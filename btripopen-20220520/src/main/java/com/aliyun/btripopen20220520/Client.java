@@ -1950,6 +1950,172 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.flightBillSettlementQueryWithOptions(request, headers, runtime);
     }
 
+    public FlightCancelOrderResponse flightCancelOrderWithOptions(FlightCancelOrderRequest request, FlightCancelOrderHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            query.put("dis_order_id", request.disOrderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightCancelOrder"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/order/action/cancel"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightCancelOrderResponse());
+    }
+
+    public FlightCancelOrderResponse flightCancelOrder(FlightCancelOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightCancelOrderHeaders headers = new FlightCancelOrderHeaders();
+        return this.flightCancelOrderWithOptions(request, headers, runtime);
+    }
+
+    public FlightCreateOrderResponse flightCreateOrderWithOptions(FlightCreateOrderRequest tmpReq, FlightCreateOrderHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        FlightCreateOrderShrinkRequest request = new FlightCreateOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.contactInfo)) {
+            request.contactInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.contactInfo, "contact_info", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.orderAttr)) {
+            request.orderAttrShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.orderAttr, "order_attr", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.travelerInfoList)) {
+            request.travelerInfoListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.travelerInfoList, "traveler_info_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arrAirportCode)) {
+            body.put("arr_airport_code", request.arrAirportCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arrCityCode)) {
+            body.put("arr_city_code", request.arrCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            body.put("auto_pay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerName)) {
+            body.put("buyer_name", request.buyerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerUniqueKey)) {
+            body.put("buyer_unique_key", request.buyerUniqueKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactInfoShrink)) {
+            body.put("contact_info", request.contactInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depAirportCode)) {
+            body.put("dep_airport_code", request.depAirportCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depCityCode)) {
+            body.put("dep_city_code", request.depCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depDate)) {
+            body.put("dep_date", request.depDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            body.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderAttrShrink)) {
+            body.put("order_attr", request.orderAttrShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderParams)) {
+            body.put("order_params", request.orderParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otaItemId)) {
+            body.put("ota_item_id", request.otaItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.price)) {
+            body.put("price", request.price);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiptAddress)) {
+            body.put("receipt_address", request.receiptAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiptTarget)) {
+            body.put("receipt_target", request.receiptTarget);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiptTitle)) {
+            body.put("receipt_title", request.receiptTitle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.travelerInfoListShrink)) {
+            body.put("traveler_info_list", request.travelerInfoListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tripType)) {
+            body.put("trip_type", request.tripType);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightCreateOrder"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/order/action/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightCreateOrderResponse());
+    }
+
+    public FlightCreateOrderResponse flightCreateOrder(FlightCreateOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightCreateOrderHeaders headers = new FlightCreateOrderHeaders();
+        return this.flightCreateOrderWithOptions(request, headers, runtime);
+    }
+
     public FlightExceedApplyQueryResponse flightExceedApplyQueryWithOptions(FlightExceedApplyQueryRequest request, FlightExceedApplyQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1988,6 +2154,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         FlightExceedApplyQueryHeaders headers = new FlightExceedApplyQueryHeaders();
         return this.flightExceedApplyQueryWithOptions(request, headers, runtime);
+    }
+
+    public FlightOrderDetailInfoResponse flightOrderDetailInfoWithOptions(FlightOrderDetailInfoRequest request, FlightOrderDetailInfoHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            query.put("dis_order_id", request.disOrderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightOrderDetailInfo"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/order/action/detail"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightOrderDetailInfoResponse());
+    }
+
+    public FlightOrderDetailInfoResponse flightOrderDetailInfo(FlightOrderDetailInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightOrderDetailInfoHeaders headers = new FlightOrderDetailInfoHeaders();
+        return this.flightOrderDetailInfoWithOptions(request, headers, runtime);
     }
 
     public FlightOrderListQueryResponse flightOrderListQueryWithOptions(FlightOrderListQueryRequest request, FlightOrderListQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2112,6 +2318,272 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         FlightOrderQueryHeaders headers = new FlightOrderQueryHeaders();
         return this.flightOrderQueryWithOptions(request, headers, runtime);
+    }
+
+    public FlightPayOrderResponse flightPayOrderWithOptions(FlightPayOrderRequest tmpReq, FlightPayOrderHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        FlightPayOrderShrinkRequest request = new FlightPayOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "extra", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.corpPayPrice)) {
+            body.put("corp_pay_price", request.corpPayPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            body.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            body.put("extra", request.extraShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.personalPayPrice)) {
+            body.put("personal_pay_price", request.personalPayPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalPayPrice)) {
+            body.put("total_pay_price", request.totalPayPrice);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightPayOrder"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/order/action/pay"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightPayOrderResponse());
+    }
+
+    public FlightPayOrderResponse flightPayOrder(FlightPayOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightPayOrderHeaders headers = new FlightPayOrderHeaders();
+        return this.flightPayOrderWithOptions(request, headers, runtime);
+    }
+
+    public FlightRefundApplyResponse flightRefundApplyWithOptions(FlightRefundApplyRequest tmpReq, FlightRefundApplyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        FlightRefundApplyShrinkRequest request = new FlightRefundApplyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "extra", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.passengerSegmentInfoList)) {
+            request.passengerSegmentInfoListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.passengerSegmentInfoList, "passenger_segment_info_list", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.refundVoucherInfo)) {
+            request.refundVoucherInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.refundVoucherInfo, "refund_voucher_info", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.corpRefundPrice)) {
+            body.put("corp_refund_price", request.corpRefundPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            body.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disSubOrderId)) {
+            body.put("dis_sub_order_id", request.disSubOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayRefundMoney)) {
+            body.put("display_refund_money", request.displayRefundMoney);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            body.put("extra", request.extraShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isVoluntary)) {
+            body.put("is_voluntary", request.isVoluntary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.itemUnitIds)) {
+            body.put("item_unit_ids", request.itemUnitIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passengerSegmentInfoListShrink)) {
+            body.put("passenger_segment_info_list", request.passengerSegmentInfoListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.personalRefundPrice)) {
+            body.put("personal_refund_price", request.personalRefundPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reasonDetail)) {
+            body.put("reason_detail", request.reasonDetail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reasonType)) {
+            body.put("reason_type", request.reasonType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refundVoucherInfoShrink)) {
+            body.put("refund_voucher_info", request.refundVoucherInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("session_id", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalRefundPrice)) {
+            body.put("total_refund_price", request.totalRefundPrice);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightRefundApply"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/refund/action/apply"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightRefundApplyResponse());
+    }
+
+    public FlightRefundApplyResponse flightRefundApply(FlightRefundApplyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightRefundApplyHeaders headers = new FlightRefundApplyHeaders();
+        return this.flightRefundApplyWithOptions(request, headers, runtime);
+    }
+
+    public FlightRefundDetailResponse flightRefundDetailWithOptions(FlightRefundDetailRequest request, FlightRefundDetailHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            query.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disSubOrderId)) {
+            query.put("dis_sub_order_id", request.disSubOrderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightRefundDetail"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/refund/action/detail"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightRefundDetailResponse());
+    }
+
+    public FlightRefundDetailResponse flightRefundDetail(FlightRefundDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightRefundDetailHeaders headers = new FlightRefundDetailHeaders();
+        return this.flightRefundDetailWithOptions(request, headers, runtime);
+    }
+
+    public FlightRefundPreCalResponse flightRefundPreCalWithOptions(FlightRefundPreCalRequest tmpReq, FlightRefundPreCalHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        FlightRefundPreCalShrinkRequest request = new FlightRefundPreCalShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.passengerSegmentInfoList)) {
+            request.passengerSegmentInfoListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.passengerSegmentInfoList, "passenger_segment_info_list", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            query.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isVoluntary)) {
+            query.put("is_voluntary", request.isVoluntary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passengerSegmentInfoListShrink)) {
+            query.put("passenger_segment_info_list", request.passengerSegmentInfoListShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightRefundPreCal"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/refund/action/pre-cal"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightRefundPreCalResponse());
+    }
+
+    public FlightRefundPreCalResponse flightRefundPreCal(FlightRefundPreCalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightRefundPreCalHeaders headers = new FlightRefundPreCalHeaders();
+        return this.flightRefundPreCalWithOptions(request, headers, runtime);
     }
 
     public HotelBillSettlementQueryResponse hotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2974,6 +3446,364 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         SyncSingleUserHeaders headers = new SyncSingleUserHeaders();
         return this.syncSingleUserWithOptions(request, headers, runtime);
+    }
+
+    public TicketChangingApplyResponse ticketChangingApplyWithOptions(TicketChangingApplyRequest tmpReq, TicketChangingApplyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TicketChangingApplyShrinkRequest request = new TicketChangingApplyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modifyFlightInfoList)) {
+            request.modifyFlightInfoListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modifyFlightInfoList, "modify_flight_info_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            body.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disSubOrderId)) {
+            body.put("dis_sub_order_id", request.disSubOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isVoluntary)) {
+            body.put("is_voluntary", request.isVoluntary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyFlightInfoListShrink)) {
+            body.put("modify_flight_info_list", request.modifyFlightInfoListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otaItemId)) {
+            body.put("ota_item_id", request.otaItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("session_id", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whetherRetry)) {
+            body.put("whether_retry", request.whetherRetry);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketChangingApply"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/ticket-changing/action/apply"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketChangingApplyResponse());
+    }
+
+    public TicketChangingApplyResponse ticketChangingApply(TicketChangingApplyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TicketChangingApplyHeaders headers = new TicketChangingApplyHeaders();
+        return this.ticketChangingApplyWithOptions(request, headers, runtime);
+    }
+
+    public TicketChangingCancelResponse ticketChangingCancelWithOptions(TicketChangingCancelRequest request, TicketChangingCancelHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            query.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disSubOrderId)) {
+            query.put("dis_sub_order_id", request.disSubOrderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketChangingCancel"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/ticket-changing/action/cancel"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketChangingCancelResponse());
+    }
+
+    public TicketChangingCancelResponse ticketChangingCancel(TicketChangingCancelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TicketChangingCancelHeaders headers = new TicketChangingCancelHeaders();
+        return this.ticketChangingCancelWithOptions(request, headers, runtime);
+    }
+
+    public TicketChangingDetailResponse ticketChangingDetailWithOptions(TicketChangingDetailRequest request, TicketChangingDetailHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            query.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disSubOrderId)) {
+            query.put("dis_sub_order_id", request.disSubOrderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketChangingDetail"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/ticket-changing/action/detail"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketChangingDetailResponse());
+    }
+
+    public TicketChangingDetailResponse ticketChangingDetail(TicketChangingDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TicketChangingDetailHeaders headers = new TicketChangingDetailHeaders();
+        return this.ticketChangingDetailWithOptions(request, headers, runtime);
+    }
+
+    public TicketChangingEnquiryResponse ticketChangingEnquiryWithOptions(TicketChangingEnquiryRequest request, TicketChangingEnquiryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arrCity)) {
+            query.put("arr_city", request.arrCity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depCity)) {
+            query.put("dep_city", request.depCity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            query.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isVoluntary)) {
+            query.put("is_voluntary", request.isVoluntary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyDepartDate)) {
+            query.put("modify_depart_date", request.modifyDepartDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyFlightNo)) {
+            query.put("modify_flight_no", request.modifyFlightNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("session_id", request.sessionId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketChangingEnquiry"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/ticket-changing/action/enquiry"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketChangingEnquiryResponse());
+    }
+
+    public TicketChangingEnquiryResponse ticketChangingEnquiry(TicketChangingEnquiryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TicketChangingEnquiryHeaders headers = new TicketChangingEnquiryHeaders();
+        return this.ticketChangingEnquiryWithOptions(request, headers, runtime);
+    }
+
+    public TicketChangingFlightListResponse ticketChangingFlightListWithOptions(TicketChangingFlightListRequest tmpReq, TicketChangingFlightListHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TicketChangingFlightListShrinkRequest request = new TicketChangingFlightListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.travelerInfoList)) {
+            request.travelerInfoListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.travelerInfoList, "traveler_info_list", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arrCity)) {
+            query.put("arr_city", request.arrCity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depCity)) {
+            query.put("dep_city", request.depCity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depDate)) {
+            query.put("dep_date", request.depDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            query.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isVoluntary)) {
+            query.put("is_voluntary", request.isVoluntary);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.travelerInfoListShrink)) {
+            query.put("traveler_info_list", request.travelerInfoListShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketChangingFlightList"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/huge/dtb-flight/v1/ticket-changing-flight/action/list"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketChangingFlightListResponse());
+    }
+
+    public TicketChangingFlightListResponse ticketChangingFlightList(TicketChangingFlightListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TicketChangingFlightListHeaders headers = new TicketChangingFlightListHeaders();
+        return this.ticketChangingFlightListWithOptions(request, headers, runtime);
+    }
+
+    public TicketChangingPayResponse ticketChangingPayWithOptions(TicketChangingPayRequest tmpReq, TicketChangingPayHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TicketChangingPayShrinkRequest request = new TicketChangingPayShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "extra", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.corpPayPrice)) {
+            body.put("corp_pay_price", request.corpPayPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            body.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disSubOrderId)) {
+            body.put("dis_sub_order_id", request.disSubOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            body.put("extra", request.extraShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.personalPayPrice)) {
+            body.put("personal_pay_price", request.personalPayPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalPayPrice)) {
+            body.put("total_pay_price", request.totalPayPrice);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketChangingPay"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/ticket-changing/action/pay"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketChangingPayResponse());
+    }
+
+    public TicketChangingPayResponse ticketChangingPay(TicketChangingPayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TicketChangingPayHeaders headers = new TicketChangingPayHeaders();
+        return this.ticketChangingPayWithOptions(request, headers, runtime);
     }
 
     public TrainBillSettlementQueryResponse trainBillSettlementQueryWithOptions(TrainBillSettlementQueryRequest request, TrainBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

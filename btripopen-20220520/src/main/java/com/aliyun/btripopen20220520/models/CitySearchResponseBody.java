@@ -10,7 +10,9 @@ public class CitySearchResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    // module
+    /**
+     * <p>module</p>
+     */
     @NameInMap("module")
     public CitySearchResponseBodyModule module;
 

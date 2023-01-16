@@ -13,14 +13,18 @@ public class CarOrderQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public CarOrderQueryResponseBodyModule module;
 
-    // requestId
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("success")
     public Boolean success;
 
-    // traceId
+    /**
+     * <p>traceId</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 

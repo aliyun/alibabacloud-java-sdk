@@ -19,7 +19,9 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    // traceId
+    /**
+     * <p>traceId</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -272,7 +274,9 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         @NameInMap("arr_date")
         public Long arrDate;
 
-        // cheapest
+        /**
+         * <p>cheapest</p>
+         */
         @NameInMap("cheapest")
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesCheapest cheapest;
 

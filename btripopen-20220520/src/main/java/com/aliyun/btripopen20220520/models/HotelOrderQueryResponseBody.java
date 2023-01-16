@@ -10,18 +10,24 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    // module。
+    /**
+     * <p>module。</p>
+     */
     @NameInMap("module")
     public HotelOrderQueryResponseBodyModule module;
 
-    // requestId
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("success")
     public Boolean success;
 
-    // traceId
+    /**
+     * <p>traceId</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
