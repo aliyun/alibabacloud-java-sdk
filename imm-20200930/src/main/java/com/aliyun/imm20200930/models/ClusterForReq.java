@@ -102,42 +102,4 @@ public class ClusterForReq extends TeaModel {
 
     }
 
-    public static class FigureClusterForReqCoverFigures extends TeaModel {
-        @NameInMap("FigureId")
-        public String figureId;
-
-        public static FigureClusterForReqCoverFigures build(java.util.Map<String, ?> map) throws Exception {
-            FigureClusterForReqCoverFigures self = new FigureClusterForReqCoverFigures();
-            return TeaModel.build(map, self);
-        }
-
-        public FigureClusterForReqCoverFigures setFigureId(String figureId) {
-            this.figureId = figureId;
-            return this;
-        }
-        public String getFigureId() {
-            return this.figureId;
-        }
-
-    }
-
-    public static class FigureClusterForReqCover extends TeaModel {
-        @NameInMap("Figures")
-        public java.util.List<FigureClusterForReqCoverFigures> figures;
-
-        public static FigureClusterForReqCover build(java.util.Map<String, ?> map) throws Exception {
-            FigureClusterForReqCover self = new FigureClusterForReqCover();
-            return TeaModel.build(map, self);
-        }
-
-        public FigureClusterForReqCover setFigures(java.util.List<FigureClusterForReqCoverFigures> figures) {
-            this.figures = figures;
-            return this;
-        }
-        public java.util.List<FigureClusterForReqCoverFigures> getFigures() {
-            return this.figures;
-        }
-
-    }
-
 }

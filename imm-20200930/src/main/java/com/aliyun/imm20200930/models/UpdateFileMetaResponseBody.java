@@ -20,45 +20,4 @@ public class UpdateFileMetaResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class BatchUpdateFileMetaResponseBodyFiles extends TeaModel {
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("Success")
-        public Boolean success;
-
-        @NameInMap("URI")
-        public String URI;
-
-        public static BatchUpdateFileMetaResponseBodyFiles build(java.util.Map<String, ?> map) throws Exception {
-            BatchUpdateFileMetaResponseBodyFiles self = new BatchUpdateFileMetaResponseBodyFiles();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchUpdateFileMetaResponseBodyFiles setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public BatchUpdateFileMetaResponseBodyFiles setSuccess(Boolean success) {
-            this.success = success;
-            return this;
-        }
-        public Boolean getSuccess() {
-            return this.success;
-        }
-
-        public BatchUpdateFileMetaResponseBodyFiles setURI(String URI) {
-            this.URI = URI;
-            return this;
-        }
-        public String getURI() {
-            return this.URI;
-        }
-
-    }
-
 }
