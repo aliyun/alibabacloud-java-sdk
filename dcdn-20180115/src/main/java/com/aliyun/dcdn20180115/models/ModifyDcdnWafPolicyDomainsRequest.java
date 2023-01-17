@@ -7,6 +7,9 @@ public class ModifyDcdnWafPolicyDomainsRequest extends TeaModel {
     @NameInMap("BindDomains")
     public String bindDomains;
 
+    @NameInMap("Method")
+    public Integer method;
+
     @NameInMap("PolicyId")
     public Long policyId;
 
@@ -24,6 +27,14 @@ public class ModifyDcdnWafPolicyDomainsRequest extends TeaModel {
     }
     public String getBindDomains() {
         return this.bindDomains;
+    }
+
+    public ModifyDcdnWafPolicyDomainsRequest setMethod(Integer method) {
+        this.method = method;
+        return this;
+    }
+    public Integer getMethod() {
+        return this.method;
     }
 
     public ModifyDcdnWafPolicyDomainsRequest setPolicyId(Long policyId) {

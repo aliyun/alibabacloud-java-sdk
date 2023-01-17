@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafRulesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of protection rules returned per page, which is the same as the PageSize parameter in request parameters.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the protection rule.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeDcdnWafRulesResponseBodyRules> rules;
 
+    /**
+     * <p>The total number of protection rules.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,45 @@ public class DescribeDcdnWafRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafRulesResponseBodyRules extends TeaModel {
+        /**
+         * <p>The type of the protection policy, which is the same as the DefenseScenes field in the QueryArgs parameter.</p>
+         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        /**
+         * <p>The modification time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the protection policy.</p>
+         */
         @NameInMap("PolicyId")
         public Long policyId;
 
+        /**
+         * <p>The configuration information about the protection rule.</p>
+         */
         @NameInMap("RuleConfig")
         public String ruleConfig;
 
+        /**
+         * <p>The ID of the protection rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The name of the protection rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The status of the protection rule, which is the same as the RuleStatus field in the QueryArgs parameter.</p>
+         */
         @NameInMap("RuleStatus")
         public String ruleStatus;
 

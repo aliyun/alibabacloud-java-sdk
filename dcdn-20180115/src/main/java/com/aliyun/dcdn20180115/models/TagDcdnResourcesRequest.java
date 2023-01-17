@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class TagDcdnResourcesRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource. Valid values of N: **1** to **50**.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resources from which you want to detach tags. Set this value to **DOMAIN**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>Details about the tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagDcdnResourcesRequestTag> tag;
 
@@ -43,9 +52,15 @@ public class TagDcdnResourcesRequest extends TeaModel {
     }
 
     public static class TagDcdnResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The value of the tag. Valid values of N: **1** to **20**.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of a tag. Valid values of N: **1** to **20**.</p>
+         */
         @NameInMap("Value")
         public String value;
 

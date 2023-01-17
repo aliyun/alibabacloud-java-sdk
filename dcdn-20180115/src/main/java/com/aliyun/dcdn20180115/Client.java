@@ -911,69 +911,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSlrAndSlsProjectWithOptions(request, runtime);
     }
 
-    public DcdnHttpRequestTestToolResponse dcdnHttpRequestTestToolWithOptions(DcdnHttpRequestTestToolRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        DcdnHttpRequestTestToolShrinkRequest request = new DcdnHttpRequestTestToolShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.header)) {
-            request.headerShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.header, "Header", "json");
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.args)) {
-            body.put("Args", request.args);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
-            body.put("Body", request.body);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.headerShrink)) {
-            body.put("Header", request.headerShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
-            body.put("Host", request.host);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.method)) {
-            body.put("Method", request.method);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.proxyIp)) {
-            body.put("ProxyIp", request.proxyIp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.scheme)) {
-            body.put("Scheme", request.scheme);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uri)) {
-            body.put("Uri", request.uri);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DcdnHttpRequestTestTool"),
-            new TeaPair("version", "2018-01-15"),
-            new TeaPair("protocol", "HTTP"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DcdnHttpRequestTestToolResponse());
-    }
-
-    public DcdnHttpRequestTestToolResponse dcdnHttpRequestTestTool(DcdnHttpRequestTestToolRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.dcdnHttpRequestTestToolWithOptions(request, runtime);
-    }
-
     public DeleteDcdnDeliverTaskResponse deleteDcdnDeliverTaskWithOptions(DeleteDcdnDeliverTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1124,6 +1061,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDcdnIpaSpecificConfigResponse deleteDcdnIpaSpecificConfig(DeleteDcdnIpaSpecificConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnIpaSpecificConfigWithOptions(request, runtime);
+    }
+
+    public DeleteDcdnKvResponse deleteDcdnKvWithOptions(DeleteDcdnKvRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.key)) {
+            query.put("Key", request.key);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDcdnKv"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnKvResponse());
+    }
+
+    public DeleteDcdnKvResponse deleteDcdnKv(DeleteDcdnKvRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDcdnKvWithOptions(request, runtime);
     }
 
     public DeleteDcdnRealTimeLogProjectResponse deleteDcdnRealTimeLogProjectWithOptions(DeleteDcdnRealTimeLogProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1668,6 +1638,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnDeliverListWithOptions(request, runtime);
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainBpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainBpsDataResponse
+     */
     public DescribeDcdnDomainBpsDataResponse describeDcdnDomainBpsDataWithOptions(DescribeDcdnDomainBpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1712,6 +1697,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainBpsDataResponse());
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainBpsDataRequest
+      * @return DescribeDcdnDomainBpsDataResponse
+     */
     public DescribeDcdnDomainBpsDataResponse describeDcdnDomainBpsData(DescribeDcdnDomainBpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainBpsDataWithOptions(request, runtime);
@@ -5188,6 +5187,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnWafRuleWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafRulesResponse
+     */
     public DescribeDcdnWafRulesResponse describeDcdnWafRulesWithOptions(DescribeDcdnWafRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5220,6 +5226,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafRulesResponse());
     }
 
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafRulesRequest
+      * @return DescribeDcdnWafRulesResponse
+     */
     public DescribeDcdnWafRulesResponse describeDcdnWafRules(DescribeDcdnWafRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafRulesWithOptions(request, runtime);
@@ -5874,6 +5886,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("BindDomains", request.bindDomains);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.method)) {
+            body.put("Method", request.method);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
             body.put("PolicyId", request.policyId);
         }
@@ -6007,6 +6023,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withHeader)) {
+            query.put("WithHeader", request.withHeader);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6548,6 +6568,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.stopDcdnIpaDomainWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this API operation up to 100 times per second per account.
+      *
+      * @param request TagDcdnResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TagDcdnResourcesResponse
+     */
     public TagDcdnResourcesResponse tagDcdnResourcesWithOptions(TagDcdnResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6580,6 +6607,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagDcdnResourcesResponse());
     }
 
+    /**
+      * >  You can call this API operation up to 100 times per second per account.
+      *
+      * @param request TagDcdnResourcesRequest
+      * @return TagDcdnResourcesResponse
+     */
     public TagDcdnResourcesResponse tagDcdnResources(TagDcdnResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagDcdnResourcesWithOptions(request, runtime);

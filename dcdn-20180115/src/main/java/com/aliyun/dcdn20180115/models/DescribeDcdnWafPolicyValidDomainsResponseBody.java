@@ -64,9 +64,53 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies extends TeaModel {
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies self = new DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeDcdnWafPolicyValidDomainsResponseBodyDomains extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("Policies")
+        public java.util.List<DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies> policies;
 
         @NameInMap("PolicyId")
         public Long policyId;
@@ -88,6 +132,14 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeDcdnWafPolicyValidDomainsResponseBodyDomains setPolicies(java.util.List<DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies> policies) {
+            this.policies = policies;
+            return this;
+        }
+        public java.util.List<DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies> getPolicies() {
+            return this.policies;
         }
 
         public DescribeDcdnWafPolicyValidDomainsResponseBodyDomains setPolicyId(Long policyId) {
