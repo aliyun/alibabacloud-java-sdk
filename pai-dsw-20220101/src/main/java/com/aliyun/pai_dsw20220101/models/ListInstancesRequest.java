@@ -10,6 +10,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("InstanceName")
     public String instanceName;
 
@@ -56,6 +59,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public ListInstancesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListInstancesRequest setInstanceName(String instanceName) {

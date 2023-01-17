@@ -762,6 +762,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Accessibility", request.accessibility);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             query.put("InstanceName", request.instanceName);
         }
