@@ -58,6 +58,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceUrl")
     public String instanceUrl;
 
+    /**
+     * <p>Jupyterlab Url。</p>
+     */
     @NameInMap("JupyterlabUrl")
     public String jupyterlabUrl;
 
@@ -112,6 +115,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("UserVpc")
     public GetInstanceResponseBodyUserVpc userVpc;
 
+    /**
+     * <p>Web IDE url。</p>
+     */
     @NameInMap("WebIDEUrl")
     public String webIDEUrl;
 
@@ -768,6 +774,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>Vpc Id。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

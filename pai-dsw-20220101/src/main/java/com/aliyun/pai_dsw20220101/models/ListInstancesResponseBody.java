@@ -416,6 +416,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>Vpc Id。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -499,6 +502,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceUrl")
         public String instanceUrl;
 
+        /**
+         * <p>Jupyterlab Url。</p>
+         */
         @NameInMap("JupyterlabUrl")
         public String jupyterlabUrl;
 
@@ -544,6 +550,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("UserVpc")
         public ListInstancesResponseBodyInstancesUserVpc userVpc;
 
+        /**
+         * <p>Web IDE url。</p>
+         */
         @NameInMap("WebIDEUrl")
         public String webIDEUrl;
 

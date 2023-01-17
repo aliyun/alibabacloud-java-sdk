@@ -219,6 +219,9 @@ public class UpdateInstanceRequest extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>Vpc Id。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
