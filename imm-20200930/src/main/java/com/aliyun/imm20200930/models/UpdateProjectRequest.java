@@ -22,17 +22,11 @@ public class UpdateProjectRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("EngineConcurrency")
-    public Long engineConcurrency;
-
     @NameInMap("ProjectMaxDatasetCount")
     public Long projectMaxDatasetCount;
 
     @NameInMap("ProjectName")
     public String projectName;
-
-    @NameInMap("ProjectQueriesPerSecond")
-    public Long projectQueriesPerSecond;
 
     @NameInMap("ServiceRole")
     public String serviceRole;
@@ -93,14 +87,6 @@ public class UpdateProjectRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateProjectRequest setEngineConcurrency(Long engineConcurrency) {
-        this.engineConcurrency = engineConcurrency;
-        return this;
-    }
-    public Long getEngineConcurrency() {
-        return this.engineConcurrency;
-    }
-
     public UpdateProjectRequest setProjectMaxDatasetCount(Long projectMaxDatasetCount) {
         this.projectMaxDatasetCount = projectMaxDatasetCount;
         return this;
@@ -115,14 +101,6 @@ public class UpdateProjectRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
-    }
-
-    public UpdateProjectRequest setProjectQueriesPerSecond(Long projectQueriesPerSecond) {
-        this.projectQueriesPerSecond = projectQueriesPerSecond;
-        return this;
-    }
-    public Long getProjectQueriesPerSecond() {
-        return this.projectQueriesPerSecond;
     }
 
     public UpdateProjectRequest setServiceRole(String serviceRole) {
