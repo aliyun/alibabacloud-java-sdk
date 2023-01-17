@@ -4,12 +4,23 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafRulesRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of protection rules to return per page. Valid values: an integer from **1** to **500**. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The query conditions. The value is a string in the JSON format: `QueryArgs={"PolicyIds":"The range of protection policy IDs","RuleIds":"The range of protection rule IDs","RuleNameLike":"The name of the protection rule","DomainNames":"The protected domain names","DefenseScenes":"waf_group","RuleStatus":"on","OrderBy":"GmtModified","Desc":"false"}`</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, all protection rules are queried.</p>
+     */
     @NameInMap("QueryArgs")
     public String queryArgs;
 

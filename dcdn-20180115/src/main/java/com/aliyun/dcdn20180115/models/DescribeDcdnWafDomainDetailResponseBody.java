@@ -38,6 +38,9 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
         @NameInMap("PolicyId")
         public Long policyId;
 
+        @NameInMap("PolicyIds")
+        public String policyIds;
+
         public static DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes self = new DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes();
             return TeaModel.build(map, self);
@@ -57,6 +60,14 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
         }
         public Long getPolicyId() {
             return this.policyId;
+        }
+
+        public DescribeDcdnWafDomainDetailResponseBodyDomainDefenseScenes setPolicyIds(String policyIds) {
+            this.policyIds = policyIds;
+            return this;
+        }
+        public String getPolicyIds() {
+            return this.policyIds;
         }
 
     }

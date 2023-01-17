@@ -3,19 +3,19 @@ package com.aliyun.dcdn20180115.models;
 
 import com.aliyun.tea.*;
 
-public class TagDcdnResourcesResponseBody extends TeaModel {
+public class DeleteDcdnKvResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static TagDcdnResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        TagDcdnResourcesResponseBody self = new TagDcdnResourcesResponseBody();
+    public static DeleteDcdnKvResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteDcdnKvResponseBody self = new DeleteDcdnKvResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public TagDcdnResourcesResponseBody setRequestId(String requestId) {
+    public DeleteDcdnKvResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

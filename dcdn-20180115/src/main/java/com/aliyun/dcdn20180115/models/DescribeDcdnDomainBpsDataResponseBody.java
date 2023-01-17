@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The bandwidth data returned at each interval.</p>
+     */
     @NameInMap("BpsDataPerInterval")
     public DescribeDcdnDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
+    /**
+     * <p>The time interval between the data entries returned.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,21 +94,39 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The bandwidth value. Unit: bit/s.</p>
+         */
         @NameInMap("Bps")
         public Float bps;
 
+        /**
+         * <p>The bandwidth that was consumed to deliver dynamic content over HTTP, in bit/s.</p>
+         */
         @NameInMap("DynamicHttpBps")
         public Float dynamicHttpBps;
 
+        /**
+         * <p>The bandwidth that was consumed to deliver dynamic content over HTTPS, in bit/s.</p>
+         */
         @NameInMap("DynamicHttpsBps")
         public Float dynamicHttpsBps;
 
+        /**
+         * <p>The bandwidth that was consumed to deliver static content over HTTP, in bit/s.</p>
+         */
         @NameInMap("StaticHttpBps")
         public Float staticHttpBps;
 
+        /**
+         * <p>The bandwidth that was consumed to deliver static content over HTTPS, in bit/s.</p>
+         */
         @NameInMap("StaticHttpsBps")
         public Float staticHttpsBps;
 
+        /**
+         * <p>The timestamp of the returned data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
