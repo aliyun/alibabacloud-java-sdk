@@ -32,6 +32,9 @@ public class DescribeScdnDomainCnameResponseBody extends TeaModel {
     }
 
     public static class DescribeScdnDomainCnameResponseBodyCnameDatasData extends TeaModel {
+        /**
+         * <p>Cname</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
