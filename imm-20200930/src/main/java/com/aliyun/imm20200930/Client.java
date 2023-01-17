@@ -4004,20 +4004,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.engineConcurrency)) {
-            query.put("EngineConcurrency", request.engineConcurrency);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.projectMaxDatasetCount)) {
             query.put("ProjectMaxDatasetCount", request.projectMaxDatasetCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             query.put("ProjectName", request.projectName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectQueriesPerSecond)) {
-            query.put("ProjectQueriesPerSecond", request.projectQueriesPerSecond);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceRole)) {
