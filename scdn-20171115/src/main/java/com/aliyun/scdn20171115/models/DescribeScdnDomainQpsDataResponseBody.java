@@ -82,12 +82,18 @@ public class DescribeScdnDomainQpsDataResponseBody extends TeaModel {
         @NameInMap("HttpAccValue")
         public String httpAccValue;
 
+        /**
+         * <p>http QPS。</p>
+         */
         @NameInMap("HttpQpsValue")
         public String httpQpsValue;
 
         @NameInMap("HttpsAccValue")
         public String httpsAccValue;
 
+        /**
+         * <p>https QPS。</p>
+         */
         @NameInMap("HttpsQpsValue")
         public String httpsQpsValue;
 

@@ -19,6 +19,9 @@ public class PreloadScdnObjectCachesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("WithHeader")
+    public String withHeader;
+
     public static PreloadScdnObjectCachesRequest build(java.util.Map<String, ?> map) throws Exception {
         PreloadScdnObjectCachesRequest self = new PreloadScdnObjectCachesRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class PreloadScdnObjectCachesRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public PreloadScdnObjectCachesRequest setWithHeader(String withHeader) {
+        this.withHeader = withHeader;
+        return this;
+    }
+    public String getWithHeader() {
+        return this.withHeader;
     }
 
 }
