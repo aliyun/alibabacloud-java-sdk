@@ -95,11 +95,15 @@ public class ListSmartJobsResponseBody extends TeaModel {
     }
 
     public static class ListSmartJobsResponseBodySmartJobListOutputConfig extends TeaModel {
-        // OSS Bucket
+        /**
+         * <p>OSS Bucket</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
-        // OSS Object
+        /**
+         * <p>OSS Object</p>
+         */
         @NameInMap("Object")
         public String object;
 

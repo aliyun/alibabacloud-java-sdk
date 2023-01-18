@@ -91,7 +91,9 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        // MediaId
+        /**
+         * <p>MediaId</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
@@ -250,7 +252,9 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         @NameInMap("DynamicMetaData")
         public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoDynamicMetaData dynamicMetaData;
 
-        // BasicInfo
+        /**
+         * <p>BasicInfo</p>
+         */
         @NameInMap("MediaBasicInfo")
         public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo mediaBasicInfo;
 

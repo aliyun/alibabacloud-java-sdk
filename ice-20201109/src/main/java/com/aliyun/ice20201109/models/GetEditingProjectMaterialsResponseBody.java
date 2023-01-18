@@ -286,7 +286,9 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         @NameInMap("InputURL")
         public String inputURL;
 
-        // MediaId
+        /**
+         * <p>MediaId</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
@@ -472,11 +474,15 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class GetEditingProjectMaterialsResponseBodyMediaInfos extends TeaModel {
-        // FileInfos
+        /**
+         * <p>FileInfos</p>
+         */
         @NameInMap("FileInfoList")
         public java.util.List<GetEditingProjectMaterialsResponseBodyMediaInfosFileInfoList> fileInfoList;
 
-        // BasicInfo
+        /**
+         * <p>BasicInfo</p>
+         */
         @NameInMap("MediaBasicInfo")
         public GetEditingProjectMaterialsResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 

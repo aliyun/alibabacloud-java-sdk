@@ -976,7 +976,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("AiRoughData")
         public SearchMediaResponseBodyMediaInfoListAiRoughData aiRoughData;
 
-        // FileInfos。
+        /**
+         * <p>FileInfos。</p>
+         */
         @NameInMap("FileInfoList")
         public java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList;
 

@@ -4,11 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitLiveRecordJobRequest extends TeaModel {
-    // 代表资源名称的资源属性字段
+    /**
+     * <p>代表资源名称的资源属性字段</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // 回调地址
+    /**
+     * <p>回调地址</p>
+     */
     @NameInMap("NotifyUrl")
     public String notifyUrl;
 
@@ -18,7 +22,9 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
     @NameInMap("StreamInput")
     public SubmitLiveRecordJobRequestStreamInput streamInput;
 
-    // 录制模板ID
+    /**
+     * <p>录制模板ID</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

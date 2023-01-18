@@ -7,7 +7,9 @@ public class GetTemplateMaterialsResponseBody extends TeaModel {
     @NameInMap("MaterialUrls")
     public String materialUrls;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

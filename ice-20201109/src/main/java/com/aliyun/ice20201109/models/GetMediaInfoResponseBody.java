@@ -924,7 +924,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("InputURL")
         public String inputURL;
 
-        // MediaId
+        /**
+         * <p>MediaId</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
@@ -1140,7 +1142,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("FileInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;
 
-        // BasicInfo
+        /**
+         * <p>BasicInfo</p>
+         */
         @NameInMap("MediaBasicInfo")
         public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo;
 

@@ -4,7 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetMediaInfoJobResponseBody extends TeaModel {
-    // MediaInfoJobDTO
+    /**
+     * <p>MediaInfoJobDTO</p>
+     */
     @NameInMap("MediaInfoJob")
     public GetMediaInfoJobResponseBodyMediaInfoJob mediaInfoJob;
 

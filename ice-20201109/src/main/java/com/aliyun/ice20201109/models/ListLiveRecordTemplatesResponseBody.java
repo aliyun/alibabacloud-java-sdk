@@ -79,19 +79,27 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
-        // 格式
+        /**
+         * <p>格式</p>
+         */
         @NameInMap("Format")
         public String format;
 
-        // Oss对象名，不包含后缀
+        /**
+         * <p>Oss对象名，不包含后缀</p>
+         */
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
-        // 切片时长
+        /**
+         * <p>切片时长</p>
+         */
         @NameInMap("SliceDuration")
         public Integer sliceDuration;
 
-        // 切片Oss对象名，不包含后缀
+        /**
+         * <p>切片Oss对象名，不包含后缀</p>
+         */
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;
 
@@ -143,27 +151,39 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateList extends TeaModel {
-        // 代表创建时间的资源属性字段
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 最后修改时间
+        /**
+         * <p>最后修改时间</p>
+         */
         @NameInMap("LastModified")
         public String lastModified;
 
-        // 代表资源名称的资源属性字段
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // 录制格式
+        /**
+         * <p>录制格式</p>
+         */
         @NameInMap("RecordFormatList")
         public java.util.List<ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList> recordFormatList;
 
-        // 代表资源一级ID的资源属性字段
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 代表资源名称的资源属性字段
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("Type")
         public String type;
 
