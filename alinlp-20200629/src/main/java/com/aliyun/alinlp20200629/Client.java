@@ -985,6 +985,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSummaryChEcomWithOptions(request, runtime);
     }
 
+    public GetTableQAServiceInfoByIdResponse getTableQAServiceInfoByIdWithOptions(GetTableQAServiceInfoByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            body.put("ServiceCode", request.serviceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("ServiceId", request.serviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTableQAServiceInfoById"),
+            new TeaPair("version", "2020-06-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableQAServiceInfoByIdResponse());
+    }
+
+    public GetTableQAServiceInfoByIdResponse getTableQAServiceInfoById(GetTableQAServiceInfoByIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTableQAServiceInfoByIdWithOptions(request, runtime);
+    }
+
     public GetTcChEcomResponse getTcChEcomWithOptions(GetTcChEcomRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1762,6 +1795,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OpenAlinlpServiceResponse openAlinlpService() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openAlinlpServiceWithOptions(runtime);
+    }
+
+    public RequestTableQAResponse requestTableQAWithOptions(RequestTableQARequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            body.put("Params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            body.put("ServiceCode", request.serviceCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RequestTableQA"),
+            new TeaPair("version", "2020-06-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RequestTableQAResponse());
+    }
+
+    public RequestTableQAResponse requestTableQA(RequestTableQARequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.requestTableQAWithOptions(request, runtime);
+    }
+
+    public RequestTableQAOnlineResponse requestTableQAOnlineWithOptions(RequestTableQAOnlineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.botId)) {
+            body.put("BotId", request.botId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            body.put("Params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.question)) {
+            body.put("Question", request.question);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
+            body.put("ServiceCode", request.serviceCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RequestTableQAOnline"),
+            new TeaPair("version", "2020-06-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RequestTableQAOnlineResponse());
+    }
+
+    public RequestTableQAOnlineResponse requestTableQAOnline(RequestTableQAOnlineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.requestTableQAOnlineWithOptions(request, runtime);
     }
 
     public UpdateCustomResponse updateCustomWithOptions(UpdateCustomRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
