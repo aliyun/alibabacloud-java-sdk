@@ -2586,6 +2586,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.flightRefundPreCalWithOptions(request, headers, runtime);
     }
 
+    public FlightSearchListResponse flightSearchListWithOptions(FlightSearchListRequest request, FlightSearchListHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.airlineCode)) {
+            query.put("airline_code", request.airlineCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arrCityCode)) {
+            query.put("arr_city_code", request.arrCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arrCityName)) {
+            query.put("arr_city_name", request.arrCityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arrDate)) {
+            query.put("arr_date", request.arrDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cabinClass)) {
+            query.put("cabin_class", request.cabinClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depCityCode)) {
+            query.put("dep_city_code", request.depCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depCityName)) {
+            query.put("dep_city_name", request.depCityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depDate)) {
+            query.put("dep_date", request.depDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flightNo)) {
+            query.put("flight_no", request.flightNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needMultiClassPrice)) {
+            query.put("need_multi_class_price", request.needMultiClassPrice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transferCityCode)) {
+            query.put("transfer_city_code", request.transferCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transferFlightNo)) {
+            query.put("transfer_flight_no", request.transferFlightNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transferLeaveDate)) {
+            query.put("transfer_leave_date", request.transferLeaveDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tripType)) {
+            query.put("trip_type", request.tripType);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightSearchList"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/huge/dtb-flight/v1/flight/action/search-list"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightSearchListResponse());
+    }
+
+    public FlightSearchListResponse flightSearchList(FlightSearchListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightSearchListHeaders headers = new FlightSearchListHeaders();
+        return this.flightSearchListWithOptions(request, headers, runtime);
+    }
+
     public HotelBillSettlementQueryResponse hotelBillSettlementQueryWithOptions(HotelBillSettlementQueryRequest request, HotelBillSettlementQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
