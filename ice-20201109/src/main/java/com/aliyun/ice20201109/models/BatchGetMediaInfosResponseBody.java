@@ -201,7 +201,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @NameInMap("InputURL")
         public String inputURL;
 
-        // MediaId
+        /**
+         * <p>MediaId</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
@@ -387,7 +389,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
 
     public static class BatchGetMediaInfosResponseBodyMediaInfos extends TeaModel {
-        // FileInfos
+        /**
+         * <p>FileInfos</p>
+         */
         @NameInMap("FileInfoList")
         public java.util.List<BatchGetMediaInfosResponseBodyMediaInfosFileInfoList> fileInfoList;
 

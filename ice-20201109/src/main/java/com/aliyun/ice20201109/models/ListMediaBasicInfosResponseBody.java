@@ -485,11 +485,15 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListMediaBasicInfosResponseBodyMediaInfos extends TeaModel {
-        // FileInfos
+        /**
+         * <p>FileInfos</p>
+         */
         @NameInMap("FileInfoList")
         public java.util.List<ListMediaBasicInfosResponseBodyMediaInfosFileInfoList> fileInfoList;
 
-        // BasicInfo
+        /**
+         * <p>BasicInfo</p>
+         */
         @NameInMap("MediaBasicInfo")
         public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 

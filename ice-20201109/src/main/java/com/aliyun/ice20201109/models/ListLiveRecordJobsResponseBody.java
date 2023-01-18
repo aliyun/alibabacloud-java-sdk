@@ -147,18 +147,24 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordJobsResponseBodyLiveRecordJobs extends TeaModel {
-        // 代表创建时间的资源属性字段
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("JobId")
         public String jobId;
 
-        // 代表资源名称的资源属性字段
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // 回调地址
+        /**
+         * <p>回调地址</p>
+         */
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 
@@ -171,7 +177,9 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         @NameInMap("StreamInput")
         public ListLiveRecordJobsResponseBodyLiveRecordJobsStreamInput streamInput;
 
-        // 录制模板ID
+        /**
+         * <p>录制模板ID</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

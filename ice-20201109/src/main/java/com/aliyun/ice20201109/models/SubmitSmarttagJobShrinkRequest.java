@@ -13,7 +13,9 @@ public class SubmitSmarttagJobShrinkRequest extends TeaModel {
     @NameInMap("ContentType")
     public String contentType;
 
-    // input
+    /**
+     * <p>input</p>
+     */
     @NameInMap("Input")
     public String inputShrink;
 
@@ -23,7 +25,9 @@ public class SubmitSmarttagJobShrinkRequest extends TeaModel {
     @NameInMap("Params")
     public String params;
 
-    // scheduleConfig
+    /**
+     * <p>scheduleConfig</p>
+     */
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 

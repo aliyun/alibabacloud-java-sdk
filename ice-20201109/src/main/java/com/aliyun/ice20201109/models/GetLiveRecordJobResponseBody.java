@@ -4,7 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLiveRecordJobResponseBody extends TeaModel {
-    // 录制任务
+    /**
+     * <p>录制任务</p>
+     */
     @NameInMap("RecordJob")
     public GetLiveRecordJobResponseBodyRecordJob recordJob;
 
@@ -104,37 +106,51 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveRecordJobResponseBodyRecordJob extends TeaModel {
-        // 代表创建时间的资源属性字段
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 代表资源名称的资源属性字段
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
-        // 代表资源名称的资源属性字段
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // 回调地址
+        /**
+         * <p>回调地址</p>
+         */
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 
         @NameInMap("RecordOutput")
         public GetLiveRecordJobResponseBodyRecordJobRecordOutput recordOutput;
 
-        // 代表资源名称的资源属性字段
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("StreamInput")
         public GetLiveRecordJobResponseBodyRecordJobStreamInput streamInput;
 
-        // 录制模板ID
+        /**
+         * <p>录制模板ID</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 录制模板ID
+        /**
+         * <p>录制模板ID</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

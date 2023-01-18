@@ -7,7 +7,9 @@ public class DescribeMeterIceMediaConvertUHDUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterIceMediaConvertUHDUsageResponseBodyData> data;
 
-    // Id
+    /**
+     * <p>Id</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

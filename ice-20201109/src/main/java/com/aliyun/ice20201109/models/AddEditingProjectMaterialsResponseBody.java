@@ -471,7 +471,9 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class AddEditingProjectMaterialsResponseBodyMediaInfos extends TeaModel {
-        // FileInfos
+        /**
+         * <p>FileInfos</p>
+         */
         @NameInMap("FileInfoList")
         public java.util.List<AddEditingProjectMaterialsResponseBodyMediaInfosFileInfoList> fileInfoList;
 
