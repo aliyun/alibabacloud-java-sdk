@@ -32,6 +32,9 @@ public class ListInspectionDevicesResponseBody extends TeaModel {
     }
 
     public static class ListInspectionDevicesResponseBodyInspectionScripts extends TeaModel {
+        @NameInMap("AppState")
+        public String appState;
+
         @NameInMap("DeviceId")
         public String deviceId;
 
@@ -59,6 +62,14 @@ public class ListInspectionDevicesResponseBody extends TeaModel {
         public static ListInspectionDevicesResponseBodyInspectionScripts build(java.util.Map<String, ?> map) throws Exception {
             ListInspectionDevicesResponseBodyInspectionScripts self = new ListInspectionDevicesResponseBodyInspectionScripts();
             return TeaModel.build(map, self);
+        }
+
+        public ListInspectionDevicesResponseBodyInspectionScripts setAppState(String appState) {
+            this.appState = appState;
+            return this;
+        }
+        public String getAppState() {
+            return this.appState;
         }
 
         public ListInspectionDevicesResponseBodyInspectionScripts setDeviceId(String deviceId) {

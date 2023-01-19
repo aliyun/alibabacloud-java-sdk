@@ -4,6 +4,9 @@ package com.aliyun.cmn20200825.models;
 import com.aliyun.tea.*;
 
 public class ListInspectionDevicesShrinkRequest extends TeaModel {
+    @NameInMap("AppState")
+    public String appState;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,23 @@ public class ListInspectionDevicesShrinkRequest extends TeaModel {
     @NameInMap("Role")
     public String role;
 
+    @NameInMap("Space")
+    public String space;
+
     @NameInMap("Vendor")
     public String vendor;
 
     public static ListInspectionDevicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInspectionDevicesShrinkRequest self = new ListInspectionDevicesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInspectionDevicesShrinkRequest setAppState(String appState) {
+        this.appState = appState;
+        return this;
+    }
+    public String getAppState() {
+        return this.appState;
     }
 
     public ListInspectionDevicesShrinkRequest setInstanceId(String instanceId) {
@@ -43,6 +57,14 @@ public class ListInspectionDevicesShrinkRequest extends TeaModel {
     }
     public String getRole() {
         return this.role;
+    }
+
+    public ListInspectionDevicesShrinkRequest setSpace(String space) {
+        this.space = space;
+        return this;
+    }
+    public String getSpace() {
+        return this.space;
     }
 
     public ListInspectionDevicesShrinkRequest setVendor(String vendor) {
