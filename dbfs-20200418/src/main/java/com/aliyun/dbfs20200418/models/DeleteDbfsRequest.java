@@ -4,6 +4,9 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DeleteDbfsRequest extends TeaModel {
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("FsId")
     public String fsId;
 
@@ -13,6 +16,14 @@ public class DeleteDbfsRequest extends TeaModel {
     public static DeleteDbfsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDbfsRequest self = new DeleteDbfsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDbfsRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public DeleteDbfsRequest setFsId(String fsId) {

@@ -90,7 +90,7 @@ public class GetDbfsResponseBody extends TeaModel {
         @NameInMap("SnapshotCount")
         public Integer snapshotCount;
 
-        @NameInMap("totalSize")
+        @NameInMap("TotalSize")
         public Long totalSize;
 
         public static GetDbfsResponseBodyDBFSInfoSnapshotInfo build(java.util.Map<String, ?> map) throws Exception {
