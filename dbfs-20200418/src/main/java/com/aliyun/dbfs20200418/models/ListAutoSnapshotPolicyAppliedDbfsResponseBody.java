@@ -78,13 +78,13 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
         public Long sizeG;
 
         @NameInMap("SnapshotCount")
-        public String snapshotCount;
+        public Integer snapshotCount;
 
         @NameInMap("Status")
         public String status;
 
         @NameInMap("TotalSize")
-        public String totalSize;
+        public Long totalSize;
 
         public static ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList build(java.util.Map<String, ?> map) throws Exception {
             ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList self = new ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList();
@@ -123,11 +123,11 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
             return this.sizeG;
         }
 
-        public ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList setSnapshotCount(String snapshotCount) {
+        public ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList setSnapshotCount(Integer snapshotCount) {
             this.snapshotCount = snapshotCount;
             return this;
         }
-        public String getSnapshotCount() {
+        public Integer getSnapshotCount() {
             return this.snapshotCount;
         }
 
@@ -139,11 +139,11 @@ public class ListAutoSnapshotPolicyAppliedDbfsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList setTotalSize(String totalSize) {
+        public ListAutoSnapshotPolicyAppliedDbfsResponseBodyDbfsList setTotalSize(Long totalSize) {
             this.totalSize = totalSize;
             return this;
         }
-        public String getTotalSize() {
+        public Long getTotalSize() {
             return this.totalSize;
         }
 

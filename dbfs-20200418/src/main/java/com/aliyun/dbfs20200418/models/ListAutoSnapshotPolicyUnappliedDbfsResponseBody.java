@@ -78,7 +78,7 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
         public Long sizeG;
 
         @NameInMap("SnapshotCount")
-        public String snapshotCount;
+        public Integer snapshotCount;
 
         @NameInMap("Status")
         public String status;
@@ -123,11 +123,11 @@ public class ListAutoSnapshotPolicyUnappliedDbfsResponseBody extends TeaModel {
             return this.sizeG;
         }
 
-        public ListAutoSnapshotPolicyUnappliedDbfsResponseBodyDbfsList setSnapshotCount(String snapshotCount) {
+        public ListAutoSnapshotPolicyUnappliedDbfsResponseBodyDbfsList setSnapshotCount(Integer snapshotCount) {
             this.snapshotCount = snapshotCount;
             return this;
         }
-        public String getSnapshotCount() {
+        public Integer getSnapshotCount() {
             return this.snapshotCount;
         }
 
