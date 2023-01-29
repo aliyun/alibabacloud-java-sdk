@@ -242,6 +242,113 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyInstancesInstanceSnapshotList extends TeaModel {
+        @NameInMap("GmtCreateTime")
+        public String gmtCreateTime;
+
+        @NameInMap("GmtModifiedTime")
+        public String gmtModifiedTime;
+
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("ImageName")
+        public String imageName;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
+        @NameInMap("ReasonCode")
+        public String reasonCode;
+
+        @NameInMap("ReasonMessage")
+        public String reasonMessage;
+
+        @NameInMap("RepositoryUrl")
+        public String repositoryUrl;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static ListInstancesResponseBodyInstancesInstanceSnapshotList build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesInstanceSnapshotList self = new ListInstancesResponseBodyInstancesInstanceSnapshotList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesInstanceSnapshotList setGmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+        public String getGmtCreateTime() {
+            return this.gmtCreateTime;
+        }
+
+        public ListInstancesResponseBodyInstancesInstanceSnapshotList setGmtModifiedTime(String gmtModifiedTime) {
+            this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+        public String getGmtModifiedTime() {
+            return this.gmtModifiedTime;
+        }
+
+        public ListInstancesResponseBodyInstancesInstanceSnapshotList setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public ListInstancesResponseBodyInstancesInstanceSnapshotList setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        public ListInstancesResponseBodyInstancesInstanceSnapshotList setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public ListInstancesResponseBodyInstancesInstanceSnapshotList setReasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        public ListInstancesResponseBodyInstancesInstanceSnapshotList setReasonMessage(String reasonMessage) {
+            this.reasonMessage = reasonMessage;
+            return this;
+        }
+        public String getReasonMessage() {
+            return this.reasonMessage;
+        }
+
+        public ListInstancesResponseBodyInstancesInstanceSnapshotList setRepositoryUrl(String repositoryUrl) {
+            this.repositoryUrl = repositoryUrl;
+            return this;
+        }
+        public String getRepositoryUrl() {
+            return this.repositoryUrl;
+        }
+
+        public ListInstancesResponseBodyInstancesInstanceSnapshotList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstancesLabels extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -288,8 +395,17 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        @NameInMap("ReasonCode")
+        public String reasonCode;
+
+        @NameInMap("ReasonMessage")
+        public String reasonMessage;
+
         @NameInMap("RepositoryUrl")
         public String repositoryUrl;
+
+        @NameInMap("Status")
+        public String status;
 
         public static ListInstancesResponseBodyInstancesLatestSnapshot build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstancesLatestSnapshot self = new ListInstancesResponseBodyInstancesLatestSnapshot();
@@ -336,12 +452,36 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.imageUrl;
         }
 
+        public ListInstancesResponseBodyInstancesLatestSnapshot setReasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        public ListInstancesResponseBodyInstancesLatestSnapshot setReasonMessage(String reasonMessage) {
+            this.reasonMessage = reasonMessage;
+            return this;
+        }
+        public String getReasonMessage() {
+            return this.reasonMessage;
+        }
+
         public ListInstancesResponseBodyInstancesLatestSnapshot setRepositoryUrl(String repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
         public String getRepositoryUrl() {
             return this.repositoryUrl;
+        }
+
+        public ListInstancesResponseBodyInstancesLatestSnapshot setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
@@ -498,6 +638,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
         @NameInMap("InstanceShutdownTimer")
         public ListInstancesResponseBodyInstancesInstanceShutdownTimer instanceShutdownTimer;
+
+        @NameInMap("InstanceSnapshotList")
+        public java.util.List<ListInstancesResponseBodyInstancesInstanceSnapshotList> instanceSnapshotList;
 
         @NameInMap("InstanceUrl")
         public String instanceUrl;
@@ -685,6 +828,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public ListInstancesResponseBodyInstancesInstanceShutdownTimer getInstanceShutdownTimer() {
             return this.instanceShutdownTimer;
+        }
+
+        public ListInstancesResponseBodyInstances setInstanceSnapshotList(java.util.List<ListInstancesResponseBodyInstancesInstanceSnapshotList> instanceSnapshotList) {
+            this.instanceSnapshotList = instanceSnapshotList;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyInstancesInstanceSnapshotList> getInstanceSnapshotList() {
+            return this.instanceSnapshotList;
         }
 
         public ListInstancesResponseBodyInstances setInstanceUrl(String instanceUrl) {
