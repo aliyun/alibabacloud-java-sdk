@@ -43,8 +43,14 @@ public class AddCasesRequest extends TeaModel {
     }
 
     public static class AddCasesRequestCaseList extends TeaModel {
+        @NameInMap("Caller")
+        public String caller;
+
         @NameInMap("CustomVariables")
         public String customVariables;
+
+        @NameInMap("MaskedCallee")
+        public String maskedCallee;
 
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -57,12 +63,28 @@ public class AddCasesRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public AddCasesRequestCaseList setCaller(String caller) {
+            this.caller = caller;
+            return this;
+        }
+        public String getCaller() {
+            return this.caller;
+        }
+
         public AddCasesRequestCaseList setCustomVariables(String customVariables) {
             this.customVariables = customVariables;
             return this;
         }
         public String getCustomVariables() {
             return this.customVariables;
+        }
+
+        public AddCasesRequestCaseList setMaskedCallee(String maskedCallee) {
+            this.maskedCallee = maskedCallee;
+            return this;
+        }
+        public String getMaskedCallee() {
+            return this.maskedCallee;
         }
 
         public AddCasesRequestCaseList setPhoneNumber(String phoneNumber) {

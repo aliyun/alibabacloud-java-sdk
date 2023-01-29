@@ -25,6 +25,9 @@ public class ListAttemptsRequest extends TeaModel {
     @NameInMap("ContactId")
     public String contactId;
 
+    @NameInMap("Criteria")
+    public String criteria;
+
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -102,6 +105,14 @@ public class ListAttemptsRequest extends TeaModel {
     }
     public String getContactId() {
         return this.contactId;
+    }
+
+    public ListAttemptsRequest setCriteria(String criteria) {
+        this.criteria = criteria;
+        return this;
+    }
+    public String getCriteria() {
+        return this.criteria;
     }
 
     public ListAttemptsRequest setEndTime(Long endTime) {

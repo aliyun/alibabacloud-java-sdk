@@ -19,6 +19,9 @@ public class CreateCampaignShrinkRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("ExecutingUntilTimeout")
+    public Boolean executingUntilTimeout;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -92,6 +95,14 @@ public class CreateCampaignShrinkRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public CreateCampaignShrinkRequest setExecutingUntilTimeout(Boolean executingUntilTimeout) {
+        this.executingUntilTimeout = executingUntilTimeout;
+        return this;
+    }
+    public Boolean getExecutingUntilTimeout() {
+        return this.executingUntilTimeout;
     }
 
     public CreateCampaignShrinkRequest setInstanceId(String instanceId) {

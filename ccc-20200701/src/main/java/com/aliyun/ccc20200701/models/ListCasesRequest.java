@@ -19,6 +19,9 @@ public class ListCasesRequest extends TeaModel {
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    @NameInMap("State")
+    public String state;
+
     public static ListCasesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCasesRequest self = new ListCasesRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListCasesRequest extends TeaModel {
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public ListCasesRequest setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
     }
 
 }
