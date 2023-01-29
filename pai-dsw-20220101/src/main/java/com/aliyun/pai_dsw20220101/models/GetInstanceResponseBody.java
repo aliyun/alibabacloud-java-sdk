@@ -55,6 +55,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceShutdownTimer")
     public GetInstanceResponseBodyInstanceShutdownTimer instanceShutdownTimer;
 
+    @NameInMap("InstanceSnapshotList")
+    public java.util.List<GetInstanceResponseBodyInstanceSnapshotList> instanceSnapshotList;
+
     @NameInMap("InstanceUrl")
     public String instanceUrl;
 
@@ -266,6 +269,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public GetInstanceResponseBodyInstanceShutdownTimer getInstanceShutdownTimer() {
         return this.instanceShutdownTimer;
+    }
+
+    public GetInstanceResponseBody setInstanceSnapshotList(java.util.List<GetInstanceResponseBodyInstanceSnapshotList> instanceSnapshotList) {
+        this.instanceSnapshotList = instanceSnapshotList;
+        return this;
+    }
+    public java.util.List<GetInstanceResponseBodyInstanceSnapshotList> getInstanceSnapshotList() {
+        return this.instanceSnapshotList;
     }
 
     public GetInstanceResponseBody setInstanceUrl(String instanceUrl) {
@@ -600,6 +611,113 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyInstanceSnapshotList extends TeaModel {
+        @NameInMap("GmtCreateTime")
+        public String gmtCreateTime;
+
+        @NameInMap("GmtModifiedTime")
+        public String gmtModifiedTime;
+
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("ImageName")
+        public String imageName;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
+        @NameInMap("ReasonCode")
+        public String reasonCode;
+
+        @NameInMap("ReasonMessage")
+        public String reasonMessage;
+
+        @NameInMap("RepositoryUrl")
+        public String repositoryUrl;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static GetInstanceResponseBodyInstanceSnapshotList build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyInstanceSnapshotList self = new GetInstanceResponseBodyInstanceSnapshotList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyInstanceSnapshotList setGmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+        public String getGmtCreateTime() {
+            return this.gmtCreateTime;
+        }
+
+        public GetInstanceResponseBodyInstanceSnapshotList setGmtModifiedTime(String gmtModifiedTime) {
+            this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+        public String getGmtModifiedTime() {
+            return this.gmtModifiedTime;
+        }
+
+        public GetInstanceResponseBodyInstanceSnapshotList setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public GetInstanceResponseBodyInstanceSnapshotList setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        public GetInstanceResponseBodyInstanceSnapshotList setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public GetInstanceResponseBodyInstanceSnapshotList setReasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        public GetInstanceResponseBodyInstanceSnapshotList setReasonMessage(String reasonMessage) {
+            this.reasonMessage = reasonMessage;
+            return this;
+        }
+        public String getReasonMessage() {
+            return this.reasonMessage;
+        }
+
+        public GetInstanceResponseBodyInstanceSnapshotList setRepositoryUrl(String repositoryUrl) {
+            this.repositoryUrl = repositoryUrl;
+            return this;
+        }
+        public String getRepositoryUrl() {
+            return this.repositoryUrl;
+        }
+
+        public GetInstanceResponseBodyInstanceSnapshotList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyLabels extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -646,8 +764,17 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        @NameInMap("ReasonCode")
+        public String reasonCode;
+
+        @NameInMap("ReasonMessage")
+        public String reasonMessage;
+
         @NameInMap("RepositoryUrl")
         public String repositoryUrl;
+
+        @NameInMap("Status")
+        public String status;
 
         public static GetInstanceResponseBodyLatestSnapshot build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyLatestSnapshot self = new GetInstanceResponseBodyLatestSnapshot();
@@ -694,12 +821,36 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.imageUrl;
         }
 
+        public GetInstanceResponseBodyLatestSnapshot setReasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        public GetInstanceResponseBodyLatestSnapshot setReasonMessage(String reasonMessage) {
+            this.reasonMessage = reasonMessage;
+            return this;
+        }
+        public String getReasonMessage() {
+            return this.reasonMessage;
+        }
+
         public GetInstanceResponseBodyLatestSnapshot setRepositoryUrl(String repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
         public String getRepositoryUrl() {
             return this.repositoryUrl;
+        }
+
+        public GetInstanceResponseBodyLatestSnapshot setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
