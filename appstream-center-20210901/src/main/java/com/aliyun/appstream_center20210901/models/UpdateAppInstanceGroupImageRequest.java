@@ -16,6 +16,9 @@ public class UpdateAppInstanceGroupImageRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    @NameInMap("UpdateMode")
+    public String updateMode;
+
     public static UpdateAppInstanceGroupImageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppInstanceGroupImageRequest self = new UpdateAppInstanceGroupImageRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class UpdateAppInstanceGroupImageRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public UpdateAppInstanceGroupImageRequest setUpdateMode(String updateMode) {
+        this.updateMode = updateMode;
+        return this;
+    }
+    public String getUpdateMode() {
+        return this.updateMode;
     }
 
 }

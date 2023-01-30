@@ -455,6 +455,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceStatus")
+        public String resourceStatus;
+
         @NameInMap("SessionTimeout")
         public String sessionTimeout;
 
@@ -579,6 +582,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setResourceStatus(String resourceStatus) {
+            this.resourceStatus = resourceStatus;
+            return this;
+        }
+        public String getResourceStatus() {
+            return this.resourceStatus;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setSessionTimeout(String sessionTimeout) {
