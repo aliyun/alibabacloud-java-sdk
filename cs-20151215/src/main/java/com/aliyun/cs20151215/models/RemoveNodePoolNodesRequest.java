@@ -7,6 +7,9 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
     @NameInMap("drain_node")
     public Boolean drainNode;
 
+    @NameInMap("instance_ids")
+    public java.util.List<String> instanceIds;
+
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 
@@ -24,6 +27,14 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
     }
     public Boolean getDrainNode() {
         return this.drainNode;
+    }
+
+    public RemoveNodePoolNodesRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public RemoveNodePoolNodesRequest setNodes(java.util.List<String> nodes) {

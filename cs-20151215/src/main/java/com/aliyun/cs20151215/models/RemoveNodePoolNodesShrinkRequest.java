@@ -7,6 +7,9 @@ public class RemoveNodePoolNodesShrinkRequest extends TeaModel {
     @NameInMap("drain_node")
     public Boolean drainNode;
 
+    @NameInMap("instance_ids")
+    public String instanceIdsShrink;
+
     @NameInMap("nodes")
     public String nodesShrink;
 
@@ -24,6 +27,14 @@ public class RemoveNodePoolNodesShrinkRequest extends TeaModel {
     }
     public Boolean getDrainNode() {
         return this.drainNode;
+    }
+
+    public RemoveNodePoolNodesShrinkRequest setInstanceIdsShrink(String instanceIdsShrink) {
+        this.instanceIdsShrink = instanceIdsShrink;
+        return this;
+    }
+    public String getInstanceIdsShrink() {
+        return this.instanceIdsShrink;
     }
 
     public RemoveNodePoolNodesShrinkRequest setNodesShrink(String nodesShrink) {
