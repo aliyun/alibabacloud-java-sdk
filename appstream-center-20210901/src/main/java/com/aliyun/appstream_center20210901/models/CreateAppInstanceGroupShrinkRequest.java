@@ -25,6 +25,9 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("Network")
+    public String networkShrink;
+
     @NameInMap("NodePool")
     public String nodePoolShrink;
 
@@ -33,6 +36,9 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
 
     @NameInMap("PeriodUnit")
     public String periodUnit;
+
+    @NameInMap("PreOpenAppId")
+    public String preOpenAppId;
 
     @NameInMap("ProductType")
     public String productType;
@@ -110,6 +116,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
         return this.chargeType;
     }
 
+    public CreateAppInstanceGroupShrinkRequest setNetworkShrink(String networkShrink) {
+        this.networkShrink = networkShrink;
+        return this;
+    }
+    public String getNetworkShrink() {
+        return this.networkShrink;
+    }
+
     public CreateAppInstanceGroupShrinkRequest setNodePoolShrink(String nodePoolShrink) {
         this.nodePoolShrink = nodePoolShrink;
         return this;
@@ -132,6 +146,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setPreOpenAppId(String preOpenAppId) {
+        this.preOpenAppId = preOpenAppId;
+        return this;
+    }
+    public String getPreOpenAppId() {
+        return this.preOpenAppId;
     }
 
     public CreateAppInstanceGroupShrinkRequest setProductType(String productType) {

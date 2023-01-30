@@ -25,6 +25,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("Network")
+    public CreateAppInstanceGroupRequestNetwork network;
+
     @NameInMap("NodePool")
     public CreateAppInstanceGroupRequestNodePool nodePool;
 
@@ -33,6 +36,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     @NameInMap("PeriodUnit")
     public String periodUnit;
+
+    @NameInMap("PreOpenAppId")
+    public String preOpenAppId;
 
     @NameInMap("ProductType")
     public String productType;
@@ -110,6 +116,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         return this.chargeType;
     }
 
+    public CreateAppInstanceGroupRequest setNetwork(CreateAppInstanceGroupRequestNetwork network) {
+        this.network = network;
+        return this;
+    }
+    public CreateAppInstanceGroupRequestNetwork getNetwork() {
+        return this.network;
+    }
+
     public CreateAppInstanceGroupRequest setNodePool(CreateAppInstanceGroupRequestNodePool nodePool) {
         this.nodePool = nodePool;
         return this;
@@ -132,6 +146,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public CreateAppInstanceGroupRequest setPreOpenAppId(String preOpenAppId) {
+        this.preOpenAppId = preOpenAppId;
+        return this;
+    }
+    public String getPreOpenAppId() {
+        return this.preOpenAppId;
     }
 
     public CreateAppInstanceGroupRequest setProductType(String productType) {
@@ -174,6 +196,148 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         return this.users;
     }
 
+    public static class CreateAppInstanceGroupRequestNetworkRoutes extends TeaModel {
+        @NameInMap("Destination")
+        public String destination;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        public static CreateAppInstanceGroupRequestNetworkRoutes build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestNetworkRoutes self = new CreateAppInstanceGroupRequestNetworkRoutes();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestNetworkRoutes setDestination(String destination) {
+            this.destination = destination;
+            return this;
+        }
+        public String getDestination() {
+            return this.destination;
+        }
+
+        public CreateAppInstanceGroupRequestNetworkRoutes setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+    }
+
+    public static class CreateAppInstanceGroupRequestNetwork extends TeaModel {
+        @NameInMap("Routes")
+        public java.util.List<CreateAppInstanceGroupRequestNetworkRoutes> routes;
+
+        @NameInMap("StrategyType")
+        public String strategyType;
+
+        public static CreateAppInstanceGroupRequestNetwork build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestNetwork self = new CreateAppInstanceGroupRequestNetwork();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestNetwork setRoutes(java.util.List<CreateAppInstanceGroupRequestNetworkRoutes> routes) {
+            this.routes = routes;
+            return this;
+        }
+        public java.util.List<CreateAppInstanceGroupRequestNetworkRoutes> getRoutes() {
+            return this.routes;
+        }
+
+        public CreateAppInstanceGroupRequestNetwork setStrategyType(String strategyType) {
+            this.strategyType = strategyType;
+            return this;
+        }
+        public String getStrategyType() {
+            return this.strategyType;
+        }
+
+    }
+
+    public static class CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods extends TeaModel {
+        @NameInMap("Amount")
+        public Integer amount;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods self = new CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods setAmount(Integer amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        public CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules extends TeaModel {
+        @NameInMap("RecurrenceType")
+        public String recurrenceType;
+
+        @NameInMap("RecurrenceValues")
+        public java.util.List<Integer> recurrenceValues;
+
+        @NameInMap("TimerPeriods")
+        public java.util.List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods> timerPeriods;
+
+        public static CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules self = new CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules setRecurrenceType(String recurrenceType) {
+            this.recurrenceType = recurrenceType;
+            return this;
+        }
+        public String getRecurrenceType() {
+            return this.recurrenceType;
+        }
+
+        public CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules setRecurrenceValues(java.util.List<Integer> recurrenceValues) {
+            this.recurrenceValues = recurrenceValues;
+            return this;
+        }
+        public java.util.List<Integer> getRecurrenceValues() {
+            return this.recurrenceValues;
+        }
+
+        public CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules setTimerPeriods(java.util.List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods> timerPeriods) {
+            this.timerPeriods = timerPeriods;
+            return this;
+        }
+        public java.util.List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods> getTimerPeriods() {
+            return this.timerPeriods;
+        }
+
+    }
+
     public static class CreateAppInstanceGroupRequestNodePool extends TeaModel {
         @NameInMap("MaxScalingAmount")
         public Integer maxScalingAmount;
@@ -187,6 +351,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("NodeInstanceType")
         public String nodeInstanceType;
 
+        @NameInMap("RecurrenceSchedules")
+        public java.util.List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules> recurrenceSchedules;
+
         @NameInMap("ScalingDownAfterIdleMinutes")
         public Integer scalingDownAfterIdleMinutes;
 
@@ -196,8 +363,17 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("ScalingUsageThreshold")
         public String scalingUsageThreshold;
 
+        @NameInMap("StrategyDisableDate")
+        public String strategyDisableDate;
+
+        @NameInMap("StrategyEnableDate")
+        public String strategyEnableDate;
+
         @NameInMap("StrategyType")
         public String strategyType;
+
+        @NameInMap("WarmUp")
+        public Boolean warmUp;
 
         public static CreateAppInstanceGroupRequestNodePool build(java.util.Map<String, ?> map) throws Exception {
             CreateAppInstanceGroupRequestNodePool self = new CreateAppInstanceGroupRequestNodePool();
@@ -236,6 +412,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
             return this.nodeInstanceType;
         }
 
+        public CreateAppInstanceGroupRequestNodePool setRecurrenceSchedules(java.util.List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules> recurrenceSchedules) {
+            this.recurrenceSchedules = recurrenceSchedules;
+            return this;
+        }
+        public java.util.List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules> getRecurrenceSchedules() {
+            return this.recurrenceSchedules;
+        }
+
         public CreateAppInstanceGroupRequestNodePool setScalingDownAfterIdleMinutes(Integer scalingDownAfterIdleMinutes) {
             this.scalingDownAfterIdleMinutes = scalingDownAfterIdleMinutes;
             return this;
@@ -260,12 +444,36 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
             return this.scalingUsageThreshold;
         }
 
+        public CreateAppInstanceGroupRequestNodePool setStrategyDisableDate(String strategyDisableDate) {
+            this.strategyDisableDate = strategyDisableDate;
+            return this;
+        }
+        public String getStrategyDisableDate() {
+            return this.strategyDisableDate;
+        }
+
+        public CreateAppInstanceGroupRequestNodePool setStrategyEnableDate(String strategyEnableDate) {
+            this.strategyEnableDate = strategyEnableDate;
+            return this;
+        }
+        public String getStrategyEnableDate() {
+            return this.strategyEnableDate;
+        }
+
         public CreateAppInstanceGroupRequestNodePool setStrategyType(String strategyType) {
             this.strategyType = strategyType;
             return this;
         }
         public String getStrategyType() {
             return this.strategyType;
+        }
+
+        public CreateAppInstanceGroupRequestNodePool setWarmUp(Boolean warmUp) {
+            this.warmUp = warmUp;
+            return this;
+        }
+        public Boolean getWarmUp() {
+            return this.warmUp;
         }
 
     }
