@@ -10,18 +10,24 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
     @NameInMap("model")
     public String model;
 
-    // Product Key
+    /**
+     * <p>Product Key</p>
+     */
     @NameInMap("product_key")
     public String productKey;
 
-    // Request ID
+    /**
+     * <p>Request ID</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
     @NameInMap("sn")
     public String sn;
 
-    // Token
+    /**
+     * <p>Token</p>
+     */
     @NameInMap("token")
     public String token;
 

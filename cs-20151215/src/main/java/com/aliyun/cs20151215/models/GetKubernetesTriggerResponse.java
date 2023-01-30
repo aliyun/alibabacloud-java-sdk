@@ -64,7 +64,9 @@ public class GetKubernetesTriggerResponse extends TeaModel {
         @NameInMap("action")
         public String action;
 
-        // Token
+        /**
+         * <p>Token</p>
+         */
         @NameInMap("token")
         public String token;
 

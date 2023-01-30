@@ -11,7 +11,7 @@ public class DescribeClusterEventsRequest extends TeaModel {
     public Long pageSize;
 
     @NameInMap("task_id")
-    public Long taskId;
+    public String taskId;
 
     public static DescribeClusterEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterEventsRequest self = new DescribeClusterEventsRequest();
@@ -34,11 +34,11 @@ public class DescribeClusterEventsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeClusterEventsRequest setTaskId(Long taskId) {
+    public DescribeClusterEventsRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
-    public Long getTaskId() {
+    public String getTaskId() {
         return this.taskId;
     }
 

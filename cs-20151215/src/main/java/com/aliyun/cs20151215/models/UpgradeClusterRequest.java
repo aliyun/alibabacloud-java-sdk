@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterRequest extends TeaModel {
     @NameInMap("component_name")
+    @Deprecated
     public String componentName;
 
     @NameInMap("master_only")
@@ -14,6 +15,7 @@ public class UpgradeClusterRequest extends TeaModel {
     public String nextVersion;
 
     @NameInMap("version")
+    @Deprecated
     public String version;
 
     public static UpgradeClusterRequest build(java.util.Map<String, ?> map) throws Exception {
