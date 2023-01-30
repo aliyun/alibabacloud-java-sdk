@@ -10,8 +10,8 @@ public class FixNodePoolVulsRequest extends TeaModel {
     @NameInMap("rollout_policy")
     public FixNodePoolVulsRequestRolloutPolicy rolloutPolicy;
 
-    @NameInMap("vul_list")
-    public java.util.List<String> vulList;
+    @NameInMap("vuls")
+    public java.util.List<String> vuls;
 
     public static FixNodePoolVulsRequest build(java.util.Map<String, ?> map) throws Exception {
         FixNodePoolVulsRequest self = new FixNodePoolVulsRequest();
@@ -34,12 +34,12 @@ public class FixNodePoolVulsRequest extends TeaModel {
         return this.rolloutPolicy;
     }
 
-    public FixNodePoolVulsRequest setVulList(java.util.List<String> vulList) {
-        this.vulList = vulList;
+    public FixNodePoolVulsRequest setVuls(java.util.List<String> vuls) {
+        this.vuls = vuls;
         return this;
     }
-    public java.util.List<String> getVulList() {
-        return this.vulList;
+    public java.util.List<String> getVuls() {
+        return this.vuls;
     }
 
     public static class FixNodePoolVulsRequestRolloutPolicy extends TeaModel {

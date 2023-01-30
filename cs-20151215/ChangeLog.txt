@@ -1,3 +1,6 @@
+2023-01-30 Version: 3.0.26
+- Update API.
+
 2023-01-05 Version: 3.0.25
 - New API ScanClusterVuls.
 - New API DescribeClusterVuls.
