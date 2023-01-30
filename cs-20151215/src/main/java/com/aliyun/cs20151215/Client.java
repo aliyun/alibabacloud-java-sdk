@@ -3365,6 +3365,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RemoveNodePoolNodesShrinkRequest request = new RemoveNodePoolNodesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "instance_ids", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodes)) {
             request.nodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodes, "nodes", "json");
         }
@@ -3372,6 +3376,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.drainNode)) {
             query.put("drain_node", request.drainNode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("instance_ids", request.instanceIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodesShrink)) {
