@@ -22,6 +22,9 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     @NameInMap("IsFakeAsn")
     public Boolean isFakeAsn;
 
+    @NameInMap("LocalAsn")
+    public Long localAsn;
+
     @NameInMap("Name")
     public String name;
 
@@ -42,6 +45,9 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("RouteQuota")
+    public Integer routeQuota;
 
     public static ModifyBgpGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBgpGroupAttributeRequest self = new ModifyBgpGroupAttributeRequest();
@@ -94,6 +100,14 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     }
     public Boolean getIsFakeAsn() {
         return this.isFakeAsn;
+    }
+
+    public ModifyBgpGroupAttributeRequest setLocalAsn(Long localAsn) {
+        this.localAsn = localAsn;
+        return this;
+    }
+    public Long getLocalAsn() {
+        return this.localAsn;
     }
 
     public ModifyBgpGroupAttributeRequest setName(String name) {
@@ -150,6 +164,14 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyBgpGroupAttributeRequest setRouteQuota(Integer routeQuota) {
+        this.routeQuota = routeQuota;
+        return this;
+    }
+    public Integer getRouteQuota() {
+        return this.routeQuota;
     }
 
 }
