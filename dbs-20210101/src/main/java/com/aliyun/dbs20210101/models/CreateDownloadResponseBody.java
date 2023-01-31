@@ -4,34 +4,48 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class CreateDownloadResponseBody extends TeaModel {
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The response parameters.
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public CreateDownloadResponseBodyData data;
 
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // *   **true**: The request is successful.
-    // *   **false**: The request fails.
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request fails.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -97,68 +111,94 @@ public class CreateDownloadResponseBody extends TeaModel {
     }
 
     public static class CreateDownloadResponseBodyData extends TeaModel {
-        // The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp.
+        /**
+         * <p>The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp.</p>
+         */
         @NameInMap("BackupSetTime")
         public Long backupSetTime;
 
-        // The ID of the full backup set.
+        /**
+         * <p>The ID of the full backup set.</p>
+         */
         @NameInMap("BakSetId")
         public String bakSetId;
 
-        // The database and table information that is returned if the download task is a database and table filtering task.
+        /**
+         * <p>The database and table information that is returned if the download task is a database and table filtering task.</p>
+         */
         @NameInMap("DbList")
         public String dbList;
 
-        // The status of the download task. Valid values:
-        // 
-        // *   Initializing: The download task is being initialized.
-        // *   queuing: The download task is queuing.
-        // *   running: The download task is running.
-        // *   failed: The download task fails.
-        // *   finished: The download task is complete.
-        // *   expired: The download task expires.
-        // 
-        // >  The download task expires in three days after the task is complete if the TargetType parameter is set to URL.
+        /**
+         * <p>The status of the download task. Valid values:</p>
+         * <br>
+         * <p>*   Initializing: The download task is being initialized.</p>
+         * <p>*   queuing: The download task is queuing.</p>
+         * <p>*   running: The download task is running.</p>
+         * <p>*   failed: The download task fails.</p>
+         * <p>*   finished: The download task is complete.</p>
+         * <p>*   expired: The download task expires.</p>
+         * <br>
+         * <p>>  The download task expires in three days after the task is complete if the TargetType parameter is set to URL.</p>
+         */
         @NameInMap("DownloadStatus")
         public String downloadStatus;
 
-        // The amount of output data. Unit: bytes.
+        /**
+         * <p>The amount of output data. Unit: bytes.</p>
+         */
         @NameInMap("ExportDataSize")
         public Long exportDataSize;
 
-        // The format to which the downloaded data is converted.
+        /**
+         * <p>The format to which the downloaded data is converted.</p>
+         */
         @NameInMap("Format")
         public String format;
 
-        // The time when the download task was created. The value is a timestamp.
+        /**
+         * <p>The time when the download task was created. The value is a timestamp.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        // The amount of data that is processed. Unit: bytes.
+        /**
+         * <p>The amount of data that is processed. Unit: bytes.</p>
+         */
         @NameInMap("ImportDataSize")
         public Long importDataSize;
 
-        // The number of tables that have been downloaded and the total number of tables to be downloaded.
-        // 
-        // >  If the task is in the preparation stage, 0/0 is returned.
+        /**
+         * <p>The number of tables that have been downloaded and the total number of tables to be downloaded.</p>
+         * <br>
+         * <p>>  If the task is in the preparation stage, 0/0 is returned.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
-        // The ID of the region in which the instance resides.
+        /**
+         * <p>The ID of the region in which the instance resides.</p>
+         */
         @NameInMap("RegionCode")
         public String regionCode;
 
-        // The destination path of the downloaded data.
-        // 
-        // >  This parameter is returned if the TargetType parameter is set to OSS.
+        /**
+         * <p>The destination path of the downloaded data.</p>
+         * <br>
+         * <p>>  This parameter is returned if the TargetType parameter is set to OSS.</p>
+         */
         @NameInMap("TargetPath")
         public String targetPath;
 
-        // The type of the method in which the backup set is downloaded.
+        /**
+         * <p>The type of the method in which the backup set is downloaded.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
-        // The ID of the download task.
+        /**
+         * <p>The ID of the download task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

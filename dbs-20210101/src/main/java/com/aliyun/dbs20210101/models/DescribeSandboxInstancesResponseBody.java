@@ -4,43 +4,57 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSandboxInstancesResponseBody extends TeaModel {
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The response parameters.
-    // 
-    // *   **connectionString**: the connection string of the sandbox instance, in the format of IP address:Port number. This parameter indicates the endpoint of the sandbox instance if the value of the SandboxType parameter is **Sandbox**. This parameter indicates the Network File System (NFS) mount address if the value of the SandboxType parameter is **NFS**.
-    // *   **restoreSeconds**: the time required to create the sandbox instance. Unit: seconds.
-    // *   **restoreTime**: the point in time to which the sandbox instance is restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
-    // *   **instanceId**: the ID of the sandbox instance.
-    // *   **backupSetId**: the ID of the backup set.
-    // *   **createTime**: the point in time when the sandbox instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
-    // *   **backupPlanId**: the ID of the backup schedule.
-    // *   **vpcId**: the ID of the virtual private cloud (VPC).
-    // *   **vpcSwitchId**: the ID of the VSwitch.
-    // *   **sandboxSpecification**: the specifications of the sandbox instance.
-    // *   **status**: the status of the sandbox instance. Valid values: **running**, **check_pass**, and **stop**.
+    /**
+     * <p>The response parameters.</p>
+     * <br>
+     * <p>*   **connectionString**: the connection string of the sandbox instance, in the format of IP address:Port number. This parameter indicates the endpoint of the sandbox instance if the value of the SandboxType parameter is **Sandbox**. This parameter indicates the Network File System (NFS) mount address if the value of the SandboxType parameter is **NFS**.</p>
+     * <p>*   **restoreSeconds**: the time required to create the sandbox instance. Unit: seconds.</p>
+     * <p>*   **restoreTime**: the point in time to which the sandbox instance is restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>*   **instanceId**: the ID of the sandbox instance.</p>
+     * <p>*   **backupSetId**: the ID of the backup set.</p>
+     * <p>*   **createTime**: the point in time when the sandbox instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>*   **backupPlanId**: the ID of the backup schedule.</p>
+     * <p>*   **vpcId**: the ID of the virtual private cloud (VPC).</p>
+     * <p>*   **vpcSwitchId**: the ID of the VSwitch.</p>
+     * <p>*   **sandboxSpecification**: the specifications of the sandbox instance.</p>
+     * <p>*   **status**: the status of the sandbox instance. Valid values: **running**, **check_pass**, and **stop**.</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful.
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 

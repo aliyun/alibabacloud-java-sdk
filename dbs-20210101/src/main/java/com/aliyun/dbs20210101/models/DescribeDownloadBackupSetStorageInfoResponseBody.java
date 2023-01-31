@@ -4,34 +4,48 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The response parameters.
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public DescribeDownloadBackupSetStorageInfoResponseBodyData data;
 
-    // The error code.
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    // The error message.
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: the request is successful.
-    // *   **false**: the request fails.
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: the request is successful.</p>
+     * <p>*   **false**: the request fails.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -97,17 +111,23 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDownloadBackupSetStorageInfoResponseBodyData extends TeaModel {
-        // The expiration time of the URL.
-        // 
-        // >  The return value is in the timestamp format.
+        /**
+         * <p>The expiration time of the URL.</p>
+         * <br>
+         * <p>>  The return value is in the timestamp format.</p>
+         */
         @NameInMap("ExpirationTime")
         public Long expirationTime;
 
-        // The private download URL of the backup set.
+        /**
+         * <p>The private download URL of the backup set.</p>
+         */
         @NameInMap("PrivateUrl")
         public String privateUrl;
 
-        // The public download URL of the backup set.
+        /**
+         * <p>The public download URL of the backup set.</p>
+         */
         @NameInMap("PublicUrl")
         public String publicUrl;
 

@@ -4,25 +4,33 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSandboxBackupSetsRequest extends TeaModel {
-    // The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.
-    // 
-    // >  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
+    /**
+     * <p>The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.</p>
+     * <br>
+     * <p>>  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
+     */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
-    // The ID of the backup set. If this parameter is specified, only the snapshot of the backup set is returned. If this parameter is not specified, all the snapshots of the backup schedule are returned.
+    /**
+     * <p>The ID of the backup set. If this parameter is specified, only the snapshot of the backup set is returned. If this parameter is not specified, all the snapshots of the backup schedule are returned.</p>
+     */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
-    // The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
-    // The number of entries to return on each page. Valid values:
-    // 
-    // *   30 (default value)
-    // *   50
-    // *   100
+    /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <br>
+     * <p>*   30 (default value)</p>
+     * <p>*   50</p>
+     * <p>*   100</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 

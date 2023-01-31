@@ -4,68 +4,90 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class CreateDownloadRequest extends TeaModel {
-    // The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.
-    // 
-    // >  This parameter is required if the BakSetType parameter is set to full.
+    /**
+     * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.</p>
+     * <br>
+     * <p>>  This parameter is required if the BakSetType parameter is set to full.</p>
+     */
     @NameInMap("BakSetId")
     public String bakSetId;
 
-    // The size of the full backup set. You can call the [DescribeBackups](~~26273~~) operation to query the size of the full backup set. Unit: bytes.
+    /**
+     * <p>The size of the full backup set. You can call the [DescribeBackups](~~26273~~) operation to query the size of the full backup set. Unit: bytes.</p>
+     */
     @NameInMap("BakSetSize")
     public String bakSetSize;
 
-    // The type of the download task. Valid values:
-    // 
-    // *   **full**: downloads a full backup set.
-    // *   **pitr**: downloads a backup set at a specific point in time.
+    /**
+     * <p>The type of the download task. Valid values:</p>
+     * <br>
+     * <p>*   **full**: downloads a full backup set.</p>
+     * <p>*   **pitr**: downloads a backup set at a specific point in time.</p>
+     */
     @NameInMap("BakSetType")
     public String bakSetType;
 
-    // The point in time at which the backup set is downloaded. The UNIX timestamp of the LONG type. Unit: milliseconds.
-    // 
-    // >  This parameter is required if the BakSetType parameter is set to pitr.
+    /**
+     * <p>The point in time at which the backup set is downloaded. The UNIX timestamp of the LONG type. Unit: milliseconds.</p>
+     * <br>
+     * <p>>  This parameter is required if the BakSetType parameter is set to pitr.</p>
+     */
     @NameInMap("DownloadPointInTime")
     public String downloadPointInTime;
 
-    // The destination format to which the downloaded backup set is converted. Valid values:
-    // 
-    // *   **csv**
-    // *   **SQL**
-    // *   **Parquet**
+    /**
+     * <p>The destination format to which the downloaded backup set is converted. Valid values:</p>
+     * <br>
+     * <p>*   **csv**</p>
+     * <p>*   **SQL**</p>
+     * <p>*   **Parquet**</p>
+     */
     @NameInMap("FormatType")
     public String formatType;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+    /**
+     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionCode")
     public String regionCode;
 
-    // The name of the OSS bucket that is used to store the backup set.
-    // 
-    // *   This parameter is required if the TargetType parameter is set to OSS.
-    // *   Make sure that your account has the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](~~26307~~). You can also grant permissions based on the operation instructions in the RAM console.
+    /**
+     * <p>The name of the OSS bucket that is used to store the backup set.</p>
+     * <br>
+     * <p>*   This parameter is required if the TargetType parameter is set to OSS.</p>
+     * <p>*   Make sure that your account has the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](~~26307~~). You can also grant permissions based on the operation instructions in the RAM console.</p>
+     */
     @NameInMap("TargetBucket")
     public String targetBucket;
 
-    // The region in which the OSS bucket resides.
-    // 
-    // >  This parameter is required if the TargetType parameter is set to OSS.
+    /**
+     * <p>The region in which the OSS bucket resides.</p>
+     * <br>
+     * <p>>  This parameter is required if the TargetType parameter is set to OSS.</p>
+     */
     @NameInMap("TargetOssRegion")
     public String targetOssRegion;
 
-    // The destination path of the downloaded data.
-    // 
-    // >  This parameter is required if the TargetType parameter is set to OSS.
+    /**
+     * <p>The destination path of the downloaded data.</p>
+     * <br>
+     * <p>>  This parameter is required if the TargetType parameter is set to OSS.</p>
+     */
     @NameInMap("TargetPath")
     public String targetPath;
 
-    // The type of the method in which the backup set is downloaded. Valid values:
-    // 
-    // *   **OSS**
-    // *   **URL**
+    /**
+     * <p>The type of the method in which the backup set is downloaded. Valid values:</p>
+     * <br>
+     * <p>*   **OSS**</p>
+     * <p>*   **URL**</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 
