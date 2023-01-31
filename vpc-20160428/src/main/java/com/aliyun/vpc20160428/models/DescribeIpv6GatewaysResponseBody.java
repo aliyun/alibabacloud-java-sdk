@@ -89,9 +89,6 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("Spec")
-        public String spec;
-
         @NameInMap("Status")
         public String status;
 
@@ -165,14 +162,6 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
-        }
-
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
         }
 
         public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setStatus(String status) {
