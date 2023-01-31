@@ -22,9 +22,6 @@ public class CreateScriptRequest extends TeaModel {
     @NameInMap("LongWaitEnable")
     public Boolean longWaitEnable;
 
-    @NameInMap("MiniPlaybackConfigListJsonString")
-    public String miniPlaybackConfigListJsonString;
-
     @NameInMap("MiniPlaybackEnable")
     public Boolean miniPlaybackEnable;
 
@@ -100,14 +97,6 @@ public class CreateScriptRequest extends TeaModel {
     }
     public Boolean getLongWaitEnable() {
         return this.longWaitEnable;
-    }
-
-    public CreateScriptRequest setMiniPlaybackConfigListJsonString(String miniPlaybackConfigListJsonString) {
-        this.miniPlaybackConfigListJsonString = miniPlaybackConfigListJsonString;
-        return this;
-    }
-    public String getMiniPlaybackConfigListJsonString() {
-        return this.miniPlaybackConfigListJsonString;
     }
 
     public CreateScriptRequest setMiniPlaybackEnable(Boolean miniPlaybackEnable) {
