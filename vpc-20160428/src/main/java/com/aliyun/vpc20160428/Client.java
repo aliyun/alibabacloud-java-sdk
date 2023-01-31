@@ -16369,6 +16369,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsFakeAsn", request.isFakeAsn);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.localAsn)) {
+            query.put("LocalAsn", request.localAsn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
@@ -16395,6 +16399,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeQuota)) {
+            query.put("RouteQuota", request.routeQuota);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
