@@ -118,7 +118,9 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         @NameInMap("HitNum")
         public Integer hitNum;
 
-        // id
+        /**
+         * <p>id</p>
+         */
         @NameInMap("Id")
         public String id;
 

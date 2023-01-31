@@ -3,7 +3,7 @@ package com.aliyun.outboundbot20191226.models;
 
 import com.aliyun.tea.*;
 
-public class TagResourcesResponseBody extends TeaModel {
+public class UploadScriptRecordingResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -19,12 +19,15 @@ public class TagResourcesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static TagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        TagResourcesResponseBody self = new TagResourcesResponseBody();
+    @NameInMap("Uuid")
+    public String uuid;
+
+    public static UploadScriptRecordingResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UploadScriptRecordingResponseBody self = new UploadScriptRecordingResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public TagResourcesResponseBody setCode(String code) {
+    public UploadScriptRecordingResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,7 +35,7 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public TagResourcesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public UploadScriptRecordingResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -40,7 +43,7 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public TagResourcesResponseBody setMessage(String message) {
+    public UploadScriptRecordingResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +51,7 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.message;
     }
 
-    public TagResourcesResponseBody setRequestId(String requestId) {
+    public UploadScriptRecordingResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,12 +59,20 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public TagResourcesResponseBody setSuccess(Boolean success) {
+    public UploadScriptRecordingResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UploadScriptRecordingResponseBody setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

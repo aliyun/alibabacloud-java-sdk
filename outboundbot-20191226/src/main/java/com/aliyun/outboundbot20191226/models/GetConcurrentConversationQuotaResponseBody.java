@@ -10,7 +10,9 @@ public class GetConcurrentConversationQuotaResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // maxConcurrent
+    /**
+     * <p>maxConcurrent</p>
+     */
     @NameInMap("MaxConcurrent")
     public Integer maxConcurrent;
 

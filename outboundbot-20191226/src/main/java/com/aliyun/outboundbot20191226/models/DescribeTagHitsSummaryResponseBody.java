@@ -87,7 +87,9 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeTagHitsSummaryResponseBodyTagGroups extends TeaModel {
-        // ID
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("Id")
         public String id;
 

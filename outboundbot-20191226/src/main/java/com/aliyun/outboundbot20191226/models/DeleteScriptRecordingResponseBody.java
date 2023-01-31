@@ -3,7 +3,7 @@ package com.aliyun.outboundbot20191226.models;
 
 import com.aliyun.tea.*;
 
-public class TagResourcesResponseBody extends TeaModel {
+public class DeleteScriptRecordingResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -19,12 +19,12 @@ public class TagResourcesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static TagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        TagResourcesResponseBody self = new TagResourcesResponseBody();
+    public static DeleteScriptRecordingResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteScriptRecordingResponseBody self = new DeleteScriptRecordingResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public TagResourcesResponseBody setCode(String code) {
+    public DeleteScriptRecordingResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,7 +32,7 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public TagResourcesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public DeleteScriptRecordingResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -40,7 +40,7 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public TagResourcesResponseBody setMessage(String message) {
+    public DeleteScriptRecordingResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.message;
     }
 
-    public TagResourcesResponseBody setRequestId(String requestId) {
+    public DeleteScriptRecordingResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class TagResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public TagResourcesResponseBody setSuccess(Boolean success) {
+    public DeleteScriptRecordingResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
