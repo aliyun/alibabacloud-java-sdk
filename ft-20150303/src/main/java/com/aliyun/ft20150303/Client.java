@@ -84,10 +84,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Success", request.success);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.newParam1)) {
-            query.put("new-param-1", request.newParam1);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -164,10 +160,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.newParam1)) {
             query.put("new-param-1", request.newParam1);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.newParam2)) {
-            query.put("new-param-2", request.newParam2);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
