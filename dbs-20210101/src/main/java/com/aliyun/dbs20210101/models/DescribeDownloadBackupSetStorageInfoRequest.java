@@ -4,32 +4,42 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDownloadBackupSetStorageInfoRequest extends TeaModel {
-    // The ID of the backup set.
+    /**
+     * <p>The ID of the backup set.</p>
+     */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
-    // Set this parameter if the Download Destination parameter is set to URL.
-    // 
-    // *   By default, a URL is valid for 2 hours, which is equal to 7,200 seconds.
-    // *   The valid duration is 5 minutes (300 seconds) to 1 day (86,400 seconds).
-    // *   Before you set this parameter, convert the time to seconds. For example, if you want to set the validity period of the link to 5 minutes, enter 300.
+    /**
+     * <p>Set this parameter if the Download Destination parameter is set to URL.</p>
+     * <br>
+     * <p>*   By default, a URL is valid for 2 hours, which is equal to 7,200 seconds.</p>
+     * <p>*   The valid duration is 5 minutes (300 seconds) to 1 day (86,400 seconds).</p>
+     * <p>*   Before you set this parameter, convert the time to seconds. For example, if you want to set the validity period of the link to 5 minutes, enter 300.</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
-    // The ID of the instance.
-    // 
-    // >  The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionCode")
     public String regionCode;
 
-    // The ID of the download task.
-    // 
-    // *   The **BackupSetId** and **InstanceName** parameters are required if you do not specify the **TaskId** parameter.
-    // *   You can find the instance and click **Backup and Restoration**. On the **Backup Download** tab, view the **task ID**.
+    /**
+     * <p>The ID of the download task.</p>
+     * <br>
+     * <p>*   The **BackupSetId** and **InstanceName** parameters are required if you do not specify the **TaskId** parameter.</p>
+     * <p>*   You can find the instance and click **Backup and Restoration**. On the **Backup Download** tab, view the **task ID**.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -4,63 +4,87 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskRequest extends TeaModel {
-    // The ID of the backup set generated when you create the download task. You can call the [DescribeBackups](~~26273~~) operation to query the backup set ID. Unit: bytes.
+    /**
+     * <p>The ID of the backup set generated when you create the download task. You can call the [DescribeBackups](~~26273~~) operation to query the backup set ID. Unit: bytes.</p>
+     */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
-    // The page number of the page to return.
+    /**
+     * <p>The page number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // The ID of the Database Backup (DBS) data source. Specify the parameter in the format of *ds-${Instance ID}\_${regionId}*.
+    /**
+     * <p>The ID of the Database Backup (DBS) data source. Specify the parameter in the format of *ds-${Instance ID}\_${regionId}*.</p>
+     */
     @NameInMap("DatasourceId")
     public String datasourceId;
 
-    // The end of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.
+    /**
+     * <p>The end of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // The column based on which the entries are sorted. By default, the entries are sorted by the creation time. Set the value to **gmt_create**.
+    /**
+     * <p>The column based on which the entries are sorted. By default, the entries are sorted by the creation time. Set the value to **gmt_create**.</p>
+     */
     @NameInMap("OrderColumn")
     public String orderColumn;
 
-    // The order in which you want to sort the entries. Valid values:
-    // 
-    // *   **asc**: sorts the retrieved entries by time in ascending order.
-    // *   **desc**: sorts the retrieved entries by time in descending order. This is the default value.
+    /**
+     * <p>The order in which you want to sort the entries. Valid values:</p>
+     * <br>
+     * <p>*   **asc**: sorts the retrieved entries by time in ascending order.</p>
+     * <p>*   **desc**: sorts the retrieved entries by time in descending order. This is the default value.</p>
+     */
     @NameInMap("OrderDirect")
     public String orderDirect;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+    /**
+     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionCode")
     public String regionCode;
 
-    // The beginning of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.
+    /**
+     * <p>The beginning of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The status of the download task. Valid values:
-    // 
-    // *   **Initializing**: The download task is being initialized.
-    // *   **queuing**: The download task is queuing.
-    // *   **running**: The download task is running.
-    // *   **failed**: The download task fails.
-    // *   **finished**: The download task is complete.
+    /**
+     * <p>The status of the download task. Valid values:</p>
+     * <br>
+     * <p>*   **Initializing**: The download task is being initialized.</p>
+     * <p>*   **queuing**: The download task is queuing.</p>
+     * <p>*   **running**: The download task is running.</p>
+     * <p>*   **failed**: The download task fails.</p>
+     * <p>*   **finished**: The download task is complete.</p>
+     */
     @NameInMap("State")
     public String state;
 
-    // The type of the download task. Valid values:
-    // 
-    // *   **full**: downloads a full backup set.
-    // *   **pitr**: downloads a backup set at a specific point in time.
+    /**
+     * <p>The type of the download task. Valid values:</p>
+     * <br>
+     * <p>*   **full**: downloads a full backup set.</p>
+     * <p>*   **pitr**: downloads a backup set at a specific point in time.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

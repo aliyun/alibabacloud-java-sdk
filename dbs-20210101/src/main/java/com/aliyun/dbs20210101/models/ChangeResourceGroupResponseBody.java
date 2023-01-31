@@ -3,55 +3,34 @@ package com.aliyun.dbs20210101.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteSandboxInstanceResponseBody extends TeaModel {
-    /**
-     * <p>The error code.</p>
-     */
+public class ChangeResourceGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The response parameters.</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("ErrCode")
     public String errCode;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    /**
-     * <p>The error message.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful.</p>
-     */
     @NameInMap("Success")
     public String success;
 
-    public static DeleteSandboxInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteSandboxInstanceResponseBody self = new DeleteSandboxInstanceResponseBody();
+    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSandboxInstanceResponseBody setCode(String code) {
+    public ChangeResourceGroupResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -59,7 +38,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteSandboxInstanceResponseBody setData(String data) {
+    public ChangeResourceGroupResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -67,7 +46,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteSandboxInstanceResponseBody setErrCode(String errCode) {
+    public ChangeResourceGroupResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -75,7 +54,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public DeleteSandboxInstanceResponseBody setErrMessage(String errMessage) {
+    public ChangeResourceGroupResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -83,7 +62,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public DeleteSandboxInstanceResponseBody setMessage(String message) {
+    public ChangeResourceGroupResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -91,7 +70,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteSandboxInstanceResponseBody setRequestId(String requestId) {
+    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -99,7 +78,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteSandboxInstanceResponseBody setSuccess(String success) {
+    public ChangeResourceGroupResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
