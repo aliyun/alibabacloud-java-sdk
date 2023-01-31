@@ -28,9 +28,6 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Spec")
-    public String spec;
-
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -101,14 +98,6 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateIpv6GatewayRequest setSpec(String spec) {
-        this.spec = spec;
-        return this;
-    }
-    public String getSpec() {
-        return this.spec;
     }
 
     public CreateIpv6GatewayRequest setVpcId(String vpcId) {

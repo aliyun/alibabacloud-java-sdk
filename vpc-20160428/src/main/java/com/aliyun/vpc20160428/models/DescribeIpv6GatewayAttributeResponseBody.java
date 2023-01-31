@@ -31,9 +31,6 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Spec")
-    public String spec;
-
     @NameInMap("Status")
     public String status;
 
@@ -115,14 +112,6 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeIpv6GatewayAttributeResponseBody setSpec(String spec) {
-        this.spec = spec;
-        return this;
-    }
-    public String getSpec() {
-        return this.spec;
     }
 
     public DescribeIpv6GatewayAttributeResponseBody setStatus(String status) {

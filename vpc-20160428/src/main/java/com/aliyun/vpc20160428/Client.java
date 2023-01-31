@@ -2453,6 +2453,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsFakeAsn", request.isFakeAsn);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.localAsn)) {
+            query.put("LocalAsn", request.localAsn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
@@ -2479,6 +2483,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeQuota)) {
+            query.put("RouteQuota", request.routeQuota);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.routerId)) {
@@ -3752,10 +3760,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.spec)) {
-            query.put("Spec", request.spec);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
