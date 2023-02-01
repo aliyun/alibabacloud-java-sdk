@@ -4,18 +4,34 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetIpControlApisRequest extends TeaModel {
+    /**
+     * <p>The API IDs. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     */
     @NameInMap("ApiIds")
     public String apiIds;
 
+    /**
+     * <p>The ID of the API group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the ACL.</p>
+     */
     @NameInMap("IpControlId")
     public String ipControlId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **PRE**</p>
+     * <p>*   **TEST**</p>
+     */
     @NameInMap("StageName")
     public String stageName;
 

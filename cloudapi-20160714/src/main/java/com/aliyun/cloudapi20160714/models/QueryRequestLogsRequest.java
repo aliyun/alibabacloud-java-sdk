@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class QueryRequestLogsRequest extends TeaModel {
+    /**
+     * <p>The ID of the request log.</p>
+     */
     @NameInMap("RequestLogId")
     public String requestLogId;
 

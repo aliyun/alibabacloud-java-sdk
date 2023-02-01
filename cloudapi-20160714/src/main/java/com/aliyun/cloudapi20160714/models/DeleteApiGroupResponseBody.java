@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteApiGroupResponseBody extends TeaModel {
+    /**
+     * <p>auditing</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

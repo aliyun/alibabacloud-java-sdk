@@ -4,18 +4,36 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveTrafficControlApisRequest extends TeaModel {
+    /**
+     * <p>The IDs of the APIs from which you want to unbind a specified throttling policy.</p>
+     * <br>
+     * <p>*   If this parameter is not specified, the throttling policy is unbound from all the APIs in the specified environment of the API group.</p>
+     * <p>*   Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     */
     @NameInMap("ApiIds")
     public String apiIds;
 
+    /**
+     * <p>The ID of the API group containing the APIs from which you want to unbind a specified throttling policy.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **TEST**</p>
+     */
     @NameInMap("StageName")
     public String stageName;
 
+    /**
+     * <p>The ID of the throttling policy that you want to unbind from APIs.</p>
+     */
     @NameInMap("TrafficControlId")
     public String trafficControlId;
 

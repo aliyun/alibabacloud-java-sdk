@@ -4,24 +4,47 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateTrafficControlRequest extends TeaModel {
+    /**
+     * <p>The default throttling value for each API.</p>
+     */
     @NameInMap("ApiDefault")
     public Integer apiDefault;
 
+    /**
+     * <p>The default throttling value for each app.</p>
+     */
     @NameInMap("AppDefault")
     public Integer appDefault;
 
+    /**
+     * <p>The description of the throttling policy.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The name of the throttling policy. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It cannot start with an underscore.</p>
+     */
     @NameInMap("TrafficControlName")
     public String trafficControlName;
 
+    /**
+     * <p>The unit to be used in the throttling policy. Valid values:</p>
+     * <br>
+     * <p>*   **SECOND**</p>
+     * <p>*   **MINUTE**</p>
+     * <p>*   **HOUR**</p>
+     * <p>*   **DAY**</p>
+     */
     @NameInMap("TrafficControlUnit")
     public String trafficControlUnit;
 
+    /**
+     * <p>The default throttling value for each user.</p>
+     */
     @NameInMap("UserDefault")
     public Integer userDefault;
 

@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiIpControlsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the ACLs. The information is an array of ApiIpControlItem data.</p>
+     */
     @NameInMap("ApiIpControls")
     public DescribeApiIpControlsResponseBodyApiIpControls apiIpControls;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,33 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem extends TeaModel {
+        /**
+         * <p>The ID of the API.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The name of the API.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The time of binding.</p>
+         */
         @NameInMap("BoundTime")
         public String boundTime;
 
+        /**
+         * <p>The ID of the ACL.</p>
+         */
         @NameInMap("IpControlId")
         public String ipControlId;
 
+        /**
+         * <p>The name of the ACL.</p>
+         */
         @NameInMap("IpControlName")
         public String ipControlName;
 

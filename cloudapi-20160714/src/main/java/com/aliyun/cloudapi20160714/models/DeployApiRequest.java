@@ -4,18 +4,34 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeployApiRequest extends TeaModel {
+    /**
+     * <p>The ID of the API.</p>
+     */
     @NameInMap("ApiId")
     public String apiId;
 
+    /**
+     * <p>The publishing remarks.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the API group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **PRE: the pre-release environment**</p>
+     * <p>*   **TEST: the test environment**</p>
+     */
     @NameInMap("StageName")
     public String stageName;
 

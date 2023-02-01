@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteApiStageVariableResponseBody extends TeaModel {
+    /**
+     * <p>Deletes a specified variable in a specified environment.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginsByApiResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The returned plug-in information. It is an array consisting of PluginAttribute data.</p>
+     */
     @NameInMap("Plugins")
     public DescribePluginsByApiResponseBodyPlugins plugins;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,51 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
     }
 
     public static class DescribePluginsByApiResponseBodyPluginsPluginAttribute extends TeaModel {
+        /**
+         * <p>The creation time (UTC) of the plug-in.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The plug-in description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The last modification time (UTC) of the plug-in.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The definition statement of the plug-in.</p>
+         */
         @NameInMap("PluginData")
         public String pluginData;
 
+        /**
+         * <p>The ID of the plug-in.</p>
+         */
         @NameInMap("PluginId")
         public String pluginId;
 
+        /**
+         * <p>The name of the plug-in.</p>
+         */
         @NameInMap("PluginName")
         public String pluginName;
 
+        /**
+         * <p>The type of the plug-in.</p>
+         */
         @NameInMap("PluginType")
         public String pluginType;
 
+        /**
+         * <p>The region where the plug-in is located.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

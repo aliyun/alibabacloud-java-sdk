@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeMarketRemainsQuotaRequest extends TeaModel {
+    /**
+     * <p>The remaining quota.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

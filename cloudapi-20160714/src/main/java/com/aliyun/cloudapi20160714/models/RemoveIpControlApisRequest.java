@@ -4,18 +4,36 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveIpControlApisRequest extends TeaModel {
+    /**
+     * <p>The ID of the API to be managed.</p>
+     * <br>
+     * <p>*   If this parameter is not specified, all APIs of the API group are unbound in the specified environment by default.</p>
+     * <p>*   The IDs of the APIs that you want to query. Separate multiple IDs with commas (,). A maximum of 100 IDs can be entered.</p>
+     */
     @NameInMap("ApiIds")
     public String apiIds;
 
+    /**
+     * <p>The ID of the API group containing the API to be managed.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the ACL.</p>
+     */
     @NameInMap("IpControlId")
     public String ipControlId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **TEST**</p>
+     */
     @NameInMap("StageName")
     public String stageName;
 

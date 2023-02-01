@@ -4,15 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByTrafficControlRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the throttling policy that you want to query.</p>
+     */
     @NameInMap("TrafficControlId")
     public String trafficControlId;
 

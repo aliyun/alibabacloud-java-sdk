@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class QueryRequestLogsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about request logs returned.</p>
+     */
     @NameInMap("RequestLogs")
     public QueryRequestLogsResponseBodyRequestLogs requestLogs;
 
@@ -32,108 +38,213 @@ public class QueryRequestLogsResponseBody extends TeaModel {
     }
 
     public static class QueryRequestLogsResponseBodyRequestLogsRequestLog extends TeaModel {
+        /**
+         * <p>The ID of the API.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The name of the API.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The IP address of the client that sent the request.</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The X-Ca-Nonce header included in the request from the client.</p>
+         */
         @NameInMap("ClientNonce")
         public String clientNonce;
 
+        /**
+         * <p>The ID of the application from which an API request is sent.</p>
+         */
         @NameInMap("ConsumerAppId")
         public String consumerAppId;
 
+        /**
+         * <p>The application key used by the caller.</p>
+         */
         @NameInMap("ConsumerAppKey")
         public String consumerAppKey;
 
+        /**
+         * <p>The ID of the custom trace.</p>
+         */
         @NameInMap("CustomTraceId")
         public String customTraceId;
 
+        /**
+         * <p>The requested domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned if the request fails.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The specific error message that was returned by the backend service.</p>
+         */
         @NameInMap("Exception")
         public String exception;
 
+        /**
+         * <p>The ID of the group to which the API belongs.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the API group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The HTTP method used to send the request.</p>
+         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
+        /**
+         * <p>The path of the request.</p>
+         */
         @NameInMap("HttpPath")
         public String httpPath;
 
+        /**
+         * <p>The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, initialRequestId in the log of API-2 represents the ID of the request from API-1.</p>
+         */
         @NameInMap("InitialRequestId")
         public String initialRequestId;
 
+        /**
+         * <p>The ID of the gateway instance to which the API belongs.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The JSON web token (JWT) claims. The claims can be configured at the group level.</p>
+         */
         @NameInMap("JwtClaims")
         public String jwtClaims;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The request body. The maximum size of the request body is 1,024 bytes.</p>
+         */
         @NameInMap("RequestBody")
         public String requestBody;
 
+        /**
+         * <p>The request headers.</p>
+         */
         @NameInMap("RequestHeaders")
         public String requestHeaders;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>The protocol used by the client to send the request. Valid values: HTTP, HTTPS, and WS.</p>
+         */
         @NameInMap("RequestProtocol")
         public String requestProtocol;
 
+        /**
+         * <p>The query string for the request.</p>
+         */
         @NameInMap("RequestQueryString")
         public String requestQueryString;
 
+        /**
+         * <p>The size of the request. Unit: bytes.</p>
+         */
         @NameInMap("RequestSize")
         public String requestSize;
 
+        /**
+         * <p>The request time. The time is displayed in UTC.</p>
+         */
         @NameInMap("RequestTime")
         public String requestTime;
 
+        /**
+         * <p>The response body. The maximum size of the response body is 1,024 bytes.</p>
+         */
         @NameInMap("ResponseBody")
         public String responseBody;
 
+        /**
+         * <p>The response headers.</p>
+         */
         @NameInMap("ResponseHeaders")
         public String responseHeaders;
 
+        /**
+         * <p>The size of returned data. Unit: bytes.</p>
+         */
         @NameInMap("ResponseSize")
         public String responseSize;
 
+        /**
+         * <p>The total time that was consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.</p>
+         */
         @NameInMap("ServiceLatency")
         public String serviceLatency;
 
+        /**
+         * <p>The ID of the API environment.</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>The name of the API environment.</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <p>The HTTP status code.</p>
+         */
         @NameInMap("StatusCode")
         public String statusCode;
 
+        /**
+         * <p>The total period of time that the request consumed. Unit: milliseconds.</p>
+         */
         @NameInMap("TotalLatency")
         public String totalLatency;
 
+        /**
+         * <p>The list of plug-ins hit by the request and the relevant context.</p>
+         */
         @NameInMap("plugin")
         public String plugin;
 

@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateIntranetDomainRequest extends TeaModel {
+    /**
+     * <p>The custom domain name.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

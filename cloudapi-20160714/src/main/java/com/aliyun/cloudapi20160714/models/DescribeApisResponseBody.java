@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisResponseBody extends TeaModel {
+    /**
+     * <p>The returned API definition. It is an array that consists of ApiSummary data.</p>
+     */
     @NameInMap("ApiSummarys")
     public DescribeApisResponseBodyApiSummarys apiSummarys;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -64,37 +79,130 @@ public class DescribeApisResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo extends TeaModel {
+        @NameInMap("DeployedStatus")
+        public String deployedStatus;
+
+        @NameInMap("EffectiveVersion")
+        public String effectiveVersion;
+
+        @NameInMap("StageName")
+        public String stageName;
+
+        public static DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo self = new DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo setDeployedStatus(String deployedStatus) {
+            this.deployedStatus = deployedStatus;
+            return this;
+        }
+        public String getDeployedStatus() {
+            return this.deployedStatus;
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo setEffectiveVersion(String effectiveVersion) {
+            this.effectiveVersion = effectiveVersion;
+            return this;
+        }
+        public String getEffectiveVersion() {
+            return this.effectiveVersion;
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
+        }
+
+    }
+
+    public static class DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos extends TeaModel {
+        @NameInMap("DeployedInfo")
+        public java.util.List<DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo> deployedInfo;
+
+        public static DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos self = new DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos setDeployedInfo(java.util.List<DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo> deployedInfo) {
+            this.deployedInfo = deployedInfo;
+            return this;
+        }
+        public java.util.List<DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfosDeployedInfo> getDeployedInfo() {
+            return this.deployedInfo;
+        }
+
+    }
+
     public static class DescribeApisResponseBodyApiSummarysApiSummary extends TeaModel {
+        /**
+         * <p>The ID of the API.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
         @NameInMap("ApiMethod")
         public String apiMethod;
 
+        /**
+         * <p>The name of the API operation.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
         @NameInMap("ApiPath")
         public String apiPath;
 
+        /**
+         * <p>The creation time (UTC) of the query task.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        @NameInMap("DeployedInfos")
+        public DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos deployedInfos;
+
+        /**
+         * <p>The description of the API.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the API group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the group to which the API belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The modification time (UTC) of the API.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The ID of the region in which the API resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Indicates whether the API is public. Valid values:</p>
+         * <br>
+         * <p>*   **PUBLIC**</p>
+         * <p>*   **PRIVATE**</p>
+         */
         @NameInMap("Visibility")
         public String visibility;
 
@@ -141,6 +249,14 @@ public class DescribeApisResponseBody extends TeaModel {
         }
         public String getCreatedTime() {
             return this.createdTime;
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummary setDeployedInfos(DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos deployedInfos) {
+            this.deployedInfos = deployedInfos;
+            return this;
+        }
+        public DescribeApisResponseBodyApiSummarysApiSummaryDeployedInfos getDeployedInfos() {
+            return this.deployedInfos;
         }
 
         public DescribeApisResponseBodyApiSummarysApiSummary setDescription(String description) {

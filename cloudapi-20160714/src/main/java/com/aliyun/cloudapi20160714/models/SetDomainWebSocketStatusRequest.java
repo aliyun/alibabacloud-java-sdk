@@ -4,12 +4,21 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetDomainWebSocketStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ActionValue")
     public String actionValue;
 
+    /**
+     * <p>The action.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The custom domain name.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

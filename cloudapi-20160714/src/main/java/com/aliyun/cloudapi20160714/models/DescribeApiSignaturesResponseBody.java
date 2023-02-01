@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiSignaturesResponseBody extends TeaModel {
+    /**
+     * <p>The time when the backend signature key was bound.</p>
+     */
     @NameInMap("ApiSignatures")
     public DescribeApiSignaturesResponseBodyApiSignatures apiSignatures;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned signature key information. It is an array consisting of ApiSignatureItem data.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,34 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
     }
 
     public static class DescribeApiSignaturesResponseBodyApiSignaturesApiSignatureItem extends TeaModel {
+        /**
+         * <p>The ID of the backend signature key.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>*   This API is intended for API providers.</p>
+         * <p>*   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The ID of the API.</p>
+         */
         @NameInMap("BoundTime")
         public String boundTime;
 
+        /**
+         * <p>The name of the backend signature key.</p>
+         */
         @NameInMap("SignatureId")
         public String signatureId;
 
+        /**
+         * <p>The name of the API.</p>
+         */
         @NameInMap("SignatureName")
         public String signatureName;
 

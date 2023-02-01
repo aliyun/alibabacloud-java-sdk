@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateIntranetDomainResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>auditing</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

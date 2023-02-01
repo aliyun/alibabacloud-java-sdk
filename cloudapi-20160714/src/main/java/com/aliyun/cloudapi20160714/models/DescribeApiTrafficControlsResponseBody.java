@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiTrafficControlsResponseBody extends TeaModel {
+    /**
+     * <p>The binding time of the throttling policy.</p>
+     */
     @NameInMap("ApiTrafficControls")
     public DescribeApiTrafficControlsResponseBodyApiTrafficControls apiTrafficControls;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned throttling policy information. It is an array consisting of ApiTrafficControlItem data.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,34 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem extends TeaModel {
+        /**
+         * <p>The ID of the throttling policy.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>*   This API is intended for API providers.</p>
+         * <p>*   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The ID of the API.</p>
+         */
         @NameInMap("BoundTime")
         public String boundTime;
 
+        /**
+         * <p>The name of the throttling policy.</p>
+         */
         @NameInMap("TrafficControlId")
         public String trafficControlId;
 
+        /**
+         * <p>API operation</p>
+         */
         @NameInMap("TrafficControlName")
         public String trafficControlName;
 

@@ -7,12 +7,24 @@ public class DeleteTrafficSpecialControlRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the app or Alibaba Cloud account. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.343130a8sDi8cO#/secure) page.</p>
+     */
     @NameInMap("SpecialKey")
     public String specialKey;
 
+    /**
+     * <p>The type of the special throttling policy. Valid values:</p>
+     * <br>
+     * <p>*   **APP**</p>
+     * <p>*   **USER**</p>
+     */
     @NameInMap("SpecialType")
     public String specialType;
 
+    /**
+     * <p>The ID of the throttling policy.</p>
+     */
     @NameInMap("TrafficControlId")
     public String trafficControlId;
 

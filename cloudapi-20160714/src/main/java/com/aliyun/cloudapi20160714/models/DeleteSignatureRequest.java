@@ -7,6 +7,9 @@ public class DeleteSignatureRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the key to be deleted.</p>
+     */
     @NameInMap("SignatureId")
     public String signatureId;
 
