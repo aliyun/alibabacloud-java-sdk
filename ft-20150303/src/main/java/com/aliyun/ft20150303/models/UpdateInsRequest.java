@@ -10,8 +10,8 @@ public class UpdateInsRequest extends TeaModel {
     @NameInMap("Succeed")
     public String succeed;
 
-    @NameInMap("new-param-1")
-    public String newParam1;
+    @NameInMap("new-param-7")
+    public String newParam7;
 
     public static UpdateInsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInsRequest self = new UpdateInsRequest();
@@ -34,12 +34,12 @@ public class UpdateInsRequest extends TeaModel {
         return this.succeed;
     }
 
-    public UpdateInsRequest setNewParam1(String newParam1) {
-        this.newParam1 = newParam1;
+    public UpdateInsRequest setNewParam7(String newParam7) {
+        this.newParam7 = newParam7;
         return this;
     }
-    public String getNewParam1() {
-        return this.newParam1;
+    public String getNewParam7() {
+        return this.newParam7;
     }
 
 }
