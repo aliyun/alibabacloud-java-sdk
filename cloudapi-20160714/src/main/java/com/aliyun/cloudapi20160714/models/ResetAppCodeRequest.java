@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ResetAppCodeRequest extends TeaModel {
+    /**
+     * <p>The new AppCode of the app.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("NewAppCode")
     public String newAppCode;
 

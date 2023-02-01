@@ -4,12 +4,21 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateSignatureResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the back-end signature key.</p>
+     */
     @NameInMap("SignatureId")
     public String signatureId;
 
+    /**
+     * <p>The name of the back-end signature key.</p>
+     */
     @NameInMap("SignatureName")
     public String signatureName;
 

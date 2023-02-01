@@ -4,15 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteApiStageVariableRequest extends TeaModel {
+    /**
+     * <p>The name of the variable to be deleted. This parameter is case-sensitive.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("StageId")
     public String stageId;
 
+    /**
+     * <p>*   This operation is intended for API providers.</p>
+     */
     @NameInMap("VariableName")
     public String variableName;
 

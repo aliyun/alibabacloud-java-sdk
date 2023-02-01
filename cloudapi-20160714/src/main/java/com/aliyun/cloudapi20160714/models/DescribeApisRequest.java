@@ -4,42 +4,75 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisRequest extends TeaModel {
+    /**
+     * <p>The ID of the API.</p>
+     */
     @NameInMap("ApiId")
     public String apiId;
 
     @NameInMap("ApiMethod")
     public String apiMethod;
 
+    /**
+     * <p>The name of the API operation. The name is used for fuzzy match.</p>
+     */
     @NameInMap("ApiName")
     public String apiName;
 
     @NameInMap("ApiPath")
     public String apiPath;
 
+    /**
+     * <p>The ID of the category.</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>Specifies whether to enable tag verification.</p>
+     */
     @NameInMap("EnableTagAuth")
     public Boolean enableTagAuth;
 
+    /**
+     * <p>The ID of the API group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("StageName")
+    public String stageName;
+
+    /**
+     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeApisRequestTag> tag;
 
     @NameInMap("UnDeployed")
     public Boolean unDeployed;
 
+    /**
+     * <p>Specifies whether to make the API public. Valid values:</p>
+     * <br>
+     * <p>*   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**</p>
+     * <p>*   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
+     */
     @NameInMap("Visibility")
     public String visibility;
 
@@ -128,6 +161,14 @@ public class DescribeApisRequest extends TeaModel {
         return this.securityToken;
     }
 
+    public DescribeApisRequest setStageName(String stageName) {
+        this.stageName = stageName;
+        return this;
+    }
+    public String getStageName() {
+        return this.stageName;
+    }
+
     public DescribeApisRequest setTag(java.util.List<DescribeApisRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -153,9 +194,15 @@ public class DescribeApisRequest extends TeaModel {
     }
 
     public static class DescribeApisRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

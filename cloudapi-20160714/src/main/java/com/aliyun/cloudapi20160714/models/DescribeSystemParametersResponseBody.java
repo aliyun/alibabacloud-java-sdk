@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemParametersResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned information about system parameters. It is an array that consists of SystemParam data.</p>
+     */
     @NameInMap("SystemParams")
     public DescribeSystemParametersResponseBodySystemParams systemParams;
 
@@ -32,15 +38,27 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeSystemParametersResponseBodySystemParamsSystemParamItem extends TeaModel {
+        /**
+         * <p>Examples</p>
+         */
         @NameInMap("DemoValue")
         public String demoValue;
 
+        /**
+         * <p>The description of a parameter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParamName")
         public String paramName;
 
+        /**
+         * <p>The type of the parameter.</p>
+         */
         @NameInMap("ParamType")
         public String paramType;
 

@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The information about the access control policy.</p>
+     */
     @NameInMap("AclEntrys")
     public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
 
+    /**
+     * <p>The ID of the access control policy.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The name of the access control policy.</p>
+     */
     @NameInMap("AclName")
     public String aclName;
 
+    /**
+     * <p>Indicates whether the policy was used.</p>
+     */
     @NameInMap("IsUsed")
     public String isUsed;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +80,15 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
+        /**
+         * <p>The description of an entry.</p>
+         */
         @NameInMap("AclEntryComment")
         public String aclEntryComment;
 
+        /**
+         * <p>The entries of the access control policy.</p>
+         */
         @NameInMap("AclEntryIp")
         public String aclEntryIp;
 

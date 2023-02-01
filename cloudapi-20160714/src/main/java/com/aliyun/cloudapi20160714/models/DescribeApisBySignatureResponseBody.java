@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisBySignatureResponseBody extends TeaModel {
+    /**
+     * <p>The binding time of the API.</p>
+     */
     @NameInMap("ApiInfos")
     public DescribeApisBySignatureResponseBodyApiInfos apiInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned API information. It is an array consisting of ApiInfo data.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +80,64 @@ public class DescribeApisBySignatureResponseBody extends TeaModel {
     }
 
     public static class DescribeApisBySignatureResponseBodyApiInfosApiInfo extends TeaModel {
+        /**
+         * <p>The description of the API.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The region where the API is located.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>Indicates whether the API is public. Valid values:</p>
+         * <br>
+         * <p>*   **PUBLIC**</p>
+         * <p>*   **PRIVATE**</p>
+         */
         @NameInMap("BoundTime")
         public String boundTime;
 
+        /**
+         * <p>Description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <br>
+         * <p>*   **RELEASE**</p>
+         * <p>*   **TEST**</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The ID of the API group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>*   This API is intended for API providers.</p>
+         * <p>*   The results are returned on separate pages. You can specify PageNumber to obtain the result on the specified page.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the API.</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <p>The ID of the API.</p>
+         */
         @NameInMap("Visibility")
         public String visibility;
 

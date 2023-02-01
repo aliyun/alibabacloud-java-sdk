@@ -4,18 +4,36 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveSignatureApisRequest extends TeaModel {
+    /**
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **TEST**</p>
+     */
     @NameInMap("ApiIds")
     public String apiIds;
 
+    /**
+     * <p>The IDs of the APIs from which you want to unbind the signature key.</p>
+     * <br>
+     * <p>*   If this parameter is not specified, the signature key is unbound from all the APIs in the specified environment of the API group.</p>
+     * <p>*   The IDs of the APIs that you want to manage. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the API group to which the API that you want to manage belongs.</p>
+     */
     @NameInMap("SignatureId")
     public String signatureId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("StageName")
     public String stageName;
 

@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class AddIpControlPolicyItemResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the policy. The ID is unique.</p>
+     */
     @NameInMap("PolicyItemId")
     public String policyItemId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

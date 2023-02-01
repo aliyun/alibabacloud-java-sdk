@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpControlsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the ACL. The information is an array of IpControlInfo data. The information does not include specific policies.</p>
+     */
     @NameInMap("IpControlInfos")
     public DescribeIpControlsResponseBodyIpControlInfos ipControlInfos;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,45 @@ public class DescribeIpControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeIpControlsResponseBodyIpControlInfosIpControlInfo extends TeaModel {
+        /**
+         * <p>The time when the ACL was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the ACL.</p>
+         */
         @NameInMap("IpControlId")
         public String ipControlId;
 
+        /**
+         * <p>The name of the ACL.</p>
+         */
         @NameInMap("IpControlName")
         public String ipControlName;
 
+        /**
+         * <p>The type of the ACL.</p>
+         */
         @NameInMap("IpControlType")
         public String ipControlType;
 
+        /**
+         * <p>The time when the ACL was modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The region in which the API is located.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

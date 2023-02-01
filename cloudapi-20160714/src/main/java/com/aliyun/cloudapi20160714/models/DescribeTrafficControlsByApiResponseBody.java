@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned throttling policy information. It is an array consisting of TrafficControlItem data.</p>
+     */
     @NameInMap("TrafficControlItems")
     public DescribeTrafficControlsByApiResponseBodyTrafficControlItems trafficControlItems;
 
@@ -32,12 +38,21 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
     }
 
     public static class DescribeTrafficControlsByApiResponseBodyTrafficControlItemsTrafficControlItem extends TeaModel {
+        /**
+         * <p>The binding time of the policy.</p>
+         */
         @NameInMap("BoundTime")
         public String boundTime;
 
+        /**
+         * <p>The ID of the throttling policy.</p>
+         */
         @NameInMap("TrafficControlItemId")
         public String trafficControlItemId;
 
+        /**
+         * <p>The name of the throttling policy.</p>
+         */
         @NameInMap("TrafficControlItemName")
         public String trafficControlItemName;
 

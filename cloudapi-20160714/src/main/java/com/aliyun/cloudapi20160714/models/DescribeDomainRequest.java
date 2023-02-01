@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRequest extends TeaModel {
+    /**
+     * <p>The private key of the SSL certificate.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The custom domain name.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

@@ -4,33 +4,63 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateModelResponseBody extends TeaModel {
+    /**
+     * <p>The time when the model was created.</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The description of the created model.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the API group to which the created model belongs.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the created model.</p>
+     */
     @NameInMap("ModelId")
     public String modelId;
 
+    /**
+     * <p>The name of the created model.</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>The URI of the created model.</p>
+     */
     @NameInMap("ModelRef")
     public String modelRef;
 
+    /**
+     * <p>The time when the model is last modified.</p>
+     */
     @NameInMap("ModifiedTime")
     public String modifiedTime;
 
+    /**
+     * <p>The region to which the created model belongs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The definition of the created model.</p>
+     */
     @NameInMap("Schema")
     public String schema;
 

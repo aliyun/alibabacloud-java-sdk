@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ResetAppSecretRequest extends TeaModel {
+    /**
+     * <p>The key of the application that is used to make an API call.</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>The new key of the application. To improve compatibility, we recommend that you use other parameters.</p>
+     */
     @NameInMap("NewAppSecret")
     public String newAppSecret;
 

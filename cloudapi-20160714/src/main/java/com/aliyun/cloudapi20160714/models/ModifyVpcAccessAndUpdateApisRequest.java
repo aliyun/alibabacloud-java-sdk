@@ -4,30 +4,54 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcAccessAndUpdateApisRequest extends TeaModel {
+    /**
+     * <p>The ID of the new instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The unique custom name for the authorization.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Specifies whether to update the associated API.</p>
+     */
     @NameInMap("NeedBatchWork")
     public Boolean needBatchWork;
 
+    /**
+     * <p>The port number to be modified.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>Specifies whether to refresh the VPC authorization.</p>
+     */
     @NameInMap("Refresh")
     public Boolean refresh;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The password.</p>
+     */
     @NameInMap("Token")
     public String token;
 
+    /**
+     * <p>The ID of the new VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The authorized backend host.</p>
+     */
     @NameInMap("VpcTargetHostName")
     public String vpcTargetHostName;
 
