@@ -4,7 +4,9 @@ package com.aliyun.avatar20220130.models;
 import com.aliyun.tea.*;
 
 public class SendMessageResponseBody extends TeaModel {
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("Code")
     public String code;
 

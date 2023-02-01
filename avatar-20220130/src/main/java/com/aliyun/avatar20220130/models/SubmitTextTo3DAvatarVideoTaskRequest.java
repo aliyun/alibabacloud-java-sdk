@@ -98,6 +98,9 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
         @NameInMap("Angle")
         public Integer angle;
 
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("Locate")
         public Integer locate;
 
@@ -112,6 +115,14 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
         }
         public Integer getAngle() {
             return this.angle;
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public SubmitTextTo3DAvatarVideoTaskRequestAvatarInfo setLocate(Integer locate) {
