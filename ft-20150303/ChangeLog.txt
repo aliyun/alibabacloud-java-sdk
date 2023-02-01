@@ -1,3 +1,6 @@
+2023-02-01 Version: 1.0.6
+- Generated java 2015-03-03 for Ft.
+
 2023-02-01 Version: 1.0.5
 - Generated java 2015-03-03 for Ft.
 
