@@ -49,6 +49,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("next_version")
     public String nextVersion;
 
+    @NameInMap("parameters")
+    public java.util.Map<String, String> parameters;
+
     @NameInMap("private_zone")
     public Boolean privateZone;
 
@@ -214,6 +217,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getNextVersion() {
         return this.nextVersion;
+    }
+
+    public DescribeClusterDetailResponseBody setParameters(java.util.Map<String, String> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.Map<String, String> getParameters() {
+        return this.parameters;
     }
 
     public DescribeClusterDetailResponseBody setPrivateZone(Boolean privateZone) {
