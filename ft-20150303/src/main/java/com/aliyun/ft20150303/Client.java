@@ -162,8 +162,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Succeed", request.succeed);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.newParam7)) {
-            query.put("new-param-7", request.newParam7);
+        if (!com.aliyun.teautil.Common.isUnset(request.newParam72)) {
+            query.put("new-param-72", request.newParam72);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
