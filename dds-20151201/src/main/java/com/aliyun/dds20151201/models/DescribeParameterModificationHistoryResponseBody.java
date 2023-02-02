@@ -4,11 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
-    // Details about the parameter modification records.
+    /**
+     * <p>Details about the parameter modification records.</p>
+     */
     @NameInMap("HistoricalParameters")
     public DescribeParameterModificationHistoryResponseBodyHistoricalParameters historicalParameters;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,19 +38,27 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter extends TeaModel {
-        // The time when the parameter was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the parameter was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // The parameter value after modification.
+        /**
+         * <p>The parameter value after modification.</p>
+         */
         @NameInMap("NewParameterValue")
         public String newParameterValue;
 
-        // The parameter value before modification.
+        /**
+         * <p>The parameter value before modification.</p>
+         */
         @NameInMap("OldParameterValue")
         public String oldParameterValue;
 
-        // The name of the modified parameter.
+        /**
+         * <p>The name of the modified parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 

@@ -4,17 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    // The token used to start the next query.
-    // 
-    // >  If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter in the next query.
+    /**
+     * <p>The token used to start the next query.</p>
+     * <br>
+     * <p>>  If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter in the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about the tags of the instance.
+    /**
+     * <p>Details about the tags of the instance.</p>
+     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -48,19 +54,27 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        // The ID of the resource. It is the ID of the ApsaraDB for MongoDB instance.
+        /**
+         * <p>The ID of the resource. It is the ID of the ApsaraDB for MongoDB instance.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // The resource type. The return value is fixed to **ALIYUN: KVSTORE: INSTANCE**, indicating an ApsaraDB for MongoDB instance.
+        /**
+         * <p>The resource type. The return value is fixed to **ALIYUN: KVSTORE: INSTANCE**, indicating an ApsaraDB for MongoDB instance.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // The key of the tag.
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The value of the tag.
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

@@ -2458,95 +2458,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBInstancesOverviewWithOptions(request, runtime);
     }
 
-    public DescribeDedicatedClusterInstanceListResponse describeDedicatedClusterInstanceListWithOptions(DescribeDedicatedClusterInstanceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
-            query.put("ClusterId", request.clusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedHostName)) {
-            query.put("DedicatedHostName", request.dedicatedHostName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
-            query.put("Engine", request.engine);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
-            query.put("EngineVersion", request.engineVersion);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceNetType)) {
-            query.put("InstanceNetType", request.instanceNetType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceStatus)) {
-            query.put("InstanceStatus", request.instanceStatus);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            query.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
-            query.put("SecurityToken", request.securityToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
-            query.put("ZoneId", request.zoneId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDedicatedClusterInstanceList"),
-            new TeaPair("version", "2015-12-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDedicatedClusterInstanceListResponse());
-    }
-
-    public DescribeDedicatedClusterInstanceListResponse describeDedicatedClusterInstanceList(DescribeDedicatedClusterInstanceListRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDedicatedClusterInstanceListWithOptions(request, runtime);
-    }
-
     /**
       * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
       * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
@@ -3988,6 +3899,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ShardsInfo", request.shardsInfo);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storage)) {
+            query.put("Storage", request.storage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
         }
@@ -5040,6 +4955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
             query.put("EffectiveTime", request.effectiveTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraParam)) {
+            query.put("ExtraParam", request.extraParam);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
@@ -6412,12 +6331,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Please ensure that you have fully understood the charging method and [Price](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of MongoDB products before using this API.
-      * When calling this interface, the instance must meet the following conditions:
-      * - The instance status is Running.
-      * - The instance does not have a conversion payment type order that has not been paid.
-      * - The instance type cannot be a historical type (no longer sold). For the list of historical types, see [Instance Type Table](~~57141~~).
-      * > To convert the payment type of the historical type instance, first call the [ModifyDBInstanceSpec] (~~61816~~) or [ModifyNodeSpec] (~~61923~~) interface to change the instance type.
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
+      * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The instance is in the Running state.
+      * *   Your instance has no unpaid billing method change orders.
+      * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](~~57141~~).
+      * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](~~61816~~) or [ModifyNodeSpec](~~61923~~) operation to first change the instance type.
       *
       * @param request TransformInstanceChargeTypeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6492,12 +6411,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Please ensure that you have fully understood the charging method and [Price](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of MongoDB products before using this API.
-      * When calling this interface, the instance must meet the following conditions:
-      * - The instance status is Running.
-      * - The instance does not have a conversion payment type order that has not been paid.
-      * - The instance type cannot be a historical type (no longer sold). For the list of historical types, see [Instance Type Table](~~57141~~).
-      * > To convert the payment type of the historical type instance, first call the [ModifyDBInstanceSpec] (~~61816~~) or [ModifyNodeSpec] (~~61923~~) interface to change the instance type.
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB.
+      * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The instance is in the Running state.
+      * *   Your instance has no unpaid billing method change orders.
+      * *   The instance type is available for purchase. For more information about unavailable instance types, see [Instance types](~~57141~~).
+      * > To change the billing method of an instance whose instance type is no longer available to purchase, call the [ModifyDBInstanceSpec](~~61816~~) or [ModifyNodeSpec](~~61923~~) operation to first change the instance type.
       *
       * @param request TransformInstanceChargeTypeRequest
       * @return TransformInstanceChargeTypeResponse
@@ -6604,8 +6523,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > * You can unbind up to 20 tags at a time.
-      * > * When a tag is unbound from all instances, the tag is automatically deleted.
+      * - You can remove up to 20 tags at a time.
+      * - If you remove a tag from all instances, the tag is automatically deleted.
       *
       * @param request UntagResourcesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6672,8 +6591,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > * You can unbind up to 20 tags at a time.
-      * > * When a tag is unbound from all instances, the tag is automatically deleted.
+      * - You can remove up to 20 tags at a time.
+      * - If you remove a tag from all instances, the tag is automatically deleted.
       *
       * @param request UntagResourcesRequest
       * @return UntagResourcesResponse

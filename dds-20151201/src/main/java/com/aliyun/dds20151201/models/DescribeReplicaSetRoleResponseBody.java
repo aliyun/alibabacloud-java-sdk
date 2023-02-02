@@ -4,15 +4,21 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeReplicaSetRoleResponseBody extends TeaModel {
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // Details about the replica set roles.
+    /**
+     * <p>Details about the replica set roles.</p>
+     */
     @NameInMap("ReplicaSets")
     public DescribeReplicaSetRoleResponseBodyReplicaSets replicaSets;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,34 +52,46 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     }
 
     public static class DescribeReplicaSetRoleResponseBodyReplicaSetsReplicaSet extends TeaModel {
-        // The endpoint of the node.
+        /**
+         * <p>The endpoint of the node.</p>
+         */
         @NameInMap("ConnectionDomain")
         public String connectionDomain;
 
-        // The port of the node.
+        /**
+         * <p>The port of the node.</p>
+         */
         @NameInMap("ConnectionPort")
         public String connectionPort;
 
-        // The remaining duration of the classic network endpoint. Unit: seconds.
+        /**
+         * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The network type. Valid values:
-        // 
-        // *   **VPC**
-        // *   **Classic**
-        // *   **Public**
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   **VPC**</p>
+         * <p>*   **Classic**</p>
+         * <p>*   **Public**</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        // The role of the node in the replica set.
-        // 
-        // *   **Primary**
-        // *   **Secondary**
+        /**
+         * <p>The role of the node in the replica set.</p>
+         * <br>
+         * <p>*   **Primary**</p>
+         * <p>*   **Secondary**</p>
+         */
         @NameInMap("ReplicaSetRole")
         public String replicaSetRole;
 
-        // The role ID of the node.
+        /**
+         * <p>The role ID of the node.</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 

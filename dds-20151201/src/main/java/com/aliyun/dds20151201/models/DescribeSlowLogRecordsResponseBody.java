@@ -4,27 +4,39 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    // The database engine.
+    /**
+     * <p>The database engine.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
-    // Details about the slow query logs.
+    /**
+     * <p>Details about the slow query logs.</p>
+     */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
-    // The page number of the returned page. The value must be an integer that is greater than 0. Default value: **1**.
+    /**
+     * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of slow query log entries returned on the page.
+    /**
+     * <p>The number of slow query log entries returned on the page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries.
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -82,43 +94,63 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodyItemsLogRecords extends TeaModel {
-        // The username of the database account that performs the operation.
+        /**
+         * <p>The username of the database account that performs the operation.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
-        // The name of the database.
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
-        // The number of documents that are scanned during the operation.
+        /**
+         * <p>The number of documents that are scanned during the operation.</p>
+         */
         @NameInMap("DocsExamined")
         public Long docsExamined;
 
-        // The start time of the operation. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The start time of the operation. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
-        // The host IP address that is used to connect to the database.
+        /**
+         * <p>The host IP address that is used to connect to the database.</p>
+         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
-        // The data entries that are scanned during indexing.
+        /**
+         * <p>The data entries that are scanned during indexing.</p>
+         */
         @NameInMap("KeysExamined")
         public Long keysExamined;
 
-        // The execution time of the statement. Unit: milliseconds.
+        /**
+         * <p>The execution time of the statement. Unit: milliseconds.</p>
+         */
         @NameInMap("QueryTimes")
         public String queryTimes;
 
-        // The number of entries returned.
+        /**
+         * <p>The number of entries returned.</p>
+         */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
-        // The SQL statement that is executed during the slow operation.
+        /**
+         * <p>The SQL statement that is executed during the slow operation.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
-        // The name of the collection.
+        /**
+         * <p>The name of the collection.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

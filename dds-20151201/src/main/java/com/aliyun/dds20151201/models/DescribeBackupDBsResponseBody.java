@@ -4,23 +4,33 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDBsResponseBody extends TeaModel {
-    // Details about the databases.
+    /**
+     * <p>Details about the databases.</p>
+     */
     @NameInMap("Databases")
     public DescribeBackupDBsResponseBodyDatabases databases;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of returned databases.
+    /**
+     * <p>The number of returned databases.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,7 +80,9 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupDBsResponseBodyDatabasesDatabase extends TeaModel {
-        // The name of the database.
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 

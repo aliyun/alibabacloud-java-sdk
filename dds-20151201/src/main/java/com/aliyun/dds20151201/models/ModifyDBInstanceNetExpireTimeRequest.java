@@ -4,15 +4,21 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceNetExpireTimeRequest extends TeaModel {
-    // The retention period of the original classic network address. Valid values: **14**, **30**, **60**, and** 120**. Unit: day.
+    /**
+     * <p>The retention period of the original classic network address. Valid values: **14**, **30**, **60**, and** 120**. Unit: day.</p>
+     */
     @NameInMap("ClassicExpendExpiredDays")
     public Integer classicExpendExpiredDays;
 
-    // The connection string of the instance
+    /**
+     * <p>The connection string of the instance</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

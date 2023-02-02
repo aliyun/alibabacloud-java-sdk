@@ -4,13 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
-    // The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.
-    // 
-    // >  An empty string is returned if the latest version is being used.
+    /**
+     * <p>The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
+     * <br>
+     * <p>>  An empty string is returned if the latest version is being used.</p>
+     */
     @NameInMap("EngineVersions")
     public DescribeAvailableEngineVersionResponseBodyEngineVersions engineVersions;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

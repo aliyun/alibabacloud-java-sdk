@@ -4,25 +4,33 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceRequest extends TeaModel {
-    // The ID of the instance.
-    // 
-    // >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+    /**
+     * <p>The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // A performance metric. For more information about the valid values, see [Performance metrics](~~64048~~).
-    // 
-    // >  If you specify multiple metrics, separate them with commas (,).
+    /**
+     * <p>A performance metric. For more information about the valid values, see [Performance metrics](~~64048~~).</p>
+     * <br>
+     * <p>>  If you specify multiple metrics, separate them with commas (,).</p>
+     */
     @NameInMap("Key")
     public String key;
 
-    // The ID of the mongos or shard node in a sharded cluster instance. You can specify this parameter to view the performance data of a single node.
-    // 
-    // >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
+    /**
+     * <p>The ID of the mongos or shard node in a sharded cluster instance. You can specify this parameter to view the performance data of a single node.</p>
+     * <br>
+     * <p>>  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -32,13 +40,15 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The role of the node in a standalone or replica set instance.
-    // 
-    // * **Primary**
-    // * **Secondary**
-    // 
-    // > * This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
-    // > * If you set the **DBInstanceId** parameter to the ID of a standalone instance, the value of this parameter can only be **Primary**.
+    /**
+     * <p>The role of the node in a standalone or replica set instance.</p>
+     * <br>
+     * <p>* **Primary**</p>
+     * <p>* **Secondary**</p>
+     * <br>
+     * <p>> * This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.</p>
+     * <p>> * If you set the **DBInstanceId** parameter to the ID of a standalone instance, the value of this parameter can only be **Primary**.</p>
+     */
     @NameInMap("ReplicaSetRole")
     public String replicaSetRole;
 
@@ -48,16 +58,20 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The role ID of the node in a standalone or replica set instance. You can call the [DescribeReplicaSetRole](~~62134~~) operation to query the role ID of the node.
-    // 
-    // >  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
+    /**
+     * <p>The role ID of the node in a standalone or replica set instance. You can call the [DescribeReplicaSetRole](~~62134~~) operation to query the role ID of the node.</p>
+     * <br>
+     * <p>>  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.</p>
+     */
     @NameInMap("RoleId")
     public String roleId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -4,22 +4,28 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ReleaseNodePrivateNetworkAddressRequest extends TeaModel {
-    // The ID of the sharded cluster instance.
+    /**
+     * <p>The ID of the sharded cluster instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The network type of the internal endpoint. Valid values:
-    // 
-    // *   **VPC**
-    // *   **Classic**
-    // 
-    // >  You can call the [DescribeShardingNetworkAddress](~~62135~~) operation to query the network type of the internal endpoint.
+    /**
+     * <p>The network type of the internal endpoint. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **Classic**</p>
+     * <br>
+     * <p>>  You can call the [DescribeShardingNetworkAddress](~~62135~~) operation to query the network type of the internal endpoint.</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
-    // The ID of the shard or Configserver node.
-    // 
-    // >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the shard or Configserver node.
+    /**
+     * <p>The ID of the shard or Configserver node.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the shard or Configserver node.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

@@ -4,17 +4,21 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityIpsRequest extends TeaModel {
-    // The ID of an instance.
+    /**
+     * <p>The ID of an instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The method of modification. Valid values:
-    // 
-    // *   **Cover**: overwrites the whitelist.
-    // *   **Append**: appends data to the whitelist.
-    // *   **Delete**: deletes the whitelist.
-    // 
-    // The default value is **Cover**.
+    /**
+     * <p>The method of modification. Valid values:</p>
+     * <br>
+     * <p>*   **Cover**: overwrites the whitelist.</p>
+     * <p>*   **Append**: appends data to the whitelist.</p>
+     * <p>*   **Delete**: deletes the whitelist.</p>
+     * <br>
+     * <p>The default value is **Cover**.</p>
+     */
     @NameInMap("ModifyMode")
     public String modifyMode;
 
@@ -30,20 +34,26 @@ public class ModifySecurityIpsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The attributes of an IP address whitelist. It can contain a maximum of 120 characters in length and can contain uppercase letters, lowercase letters, and digits.
-    // 
-    // This parameter is empty by default.
+    /**
+     * <p>The attributes of an IP address whitelist. It can contain a maximum of 120 characters in length and can contain uppercase letters, lowercase letters, and digits.</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
+     */
     @NameInMap("SecurityIpGroupAttribute")
     public String securityIpGroupAttribute;
 
-    // The name of the IP address whitelist to be modified. The default value is **default**.
+    /**
+     * <p>The name of the IP address whitelist to be modified. The default value is **default**.</p>
+     */
     @NameInMap("SecurityIpGroupName")
     public String securityIpGroupName;
 
-    // The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). You can add a maximum of 1,000 different IP addresses to a whitelist. You can add IP addresses in one of the following two formats:
-    // 
-    // *   IP addresses. Example: 10.23.12.24.
-    // *   Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.24/24, where 24 indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
+    /**
+     * <p>The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). You can add a maximum of 1,000 different IP addresses to a whitelist. You can add IP addresses in one of the following two formats:</p>
+     * <br>
+     * <p>*   IP addresses. Example: 10.23.12.24.</p>
+     * <p>*   Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.24/24, where 24 indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</p>
+     */
     @NameInMap("SecurityIps")
     public String securityIps;
 

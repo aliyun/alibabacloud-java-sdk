@@ -4,7 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeMongoDBLogConfigRequest extends TeaModel {
-    // The ID of the instance. You can call the [DescribeDBInstances](~~61939~~) operation to query the ID of the instance.
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~61939~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

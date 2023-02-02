@@ -4,28 +4,36 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterModificationHistoryRequest extends TeaModel {
-    // The role of the instance. Valid values:
-    // 
-    // *   **db**: shard
-    // *   **cs**: Configserver
-    // *   **mongos**: mongos
-    // *   **logic**: sharded cluster instance
+    /**
+     * <p>The role of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **db**: shard</p>
+     * <p>*   **cs**: Configserver</p>
+     * <p>*   **mongos**: mongos</p>
+     * <p>*   **logic**: sharded cluster instance</p>
+     */
     @NameInMap("CharacterType")
     public String characterType;
 
-    // The ID of the instance.
-    // 
-    // >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the mongos node or shard node whose parameter modification records you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
-    // 
-    // >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
+    /**
+     * <p>The ID of the mongos node or shard node whose parameter modification records you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.</p>
+     * <br>
+     * <p>>  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -44,7 +52,9 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+    /**
+     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

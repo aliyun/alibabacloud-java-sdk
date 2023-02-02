@@ -4,11 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoleZoneInfoResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of information of nodes in the zone.
+    /**
+     * <p>An array that consists of information of nodes in the zone.</p>
+     */
     @NameInMap("ZoneInfos")
     public DescribeRoleZoneInfoResponseBodyZoneInfos zoneInfos;
 
@@ -34,34 +38,44 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo extends TeaModel {
-        // The ID of the node.
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("InsName")
         public String insName;
 
-        // The type of the node. Valid values:
-        // 
-        // *   **normal**
-        // *   **configServer**
-        // *   **shard**
-        // *   **mongos**
-        // 
-        // >  Valid value for replica set instances: **normal**. Valid values for replica set instances: **configServer**, **shard**, and **mongos**.
+        /**
+         * <p>The type of the node. Valid values:</p>
+         * <br>
+         * <p>*   **normal**</p>
+         * <p>*   **configServer**</p>
+         * <p>*   **shard**</p>
+         * <p>*   **mongos**</p>
+         * <br>
+         * <p>>  Valid value for replica set instances: **normal**. Valid values for replica set instances: **configServer**, **shard**, and **mongos**.</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        // The ID of the role.
+        /**
+         * <p>The ID of the role.</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
-        // The role of the node. Valid values:
-        // 
-        // *   **Primary**
-        // *   **Secondary**
-        // *   **Hidden**
+        /**
+         * <p>The role of the node. Valid values:</p>
+         * <br>
+         * <p>*   **Primary**</p>
+         * <p>*   **Secondary**</p>
+         * <p>*   **Hidden**</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 
-        // The zone ID.
+        /**
+         * <p>The zone ID.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

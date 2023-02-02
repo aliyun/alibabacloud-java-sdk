@@ -4,60 +4,76 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    // The frequency at which high-frequency backups are created. Valid values:
-    // 
-    // *   **-1**: disables high-frequency backup.
-    // *   **15**: every 15 minutes.
-    // *   **30**: every 30 minutes.
-    // *   **60**: every hour.
-    // *   **120**: every 2 hours.
-    // *   **180**: every 3 hours.
-    // *   **240**: every 4 hours.
-    // *   **360**: every 6 hours.
-    // *   **480**: every 8 hours.
-    // *   **720**: every 12 hours.
+    /**
+     * <p>The frequency at which high-frequency backups are created. Valid values:</p>
+     * <br>
+     * <p>*   **-1**: disables high-frequency backup.</p>
+     * <p>*   **15**: every 15 minutes.</p>
+     * <p>*   **30**: every 30 minutes.</p>
+     * <p>*   **60**: every hour.</p>
+     * <p>*   **120**: every 2 hours.</p>
+     * <p>*   **180**: every 3 hours.</p>
+     * <p>*   **240**: every 4 hours.</p>
+     * <p>*   **360**: every 6 hours.</p>
+     * <p>*   **480**: every 8 hours.</p>
+     * <p>*   **720**: every 12 hours.</p>
+     */
     @NameInMap("BackupInterval")
     public Integer backupInterval;
 
-    // The retention period of backups. Unit: days.
+    /**
+     * <p>The retention period of backups. Unit: days.</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
-    // Indicates whether log backup is enabled. Default value: 0. Valid values:
-    // 
-    // *   **0**: disables log backup.
-    // *   **1**: enables log backup.
+    /**
+     * <p>Indicates whether log backup is enabled. Default value: 0. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disables log backup.</p>
+     * <p>*   **1**: enables log backup.</p>
+     */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
-    // The number of days for which to retain log backups. Valid values: 7 to 730.
+    /**
+     * <p>The number of days for which to retain log backups. Valid values: 7 to 730.</p>
+     */
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
 
-    // The day of a week on which to back up data. Valid values:
-    // 
-    // *   **Monday**
-    // *   **Tuesday**
-    // *   **Wednesday**
-    // *   **Thursday**
-    // *   **Friday**
-    // *   **Saturday**
-    // *   **Sunday**
+    /**
+     * <p>The day of a week on which to back up data. Valid values:</p>
+     * <br>
+     * <p>*   **Monday**</p>
+     * <p>*   **Tuesday**</p>
+     * <p>*   **Wednesday**</p>
+     * <p>*   **Thursday**</p>
+     * <p>*   **Friday**</p>
+     * <p>*   **Saturday**</p>
+     * <p>*   **Sunday**</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
-    // The time range to back up data. The time is in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
+    /**
+     * <p>The time range to back up data. The time is in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The snapshot backup type. Default value: Standard. Valid values:
-    // 
-    // *   **Flash**: single-digit second backup
-    // *   **Standard**: standard backup
+    /**
+     * <p>The snapshot backup type. Default value: Standard. Valid values:</p>
+     * <br>
+     * <p>*   **Flash**: single-digit second backup</p>
+     * <p>*   **Standard**: standard backup</p>
+     */
     @NameInMap("SnapshotBackupType")
     public String snapshotBackupType;
 

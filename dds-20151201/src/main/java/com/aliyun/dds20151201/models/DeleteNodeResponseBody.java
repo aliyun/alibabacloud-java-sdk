@@ -4,15 +4,21 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DeleteNodeResponseBody extends TeaModel {
-    // The order ID of the instance.
+    /**
+     * <p>The order ID of the instance.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the task.
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public Integer taskId;
 

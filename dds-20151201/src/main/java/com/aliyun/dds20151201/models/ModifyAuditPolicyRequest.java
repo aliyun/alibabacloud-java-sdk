@@ -4,18 +4,24 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyAuditPolicyRequest extends TeaModel {
-    // The request source for the audit log feature. Set the value to **Console**.
+    /**
+     * <p>The request source for the audit log feature. Set the value to **Console**.</p>
+     */
     @NameInMap("AuditLogSwitchSource")
     public String auditLogSwitchSource;
 
-    // Specifies whether the audit log feature is enabled. Valid values:
-    // 
-    // *   **enable**
-    // *   **disabled**
+    /**
+     * <p>Specifies whether the audit log feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **enable**</p>
+     * <p>*   **disabled**</p>
+     */
     @NameInMap("AuditStatus")
     public String auditStatus;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -34,16 +40,20 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The type of the audit log feature. Valid values:
-    // 
-    // *   **Trail**: the free trial edition
-    // *   **Standard**: the official edition
-    // 
-    // >  Default value: **Trial**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. We recommend that you set this parameter to **Standard**.
+    /**
+     * <p>The type of the audit log feature. Valid values:</p>
+     * <br>
+     * <p>*   **Trail**: the free trial edition</p>
+     * <p>*   **Standard**: the official edition</p>
+     * <br>
+     * <p>>  Default value: **Trial**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. We recommend that you set this parameter to **Standard**.</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
-    // The log retention period. Valid values: 1 to 365 days. Default value: 30 days.
+    /**
+     * <p>The log retention period. Valid values: 1 to 365 days. Default value: 30 days.</p>
+     */
     @NameInMap("StoragePeriod")
     public Integer storagePeriod;
 

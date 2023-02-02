@@ -4,45 +4,55 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
-    // The frequency at which high-frequency backups are created. Valid values:
-    // 
-    // *   **-1**: disables high-frequency backup.
-    // *   **15**: every 15 minutes.
-    // *   **30**: every 30 minutes.
-    // *   **60**: every hour.
-    // *   **120**: every 2 hours.
-    // *   **180**: every 3 hours.
-    // *   **240**: every 4 hours.
-    // *   **360**: every 6 hours.
-    // *   **480**: every 8 hours.
-    // *   **720**: every 12 hours.
-    // 
-    // > * If **SnapshotBackupType** is set to **Standard**, this parameter is set to **-1** and cannot be changed.
-    // > * High-frequency backup takes effect only when **SnapshotBackupType** is set to **Flash** and the value of this parameter is greater than 0.
+    /**
+     * <p>The frequency at which high-frequency backups are created. Valid values:</p>
+     * <br>
+     * <p>*   **-1**: disables high-frequency backup.</p>
+     * <p>*   **15**: every 15 minutes.</p>
+     * <p>*   **30**: every 30 minutes.</p>
+     * <p>*   **60**: every hour.</p>
+     * <p>*   **120**: every 2 hours.</p>
+     * <p>*   **180**: every 3 hours.</p>
+     * <p>*   **240**: every 4 hours.</p>
+     * <p>*   **360**: every 6 hours.</p>
+     * <p>*   **480**: every 8 hours.</p>
+     * <p>*   **720**: every 12 hours.</p>
+     * <br>
+     * <p>> * If **SnapshotBackupType** is set to **Standard**, this parameter is set to **-1** and cannot be changed.</p>
+     * <p>> * High-frequency backup takes effect only when **SnapshotBackupType** is set to **Flash** and the value of this parameter is greater than 0.</p>
+     */
     @NameInMap("BackupInterval")
     public String backupInterval;
 
-    // The retention period of full backups.
-    // 
-    // > * If your instance is created before September 10, 2021, backups are retained for seven days by default.
-    // > * If your instance is created after September 10, 2021, backups are retained for 30 days by default.
+    /**
+     * <p>The retention period of full backups.</p>
+     * <br>
+     * <p>> * If your instance is created before September 10, 2021, backups are retained for seven days by default.</p>
+     * <p>> * If your instance is created after September 10, 2021, backups are retained for 30 days by default.</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public Long backupRetentionPeriod;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // Specifies whether to enable log backup. Default value: 0. Valid values:
-    // 
-    // *   **0**: disables log backup.
-    // *   **1**: enables log backup.
+    /**
+     * <p>Specifies whether to enable log backup. Default value: 0. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disables log backup.</p>
+     * <p>*   **1**: enables log backup.</p>
+     */
     @NameInMap("EnableBackupLog")
     public Long enableBackupLog;
 
-    // The number of days for which log backups are retained. Default value: 7.
-    // 
-    // Valid values: 7 to 730.
+    /**
+     * <p>The number of days for which log backups are retained. Default value: 7.</p>
+     * <br>
+     * <p>Valid values: 7 to 730.</p>
+     */
     @NameInMap("LogBackupRetentionPeriod")
     public Long logBackupRetentionPeriod;
 
@@ -52,23 +62,27 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The day of a week on which to back up data. Valid values:
-    // 
-    // *   **Monday**
-    // *   **Tuesday**
-    // *   **Wednesday**
-    // *   **Thursday**
-    // *   **Friday**
-    // *   **Saturday**
-    // *   **Sunday**
-    // 
-    // >  Separate multiple values with commas (,).
+    /**
+     * <p>The day of a week on which to back up data. Valid values:</p>
+     * <br>
+     * <p>*   **Monday**</p>
+     * <p>*   **Tuesday**</p>
+     * <p>*   **Wednesday**</p>
+     * <p>*   **Thursday**</p>
+     * <p>*   **Friday**</p>
+     * <p>*   **Saturday**</p>
+     * <p>*   **Sunday**</p>
+     * <br>
+     * <p>>  Separate multiple values with commas (,).</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
-    // The time range to back up data. Specify the time in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.
-    // 
-    // >  The time range is 1 hour.
+    /**
+     * <p>The time range to back up data. Specify the time in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The time range is 1 hour.</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
@@ -81,10 +95,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The snapshot backup type. Default value: Standard. Valid values:
-    // 
-    // *   **Flash**: single-digit second backup
-    // *   **Standard**: standard backup
+    /**
+     * <p>The snapshot backup type. Default value: Standard. Valid values:</p>
+     * <br>
+     * <p>*   **Flash**: single-digit second backup</p>
+     * <p>*   **Standard**: standard backup</p>
+     */
     @NameInMap("SnapshotBackupType")
     public String snapshotBackupType;
 

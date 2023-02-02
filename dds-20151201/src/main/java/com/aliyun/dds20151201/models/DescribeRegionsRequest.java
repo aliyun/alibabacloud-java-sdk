@@ -4,10 +4,12 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
-    // Specifies the language of the returned **RegionName** and **ZoneName** values. Default value: zh. Valid values:
-    // 
-    // *   **zh**: Chinese.
-    // *   **en**: English
+    /**
+     * <p>Specifies the language of the returned **RegionName** and **ZoneName** values. Default value: zh. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese.</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -17,9 +19,11 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the region.
-    // 
-    // >  If you do not specify this parameter, all supported regions are queried.
+    /**
+     * <p>The ID of the region.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, all supported regions are queried.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

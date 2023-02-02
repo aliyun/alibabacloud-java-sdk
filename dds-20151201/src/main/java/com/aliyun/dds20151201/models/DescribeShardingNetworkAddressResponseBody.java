@@ -4,15 +4,21 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
-    // An array that consists of the endpoints of DynamoDB instances.
+    /**
+     * <p>An array that consists of the endpoints of DynamoDB instances.</p>
+     */
     @NameInMap("CompatibleConnections")
     public DescribeShardingNetworkAddressResponseBodyCompatibleConnections compatibleConnections;
 
-    // An array that consists of the endpoints of ApsaraDB for MongoDB instances.
+    /**
+     * <p>An array that consists of the endpoints of ApsaraDB for MongoDB instances.</p>
+     */
     @NameInMap("NetworkAddresses")
     public DescribeShardingNetworkAddressResponseBodyNetworkAddresses networkAddresses;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,39 +52,53 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection extends TeaModel {
-        // The remaining duration of the classic network address. Unit: seconds.
+        /**
+         * <p>The remaining duration of the classic network address. Unit: seconds.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The IP address of the instance.
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        // The endpoint of the instance.
+        /**
+         * <p>The endpoint of the instance.</p>
+         */
         @NameInMap("NetworkAddress")
         public String networkAddress;
 
-        // The network type. Valid values:
-        // 
-        // *   **VPC**
-        // *   **Classic**
-        // *   **Public**: pubic endpoint
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   **VPC**</p>
+         * <p>*   **Classic**</p>
+         * <p>*   **Public**: pubic endpoint</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        // The port number.
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public String port;
 
-        // The ID of the VPC.
-        // 
-        // >  This parameter is returned when the network type is **VPC**.
+        /**
+         * <p>The ID of the VPC.</p>
+         * <br>
+         * <p>>  This parameter is returned when the network type is **VPC**.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
-        // The vSwitch ID of the VPC.
-        // 
-        // >  This parameter is returned when the network type is **VPC**.
+        /**
+         * <p>The vSwitch ID of the VPC.</p>
+         * <br>
+         * <p>>  This parameter is returned when the network type is **VPC**.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
@@ -165,58 +185,78 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress extends TeaModel {
-        // The remaining duration of the classic network address. Unit: seconds.
+        /**
+         * <p>The remaining duration of the classic network address. Unit: seconds.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The IP address of the instance.
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        // The endpoint of the instance.
+        /**
+         * <p>The endpoint of the instance.</p>
+         */
         @NameInMap("NetworkAddress")
         public String networkAddress;
 
-        // The network type. Valid values:
-        // 
-        // - **VPC**
-        // - **Classic**
-        // - **Public**: pubic endpoint
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>- **VPC**</p>
+         * <p>- **Classic**</p>
+         * <p>- **Public**: pubic endpoint</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
-        // The ID of the mongos.
+        /**
+         * <p>The ID of the mongos.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        // The type of the node. Valid values:
-        // 
-        // - **mongos**
-        // - **shard**
-        // - **configserver**
+        /**
+         * <p>The type of the node. Valid values:</p>
+         * <br>
+         * <p>- **mongos**</p>
+         * <p>- **shard**</p>
+         * <p>- **configserver**</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        // The port number.
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public String port;
 
-        // The role of the node. Valid values:
-        // 
-        // - Primary
-        // - Secondary
+        /**
+         * <p>The role of the node. Valid values:</p>
+         * <br>
+         * <p>- Primary</p>
+         * <p>- Secondary</p>
+         */
         @NameInMap("Role")
         public String role;
 
-        // The ID of the VPC.
-        // 
-        // >  This parameter is returned when the network type is **VPC**.
+        /**
+         * <p>The ID of the VPC.</p>
+         * <br>
+         * <p>>  This parameter is returned when the network type is **VPC**.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
-        // The vSwitch ID of the VPC.
-        // 
-        // >  This parameter is returned when the network type is **VPC**.
+        /**
+         * <p>The vSwitch ID of the VPC.</p>
+         * <br>
+         * <p>>  This parameter is returned when the network type is **VPC**.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 

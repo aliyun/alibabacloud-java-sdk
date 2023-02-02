@@ -4,11 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceMonitorRequest extends TeaModel {
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The collection frequency of monitoring data. Valid values: **1** or **300**. Unit: seconds.
+    /**
+     * <p>The collection frequency of monitoring data. Valid values: **1** or **300**. Unit: seconds.</p>
+     */
     @NameInMap("Granularity")
     public String granularity;
 

@@ -4,18 +4,22 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class MigrateToOtherZoneRequest extends TeaModel {
-    // The time when the instance is migrated to the destination zone. Valid values:
-    // 
-    // *   **Immediately**: The instance is immediately migrated to the destination zone.
-    // *   **MaintainTime**: The instance is migrated during the maintenance period of the instance.
-    // 
-    // Default value: **Immediately**.
+    /**
+     * <p>The time when the instance is migrated to the destination zone. Valid values:</p>
+     * <br>
+     * <p>*   **Immediately**: The instance is immediately migrated to the destination zone.</p>
+     * <p>*   **MaintainTime**: The instance is migrated during the maintenance period of the instance.</p>
+     * <br>
+     * <p>Default value: **Immediately**.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
-    // The ID of the instance.
-    // 
-    // >  If the network type of the instance is VPC, you must specify the **Vswitch** parameter .
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  If the network type of the instance is VPC, you must specify the **Vswitch** parameter .</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -31,16 +35,20 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the vSwitch in the destination zone.
-    // 
-    // >  This parameter is valid and required only when the network type of the instance is VPC.
+    /**
+     * <p>The ID of the vSwitch in the destination zone.</p>
+     * <br>
+     * <p>>  This parameter is valid and required only when the network type of the instance is VPC.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.
-    // 
-    // > * The destination and source zones must be in one region.
-    // > * You can call [DescribeRegions](~~61933~~) to query the zone IDs.
+    /**
+     * <p>The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.</p>
+     * <br>
+     * <p>> * The destination and source zones must be in one region.</p>
+     * <p>> * You can call [DescribeRegions](~~61933~~) to query the zone IDs.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

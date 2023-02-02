@@ -4,11 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    // Details about the regions.
+    /**
+     * <p>Details about the regions.</p>
+     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,20 +38,26 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsDdsRegionZonesZone extends TeaModel {
-        // Indicates whether a virtual private cloud (VPC) is supported. Valid values:
-        // 
-        // *   **true**: VPC is supported.
-        // *   **false**: VPC is not supported.
+        /**
+         * <p>Indicates whether a virtual private cloud (VPC) is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**: VPC is supported.</p>
+         * <p>*   **false**: VPC is not supported.</p>
+         */
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
-        // The ID of the zone.
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
-        // The name of the zone.
-        // 
-        // The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.
+        /**
+         * <p>The name of the zone.</p>
+         * <br>
+         * <p>The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 
@@ -102,17 +112,23 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsDdsRegion extends TeaModel {
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The name of the region.
-        // 
-        // The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.
+        /**
+         * <p>The name of the region.</p>
+         * <br>
+         * <p>The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
-        // Details about the zones.
+        /**
+         * <p>Details about the zones.</p>
+         */
         @NameInMap("Zones")
         public DescribeRegionsResponseBodyRegionsDdsRegionZones zones;
 

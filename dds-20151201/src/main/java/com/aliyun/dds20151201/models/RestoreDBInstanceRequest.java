@@ -4,13 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class RestoreDBInstanceRequest extends TeaModel {
-    // The ID of the backup.
-    // 
-    // >  You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
+    /**
+     * <p>The ID of the backup.</p>
+     * <br>
+     * <p>>  You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.</p>
+     */
     @NameInMap("BackupId")
     public Integer backupId;
 
-    // The ID of an instance.
+    /**
+     * <p>The ID of an instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

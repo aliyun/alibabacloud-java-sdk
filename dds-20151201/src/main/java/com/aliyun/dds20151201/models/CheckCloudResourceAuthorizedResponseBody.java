@@ -4,21 +4,27 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
-    // Indicates whether KMS keys are authorized to ApsaraDB for MongoDB instances. Valid values:
-    // 
-    // *   **0**: KMS keys are not authorized.
-    // *   **1**: KMS keys are authorized.
-    // *   **2**: KMS is not enabled.
+    /**
+     * <p>Indicates whether KMS keys are authorized to ApsaraDB for MongoDB instances. Valid values:</p>
+     * <br>
+     * <p>*   **0**: KMS keys are not authorized.</p>
+     * <p>*   **1**: KMS keys are authorized.</p>
+     * <p>*   **2**: KMS is not enabled.</p>
+     */
     @NameInMap("AuthorizationState")
     public Integer authorizationState;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The role information of the authorized Alibaba Resource Name (ARN).
-    // 
-    // >  This parameter is returned only when the value of the **AuthorizationState** parameter is **1**.
+    /**
+     * <p>The role information of the authorized Alibaba Resource Name (ARN).</p>
+     * <br>
+     * <p>>  This parameter is returned only when the value of the **AuthorizationState** parameter is **1**.</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 

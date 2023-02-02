@@ -10,15 +10,21 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group.
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The resource IDs.
+    /**
+     * <p>The resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -28,11 +34,15 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The resource type. Set the value to **INSTANCE**.
+    /**
+     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The list of tags that you want to associate with the resources. You can specify up to 20 tags.
+    /**
+     * <p>The list of tags that you want to associate with the resources. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -113,52 +123,24 @@ public class TagResourcesRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class ListTagResourcesRequestTag extends TeaModel {
-        // The key of tag.
-        @NameInMap("Key")
-        public String key;
-
-        // The value of tag.
-        @NameInMap("Value")
-        public String value;
-
-        public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesRequestTag self = new ListTagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class TagResourcesRequestTag extends TeaModel {
-        // The key of tag.
-        // 
-        // * The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-        // * It can be up to 64 characters in length.
-        // * The key cannot be an empty string.
+        /**
+         * <p>The key of tag.</p>
+         * <br>
+         * <p>* The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
+         * <p>* It can be up to 64 characters in length.</p>
+         * <p>* The key cannot be an empty string.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag.
-        // 
-        // - The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-        // - It can be up to 128 characters in length.
-        // - The value can be an empty string.
+        /**
+         * <p>The value of tag.</p>
+         * <br>
+         * <p>- The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
+         * <p>- It can be up to 128 characters in length.</p>
+         * <p>- The value can be an empty string.</p>
+         */
         @NameInMap("Value")
         public String value;
 

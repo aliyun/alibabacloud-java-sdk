@@ -4,99 +4,127 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
-    // The password of the root account. The password must meet the following requirements:
-    // 
-    // *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-    // *   These special characters include ! # $ % ^ & \* ( ) \_ + - =
-    // *   The password must be 8 to 32 characters in length.
+    /**
+     * <p>The password of the root account. The password must meet the following requirements:</p>
+     * <br>
+     * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>*   These special characters include ! # $ % ^ & \* ( ) \_ + - =</p>
+     * <p>*   The password must be 8 to 32 characters in length.</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
-    // Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:
-    // 
-    // *   **true**
-    // *   **false**
-    // 
-    // >  If you set the **ChargeType** parameter to **PrePaid**, you must configure this optional parameter.
+    /**
+     * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>>  If you set the **ChargeType** parameter to **PrePaid**, you must configure this optional parameter.</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
-    // The ID of the backup set. You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
-    // 
-    // >  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.
+    /**
+     * <p>The ID of the backup set. You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.</p>
+     * <br>
+     * <p>>  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
-    // The business information. This is an additional parameter.
+    /**
+     * <p>The business information. This is an additional parameter.</p>
+     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
-    // The billing method of the instance. Valid values:
-    // 
-    // *   **PostPaid**: pay-as-you-go
-    // *   **PrePaid**: subscription
-    // 
-    // >  If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.
+    /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <p>*   **PrePaid**: subscription</p>
+     * <br>
+     * <p>>  If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
-    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+    /**
+     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
-    // The instance type. You can also call the [DescribeAvailableResource](~~149719~~) operation to view instance types.
+    /**
+     * <p>The instance type. You can also call the [DescribeAvailableResource](~~149719~~) operation to view instance types.</p>
+     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
-    // The name of the instance. Valid values:
-    // 
-    // *   The name must start with a letter.
-    // *   The name can contain digits, letters, underscores (\_), and hyphens (-).
-    // *   The name must be 2 to 256 characters in length.
+    /**
+     * <p>The name of the instance. Valid values:</p>
+     * <br>
+     * <p>*   The name must start with a letter.</p>
+     * <p>*   The name can contain digits, letters, underscores (\_), and hyphens (-).</p>
+     * <p>*   The name must be 2 to 256 characters in length.</p>
+     */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
-    // The storage capacity of the instance. Unit: GB.
-    // 
-    // The values that can be specified for this parameter are subject to the instance types. For more information, see [Replica set instance types](~~311410~~).
+    /**
+     * <p>The storage capacity of the instance. Unit: GB.</p>
+     * <br>
+     * <p>The values that can be specified for this parameter are subject to the instance types. For more information, see [Replica set instance types](~~311410~~).</p>
+     */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
 
-    // The name of the database.
-    // 
-    // >  When you call this operation to clone an instance, you can set the databases that are specified by this parameter for cloning. Otherwise, all databases of the instance are cloned.
+    /**
+     * <p>The name of the database.</p>
+     * <br>
+     * <p>>  When you call this operation to clone an instance, you can set the databases that are specified by this parameter for cloning. Otherwise, all databases of the instance are cloned.</p>
+     */
     @NameInMap("DatabaseNames")
     public String databaseNames;
 
-    // The engine of the instance. The value is set to **MongoDB**.
+    /**
+     * <p>The engine of the instance. The value is set to **MongoDB**.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
-    // The engine version of the instance. Valid values:
-    // 
-    // * **5.0**
-    // * **4.4**
-    // * **4.2**
-    // * **4.0**
-    // * **3.4**
-    // 
-    // > If you call this operation to clone an instance, set the value to the engine of the source instance.
+    /**
+     * <p>The engine version of the instance. Valid values:</p>
+     * <br>
+     * <p>* **5.0**</p>
+     * <p>* **4.4**</p>
+     * <p>* **4.2**</p>
+     * <p>* **4.0**</p>
+     * <p>* **3.4**</p>
+     * <br>
+     * <p>> If you call this operation to clone an instance, set the value to the engine of the source instance.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     @NameInMap("HiddenZoneId")
     public String hiddenZoneId;
 
-    // The network type of the instance. Valid values:
-    // 
-    // **VPC**
+    /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <br>
+     * <p>**VPC**</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -106,31 +134,41 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The subscription period of the instance. Unit: months.
-    // 
-    // Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
-    // 
-    // >  If you set the ChargeType property to PrePaid, you must configure this property.
+    /**
+     * <p>The subscription period of the instance. Unit: months.</p>
+     * <br>
+     * <p>Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.</p>
+     * <br>
+     * <p>>  If you set the ChargeType property to PrePaid, you must configure this property.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
-    // The number of **read-only nodes** in the replica set instance. Default value: **0**. Valid values: **0** to **5**.
+    /**
+     * <p>The number of **read-only nodes** in the replica set instance. Default value: **0**. Valid values: **0** to **5**.</p>
+     */
     @NameInMap("ReadonlyReplicas")
     public String readonlyReplicas;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The number of **nodes** in the replica set instance. Default value: 3. Valid values:
-    // 
-    // *   **3**
-    // *   **5**
-    // *   **7**
+    /**
+     * <p>The number of **nodes** in the replica set instance. Default value: 3. Valid values:</p>
+     * <br>
+     * <p>*   **3**</p>
+     * <p>*   **5**</p>
+     * <p>*   **7**</p>
+     */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
 
-    // The ID of the resource group.
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -140,62 +178,78 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The point in time to clone the instance, which must be within seven days. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-    // 
-    // >  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.
+    /**
+     * <p>The point in time to clone the instance, which must be within seven days. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.</p>
+     */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
 
-    // The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The following types of IP addresses are supported:
-    // 
-    // * 0.0.0.0/0
-    // * IP addresses, such as 10.23.12.24.
-    // * Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
-    // 
-    // > * A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.
-    // > * If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance.
+    /**
+     * <p>The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The following types of IP addresses are supported:</p>
+     * <br>
+     * <p>* 0.0.0.0/0</p>
+     * <p>* IP addresses, such as 10.23.12.24.</p>
+     * <p>* Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</p>
+     * <br>
+     * <p>> * A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</p>
+     * <p>> * If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance.</p>
+     */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The ID of the source instance.
-    // 
-    // >  This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter.
+    /**
+     * <p>The ID of the source instance.</p>
+     * <br>
+     * <p>>  This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter.</p>
+     */
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
 
-    // The storage engine of the instance. Default value: WiredTiger. Valid values:
-    // 
-    // * **WiredTiger**
-    // * **RocksDB**
-    // * **TerarkDB**
-    // 
-    // > * If you call this operation to clone an instance, set the value to the engine of the source instance.
-    // > * For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+    /**
+     * <p>The storage engine of the instance. Default value: WiredTiger. Valid values:</p>
+     * <br>
+     * <p>* **WiredTiger**</p>
+     * <p>* **RocksDB**</p>
+     * <p>* **TerarkDB**</p>
+     * <br>
+     * <p>> * If you call this operation to clone an instance, set the value to the engine of the source instance.</p>
+     * <p>> * For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
+     */
     @NameInMap("StorageEngine")
     public String storageEngine;
 
-    // The storage type of the instance. Valid values:
-    // 
-    // *   **cloud_essd**: enhanced SSD (ESSD)
-    // *   **local_ssd**: local SSD
+    /**
+     * <p>The storage type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
+     * <p>*   **local_ssd**: local SSD</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
-    // The vSwitch ID of the instance.
+    /**
+     * <p>The vSwitch ID of the instance.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // The VPC ID of the instance.
+    /**
+     * <p>The VPC ID of the instance.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
-    // The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+    /**
+     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

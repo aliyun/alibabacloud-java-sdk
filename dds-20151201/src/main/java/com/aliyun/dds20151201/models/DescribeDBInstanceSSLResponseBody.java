@@ -4,22 +4,30 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
-    // The name of the SSL certificate.
+    /**
+     * <p>The name of the SSL certificate.</p>
+     */
     @NameInMap("CertCommonName")
     public String certCommonName;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The time when the SSL certificate expires. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+    /**
+     * <p>The time when the SSL certificate expires. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("SSLExpiredTime")
     public String SSLExpiredTime;
 
-    // The status of the SSL feature. Valid values:
-    // 
-    // *   **Open**: The SSL feature is enabled.
-    // *   **Closed**: The SSL feature is disabled.
+    /**
+     * <p>The status of the SSL feature. Valid values:</p>
+     * <br>
+     * <p>*   **Open**: The SSL feature is enabled.</p>
+     * <p>*   **Closed**: The SSL feature is disabled.</p>
+     */
     @NameInMap("SSLStatus")
     public String SSLStatus;
 

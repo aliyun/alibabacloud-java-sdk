@@ -4,11 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    // Details about the accounts.
+    /**
+     * <p>Details about the accounts.</p>
+     */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,32 +38,42 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
-        // The description of the account.
+        /**
+         * <p>The description of the account.</p>
+         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
-        // The name of the account.
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
-        // The status of the account.
-        // 
-        // *   Unavailable
-        // *   Available
+        /**
+         * <p>The status of the account.</p>
+         * <br>
+         * <p>*   Unavailable</p>
+         * <p>*   Available</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
-        // The role of the account. Valid values:
-        // 
-        // *   db: shard
-        // *   cs: Configserver
-        // *   mongos: mongos
-        // *   logic: sharded cluster instance
-        // *   normal: replica set instance
+        /**
+         * <p>The role of the account. Valid values:</p>
+         * <br>
+         * <p>*   db: shard</p>
+         * <p>*   cs: Configserver</p>
+         * <p>*   mongos: mongos</p>
+         * <p>*   logic: sharded cluster instance</p>
+         * <p>*   normal: replica set instance</p>
+         */
         @NameInMap("CharacterType")
         public String characterType;
 
-        // The name of the instance to which the account belongs.
+        /**
+         * <p>The name of the instance to which the account belongs.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
