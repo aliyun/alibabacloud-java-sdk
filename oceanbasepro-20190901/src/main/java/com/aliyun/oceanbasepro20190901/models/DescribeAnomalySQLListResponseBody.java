@@ -4,12 +4,21 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnomalySQLListResponseBody extends TeaModel {
+    /**
+     * <p>The list of suspicious SQL statements.</p>
+     */
     @NameInMap("AnomalySQLList")
     public java.util.List<DescribeAnomalySQLListResponseBodyAnomalySQLList> anomalySQLList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total count.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,39 +52,75 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
     }
 
     public static class DescribeAnomalySQLListResponseBodyAnomalySQLList extends TeaModel {
+        /**
+         * <p>The average CPU time, in ms.</p>
+         */
         @NameInMap("CpuTime")
         public Float cpuTime;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The diagnosis information.</p>
+         */
         @NameInMap("Diagnosis")
         public String diagnosis;
 
+        /**
+         * <p>The diagnostic rule.</p>
+         */
         @NameInMap("DiagnosisRule")
         public String diagnosisRule;
 
+        /**
+         * <p>The number of executions.</p>
+         */
         @NameInMap("Executions")
         public Long executions;
 
+        /**
+         * <p>The sequence number of the returned SQL statement.</p>
+         */
         @NameInMap("Key")
         public Long key;
 
+        /**
+         * <p>The request time, in ms.</p>
+         */
         @NameInMap("RequestTime")
         public Float requestTime;
 
+        /**
+         * <p>The request time in UTC +0.</p>
+         */
         @NameInMap("RequestTimeUTCString")
         public String requestTimeUTCString;
 
+        /**
+         * <p>SQLID.</p>
+         */
         @NameInMap("SQLId")
         public String SQLId;
 
+        /**
+         * <p>The SQL text.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The suggestions.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

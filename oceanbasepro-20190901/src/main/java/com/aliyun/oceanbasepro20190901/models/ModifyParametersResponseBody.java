@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyParametersResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The modification results.</p>
+     */
     @NameInMap("Results")
     public ModifyParametersResponseBodyResults results;
 
@@ -32,9 +38,17 @@ public class ModifyParametersResponseBody extends TeaModel {
     }
 
     public static class ModifyParametersResponseBodyResults extends TeaModel {
+        /**
+         * <p>The cause of the modification failure.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether the parameter has been modified. Valid values:   </p>
+         * <p>true: The modification is successful. </p>
+         * <p>false: The modification failed.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

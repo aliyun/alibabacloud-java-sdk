@@ -7,6 +7,9 @@ public class CreateInstanceResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateInstanceResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

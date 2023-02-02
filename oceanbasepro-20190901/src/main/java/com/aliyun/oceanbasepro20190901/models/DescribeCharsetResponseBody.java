@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharsetResponseBody extends TeaModel {
+    /**
+     * <p>The list of character sets.</p>
+     */
     @NameInMap("Charset")
     public java.util.List<DescribeCharsetResponseBodyCharset> charset;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeCharsetResponseBody extends TeaModel {
     }
 
     public static class DescribeCharsetResponseBodyCharset extends TeaModel {
+        /**
+         * <p>The character set name.</p>
+         */
         @NameInMap("Charset")
         public String charset;
 
+        /**
+         * <p>The collation set.</p>
+         */
         @NameInMap("Collations")
         public java.util.List<String> collations;
 

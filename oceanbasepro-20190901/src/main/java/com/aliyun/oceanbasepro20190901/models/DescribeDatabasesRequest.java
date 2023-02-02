@@ -4,21 +4,45 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabasesRequest extends TeaModel {
+    /**
+     * <p>The name of the database.    </p>
+     * <p>You cannot use reserved keywords, such as test and mysql.</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The number of the page to return.   </p>
+     * <p>- Start value: 1   </p>
+     * <p>- Default value: 1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of rows to return on each page.   </p>
+     * <p>- Maximum value: 100.  </p>
+     * <p>- Default value: 10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The search keyword.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>Specifies whether to return the information of tables in the database.   </p>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("WithTables")
     public Boolean withTables;
 

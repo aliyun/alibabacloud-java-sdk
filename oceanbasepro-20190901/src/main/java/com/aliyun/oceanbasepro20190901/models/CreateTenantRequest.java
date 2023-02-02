@@ -4,39 +4,89 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateTenantRequest extends TeaModel {
+    /**
+     * <p>The character set.    </p>
+     * <p>For more information, see DescribeCharset.</p>
+     */
     @NameInMap("Charset")
     public String charset;
 
+    /**
+     * <p>The number of CPU cores of the tenant.   </p>
+     * <br>
+     * <p>> <br>The CPU specification of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the CPU specification of the tenant cannot exceed 14 cores.</p>
+     */
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>The description of the database.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The memory size of the tenant, in GB.   </p>
+     * <br>
+     * <p>> <br>The memory size of a single tenant cannot exceed that of the corresponding cluster. <br>For example, if the specification of the cluster is 14 CPU cores and 70 GB of memory, the memory size of the tenant cannot exceed 70 GB.</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The primary zone of the tenant.    </p>
+     * <p>It is one of the zones in which the cluster is deployed.</p>
+     */
     @NameInMap("PrimaryZone")
     public String primaryZone;
 
+    /**
+     * <p>The tenant mode.    </p>
+     * <p>Valid values: Oracle and MySQL.   </p>
+     * <p>For more information, see [DescribeInstanceTenantModes](~~410354~~).</p>
+     */
     @NameInMap("TenantMode")
     public String tenantMode;
 
+    /**
+     * <p>The name of the tenant.    </p>
+     * <p>It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.</p>
+     */
     @NameInMap("TenantName")
     public String tenantName;
 
+    /**
+     * <p>The time zone of the tenant. For more information, see [DescribeTimeZones](~~410361~~).</p>
+     */
     @NameInMap("TimeZone")
     public String timeZone;
 
+    /**
+     * <p>The number of resource distribution nodes in the tenant.    </p>
+     * <p>The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.</p>
+     */
     @NameInMap("UnitNum")
     public Integer unitNum;
 
+    /**
+     * <p>The ID of the vSwitch.    </p>
+     * <p>If no suitable vSwitch is available, create a vSwitch as prompted.   </p>
+     * <p>For more information, see Use a vSwitch.</p>
+     */
     @NameInMap("UserVSwitchId")
     public String userVSwitchId;
 
+    /**
+     * <p>The ID of the VPC.   </p>
+     * <p> If no suitable VPC is available, create a VPC as prompted.   </p>
+     * <p>For more information, see "What is a VPC".</p>
+     */
     @NameInMap("UserVpcId")
     public String userVpcId;
 

@@ -4,12 +4,21 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantUsersResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of database accounts in the tenant.</p>
+     */
     @NameInMap("TenantUsers")
     public java.util.List<DescribeTenantUsersResponseBodyTenantUsers> tenantUsers;
 
+    /**
+     * <p>The total number of database accounts in the tenant.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,12 +52,31 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantUsersResponseBodyTenantUsersDatabases extends TeaModel {
+        /**
+         * <p>The name of the database (MySQL mode) or schema (Oracle mode).</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The role of the account.   </p>
+         * <p>In Oracle mode, a role is a schema-level role. Valid values:  </p>
+         * <p>- ReadWrite: a role that has the read and write privileges, including: CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SYNONYM, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SESSION, EXECUTE ANY PROCEDURE, CREATE ANY OUTLINE, ALTER ANY OUTLINE, DROP ANY OUTLINE, CREATE ANY PROCEDURE, ALTER ANY PROCEDURE, DROP ANY PROCEDURE, CREATE ANY SEQUENCE, ALTER ANY SEQUENCE, DROP ANY SEQUENCE, CREATE ANY TYPE, ALTER ANY TYPE, DROP ANY TYPE, SYSKM, CREATE ANY TRIGGER, ALTER ANY TRIGGER, DROP ANY TRIGGER, CREATE PROFILE, ALTER PROFILE, and DROP PROFILE.  </p>
+         * <p>- ReadOnly: a role that has only the read-only privilege SELECT.</p>
+         * <p>In MySQL mode, a role is a database-level role. Valid values: </p>
+         * <p>- ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.   </p>
+         * <p>- ReadOnly: a role that has only the read-only privilege SELECT.   </p>
+         * <p>- DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </p>
+         * <p>- DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.   </p>
+         * <br>
+         * <p>> <br>By default, an Oracle account has the read and write privileges on its own schema, which are not listed here.</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("Table")
         public String table;
 
@@ -84,18 +112,43 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantUsersResponseBodyTenantUsers extends TeaModel {
+        /**
+         * <p>The database privileges of the account.</p>
+         */
         @NameInMap("Databases")
         public java.util.List<DescribeTenantUsersResponseBodyTenantUsersDatabases> databases;
 
+        /**
+         * <p>The description of the database account.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("TenantId")
+        public String tenantId;
+
+        /**
+         * <p>The name of the database account.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The status of the database account. Valid values:   </p>
+         * <p> - LOCKED: The account is locked.   </p>
+         * <p>- NORMAL: The account is unlocked.</p>
+         */
         @NameInMap("UserStatus")
         public String userStatus;
 
+        /**
+         * <p>The type of the database account. Valid values:    </p>
+         * <p>- Admin: the super administrator account.   </p>
+         * <p>- NORMAL: a general account.</p>
+         */
         @NameInMap("UserType")
         public String userType;
 
@@ -118,6 +171,22 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeTenantUsersResponseBodyTenantUsers setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeTenantUsersResponseBodyTenantUsers setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
         }
 
         public DescribeTenantUsersResponseBodyTenantUsers setUserName(String userName) {

@@ -4,9 +4,16 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteTenantsRequest extends TeaModel {
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The list of tenant IDs.   </p>
+     * <p>It is a JSON array. Each object in the array is a tenant name string.</p>
+     */
     @NameInMap("TenantIds")
     public String tenantIds;
 

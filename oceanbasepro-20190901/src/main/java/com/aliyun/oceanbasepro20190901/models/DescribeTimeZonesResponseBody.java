@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTimeZonesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time zones supported by the tenant.</p>
+     */
     @NameInMap("TimeZones")
     public DescribeTimeZonesResponseBodyTimeZones timeZones;
 
@@ -32,9 +38,15 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeTimeZonesResponseBodyTimeZonesList extends TeaModel {
+        /**
+         * <p>The description of the time zone.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the time zone.</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
@@ -62,9 +74,15 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeTimeZonesResponseBodyTimeZones extends TeaModel {
+        /**
+         * <p>The default time zone.</p>
+         */
         @NameInMap("Default")
         public String _default;
 
+        /**
+         * <p>The list of time zones.</p>
+         */
         @NameInMap("List")
         public java.util.List<DescribeTimeZonesResponseBodyTimeZonesList> list;
 

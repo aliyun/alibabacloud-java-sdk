@@ -4,27 +4,51 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class SearchOmsOpenAPIProjectsShrinkRequest extends TeaModel {
+    /**
+     * <p>The types of destination data sources.</p>
+     */
     @NameInMap("DestDbTypes")
     public String destDbTypesShrink;
 
+    /**
+     * <p>The list of labels.</p>
+     */
     @NameInMap("LabelIds")
     public String labelIdsShrink;
 
+    /**
+     * <p>The page number, which takes effect in a pagination query.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The page size, which takes effect in a pagination query.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The keyword for fuzzy search. A fuzzy search is performed based on the project ID and name.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <p>The types of source data sources.</p>
+     */
     @NameInMap("SourceDbTypes")
     public String sourceDbTypesShrink;
 
+    /**
+     * <p>The list of project statuses.</p>
+     */
     @NameInMap("StatusList")
     public String statusListShrink;
 
+    /**
+     * <p>The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.</p>
+     */
     @NameInMap("WorkerGradeId")
     public String workerGradeId;
 

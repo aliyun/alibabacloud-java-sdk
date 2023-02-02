@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the tenant.</p>
+     */
     @NameInMap("Tenant")
     public DescribeTenantResponseBodyTenant tenant;
 
@@ -35,42 +41,86 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("AddressType")
         public String addressType;
 
+        /**
+         * <p>The service mode of the connection address. Valid values:  </p>
+         * <p>ReadWrite: provides strong-consistency read and write services.   </p>
+         * <p>ReadOnly: provides the read-only service to ensure ultimate consistency of data.   </p>
+         * <p>Clog: provides transaction log services.</p>
+         */
         @NameInMap("ConnectionRole")
         public String connectionRole;
 
+        /**
+         * <p>The list of zones corresponding to the tenant connection.</p>
+         */
         @NameInMap("ConnectionZones")
         public java.util.List<String> connectionZones;
 
+        /**
+         * <p>The Internet address for accessing the tenant.</p>
+         */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
+        /**
+         * <p>The status of the Internet address for accessing the tenant. Valid values:   </p>
+         * <p>Closed: The address is disabled.   </p>
+         * <p>- ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   </p>
+         * <p>- PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   </p>
+         * <p>- ONLINE: The address is in service.</p>
+         */
         @NameInMap("InternetAddressStatus")
         public String internetAddressStatus;
 
+        /**
+         * <p>The Internet port for accessing the tenant.</p>
+         */
         @NameInMap("InternetPort")
         public Integer internetPort;
 
+        /**
+         * <p>The intranet address for accessing the tenant.</p>
+         */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
+        /**
+         * <p>The primary zone corresponding to the address for accessing the tenant.</p>
+         */
         @NameInMap("IntranetAddressMasterZoneId")
         public String intranetAddressMasterZoneId;
 
+        /**
+         * <p>The standby zone corresponding to the address for accessing the tenant.</p>
+         */
         @NameInMap("IntranetAddressSlaveZoneId")
         public String intranetAddressSlaveZoneId;
 
+        /**
+         * <p>The status of the intranet address for accessing the tenant.  </p>
+         * <p>The value ONLINE indicates that the address is in service.</p>
+         */
         @NameInMap("IntranetAddressStatus")
         public String intranetAddressStatus;
 
+        /**
+         * <p>The intranet port for accessing the tenant.</p>
+         */
         @NameInMap("IntranetPort")
         public Integer intranetPort;
 
         @NameInMap("TransactionSplit")
         public Boolean transactionSplit;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -194,12 +244,21 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantResourceCpu extends TeaModel {
+        /**
+         * <p>The total number of CPU cores of the tenant.</p>
+         */
         @NameInMap("TotalCpu")
         public Float totalCpu;
 
+        /**
+         * <p>The number of CPU cores in each resource unit of the tenant.</p>
+         */
         @NameInMap("UnitCpu")
         public Float unitCpu;
 
+        /**
+         * <p>The number of used CPU cores of the tenant.</p>
+         */
         @NameInMap("UsedCpu")
         public Float usedCpu;
 
@@ -235,6 +294,9 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantResourceDiskSize extends TeaModel {
+        /**
+         * <p>The size of used disk space of the tenant, in GB.</p>
+         */
         @NameInMap("UsedDiskSize")
         public Float usedDiskSize;
 
@@ -254,12 +316,21 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantResourceMemory extends TeaModel {
+        /**
+         * <p>The total memory size of the tenant, in GB.</p>
+         */
         @NameInMap("TotalMemory")
         public Float totalMemory;
 
+        /**
+         * <p>The memory size of each resource unit of the tenant, in GB.</p>
+         */
         @NameInMap("UnitMemory")
         public Float unitMemory;
 
+        /**
+         * <p>The size of used memory of the tenant, in GB.</p>
+         */
         @NameInMap("UsedMemory")
         public Float usedMemory;
 
@@ -295,15 +366,27 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantResource extends TeaModel {
+        /**
+         * <p>The information about the CPU resources of the tenant.</p>
+         */
         @NameInMap("Cpu")
         public DescribeTenantResponseBodyTenantTenantResourceCpu cpu;
 
+        /**
+         * <p>The information about the disk resources of the tenant.</p>
+         */
         @NameInMap("DiskSize")
         public DescribeTenantResponseBodyTenantTenantResourceDiskSize diskSize;
 
+        /**
+         * <p>The information about the memory resources of the tenant.</p>
+         */
         @NameInMap("Memory")
         public DescribeTenantResponseBodyTenantTenantResourceMemory memory;
 
+        /**
+         * <p>The number of resource units in the tenant.</p>
+         */
         @NameInMap("UnitNum")
         public Integer unitNum;
 
@@ -347,12 +430,21 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantZones extends TeaModel {
+        /**
+         * <p>The region where the zone of the tenant resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("TenantZoneId")
         public String tenantZoneId;
 
+        /**
+         * <p>The role of the zone of the tenant.</p>
+         */
         @NameInMap("TenantZoneRole")
         public String tenantZoneRole;
 
@@ -394,30 +486,61 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("Charset")
         public String charset;
 
+        /**
+         * <p>The enabling status of the Clog service.  </p>
+         * <p>CLOSED: The Clog service is disabled.   </p>
+         * <p>- ONLINE: The Clog service is running.</p>
+         */
         @NameInMap("ClogServiceStatus")
         public String clogServiceStatus;
 
         @NameInMap("Collation")
         public String collation;
 
+        /**
+         * <p>The time when the tenant was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The data replica distribution mode of the tenant.    </p>
+         * <br>
+         * <p>- For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.</p>
+         * <p>- For the basic version, N indicates the single-zone mode. </p>
+         * <br>
+         * <p>> <br>N represents the number of nodes in a single zone.</p>
+         */
         @NameInMap("DeployMode")
         public String deployMode;
 
+        /**
+         * <p>The deployment type of the cluster. Valid values:  </p>
+         * <p>- multiple: multi-IDC deployment   </p>
+         * <p>- single: single-IDC deployment   </p>
+         * <p>- dual: dual-IDC deployment</p>
+         */
         @NameInMap("DeployType")
         public String deployType;
 
+        /**
+         * <p>The description of the tenant.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("DiskType")
         public String diskType;
 
+        /**
+         * <p>Indicates whether the Clog service is available. To enable the Clog service, submit a ticket.</p>
+         */
         @NameInMap("EnableClogService")
         public Boolean enableClogService;
 
+        /**
+         * <p>Indicates whether the Internet address can be enabled for the tenant.</p>
+         */
         @NameInMap("EnableInternetAddressService")
         public Boolean enableInternetAddressService;
 
@@ -433,6 +556,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The primary zone of the tenant.</p>
+         */
         @NameInMap("PrimaryZone")
         public String primaryZone;
 
@@ -442,27 +568,64 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("Series")
         public String series;
 
+        /**
+         * <p>The status of the tenant.   </p>
+         * <p>- PENDING_CREATE: The tenant is being created.   </p>
+         * <p>- RESTORE: The tenant is being recovered.   </p>
+         * <p>- ONLINE: The tenant is running.   </p>
+         * <p>- SPEC_MODIFYING: The specification of the tenant is being modified.   </p>
+         * <p>- ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.  </p>
+         * <p>- PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.  </p>
+         * <p>- PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.  </p>
+         * <p>- PARAMETER_MODIFYING: Parameters are being modified.   </p>
+         * <p>- WHITE_LIST_MODIFYING: The whitelist is being modified.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The connection access information of the tenant.</p>
+         */
         @NameInMap("TenantConnections")
         public java.util.List<DescribeTenantResponseBodyTenantTenantConnections> tenantConnections;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The tenant mode.   </p>
+         * <p>Valid values: </p>
+         * <p>Oracle   </p>
+         * <p>MySQL</p>
+         */
         @NameInMap("TenantMode")
         public String tenantMode;
 
+        /**
+         * <p>The name of the tenant.</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <p>The resource information of the tenant.</p>
+         */
         @NameInMap("TenantResource")
         public DescribeTenantResponseBodyTenantTenantResource tenantResource;
 
+        /**
+         * <p>The zone information of the tenant.</p>
+         */
         @NameInMap("TenantZones")
         public java.util.List<DescribeTenantResponseBodyTenantTenantZones> tenantZones;
 
+        /**
+         * <p>The ID of the VPC.    </p>
+         * <p>If no suitable VPC is available, create a VPC as prompted. For more information, see "What is a VPC".</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

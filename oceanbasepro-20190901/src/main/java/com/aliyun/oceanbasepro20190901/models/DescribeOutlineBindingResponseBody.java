@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutlineBindingResponseBody extends TeaModel {
+    /**
+     * <p>The binding information.</p>
+     */
     @NameInMap("OutlineBinding")
     public DescribeOutlineBindingResponseBodyOutlineBinding outlineBinding;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
     }
 
     public static class DescribeOutlineBindingResponseBodyOutlineBinding extends TeaModel {
+        /**
+         * <p>The bound index.</p>
+         */
         @NameInMap("BindIndex")
         public String bindIndex;
 
+        /**
+         * <p>The bound plan.</p>
+         */
         @NameInMap("BindPlan")
         public String bindPlan;
 
+        /**
+         * <p>The maximum number of concurrent tasks.</p>
+         */
         @NameInMap("MaxConcurrent")
         public Integer maxConcurrent;
 
+        /**
+         * <p>OutlineID.</p>
+         */
         @NameInMap("OutlineId")
         public Long outlineId;
 

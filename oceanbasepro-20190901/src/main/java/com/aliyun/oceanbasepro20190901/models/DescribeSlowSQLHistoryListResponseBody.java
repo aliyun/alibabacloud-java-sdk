@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The execution history of the slow SQL statement.</p>
+     */
     @NameInMap("SlowSQLHistoryList")
     public DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryList slowSQLHistoryList;
 
@@ -32,123 +38,243 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList extends TeaModel {
+        /**
+         * <p>The number of rows affected.</p>
+         */
         @NameInMap("AffectedRows")
         public Double affectedRows;
 
+        /**
+         * <p>The wait time of the client.</p>
+         */
         @NameInMap("AppWaitTime")
         public Double appWaitTime;
 
+        /**
+         * <p>The number of block cache hits.</p>
+         */
         @NameInMap("BlockCacheHit")
         public Double blockCacheHit;
 
+        /**
+         * <p>The number of block index cache hits.</p>
+         */
         @NameInMap("BlockIndexCacheHit")
         public Double blockIndexCacheHit;
 
+        /**
+         * <p>The number of Bloom filter cache hits.</p>
+         */
         @NameInMap("BloomFilterCacheHit")
         public Double bloomFilterCacheHit;
 
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The wait time in concurrent execution.</p>
+         */
         @NameInMap("ConcurrencyWaitTime")
         public Double concurrencyWaitTime;
 
+        /**
+         * <p>The average CPU time.</p>
+         */
         @NameInMap("CpuTime")
         public Double cpuTime;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The time to wait for decoding.</p>
+         */
         @NameInMap("DecodeTime")
         public Double decodeTime;
 
+        /**
+         * <p>The number of physical reads.</p>
+         */
         @NameInMap("DiskRead")
         public Double diskRead;
 
+        /**
+         * <p>The average response time.</p>
+         */
         @NameInMap("ElapsedTime")
         public Double elapsedTime;
 
+        /**
+         * <p>The end time.</p>
+         */
         @NameInMap("EndTimeUTCString")
         public String endTimeUTCString;
 
+        /**
+         * <p>The wait event.</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>The number of executions per second.</p>
+         */
         @NameInMap("ExecPerSecond")
         public Double execPerSecond;
 
+        /**
+         * <p>The internal execution time.</p>
+         */
         @NameInMap("ExecuteTime")
         public Double executeTime;
 
+        /**
+         * <p>The number of executions.</p>
+         */
         @NameInMap("Executions")
         public Double executions;
 
+        /**
+         * <p>The number of failures.</p>
+         */
         @NameInMap("FailTimes")
         public Double failTimes;
 
+        /**
+         * <p>Hard parsing time.</p>
+         */
         @NameInMap("GetPlanTime")
         public Double getPlanTime;
 
+        /**
+         * <p>The I/O wait time.</p>
+         */
         @NameInMap("IOWaitTime")
         public Double IOWaitTime;
 
+        /**
+         * <p>The number of logical reads.</p>
+         */
         @NameInMap("LogicalRead")
         public Double logicalRead;
 
+        /**
+         * <p>The maximum CPU time.</p>
+         */
         @NameInMap("MaxCpuTime")
         public Double maxCpuTime;
 
+        /**
+         * <p>The maximum response time.</p>
+         */
         @NameInMap("MaxElapsedTime")
         public Double maxElapsedTime;
 
+        /**
+         * <p>The number of rows read from the memory.</p>
+         */
         @NameInMap("MemstoreReadRowCount")
         public Double memstoreReadRowCount;
 
+        /**
+         * <p>The number of plan misses.</p>
+         */
         @NameInMap("MissPlans")
         public Double missPlans;
 
+        /**
+         * <p>The wait time for network.</p>
+         */
         @NameInMap("NetWaitTime")
         public Double netWaitTime;
 
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("NodeIp")
         public String nodeIp;
 
+        /**
+         * <p>The queuing time.</p>
+         */
         @NameInMap("QueueTime")
         public Double queueTime;
 
+        /**
+         * <p>The number of RPCs.</p>
+         */
         @NameInMap("RPCCount")
         public Double RPCCount;
 
+        /**
+         * <p>The number of remote plans.</p>
+         */
         @NameInMap("RemotePlans")
         public Double remotePlans;
 
+        /**
+         * <p>The number of retries.</p>
+         */
         @NameInMap("RetryCount")
         public Double retryCount;
 
+        /**
+         * <p>The number of rows returned.</p>
+         */
         @NameInMap("ReturnRows")
         public Double returnRows;
 
+        /**
+         * <p>The number of row cache hits.</p>
+         */
         @NameInMap("RowCacheHit")
         public Double rowCacheHit;
 
+        /**
+         * <p>The scheduling duration.</p>
+         */
         @NameInMap("ScheduleTime")
         public Double scheduleTime;
 
+        /**
+         * <p>SQLID.</p>
+         */
         @NameInMap("SqlId")
         public String sqlId;
 
+        /**
+         * <p>The SQL type.</p>
+         */
         @NameInMap("SqlType")
         public String sqlType;
 
+        /**
+         * <p>The number of rows read from the disk.</p>
+         */
         @NameInMap("SsstoreReadRowCount")
         public Double ssstoreReadRowCount;
 
+        /**
+         * <p>The name of the tenant.</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <p>The internal wait time.</p>
+         */
         @NameInMap("TotalWaitTime")
         public Double totalWaitTime;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -480,9 +606,15 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryList extends TeaModel {
+        /**
+         * <p>The quantity.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The return result of the request.</p>
+         */
         @NameInMap("List")
         public java.util.List<DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList> list;
 

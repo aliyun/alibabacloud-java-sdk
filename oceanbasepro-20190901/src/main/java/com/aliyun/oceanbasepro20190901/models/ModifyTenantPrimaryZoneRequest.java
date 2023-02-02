@@ -4,24 +4,40 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantPrimaryZoneRequest extends TeaModel {
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("MasterIntranetAddressZone")
     public String masterIntranetAddressZone;
 
+    /**
+     * <p>The switching mode.</p>
+     */
     @NameInMap("ModifyType")
     public String modifyType;
 
+    /**
+     * <p>The primary zone of the tenant.    </p>
+     * <p>It is one of the zones in which the cluster is deployed.</p>
+     */
     @NameInMap("PrimaryZone")
     public String primaryZone;
 
     @NameInMap("PrimaryZoneDeployType")
     public String primaryZoneDeployType;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("UserVSwitchId")
     public String userVSwitchId;
 
