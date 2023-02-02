@@ -62,7 +62,9 @@ public class DetectKneeKeypointXRayResponseBody extends TeaModel {
     }
 
     public static class DetectKneeKeypointXRayResponseBodyDataKeyPoints extends TeaModel {
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Coordinates")
         public java.util.List<Integer> coordinates;
 

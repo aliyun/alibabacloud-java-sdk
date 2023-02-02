@@ -208,7 +208,9 @@ public class DetectLungNoduleResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<DetectLungNoduleResponseBodyDataSeriesElements> elements;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Origin")
         public java.util.List<Float> origin;
 
@@ -218,7 +220,9 @@ public class DetectLungNoduleResponseBody extends TeaModel {
         @NameInMap("SeriesInstanceUid")
         public String seriesInstanceUid;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Spacing")
         public java.util.List<Float> spacing;
 
