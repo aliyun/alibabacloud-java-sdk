@@ -10,6 +10,9 @@ public class CreateInsRequest extends TeaModel {
     @NameInMap("new-param-1")
     public String newParam1;
 
+    @NameInMap("new-param-2")
+    public String newParam2;
+
     public static CreateInsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInsRequest self = new CreateInsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateInsRequest extends TeaModel {
     }
     public String getNewParam1() {
         return this.newParam1;
+    }
+
+    public CreateInsRequest setNewParam2(String newParam2) {
+        this.newParam2 = newParam2;
+        return this;
+    }
+    public String getNewParam2() {
+        return this.newParam2;
     }
 
 }
