@@ -4,6 +4,9 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsMessagePushResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,23 +4,21 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsRegionListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The information about the message that is queried.</p>
+     */
     @NameInMap("Data")
     public OnsRegionListResponseBodyData data;
+
+    /**
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static OnsRegionListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsRegionListResponseBody self = new OnsRegionListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public OnsRegionListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public OnsRegionListResponseBody setData(OnsRegionListResponseBodyData data) {
@@ -31,24 +29,30 @@ public class OnsRegionListResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsRegionListResponseBodyDataRegionDo extends TeaModel {
-        @NameInMap("RegionName")
-        public String regionName;
+    public OnsRegionListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class OnsRegionListResponseBodyDataRegionDo extends TeaModel {
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("OnsRegionId")
         public String onsRegionId;
+
+        /**
+         * <p>The ID of the region.</p>
+         */
+        @NameInMap("RegionName")
+        public String regionName;
 
         public static OnsRegionListResponseBodyDataRegionDo build(java.util.Map<String, ?> map) throws Exception {
             OnsRegionListResponseBodyDataRegionDo self = new OnsRegionListResponseBodyDataRegionDo();
             return TeaModel.build(map, self);
-        }
-
-        public OnsRegionListResponseBodyDataRegionDo setRegionName(String regionName) {
-            this.regionName = regionName;
-            return this;
-        }
-        public String getRegionName() {
-            return this.regionName;
         }
 
         public OnsRegionListResponseBodyDataRegionDo setOnsRegionId(String onsRegionId) {
@@ -57,6 +61,14 @@ public class OnsRegionListResponseBody extends TeaModel {
         }
         public String getOnsRegionId() {
             return this.onsRegionId;
+        }
+
+        public OnsRegionListResponseBodyDataRegionDo setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
         }
 
     }

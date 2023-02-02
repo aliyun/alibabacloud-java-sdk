@@ -4,6 +4,9 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsInstanceBaseInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance that you want to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

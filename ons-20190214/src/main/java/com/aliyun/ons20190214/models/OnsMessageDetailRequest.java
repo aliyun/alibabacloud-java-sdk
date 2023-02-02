@@ -3,9 +3,9 @@ package com.aliyun.ons20190214.models;
 
 import com.aliyun.tea.*;
 
-public class OnsMessageTraceRequest extends TeaModel {
+public class OnsMessageDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the instance where the message that you want to query resides.</p>
+     * <p>The ID of the Message Queue for Apache RocketMQ Instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,17 +17,17 @@ public class OnsMessageTraceRequest extends TeaModel {
     public String msgId;
 
     /**
-     * <p>The topic to which the message belongs.</p>
+     * <p>The name of the topic in which the message you want to query is stored.</p>
      */
     @NameInMap("Topic")
     public String topic;
 
-    public static OnsMessageTraceRequest build(java.util.Map<String, ?> map) throws Exception {
-        OnsMessageTraceRequest self = new OnsMessageTraceRequest();
+    public static OnsMessageDetailRequest build(java.util.Map<String, ?> map) throws Exception {
+        OnsMessageDetailRequest self = new OnsMessageDetailRequest();
         return TeaModel.build(map, self);
     }
 
-    public OnsMessageTraceRequest setInstanceId(String instanceId) {
+    public OnsMessageDetailRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -35,7 +35,7 @@ public class OnsMessageTraceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public OnsMessageTraceRequest setMsgId(String msgId) {
+    public OnsMessageDetailRequest setMsgId(String msgId) {
         this.msgId = msgId;
         return this;
     }
@@ -43,7 +43,7 @@ public class OnsMessageTraceRequest extends TeaModel {
         return this.msgId;
     }
 
-    public OnsMessageTraceRequest setTopic(String topic) {
+    public OnsMessageDetailRequest setTopic(String topic) {
         this.topic = topic;
         return this;
     }

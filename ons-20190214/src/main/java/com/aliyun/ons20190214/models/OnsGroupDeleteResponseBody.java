@@ -4,6 +4,9 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsGroupDeleteResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

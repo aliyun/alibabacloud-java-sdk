@@ -3,12 +3,12 @@ package com.aliyun.ons20190214.models;
 
 import com.aliyun.tea.*;
 
-public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
+public class OnsMessageDetailResponseBody extends TeaModel {
     /**
-     * <p>The information about the message that is queried.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
-    public OnsMessageGetByMsgIdResponseBodyData data;
+    public OnsMessageDetailResponseBodyData data;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
@@ -16,20 +16,20 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static OnsMessageGetByMsgIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        OnsMessageGetByMsgIdResponseBody self = new OnsMessageGetByMsgIdResponseBody();
+    public static OnsMessageDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        OnsMessageDetailResponseBody self = new OnsMessageDetailResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public OnsMessageGetByMsgIdResponseBody setData(OnsMessageGetByMsgIdResponseBodyData data) {
+    public OnsMessageDetailResponseBody setData(OnsMessageDetailResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public OnsMessageGetByMsgIdResponseBodyData getData() {
+    public OnsMessageDetailResponseBodyData getData() {
         return this.data;
     }
 
-    public OnsMessageGetByMsgIdResponseBody setRequestId(String requestId) {
+    public OnsMessageDetailResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -37,11 +37,12 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty extends TeaModel {
+    public static class OnsMessageDetailResponseBodyDataPropertyList extends TeaModel {
         /**
          * <p>The name of the attribute. Valid values:</p>
          * <br>
-         * <p>*   **TRACE_ON**: indicates whether a trace of the message exists.</p>
+         * <p>*   **BODY**: indicates the message body</p>
+         * <p>*   **TRACE_ON**: indicates whether the trace of the message exists.</p>
          * <p>*   **KEYS**: indicates the key of the message.</p>
          * <p>*   **TAGS**: indicates the tag that is attached to the message.</p>
          * <p>*   **INSTANCE_ID**: indicates the ID of the instance that contains the message.</p>
@@ -57,12 +58,12 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty build(java.util.Map<String, ?> map) throws Exception {
-            OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty self = new OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty();
+        public static OnsMessageDetailResponseBodyDataPropertyList build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageDetailResponseBodyDataPropertyList self = new OnsMessageDetailResponseBodyDataPropertyList();
             return TeaModel.build(map, self);
         }
 
-        public OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty setName(String name) {
+        public OnsMessageDetailResponseBodyDataPropertyList setName(String name) {
             this.name = name;
             return this;
         }
@@ -70,7 +71,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.name;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty setValue(String value) {
+        public OnsMessageDetailResponseBodyDataPropertyList setValue(String value) {
             this.value = value;
             return this;
         }
@@ -80,26 +81,13 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
 
     }
 
-    public static class OnsMessageGetByMsgIdResponseBodyDataPropertyList extends TeaModel {
-        @NameInMap("MessageProperty")
-        public java.util.List<OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty> messageProperty;
+    public static class OnsMessageDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The body of the message.</p>
+         */
+        @NameInMap("Body")
+        public String body;
 
-        public static OnsMessageGetByMsgIdResponseBodyDataPropertyList build(java.util.Map<String, ?> map) throws Exception {
-            OnsMessageGetByMsgIdResponseBodyDataPropertyList self = new OnsMessageGetByMsgIdResponseBodyDataPropertyList();
-            return TeaModel.build(map, self);
-        }
-
-        public OnsMessageGetByMsgIdResponseBodyDataPropertyList setMessageProperty(java.util.List<OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty> messageProperty) {
-            this.messageProperty = messageProperty;
-            return this;
-        }
-        public java.util.List<OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty> getMessageProperty() {
-            return this.messageProperty;
-        }
-
-    }
-
-    public static class OnsMessageGetByMsgIdResponseBodyData extends TeaModel {
         /**
          * <p>The cyclic redundancy check (CRC) value of the message body.</p>
          */
@@ -107,19 +95,25 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
         public Integer bodyCRC;
 
         /**
-         * <p>The producer client that generated the message.</p>
+         * <p>消息体内容。</p>
+         */
+        @NameInMap("BodyStr")
+        public String bodyStr;
+
+        /**
+         * <p>The producer instance that generated the message.</p>
          */
         @NameInMap("BornHost")
         public String bornHost;
 
         /**
-         * <p>The timestamp when the message was produced.</p>
+         * <p>The timestamp that indicates the point in time when the message was generated. Unit: milliseconds.</p>
          */
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Message Queue for Apache RocketMQ Instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -134,7 +128,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
          * <p>The attributes of the message.</p>
          */
         @NameInMap("PropertyList")
-        public OnsMessageGetByMsgIdResponseBodyDataPropertyList propertyList;
+        public java.util.List<OnsMessageDetailResponseBodyDataPropertyList> propertyList;
 
         /**
          * <p>The number of retries that Message Queue for Apache RocketMQ performed to send the message to consumers.</p>
@@ -149,13 +143,13 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
         public String storeHost;
 
         /**
-         * <p>The size of the message.</p>
+         * <p>The size of the message. Unit: KB.</p>
          */
         @NameInMap("StoreSize")
         public Integer storeSize;
 
         /**
-         * <p>The timestamp when the Message Queue for Apache RocketMQ broker stored the message.</p>
+         * <p>The timestamp that indicates the point in time when the Message Queue for Apache RocketMQ broker stored the message. Unit: milliseconds.</p>
          */
         @NameInMap("StoreTimestamp")
         public Long storeTimestamp;
@@ -166,12 +160,20 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
         @NameInMap("Topic")
         public String topic;
 
-        public static OnsMessageGetByMsgIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            OnsMessageGetByMsgIdResponseBodyData self = new OnsMessageGetByMsgIdResponseBodyData();
+        public static OnsMessageDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageDetailResponseBodyData self = new OnsMessageDetailResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setBodyCRC(Integer bodyCRC) {
+        public OnsMessageDetailResponseBodyData setBody(String body) {
+            this.body = body;
+            return this;
+        }
+        public String getBody() {
+            return this.body;
+        }
+
+        public OnsMessageDetailResponseBodyData setBodyCRC(Integer bodyCRC) {
             this.bodyCRC = bodyCRC;
             return this;
         }
@@ -179,7 +181,15 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.bodyCRC;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setBornHost(String bornHost) {
+        public OnsMessageDetailResponseBodyData setBodyStr(String bodyStr) {
+            this.bodyStr = bodyStr;
+            return this;
+        }
+        public String getBodyStr() {
+            return this.bodyStr;
+        }
+
+        public OnsMessageDetailResponseBodyData setBornHost(String bornHost) {
             this.bornHost = bornHost;
             return this;
         }
@@ -187,7 +197,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.bornHost;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setBornTimestamp(Long bornTimestamp) {
+        public OnsMessageDetailResponseBodyData setBornTimestamp(Long bornTimestamp) {
             this.bornTimestamp = bornTimestamp;
             return this;
         }
@@ -195,7 +205,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.bornTimestamp;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setInstanceId(String instanceId) {
+        public OnsMessageDetailResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -203,7 +213,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setMsgId(String msgId) {
+        public OnsMessageDetailResponseBodyData setMsgId(String msgId) {
             this.msgId = msgId;
             return this;
         }
@@ -211,15 +221,15 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.msgId;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setPropertyList(OnsMessageGetByMsgIdResponseBodyDataPropertyList propertyList) {
+        public OnsMessageDetailResponseBodyData setPropertyList(java.util.List<OnsMessageDetailResponseBodyDataPropertyList> propertyList) {
             this.propertyList = propertyList;
             return this;
         }
-        public OnsMessageGetByMsgIdResponseBodyDataPropertyList getPropertyList() {
+        public java.util.List<OnsMessageDetailResponseBodyDataPropertyList> getPropertyList() {
             return this.propertyList;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setReconsumeTimes(Integer reconsumeTimes) {
+        public OnsMessageDetailResponseBodyData setReconsumeTimes(Integer reconsumeTimes) {
             this.reconsumeTimes = reconsumeTimes;
             return this;
         }
@@ -227,7 +237,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.reconsumeTimes;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setStoreHost(String storeHost) {
+        public OnsMessageDetailResponseBodyData setStoreHost(String storeHost) {
             this.storeHost = storeHost;
             return this;
         }
@@ -235,7 +245,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.storeHost;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setStoreSize(Integer storeSize) {
+        public OnsMessageDetailResponseBodyData setStoreSize(Integer storeSize) {
             this.storeSize = storeSize;
             return this;
         }
@@ -243,7 +253,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.storeSize;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setStoreTimestamp(Long storeTimestamp) {
+        public OnsMessageDetailResponseBodyData setStoreTimestamp(Long storeTimestamp) {
             this.storeTimestamp = storeTimestamp;
             return this;
         }
@@ -251,7 +261,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.storeTimestamp;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setTopic(String topic) {
+        public OnsMessageDetailResponseBodyData setTopic(String topic) {
             this.topic = topic;
             return this;
         }

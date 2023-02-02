@@ -4,23 +4,21 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsConsumerGetConnectionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public OnsConsumerGetConnectionResponseBodyData data;
+
+    /**
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static OnsConsumerGetConnectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsConsumerGetConnectionResponseBody self = new OnsConsumerGetConnectionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public OnsConsumerGetConnectionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public OnsConsumerGetConnectionResponseBody setData(OnsConsumerGetConnectionResponseBodyData data) {
@@ -31,30 +29,42 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo extends TeaModel {
-        @NameInMap("Version")
-        public String version;
+    public OnsConsumerGetConnectionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo extends TeaModel {
+        /**
+         * <p>The IP address and port number of the consumer instance.</p>
+         */
         @NameInMap("ClientAddr")
         public String clientAddr;
 
+        /**
+         * <p>The ID of the consumer instance.</p>
+         */
+        @NameInMap("ClientId")
+        public String clientId;
+
+        /**
+         * <p>The programming language in which the consumer application was developed.</p>
+         */
         @NameInMap("Language")
         public String language;
 
-        @NameInMap("ClientId")
-        public String clientId;
+        /**
+         * <p>The version of the consumer client.</p>
+         */
+        @NameInMap("Version")
+        public String version;
 
         public static OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo build(java.util.Map<String, ?> map) throws Exception {
             OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo self = new OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo();
             return TeaModel.build(map, self);
-        }
-
-        public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
         public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setClientAddr(String clientAddr) {
@@ -65,6 +75,14 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             return this.clientAddr;
         }
 
+        public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setClientId(String clientId) {
+            this.clientId = clientId;
+            return this;
+        }
+        public String getClientId() {
+            return this.clientId;
+        }
+
         public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setLanguage(String language) {
             this.language = language;
             return this;
@@ -73,12 +91,12 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             return this.language;
         }
 
-        public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setClientId(String clientId) {
-            this.clientId = clientId;
+        public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setVersion(String version) {
+            this.version = version;
             return this;
         }
-        public String getClientId() {
-            return this.clientId;
+        public String getVersion() {
+            return this.version;
         }
 
     }
@@ -103,6 +121,9 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
     }
 
     public static class OnsConsumerGetConnectionResponseBodyData extends TeaModel {
+        /**
+         * <p>The connection information about the consumers in the specified group.</p>
+         */
         @NameInMap("ConnectionList")
         public OnsConsumerGetConnectionResponseBodyDataConnectionList connectionList;
 

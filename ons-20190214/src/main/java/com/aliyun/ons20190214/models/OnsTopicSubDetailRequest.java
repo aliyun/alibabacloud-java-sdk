@@ -4,9 +4,15 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsTopicSubDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance that contains the topic you want to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the topic that you want to query.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

@@ -4,6 +4,9 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsTraceGetResultRequest extends TeaModel {
+    /**
+     * <p>The ID of the task that was created to query the trace of the message.</p>
+     */
     @NameInMap("QueryId")
     public String queryId;
 
