@@ -22,6 +22,12 @@ public class AddNodesRequest extends TeaModel {
     @NameInMap("ComputeEnableHt")
     public Boolean computeEnableHt;
 
+    @NameInMap("ComputeSpotDuration")
+    public Integer computeSpotDuration;
+
+    @NameInMap("ComputeSpotInterruptionBehavior")
+    public String computeSpotInterruptionBehavior;
+
     @NameInMap("ComputeSpotPriceLimit")
     public String computeSpotPriceLimit;
 
@@ -145,6 +151,22 @@ public class AddNodesRequest extends TeaModel {
     }
     public Boolean getComputeEnableHt() {
         return this.computeEnableHt;
+    }
+
+    public AddNodesRequest setComputeSpotDuration(Integer computeSpotDuration) {
+        this.computeSpotDuration = computeSpotDuration;
+        return this;
+    }
+    public Integer getComputeSpotDuration() {
+        return this.computeSpotDuration;
+    }
+
+    public AddNodesRequest setComputeSpotInterruptionBehavior(String computeSpotInterruptionBehavior) {
+        this.computeSpotInterruptionBehavior = computeSpotInterruptionBehavior;
+        return this;
+    }
+    public String getComputeSpotInterruptionBehavior() {
+        return this.computeSpotInterruptionBehavior;
     }
 
     public AddNodesRequest setComputeSpotPriceLimit(String computeSpotPriceLimit) {

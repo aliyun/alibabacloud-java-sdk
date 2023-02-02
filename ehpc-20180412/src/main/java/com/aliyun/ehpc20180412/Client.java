@@ -1038,6 +1038,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeNFSClientStatusWithOptions(request, runtime);
     }
 
+    /**
+      * ****
+      *
+      * @param request DescribePriceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribePriceResponse
+     */
     public DescribePriceResponse describePriceWithOptions(DescribePriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1058,6 +1065,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePriceResponse());
     }
 
+    /**
+      * ****
+      *
+      * @param request DescribePriceRequest
+      * @return DescribePriceResponse
+     */
     public DescribePriceResponse describePrice(DescribePriceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePriceWithOptions(request, runtime);

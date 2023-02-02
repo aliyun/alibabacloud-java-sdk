@@ -13,6 +13,9 @@ public class CreateGWSClusterRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>VPC ID。</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
