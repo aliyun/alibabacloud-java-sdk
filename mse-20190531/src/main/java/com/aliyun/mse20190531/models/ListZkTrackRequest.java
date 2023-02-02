@@ -20,7 +20,7 @@ public class ListZkTrackRequest extends TeaModel {
     public Long endTs;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -50,7 +50,7 @@ public class ListZkTrackRequest extends TeaModel {
     public String requestPars;
 
     /**
-     * <p>Specifies whether entries are sorted in reverse chronological order.</p>
+     * <p>Specifies whether to enable reverse ordering.</p>
      */
     @NameInMap("Reverse")
     public Boolean reverse;

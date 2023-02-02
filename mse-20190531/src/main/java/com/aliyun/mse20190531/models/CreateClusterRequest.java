@@ -41,7 +41,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The engine version of the instance. Valid values:</p>
      * <br>
-     * <p>\[Professional Edition]</p>
+     * <p>\[Professional version]</p>
      * <br>
      * <p>*   `NACOS_2_0_0`: Nacos 2.0.0</p>
      * <p>*   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0</p>
@@ -64,7 +64,7 @@ public class CreateClusterRequest extends TeaModel {
     public String connectionType;
 
     /**
-     * <p>The disk type. Valid values:</p>
+     * <p>The disk type of the MSE instance. Valid values:</p>
      * <br>
      * <p>*   alicloud-disk-ssd</p>
      * <p>*   alicloud-disk-essd-pl1</p>
@@ -93,7 +93,7 @@ public class CreateClusterRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Set this parameter unless otherwise specified. Valid values:</p>
+     * <p>Configure this parameter unless otherwise specified. Valid values:</p>
      * <br>
      * <p>*   `mse_pro`: Professional Edition</p>
      * <p>*   `mse_dev`: Developer Edition</p>
@@ -102,7 +102,7 @@ public class CreateClusterRequest extends TeaModel {
     public String mseVersion;
 
     /**
-     * <p>The network type of the instance. Valid values:</p>
+     * <p>The network type of the MSE instance. Valid values:</p>
      * <br>
      * <p>*   `privatenet`: VPC</p>
      * <p>*   `pubnet`: Internet</p>
@@ -136,7 +136,7 @@ public class CreateClusterRequest extends TeaModel {
     public String pubSlbSpecification;
 
     /**
-     * <p>The region where the MSE instance resides. Examples:</p>
+     * <p>The region where the instance resides. Examples:</p>
      * <br>
      * <p>*   `cn-hangzhou`: China (Hangzhou)</p>
      * <p>*   `cn-beijing`: China (Beijing)</p>
@@ -154,7 +154,7 @@ public class CreateClusterRequest extends TeaModel {
     public String requestPars;
 
     /**
-     * <p>The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."</p>
+     * <p>The ID of the resource group. For more information, see [View basic information of a resource group](~~457230~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

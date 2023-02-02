@@ -23,7 +23,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -122,7 +122,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -152,7 +152,14 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         public Integer routeOrder;
 
         /**
-         * <p>The status.</p>
+         * <p>The status of the route. Valid values:</p>
+         * <br>
+         * <p>*   0: unpublished</p>
+         * <p>*   2: publishing</p>
+         * <p>*   3: published</p>
+         * <p>*   4: editing (updated but not published)</p>
+         * <p>*   5: unpublishing</p>
+         * <p>*   6: unavailable</p>
          */
         @NameInMap("Status")
         public Integer status;

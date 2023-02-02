@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddServiceSourceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return value.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -37,8 +37,8 @@ public class AddServiceSourceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

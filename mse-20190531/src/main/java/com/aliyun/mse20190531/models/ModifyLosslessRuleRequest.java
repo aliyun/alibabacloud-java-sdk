@@ -52,23 +52,29 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     @NameInMap("FuncType")
     public Long funcType;
 
+    /**
+     * <p>Specifies whether to display online and offline processing details.</p>
+     */
     @NameInMap("LossLessDetail")
     public Boolean lossLessDetail;
 
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>Specifies whether to enable notification.</p>
+     */
     @NameInMap("Notice")
     public Boolean notice;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to associate readiness probe with service prefetching.</p>
+     * <p>Specifies whether to associate with service prefetching.</p>
      */
     @NameInMap("Related")
     public Boolean related;
@@ -80,7 +86,7 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     public Integer shutdownWaitSeconds;
 
     /**
-     * <p>The service source. Valid values:</p>
+     * <p>The service source.</p>
      */
     @NameInMap("Source")
     public String source;

@@ -20,7 +20,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
      * <p>> This parameter specifies the instance ID that is passed. Examples:</p>
      * <br>

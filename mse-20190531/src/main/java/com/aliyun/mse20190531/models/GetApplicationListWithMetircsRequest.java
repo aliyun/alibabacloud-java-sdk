@@ -53,7 +53,7 @@ public class GetApplicationListWithMetircsRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The service source. Valid values:</p>
+     * <p>The service source.</p>
      */
     @NameInMap("Source")
     public String source;

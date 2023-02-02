@@ -17,7 +17,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
     public java.util.List<ListClusterTypesResponseBodyData> data;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
      * <br>
      * <p>> If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
      */
@@ -25,7 +25,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -49,7 +49,7 @@ public class ListClusterTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>

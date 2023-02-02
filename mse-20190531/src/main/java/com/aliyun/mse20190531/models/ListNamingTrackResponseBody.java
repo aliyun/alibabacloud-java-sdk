@@ -4,30 +4,60 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNamingTrackResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The data information.</p>
+     */
     @NameInMap("Traces")
     public java.util.List<ListNamingTrackResponseBodyTraces> traces;
 
@@ -109,30 +139,57 @@ public class ListNamingTrackResponseBody extends TeaModel {
     }
 
     public static class ListNamingTrackResponseBodyTraces extends TeaModel {
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("InstanceSize")
         public String instanceSize;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The push time.</p>
+         */
         @NameInMap("PushTime")
         public String pushTime;
 
+        /**
+         * <p>The total push time.</p>
+         */
         @NameInMap("PushTimeAll")
         public String pushTimeAll;
 
+        /**
+         * <p>The push time for the network.</p>
+         */
         @NameInMap("PushTimeNetwork")
         public String pushTimeNetwork;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServerName")
         public String serverName;
 
+        /**
+         * <p>The duration that is specified in the service-level agreement (SLA).</p>
+         */
         @NameInMap("SlaTime")
         public String slaTime;
 

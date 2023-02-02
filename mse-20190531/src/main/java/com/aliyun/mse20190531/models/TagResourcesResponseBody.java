@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

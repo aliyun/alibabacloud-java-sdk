@@ -7,14 +7,14 @@ public class DeleteGatewayRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <br>
-     * <p>- zh: Chinese</p>
-     * <p>- en: English</p>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>Specifies whether to delete the Server Load Balancer (SLB) instance purchased for the gateway.</p>
+     * <p>Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.</p>
      */
     @NameInMap("DeleteSlb")
     public Boolean deleteSlb;

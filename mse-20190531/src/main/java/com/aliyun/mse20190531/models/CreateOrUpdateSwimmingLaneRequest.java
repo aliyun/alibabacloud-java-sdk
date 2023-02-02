@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     /**
-     * <p>The language that the value of the **LocalName** response parameter uses. Valid values:</p>
+     * <p>The language of the response. Valid values:****</p>
      * <br>
-     * <p>*   **zh-cn**: Chinese</p>
-     * <p>*   **en-us**: English.</p>
+     * <p>*   **zh-CN**: Chinese</p>
+     * <p>*   **en-US**: English.</p>
      * <br>
      * <p>> Default value: **zh-CN**.</p>
      */
@@ -43,13 +43,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson;
 
     /**
-     * <p>Optional. The time when the lane was created.</p>
+     * <p>The creation time.</p>
      */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
     /**
-     * <p>Optional. The time when the lane was last modified.</p>
+     * <p>The update time.</p>
      */
     @NameInMap("GmtModified")
     public String gmtModified;
@@ -79,7 +79,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -269,7 +269,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         public Integer divisor;
 
         /**
-         * <p>The name of the rule. This parameter corresponds to the key of the type parameter.</p>
+         * <p>The name of the rule. This parameter corresponds to the key of the Type parameter.</p>
          */
         @NameInMap("Name")
         public String name;
