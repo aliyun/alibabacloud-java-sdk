@@ -16,7 +16,9 @@ public class DetectLungNoduleAdvanceRequest extends TeaModel {
     @NameInMap("Threshold")
     public Float threshold;
 
-    // 1
+    /**
+     * <p>1</p>
+     */
     @NameInMap("URLList")
     public java.util.List<DetectLungNoduleAdvanceRequestURLList> URLList;
 

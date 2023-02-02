@@ -43,7 +43,9 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
     }
 
     public static class AnalyzeChestVesselResponseBodyDataAortaInfo extends TeaModel {
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Area")
         public java.util.List<Float> area;
 
@@ -118,7 +120,9 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
     }
 
     public static class AnalyzeChestVesselResponseBodyDataPulmonaryInfo extends TeaModel {
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Area")
         public java.util.List<Float> area;
 
