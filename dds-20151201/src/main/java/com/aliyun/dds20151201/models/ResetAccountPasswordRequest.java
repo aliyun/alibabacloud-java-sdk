@@ -4,18 +4,24 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
-    // The account for which you want to reset the password. Set the value to **root**.
+    /**
+     * <p>The account for which you want to reset the password. Set the value to **root**.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
-    // The new password.
-    // 
-    // *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`
-    // *   The password must be 8 to 32 characters in length.
+    /**
+     * <p>The new password.</p>
+     * <br>
+     * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`</p>
+     * <p>*   The password must be 8 to 32 characters in length.</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

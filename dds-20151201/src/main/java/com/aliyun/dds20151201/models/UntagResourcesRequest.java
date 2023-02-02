@@ -4,13 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    // Specifies whether to unbind all tags from the instance. Valid values:
-    // 
-    // *   **true**
-    // *   **false**
-    // 
-    // > * Default value: **false**.
-    // > * If you specify both this parameter and **TagKey.N**, this parameter is invalid.
+    /**
+     * <p>Specifies whether to remove all tags from the instances. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Remove all tags from the instances.</p>
+     * <p>*   **false**: Do not remove all tags from the instances.</p>
+     * <br>
+     * <p>> * Default value: **false**.</p>
+     * <p>> * If you specify the **TagKey** parameter together with this parameter, this parameter does not take effect.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -20,15 +22,21 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group.
+    /**
+     * <p>The ID of the resource group to which the instances you want to query belong.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The resource IDs.
+    /**
+     * <p>The list of resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -38,11 +46,15 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The resource type. Set the value to **INSTANCE**.
+    /**
+     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The keys of the tags.
+    /**
+     * <p>The tag keys of the resource.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

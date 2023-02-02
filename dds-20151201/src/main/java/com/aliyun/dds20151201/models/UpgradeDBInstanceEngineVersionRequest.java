@@ -4,13 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The database version to which you want to upgrade. Valid values: **3.4**, **4.0**, and **4.2**.
-    // 
-    // >  This database version must be later than the current database version of the instance.
+    /**
+     * <p>The database version to which you want to upgrade. Valid values: **3.4**, **4.0**, and **4.2**.</p>
+     * <br>
+     * <p>>  This database version must be later than the current database version of the instance.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 

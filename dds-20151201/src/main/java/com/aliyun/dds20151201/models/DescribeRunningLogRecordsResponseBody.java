@@ -4,27 +4,39 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRunningLogRecordsResponseBody extends TeaModel {
-    // The database engine.
+    /**
+     * <p>The database engine.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
-    // Details about the operational log entries.
+    /**
+     * <p>Details about the operational log entries.</p>
+     */
     @NameInMap("Items")
     public DescribeRunningLogRecordsResponseBodyItems items;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries.
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -82,19 +94,27 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeRunningLogRecordsResponseBodyItemsLogRecords extends TeaModel {
-        // The category of the log entry. Valid values:
+        /**
+         * <p>The category of the log entry. Valid values:</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // The connection information of the log entry.
+        /**
+         * <p>The connection information of the log entry.</p>
+         */
         @NameInMap("ConnInfo")
         public String connInfo;
 
-        // The content of the log entry.
+        /**
+         * <p>The content of the log entry.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 

@@ -4,19 +4,27 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
-    // The list of orders.
+    /**
+     * <p>The list of orders.</p>
+     */
     @NameInMap("Order")
     public DescribeRenewalPriceResponseBodyOrder order;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about the promotion rules.
+    /**
+     * <p>Details about the promotion rules.</p>
+     */
     @NameInMap("Rules")
     public DescribeRenewalPriceResponseBodyRules rules;
 
-    // The rules matching the coupons.
+    /**
+     * <p>The rules matching the coupons.</p>
+     */
     @NameInMap("SubOrders")
     public DescribeRenewalPriceResponseBodySubOrders subOrders;
 
@@ -58,19 +66,27 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyOrderCouponsCoupon extends TeaModel {
-        // The coupon number.
+        /**
+         * <p>The coupon number.</p>
+         */
         @NameInMap("CouponNo")
         public String couponNo;
 
-        // The description of the coupon.
+        /**
+         * <p>The description of the coupon.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // Indicates whether the coupon was selected.
+        /**
+         * <p>Indicates whether the coupon was selected.</p>
+         */
         @NameInMap("IsSelected")
         public String isSelected;
 
-        // The name of the coupon.
+        /**
+         * <p>The name of the coupon.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -152,30 +168,42 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyOrder extends TeaModel {
-        // Details about the coupons.
+        /**
+         * <p>Details about the coupons.</p>
+         */
         @NameInMap("Coupons")
         public DescribeRenewalPriceResponseBodyOrderCoupons coupons;
 
-        // The type of the currency. Valid values:
-        // 
-        // *   USD: United States dollar
-        // *   JPY: Japanese Yen
+        /**
+         * <p>The type of the currency. Valid values:</p>
+         * <br>
+         * <p>*   USD: United States dollar</p>
+         * <p>*   JPY: Japanese Yen</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
-        // The discount amount of the order.
+        /**
+         * <p>The discount amount of the order.</p>
+         */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
-        // The original price of the order.
+        /**
+         * <p>The original price of the order.</p>
+         */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
-        // The IDs of the matched rules.
+        /**
+         * <p>The IDs of the matched rules.</p>
+         */
         @NameInMap("RuleIds")
         public DescribeRenewalPriceResponseBodyOrderRuleIds ruleIds;
 
-        // The actual price of the order.
+        /**
+         * <p>The actual price of the order.</p>
+         */
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 
@@ -235,15 +263,21 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyRulesRule extends TeaModel {
-        // The name of the rule.
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The ID of the rule.
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
-        // The title of the rule.
+        /**
+         * <p>The title of the rule.</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -317,23 +351,33 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodySubOrdersSubOrder extends TeaModel {
-        // The discount amount of the order.
+        /**
+         * <p>The discount amount of the order.</p>
+         */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The original price of the order.
+        /**
+         * <p>The original price of the order.</p>
+         */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
-        // The IDs of the matched rules.
+        /**
+         * <p>The IDs of the matched rules.</p>
+         */
         @NameInMap("RuleIds")
         public DescribeRenewalPriceResponseBodySubOrdersSubOrderRuleIds ruleIds;
 
-        // The actual price of the order.
+        /**
+         * <p>The actual price of the order.</p>
+         */
         @NameInMap("TradeAmount")
         public Float tradeAmount;
 

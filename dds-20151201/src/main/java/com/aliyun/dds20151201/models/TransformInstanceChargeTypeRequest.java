@@ -4,42 +4,52 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class TransformInstanceChargeTypeRequest extends TeaModel {
-    // Specifies whether to enable automatic payment. Valid values:
-    // 
-    // *   **true**: enables automatic payment.
-    // *   **false**: disables automatic payment. For more information, see [Renew an ApsaraDB for MongoDB subscription instance](~~85052~~).
-    // 
-    // >  Default value: **true**.
+    /**
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>> The default value is **true**.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    // Specifies whether to enable auto-renewal for the instance. Valid values:
-    // 
-    // *   **true**
-    // *   **false**
-    // 
-    // >  Default value: **false**.
+    /**
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>> The default value is **false**.</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
-    // The business information. This is an additional parameter.
+    /**
+     * <p>The business information. This is an additional parameter.</p>
+     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
-    // The billing method of the instance. Valid values:
-    // 
-    // *   **PostPaid: pay-as-you-go.**
-    // *   **PrePaid**: subscription
-    // 
-    // >  If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.
+    /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
-    // The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+    /**
+     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -49,11 +59,9 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The subscription period of the instance. Unit: months.
-    // 
-    // Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
-    // 
-    // >  If you set the ChargeType property to PrePaid, you must configure this property.
+    /**
+     * <p>The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.</p>
+     */
     @NameInMap("Period")
     public Long period;
 

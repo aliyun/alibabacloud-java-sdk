@@ -4,17 +4,21 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
-    // The architecture of the instance. Valid values:
-    // 
-    // *   **normal**: replica set instance
-    // *   **sharding**: sharded cluster instance
+    /**
+     * <p>The architecture of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **normal**: replica set instance</p>
+     * <p>*   **sharding**: sharded cluster instance</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
-    // The billing method of the instance. Default value: PrePaid. Valid values:
-    // 
-    // *   **PrePaid**: subscription
-    // *   **PostPaid**: pay-as-you-go
+    /**
+     * <p>The billing method of the instance. Default value: PrePaid. Valid values:</p>
+     * <br>
+     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -24,11 +28,15 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource group.
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -41,7 +49,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+    /**
+     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

@@ -4,13 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class SwitchDBInstanceHARequest extends TeaModel {
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The ID of the shard in the sharded cluster instance.
-    // 
-    // >  You must specify this parameter if the value of **DBInstanceId** is the ID of a sharded cluster instance.
+    /**
+     * <p>The ID of the shard in the sharded cluster instance.</p>
+     * <br>
+     * <p>>  You must specify this parameter if the value of **DBInstanceId** is the ID of a sharded cluster instance.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -26,20 +30,24 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The IDs of the roles that you want to switch. You can call the [DescribeRoleZoneInfo](~~123802~~) operation to query IDs of roles and roles of nodes.
-    // 
-    // > * Separate role IDs with commas (,). If this parameter is not specified, roles of the primary and secondary nodes are switched.
-    // > * If the value of **DBInstanceId** is the ID of a sharded cluster instance, the roles to be switched must belong to one shard.
+    /**
+     * <p>The IDs of the roles that you want to switch. You can call the [DescribeRoleZoneInfo](~~123802~~) operation to query IDs of roles and roles of nodes.</p>
+     * <br>
+     * <p>> * Separate role IDs with commas (,). If this parameter is not specified, roles of the primary and secondary nodes are switched.</p>
+     * <p>> * If the value of **DBInstanceId** is the ID of a sharded cluster instance, the roles to be switched must belong to one shard.</p>
+     */
     @NameInMap("RoleIds")
     public String roleIds;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The time when roles of the primary and secondary nodes are switched. Valid values:
-    // 
-    // *   0: The roles are switched immediately.
-    // *   1: The roles are switched during the maintenance period.
+    /**
+     * <p>The time when roles of the primary and secondary nodes are switched. Valid values:</p>
+     * <br>
+     * <p>*   0: The roles are switched immediately.</p>
+     * <p>*   1: The roles are switched during the maintenance period.</p>
+     */
     @NameInMap("SwitchMode")
     public Integer switchMode;
 

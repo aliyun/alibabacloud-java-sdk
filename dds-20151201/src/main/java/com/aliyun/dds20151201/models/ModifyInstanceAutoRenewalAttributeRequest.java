@@ -4,22 +4,28 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
-    // Specifies whether to enable auto-renewal. Valid values:
-    // 
-    // *   **true**
-    // *   **false**
-    // 
-    // >  If this parameter is set to **true**, you must set the **Duration** parameter.
+    /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>>  If this parameter is set to **true**, you must set the **Duration** parameter.</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The auto-renewal period. Valid values: **1** to **12**. Unit: month.
-    // 
-    // >  This parameter is valid only when **AutoRenew** is set to **true**.
+    /**
+     * <p>The auto-renewal period. Valid values: **1** to **12**. Unit: month.</p>
+     * <br>
+     * <p>>  This parameter is valid only when **AutoRenew** is set to **true**.</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
@@ -29,7 +35,9 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

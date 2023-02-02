@@ -4,19 +4,25 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DestroyInstanceRequest extends TeaModel {
-    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // The ID of the instance.
-    // 
-    // >  **InstanceId** and **DBInstanceId** serve the same function. You need only to specify one of them.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  **InstanceId** and **DBInstanceId** serve the same function. You need only to specify one of them.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The ID of the instance.
-    // 
-    // >  **InstanceId** and **DBInstanceId** serve the same function. You need only to specify one of them.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  **InstanceId** and **DBInstanceId** serve the same function. You need only to specify one of them.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -26,7 +32,9 @@ public class DestroyInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the resource group.
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

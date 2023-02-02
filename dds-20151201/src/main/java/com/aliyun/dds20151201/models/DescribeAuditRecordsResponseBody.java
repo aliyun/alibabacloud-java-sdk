@@ -4,23 +4,33 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsResponseBody extends TeaModel {
-    // An array that consists of the information of audit log entries.
+    /**
+     * <p>An array that consists of the information of audit log entries.</p>
+     */
     @NameInMap("Items")
     public DescribeAuditRecordsResponseBodyItems items;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The maximum number of entries on the current page.
+    /**
+     * <p>The maximum number of entries on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries.
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -70,39 +80,57 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeAuditRecordsResponseBodyItemsSQLRecord extends TeaModel {
-        // The account of the database.
+        /**
+         * <p>The account of the database.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
-        // The name of the database.
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
-        // The time when the statement was executed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the statement was executed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
-        // The IP address of the client.
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
-        // The number of SQL audit log entries that are returned.
+        /**
+         * <p>The number of SQL audit log entries that are returned.</p>
+         */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
-        // The statement that was executed.
+        /**
+         * <p>The statement that was executed.</p>
+         */
         @NameInMap("Syntax")
         public String syntax;
 
-        // The name of the collection.
+        /**
+         * <p>The name of the collection.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
-        // The ID of the thread that is recorded in the SQL audit log entry.
+        /**
+         * <p>The ID of the thread that is recorded in the SQL audit log entry.</p>
+         */
         @NameInMap("ThreadID")
         public String threadID;
 
-        // The duration of the statement execution. Unit: microseconds.
+        /**
+         * <p>The duration of the statement execution. Unit: microseconds.</p>
+         */
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;
 

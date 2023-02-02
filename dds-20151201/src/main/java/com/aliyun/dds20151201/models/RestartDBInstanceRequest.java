@@ -4,13 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class RestartDBInstanceRequest extends TeaModel {
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The ID of the shard or mongos node in the sharded cluster instance.
-    // 
-    // >  The sharded cluster instance is restarted if you do not specify this parameter.
+    /**
+     * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
+     * <br>
+     * <p>>  The sharded cluster instance is restarted if you do not specify this parameter.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

@@ -4,10 +4,12 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDBsRequest extends TeaModel {
-    // The ID of the backup set.
-    // 
-    // > * You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
-    // > * You must specify one of the **RestoreTime** and BackupId parameters.
+    /**
+     * <p>The ID of the backup set.</p>
+     * <br>
+     * <p>> * You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.</p>
+     * <p>> * You must specify one of the **RestoreTime** and BackupId parameters.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
@@ -17,15 +19,21 @@ public class DescribeBackupDBsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
+    /**
+     * <p>The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Default value: 30. Valid values: **30**, **50**, and **100**.
+    /**
+     * <p>The number of entries to return on each page. Default value: 30. Valid values: **30**, **50**, and **100**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the resource group.
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -35,17 +43,21 @@ public class DescribeBackupDBsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The point in time to which the instance is restored. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-    // 
-    // > * The time can be a point in time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.
-    // > * You must specify one of the RestoreTime and **BackupId** parameters.
+    /**
+     * <p>The point in time to which the instance is restored. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>> * The time can be a point in time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.</p>
+     * <p>> * You must specify one of the RestoreTime and **BackupId** parameters.</p>
+     */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The ID of the source instance.
+    /**
+     * <p>The ID of the source instance.</p>
+     */
     @NameInMap("SourceDBInstance")
     public String sourceDBInstance;
 

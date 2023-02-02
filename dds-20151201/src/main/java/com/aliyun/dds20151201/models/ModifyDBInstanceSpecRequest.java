@@ -4,51 +4,70 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSpecRequest extends TeaModel {
-    // Specifies whether to enable automatic payment. Default value: true. Valid values:
-    // 
-    // *   **true**: enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.
-    // *   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > **User Center**. In the left-side navigation pane, choose **Order Management** > **Order**. On the **Orders for Services** tab, find the order and pay for the order.
+    /**
+     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.</p>
+     * <p>*   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > **User Center**. In the left-side navigation pane, choose **Order Management** > **Order**. On the **Orders for Services** tab, find the order and pay for the order.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    // The business information.
+    /**
+     * <p>The business information.</p>
+     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
-    // The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+    /**
+     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
-    // The instance type. For more information, see [Instance types](~~57141~~). You can also call the [DescribeAvailableResource](~~149719~~) operation to view instance types.
-    // 
-    // >  You must specify at least one of the DBInstanceClass and **DBInstanceStorage** parameters.
+    /**
+     * <p>The instance type. For more information, see [Instance types](~~57141~~). You can also call the [DescribeAvailableResource](~~149719~~) operation to view instance types.</p>
+     * <br>
+     * <p>>  You must specify at least one of the DBInstanceClass and **DBInstanceStorage** parameters.</p>
+     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The storage capacity of the instance. Valid values: 10 to 3000. The value must be a multiple of 10. Unit: GB. The values that can be specified for this parameter are subject to the instance types. For more information, see [Instance types](~~57141~~).
-    // 
-    // > * You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.
-    // > * Storage capacity can be scaled down only for pay-as-you-go replica set instances. The new storage capacity you specify must be greater than the used storage capacity.
+    /**
+     * <p>The storage capacity of the instance. Valid values: 10 to 3000. The value must be a multiple of 10. Unit: GB. The values that can be specified for this parameter are subject to the instance types. For more information, see [Instance types](~~57141~~).</p>
+     * <br>
+     * <p>> * You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.</p>
+     * <p>> * Storage capacity can be scaled down only for pay-as-you-go replica set instances. The new storage capacity you specify must be greater than the used storage capacity.</p>
+     */
     @NameInMap("DBInstanceStorage")
     public String DBInstanceStorage;
 
-    // The time when the changed configurations take effect. Default value: Immediately. Valid values:
-    // 
-    // *   **Immediately**: The configurations immediately take effect.
-    // *   **MaintainTime**: The configurations take effect during the maintenance window of the instance.
+    /**
+     * <p>The time when the changed configurations take effect. Default value: Immediately. Valid values:</p>
+     * <br>
+     * <p>*   **Immediately**: The configurations immediately take effect.</p>
+     * <p>*   **MaintainTime**: The configurations take effect during the maintenance window of the instance.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
-    // The type of the modification. Valid values:
-    // 
-    // *   **UPGRADE**
-    // *   **DOWNGRADE**
-    // 
-    // >  This parameter can be configured only when the billing method of the instance is subscription.
+    @NameInMap("ExtraParam")
+    public String extraParam;
+
+    /**
+     * <p>The type of the modification. Valid values:</p>
+     * <br>
+     * <p>*   **UPGRADE**</p>
+     * <p>*   **DOWNGRADE**</p>
+     * <br>
+     * <p>>  This parameter can be configured only when the billing method of the instance is subscription.</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
@@ -58,20 +77,24 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of read-only nodes. Valid values: **0** to **5**.
-    // 
-    // If your instance has only **Classic Network** and **VPC** endpoints, you must apply for a public endpoint or release the classic network endpoint for the instance before you can change the **Read-only Nodes** value.
-    // 
-    // >  You can go to the **Database Connections** page to view the types of networks that are enabled.
+    /**
+     * <p>The number of read-only nodes. Valid values: **0** to **5**.</p>
+     * <br>
+     * <p>If your instance has only **Classic Network** and **VPC** endpoints, you must apply for a public endpoint or release the classic network endpoint for the instance before you can change the **Read-only Nodes** value.</p>
+     * <br>
+     * <p>>  You can go to the **Database Connections** page to view the types of networks that are enabled.</p>
+     */
     @NameInMap("ReadonlyReplicas")
     public String readonlyReplicas;
 
-    // The number of nodes in the instance.
-    // 
-    // *   Valid values of replica set instances: **3**, **5**, and **7**
-    // *   Valid values of standalone instances: **1**
-    // 
-    // >  This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).
+    /**
+     * <p>The number of nodes in the instance.</p>
+     * <br>
+     * <p>*   Valid values of replica set instances: **3**, **5**, and **7**</p>
+     * <p>*   Valid values of standalone instances: **1**</p>
+     * <br>
+     * <p>>  This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).</p>
+     */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
 
@@ -143,6 +166,14 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     }
     public String getEffectiveTime() {
         return this.effectiveTime;
+    }
+
+    public ModifyDBInstanceSpecRequest setExtraParam(String extraParam) {
+        this.extraParam = extraParam;
+        return this;
+    }
+    public String getExtraParam() {
+        return this.extraParam;
     }
 
     public ModifyDBInstanceSpecRequest setOrderType(String orderType) {

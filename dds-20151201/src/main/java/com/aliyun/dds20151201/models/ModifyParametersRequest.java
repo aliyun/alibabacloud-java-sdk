@@ -4,24 +4,30 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyParametersRequest extends TeaModel {
-    // The role of the instance. Valid values:
-    // 
-    // *   **db**: a shard node
-    // *   **cs**: a Configserver node
-    // *   **mongos**: a mongos node
-    // *   **logic**: a sharded cluster instance
+    /**
+     * <p>The role of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **db**: a shard node</p>
+     * <p>*   **cs**: a Configserver node</p>
+     * <p>*   **mongos**: a mongos node</p>
+     * <p>*   **logic**: a sharded cluster instance</p>
+     */
     @NameInMap("CharacterType")
     public String characterType;
 
-    // The ID of the instance.
-    // 
-    // >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The ID of the mongos or shard node in the specified sharded cluster instance.
-    // 
-    // >  This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.
+    /**
+     * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
+     * <br>
+     * <p>>  This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -31,13 +37,17 @@ public class ModifyParametersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {"ParameterName1":"ParameterValue1","ParameterName2":"ParameterValue2"}.
-    // 
-    // >  You can call the [DescribeParameterTemplates](~~67618~~) operation to query a list of default parameter templates.
+    /**
+     * <p>The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {"ParameterName1":"ParameterValue1","ParameterName2":"ParameterValue2"}.</p>
+     * <br>
+     * <p>>  You can call the [DescribeParameterTemplates](~~67618~~) operation to query a list of default parameter templates.</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 
-    // The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

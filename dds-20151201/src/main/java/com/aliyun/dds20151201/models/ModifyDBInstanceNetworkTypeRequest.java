@@ -4,20 +4,26 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
-    // The retention period of the original classic network address when you change the network type to VPC. Valid values: **14**, **30**, **60**, and **120**. Unit: days.
-    // 
-    // >  This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.
+    /**
+     * <p>The retention period of the original classic network address when you change the network type to VPC. Valid values: **14**, **30**, **60**, and **120**. Unit: days.</p>
+     * <br>
+     * <p>>  This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.</p>
+     */
     @NameInMap("ClassicExpiredDays")
     public Integer classicExpiredDays;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The network type to switch to. Valid values:
-    // 
-    // *   **VPC**
-    // *   **Classic**
+    /**
+     * <p>The network type to switch to. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **Classic**</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -33,28 +39,34 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:
-    // 
-    // - **True**: retains the original classic network address.
-    // - **False**: does not retain the original classic network address.
-    // 
-    // > * This parameter is required when the **NetworkType** parameter is set to **VPC**.
-    // > * If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.
+    /**
+     * <p>Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:</p>
+     * <br>
+     * <p>- **True**: retains the original classic network address.</p>
+     * <p>- **False**: does not retain the original classic network address.</p>
+     * <br>
+     * <p>> * This parameter is required when the **NetworkType** parameter is set to **VPC**.</p>
+     * <p>> * If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.</p>
+     */
     @NameInMap("RetainClassic")
     public String retainClassic;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The ID of the vSwitch.
-    // 
-    // >  This parameter is required when the **NetworkType** parameter is set to **VPC**.
+    /**
+     * <p>The ID of the vSwitch.</p>
+     * <br>
+     * <p>>  This parameter is required when the **NetworkType** parameter is set to **VPC**.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // The ID of the virtual private cloud (VPC).
-    // 
-    // >  This parameter is required when the **NetworkType** parameter is set to **VPC**.
+    /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <br>
+     * <p>>  This parameter is required when the **NetworkType** parameter is set to **VPC**.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

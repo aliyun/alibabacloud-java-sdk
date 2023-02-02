@@ -4,16 +4,20 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The category of the instance. Valid values:
-    // 
-    // *   **replicate**: the standalone or replica set instance
-    // *   **sharding**: the sharded cluster instance
-    // 
-    // Default value: **replicate**.
+    /**
+     * <p>The category of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **replicate**: the standalone or replica set instance</p>
+     * <p>*   **sharding**: the sharded cluster instance</p>
+     * <br>
+     * <p>Default value: **replicate**.</p>
+     */
     @NameInMap("DBInstanceType")
     public String DBInstanceType;
 
@@ -23,17 +27,23 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the Integer parameter. Default value: **1**.
+    /**
+     * <p>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the Integer parameter. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
-    // 
-    // >  Default value: **30**.
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**.</p>
+     * <br>
+     * <p>>  Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

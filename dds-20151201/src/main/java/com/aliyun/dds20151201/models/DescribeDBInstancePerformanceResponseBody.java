@@ -4,19 +4,27 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
-    // The end of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+    /**
+     * <p>The end of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // Details about the performance metrics.
+    /**
+     * <p>Details about the performance metrics.</p>
+     */
     @NameInMap("PerformanceKeys")
     public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+    /**
+     * <p>The beginning of the time range to query. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -58,11 +66,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue extends TeaModel {
-        // The date and time when the metric value was generated.
+        /**
+         * <p>The date and time when the metric value was generated.</p>
+         */
         @NameInMap("Date")
         public String date;
 
-        // The value of the performance metric.
+        /**
+         * <p>The value of the performance metric.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -109,21 +121,29 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
-        // The performance metric.
+        /**
+         * <p>The performance metric.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // Details about the performance metric values.
+        /**
+         * <p>Details about the performance metric values.</p>
+         */
         @NameInMap("PerformanceValues")
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues performanceValues;
 
-        // The unit of the performance metric.
+        /**
+         * <p>The unit of the performance metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
-        // The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with **\&amp;** symbols.
-        // 
-        // For example, if you query disk usage, the returned **ValueFormat** value is in the **ins_size\&amp;data_size\&amp;log_size** format.
+        /**
+         * <p>The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with **\&amp;** symbols.</p>
+         * <br>
+         * <p>For example, if you query disk usage, the returned **ValueFormat** value is in the **ins_size\&amp;data_size\&amp;log_size** format.</p>
+         */
         @NameInMap("ValueFormat")
         public String valueFormat;
 

@@ -4,17 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceTDERequest extends TeaModel {
-    // The ID of an instance.
+    /**
+     * <p>The ID of an instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The custom key.
+    /**
+     * <p>The custom key.</p>
+     */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
-    // The encryption method. Set the value to **AES-256-CBC**.
-    // 
-    // >  This parameter is valid only when you specify the **TEDStatus** parameter to **enabled**.
+    /**
+     * <p>The encryption method. Set the value to **AES-256-CBC**.</p>
+     * <br>
+     * <p>>  This parameter is valid only when you specify the **TEDStatus** parameter to **enabled**.</p>
+     */
     @NameInMap("EncryptorName")
     public String encryptorName;
 
@@ -30,19 +36,23 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ARN of the role. It is in the format of `acs:ram::$accountID:role/$roleName`.
-    // 
-    // > * `$accountID`: indicates the ID of the Alibaba Cloud account that owns the RAM role. To view the account ID, log on to the Alibaba Cloud Management Console, move your pointer over your profile picture in the upper-right corner, and then click Security Settings.
-    // > * `$roleName`: indicates the name of the RAM role. To view the RAM role name, perform the following steps: Log on to the RAM console. In the left-side navigation pane, click RAM Roles. In the RAM Role Name column on the page that appears, you can view the name of the RAM role.
+    /**
+     * <p>The ARN of the role. It is in the format of `acs:ram::$accountID:role/$roleName`.</p>
+     * <br>
+     * <p>> * `$accountID`: indicates the ID of the Alibaba Cloud account that owns the RAM role. To view the account ID, log on to the Alibaba Cloud Management Console, move your pointer over your profile picture in the upper-right corner, and then click Security Settings.</p>
+     * <p>> * `$roleName`: indicates the name of the RAM role. To view the RAM role name, perform the following steps: Log on to the RAM console. In the left-side navigation pane, click RAM Roles. In the RAM Role Name column on the page that appears, you can view the name of the RAM role.</p>
+     */
     @NameInMap("RoleARN")
     public String roleARN;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The TDE status. Set the value to **Enabled**.
-    // 
-    // >  Exercise caution when enabling TDE. After TDE is enabled, it cannot be disabled.
+    /**
+     * <p>The TDE status. Set the value to **Enabled**.</p>
+     * <br>
+     * <p>>  Exercise caution when enabling TDE. After TDE is enabled, it cannot be disabled.</p>
+     */
     @NameInMap("TDEStatus")
     public String TDEStatus;
 

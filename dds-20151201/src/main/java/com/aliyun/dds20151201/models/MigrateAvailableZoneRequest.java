@@ -4,18 +4,22 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class MigrateAvailableZoneRequest extends TeaModel {
-    // The ID of the instance.
-    // 
-    // >  If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The time when the instance is migrated to the destination zone. Valid values:
-    // 
-    // *   **Immediately**: The instance is immediately migrated to the destination zone.
-    // *   **MaintainTime**: The instance is migrated to the destination zone during the maintenance window of the instance.
-    // 
-    // Default value: **Immediately**.
+    /**
+     * <p>The time when the instance is migrated to the destination zone. Valid values:</p>
+     * <br>
+     * <p>*   **Immediately**: The instance is immediately migrated to the destination zone.</p>
+     * <p>*   **MaintainTime**: The instance is migrated to the destination zone during the maintenance window of the instance.</p>
+     * <br>
+     * <p>Default value: **Immediately**.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
@@ -31,16 +35,20 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the vSwitch in the destination zone.
-    // 
-    // >  If the instance is deployed in a VPC, you must specify this parameter.
+    /**
+     * <p>The ID of the vSwitch in the destination zone.</p>
+     * <br>
+     * <p>>  If the instance is deployed in a VPC, you must specify this parameter.</p>
+     */
     @NameInMap("Vswitch")
     public String vswitch;
 
-    // The ID of the destination zone.
-    // 
-    // > * The source zone and the destination zone belong to the same region.
-    // > * You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+    /**
+     * <p>The ID of the destination zone.</p>
+     * <br>
+     * <p>> * The source zone and the destination zone belong to the same region.</p>
+     * <p>> * You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

@@ -4,23 +4,33 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
-    // Details about backup sets.
+    /**
+     * <p>Details about backup sets.</p>
+     */
     @NameInMap("Backups")
     public DescribeBackupsResponseBodyBackups backups;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of backup sets that were returned.
+    /**
+     * <p>The total number of backup sets that were returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,62 +80,84 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyBackupsBackup extends TeaModel {
-        // The name of the database that has been backed up.
+        /**
+         * <p>The name of the database that has been backed up.</p>
+         */
         @NameInMap("BackupDBNames")
         public String backupDBNames;
 
-        // The Internet download URL of the backup set. If the download URL is unavailable, this parameter is an empty string.
+        /**
+         * <p>The Internet download URL of the backup set. If the download URL is unavailable, this parameter is an empty string.</p>
+         */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
-        // The end of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
+        /**
+         * <p>The end of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.</p>
+         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
-        // The ID of the backup set.
+        /**
+         * <p>The ID of the backup set.</p>
+         */
         @NameInMap("BackupId")
         public Integer backupId;
 
-        // The internal download URL of the backup set.
-        // 
-        // >  You can use this URL to download the backup set from on the ECS instance which is on the same network as the ApsaraDB for MongoDB instance.
+        /**
+         * <p>The internal download URL of the backup set.</p>
+         * <br>
+         * <p>>  You can use this URL to download the backup set from on the ECS instance which is on the same network as the ApsaraDB for MongoDB instance.</p>
+         */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
-        // The backup method. Valid values:
-        // 
-        // *   **Snapshot**
-        // *   **Physical**
-        // *   **Logical**
+        /**
+         * <p>The backup method. Valid values:</p>
+         * <br>
+         * <p>*   **Snapshot**</p>
+         * <p>*   **Physical**</p>
+         * <p>*   **Logical**</p>
+         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
-        // The backup mode.
-        // 
-        // *   **Automated**: automatic backup
-        // *   **Manual**: manual backup
+        /**
+         * <p>The backup mode.</p>
+         * <br>
+         * <p>*   **Automated**: automatic backup</p>
+         * <p>*   **Manual**: manual backup</p>
+         */
         @NameInMap("BackupMode")
         public String backupMode;
 
-        // The size of the backup set. Unit: bytes.
+        /**
+         * <p>The size of the backup set. Unit: bytes.</p>
+         */
         @NameInMap("BackupSize")
         public Long backupSize;
 
-        // The beginning of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
+        /**
+         * <p>The beginning of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
-        // The status of the backup. Valid values:
-        // 
-        // *   **Success**: The backup task is successful.
-        // *   **Failed**: The backup task failed.
+        /**
+         * <p>The status of the backup. Valid values:</p>
+         * <br>
+         * <p>*   **Success**: The backup task is successful.</p>
+         * <p>*   **Failed**: The backup task failed.</p>
+         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
-        // The backup method.
-        // 
-        // *   **FullBackup**: a full backup
-        // *   **IncrementalBackup**: an incremental backup
+        /**
+         * <p>The backup method.</p>
+         * <br>
+         * <p>*   **FullBackup**: a full backup</p>
+         * <p>*   **IncrementalBackup**: an incremental backup</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 

@@ -4,7 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CheckCloudResourceAuthorizedRequest extends TeaModel {
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -23,7 +25,9 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("TargetRegionId")
     public String targetRegionId;
 

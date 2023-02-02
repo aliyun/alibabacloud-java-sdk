@@ -4,11 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The list of tasks.
+    /**
+     * <p>The list of tasks.</p>
+     */
     @NameInMap("TypeList")
     public java.util.List<DescribeActiveOperationTaskTypeResponseBodyTypeList> typeList;
 
@@ -34,22 +38,30 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveOperationTaskTypeResponseBodyTypeList extends TeaModel {
-        // The number of pending tasks.
+        /**
+         * <p>The number of pending tasks.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
-        // The type of the task. Valid values:
-        // 
-        // *   **rds_apsaradb_transfer**: instance migration
-        // *   **rds_apsaradb_upgrade**: minor version update
+        /**
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>*   **rds\_apsaradb\_transfer**: instance migration</p>
+         * <p>*   **rds\_apsaradb\_upgrade**: minor version update</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
-        // The task type (English).
+        /**
+         * <p>The task type (English).</p>
+         */
         @NameInMap("TaskTypeInfoEn")
         public String taskTypeInfoEn;
 
-        // The task type (Chinese).
+        /**
+         * <p>The task type (Chinese).</p>
+         */
         @NameInMap("TaskTypeInfoZh")
         public String taskTypeInfoZh;
 

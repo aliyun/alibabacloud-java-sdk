@@ -4,27 +4,39 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeErrorLogRecordsResponseBody extends TeaModel {
-    // The database engine.
+    /**
+     * <p>The database engine.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
-    // Details about the log entries returned.
+    /**
+     * <p>Details about the log entries returned.</p>
+     */
     @NameInMap("Items")
     public DescribeErrorLogRecordsResponseBodyItems items;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries.
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -82,33 +94,43 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeErrorLogRecordsResponseBodyItemsLogRecords extends TeaModel {
-        // The category of the log entry. Valid values:
-        // 
-        // *   NETWORK: network connection log
-        // *   ACCESS: access control log
-        // *   \-: general log
-        // *   COMMAND: slow query log
-        // *   SHARDING: sharded cluster log
-        // *   STORAGE: storage engine log
-        // *   CONNPOOL: connection pool log
-        // *   ASIO: asynchronous I/O operation log
-        // *   WRITE: slow update log
+        /**
+         * <p>The category of the log entry. Valid values:</p>
+         * <br>
+         * <p>*   NETWORK: network connection log</p>
+         * <p>*   ACCESS: access control log</p>
+         * <p>*   \-: general log</p>
+         * <p>*   COMMAND: slow query log</p>
+         * <p>*   SHARDING: sharded cluster log</p>
+         * <p>*   STORAGE: storage engine log</p>
+         * <p>*   CONNPOOL: connection pool log</p>
+         * <p>*   ASIO: asynchronous I/O operation log</p>
+         * <p>*   WRITE: slow update log</p>
+         */
         @NameInMap("Category")
         public String category;
 
-        // The connection information of the log entry.
+        /**
+         * <p>The connection information of the log entry.</p>
+         */
         @NameInMap("ConnInfo")
         public String connInfo;
 
-        // The content of the log entry.
+        /**
+         * <p>The content of the log entry.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss***Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss***Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The ID of the log entry.
+        /**
+         * <p>The ID of the log entry.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 

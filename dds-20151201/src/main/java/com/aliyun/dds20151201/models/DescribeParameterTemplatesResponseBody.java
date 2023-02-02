@@ -4,23 +4,33 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
-    // The database engine of the instance.
+    /**
+     * <p>The database engine of the instance.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
-    // The database engine version of the instance.
+    /**
+     * <p>The database engine version of the instance.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
-    // The number of parameters that are supported by the instance.
+    /**
+     * <p>The number of parameters that are supported by the instance.</p>
+     */
     @NameInMap("ParameterCount")
     public String parameterCount;
 
-    // Details about the parameter templates.
+    /**
+     * <p>Details about the parameter templates.</p>
+     */
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -70,33 +80,45 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
-        // The value range of modifiable parameters.
+        /**
+         * <p>The value range of modifiable parameters.</p>
+         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
-        // Indicates whether the parameter is modifiable.
-        // 
-        // *   **false**: The parameter cannot be modified.
-        // *   **true**: The parameter can be modified.
+        /**
+         * <p>Indicates whether the parameter is modifiable.</p>
+         * <br>
+         * <p>*   **false**: The parameter cannot be modified.</p>
+         * <p>*   **true**: The parameter can be modified.</p>
+         */
         @NameInMap("ForceModify")
         public Boolean forceModify;
 
-        // Indicates whether a restart is required for parameter modifications to take effect.
-        // 
-        // *   **false**: A restart is not required. Parameter modifications immediately take effect.
-        // *   **true**: A restart is required for parameter modifications to take effect.
+        /**
+         * <p>Indicates whether a restart is required for parameter modifications to take effect.</p>
+         * <br>
+         * <p>*   **false**: A restart is not required. Parameter modifications immediately take effect.</p>
+         * <p>*   **true**: A restart is required for parameter modifications to take effect.</p>
+         */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
-        // The description of the parameter.
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
-        // The name of the parameter.
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
-        // The default value of the parameter.
+        /**
+         * <p>The default value of the parameter.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

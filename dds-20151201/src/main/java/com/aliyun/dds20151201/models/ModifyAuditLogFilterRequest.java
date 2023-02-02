@@ -4,19 +4,23 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyAuditLogFilterRequest extends TeaModel {
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    // The type of the audit log entries to be collected. Valid values:
-    // 
-    // *   **admin**: O\&M and management operations
-    // *   **slow**: slow query logs
-    // *   **query**: query operations
-    // *   **insert**: insert operations
-    // *   **update**: update operations
-    // *   **delete**: delete operations
-    // *   **command**: protocol commands such as the aggregate method
+    /**
+     * <p>The type of the audit log entries to be collected. Valid values:</p>
+     * <br>
+     * <p>*   **admin**: O\&M and management operations</p>
+     * <p>*   **slow**: slow query logs</p>
+     * <p>*   **query**: query operations</p>
+     * <p>*   **insert**: insert operations</p>
+     * <p>*   **update**: update operations</p>
+     * <p>*   **delete**: delete operations</p>
+     * <p>*   **command**: protocol commands such as the aggregate method</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
@@ -32,10 +36,12 @@ public class ModifyAuditLogFilterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The role of the node in the instance. Valid values:
-    // 
-    // *   **primary**
-    // *   **secondary**
+    /**
+     * <p>The role of the node in the instance. Valid values:</p>
+     * <br>
+     * <p>*   **primary**</p>
+     * <p>*   **secondary**</p>
+     */
     @NameInMap("RoleType")
     public String roleType;
 

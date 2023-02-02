@@ -4,11 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
-    // The name of the account. Set the value to **root**.
+    /**
+     * <p>The name of the account. Set the value to **root**.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
