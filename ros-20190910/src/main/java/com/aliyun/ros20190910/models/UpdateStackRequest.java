@@ -10,6 +10,9 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("Parallelism")
     public Long parallelism;
 
@@ -83,6 +86,14 @@ public class UpdateStackRequest extends TeaModel {
     }
     public Boolean getDisableRollback() {
         return this.disableRollback;
+    }
+
+    public UpdateStackRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public UpdateStackRequest setParallelism(Long parallelism) {

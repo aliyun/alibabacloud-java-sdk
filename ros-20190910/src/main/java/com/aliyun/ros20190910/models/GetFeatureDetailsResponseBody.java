@@ -10,6 +10,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     @NameInMap("ResourceCleaner")
     public GetFeatureDetailsResponseBodyResourceCleaner resourceCleaner;
 
+    @NameInMap("TemplateParameterConstraints")
+    public GetFeatureDetailsResponseBodyTemplateParameterConstraints templateParameterConstraints;
+
     @NameInMap("TemplateScratch")
     public GetFeatureDetailsResponseBodyTemplateScratch templateScratch;
 
@@ -35,6 +38,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
     public GetFeatureDetailsResponseBodyResourceCleaner getResourceCleaner() {
         return this.resourceCleaner;
+    }
+
+    public GetFeatureDetailsResponseBody setTemplateParameterConstraints(GetFeatureDetailsResponseBodyTemplateParameterConstraints templateParameterConstraints) {
+        this.templateParameterConstraints = templateParameterConstraints;
+        return this;
+    }
+    public GetFeatureDetailsResponseBodyTemplateParameterConstraints getTemplateParameterConstraints() {
+        return this.templateParameterConstraints;
     }
 
     public GetFeatureDetailsResponseBody setTemplateScratch(GetFeatureDetailsResponseBodyTemplateScratch templateScratch) {
@@ -108,6 +119,55 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             return this;
         }
         public java.util.List<GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes> getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
+    }
+
+    public static class GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes extends TeaModel {
+        @NameInMap("Properties")
+        public java.util.List<String> properties;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes self = new GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes setProperties(java.util.List<String> properties) {
+            this.properties = properties;
+            return this;
+        }
+        public java.util.List<String> getProperties() {
+            return this.properties;
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
+    public static class GetFeatureDetailsResponseBodyTemplateParameterConstraints extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        public java.util.List<GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes;
+
+        public static GetFeatureDetailsResponseBodyTemplateParameterConstraints build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyTemplateParameterConstraints self = new GetFeatureDetailsResponseBodyTemplateParameterConstraints();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateParameterConstraints setSupportedResourceTypes(java.util.List<GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes) {
+            this.supportedResourceTypes = supportedResourceTypes;
+            return this;
+        }
+        public java.util.List<GetFeatureDetailsResponseBodyTemplateParameterConstraintsSupportedResourceTypes> getSupportedResourceTypes() {
             return this.supportedResourceTypes;
         }
 
