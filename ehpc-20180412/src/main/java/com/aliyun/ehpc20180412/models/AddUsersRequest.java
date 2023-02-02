@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddUsersRequest extends TeaModel {
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -13,6 +16,14 @@ public class AddUsersRequest extends TeaModel {
     public static AddUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         AddUsersRequest self = new AddUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddUsersRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public AddUsersRequest setClusterId(String clusterId) {

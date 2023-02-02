@@ -433,6 +433,12 @@ public class DescribeClusterResponseBody extends TeaModel {
         @NameInMap("PostInstallScripts")
         public DescribeClusterResponseBodyClusterInfoPostInstallScripts postInstallScripts;
 
+        @NameInMap("RamNodeTypes")
+        public String ramNodeTypes;
+
+        @NameInMap("RamRoleName")
+        public String ramRoleName;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -632,6 +638,22 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
         public DescribeClusterResponseBodyClusterInfoPostInstallScripts getPostInstallScripts() {
             return this.postInstallScripts;
+        }
+
+        public DescribeClusterResponseBodyClusterInfo setRamNodeTypes(String ramNodeTypes) {
+            this.ramNodeTypes = ramNodeTypes;
+            return this;
+        }
+        public String getRamNodeTypes() {
+            return this.ramNodeTypes;
+        }
+
+        public DescribeClusterResponseBodyClusterInfo setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
         }
 
         public DescribeClusterResponseBodyClusterInfo setRegionId(String regionId) {

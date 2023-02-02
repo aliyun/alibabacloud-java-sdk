@@ -252,6 +252,12 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("SpotDuration")
+        public Integer spotDuration;
+
+        @NameInMap("SpotInterruptionBehavior")
+        public String spotInterruptionBehavior;
+
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
@@ -275,6 +281,22 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public SetAutoScaleConfigRequestQueuesInstanceTypes setSpotDuration(Integer spotDuration) {
+            this.spotDuration = spotDuration;
+            return this;
+        }
+        public Integer getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        public SetAutoScaleConfigRequestQueuesInstanceTypes setSpotInterruptionBehavior(String spotInterruptionBehavior) {
+            this.spotInterruptionBehavior = spotInterruptionBehavior;
+            return this;
+        }
+        public String getSpotInterruptionBehavior() {
+            return this.spotInterruptionBehavior;
         }
 
         public SetAutoScaleConfigRequestQueuesInstanceTypes setSpotPriceLimit(Float spotPriceLimit) {

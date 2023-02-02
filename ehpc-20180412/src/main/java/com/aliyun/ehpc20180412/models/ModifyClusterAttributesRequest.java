@@ -19,6 +19,12 @@ public class ModifyClusterAttributesRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RamNodeTypes")
+    public java.util.List<String> ramNodeTypes;
+
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
     public static ModifyClusterAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterAttributesRequest self = new ModifyClusterAttributesRequest();
         return TeaModel.build(map, self);
@@ -62,6 +68,22 @@ public class ModifyClusterAttributesRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyClusterAttributesRequest setRamNodeTypes(java.util.List<String> ramNodeTypes) {
+        this.ramNodeTypes = ramNodeTypes;
+        return this;
+    }
+    public java.util.List<String> getRamNodeTypes() {
+        return this.ramNodeTypes;
+    }
+
+    public ModifyClusterAttributesRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
     }
 
 }
