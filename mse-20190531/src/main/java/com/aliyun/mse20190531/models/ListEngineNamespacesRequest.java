@@ -14,7 +14,7 @@ public class ListEngineNamespacesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

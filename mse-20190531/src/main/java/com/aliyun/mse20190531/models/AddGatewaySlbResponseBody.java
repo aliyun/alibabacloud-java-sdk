@@ -11,7 +11,7 @@ public class AddGatewaySlbResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public String data;
@@ -32,7 +32,7 @@ public class AddGatewaySlbResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

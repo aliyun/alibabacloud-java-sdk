@@ -11,7 +11,7 @@ public class UpdateSSLCertResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data structure.</p>
+     * <p>Indicates whether the update is successful.</p>
      */
     @NameInMap("Data")
     public Boolean data;
@@ -29,7 +29,7 @@ public class UpdateSSLCertResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      */
     @NameInMap("RequestId")
     public String requestId;

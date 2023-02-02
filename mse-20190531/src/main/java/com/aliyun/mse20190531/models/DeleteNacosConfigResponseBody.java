@@ -17,7 +17,7 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;

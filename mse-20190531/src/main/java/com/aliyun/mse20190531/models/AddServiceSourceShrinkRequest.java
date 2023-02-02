@@ -15,7 +15,7 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The endpoint.</p>
+     * <p>The address.</p>
      */
     @NameInMap("Address")
     public String address;
@@ -33,7 +33,7 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     public String groupListShrink;
 
     /**
-     * <p>The Ingress configuration.</p>
+     * <p>The configurations of Ingress resources.</p>
      */
     @NameInMap("IngressOptionsRequest")
     public String ingressOptionsRequestShrink;
@@ -41,9 +41,9 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     /**
      * <p>The name.</p>
      * <br>
-     * <p>> The parameter value varies based on the source type.</p>
+     * <p>> The parameter definition varies based on the source type.</p>
      * <br>
-     * <p>*   If Type is set to K8S, this parameter specifies the name of the ACK cluster.</p>
+     * <p>*   If Type is set to K8S, this parameter specifies the name of the Kubernetes cluster.</p>
      * <p>*   If Type is set to NACOS, this parameter specifies the ID of the instance.</p>
      */
     @NameInMap("Name")
@@ -56,9 +56,9 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     public String pathListShrink;
 
     /**
-     * <p>The service source.</p>
+     * <p>The service source. Valid values:</p>
      * <br>
-     * <p>*   K8S: ACK cluster</p>
+     * <p>*   K8S: Kubernetes cluster</p>
      * <p>*   MSE: Nacos instance</p>
      */
     @NameInMap("Source")
@@ -67,7 +67,7 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     /**
      * <p>The type of the service source. Valid values:</p>
      * <br>
-     * <p>*   K8S: ACK cluster</p>
+     * <p>*   K8S: Kubernetes cluster</p>
      * <p>*   NACOS: Nacos instance</p>
      */
     @NameInMap("Type")

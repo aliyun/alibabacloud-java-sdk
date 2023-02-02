@@ -14,13 +14,13 @@ public class QueryConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("ConfigType")
     public String configType;
@@ -31,6 +31,9 @@ public class QueryConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether runtime configurations are required.</p>
+     */
     @NameInMap("NeedRunningConf")
     public Boolean needRunningConf;
 

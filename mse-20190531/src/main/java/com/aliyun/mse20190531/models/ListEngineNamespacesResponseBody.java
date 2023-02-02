@@ -56,7 +56,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of instances.</p>
+     * <p>The total number of returned instances.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -164,7 +164,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         public String namespaceShowName;
 
         /**
-         * <p>The quota of configurations.</p>
+         * <p>The quotas.</p>
          */
         @NameInMap("Quota")
         public Integer quota;
@@ -174,6 +174,9 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
          */
         @NameInMap("ServiceCount")
         public String serviceCount;
+
+        @NameInMap("SourceType")
+        public String sourceType;
 
         /**
          * <p>The type of the namespace. Valid values:</p>
@@ -236,6 +239,14 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         }
         public String getServiceCount() {
             return this.serviceCount;
+        }
+
+        public ListEngineNamespacesResponseBodyData setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         public ListEngineNamespacesResponseBodyData setType(Integer type) {

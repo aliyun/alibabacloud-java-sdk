@@ -4,39 +4,81 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListConfigTrackRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The ID of the configuration.</p>
+     */
     @NameInMap("DataId")
     public String dataId;
 
+    /**
+     * <p>The end timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EndTs")
     public Long endTs;
 
+    /**
+     * <p>The name of the configuration group.</p>
+     */
     @NameInMap("Group")
     public String group;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IP address of the listener.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The extended request parameters in the JSON format.</p>
+     */
     @NameInMap("RequestPars")
     public String requestPars;
 
+    /**
+     * <p>Specifies whether entries are sorted in reverse chronological order.</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Reverse")
     public Boolean reverse;
 
+    /**
+     * <p>The start timestamp. Unit: seconds.</p>
+     */
     @NameInMap("StartTs")
     public Long startTs;
 

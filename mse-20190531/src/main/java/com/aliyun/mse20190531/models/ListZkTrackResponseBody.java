@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListZkTrackResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -56,7 +56,7 @@ public class ListZkTrackResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The trajectory data.</p>
+     * <p>The track data.</p>
      */
     @NameInMap("Traces")
     public java.util.List<ListZkTrackResponseBodyTraces> traces;
@@ -155,7 +155,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The type of the event. For trajectory of the notify type:</p>
+         * <p>The type of the event. For tracks of the Notify type:</p>
          * <br>
          * <p>*   NodeCreated</p>
          * <p>*   NodeDeleted</p>
@@ -172,7 +172,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public Boolean finished;
 
         /**
-         * <p>The recorded time.</p>
+         * <p>The logging time.</p>
          */
         @NameInMap("LogDate")
         public String logDate;
@@ -184,7 +184,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public Long multiSize;
 
         /**
-         * <p>The operation type. For trajectory of the push type:</p>
+         * <p>The operation type. For tracks of the Push type:</p>
          * <br>
          * <p>*   Create</p>
          * <p>*   Update</p>
@@ -192,7 +192,7 @@ public class ListZkTrackResponseBody extends TeaModel {
          * <p>*   SetAcl</p>
          * <p>*   Multi</p>
          * <br>
-         * <p>For trajectory of the pull type:</p>
+         * <p>For tracks of the Pull type:</p>
          * <br>
          * <p>*   GetData</p>
          * <p>*   GetChild</p>
@@ -208,7 +208,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The returned message.</p>
+         * <p>The result.</p>
          */
         @NameInMap("Result")
         public String result;
@@ -226,7 +226,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public String timestamp;
 
         /**
-         * <p>The type of the trajectory. Valid values:</p>
+         * <p>The type of the track. Valid values:</p>
          * <br>
          * <p>*   Push</p>
          * <p>*   Pull</p>
@@ -242,7 +242,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public Long ttl;
 
         /**
-         * <p>Indicates whether to enable the listener.</p>
+         * <p>Indicates whether to enable the monitoring feature.</p>
          */
         @NameInMap("Watch")
         public Boolean watch;

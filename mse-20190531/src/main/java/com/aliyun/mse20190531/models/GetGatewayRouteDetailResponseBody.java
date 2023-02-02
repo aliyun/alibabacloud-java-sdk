@@ -23,7 +23,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -650,7 +650,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public Integer attempts;
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status codes.</p>
          */
         @NameInMap("HttpCodes")
         public java.util.List<String> httpCodes;
@@ -970,7 +970,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public Integer servicePort;
 
         /**
-         * <p>The source type of the service.</p>
+         * <p>The source type.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -1180,7 +1180,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public java.util.List<String> domainNameList;
 
         /**
-         * <p>Indicates whether WAF is activated.</p>
+         * <p>Indicates whether Web Application Firewall (WAF) is activated.</p>
          */
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
@@ -1192,7 +1192,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public Boolean fallback;
 
         /**
-         * <p>The information about the Fallback service.</p>
+         * <p>The information of the Fallback service.</p>
          */
         @NameInMap("FallbackServices")
         public java.util.List<GetGatewayRouteDetailResponseBodyDataFallbackServices> fallbackServices;

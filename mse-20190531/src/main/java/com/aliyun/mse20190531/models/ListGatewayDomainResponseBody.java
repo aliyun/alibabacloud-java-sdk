@@ -23,7 +23,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -166,7 +166,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String http2;
 
         /**
-         * <p>ID</p>
+         * <p>The domain ID.</p>
          */
         @NameInMap("Id")
         public Long id;

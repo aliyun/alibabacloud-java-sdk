@@ -16,8 +16,8 @@ public class DeleteNacosConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a beta release. Valid values:</p>
      * <br>
-     * <p>*   `true`: performs a beta release.</p>
-     * <p>*   `false`: not performs a beta release.</p>
+     * <p>*   `true`: yes</p>
+     * <p>*   `false`: no</p>
      */
     @NameInMap("Beta")
     public Boolean beta;
@@ -35,7 +35,7 @@ public class DeleteNacosConfigRequest extends TeaModel {
     public String group;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

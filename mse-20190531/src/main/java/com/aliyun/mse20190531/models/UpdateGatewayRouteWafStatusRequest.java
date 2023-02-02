@@ -26,7 +26,7 @@ public class UpdateGatewayRouteWafStatusRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The ID of the route.</p>
+     * <p>The ID of the route entry.</p>
      */
     @NameInMap("RouteId")
     public Long routeId;

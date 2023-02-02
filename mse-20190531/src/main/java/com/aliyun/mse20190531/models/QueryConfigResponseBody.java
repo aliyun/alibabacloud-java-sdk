@@ -97,6 +97,9 @@ public class QueryConfigResponseBody extends TeaModel {
     }
 
     public static class QueryConfigResponseBodyDataNacosRunningEnv extends TeaModel {
+        /**
+         * <p>Indicates whether empty list protection is enabled.</p>
+         */
         @NameInMap("emptyProtect")
         public Boolean emptyProtect;
 
@@ -152,6 +155,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ConfigAuthSupported")
         public Boolean configAuthSupported;
 
+        /**
+         * <p>The maximum size of a configuration. Unit: KB.</p>
+         */
         @NameInMap("ConfigContentLimit")
         public Long configContentLimit;
 
@@ -173,6 +179,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ConfigSecretSupported")
         public Boolean configSecretSupported;
 
+        /**
+         * <p>Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.</p>
+         */
         @NameInMap("ExtendedTypesEnable")
         public Boolean extendedTypesEnable;
 
@@ -231,6 +240,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("MinSessionTimeout")
         public String minSessionTimeout;
 
+        /**
+         * <p>The runtime configuration of the Nacos instance.</p>
+         */
         @NameInMap("NacosRunningEnv")
         public QueryConfigResponseBodyDataNacosRunningEnv nacosRunningEnv;
 
