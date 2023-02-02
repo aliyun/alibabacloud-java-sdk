@@ -4,18 +4,35 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsMessageGetByMsgIdRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance where the message that you want to query resides.</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <p>The ID of the message that you want to query.</p>
+     */
     @NameInMap("MsgId")
     public String msgId;
 
+    /**
+     * <p>The topic that contains the message that you want to query.</p>
+     */
     @NameInMap("Topic")
     public String topic;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
 
     public static OnsMessageGetByMsgIdRequest build(java.util.Map<String, ?> map) throws Exception {
         OnsMessageGetByMsgIdRequest self = new OnsMessageGetByMsgIdRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OnsMessageGetByMsgIdRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public OnsMessageGetByMsgIdRequest setMsgId(String msgId) {
@@ -32,14 +49,6 @@ public class OnsMessageGetByMsgIdRequest extends TeaModel {
     }
     public String getTopic() {
         return this.topic;
-    }
-
-    public OnsMessageGetByMsgIdRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
 }

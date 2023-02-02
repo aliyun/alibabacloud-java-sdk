@@ -3,7 +3,7 @@ package com.aliyun.ons20190214.models;
 
 import com.aliyun.tea.*;
 
-public class OnsTrendGroupOutputTpsResponse extends TeaModel {
+public class OnsMessageDetailResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class OnsTrendGroupOutputTpsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public OnsTrendGroupOutputTpsResponseBody body;
+    public OnsMessageDetailResponseBody body;
 
-    public static OnsTrendGroupOutputTpsResponse build(java.util.Map<String, ?> map) throws Exception {
-        OnsTrendGroupOutputTpsResponse self = new OnsTrendGroupOutputTpsResponse();
+    public static OnsMessageDetailResponse build(java.util.Map<String, ?> map) throws Exception {
+        OnsMessageDetailResponse self = new OnsMessageDetailResponse();
         return TeaModel.build(map, self);
     }
 
-    public OnsTrendGroupOutputTpsResponse setHeaders(java.util.Map<String, String> headers) {
+    public OnsMessageDetailResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class OnsTrendGroupOutputTpsResponse extends TeaModel {
         return this.headers;
     }
 
-    public OnsTrendGroupOutputTpsResponse setStatusCode(Integer statusCode) {
+    public OnsMessageDetailResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class OnsTrendGroupOutputTpsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public OnsTrendGroupOutputTpsResponse setBody(OnsTrendGroupOutputTpsResponseBody body) {
+    public OnsMessageDetailResponse setBody(OnsMessageDetailResponseBody body) {
         this.body = body;
         return this;
     }
-    public OnsTrendGroupOutputTpsResponseBody getBody() {
+    public OnsMessageDetailResponseBody getBody() {
         return this.body;
     }
 

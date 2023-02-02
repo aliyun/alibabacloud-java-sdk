@@ -4,23 +4,21 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public OnsTrendTopicInputTpsResponseBodyData data;
+
+    /**
+     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static OnsTrendTopicInputTpsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsTrendTopicInputTpsResponseBody self = new OnsTrendTopicInputTpsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public OnsTrendTopicInputTpsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public OnsTrendTopicInputTpsResponseBody setData(OnsTrendTopicInputTpsResponseBodyData data) {
@@ -31,24 +29,30 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo extends TeaModel {
-        @NameInMap("Y")
-        public Float y;
+    public OnsTrendTopicInputTpsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo extends TeaModel {
+        /**
+         * <p>Indicates the timestamp. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("X")
         public Long x;
+
+        /**
+         * <p>Indicates the TPS for message publishing or the number of messages that are published to the topic.</p>
+         */
+        @NameInMap("Y")
+        public Float y;
 
         public static OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo build(java.util.Map<String, ?> map) throws Exception {
             OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo self = new OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo();
             return TeaModel.build(map, self);
-        }
-
-        public OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo setY(Float y) {
-            this.y = y;
-            return this;
-        }
-        public Float getY() {
-            return this.y;
         }
 
         public OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo setX(Long x) {
@@ -57,6 +61,14 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
         }
         public Long getX() {
             return this.x;
+        }
+
+        public OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
         }
 
     }
@@ -81,17 +93,29 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
     }
 
     public static class OnsTrendTopicInputTpsResponseBodyData extends TeaModel {
+        /**
+         * <p>The data set that is returned based on each sampling period.</p>
+         */
         @NameInMap("Records")
         public OnsTrendTopicInputTpsResponseBodyDataRecords records;
 
+        /**
+         * <p>The name of the table that stores the data.</p>
+         */
+        @NameInMap("Title")
+        public String title;
+
+        /**
+         * <p>The unit of the timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("XUnit")
         public String XUnit;
 
+        /**
+         * <p>The unit of the value of the Y parameter.</p>
+         */
         @NameInMap("YUnit")
         public String YUnit;
-
-        @NameInMap("Title")
-        public String title;
 
         public static OnsTrendTopicInputTpsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             OnsTrendTopicInputTpsResponseBodyData self = new OnsTrendTopicInputTpsResponseBodyData();
@@ -104,6 +128,14 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
         }
         public OnsTrendTopicInputTpsResponseBodyDataRecords getRecords() {
             return this.records;
+        }
+
+        public OnsTrendTopicInputTpsResponseBodyData setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
         public OnsTrendTopicInputTpsResponseBodyData setXUnit(String XUnit) {
@@ -120,14 +152,6 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
         }
         public String getYUnit() {
             return this.YUnit;
-        }
-
-        public OnsTrendTopicInputTpsResponseBodyData setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
         }
 
     }

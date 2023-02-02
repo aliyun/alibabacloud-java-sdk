@@ -4,6 +4,9 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -18,69 +21,6 @@ public class TagResourcesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        @NameInMap("ResourceId")
-        public String resourceId;
-
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        public static ListTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesResponseBodyTagResources self = new ListTagResourcesResponseBodyTagResources();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResources setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setResourceId(String resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public String getResourceId() {
-            return this.resourceId;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
     }
 
 }

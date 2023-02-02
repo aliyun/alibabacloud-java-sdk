@@ -4,23 +4,21 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("MsgFoundDo")
     public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo msgFoundDo;
+
+    /**
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static OnsDLQMessagePageQueryByGroupIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsDLQMessagePageQueryByGroupIdResponseBody self = new OnsDLQMessagePageQueryByGroupIdResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public OnsDLQMessagePageQueryByGroupIdResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public OnsDLQMessagePageQueryByGroupIdResponseBody setMsgFoundDo(OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo msgFoundDo) {
@@ -31,24 +29,37 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
         return this.msgFoundDo;
     }
 
-    public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public OnsDLQMessagePageQueryByGroupIdResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty extends TeaModel {
+        /**
+         * <p>The name of the attribute. Valid values:</p>
+         * <br>
+         * <p>*   **TRACE_ON**: indicates whether a trace of the message exists.</p>
+         * <p>*   **KEYS**: indicates the message key of the message.</p>
+         * <p>*   **TAGS**: indicates the tag of the message.</p>
+         * <p>*   **INSTANCE_ID**: indicates the ID of the instance that contains the message.</p>
+         * <br>
+         * <p>For more information about the terms that are used in Message Queue for Apache RocketMQ, see [Terms](~~29533~~).</p>
+         */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <p>The value of the attribute.</p>
+         */
+        @NameInMap("Value")
+        public String value;
 
         public static OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty build(java.util.Map<String, ?> map) throws Exception {
             OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty self = new OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty();
             return TeaModel.build(map, self);
-        }
-
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty setName(String name) {
@@ -57,6 +68,14 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -81,66 +100,99 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
     }
 
     public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo extends TeaModel {
-        @NameInMap("StoreSize")
-        public Integer storeSize;
-
-        @NameInMap("ReconsumeTimes")
-        public Integer reconsumeTimes;
-
-        @NameInMap("StoreTimestamp")
-        public Long storeTimestamp;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("MsgId")
-        public String msgId;
-
-        @NameInMap("StoreHost")
-        public String storeHost;
-
-        @NameInMap("Topic")
-        public String topic;
-
-        @NameInMap("PropertyList")
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList propertyList;
-
-        @NameInMap("BornTimestamp")
-        public Long bornTimestamp;
-
+        /**
+         * <p>The cyclic redundancy check (CRC) value of the message body.</p>
+         */
         @NameInMap("BodyCRC")
         public Integer bodyCRC;
 
+        /**
+         * <p>The producer instance that generated the message.</p>
+         */
         @NameInMap("BornHost")
         public String bornHost;
+
+        /**
+         * <p>The timestamp when the message was produced.</p>
+         */
+        @NameInMap("BornTimestamp")
+        public Long bornTimestamp;
+
+        /**
+         * <p>The ID of the instance.</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>The ID of the message.</p>
+         */
+        @NameInMap("MsgId")
+        public String msgId;
+
+        /**
+         * <p>The attributes of the message.</p>
+         */
+        @NameInMap("PropertyList")
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList propertyList;
+
+        /**
+         * <p>The number of retries that Message Queue for Apache RocketMQ performed to send the message to consumers.</p>
+         */
+        @NameInMap("ReconsumeTimes")
+        public Integer reconsumeTimes;
+
+        /**
+         * <p>The Message Queue for Apache RocketMQ broker that stores the message.</p>
+         */
+        @NameInMap("StoreHost")
+        public String storeHost;
+
+        /**
+         * <p>The size of the message. Unit: KB.</p>
+         */
+        @NameInMap("StoreSize")
+        public Integer storeSize;
+
+        /**
+         * <p>The timestamp when the Message Queue for Apache RocketMQ broker stored the message.</p>
+         */
+        @NameInMap("StoreTimestamp")
+        public Long storeTimestamp;
+
+        /**
+         * <p>The topic to which the message belongs.</p>
+         */
+        @NameInMap("Topic")
+        public String topic;
 
         public static OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo build(java.util.Map<String, ?> map) throws Exception {
             OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo self = new OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreSize(Integer storeSize) {
-            this.storeSize = storeSize;
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBodyCRC(Integer bodyCRC) {
+            this.bodyCRC = bodyCRC;
             return this;
         }
-        public Integer getStoreSize() {
-            return this.storeSize;
+        public Integer getBodyCRC() {
+            return this.bodyCRC;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setReconsumeTimes(Integer reconsumeTimes) {
-            this.reconsumeTimes = reconsumeTimes;
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBornHost(String bornHost) {
+            this.bornHost = bornHost;
             return this;
         }
-        public Integer getReconsumeTimes() {
-            return this.reconsumeTimes;
+        public String getBornHost() {
+            return this.bornHost;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreTimestamp(Long storeTimestamp) {
-            this.storeTimestamp = storeTimestamp;
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBornTimestamp(Long bornTimestamp) {
+            this.bornTimestamp = bornTimestamp;
             return this;
         }
-        public Long getStoreTimestamp() {
-            return this.storeTimestamp;
+        public Long getBornTimestamp() {
+            return this.bornTimestamp;
         }
 
         public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setInstanceId(String instanceId) {
@@ -159,22 +211,6 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.msgId;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreHost(String storeHost) {
-            this.storeHost = storeHost;
-            return this;
-        }
-        public String getStoreHost() {
-            return this.storeHost;
-        }
-
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
-        }
-
         public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setPropertyList(OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList propertyList) {
             this.propertyList = propertyList;
             return this;
@@ -183,28 +219,44 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.propertyList;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBornTimestamp(Long bornTimestamp) {
-            this.bornTimestamp = bornTimestamp;
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setReconsumeTimes(Integer reconsumeTimes) {
+            this.reconsumeTimes = reconsumeTimes;
             return this;
         }
-        public Long getBornTimestamp() {
-            return this.bornTimestamp;
+        public Integer getReconsumeTimes() {
+            return this.reconsumeTimes;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBodyCRC(Integer bodyCRC) {
-            this.bodyCRC = bodyCRC;
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreHost(String storeHost) {
+            this.storeHost = storeHost;
             return this;
         }
-        public Integer getBodyCRC() {
-            return this.bodyCRC;
+        public String getStoreHost() {
+            return this.storeHost;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBornHost(String bornHost) {
-            this.bornHost = bornHost;
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreSize(Integer storeSize) {
+            this.storeSize = storeSize;
             return this;
         }
-        public String getBornHost() {
-            return this.bornHost;
+        public Integer getStoreSize() {
+            return this.storeSize;
+        }
+
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreTimestamp(Long storeTimestamp) {
+            this.storeTimestamp = storeTimestamp;
+            return this;
+        }
+        public Long getStoreTimestamp() {
+            return this.storeTimestamp;
+        }
+
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
         }
 
     }
@@ -229,15 +281,27 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
     }
 
     public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Long currentPage;
 
-        @NameInMap("MsgFoundList")
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList msgFoundList;
-
+        /**
+         * <p>The total number of returned pages.</p>
+         */
         @NameInMap("MaxPageCount")
         public Long maxPageCount;
 
+        /**
+         * <p>The information about dead-letter messages that are returned on the current page. The information that is contained in this parameter is the same as the information that is returned by the [OnsDLQMessageGetById](~~112667~~) operation.</p>
+         */
+        @NameInMap("MsgFoundList")
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList msgFoundList;
+
+        /**
+         * <p>The ID of the query task. The first time you call this operation to query the dead-letter messages that are sent to a specified consumer group within a specified time range, this parameter is returned. You can use the task ID to query the details of dead-letter messages on other returned pages.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -254,20 +318,20 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo setMsgFoundList(OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList msgFoundList) {
-            this.msgFoundList = msgFoundList;
-            return this;
-        }
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList getMsgFoundList() {
-            return this.msgFoundList;
-        }
-
         public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo setMaxPageCount(Long maxPageCount) {
             this.maxPageCount = maxPageCount;
             return this;
         }
         public Long getMaxPageCount() {
             return this.maxPageCount;
+        }
+
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo setMsgFoundList(OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList msgFoundList) {
+            this.msgFoundList = msgFoundList;
+            return this;
+        }
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList getMsgFoundList() {
+            return this.msgFoundList;
         }
 
         public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo setTaskId(String taskId) {

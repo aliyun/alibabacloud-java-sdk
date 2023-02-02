@@ -4,23 +4,21 @@ package com.aliyun.ons20190214.models;
 import com.aliyun.tea.*;
 
 public class OnsTopicSubDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public OnsTopicSubDetailResponseBodyData data;
+
+    /**
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static OnsTopicSubDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsTopicSubDetailResponseBody self = new OnsTopicSubDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public OnsTopicSubDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public OnsTopicSubDetailResponseBody setData(OnsTopicSubDetailResponseBodyData data) {
@@ -31,13 +29,35 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         return this.data;
     }
 
+    public OnsTopicSubDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList extends TeaModel {
+        /**
+         * <p>The ID of the consumer group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The consumption mode. Valid values:</p>
+         * <br>
+         * <p>*   **CLUSTERING**: the clustering consumption mode</p>
+         * <p>*   **BROADCASTING**: the broadcasting consumption mode</p>
+         * <br>
+         * <p>For more information about consumption modes, see [Clustering consumption and broadcasting consumption](~~43163~~).</p>
+         */
         @NameInMap("MessageModel")
         public String messageModel;
 
+        /**
+         * <p>The expression based on which consumers in the consumer group subscribe to the topic.</p>
+         */
         @NameInMap("SubString")
         public String subString;
 
@@ -92,9 +112,15 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
     }
 
     public static class OnsTopicSubDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the online consumer groups that subscribe to the topic.</p>
+         */
         @NameInMap("SubscriptionDataList")
         public OnsTopicSubDetailResponseBodyDataSubscriptionDataList subscriptionDataList;
 
+        /**
+         * <p>The name of the topic.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
