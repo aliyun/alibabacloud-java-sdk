@@ -10,6 +10,9 @@ public class UpdateInsRequest extends TeaModel {
     @NameInMap("Succeed")
     public String succeed;
 
+    @NameInMap("new-param-1")
+    public String newParam1;
+
     @NameInMap("new-param-72444")
     public String newParam72444;
 
@@ -32,6 +35,14 @@ public class UpdateInsRequest extends TeaModel {
     }
     public String getSucceed() {
         return this.succeed;
+    }
+
+    public UpdateInsRequest setNewParam1(String newParam1) {
+        this.newParam1 = newParam1;
+        return this;
+    }
+    public String getNewParam1() {
+        return this.newParam1;
     }
 
     public UpdateInsRequest setNewParam72444(String newParam72444) {
