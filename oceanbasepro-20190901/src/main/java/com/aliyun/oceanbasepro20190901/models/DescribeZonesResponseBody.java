@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of zones.</p>
+     */
     @NameInMap("Zones")
     public java.util.List<DescribeZonesResponseBodyZones> zones;
 
@@ -32,15 +38,29 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZones extends TeaModel {
+        /**
+         * <p>The deployment mode.</p>
+         */
         @NameInMap("DeployType")
         public String deployType;
 
+        /**
+         * <p>The series of the OceanBase cluster. Valid values:   </p>
+         * <p>NORMAL: the high availability version. This is the default value.</p>
+         */
         @NameInMap("Series")
         public String series;
 
+        /**
+         * <p>The list of zone IDs.   </p>
+         * <p>For a cluster with multiple zones, separate the zone names with commas (,).</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>The name of the zone.</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 

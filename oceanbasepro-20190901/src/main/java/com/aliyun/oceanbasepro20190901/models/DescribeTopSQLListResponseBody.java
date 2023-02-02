@@ -4,12 +4,21 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTopSQLListResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of top SQL statements.</p>
+     */
     @NameInMap("TopSQLList")
     public java.util.List<DescribeTopSQLListResponseBodyTopSQLList> topSQLList;
 
+    /**
+     * <p>The total count.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,123 +52,246 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
     }
 
     public static class DescribeTopSQLListResponseBodyTopSQLList extends TeaModel {
+        /**
+         * <p>The number of rows affected.</p>
+         */
         @NameInMap("AffectedRows")
         public Long affectedRows;
 
+        /**
+         * <p>The wait time of the client, in ms.</p>
+         */
         @NameInMap("AppWaitTime")
         public Float appWaitTime;
 
+        /**
+         * <p>The number of block cache hits.</p>
+         */
         @NameInMap("BlockCacheHit")
         public Long blockCacheHit;
 
+        /**
+         * <p>The number of block index cache hits.</p>
+         */
         @NameInMap("BlockIndexCacheHit")
         public Long blockIndexCacheHit;
 
+        /**
+         * <p>The number of Bloom filter cache hits.</p>
+         */
         @NameInMap("BloomFilterCacheHit")
         public Long bloomFilterCacheHit;
 
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The wait time in concurrent execution, in ms.</p>
+         */
         @NameInMap("ConcurrencyWaitTime")
         public Float concurrencyWaitTime;
 
+        /**
+         * <p>The average CPU time, in ms.</p>
+         */
         @NameInMap("CpuTime")
         public Float cpuTime;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The time to wait for decoding, in ms.</p>
+         */
         @NameInMap("DecodeTime")
         public Float decodeTime;
 
+        /**
+         * <p>The number of physical reads.</p>
+         */
         @NameInMap("DiskRead")
         public Long diskRead;
 
+        /**
+         * <p>The average response time, in ms.</p>
+         */
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
+        /**
+         * <p>The wait event.</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>The number of executions per second.</p>
+         */
         @NameInMap("ExecPerSecond")
         public Float execPerSecond;
 
+        /**
+         * <p>The internal execution time, in ms.</p>
+         */
         @NameInMap("ExecuteTime")
         public Float executeTime;
 
+        /**
+         * <p>The number of executions.</p>
+         */
         @NameInMap("Executions")
         public Long executions;
 
+        /**
+         * <p>The number of failures.</p>
+         */
         @NameInMap("FailTimes")
         public Long failTimes;
 
+        /**
+         * <p>The time spent in hard parsing, in ms.</p>
+         */
         @NameInMap("GetPlanTime")
         public Float getPlanTime;
 
+        /**
+         * <p>The I/O wait time, in ms.</p>
+         */
         @NameInMap("IOWaitTime")
         public Float IOWaitTime;
 
+        /**
+         * <p>The sequence number of the returned SQL statement.</p>
+         */
         @NameInMap("Key")
         public Long key;
 
+        /**
+         * <p>The average number of logical reads of the SQL statement during the specified period of time.   </p>
+         * <p>The value covers the numbers of reads of different caches and the number of disk I/Os. It is an important metric for measuring the SQL filtering performance.   </p>
+         * <br>
+         * <p>> <br> A higher ratio of the number of logical reads to the number of returned rows indicates poorer filtering performance. General causes include non-standard content written by SQL statements, non-standard table indexes created, and non-standard SQL execution plans.</p>
+         */
         @NameInMap("LogicalRead")
         public Long logicalRead;
 
+        /**
+         * <p>The maximum CPU time, in ms.</p>
+         */
         @NameInMap("MaxCpuTime")
         public Float maxCpuTime;
 
+        /**
+         * <p>The maximum response time, in ms.</p>
+         */
         @NameInMap("MaxElapsedTime")
         public Float maxElapsedTime;
 
+        /**
+         * <p>The number of rows read from the memory.</p>
+         */
         @NameInMap("MemstoreReadRowCount")
         public Long memstoreReadRowCount;
 
+        /**
+         * <p>The number of plan misses.</p>
+         */
         @NameInMap("MissPlans")
         public Long missPlans;
 
+        /**
+         * <p>The network latency, in ms.</p>
+         */
         @NameInMap("NetWaitTime")
         public Float netWaitTime;
 
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("NodeIp")
         public String nodeIp;
 
+        /**
+         * <p>The queuing time, in ms.</p>
+         */
         @NameInMap("QueueTime")
         public Float queueTime;
 
+        /**
+         * <p>The number of RPCs.</p>
+         */
         @NameInMap("RPCCount")
         public Long RPCCount;
 
+        /**
+         * <p>The number of remote plans.</p>
+         */
         @NameInMap("RemotePlans")
         public Long remotePlans;
 
+        /**
+         * <p>The number of retries.</p>
+         */
         @NameInMap("RetryCount")
         public Long retryCount;
 
+        /**
+         * <p>The number of rows returned.</p>
+         */
         @NameInMap("ReturnRows")
         public Long returnRows;
 
+        /**
+         * <p>The number of row cache hits.</p>
+         */
         @NameInMap("RowCacheHit")
         public Long rowCacheHit;
 
+        /**
+         * <p>SQLID.</p>
+         */
         @NameInMap("SQLId")
         public String SQLId;
 
+        /**
+         * <p>The SQL text.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The SQL type.</p>
+         */
         @NameInMap("SQLType")
         public Long SQLType;
 
+        /**
+         * <p>The scheduling duration, in ms.</p>
+         */
         @NameInMap("ScheduleTime")
         public Float scheduleTime;
 
+        /**
+         * <p>The number of rows read from the disk.</p>
+         */
         @NameInMap("SsstoreReadRowCount")
         public Long ssstoreReadRowCount;
 
+        /**
+         * <p>The internal wait time, in ms.</p>
+         */
         @NameInMap("TotalWaitTime")
         public Float totalWaitTime;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

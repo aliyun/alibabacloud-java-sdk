@@ -4,21 +4,42 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLHistoryListRequest extends TeaModel {
+    /**
+     * <p>The end time of the time range for querying the SQL execution history.   </p>
+     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.   </p>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>SQLID.</p>
+     */
     @NameInMap("SQLId")
     public String SQLId;
 
+    /**
+     * <p>The start time of the time range for querying the SQL execution history.   </p>
+     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

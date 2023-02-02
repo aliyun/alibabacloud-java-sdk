@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
+    /**
+     * <p>The information of parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<DescribeParametersResponseBodyParameters> parameters;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,58 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyParameters extends TeaModel {
+        /**
+         * <p>The valid value range of the parameter.  It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.</p>
+         */
         @NameInMap("AcceptableValue")
         public java.util.List<String> acceptableValue;
 
+        /**
+         * <p>The current value of the parameter.</p>
+         */
         @NameInMap("CurrentValue")
         public String currentValue;
 
+        /**
+         * <p>The default value of the parameter.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   </p>
+         * <p>- true: A restart is required.   </p>
+         * <p>- false: A restart is not required.</p>
+         */
         @NameInMap("NeedReboot")
         public Boolean needReboot;
 
+        /**
+         * <p>The invalid value range of the parameter.    </p>
+         * <p>It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.</p>
+         */
         @NameInMap("RejectedValue")
         public java.util.List<String> rejectedValue;
 
+        /**
+         * <p>The type of the parameter value.    Valid values:   </p>
+         * <p>- ENUM: an enumeration value.   </p>
+         * <p>- RANGE: a value range.   </p>
+         * <p>- TIME: a time value.   </p>
+         * <p>- CAPACITY: a storage capacity, in KB, MB, or GB.</p>
+         */
         @NameInMap("ValueType")
         public String valueType;
 

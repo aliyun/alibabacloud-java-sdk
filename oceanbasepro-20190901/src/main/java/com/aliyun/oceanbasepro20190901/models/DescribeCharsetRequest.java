@@ -4,6 +4,11 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharsetRequest extends TeaModel {
+    /**
+     * <p>The tenant mode.    </p>
+     * <p>Valid values: Oracle and MySQL.   </p>
+     * <p>For more information, see [DescribeInstanceTenantModes](~~410354~~).</p>
+     */
     @NameInMap("TenantMode")
     public String tenantMode;
 

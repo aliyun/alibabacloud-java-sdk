@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLHistoryListResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The execution history of the SQL statement.</p>
+     */
     @NameInMap("SQLHistoryList")
     public DescribeSQLHistoryListResponseBodySQLHistoryList SQLHistoryList;
 
@@ -32,117 +38,231 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLHistoryListResponseBodySQLHistoryListList extends TeaModel {
+        /**
+         * <p>The number of rows affected.</p>
+         */
         @NameInMap("AffectedRows")
         public Long affectedRows;
 
+        /**
+         * <p>The wait time of the client.</p>
+         */
         @NameInMap("AppWaitTime")
         public Float appWaitTime;
 
+        /**
+         * <p>The number of block cache hits.</p>
+         */
         @NameInMap("BlockCacheHit")
         public Long blockCacheHit;
 
+        /**
+         * <p>The number of block index cache hits.</p>
+         */
         @NameInMap("BlockIndexCacheHit")
         public Long blockIndexCacheHit;
 
+        /**
+         * <p>The number of Bloom filter cache hits.</p>
+         */
         @NameInMap("BloomFilterCacheHit")
         public Long bloomFilterCacheHit;
 
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The wait time in concurrent execution.</p>
+         */
         @NameInMap("ConcurrencyWaitTime")
         public Float concurrencyWaitTime;
 
+        /**
+         * <p>The average CPU time.</p>
+         */
         @NameInMap("CpuTime")
         public Float cpuTime;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The time to wait for decoding.</p>
+         */
         @NameInMap("DecodeTime")
         public Float decodeTime;
 
+        /**
+         * <p>The number of physical reads.</p>
+         */
         @NameInMap("DiskRead")
         public Long diskRead;
 
+        /**
+         * <p>The average response time.</p>
+         */
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
+        /**
+         * <p>The end time.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The end time in UTC +0.</p>
+         */
         @NameInMap("EndTimeUTCString")
         public String endTimeUTCString;
 
+        /**
+         * <p>The wait event.</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <p>The number of executions per second.</p>
+         */
         @NameInMap("ExecPerSecond")
         public Long execPerSecond;
 
+        /**
+         * <p>The internal execution time.</p>
+         */
         @NameInMap("ExecuteTime")
         public Float executeTime;
 
+        /**
+         * <p>The number of executions.</p>
+         */
         @NameInMap("Executions")
         public Long executions;
 
+        /**
+         * <p>The number of failures.</p>
+         */
         @NameInMap("FailTimes")
         public Long failTimes;
 
+        /**
+         * <p>The time spent in hard parsing.</p>
+         */
         @NameInMap("GetPlanTime")
         public Float getPlanTime;
 
+        /**
+         * <p>The I/O wait time.</p>
+         */
         @NameInMap("IOWaitTime")
         public Float IOWaitTime;
 
+        /**
+         * <p>The number of logical reads.</p>
+         */
         @NameInMap("LogicalRead")
         public Long logicalRead;
 
+        /**
+         * <p>The maximum CPU time.</p>
+         */
         @NameInMap("MaxCpuTime")
         public Float maxCpuTime;
 
+        /**
+         * <p>The maximum response time.</p>
+         */
         @NameInMap("MaxElapsedTime")
         public Float maxElapsedTime;
 
+        /**
+         * <p>The number of rows read from the memory.</p>
+         */
         @NameInMap("MemstoreReadRowCount")
         public Long memstoreReadRowCount;
 
+        /**
+         * <p>The number of plan misses.</p>
+         */
         @NameInMap("MissPlans")
         public Long missPlans;
 
+        /**
+         * <p>The network latency.</p>
+         */
         @NameInMap("NetWaitTime")
         public Float netWaitTime;
 
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("NodeIp")
         public String nodeIp;
 
+        /**
+         * <p>The queuing time.</p>
+         */
         @NameInMap("QueueTime")
         public Float queueTime;
 
+        /**
+         * <p>The number of RPCs.</p>
+         */
         @NameInMap("RPCCount")
         public Long RPCCount;
 
+        /**
+         * <p>The number of remote plans.</p>
+         */
         @NameInMap("RemotePlans")
         public Long remotePlans;
 
+        /**
+         * <p>The number of retries.</p>
+         */
         @NameInMap("RetryCount")
         public Long retryCount;
 
+        /**
+         * <p>The number of rows returned.</p>
+         */
         @NameInMap("ReturnRows")
         public Long returnRows;
 
+        /**
+         * <p>The number of row cache hits.</p>
+         */
         @NameInMap("RowCacheHit")
         public Long rowCacheHit;
 
+        /**
+         * <p>The scheduling duration.</p>
+         */
         @NameInMap("ScheduleTime")
         public Float scheduleTime;
 
+        /**
+         * <p>The number of rows read from the disk.</p>
+         */
         @NameInMap("SsstoreReadRowCount")
         public Long ssstoreReadRowCount;
 
+        /**
+         * <p>The internal wait time.</p>
+         */
         @NameInMap("TotalWaitTime")
         public Float totalWaitTime;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -458,6 +578,9 @@ public class DescribeSQLHistoryListResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLHistoryListResponseBodySQLHistoryList extends TeaModel {
+        /**
+         * <p>The quantity.</p>
+         */
         @NameInMap("Count")
         public Long count;
 

@@ -4,21 +4,41 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutlineBindingRequest extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>- When the value is set to True, the throttling information in the database is queried based on the SQL ID.   </p>
+     * <p>- When the value is set to False, the bound index or execution plan in the database is queried based on the SQL ID.</p>
+     */
     @NameInMap("IsConcurrentLimit")
     public Boolean isConcurrentLimit;
 
+    /**
+     * <p>SQLID.</p>
+     */
     @NameInMap("SQLId")
     public String SQLId;
 
+    /**
+     * <p>The name of the tenant.    </p>
+     * <p>It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_). It cannot be set to SYS.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

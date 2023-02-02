@@ -4,12 +4,25 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableCpuResourceRequest extends TeaModel {
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the privilege modification operation.   </p>
+     * <p> Valid values:  </p>
+     * <p>update: updates all privileges. This is the default value.  </p>
+     * <p>add: adds a privilege.   </p>
+     * <p>delete: deletes a privilege.</p>
+     */
     @NameInMap("ModifyType")
     public String modifyType;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

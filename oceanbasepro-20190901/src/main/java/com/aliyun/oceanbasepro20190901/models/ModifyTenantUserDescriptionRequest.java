@@ -4,15 +4,28 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantUserDescriptionRequest extends TeaModel {
+    /**
+     * <p>The description of the database.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>The name of the database account.   </p>
+     * <p>You cannot use reserved keywords, such as SYS and root.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

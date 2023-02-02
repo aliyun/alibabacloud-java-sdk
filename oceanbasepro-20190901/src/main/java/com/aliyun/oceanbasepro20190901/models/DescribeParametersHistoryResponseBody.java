@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of parameter modification records.</p>
+     */
     @NameInMap("Respond")
     public java.util.List<DescribeParametersHistoryResponseBodyRespond> respond;
 
@@ -32,24 +38,49 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersHistoryResponseBodyRespondParameters extends TeaModel {
+        /**
+         * <p>The time when the parameter modification was initiated.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The resource ID of the parameter type.    </p>
+         * <p>- When you called this operation to query the modification history of cluster parameters, the value is DEFAULT_DIMENSION_VALUE.   </p>
+         * <p>- When you called this operation to query the modification history of tenant parameters, the value is the tenant ID.</p>
+         */
         @NameInMap("DimensionValue")
         public String dimensionValue;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the parameter after the modification.</p>
+         */
         @NameInMap("NewValue")
         public String newValue;
 
+        /**
+         * <p>The parameter value before modification.</p>
+         */
         @NameInMap("OldValue")
         public String oldValue;
 
+        /**
+         * <p>The modification status. Valid values:    </p>
+         * <p>- APPLIED: The modification was successful.   </p>
+         * <p>- SCHEDULING: The modification was to be made.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the parameter modification took effect.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -117,12 +148,21 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersHistoryResponseBodyRespond extends TeaModel {
+        /**
+         * <p>The number of returned entries on each page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The parameter modification history.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<DescribeParametersHistoryResponseBodyRespondParameters> parameters;
 
+        /**
+         * <p>The number of parameter modification records.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

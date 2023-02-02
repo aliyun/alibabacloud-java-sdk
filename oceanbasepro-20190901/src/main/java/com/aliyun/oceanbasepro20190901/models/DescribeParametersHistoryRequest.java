@@ -4,24 +4,51 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersHistoryRequest extends TeaModel {
+    /**
+     * <p>The type of the parameter.   </p>
+     * <p>Valid values: CLUSTER and TENANT.</p>
+     */
     @NameInMap("Dimension")
     public String dimension;
 
+    /**
+     * <p>The resource ID of the parameter type.   </p>
+     * <p>You can leave this parameter unspecified when you call this operation to query the modification history of cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
+     */
     @NameInMap("DimensionValue")
     public String dimensionValue;
 
+    /**
+     * <p>The end time for the query of parameter modification history.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of the page to return.    </p>
+     * <p>- Start value: 1   </p>
+     * <p>- Default value: 1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of rows to return on each page.   </p>
+     * <p>- Maximum value: 100   </p>
+     * <p>- Default value: 10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The start time of the time range for querying the parameter modification history.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

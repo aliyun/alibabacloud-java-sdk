@@ -156,6 +156,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+      *
+      * @param request CreateOmsMysqlDataSourceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOmsMysqlDataSourceResponse
+     */
     public CreateOmsMysqlDataSourceResponse createOmsMysqlDataSourceWithOptions(CreateOmsMysqlDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -220,6 +227,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOmsMysqlDataSourceResponse());
     }
 
+    /**
+      * To call this operation, you must add the IP address of the OceanBase Migration Service (OMS) server to the whitelist of the Alibaba Cloud database instance, the security rules of the ECS instance, or the security settings of your self-managed database (usually the firewall of your self-managed database) to ensure that OMS can successfully access your database instance. To obtain the IP address of the OMS server, go to the OMS data source management page in the OMS console.
+      *
+      * @param request CreateOmsMysqlDataSourceRequest
+      * @return CreateOmsMysqlDataSourceResponse
+     */
     public CreateOmsMysqlDataSourceResponse createOmsMysqlDataSource(CreateOmsMysqlDataSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOmsMysqlDataSourceWithOptions(request, runtime);
@@ -549,6 +562,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDatabasesWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, ensure that the following requirements are met:
+      * - The cluster is in the Running state.
+      * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+      *
+      * @param request DeleteInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteInstancesResponse
+     */
     public DeleteInstancesResponse deleteInstancesWithOptions(DeleteInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -577,6 +599,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstancesResponse());
     }
 
+    /**
+      * Before you call this operation, ensure that the following requirements are met:
+      * - The cluster is in the Running state.
+      * - The cluster is a primary cluster and the billing method is pay-as-you-go.
+      *
+      * @param request DeleteInstancesRequest
+      * @return DeleteInstancesResponse
+     */
     public DeleteInstancesResponse deleteInstances(DeleteInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstancesWithOptions(request, runtime);

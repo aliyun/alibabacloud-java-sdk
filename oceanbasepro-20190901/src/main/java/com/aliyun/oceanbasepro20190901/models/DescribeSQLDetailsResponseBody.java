@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the SQL statement.</p>
+     */
     @NameInMap("SQLDetails")
     public java.util.List<DescribeSQLDetailsResponseBodySQLDetails> SQLDetails;
 
@@ -32,12 +38,21 @@ public class DescribeSQLDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLDetailsResponseBodySQLDetails extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The SQL text.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

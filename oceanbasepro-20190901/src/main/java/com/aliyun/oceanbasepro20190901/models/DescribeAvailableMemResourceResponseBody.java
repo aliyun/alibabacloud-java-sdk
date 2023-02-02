@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableMemResourceResponseBody extends TeaModel {
+    /**
+     * <p>The available memory size.</p>
+     */
     @NameInMap("Data")
     public DescribeAvailableMemResourceResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableMemResourceResponseBodyData extends TeaModel {
+        /**
+         * <p>The maximum memory size for each resource unit, in GB.</p>
+         */
         @NameInMap("MaxMem")
         public Long maxMem;
 
+        /**
+         * <p>The minimum memory size required for each resource unit, in GB.</p>
+         */
         @NameInMap("MinMem")
         public Long minMem;
 
+        /**
+         * <p>The number of resource units in the tenant.</p>
+         */
         @NameInMap("UsedMem")
         public Long usedMem;
 

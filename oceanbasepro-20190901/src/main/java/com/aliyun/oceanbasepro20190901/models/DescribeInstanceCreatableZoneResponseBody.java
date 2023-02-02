@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of zones.</p>
+     */
     @NameInMap("ZoneList")
     public java.util.List<DescribeInstanceCreatableZoneResponseBodyZoneList> zoneList;
 
@@ -32,9 +38,15 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceCreatableZoneResponseBodyZoneList extends TeaModel {
+        /**
+         * <p>Indicates whether the cluster is deployed in the zone.</p>
+         */
         @NameInMap("IsInCluster")
         public Boolean isInCluster;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 

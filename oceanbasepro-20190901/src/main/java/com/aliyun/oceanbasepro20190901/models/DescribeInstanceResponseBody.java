@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The information of the OceanBase cluster.</p>
+     */
     @NameInMap("Instance")
     public DescribeInstanceResponseBodyInstance instance;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResourceCpu extends TeaModel {
+        /**
+         * <p>The total number of CPU cores of the cluster.</p>
+         */
         @NameInMap("TotalCpu")
         public Long totalCpu;
 
+        /**
+         * <p>The number of CPU cores of each replica node in the cluster.</p>
+         */
         @NameInMap("UnitCpu")
         public Long unitCpu;
 
+        /**
+         * <p>The number of CPU cores used in the cluster.</p>
+         */
         @NameInMap("UsedCpu")
         public Long usedCpu;
 
@@ -73,21 +88,39 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResourceDiskSize extends TeaModel {
+        /**
+         * <p>The size of the data disk, in GB.</p>
+         */
         @NameInMap("DataUsedSize")
         public Double dataUsedSize;
 
+        /**
+         * <p>The server with the highest disk usage.</p>
+         */
         @NameInMap("MaxDiskUsedObServer")
         public java.util.List<String> maxDiskUsedObServer;
 
+        /**
+         * <p>The maximum disk usage, in percentage.</p>
+         */
         @NameInMap("MaxDiskUsedPercent")
         public Double maxDiskUsedPercent;
 
+        /**
+         * <p>The total storage space of the cluster, in GB.</p>
+         */
         @NameInMap("TotalDiskSize")
         public Long totalDiskSize;
 
+        /**
+         * <p>The storage space of each replica node in the cluster, in GB.</p>
+         */
         @NameInMap("UnitDiskSize")
         public Long unitDiskSize;
 
+        /**
+         * <p>The size of used storage space of the cluster, in GB.</p>
+         */
         @NameInMap("UsedDiskSize")
         public Long usedDiskSize;
 
@@ -147,9 +180,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResourceLogDiskSize extends TeaModel {
+        /**
+         * <p>The total log disk space of the cluster, in GB.</p>
+         */
         @NameInMap("TotalDiskSize")
         public Long totalDiskSize;
 
+        /**
+         * <p>The log disk space of each replica node in the cluster. Unit: GB.</p>
+         */
         @NameInMap("UnitDiskSize")
         public Long unitDiskSize;
 
@@ -177,12 +216,21 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResourceMemory extends TeaModel {
+        /**
+         * <p>The total memory size of the cluster, in GB.</p>
+         */
         @NameInMap("TotalMemory")
         public Long totalMemory;
 
+        /**
+         * <p>The memory size of each replica node in the cluster, in GB.</p>
+         */
         @NameInMap("UnitMemory")
         public Long unitMemory;
 
+        /**
+         * <p>The size of used memory in the cluster, in GB.</p>
+         */
         @NameInMap("UsedMemory")
         public Long usedMemory;
 
@@ -218,18 +266,33 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResource extends TeaModel {
+        /**
+         * <p>The information about the CPU resources of the cluster.</p>
+         */
         @NameInMap("Cpu")
         public DescribeInstanceResponseBodyInstanceResourceCpu cpu;
 
+        /**
+         * <p>The information about the storage resources of the cluster.</p>
+         */
         @NameInMap("DiskSize")
         public DescribeInstanceResponseBodyInstanceResourceDiskSize diskSize;
 
+        /**
+         * <p>The information about the log disk space of the cluster.</p>
+         */
         @NameInMap("LogDiskSize")
         public DescribeInstanceResponseBodyInstanceResourceLogDiskSize logDiskSize;
 
+        /**
+         * <p>The information about the memory resources of the cluster.</p>
+         */
         @NameInMap("Memory")
         public DescribeInstanceResponseBodyInstanceResourceMemory memory;
 
+        /**
+         * <p>The number of resource units in the cluster.</p>
+         */
         @NameInMap("UnitCount")
         public Long unitCount;
 
@@ -281,69 +344,170 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstance extends TeaModel {
+        /**
+         * <p>Indicates whether automatic renewal is enabled. </p>
+         * <br>
+         * <p>This parameter is valid only for clusters whose billing methods are set to PREPAY.</p>
+         */
         @NameInMap("AutoRenewal")
         public Boolean autoRenewal;
 
+        /**
+         * <p>Indicates whether automatic upgrade of the OBServer version is enabled.</p>
+         */
         @NameInMap("AutoUpgradeObVersion")
         public Boolean autoUpgradeObVersion;
 
+        /**
+         * <p>The list of zones.</p>
+         */
         @NameInMap("AvailableZones")
         public java.util.List<String> availableZones;
 
+        /**
+         * <p>The time in UTC when the cluster was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the major compaction of cluster data is performed.</p>
+         */
         @NameInMap("DataMergeTime")
         public String dataMergeTime;
 
+        /**
+         * <p>The data replica distribution mode of the cluster. Valid values: </p>
+         * <p>- n: indicates the single-IDC mode. </p>
+         * <p>- n-n: indicates the dual-IDC mode. </p>
+         * <p>- n-n-n: indicates the multi-IDC mode. </p>
+         * <br>
+         * <p>> <br>The integer n represents the number of OBServer nodes in each IDC.</p>
+         */
         @NameInMap("DeployMode")
         public String deployMode;
 
+        /**
+         * <p>The deployment type of the cluster. Valid values:  </p>
+         * <p>- multiple: multi-IDC deployment   </p>
+         * <p>- single: single-IDC deployment   </p>
+         * <p>- dual: dual-IDC deployment</p>
+         */
         @NameInMap("DeployType")
         public String deployType;
 
+        /**
+         * <p>The type of the storage disk where the cluster is deployed. </p>
+         * <br>
+         * <p>The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
+        /**
+         * <p>Indicates whether the log disk specifications can be upgraded.</p>
+         */
         @NameInMap("EnableUpgradeLogDisk")
         public Boolean enableUpgradeLogDisk;
 
+        /**
+         * <p>The time in UTC when the cluster expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The specifications of the cluster.  You can specify one of the following four plans:    </p>
+         * <p>- 8C32G: indicates 8 CPU cores and 32 GB of memory. </p>
+         * <p>- 14C70G: indicates 14 CPU cores and 70 GB of memory. </p>
+         * <p>- 30C180G: indicates 30 CPU cores and 180 GB of memory. </p>
+         * <p>- 62C400G: indicates 62 CPU cores and 400 GB of memory.</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>The ID of the OceanBase cluster.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the OceanBase cluster.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>Indicates whether the OBServer version is the latest.</p>
+         */
         @NameInMap("IsLatestObVersion")
         public Boolean isLatestObVersion;
 
+        /**
+         * <p>Indicates whether trusted ECS instances are used.</p>
+         */
         @NameInMap("IsTrustEcs")
         public Boolean isTrustEcs;
 
+        /**
+         * <p>The time period in UTC for the daily routine maintenance of the cluster.</p>
+         */
         @NameInMap("MaintainTime")
         public String maintainTime;
 
+        /**
+         * <p>The detailed information of the OBServer version.</p>
+         */
         @NameInMap("ObRpmVersion")
         public String obRpmVersion;
 
+        /**
+         * <p>The billing method of the OceanBase cluster. Valid values: </p>
+         * <p>- PREPAY: the subscription billing method. </p>
+         * <p>- POSTPAY: the pay-as-you-go billing method.</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The information about cluster resources.</p>
+         */
         @NameInMap("Resource")
         public DescribeInstanceResponseBodyInstanceResource resource;
 
+        /**
+         * <p>The series of the OceanBase cluster. Valid values:   </p>
+         * <p>- NORMAL: the high availability edition.   </p>
+         * <p>- BASIC: the basic edition.</p>
+         */
         @NameInMap("Series")
         public String series;
 
+        /**
+         * <p>The status of the cluster. Valid values: </p>
+         * <p> - PENDING_CREATE: The cluster is being created. </p>
+         * <p> - ONLINE: The cluster is running. </p>
+         * <p> - TENANT_CREATING: The tenant is being created. </p>
+         * <p>- TENANT_SPEC_MODIFYING: The tenant specifications are being modified. </p>
+         * <p>- EXPANDING: Nodes are being added to the cluster to increase its capacity. </p>
+         * <p>- REDUCING: Nodes are being removed from the cluster to reduce its capacity. </p>
+         * <p>- SPEC_UPGRADING: The service plan is being upgraded. </p>
+         * <p>- DISK_UPGRADING: The storage space is being expanded. </p>
+         * <p>- WHITE_LIST_MODIFYING: The whitelist is being modified. </p>
+         * <p>- PARAMETER_MODIFYING: Parameters are being modified. </p>
+         * <p>- SSL_MODIFYING: The SSL certificate is being changed. </p>
+         * <p>- PREPAID_EXPIRE_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to PREPAY. </p>
+         * <p>- ARREARS_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to POSTPAY. </p>
+         * <p>- PENDING_DELETE: The cluster is being deleted.    </p>
+         * <p>Generally, the cluster is in the ONLINE state.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The OBServer version.</p>
+         */
         @NameInMap("Version")
         public String version;
 

@@ -4,15 +4,29 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantUserPasswordRequest extends TeaModel {
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>The name of the database account.    </p>
+     * <p>You cannot use reserved keywords, such as SYS and root.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>The password of the database account.    </p>
+     * <p>It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ & \ * ( ) _ + - =</p>
+     */
     @NameInMap("UserPassword")
     public String userPassword;
 

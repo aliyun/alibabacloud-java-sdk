@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
+    /**
+     * <p>The return result of the request.</p>
+     */
     @NameInMap("Data")
     public CreateOmsMysqlDataSourceResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
     }
 
     public static class CreateOmsMysqlDataSourceResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the data source record.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 

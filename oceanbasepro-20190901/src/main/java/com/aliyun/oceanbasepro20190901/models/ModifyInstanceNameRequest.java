@@ -4,9 +4,16 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNameRequest extends TeaModel {
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the OceanBase cluster.   </p>
+     * <p>It must be 1 to 20 characters in length.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 

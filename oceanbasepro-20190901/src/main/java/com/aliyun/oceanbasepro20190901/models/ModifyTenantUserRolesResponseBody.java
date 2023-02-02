@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantUserRolesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of database accounts in the tenant.</p>
+     */
     @NameInMap("TenantUser")
     public ModifyTenantUserRolesResponseBodyTenantUser tenantUser;
 
@@ -32,15 +38,27 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
     }
 
     public static class ModifyTenantUserRolesResponseBodyTenantUserUserRole extends TeaModel {
+        /**
+         * <p>The name of the database (MySQL mode) or schema (Oracle mode).</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>Indicates whether the privilege was granted to the role.</p>
+         */
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
+        /**
+         * <p>The role of the account.</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("Table")
         public String table;
 
@@ -84,12 +102,23 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
     }
 
     public static class ModifyTenantUserRolesResponseBodyTenantUser extends TeaModel {
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The type of the account. Valid values:   </p>
+         * <p>- Admin: the super administrator account.   </p>
+         * <p>- Normal: a general account.</p>
+         */
         @NameInMap("UserRole")
         public java.util.List<ModifyTenantUserRolesResponseBodyTenantUserUserRole> userRole;
 
