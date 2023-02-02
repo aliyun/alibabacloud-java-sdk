@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class CancelStackOperationRequest extends TeaModel {
+    /**
+     * <p>test</p>
+     */
     @NameInMap("AllowedStackOperations")
     public java.util.List<String> allowedStackOperations;
 

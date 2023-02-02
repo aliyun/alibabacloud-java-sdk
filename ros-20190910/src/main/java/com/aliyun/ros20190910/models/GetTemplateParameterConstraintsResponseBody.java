@@ -61,6 +61,47 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
     }
 
+    public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("ResourceName")
+        public String resourceName;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors self = new GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraints extends TeaModel {
         @NameInMap("AllowedValues")
         public java.util.List<String> allowedValues;
@@ -85,6 +126,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
         @NameInMap("ParameterKey")
         public String parameterKey;
+
+        @NameInMap("QueryErrors")
+        public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> queryErrors;
 
         @NameInMap("Type")
         public String type;
@@ -156,6 +200,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
         public String getParameterKey() {
             return this.parameterKey;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraints setQueryErrors(java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> queryErrors) {
+            this.queryErrors = queryErrors;
+            return this;
+        }
+        public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> getQueryErrors() {
+            return this.queryErrors;
         }
 
         public GetTemplateParameterConstraintsResponseBodyParameterConstraints setType(String type) {

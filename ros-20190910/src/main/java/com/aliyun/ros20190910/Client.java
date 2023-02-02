@@ -3246,6 +3246,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DisableRollback", request.disableRollback);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.parallelism)) {
             query.put("Parallelism", request.parallelism);
         }
