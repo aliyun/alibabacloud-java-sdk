@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextModerationResponseBody extends TeaModel {
     @NameInMap("Code")
-    public String code;
+    public Integer code;
 
     @NameInMap("Data")
     public TextModerationResponseBodyData data;
@@ -21,11 +21,11 @@ public class TextModerationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public TextModerationResponseBody setCode(String code) {
+    public TextModerationResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
@@ -54,6 +54,12 @@ public class TextModerationResponseBody extends TeaModel {
     }
 
     public static class TextModerationResponseBodyData extends TeaModel {
+        @NameInMap("accountId")
+        public String accountId;
+
+        @NameInMap("deviceId")
+        public String deviceId;
+
         @NameInMap("labels")
         public String labels;
 
@@ -63,6 +69,22 @@ public class TextModerationResponseBody extends TeaModel {
         public static TextModerationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TextModerationResponseBodyData self = new TextModerationResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public TextModerationResponseBodyData setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        public TextModerationResponseBodyData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public TextModerationResponseBodyData setLabels(String labels) {
