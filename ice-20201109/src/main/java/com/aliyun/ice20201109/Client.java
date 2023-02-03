@@ -184,6 +184,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addFavoritePublicMediaWithOptions(request, runtime);
     }
 
+    public AddMediaMarksResponse addMediaMarksWithOptions(AddMediaMarksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaMarks)) {
+            query.put("MediaMarks", request.mediaMarks);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddMediaMarks"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddMediaMarksResponse());
+    }
+
+    public AddMediaMarksResponse addMediaMarks(AddMediaMarksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addMediaMarksWithOptions(request, runtime);
+    }
+
     public AddTemplateResponse addTemplateWithOptions(AddTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1239,6 +1272,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMediaInfosResponse deleteMediaInfos(DeleteMediaInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMediaInfosWithOptions(request, runtime);
+    }
+
+    public DeleteMediaMarksResponse deleteMediaMarksWithOptions(DeleteMediaMarksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaMarkIds)) {
+            query.put("MediaMarkIds", request.mediaMarkIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMediaMarks"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMediaMarksResponse());
+    }
+
+    public DeleteMediaMarksResponse deleteMediaMarks(DeleteMediaMarksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMediaMarksWithOptions(request, runtime);
     }
 
     public DeletePipelineResponse deletePipelineWithOptions(DeletePipelineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2889,6 +2955,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMediaInfoJobWithOptions(request, runtime);
     }
 
+    public GetMediaMarksResponse getMediaMarksWithOptions(GetMediaMarksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaMarkIds)) {
+            query.put("MediaMarkIds", request.mediaMarkIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMediaMarks"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMediaMarksResponse());
+    }
+
+    public GetMediaMarksResponse getMediaMarks(GetMediaMarksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMediaMarksWithOptions(request, runtime);
+    }
+
     public GetMediaProducingJobResponse getMediaProducingJobWithOptions(GetMediaProducingJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3226,6 +3325,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTemplateMaterialsResponse getTemplateMaterials(GetTemplateMaterialsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTemplateMaterialsWithOptions(request, runtime);
+    }
+
+    public GetTemplateParamsResponse getTemplateParamsWithOptions(GetTemplateParamsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTemplateParams"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTemplateParamsResponse());
+    }
+
+    public GetTemplateParamsResponse getTemplateParams(GetTemplateParamsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTemplateParamsWithOptions(request, runtime);
     }
 
     public GetTranscodeJobResponse getTranscodeJobWithOptions(GetTranscodeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3932,6 +4056,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListMediaInfoJobsResponse listMediaInfoJobs(ListMediaInfoJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listMediaInfoJobsWithOptions(request, runtime);
+    }
+
+    public ListMediaMarksResponse listMediaMarksWithOptions(ListMediaMarksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaMarkIds)) {
+            query.put("MediaMarkIds", request.mediaMarkIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMediaMarks"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMediaMarksResponse());
+    }
+
+    public ListMediaMarksResponse listMediaMarks(ListMediaMarksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMediaMarksWithOptions(request, runtime);
     }
 
     public ListPackageJobsResponse listPackageJobsWithOptions(ListPackageJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -4693,12 +4850,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
-            query.put("MaxResults", request.maxResults);
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectType)) {
@@ -6647,6 +6804,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateMediaInfoResponse updateMediaInfo(UpdateMediaInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateMediaInfoWithOptions(request, runtime);
+    }
+
+    public UpdateMediaMarksResponse updateMediaMarksWithOptions(UpdateMediaMarksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaMarks)) {
+            query.put("MediaMarks", request.mediaMarks);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMediaMarks"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMediaMarksResponse());
+    }
+
+    public UpdateMediaMarksResponse updateMediaMarks(UpdateMediaMarksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMediaMarksWithOptions(request, runtime);
     }
 
     public UpdatePipelineResponse updatePipelineWithOptions(UpdatePipelineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

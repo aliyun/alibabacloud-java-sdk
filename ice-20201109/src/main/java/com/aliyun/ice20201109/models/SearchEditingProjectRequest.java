@@ -10,11 +10,11 @@ public class SearchEditingProjectRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("MaxResults")
-    public Long maxResults;
+    @NameInMap("PageNo")
+    public Long pageNo;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("ProjectType")
     public String projectType;
@@ -52,20 +52,20 @@ public class SearchEditingProjectRequest extends TeaModel {
         return this.endTime;
     }
 
-    public SearchEditingProjectRequest setMaxResults(Long maxResults) {
-        this.maxResults = maxResults;
+    public SearchEditingProjectRequest setPageNo(Long pageNo) {
+        this.pageNo = pageNo;
         return this;
     }
-    public Long getMaxResults() {
-        return this.maxResults;
+    public Long getPageNo() {
+        return this.pageNo;
     }
 
-    public SearchEditingProjectRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public SearchEditingProjectRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public SearchEditingProjectRequest setProjectType(String projectType) {
