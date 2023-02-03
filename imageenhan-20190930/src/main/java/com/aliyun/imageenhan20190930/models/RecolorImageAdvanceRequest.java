@@ -7,7 +7,9 @@ public class RecolorImageAdvanceRequest extends TeaModel {
     @NameInMap("ColorCount")
     public Integer colorCount;
 
-    // 1
+    /**
+     * <p>1</p>
+     */
     @NameInMap("ColorTemplate")
     public java.util.List<RecolorImageAdvanceRequestColorTemplate> colorTemplate;
 
