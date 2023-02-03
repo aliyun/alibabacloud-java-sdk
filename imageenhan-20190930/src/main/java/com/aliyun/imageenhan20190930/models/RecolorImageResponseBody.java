@@ -32,7 +32,9 @@ public class RecolorImageResponseBody extends TeaModel {
     }
 
     public static class RecolorImageResponseBodyData extends TeaModel {
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("ImageList")
         public java.util.List<String> imageList;
 
