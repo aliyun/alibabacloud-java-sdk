@@ -1,3 +1,6 @@
+2023-02-03 Version: 3.0.7
+- Release CompareFaceWithMask DetectInfraredLivingFace.
+
 2023-01-11 Version: 3.0.6
 - Update sdk.
 
