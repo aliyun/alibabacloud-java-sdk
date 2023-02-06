@@ -285,6 +285,12 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("IsOperated")
+        public Boolean isOperated;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("OperatedServiceInstanceId")
         public String operatedServiceInstanceId;
 
@@ -360,6 +366,22 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setIsOperated(Boolean isOperated) {
+            this.isOperated = isOperated;
+            return this;
+        }
+        public Boolean getIsOperated() {
+            return this.isOperated;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setOperatedServiceInstanceId(String operatedServiceInstanceId) {
