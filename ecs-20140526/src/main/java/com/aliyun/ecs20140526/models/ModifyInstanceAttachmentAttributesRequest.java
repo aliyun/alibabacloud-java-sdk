@@ -20,7 +20,7 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the private pool. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the private pool. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -105,7 +105,7 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
         /**
          * <p>The match mode of the private pool. Valid values:</p>
          * <br>
-         * <p>*   Open: open private pool. The system matches the instance with open private pools.</p>
+         * <p>*   Open: open private pool The system matches the instance with open private pools.</p>
          * <p>*   Target: specified private pool. You must use `PrivatePoolOptions.Id` to specify the ID of a private pool.</p>
          * <p>*   None: no private pool. The instance starts normally without using private pools.</p>
          */

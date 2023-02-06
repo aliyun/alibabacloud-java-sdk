@@ -16,7 +16,7 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the specified value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -34,7 +34,7 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
      * <p>*   600</p>
      * <p>*   3600</p>
      * <br>
-     * <p>Default value: 60.</p>
+     * <p>Default value: 60</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -52,7 +52,7 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the specified value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -23,7 +23,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned instance RAM roles.</p>
+     * <p>The total number of instance RAM roles returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

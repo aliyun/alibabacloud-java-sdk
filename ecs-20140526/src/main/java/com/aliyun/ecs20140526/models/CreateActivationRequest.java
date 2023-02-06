@@ -19,7 +19,7 @@ public class CreateActivationRequest extends TeaModel {
     public Integer instanceCount;
 
     /**
-     * <p>The default instance name prefix. The instance name prefix must be 1 to 50 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The instance name prefix can contain only letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:).</p>
+     * <p>The default instance name prefix. The instance name prefix must be 1 to 50 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The instance name prefix can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:).</p>
      * <br>
      * <p>If you use the activation code created by calling the CreateActivation operation to register managed instances, the instances are assigned sequential names that are prefixed by the value of this parameter. You can also specify a new instance name to override the assigned sequential name when you register a managed instance.</p>
      * <br>
@@ -58,7 +58,7 @@ public class CreateActivationRequest extends TeaModel {
     public java.util.List<CreateActivationRequestTag> tag;
 
     /**
-     * <p>The validity period of the activation code. The activation code can no longer be used to register instances after the code expires. Unit: hours. Valid values: 1 to 24.</p>
+     * <p>The validity period of the activation code. The activation code cannot be used to register new instances after the validity period expires. Unit: hours. Valid values: 1 to 24.</p>
      * <br>
      * <p>Default value: 4.</p>
      */

@@ -164,15 +164,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The type of a resource. Valid values:</p>
          * <br>
-         * <p>*   Zone: zone</p>
-         * <p>*   IoOptimized: I/O optimized resource</p>
-         * <p>*   InstanceType: instance type</p>
-         * <p>*   SystemDisk: system disk</p>
-         * <p>*   DataDisk: data disk</p>
-         * <p>*   Network: network type</p>
-         * <p>*   ddh: dedicated host</p>
+         * <p>*   Zone: zone.</p>
+         * <p>*   IoOptimized: I/O optimized resource.</p>
+         * <p>*   InstanceType: instance type.</p>
+         * <p>*   SystemDisk: system disk.</p>
+         * <p>*   DataDisk: data disk.</p>
+         * <p>*   Network: network type.</p>
+         * <p>*   ddh: dedicated host.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -221,13 +221,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
         /**
-         * <p>Details about the resources available in the zone.</p>
+         * <p>Details about the resources that can be created in the zone.</p>
          */
         @NameInMap("AvailableResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The ID of the region where the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -253,7 +253,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String statusCategory;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The ID of the zone in which the instance resides.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

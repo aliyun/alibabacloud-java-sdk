@@ -11,13 +11,13 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of resources. You can specify up to 50 resource IDs.</p>
+     * <p>The ID of resource N. Valid values of N: 1 to 50.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -43,12 +43,14 @@ public class TagResourcesRequest extends TeaModel {
      * <p>*   snapshotpolicy: automatic snapshot policy</p>
      * <p>*   elasticityassurance: elasticity assurance</p>
      * <p>*   capacityreservation: capacity reservation</p>
+     * <p>*   command: Cloud Assistant command</p>
+     * <p>*   invocation: Cloud Assistant command execution result</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags that are attached to the resources. You can specify up to 20 tags.</p>
+     * <p>The tags to add to the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -116,13 +118,13 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;

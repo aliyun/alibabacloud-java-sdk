@@ -87,7 +87,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         public Boolean autoRenewEnabled;
 
         /**
-         * <p>The auto-renewal period.</p>
+         * <p>The auto-renewal duration.</p>
          */
         @NameInMap("Duration")
         public Integer duration;
@@ -99,17 +99,17 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The unit of the auto-renewal period.</p>
+         * <p>The unit of the auto-renewal duration.</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
         /**
-         * <p>The auto-renewal status of the instance. Valid values:</p>
+         * <p>The auto-renewal state of the instance. Valid values:</p>
          * <br>
          * <p>*   AutoRenewal: Auto-renewal is enabled for the instance.</p>
          * <p>*   Normal: Auto-renewal is disabled for the instance.</p>
-         * <p>*   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal status to `Normal`. Then you can manually renew the instance or enable auto-renewal for the instance.</p>
+         * <p>*   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal state to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.</p>
          */
         @NameInMap("RenewalStatus")
         public String renewalStatus;

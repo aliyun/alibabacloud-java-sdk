@@ -5,25 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
-     * <p>The ID of the Elastic Compute Service (ECS) instance to which the ENI is bound.</p>
+     * <p>The ID of the instance to which the ENI is attached.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IPv6 addresses of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
     /**
      * <p>The maximum number of entries to return on each page. Valid values: 10 to 500.</p>
      * <br>
-     * <p>Default value:</p>
+     * <p>Default values:</p>
      * <br>
-     * <p>*   If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</p>
-     * <p>*   If this parameter is set to a value greater than 500, the default value is 500.</p>
+     * <p>*   If this parameter is not specified or if this parameter is set to a value smaller than 10, the default value 10 is used.</p>
+     * <p>*   If this parameter is set to a value greater than 500, the default value 500 is used.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The IDs of ENIs. You specify multiple ENI IDs. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public java.util.List<String> networkInterfaceId;
 
@@ -54,7 +60,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      * <br>
      * <p>Default value: 1.</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters to perform a paged query.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -62,11 +68,11 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Maximum value: 1,000.</p>
+     * <p>Maximum value: 1000.</p>
      * <br>
      * <p>Default value: 10.</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters to perform a paged query.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -77,6 +83,9 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
 
+    /**
+     * <p>The secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 
@@ -87,9 +96,9 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the ENI belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The ID of the resource group to which the ENI belongs. If a resource group is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -104,13 +113,13 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      * <p>The ID of the security group to which the secondary ENI belongs.</p>
      * <br>
      * <p>*   To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</p>
-     * <p>*   To query the details of primary ENIs based on the ID of a security group, call the [DescribeInstances](~~25506~~) operation and specify the `SecurityGroupId` parameter.</p>
+     * <p>*   To query the details of primary ENIs based on the ID of a security group, call the [DescribeInstances](~~25506~~) operation with the `SecurityGroupId` parameter specified.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>Specifies whether the user is an Alibaba Cloud service or a distributor.</p>
+     * <p>Specifies whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
@@ -118,10 +127,10 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
      * <p>The state of the ENI. Valid values:</p>
      * <br>
-     * <p>*   Available: The ENI is not bound to an instance.</p>
-     * <p>*   Attaching: The ENI is being bound to an instance.</p>
-     * <p>*   InUse: The ENI is bound to an instance.</p>
-     * <p>*   Detaching: The ENI is being unbound from an instance.</p>
+     * <p>*   Available: The ENI is not attached to an instance.</p>
+     * <p>*   Attaching: The ENI is being attached to an instance.</p>
+     * <p>*   InUse: The ENI is attached to an instance.</p>
+     * <p>*   Detaching: The ENI is being detached from an instance.</p>
      * <p>*   Deleting: The ENI is being deleted.</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that ENIs in all states are queried.</p>
@@ -129,6 +138,9 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags of the ENI.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeNetworkInterfacesRequestTag> tag;
 

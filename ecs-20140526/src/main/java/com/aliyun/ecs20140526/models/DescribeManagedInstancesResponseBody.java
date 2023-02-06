@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeManagedInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details of the managed instances.</p>
+     * <p>Details about the managed instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeManagedInstancesResponseBodyInstances> instances;
@@ -80,9 +80,21 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeManagedInstancesResponseBodyInstancesTags extends TeaModel {
+        /**
+         * <p>The tag key of the managed instance. Up to 20 tag keys can be returned for each managed instance. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the managed instance. Up to 20 tag values can be returned for each managed instance. The tag value can be an empty string.</p>
+         * <br>
+         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -197,6 +209,9 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         @NameInMap("RegistrationTime")
         public String registrationTime;
 
+        /**
+         * <p>The tags of the managed instance.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeManagedInstancesResponseBodyInstancesTags> tags;
 

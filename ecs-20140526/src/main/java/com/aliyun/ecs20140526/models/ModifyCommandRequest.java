@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCommandRequest extends TeaModel {
     /**
-     * <p>The content of the command. The command content can be plaintext or Base64-encoded. Take note of the following items:</p>
+     * <p>The content of the command. The command content can be plaintext or Base64-encoded. When you call this operation, take note of the following items:</p>
      * <br>
      * <p>*   The Base64-encoded command content cannot exceed 16 KB in size.</p>
      * <br>
@@ -46,7 +46,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -64,7 +64,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>The working directory of the command on the ECS instance.</p>
+     * <p>The working directory of the command on the Elastic Compute Service (ECS) instance.</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;

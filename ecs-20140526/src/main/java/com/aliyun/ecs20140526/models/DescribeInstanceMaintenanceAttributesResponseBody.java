@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel {
     /**
-     * <p>Details of the maintenance properties.</p>
+     * <p>Details about the maintenance attributes.</p>
      */
     @NameInMap("MaintenanceAttributes")
     public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes;
@@ -29,7 +29,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The total number of queried maintenance properties.</p>
+     * <p>The total number of queried maintenance attributes.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -106,7 +106,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         public String defaultValue;
 
         /**
-         * <p>Details of the supported maintenance actions.</p>
+         * <p>The list of the supported maintenance actions.</p>
          */
         @NameInMap("SupportedValues")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues;
@@ -114,9 +114,9 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         /**
          * <p>The current maintenance action. Valid values:</p>
          * <br>
-         * <p>*   Stop: The instance is shutdown.</p>
+         * <p>*   Stop: The instance goes down.</p>
          * <p>*   AutoRecover: The instance is automatically recovered.</p>
-         * <p>*   AutoRedeploy: Failover is performed, which may cause damage to the data disks attached to the instance.</p>
+         * <p>*   AutoRedeploy: Failover is performed on the instance, which may damage the data disks.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -209,7 +209,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute extends TeaModel {
         /**
-         * <p>The property of the maintenance action of the instance.</p>
+         * <p>The attributes of the maintenance action of the instance.</p>
          */
         @NameInMap("ActionOnMaintenance")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance;
@@ -221,7 +221,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         public String instanceId;
 
         /**
-         * <p>Details of the maintenance window.</p>
+         * <p>Details about the maintenance window.</p>
          */
         @NameInMap("MaintenanceWindows")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows;

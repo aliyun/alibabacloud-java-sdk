@@ -16,13 +16,13 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>>  This parameter is deprecated.</p>
+     * <p>> This parameter is deprecated.</p>
      */
     @NameInMap("FuzzyQuery")
     public Boolean fuzzyQuery;
 
     /**
-     * <p>>  This parameter is deprecated.</p>
+     * <p>> This parameter is deprecated.</p>
      */
     @NameInMap("IsQueryEcsCount")
     public Boolean isQueryEcsCount;
@@ -65,7 +65,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
      * <br>
      * <p>Default value: 1.</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -77,7 +77,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
      * <br>
      * <p>Default value: 10.</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -91,7 +91,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the security group belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.</p>
      * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -126,13 +126,13 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
      * <p>*   normal: basic security group</p>
      * <p>*   enterprise: advanced security group</p>
      * <br>
-     * <p>>  If you do not specify this parameter, both basic and advanced security groups are queried.</p>
+     * <p>> If you do not specify this parameter, both basic and advanced security groups are queried.</p>
      */
     @NameInMap("SecurityGroupType")
     public String securityGroupType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the security group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSecurityGroupsRequestTag> tag;

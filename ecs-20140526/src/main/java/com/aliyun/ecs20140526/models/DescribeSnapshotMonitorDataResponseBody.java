@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     /**
-     * <p>The collection of monitoring data of snapshot sizes.</p>
+     * <p>Details about the monitoring data of snapshot sizes.</p>
      */
     @NameInMap("MonitorData")
     public DescribeSnapshotMonitorDataResponseBodyMonitorData monitorData;

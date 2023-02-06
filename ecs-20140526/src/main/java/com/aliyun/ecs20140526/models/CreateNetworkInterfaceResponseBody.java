@@ -10,9 +10,15 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     */
     @NameInMap("Ipv4PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
+    /**
+     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     */
     @NameInMap("Ipv6PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets;
 
@@ -53,7 +59,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>Private IP addresses of the ENI.</p>
+     * <p>Details about the private IP addresses.</p>
      */
     @NameInMap("PrivateIpSets")
     public CreateNetworkInterfaceResponseBodyPrivateIpSets privateIpSets;
@@ -83,7 +89,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public Long serviceID;
 
     /**
-     * <p>Indicates whether the user is an Alibaba Cloud service or a distributor.</p>
+     * <p>Indicates whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
@@ -298,6 +304,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
+        /**
+         * <p>> 该参数正在邀测中，暂未开放使用。</p>
+         */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
 
@@ -336,6 +345,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
+        /**
+         * <p>> 该参数正在邀测中，暂未开放使用。</p>
+         */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
 
@@ -375,7 +387,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set extends TeaModel {
         /**
-         * <p>The IPv6 address.</p>
+         * <p>The IPv6 address of the ENI.</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
@@ -422,7 +434,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         public Boolean primary;
 
         /**
-         * <p>The private IP address of the instance to which the ENI is bound.</p>
+         * <p>The private IP address of the ENI.</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;

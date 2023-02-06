@@ -23,7 +23,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tags that match all filter conditions.</p>
+     * <p>The tags that match all the filter conditions.</p>
      */
     @NameInMap("Tags")
     public DescribeTagsResponseBodyTags tags;
@@ -269,7 +269,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

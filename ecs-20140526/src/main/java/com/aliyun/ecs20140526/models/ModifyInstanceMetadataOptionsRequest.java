@@ -5,33 +5,33 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the metadata HTTP endpoint on the instance. Valid values:</p>
+     * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
      * <br>
-     * <p>*   enabled</p>
-     * <p>*   disabled</p>
+     * <p>*   enabled: enables the access channel for instance metadata.</p>
+     * <p>*   disabled: disables the access channel for instance metadata.</p>
      * <br>
      * <p>Default value: enabled.</p>
      * <br>
-     * <p>>  For more information about instance metadata, see [Metadata](~~49122~~).</p>
+     * <p>> For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).</p>
      */
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
 
     /**
-     * <p>>  This parameter is currently in invitational preview and unavailable for general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
      */
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
 
     /**
-     * <p>Specifies whether to forcibly use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:</p>
+     * <p>Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:</p>
      * <br>
-     * <p>*   optional: The security-enhancement mode (IMDSv2) is not forcibly used.</p>
-     * <p>*   required: The security-enhancement mode (IMDSv2) is forcibly used. After you set this parameter to required, you cannot access the instance metadata in normal mode.</p>
+     * <p>*   optional: does not forcefully use the security-enhanced mode (IMDSv2).</p>
+     * <p>*   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</p>
      * <br>
      * <p>Default value: optional.</p>
      * <br>
-     * <p>>  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).</p>
+     * <p>> For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).</p>
      */
     @NameInMap("HttpTokens")
     public String httpTokens;
@@ -49,7 +49,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

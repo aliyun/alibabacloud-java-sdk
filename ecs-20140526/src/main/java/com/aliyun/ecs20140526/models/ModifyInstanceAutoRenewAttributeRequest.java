@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal.</p>
+     * <p>Specifies whether to enable auto-renewal for the instance.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -13,16 +13,17 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period.</p>
+     * <p>The auto-renewal period for the instance.</p>
      * <br>
-     * <p>*   When `PeriodUnit` is set to `Year`, valid values of `Duration` are 1, 2, and 3.</p>
-     * <p>*   When `PeriodUnit` is set to `Month`, valid values of `Duration` are 1, 2, 3, 6, and 12.</p>
+     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Year` (year): 1, 2, 3, 4, and 5.</p>
+     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Month` (month): 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+     * <p>*   Valid values of `Duration` when `PeriodUnit` is set to `Week` (week): 1, 2, 3, and 4.</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
-     * <p>The ID of the instance. A maximum of 100 instance IDs can be specified at a time. Separate multiple instance IDs with commas (,).</p>
+     * <p>The ID of the instance. You can specify IDs of up to 100 subscription instances. Separate the instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,8 +35,9 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The unit of the renewal duration (`Period`). Default value: month. Default value: Month. Valid values:</p>
+     * <p>The unit of the renewal period (`Duration`). Default value: Month. Valid values:</p>
      * <br>
+     * <p>*   Week</p>
      * <p>*   Month</p>
      * <p>*   Year</p>
      */
@@ -49,13 +51,13 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The auto-renewal status of the instance. Valid values:</p>
+     * <p>The auto-renewal state of the instance. Valid values:</p>
      * <br>
      * <p>*   AutoRenewal: Auto-renewal is enabled for the instance.</p>
      * <p>*   Normal: Auto-renewal is disabled for the instance.</p>
-     * <p>*   NotRenewal: The instance will not be renewed upon expiration. The system no longer sends an expiration reminder, but sends only a non-renewal reminder three days before the expiration date. You can change the value of this parameter from NotRenewal to `Normal` for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</p>
+     * <p>*   NotRenewal: The instance is not renewed. The system no longer sends an expiration notification. Notifications for renewal are sent three days before the expiration time of the instance. You can change the value of this parameter from NotRenewal to `Normal` for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</p>
      * <br>
-     * <p>>  `RenewalStatus` takes precedence over `AutoRenew`. If you do not specify `RenewalStatus`, the `AutoRenew` parameter is used by default.</p>
+     * <p>> `RenewalStatus` takes precedence over `AutoRenew`. If you do not specify `RenewalStatus`, the `AutoRenew` parameter is used by default.</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksRequest extends TeaModel {
     /**
-     * <p>The ID of the disk. The value is a JSON array that consists of up to 100 disk IDs. Separate multiple disk IDs with commas (,).</p>
+     * <p>The IDs of disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).</p>
      */
     @NameInMap("DiskIds")
     public String diskIds;
@@ -19,16 +19,13 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <p>RAM用户的虚拟账号ID。</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -47,20 +44,14 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>资源主账号的账号名称。</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>资源主账号的ID，亦即UID。</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate multiple snapshot chain IDs with commas (,).</p>
+     * <p>The IDs of snapshot chains. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
      */
     @NameInMap("SnapshotLinkIds")
     public String snapshotLinkIds;

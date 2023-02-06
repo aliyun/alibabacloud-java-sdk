@@ -34,13 +34,13 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource to which the tag is add. When ResourceType is set to instance, this parameter can be interpreted as InstanceId.</p>
+     * <p>The ID of the resource. For example, when ResourceType is set to instance, this parameter is interpreted as the ID of the instance (InstanceId).</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -52,7 +52,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The type of the resource to which the tag is added. Valid values:</p>
      * <br>
      * <p>*   instance: Elastic Compute Service (ECS) instance</p>
      * <p>*   disk: disk</p>
@@ -73,7 +73,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Details about the tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeTagsRequestTag> tag;
@@ -164,9 +164,15 @@ public class DescribeTagsRequest extends TeaModel {
     }
 
     public static class DescribeTagsRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

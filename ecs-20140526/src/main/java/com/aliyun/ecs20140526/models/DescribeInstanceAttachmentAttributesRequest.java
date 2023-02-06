@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     /**
-     * <p>The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate multiple instance IDs with commas (,).</p>
+     * <p>The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -19,9 +19,9 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
      * <br>
-     * <p>This value starts from 1.</p>
+     * <p>Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -29,7 +29,7 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Maximum value: 100</p>
+     * <p>Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClassicLinkInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can specify a maximum of 100 instance IDs in a single request. Separate multiple IDs with commas (,).</p>
+     * <p>The ID of the instance. You can specify up to 100 instance IDs in a single request. Separate the instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -16,7 +16,7 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -24,7 +24,7 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
      * <br>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

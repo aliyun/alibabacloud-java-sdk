@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
     /**
-     * <p>Details about the permission on the ENI.</p>
+     * <p>Details about permissions on ENIs.</p>
      */
     @NameInMap("NetworkInterfacePermission")
     public CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission networkInterfacePermission;
@@ -63,12 +63,12 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public String permission;
 
         /**
-         * <p>The status of the permission on the ENI. Valid values:</p>
+         * <p>The state of the permission on the ENI. Valid values:</p>
          * <br>
          * <p>*   Pending: The permission is being granted.</p>
-         * <p>*   Granted: The permission has been granted.</p>
+         * <p>*   Granted: The permission is granted.</p>
          * <p>*   Revoking: The permission is being revoked.</p>
-         * <p>*   Revoked: The permission has been revoked.</p>
+         * <p>*   Revoked: The permission is revoked.</p>
          */
         @NameInMap("PermissionState")
         public String permissionState;

@@ -18,7 +18,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <p>*   If you have used local snapshots before December 14, 2020, you can use this parameter.</p>
      * <p>*   If you have not used local snapshots before December 14, 2020, you cannot use this parameter.</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     * <p>For more information, see [Snapshot service upgrade and addition of a new billable item on December 14, 2020](https://help.aliyun.com/noticelist/articleid/1060755542.html).</p>
+     * <br>
+     * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -30,7 +32,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <p>Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:</p>
      * <br>
      * <p>*   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
      * <p>*   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.</p>
@@ -51,7 +53,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the Key Management Service (KMS) key used for the data disk.</p>
+     * <p>The ID of the Key Management Service (KMS) key that is used for the data disk.</p>
      */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
@@ -99,9 +101,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the snapshot belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The ID of the resource group to which the snapshot belongs. If a resource group is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -119,7 +121,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotIds;
 
     /**
-     * <p>The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate multiple snapshot chain IDs with commas (,).</p>
+     * <p>The ID of the snapshot chain. The value is a JSON array that consists of up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
      */
     @NameInMap("SnapshotLinkId")
     public String snapshotLinkId;
@@ -146,7 +148,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <p>*   System: system disk</p>
      * <p>*   data: data disk</p>
      * <br>
-     * <p>>  The value of this parameter is case-insensitive.</p>
+     * <p>> The value of this parameter is case-insensitive.</p>
      */
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
@@ -157,24 +159,24 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <p>*   progressing: The snapshot is being created.</p>
      * <p>*   accomplished: The snapshot is created.</p>
      * <p>*   failed: The snapshot fails to be created.</p>
-     * <p>*   all: This parameter indicates all snapshot states.</p>
+     * <p>*   all: This value indicates all snapshot states.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the snapshot.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSnapshotsRequestTag> tag;
 
     /**
-     * <p>Specifies whether the snapshot has been used to create images or disks. Valid values:</p>
+     * <p>Specifies whether the snapshot has been used to create custom images or disks. Valid values:</p>
      * <br>
      * <p>*   image: The snapshot has been used to create custom images.</p>
-     * <p>*   disk: The snapshot has been used to create disks.</p>
+     * <p>*   disk: The snapshot is used to create disks.</p>
      * <p>*   image_disk: The snapshot has been used to create both custom images and data disks.</p>
-     * <p>*   none: The snapshot has not been used to create images or disks.</p>
+     * <p>*   none: The snapshot has not been used to create custom images or disks.</p>
      */
     @NameInMap("Usage")
     public String usage;

@@ -11,7 +11,7 @@ public class DetachKeyPairRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The name of the SSH key pair.</p>
+     * <p>The names of SSH key pairs.</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;

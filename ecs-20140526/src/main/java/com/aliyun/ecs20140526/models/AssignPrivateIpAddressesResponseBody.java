@@ -77,7 +77,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet extends TeaModel {
         /**
-         * <p>The IPv4 prefix set assigned.</p>
+         * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
          */
         @NameInMap("Ipv4PrefixSet")
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetIpv4PrefixSet ipv4PrefixSet;
@@ -89,7 +89,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The private IP addresses assigned.</p>
+         * <p>The private IP addresses assigned to the ENI.</p>
          */
         @NameInMap("PrivateIpSet")
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet privateIpSet;

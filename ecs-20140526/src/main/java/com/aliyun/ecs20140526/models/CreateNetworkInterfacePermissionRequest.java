@@ -23,9 +23,9 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The permission on the ENI. Valid values:</p>
+     * <p>The permission on the ENI. Set the value to InstanceAttach.</p>
      * <br>
-     * <p>InstanceAttach: allows authorized users to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.</p>
+     * <p>InstanceAttach: allows authorized users to attach the ENI to an ECS instance. The ENI and the ECS instance must reside in the same zone.</p>
      */
     @NameInMap("Permission")
     public String permission;

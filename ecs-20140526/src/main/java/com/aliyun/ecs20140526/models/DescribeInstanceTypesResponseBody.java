@@ -53,7 +53,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCardsNetworkCardInfo extends TeaModel {
         /**
-         * <p>The index of the network card.</p>
+         * <p>The index of the NIC.</p>
          */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
@@ -102,8 +102,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The CPU architecture. Valid values:</p>
          * <br>
-         * <p>*   X86: x86</p>
-         * <p>*   ARM: ARM</p>
+         * <p>*   X86</p>
+         * <p>*   ARM</p>
          */
         @NameInMap("CpuArchitecture")
         public String cpuArchitecture;
@@ -153,7 +153,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The maximum number of NICs, including the primary NIC, ENIs, and trunk NICs.</p>
          * <br>
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
          */
         @NameInMap("EniTotalQuantity")
         public Integer eniTotalQuantity;
@@ -161,7 +161,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether NICs on instances of the instance type support trunking.</p>
          * <br>
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
          */
         @NameInMap("EniTrunkSupported")
         public Boolean eniTrunkSupported;
@@ -169,7 +169,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The number of ERIs.</p>
          * <br>
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
          */
         @NameInMap("EriQuantity")
         public Integer eriQuantity;
@@ -187,7 +187,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Float GPUMemorySize;
 
         /**
-         * <p>The type of the GPU.</p>
+         * <p>The GPU model.</p>
          */
         @NameInMap("GPUSpec")
         public String GPUSpec;
@@ -235,9 +235,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The level of the instance family. Valid values:</p>
          * <br>
-         * <p>*   EntryLevel</p>
-         * <p>*   EnterpriseLevel</p>
-         * <p>*   CreditEntryLevel For more information, see [Overview](~~59977~~).</p>
+         * <p>*   EntryLevel: entry level (shared).</p>
+         * <p>*   EnterpriseLevel: enterprise level.</p>
+         * <p>*   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~).</p>
          */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
@@ -300,13 +300,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Float memorySize;
 
         /**
-         * <p>The quantity of network cards.</p>
+         * <p>The number of NICs.</p>
          */
         @NameInMap("NetworkCardQuantity")
         public Integer networkCardQuantity;
 
         /**
-         * <p>The list of network cards.</p>
+         * <p>Details about NICs.</p>
          */
         @NameInMap("NetworkCards")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCards networkCards;

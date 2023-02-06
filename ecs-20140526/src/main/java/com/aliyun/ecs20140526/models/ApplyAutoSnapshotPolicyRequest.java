@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
-    /**
-     * <p>RAM用户的虚拟账号ID。</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>资源主账号的账号名称。</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>资源主账号的ID，亦即UID。</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -29,7 +20,7 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The IDs of one or more disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>The IDs of disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).</p>
      */
     @NameInMap("diskIds")
     public String diskIds;

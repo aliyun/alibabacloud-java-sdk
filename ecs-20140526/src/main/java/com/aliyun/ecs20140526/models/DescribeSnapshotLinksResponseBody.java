@@ -81,9 +81,9 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
 
     public static class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink extends TeaModel {
         /**
-         * <p>The type of the snapshot.</p>
+         * <p>The category of the snapshot.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
+         * <p>> This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
          */
         @NameInMap("Category")
         public String category;

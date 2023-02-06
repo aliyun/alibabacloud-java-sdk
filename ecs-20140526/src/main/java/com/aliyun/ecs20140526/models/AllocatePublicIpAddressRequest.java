@@ -11,7 +11,7 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The public IP address to assign to the instance. This parameter is empty by default, which indicates that a public IP address is randomly assigned by the system.</p>
+     * <p>The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the specified instance.</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
@@ -29,9 +29,9 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The virtual LAN (VLAN) ID of the instance. </p>
+     * <p>The virtual LAN (VLAN) ID of the instance.</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
      */
     @NameInMap("VlanId")
     public String vlanId;

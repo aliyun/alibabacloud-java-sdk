@@ -26,7 +26,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
      * <br>
      * <p>When you migrate an instance from a shared host to a dedicated host or between dedicated hosts, take note of the following items:</p>
      * <br>
-     * <p>*   To migrate the instance to a specific dedicated host, specify a value for this parameter.</p>
+     * <p>*   To migrate the instance to a specific dedicated host, specify this parameter.</p>
      * <p>*   To migrate the instance to a system-selected dedicated host, leave this parameter empty and set `Tenancy` to host.</p>
      * <br>
      * <p>For information about the automatic deployment feature, see [Features of dedicated hosts](~~118938~~).</p>
@@ -37,7 +37,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     /**
      * <p>The number of the deployment set group in which to deploy the instance in the destination deployment set. This parameter is valid only when the destination deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.</p>
      * <br>
-     * <p>>  If you call this operation to deploy an instance to a deployment set that uses the high availability group strategy (`AvailablilityGroup`) and this parameter is left empty, the system evenly distributes ECS instances among the deployment set groups in the deployment set. If you call this operation to change the deployment set of an instance and specify the current deployment set of the instance as the destination deployment set, the system evenly distributes ECS instances again among the deployment set groups in the deployment set.</p>
+     * <p>> If you call this operation to deploy an instance to a deployment set that uses the high availability group strategy (`AvailablilityGroup`) and leave this parameter empty, the system evenly distributes instances among the deployment set groups in the deployment set. If you call this operation to change the deployment set of an instance and specify the current deployment set of the instance as the destination deployment set, the system evenly distributes instances again among the deployment set groups in the deployment set.</p>
      */
     @NameInMap("DeploymentSetGroupNo")
     public Integer deploymentSetGroupNo;
@@ -45,21 +45,23 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     /**
      * <p>The ID of the destination deployment set.</p>
      * <br>
-     * <p>This parameter is required when you add an ECS instance to a deployment set or change the deployment set of an instance.</p>
+     * <p>This parameter is required when you add an instance to a deployment set or change the deployment set of an instance.</p>
      * <br>
-     * <p>>  You cannot change the deployment set when you modify the configurations of dedicated hosts, including parameters such as `Tenancy`, `Affinity`, and `DedicatedHostId`.</p>
+     * <p>> You cannot change the deployment set when you modify dedicated host configurations, including the `Tenancy`, `Affinity`, and `DedicatedHostId` parameters.</p>
      */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
     /**
-     * <p>Specifies whether to forcibly change the host of the instance when the deployment set of the instance is changed. Valid values:</p>
+     * <p>Specifies whether to forcefully change the host of the instance when the deployment set of the instance is changed. Valid values:</p>
      * <br>
-     * <p>*   true: forcibly changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcibly changed only for instances in the Running or Stopped state. The instances in the Stopped state do not include pay-as-you-go instances that are stopped in economical mode.</p>
+     * <p>*   true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running (Running) or Stopped (Stopped) state. The instances that are in the Stopped (Stopped) state do not include pay-as-you-go instances that are stopped in economical mode.</p>
      * <br>
-     * <p>    > If the specified ECS instance has local disks attached, the local disks are forcibly changed when the host of the instance is forcibly changed. This may cause data loss in the local disks. Proceed with caution.</p>
+     * <p>    **</p>
      * <br>
-     * <p>*   false: does not forcibly change the host of the instance when the deployment set of the instance is changed. You can add the instance to a deployment set only when the instance remains on the current host. When the Force parameter is set to false, the deployment set may fail to be changed.</p>
+     * <p>    **Note**If the specified instance has local disks attached, the local disks are forcefully changed when the host of the instance is forcefully changed. This may cause data loss in the local disks. Proceed with caution.</p>
+     * <br>
+     * <p>*   false: does not forcefully change the host of the instance when the deployment set of the instance is changed. You can add the instance to a deployment set only when the instance remains on the current host. When the Force parameter is set to false, the deployment set may fail to be changed.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -67,18 +69,18 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The IDs of instances.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The instance type to which the instance is changed. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.</p>
+     * <p>The instance type to which to change the instance. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.</p>
      * <br>
-     * <p>You can change the instance type of the ECS instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see [Dedicated host types](~~68564~~).</p>
+     * <p>You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see [Dedicated host types](~~68564~~).</p>
      * <br>
      * <p>*   If you specify this parameter, you must also specify the `DedicatedHostId` parameter.</p>
-     * <p>*   You cannot change the instance type of the ECS instance if you use the automatic deployment feature to migrate the instance.</p>
+     * <p>*   You cannot change the instance type of an instance if you use the automatic deployment feature to migrate the instance.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -87,7 +89,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
      * <p>Specifies whether to stop the instance before it is migrated to the destination dedicated host. Valid values:</p>
      * <br>
      * <p>*   reboot: stops the instance before it is migrated.</p>
-     * <p>*   live: migrates the instance without stopping it. If you set the MigrationType parameter to live, you must specify the DedicatedHostId parameter. In this case, you cannot change the instance type of the ECS instance when the instance is migrated.</p>
+     * <p>*   live: migrates the instance without stopping it. If you set the MigrationType parameter to live, you must specify the DedicatedHostId parameter. In this case, you cannot change the instance type of the instance when the instance is migrated.</p>
      * <br>
      * <p>Default value: reboot.</p>
      */
@@ -109,12 +111,12 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove the selected instance from the selected deployment set. Valid values:</p>
      * <br>
-     * <p>*   true.</p>
-     * <p>*   false.</p>
+     * <p>*   true: removes the instance from the deployment set.</p>
+     * <p>*   false: does not remove the instance from the deployment set.</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>>  If you set this parameter to true, you must specify the InstanceId of the selected ECS instance and DeploymentSetId of the deployment set to which the ECS instance belongs.</p>
+     * <p>> If you set this parameter to true, you must specify the InstanceId and DeploymentSetId parameters and make sure that the specified instance belongs to the specified deployment set.</p>
      */
     @NameInMap("RemoveFromDeploymentSet")
     public Boolean removeFromDeploymentSet;

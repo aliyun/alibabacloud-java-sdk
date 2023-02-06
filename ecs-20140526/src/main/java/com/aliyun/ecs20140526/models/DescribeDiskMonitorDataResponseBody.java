@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     /**
-     * <p>Details about the disk monitoring data.</p>
+     * <p>Details about the monitoring data of the disk.</p>
      */
     @NameInMap("MonitorData")
     public DescribeDiskMonitorDataResponseBodyMonitorData monitorData;
@@ -53,19 +53,19 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
 
     public static class DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData extends TeaModel {
         /**
-         * <p>The read bandwidth of the system disk. Unit: Byte/s.</p>
+         * <p>The read bandwidth of the system disk. Unit: byte/s.</p>
          */
         @NameInMap("BPSRead")
         public Integer BPSRead;
 
         /**
-         * <p>The total read and write bandwidth of the system disk. Unit: Byte/s.</p>
+         * <p>The total read and write bandwidth of the system disk. Unit: byte/s.</p>
          */
         @NameInMap("BPSTotal")
         public Integer BPSTotal;
 
         /**
-         * <p>The write bandwidth of the system disk. Unit: Byte/s.</p>
+         * <p>The write bandwidth of the system disk. Unit: byte/s.</p>
          */
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
@@ -95,19 +95,19 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         public Integer IOPSWrite;
 
         /**
-         * <p>The read latency of the disk. Unit: μs.</p>
+         * <p>The read latency of the disk. Unit: microseconds.</p>
          */
         @NameInMap("LatencyRead")
         public Integer latencyRead;
 
         /**
-         * <p>The write latency of the disk. Unit: μs.</p>
+         * <p>The write latency of the disk. Unit: microseconds.</p>
          */
         @NameInMap("LatencyWrite")
         public Integer latencyWrite;
 
         /**
-         * <p>The timestamp of monitoring data query. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

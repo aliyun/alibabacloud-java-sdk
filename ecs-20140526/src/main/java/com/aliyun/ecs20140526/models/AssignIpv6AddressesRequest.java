@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesRequest extends TeaModel {
     /**
-     * <p>One or more IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
+     * <p>IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.</p>
      * <br>
      * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*</p>
      * <br>
-     * <p>>  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.</p>
+     * <p>> You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.</p>
      */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
@@ -23,13 +23,13 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public Integer ipv6AddressCount;
 
     /**
-     * <p>One or more IPv6 address prefixes to assign to the ENI.</p>
+     * <p>> 该参数正在邀测中，暂未开放使用。</p>
      */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
     /**
-     * <p>The number of IPv6 address prefixes.</p>
+     * <p>> 该参数正在邀测中，暂未开放使用。</p>
      */
     @NameInMap("Ipv6PrefixCount")
     public Integer ipv6PrefixCount;

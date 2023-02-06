@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportAttributesRequest extends TeaModel {
     /**
-     * <p>The region ID of the diagnostic report. You can call the [DescribeRegions](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/regions-describeregions) operation to query the most recent region list.</p>
+     * <p>The region ID of the diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -20,7 +20,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The IDs of instances. You can specify up to 100 instance IDs.</p>
+     * <p>The IDs of the instances. You can specify the IDs of up to 100 instances.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -28,7 +28,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     /**
      * <p>The start time of the scheduled event execution. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>>  For exception events due to system failures or instance failures, the simulated events of these exception events enter the Executing (`Executing`) state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the Executed (`Executed`) state.</p>
+     * <p>> For events that occur due to system failures or instance failures, the simulated events enter the Executing (`Executing`) state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the Executed (`Executed`) state.</p>
      */
     @NameInMap("NotBefore")
     public String notBefore;
@@ -40,7 +40,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the event. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

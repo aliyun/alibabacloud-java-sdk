@@ -29,7 +29,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries that meet the query criteria.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

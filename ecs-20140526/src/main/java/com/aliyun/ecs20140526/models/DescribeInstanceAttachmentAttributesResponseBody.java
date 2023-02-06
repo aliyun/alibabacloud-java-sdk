@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     /**
-     * <p>Details about the private pools from which the instances are created.</p>
+     * <p>Details about the private pools that the instances match.</p>
      */
     @NameInMap("Instances")
     public DescribeInstanceAttachmentAttributesResponseBodyInstances instances;
 
     /**
-     * <p>The number of the page returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -29,7 +29,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries that meet the query criteria.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -87,7 +87,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the private pool. When the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the private pool ID is the ID that was allocated by the system for automatic match.</p>
+         * <p>The ID of the private pool. When the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the value of PrivatePoolOptionsId is the ID of a private pool that is automatically matched to the instance.</p>
          */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
@@ -95,9 +95,9 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         /**
          * <p>The match mode of the private pool. Valid values:</p>
          * <br>
-         * <p>*   Open: Instances automatically match an open private pool.</p>
-         * <p>*   Target: Instances match a specified private pool.</p>
-         * <p>*   None: Instances do not use private pools.</p>
+         * <p>*   Open: open private pool. Instances automatically match an open private pool.</p>
+         * <p>*   Target: specified private pool. Instances match a specified private pool.</p>
+         * <p>*   None: no private pool. Instances do not use private pools.</p>
          */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;

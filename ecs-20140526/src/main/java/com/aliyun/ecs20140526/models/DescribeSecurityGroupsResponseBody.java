@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If the value returned of **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>The query token returned in this call. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no more results are to be returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -16,7 +13,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -24,7 +21,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -171,7 +168,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup extends TeaModel {
         /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>> This parameter is in invitational preview and unavailable for general users.</p>
          */
         @NameInMap("AvailableInstanceAmount")
         public Integer availableInstanceAmount;
@@ -189,7 +186,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>> This parameter is in invitational preview and unavailable for general users.</p>
          */
         @NameInMap("EcsCount")
         public Integer ecsCount;
@@ -207,7 +204,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The new name of the security group.</p>
+         * <p>The name of the security group.</p>
          */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
@@ -234,7 +231,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>The tags of the security group.</p>
+         * <p>The tags of the security groups.</p>
          */
         @NameInMap("Tags")
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTags tags;

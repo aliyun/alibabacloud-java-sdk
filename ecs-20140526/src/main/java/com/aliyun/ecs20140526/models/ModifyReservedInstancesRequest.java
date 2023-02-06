@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyReservedInstancesRequest extends TeaModel {
+    /**
+     * <p>The configurations of reserved instances.</p>
+     */
     @NameInMap("Configuration")
     public java.util.List<ModifyReservedInstancesRequestConfiguration> configuration;
 
@@ -21,6 +24,9 @@ public class ModifyReservedInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of reserved instances. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
 
@@ -93,15 +99,15 @@ public class ModifyReservedInstancesRequest extends TeaModel {
 
     public static class ModifyReservedInstancesRequestConfiguration extends TeaModel {
         /**
-         * <p>The number of pay-as-you-go instances that are of the instance type matched with reserved instance N. The value must be greater than or equal to 1. Valid values of N: 1 to 100.</p>
+         * <p>The number of pay-as-you-go instances of the same instance type that reserved instance N can match. The value must be greater than or equal to 1. Valid values of N: 1 to 100.</p>
          */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
         /**
-         * <p>The number of instance types that reserved instance N can match. Valid values of N: 1 to 100.</p>
+         * <p>The instance type that reserved instance N can match. Valid values of N: 1 to 100.</p>
          * <br>
-         * <p>>  The applicable instance types are continuously updated. For more information, see the "Attributes" section in [Reserved instance overview](~~100370~~).</p>
+         * <p>> The supported instance types are regularly updated. For more information, see the "Attributes" section of [Overview](~~100370~~).</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -109,7 +115,7 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         /**
          * <p>The name of reserved instance N. Valid values of N: 1 to 100.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with [http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)</p>
          */
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;

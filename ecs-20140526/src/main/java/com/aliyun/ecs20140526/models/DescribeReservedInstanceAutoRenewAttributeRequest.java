@@ -3,24 +3,18 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class InstallCloudAssistantRequest extends TeaModel {
-    /**
-     * <p>The IDs of instances. You can specify up to 50 instance IDs in a single request.</p>
-     */
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
-
+public class DescribeReservedInstanceAutoRenewAttributeRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ReservedInstanceId")
+    public java.util.List<String> reservedInstanceId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -28,20 +22,12 @@ public class InstallCloudAssistantRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static InstallCloudAssistantRequest build(java.util.Map<String, ?> map) throws Exception {
-        InstallCloudAssistantRequest self = new InstallCloudAssistantRequest();
+    public static DescribeReservedInstanceAutoRenewAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeReservedInstanceAutoRenewAttributeRequest self = new DescribeReservedInstanceAutoRenewAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public InstallCloudAssistantRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
-    public InstallCloudAssistantRequest setOwnerAccount(String ownerAccount) {
+    public DescribeReservedInstanceAutoRenewAttributeRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -49,7 +35,7 @@ public class InstallCloudAssistantRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public InstallCloudAssistantRequest setOwnerId(Long ownerId) {
+    public DescribeReservedInstanceAutoRenewAttributeRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -57,7 +43,7 @@ public class InstallCloudAssistantRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public InstallCloudAssistantRequest setRegionId(String regionId) {
+    public DescribeReservedInstanceAutoRenewAttributeRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -65,7 +51,15 @@ public class InstallCloudAssistantRequest extends TeaModel {
         return this.regionId;
     }
 
-    public InstallCloudAssistantRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeReservedInstanceAutoRenewAttributeRequest setReservedInstanceId(java.util.List<String> reservedInstanceId) {
+        this.reservedInstanceId = reservedInstanceId;
+        return this;
+    }
+    public java.util.List<String> getReservedInstanceId() {
+        return this.reservedInstanceId;
+    }
+
+    public DescribeReservedInstanceAutoRenewAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -73,7 +67,7 @@ public class InstallCloudAssistantRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public InstallCloudAssistantRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeReservedInstanceAutoRenewAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RebootInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   true: The validity of the request is checked but the request is not made. Check items include the required parameters, request format, service limits, and available ECS resources. If the check fails, the corresponding error is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
-     * <p>*   false: The validity of the request is checked, and the request is made if the check succeeds.</p>
+     * <p>*   true: performs a dry run. The system checks the required parameters, the request format, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -16,10 +16,10 @@ public class RebootInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcibly stop the instance to restart it. Default value: false. Valid values:</p>
+     * <p>Specifies whether to forcibly stop the instance to restart it. Valid values:</p>
      * <br>
-     * <p>*   true: forcibly stops the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage in the instance will be lost.</p>
-     * <p>*   false: normally stops the instance.</p>
+     * <p>*   true: stops the instance in a forceful manner. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage in the instance will be lost.</p>
+     * <p>*   false: normally stops the instance. This is the default value.</p>
      */
     @NameInMap("ForceStop")
     public Boolean forceStop;

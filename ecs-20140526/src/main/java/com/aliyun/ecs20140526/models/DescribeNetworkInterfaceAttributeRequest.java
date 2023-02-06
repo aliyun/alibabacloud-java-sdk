@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The attributes of the ENI.</p>
+     * <p>The attribute of the ENI.</p>
      */
     @NameInMap("Attribute")
     public String attribute;
@@ -23,7 +23,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,6 +34,9 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>> This parameter is unavailable.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag;
 
@@ -108,13 +111,13 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeRequestTag extends TeaModel {
         /**
-         * <p>>  This parameter is unavailable.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>>  This parameter is unavailable.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -23,7 +23,7 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of security groups that you want to query. You can specify up to 10 security group IDs.</p>
+     * <p>The ID of security group N. Valid values of N: 1 to 10.</p>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
