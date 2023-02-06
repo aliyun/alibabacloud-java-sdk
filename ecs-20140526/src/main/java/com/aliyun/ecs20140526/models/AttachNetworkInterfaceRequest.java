@@ -10,6 +10,11 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The index of the network interface controller (NIC).</p>
+     * <br>
+     * <p>> The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
+     */
     @NameInMap("NetworkCardIndex")
     public Integer networkCardIndex;
 
@@ -26,7 +31,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,15 +43,15 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The trunk network card ID.</p>
+     * <p>The ID of the trunk ENI.</p>
      * <br>
-     * <p>> This parameter is not online yet and cannot be used.</p>
+     * <p>> This parameter is unavailable for use.</p>
      */
     @NameInMap("TrunkNetworkInstanceId")
     public String trunkNetworkInstanceId;
 
     /**
-     * <p>> The parameter is deprecated.</p>
+     * <p>> This parameter is no longer used.</p>
      */
     @NameInMap("WaitForNetworkConfigurationReady")
     public Boolean waitForNetworkConfigurationReady;

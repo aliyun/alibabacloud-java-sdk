@@ -20,7 +20,7 @@ public class AttachKeyPairRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the SSH key pair belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

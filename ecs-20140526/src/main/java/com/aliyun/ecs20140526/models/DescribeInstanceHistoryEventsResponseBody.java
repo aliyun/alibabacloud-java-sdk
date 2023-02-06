@@ -29,7 +29,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances.</p>
+     * <p>The total number of instances that were queried.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -159,16 +159,16 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The category of the disk. Valid values:</p>
+         * <p>The category of the cloud disk or local disk. Valid values:</p>
          * <br>
-         * <p>*   cloud: basic disk</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
-         * <p>*   local_ssd_pro: I/O-intensive local disk</p>
-         * <p>*   local_hdd_pro: throughput-intensive local disk</p>
-         * <p>*   ephemeral: retired local disk</p>
-         * <p>*   ephemeral_ssd: retired local SSD</p>
+         * <p>*   cloud: basic disk.</p>
+         * <p>*   cloud_efficiency: ultra disk.</p>
+         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   cloud_essd: enhanced SSD (ESSD).</p>
+         * <p>*   local_ssd_pro: I/O-intensive local disk.</p>
+         * <p>*   local_hdd_pro: throughput-intensive local disk.</p>
+         * <p>*   ephemeral: retired local disk.</p>
+         * <p>*   ephemeral_ssd: retired local SSD.</p>
          */
         @NameInMap("DeviceCategory")
         public String deviceCategory;
@@ -182,8 +182,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * <p>The type of the disk. Valid values:</p>
          * <br>
-         * <p>*   system: system disk</p>
-         * <p>*   data: data disk</p>
+         * <p>*   system: system disk.</p>
+         * <p>*   data: data disk.</p>
          */
         @NameInMap("DeviceType")
         public String deviceType;
@@ -301,8 +301,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * <p>The type of the host. Valid values:</p>
          * <br>
-         * <p>- ddh: dedicated host</p>
-         * <p>- managehost: physical machine in a smart hosting pool</p>
+         * <p>*   ddh: dedicated host.</p>
+         * <p>*   managehost: physical machine in a smart hosting pool.</p>
          */
         @NameInMap("HostType")
         public String hostType;
@@ -314,7 +314,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
 
         /**
-         * <p>The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.</p>
+         * <p>The migration solution of the instance. Valid value: MigrationOptions. Instances can be migrated only by using migration plans.</p>
          */
         @NameInMap("MigrationOptions")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions migrationOptions;
@@ -446,7 +446,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String impactLevel;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance that you query.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -464,11 +464,11 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The type of a resource. Valid values:</p>
          * <br>
-         * <p>*   instance: ECS instance</p>
-         * <p>*   ddh: dedicated host</p>
-         * <p>*   managehost: physical machine in a smart hosting pool</p>
+         * <p>*   instance: ECS instance.</p>
+         * <p>*   ddh: dedicated host.</p>
+         * <p>*   managehost: physical machine in a smart hosting pool.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

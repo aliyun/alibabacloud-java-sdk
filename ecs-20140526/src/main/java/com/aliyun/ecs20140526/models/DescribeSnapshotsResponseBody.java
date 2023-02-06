@@ -152,7 +152,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The category of the snapshot.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
+         * <p>> This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -176,10 +176,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
+         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.</p>
+         * <p>*   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
@@ -193,7 +193,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Integer instantAccessRetentionDays;
 
         /**
-         * <p>The ID of the KMS key used for the data disk.</p>
+         * <p>The ID of the KMS key used by the data disk.</p>
          */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
@@ -217,7 +217,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
+         * <p>The remaining time that is required to create the snapshot. Unit: seconds.</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
@@ -253,7 +253,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotSN;
 
         /**
-         * <p>The type of the snapshot. Valid values:</p>
+         * <p>The type of snapshot. Valid values:</p>
          * <br>
          * <p>*   auto or timer: automatic snapshot</p>
          * <p>*   user: manual snapshot</p>
@@ -298,7 +298,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The type of the source disk.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
          */
         @NameInMap("SourceStorageType")
         public String sourceStorageType;

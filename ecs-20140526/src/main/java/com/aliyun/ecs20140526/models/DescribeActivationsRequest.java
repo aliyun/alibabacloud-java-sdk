@@ -23,7 +23,7 @@ public class DescribeActivationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the page to return.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>

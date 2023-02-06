@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
     /**
-     * <p>The list of simulated event IDs.</p>
+     * <p>The IDs of the simulated events.</p>
      */
     @NameInMap("EventIdSet")
     public CreateSimulatedSystemEventsResponseBodyEventIdSet eventIdSet;

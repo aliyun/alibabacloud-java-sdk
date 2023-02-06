@@ -7,16 +7,16 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends TeaModel {
     /**
      * <p>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * <br>
-     * <p>*   The scheduled release time must be at least 30 minutes from the current time.</p>
-     * <p>*   The scheduled release time must be at most 3 years from the current time.</p>
-     * <p>*   If the value of the seconds (ss) is not 00, it is automatically set to 00.</p>
-     * <p>*   If you do not specify the `AutoReleaseTime` parameter, the automatic release is disabled. The dedicated host will not be released when the scheduled time is reached.</p>
+     * <p>*   The automatic release time must be at least 30 minutes from the current time.</p>
+     * <p>*   The automatic release time must be at most three years from the current time.</p>
+     * <p>*   If the value of seconds (ss) is not 00, it is automatically set to 00.</p>
+     * <p>*   If you do not specify the `AutoReleaseTime` parameter, the automatic release time is canceled the dedicated host is automatically released.</p>
      */
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
 
     /**
-     * <p>The ID of the dedicated host that you want to automatically release.</p>
+     * <p>The ID of the dedicated host.</p>
      */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;

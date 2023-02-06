@@ -134,13 +134,13 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public String eventId;
 
         /**
-         * <p>The time when the event started.</p>
+         * <p>The time when the event occurred.</p>
          */
         @NameInMap("EventTime")
         public String eventTime;
 
         /**
-         * <p>The event type.</p>
+         * <p>The type of the event.</p>
          */
         @NameInMap("EventType")
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType eventType;
@@ -295,7 +295,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
          * <br>
          * <p>This parameter has a value only when the value of `Status` is `In_use`.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>> This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.</p>
          */
         @NameInMap("Device")
         public String device;
@@ -307,7 +307,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet diskEventSet;
 
         /**
-         * <p>The ID of the EBS device.</p>
+         * <p>The ID of EBS device N.</p>
          */
         @NameInMap("DiskId")
         public String diskId;
@@ -319,7 +319,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus healthStatus;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance that you query.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

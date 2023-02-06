@@ -12,7 +12,7 @@ public class DetachDiskRequest extends TeaModel {
      * <br>
      * <p>Default value: true.</p>
      * <br>
-     * <p>Take note of the following items:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <br>
      * <p>*   This parameter cannot be set for disks for which the multi-attach feature is enabled.</p>
      * <p>*   If a data disk is to be detached, the default value is `false`.</p>
@@ -35,21 +35,12 @@ public class DetachDiskRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <p>资源主账号的ID，亦即UID。</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>资源主账号的账号名称。</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>RAM用户的虚拟账号ID。</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

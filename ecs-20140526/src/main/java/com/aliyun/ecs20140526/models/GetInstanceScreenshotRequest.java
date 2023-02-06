@@ -29,7 +29,7 @@ public class GetInstanceScreenshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to wake up the instance that is in sleep mode.</p>
+     * <p>Specifies whether to wake up the instance for which the instance hibernation feature is enabled.</p>
      * <br>
      * <p>Default value: false.</p>
      */

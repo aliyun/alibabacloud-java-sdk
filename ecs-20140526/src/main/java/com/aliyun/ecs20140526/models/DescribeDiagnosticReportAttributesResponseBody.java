@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
+    /**
+     * <p>The extended attributes of the diagnostic report.</p>
+     */
     @NameInMap("Attributes")
     public String attributes;
 
@@ -14,7 +17,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/creatediagnosticreport) operation to create the diagnostic report.</p>
+     * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -26,7 +29,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String finishedTime;
 
     /**
-     * <p>The results of metrics.</p>
+     * <p>The results of all diagnostic metrics in the diagnostic metric set.</p>
      */
     @NameInMap("MetricResults")
     public DescribeDiagnosticReportAttributesResponseBodyMetricResults metricResults;
@@ -50,7 +53,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource that was diagnosed.</p>
+     * <p>The ID of the resource.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -62,19 +65,19 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The severity level of the diagnostic report. The value of this parameter is determined by the most severe level of all diagnostic metrics. Valid values: </p>
+     * <p>The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:</p>
      * <br>
-     * <p>- Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</p>
-     * <p>- Normal: No exceptions were detected.</p>
-     * <p>- Info: Diagnostic information was recorded and may be related to exceptions.</p>
-     * <p>- Warn: Diagnostic information was recorded and may indicate potential exceptions.</p>
-     * <p>- Critical: Critical exceptions were detected.</p>
+     * <p>*   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</p>
+     * <p>*   Normal: No exceptions were detected.</p>
+     * <p>*   Info: Diagnostic information was recorded and may be related to exceptions.</p>
+     * <p>*   Warn: Diagnostic information was recorded and may indicate potential exceptions.</p>
+     * <p>*   Critical: Critical exceptions were detected.</p>
      */
     @NameInMap("Severity")
     public String severity;
 
     /**
-     * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/creatediagnosticreport) operation to create the diagnostic report.</p>
+     * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -82,9 +85,9 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     /**
      * <p>The state of the diagnostic report. Valid values:</p>
      * <br>
-     * <p>- InProgress: The diagnostic is in progress.</p>
-     * <p>- Finished: The diagnostic is complete.</p>
-     * <p>- Failed: The diagnostic failed.</p>
+     * <p>*   InProgress: The diagnostic is in progress.</p>
+     * <p>*   Finished: The diagnostic is complete.</p>
+     * <p>*   Failed: The diagnostic failed.</p>
      */
     @NameInMap("Status")
     public String status;
@@ -200,7 +203,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
 
     public static class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssuesIssue extends TeaModel {
         /**
-         * <p>Additional data carried by the diagnosis of the problem to help understand more information about the problem. The data format is JSON string.</p>
+         * <p>The additional data about the diagnosed issue. The value is a JSON string.</p>
          */
         @NameInMap("Additional")
         public String additional;
@@ -212,17 +215,17 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         public String issueId;
 
         /**
-         * <p>The time when the problem occurred.</p>
+         * <p>The time when the diagnosed issue occurred.</p>
          */
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
         /**
-         * <p>Valid values:</p>
+         * <p>The severity level of the diagnosed issue. Valid values:</p>
          * <br>
-         * <p>- Info: Diagnostic information was recorded and may be related to exceptions.</p>
-         * <p>- Warn: Diagnostic information was recorded and may indicate potential exceptions.</p>
-         * <p>- Critical: Critical exceptions were detected.</p>
+         * <p>*   Info: Diagnostic information was recorded and may be related to exceptions.</p>
+         * <p>*   Warn: Diagnostic information was recorded and may indicate potential exceptions.</p>
+         * <p>*   Critical: Critical exceptions were detected.</p>
          */
         @NameInMap("Severity")
         public String severity;
@@ -287,7 +290,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
 
     public static class DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResult extends TeaModel {
         /**
-         * <p>The list of diagnostic issues.</p>
+         * <p>Details about the diagnosed issues.</p>
          */
         @NameInMap("Issues")
         public DescribeDiagnosticReportAttributesResponseBodyMetricResultsMetricResultIssues issues;
@@ -307,12 +310,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         /**
          * <p>The severity level of the diagnostic metric. Valid values:</p>
          * <br>
-         * <p>- Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</p>
-         * <p>- Normal: No exceptions were detected.</p>
-         * <p>- Info: Diagnostic information was recorded and may be related to exceptions.</p>
-         * <p>- NotSupport: The version of the guest operating system does support diagnosing the metric.</p>
-         * <p>- Warn: Diagnostic information was recorded and may indicate potential exceptions.</p>
-         * <p>- Critical: Critical exceptions were detected.</p>
+         * <p>*   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</p>
+         * <p>*   Normal: No exceptions were detected.</p>
+         * <p>*   Info: Diagnostic information was recorded and may be related to exceptions.</p>
+         * <p>*   NotSupport: The version of the guest operating system does support diagnosing the metric.</p>
+         * <p>*   Warn: Diagnostic information was recorded and may indicate potential exceptions.</p>
+         * <p>*   Critical: Critical exceptions were detected.</p>
          */
         @NameInMap("Severity")
         public String severity;
@@ -320,9 +323,9 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         /**
          * <p>The state of the diagnostic metric. Valid values:</p>
          * <br>
-         * <p>- InProgress: The diagnostic is in progress.</p>
-         * <p>- Finished: The diagnostic is complete.</p>
-         * <p>- Failed: The diagnostic failed.</p>
+         * <p>*   InProgress: The diagnostic is in progress.</p>
+         * <p>*   Finished: The diagnostic is complete.</p>
+         * <p>*   Failed: The diagnostic failed.</p>
          */
         @NameInMap("Status")
         public String status;

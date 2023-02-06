@@ -7,8 +7,8 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     /**
      * <p>The CPU architecture. Valid values:</p>
      * <br>
-     * <p>*   X86: x86</p>
-     * <p>*   ARM: ARM</p>
+     * <p>*   X86</p>
+     * <p>*   ARM</p>
      */
     @NameInMap("CpuArchitecture")
     public String cpuArchitecture;
@@ -38,7 +38,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
      * <p>*   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</p>
      * <p>*   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</p>
      * <p>*   ECS Bare Metal: ECS Bare Metal Instance type</p>
-     * <p>*   Super Computing Cluster: SCC instance type</p>
+     * <p>*   Super Computing Cluster: Super Computing Cluster (SCC) instance type</p>
      */
     @NameInMap("InstanceCategory")
     public String instanceCategory;
@@ -46,9 +46,9 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     /**
      * <p>The level of the instance family. Valid values:</p>
      * <br>
-     * <p>*   EntryLevel</p>
-     * <p>*   EnterpriseLevel</p>
-     * <p>*   CreditEntryLevel</p>
+     * <p>*   EntryLevel: entry level (shared)</p>
+     * <p>*   EnterpriseLevel: enterprise level</p>
+     * <p>*   CreditEntryLevel: credit-based entry level</p>
      */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
@@ -62,7 +62,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>Instance type N. Valid values of N: 1 to 10 If this parameter is empty, information about all instance types is queried.</p>
+     * <p>Instance type N. Valid values of N: 1 to 10. If this parameter is empty, information about all instance types is queried.</p>
      */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
@@ -71,7 +71,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
      * <p>The category of local disks. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:</p>
      * <br>
      * <p>*   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are used by d1ne or d1 instances</p>
-     * <p>*   local_ssd_pro: local NVMe SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances</p>
+     * <p>*   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances</p>
      */
     @NameInMap("LocalStorageCategory")
     public String localStorageCategory;
@@ -291,7 +291,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumSecondaryEniQueueNumber;
 
     /**
-     * <p>The query token. Set the value to the NextToken value queried in the previous call to the DescribeInstanceTypes operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeInstanceTypes operation. Leave this parameter empty the first time you call this operation.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

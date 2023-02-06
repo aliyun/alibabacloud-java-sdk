@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AttachInstanceRamRoleResponseBody extends TeaModel {
     /**
-     * <p>Details about the results of binding the instance RAM role.</p>
+     * <p>Details about the results of attaching the instance RAM role.</p>
      */
     @NameInMap("AttachInstanceRamRoleResults")
     public AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResults attachInstanceRamRoleResults;
 
     /**
-     * <p>The number of RAM roles that fail to be bound.</p>
+     * <p>The number of the instances to which the instance RAM role failed to be attached.</p>
      */
     @NameInMap("FailCount")
     public Integer failCount;
@@ -81,7 +81,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
 
     public static class AttachInstanceRamRoleResponseBodyAttachInstanceRamRoleResultsAttachInstanceRamRoleResult extends TeaModel {
         /**
-         * <p>Indicates whether the instance RAM role was bound. If 200 is returned, the RAM role was bound. If any other value is returned, the RAM role failed to be bound. For more information, see the "Error codes" section of this topic.</p>
+         * <p>Indicates whether the instance RAM role was attached. If 200 is returned, the instance RAM role was attached. If any other value is returned, the instance RAM role failed to be attached. For more information, see the "Error codes" section.</p>
          */
         @NameInMap("Code")
         public String code;
@@ -93,13 +93,13 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Indicates whether the instance RAM role was bound. If success is returned, the RAM role was bound. If any other value is returned, the RAM role failed to be bound. For more information, see the "Error codes" section of this topic.</p>
+         * <p>Indicates whether the instance RAM role was attached. If success is returned, the instance RAM role was attached. If any other value is returned, the instance RAM role failed to be attached. For more information, see the "Error codes" section.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the RAM role was bound.</p>
+         * <p>Indicates whether the instance RAM role was attached.</p>
          */
         @NameInMap("Success")
         public Boolean success;

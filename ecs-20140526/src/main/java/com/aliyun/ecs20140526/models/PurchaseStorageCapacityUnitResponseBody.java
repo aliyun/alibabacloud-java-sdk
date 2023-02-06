@@ -17,7 +17,7 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of SCU ID.</p>
+     * <p>The IDs of the SCUs.</p>
      */
     @NameInMap("StorageCapacityUnitIds")
     public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds storageCapacityUnitIds;

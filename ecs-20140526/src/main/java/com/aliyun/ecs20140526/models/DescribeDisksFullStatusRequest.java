@@ -8,13 +8,13 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     public DescribeDisksFullStatusRequestEventTime eventTime;
 
     /**
-     * <p>The IDs of EBS devices. You can specify up to 100 EBS device IDs.</p>
+     * <p>The ID of EBS device N. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("DiskId")
     public java.util.List<String> diskId;
 
     /**
-     * <p>The list of event IDs.</p>
+     * <p>The ID of the event. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("EventId")
     public java.util.List<String> eventId;
@@ -23,7 +23,7 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
      * <p>The event type. Valid values:</p>
      * <br>
      * <p>*   Degraded: The performance of the EBS device is degraded.</p>
-     * <p>*   SeverelyDegraded: The performance of the EBS device was severely degraded.</p>
+     * <p>*   SeverelyDegraded: The performance of the EBS device is severely degraded.</p>
      * <p>*   Stalled: The performance of the EBS device is severely affected.</p>
      * <p>*   ErrorDetected: The local disk is damaged.</p>
      */
@@ -35,7 +35,7 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
      * <br>
      * <p>*   Impaired: The EBS device is damaged.</p>
      * <p>*   Warning: The performance of the EBS device may be degraded.</p>
-     * <p>*   Initializing: The EBS device is being initialized.</p>
+     * <p>*   Initializing: The disk is being initialized.</p>
      * <p>*   InsufficientData: The status cannot be determined due to insufficient data.</p>
      * <p>*   NotApplicable: The EBS device cannot be used.</p>
      */
@@ -71,7 +71,7 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the EBS device belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The ID of the resource group to which the EBS device belongs. When you use this property to query resources, the number of resources that are contained in the specified resource group cannot exceed 1,000.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -85,18 +85,18 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     /**
      * <p>The lifecycle status of the EBS device. For more information, see [Disk status](~~25689~~). Valid values:</p>
      * <br>
-     * <p>*   In_use</p>
-     * <p>*   Available</p>
-     * <p>*   Attaching</p>
-     * <p>*   Detaching</p>
-     * <p>*   Creating</p>
-     * <p>*   ReIniting</p>
+     * <p>*   In_use: The disk is in use.</p>
+     * <p>*   Available: The disk can be attached.</p>
+     * <p>*   Attaching: The disk is being attached.</p>
+     * <p>*   Detaching: The disk is being detached.</p>
+     * <p>*   Creating: The disk is being created.</p>
+     * <p>*   ReIniting: The disk is being initialized.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDisksFullStatusRequestTag> tag;
@@ -230,7 +230,7 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         /**
          * <p>The end of the time range in which to query occurred events.</p>
          * <br>
-         * <p>The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be displayed in UTC.</p>
+         * <p>The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is specified in UTC.</p>
          */
         @NameInMap("End")
         public String end;
@@ -238,7 +238,7 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         /**
          * <p>The start of the time range in which to query occurred events.</p>
          * <br>
-         * <p>The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be displayed in UTC.</p>
+         * <p>The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time specified in UTC.</p>
          */
         @NameInMap("Start")
         public String start;
@@ -268,15 +268,15 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
 
     public static class DescribeDisksFullStatusRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N added to the EBS device. A key-value pair consists of a key specified by the Tag.N.Key parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the Tag.N.Value parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

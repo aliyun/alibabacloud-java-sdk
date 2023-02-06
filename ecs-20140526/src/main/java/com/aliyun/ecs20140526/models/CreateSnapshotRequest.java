@@ -10,7 +10,7 @@ public class CreateSnapshotRequest extends TeaModel {
      * <p>*   Standard: normal snapshot</p>
      * <p>*   Flash: local snapshot</p>
      * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility. This parameter and the `InstantAccess` parameter cannot be specified at the same time. For more information, see the "Description" section in this topic.</p>
+     * <p>> This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility. This parameter and the `InstantAccess` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -40,19 +40,21 @@ public class CreateSnapshotRequest extends TeaModel {
      * <br>
      * <p>*   true: enables the instant access feature. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
      * <br>
-     * <p>    > After the instant access feature is enabled, the snapshot can be used to roll back disks or create disks across zones even when the snapshot is being created. This feature ensures instant access to a new snapshot for an ESSD regardless of the ESSD size.</p>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note**After the instant access feature is enabled, an instant access (IA) snapshot is created and can be used to roll back disks or create disks across zones even when the snapshot is being created. This feature ensures that a new snapshot of an ESSD becomes available for use within five seconds regardless of the ESSD size.</p>
      * <br>
      * <p>*   false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>>  This parameter and the `Category` parameter cannot be specified at the same time. For more information, see the "Description" section in this topic.</p>
+     * <p>> This parameter and the `Category` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.</p>
      */
     @NameInMap("InstantAccess")
     public Boolean instantAccess;
 
     /**
-     * <p>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access (IA) snapshot is automatically released. This parameter takes effect only when `InstantAccess` is set to true. Unit: days. Valid values: 1 to 65535.</p>
+     * <p>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the IA snapshot is automatically released. This parameter takes effect only when `InstantAccess` is set to true. Unit: days. Valid values: 1 to 65535.</p>
      * <br>
      * <p>By default, the value of this parameter is the same as that of `RetentionDays`.</p>
      */
@@ -78,7 +80,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when the retention period expires.</p>
+     * <p>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that the snapshot is not automatically released.</p>
      */
@@ -94,13 +96,13 @@ public class CreateSnapshotRequest extends TeaModel {
     public String snapshotName;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     * <p>> This parameter is unavailable.</p>
      */
     @NameInMap("StorageLocationArn")
     public String storageLocationArn;
 
     /**
-     * <p>The tags of the new snapshot.</p>
+     * <p>The tags to add to the snapshot.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSnapshotRequestTag> tag;
@@ -232,13 +234,13 @@ public class CreateSnapshotRequest extends TeaModel {
 
     public static class CreateSnapshotRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. It must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.</p>
+         * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)</p>
          */
         @NameInMap("Value")
         public String value;

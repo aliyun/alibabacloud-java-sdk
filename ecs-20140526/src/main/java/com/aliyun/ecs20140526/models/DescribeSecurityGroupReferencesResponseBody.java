@@ -11,7 +11,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about the security groups that reference the specified security group.</p>
+     * <p>Details about the references to the specified security groups.</p>
      */
     @NameInMap("SecurityGroupReferences")
     public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferences securityGroupReferences;
@@ -94,13 +94,13 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
 
     public static class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReference extends TeaModel {
         /**
-         * <p>Details about the security groups that referenced by the specified security group.</p>
+         * <p>Details about the security groups whose rules are referencing the specified security groups.</p>
          */
         @NameInMap("ReferencingSecurityGroups")
         public DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups referencingSecurityGroups;
 
         /**
-         * <p>The ID of the queried security group.</p>
+         * <p>The ID of the specified security group.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances. You can specify a maximum of 100 subscription instance IDs at a time. Separate multiple instance IDs with commas (,).</p>
+     * <p>The IDs of instances. You can specify a maximum of 100 subscription instance IDs in a single requets. Separate the instance IDs with commas (,).</p>
      * <br>
-     * <p>>  The `InstanceId` and `RenewalStatus` parameters cannot be empty at the same time.</p>
+     * <p>> The `InstanceId` and `RenewalStatus` parameters cannot be empty at the same time.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -31,7 +31,7 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -39,17 +39,17 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The auto-renewal status of the instance. Valid values:</p>
+     * <p>The auto-renewal state of the instance. Valid values:</p>
      * <br>
      * <p>*   AutoRenewal: Auto-renewal is enabled for the instance.</p>
      * <p>*   Normal: Auto-renewal is disabled for the instance.</p>
-     * <p>*   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal status to `Normal`. Then you can manually renew the instance or enable auto-renewal for the instance.</p>
+     * <p>*   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal state to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
     /**
-     * <p>The list of the IPv4 prefixes.</p>
+     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
@@ -22,6 +22,9 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The secondary private IP addresses to unassign.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 

@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReleasePublicIpAddressRequest extends TeaModel {
+    /**
+     * <p>> This parameter is unavailable.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -19,6 +22,9 @@ public class ReleasePublicIpAddressRequest extends TeaModel {
     @NameInMap("PublicIpAddress")
     public String publicIpAddress;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

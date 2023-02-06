@@ -13,13 +13,13 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Integer cores;
 
     /**
-     * <p>The category of the data disk. Valid values:</p>
+     * <p>The type of the data disk. Valid values:</p>
      * <br>
-     * <p>*   cloud: basic disk</p>
-     * <p>*   cloud_efficiency: ultra disk</p>
-     * <p>*   cloud_ssd: standard SSD</p>
-     * <p>*   ephemeral_ssd: local SSD</p>
-     * <p>*   cloud_essd: ESSD</p>
+     * <p>*   cloud: basic disk.</p>
+     * <p>*   cloud_efficiency: ultra disk.</p>
+     * <p>*   cloud_ssd: standard SSD.</p>
+     * <p>*   ephemeral_ssd: local SSD.</p>
+     * <p>*   cloud_essd: ESSD.</p>
      */
     @NameInMap("DataDiskCategory")
     public String dataDiskCategory;
@@ -33,13 +33,13 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The resource type to query. Valid values:</p>
      * <br>
-     * <p>*   Zone: zone</p>
-     * <p>*   IoOptimized: I/O optimized resource</p>
-     * <p>*   InstanceType: instance type</p>
-     * <p>*   SystemDisk: system disk</p>
-     * <p>*   DataDisk: data disk</p>
-     * <p>*   Network: network type</p>
-     * <p>*   ddh: dedicated host</p>
+     * <p>*   Zone: zone.</p>
+     * <p>*   IoOptimized: I/O optimized resource.</p>
+     * <p>*   InstanceType: instance type.</p>
+     * <p>*   SystemDisk: system disk.</p>
+     * <p>*   DataDisk: data disk.</p>
+     * <p>*   Network: network type.</p>
+     * <p>*   ddh: dedicated host.</p>
      * <br>
      * <p>For more information about how to configure the DestinationResource parameter, see the **Description** section of this topic.</p>
      */
@@ -49,8 +49,8 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The billing method of the resource. For more information, see [Billing overview](~~25398~~). Valid values:</p>
      * <br>
-     * <p>*   PrePaid: subscription</p>
-     * <p>*   PostPaid: pay-as-you-go</p>
+     * <p>*   PrePaid: subscription.</p>
+     * <p>*   PostPaid: pay-as-you-go.</p>
      * <br>
      * <p>Default value: PostPaid.</p>
      */
@@ -58,7 +58,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.</p>
+     * <p>The instance types. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.</p>
      * <br>
      * <p>For more information about how to configure the InstanceType parameter, see the **Description** section of this topic.</p>
      */
@@ -85,7 +85,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Float memory;
 
     /**
-     * <p>The network type. Valid values:</p>
+     * <p>The network type of the cluster. Valid values:</p>
      * <br>
      * <p>*   vpc</p>
      * <p>*   classic</p>
@@ -114,10 +114,10 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The type of the resource. Valid values:</p>
      * <br>
-     * <p>*   instance: ECS instance</p>
-     * <p>*   disk: cloud disk</p>
-     * <p>*   reservedinstance: reserved instance</p>
-     * <p>*   ddh: dedicated host</p>
+     * <p>*   instance: ECS instance.</p>
+     * <p>*   disk: cloud disk.</p>
+     * <p>*   reservedinstance: reserved instance.</p>
+     * <p>*   ddh: dedicated host.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -125,8 +125,8 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The scope of the reserved instance. Valid values:</p>
      * <br>
-     * <p>*   Region: regional</p>
-     * <p>*   Zone: zonal</p>
+     * <p>*   Region: regional.</p>
+     * <p>*   Zone: zonal.</p>
      */
     @NameInMap("Scope")
     public String scope;
@@ -143,11 +143,11 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+     * <p>The bidding policy for pay-as-you-go instances. Valid values:</p>
      * <br>
-     * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance for which you specify the maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance whose price is based on the market price at the time of purchase. The market price can be equal to the price of a pay-as-you-go instance.</p>
+     * <p>*   NoSpot: The instance is a pay-as-you-go instance.</p>
+     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
+     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
      * <br>
      * <p>Default value: NoSpot.</p>
      * <br>
@@ -159,21 +159,21 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The category of the system disk. Valid values:</p>
      * <br>
-     * <p>*   cloud: basic disk</p>
-     * <p>*   cloud_efficiency: ultra disk</p>
-     * <p>*   cloud_ssd: standard SSD</p>
-     * <p>*   ephemeral_ssd: local SSD</p>
-     * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
+     * <p>*   cloud: basic disk.</p>
+     * <p>*   cloud_efficiency: ultra disk.</p>
+     * <p>*   cloud_ssd: standard SSD.</p>
+     * <p>*   ephemeral_ssd: local SSD.</p>
+     * <p>*   cloud_essd: enhanced SSD (ESSD).</p>
      * <br>
      * <p>Default value: cloud_efficiency.</p>
      * <br>
-     * <p>>  When the ResourceType parameter is set to instance and the DestinationResource parameter is set to DataDisk, you must set the SystemDiskCategory parameter. If you do not set this parameter, the default value takes effect.</p>
+     * <p>> When the ResourceType parameter is set to instance and the DestinationResource parameter is set to DataDisk, you must set the SystemDiskCategory parameter. If you do not set this parameter, the default value takes effect.</p>
      */
     @NameInMap("SystemDiskCategory")
     public String systemDiskCategory;
 
     /**
-     * <p>The ID of the zone for which to query resources.</p>
+     * <p>The ID of the zone where the instance resides.</p>
      * <br>
      * <p>This parameter is empty by default. When this parameter is empty, the system returns resources that match the other criteria in all zones within the region specified by `RegionId`.</p>
      */

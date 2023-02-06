@@ -11,7 +11,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
     public String failCount;
 
     /**
-     * <p>The name of the SSH key pair.</p>
+     * <p>The names of the key pairs.</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -93,7 +93,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The operation information returned. For example, when the value of `Code` is 200, the value of `Message` is `successful`.</p>
+         * <p>The result of the operation. For example, when the value of `Code` is 200, the value of `Message` is `successful`.</p>
          */
         @NameInMap("Message")
         public String message;

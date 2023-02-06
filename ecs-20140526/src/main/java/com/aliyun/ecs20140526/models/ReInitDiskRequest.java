@@ -21,7 +21,7 @@ public class ReInitDiskRequest extends TeaModel {
     /**
      * <p>The name of the key pair.</p>
      * <br>
-     * <p>>  The parameter is applicable only to Linux instances. You can bind an SSH key pair to an instance as the logon credential when you re-initialize its system disk. After the SSH key pair is bound, the username and password logon method is disabled for the instance.</p>
+     * <p>> The parameter is applicable only to Linux instances. You can bind an SSH key pair to an instance as the logon credential when you re-initialize the system disk of the instance. After the SSH key pair is bound, the username and password-based logon method is disabled for the instance.</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -29,45 +29,32 @@ public class ReInitDiskRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <p>RAM用户的虚拟账号ID。</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to reset the password of the instance when you re-initialize its system disk. The password must be 8 to 30 characters in length. It must include at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include</p>
+     * <p>Specifies whether to reset the password of the instance when you re-initialize its system disk. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
      * <br>
-     * <p>```</p>
+     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
      * <br>
-     * <p>( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /</p>
-     * <p>                                </p>
-     * <p>```</p>
+     * <p>For Windows instances, passwords cannot start with a forward slash (/).</p>
      * <br>
-     * <p>For a Windows instance, the password cannot start with a forward slash (/).</p>
-     * <br>
-     * <p>>  If the `Password` parameter is specified, we recommend that you send requests over HTTPS to secure your password.</p>
+     * <p>> If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.</p>
      */
     @NameInMap("Password")
     public String password;
 
-    /**
-     * <p>资源主账号的账号名称。</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>资源主账号的ID，亦即UID。</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
     /**
      * <p>Specifies whether to use Security Center for free after the system disk is re-initialized. Valid values:</p>
      * <br>
-     * <p>*   Active: Security Center is used for free after the system disk is replaced. This value is applicable only to public images.</p>
-     * <p>*   Deactive: Security Center is not used for free after the system disk is replaced. This value is applicable to all images.</p>
+     * <p>*   Active: uses Security Center for free after the system disk is re-initialized. This value is applicable only to public images.</p>
+     * <p>*   Deactive: does not use Security Center for free after the system disk is re-initialized. This value is applicable to all images.</p>
      * <br>
      * <p>Default value: Deactive.</p>
      */

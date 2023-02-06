@@ -57,7 +57,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The overall execution state of the command. The value of this parameter depends on the execution states of all involved instances. Valid values:</p>
+     * <p>The overall execution state of the command. The value of this parameter depends on the execution states on all involved instances. Valid values:</p>
      * <br>
      * <p>*   Running:</p>
      * <br>
@@ -124,15 +124,13 @@ public class DescribeInvocationsRequest extends TeaModel {
      * <p>*   NextRebootOnly: The command is automatically run the next time the instance starts.</p>
      * <p>*   EveryReboot: The command is automatically run every time the instance starts.</p>
      * <br>
-     * <p>This parameter is empty by default, which indicates that the commands in all the modes are queried.</p>
+     * <p>This parameter is empty by default, which indicates that commands run in all modes are queried.</p>
      */
     @NameInMap("RepeatMode")
     public String repeatMode;
 
     /**
-     * <p>The ID of the resource group to which the key pair belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
-     * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -144,7 +142,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the command.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInvocationsRequestTag> tag;
@@ -323,7 +321,7 @@ public class DescribeInvocationsRequest extends TeaModel {
 
     public static class DescribeInvocationsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
          * <br>
          * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
          * <br>
@@ -333,9 +331,7 @@ public class DescribeInvocationsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

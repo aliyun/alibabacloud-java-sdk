@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     /**
-     * <p>The number of SCUs to be purchased. Valid values: 1 to 20.</p>
+     * <p>The number of SCUs that you want to purchase. Valid values: 1 to 20.</p>
      * <br>
-     * <p>Default: 1.</p>
+     * <p>Default value: 1</p>
      */
     @NameInMap("Amount")
     public Integer amount;
@@ -19,7 +19,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public Integer capacity;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -31,7 +31,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>It is used to remark the request source. The default value is `OpenAPI`, and manual setting is unnecessary.</p>
+     * <p>The source of the request. The value is automatically set to OpenAPI and does not need to be changed. Default value: OpenAPI.</p>
      */
     @NameInMap("FromApp")
     public String fromApp;
@@ -71,7 +71,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the region in which to purchase the SCU. After this parameter is specified, the purchased SCUs can offset bills only of pay-as-you-go disks that reside in the specified region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to purchase the SCU. After this parameter is specified, the purchased SCU can offset bills of only pay-as-you-go disks that reside in the specified region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -91,7 +91,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The tags to be added to the SCU. You can specify up to 20 tags.</p>
+     * <p>The tags to add to the SCU.</p>
      */
     @NameInMap("Tag")
     public java.util.List<PurchaseStorageCapacityUnitRequestTag> tag;
@@ -223,17 +223,13 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
 
     public static class PurchaseStorageCapacityUnitRequestTag extends TeaModel {
         /**
-         * <p>The key of tag to be added to the SCU.</p>
-         * <br>
-         * <p>The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N. N indicates the number of tag keys that can be specified. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag to be added to the SCU.</p>
-         * <br>
-         * <p>The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.</p>
+         * <p>The value of tag N. N indicates the number of tag values that can be specified and corresponds to the N in `Tag.N.Key`. Valid values: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

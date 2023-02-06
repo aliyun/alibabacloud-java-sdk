@@ -18,7 +18,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance.</p>
      * <br>
-     * <p>>  This parameter is applicable only to pay-as-you-go instances. It can protect instances only against manual releases, but not against automatic releases.</p>
+     * <p>> This parameter is applicable to only pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
@@ -72,27 +72,23 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
      * <br>
-     * <p>```</p>
+     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
      * <br>
-     * <p>()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
-     * <p>                                </p>
-     * <p>```</p>
+     * <p>The password of a Windows instance cannot start with a forward slash (/).</p>
      * <br>
-     * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
-     * <br>
-     * <p>>  For security reasons, we recommend that you use HTTPS to send requests if the `Password` parameter is specified.</p>
+     * <p>> If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     * <p>> This parameter is in invitational preview and unavailable for general users.</p>
      */
     @NameInMap("Recyclable")
     public Boolean recyclable;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     * <p>> This parameter is in invitational preview and unavailable for general users.</p>
      */
     @NameInMap("RemoteConnectionOptions")
     public ModifyInstanceAttributeRequestRemoteConnectionOptions remoteConnectionOptions;
@@ -106,12 +102,12 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The IDs of replacement security groups.</p>
      * <br>
-     * <p>- All security group IDs must be unique.</p>
-     * <p>- The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, you must add the IDs of the current security groups to the list.</p>
-     * <p>- You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</p>
-     * <p>- The specified security group and instance must belong to the same virtual private cloud (VPC).</p>
-     * <p>- The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see [Limits](~~25412#SecurityGroupQuota1~~).</p>
-     * <p>- New security groups become valid for corresponding instances after a short latency.</p>
+     * <p>*   All security group IDs must be unique.</p>
+     * <p>*   The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, you must add the IDs of the current security groups to the list.</p>
+     * <p>*   You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</p>
+     * <p>*   The specified security group and instance must belong to the same virtual private cloud (VPC).</p>
+     * <p>*   The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).</p>
+     * <p>*   New security groups become valid for corresponding instances after a short latency.</p>
      */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
@@ -259,13 +255,13 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     public static class ModifyInstanceAttributeRequestRemoteConnectionOptions extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> This parameter is in invitational preview and unavailable for general users.</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> This parameter is in invitational preview and unavailable for general users.</p>
          */
         @NameInMap("Type")
         public String type;

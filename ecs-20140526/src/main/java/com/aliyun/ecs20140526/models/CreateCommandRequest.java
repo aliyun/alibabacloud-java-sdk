@@ -9,7 +9,7 @@ public class CreateCommandRequest extends TeaModel {
      * <br>
      * <p>*   The parameter value must be Base64-encoded and cannot exceed 18 KB in size.</p>
      * <br>
-     * <p>*   The command content can be specified by using custom parameters. To enable the custom parameter feature, you must set `EnableParameter` to true.</p>
+     * <p>*   Custom parameters can be added to the command. To enable the custom parameter feature, you must set `EnableParameter` to true.</p>
      * <br>
      * <p>    *   Custom parameters are defined in the `{{}}` format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.</p>
      * <p>    *   The number of custom parameters cannot exceed 20.</p>
@@ -22,7 +22,7 @@ public class CreateCommandRequest extends TeaModel {
      * <br>
      * <p>    *   `{{ACS::AccountId}}`: the UID of the Alibaba Cloud account.</p>
      * <br>
-     * <p>    *   `{{ACS::InstanceId}}`: the ID of the instance. If you want to run the command on multiple instances and specify `{{ACS::InstanceId}}` as a built-in environment parameter, make sure that the version of the Cloud Assistant client is not earlier than the following ones:</p>
+     * <p>    *   `{{ACS::InstanceId}}`: the ID of the instance. When the command is run on multiple instances, if you want to specify `{{ACS::InstanceId}}` as a built-in environment variable, make sure that the version of the Cloud Assistant client is not earlier than the following ones:</p>
      * <br>
      * <p>        *   Linux: 2.2.3.309</p>
      * <p>        *   Windows: 2.1.3.309</p>
@@ -32,7 +32,7 @@ public class CreateCommandRequest extends TeaModel {
      * <p>        *   Linux: 2.2.3.344</p>
      * <p>        *   Windows: 2.1.3.344</p>
      * <br>
-     * <p>    *   `{{ACS::InvokeId}}`: the ID of the command execution task. If you want to specify `{{ACS::InvokeId}}` as a built-in environment parameter, make sure that the version of the Cloud Assistant client is not earlier than the following ones:</p>
+     * <p>    *   `{{ACS::InvokeId}}`: the ID of the command task. If you want to specify `{{ACS::InvokeId}}` as a built-in environment variable, make sure that the version of the Cloud Assistant client is not earlier than the following one:</p>
      * <br>
      * <p>        *   Linux: 2.2.3.309</p>
      * <p>        *   Windows: 2.1.3.309</p>
@@ -53,7 +53,7 @@ public class CreateCommandRequest extends TeaModel {
      * <br>
      * <p>Default value: Base64.</p>
      * <br>
-     * <p>>  If the specified value of this parameter is invalid, Base64 is used by default.</p>
+     * <p>> If the specified value of this parameter is invalid, Base64 is used by default.</p>
      */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
@@ -96,6 +96,9 @@ public class CreateCommandRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags to add to the command.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateCommandRequestTag> tag;
 
@@ -108,7 +111,7 @@ public class CreateCommandRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>The type of the command. Valid values:</p>
+     * <p>The command type. Valid values:</p>
      * <br>
      * <p>*   RunBatScript: batch commands. These commands are applicable to Windows instances.</p>
      * <p>*   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.</p>
@@ -122,8 +125,8 @@ public class CreateCommandRequest extends TeaModel {
      * <br>
      * <p>Default value:</p>
      * <br>
-     * <p>*   Linux instance: the home directory of the root user, which is the `/root` directory.</p>
-     * <p>*   Windows instance: the directory where the Cloud Assistant client process resides, such as `C:\Windows\System32\`.</p>
+     * <p>*   For Linux instances, the default value is the home directory of the root user, which is the `/root` directory.</p>
+     * <p>*   For Windows instances, the default value is the directory where the Cloud Assistant client process resides. Example: `C:\Windows\System32\`.</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;
@@ -246,9 +249,21 @@ public class CreateCommandRequest extends TeaModel {
     }
 
     public static class CreateCommandRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <br>
+         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

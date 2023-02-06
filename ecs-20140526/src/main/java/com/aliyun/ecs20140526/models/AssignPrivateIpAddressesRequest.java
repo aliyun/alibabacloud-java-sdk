@@ -11,13 +11,13 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The list of the IPv4 prefixes.</p>
+     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
     /**
-     * <p>The count of IPv4 prefixes.</p>
+     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
      */
     @NameInMap("Ipv4PrefixCount")
     public Integer ipv4PrefixCount;
@@ -35,12 +35,12 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Secondary private IP addresses, which is selected from within the CIDR block of the vSwitch.</p>
+     * <p>Secondary private IP address N, which is selected from within the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:</p>
      * <br>
-     * <p>*   When the ENI is in the Available (`Available`) state, you can enter at most 10 addresses.</p>
-     * <p>*   When the ENI is in the Bound (`InUse`) state, the valid values of N are subject to the instance type. For more information, see [Instance families](~~25378~~).</p>
+     * <p>*   When the ENI is in the Available (`Available`) state, the valid values of N are 1 to 32.</p>
+     * <p>*   When the ENI is in the InUse (`InUse`) state, the valid values of N are subject to the instance type. For more information, see [Instance families](~~25378~~).</p>
      * <br>
-     * <p>>  To assign secondary private IP addresses, you must specify `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` but not both.</p>
+     * <p>To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.</p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
@@ -58,9 +58,9 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The number of private IP addresses to be automatically assigned from within the CIDR block of the vSwitch.</p>
+     * <p>The number of private IP addresses to be automatically assigned from within the CIDR block of the vSwitch that is connected to the ENI.</p>
      * <br>
-     * <p>To assign secondary private IP addresses, you must specify `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` but not both.</p>
+     * <p>To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.</p>
      */
     @NameInMap("SecondaryPrivateIpAddressCount")
     public Integer secondaryPrivateIpAddressCount;

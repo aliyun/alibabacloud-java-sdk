@@ -135,7 +135,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         public Integer intranetTX;
 
         /**
-         * <p>The timestamp of monitoring data query.</p>
+         * <p>The timestamp of the monitoring data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

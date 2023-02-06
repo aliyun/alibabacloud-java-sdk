@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelCopyImageRequest extends TeaModel {
     /**
-     * <p>The ID of the image being copied.</p>
+     * <p>The ID of the image that is being copied.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
