@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The return data.</p>
+     */
     @NameInMap("Data")
     public QuerySavingsPlansInstanceResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +80,15 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansInstanceResponseBodyDataItemsTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,9 +116,19 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansInstanceResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The allocation status. Valid values:</p>
+         * <br>
+         * <p>*   unallocated</p>
+         * <p>*   allocated</p>
+         * <p>*   beAllocated</p>
+         */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
+        /**
+         * <p>The currency. Valid values: CNY and USD.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
@@ -107,15 +138,24 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         @NameInMap("DeductCycleType")
         public String deductCycleType;
 
+        /**
+         * <p>The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
         @NameInMap("EndTimestamp")
         public Long endTimestamp;
 
+        /**
+         * <p>The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.</p>
+         */
         @NameInMap("InstanceFamily")
         public String instanceFamily;
 
+        /**
+         * <p>The ID of the savings plan instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -125,36 +165,77 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         @NameInMap("LastBillUtilization")
         public String lastBillUtilization;
 
+        /**
+         * <p>The payment type. Valid values:</p>
+         * <br>
+         * <p>*   total: All Upfront</p>
+         * <p>*   half: Partial Upfront</p>
+         * <p>*   zero: No Upfront</p>
+         */
         @NameInMap("PayMode")
         public String payMode;
 
+        /**
+         * <p>The commitment.</p>
+         */
         @NameInMap("PoolValue")
         public String poolValue;
 
+        /**
+         * <p>The prepaid amount.</p>
+         */
         @NameInMap("PrepayFee")
         public String prepayFee;
 
+        /**
+         * <p>The region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The type of the savings plan. Valid values:</p>
+         * <br>
+         * <p>*   universal: general-purpose</p>
+         * <p>*   ecs: ECS compute</p>
+         */
         @NameInMap("SavingsType")
         public String savingsType;
 
+        /**
+         * <p>The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
         @NameInMap("StartTimestamp")
         public Long startTimestamp;
 
+        /**
+         * <p>The status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL: normal</p>
+         * <p>*   LIMIT: stopped due to overdue payment</p>
+         * <p>*   RELEASE: released</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The details about the tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> tags;
 
+        /**
+         * <p>The total amount that is saved.</p>
+         */
         @NameInMap("TotalSave")
         public String totalSave;
 
+        /**
+         * <p>The total usage.</p>
+         */
         @NameInMap("Utilization")
         public String utilization;
 
@@ -334,15 +415,27 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The details about the instances.</p>
+         */
         @NameInMap("Items")
         public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItems> items;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

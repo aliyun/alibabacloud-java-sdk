@@ -3,12 +3,12 @@ package com.aliyun.bssopenapi20171214.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody extends TeaModel {
+public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData data;
+    public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
@@ -19,12 +19,12 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
     @NameInMap("Success")
     public Boolean success;
 
-    public static DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody self = new DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody();
+    public static DescribeInstanceAmortizedCostByConsumePeriodResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInstanceAmortizedCostByConsumePeriodResponseBody self = new DescribeInstanceAmortizedCostByConsumePeriodResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody setCode(String code) {
+    public DescribeInstanceAmortizedCostByConsumePeriodResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,15 +32,15 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         return this.code;
     }
 
-    public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody setData(DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData data) {
+    public DescribeInstanceAmortizedCostByConsumePeriodResponseBody setData(DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData getData() {
+    public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData getData() {
         return this.data;
     }
 
-    public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody setMessage(String message) {
+    public DescribeInstanceAmortizedCostByConsumePeriodResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         return this.message;
     }
 
-    public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody setRequestId(String requestId) {
+    public DescribeInstanceAmortizedCostByConsumePeriodResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         return this.requestId;
     }
 
-    public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody setSuccess(Boolean success) {
+    public DescribeInstanceAmortizedCostByConsumePeriodResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -64,7 +64,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         return this.success;
     }
 
-    public static class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems extends TeaModel {
+    public static class DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems extends TeaModel {
         @NameInMap("AmortizationPeriod")
         public String amortizationPeriod;
 
@@ -239,12 +239,12 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         @NameInMap("Zone")
         public String zone;
 
-        public static DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems self = new DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems();
+        public static DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems self = new DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setAmortizationPeriod(String amortizationPeriod) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setAmortizationPeriod(String amortizationPeriod) {
             this.amortizationPeriod = amortizationPeriod;
             return this;
         }
@@ -252,7 +252,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.amortizationPeriod;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setAmortizationStatus(String amortizationStatus) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setAmortizationStatus(String amortizationStatus) {
             this.amortizationStatus = amortizationStatus;
             return this;
         }
@@ -260,7 +260,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.amortizationStatus;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setBillAccountID(Long billAccountID) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setBillAccountID(Long billAccountID) {
             this.billAccountID = billAccountID;
             return this;
         }
@@ -268,7 +268,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.billAccountID;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setBillAccountName(String billAccountName) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setBillAccountName(String billAccountName) {
             this.billAccountName = billAccountName;
             return this;
         }
@@ -276,7 +276,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.billAccountName;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setBillOwnerID(Long billOwnerID) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setBillOwnerID(Long billOwnerID) {
             this.billOwnerID = billOwnerID;
             return this;
         }
@@ -284,7 +284,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.billOwnerID;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setBillOwnerName(String billOwnerName) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setBillOwnerName(String billOwnerName) {
             this.billOwnerName = billOwnerName;
             return this;
         }
@@ -292,7 +292,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.billOwnerName;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setBizType(String bizType) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setBizType(String bizType) {
             this.bizType = bizType;
             return this;
         }
@@ -300,7 +300,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.bizType;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setConsumePeriod(String consumePeriod) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setConsumePeriod(String consumePeriod) {
             this.consumePeriod = consumePeriod;
             return this;
         }
@@ -308,7 +308,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.consumePeriod;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCostUnit(String costUnit) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCostUnit(String costUnit) {
             this.costUnit = costUnit;
             return this;
         }
@@ -316,7 +316,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.costUnit;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCostUnitCode(String costUnitCode) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCostUnitCode(String costUnitCode) {
             this.costUnitCode = costUnitCode;
             return this;
         }
@@ -324,7 +324,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.costUnitCode;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationDeductedByCashCoupons(Double currentAmortizationDeductedByCashCoupons) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCurrentAmortizationDeductedByCashCoupons(Double currentAmortizationDeductedByCashCoupons) {
             this.currentAmortizationDeductedByCashCoupons = currentAmortizationDeductedByCashCoupons;
             return this;
         }
@@ -332,7 +332,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.currentAmortizationDeductedByCashCoupons;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationDeductedByCoupons(Double currentAmortizationDeductedByCoupons) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCurrentAmortizationDeductedByCoupons(Double currentAmortizationDeductedByCoupons) {
             this.currentAmortizationDeductedByCoupons = currentAmortizationDeductedByCoupons;
             return this;
         }
@@ -340,7 +340,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.currentAmortizationDeductedByCoupons;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationDeductedByPrepaidCard(Double currentAmortizationDeductedByPrepaidCard) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCurrentAmortizationDeductedByPrepaidCard(Double currentAmortizationDeductedByPrepaidCard) {
             this.currentAmortizationDeductedByPrepaidCard = currentAmortizationDeductedByPrepaidCard;
             return this;
         }
@@ -348,7 +348,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.currentAmortizationDeductedByPrepaidCard;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationExpenditureAmount(Double currentAmortizationExpenditureAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCurrentAmortizationExpenditureAmount(Double currentAmortizationExpenditureAmount) {
             this.currentAmortizationExpenditureAmount = currentAmortizationExpenditureAmount;
             return this;
         }
@@ -356,7 +356,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.currentAmortizationExpenditureAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationInvoiceDiscount(Double currentAmortizationInvoiceDiscount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCurrentAmortizationInvoiceDiscount(Double currentAmortizationInvoiceDiscount) {
             this.currentAmortizationInvoiceDiscount = currentAmortizationInvoiceDiscount;
             return this;
         }
@@ -364,7 +364,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.currentAmortizationInvoiceDiscount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationPretaxAmount(Double currentAmortizationPretaxAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCurrentAmortizationPretaxAmount(Double currentAmortizationPretaxAmount) {
             this.currentAmortizationPretaxAmount = currentAmortizationPretaxAmount;
             return this;
         }
@@ -372,7 +372,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.currentAmortizationPretaxAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationPretaxGrossAmount(Double currentAmortizationPretaxGrossAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCurrentAmortizationPretaxGrossAmount(Double currentAmortizationPretaxGrossAmount) {
             this.currentAmortizationPretaxGrossAmount = currentAmortizationPretaxGrossAmount;
             return this;
         }
@@ -380,7 +380,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.currentAmortizationPretaxGrossAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setCurrentAmortizationRoundDownDiscount(Double currentAmortizationRoundDownDiscount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setCurrentAmortizationRoundDownDiscount(Double currentAmortizationRoundDownDiscount) {
             this.currentAmortizationRoundDownDiscount = currentAmortizationRoundDownDiscount;
             return this;
         }
@@ -388,7 +388,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.currentAmortizationRoundDownDiscount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setDeductedByCashCoupons(Double deductedByCashCoupons) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setDeductedByCashCoupons(Double deductedByCashCoupons) {
             this.deductedByCashCoupons = deductedByCashCoupons;
             return this;
         }
@@ -396,7 +396,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.deductedByCashCoupons;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setDeductedByCoupons(Double deductedByCoupons) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setDeductedByCoupons(Double deductedByCoupons) {
             this.deductedByCoupons = deductedByCoupons;
             return this;
         }
@@ -404,7 +404,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.deductedByCoupons;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setDeductedByPrepaidCard(Double deductedByPrepaidCard) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setDeductedByPrepaidCard(Double deductedByPrepaidCard) {
             this.deductedByPrepaidCard = deductedByPrepaidCard;
             return this;
         }
@@ -412,7 +412,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.deductedByPrepaidCard;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setExpenditureAmount(Double expenditureAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setExpenditureAmount(Double expenditureAmount) {
             this.expenditureAmount = expenditureAmount;
             return this;
         }
@@ -420,7 +420,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.expenditureAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setInstanceID(String instanceID) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setInstanceID(String instanceID) {
             this.instanceID = instanceID;
             return this;
         }
@@ -428,7 +428,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.instanceID;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setInternetIP(String internetIP) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setInternetIP(String internetIP) {
             this.internetIP = internetIP;
             return this;
         }
@@ -436,7 +436,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.internetIP;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setIntranetIP(String intranetIP) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setIntranetIP(String intranetIP) {
             this.intranetIP = intranetIP;
             return this;
         }
@@ -444,7 +444,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.intranetIP;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setInvoiceDiscount(Double invoiceDiscount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setInvoiceDiscount(Double invoiceDiscount) {
             this.invoiceDiscount = invoiceDiscount;
             return this;
         }
@@ -452,7 +452,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.invoiceDiscount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPretaxAmount(Double pretaxAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPretaxAmount(Double pretaxAmount) {
             this.pretaxAmount = pretaxAmount;
             return this;
         }
@@ -460,7 +460,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.pretaxAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPretaxGrossAmount(Double pretaxGrossAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPretaxGrossAmount(Double pretaxGrossAmount) {
             this.pretaxGrossAmount = pretaxGrossAmount;
             return this;
         }
@@ -468,7 +468,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.pretaxGrossAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedDeductedByCashCoupons(Double previouslyAmortizedDeductedByCashCoupons) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPreviouslyAmortizedDeductedByCashCoupons(Double previouslyAmortizedDeductedByCashCoupons) {
             this.previouslyAmortizedDeductedByCashCoupons = previouslyAmortizedDeductedByCashCoupons;
             return this;
         }
@@ -476,7 +476,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.previouslyAmortizedDeductedByCashCoupons;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedDeductedByCoupons(Double previouslyAmortizedDeductedByCoupons) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPreviouslyAmortizedDeductedByCoupons(Double previouslyAmortizedDeductedByCoupons) {
             this.previouslyAmortizedDeductedByCoupons = previouslyAmortizedDeductedByCoupons;
             return this;
         }
@@ -484,7 +484,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.previouslyAmortizedDeductedByCoupons;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedDeductedByPrepaidCard(Double previouslyAmortizedDeductedByPrepaidCard) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPreviouslyAmortizedDeductedByPrepaidCard(Double previouslyAmortizedDeductedByPrepaidCard) {
             this.previouslyAmortizedDeductedByPrepaidCard = previouslyAmortizedDeductedByPrepaidCard;
             return this;
         }
@@ -492,7 +492,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.previouslyAmortizedDeductedByPrepaidCard;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedExpenditureAmount(Double previouslyAmortizedExpenditureAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPreviouslyAmortizedExpenditureAmount(Double previouslyAmortizedExpenditureAmount) {
             this.previouslyAmortizedExpenditureAmount = previouslyAmortizedExpenditureAmount;
             return this;
         }
@@ -500,7 +500,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.previouslyAmortizedExpenditureAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedInvoiceDiscount(Double previouslyAmortizedInvoiceDiscount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPreviouslyAmortizedInvoiceDiscount(Double previouslyAmortizedInvoiceDiscount) {
             this.previouslyAmortizedInvoiceDiscount = previouslyAmortizedInvoiceDiscount;
             return this;
         }
@@ -508,7 +508,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.previouslyAmortizedInvoiceDiscount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedPretaxAmount(Double previouslyAmortizedPretaxAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPreviouslyAmortizedPretaxAmount(Double previouslyAmortizedPretaxAmount) {
             this.previouslyAmortizedPretaxAmount = previouslyAmortizedPretaxAmount;
             return this;
         }
@@ -516,7 +516,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.previouslyAmortizedPretaxAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedPretaxGrossAmount(Double previouslyAmortizedPretaxGrossAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPreviouslyAmortizedPretaxGrossAmount(Double previouslyAmortizedPretaxGrossAmount) {
             this.previouslyAmortizedPretaxGrossAmount = previouslyAmortizedPretaxGrossAmount;
             return this;
         }
@@ -524,7 +524,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.previouslyAmortizedPretaxGrossAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setPreviouslyAmortizedRoundDownDiscount(Double previouslyAmortizedRoundDownDiscount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setPreviouslyAmortizedRoundDownDiscount(Double previouslyAmortizedRoundDownDiscount) {
             this.previouslyAmortizedRoundDownDiscount = previouslyAmortizedRoundDownDiscount;
             return this;
         }
@@ -532,7 +532,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.previouslyAmortizedRoundDownDiscount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setProductCode(String productCode) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setProductCode(String productCode) {
             this.productCode = productCode;
             return this;
         }
@@ -540,7 +540,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.productCode;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setProductDetail(String productDetail) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setProductDetail(String productDetail) {
             this.productDetail = productDetail;
             return this;
         }
@@ -548,7 +548,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.productDetail;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setProductDetailCode(String productDetailCode) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setProductDetailCode(String productDetailCode) {
             this.productDetailCode = productDetailCode;
             return this;
         }
@@ -556,7 +556,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.productDetailCode;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setProductName(String productName) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setProductName(String productName) {
             this.productName = productName;
             return this;
         }
@@ -564,7 +564,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.productName;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRegion(String region) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRegion(String region) {
             this.region = region;
             return this;
         }
@@ -572,7 +572,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.region;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationDeductedByCashCoupons(Double remainingAmortizationDeductedByCashCoupons) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRemainingAmortizationDeductedByCashCoupons(Double remainingAmortizationDeductedByCashCoupons) {
             this.remainingAmortizationDeductedByCashCoupons = remainingAmortizationDeductedByCashCoupons;
             return this;
         }
@@ -580,7 +580,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.remainingAmortizationDeductedByCashCoupons;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationDeductedByCoupons(Double remainingAmortizationDeductedByCoupons) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRemainingAmortizationDeductedByCoupons(Double remainingAmortizationDeductedByCoupons) {
             this.remainingAmortizationDeductedByCoupons = remainingAmortizationDeductedByCoupons;
             return this;
         }
@@ -588,7 +588,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.remainingAmortizationDeductedByCoupons;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationDeductedByPrepaidCard(Double remainingAmortizationDeductedByPrepaidCard) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRemainingAmortizationDeductedByPrepaidCard(Double remainingAmortizationDeductedByPrepaidCard) {
             this.remainingAmortizationDeductedByPrepaidCard = remainingAmortizationDeductedByPrepaidCard;
             return this;
         }
@@ -596,7 +596,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.remainingAmortizationDeductedByPrepaidCard;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationExpenditureAmount(Double remainingAmortizationExpenditureAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRemainingAmortizationExpenditureAmount(Double remainingAmortizationExpenditureAmount) {
             this.remainingAmortizationExpenditureAmount = remainingAmortizationExpenditureAmount;
             return this;
         }
@@ -604,7 +604,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.remainingAmortizationExpenditureAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationInvoiceDiscount(Double remainingAmortizationInvoiceDiscount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRemainingAmortizationInvoiceDiscount(Double remainingAmortizationInvoiceDiscount) {
             this.remainingAmortizationInvoiceDiscount = remainingAmortizationInvoiceDiscount;
             return this;
         }
@@ -612,7 +612,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.remainingAmortizationInvoiceDiscount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationPretaxAmount(Double remainingAmortizationPretaxAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRemainingAmortizationPretaxAmount(Double remainingAmortizationPretaxAmount) {
             this.remainingAmortizationPretaxAmount = remainingAmortizationPretaxAmount;
             return this;
         }
@@ -620,7 +620,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.remainingAmortizationPretaxAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationPretaxGrossAmount(Double remainingAmortizationPretaxGrossAmount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRemainingAmortizationPretaxGrossAmount(Double remainingAmortizationPretaxGrossAmount) {
             this.remainingAmortizationPretaxGrossAmount = remainingAmortizationPretaxGrossAmount;
             return this;
         }
@@ -628,7 +628,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.remainingAmortizationPretaxGrossAmount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRemainingAmortizationRoundDownDiscount(Double remainingAmortizationRoundDownDiscount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRemainingAmortizationRoundDownDiscount(Double remainingAmortizationRoundDownDiscount) {
             this.remainingAmortizationRoundDownDiscount = remainingAmortizationRoundDownDiscount;
             return this;
         }
@@ -636,7 +636,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.remainingAmortizationRoundDownDiscount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setResourceGroup(String resourceGroup) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setResourceGroup(String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
@@ -644,7 +644,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.resourceGroup;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setRoundDownDiscount(Double roundDownDiscount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setRoundDownDiscount(Double roundDownDiscount) {
             this.roundDownDiscount = roundDownDiscount;
             return this;
         }
@@ -652,7 +652,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.roundDownDiscount;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setSplitAccountName(String splitAccountName) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setSplitAccountName(String splitAccountName) {
             this.splitAccountName = splitAccountName;
             return this;
         }
@@ -660,7 +660,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.splitAccountName;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setSplitItemID(String splitItemID) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setSplitItemID(String splitItemID) {
             this.splitItemID = splitItemID;
             return this;
         }
@@ -668,7 +668,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.splitItemID;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setSplitItemName(String splitItemName) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setSplitItemName(String splitItemName) {
             this.splitItemName = splitItemName;
             return this;
         }
@@ -676,7 +676,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.splitItemName;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setSplitProductDetail(String splitProductDetail) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setSplitProductDetail(String splitProductDetail) {
             this.splitProductDetail = splitProductDetail;
             return this;
         }
@@ -684,7 +684,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.splitProductDetail;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setSubscriptionType(String subscriptionType) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setSubscriptionType(String subscriptionType) {
             this.subscriptionType = subscriptionType;
             return this;
         }
@@ -692,7 +692,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.subscriptionType;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setTag(String tag) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setTag(String tag) {
             this.tag = tag;
             return this;
         }
@@ -700,7 +700,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.tag;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems setZone(String zone) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems setZone(String zone) {
             this.zone = zone;
             return this;
         }
@@ -710,7 +710,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
 
     }
 
-    public static class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData extends TeaModel {
+    public static class DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData extends TeaModel {
         @NameInMap("AccountID")
         public String accountID;
 
@@ -718,7 +718,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         public String accountName;
 
         @NameInMap("Items")
-        public java.util.List<DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems> items;
+        public java.util.List<DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems> items;
 
         @NameInMap("MaxResults")
         public Integer maxResults;
@@ -729,12 +729,12 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        public static DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData self = new DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData();
+        public static DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData self = new DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData setAccountID(String accountID) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData setAccountID(String accountID) {
             this.accountID = accountID;
             return this;
         }
@@ -742,7 +742,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.accountID;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData setAccountName(String accountName) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData setAccountName(String accountName) {
             this.accountName = accountName;
             return this;
         }
@@ -750,15 +750,15 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.accountName;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData setItems(java.util.List<DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems> items) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData setItems(java.util.List<DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems> items) {
             this.items = items;
             return this;
         }
-        public java.util.List<DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems> getItems() {
+        public java.util.List<DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems> getItems() {
             return this.items;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData setMaxResults(Integer maxResults) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData setMaxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
@@ -766,7 +766,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.maxResults;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData setNextToken(String nextToken) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData setNextToken(String nextToken) {
             this.nextToken = nextToken;
             return this;
         }
@@ -774,7 +774,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             return this.nextToken;
         }
 
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData setTotalCount(Integer totalCount) {
+        public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }

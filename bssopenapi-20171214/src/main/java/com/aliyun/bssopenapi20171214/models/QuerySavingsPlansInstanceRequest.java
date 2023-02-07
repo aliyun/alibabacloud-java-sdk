@@ -4,21 +4,42 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySavingsPlansInstanceRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the savings plan instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language of the return data. Valid values:</p>
+     * <br>
+     * <p>*   ZH: Chinese</p>
+     * <p>*   EN: English</p>
+     */
     @NameInMap("Locale")
     public String locale;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -87,9 +108,15 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
     }
 
     public static class QuerySavingsPlansInstanceRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag to query.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag to query.</p>
+         */
         @NameInMap("Value")
         public String value;
 

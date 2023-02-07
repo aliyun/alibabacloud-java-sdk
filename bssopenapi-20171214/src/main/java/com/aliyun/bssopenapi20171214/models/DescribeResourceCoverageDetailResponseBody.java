@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeResourceCoverageDetailResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,63 +80,123 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceCoverageDetailResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
+         */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The name and billing method of the service.</p>
+         */
         @NameInMap("CommodityName")
         public String commodityName;
 
+        /**
+         * <p>The coverage rate of a deduction plan.</p>
+         */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
+        /**
+         * <p>The currency in which deduction plans were priced.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The amount of the resources deducted from a deduction plan.</p>
+         */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
+        /**
+         * <p>The end of the time range in which the coverage details were queried.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of a pay-as-you-go instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The specifications of a deduction plan.</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The amount of the bill.</p>
+         */
         @NameInMap("PaymentAmount")
         public Float paymentAmount;
 
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The code of the region.</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The beginning of the time range in which the coverage details were queried.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The total amount of resources consumed.</p>
+         */
         @NameInMap("TotalQuantity")
         public Float totalQuantity;
 
+        /**
+         * <p>The ID of the account.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The code of the zone.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 
+        /**
+         * <p>The zone.</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 
@@ -293,15 +368,27 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceCoverageDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The data entries.</p>
+         */
         @NameInMap("Items")
         public java.util.List<DescribeResourceCoverageDetailResponseBodyDataItems> items;
 
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token of the next page.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

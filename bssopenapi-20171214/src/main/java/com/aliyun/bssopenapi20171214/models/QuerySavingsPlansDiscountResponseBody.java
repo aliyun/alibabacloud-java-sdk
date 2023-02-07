@@ -7,7 +7,9 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("Data")
     public QuerySavingsPlansDiscountResponseBodyData data;
 

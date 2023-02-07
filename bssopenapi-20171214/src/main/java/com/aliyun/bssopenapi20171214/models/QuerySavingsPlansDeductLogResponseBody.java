@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The return data.</p>
+     */
     @NameInMap("Data")
     public QuerySavingsPlansDeductLogResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,39 +80,75 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansDeductLogResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The billable item for which the fee is deducted.</p>
+         */
         @NameInMap("BillModule")
         public String billModule;
 
+        /**
+         * <p>The service for which the fee is deducted.</p>
+         */
         @NameInMap("DeductCommodity")
         public String deductCommodity;
 
+        /**
+         * <p>The deducted amount.</p>
+         */
         @NameInMap("DeductFee")
         public String deductFee;
 
+        /**
+         * <p>The ID of the instance for which the fee is deducted.</p>
+         */
         @NameInMap("DeductInstanceId")
         public String deductInstanceId;
 
+        /**
+         * <p>The deduction rate.</p>
+         */
         @NameInMap("DeductRate")
         public String deductRate;
 
+        /**
+         * <p>The discount used for the current deduction.</p>
+         */
         @NameInMap("DiscountRate")
         public String discountRate;
 
+        /**
+         * <p>The end of the billing cycle for which the fee is deducted.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the savings plan instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        /**
+         * <p>The type of the savings plan. Valid values:</p>
+         * <br>
+         * <p>*   universal: general-purpose</p>
+         * <p>*   ecs: ECS compute</p>
+         */
         @NameInMap("SavingsType")
         public String savingsType;
 
+        /**
+         * <p>The beginning of the billing cycle for which the fee is deducted. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
@@ -205,15 +256,27 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansDeductLogResponseBodyData extends TeaModel {
+        /**
+         * <p>The deduction details.</p>
+         */
         @NameInMap("Items")
         public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

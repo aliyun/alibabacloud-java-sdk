@@ -13,7 +13,9 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -217,7 +219,9 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         @NameInMap("CskuPriceList")
         public java.util.List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceList> cskuPriceList;
 
-        // sku code
+        /**
+         * <p>sku code</p>
+         */
         @NameInMap("SkuCode")
         public String skuCode;
 

@@ -902,6 +902,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceAmortizedCostByAmortizationPeriodWithOptions(request, runtime);
     }
 
+    public DescribeInstanceAmortizedCostByConsumePeriodResponse describeInstanceAmortizedCostByConsumePeriodWithOptions(DescribeInstanceAmortizedCostByConsumePeriodRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amortizationPeriodFilter)) {
+            body.put("AmortizationPeriodFilter", request.amortizationPeriodFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billOwnerIdList)) {
+            body.put("BillOwnerIdList", request.billOwnerIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billUserIdList)) {
+            body.put("BillUserIdList", request.billUserIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billingCycle)) {
+            body.put("BillingCycle", request.billingCycle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.costUnitCode)) {
+            body.put("CostUnitCode", request.costUnitCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
+            body.put("InstanceIdList", request.instanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productDetail)) {
+            body.put("ProductDetail", request.productDetail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionType)) {
+            body.put("SubscriptionType", request.subscriptionType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceAmortizedCostByConsumePeriod"),
+            new TeaPair("version", "2017-12-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceAmortizedCostByConsumePeriodResponse());
+    }
+
+    public DescribeInstanceAmortizedCostByConsumePeriodResponse describeInstanceAmortizedCostByConsumePeriod(DescribeInstanceAmortizedCostByConsumePeriodRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInstanceAmortizedCostByConsumePeriodWithOptions(request, runtime);
+    }
+
     public DescribeInstanceBillResponse describeInstanceBillWithOptions(DescribeInstanceBillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1085,6 +1154,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeProductAmortizedCostByAmortizationPeriodWithOptions(request, runtime);
     }
 
+    public DescribeProductAmortizedCostByConsumePeriodResponse describeProductAmortizedCostByConsumePeriodWithOptions(DescribeProductAmortizedCostByConsumePeriodRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amortizationPeriodFilter)) {
+            body.put("AmortizationPeriodFilter", request.amortizationPeriodFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billOwnerIdList)) {
+            body.put("BillOwnerIdList", request.billOwnerIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billUserIdList)) {
+            body.put("BillUserIdList", request.billUserIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billingCycle)) {
+            body.put("BillingCycle", request.billingCycle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.costUnitCode)) {
+            body.put("CostUnitCode", request.costUnitCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productDetail)) {
+            body.put("ProductDetail", request.productDetail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionType)) {
+            body.put("SubscriptionType", request.subscriptionType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeProductAmortizedCostByConsumePeriod"),
+            new TeaPair("version", "2017-12-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeProductAmortizedCostByConsumePeriodResponse());
+    }
+
+    public DescribeProductAmortizedCostByConsumePeriodResponse describeProductAmortizedCostByConsumePeriod(DescribeProductAmortizedCostByConsumePeriodRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeProductAmortizedCostByConsumePeriodWithOptions(request, runtime);
+    }
+
+    /**
+      * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
+      * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
+      * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
+      *
+      * @param request DescribeResourceCoverageDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeResourceCoverageDetailResponse
+     */
     public DescribeResourceCoverageDetailResponse describeResourceCoverageDetailWithOptions(DescribeResourceCoverageDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1133,11 +1276,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeResourceCoverageDetailResponse());
     }
 
+    /**
+      * 1\\. The queried coverage details are the same as those displayed in the table on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
+      * 2\\. You can call this operation to query the coverage details of RIs or SCUs.
+      * 3\\. You can call this operation to query coverage details at an hourly, daily, or monthly granularity.
+      *
+      * @param request DescribeResourceCoverageDetailRequest
+      * @return DescribeResourceCoverageDetailResponse
+     */
     public DescribeResourceCoverageDetailResponse describeResourceCoverageDetail(DescribeResourceCoverageDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeResourceCoverageDetailWithOptions(request, runtime);
     }
 
+    /**
+      * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
+      * You can call this operation to query the total coverage data of RIs or SCUs.
+      *
+      * @param request DescribeResourceCoverageTotalRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeResourceCoverageTotalResponse
+     */
     public DescribeResourceCoverageTotalResponse describeResourceCoverageTotalWithOptions(DescribeResourceCoverageTotalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1178,6 +1337,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeResourceCoverageTotalResponse());
     }
 
+    /**
+      * The queried total coverage data is the same as the aggregated data displayed on the Coverage tab of the Manage Reserved Instances page in the Billing Management console.
+      * You can call this operation to query the total coverage data of RIs or SCUs.
+      *
+      * @param request DescribeResourceCoverageTotalRequest
+      * @return DescribeResourceCoverageTotalResponse
+     */
     public DescribeResourceCoverageTotalResponse describeResourceCoverageTotal(DescribeResourceCoverageTotalRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeResourceCoverageTotalWithOptions(request, runtime);
@@ -4346,6 +4512,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopMode)) {
+            query.put("StopMode", request.stopMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

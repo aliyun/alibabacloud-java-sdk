@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceUsageDetailResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeResourceUsageDetailResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,72 +80,141 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceUsageDetailResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
+         */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
+        /**
+         * <p>The currency in which deduction plans were priced.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The amount of the resources deducted from deduction plans.</p>
+         */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
+        /**
+         * <p>The end of the time range in which the usage details were queried.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The operating system.</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 
+        /**
+         * <p>The specifications of a deduction plan.</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The equivalent of pay-as-you-go costs.</p>
+         */
         @NameInMap("PostpaidCost")
         public String postpaidCost;
 
+        /**
+         * <p>The potential net savings.</p>
+         */
         @NameInMap("PotentialSavedCost")
         public String potentialSavedCost;
 
+        /**
+         * <p>The number of deduction plans.</p>
+         */
         @NameInMap("Quantity")
         public Long quantity;
 
+        /**
+         * <p>The region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The code of the region.</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The fee of purchased deduction plans.</p>
+         */
         @NameInMap("ReservationCost")
         public String reservationCost;
 
+        /**
+         * <p>The ID of a deduction plan.</p>
+         */
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
+        /**
+         * <p>The net savings.</p>
+         */
         @NameInMap("SavedCost")
         public String savedCost;
 
+        /**
+         * <p>The beginning of the time range in which the usage details were queried.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the deduction plan.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the state.</p>
+         */
         @NameInMap("StatusName")
         public String statusName;
 
+        /**
+         * <p>The total capacity of deduction plans.</p>
+         */
         @NameInMap("TotalQuantity")
         public Float totalQuantity;
 
+        /**
+         * <p>The usage of deduction plans.</p>
+         */
         @NameInMap("UsagePercentage")
         public Float usagePercentage;
 
+        /**
+         * <p>The ID of the account.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The code of the zone.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 
+        /**
+         * <p>The zone.</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 
@@ -326,15 +410,27 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceUsageDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The data entries.</p>
+         */
         @NameInMap("Items")
         public java.util.List<DescribeResourceUsageDetailResponseBodyDataItems> items;
 
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token of the next page.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

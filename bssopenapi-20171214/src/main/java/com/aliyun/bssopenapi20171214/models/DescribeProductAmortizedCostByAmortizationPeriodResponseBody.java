@@ -574,9 +574,6 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         @NameInMap("AccountName")
         public String accountName;
 
-        @NameInMap("HostId")
-        public String hostId;
-
         @NameInMap("Items")
         public java.util.List<DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems> items;
 
@@ -608,14 +605,6 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
         public String getAccountName() {
             return this.accountName;
-        }
-
-        public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyData setHostId(String hostId) {
-            this.hostId = hostId;
-            return this;
-        }
-        public String getHostId() {
-            return this.hostId;
         }
 
         public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyData setItems(java.util.List<DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems> items) {
