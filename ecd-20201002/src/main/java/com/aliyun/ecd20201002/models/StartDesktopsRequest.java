@@ -4,27 +4,51 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class StartDesktopsRequest extends TeaModel {
+    /**
+     * <p>The ID of the client.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The OS used by the client.</p>
+     */
     @NameInMap("ClientOS")
     public String clientOS;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The version of the client.</p>
+     */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <p>The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>The logon credential.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the session.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

@@ -35,6 +35,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("DesktopAccessType")
         public String desktopAccessType;
 
+        @NameInMap("DesktopVpcEndpoint")
+        public String desktopVpcEndpoint;
+
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
@@ -58,6 +61,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getDesktopAccessType() {
             return this.desktopAccessType;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setDesktopVpcEndpoint(String desktopVpcEndpoint) {
+            this.desktopVpcEndpoint = desktopVpcEndpoint;
+            return this;
+        }
+        public String getDesktopVpcEndpoint() {
+            return this.desktopVpcEndpoint;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setOfficeSiteId(String officeSiteId) {

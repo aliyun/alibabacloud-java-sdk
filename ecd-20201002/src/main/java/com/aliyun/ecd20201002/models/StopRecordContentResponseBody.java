@@ -3,19 +3,16 @@ package com.aliyun.ecd20201002.models;
 
 import com.aliyun.tea.*;
 
-public class StopDesktopsResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
+public class StopRecordContentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static StopDesktopsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        StopDesktopsResponseBody self = new StopDesktopsResponseBody();
+    public static StopRecordContentResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StopRecordContentResponseBody self = new StopRecordContentResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public StopDesktopsResponseBody setRequestId(String requestId) {
+    public StopRecordContentResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

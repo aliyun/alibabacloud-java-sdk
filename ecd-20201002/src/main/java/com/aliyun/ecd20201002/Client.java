@@ -239,99 +239,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteFingerPrintTemplateWithOptions(request, runtime);
     }
 
-    public DescribeDesktopsResponse describeDesktopsWithOptions(DescribeDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
-            query.put("ClientId", request.clientId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
-            query.put("ClientType", request.clientType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
-            query.put("DesktopId", request.desktopId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.desktopName)) {
-            query.put("DesktopName", request.desktopName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.desktopStatus)) {
-            query.put("DesktopStatus", request.desktopStatus);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
-            query.put("DirectoryId", request.directoryId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
-            query.put("GroupId", request.groupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.html5Access)) {
-            query.put("Html5Access", request.html5Access);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
-            query.put("LoginToken", request.loginToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
-            query.put("MaxResults", request.maxResults);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
-            query.put("NextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.protocolType)) {
-            query.put("ProtocolType", request.protocolType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.queryFotaUpdate)) {
-            query.put("QueryFotaUpdate", request.queryFotaUpdate);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
-            query.put("SessionId", request.sessionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
-            query.put("UserName", request.userName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDesktops"),
-            new TeaPair("version", "2020-10-02"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopsResponse());
-    }
-
-    public DescribeDesktopsResponse describeDesktops(DescribeDesktopsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDesktopsWithOptions(request, runtime);
-    }
-
     public DescribeDirectoriesResponse describeDirectoriesWithOptions(DescribeDirectoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -502,6 +409,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OfficeSiteId", request.officeSiteId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.queryFotaUpdate)) {
             query.put("QueryFotaUpdate", request.queryFotaUpdate);
         }
@@ -516,6 +427,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortType)) {
+            query.put("SortType", request.sortType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withoutLatency)) {
+            query.put("WithoutLatency", request.withoutLatency);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1001,6 +920,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.rebootDesktopsWithOptions(request, runtime);
     }
 
+    /**
+      * The validity period of a logon token is 15 minutes. If an end user does not exit a client in 15 minutes, the logon token for the client must be refreshed. You can call this operation to refresh the client token.
+      *
+      * @param request RefreshLoginTokenRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RefreshLoginTokenResponse
+     */
     public RefreshLoginTokenResponse refreshLoginTokenWithOptions(RefreshLoginTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1049,6 +975,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshLoginTokenResponse());
     }
 
+    /**
+      * The validity period of a logon token is 15 minutes. If an end user does not exit a client in 15 minutes, the logon token for the client must be refreshed. You can call this operation to refresh the client token.
+      *
+      * @param request RefreshLoginTokenRequest
+      * @return RefreshLoginTokenResponse
+     */
     public RefreshLoginTokenResponse refreshLoginToken(RefreshLoginTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.refreshLoginTokenWithOptions(request, runtime);
@@ -1474,6 +1406,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setStudentsDesktopGroupPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * If the call is successful, the cloud desktops enter the Running state.
+      *
+      * @param request StartDesktopsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartDesktopsResponse
+     */
     public StartDesktopsResponse startDesktopsWithOptions(StartDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1526,11 +1466,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartDesktopsResponse());
     }
 
+    /**
+      * ## Description
+      * If the call is successful, the cloud desktops enter the Running state.
+      *
+      * @param request StartDesktopsRequest
+      * @return StartDesktopsResponse
+     */
     public StartDesktopsResponse startDesktops(StartDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDesktopsWithOptions(request, runtime);
     }
 
+    public StartRecordContentResponse startRecordContentWithOptions(StartRecordContentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientOS)) {
+            query.put("ClientOS", request.clientOS);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientVersion)) {
+            query.put("ClientVersion", request.clientVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
+            query.put("LoginToken", request.loginToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartRecordContent"),
+            new TeaPair("version", "2020-10-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartRecordContentResponse());
+    }
+
+    public StartRecordContentResponse startRecordContent(StartRecordContentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startRecordContentWithOptions(request, runtime);
+    }
+
+    /**
+      * ## Description
+      * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+      *
+      * @param request StopDesktopsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopDesktopsResponse
+     */
     public StopDesktopsResponse stopDesktopsWithOptions(StopDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1583,9 +1591,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopDesktopsResponse());
     }
 
+    /**
+      * ## Description
+      * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+      *
+      * @param request StopDesktopsRequest
+      * @return StopDesktopsResponse
+     */
     public StopDesktopsResponse stopDesktops(StopDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDesktopsWithOptions(request, runtime);
+    }
+
+    public StopRecordContentResponse stopRecordContentWithOptions(StopRecordContentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
+            query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientOS)) {
+            query.put("ClientOS", request.clientOS);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientVersion)) {
+            query.put("ClientVersion", request.clientVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
+            query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
+            query.put("LoginToken", request.loginToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopRecordContent"),
+            new TeaPair("version", "2020-10-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopRecordContentResponse());
+    }
+
+    public StopRecordContentResponse stopRecordContent(StopRecordContentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopRecordContentWithOptions(request, runtime);
     }
 
     public UnbindUserDesktopResponse unbindUserDesktopWithOptions(UnbindUserDesktopRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

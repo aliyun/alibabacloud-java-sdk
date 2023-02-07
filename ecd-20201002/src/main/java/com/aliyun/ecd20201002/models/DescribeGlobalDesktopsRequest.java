@@ -34,6 +34,9 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     @NameInMap("QueryFotaUpdate")
     public Boolean queryFotaUpdate;
 
@@ -45,6 +48,12 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
 
     @NameInMap("SessionId")
     public String sessionId;
+
+    @NameInMap("SortType")
+    public String sortType;
+
+    @NameInMap("WithoutLatency")
+    public Boolean withoutLatency;
 
     public static DescribeGlobalDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalDesktopsRequest self = new DescribeGlobalDesktopsRequest();
@@ -131,6 +140,14 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
         return this.officeSiteId;
     }
 
+    public DescribeGlobalDesktopsRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
     public DescribeGlobalDesktopsRequest setQueryFotaUpdate(Boolean queryFotaUpdate) {
         this.queryFotaUpdate = queryFotaUpdate;
         return this;
@@ -161,6 +178,22 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public DescribeGlobalDesktopsRequest setSortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public String getSortType() {
+        return this.sortType;
+    }
+
+    public DescribeGlobalDesktopsRequest setWithoutLatency(Boolean withoutLatency) {
+        this.withoutLatency = withoutLatency;
+        return this;
+    }
+    public Boolean getWithoutLatency() {
+        return this.withoutLatency;
     }
 
 }
