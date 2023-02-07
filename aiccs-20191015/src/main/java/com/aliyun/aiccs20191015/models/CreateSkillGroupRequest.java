@@ -10,7 +10,6 @@ public class CreateSkillGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 部门ID
     @NameInMap("DepartmentId")
     public Long departmentId;
 

@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetDepGroupTreeDataRequest extends TeaModel {
-    // 坐席ID
     @NameInMap("AgentId")
     public Long agentId;
 
-    // 租户实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

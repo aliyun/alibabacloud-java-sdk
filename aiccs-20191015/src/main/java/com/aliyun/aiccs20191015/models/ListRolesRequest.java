@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListRolesRequest extends TeaModel {
-    // clientToken
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 租户实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

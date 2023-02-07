@@ -4,23 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetDepGroupTreeDataResponseBody extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Data
     @NameInMap("Data")
     public java.util.List<GetDepGroupTreeDataResponseBodyData> data;
 
-    // Message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // Success
     @NameInMap("Success")
     public String success;
 
@@ -70,11 +65,9 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
     }
 
     public static class GetDepGroupTreeDataResponseBodyDataGroupDTOS extends TeaModel {
-        // name
         @NameInMap("Name")
         public String name;
 
-        // skillGroupId
         @NameInMap("SkillGroupId")
         public Long skillGroupId;
 
@@ -102,15 +95,12 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
     }
 
     public static class GetDepGroupTreeDataResponseBodyData extends TeaModel {
-        // depGroupId
         @NameInMap("DepGroupId")
         public String depGroupId;
 
-        // depGroupName
         @NameInMap("DepGroupName")
         public String depGroupName;
 
-        // groupDTOS
         @NameInMap("GroupDTOS")
         public java.util.List<GetDepGroupTreeDataResponseBodyDataGroupDTOS> groupDTOS;
 

@@ -4,23 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryHotlineNumberResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 返回结果数据
     @NameInMap("Data")
     public QueryHotlineNumberResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,11 +65,9 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeListGroupDOList extends TeaModel {
-        // 技能组id
         @NameInMap("GroupId")
         public Long groupId;
 
-        // 技能组名称
         @NameInMap("GroupName")
         public String groupName;
 
@@ -102,15 +95,12 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeList extends TeaModel {
-        // 部门id
         @NameInMap("DepartmentId")
         public Long departmentId;
 
-        // 部门名称
         @NameInMap("DepartmentName")
         public String departmentName;
 
-        // 技能组列表
         @NameInMap("GroupDOList")
         public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeListGroupDOList> groupDOList;
 
@@ -146,47 +136,36 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumList extends TeaModel {
-        // 外呼针对所有部门生效
         @NameInMap("CalloutAllDepartment")
         public Boolean calloutAllDepartment;
 
-        // 外呼生效列表
         @NameInMap("CalloutRangeList")
         public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeList> calloutRangeList;
 
-        // 号码描述
         @NameInMap("Description")
         public String description;
 
-        // 满意度状态
         @NameInMap("EvaluationStatus")
         public Integer evaluationStatus;
 
-        // 入呼流程id
         @NameInMap("FlowId")
         public Long flowId;
 
-        // 入呼流程名称
         @NameInMap("FlowName")
         public String flowName;
 
-        // 号码
         @NameInMap("HotlineNumber")
         public String hotlineNumber;
 
-        // 是否用于入呼
         @NameInMap("InBoundEnabled")
         public Boolean inBoundEnabled;
 
-        // 归属地
         @NameInMap("Location")
         public String location;
 
-        // 是否用于外呼
         @NameInMap("OutboundEnabled")
         public Boolean outboundEnabled;
 
-        // 运营商
         @NameInMap("Sp")
         public String sp;
 
@@ -286,19 +265,15 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineNumberResponseBodyData extends TeaModel {
-        // 当前页面
         @NameInMap("CurrentPage")
         public Long currentPage;
 
-        // 号码列表
         @NameInMap("HotlineNumList")
         public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumList> hotlineNumList;
 
-        // 每页大小
         @NameInMap("PageSize")
         public Long pageSize;
 
-        // 数据总量
         @NameInMap("TotalCount")
         public Long totalCount;
 

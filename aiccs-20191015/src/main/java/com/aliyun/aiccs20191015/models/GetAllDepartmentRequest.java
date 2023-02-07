@@ -4,7 +4,6 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAllDepartmentRequest extends TeaModel {
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

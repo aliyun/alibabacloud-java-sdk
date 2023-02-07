@@ -4,22 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineMessageLogResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<GetHotlineMessageLogResponseBodyData> data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -69,27 +65,21 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
     }
 
     public static class GetHotlineMessageLogResponseBodyData extends TeaModel {
-        // 会话ID
         @NameInMap("Acid")
         public String acid;
 
-        // 会话内容
         @NameInMap("Content")
         public String content;
 
-        // 结束时间
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 记录id
         @NameInMap("Mid")
         public String mid;
 
-        // 发送方类型（1：会员，2：坐席）
         @NameInMap("SenderType")
         public Integer senderType;
 
-        // 开始时间
         @NameInMap("StartTime")
         public Long startTime;
 

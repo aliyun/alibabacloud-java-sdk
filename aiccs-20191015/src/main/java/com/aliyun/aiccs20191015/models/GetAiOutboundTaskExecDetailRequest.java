@@ -4,43 +4,33 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskExecDetailRequest extends TeaModel {
-    // 任务批次
     @NameInMap("BatchVersion")
     public Integer batchVersion;
 
-    // 单条外呼id
     @NameInMap("CaseId")
     public Long caseId;
 
-    // 单条号码任务执行状态（1：待呼叫，2:呼叫中，3:已完成，4:已终止，5:待重呼）
     @NameInMap("CaseStatus")
     public Integer caseStatus;
 
-    // 号码导入结束时间戳（毫秒）
     @NameInMap("CreateTimeEnd")
     public Long createTimeEnd;
 
-    // 号码导入起始时间戳（毫秒）
     @NameInMap("CreateTimeStart")
     public Long createTimeStart;
 
-    // 当前页数
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 分页大小（<=50）
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 手机号
     @NameInMap("PhoneNum")
     public String phoneNum;
 
-    // 任务id
     @NameInMap("TaskId")
     public Long taskId;
 

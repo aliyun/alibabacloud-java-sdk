@@ -4,23 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetCustomerInfoResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 会员信息
     @NameInMap("Data")
     public GetCustomerInfoResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,27 +65,21 @@ public class GetCustomerInfoResponseBody extends TeaModel {
     }
 
     public static class GetCustomerInfoResponseBodyData extends TeaModel {
-        // 自定义字段
         @NameInMap("CustomizeFields")
         public java.util.Map<String, ?> customizeFields;
 
-        // 昵称
         @NameInMap("Nick")
         public String nick;
 
-        // 外部ID
         @NameInMap("OuterId")
         public String outerId;
 
-        // 头像
         @NameInMap("Photo")
         public String photo;
 
-        // 真实姓名
         @NameInMap("RealName")
         public String realName;
 
-        // 会员ID
         @NameInMap("UserId")
         public Long userId;
 

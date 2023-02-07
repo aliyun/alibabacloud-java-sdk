@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineMessageLogRequest extends TeaModel {
-    // 会话id
     @NameInMap("Acid")
     public String acid;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -7,14 +7,12 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 任务进展
     @NameInMap("Data")
     public GetAiOutboundTaskProgressResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,39 +65,30 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskProgressResponseBodyDataCalloutProgress extends TeaModel {
-        // 呼损量（预测式外呼特有）
         @NameInMap("CallLossCount")
         public Integer callLossCount;
 
-        // 呼损率（预测式外呼特有）
         @NameInMap("CallLossRate")
         public Float callLossRate;
 
-        // 外呼接通次数（自动外呼特有）
         @NameInMap("CallOutConnectCount")
         public Integer callOutConnectCount;
 
-        // 外呼接通次率（自动外呼特有）
         @NameInMap("CallOutConnectRate")
         public Float callOutConnectRate;
 
-        // 外呼次数
         @NameInMap("CallOutCount")
         public Integer callOutCount;
 
-        // 坐席接通量（预测式外呼特有）
         @NameInMap("CallOutServicerPickupCount")
         public Integer callOutServicerPickupCount;
 
-        // 坐席接通率（预测式外呼特有）
         @NameInMap("CallOutServicerPickupRate")
         public Float callOutServicerPickupRate;
 
-        // 客户接起量（预测式外呼特有）
         @NameInMap("CallOutUserPickupCount")
         public Integer callOutUserPickupCount;
 
-        // 客户接起率（预测式外呼特有）
         @NameInMap("CallOutUserPickupRate")
         public Float callOutUserPickupRate;
 
@@ -183,55 +172,42 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskProgressResponseBodyDataTaskProgress extends TeaModel {
-        // 呼叫中任务数
         @NameInMap("CallingCount")
         public Integer callingCount;
 
-        // 任务接通量（自动外呼特有）
         @NameInMap("ConnectCount")
         public Integer connectCount;
 
-        // 任务接通率（自动外呼特有）
         @NameInMap("ConnectRate")
         public Float connectRate;
 
-        // 任务完成数
         @NameInMap("FinishCount")
         public Integer finishCount;
 
-        // 任务完成率
         @NameInMap("FinishRate")
         public Float finishRate;
 
-        // 坐席接通数（预测式外呼特有）
         @NameInMap("ServicerPickupCount")
         public Integer servicerPickupCount;
 
-        // 坐席接通率(预测式外呼特有）
         @NameInMap("ServicerPickupRate")
         public Float servicerPickupRate;
 
-        // 已终止任务数
         @NameInMap("TerminateCount")
         public Integer terminateCount;
 
-        // 总任务数
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        // 客户接起数（预测式外呼特有）
         @NameInMap("UserPickupCount")
         public Integer userPickupCount;
 
-        // 客户接起率（预测式外呼特有）
         @NameInMap("UserPickupRate")
         public Float userPickupRate;
 
-        // 待呼叫任务数
         @NameInMap("WaitingCallCount")
         public Integer waitingCallCount;
 
-        // 待重呼任务数
         @NameInMap("WaitingRecallCount")
         public Integer waitingRecallCount;
 
@@ -347,19 +323,15 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskProgressResponseBodyData extends TeaModel {
-        // 外呼维度进展
         @NameInMap("CalloutProgress")
         public GetAiOutboundTaskProgressResponseBodyDataCalloutProgress calloutProgress;
 
-        // 任务id
         @NameInMap("TaskId")
         public Long taskId;
 
-        // 任务维度进展
         @NameInMap("TaskProgress")
         public GetAiOutboundTaskProgressResponseBodyDataTaskProgress taskProgress;
 
-        // 任务类型（2:预测式3:自动）
         @NameInMap("Type")
         public Integer type;
 

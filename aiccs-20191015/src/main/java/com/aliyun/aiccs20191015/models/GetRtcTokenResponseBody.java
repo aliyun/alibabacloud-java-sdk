@@ -4,23 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetRtcTokenResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public GetRtcTokenResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,15 +65,12 @@ public class GetRtcTokenResponseBody extends TeaModel {
     }
 
     public static class GetRtcTokenResponseBodyData extends TeaModel {
-        // 账号名
         @NameInMap("AccountName")
         public String accountName;
 
-        // rtcId
         @NameInMap("RtcId")
         public String rtcId;
 
-        // token信息
         @NameInMap("Token")
         public String token;
 

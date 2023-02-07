@@ -7,14 +7,12 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 任务详情
     @NameInMap("Data")
     public GetAiOutboundTaskDetailResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,11 +65,9 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskDetailResponseBodyDataRecallRule extends TeaModel {
-        // 重呼次数
         @NameInMap("Count")
         public Integer count;
 
-        // 重呼间隔时间（分钟）
         @NameInMap("Interval")
         public Integer interval;
 
@@ -99,59 +95,45 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskDetailResponseBodyData extends TeaModel {
-        // 自动外呼的并发
         @NameInMap("ConcurrentRate")
         public Integer concurrentRate;
 
-        // 任务描述
         @NameInMap("Description")
         public String description;
 
-        // 任务执行时间
         @NameInMap("ExecutionTime")
         public String executionTime;
 
-        // 预测式外呼固定外呼比例
         @NameInMap("ForecastCallRate")
         public Float forecastCallRate;
 
-        // 技能组id（预测式外呼）或者ivr id（自动外呼）
         @NameInMap("HandlerId")
         public Long handlerId;
 
-        // 技能组名称或ivr名称
         @NameInMap("HandlerName")
         public String handlerName;
 
-        // 任务名
         @NameInMap("Name")
         public String name;
 
-        // 被叫号码重复策略（0去重，1不去重）
         @NameInMap("NumRepeated")
         public Integer numRepeated;
 
-        // 外呼主叫号码
         @NameInMap("OutboundNums")
         public java.util.List<String> outboundNums;
 
-        // 失败重呼策略
         @NameInMap("RecallRule")
         public GetAiOutboundTaskDetailResponseBodyDataRecallRule recallRule;
 
-        // 任务状态（0:未开始,1:进行中,2:系统暂停,3:手动暂停,4:已完成,5:已终止）
         @NameInMap("Status")
         public Integer status;
 
-        // 任务状态描述
         @NameInMap("StatusDesc")
         public String statusDesc;
 
-        // 任务id
         @NameInMap("TaskId")
         public Long taskId;
 
-        // 任务类型(2:预测式外呼，3:自动外呼)
         @NameInMap("Type")
         public Integer type;
 

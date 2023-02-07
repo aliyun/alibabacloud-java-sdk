@@ -4,19 +4,15 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class InsertAiOutboundPhoneNumsRequest extends TeaModel {
-    // 任务批次号（不填则导入到默认批次）
     @NameInMap("BatchVersion")
     public Integer batchVersion;
 
-    // 号码详情(至多30条)
     @NameInMap("Details")
     public java.util.List<InsertAiOutboundPhoneNumsRequestDetails> details;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 任务id
     @NameInMap("TaskId")
     public Long taskId;
 
@@ -58,11 +54,9 @@ public class InsertAiOutboundPhoneNumsRequest extends TeaModel {
     }
 
     public static class InsertAiOutboundPhoneNumsRequestDetails extends TeaModel {
-        // 自定义信息
         @NameInMap("BizData")
         public String bizData;
 
-        // 手机号
         @NameInMap("PhoneNum")
         public String phoneNum;
 

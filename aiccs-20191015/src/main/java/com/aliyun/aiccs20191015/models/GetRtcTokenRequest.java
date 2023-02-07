@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetRtcTokenRequest extends TeaModel {
-    // 账号名称
     @NameInMap("AccountName")
     public String accountName;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -7,14 +7,12 @@ public class CreateAiOutboundTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 任务id
     @NameInMap("Data")
     public Long data;
 
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

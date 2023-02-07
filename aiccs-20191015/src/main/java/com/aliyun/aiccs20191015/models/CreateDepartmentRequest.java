@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class CreateDepartmentRequest extends TeaModel {
-    // 部门名称
     @NameInMap("DepartmentName")
     public String departmentName;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

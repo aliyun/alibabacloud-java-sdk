@@ -4,47 +4,36 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ResetHotlineNumberRequest extends TeaModel {
-    // 号码描述
     @NameInMap("Description")
     public String description;
 
-    // 是否用于入呼
     @NameInMap("EnableInbound")
     public Boolean enableInbound;
 
-    // 是否开启入呼满意度
     @NameInMap("EnableInboundEvaluation")
     public Boolean enableInboundEvaluation;
 
-    // 是否用于外呼
     @NameInMap("EnableOutbound")
     public Boolean enableOutbound;
 
-    // 是否开启外呼满意度
     @NameInMap("EnableOutboundEvaluation")
     public Boolean enableOutboundEvaluation;
 
-    // 满意度等级
     @NameInMap("EvaluationLevel")
     public Integer evaluationLevel;
 
-    // 号码
     @NameInMap("HotlineNumber")
     public String hotlineNumber;
 
-    // 入呼ivr流程id
     @NameInMap("InboundFlowId")
     public Long inboundFlowId;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 外呼是否对所有部门生效
     @NameInMap("OutboundAllDepart")
     public Boolean outboundAllDepart;
 
-    // 外呼生效范围
     @NameInMap("OutboundRangeList")
     public java.util.List<ResetHotlineNumberRequestOutboundRangeList> outboundRangeList;
 
@@ -142,11 +131,9 @@ public class ResetHotlineNumberRequest extends TeaModel {
     }
 
     public static class ResetHotlineNumberRequestOutboundRangeList extends TeaModel {
-        // 生效部门id
         @NameInMap("DepartmentId")
         public Long departmentId;
 
-        // 生效技能组列表（部门123下）
         @NameInMap("GroupIdList")
         public java.util.List<Long> groupIdList;
 

@@ -4,15 +4,12 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class RemoveAgentFromSkillGroupRequest extends TeaModel {
-    // 坐席列表
     @NameInMap("AgentIds")
     public java.util.List<Long> agentIds;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 技能组id
     @NameInMap("SkillGroupId")
     public Long skillGroupId;
 

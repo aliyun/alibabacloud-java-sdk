@@ -10,7 +10,6 @@ public class GetRecordUrlResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -55,11 +54,9 @@ public class GetRecordUrlResponseBody extends TeaModel {
     }
 
     public static class GetRecordUrlResponseBodyData extends TeaModel {
-        // 会话id
         @NameInMap("Acid")
         public String acid;
 
-        // 录音链接
         @NameInMap("OssLink")
         public String ossLink;
 

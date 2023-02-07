@@ -7,14 +7,12 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 本次呼叫关联的业务信息
     @NameInMap("Data")
     public GetAiOutboundTaskBizDataResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,19 +65,15 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskBizDataResponseBodyData extends TeaModel {
-        // 业务自定义信息
         @NameInMap("BizData")
         public String bizData;
 
-        // id
         @NameInMap("CaseId")
         public Long caseId;
 
-        // 外呼号码
         @NameInMap("PhoneNum")
         public String phoneNum;
 
-        // 任务ID
         @NameInMap("TaskId")
         public Long taskId;
 

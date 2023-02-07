@@ -7,14 +7,12 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 任务列表
     @NameInMap("Data")
     public GetAiOutboundTaskListResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,51 +65,39 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskListResponseBodyDataList extends TeaModel {
-        // 自动外呼的并发
         @NameInMap("ConcurrentRate")
         public Integer concurrentRate;
 
-        // 任务创建时间毫秒时间戳
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 任务描述
         @NameInMap("Description")
         public String description;
 
-        // 任务已完成量
         @NameInMap("FinishCount")
         public Integer finishCount;
 
-        // 任务完成率
         @NameInMap("FinishRate")
         public Float finishRate;
 
-        // 技能组id（预测式）或者ivr id（自动外呼）
         @NameInMap("HandlerId")
         public Long handlerId;
 
-        // 技能组名称或ivr名称
         @NameInMap("HandlerName")
         public String handlerName;
 
-        // 任务名称
         @NameInMap("Name")
         public String name;
 
-        // 任务状态（0:未开始,1:进行中,2:系统暂停,3:手动暂停,4:已完成,5:已终止）
         @NameInMap("Status")
         public Integer status;
 
-        // 任务状态描述
         @NameInMap("StatusDesc")
         public String statusDesc;
 
-        // 任务id
         @NameInMap("TaskId")
         public Long taskId;
 
-        // 任务总量
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -219,23 +205,18 @@ public class GetAiOutboundTaskListResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskListResponseBodyData extends TeaModel {
-        // 当前页数
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // 是否有下一页
         @NameInMap("HasNextPage")
         public Boolean hasNextPage;
 
-        // 任务信息
         @NameInMap("List")
         public java.util.List<GetAiOutboundTaskListResponseBodyDataList> list;
 
-        // 分页大小
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 数据总量
         @NameInMap("TotalResults")
         public Integer totalResults;
 
