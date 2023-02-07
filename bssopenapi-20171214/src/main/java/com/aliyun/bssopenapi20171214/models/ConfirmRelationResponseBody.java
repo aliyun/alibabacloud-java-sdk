@@ -65,7 +65,9 @@ public class ConfirmRelationResponseBody extends TeaModel {
     }
 
     public static class ConfirmRelationResponseBodyData extends TeaModel {
-        // HostId
+        /**
+         * <p>HostId</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 

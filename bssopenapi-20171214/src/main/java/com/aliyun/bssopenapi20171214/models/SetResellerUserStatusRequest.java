@@ -13,6 +13,9 @@ public class SetResellerUserStatusRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("StopMode")
+    public String stopMode;
+
     public static SetResellerUserStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetResellerUserStatusRequest self = new SetResellerUserStatusRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SetResellerUserStatusRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public SetResellerUserStatusRequest setStopMode(String stopMode) {
+        this.stopMode = stopMode;
+        return this;
+    }
+    public String getStopMode() {
+        return this.stopMode;
     }
 
 }

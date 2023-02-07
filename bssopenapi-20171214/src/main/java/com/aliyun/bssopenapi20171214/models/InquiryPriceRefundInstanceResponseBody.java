@@ -7,7 +7,9 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("Data")
     public InquiryPriceRefundInstanceResponseBodyData data;
 

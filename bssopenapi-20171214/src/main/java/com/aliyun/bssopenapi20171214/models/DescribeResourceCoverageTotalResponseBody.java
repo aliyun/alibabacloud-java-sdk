@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeResourceCoverageTotalResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +80,17 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage extends TeaModel {
+        /**
+         * <p>The coverage rate of deduction plans within the specified period.</p>
+         */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
+        /**
+         * <p>The period.</p>
+         * <br>
+         * <p>The value is in the format of yyyyMMddHH.</p>
+         */
         @NameInMap("Period")
         public String period;
 
@@ -95,15 +118,27 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceCoverageTotalResponseBodyDataTotalCoverage extends TeaModel {
+        /**
+         * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
+         */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
+        /**
+         * <p>The total coverage rate of deduction plans.</p>
+         */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
+        /**
+         * <p>The total amount of the resources deducted from deduction plans.</p>
+         */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
+        /**
+         * <p>The total amount of resources consumed.</p>
+         */
         @NameInMap("TotalQuantity")
         public Float totalQuantity;
 
@@ -147,9 +182,15 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceCoverageTotalResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the coverage rate of deduction plans within a period.</p>
+         */
         @NameInMap("PeriodCoverage")
         public java.util.List<DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage> periodCoverage;
 
+        /**
+         * <p>The information about the total coverage data of deduction plans.</p>
+         */
         @NameInMap("TotalCoverage")
         public DescribeResourceCoverageTotalResponseBodyDataTotalCoverage totalCoverage;
 

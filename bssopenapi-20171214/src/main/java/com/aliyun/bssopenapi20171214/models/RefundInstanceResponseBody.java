@@ -7,7 +7,9 @@ public class RefundInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("Data")
     public RefundInstanceResponseBodyData data;
 
@@ -63,58 +65,6 @@ public class RefundInstanceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class InquiryPriceRefundInstanceResponseBodyData extends TeaModel {
-        @NameInMap("Currency")
-        public String currency;
-
-        @NameInMap("HostId")
-        public String hostId;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("RefundAmount")
-        public Double refundAmount;
-
-        public static InquiryPriceRefundInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            InquiryPriceRefundInstanceResponseBodyData self = new InquiryPriceRefundInstanceResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public InquiryPriceRefundInstanceResponseBodyData setCurrency(String currency) {
-            this.currency = currency;
-            return this;
-        }
-        public String getCurrency() {
-            return this.currency;
-        }
-
-        public InquiryPriceRefundInstanceResponseBodyData setHostId(String hostId) {
-            this.hostId = hostId;
-            return this;
-        }
-        public String getHostId() {
-            return this.hostId;
-        }
-
-        public InquiryPriceRefundInstanceResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public InquiryPriceRefundInstanceResponseBodyData setRefundAmount(Double refundAmount) {
-            this.refundAmount = refundAmount;
-            return this;
-        }
-        public Double getRefundAmount() {
-            return this.refundAmount;
-        }
-
     }
 
     public static class RefundInstanceResponseBodyData extends TeaModel {
