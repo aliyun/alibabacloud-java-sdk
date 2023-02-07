@@ -4,27 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAllDepartmentResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public java.util.List<GetAllDepartmentResponseBodyData> data;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 

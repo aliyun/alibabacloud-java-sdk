@@ -4,27 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineRecordDetailRequest extends TeaModel {
-    // clientToken
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 热线挂断的时间范围
     @NameInMap("CloseTimeEnd")
     public Long closeTimeEnd;
 
-    // 热线挂断的时间范围
     @NameInMap("CloseTimeStart")
     public Long closeTimeStart;
 
-    // 当前页
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 每页数据量
     @NameInMap("PageSize")
     public Integer pageSize;
 

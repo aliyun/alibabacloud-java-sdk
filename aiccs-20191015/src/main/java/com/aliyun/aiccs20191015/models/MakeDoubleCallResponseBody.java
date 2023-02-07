@@ -4,23 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class MakeDoubleCallResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 返回数据
     @NameInMap("Data")
     public MakeDoubleCallResponseBodyData data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 调用是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,7 +65,6 @@ public class MakeDoubleCallResponseBody extends TeaModel {
     }
 
     public static class MakeDoubleCallResponseBodyData extends TeaModel {
-        // 会话id
         @NameInMap("Acid")
         public String acid;
 

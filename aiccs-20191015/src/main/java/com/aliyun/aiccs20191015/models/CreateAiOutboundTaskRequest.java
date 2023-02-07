@@ -4,47 +4,36 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class CreateAiOutboundTaskRequest extends TeaModel {
-    // 自动外呼的呼叫并发
     @NameInMap("ConcurrentRate")
     public Integer concurrentRate;
 
-    // 任务描述（0～100字符）
     @NameInMap("Description")
     public String description;
 
-    // 任务执行时间
     @NameInMap("ExecutionTime")
     public String executionTime;
 
-    // 预测式外呼固定外呼比例（>=1）
     @NameInMap("ForecastCallRate")
     public Float forecastCallRate;
 
-    // 技能组id（预测式外呼）或者ivr id（自动外呼）
     @NameInMap("HandlerId")
     public Long handlerId;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 任务名（1～15字符）
     @NameInMap("Name")
     public String name;
 
-    // 被叫号码重复策略（0任务内去重，1不去重）
     @NameInMap("NumRepeated")
     public Integer numRepeated;
 
-    // 外呼主叫号码
     @NameInMap("OutboundNums")
     public java.util.List<String> outboundNums;
 
-    // 失败重呼策略（为空则不重呼）
     @NameInMap("RecallRule")
     public CreateAiOutboundTaskRequestRecallRule recallRule;
 
-    // 任务类型（2:预测式外呼3:自动外呼）
     @NameInMap("Type")
     public Integer type;
 
@@ -142,11 +131,9 @@ public class CreateAiOutboundTaskRequest extends TeaModel {
     }
 
     public static class CreateAiOutboundTaskRequestRecallRule extends TeaModel {
-        // 重呼次数（1～3）
         @NameInMap("Count")
         public Integer count;
 
-        // 重呼间隔时间（1～60分钟）
         @NameInMap("Interval")
         public Integer interval;
 

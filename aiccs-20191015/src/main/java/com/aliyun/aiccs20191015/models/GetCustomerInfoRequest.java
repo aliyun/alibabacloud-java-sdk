@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetCustomerInfoRequest extends TeaModel {
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 会员ID
     @NameInMap("MemberId")
     public Long memberId;
 

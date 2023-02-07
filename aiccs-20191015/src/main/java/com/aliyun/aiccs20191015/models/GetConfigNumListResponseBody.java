@@ -4,23 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetConfigNumListResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 号码列表
     @NameInMap("Data")
     public java.util.List<String> data;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 接口调用是否成功
     @NameInMap("Success")
     public Boolean success;
 

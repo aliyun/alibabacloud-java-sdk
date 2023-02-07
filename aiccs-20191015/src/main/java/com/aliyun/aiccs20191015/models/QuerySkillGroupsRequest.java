@@ -4,14 +4,12 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QuerySkillGroupsRequest extends TeaModel {
-    // 技能组类型（1：热线，2：在线，4：工单）
     @NameInMap("ChannelType")
     public Integer channelType;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 部门ID
     @NameInMap("DepartmentId")
     public Long departmentId;
 

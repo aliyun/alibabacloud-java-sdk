@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DeleteHotlineNumberRequest extends TeaModel {
-    // 号码
     @NameInMap("HotlineNumber")
     public String hotlineNumber;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

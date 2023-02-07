@@ -4,39 +4,30 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetSkillGroupAndAgentStatusSummaryShrinkRequest extends TeaModel {
-    // 当前页（默认为1）
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // 部门id列表
     @NameInMap("DepIds")
     public String depIdsShrink;
 
-    // 结束日期时间戳（毫秒）
     @NameInMap("EndDate")
     public Long endDate;
 
-    // 是否根据部门分组
     @NameInMap("ExistDepartmentGrouping")
     public Boolean existDepartmentGrouping;
 
-    // 是否根据技能组分组
     @NameInMap("ExistSkillGroupGrouping")
     public Boolean existSkillGroupGrouping;
 
-    // 技能组id列表
     @NameInMap("GroupIds")
     public String groupIdsShrink;
 
-    // AICCS实例ID，在智能联络中心控制台上可以看到
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 每页大小（默认为10)
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 开始日期时间戳（毫秒）
     @NameInMap("StartDate")
     public Long startDate;
 

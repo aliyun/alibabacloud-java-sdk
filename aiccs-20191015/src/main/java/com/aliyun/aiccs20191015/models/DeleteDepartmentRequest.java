@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DeleteDepartmentRequest extends TeaModel {
-    // 部门id
     @NameInMap("DepartmentId")
     public Long departmentId;
 
-    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 

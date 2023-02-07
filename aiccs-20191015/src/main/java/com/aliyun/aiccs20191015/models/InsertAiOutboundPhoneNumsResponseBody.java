@@ -7,14 +7,12 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 导入结果
     @NameInMap("Data")
     public InsertAiOutboundPhoneNumsResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,15 +65,12 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
     }
 
     public static class InsertAiOutboundPhoneNumsResponseBodyDataFailInfo extends TeaModel {
-        // 自定义信息
         @NameInMap("BizData")
         public String bizData;
 
-        // 失败原因描述
         @NameInMap("Msg")
         public String msg;
 
-        // 外呼被叫号码
         @NameInMap("PhoneNum")
         public String phoneNum;
 
@@ -111,15 +106,12 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
     }
 
     public static class InsertAiOutboundPhoneNumsResponseBodyData extends TeaModel {
-        // 失败号码详情
         @NameInMap("FailInfo")
         public java.util.List<InsertAiOutboundPhoneNumsResponseBodyDataFailInfo> failInfo;
 
-        // 导入成功数量
         @NameInMap("SuccessCount")
         public Integer successCount;
 
-        // 导入总数
         @NameInMap("TotalCount")
         public Integer totalCount;
 

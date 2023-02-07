@@ -4,31 +4,24 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetSeatInformationShrinkRequest extends TeaModel {
-    // AICCS实例ID，在智能联络中心控制台上可以看到
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 当前页（默认为1）
     @NameInMap("currentPage")
     public Integer currentPage;
 
-    // 部门id列表
     @NameInMap("depIds")
     public String depIdsShrink;
 
-    // 结束日期时间戳（毫秒）
     @NameInMap("endDate")
     public Long endDate;
 
-    // 是否根据部门分组
     @NameInMap("existDepartmentGrouping")
     public Boolean existDepartmentGrouping;
 
-    // 每页大小（默认为10)
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 开始日期时间戳（毫秒）
     @NameInMap("startDate")
     public Long startDate;
 

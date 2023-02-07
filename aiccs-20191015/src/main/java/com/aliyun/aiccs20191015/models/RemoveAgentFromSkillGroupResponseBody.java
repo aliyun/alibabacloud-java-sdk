@@ -7,14 +7,12 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 结果信息
     @NameInMap("Data")
     public RemoveAgentFromSkillGroupResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,7 +65,6 @@ public class RemoveAgentFromSkillGroupResponseBody extends TeaModel {
     }
 
     public static class RemoveAgentFromSkillGroupResponseBodyData extends TeaModel {
-        // 成功移除的坐席数
         @NameInMap("SuccessCount")
         public Integer successCount;
 

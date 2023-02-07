@@ -4,27 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListChatRecordDetailResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // data
     @NameInMap("ResultData")
     public ListChatRecordDetailResponseBodyResultData resultData;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -145,18 +139,15 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
     }
 
     public static class ListChatRecordDetailResponseBodyResultDataData extends TeaModel {
-        // 在线结束时间
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 在线会话详细信息
         @NameInMap("MessageList")
         public java.util.List<ListChatRecordDetailResponseBodyResultDataDataMessageList> messageList;
 
         @NameInMap("ServicerName")
         public String servicerName;
 
-        // 在线开始时间
         @NameInMap("StartTime")
         public Long startTime;
 

@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineRuntimeInfoRequest extends TeaModel {
-    // 账号名
     @NameInMap("AccountName")
     public String accountName;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 

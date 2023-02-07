@@ -4,15 +4,12 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAiOutboundTaskProgressRequest extends TeaModel {
-    // 任务批次（为空则查询任务下所有数据）
     @NameInMap("BatchVersion")
     public Integer batchVersion;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 任务id
     @NameInMap("TaskId")
     public Long taskId;
 

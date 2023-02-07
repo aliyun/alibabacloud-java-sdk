@@ -4,23 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetMcuLvsIpResponseBody extends TeaModel {
-    // error code
     @NameInMap("Code")
     public String code;
 
-    // result data
     @NameInMap("Data")
     public String data;
 
-    // error message
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 

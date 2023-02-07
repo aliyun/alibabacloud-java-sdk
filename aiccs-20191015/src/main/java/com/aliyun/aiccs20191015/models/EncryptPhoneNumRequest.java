@@ -4,11 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class EncryptPhoneNumRequest extends TeaModel {
-    // 实例Id
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 号码明文
     @NameInMap("PhoneNum")
     public String phoneNum;
 

@@ -7,14 +7,12 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 任务执行列表
     @NameInMap("Data")
     public GetAiOutboundTaskExecDetailResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,39 +65,30 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskExecDetailResponseBodyDataList extends TeaModel {
-        // 任务批次
         @NameInMap("BatchVersion")
         public Integer batchVersion;
 
-        // 业务自定义信息
         @NameInMap("BizData")
         public String bizData;
 
-        // 外呼次数
         @NameInMap("CallCount")
         public Integer callCount;
 
-        // id
         @NameInMap("CaseId")
         public Long caseId;
 
-        // 号码导入时间戳（毫秒）
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 最后一次外呼结果
         @NameInMap("LastCallResult")
         public String lastCallResult;
 
-        // 手机号
         @NameInMap("PhoneNum")
         public String phoneNum;
 
-        // 执行状态（1：待呼叫，2:呼叫中，3:已完成，4:已终止，5:待重呼）
         @NameInMap("Status")
         public Integer status;
 
-        // 执行状态描述
         @NameInMap("StatusDesc")
         public Integer statusDesc;
 
@@ -183,23 +172,18 @@ public class GetAiOutboundTaskExecDetailResponseBody extends TeaModel {
     }
 
     public static class GetAiOutboundTaskExecDetailResponseBodyData extends TeaModel {
-        // 当前页数
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // 是否有下一页
         @NameInMap("HasNextPage")
         public Boolean hasNextPage;
 
-        // 外呼号码执行列表
         @NameInMap("List")
         public java.util.List<GetAiOutboundTaskExecDetailResponseBodyDataList> list;
 
-        // 分页大小
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总数
         @NameInMap("TotalResults")
         public Integer totalResults;
 

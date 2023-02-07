@@ -4,27 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineRecordDetailResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // data
     @NameInMap("ResultData")
     public ListHotlineRecordDetailResponseBodyResultData resultData;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -82,18 +76,15 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
     }
 
     public static class ListHotlineRecordDetailResponseBodyResultDataData extends TeaModel {
-        // 热线结束时间
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 热线通话录音地址
         @NameInMap("OssUrl")
         public String ossUrl;
 
         @NameInMap("ServicerName")
         public String servicerName;
 
-        // 热线开始时间
         @NameInMap("StartTime")
         public Long startTime;
 

@@ -7,14 +7,12 @@ public class CreateAiOutboundTaskBatchResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 新建的任务批次版本id
     @NameInMap("Data")
     public Integer data;
 
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

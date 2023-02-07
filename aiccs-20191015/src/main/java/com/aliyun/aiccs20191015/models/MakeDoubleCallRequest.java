@@ -4,27 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class MakeDoubleCallRequest extends TeaModel {
-    // 账号名称
     @NameInMap("AccountName")
     public String accountName;
 
-    // 业务携带数据（JsonString）
     @NameInMap("BizData")
     public String bizData;
 
-    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 用户手机号
     @NameInMap("MemberPhone")
     public String memberPhone;
 
-    // 外呼主叫号码
     @NameInMap("OutboundCallNumber")
     public String outboundCallNumber;
 
-    // 坐席手机号（需要通过坐席手机呼叫才需要填写）
     @NameInMap("ServicerPhone")
     public String servicerPhone;
 
