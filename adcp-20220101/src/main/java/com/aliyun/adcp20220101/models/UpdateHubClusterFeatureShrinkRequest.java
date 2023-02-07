@@ -4,55 +4,62 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
-    // The ID of the EIP.
+    /**
+     * <p>The ID of the EIP.</p>
+     */
     @NameInMap("ApiServerEipId")
     public String apiServerEipId;
 
-    // Specifies whether to enable audit logs. Valid values: - true: enable audit logs. - false: disables audit logs.
+    @NameInMap("ArgoCDEnabled")
+    public Boolean argoCDEnabled;
+
+    @NameInMap("ArgoServerEnabled")
+    public Boolean argoServerEnabled;
+
+    /**
+     * <p>Specifies whether to enable audit logs. Valid values: - true: enable audit logs. - false: disables audit logs.</p>
+     */
     @NameInMap("AuditLogEnabled")
     public Boolean auditLogEnabled;
 
-    // The ID of the master instance.
+    /**
+     * <p>The ID of the master instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // Specifies whether to enable deletion protection for the master instance. After you enable deletion protection, you cannot delete the master instance in the console or by calling API operations. Valid values:
+    /**
+     * <p>Specifies whether to enable deletion protection for the master instance. After you enable deletion protection, you cannot delete the master instance in the console or by calling API operations. Valid values:</p>
+     */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
-    // Whether to enable ArgoCD.
-    // 
-    // - true Enabled
-    // - false Disabled
-    @NameInMap("EnableArgoCD")
-    public Boolean enableArgoCD;
-
-    // Specifies whether to enable Service Mesh (ASM). Valid values: true: enables ASM. false: disables ASM.
+    /**
+     * <p>Specifies whether to enable Service Mesh (ASM). Valid values: true: enables ASM. false: disables ASM.</p>
+     */
     @NameInMap("EnableMesh")
     public Boolean enableMesh;
 
-    @NameInMap("Enabled")
-    public Boolean enabled;
-
-    // The name of the master instance. The name must be 1 to 63 characters in length, and can contain letters and digits. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-).
+    /**
+     * <p>The name of the master instance. The name must be 1 to 63 characters in length, and can contain letters and digits. The name must start with a letter. The name can contain letters, digits, underscores (_), and hyphens (-).</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("PriceLimit")
     public String priceLimit;
 
-    // Specifies whether to associate an elastic IP address (EIP) with the API server. Default value: false. To associate an EIP with the API server, set the value to true. You can use a custom EIP by setting the ApiServerEipId parameter. If you do not set the ApiServerEipId parameter, the system automatically creates an EIP.
+    /**
+     * <p>Specifies whether to associate an elastic IP address (EIP) with the API server. Default value: false. To associate an EIP with the API server, set the value to true. You can use a custom EIP by setting the ApiServerEipId parameter. If you do not set the ApiServerEipId parameter, the system automatically creates an EIP.</p>
+     */
     @NameInMap("PublicApiServerEnabled")
     public Boolean publicApiServerEnabled;
 
-    @NameInMap("ScheduleMode")
-    public String scheduleMode;
+    @NameInMap("VSwitches")
+    public String vSwitchesShrink;
 
-    @NameInMap("ServerEnabled")
-    public Boolean serverEnabled;
-
-    @NameInMap("Units")
-    public String unitsShrink;
+    @NameInMap("WorkflowScheduleMode")
+    public String workflowScheduleMode;
 
     public static UpdateHubClusterFeatureShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateHubClusterFeatureShrinkRequest self = new UpdateHubClusterFeatureShrinkRequest();
@@ -65,6 +72,22 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
     }
     public String getApiServerEipId() {
         return this.apiServerEipId;
+    }
+
+    public UpdateHubClusterFeatureShrinkRequest setArgoCDEnabled(Boolean argoCDEnabled) {
+        this.argoCDEnabled = argoCDEnabled;
+        return this;
+    }
+    public Boolean getArgoCDEnabled() {
+        return this.argoCDEnabled;
+    }
+
+    public UpdateHubClusterFeatureShrinkRequest setArgoServerEnabled(Boolean argoServerEnabled) {
+        this.argoServerEnabled = argoServerEnabled;
+        return this;
+    }
+    public Boolean getArgoServerEnabled() {
+        return this.argoServerEnabled;
     }
 
     public UpdateHubClusterFeatureShrinkRequest setAuditLogEnabled(Boolean auditLogEnabled) {
@@ -91,28 +114,12 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
         return this.deletionProtection;
     }
 
-    public UpdateHubClusterFeatureShrinkRequest setEnableArgoCD(Boolean enableArgoCD) {
-        this.enableArgoCD = enableArgoCD;
-        return this;
-    }
-    public Boolean getEnableArgoCD() {
-        return this.enableArgoCD;
-    }
-
     public UpdateHubClusterFeatureShrinkRequest setEnableMesh(Boolean enableMesh) {
         this.enableMesh = enableMesh;
         return this;
     }
     public Boolean getEnableMesh() {
         return this.enableMesh;
-    }
-
-    public UpdateHubClusterFeatureShrinkRequest setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-        return this;
-    }
-    public Boolean getEnabled() {
-        return this.enabled;
     }
 
     public UpdateHubClusterFeatureShrinkRequest setName(String name) {
@@ -139,28 +146,20 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
         return this.publicApiServerEnabled;
     }
 
-    public UpdateHubClusterFeatureShrinkRequest setScheduleMode(String scheduleMode) {
-        this.scheduleMode = scheduleMode;
+    public UpdateHubClusterFeatureShrinkRequest setVSwitchesShrink(String vSwitchesShrink) {
+        this.vSwitchesShrink = vSwitchesShrink;
         return this;
     }
-    public String getScheduleMode() {
-        return this.scheduleMode;
+    public String getVSwitchesShrink() {
+        return this.vSwitchesShrink;
     }
 
-    public UpdateHubClusterFeatureShrinkRequest setServerEnabled(Boolean serverEnabled) {
-        this.serverEnabled = serverEnabled;
+    public UpdateHubClusterFeatureShrinkRequest setWorkflowScheduleMode(String workflowScheduleMode) {
+        this.workflowScheduleMode = workflowScheduleMode;
         return this;
     }
-    public Boolean getServerEnabled() {
-        return this.serverEnabled;
-    }
-
-    public UpdateHubClusterFeatureShrinkRequest setUnitsShrink(String unitsShrink) {
-        this.unitsShrink = unitsShrink;
-        return this;
-    }
-    public String getUnitsShrink() {
-        return this.unitsShrink;
+    public String getWorkflowScheduleMode() {
+        return this.workflowScheduleMode;
     }
 
 }

@@ -4,11 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHubClusterKubeconfigResponseBody extends TeaModel {
-    // The content of the kubeconfig file of the master instance.
+    /**
+     * <p>The content of the kubeconfig file of the master instance.</p>
+     */
     @NameInMap("Kubeconfig")
     public String kubeconfig;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

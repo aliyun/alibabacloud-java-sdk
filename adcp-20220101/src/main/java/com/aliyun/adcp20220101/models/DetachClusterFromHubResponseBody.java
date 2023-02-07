@@ -4,19 +4,27 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DetachClusterFromHubResponseBody extends TeaModel {
-    // The ID of the master instance.
+    /**
+     * <p>The ID of the master instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The IDs of the clusters that are disassociated from the master instance.
+    /**
+     * <p>The IDs of the clusters that are disassociated from the master instance.</p>
+     */
     @NameInMap("ManagedClusterIds")
     public java.util.List<String> managedClusterIds;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the task.
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
