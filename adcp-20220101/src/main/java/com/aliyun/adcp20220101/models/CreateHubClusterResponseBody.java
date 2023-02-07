@@ -4,15 +4,21 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateHubClusterResponseBody extends TeaModel {
-    // The ID of the master instance.
+    /**
+     * <p>The ID of the master instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the task.
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

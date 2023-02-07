@@ -91,22 +91,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachClusterToHubWithOptions(request, runtime);
     }
 
-    public CreateHubClusterResponse createHubClusterWithOptions(CreateHubClusterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        CreateHubClusterShrinkRequest request = new CreateHubClusterShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.clusterConfiguration)) {
-            request.clusterConfigurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clusterConfiguration, "ClusterConfiguration", "json");
-        }
-
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterConfigurationShrink)) {
-            query.put("ClusterConfiguration", request.clusterConfigurationShrink);
-        }
-
+    public CreateHubClusterResponse createHubClusterWithOptions(CreateHubClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.apiServerPublicEip)) {
             body.put("ApiServerPublicEip", request.apiServerPublicEip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.argoServerEnabled)) {
+            body.put("ArgoServerEnabled", request.argoServerEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.auditLogEnabled)) {
@@ -119,6 +112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priceLimit)) {
+            body.put("PriceLimit", request.priceLimit);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.profile)) {
@@ -137,8 +134,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("VpcId", request.vpcId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowScheduleMode)) {
+            body.put("WorkflowScheduleMode", request.workflowScheduleMode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -420,13 +420,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateHubClusterFeatureShrinkRequest request = new UpdateHubClusterFeatureShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.units)) {
-            request.unitsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.units, "Units", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.vSwitches)) {
+            request.vSwitchesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vSwitches, "VSwitches", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.apiServerEipId)) {
             query.put("ApiServerEipId", request.apiServerEipId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.argoCDEnabled)) {
+            query.put("ArgoCDEnabled", request.argoCDEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.argoServerEnabled)) {
+            query.put("ArgoServerEnabled", request.argoServerEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.auditLogEnabled)) {
@@ -441,16 +449,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DeletionProtection", request.deletionProtection);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.enableArgoCD)) {
-            query.put("EnableArgoCD", request.enableArgoCD);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.enableMesh)) {
             query.put("EnableMesh", request.enableMesh);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
-            query.put("Enabled", request.enabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -465,16 +465,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PublicApiServerEnabled", request.publicApiServerEnabled);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.scheduleMode)) {
-            query.put("ScheduleMode", request.scheduleMode);
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchesShrink)) {
+            query.put("VSwitches", request.vSwitchesShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.serverEnabled)) {
-            query.put("ServerEnabled", request.serverEnabled);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.unitsShrink)) {
-            query.put("Units", request.unitsShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowScheduleMode)) {
+            query.put("WorkflowScheduleMode", request.workflowScheduleMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

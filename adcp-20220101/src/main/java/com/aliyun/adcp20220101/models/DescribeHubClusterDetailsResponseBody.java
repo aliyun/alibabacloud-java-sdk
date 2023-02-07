@@ -4,11 +4,15 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHubClusterDetailsResponseBody extends TeaModel {
-    // The details about the master instance.
+    /**
+     * <p>The details about the master instance.</p>
+     */
     @NameInMap("Cluster")
     public DescribeHubClusterDetailsResponseBodyCluster cluster;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterApiServer extends TeaModel {
-        // The ID of the elastic IP address (EIP).
+        /**
+         * <p>The ID of the elastic IP address (EIP).</p>
+         */
         @NameInMap("ApiServerEipId")
         public String apiServerEipId;
 
-        // Indicates whether a public endpoint is used to expose the API server. Valid values: - true: a public endpoint is used to expose the API server. - false: no public endpoint is used to expose the API server.
+        /**
+         * <p>Indicates whether a public endpoint is used to expose the API server. Valid values: - true: a public endpoint is used to expose the API server. - false: no public endpoint is used to expose the API server.</p>
+         */
         @NameInMap("EnabledPublic")
         public Boolean enabledPublic;
 
-        // The ID of the Server Load Balancer (SLB) instance.
+        /**
+         * <p>The ID of the Server Load Balancer (SLB) instance.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
@@ -78,43 +88,63 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterClusterInfo extends TeaModel {
-        // The ID of the master instance.
+        /**
+         * <p>The ID of the master instance.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // The specification of the master instance. Valid values: - ack.pro.small: ACK Pro
+        /**
+         * <p>The specification of the master instance. Valid values: - ack.pro.small: ACK Pro</p>
+         */
         @NameInMap("ClusterSpec")
         public String clusterSpec;
 
-        // The time when the master instance was created.
+        /**
+         * <p>The time when the master instance was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The error message that is returned when the system fails to create the master instance.
+        /**
+         * <p>The error message that is returned when the system fails to create the master instance.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        // The name of the master instance.
+        /**
+         * <p>The name of the master instance.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The configurations of the master instance.
+        /**
+         * <p>The configurations of the master instance.</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
-        // The ID of the region in which the master instance resides.
+        /**
+         * <p>The ID of the region in which the master instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The status of the master instance. Valid values: - initial: The master instance is being initialized. - failed: The master instance failed to be created. - running: The master instance is running. - inactive: The master instance is inactive. - deleting: The master instance is being deleted. - delete_failed: The master instance failed to be deleted. - deleted: The master instance is deleted.
+        /**
+         * <p>The status of the master instance. Valid values: - initial: The master instance is being initialized. - failed: The master instance failed to be created. - running: The master instance is running. - inactive: The master instance is inactive. - deleting: The master instance is being deleted. - delete_failed: The master instance failed to be deleted. - deleted: The master instance is deleted.</p>
+         */
         @NameInMap("State")
         public String state;
 
-        // The time when the master instance was updated.
+        /**
+         * <p>The time when the master instance was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // The Kubernetes version of the master instance.
+        /**
+         * <p>The Kubernetes version of the master instance.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -206,22 +236,30 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterConditions extends TeaModel {
-        // 删除条件错误信息
+        /**
+         * <p>The error message of the deletion condition.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // 删除条件原因
+        /**
+         * <p>The reason for the deletion condition.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
-        // 删除条件状态，取值
-        // - True 不能删除
-        // - False 允许删除
-        // - Unknow 未知
+        /**
+         * <p>The status of the deletion condition. Valid values:</p>
+         * <p>- True: The master instance cannot be deleted.</p>
+         * <p>- False: The master instance can be deleted.</p>
+         * <p>- Unknow: Whether the master instance can be deleted is unknown.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // 删除条件类型
+        /**
+         * <p>The type of deletion condition.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -265,11 +303,15 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterEndpoints extends TeaModel {
-        // The internal endpoint of the API server of the master instance.
+        /**
+         * <p>The internal endpoint of the API server of the master instance.</p>
+         */
         @NameInMap("IntranetApiServerEndpoint")
         public String intranetApiServerEndpoint;
 
-        // The public endpoint of the API server of the master instance.
+        /**
+         * <p>The public endpoint of the API server of the master instance.</p>
+         */
         @NameInMap("PublicApiServerEndpoint")
         public String publicApiServerEndpoint;
 
@@ -297,15 +339,21 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterLogConfig extends TeaModel {
-        // Indicates whether audit logs are enabled. Valid values: - true: audit logs are enabled. - false: audit logs are disabled.
+        /**
+         * <p>Indicates whether audit logs are enabled. Valid values: - true: audit logs are enabled. - false: audit logs are disabled.</p>
+         */
         @NameInMap("EnableLog")
         public Boolean enableLog;
 
-        // The name of the Log Service project.
+        /**
+         * <p>The name of the Log Service project.</p>
+         */
         @NameInMap("LogProject")
         public String logProject;
 
-        // The retention period of the logs.
+        /**
+         * <p>The retention period of the logs.</p>
+         */
         @NameInMap("LogStoreTTL")
         public String logStoreTTL;
 
@@ -341,11 +389,15 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterMeshConfig extends TeaModel {
-        // Indicates whether ASM is enabled. Valid values: - true: ASM is enabled. - false: ASM is disabled.
+        /**
+         * <p>Indicates whether ASM is enabled. Valid values: - true: ASM is enabled. - false: ASM is disabled.</p>
+         */
         @NameInMap("EnableMesh")
         public Boolean enableMesh;
 
-        // The ID of the ASM instance.
+        /**
+         * <p>The ID of the ASM instance.</p>
+         */
         @NameInMap("MeshId")
         public String meshId;
 
@@ -373,23 +425,33 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeHubClusterDetailsResponseBodyClusterNetwork extends TeaModel {
-        // The domain name of the master instance.
+        /**
+         * <p>The domain name of the master instance.</p>
+         */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
-        // The IP version that is supported by the master instance. Valid values: - ipv4: IPv4. - ipv6: IPv6. - dual: IPv4 and IPv6.
+        /**
+         * <p>The IP version that is supported by the master instance. Valid values: - ipv4: IPv4. - ipv6: IPv6. - dual: IPv4 and IPv6.</p>
+         */
         @NameInMap("IPStack")
         public String IPStack;
 
-        // The ID of the associated security group.
+        /**
+         * <p>The ID of the associated security group.</p>
+         */
         @NameInMap("SecurityGroupIDs")
         public java.util.List<String> securityGroupIDs;
 
-        // A list of the vSwitches that are used by the master instance.
+        /**
+         * <p>A list of the vSwitches that are used by the master instance.</p>
+         */
         @NameInMap("VSwitches")
         public java.util.List<String> vSwitches;
 
-        // The ID of the virtual private cloud (VPC) in which the master instance resides.
+        /**
+         * <p>The ID of the virtual private cloud (VPC) in which the master instance resides.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -440,34 +502,174 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches extends TeaModel {
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches self = new DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits extends TeaModel {
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("VSwitches")
+        public java.util.List<DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches> vSwitches;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits self = new DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits setVSwitches(java.util.List<DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches> vSwitches) {
+            this.vSwitches = vSwitches;
+            return this;
+        }
+        public java.util.List<DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnitsVSwitches> getVSwitches() {
+            return this.vSwitches;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
+    public static class DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig extends TeaModel {
+        @NameInMap("ArgoServerEnabled")
+        public Boolean argoServerEnabled;
+
+        @NameInMap("PriceLimit")
+        public String priceLimit;
+
+        @NameInMap("WorkflowScheduleMode")
+        public String workflowScheduleMode;
+
+        @NameInMap("WorkflowUnits")
+        public java.util.List<DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits> workflowUnits;
+
+        public static DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig self = new DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig setArgoServerEnabled(Boolean argoServerEnabled) {
+            this.argoServerEnabled = argoServerEnabled;
+            return this;
+        }
+        public Boolean getArgoServerEnabled() {
+            return this.argoServerEnabled;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig setPriceLimit(String priceLimit) {
+            this.priceLimit = priceLimit;
+            return this;
+        }
+        public String getPriceLimit() {
+            return this.priceLimit;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig setWorkflowScheduleMode(String workflowScheduleMode) {
+            this.workflowScheduleMode = workflowScheduleMode;
+            return this;
+        }
+        public String getWorkflowScheduleMode() {
+            return this.workflowScheduleMode;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig setWorkflowUnits(java.util.List<DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits> workflowUnits) {
+            this.workflowUnits = workflowUnits;
+            return this;
+        }
+        public java.util.List<DescribeHubClusterDetailsResponseBodyClusterWorkflowConfigWorkflowUnits> getWorkflowUnits() {
+            return this.workflowUnits;
+        }
+
+    }
+
     public static class DescribeHubClusterDetailsResponseBodyCluster extends TeaModel {
-        // Information about the API server of the master instance.
+        /**
+         * <p>Information about the API server of the master instance.</p>
+         */
         @NameInMap("ApiServer")
         public DescribeHubClusterDetailsResponseBodyClusterApiServer apiServer;
 
-        // The details about the master instance.
+        /**
+         * <p>The details about the master instance.</p>
+         */
         @NameInMap("ClusterInfo")
         public DescribeHubClusterDetailsResponseBodyClusterClusterInfo clusterInfo;
 
-        // 集群删除条件信息列表
+        /**
+         * <p>The list of the deletion conditions of the master instance.</p>
+         */
         @NameInMap("Conditions")
         public java.util.List<DescribeHubClusterDetailsResponseBodyClusterConditions> conditions;
 
-        // The endpoint of the master instance.
+        /**
+         * <p>The endpoint of the master instance.</p>
+         */
         @NameInMap("Endpoints")
         public DescribeHubClusterDetailsResponseBodyClusterEndpoints endpoints;
 
-        // The logging configuration.
+        /**
+         * <p>The logging configuration.</p>
+         */
         @NameInMap("LogConfig")
         public DescribeHubClusterDetailsResponseBodyClusterLogConfig logConfig;
 
-        // The Service Mesh (ASM) configurations.
+        /**
+         * <p>The Service Mesh (ASM) configurations.</p>
+         */
         @NameInMap("MeshConfig")
         public DescribeHubClusterDetailsResponseBodyClusterMeshConfig meshConfig;
 
-        // The network configurations of the master instance.
+        /**
+         * <p>The network configurations of the master instance.</p>
+         */
         @NameInMap("Network")
         public DescribeHubClusterDetailsResponseBodyClusterNetwork network;
+
+        @NameInMap("WorkflowConfig")
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig workflowConfig;
 
         public static DescribeHubClusterDetailsResponseBodyCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeHubClusterDetailsResponseBodyCluster self = new DescribeHubClusterDetailsResponseBodyCluster();
@@ -528,6 +730,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
         public DescribeHubClusterDetailsResponseBodyClusterNetwork getNetwork() {
             return this.network;
+        }
+
+        public DescribeHubClusterDetailsResponseBodyCluster setWorkflowConfig(DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig workflowConfig) {
+            this.workflowConfig = workflowConfig;
+            return this;
+        }
+        public DescribeHubClusterDetailsResponseBodyClusterWorkflowConfig getWorkflowConfig() {
+            return this.workflowConfig;
         }
 
     }
