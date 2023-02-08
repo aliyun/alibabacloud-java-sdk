@@ -95,6 +95,9 @@ public class UpdateAdxCreativeContentRequest extends TeaModel {
     }
 
     public static class UpdateAdxCreativeContentRequestAd extends TeaModel {
+        @NameInMap("Bundle")
+        public java.util.List<String> bundle;
+
         @NameInMap("Clicks")
         public java.util.List<String> clicks;
 
@@ -110,6 +113,9 @@ public class UpdateAdxCreativeContentRequest extends TeaModel {
         @NameInMap("Interacttype")
         public Integer interacttype;
 
+        @NameInMap("MediaIdList")
+        public java.util.List<String> mediaIdList;
+
         @NameInMap("Nativead")
         public java.util.List<UpdateAdxCreativeContentRequestAdNativead> nativead;
 
@@ -118,6 +124,12 @@ public class UpdateAdxCreativeContentRequest extends TeaModel {
 
         @NameInMap("Ostype")
         public String ostype;
+
+        @NameInMap("Prereview")
+        public Boolean prereview;
+
+        @NameInMap("Seat")
+        public String seat;
 
         @NameInMap("Startdate")
         public String startdate;
@@ -131,6 +143,14 @@ public class UpdateAdxCreativeContentRequest extends TeaModel {
         public static UpdateAdxCreativeContentRequestAd build(java.util.Map<String, ?> map) throws Exception {
             UpdateAdxCreativeContentRequestAd self = new UpdateAdxCreativeContentRequestAd();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateAdxCreativeContentRequestAd setBundle(java.util.List<String> bundle) {
+            this.bundle = bundle;
+            return this;
+        }
+        public java.util.List<String> getBundle() {
+            return this.bundle;
         }
 
         public UpdateAdxCreativeContentRequestAd setClicks(java.util.List<String> clicks) {
@@ -173,6 +193,14 @@ public class UpdateAdxCreativeContentRequest extends TeaModel {
             return this.interacttype;
         }
 
+        public UpdateAdxCreativeContentRequestAd setMediaIdList(java.util.List<String> mediaIdList) {
+            this.mediaIdList = mediaIdList;
+            return this;
+        }
+        public java.util.List<String> getMediaIdList() {
+            return this.mediaIdList;
+        }
+
         public UpdateAdxCreativeContentRequestAd setNativead(java.util.List<UpdateAdxCreativeContentRequestAdNativead> nativead) {
             this.nativead = nativead;
             return this;
@@ -195,6 +223,22 @@ public class UpdateAdxCreativeContentRequest extends TeaModel {
         }
         public String getOstype() {
             return this.ostype;
+        }
+
+        public UpdateAdxCreativeContentRequestAd setPrereview(Boolean prereview) {
+            this.prereview = prereview;
+            return this;
+        }
+        public Boolean getPrereview() {
+            return this.prereview;
+        }
+
+        public UpdateAdxCreativeContentRequestAd setSeat(String seat) {
+            this.seat = seat;
+            return this;
+        }
+        public String getSeat() {
+            return this.seat;
         }
 
         public UpdateAdxCreativeContentRequestAd setStartdate(String startdate) {

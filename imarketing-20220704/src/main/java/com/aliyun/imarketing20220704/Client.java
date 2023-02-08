@@ -458,12 +458,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListAdvertisingShrinkRequest request = new ListAdvertisingShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.app))) {
-            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.app), "App", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.device))) {
-            request.deviceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.device), "Device", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.device)) {
+            request.deviceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.device, "Device", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.ext)) {
@@ -474,8 +474,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.impShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.imp, "Imp", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.user))) {
-            request.userShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.user), "User", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.user)) {
+            request.userShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.user, "User", "json");
         }
 
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -716,6 +716,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAdxCreativeContentResponse updateAdxCreativeContent(UpdateAdxCreativeContentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAdxCreativeContentWithOptions(request, runtime);
+    }
+
+    public VerifyAdvertisingResponse verifyAdvertisingWithOptions(VerifyAdvertisingRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        VerifyAdvertisingShrinkRequest request = new VerifyAdvertisingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.device)) {
+            request.deviceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.device, "Device", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ext)) {
+            request.extShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ext, "Ext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.imp)) {
+            request.impShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.imp, "Imp", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.user)) {
+            request.userShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.user, "User", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.verifyad)) {
+            request.verifyadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.verifyad, "Verifyad", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyAdvertising"),
+            new TeaPair("version", "2022-07-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyAdvertisingResponse());
+    }
+
+    public VerifyAdvertisingResponse verifyAdvertising(VerifyAdvertisingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyAdvertisingWithOptions(request, runtime);
     }
 
     public VerifySmsCodeResponse verifySmsCodeWithOptions(VerifySmsCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

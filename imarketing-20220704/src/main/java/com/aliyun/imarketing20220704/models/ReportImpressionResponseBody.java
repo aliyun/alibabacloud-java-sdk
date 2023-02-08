@@ -4,15 +4,27 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class ReportImpressionResponseBody extends TeaModel {
+    /**
+     * <p>errorCode</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>errorMsg</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>ext</p>
+     */
     @NameInMap("Ext")
     public java.util.Map<String, String> ext;
 
+    /**
+     * <p>header</p>
+     */
     @NameInMap("Header")
     public ReportImpressionResponseBodyHeader header;
 
@@ -22,6 +34,9 @@ public class ReportImpressionResponseBody extends TeaModel {
     @NameInMap("Result")
     public ReportImpressionResponseBodyResult result;
 
+    /**
+     * <p>success</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,15 +102,27 @@ public class ReportImpressionResponseBody extends TeaModel {
     }
 
     public static class ReportImpressionResponseBodyHeader extends TeaModel {
+        /**
+         * <p>costTime</p>
+         */
         @NameInMap("CostTime")
         public Long costTime;
 
+        /**
+         * <p>rpcId</p>
+         */
         @NameInMap("RpcId")
         public String rpcId;
 
+        /**
+         * <p>traceId</p>
+         */
         @NameInMap("TraceId")
         public String traceId;
 
+        /**
+         * <p>version</p>
+         */
         @NameInMap("Version")
         public String version;
 
