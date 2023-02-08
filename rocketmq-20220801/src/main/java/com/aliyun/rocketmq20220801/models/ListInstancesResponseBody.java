@@ -128,6 +128,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("remark")
         public String remark;
 
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("seriesCode")
         public String seriesCode;
 
@@ -235,6 +238,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public ListInstancesResponseBodyDataList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListInstancesResponseBodyDataList setSeriesCode(String seriesCode) {
