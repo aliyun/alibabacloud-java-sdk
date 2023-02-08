@@ -58,6 +58,24 @@ public class CreateMeetingTransRequest extends TeaModel {
     @NameInMap("RealtimeResultLevel")
     public Integer realtimeResultLevel;
 
+    @NameInMap("RealtimeResultMeetingInfoEnabled")
+    public Boolean realtimeResultMeetingInfoEnabled;
+
+    @NameInMap("RealtimeResultWordsEnabled")
+    public Boolean realtimeResultWordsEnabled;
+
+    @NameInMap("TranslateActiveResultLevel")
+    public Integer translateActiveResultLevel;
+
+    @NameInMap("TranslateLanguages")
+    public String translateLanguages;
+
+    @NameInMap("TranslateResultEnabled")
+    public Boolean translateResultEnabled;
+
+    @NameInMap("TranslateResultLevel")
+    public Integer translateResultLevel;
+
     public static CreateMeetingTransRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMeetingTransRequest self = new CreateMeetingTransRequest();
         return TeaModel.build(map, self);
@@ -205,6 +223,54 @@ public class CreateMeetingTransRequest extends TeaModel {
     }
     public Integer getRealtimeResultLevel() {
         return this.realtimeResultLevel;
+    }
+
+    public CreateMeetingTransRequest setRealtimeResultMeetingInfoEnabled(Boolean realtimeResultMeetingInfoEnabled) {
+        this.realtimeResultMeetingInfoEnabled = realtimeResultMeetingInfoEnabled;
+        return this;
+    }
+    public Boolean getRealtimeResultMeetingInfoEnabled() {
+        return this.realtimeResultMeetingInfoEnabled;
+    }
+
+    public CreateMeetingTransRequest setRealtimeResultWordsEnabled(Boolean realtimeResultWordsEnabled) {
+        this.realtimeResultWordsEnabled = realtimeResultWordsEnabled;
+        return this;
+    }
+    public Boolean getRealtimeResultWordsEnabled() {
+        return this.realtimeResultWordsEnabled;
+    }
+
+    public CreateMeetingTransRequest setTranslateActiveResultLevel(Integer translateActiveResultLevel) {
+        this.translateActiveResultLevel = translateActiveResultLevel;
+        return this;
+    }
+    public Integer getTranslateActiveResultLevel() {
+        return this.translateActiveResultLevel;
+    }
+
+    public CreateMeetingTransRequest setTranslateLanguages(String translateLanguages) {
+        this.translateLanguages = translateLanguages;
+        return this;
+    }
+    public String getTranslateLanguages() {
+        return this.translateLanguages;
+    }
+
+    public CreateMeetingTransRequest setTranslateResultEnabled(Boolean translateResultEnabled) {
+        this.translateResultEnabled = translateResultEnabled;
+        return this;
+    }
+    public Boolean getTranslateResultEnabled() {
+        return this.translateResultEnabled;
+    }
+
+    public CreateMeetingTransRequest setTranslateResultLevel(Integer translateResultLevel) {
+        this.translateResultLevel = translateResultLevel;
+        return this;
+    }
+    public Integer getTranslateResultLevel() {
+        return this.translateResultLevel;
     }
 
 }
