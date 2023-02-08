@@ -87,7 +87,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationConfigResponseBodyDataConfigMapMountDesc extends TeaModel {
-        // ConfigMap ID。
+        /**
+         * <p>ConfigMap ID。</p>
+         */
         @NameInMap("ConfigMapId")
         public Long configMapId;
 
@@ -348,7 +350,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("NasConfigs")
         public String nasConfigs;
 
-        // NAS ID。
+        /**
+         * <p>NAS ID。</p>
+         */
         @NameInMap("NasId")
         public String nasId;
 
@@ -427,11 +431,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("UpdateStrategy")
         public String updateStrategy;
 
-        // vSwitch ID。
+        /**
+         * <p>vSwitch ID。</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // VPC ID。
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
