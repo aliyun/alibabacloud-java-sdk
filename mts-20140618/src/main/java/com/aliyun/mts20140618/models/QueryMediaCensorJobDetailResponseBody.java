@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
+    /**
+     * <p>The results of the content moderation job.</p>
+     */
     @NameInMap("MediaCensorJobDetail")
     public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetail mediaCensorJobDetail;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,39 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailBarrageCensorResult extends TeaModel {
+        /**
+         * <p>The labels of the moderation result. Multiple labels are separated with commas (,). Valid values:</p>
+         * <br>
+         * <p>*   **spam**: spam</p>
+         * <p>*   **ad**: ads</p>
+         * <p>*   **abuse**: abuse</p>
+         * <p>*   **flood**: excessive junk content</p>
+         * <p>*   **contraband**: prohibited content</p>
+         * <p>*   **meaningless**: meaningless content</p>
+         * <p>*   **normal**: normal content</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The score.</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <p>The moderation scenario. The value is **antispam**.</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The recommended subsequent operation. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: The content passes the moderation.</p>
+         * <p>*   **review**: The content needs to be manually reviewed again.</p>
+         * <p>*   **block**: The content needs to be blocked.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -84,15 +114,88 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResultResultsResult extends TeaModel {
+        /**
+         * <p>The labels of the moderation result. Multiple labels are separated with commas (,).</p>
+         * <br>
+         * <p>*   Valid values in the pornographic content moderation scenario:</p>
+         * <br>
+         * <p>    *   **normal**: normal content</p>
+         * <p>    *   **sexy**: sexy content</p>
+         * <p>    *   **porn**: pornographic content</p>
+         * <br>
+         * <p>*   Valid values in the terrorist content moderation scenario:</p>
+         * <br>
+         * <p>    *   **normal**: normal content</p>
+         * <p>    *   **bloody**: bloody content</p>
+         * <p>    *   **explosion**: explosion and smoke</p>
+         * <p>    *   **outfit**: special costume</p>
+         * <p>    *   **logo**: special logo</p>
+         * <p>    *   **weapon**: weapon</p>
+         * <p>    *   **politics**: political content</p>
+         * <p>    *   **violence**: violence</p>
+         * <p>    *   **crowd**: crowd</p>
+         * <p>    *   **parade**: parade</p>
+         * <p>    *   **carcrash**: car accident</p>
+         * <p>    *   **flag**: flag</p>
+         * <p>    *   **location**: landmark</p>
+         * <p>    *   **others**: other content</p>
+         * <br>
+         * <p>*   Valid values in the ad moderation scenario:</p>
+         * <br>
+         * <p>    *   **normal**: normal content</p>
+         * <p>    *   **ad**: other ads</p>
+         * <p>    *   **politics**: political content in text</p>
+         * <p>    *   **porn**: pornographic content in text</p>
+         * <p>    *   **abuse**: abuse in text</p>
+         * <p>    *   **terrorism**: terrorist content in text</p>
+         * <p>    *   **contraband**: prohibited content in text</p>
+         * <p>    *   **spam**: spam in text</p>
+         * <p>    *   **npx**: illegal ads</p>
+         * <p>    *   **qrcode**: QR code</p>
+         * <p>    *   **programCode**: mini program code</p>
+         * <br>
+         * <p>*   Valid values in the live moderation scenario:</p>
+         * <br>
+         * <p>    *   **normal**: normal content</p>
+         * <p>    *   **meaningless**: meaningless content, such as a black or white screen</p>
+         * <p>    *   **PIP**: picture-in-picture</p>
+         * <p>    *   **smoking**: smoking</p>
+         * <p>    *   **drivelive**: live broadcasting in a running vehicle</p>
+         * <br>
+         * <p>*   Valid values in the logo moderation scenario:</p>
+         * <br>
+         * <p>    *   **normal**: normal content</p>
+         * <p>    *   **TV**: controlled TV station logo</p>
+         * <p>    *   **trademark**: trademark</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The score. Valid values: **0 to 100**.</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <p>The moderation scenario. Valid values:</p>
+         * <br>
+         * <p>*   **porn**: pornographic content moderation</p>
+         * <p>*   **terrorism**: terrorist content moderation</p>
+         * <p>*   **ad**: ad violation moderation</p>
+         * <p>*   **live**: undesirable scene moderation</p>
+         * <p>*   **logo**: logo moderation</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The recommended subsequent operation. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: The content passes the moderation.</p>
+         * <p>*   **review**: The content needs to be manually reviewed again.</p>
+         * <p>*   **block**: The content needs to be blocked.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -155,15 +258,27 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResult extends TeaModel {
+        /**
+         * <p>The OSS bucket that stores the video thumbnail.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The OSS region in which the video thumbnail resides.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The Object Storage Service (OSS) object that is used as the video thumbnail.</p>
+         */
         @NameInMap("Object")
         public String object;
 
+        /**
+         * <p>The moderation results.</p>
+         */
         @NameInMap("Results")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResultsCoverImageCensorResultResults results;
 
@@ -226,15 +341,39 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailDescCensorResult extends TeaModel {
+        /**
+         * <p>The labels of the moderation result. Valid values:</p>
+         * <br>
+         * <p>*   **spam**: spam</p>
+         * <p>*   **ad**: ads</p>
+         * <p>*   **abuse**: abuse</p>
+         * <p>*   **flood**: excessive junk content</p>
+         * <p>*   **contraband**: prohibited content</p>
+         * <p>*   **meaningless**: meaningless content</p>
+         * <p>*   **normal**: normal content</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The score.</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <p>The moderation scenario. The value is **antispam**.</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The recommended subsequent operation. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: The content passes the moderation.</p>
+         * <p>*   **review**: The content needs to be manually reviewed again.</p>
+         * <p>*   **block**: The content needs to be blocked.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -278,12 +417,21 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailInput extends TeaModel {
+        /**
+         * <p>The OSS bucket that stores the input file.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The OSS region in which the input file resides.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The OSS object that is used as the input file.</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -319,15 +467,39 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailTitleCensorResult extends TeaModel {
+        /**
+         * <p>The labels of the moderation result. Valid values: </p>
+         * <br>
+         * <p>- **normal**: normal content</p>
+         * <p>- **spam**: spam</p>
+         * <p>- **ad**: ads</p>
+         * <p>- **abuse**: abuse</p>
+         * <p>- **flood**: excessive junk content</p>
+         * <p>- **contraband**: prohibited content</p>
+         * <p>- **meaningless**: meaningless content</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The score.</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <p>The moderation scenario. The value is **antispam**.</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The recommended subsequent operation. Valid values:</p>
+         * <br>
+         * <p>- **pass**: The content passes the moderation.</p>
+         * <p>- **review**: The content needs to be manually reviewed again.</p>
+         * <p>- **block**: The content needs to be blocked.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -371,15 +543,74 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultCensorResultsCensorResult extends TeaModel {
+        /**
+         * <p>The labels of the moderation result. Multiple labels are separated with commas (,). </p>
+         * <br>
+         * <p>- Valid values in the pornographic content moderation scenario:   - **porn**: pornographic content</p>
+         * <p>  - **sexy**: sexy content</p>
+         * <p>  - **normal**: normal content</p>
+         * <p>- Valid values in the terrorist content moderation scenario:   - **normal**: normal content</p>
+         * <p>  - **bloody**: bloody content</p>
+         * <p>  - **explosion**: explosion and smoke</p>
+         * <p>  - **outfit**: special costume</p>
+         * <p>  - **logo**: special logo</p>
+         * <p>  - **weapon**: weapon</p>
+         * <p>  - **politics**: political content</p>
+         * <p>  - **violence**: violence</p>
+         * <p>  - **crowd**: crowd</p>
+         * <p>  - **parade**: parade</p>
+         * <p>  - **carcrash**: car accident</p>
+         * <p>  - **flag**: flag</p>
+         * <p>  - **location**: landmark</p>
+         * <p>  - **others**: other content</p>
+         * <p>- Valid values in the ad moderation scenario:   - **normal**: normal content</p>
+         * <p>  - **ad**: other ads</p>
+         * <p>  - **politics**: political content in text</p>
+         * <p>  - **porn**: pornographic content in text</p>
+         * <p>  - **abuse**: abuse in text</p>
+         * <p>  - **terrorism**: terrorist content in text</p>
+         * <p>  - **contraband**: prohibited content in text</p>
+         * <p>  - **spam**: spam in text</p>
+         * <p>  - **npx**: illegal ads</p>
+         * <p>  - **qrcode**: QR code</p>
+         * <p>  - **programCode**: mini program code</p>
+         * <p>- Valid values in the live moderation scenario:   - **normal**: normal content</p>
+         * <p>  - **meaningless**: meaningless content, such as a black or white screen</p>
+         * <p>  - **PIP**: picture-in-picture</p>
+         * <p>  - **smoking**: smoking</p>
+         * <p>  - **drivelive**: live broadcasting in a running vehicle</p>
+         * <p>- Valid values in the logo moderation scenario:   - **normal**: normal content</p>
+         * <p>  - **TV**: controlled TV station logo</p>
+         * <p>  - **trademark**: trademark</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The score.</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <p>The moderation scenario. Valid values: </p>
+         * <br>
+         * <p>- **porn**: pornographic content moderation</p>
+         * <p>- **terrorism**: terrorist content moderation</p>
+         * <p>- **ad**: ad violation moderation</p>
+         * <p>- **live**: undesirable scene moderation</p>
+         * <p>- **logo**: logo moderation</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The recommended subsequent operation. Valid values:</p>
+         * <br>
+         * <p>- **pass**: The content passes the moderation.</p>
+         * <p>- **review**: The content needs to be manually reviewed again.</p>
+         * <p>- **block**: The content needs to be blocked.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -442,15 +673,88 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult extends TeaModel {
+        /**
+         * <p>The labels of the moderation result. Multiple labels are separated with commas (,).</p>
+         * <br>
+         * <p>*   Valid values in the pornographic content moderation scenario:</p>
+         * <br>
+         * <p>    *   **porn**: pornographic content</p>
+         * <p>    *   **sexy**: sexy content</p>
+         * <p>    *   **normal**: normal content</p>
+         * <br>
+         * <p>*   Valid values in the terrorist content moderation scenario:</p>
+         * <br>
+         * <p>    *   **normal**: normal content</p>
+         * <p>    *   **bloody**: bloody content</p>
+         * <p>    *   **explosion**: explosion and smoke</p>
+         * <p>    *   **outfit**: special costume</p>
+         * <p>    *   **logo**: special logo</p>
+         * <p>    *   **weapon**: weapon</p>
+         * <p>    *   **politics**: political content</p>
+         * <p>    *   **violence**: violence</p>
+         * <p>    *   **crowd**: crowd</p>
+         * <p>    *   **parade**: parade</p>
+         * <p>    *   **carcrash**: car accident</p>
+         * <p>    *   **flag**: flag</p>
+         * <p>    *   **location**: landmark</p>
+         * <p>    *   **others**: other content</p>
+         * <br>
+         * <p>*   Valid values in the ad moderation scenario:</p>
+         * <br>
+         * <p>    *   **normal**: normal content</p>
+         * <p>    *   **ad**: other ads</p>
+         * <p>    *   **politics**: political content in text</p>
+         * <p>    *   **porn**: pornographic content in text</p>
+         * <p>    *   **abuse**: abuse in text</p>
+         * <p>    *   **terrorism**: terrorist content in text</p>
+         * <p>    *   **contraband**: prohibited content in text</p>
+         * <p>    *   **spam**: spam in text</p>
+         * <p>    *   **npx**: illegal ads</p>
+         * <p>    *   **qrcode**: QR code</p>
+         * <p>    *   **programCode**: mini program code</p>
+         * <br>
+         * <p>*   Valid values in the live moderation scenario:</p>
+         * <br>
+         * <p>    *   **normal**: normal content</p>
+         * <p>    *   **meaningless**: meaningless content, such as a black or white screen</p>
+         * <p>    *   **PIP**: picture-in-picture</p>
+         * <p>    *   **smoking**: smoking</p>
+         * <p>    *   **drivelive**: live broadcasting in a running vehicle</p>
+         * <br>
+         * <p>*   Valid values in the logo moderation scenario:</p>
+         * <br>
+         * <p>    *   **normal**: normal content</p>
+         * <p>    *   **TV**: controlled TV station logo</p>
+         * <p>    *   **trademark**: trademark</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The score.</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <p>The moderation scenario. Valid values:</p>
+         * <br>
+         * <p>*   **porn**: pornographic content moderation</p>
+         * <p>*   **terrorism**: terrorist content moderation</p>
+         * <p>*   **ad**: ad violation moderation</p>
+         * <p>*   **live**: undesirable scene moderation</p>
+         * <p>*   **logo**: logo moderation</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>The recommended subsequent operation. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: The content passes the moderation.</p>
+         * <p>*   **review**: The content needs to be manually reviewed again.</p>
+         * <p>*   **block**: The content needs to be blocked.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -513,12 +817,25 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimeline extends TeaModel {
+        /**
+         * <p>A collection of the moderation results. The information includes the summary about various scenarios such as pornographic content and terrorist content.</p>
+         */
         @NameInMap("CensorResults")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelinesVideoTimelineCensorResults censorResults;
 
+        /**
+         * <p>The one or more OSS objects that are generated as the output snapshots.</p>
+         * <br>
+         * <p>>  In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named `output00001-****.jpg`, `output00002-****.jpg`, and so on.</p>
+         */
         @NameInMap("Object")
         public String object;
 
+        /**
+         * <p>The position in the video.</p>
+         * <br>
+         * <p>Format: `hh:mm:ss[.SSS]`.</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -573,12 +890,21 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResult extends TeaModel {
+        /**
+         * <p>A collection of the moderation results. The information includes the summary about various scenarios such as pornographic content and terrorist content.</p>
+         */
         @NameInMap("CensorResults")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultCensorResults censorResults;
 
+        /**
+         * <p>The token that is used to retrieve the next page of the query results.</p>
+         */
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
+        /**
+         * <p>The moderation results that are sorted in ascending order by time.</p>
+         */
         @NameInMap("VideoTimelines")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResultVideoTimelines videoTimelines;
 
@@ -614,12 +940,23 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVideoCensorConfigOutputFile extends TeaModel {
+        /**
+         * <p>The OSS bucket that stores the output snapshot.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The OSS region in which the OSS bucket for storing the output snapshot resides.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The one or more OSS objects that are generated as the output snapshots.</p>
+         * <br>
+         * <p>>  In the example, {Count} is a placeholder. The OSS objects that are generated as output snapshots are named `output00001-****.jpg`, `output00002-****.jpg`, and so on.</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -655,12 +992,24 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVideoCensorConfig extends TeaModel {
+        /**
+         * <p>The custom business type. Default value: common.</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The information about output snapshots.</p>
+         */
         @NameInMap("OutputFile")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVideoCensorConfigOutputFile outputFile;
 
+        /**
+         * <p>Indicates whether the video content needs to be moderated. Default value: **true**. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The video content needs to be moderated.</p>
+         * <p>*   **false**: The video content does not need to be moderated.</p>
+         */
         @NameInMap("VideoCensor")
         public String videoCensor;
 
@@ -696,51 +1045,105 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetail extends TeaModel {
+        /**
+         * <p>The moderation result of live comments.</p>
+         */
         @NameInMap("BarrageCensorResult")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailBarrageCensorResult barrageCensorResult;
 
+        /**
+         * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The moderation results of thumbnails.</p>
+         */
         @NameInMap("CoverImageCensorResults")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailCoverImageCensorResults coverImageCensorResults;
 
+        /**
+         * <p>The time when the job was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The moderation result of the description.</p>
+         */
         @NameInMap("DescCensorResult")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailDescCensorResult descCensorResult;
 
+        /**
+         * <p>The time when the job was completed.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The information about the job input.</p>
+         */
         @NameInMap("Input")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailInput input;
 
+        /**
+         * <p>The ID of the content moderation job.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The error message returned if the job fails. This parameter is not returned if the job is successful.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The status of the job.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The overall result of the job. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: The content passes the moderation.</p>
+         * <p>*   **review**: The content needs to be manually reviewed again.</p>
+         * <p>*   **block**: The content needs to be blocked.</p>
+         * <br>
+         * <p>If the moderation result of one type of the moderated content is review, the overall result is review. If the moderation result of one type of the moderated content is block, the overall result is block.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <p>The moderation result of the title.</p>
+         */
         @NameInMap("TitleCensorResult")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailTitleCensorResult titleCensorResult;
 
+        /**
+         * <p>The custom data.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <p>The results of video review.</p>
+         */
         @NameInMap("VensorCensorResult")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVensorCensorResult vensorCensorResult;
 
+        /**
+         * <p>The video moderation configurations.</p>
+         */
         @NameInMap("VideoCensorConfig")
         public QueryMediaCensorJobDetailResponseBodyMediaCensorJobDetailVideoCensorConfig videoCensorConfig;
 

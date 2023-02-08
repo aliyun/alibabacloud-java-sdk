@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ActivateMediaWorkflowRequest extends TeaModel {
+    /**
+     * <p>The ID of the media workflow. You can obtain the ID from the response of the [AddMediaWorkflow](~~44437~~) operation.</p>
+     */
     @NameInMap("MediaWorkflowId")
     public String mediaWorkflowId;
 

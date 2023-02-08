@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeactivateMediaWorkflowRequest extends TeaModel {
+    /**
+     * <p>The ID of the media workflow that you want to deactivate. To obtain the ID of the media workflow, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Workflow Settings** in the left-side navigation pane.</p>
+     */
     @NameInMap("MediaWorkflowId")
     public String mediaWorkflowId;
 

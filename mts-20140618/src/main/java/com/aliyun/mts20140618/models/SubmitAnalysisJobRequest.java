@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitAnalysisJobRequest extends TeaModel {
+    /**
+     * <p>The job configuration. Set this parameter as required. [~~29253~~](~~29253~~)</p>
+     */
     @NameInMap("AnalysisConfig")
     public String analysisConfig;
 
+    /**
+     * <p>The input information about the preset template analysis job to be submitted. The value is a JSON object. You must log on to the Object Storage Service (OSS) console to grant the read permissions on the specified OSS bucket to MPS. [~~29253~~](~~29253~~)</p>
+     */
     @NameInMap("Input")
     public String input;
 
@@ -16,9 +22,18 @@ public class SubmitAnalysisJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the MPS queue to which the job is added. To view the MPS queue ID, log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane. If you want to enable asynchronous notifications, make sure that the queue is bound to a Message Service (MNS) topic.</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    /**
+     * <p>The priority of the job in the MPS queue to which the job is added.</p>
+     * <br>
+     * <p>*   Valid values: **1 to 10**. A value of 10 indicates the highest priority.</p>
+     * <p>*   Default value: **6**.</p>
+     */
     @NameInMap("Priority")
     public String priority;
 
@@ -28,6 +43,9 @@ public class SubmitAnalysisJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The custom data. The custom data can contain letters, digits, and hyphens (-), and can be up to 1,024 bytes in length. It cannot start with a special character.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

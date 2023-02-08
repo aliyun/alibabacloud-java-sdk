@@ -4,12 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
+    /**
+     * <p>The jobs of deleting a media fingerprint library. For more information, see the "FpDBDeleteJob" section of the [Data types](https://icms.alibaba-inc.com/content/mps/cc2a58?l=1\&m=16051\&n=23657) topic.</p>
+     */
     @NameInMap("FpDBDeleteJobList")
     public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobList fpDBDeleteJobList;
 
+    /**
+     * <p>The IDs of the jobs that do not exist. This parameter is not returned if all specified jobs are found.</p>
+     */
     @NameInMap("NonExistIds")
     public QueryFpDBDeleteJobListResponseBodyNonExistIds nonExistIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +52,68 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob extends TeaModel {
+        /**
+         * <p>The error code returned when the job fails. This parameter is not returned if the job is successful.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The point in time when the job was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The operation type.</p>
+         */
         @NameInMap("DelType")
         public String delType;
 
+        /**
+         * <p>The point in time when the job was complete.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The ID of the media fingerprint library.</p>
+         */
         @NameInMap("FpDBId")
         public String fpDBId;
 
+        /**
+         * <p>The ID of the job.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The error message returned when the job fails. This parameter is not returned if the job is successful.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue.</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The status of the job. Valid values:</p>
+         * <br>
+         * <p>*   **Queuing**: The job is waiting in the queue.</p>
+         * <p>*   **Analysing**: The job is in progress.</p>
+         * <p>*   **Success**: The job is successful.</p>
+         * <p>*   **Fail**: The job fails.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The custom data.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

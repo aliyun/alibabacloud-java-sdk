@@ -4,9 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddWaterMarkTemplateRequest extends TeaModel {
+    /**
+     * <p>The configuration of the watermark template. The value is a JSON object. For more information, see [Watermark templates](~~29253~~).</p>
+     * <br>
+     * <p>>  If you do not require a positive correlation between the size of text in the watermark and the resolution, you can enable adaptation for the watermark. To do so, add `[\"adaptive\"]=true` to the text parameter of the watermark.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The name of the watermark template. The value can contain letters and digits and can be up to 128 bytes in size.</p>
+     */
     @NameInMap("Name")
     public String name;
 

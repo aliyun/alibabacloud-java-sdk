@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddMediaWorkflowResponseBody extends TeaModel {
+    /**
+     * <p>The information about the media workflow.</p>
+     */
     @NameInMap("MediaWorkflow")
     public AddMediaWorkflowResponseBodyMediaWorkflow mediaWorkflow;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,42 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
     }
 
     public static class AddMediaWorkflowResponseBodyMediaWorkflow extends TeaModel {
+        /**
+         * <p>The time when the media workflow was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the media workflow. We recommend that you keep this ID for later operations on this workflow.</p>
+         */
         @NameInMap("MediaWorkflowId")
         public String mediaWorkflowId;
 
+        /**
+         * <p>The name of the media workflow.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the media workflow. By default, the created workflow is in the **Active** state.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The topology of the media workflow. The value is a JSON object that contains the activity list and activity dependencies.</p>
+         */
         @NameInMap("Topology")
         public String topology;
 
+        /**
+         * <p>The trigger mode of the media workflow. Valid values:</p>
+         * <br>
+         * <p>*   **OssAutoTrigger**: The media workflow is automatically triggered.</p>
+         * <p>*   **NotInAuto**: The media workflow is not automatically triggered.</p>
+         */
         @NameInMap("TriggerMode")
         public String triggerMode;
 

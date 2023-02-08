@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaInfoJobListRequest extends TeaModel {
+    /**
+     * <p>The IDs of the media information analysis jobs. Separate multiple jobs with commas (,). You can query up to 10 jobs at a time.</p>
+     */
     @NameInMap("MediaInfoJobIds")
     public String mediaInfoJobIds;
 

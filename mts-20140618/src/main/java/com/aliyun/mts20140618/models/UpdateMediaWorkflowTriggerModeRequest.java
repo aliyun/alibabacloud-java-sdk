@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaWorkflowTriggerModeRequest extends TeaModel {
+    /**
+     * <p>The ID of the media workflow to be updated. To obtain the workflow ID, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Workflow Settings**.</p>
+     */
     @NameInMap("MediaWorkflowId")
     public String mediaWorkflowId;
 
@@ -19,6 +22,12 @@ public class UpdateMediaWorkflowTriggerModeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The trigger mode of the media workflow. Valid values:</p>
+     * <br>
+     * <p>*   **OssAutoTrigger**: automatically triggers the media workflow.</p>
+     * <p>*   **NotInAuto**: does not automatically trigger the media workflow.</p>
+     */
     @NameInMap("TriggerMode")
     public String triggerMode;
 

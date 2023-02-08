@@ -7,8 +7,8 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
     @NameInMap("EndOfJobCreatedTimeRange")
     public String endOfJobCreatedTimeRange;
 
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("JobIds")
+    public String jobIds;
 
     @NameInMap("MaximumPageSize")
     public Long maximumPageSize;
@@ -50,12 +50,12 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
         return this.endOfJobCreatedTimeRange;
     }
 
-    public QueryMediaCensorJobListRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public QueryMediaCensorJobListRequest setJobIds(String jobIds) {
+        this.jobIds = jobIds;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getJobIds() {
+        return this.jobIds;
     }
 
     public QueryMediaCensorJobListRequest setMaximumPageSize(Long maximumPageSize) {

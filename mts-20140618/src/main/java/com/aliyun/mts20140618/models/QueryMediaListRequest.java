@@ -4,18 +4,45 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaListRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to include media information in the returned result.</p>
+     * <br>
+     * <p>*   Valid values: true and false.</p>
+     * <p>*   Default value: **false**.</p>
+     */
     @NameInMap("IncludeMediaInfo")
     public Boolean includeMediaInfo;
 
+    /**
+     * <p>Specifies whether to include playback information in the returned result.</p>
+     * <br>
+     * <p>*   Valid values: true and false.</p>
+     * <p>*   Default value: **false**.</p>
+     */
     @NameInMap("IncludePlayList")
     public Boolean includePlayList;
 
+    /**
+     * <p>Specifies whether to include snapshot information in the returned result.</p>
+     * <br>
+     * <p>*   Valid values: true and false.</p>
+     * <p>*   Default value: **false**.</p>
+     */
     @NameInMap("IncludeSnapshotList")
     public Boolean includeSnapshotList;
 
+    /**
+     * <p>Specifies whether to include summaries in the returned result.</p>
+     * <br>
+     * <p>*   Valid values: true and false.</p>
+     * <p>*   Default value: **false**.</p>
+     */
     @NameInMap("IncludeSummaryList")
     public Boolean includeSummaryList;
 
+    /**
+     * <p>The IDs of the media files. To obtain the ID of a media file, you can perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click Manage. The ID of the video is displayed on the Basics tab. Separate multiple IDs with commas (,). You can query up to 10 media files at a time.</p>
+     */
     @NameInMap("MediaIds")
     public String mediaIds;
 

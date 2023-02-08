@@ -10,6 +10,9 @@ public class DeletePipelineRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the MPS queue that you want to delete. To obtain the ID of the MPS queue, you can log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 

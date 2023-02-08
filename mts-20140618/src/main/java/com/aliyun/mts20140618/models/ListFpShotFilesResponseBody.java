@@ -4,12 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListFpShotFilesResponseBody extends TeaModel {
+    /**
+     * <p>The media fingerprint files. For more information, see the "FpShotFile" section of the [Data types](~~29251~~) topic.</p>
+     */
     @NameInMap("FpShotFileList")
     public ListFpShotFilesResponseBodyFpShotFileList fpShotFileList;
 
+    /**
+     * <p>The token of the next page.</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,21 @@ public class ListFpShotFilesResponseBody extends TeaModel {
     }
 
     public static class ListFpShotFilesResponseBodyFpShotFileListFpShotFileInputFile extends TeaModel {
+        /**
+         * <p>The name of the OSS bucket in which the input file is stored.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The ID of the OSS region in which the input file resides.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The name of the Object Storage Service (OSS) object that is used as the input file.</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -84,12 +102,21 @@ public class ListFpShotFilesResponseBody extends TeaModel {
     }
 
     public static class ListFpShotFilesResponseBodyFpShotFileListFpShotFile extends TeaModel {
+        /**
+         * <p>The ID of the video file.</p>
+         */
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <p>The information about the job input.</p>
+         */
         @NameInMap("InputFile")
         public ListFpShotFilesResponseBodyFpShotFileListFpShotFileInputFile inputFile;
 
+        /**
+         * <p>The unique primary key of the video.</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 

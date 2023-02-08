@@ -4,12 +4,23 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryPipelineListResponseBody extends TeaModel {
+    /**
+     * <p>The MPS queue IDs that do not exist. This parameter is not returned if all specified MPS queues are found.  </p>
+     * <br>
+     * <p>>  This parameter is returned if the specified MPS queue IDs that do not exist are valid. Check whether the user ID (UID) that is used to submit the request is the same as the UID to which the queues belong.</p>
+     */
     @NameInMap("NonExistPids")
     public QueryPipelineListResponseBodyNonExistPids nonExistPids;
 
+    /**
+     * <p>The details of the MPS queues.</p>
+     */
     @NameInMap("PipelineList")
     public QueryPipelineListResponseBodyPipelineList pipelineList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -62,15 +73,27 @@ public class QueryPipelineListResponseBody extends TeaModel {
     }
 
     public static class QueryPipelineListResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
+        /**
+         * <p>The tags of the messages.</p>
+         */
         @NameInMap("MqTag")
         public String mqTag;
 
+        /**
+         * <p>The queue of messages that are received.</p>
+         */
         @NameInMap("MqTopic")
         public String mqTopic;
 
+        /**
+         * <p>The name of the queue that is created in MNS.</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <p>The name of the topic that is created in MNS.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -114,27 +137,66 @@ public class QueryPipelineListResponseBody extends TeaModel {
     }
 
     public static class QueryPipelineListResponseBodyPipelineListPipeline extends TeaModel {
+        /**
+         * <p>The ID of the MPS queue.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the MPS queue.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The Message Service (MNS) configuration.</p>
+         */
         @NameInMap("NotifyConfig")
         public QueryPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig;
 
+        /**
+         * <p>The quota that is allocated to the MPS queue.</p>
+         */
         @NameInMap("QuotaAllocate")
         public Long quotaAllocate;
 
+        /**
+         * <p>The role that is assigned to the current RAM user.</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The type of the MPS queue. Default value: **Standard**. Valid values:</p>
+         * <br>
+         * <p>*   **Boost**: MPS queue with transcoding speed boosted</p>
+         * <p>*   **Standard**: standard MPS queue</p>
+         * <p>*   **NarrowBandHDV2**: MPS queue that supports Narrowband HD 2.0</p>
+         * <p>*   **AIVideoCover**: MPS queue for intelligent snapshot capture</p>
+         * <p>*   **AIVideoFPShot**: MPS queue for media fingerprinting</p>
+         * <p>*   **AIVideoCensor**: MPS queue for automated review</p>
+         * <p>*   **AIVideoMCU**: MPS queue for smart tagging</p>
+         * <p>*   **AIVideoSummary**: MPS queue for video synopsis</p>
+         * <p>*   **AIVideoPorn**: MPS queue for pornography detection in videos</p>
+         * <p>*   **AIAudioKWS**: MPS queue for keyword recognition in audio</p>
+         * <p>*   **AIAudioASR**: MPS queue for speech-to-text conversion</p>
+         */
         @NameInMap("Speed")
         public String speed;
 
+        /**
+         * <p>The level of the MPS queue.</p>
+         */
         @NameInMap("SpeedLevel")
         public Long speedLevel;
 
+        /**
+         * <p>The state of the MPS queue. Valid values:</p>
+         * <br>
+         * <p>*   **Active**: The MPS queue is active.</p>
+         * <p>*   **Paused**: The MPS queue is paused.</p>
+         */
         @NameInMap("State")
         public String state;
 

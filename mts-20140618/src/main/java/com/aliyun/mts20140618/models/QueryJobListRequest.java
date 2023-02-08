@@ -4,6 +4,11 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryJobListRequest extends TeaModel {
+    /**
+     * <p>The IDs of transcoding jobs. Separate multiple IDs with commas (,). You can query a maximum of 10 transcoding jobs at a time. You can log on to the [ApsaraVideo Media Processing (MPS) console](https://mps.console.aliyun.com/overview) and click **Tasks** in the left-side navigation pane to obtain job IDs. Alternatively, you can obtain job IDs from the response to the [SubmitJobs](~~29226~~) operation.</p>
+     * <br>
+     * <p>>  If you do not set the JobIds parameter, the `InvalidParameter` error code is returned.</p>
+     */
     @NameInMap("JobIds")
     public String jobIds;
 

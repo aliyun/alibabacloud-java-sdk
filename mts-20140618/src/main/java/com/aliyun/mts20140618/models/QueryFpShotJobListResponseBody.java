@@ -4,12 +4,24 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryFpShotJobListResponseBody extends TeaModel {
+    /**
+     * <p>The array of media fingerprint analysis jobs.</p>
+     */
     @NameInMap("FpShotJobList")
     public QueryFpShotJobListResponseBodyFpShotJobList fpShotJobList;
 
+    @NameInMap("NextPageToken")
+    public String nextPageToken;
+
+    /**
+     * <p>The job IDs that do not exist. This parameter is not returned if all specified jobs are found.</p>
+     */
     @NameInMap("NonExistIds")
     public QueryFpShotJobListResponseBodyNonExistIds nonExistIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -24,6 +36,14 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
     public QueryFpShotJobListResponseBodyFpShotJobList getFpShotJobList() {
         return this.fpShotJobList;
+    }
+
+    public QueryFpShotJobListResponseBody setNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    public String getNextPageToken() {
+        return this.nextPageToken;
     }
 
     public QueryFpShotJobListResponseBody setNonExistIds(QueryFpShotJobListResponseBodyNonExistIds nonExistIds) {
@@ -43,12 +63,25 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotConfig extends TeaModel {
+        /**
+         * <p>The ID of the media fingerprint library.</p>
+         */
         @NameInMap("FpDBId")
         public String fpDBId;
 
+        /**
+         * <p>The unique primary key of the input video.</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
+        /**
+         * <p>The storage type. Valid values:</p>
+         * <br>
+         * <p>- **nosave**: The fingerprints of the job input are not saved to the media fingerprint library.</p>
+         * <p>- **save**: The fingerprints of the job input are saved to the media fingerprint library only if the job input is not duplicated with media content in the media fingerprint library.</p>
+         * <p>- **forcesave**: The fingerprints of the job input are forcibly saved to the media fingerprint library.</p>
+         */
         @NameInMap("SaveType")
         public String saveType;
 
@@ -84,9 +117,15 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSliceDuplication extends TeaModel {
+        /**
+         * <p>The length.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The start point in time.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -114,9 +153,15 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSliceInput extends TeaModel {
+        /**
+         * <p>The length.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The start point in time.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -144,12 +189,21 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSlice extends TeaModel {
+        /**
+         * <p>The start point in time and length of the similar audio clip in the audio file that has similar fingerprints to the input audio in the audio fingerprint library.</p>
+         */
         @NameInMap("Duplication")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSliceDuplication duplication;
 
+        /**
+         * <p>The start point in time and length of the similar audio clip in the input audio.</p>
+         */
         @NameInMap("Input")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSliceInput input;
 
+        /**
+         * <p>The overall similarity of the input audio against audio files that have similar fingerprints to the input audio in the audio fingerprint library.</p>
+         */
         @NameInMap("Similarity")
         public String similarity;
 
@@ -204,12 +258,21 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShot extends TeaModel {
+        /**
+         * <p>The array of audio files that have similar fingerprints to the input audio in the audio fingerprint library.</p>
+         */
         @NameInMap("FpShotSlices")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlices fpShotSlices;
 
+        /**
+         * <p>The unique primary key of the input video.</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
+        /**
+         * <p>The overall similarity of the input audio against audio files that have similar fingerprints to the input audio in the audio fingerprint library.</p>
+         */
         @NameInMap("Similarity")
         public String similarity;
 
@@ -264,9 +327,15 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSliceDuplication extends TeaModel {
+        /**
+         * <p>The length.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The start point in time.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -294,9 +363,15 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSliceInput extends TeaModel {
+        /**
+         * <p>The length.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The start point in time.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -324,12 +399,21 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSlice extends TeaModel {
+        /**
+         * <p>The start point in time and length of the similar video clip in the video that has similar fingerprints to the input video in the video fingerprint library.</p>
+         */
         @NameInMap("Duplication")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSliceDuplication duplication;
 
+        /**
+         * <p>The start point in time and length of the similar video clip in the input video.</p>
+         */
         @NameInMap("Input")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSliceInput input;
 
+        /**
+         * <p>The similarity of the input video clip against the video that has similar fingerprints to the input video in the video fingerprint library.</p>
+         */
         @NameInMap("Similarity")
         public String similarity;
 
@@ -384,12 +468,21 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShot extends TeaModel {
+        /**
+         * <p>The array of videos that have similar fingerprints to the input video in the video fingerprint library.</p>
+         */
         @NameInMap("FpShotSlices")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlices fpShotSlices;
 
+        /**
+         * <p>The unique primary key of the input video.</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
+        /**
+         * <p>The overall similarity of the input video against videos that have similar fingerprints to the input video in the video fingerprint library. The overall similarity is the average value of the similarities of the input video against all similar video clips. If multiple similar video clips exist in the video fingerprint library, the similarities of the input video against multiple similar video clips are returned.</p>
+         */
         @NameInMap("Similarity")
         public String similarity;
 
@@ -444,9 +537,15 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment extends TeaModel {
+        /**
+         * <p>The length.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The start point in time.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -474,15 +573,27 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice extends TeaModel {
+        /**
+         * <p>The text snippet that has similar fingerprints to the input text in the text fingerprint library.</p>
+         */
         @NameInMap("DuplicationText")
         public String duplicationText;
 
+        /**
+         * <p>The start point in time and length of the similar text snippet in the input text.</p>
+         */
         @NameInMap("InputFragment")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment inputFragment;
 
+        /**
+         * <p>The input text for text fingerprint analysis.</p>
+         */
         @NameInMap("InputText")
         public String inputText;
 
+        /**
+         * <p>The similarity of the input text against the text snippet that has similar fingerprints to the input text in the text fingerprint library.</p>
+         */
         @NameInMap("Similarity")
         public String similarity;
 
@@ -545,12 +656,21 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot extends TeaModel {
+        /**
+         * <p>The unique primary key of the input text.</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
+        /**
+         * <p>The similarity of the input text against text snippets that have similar fingerprints to the input text in the text fingerprint library.</p>
+         */
         @NameInMap("Similarity")
         public String similarity;
 
+        /**
+         * <p>The array of text snippets that have similar fingerprints to the input text in the text fingerprint library.</p>
+         */
         @NameInMap("TextFpShotSlices")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlices textFpShotSlices;
 
@@ -605,12 +725,21 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResult extends TeaModel {
+        /**
+         * <p>The audio fingerprint analysis results.</p>
+         */
         @NameInMap("AudioFpShots")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShots audioFpShots;
 
+        /**
+         * <p>The video fingerprint analysis results.</p>
+         */
         @NameInMap("FpShots")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShots fpShots;
 
+        /**
+         * <p>The text fingerprint analysis results.</p>
+         */
         @NameInMap("TextFpShots")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShots textFpShots;
 
@@ -646,12 +775,21 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobInputFile extends TeaModel {
+        /**
+         * <p>The OSS bucket in which the job input resides.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The OSS region in which the job input resides.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The Object Storage Service (OSS) object that is used as the job input.</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -687,42 +825,86 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJob extends TeaModel {
+        /**
+         * <p>The error code returned when the job fails.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The point in time when the job was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the matched file in the media fingerprint library.</p>
+         */
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <p>The point in time when the job was complete.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The configurations of the job.</p>
+         */
         @NameInMap("FpShotConfig")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotConfig fpShotConfig;
 
+        /**
+         * <p>The results of the media fingerprint analysis job.</p>
+         */
         @NameInMap("FpShotResult")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResult fpShotResult;
 
+        /**
+         * <p>The ID of the job.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The information about the job input.</p>
+         */
         @NameInMap("Input")
         public String input;
 
+        /**
+         * <p>The information about the job input.</p>
+         */
         @NameInMap("InputFile")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobInputFile inputFile;
 
+        /**
+         * <p>The error message returned when the job fails. This parameter is not returned if the job is successful.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue.</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The status of the job. Valid values:</p>
+         * <br>
+         * <p>- **Queuing**: The job is waiting in the queue.</p>
+         * <p>- **Analysing**: The job is in progress.</p>
+         * <p>- **Success**: The job is successful.</p>
+         * <p>- **Fail**: The job fails.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The custom data.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

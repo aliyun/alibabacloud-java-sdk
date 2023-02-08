@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaWorkflowRequest extends TeaModel {
+    /**
+     * <p>The ID of the media workflow that you want to update. To obtain the ID of the media workflow, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Workflow Settings** in the left-side navigation pane.</p>
+     */
     @NameInMap("MediaWorkflowId")
     public String mediaWorkflowId;
 
@@ -19,6 +22,9 @@ public class UpdateMediaWorkflowRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The new topology of the media workflow. The value is a JSON object that contains the activity list and activity dependencies.</p>
+     */
     @NameInMap("Topology")
     public String topology;
 
