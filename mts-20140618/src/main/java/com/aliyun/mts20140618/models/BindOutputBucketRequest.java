@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class BindOutputBucketRequest extends TeaModel {
+    /**
+     * <p>The name of the output media bucket to be bound. The name can be up to 64 bytes in size and can contain letters, digits, and hyphens (-). The name cannot start with a special character.</p>
+     */
     @NameInMap("Bucket")
     public String bucket;
 
@@ -19,6 +22,18 @@ public class BindOutputBucketRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ARN of the RAM role.</p>
+     * <br>
+     * <p>The trust entity of the RAM role is a SAML IdP. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).</p>
+     * <br>
+     * <p>Format: `acs:ram::<account_id>:role/<role_name>`.</p>
+     * <br>
+     * <p>You can view the ARN in the RAM console or by calling operations.</p>
+     * <br>
+     * <p>- For more information about how to view the ARN in the RAM console, see [How do I view the ARN of the RAM role?](~~39744~~).</p>
+     * <p>- For more information about how to view the ARN by calling operations, see [ListRoles](~~28713~~) or [GetRole](~~28711~~).</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 

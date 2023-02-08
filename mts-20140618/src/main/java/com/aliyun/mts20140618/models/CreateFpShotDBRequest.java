@@ -4,15 +4,27 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class CreateFpShotDBRequest extends TeaModel {
+    /**
+     * <p>The configurations of the media fingerprint library. By default, this parameter is empty. You can customize the configurations based on your business requirements. The value is a string in the JSON format.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The description of the media fingerprint library.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The model ID of the media fingerprint library. To create a text fingerprint library, set the parameter to **11**. To create a video fingerprint library, set the parameter to **12**. To create an audio fingerprint library, set the parameter to **13**. A value of **14** indicates that the library is an image fingerprint library.</p>
+     */
     @NameInMap("ModelId")
     public Integer modelId;
 
+    /**
+     * <p>The name of the media fingerprint library to be created.</p>
+     */
     @NameInMap("Name")
     public String name;
 

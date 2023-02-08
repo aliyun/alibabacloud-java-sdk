@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class CreateFpShotDBResponseBody extends TeaModel {
+    /**
+     * <p>The details of the media fingerprint library.</p>
+     */
     @NameInMap("FpShotDB")
     public CreateFpShotDBResponseBodyFpShotDB fpShotDB;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class CreateFpShotDBResponseBody extends TeaModel {
     }
 
     public static class CreateFpShotDBResponseBodyFpShotDB extends TeaModel {
+        /**
+         * <p>The configurations of the media fingerprint library.</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The description of the media fingerprint library.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the media fingerprint library. We recommend that you keep this ID for subsequent operation calls.</p>
+         */
         @NameInMap("FpDBId")
         public String fpDBId;
 
+        /**
+         * <p>The model ID of the media fingerprint library.</p>
+         */
         @NameInMap("ModelId")
         public Integer modelId;
 
+        /**
+         * <p>The name of the media fingerprint library.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the media fingerprint library. After the media fingerprint library is created, it enters the **offline** state. After the media fingerprint library is processed at the backend, it enters the **active** state.</p>
+         */
         @NameInMap("State")
         public String state;
 

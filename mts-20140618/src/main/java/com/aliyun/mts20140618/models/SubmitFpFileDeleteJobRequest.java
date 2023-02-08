@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitFpFileDeleteJobRequest extends TeaModel {
+    /**
+     * <p>The IDs of the media files that you want to delete. Separate multiple file IDs with commas (,). You can delete up to 200 media files at a time. You can obtain the file IDs from the response parameters of the [ListFpShotFiles](~~209266~~) operation.</p>
+     */
     @NameInMap("FileIds")
     public String fileIds;
 
+    /**
+     * <p>The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.</p>
+     */
     @NameInMap("FpDBId")
     public String fpDBId;
 
@@ -16,6 +22,9 @@ public class SubmitFpFileDeleteJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the ApsaraVideo Media Processing (MPS) queue. This ID can be used to associate the job with a notification method. To view the MPS queue ID, log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
@@ -28,6 +37,9 @@ public class SubmitFpFileDeleteJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The custom data. The value can contain letters and digits and can be up to 128 bytes in length.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

@@ -10,9 +10,18 @@ public class SearchMediaWorkflowRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   A maximum of **100** entries can be returned on each page.</p>
+     * <p>*   Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -22,6 +31,13 @@ public class SearchMediaWorkflowRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the media workflows that you want to query. You can specify multiple states. Separate multiple states with commas (,). Default value: **Inactive,Active,Deleted**. Valid values:</p>
+     * <br>
+     * <p>*   **Inactive**: Deactivated media workflows are queried.</p>
+     * <p>*   **Active**: Activated media workflows are queried.</p>
+     * <p>*   **Deleted**: Deleted media workflows are queried.</p>
+     */
     @NameInMap("StateList")
     public String stateList;
 

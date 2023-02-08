@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitFpShotJobResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the media fingerprint analysis job. We recommend that you keep this ID for subsequent operation calls.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

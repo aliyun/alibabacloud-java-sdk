@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeleteMediaTagRequest extends TeaModel {
+    /**
+     * <p>The ID of the media file for which you want to remove a tag. To obtain the ID of a media file, you can call the [AddMedia](~~44458~~) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click **Manage**. The ID of the video is displayed on the Basics tab.</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
@@ -19,6 +22,11 @@ public class DeleteMediaTagRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The media tag that you want to remove. The value is encoded in UTF-8 and can be up to 32 bytes in length.</p>
+     * <br>
+     * <p>>  You can remove only one tag at a time.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

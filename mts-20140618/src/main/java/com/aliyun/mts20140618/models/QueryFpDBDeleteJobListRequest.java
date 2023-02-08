@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryFpDBDeleteJobListRequest extends TeaModel {
+    /**
+     * <p>The IDs of the jobs of clearing or deleting a media fingerprint library. You can obtain the job IDs from the response parameters of the [SubmitFpDBDeleteJob](~~209341~~) operation. Separate multiple job IDs with commas (,). If you leave this parameter empty, the system returns the latest 20 jobs that are submitted.</p>
+     */
     @NameInMap("JobIds")
     public String jobIds;
 

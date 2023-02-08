@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the custom transcoding template that is deleted.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

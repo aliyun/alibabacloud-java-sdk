@@ -4,15 +4,27 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QuerySnapshotJobListResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used to retrieve the next page of the query results. The value is a 32-bit UUID. If the returned query results cannot be displayed within one page, this parameter is returned. The value of this parameter is updated for each query.</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The snapshot job IDs that do not exist. This parameter is not returned if all specified snapshot jobs are found.</p>
+     */
     @NameInMap("NonExistSnapshotJobIds")
     public QuerySnapshotJobListResponseBodyNonExistSnapshotJobIds nonExistSnapshotJobIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the snapshot jobs.</p>
+     */
     @NameInMap("SnapshotJobList")
     public QuerySnapshotJobListResponseBodySnapshotJobList snapshotJobList;
 
@@ -73,15 +85,27 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
     }
 
     public static class QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobInput extends TeaModel {
+        /**
+         * <p>The OSS bucket that stores the input file.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The ID of the region in which the input OSS bucket is located.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The OSS object that is used as the input file.</p>
+         */
         @NameInMap("Object")
         public String object;
 
+        /**
+         * <p>The ARN of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
@@ -125,12 +149,21 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
     }
 
     public static class QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobMNSMessageResult extends TeaModel {
+        /**
+         * <p>The error code returned when the job fails. This parameter is not returned if the job is successfully processed.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned when the job fails. This parameter is not returned if the job is successfully processed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The ID of the message. This parameter is not returned if the job fails.</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
@@ -166,15 +199,27 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
     }
 
     public static class QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobSnapshotConfigOutputFile extends TeaModel {
+        /**
+         * <p>The OSS bucket that stores the output file.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The ID of the region in which the output OSS bucket is located.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The OSS object that is generated as the output file of the snapshot job.</p>
+         */
         @NameInMap("Object")
         public String object;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
@@ -218,30 +263,68 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
     }
 
     public static class QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobSnapshotConfigTileOut extends TeaModel {
+        /**
+         * <p>The height of a single image. The default value is the height of the output snapshot.</p>
+         */
         @NameInMap("CellHeight")
         public String cellHeight;
 
+        /**
+         * <p>The stride of a single image.</p>
+         */
         @NameInMap("CellSelStep")
         public String cellSelStep;
 
+        /**
+         * <p>The width of a single image. The default value is the width of the output snapshot.</p>
+         */
         @NameInMap("CellWidth")
         public String cellWidth;
 
+        /**
+         * <p>The background color.</p>
+         * <br>
+         * <p>*   Default value: **black**.</p>
+         * <p>*   You can set the Color parameter to a **color keyword** or **random** in the request.</p>
+         * <br>
+         * <p>>  If you want to set the background color to black, you can specify the color keyword in one of the following three formats: Black, black, and #000000.</p>
+         */
         @NameInMap("Color")
         public String color;
 
+        /**
+         * <p>The number of columns that the tiled image can contain. Default value: **10**.</p>
+         */
         @NameInMap("Columns")
         public String columns;
 
+        /**
+         * <p>Indicates whether the single images are retained. Default value: **true**.</p>
+         */
         @NameInMap("IsKeepCellPic")
         public String isKeepCellPic;
 
+        /**
+         * <p>The number of rows that the tiled image can contain. Default value: **10**.</p>
+         */
         @NameInMap("Lines")
         public String lines;
 
+        /**
+         * <p>The margin width of the tiled image.</p>
+         * <br>
+         * <p>*   Default value: **0**.</p>
+         * <p>*   Unit: pixel.</p>
+         */
         @NameInMap("Margin")
         public String margin;
 
+        /**
+         * <p>The distance between images.</p>
+         * <br>
+         * <p>*   Default value: **0**.</p>
+         * <p>*   Unit: pixel.</p>
+         */
         @NameInMap("Padding")
         public String padding;
 
@@ -325,15 +408,27 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
     }
 
     public static class QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobSnapshotConfigTileOutputFile extends TeaModel {
+        /**
+         * <p>The OSS bucket that stores the output file.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The ID of the region in which the output OSS bucket is located.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The OSS object that is generated as the output file of the tiling job.</p>
+         */
         @NameInMap("Object")
         public String object;
 
+        /**
+         * <p>The ARN of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
@@ -377,30 +472,65 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
     }
 
     public static class QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobSnapshotConfig extends TeaModel {
+        /**
+         * <p>The type of the snapshot. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: normal frames.</p>
+         * <p>*   **intra**: I-frames.</p>
+         * <p>*   Default value: **intra**.</p>
+         */
         @NameInMap("FrameType")
         public String frameType;
 
+        /**
+         * <p>The height of the output snapshot.</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <p>The interval for taking snapshots.</p>
+         * <br>
+         * <p>*   If this Interval parameter is specified in the request, snapshots are taken at intervals. The value must be greater than 0.</p>
+         * <p>*   Unit: seconds.</p>
+         * <p>*   Default value: **10**.</p>
+         */
         @NameInMap("Interval")
         public String interval;
 
+        /**
+         * <p>The number of snapshots to take. If the Num parameter is set in the request, snapshots are taken at intervals.</p>
+         */
         @NameInMap("Num")
         public String num;
 
+        /**
+         * <p>The Object Storage Service (OSS) output file of the snapshot job.</p>
+         */
         @NameInMap("OutputFile")
         public QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobSnapshotConfigOutputFile outputFile;
 
+        /**
+         * <p>The tiling configuration.</p>
+         */
         @NameInMap("TileOut")
         public QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobSnapshotConfigTileOut tileOut;
 
+        /**
+         * <p>The OSS output file of the tiling job.</p>
+         */
         @NameInMap("TileOutputFile")
         public QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobSnapshotConfigTileOutputFile tileOutputFile;
 
+        /**
+         * <p>The start time for taking snapshots. Unit: milliseconds.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The width of the output snapshot.</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -484,39 +614,80 @@ public class QuerySnapshotJobListResponseBody extends TeaModel {
     }
 
     public static class QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJob extends TeaModel {
+        /**
+         * <p>The error code returned when the job fails. This parameter is not returned if the job is successfully processed.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The number of snapshots that were taken.</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The time when the job was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the snapshot job.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The information about the job input.</p>
+         */
         @NameInMap("Input")
         public QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobInput input;
 
+        /**
+         * <p>The message sent by MNS to notify the user of the job result.</p>
+         */
         @NameInMap("MNSMessageResult")
         public QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobMNSMessageResult MNSMessageResult;
 
+        /**
+         * <p>The error message returned when the job fails. This parameter is not returned if the job is successfully processed.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the MPS queue to which the snapshot job was submitted.</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The snapshot configuration.</p>
+         */
         @NameInMap("SnapshotConfig")
         public QuerySnapshotJobListResponseBodySnapshotJobListSnapshotJobSnapshotConfig snapshotConfig;
 
+        /**
+         * <p>The status of the snapshot job. </p>
+         * <br>
+         * <p>- **Submitted**: The job was submitted.</p>
+         * <p>- **Snapshoting**: The job is being processed.</p>
+         * <p>- **Success**: The job was successfully processed.</p>
+         * <p>- **Fail**: The job failed.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The number of snapshots that are contained in the tiled image.</p>
+         */
         @NameInMap("TileCount")
         public String tileCount;
 
+        /**
+         * <p>The custom data.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

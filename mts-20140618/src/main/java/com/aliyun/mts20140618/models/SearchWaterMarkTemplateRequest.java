@@ -10,9 +10,18 @@ public class SearchWaterMarkTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   A maximum of **100** entries can be returned on each page.</p>
+     * <p>*   Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -22,6 +31,13 @@ public class SearchWaterMarkTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the watermark templates that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **All**: All watermark templates are queried. This is the default value.</p>
+     * <p>*   **normal**: Normal watermark templates are queried.</p>
+     * <p>*   **Deleted**: Deleted watermark templates are queried.</p>
+     */
     @NameInMap("State")
     public String state;
 

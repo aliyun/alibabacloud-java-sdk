@@ -7,9 +7,15 @@ public class ListFpShotFilesRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the media fingerprint library whose files you want to query. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.</p>
+     */
     @NameInMap("FpDBId")
     public String fpDBId;
 
+    /**
+     * <p>The token of the next page. This parameter is specified if you require paged queries. When you request the first page of query results, leave the NextPageToken parameter empty. When you request more query results, specify the value of the NextPageToken parameter returned in the query results on the previous page.</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
@@ -19,6 +25,9 @@ public class ListFpShotFilesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

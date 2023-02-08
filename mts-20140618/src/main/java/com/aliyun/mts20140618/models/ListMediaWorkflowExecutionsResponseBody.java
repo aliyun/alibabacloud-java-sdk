@@ -4,12 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of media workflow execution instances.</p>
+     */
     @NameInMap("MediaWorkflowExecutionList")
     public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionList mediaWorkflowExecutionList;
 
+    /**
+     * <p>The token that is used to retrieve the next page of the query results.</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,21 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult extends TeaModel {
+        /**
+         * <p>The error code returned when the job fails. If the job is successful, this parameter is not returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned when the job fails. If the job is successful, this parameter is not returned.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The ID of the success message. If the job fails, this parameter is not returned.</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
@@ -84,30 +102,72 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         * <br>
+         * <p>*   The specific error code appears if the activity status is **Fail**.</p>
+         * <p>*   This parameter is not returned if the activity status is **Success**.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The end time of the activity.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the job generated when the activity is executed. We recommend that you save this ID for subsequent calls of other operations.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The message sent by Message Service (MNS) to notify the user of the job result.</p>
+         */
         @NameInMap("MNSMessageResult")
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult MNSMessageResult;
 
+        /**
+         * <p>The error message returned.</p>
+         * <br>
+         * <p>*   The detailed error message appears if the activity status is **Fail**.</p>
+         * <p>*   This parameter is not returned if the activity status is **Success**.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the media workflow activity. </p>
+         * <br>
+         * <p>>  The name of an activity in a media workflow is unique.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The start time of the activity.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the activity. Valid values:</p>
+         * <br>
+         * <p>*   **Running**: The activity is being executed.</p>
+         * <p>*   **Fail**: The activity failed to be executed.</p>
+         * <p>*   **Skipped**: The activity was skipped.</p>
+         * <p>*   **Success**: The activity was successfully executed.</p>
+         * <br>
+         * <p>>  For example, the high-definition and standard-definition transcoding activities are to be run after the analysis activity is complete. The system determines the activity to run based on the analysis result. If the definition of the input video content is insufficient, the high-definition transcoding activity may be skipped.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The type of the media workflow activity. Valid values: Start, Snapshot, Transcode, Analysis, and Report. For more information, see [Media workflow activities](~~68494~~).</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -210,12 +270,21 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile extends TeaModel {
+        /**
+         * <p>The name of the OSS bucket in which the input file is stored.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The ID of the OSS region where the input file resides.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The name of the OSS object that is used as the input file.</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -251,9 +320,15 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput extends TeaModel {
+        /**
+         * <p>The information about the storage location of the input file of the media workflow in OSS.</p>
+         */
         @NameInMap("InputFile")
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile inputFile;
 
+        /**
+         * <p>The custom data.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -281,27 +356,59 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution extends TeaModel {
+        /**
+         * <p>The list of activities that are executed in the media workflow.</p>
+         */
         @NameInMap("ActivityList")
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityList activityList;
 
+        /**
+         * <p>The time when the execution instance was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The custom data of the media workflow.</p>
+         */
         @NameInMap("Input")
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput input;
 
+        /**
+         * <p>The ID of the media file. This media file ID is associated with all information generated by the media workflow.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>The ID of the media workflow.</p>
+         */
         @NameInMap("MediaWorkflowId")
         public String mediaWorkflowId;
 
+        /**
+         * <p>The name of the media workflow.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the execution instance.</p>
+         */
         @NameInMap("RunId")
         public String runId;
 
+        /**
+         * <p>The status of the execution instance. Valid values:</p>
+         * <br>
+         * <p>*   **running**: The execution instance is in progress.</p>
+         * <p>*   **Completed**: The execution instance is complete.</p>
+         * <br>
+         * <p>>  A value of Completed indicates that the execution instance is complete. For the information about whether each activity, such as Transcode or Snapshot, is successful, check the status of the activity.</p>
+         * <br>
+         * <p>*   **Fail**: The execution instance failed.</p>
+         * <p>*   **Success**: The execution instance was successful.</p>
+         */
         @NameInMap("State")
         public String state;
 

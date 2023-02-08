@@ -4,12 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListAllMediaBucketResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned media buckets.</p>
+     */
     @NameInMap("MediaBucketList")
     public ListAllMediaBucketResponseBodyMediaBucketList mediaBucketList;
 
+    /**
+     * <p>The identifier of the next page.</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,24 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
     }
 
     public static class ListAllMediaBucketResponseBodyMediaBucketListMediaBucket extends TeaModel {
+        /**
+         * <p>The name of the media bucket.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The settings of Object Storage Service (OSS) hotlink protection. For more information, see [Hotlink protection](~~31869~~).</p>
+         */
         @NameInMap("Referer")
         public String referer;
 
+        /**
+         * <p>The type of the media bucket. Valid values:</p>
+         * <br>
+         * <p>*   Input: input media bucket</p>
+         * <p>*   Output: output media bucket</p>
+         */
         @NameInMap("Type")
         public String type;
 

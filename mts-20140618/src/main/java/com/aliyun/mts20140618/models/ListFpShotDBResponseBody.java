@@ -4,12 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListFpShotDBResponseBody extends TeaModel {
+    /**
+     * <p>The array of media fingerprint libraries.</p>
+     */
     @NameInMap("FpShotDBList")
     public ListFpShotDBResponseBodyFpShotDBList fpShotDBList;
 
+    /**
+     * <p>The IDs of the media fingerprint libraries that do not exist. If all the queried libraries exist, the response does not contain this parameter.</p>
+     */
     @NameInMap("NonExistIds")
     public ListFpShotDBResponseBodyNonExistIds nonExistIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +52,38 @@ public class ListFpShotDBResponseBody extends TeaModel {
     }
 
     public static class ListFpShotDBResponseBodyFpShotDBListFpShotDB extends TeaModel {
+        /**
+         * <p>The description of the media fingerprint library.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the media fingerprint library.</p>
+         */
         @NameInMap("FpDBId")
         public String fpDBId;
 
+        /**
+         * <p>The model ID of the media fingerprint library. A value of **11** indicates that the library is a text fingerprint library. A value of **12** indicates that the library is a video fingerprint library. A value of **13** indicates that the library is an audio fingerprint library. A value of **14** indicates that the library is an image fingerprint library.</p>
+         */
         @NameInMap("ModelId")
         public Integer modelId;
 
+        /**
+         * <p>The name of the media fingerprint library.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the media fingerprint library. Default value: **offline**. ****Valid values:</p>
+         * <br>
+         * <p>*   **offline**: The media fingerprint library is offline.</p>
+         * <p>*   **active**: The media fingerprint library is online.</p>
+         * <p>*   **paused**: The media fingerprint library is paused.</p>
+         * <p>*   **deleted**: The media fingerprint library is deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 

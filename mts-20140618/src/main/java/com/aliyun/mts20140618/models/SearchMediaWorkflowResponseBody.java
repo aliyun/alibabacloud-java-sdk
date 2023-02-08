@@ -4,18 +4,33 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaWorkflowResponseBody extends TeaModel {
+    /**
+     * <p>The details of the media workflows.</p>
+     */
     @NameInMap("MediaWorkflowList")
     public SearchMediaWorkflowResponseBodyMediaWorkflowList mediaWorkflowList;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,21 +80,46 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
     }
 
     public static class SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow extends TeaModel {
+        /**
+         * <p>The time when the media workflow was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the media workflow.</p>
+         */
         @NameInMap("MediaWorkflowId")
         public String mediaWorkflowId;
 
+        /**
+         * <p>The name of the media workflow.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the media workflow. Valid values:</p>
+         * <br>
+         * <p>*   **Inactive**: The media workflow is deactivated.</p>
+         * <p>*   **Active**: The media workflow is activated.</p>
+         * <p>*   **Deleted**: The media workflow is deleted.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The topology of the media workflow.</p>
+         */
         @NameInMap("Topology")
         public String topology;
 
+        /**
+         * <p>The trigger mode of the media workflow. Valid values:</p>
+         * <br>
+         * <p>*   **OssAutoTrigger**: The media workflow is automatically triggered.</p>
+         * <p>*   **NotInAuto**: The media workflow is not automatically triggered.</p>
+         */
         @NameInMap("TriggerMode")
         public String triggerMode;
 

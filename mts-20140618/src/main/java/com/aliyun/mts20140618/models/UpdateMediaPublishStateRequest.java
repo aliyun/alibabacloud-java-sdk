@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaPublishStateRequest extends TeaModel {
+    /**
+     * <p>The ID of the media file whose publishing status you want update. To obtain the ID of a media file, you can call the [AddMedia](~~44458~~) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click **Manage**. The ID of the video is displayed on the Basics tab.</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
@@ -13,6 +16,12 @@ public class UpdateMediaPublishStateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The publishing status. Default value: **Initialed**. Valid values:</p>
+     * <br>
+     * <p>*   **true**: published</p>
+     * <p>*   **false**: unpublished</p>
+     */
     @NameInMap("Publish")
     public Boolean publish;
 

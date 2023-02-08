@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ReportFpShotJobResultRequest extends TeaModel {
+    /**
+     * <p>The details of the job results. You can obtain the details from the response parameters of the [QueryFpShotJobList](~~93557~~) operation.</p>
+     */
     @NameInMap("Details")
     public String details;
 
+    /**
+     * <p>The ID of the media fingerprint analysis job on which you want to provide feedback. To view the job ID, log on to the **MPS console**, click **Tasks** in the left-side navigation pane, and then click the **Video DNA** tab on the Tasks page.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
@@ -22,6 +28,9 @@ public class ReportFpShotJobResultRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The results of the media fingerprint analysis job. You can obtain the results of the media fingerprint analysis job from the response parameters of the [QueryFpShotJobList](~~93557~~) operation.</p>
+     */
     @NameInMap("Result")
     public String result;
 

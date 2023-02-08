@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListFpShotDBRequest extends TeaModel {
+    /**
+     * <p>The IDs of the media fingerprint libraries. You can obtain the library IDs from the response parameters of the [CreateFpShotDB](~~170149~~) operation. You can query up to 10 libraries at a time. Separate multiple library IDs with commas (,).</p>
+     */
     @NameInMap("FpDBIds")
     public String fpDBIds;
 

@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitAnalysisJobResponseBody extends TeaModel {
+    /**
+     * <p>The information about the preset template analysis job that was submitted.</p>
+     */
     @NameInMap("AnalysisJob")
     public SubmitAnalysisJobResponseBodyAnalysisJob analysisJob;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,45 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobAnalysisConfigPropertiesControlCrop extends TeaModel {
+        /**
+         * <p>The height of the video after the margins were cropped out.</p>
+         * <br>
+         * <p>>  This parameter is invalid if the **Mode** parameter is set to Auto or None.</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <p>The left margin that was cropped out.</p>
+         * <br>
+         * <p>>  This parameter is invalid if the **Mode** parameter is set to Auto or None.</p>
+         */
         @NameInMap("Left")
         public String left;
 
+        /**
+         * <p>The cropping mode. Valid values: Valid values:</p>
+         * <br>
+         * <p>*   **Auto**: Cropping was automatically run. This is the default value.</p>
+         * <p>*   **Force**: Cropping was forced to run.</p>
+         * <p>*   **None**: Cropping was forced not to run.</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The top margin that was cropped out.</p>
+         * <br>
+         * <p>>  This parameter is invalid if the **Mode** parameter is set to Auto or None.</p>
+         */
         @NameInMap("Top")
         public String top;
 
+        /**
+         * <p>The width of the video after the margins were cropped out.</p>
+         * <br>
+         * <p>>  This parameter is invalid if the **Mode** parameter is set to Auto or None.</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -95,9 +128,19 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobAnalysisConfigPropertiesControl extends TeaModel {
+        /**
+         * <p>The cropping configuration of video images.</p>
+         */
         @NameInMap("Crop")
         public SubmitAnalysisJobResponseBodyAnalysisJobAnalysisConfigPropertiesControlCrop crop;
 
+        /**
+         * <p>Indicates whether deinterlacing was forced to run. Valid values:</p>
+         * <br>
+         * <p>*   **Auto**: Deinterlacing was automatically run.</p>
+         * <p>*   **Force**: Deinterlacing was forced to run.</p>
+         * <p>*   **None**: Deinterlacing was forced not to run.</p>
+         */
         @NameInMap("Deinterlace")
         public String deinterlace;
 
@@ -125,9 +168,19 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobAnalysisConfigQualityControl extends TeaModel {
+        /**
+         * <p>The playback mode. Valid values:</p>
+         * <br>
+         * <p>*   **network**: online playback</p>
+         * <p>*   **local**: playback on on-premises devices</p>
+         * <p>*   Default value: **network**.</p>
+         */
         @NameInMap("MethodStreaming")
         public String methodStreaming;
 
+        /**
+         * <p>The quality level of the job output.</p>
+         */
         @NameInMap("RateQuality")
         public String rateQuality;
 
@@ -155,9 +208,15 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobAnalysisConfig extends TeaModel {
+        /**
+         * <p>The control on the attributes of the job output.</p>
+         */
         @NameInMap("PropertiesControl")
         public SubmitAnalysisJobResponseBodyAnalysisJobAnalysisConfigPropertiesControl propertiesControl;
 
+        /**
+         * <p>The quality control on the job output.</p>
+         */
         @NameInMap("QualityControl")
         public SubmitAnalysisJobResponseBodyAnalysisJobAnalysisConfigQualityControl qualityControl;
 
@@ -185,12 +244,21 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobInputFile extends TeaModel {
+        /**
+         * <p>The name of the OSS bucket to which the input file is uploaded.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The ID of the OSS region.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The name of the input file uploaded to the OSS bucket.</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -226,12 +294,21 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobMNSMessageResult extends TeaModel {
+        /**
+         * <p>The error code returned when the job fails. This parameter is not returned if the job is successful.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned when the job fails. This parameter is not returned if the job is successful.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The ID of the success message. This parameter is not returned if the job fails.</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
@@ -267,21 +344,45 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateAudio extends TeaModel {
+        /**
+         * <p>The audio bitrate of the output file.</p>
+         * <br>
+         * <p>*   Unit: Kbit/s.</p>
+         * <p>*   Default value: **128**.</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <p>The number of sound channels. Default value: **2**.</p>
+         */
         @NameInMap("Channels")
         public String channels;
 
+        /**
+         * <p>The audio codec format. Default value: **aac**.</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <p>The codec profile of the audio file. Valid values when the **Codec** parameter is set to **aac**: aac_low, aac_he, aac_he_v2, aac_ld, and aac_eld.</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <p>The level of quality control on the audio.</p>
+         */
         @NameInMap("Qscale")
         public String qscale;
 
+        /**
+         * <p>The sampling rate.</p>
+         * <br>
+         * <p>*   Unit: Hz.</p>
+         * <p>*   Default value: **44100**.</p>
+         */
         @NameInMap("Samplerate")
         public String samplerate;
 
@@ -341,6 +442,9 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateContainer extends TeaModel {
+        /**
+         * <p>The container format.</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -360,9 +464,15 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateMuxConfigGif extends TeaModel {
+        /**
+         * <p>The interval between two consecutive loops for the GIF format. Unit: 0.01s. For example, a value of 500 indicates 5 seconds.</p>
+         */
         @NameInMap("FinalDelay")
         public String finalDelay;
 
+        /**
+         * <p>The number of loops for the GIF or WebP format. Default value: 0.</p>
+         */
         @NameInMap("Loop")
         public String loop;
 
@@ -390,6 +500,9 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateMuxConfigSegment extends TeaModel {
+        /**
+         * <p>The length of the segment. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
@@ -409,9 +522,15 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateMuxConfig extends TeaModel {
+        /**
+         * <p>The GIF format.</p>
+         */
         @NameInMap("Gif")
         public SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateMuxConfigGif gif;
 
+        /**
+         * <p>The segment configuration.</p>
+         */
         @NameInMap("Segment")
         public SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateMuxConfigSegment segment;
 
@@ -439,6 +558,9 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateTransConfig extends TeaModel {
+        /**
+         * <p>The transcoding mode. Valid values: onepass, twopass, and CBR. Default value: **onepass**.</p>
+         */
         @NameInMap("TransMode")
         public String transMode;
 
@@ -458,9 +580,15 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateVideoBitrateBnd extends TeaModel {
+        /**
+         * <p>The upper limit of the total bitrate. Unit: Kbit/s.</p>
+         */
         @NameInMap("Max")
         public String max;
 
+        /**
+         * <p>The lower limit of the total bitrate. Unit: Kbit/s.</p>
+         */
         @NameInMap("Min")
         public String min;
 
@@ -488,51 +616,122 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateVideo extends TeaModel {
+        /**
+         * <p>The average bitrate of the video. Unit: Kbit/s.</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <p>The average bitrate range of the video.</p>
+         */
         @NameInMap("BitrateBnd")
         public SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateVideoBitrateBnd bitrateBnd;
 
+        /**
+         * <p>The size of the buffer.</p>
+         * <br>
+         * <p>*   Unit: KB.</p>
+         * <p>*   Default value: **6000**.</p>
+         */
         @NameInMap("Bufsize")
         public String bufsize;
 
+        /**
+         * <p>The video codec format. Default value: **H.264**.</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <p>The constant rate factor, which is the default quality control setting.</p>
+         * <br>
+         * <p>*   Default value when the Codec parameter is set to H.264: **23**. Default value when the Codec parameter is set to H.265: **26**.</p>
+         * <p>*   If this parameter is returned, the setting of the Bitrate parameter is invalid.</p>
+         */
         @NameInMap("Crf")
         public String crf;
 
+        /**
+         * <p>The level of the independent denoising algorithm.</p>
+         */
         @NameInMap("Degrain")
         public String degrain;
 
+        /**
+         * <p>The frame rate.</p>
+         * <br>
+         * <p>*   The value is 60 if the frame rate of the input file exceeds 60.</p>
+         * <p>*   Default value: **the frame rate of the input file**.</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <p>The maximum number of frames between two keyframes. Default value: **250**.</p>
+         */
         @NameInMap("Gop")
         public String gop;
 
+        /**
+         * <p>The height of the video.</p>
+         * <br>
+         * <p>*   Unit: pixel.</p>
+         * <p>*   Default value: **the original height of the video**.</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <p>The maximum video bitrate. Unit: Kbit/s.</p>
+         */
         @NameInMap("Maxrate")
         public String maxrate;
 
+        /**
+         * <p>The pixel format for video color encoding. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+         */
         @NameInMap("PixFmt")
         public String pixFmt;
 
+        /**
+         * <p>The preset video algorithm. Valid values: veryfast, fast, medium, slow, and slower. Default value: **medium**.</p>
+         */
         @NameInMap("Preset")
         public String preset;
 
+        /**
+         * <p>The codec profile. Valid values:</p>
+         * <br>
+         * <p>*   **baseline**: applicable to mobile devices.</p>
+         * <p>*   **main**: applicable to standard-definition devices.</p>
+         * <p>*   **high**: applicable to high-definition devices.</p>
+         * <p>*   Default value: **high**.</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <p>The level of quality control on the video.</p>
+         */
         @NameInMap("Qscale")
         public String qscale;
 
+        /**
+         * <p>The scan mode. Valid values:</p>
+         * <br>
+         * <p>*   **interlaced**: An interlaced scan was performed.</p>
+         * <p>*   **progressive**: A progressive scan was performed.</p>
+         */
         @NameInMap("ScanMode")
         public String scanMode;
 
+        /**
+         * <p>The width of the video.</p>
+         * <br>
+         * <p>*   Unit: pixel.</p>
+         * <p>*   Default value: **the original width of the video**.</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -672,27 +871,54 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplate extends TeaModel {
+        /**
+         * <p>The audio codec configuration.</p>
+         */
         @NameInMap("Audio")
         public SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateAudio audio;
 
+        /**
+         * <p>The container configuration.</p>
+         */
         @NameInMap("Container")
         public SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateContainer container;
 
+        /**
+         * <p>The ID of the transcoding template.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The transmuxing configuration.</p>
+         */
         @NameInMap("MuxConfig")
         public SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateMuxConfig muxConfig;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the template. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: The template is in the normal state.</p>
+         * <p>*   **Deleted**: The template is deleted.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The general transcoding configuration.</p>
+         */
         @NameInMap("TransConfig")
         public SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateTransConfig transConfig;
 
+        /**
+         * <p>The video codec configuration.</p>
+         */
         @NameInMap("Video")
         public SubmitAnalysisJobResponseBodyAnalysisJobTemplateListTemplateVideo video;
 
@@ -787,42 +1013,89 @@ public class SubmitAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAnalysisJobResponseBodyAnalysisJob extends TeaModel {
+        /**
+         * <p>The job configuration.</p>
+         */
         @NameInMap("AnalysisConfig")
         public SubmitAnalysisJobResponseBodyAnalysisJobAnalysisConfig analysisConfig;
 
+        /**
+         * <p>The error code returned when the job fails. This parameter is not returned if the job is successful.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The time when the job was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the template analysis job.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The information about the job input.</p>
+         */
         @NameInMap("InputFile")
         public SubmitAnalysisJobResponseBodyAnalysisJobInputFile inputFile;
 
+        /**
+         * <p>The message sent by MNS to notify the user of the job result.</p>
+         */
         @NameInMap("MNSMessageResult")
         public SubmitAnalysisJobResponseBodyAnalysisJobMNSMessageResult MNSMessageResult;
 
+        /**
+         * <p>The error message returned when the job fails.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The transcoding progress.</p>
+         */
         @NameInMap("Percent")
         public Long percent;
 
+        /**
+         * <p>The ID of the MPS queue to which the job is added.</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The priority of the job in the MPS queue to which the job is added. </p>
+         * <br>
+         * <p>- Valid values: **1 to 10**. A value of 10 indicates the highest priority.</p>
+         * <p>- Default value: **10**.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The status of the job. Valid values:</p>
+         * <br>
+         * <p>*   **Submitted**: The job has been submitted.</p>
+         * <p>*   **Analyzing**: The job is being run.</p>
+         * <p>*   **Success**: The job is successful.</p>
+         * <p>*   **Fail**: The job fails.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The list of matched preset templates.</p>
+         */
         @NameInMap("TemplateList")
         public SubmitAnalysisJobResponseBodyAnalysisJobTemplateList templateList;
 
+        /**
+         * <p>The custom data.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateWaterMarkTemplateRequest extends TeaModel {
+    /**
+     * <p>The updated configuration of the watermark template. The value is a JSON object. For more information, see [Watermark template configuration](~~29253~~).</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The new name of the watermark template. The value can contain letters and digits and can be up to 128 bytes in size.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,6 +28,9 @@ public class UpdateWaterMarkTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the watermark template that you want to update. To obtain the ID of the watermark template, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Global Settings** > **Watermark Templates** in the left-side navigation pane.</p>
+     */
     @NameInMap("WaterMarkTemplateId")
     public String waterMarkTemplateId;
 

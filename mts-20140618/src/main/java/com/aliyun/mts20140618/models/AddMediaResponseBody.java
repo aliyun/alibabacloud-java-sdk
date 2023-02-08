@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddMediaResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information about the media file.</p>
+     */
     @NameInMap("Media")
     public AddMediaResponseBodyMedia media;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class AddMediaResponseBody extends TeaModel {
     }
 
     public static class AddMediaResponseBodyMediaFile extends TeaModel {
+        /**
+         * <p>The status of the input file. The default value is **Normal**.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The URL of the input file.</p>
+         */
         @NameInMap("URL")
         public String URL;
 
@@ -100,57 +112,118 @@ public class AddMediaResponseBody extends TeaModel {
     }
 
     public static class AddMediaResponseBodyMedia extends TeaModel {
+        /**
+         * <p>The bitrate of the media file.</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <p>The ID of the category to which the media file belongs.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
+        /**
+         * <p>The review status of the video. Valid values:</p>
+         * <br>
+         * <p>*   **Initiated**: The media file is uploaded but not reviewed.</p>
+         * <p>*   **Pass**: The media file is uploaded and passes the review.</p>
+         */
         @NameInMap("CensorState")
         public String censorState;
 
+        /**
+         * <p>The storage location of the media thumbnail.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <p>The time when the media file was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the media file. The value is no longer than 1,024 bytes.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The duration of the media file.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The information about the input file.</p>
+         */
         @NameInMap("File")
         public AddMediaResponseBodyMediaFile file;
 
+        /**
+         * <p>The format of the media file. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The frame rate of the media file.</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <p>The height of the media file.</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <p>The ID of the media file.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>The publishing status of the media file. Valid values:</p>
+         * <br>
+         * <p>*   **Initiated**: The media file is in the initial state.</p>
+         * <p>*   **UnPublish**: The media file has not been published, and the playback permission on the OSS object is Private.</p>
+         * <p>*   **Published**: The media file has been published, and the playback permission on the OSS object is Default.</p>
+         */
         @NameInMap("PublishState")
         public String publishState;
 
+        /**
+         * <p>The IDs of the executed workflow execution instances. The IDs are separated by commas (,).</p>
+         */
         @NameInMap("RunIdList")
         public AddMediaResponseBodyMediaRunIdList runIdList;
 
+        /**
+         * <p>The size of the media file.</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The tags of the media file.</p>
+         */
         @NameInMap("Tags")
         public AddMediaResponseBodyMediaTags tags;
 
+        /**
+         * <p>The title of the media file. The title is no longer than 128 bytes.</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The width of the media file.</p>
+         */
         @NameInMap("Width")
         public String width;
 

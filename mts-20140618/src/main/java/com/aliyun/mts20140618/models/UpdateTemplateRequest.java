@@ -4,15 +4,33 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
+    /**
+     * <p>The configuration of the audio stream. The value is a JSON object. For more information, see [Audio](~~29253~~).</p>
+     */
     @NameInMap("Audio")
     public String audio;
 
+    /**
+     * <p>The container format. The value is a JSON object. Default format: **MP4**.</p>
+     * <br>
+     * <p>*   Video formats: FLV, MP4, HLS (m3u8 + TS), and MPEG-DASH (MPD + fMP4)</p>
+     * <p>*   Audio formats: MP3, MP4, Ogg, FLAC, and M4A</p>
+     * <p>*   Images formats: GIF and WebP</p>
+     * <br>
+     * <p>For more information, see [Container](~~29253~~).</p>
+     */
     @NameInMap("Container")
     public String container;
 
+    /**
+     * <p>The transmuxing configuration. The value is a JSON object. For more information, see [MuxConfig](~~29253~~).</p>
+     */
     @NameInMap("MuxConfig")
     public String muxConfig;
 
+    /**
+     * <p>The name of the template. The value can be up to 128 bytes in size.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -28,12 +46,21 @@ public class UpdateTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the template. You can obtain the template ID from the response of the [AddTemplate](~~213306~~) operation.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The general transcoding configuration. The value is a JSON object. For more information, see [TransConfig](~~29253~~).</p>
+     */
     @NameInMap("TransConfig")
     public String transConfig;
 
+    /**
+     * <p>The configuration of the video stream. The value is a JSON object. For more information, see [Video](~~29253~~).</p>
+     */
     @NameInMap("Video")
     public String video;
 

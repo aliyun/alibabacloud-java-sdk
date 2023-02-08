@@ -4,9 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeletePipelineResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the MPS queue that is deleted.</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

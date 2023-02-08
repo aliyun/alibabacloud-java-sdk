@@ -10,9 +10,18 @@ public class SearchPipelineRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   A maximum of **100** entries can be returned on each page.</p>
+     * <p>*   Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -22,6 +31,14 @@ public class SearchPipelineRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the MPS queues that you want to query. If you leave this parameter empty, all MPS queues are queried.</p>
+     * <br>
+     * <p>*   **All**: All MPS queues are queried.</p>
+     * <p>*   **Active**: Active MPS queues are queried.</p>
+     * <p>*   **Paused**: Paused MPS queues are queried.</p>
+     * <p>*   Default value: **All**.</p>
+     */
     @NameInMap("State")
     public String state;
 
