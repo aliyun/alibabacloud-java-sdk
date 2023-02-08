@@ -132,14 +132,18 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
-        // vSwitch ID。
+        /**
+         * <p>vSwitch ID。</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
-        // VPC ID。
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

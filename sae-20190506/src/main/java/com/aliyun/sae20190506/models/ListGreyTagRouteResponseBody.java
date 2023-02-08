@@ -181,8 +181,8 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<ListGreyTagRouteResponseBodyDataResultAlbRulesItems> items;
 
-        @NameInMap("serviceId")
-        public String serviceId;
+        @NameInMap("serviceName")
+        public String serviceName;
 
         public static ListGreyTagRouteResponseBodyDataResultAlbRules build(java.util.Map<String, ?> map) throws Exception {
             ListGreyTagRouteResponseBodyDataResultAlbRules self = new ListGreyTagRouteResponseBodyDataResultAlbRules();
@@ -213,12 +213,12 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             return this.items;
         }
 
-        public ListGreyTagRouteResponseBodyDataResultAlbRules setServiceId(String serviceId) {
-            this.serviceId = serviceId;
+        public ListGreyTagRouteResponseBodyDataResultAlbRules setServiceName(String serviceName) {
+            this.serviceName = serviceName;
             return this;
         }
-        public String getServiceId() {
-            return this.serviceId;
+        public String getServiceName() {
+            return this.serviceName;
         }
 
     }

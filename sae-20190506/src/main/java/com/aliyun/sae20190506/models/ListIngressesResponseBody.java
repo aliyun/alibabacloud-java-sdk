@@ -114,7 +114,9 @@ public class ListIngressesResponseBody extends TeaModel {
         @NameInMap("NamespaceId")
         public String namespaceId;
 
-        // SLB ID。
+        /**
+         * <p>SLB ID。</p>
+         */
         @NameInMap("SlbId")
         public String slbId;
 
