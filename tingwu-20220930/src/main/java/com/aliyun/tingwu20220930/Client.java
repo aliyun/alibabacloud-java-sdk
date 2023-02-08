@@ -26,12 +26,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public CreateFileTransResponse createFileTrans(CreateFileTransRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createFileTransWithOptions(request, headers, runtime);
-    }
-
     public CreateFileTransResponse createFileTransWithOptions(CreateFileTransRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -101,10 +95,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFileTransResponse());
     }
 
-    public CreateMeetingTransResponse createMeetingTrans(CreateMeetingTransRequest request) throws Exception {
+    public CreateFileTransResponse createFileTrans(CreateFileTransRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createMeetingTransWithOptions(request, headers, runtime);
+        return this.createFileTransWithOptions(request, headers, runtime);
     }
 
     public CreateMeetingTransResponse createMeetingTransWithOptions(CreateMeetingTransRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -182,6 +176,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RealtimeResultLevel", request.realtimeResultLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realtimeResultMeetingInfoEnabled)) {
+            body.put("RealtimeResultMeetingInfoEnabled", request.realtimeResultMeetingInfoEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realtimeResultWordsEnabled)) {
+            body.put("RealtimeResultWordsEnabled", request.realtimeResultWordsEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.translateActiveResultLevel)) {
+            body.put("TranslateActiveResultLevel", request.translateActiveResultLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.translateLanguages)) {
+            body.put("TranslateLanguages", request.translateLanguages);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.translateResultEnabled)) {
+            body.put("TranslateResultEnabled", request.translateResultEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.translateResultLevel)) {
+            body.put("TranslateResultLevel", request.translateResultLevel);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -200,10 +218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMeetingTransResponse());
     }
 
-    public GetFileTransResponse getFileTrans(String TransId) throws Exception {
+    public CreateMeetingTransResponse createMeetingTrans(CreateMeetingTransRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getFileTransWithOptions(TransId, headers, runtime);
+        return this.createMeetingTransWithOptions(request, headers, runtime);
     }
 
     public GetFileTransResponse getFileTransWithOptions(String TransId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -224,10 +242,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFileTransResponse());
     }
 
-    public GetMeetingTransResponse getMeetingTrans(String MeetingId) throws Exception {
+    public GetFileTransResponse getFileTrans(String TransId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getMeetingTransWithOptions(MeetingId, headers, runtime);
+        return this.getFileTransWithOptions(TransId, headers, runtime);
     }
 
     public GetMeetingTransResponse getMeetingTransWithOptions(String MeetingId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -248,15 +266,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMeetingTransResponse());
     }
 
-    public StopMeetingTransResponse stopMeetingTrans(String MeetingId) throws Exception {
+    public GetMeetingTransResponse getMeetingTrans(String MeetingId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.stopMeetingTransWithOptions(MeetingId, headers, runtime);
+        return this.getMeetingTransWithOptions(MeetingId, headers, runtime);
     }
 
-    public StopMeetingTransResponse stopMeetingTransWithOptions(String MeetingId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public StopMeetingTransResponse stopMeetingTransWithOptions(String MeetingId, StopMeetingTransRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.meetingRoleNum)) {
+            body.put("MeetingRoleNum", request.meetingRoleNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyRoleSplitResult)) {
+            body.put("OnlyRoleSplitResult", request.onlyRoleSplitResult);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "StopMeetingTrans"),
@@ -270,5 +299,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopMeetingTransResponse());
+    }
+
+    public StopMeetingTransResponse stopMeetingTrans(String MeetingId, StopMeetingTransRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopMeetingTransWithOptions(MeetingId, request, headers, runtime);
     }
 }
