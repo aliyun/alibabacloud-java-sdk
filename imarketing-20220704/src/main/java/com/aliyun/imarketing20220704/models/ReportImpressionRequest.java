@@ -4,6 +4,9 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class ReportImpressionRequest extends TeaModel {
+    /**
+     * <p>impressionlink</p>
+     */
     @NameInMap("Impressionlink")
     public String impressionlink;
 

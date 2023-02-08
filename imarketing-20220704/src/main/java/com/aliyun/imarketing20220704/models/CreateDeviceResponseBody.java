@@ -4,6 +4,9 @@ package com.aliyun.imarketing20220704.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,6 +16,9 @@ public class CreateDeviceResponseBody extends TeaModel {
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
