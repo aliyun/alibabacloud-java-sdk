@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDingTalkRequest extends TeaModel {
-    // The number of the page to return.Default value: 1.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The number of entries to return on each page.Default value: 20.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The name of the notification.
     @NameInMap("RuleActionName")
     public String ruleActionName;
 

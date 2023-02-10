@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckResultResponseBody extends TeaModel {
-    // An array that consists of the check items.
     @NameInMap("Checks")
     public java.util.List<ListCheckResultResponseBodyChecks> checks;
 
-    // The pagination information.
     @NameInMap("PageInfo")
     public ListCheckResultResponseBodyPageInfo pageInfo;
 
-    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -45,60 +42,22 @@ public class ListCheckResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeRiskListCheckResultResponseBodyList extends TeaModel {
-        // The instance ID of the cloud service.
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        // The total number of risk items detected in the current cloud service.
-        @NameInMap("riskCount")
-        public Long riskCount;
-
-        public static DescribeRiskListCheckResultResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRiskListCheckResultResponseBodyList self = new DescribeRiskListCheckResultResponseBodyList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeRiskListCheckResultResponseBodyList setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeRiskListCheckResultResponseBodyList setRiskCount(Long riskCount) {
-            this.riskCount = riskCount;
-            return this;
-        }
-        public Long getRiskCount() {
-            return this.riskCount;
-        }
-
-    }
-
     public static class ListCheckResultResponseBodyChecksCheckPolicies extends TeaModel {
-        // The requirement item ID of the check item.
         @NameInMap("RequirementId")
         public Long requirementId;
 
-        // The item display name of the check item.
         @NameInMap("RequirementShowName")
         public String requirementShowName;
 
-        // The section ID of the check item.
         @NameInMap("SectionId")
         public Long sectionId;
 
-        // The section display name of the check item.
         @NameInMap("SectionShowName")
         public String sectionShowName;
 
-        // The standard ID of the check item.
         @NameInMap("StandardId")
         public Long standardId;
 
-        // The standard display name of the check item.
         @NameInMap("StandardShowName")
         public String standardShowName;
 
@@ -158,110 +117,39 @@ public class ListCheckResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckResultResponseBodyChecks extends TeaModel {
-        // The ID of the check item.
         @NameInMap("CheckId")
         public Long checkId;
 
-        // The check policies.
         @NameInMap("CheckPolicies")
         public java.util.List<ListCheckResultResponseBodyChecksCheckPolicies> checkPolicies;
 
-        // The name of the check item.
         @NameInMap("CheckShowName")
         public String checkShowName;
 
-        // The asset subtype of the cloud service. Valid values:
-        // 
-        // *   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:
-        // 
-        //     *   **INSTANCE**
-        //     *   **DISK**
-        //     *   **SECURITY_GROUP**
-        // 
-        // *   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:
-        // 
-        //     *   **REPOSITORY_ENTERPRISE**
-        //     *   **REPOSITORY_PERSON**
-        // 
-        // *   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:
-        // 
-        //     *   **ALIAS**
-        //     *   **USER**
-        //     *   **POLICY**
-        //     *   **GROUP**
-        // 
-        // *   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:
-        // 
-        //     *   **DOMAIN**
-        // 
-        // *   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:
-        // 
-        //     *   **INSTANCE**
         @NameInMap("InstanceSubType")
         public String instanceSubType;
 
-        // The asset type of the cloud service. Valid values:
-        // 
-        // *   **ECS**: ECS
-        // *   **SLB**: SLB
-        // *   **RDS**: ApsaraDB RDS
-        // *   **MONGODB**: MongoDB
-        // *   **KVSTORE**: Redis
-        // *   **ACR**: Container Registry
-        // *   **CSK**: ACK
-        // *   **VPC**: VPC
-        // *   **ACTIONTRAIL**: ActionTrail
-        // *   **CDN**: CDN
-        // *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
-        // *   **RDC**: Apsara Devops
-        // *   **RAM**: RAM
-        // *   **DDOS**: Anti-DDoS
-        // *   **WAF**: WAF
-        // *   **OSS**: OSS
-        // *   **POLARDB**: PolarDB
-        // *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
-        // *   **MSE**: MSE
-        // *   **NAS**: NAS
-        // *   **SDDP**: SDDP
-        // *   **EIP**: EIP
         @NameInMap("InstanceType")
         public String instanceType;
 
-        // The timestamp when the last check was performed. Unit: milliseconds.
         @NameInMap("LastCheckTime")
         public Long lastCheckTime;
 
-        // The risk level of the check item. Valid values:
-        // 
-        // *   **HIGH**
-        // *   **MEDIUM**
-        // *   **LOW**
         @NameInMap("RiskLevel")
         public String riskLevel;
 
-        // The state of the check item. Valid values:
-        // 
-        // *   **PASS**
-        // *   **NOT_PASS**
-        // *   **CHECKING**
-        // *   **NOT_CHECK**
-        // *   **WHITELIST**
         @NameInMap("Status")
         public String status;
 
-        // The ID of the check task.
         @NameInMap("TaskId")
         public String taskId;
 
-        // The flag that whether this check item needs trial permission.
         @NameInMap("TrialPermission")
         public Boolean trialPermission;
 
-        // The value of the cloud service provider.
         @NameInMap("Vendor")
         public String vendor;
 
-        // The name of the cloud service provider.
         @NameInMap("VendorShowName")
         public String vendorShowName;
 
@@ -369,19 +257,15 @@ public class ListCheckResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckResultResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

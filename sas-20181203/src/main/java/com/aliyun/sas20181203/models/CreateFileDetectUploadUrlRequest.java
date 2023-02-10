@@ -4,26 +4,32 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectUploadUrlRequest extends TeaModel {
-    // The hash values of files.
-    // 
-    // >  You must specify at least one of the **HashKeyList** and **HashKeyContextList** parameters.
+    /**
+     * <p>The hash values of files.</p>
+     * <br>
+     * <p>>  You must specify at least one of the **HashKeyList** and **HashKeyContextList** parameters.</p>
+     */
     @NameInMap("HashKeyContextList")
     public java.util.List<CreateFileDetectUploadUrlRequestHashKeyContextList> hashKeyContextList;
 
-    // The identifier of the file. Only MD5 hash values are supported.
-    // 
-    // >  You must specify at least one of the **HashKeyList** and **HashKeyContextList** parameters.
+    /**
+     * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+     * <br>
+     * <p>>  You must specify at least one of the **HashKeyList** and **HashKeyContextList** parameters.</p>
+     */
     @NameInMap("HashKeyList")
     public java.util.List<String> hashKeyList;
 
-    // The type of the file. Valid values:
-    // 
-    // *   **0**: unknown files
-    // *   **1**: binary files
-    // *   **2**: webshell files
-    // *   **4**: script files
-    // 
-    // >  If you do not know the type of the file, set this parameter to **0**.
+    /**
+     * <p>The type of the file. Valid values:</p>
+     * <br>
+     * <p>*   **0**: unknown files</p>
+     * <p>*   **1**: binary files</p>
+     * <p>*   **2**: webshell files</p>
+     * <p>*   **4**: script files</p>
+     * <br>
+     * <p>>  If you do not know the type of the file, set this parameter to **0**.</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
@@ -57,11 +63,15 @@ public class CreateFileDetectUploadUrlRequest extends TeaModel {
     }
 
     public static class CreateFileDetectUploadUrlRequestHashKeyContextList extends TeaModel {
-        // The size of the file. Unit: bytes.
+        /**
+         * <p>The size of the file. Unit: bytes.</p>
+         */
         @NameInMap("FileSize")
         public Integer fileSize;
 
-        // The hash value of the file.
+        /**
+         * <p>The hash value of the file.</p>
+         */
         @NameInMap("HashKey")
         public String hashKey;
 

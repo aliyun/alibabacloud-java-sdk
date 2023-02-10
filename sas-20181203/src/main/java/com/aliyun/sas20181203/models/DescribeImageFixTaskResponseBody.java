@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageFixTaskResponseBody extends TeaModel {
-    // An array that consists of the tasks returned.
     @NameInMap("BuildTasks")
     public java.util.List<DescribeImageFixTaskResponseBodyBuildTasks> buildTasks;
 
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeImageFixTaskResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,55 +43,39 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFixTaskResponseBodyBuildTasks extends TeaModel {
-        // The ID of the task.
         @NameInMap("BuildTaskId")
         public String buildTaskId;
 
-        // The timestamp when the task starts. Unit: milliseconds.
         @NameInMap("FinishTime")
         public String finishTime;
 
-        // The timestamp when the task ends. Unit: milliseconds.
         @NameInMap("FixTime")
         public String fixTime;
 
-        // The version of the image after image risks are fixed.
         @NameInMap("NewTag")
         public String newTag;
 
-        // The UUID of the image after image risks are fixed.
         @NameInMap("NewUuid")
         public String newUuid;
 
-        // The version of the image.
         @NameInMap("OldTag")
         public String oldTag;
 
-        // The UUID of the image.
         @NameInMap("OldUuid")
         public String oldUuid;
 
-        // The region of the image.
         @NameInMap("RegionId")
         public String regionId;
 
-        // The name of the image repository.
         @NameInMap("RepoName")
         public String repoName;
 
-        // The namespace of the image.
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
-        // The status of the task. Valid values:
-        // 
-        // *   **1**: The task is running.
-        // *   **2**: The task is successful.
-        // *   **3**: The task failed.
         @NameInMap("Status")
         public Integer status;
 
-        // The type of the task. The value is fixed as IMAGE_REPAIR, which indicates a task that fixes image risks.
         @NameInMap("TaskType")
         public String taskType;
 
@@ -202,19 +183,15 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeImageFixTaskResponseBodyPageInfo extends TeaModel {
-        // The number of tasks returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page. Default value: **1**.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: **20**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of tasks returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

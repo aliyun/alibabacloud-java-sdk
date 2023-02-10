@@ -4,13 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainDetailRequest extends TeaModel {
-    // The domain name or the name of website that you want to query.
-    // 
-    // >  Fuzzy match is not supported. You must enter a complete domain name or a website.
     @NameInMap("DomainName")
     public String domainName;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

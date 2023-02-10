@@ -4,51 +4,114 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddClientUserDefineRuleRequest extends TeaModel {
+    /**
+     * <p>The action of the custom defense rule. Valid values:</p>
+     * <br>
+     * <p>*   **0**: allow</p>
+     * <p>*   **1**: block</p>
+     */
     @NameInMap("ActionType")
     public Integer actionType;
 
+    /**
+     * <p>The command line.</p>
+     */
     @NameInMap("Cmdline")
     public String cmdline;
 
+    /**
+     * <p>The file path.</p>
+     */
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <p>The IP address.</p>
+     */
     @NameInMap("IP")
     public String IP;
 
+    /**
+     * <p>The hash values of processes.</p>
+     */
     @NameInMap("Md5List")
     public String md5List;
 
+    /**
+     * <p>The name of the custom defense rule.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The new file path after the file is renamed.</p>
+     */
     @NameInMap("NewFilePath")
     public String newFilePath;
 
+    /**
+     * <p>The parent command line.</p>
+     */
     @NameInMap("ParentCmdline")
     public String parentCmdline;
 
+    /**
+     * <p>The path to the parent process.</p>
+     */
     @NameInMap("ParentProcPath")
     public String parentProcPath;
 
+    /**
+     * <p>The type of the operating system. Valid values:</p>
+     * <br>
+     * <p>*   **windows**: Windows</p>
+     * <p>*   **linux**: Linux</p>
+     * <p>*   **all**: all types</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>The port number. This parameter is deprecated.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The port number. Valid values: **1 to 65535**.</p>
+     */
     @NameInMap("PortStr")
     public String portStr;
 
+    /**
+     * <p>The path to the process.</p>
+     */
     @NameInMap("ProcPath")
     public String procPath;
 
+    /**
+     * <p>The registry value.</p>
+     */
     @NameInMap("RegistryContent")
     public String registryContent;
 
+    /**
+     * <p>The registry key.</p>
+     */
     @NameInMap("RegistryKey")
     public String registryKey;
 
+    /**
+     * <p>The type of the custom defense rule. Valid values:</p>
+     * <br>
+     * <p>*   **1**: Process hash</p>
+     * <p>*   **2**: Command line</p>
+     * <p>*   **3**: Process Network</p>
+     * <p>*   **4**: File Read and Write</p>
+     * <p>*   **5**: Operation on Registry</p>
+     * <p>*   **6**: Dynamic-link Library Loading</p>
+     * <p>*   **7**: File Renaming</p>
+     */
     @NameInMap("Type")
     public Integer type;
 

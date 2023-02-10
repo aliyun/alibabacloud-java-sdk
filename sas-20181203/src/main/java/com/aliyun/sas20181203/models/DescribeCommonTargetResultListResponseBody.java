@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCommonTargetResultListResponseBody extends TeaModel {
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about the configuration item.
     @NameInMap("TargetConfig")
     public DescribeCommonTargetResultListResponseBodyTargetConfig targetConfig;
 
@@ -34,40 +32,21 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
     }
 
     public static class DescribeCommonTargetResultListResponseBodyTargetConfig extends TeaModel {
-        // The identifier that indicates whether the configuration item is applied to the server. Valid values:
-        // 
-        // *   **add**: applied
-        // *   **del**: not applied
         @NameInMap("Flag")
         public String flag;
 
-        // The default identifier.
         @NameInMap("TargetDefault")
         public String targetDefault;
 
-        // An array that consists of the IDs of the server groups or the UUIDs of the servers.
-        // 
-        // >  If **uuid** is returned for the **TargetType** parameter, **UUIDs** of the servers are returned. If **groupId** is returned for the **TargetType** parameter, IDs of the server groups are returned.
         @NameInMap("TargetList")
         public java.util.List<String> targetList;
 
-        // The type of the server to which the configuration item is applied. Valid values:
-        // 
-        // *   **uuid**: a server
-        // *   **groupId**: a server group
         @NameInMap("TargetType")
         public String targetType;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public String totalCount;
 
-        // The type of the configuration item. Valid values:
-        // 
-        // *   **webshell_timescan**: webshell detection and removal
-        // *   **aliscriptengine**: in-depth detection engine
-        // *   **alidetect**: installation scope of local file detection
-        // *   **alidetect-scan-enable**: detection scope of local file detection
         @NameInMap("Type")
         public String type;
 

@@ -4,22 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyStrategyResponseBody extends TeaModel {
-    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The result returned.
     @NameInMap("Result")
     public ModifyStrategyResponseBodyResult result;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -61,7 +54,6 @@ public class ModifyStrategyResponseBody extends TeaModel {
     }
 
     public static class ModifyStrategyResponseBodyResult extends TeaModel {
-        // The ID of the baseline check policy.
         @NameInMap("StrategyId")
         public Integer strategyId;
 

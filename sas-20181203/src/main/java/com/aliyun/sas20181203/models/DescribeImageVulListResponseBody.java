@@ -4,23 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageVulListResponseBody extends TeaModel {
-    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The number of entries returned per page. Default value: **10**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // An array that consists of the vulnerabilities.
     @NameInMap("VulRecords")
     public java.util.List<DescribeImageVulListResponseBodyVulRecords> vulRecords;
 
@@ -70,35 +65,27 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
-        // The complete version number of the package.
         @NameInMap("FullVersion")
         public String fullVersion;
 
-        // The SHA-256 value of the digest of the image layer.
         @NameInMap("Layer")
         public String layer;
 
-        // The reason why the vulnerability is detected.
         @NameInMap("MatchDetail")
         public String matchDetail;
 
-        // The details of the rules that are used to detect the vulnerability.
         @NameInMap("MatchList")
         public java.util.List<String> matchList;
 
-        // The name of the software package.
         @NameInMap("Name")
         public String name;
 
-        // The path of the software that has the vulnerability.
         @NameInMap("Path")
         public String path;
 
-        // The command that is used to fix the vulnerability.
         @NameInMap("UpdateCmd")
         public String updateCmd;
 
-        // The version number of the package.
         @NameInMap("Version")
         public String version;
 
@@ -174,15 +161,12 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulListResponseBodyVulRecordsExtendContentJson extends TeaModel {
-        // The name of the operating system.
         @NameInMap("Os")
         public String os;
 
-        // The version of the operating system in the image.
         @NameInMap("OsRelease")
         public String osRelease;
 
-        // The details of the packages of the software that has the vulnerability.
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
 
@@ -218,49 +202,33 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulListResponseBodyVulRecords extends TeaModel {
-        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
-        // Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:
-        // 
-        // *   **yes**: yes
-        // *   **no**: no
         @NameInMap("CanFix")
         public String canFix;
 
-        // Indicates whether the package of the software that has the vulnerability can be upgraded by using Security Center. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
-        // The ID of the cluster.
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // The name of the cluster.
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // The ID of the container.
         @NameInMap("ContainerId")
         public String containerId;
 
-        // The extended information about the vulnerability.
         @NameInMap("ExtendContentJson")
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
-        // The timestamp when the first scan was performed. Unit: milliseconds.
         @NameInMap("FirstTs")
         public Long firstTs;
 
-        // The name of the image.
         @NameInMap("Image")
         public String image;
 
-        // The digest of the image.
         @NameInMap("ImageDigest")
         public String imageDigest;
 
@@ -273,68 +241,48 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        // The timestamp when the last scan was performed. Unit: milliseconds.
         @NameInMap("LastTs")
         public Long lastTs;
 
-        // The image layers.
         @NameInMap("Layers")
         public java.util.List<String> layers;
 
         @NameInMap("MaliciousSource")
         public String maliciousSource;
 
-        // The timestamp when the information about the vulnerability was updated. Unit: milliseconds.
         @NameInMap("ModifyTs")
         public Long modifyTs;
 
-        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 
-        // The namespace.
         @NameInMap("Namespace")
         public String namespace;
 
-        // The priority to fix the vulnerability. Valid values:
-        // 
-        // *   **asap**: high. You must fix the vulnerability at the earliest opportunity.
-        // *   **later**: medium. You can fix the vulnerability based on your business requirements.
-        // *   **nntf**: low. You can ignore the vulnerability.
         @NameInMap("Necessity")
         public String necessity;
 
-        // The pod.
         @NameInMap("Pod")
         public String pod;
 
-        // The ID of the vulnerability.
         @NameInMap("PrimaryId")
         public Long primaryId;
 
-        // The Common Vulnerabilities and Exposures (CVE) ID of the associated vulnerability.
         @NameInMap("Related")
         public String related;
 
-        // The name of the image repository.
         @NameInMap("RepoName")
         public String repoName;
 
-        // The namespace to which the image repository belongs.
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
         @NameInMap("ScanTime")
         public Long scanTime;
 
-        // The status of the vulnerability. Valid values:
-        // 
-        // *   **1**: unfixed
-        // *   **7**: fixed
         @NameInMap("Status")
         public Integer status;
 
-        // The tag that is added to the vulnerability.
         @NameInMap("Tag")
         public String tag;
 
@@ -347,11 +295,9 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         @NameInMap("TargetType")
         public String targetType;
 
-        // The type of the vulnerability. The value is fixed as CVE, which indicates image vulnerabilities.
         @NameInMap("Type")
         public String type;
 
-        // The UUID of the server.
         @NameInMap("Uuid")
         public String uuid;
 

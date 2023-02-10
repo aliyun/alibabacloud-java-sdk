@@ -4,23 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedVulResponseBody extends TeaModel {
-    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // An array that consists of the vulnerabilities.
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems;
 
-    // The number of entries returned per page. Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,57 +65,33 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedVulResponseBodyGroupedVulItems extends TeaModel {
-        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
-        // The number of vulnerabilities that have the **high** priority.
         @NameInMap("AsapCount")
         public Integer asapCount;
 
-        // The timestamp when the vulnerability was last detected. Unit: milliseconds.
         @NameInMap("GmtLast")
         public Long gmtLast;
 
-        // The number of handled vulnerabilities.
         @NameInMap("HandledCount")
         public Integer handledCount;
 
-        // The number of vulnerabilities that have the **medium** priority.
         @NameInMap("LaterCount")
         public Integer laterCount;
 
-        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 
-        // The number of vulnerabilities that have the **low** priority.
         @NameInMap("NntfCount")
         public Integer nntfCount;
 
-        // The tag that is added to the vulnerability. Valid values:
-        // 
-        // *   Restart required
-        // *   Remote exploitation
-        // *   Exploit exists
-        // *   Exploitable
-        // *   Privilege escalation
-        // *   Code execution
         @NameInMap("Tags")
         public String tags;
 
-        // The total number of fixed vulnerabilities.
         @NameInMap("TotalFixCount")
         public Long totalFixCount;
 
-        // The type of the vulnerability. Valid values:
-        // 
-        // *   **cve**: Linux software vulnerability
-        // *   **sys**: Windows system vulnerability
-        // *   **cms**: Web-CMS vulnerability
-        // *   **app**: application vulnerability
-        // *   **emg**: urgent vulnerability
-        // *   **sca**: vulnerability that is detected based on software component analysis
         @NameInMap("Type")
         public String type;
 

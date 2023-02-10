@@ -4,43 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyProcDetailRequest extends TeaModel {
-    // The startup parameter of the process.
     @NameInMap("Cmdline")
     public String cmdline;
 
-    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // Specifies whether fuzzy search by process name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
     @NameInMap("Extend")
     public String extend;
 
-    // The name of the process.
     @NameInMap("Name")
     public String name;
 
-    // The number of entries to return on each page. Default value: **10**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The timestamp when the process ends. Unit: milliseconds.
     @NameInMap("ProcTimeEnd")
     public Long procTimeEnd;
 
-    // The timestamp when the process starts. Unit: milliseconds.
     @NameInMap("ProcTimeStart")
     public Long procTimeStart;
 
-    // The name or IP address of the server.
     @NameInMap("Remark")
     public String remark;
 
-    // The user who runs the process.
     @NameInMap("User")
     public String user;
 
-    // The UUID of the server.
     @NameInMap("Uuid")
     public String uuid;
 

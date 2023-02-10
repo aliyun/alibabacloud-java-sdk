@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ExportWarningResponseBody extends TeaModel {
-    // The name of the file that contains exported baseline check results.
     @NameInMap("FileName")
     public String fileName;
 
-    // The ID of the task to export baseline check results.
     @NameInMap("Id")
     public Long id;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ChangeCheckConfigRequest extends TeaModel {
-    @NameInMap("CycleDays")
-    public java.util.List<Integer> cycleDays;
-
     @NameInMap("EndTime")
     public Integer endTime;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("StandardIds")
     public java.util.List<Long> standardIds;
@@ -21,20 +21,20 @@ public class ChangeCheckConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ChangeCheckConfigRequest setCycleDays(java.util.List<Integer> cycleDays) {
-        this.cycleDays = cycleDays;
-        return this;
-    }
-    public java.util.List<Integer> getCycleDays() {
-        return this.cycleDays;
-    }
-
     public ChangeCheckConfigRequest setEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
     }
     public Integer getEndTime() {
         return this.endTime;
+    }
+
+    public ChangeCheckConfigRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ChangeCheckConfigRequest setStandardIds(java.util.List<Long> standardIds) {

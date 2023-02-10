@@ -4,36 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class IgnoreHcCheckWarningsRequest extends TeaModel {
-    // The ID of the check item.
-    // 
-    // >  You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of check items.
     @NameInMap("CheckIds")
     public String checkIds;
 
-    // The ID of the alert that is triggered by the check item. Separate multiple IDs with commas (,).
-    // 
-    // >  You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts that are triggered by check items.
     @NameInMap("CheckWarningIds")
     public String checkWarningIds;
 
-    // The reason for the current operation.
     @NameInMap("Reason")
     public String reason;
 
-    // The ID of the risk item that you want to ignore or cancel ignoring.
-    // 
-    // >  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
     @NameInMap("RiskId")
     public String riskId;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The type of the operation that you want to perform. Valid values:
-    // 
-    // *   **1**: ignores a risk item
-    // *   **2**: cancels ignoring a risk item
     @NameInMap("Type")
     public Long type;
 

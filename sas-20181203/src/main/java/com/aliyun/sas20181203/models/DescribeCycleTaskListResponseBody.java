@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCycleTaskListResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of periodic scan tasks.</p>
+     */
     @NameInMap("CycleScheduleResponseList")
     public java.util.List<DescribeCycleTaskListResponseBodyCycleScheduleResponseList> cycleScheduleResponseList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeCycleTaskListResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,39 +52,81 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
     }
 
     public static class DescribeCycleTaskListResponseBodyCycleScheduleResponseList extends TeaModel {
+        /**
+         * <p>The ID of the task configuration.</p>
+         */
         @NameInMap("ConfigId")
         public String configId;
 
+        /**
+         * <p>Indicates whether the task is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <p>The time when the task first run.</p>
+         */
         @NameInMap("FirstDateStr")
         public Long firstDateStr;
 
+        /**
+         * <p>The interval of the task.</p>
+         */
         @NameInMap("IntervalPeriod")
         public Integer intervalPeriod;
 
+        /**
+         * <p>The ID of the task when the task last run.</p>
+         */
         @NameInMap("LastTaskId")
         public String lastTaskId;
 
+        /**
+         * <p>The next time when the task starts. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("NextStartTimeStr")
         public Long nextStartTimeStr;
 
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("Param")
         public String param;
 
+        /**
+         * <p>The unit of the scan interval. Valid values:</p>
+         * <br>
+         * <p>*   **day**: days</p>
+         * <p>*   **hour**: hours</p>
+         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
+        /**
+         * <p>The period of time before the task ends. Unit: hours.</p>
+         */
         @NameInMap("TargetEndTime")
         public Integer targetEndTime;
 
+        /**
+         * <p>The period of time before the next task starts. Unit: hours.</p>
+         */
         @NameInMap("TargetStartTime")
         public Integer targetStartTime;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The type of the task.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
@@ -183,15 +234,27 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
     }
 
     public static class DescribeCycleTaskListResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

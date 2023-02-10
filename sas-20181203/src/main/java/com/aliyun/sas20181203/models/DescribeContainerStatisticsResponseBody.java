@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerStatisticsResponseBody extends TeaModel {
-    // The alert statistics of container assets.
     @NameInMap("Data")
     public DescribeContainerStatisticsResponseBodyData data;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,27 +32,21 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeContainerStatisticsResponseBodyData extends TeaModel {
-        // The number of alerts whose risk level is **Reminder**.
         @NameInMap("RemindAlarmCount")
         public Integer remindAlarmCount;
 
-        // The number of alerts whose risk level is **Urgent**.
         @NameInMap("SeriousAlarmCount")
         public Integer seriousAlarmCount;
 
-        // The number of alerts whose risk level is **Suspicious**.
         @NameInMap("SuspiciousAlarmCount")
         public Integer suspiciousAlarmCount;
 
-        // The total number of alerts that are generated in the current container cluster.
         @NameInMap("TotalAlarmCount")
         public Integer totalAlarmCount;
 
-        // The total number of nodes in the current container cluster.
         @NameInMap("TotalNode")
         public Integer totalNode;
 
-        // The number of nodes on which alerts are generated in the current container cluster.
         @NameInMap("hasRiskNode")
         public Integer hasRiskNode;
 

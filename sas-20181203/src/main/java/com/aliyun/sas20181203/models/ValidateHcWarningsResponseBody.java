@@ -4,7 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ValidateHcWarningsResponseBody extends TeaModel {
-    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 

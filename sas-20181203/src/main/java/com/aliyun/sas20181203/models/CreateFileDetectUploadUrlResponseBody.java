@@ -4,11 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
-    // The ID of the request, which is used to locate and troubleshoot issues.
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array consisting of the parameters that are required to upload a file.
+    /**
+     * <p>An array consisting of the parameters that are required to upload a file.</p>
+     */
     @NameInMap("UploadUrlList")
     public java.util.List<CreateFileDetectUploadUrlResponseBodyUploadUrlList> uploadUrlList;
 
@@ -34,19 +38,27 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     }
 
     public static class CreateFileDetectUploadUrlResponseBodyUploadUrlListContext extends TeaModel {
-        // The AccessKey ID that is used to access the OSS bucket.
+        /**
+         * <p>The AccessKey ID that is used to access the OSS bucket.</p>
+         */
         @NameInMap("AccessId")
         public String accessId;
 
-        // The key of the file that is used after the file is uploaded to the OSS bucket.
+        /**
+         * <p>The key of the file that is used after the file is uploaded to the OSS bucket.</p>
+         */
         @NameInMap("OssKey")
         public String ossKey;
 
-        // The policy that poses limits on file upload. For example, the policy limits the size of the file.
+        /**
+         * <p>The policy that poses limits on file upload. For example, the policy limits the size of the file.</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
-        // The signature that is used to upload the file.
+        /**
+         * <p>The signature that is used to upload the file.</p>
+         */
         @NameInMap("Signature")
         public String signature;
 
@@ -90,38 +102,54 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     }
 
     public static class CreateFileDetectUploadUrlResponseBodyUploadUrlList extends TeaModel {
-        // The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+        /**
+         * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
-        // The signature information.
+        /**
+         * <p>The signature information.</p>
+         */
         @NameInMap("Context")
         public CreateFileDetectUploadUrlResponseBodyUploadUrlListContext context;
 
-        // The timestamp when the values of the parameters expire. Unit: milliseconds.
+        /**
+         * <p>The timestamp when the values of the parameters expire. Unit: milliseconds.</p>
+         */
         @NameInMap("Expire")
         public String expire;
 
-        // Indicates whether the file exists in the cloud. Valid values:
-        // 
-        // *   **true**: The file exists in the cloud. You do not need to upload the file.
-        // *   **false**: The file does not exist in the cloud. You must upload the file.
+        /**
+         * <p>Indicates whether the file exists in the cloud. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The file exists in the cloud. You do not need to upload the file.</p>
+         * <p>*   **false**: The file does not exist in the cloud. You must upload the file.</p>
+         */
         @NameInMap("FileExist")
         public Boolean fileExist;
 
-        // The identifier of the file.
+        /**
+         * <p>The identifier of the file.</p>
+         */
         @NameInMap("HashKey")
         public String hashKey;
 
-        // The internal endpoint of the URL to which the file is uploaded.
+        /**
+         * <p>The internal endpoint of the URL to which the file is uploaded.</p>
+         */
         @NameInMap("InternalUrl")
         public String internalUrl;
 
-        // The error message returned.
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // The public endpoint of the URL to which the file is uploaded.
+        /**
+         * <p>The public endpoint of the URL to which the file is uploaded.</p>
+         */
         @NameInMap("PublicUrl")
         public String publicUrl;
 

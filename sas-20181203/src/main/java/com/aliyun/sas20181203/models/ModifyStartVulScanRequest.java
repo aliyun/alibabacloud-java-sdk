@@ -4,20 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyStartVulScanRequest extends TeaModel {
-    // The types of vulnerabilities that can be detected. Valid values:
-    // 
-    // *   **cve**: Linux software vulnerabilities
-    // *   **sys**: Windows system vulnerabilities
-    // *   **cms**: Web-CMS vulnerabilities
-    // *   **app**: application vulnerabilities
-    // *   **emg**: urgent vulnerabilities
-    // *   **image**: container image vulnerabilities
-    // 
-    // >  If you leave this parameter empty, all types of vulnerabilities can be detected.
     @NameInMap("Types")
     public String types;
 
-    // The UUIDs of servers.
     @NameInMap("Uuids")
     public String uuids;
 

@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWarningExportInfoRequest extends TeaModel {
-    // The ID of the export task.
-    // 
-    // >  You can can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
     @NameInMap("ExportId")
     public Long exportId;
 

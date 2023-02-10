@@ -4,23 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulListResponseBody extends TeaModel {
-    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of vulnerabilities returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // An array that consists of the vulnerabilities.
     @NameInMap("VulRecords")
     public java.util.List<DescribeVulListResponseBodyVulRecords> vulRecords;
 
@@ -70,48 +65,24 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJsonNecessity extends TeaModel {
-        // The asset importance score. Valid values:
-        // 
-        // *   **2**: an important asset
-        // *   **1**: a common asset
-        // *   **0**: a test asset
         @NameInMap("Assets_factor")
         public String assetsFactor;
 
-        // The Common Vulnerability Scoring System (CVSS) score.
         @NameInMap("Cvss_factor")
         public String cvssFactor;
 
-        // The environment score.
         @NameInMap("Enviroment_factor")
         public String enviromentFactor;
 
-        // Indicates whether the score of urgency to fix a vulnerability is calculated. Valid values:
-        // 
-        // *   **0**: no
-        // *   **1**: yes
         @NameInMap("Is_calc")
         public String isCalc;
 
-        // The status of the score of urgency to fix a vulnerability. Valid values:
-        // 
-        // *   **none**: No score is generated.
-        // *   **pending**: The score is pending calculation.
-        // *   **normal**: The calculation is normal.
         @NameInMap("Status")
         public String status;
 
-        // The time score.
         @NameInMap("Time_factor")
         public String timeFactor;
 
-        // The score of urgency to fix a vulnerability.
-        // 
-        // The following list describes scores and related fixing suggestions:
-        // 
-        // *   If the score is from **13.5 to 15**, the vulnerability is a high-risk vulnerability. You must fix the vulnerability at the earliest opportunity.
-        // *   If the score is **greater than or equal to 7 but less than 13.5**, the vulnerability is a medium-risk vulnerability. You can fix the vulnerability at your convenience.
-        // *   If the score is **less than 7**, the vulnerability is a low-risk vulnerability. You can ignore the vulnerability.
         @NameInMap("Total_score")
         public String totalScore;
 
@@ -179,43 +150,33 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
-        // The name of the container.
         @NameInMap("ContainerName")
         public String containerName;
 
-        // The complete version number.
         @NameInMap("FullVersion")
         public String fullVersion;
 
-        // The name of the image.
         @NameInMap("ImageName")
         public String imageName;
 
-        // The reason why the vulnerability is detected.
         @NameInMap("MatchDetail")
         public String matchDetail;
 
-        // The rule that is used to detect the vulnerability.
         @NameInMap("MatchList")
         public java.util.List<String> matchList;
 
-        // The name of the RPM package.
         @NameInMap("Name")
         public String name;
 
-        // The path of the software that has the vulnerability.
         @NameInMap("Path")
         public String path;
 
-        // The process ID.
         @NameInMap("Pid")
         public String pid;
 
-        // The command that is used to fix the vulnerability.
         @NameInMap("UpdateCmd")
         public String updateCmd;
 
-        // The package version number of the software that has the vulnerability.
         @NameInMap("Version")
         public String version;
 
@@ -307,69 +268,42 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJson extends TeaModel {
-        // The package path of the software that has the vulnerability.
         @NameInMap("AbsolutePath")
         public String absolutePath;
 
-        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
-        // The description of the vulnerability.
         @NameInMap("Description")
         public String description;
 
-        // The public IP address of the asset that is associated with the vulnerability.
         @NameInMap("Ip")
         public String ip;
 
-        // The timestamp when the vulnerability was last detected. Unit: milliseconds.
         @NameInMap("LastTs")
         public Long lastTs;
 
-        // Indicates whether the vulnerability needs to be fixed.
         @NameInMap("Necessity")
         public DescribeVulListResponseBodyVulRecordsExtendContentJsonNecessity necessity;
 
-        // The name of the operating system for your asset.
         @NameInMap("Os")
         public String os;
 
-        // The release of the operating system.
         @NameInMap("OsRelease")
         public String osRelease;
 
-        // The ID of the vulnerability.
         @NameInMap("PrimaryId")
         public Long primaryId;
 
-        // An array that consists of the information about RPM Package Manager (RPM) packages.
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
 
-        // The status of the vulnerability. Valid values:
-        // 
-        // *   **1**: unfixed
-        // *   **2**: fix failed
-        // *   3: rollback failed
-        // *   **4**: being fixed
-        // *   **5**: being rolled back
-        // *   **6**: being verified
-        // *   **7**: fixed
-        // *   **8**: fixed and to be restarted
-        // *   **9**: rolled back
-        // *   **10**: ignored
-        // *   **11**: rolled back and to be restarted
-        // *   **12**: not found
-        // *   **20**: expired
         @NameInMap("Status")
         public String status;
 
-        // The tag that is added to the vulnerability.
         @NameInMap("Tag")
         public String tag;
 
-        // The CVE list.
         @NameInMap("cveList")
         public java.util.List<String> cveList;
 
@@ -485,150 +419,84 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecords extends TeaModel {
-        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
-        // The edition of Security Center that is authorized to scan the asset. Valid values:
-        // 
-        // *   **1**: Basic edition
-        // *   **6**: Anti-virus edition
-        // *   **5**: Advanced edition
-        // *   **3**: Enterprise edition
-        // *   **7**: Ultimate edition
-        // *   **10**: Value-added Plan edition
         @NameInMap("AuthVersion")
         public String authVersion;
 
-        // Indicates whether Security Center is authorized to scan the asset. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
         @NameInMap("Bind")
         public Boolean bind;
 
-        // The extended information about the vulnerability.
         @NameInMap("ExtendContentJson")
         public DescribeVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
-        // The timestamp when the vulnerability was first detected. Unit: milliseconds.
         @NameInMap("FirstTs")
         public Long firstTs;
 
-        // The ID of the asset group.
         @NameInMap("GroupId")
         public Integer groupId;
 
-        // The instance ID of the asset.
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the asset.
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The public IP address of the asset.
         @NameInMap("InternetIp")
         public String internetIp;
 
-        // The private IP address of the asset.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        // The timestamp when the vulnerability was last detected. Unit: milliseconds.
         @NameInMap("LastTs")
         public Long lastTs;
 
-        // The timestamp when the vulnerability status was modified. Unit: milliseconds.
         @NameInMap("ModifyTs")
         public Long modifyTs;
 
-        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 
-        // The priority to fix the vulnerability. Valid values:
-        // 
-        // *   **asap**: high
-        // *   **later**: medium
-        // *   **nntf**: low
-        // 
-        // >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
         @NameInMap("Necessity")
         public String necessity;
 
-        // Indicates whether the Security Center agent on the asset is online. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
         @NameInMap("Online")
         public Boolean online;
 
-        // The name of the operating system for your asset.
         @NameInMap("OsName")
         public String osName;
 
-        // The name of the operating system for your asset.
         @NameInMap("OsVersion")
         public String osVersion;
 
-        // The ID of the vulnerability.
         @NameInMap("PrimaryId")
         public Long primaryId;
 
-        // The region ID of the instance.
         @NameInMap("RegionId")
         public String regionId;
 
-        // The Common Vulnerabilities and Exposures (CVE) IDs related to the vulnerability. Multiple CVE IDs are separated by commas (,).
         @NameInMap("Related")
         public String related;
 
-        // The timestamp when the vulnerability was fixed. Unit: milliseconds.
         @NameInMap("RepairTs")
         public Long repairTs;
 
-        // The code that indicates the vulnerability fixing result.
         @NameInMap("ResultCode")
         public String resultCode;
 
-        // The message that indicates the vulnerability fixing result.
         @NameInMap("ResultMessage")
         public String resultMessage;
 
-        // The status of the vulnerability. Valid values:
-        // 
-        // *   **1**: unfixed
-        // *   **2**: fix failed
-        // *   **3**: rollback failed
-        // *   **4**: being fixed
-        // *   **5**: being rolled back
-        // *   **6**: being verified
-        // *   **7**: fixed
-        // *   **8**: fixed and to be restarted
-        // *   **9**: rolled back
-        // *   **10**: ignored
-        // *   **11**: rolled back and to be restarted
-        // *   **12**: not found
-        // *   **20**: expired
         @NameInMap("Status")
         public Integer status;
 
-        // The tag that is added to the vulnerability.
         @NameInMap("Tag")
         public String tag;
 
-        // The type of the vulnerability. Valid values:
-        // 
-        // *   **cve**: Linux software vulnerability
-        // *   **sys**: Windows system vulnerability
-        // *   **cms**: Web-CMS vulnerability
-        // *   **emg**: urgent vulnerability
-        // *   **app**: application vulnerability
         @NameInMap("Type")
         public String type;
 
-        // The instance UUID of the asset.
         @NameInMap("Uuid")
         public String uuid;
 

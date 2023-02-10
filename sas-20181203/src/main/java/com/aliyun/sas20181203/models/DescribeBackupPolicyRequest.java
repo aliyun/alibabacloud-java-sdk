@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyRequest extends TeaModel {
-    // The ID of the anti-ransomware policy.
-    // 
-    // >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
     @NameInMap("Id")
     public Long id;
 

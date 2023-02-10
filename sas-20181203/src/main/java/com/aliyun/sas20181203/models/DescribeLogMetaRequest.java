@@ -4,23 +4,29 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogMetaRequest extends TeaModel {
-    // The ID of the request source. Default value: **aegis**. Valid values:
-    // 
-    // *   **aegis**: Server Guard
-    // *   **sas**: Security Center
-    // 
-    // >  If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.
+    /**
+     * <p>The ID of the request source. Default value: **aegis**. Valid values:</p>
+     * <br>
+     * <p>*   **aegis**: Server Guard</p>
+     * <p>*   **sas**: Security Center</p>
+     * <br>
+     * <p>>  If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.</p>
+     */
     @NameInMap("From")
     public String from;
 
-    // The language of the content within the request and response. Default value: **zh**. Valid values:
-    // 
-    // *   **zh**: Chinese
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The source IP address of the request.
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

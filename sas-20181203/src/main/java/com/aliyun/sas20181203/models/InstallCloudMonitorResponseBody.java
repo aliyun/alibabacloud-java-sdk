@@ -4,26 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class InstallCloudMonitorResponseBody extends TeaModel {
-    // The error code returned if the request fails.
     @NameInMap("Code")
     public String code;
 
-    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message returned.
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // *   **true**: yes
-    // *   **false**: no
     @NameInMap("Success")
     public Boolean success;
 

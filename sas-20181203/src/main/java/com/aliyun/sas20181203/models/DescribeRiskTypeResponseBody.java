@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskTypeResponseBody extends TeaModel {
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of the information about baseline types.
     @NameInMap("RiskTypes")
     public java.util.List<DescribeRiskTypeResponseBodyRiskTypes> riskTypes;
 
@@ -34,34 +32,24 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRulesParamList extends TeaModel {
-        // If the value of paramType is 1, this parameter is empty. If the value of paramType is 2, this parameter provides the options that can be selected for paramType.
         @NameInMap("EnumValue")
         public String enumValue;
 
-        // The maximum value of the parameter.
         @NameInMap("MaxValue")
         public Integer maxValue;
 
-        // The minimum value of the parameter.
         @NameInMap("MinValue")
         public Integer minValue;
 
-        // The default value of the parameter.
         @NameInMap("ParamDefaultValue")
         public String paramDefaultValue;
 
-        // The description of the parameter.
         @NameInMap("ParamDesc")
         public String paramDesc;
 
-        // The name of the parameter.
         @NameInMap("ParamName")
         public String paramName;
 
-        // The configuration type of the parameter. Valid values:
-        // 
-        // *   **1**: input
-        // *   **2**: selection
         @NameInMap("ParamType")
         public Integer paramType;
 
@@ -129,22 +117,15 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules extends TeaModel {
-        // Indicates whether the baseline can be edited. Valid values:
-        // 
-        // *   **0**: no
-        // *   **1**: yes
         @NameInMap("Optional")
         public Integer optional;
 
-        // An array that consists of the parameters in the rule for the baseline.
         @NameInMap("ParamList")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRulesParamList> paramList;
 
-        // The description of the rule for the baseline.
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
-        // The ID of the rule for the baseline.
         @NameInMap("RuleId")
         public String ruleId;
 
@@ -188,19 +169,15 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails extends TeaModel {
-        // The description of the baseline.
         @NameInMap("CheckDesc")
         public String checkDesc;
 
-        // The ID of the baseline.
         @NameInMap("CheckId")
         public Long checkId;
 
-        // The baseline.
         @NameInMap("CheckItem")
         public String checkItem;
 
-        // An array that consists of the rule details about the baseline.
         @NameInMap("Rules")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetailsRules> rules;
 
@@ -244,15 +221,12 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskTypeResponseBodyRiskTypesSubTypes extends TeaModel {
-        // The alias of the baseline subtype.
         @NameInMap("Alias")
         public String alias;
 
-        // An array that consists of the check details about the baseline subtype.
         @NameInMap("CheckDetails")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails> checkDetails;
 
-        // The name of the baseline subtype.
         @NameInMap("TypeName")
         public String typeName;
 
@@ -288,15 +262,12 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskTypeResponseBodyRiskTypes extends TeaModel {
-        // The alias of the baseline type.
         @NameInMap("Alias")
         public String alias;
 
-        // An array that consists of the information about baseline subtypes.
         @NameInMap("SubTypes")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypes> subTypes;
 
-        // The name of the baseline type.
         @NameInMap("TypeName")
         public String typeName;
 

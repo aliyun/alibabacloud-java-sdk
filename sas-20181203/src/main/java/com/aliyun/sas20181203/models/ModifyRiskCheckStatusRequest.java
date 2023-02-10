@@ -4,32 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyRiskCheckStatusRequest extends TeaModel {
-    // The ID of the check item.
     @NameInMap("ItemId")
     public Long itemId;
 
-    // The language of the content within the request and the response. Valid values:
-    // 
-    // *   **zh**: Chinese
-    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The method to handle the check item. Valid values:
-    // 
-    // *   **ignored**: ignores the check item.
-    // *   **reset**: cancels ignoring the check item.
     @NameInMap("Status")
     public String status;
 
-    // The ID of the check task to which the check item belongs.
     @NameInMap("TaskId")
     public Long taskId;
 

@@ -4,27 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
-    // The number of check items returned on the current page.
     @NameInMap("Count")
     public Integer count;
 
-    // The page number of the current page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of check items.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // The statistics of check items.
     @NameInMap("WarningSummarys")
     public java.util.List<DescribeCheckWarningSummaryResponseBodyWarningSummarys> warningSummarys;
 
@@ -82,65 +76,42 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckWarningSummaryResponseBodyWarningSummarys extends TeaModel {
-        // The number of check items.
         @NameInMap("CheckCount")
         public Integer checkCount;
 
-        // Indicates whether the risk item can be exploited. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
         @NameInMap("CheckExploit")
         public Boolean checkExploit;
 
-        // Indicates whether the risk item is a database risk item. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
         @NameInMap("DatabaseRisk")
         public Boolean databaseRisk;
 
-        // The number of high-risk items.
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
-        // The time when the last baseline check was performed.
         @NameInMap("LastFoundTime")
         public String lastFoundTime;
 
-        // The risk level of the risk item. Valid values:
-        // 
-        // *   **high**
-        // *   **medium**
-        // *   **low**
         @NameInMap("Level")
         public String level;
 
-        // The number of low-risk items.
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
-        // The number of medium-risk items.
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
 
-        // The ID of the risk item.
         @NameInMap("RiskId")
         public Long riskId;
 
-        // The name of the risk item.
         @NameInMap("RiskName")
         public String riskName;
 
-        // The level-2 type of the risk item.
         @NameInMap("SubTypeAlias")
         public String subTypeAlias;
 
-        // The level-1 type of the check item. Examples: database, system, weak password, and middleware.
         @NameInMap("TypeAlias")
         public String typeAlias;
 
-        // The number of assets on which risk items are detected.
         @NameInMap("WarningMachineCount")
         public Integer warningMachineCount;
 

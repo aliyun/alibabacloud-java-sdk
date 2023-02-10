@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
-    // An array that consists of the status information about the servers that you restart.
     @NameInMap("RebootStatuses")
     public java.util.List<DescribeInstanceRebootStatusResponseBodyRebootStatuses> rebootStatuses;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,27 +43,15 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceRebootStatusResponseBodyRebootStatuses extends TeaModel {
-        // The error code that is returned when the server failed to be restarted. Valid values:
-        // 
-        // *   **10001**: The restart command failed to be sent.
-        // *   **10002**: The restart operation failed.
-        // *   **10003**: A timeout error occurs.
         @NameInMap("Code")
         public String code;
 
-        // The message that is returned when the server failed to be restarted.
         @NameInMap("Msg")
         public String msg;
 
-        // The status of the server. Valid values:
-        // 
-        // *   **0**: The server is being restarted.
-        // *   **1**: The server is restarted.
-        // *   **2**: The server failed to be restarted.
         @NameInMap("RebootStatus")
         public Integer rebootStatus;
 
-        // The UUID of the server.
         @NameInMap("Uuid")
         public String uuid;
 

@@ -4,88 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ExportWarningRequest extends TeaModel {
-    // Specifies whether the baseline risks are handled. Valid values:
-    // 
-    // *   **Y**: yes
-    // *   **N**: no
     @NameInMap("Dealed")
     public String dealed;
 
-    // The type of the export task. Set the value to **hc_check_warning**, which indicates tasks to export baseline check results.
     @NameInMap("ExportType")
     public String exportType;
 
-    // The export method of the results for the weak password baseline check. Valid values:
-    // 
-    // *   **0**: exports the check results after it is masked.
-    // *   **1**: exports the check results in plaintext.
     @NameInMap("IsCleartextPwd")
     public Integer isCleartextPwd;
 
-    // Specifies whether the baseline check results are aggregated and exported. Valid values:
-    // 
-    // *   **0**: no
-    // *   **1**: yes
     @NameInMap("IsSummaryExport")
     public Integer isSummaryExport;
 
-    // The language of the content within the request and response. Default value: **zh**. Valid values:
-    // 
-    // *   **zh**: Chinese
-    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
-    // The ID of the risk item in the baseline check results. Separate multiple IDs with commas (,).
     @NameInMap("RiskIds")
     public String riskIds;
 
-    // The severity of the baseline check item. Separate multiple severities with commas (,). Valid values:
-    // 
-    // *   **high**
-    // *   **medium**
-    // *   **low**
     @NameInMap("RiskLevels")
     public String riskLevels;
 
-    // The name of the baseline.
     @NameInMap("RiskName")
     public String riskName;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The status of the check item in the baseline check results. Separate multiple statuses with commas (,). Valid values:
-    // 
-    // *   **3**: passed
-    // *   **1**: failed
     @NameInMap("StatusList")
     public String statusList;
 
-    // The ID of the baseline check policy.
     @NameInMap("StrategyId")
     public Long strategyId;
 
-    // The subtypes of the baselines based on which baseline checks are performed. Separate multiple subtypes with commas (,).
-    // 
-    // >  You must set the value of this parameter to the value of the **TypeName** parameter that is contained in the **SubTypes** parameter. You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to obtain the value of the TypeName parameter.
     @NameInMap("SubTypeNames")
     public String subTypeNames;
 
-    // The type of the baseline based on which baseline checks are performed.
-    // 
-    // >  You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
     @NameInMap("TypeName")
     public String typeName;
 
-    // The types of the baselines based on which baseline checks are performed. Separate multiple types with commas (,).
-    // 
-    // >  You must set the value of this parameter to the value of the **TypeName** parameter that is returned by calling the [DescribeRiskType](~~DescribeRiskType~~) operation. If both the **TypeName** and **TypeNames** parameters are specified, only the **TypeName** parameter takes effect.
     @NameInMap("TypeNames")
     public String typeNames;
 
-    // The UUID of the server whose baseline check results you want to export. Separate multiple UUIDs with commas (,).
     @NameInMap("Uuids")
     public String uuids;
 

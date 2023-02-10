@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskErrorLogResponseBody extends TeaModel {
-    // The error logs that are returned.
     @NameInMap("Logs")
     public java.util.List<DescribeTaskErrorLogResponseBodyLogs> logs;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,7 +32,6 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskErrorLogResponseBodyLogs extends TeaModel {
-        // The error log.
         @NameInMap("Text")
         public String text;
 

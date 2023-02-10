@@ -4,13 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetSuspiciousStatisticsRequest extends TeaModel {
-    // The ID of the asset group. Separate multiple IDs with commas (,).
-    // 
-    // >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
     @NameInMap("GroupIdList")
     public String groupIdList;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

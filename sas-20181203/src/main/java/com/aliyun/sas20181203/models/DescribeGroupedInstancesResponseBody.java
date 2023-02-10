@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedInstancesResponseBody extends TeaModel {
-    // An array that consists of the information about the assets.
     @NameInMap("Instances")
     public java.util.List<DescribeGroupedInstancesResponseBodyInstances> instances;
 
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeGroupedInstancesResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,32 +43,21 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedInstancesResponseBodyInstances extends TeaModel {
-        // The number of assets on which high-risk vulnerabilities are detected.
         @NameInMap("AsapVulInstanceCount")
         public Long asapVulInstanceCount;
 
-        // The name of the server group.
         @NameInMap("FieldAliasName")
         public String fieldAliasName;
 
-        // The type of the server group. Valid values:
-        // 
-        // *   **0**: the default group
-        // *   **1**: other group
         @NameInMap("GroupFlag")
         public Integer groupFlag;
 
-        // The total number of assets that belong to the specified type.
-        // 
-        // >  If the **MachineTypes** request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.
         @NameInMap("InstanceCount")
         public String instanceCount;
 
-        // The number of assets that are at risk.
         @NameInMap("RiskInstanceCount")
         public String riskInstanceCount;
 
-        // The number of assets that are not protected by Security Center.
         @NameInMap("UnProtectedInstanceCount")
         public String unProtectedInstanceCount;
 
@@ -131,19 +117,15 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedInstancesResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: **20**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

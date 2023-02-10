@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmEventListResponseBody extends TeaModel {
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeAlarmEventListResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of the alert events.
     @NameInMap("SuspEvents")
     public java.util.List<DescribeAlarmEventListResponseBodySuspEvents> suspEvents;
 
@@ -46,19 +43,15 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeAlarmEventListResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned per page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: **20**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,11 +95,9 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeAlarmEventListResponseBodySuspEventsTacticItems extends TeaModel {
-        // The tactic name of ATT\&CK.
         @NameInMap("TacticDisplayName")
         public String tacticDisplayName;
 
-        // The tactic ID of ATT\&CK.
         @NameInMap("TacticId")
         public String tacticId;
 
@@ -134,131 +125,84 @@ public class DescribeAlarmEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeAlarmEventListResponseBodySuspEvents extends TeaModel {
-        // The name of the alert event.
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
-        // The original parent name of the alert event.
         @NameInMap("AlarmEventNameOriginal")
         public String alarmEventNameOriginal;
 
-        // The type of the alert event.
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
-        // The ID of the alert event.
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
-        // Indicates whether the online processing of the alert event is supported, such as quarantining the source file of the malicious process, adding the alert event to the whitelist, and ignoring the alert event. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
         @NameInMap("CanBeDealOnLine")
         public Boolean canBeDealOnLine;
 
-        // Indicates whether you can cancel marking the alert event as a false positive. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
         @NameInMap("CanCancelFault")
         public Boolean canCancelFault;
 
-        // The data source of the alert event.
         @NameInMap("DataSource")
         public String dataSource;
 
-        // Indicates whether the alert event is handled. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
         @NameInMap("Dealed")
         public Boolean dealed;
 
-        // The description of the alert event.
         @NameInMap("Description")
         public String description;
 
-        // The timestamp when the alert event was last detected. Unit: milliseconds.
         @NameInMap("EndTime")
         public Long endTime;
 
-        // The timestamp when the alert event was last modified. Unit: milliseconds.
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        // Indicates whether the alert event has tracing information. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
         @NameInMap("HasTraceInfo")
         public Boolean hasTraceInfo;
 
-        // The ID of the affected asset.
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the affected asset.
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The public IP address of the affected asset.
         @NameInMap("InternetIp")
         public String internetIp;
 
-        // The private IP address of the affected asset.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        // The risk level of the alert event. Valid values:
-        // 
-        // *   **serious**
-        // *   **suspicious**
-        // *   **remind**
         @NameInMap("Level")
         public String level;
 
-        // The handling result code of the alert event.
         @NameInMap("OperateErrorCode")
         public String operateErrorCode;
 
-        // The timestamp when the alert event was handled. Unit: milliseconds.
         @NameInMap("OperateTime")
         public Long operateTime;
 
-        // The edition of Security Center in which the alert event can be detected. Valid values:
-        // 
-        // *   **0**: Basic edition
-        // *   **1**: Advanced edition
-        // *   **2**: Enterprise edition
         @NameInMap("SaleVersion")
         public String saleVersion;
 
-        // The IDs of the associated exceptions.
         @NameInMap("SecurityEventIds")
         public String securityEventIds;
 
-        // The solution to the alert event.
         @NameInMap("Solution")
         public String solution;
 
-        // The stage at which the attack or intrusion is detected.
         @NameInMap("Stages")
         public String stages;
 
-        // The timestamp when the alert event starts. Unit: milliseconds.
         @NameInMap("StartTime")
         public Long startTime;
 
-        // The number of associated exceptions.
         @NameInMap("SuspiciousEventCount")
         public Integer suspiciousEventCount;
 
-        // An array that consists of the stage information about ATT\&CK.
         @NameInMap("TacticItems")
         public java.util.List<DescribeAlarmEventListResponseBodySuspEventsTacticItems> tacticItems;
 
-        // The ID of the associated instance.
         @NameInMap("Uuid")
         public String uuid;
 

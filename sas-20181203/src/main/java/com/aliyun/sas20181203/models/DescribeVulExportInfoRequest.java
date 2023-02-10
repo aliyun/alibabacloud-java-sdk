@@ -4,7 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulExportInfoRequest extends TeaModel {
-    // The ID of the vulnerability export task.
     @NameInMap("ExportId")
     public Long exportId;
 

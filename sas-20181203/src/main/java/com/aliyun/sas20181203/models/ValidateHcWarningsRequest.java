@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ValidateHcWarningsRequest extends TeaModel {
-    // The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).
     @NameInMap("RiskIds")
     public String riskIds;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The UUIDs of servers on which you want to verify risk items.
     @NameInMap("Uuids")
     public String uuids;
 

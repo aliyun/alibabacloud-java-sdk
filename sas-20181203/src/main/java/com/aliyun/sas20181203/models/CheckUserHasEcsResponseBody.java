@@ -4,29 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CheckUserHasEcsResponseBody extends TeaModel {
-    // The status code returned. The status code **200** indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.
+    /**
+     * <p>The status code returned. The status code **200** indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // Indicates whether ECS instances exist. Valid values:
-    // 
-    // *   **true**: yes
-    // *   **false**: no
+    /**
+     * <p>Indicates whether ECS instances exist. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
-    // The error message returned.
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The status of the request. Valid values:
-    // 
-    // *   **true**: The request is successful.
-    // *   **false**: The request fails.
+    /**
+     * <p>The status of the request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

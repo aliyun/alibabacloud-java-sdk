@@ -4,34 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotNodeResponseBody extends TeaModel {
-    // The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
     @NameInMap("Code")
     public String code;
 
-    // An array that consists of the information about the management nodes.
     @NameInMap("HoneypotNodeList")
     public java.util.List<ListHoneypotNodeResponseBodyHoneypotNodeList> honeypotNodeList;
 
-    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message returned.
     @NameInMap("Message")
     public String message;
 
-    // The pagination information.
     @NameInMap("PageInfo")
     public ListHoneypotNodeResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,64 +87,42 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotNodeResponseBodyHoneypotNodeList extends TeaModel {
-        // Indicates whether the honeypot is allowed to access the Internet.
-        // 
-        // *   **true**: The honeypot is allowed to access the Internet.
-        // *   **false**: The honeypot is not allowed to access the Internet.
         @NameInMap("AllowHoneypotAccessInternet")
         public Boolean allowHoneypotAccessInternet;
 
-        // The time when the management node was created.
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The type of the management node. Default value: **false**. Valid values:
-        // 
-        // *   **false**: non-default type
-        // *   **true**: default type
         @NameInMap("DefaultNode")
         public Boolean defaultNode;
 
-        // The ID of the Elastic Compute Service (ECS) instance.
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
-        // The maximum number of honeypots that can be deployed on the management node.
         @NameInMap("HoneypotTotalCount")
         public Integer honeypotTotalCount;
 
-        // The number of honeypots that are deployed on the management node.
         @NameInMap("HoneypotUsedCount")
         public Integer honeypotUsedCount;
 
-        // The ID of the management node.
         @NameInMap("NodeId")
         public String nodeId;
 
-        // The IP address of the management node.
         @NameInMap("NodeIp")
         public String nodeIp;
 
-        // The name of the management node.
         @NameInMap("NodeName")
         public String nodeName;
 
-        // The maximum number of probes that can be used.
         @NameInMap("ProbeTotalCount")
         public Integer probeTotalCount;
 
-        // The number of probes that are used.
         @NameInMap("ProbeUsedCount")
         public Integer probeUsedCount;
 
-        // An array that consists of the allowed CIDR blocks.
         @NameInMap("SecurityGroupProbeIpList")
         public java.util.List<String> securityGroupProbeIpList;
 
-        // The status of the management node. Valid values:
-        // 
-        // *   **1**: normal
-        // *   **2**: abnormal
         @NameInMap("TotalStatus")
         public Integer totalStatus;
 
@@ -281,19 +249,15 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotNodeResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

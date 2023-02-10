@@ -4,14 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CheckQuaraFileIdResponseBody extends TeaModel {
-    // Indicates whether the ID of the quarantined file is valid. Valid values:
-    // 
-    // *   **true**: The ID of the quarantined file is valid.
-    // *   **false**: The ID of the quarantined file is invalid.
+    /**
+     * <p>Indicates whether the ID of the quarantined file is valid. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The ID of the quarantined file is valid.</p>
+     * <p>*   **false**: The ID of the quarantined file is invalid.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

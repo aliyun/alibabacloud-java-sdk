@@ -4,13 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspiciousUUIDConfigRequest extends TeaModel {
-    // The type of proactive defense. Valid values:
-    // 
-    // *   **auto_breaking**: virus defense
-    // *   **ransomware_breaking**: ransomware capture
-    // *   **webshell\_cloud_breaking**: webshell defense
-    // *   **alinet**: malicious behavior defense
-    // *   **alisecguard**: client protection
     @NameInMap("Type")
     public String type;
 
