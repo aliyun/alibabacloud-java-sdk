@@ -57,6 +57,9 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         @NameInMap("ColumnName")
         public String columnName;
 
+        @NameInMap("SecurityLevel")
+        public String securityLevel;
+
         public static GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList build(java.util.Map<String, ?> map) throws Exception {
             GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList self = new GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList();
             return TeaModel.build(map, self);
@@ -76,6 +79,14 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         }
         public String getColumnName() {
             return this.columnName;
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList setSecurityLevel(String securityLevel) {
+            this.securityLevel = securityLevel;
+            return this;
+        }
+        public String getSecurityLevel() {
+            return this.securityLevel;
         }
 
     }
