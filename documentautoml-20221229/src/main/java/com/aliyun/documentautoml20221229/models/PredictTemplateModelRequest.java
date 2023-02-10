@@ -7,8 +7,8 @@ public class PredictTemplateModelRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
-    @NameInMap("ProjectId")
-    public Long projectId;
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static PredictTemplateModelRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictTemplateModelRequest self = new PredictTemplateModelRequest();
@@ -23,12 +23,12 @@ public class PredictTemplateModelRequest extends TeaModel {
         return this.content;
     }
 
-    public PredictTemplateModelRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public PredictTemplateModelRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public Long getProjectId() {
-        return this.projectId;
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }
