@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ecs20140526</artifactId>
-  <version>4.24.54</version>
+  <version>4.24.55</version>
   <packaging>jar</packaging>
   <name>ecs20140526</name>
   <description>Alibaba Cloud Elastic Compute Service (20140526) SDK for Java

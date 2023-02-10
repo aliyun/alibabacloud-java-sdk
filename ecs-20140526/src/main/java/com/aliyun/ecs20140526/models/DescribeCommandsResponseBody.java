@@ -29,7 +29,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of commands.</p>
+     * <p>The total number of the commands.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -336,7 +336,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions parameterDefinitions;
 
         /**
-         * <p>A list of custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is not enabled, an empty list is returned.</p>
+         * <p>The custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is not enabled, an empty list is returned.</p>
          */
         @NameInMap("ParameterNames")
         public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
@@ -348,7 +348,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public String provider;
 
         /**
-         * <p>The list of tags added to the command.</p>
+         * <p>The tags added to the command.</p>
          */
         @NameInMap("Tags")
         public DescribeCommandsResponseBodyCommandsCommandTags tags;

@@ -11,13 +11,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
      */
     @NameInMap("Ipv4PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
     /**
-     * <p>> 该参数正在邀测中，暂未开放使用。</p>
+     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
      */
     @NameInMap("Ipv6PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets;
@@ -59,7 +59,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>Details about the private IP addresses.</p>
+     * <p>Details about the private IP addresses of the ENI.</p>
      */
     @NameInMap("PrivateIpSets")
     public CreateNetworkInterfaceResponseBodyPrivateIpSets privateIpSets;
@@ -305,7 +305,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
         /**
-         * <p>> 该参数正在邀测中，暂未开放使用。</p>
+         * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
          */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
@@ -346,7 +346,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
         /**
-         * <p>> 该参数正在邀测中，暂未开放使用。</p>
+         * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
          */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
@@ -387,7 +387,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set extends TeaModel {
         /**
-         * <p>The IPv6 address of the ENI.</p>
+         * <p>The IPv6 address.</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
@@ -428,7 +428,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
         /**
-         * <p>Indicates whether the IP address is the primary private IP address.</p>
+         * <p>Indicates whether the private IP address is the primary private IP address.</p>
          */
         @NameInMap("Primary")
         public Boolean primary;

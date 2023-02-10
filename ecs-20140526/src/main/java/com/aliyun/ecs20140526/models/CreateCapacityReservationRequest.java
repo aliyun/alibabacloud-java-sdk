@@ -22,7 +22,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The expiration time of the capacity reservation. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+     * <p>The time when the capacity reservation expires. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,20 +30,20 @@ public class CreateCapacityReservationRequest extends TeaModel {
     /**
      * <p>The release mode of the capacity reservation. Valid values:</p>
      * <br>
-     * <p>*   Limited: The capacity reservation is released at the specified time. If you specify this parameter, you must also specify the `EndTime` parameter.</p>
-     * <p>*   Unlimited: The capacity reservation must be manually released. You can release it at any time.</p>
+     * <p>*   Limited: The capacity reservation is automatically released at the specified time. If you specify this parameter, you must also specify the `EndTime` parameter.</p>
+     * <p>*   Unlimited: The capacity reservation must be manually released. You can release it anytime.</p>
      */
     @NameInMap("EndTimeType")
     public String endTimeType;
 
     /**
-     * <p>The total number of instances for which to reserve capacity of an instance type.</p>
+     * <p>The total number of instances for which capacity of an instance type is reserved.</p>
      */
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
     /**
-     * <p>The instance type. A capacity reservation can be created to reserve the capacity of a single instance type.</p>
+     * <p>The instance type. A capacity reservation can be created to reserve the capacity of only a single instance type. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the instance types provided by ECS.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -57,18 +57,18 @@ public class CreateCapacityReservationRequest extends TeaModel {
     /**
      * <p>The operating system of the image used by the instance. This parameter corresponds to the `Platform` parameter of regional reserved instances. If the operating system of a capacity reservation matches that of a regional reserved instance, the regional reserved instance can be applied to offset bills of the unused capacity of the capacity reservation. Valid values:</p>
      * <br>
-     * <p>*   Windows: Windows Server operating systems</p>
-     * <p>*   Linux: Linux and Unix-like operating systems</p>
+     * <p>*   Windows: Windows Server operating system</p>
+     * <p>*   Linux: Linux and UNIX-like operating system</p>
      * <br>
      * <p>Default value: Linux.</p>
      * <br>
-     * <p>>  This parameter is unavailable.</p>
+     * <p>> This parameter is unavailable.</p>
      */
     @NameInMap("Platform")
     public String platform;
 
     /**
-     * <p>The ID of the region in which to create the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to create the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -86,21 +86,21 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The mode in which the capacity reservation takes effect. You can specify a time value for this parameter to create the capacity reservation as a scheduled capacity reservation that takes effect at the specified time. Only immediate capacity reservations are supported. You do not need to specify this parameter.</p>
+     * <p>The time when the capacity reservation takes effect. The CreateCapacityReservation operation can be called to create only immediate capacity reservations.</p>
      * <br>
-     * <p>>  If this parameter is empty, the capacity reservation is created as an immediate capacity reservation.</p>
+     * <p>>  If you do not specify this parameter, the capacity reservation takes effect immediately.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The tags to add to the capacity reservation. You can specify up to 20 tags.</p>
+     * <p>The tags to add to the capacity reservation.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCapacityReservationRequestTag> tag;
 
     /**
-     * <p>The IDs of zones within the region in which to create the capacity reservation. A capacity reservation can reserve resources within a single zone.</p>
+     * <p>The ID of the zone in which to create the capacity reservation. A capacity reservation can reserve resources within only a single zone.</p>
      */
     @NameInMap("ZoneId")
     public java.util.List<String> zoneId;
@@ -248,10 +248,10 @@ public class CreateCapacityReservationRequest extends TeaModel {
 
     public static class CreateCapacityReservationRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The type of the private pool to be generated after the capacity reservation takes effect. Valid values:</p>
+         * <p>The type of the private pool to generate after the capacity reservation takes effect. Valid values:</p>
          * <br>
          * <p>*   Open: open private pool</p>
-         * <p>*   Target: specified private pool</p>
+         * <p>*   Target: targeted private pool</p>
          * <br>
          * <p>Default value: Open.</p>
          */
@@ -259,7 +259,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
         public String matchCriteria;
 
         /**
-         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. The name start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
          */
         @NameInMap("Name")
         public String name;
@@ -289,13 +289,13 @@ public class CreateCapacityReservationRequest extends TeaModel {
 
     public static class CreateCapacityReservationRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

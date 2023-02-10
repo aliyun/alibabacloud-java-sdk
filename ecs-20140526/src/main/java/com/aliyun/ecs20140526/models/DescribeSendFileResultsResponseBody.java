@@ -254,6 +254,55 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag self = new DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeSendFileResultsResponseBodyInvocationsInvocationTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag> tag;
+
+        public static DescribeSendFileResultsResponseBodyInvocationsInvocationTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSendFileResultsResponseBodyInvocationsInvocationTags self = new DescribeSendFileResultsResponseBodyInvocationsInvocationTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationTags setTag(java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeSendFileResultsResponseBodyInvocationsInvocation extends TeaModel {
         /**
          * <p>The content of the file.</p>
@@ -345,6 +394,9 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
          */
         @NameInMap("Overwrite")
         public String overwrite;
+
+        @NameInMap("Tags")
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationTags tags;
 
         /**
          * <p>The destination directory.</p>
@@ -457,6 +509,14 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
         public String getOverwrite() {
             return this.overwrite;
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setTags(DescribeSendFileResultsResponseBodyInvocationsInvocationTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationTags getTags() {
+            return this.tags;
         }
 
         public DescribeSendFileResultsResponseBodyInvocationsInvocation setTargetDir(String targetDir) {

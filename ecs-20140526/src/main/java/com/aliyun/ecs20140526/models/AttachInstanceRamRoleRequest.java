@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachInstanceRamRoleRequest extends TeaModel {
     /**
-     * <p>The IDs of instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
+     * <p>The ID of the instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -26,7 +26,7 @@ public class AttachInstanceRamRoleRequest extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateDemandRequest extends TeaModel {
     /**
-     * <p>The required quantity of instances of the filed instance type. Valid values: 1 to 100000.</p>
+     * <p>The number of instances. Valid values: 1 to 100000.</p>
      */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value that is unique among different requests. The `ClientToken` value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the requirement. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the demand. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
      */
     @NameInMap("DemandDescription")
     public String demandDescription;
 
     /**
-     * <p>The name of the requirement. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with http:// or https://.</p>
+     * <p>The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      * <br>
      * <p>The default value is the instance type name.</p>
      */
@@ -33,17 +33,13 @@ public class CreateDemandRequest extends TeaModel {
     /**
      * <p>The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
-     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the start time of the current minute (mm).</p>
-     * <br>
-     * <p>The value of EndTime is later than the value of Starttime.</p>
-     * <br>
-     * <p>Typically, the interval between the two time cannot be more than 10 days.</p>
+     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. Typically, the interval between the two times cannot be more than 10 days.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The billing method of the filed instance. Default value: PostPaid. Valid values:</p>
+     * <p>The billing method of the instance. Default value: PostPaid. Valid values:</p>
      * <br>
      * <p>*   PrePaid: subscription</p>
      * <p>*   PostPaid: pay-as-you-go</p>
@@ -52,7 +48,7 @@ public class CreateDemandRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type of the filed instance. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of the target instance type, or see [Select instance types](~~58291~~) to learn how to select instance types.</p>
+     * <p>The instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Select instance types](~~58291~~) to learn about how to select instance types.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -74,7 +70,7 @@ public class CreateDemandRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription period. Default value: Month. Valid values:</p>
+     * <p>The unit of the subscription period of the resource. Default value: Month. Valid values:</p>
      * <br>
      * <p>*   Day</p>
      * <p>*   Week</p>
@@ -98,19 +94,15 @@ public class CreateDemandRequest extends TeaModel {
     /**
      * <p>The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
-     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the start time of the current minute (mm).</p>
-     * <br>
-     * <p>The value of EndTime is later than the value of Starttime.</p>
-     * <br>
-     * <p>Typically, the interval between the two time cannot be more than 10 days.</p>
+     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm). The value of EndTime must be later than the value of Starttime. Typically, the interval between the two times cannot be more than 10 days.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The ID of the zone to which the filed instance belongs. For more information, call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      * <br>
-     * <p>This parameter is empty by default. If you do not specify a zone, the system randomly selects a zone.</p>
+     * <p>This parameter is empty by default. If you do not specify a zone, the system randomly selects one.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

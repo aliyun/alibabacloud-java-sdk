@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
-    /**
-     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
-     */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 

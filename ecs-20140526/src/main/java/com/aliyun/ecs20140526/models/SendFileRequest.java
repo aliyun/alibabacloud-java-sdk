@@ -100,6 +100,9 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<SendFileRequestTag> tag;
+
     /**
      * <p>The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance.</p>
      */
@@ -242,6 +245,14 @@ public class SendFileRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public SendFileRequest setTag(java.util.List<SendFileRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<SendFileRequestTag> getTag() {
+        return this.tag;
+    }
+
     public SendFileRequest setTargetDir(String targetDir) {
         this.targetDir = targetDir;
         return this;
@@ -256,6 +267,36 @@ public class SendFileRequest extends TeaModel {
     }
     public Long getTimeout() {
         return this.timeout;
+    }
+
+    public static class SendFileRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static SendFileRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            SendFileRequestTag self = new SendFileRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public SendFileRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public SendFileRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

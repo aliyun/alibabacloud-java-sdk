@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDemandResponseBody extends TeaModel {
     /**
-     * <p>The ID of the requirement.</p>
+     * <p>The ID of the demand.</p>
      */
     @NameInMap("DemandId")
     public String demandId;

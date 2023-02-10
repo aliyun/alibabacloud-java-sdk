@@ -7,7 +7,7 @@ public class JoinSecurityGroupRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.</p>
+     * <p>> If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,7 +15,7 @@ public class JoinSecurityGroupRequest extends TeaModel {
     /**
      * <p>The ID of the ENI.</p>
      * <br>
-     * <p>>  If this parameter is specified, the `InstanceId` parameter cannot be specified.</p>
+     * <p>> If this parameter is specified, the `InstanceId` parameter cannot be specified.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -27,7 +27,7 @@ public class JoinSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance or ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      * <br>
      * <p>*   You do not need to specify a region ID when you add an instance to a security group.</p>
      * <p>*   You must specify a region ID when you add an ENI to a security group.</p>
@@ -42,7 +42,7 @@ public class JoinSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups.</p>
+     * <p>The ID of the security group to which you want to add the instance or ENI. You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
