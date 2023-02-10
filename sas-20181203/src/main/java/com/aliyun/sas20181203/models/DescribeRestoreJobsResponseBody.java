@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreJobsResponseBody extends TeaModel {
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeRestoreJobsResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of the restoration tasks.
     @NameInMap("RestoreJobs")
     public java.util.List<DescribeRestoreJobsResponseBodyRestoreJobs> restoreJobs;
 
@@ -46,19 +43,15 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreJobsResponseBodyPageInfo extends TeaModel {
-        // The number of restoration tasks returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: **10**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of restoration tasks returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,177 +95,123 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreJobsResponseBodyRestoreJobs extends TeaModel {
-        // The size of backup data. Unit: bytes.
         @NameInMap("ActualBytes")
         public Long actualBytes;
 
-        // The total size of data that is restored. Unit: bytes.
         @NameInMap("BytesDone")
         public Long bytesDone;
 
-        // The total size of data that you want to restore. Unit: bytes.
         @NameInMap("BytesTotal")
         public Long bytesTotal;
 
-        // The ID of the anti-ransomware agent that is used to restore data.
         @NameInMap("ClientId")
         public String clientId;
 
-        // The timestamp when the restoration task is complete. Unit: milliseconds.
         @NameInMap("CompleteTime")
         public Long completeTime;
 
-        // The timestamp when the restoration task is created. Unit: milliseconds.
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        // The duration of the restoration task. Unit: seconds.
         @NameInMap("Duration")
         public Long duration;
 
-        // The number of the restoration tasks on which errors occur.
         @NameInMap("ErrorCount")
         public Long errorCount;
 
-        // The name of the CSV file. The CSV file contains the files that fail to be restored.
         @NameInMap("ErrorFile")
         public String errorFile;
 
-        // The URL to download the CSV file. The CSV file contains the files that fail to be restored.
         @NameInMap("ErrorFileUrl")
         public String errorFileUrl;
 
-        // The error code that is returned for the restoration task.
         @NameInMap("ErrorType")
         public String errorType;
 
-        // The timestamp when the in-progress restoration task is expected to be complete. Unit: seconds.
         @NameInMap("Eta")
         public Long eta;
 
-        // The directory excluded from the anti-ransomware policy. The value is the directory that you specify to skip protection when you create the anti-ransomware policy.
         @NameInMap("Excludes")
         public String excludes;
 
-        // The return value of the restoration task.
         @NameInMap("ExitCode")
         public String exitCode;
 
-        // The time when the restoration task is created.
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        // The time when the restoration task is updated.
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The included directory based on which the files to restore are located. The value is the directory that you specify for protection when you create the anti-ransomware policy
         @NameInMap("Includes")
         public String includes;
 
-        // The ID of the server whose data you want to restore.
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the server whose data you want to restore.
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The public IP address of the server whose data you want to restore.
         @NameInMap("InternetIp")
         public String internetIp;
 
-        // The internal IP address of the server whose data you want to restore.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        // The number of files that are backed up.
         @NameInMap("ItemsDone")
         public Long itemsDone;
 
-        // The total number of files that you want to restore.
         @NameInMap("ItemsTotal")
         public Long itemsTotal;
 
-        // The error message returned.
         @NameInMap("Message")
         public String message;
 
-        // The progress of the restoration task in percentage.
         @NameInMap("Percentage")
         public Integer percentage;
 
-        // The ID of the request, which is used to locate and troubleshoot issues.
         @NameInMap("RequestId")
         public String requestId;
 
-        // The ID of the restoration task.
         @NameInMap("RestoreId")
         public String restoreId;
 
-        // The name of the restoration task.
         @NameInMap("RestoreName")
         public String restoreName;
 
-        // The type of the file that is restored. Valid values:
-        // 
-        // *   **ECS_FILE**: files on Elastic Compute Service (ECS) instances
-        // *   **FILE**: files on servers in data centers
         @NameInMap("RestoreType")
         public String restoreType;
 
-        // The hash value of the snapshot that stores backup data when the data is backed up.
         @NameInMap("SnapshotHash")
         public String snapshotHash;
 
-        // The hash value ID of the snapshot that stores backup data when the data is backed up.
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        // The version of the backup data.
         @NameInMap("SnapshotVersion")
         public String snapshotVersion;
 
-        // The path to the source file that you want to restore.
         @NameInMap("Source")
         public String source;
 
-        // The ID of the anti-ransomware agent that is used to back up data.
         @NameInMap("SourceClientId")
         public String sourceClientId;
 
-        // The speed of data restoration. Unit: byte/s.
         @NameInMap("Speed")
         public Long speed;
 
-        // The status of the restoration task. Valid values:
-        // 
-        // *   **RUNNING**: The task is running.
-        // *   **COMPLETE**: The task is complete.
-        // *   **FAILED**: The task fails.
-        // *   **CANCELING**: The task is being canceled.
-        // *   **CANCELED**: The task is canceled.
-        // *   **PARTIAL_COMPLETE**: The task is partially successful.
-        // *   **CREATED**: The task is created but is not run.
-        // *   **EXPIRED**: The task is not updated.
-        // *   **QUEUED**: The task is waiting to be run.
-        // *   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.
         @NameInMap("Status")
         public String status;
 
-        // The folder to which the backup data is restored. After you create the restoration task, the backup data is restored to the specified folder.
         @NameInMap("Target")
         public String target;
 
-        // The timestamp when the restoration task was last updated. Unit: milliseconds.
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
-        // The UUID of the server whose data you want to restore.
         @NameInMap("Uuid")
         public String uuid;
 
-        // The ID of the backup vault in which the backup data is stored.
         @NameInMap("VaultId")
         public String vaultId;
 

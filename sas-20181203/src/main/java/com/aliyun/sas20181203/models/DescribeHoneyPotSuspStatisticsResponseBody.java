@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array consisting of the top 5 VPCs or assets for which alerts are most frequently generated.
     @NameInMap("SuspHoneyPotStatisticsResponse")
     public java.util.List<DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse;
 
@@ -34,38 +32,21 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse extends TeaModel {
-        // The total number of alerts that are generated for the asset.
         @NameInMap("Count")
         public Integer count;
 
-        // The ID of the server.
-        // 
-        // >  This parameter is returned only if **StatisticsKeyType** is set to **uuid**.
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the server.
-        // 
-        // >  This parameter is returned only if **StatisticsKeyType** is set to **uuid**.
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The type of the asset. Valid values:
-        // 
-        // *   **vpcInstanceId**: VPC
-        // *   **uuid**: server
         @NameInMap("Type")
         public String type;
 
-        // The ID of the VPC.
-        // 
-        // >  This parameter is returned only if **StatisticsKeyType** is set to **vpcInstanceId**.
         @NameInMap("VpcId")
         public String vpcId;
 
-        // The name of the VPC.
-        // 
-        // >  This parameter is returned only if **StatisticsKeyType** is set to **vpcInstanceId**.
         @NameInMap("VpcName")
         public String vpcName;
 

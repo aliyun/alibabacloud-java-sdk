@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomBlockRecordRequest extends TeaModel {
+    /**
+     * <p>The ID of the record that you want to delete.</p>
+     * <br>
+     * <p>> You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the ID.</p>
+     */
     @NameInMap("Id")
     public Long id;
 

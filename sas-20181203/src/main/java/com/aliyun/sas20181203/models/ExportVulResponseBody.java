@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ExportVulResponseBody extends TeaModel {
-    // The name of the exported file.
     @NameInMap("FileName")
     public String fileName;
 
-    // The ID of the exported file.
     @NameInMap("Id")
     public Long id;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 

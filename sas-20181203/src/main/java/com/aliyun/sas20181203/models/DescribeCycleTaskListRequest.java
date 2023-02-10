@@ -4,15 +4,35 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCycleTaskListRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the task. Valid values:</p>
+     * <br>
+     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
+     * <p>*   **IMAGE_SCAN**: image scan task</p>
+     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>The type of the task. Valid values:</p>
+     * <br>
+     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
+     * <p>*   **IMAGE_SCAN**: image scan task</p>
+     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

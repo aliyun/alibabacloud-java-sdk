@@ -4,7 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetVulWhitelistRequest extends TeaModel {
-    // The ID of the whitelist.
     @NameInMap("VulWhitelistId")
     public Long vulWhitelistId;
 

@@ -4,19 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyPortItemRequest extends TeaModel {
-    // The number of the page to return.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // Specifies whether to forcefully refresh the data that you want to query.
     @NameInMap("ForceFlush")
     public Boolean forceFlush;
 
-    // The number of entries to return on each page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The port number.
     @NameInMap("Port")
     public String port;
 

@@ -3,16 +3,16 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class GetCheckConfigRequest extends TeaModel {
+public class ListInstanceCatalogRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    public static GetCheckConfigRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetCheckConfigRequest self = new GetCheckConfigRequest();
+    public static ListInstanceCatalogRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListInstanceCatalogRequest self = new ListInstanceCatalogRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetCheckConfigRequest setLang(String lang) {
+    public ListInstanceCatalogRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }

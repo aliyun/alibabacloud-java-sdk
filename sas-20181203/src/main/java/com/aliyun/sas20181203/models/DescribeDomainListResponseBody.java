@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainListResponseBody extends TeaModel {
-    // An array that consists of the information about domain names.
     @NameInMap("DomainListResponseList")
     public java.util.List<DescribeDomainListResponseBodyDomainListResponseList> domainListResponseList;
 
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeDomainListResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,11 +43,9 @@ public class DescribeDomainListResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainListResponseBodyDomainListResponseList extends TeaModel {
-        // The name of the domain or website.
         @NameInMap("Domain")
         public String domain;
 
-        // The IP addresses of the domain name.
         @NameInMap("IpList")
         public String ipList;
 
@@ -78,19 +73,15 @@ public class DescribeDomainListResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainListResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: **10**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

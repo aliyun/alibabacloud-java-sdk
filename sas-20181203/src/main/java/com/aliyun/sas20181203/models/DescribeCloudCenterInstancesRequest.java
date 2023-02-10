@@ -4,57 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesRequest extends TeaModel {
-    // The search conditions that are used to filter assets. The value of this parameter is in the JSON format and is case-sensitive.
-    // 
-    // >  A search condition can be an instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
     @NameInMap("Criteria")
     public String criteria;
 
-    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The importance of the asset. Valid values:
-    // 
-    // *   **2**: an important asset
-    // *   **1**: a common asset
-    // *   **0**: a test asset
     @NameInMap("Importance")
     public Integer importance;
 
-    // The language of the content within the request and response. Default value: **zh**. Valid values:
-    // 
-    // *   **zh**: Chinese
-    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
-    // The logical relationship among multiple search conditions. Valid values:
-    // 
-    // *   **OR**: The search conditions are evaluated by using a logical **OR**.
-    // *   **AND**: The search conditions are evaluated by using a logical **AND**.
     @NameInMap("LogicalExp")
     public String logicalExp;
 
-    // The type of the assets that you want to query. Valid values:
-    // 
-    // *   **ecs**: servers
-    // *   **cloud_product**: Alibaba Cloud services
     @NameInMap("MachineTypes")
     public String machineTypes;
 
-    // Specifies whether to internationalize the name of the default group. Default value: **false** . Valid values:
-    // 
-    // *   **true**: The system returns the Chinese name of the default group for the GroupTrace response parameter.************
-    // *   **false**: The system returns default for the GroupTrace response parameter.
     @NameInMap("NoGroupTrace")
     public Boolean noGroupTrace;
 
-    // The number of entries to return on each page. Default value: **20**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region in which the asset resides.
     @NameInMap("RegionId")
     public String regionId;
 

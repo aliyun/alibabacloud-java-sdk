@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyProcItemResponseBody extends TeaModel {
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribePropertyProcItemResponseBodyPageInfo pageInfo;
 
-    // An array that consists of the processes returned.
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertyProcItemResponseBodyPropertyItems> propertyItems;
 
-    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,19 +43,15 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyProcItemResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,11 +95,9 @@ public class DescribePropertyProcItemResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyProcItemResponseBodyPropertyItems extends TeaModel {
-        // The number of servers on which the process runs.
         @NameInMap("Count")
         public Integer count;
 
-        // The name of the process.
         @NameInMap("Name")
         public String name;
 

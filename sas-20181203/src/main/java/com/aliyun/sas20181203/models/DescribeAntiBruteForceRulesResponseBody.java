@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeAntiBruteForceRulesResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of the defense rules returned.
     @NameInMap("Rules")
     public java.util.List<DescribeAntiBruteForceRulesResponseBodyRules> rules;
 
@@ -46,19 +43,15 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeAntiBruteForceRulesResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,44 +95,30 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeAntiBruteForceRulesResponseBodyRules extends TeaModel {
-        // Indicates whether the defense rule is the default rule. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
-        // 
-        // >  The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.
         @NameInMap("DefaultRule")
         public Boolean defaultRule;
 
-        // This parameter is deprecated.
         @NameInMap("EnableSmartRule")
         public Boolean enableSmartRule;
 
-        // The threshold of logon failures that you specify.
         @NameInMap("FailCount")
         public Integer failCount;
 
-        // The period of time during which logons from an account are not allowed. Unit: minutes.
         @NameInMap("ForbiddenTime")
         public Integer forbiddenTime;
 
-        // The ID of the defense rule.
         @NameInMap("Id")
         public Long id;
 
-        // The number of servers to which the defense rule is applied.
         @NameInMap("MachineCount")
         public Integer machineCount;
 
-        // The name of the defense rule.
         @NameInMap("Name")
         public String name;
 
-        // The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.
         @NameInMap("Span")
         public Integer span;
 
-        // An array consisting of the UUIDs of servers to which the defense rule is applied.
         @NameInMap("UuidList")
         public java.util.List<String> uuidList;
 

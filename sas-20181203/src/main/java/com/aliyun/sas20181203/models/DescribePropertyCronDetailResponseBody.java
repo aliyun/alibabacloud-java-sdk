@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCronDetailResponseBody extends TeaModel {
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribePropertyCronDetailResponseBodyPageInfo pageInfo;
 
-    // The details of the scheduled tasks.
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyCronDetailResponseBodyPropertys> propertys;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,19 +43,15 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyCronDetailResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: **10**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,51 +95,39 @@ public class DescribePropertyCronDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyCronDetailResponseBodyPropertys extends TeaModel {
-        // The command that is used to run the scheduled task.
         @NameInMap("Cmd")
         public String cmd;
 
-        // The timestamp of the last fingerprint collection. Unit: milliseconds.
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
-        // The ID of the server.
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the server.
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The public IP address of the server.
         @NameInMap("InternetIp")
         public String internetIp;
 
-        // The private IP address of the server.
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        // The IP addresses of the server.
         @NameInMap("Ip")
         public String ip;
 
-        // The MD5 hash value of the path to the scheduled task.
         @NameInMap("Md5")
         public String md5;
 
-        // The interval at which the scheduled task is performed.
         @NameInMap("Period")
         public String period;
 
-        // The path to the scheduled task.
         @NameInMap("Source")
         public String source;
 
-        // The username of the account that runs the scheduled task.
         @NameInMap("User")
         public String user;
 
-        // The UUID of the server.
         @NameInMap("Uuid")
         public String uuid;
 

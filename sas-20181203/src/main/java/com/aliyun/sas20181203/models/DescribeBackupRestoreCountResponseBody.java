@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupRestoreCountResponseBody extends TeaModel {
-    // The statistics of restoration tasks.
     @NameInMap("BackupRestoreCount")
     public DescribeBackupRestoreCountResponseBodyBackupRestoreCount backupRestoreCount;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +32,9 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupRestoreCountResponseBodyBackupRestoreCount extends TeaModel {
-        // The number of the restoration tasks that are in the **being restored** state.
         @NameInMap("Recovering")
         public Integer recovering;
 
-        // The total number of the restoration tasks that you create.
         @NameInMap("Total")
         public Integer total;
 

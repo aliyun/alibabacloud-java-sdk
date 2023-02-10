@@ -4,75 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskCheckResultRequest extends TeaModel {
-    // The type of the cloud service whose configuration assessment result you want to query. For more information about the description of the cloud service specified by this parameter, see the check item table in the "Response parameters" section of this topic.
     @NameInMap("AssetType")
     public String assetType;
 
-    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The type of the check item that you want to query. Valid values:
-    // 
-    // *   **1**: identity authentication and permissions
-    // *   **2**: network access control
-    // *   **3**: log audit
-    // *   **4**: data security
-    // *   **5**: monitoring and alerting
-    // *   **6**: basic security protection
-    // 
-    // >  If you do not specify this parameter, all types of check items are queried by default.
     @NameInMap("GroupId")
     public Long groupId;
 
     @NameInMap("ItemIds")
     public java.util.List<String> itemIds;
 
-    // The language of the content within the request and response. Default value: **zh**. Valid values:
-    // 
-    // *   **zh**: Chinese
-    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
-    // The name of the check item. For more information about the description of the check item name, see the check item table in the "Response parameters" section of this topic.
     @NameInMap("Name")
     public String name;
 
-    // The number of entries to return on each page. Default value: **20**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // Specifies whether the check item is supported by the cloud service. Valid values:
-    // 
-    // *   **enabled**: The check item is supported by the cloud service.
-    // *   **disabled**: The check item is not supported by the cloud service.
     @NameInMap("QueryFlag")
     public String queryFlag;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The risk level of the check item that you want to query. Valid values:
-    // 
-    // *   **high**
-    // *   **medium**
-    // *   **low**
     @NameInMap("RiskLevel")
     public String riskLevel;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The status of the check result. Valid values:
-    // 
-    // *   **pass**
-    // *   **failed**
-    // *   **running**
-    // *   **waiting**
-    // *   **ignored**
-    // *   **falsePositive**
     @NameInMap("Status")
     public String status;
 

@@ -4,7 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskErrorLogRequest extends TeaModel {
-    // The ID of the task that you create to fix an image vulnerability.
     @NameInMap("BuildTaskId")
     public String buildTaskId;
 

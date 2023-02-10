@@ -4,32 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyRiskSingleResultStatusRequest extends TeaModel {
-    // The IDs of the affected assets.
     @NameInMap("Ids")
     public java.util.List<String> ids;
 
-    // The language of the content within the request and response. Valid values:
-    // 
-    // *   **zh**: Chinese
-    // *   **en**: English
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The method to handle the risk item. Valid values:
-    // 
-    // *   **ignored**: ignores the risk item.
-    // *   **failed**: cancels the ignore operation on the risk item.
     @NameInMap("Status")
     public String status;
 
-    // The ID of the check task to which the affected asset belongs.
     @NameInMap("TaskId")
     public Long taskId;
 

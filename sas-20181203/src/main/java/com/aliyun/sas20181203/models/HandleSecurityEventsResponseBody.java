@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class HandleSecurityEventsResponseBody extends TeaModel {
-    // The handling result of the alert events.
     @NameInMap("HandleSecurityEventsResponse")
     public HandleSecurityEventsResponseBodyHandleSecurityEventsResponse handleSecurityEventsResponse;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,7 +32,6 @@ public class HandleSecurityEventsResponseBody extends TeaModel {
     }
 
     public static class HandleSecurityEventsResponseBodyHandleSecurityEventsResponse extends TeaModel {
-        // The ID of the task to handle the alert events.
         @NameInMap("TaskId")
         public Long taskId;
 

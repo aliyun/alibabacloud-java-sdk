@@ -4,7 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCountRequest extends TeaModel {
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 

@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBruteForceSummaryResponseBody extends TeaModel {
-    // The statistics of IP address blocking policies.
     @NameInMap("BruteForceSummary")
     public DescribeBruteForceSummaryResponseBodyBruteForceSummary bruteForceSummary;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +32,9 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeBruteForceSummaryResponseBodyBruteForceSummary extends TeaModel {
-        // The total number of IP address blocking policies.
         @NameInMap("AllStrategyCount")
         public Integer allStrategyCount;
 
-        // The number of enabled IP address blocking policies.
         @NameInMap("EffectiveCount")
         public Integer effectiveCount;
 

@@ -4,23 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetSuspiciousStatisticsResponseBody extends TeaModel {
-    // The number of alerts whose Emergency level is Reminder.
     @NameInMap("RemindCount")
     public Integer remindCount;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of alerts whose Emergency level is Urgent.
     @NameInMap("SeriousCount")
     public Integer seriousCount;
 
-    // The number of alerts whose Emergency level is Suspicious.
     @NameInMap("SuspiciousCount")
     public Integer suspiciousCount;
 
-    // The total number of alerts.
     @NameInMap("TotalCount")
     public Integer totalCount;
 

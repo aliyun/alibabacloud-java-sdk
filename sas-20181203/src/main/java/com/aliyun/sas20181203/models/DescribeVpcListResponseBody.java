@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcListResponseBody extends TeaModel {
-    // The total number of entries returned.
     @NameInMap("Count")
     public Integer count;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of VPCs.
     @NameInMap("VpcList")
     public java.util.List<DescribeVpcListResponseBodyVpcList> vpcList;
 
@@ -46,23 +43,18 @@ public class DescribeVpcListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcListResponseBodyVpcList extends TeaModel {
-        // The number of ECS instances.
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
-        // The information about the VPC.
         @NameInMap("InstanceDesc")
         public String instanceDesc;
 
-        // The ID of the ECS instance.
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The name of the VPC.
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // The region in which the ECS instance resides.
         @NameInMap("RegionId")
         public String regionId;
 

@@ -4,10 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedTagsRequest extends TeaModel {
-    // The type of the asset to query. If you do not specify this parameter, the tags of all asset types are queried. Valid values:
-    // 
-    // *   **ecs**: server
-    // *   **cloud_product**: Alibaba Cloud service
     @NameInMap("MachineTypes")
     public String machineTypes;
 

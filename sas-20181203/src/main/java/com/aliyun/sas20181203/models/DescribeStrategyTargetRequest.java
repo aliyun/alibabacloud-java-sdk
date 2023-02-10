@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeStrategyTargetRequest extends TeaModel {
-    // The ID of the baseline check policy.
     @NameInMap("Config")
     public String config;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The type of the policy. Set the value to hc_strategy, which indicates baseline check policies.
     @NameInMap("Type")
     public String type;
 

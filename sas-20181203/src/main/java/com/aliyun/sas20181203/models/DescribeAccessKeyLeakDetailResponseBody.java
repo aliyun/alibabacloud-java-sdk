@@ -4,99 +4,139 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
-    // The ID of the AccessKey pair that is leaked.
+    /**
+     * <p>The ID of the AccessKey pair that is leaked.</p>
+     */
     @NameInMap("AccesskeyId")
     public String accesskeyId;
 
-    // The platform to which the asset belongs. The value is fixed as **Cloud platform**.
+    /**
+     * <p>The platform to which the asset belongs. The value is fixed as **Cloud platform**.</p>
+     */
     @NameInMap("Asset")
     public String asset;
 
-    // The code snippet that is leaked.
+    /**
+     * <p>The code snippet that is leaked.</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // The time when the AccessKey pair leak was handled.
+    /**
+     * <p>The time when the AccessKey pair leak was handled.</p>
+     */
     @NameInMap("DealTime")
     public String dealTime;
 
-    // The solution to the AccessKey pair leak. Valid values:
-    // 
-    // *   **manual**: manually deleted
-    // *   **disable**: manually disabled
-    // *   **add-whitelist**: added to the whitelist
-    // *   **pending**: unhandled
+    /**
+     * <p>The solution to the AccessKey pair leak. Valid values:</p>
+     * <br>
+     * <p>*   **manual**: manually deleted</p>
+     * <p>*   **disable**: manually disabled</p>
+     * <p>*   **add-whitelist**: added to the whitelist</p>
+     * <p>*   **pending**: unhandled</p>
+     */
     @NameInMap("DealType")
     public String dealType;
 
-    // The name of the GitHub file.
+    /**
+     * <p>The name of the GitHub file.</p>
+     */
     @NameInMap("GithubFileName")
     public String githubFileName;
 
-    // The type of the GitHub file. Valid values:
-    // 
-    // *   Python
-    // *   XML
-    // *   GO
-    // *   Javascript
-    // *   INI
-    // *   JSON
-    // *   C++
+    /**
+     * <p>The type of the GitHub file. Valid values:</p>
+     * <br>
+     * <p>*   Python</p>
+     * <p>*   XML</p>
+     * <p>*   GO</p>
+     * <p>*   Javascript</p>
+     * <p>*   INI</p>
+     * <p>*   JSON</p>
+     * <p>*   C++</p>
+     */
     @NameInMap("GithubFileType")
     public String githubFileType;
 
-    // The time when the GitHub file was updated.
+    /**
+     * <p>The time when the GitHub file was updated.</p>
+     */
     @NameInMap("GithubFileUpdateTime")
     public String githubFileUpdateTime;
 
-    // The URL of the GitHub file.
+    /**
+     * <p>The URL of the GitHub file.</p>
+     */
     @NameInMap("GithubFileUrl")
     public String githubFileUrl;
 
-    // The name of the GitHub repository.
+    /**
+     * <p>The name of the GitHub repository.</p>
+     */
     @NameInMap("GithubRepoName")
     public String githubRepoName;
 
-    // The URL of the GitHub repository.
+    /**
+     * <p>The URL of the GitHub repository.</p>
+     */
     @NameInMap("GithubRepoUrl")
     public String githubRepoUrl;
 
-    // The username of the GitHub user.
+    /**
+     * <p>The username of the GitHub user.</p>
+     */
     @NameInMap("GithubUser")
     public String githubUser;
 
-    // The URL of the profile picture for the GitHub user.
+    /**
+     * <p>The URL of the profile picture for the GitHub user.</p>
+     */
     @NameInMap("GithubUserPicUrl")
     public String githubUserPicUrl;
 
-    // The first time when the AccessKey pair leak was detected.
+    /**
+     * <p>The first time when the AccessKey pair leak was detected.</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
-    // The last time when the AccessKey pair leak was detected.
+    /**
+     * <p>The last time when the AccessKey pair leak was detected.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
-    // The remarks of the AccessKey pair leak.
+    /**
+     * <p>The remarks of the AccessKey pair leak.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The platform on which the AccessKey pair leak is detected.
+    /**
+     * <p>The platform on which the AccessKey pair leak is detected.</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The type of the leak. The value is fixed as **AccessKey**.
+    /**
+     * <p>The type of the leak. The value is fixed as **AccessKey**.</p>
+     */
     @NameInMap("Type")
     public String type;
 
-    // Indicates whether the AccessKey pair leak is added to the whitelist. Valid values:
-    // 
-    // *   **no**: The AccessKey pair leak is not added to the whitelist.
-    // *   **yes**: The AccessKey pair leak is added to the whitelist.
+    /**
+     * <p>Indicates whether the AccessKey pair leak is added to the whitelist. Valid values:</p>
+     * <br>
+     * <p>*   **no**: The AccessKey pair leak is not added to the whitelist.</p>
+     * <p>*   **yes**: The AccessKey pair leak is added to the whitelist.</p>
+     */
     @NameInMap("WhitelistStatus")
     public String whitelistStatus;
 

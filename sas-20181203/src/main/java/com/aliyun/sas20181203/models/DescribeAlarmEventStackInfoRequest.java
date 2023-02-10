@@ -4,30 +4,40 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmEventStackInfoRequest extends TeaModel {
-    // The name of the event.
-    // 
-    // >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the names of events.
+    /**
+     * <p>The name of the event.</p>
+     * <br>
+     * <p>>  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the names of events.</p>
+     */
     @NameInMap("EventName")
     public String eventName;
 
-    // The language of the content within the request and response. Default value: **zh**. Valid values:
-    // 
-    // *   **zh**: Chinese
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The source IP address of the request.
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The ID of the alert event.
+    /**
+     * <p>The ID of the alert event.</p>
+     */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 
-    // The UUID of the server to query.
-    // 
-    // >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.
+    /**
+     * <p>The UUID of the server to query.</p>
+     * <br>
+     * <p>>  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

@@ -4,11 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
-    // The statistics of cloud services.
+    /**
+     * <p>The statistics of cloud services.</p>
+     */
     @NameInMap("GroupedFields")
     public DescribeCloudProductFieldStatisticsResponseBodyGroupedFields groupedFields;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,21 +38,27 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudProductFieldStatisticsResponseBodyGroupedFields extends TeaModel {
-        // The statistics of the numbers of assets of different types. **MachineType** indicates the type of the assets. **Count** indicates the number of assets that belong to the type.
-        // Valid values of **MachineType**:
-        // 
-        // *   **1**: a Server Load Balancer (SLB) instance
-        // *   **2**: a Network Address Translation (NAT) gateway
-        // *   **3**: an ApsaraDB RDS instance
-        // *   **4**: an ApsaraDB for MongoDB instance
+        /**
+         * <p>The statistics of the numbers of assets of different types. **MachineType** indicates the type of the assets. **Count** indicates the number of assets that belong to the type.</p>
+         * <p>Valid values of **MachineType**:</p>
+         * <br>
+         * <p>*   **1**: a Server Load Balancer (SLB) instance</p>
+         * <p>*   **2**: a Network Address Translation (NAT) gateway</p>
+         * <p>*   **3**: an ApsaraDB RDS instance</p>
+         * <p>*   **4**: an ApsaraDB for MongoDB instance</p>
+         */
         @NameInMap("CategoryCount")
         public String categoryCount;
 
-        // The total number of cloud services that are protected by Security Center.
+        /**
+         * <p>The total number of cloud services that are protected by Security Center.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
-        // The number of cloud services that are at risk.
+        /**
+         * <p>The number of cloud services that are at risk.</p>
+         */
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
 

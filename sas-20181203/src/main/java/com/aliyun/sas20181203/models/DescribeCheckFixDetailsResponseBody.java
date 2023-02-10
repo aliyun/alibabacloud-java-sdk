@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckFixDetailsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the parameters.</p>
+     */
     @NameInMap("CheckFixDetails")
     public java.util.List<DescribeCheckFixDetailsResponseBodyCheckFixDetails> checkFixDetails;
 
+    /**
+     * <p>The number of risk items that can be fixed.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,30 +52,60 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckFixDetailsResponseBodyCheckFixDetailsRulesParamList extends TeaModel {
+        /**
+         * <p>The options that can be selected for the rule parameter if the value of the ParamType parameter is 2.</p>
+         */
         @NameInMap("EnumValue")
         public String enumValue;
 
+        /**
+         * <p>The maximum value of the rule parameter.</p>
+         */
         @NameInMap("MaxValue")
         public Integer maxValue;
 
+        /**
+         * <p>The minimum value of the rule parameter.</p>
+         */
         @NameInMap("MinValue")
         public Integer minValue;
 
+        /**
+         * <p>The default value of the rule parameter.</p>
+         */
         @NameInMap("ParamDefaultValue")
         public String paramDefaultValue;
 
+        /**
+         * <p>The description of the rule parameter.</p>
+         */
         @NameInMap("ParamDesc")
         public String paramDesc;
 
+        /**
+         * <p>The name of the rule parameter.</p>
+         */
         @NameInMap("ParamName")
         public String paramName;
 
+        /**
+         * <p>The type of the rule parameter. Valid values:</p>
+         * <br>
+         * <p>*   **1**: input</p>
+         * <p>*   **2**: selection</p>
+         */
         @NameInMap("ParamType")
         public Integer paramType;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The specified value of the rule parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -150,27 +189,54 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckFixDetailsResponseBodyCheckFixDetailsRules extends TeaModel {
+        /**
+         * <p>The ID of the risk item.</p>
+         */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>The default value of the rule.</p>
+         */
         @NameInMap("DefaultValue")
         public Integer defaultValue;
 
+        /**
+         * <p>Indicates whether the rule is optional. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("Optional")
         public Integer optional;
 
+        /**
+         * <p>An array that consists of the rule parameters.</p>
+         */
         @NameInMap("ParamList")
         public java.util.List<DescribeCheckFixDetailsResponseBodyCheckFixDetailsRulesParamList> paramList;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The specified value of the rule parameter.</p>
+         */
         @NameInMap("Value")
         public Integer value;
 
+        /**
+         * <p>The name of the variable.</p>
+         */
         @NameInMap("VarName")
         public String varName;
 
@@ -246,15 +312,27 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckFixDetailsResponseBodyCheckFixDetails extends TeaModel {
+        /**
+         * <p>The detailed description of the risk item.</p>
+         */
         @NameInMap("CheckDesc")
         public String checkDesc;
 
+        /**
+         * <p>The ID of the risk item.</p>
+         */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>The description of the risk item.</p>
+         */
         @NameInMap("CheckItem")
         public String checkItem;
 
+        /**
+         * <p>An array consisting of the rules that are supported by the risk item.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeCheckFixDetailsResponseBodyCheckFixDetailsRules> rules;
 

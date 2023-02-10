@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class RebootMachineRequest extends TeaModel {
-    // The UUID of the server that you want to restart.
-    // 
-    // >  You can call the [DescribeCloudCenterInstances](~~describecloudcenterinstances~~) operation to query the UUIDs of servers.
     @NameInMap("Uuid")
     public String uuid;
 

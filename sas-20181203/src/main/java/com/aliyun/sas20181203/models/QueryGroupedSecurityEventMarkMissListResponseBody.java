@@ -4,30 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel {
-    // The status code returned. The status code **200** indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.
     @NameInMap("Code")
     public String code;
 
-    // An array that consists of the whitelist rules.
     @NameInMap("List")
     public java.util.List<QueryGroupedSecurityEventMarkMissListResponseBodyList> list;
 
-    // The error message returned.
     @NameInMap("Message")
     public String message;
 
-    // The pagination information.
     @NameInMap("PageInfo")
     public QueryGroupedSecurityEventMarkMissListResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // *   **true**: yes
-    // *   **false**: no
     @NameInMap("Success")
     public Boolean success;
 
@@ -85,56 +76,36 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     }
 
     public static class QueryGroupedSecurityEventMarkMissListResponseBodyList extends TeaModel {
-        // The ID of the user.
         @NameInMap("AliUid")
         public Long aliUid;
 
-        // The handling method. Valid values:
-        // 
-        // *   **auto\_add_white**: Automatically Added to Whitelist
-        // *   **defense\_not_notification**: Defense Without Notification
         @NameInMap("DisposalWay")
         public String disposalWay;
 
-        // The name of the alert event. The value indicates a subtype.
         @NameInMap("EventName")
         public String eventName;
 
-        // The name of the alert event. The value indicates a type.
         @NameInMap("EventNameOriginal")
         public String eventNameOriginal;
 
-        // The subtype of the alert event.
         @NameInMap("EventType")
         public String eventType;
 
-        // The type of the alert event.
         @NameInMap("EventTypeOriginal")
         public String eventTypeOriginal;
 
-        // The field that is used in the whitelist rule.
         @NameInMap("Field")
         public String field;
 
-        // The value of the field.
         @NameInMap("FieldValue")
         public String fieldValue;
 
-        // The alias of the field.
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
-        // The operator. Valid values:
-        // 
-        // *   **contains**: contains
-        // *   **notContains**: does not contain
-        // *   **strEqual**: equals
-        // *   **strNotEqual**: does not equal
-        // *   **regex**: regular expression
         @NameInMap("Operate")
         public String operate;
 
-        // The UUIDs of assets. Multiple UUIDs are separated by commas (,).
         @NameInMap("Uuids")
         public String uuids;
 
@@ -234,19 +205,15 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     }
 
     public static class QueryGroupedSecurityEventMarkMissListResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: **20**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

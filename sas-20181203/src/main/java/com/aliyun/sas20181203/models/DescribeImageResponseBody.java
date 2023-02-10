@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageResponseBody extends TeaModel {
+    /**
+     * <p>The information about the image digest.</p>
+     */
     @NameInMap("Data")
     public DescribeImageResponseBodyData data;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DescribeImageResponseBody extends TeaModel {
     }
 
     public static class DescribeImageResponseBodyData extends TeaModel {
+        /**
+         * <p>The digest value of the image.</p>
+         */
         @NameInMap("Digest")
         public String digest;
 

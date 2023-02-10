@@ -4,22 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateHoneypotNodeRequest extends TeaModel {
-    // Specifies whether to allow the honeypots to access the Internet. Valid values:
-    // 
-    // *   **true**: allows the honeypots to access the Internet.
-    // *   **false**: does not allow the honeypots to access the Internet.
+    /**
+     * <p>Specifies whether to allow the honeypots to access the Internet. Valid values:</p>
+     * <br>
+     * <p>*   **true**: allows the honeypots to access the Internet.</p>
+     * <p>*   **false**: does not allow the honeypots to access the Internet.</p>
+     */
     @NameInMap("AllowHoneypotAccessInternet")
     public Boolean allowHoneypotAccessInternet;
 
-    // The number of probes that you want to allocate for the management node.
+    /**
+     * <p>The number of probes that you want to allocate for the management node.</p>
+     */
     @NameInMap("AvailableProbeNum")
     public Integer availableProbeNum;
 
-    // The name of the management node.
+    /**
+     * <p>The name of the management node.</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
-    // The CIDR blocks that are allowed to access the management node.
+    /**
+     * <p>The CIDR blocks that are allowed to access the management node.</p>
+     */
     @NameInMap("SecurityGroupProbeIpList")
     public java.util.List<String> securityGroupProbeIpList;
 

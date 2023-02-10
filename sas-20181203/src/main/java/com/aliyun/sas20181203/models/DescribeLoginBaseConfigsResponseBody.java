@@ -4,23 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
-    // An array that consists of the information about the configurations.
     @NameInMap("BaseConfigs")
     public java.util.List<DescribeLoginBaseConfigsResponseBodyBaseConfigs> baseConfigs;
 
-    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The number of entries returned per page. Default value: **20**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,15 +65,9 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeLoginBaseConfigsResponseBodyBaseConfigsTargetList extends TeaModel {
-        // The UUID or group ID of the server.
         @NameInMap("Target")
         public String target;
 
-        // The type of the server to which the configuration is applied. Valid values:
-        // 
-        // *   **uuid**: a server
-        // *   **groupId**: a server group
-        // *   **global**: all servers
         @NameInMap("TargetType")
         public String targetType;
 
@@ -106,35 +95,27 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeLoginBaseConfigsResponseBodyBaseConfigs extends TeaModel {
-        // The common logon account.
         @NameInMap("Account")
         public String account;
 
-        // The end time of the common logon time range.
         @NameInMap("EndTime")
         public String endTime;
 
-        // The common logon IP address.
         @NameInMap("Ip")
         public String ip;
 
-        // The common logon location.
         @NameInMap("Location")
         public String location;
 
-        // The start time of the common logon time range.
         @NameInMap("StartTime")
         public String startTime;
 
-        // The details of the servers to which the configuration is applied.
         @NameInMap("TargetList")
         public java.util.List<DescribeLoginBaseConfigsResponseBodyBaseConfigsTargetList> targetList;
 
-        // The total number of servers.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        // The number of servers to which the configuration is applied.
         @NameInMap("UuidCount")
         public Integer uuidCount;
 

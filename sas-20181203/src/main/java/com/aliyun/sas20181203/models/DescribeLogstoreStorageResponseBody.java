@@ -4,29 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogstoreStorageResponseBody extends TeaModel {
-    // The name of the dedicated Logstore that is used to store full logs of Security Center. The value is fixed as **sas-log**.
     @NameInMap("Logstore")
     public String logstore;
 
-    // The purchased log storage capacity, in GB.
     @NameInMap("Preserve")
     public Long preserve;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of days during which logs can be retained. The value is fixed as **180**, which indicates that logs can be retained for 180 days.
-    // 
-    // >  You are not allowed to change the value of this parameter.
     @NameInMap("Ttl")
     public Integer ttl;
 
-    // The used log storage capacity, in GB.
     @NameInMap("Used")
     public Long used;
 
-    // The name of the dedicated Project that is used to store full logs of Security Center.
     @NameInMap("UserProject")
     public String userProject;
 

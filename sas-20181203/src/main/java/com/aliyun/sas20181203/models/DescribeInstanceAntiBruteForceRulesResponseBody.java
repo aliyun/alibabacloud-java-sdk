@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array consisting of the servers to which the defense rule is applied.
     @NameInMap("Rules")
     public java.util.List<DescribeInstanceAntiBruteForceRulesResponseBodyRules> rules;
 
@@ -46,19 +43,15 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo extends TeaModel {
-        // The number of servers to which the defense rule is applied on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of servers to which the defense rule is applied.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,15 +95,12 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyRules extends TeaModel {
-        // The ID of the defense rule.
         @NameInMap("Id")
         public Long id;
 
-        // The name of the defense rule.
         @NameInMap("Name")
         public String name;
 
-        // The UUID of the server to which the defense rule is applied.
         @NameInMap("Uuid")
         public String uuid;
 

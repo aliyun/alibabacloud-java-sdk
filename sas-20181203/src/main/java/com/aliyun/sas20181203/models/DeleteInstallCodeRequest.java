@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstallCodeRequest extends TeaModel {
+    /**
+     * <p>The installation command.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstallCodes](~~DescribeInstallCodes~~) operation to query installation commands.</p>
+     */
     @NameInMap("CaptchaCode")
     public String captchaCode;
 

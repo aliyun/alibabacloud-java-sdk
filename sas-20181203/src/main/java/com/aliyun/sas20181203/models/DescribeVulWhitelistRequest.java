@@ -4,11 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulWhitelistRequest extends TeaModel {
-    // The number of the page to return. Pages start from page 1. Default value: 1.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The number of entries to return on each page. Default value: 10.
     @NameInMap("PageSize")
     public Integer pageSize;
 

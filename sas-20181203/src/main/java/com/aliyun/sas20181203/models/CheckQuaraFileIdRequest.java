@@ -4,15 +4,19 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CheckQuaraFileIdRequest extends TeaModel {
-    // The IDs of quarantined files that you want to check.
-    // 
-    // >  You can call the [DescribeSuspEventQuaraFiles](~~DescribeSuspEventQuaraFiles~~) operation to query the IDs of quarantined files.
+    /**
+     * <p>The IDs of quarantined files that you want to check.</p>
+     * <br>
+     * <p>>  You can call the [DescribeSuspEventQuaraFiles](~~DescribeSuspEventQuaraFiles~~) operation to query the IDs of quarantined files.</p>
+     */
     @NameInMap("QuaraFileIds")
     public java.util.List<String> quaraFileIds;
 
-    // The UUID of the server on which you want to check quarantined files.
-    // 
-    // >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+    /**
+     * <p>The UUID of the server on which you want to check quarantined files.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

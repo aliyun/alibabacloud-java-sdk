@@ -4,34 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableHoneypotResponseBody extends TeaModel {
-    // The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
     @NameInMap("Code")
     public String code;
 
-    // The number of images that are used for the honeypot.
     @NameInMap("Count")
     public Integer count;
 
-    // An array consisting of the information about the images that are used for the honeypot.
     @NameInMap("Data")
     public java.util.List<ListAvailableHoneypotResponseBodyData> data;
 
-    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The error message returned.
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,46 +87,30 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
     }
 
     public static class ListAvailableHoneypotResponseBodyData extends TeaModel {
-        // The display name of the image that is used for the honeypot.
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
-        // The ID of the image that is used for the honeypot.
         @NameInMap("HoneypotImageId")
         public String honeypotImageId;
 
-        // The name of the image that is used for the honeypot.
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
-        // The type of the image that is used for the honeypot.
         @NameInMap("HoneypotImageType")
         public String honeypotImageType;
 
-        // The version of the image that is used for the honeypot.
         @NameInMap("HoneypotImageVersion")
         public String honeypotImageVersion;
 
-        // The port that is supported by the honeypot. The value is in the JSON format. The value contains the following fields:
-        // 
-        // *   **log_type**: the log type
-        // *   **proto**: the supported protocol
-        // *   **description**: the description
-        // *   **ports**: the supported ports
-        // *   **port_str**: the supported port number of the string type
-        // *   **type**: the type
         @NameInMap("Multiports")
         public String multiports;
 
-        // The protocol that is supported by the honeypot.
         @NameInMap("Proto")
         public String proto;
 
-        // The service port of the honeypot.
         @NameInMap("ServicePort")
         public String servicePort;
 
-        // The configuration template of the honeypot.
         @NameInMap("Template")
         public String template;
 

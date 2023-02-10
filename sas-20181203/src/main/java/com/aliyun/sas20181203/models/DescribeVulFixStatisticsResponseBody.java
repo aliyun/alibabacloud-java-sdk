@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulFixStatisticsResponseBody extends TeaModel {
-    // An array that consists of the statistics of vulnerability fixes by vulnerability type.
     @NameInMap("FixStat")
     public java.util.List<DescribeVulFixStatisticsResponseBodyFixStat> fixStat;
 
-    // The total statistics of vulnerability fixes.
     @NameInMap("FixTotal")
     public DescribeVulFixStatisticsResponseBodyFixTotal fixTotal;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,29 +43,18 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulFixStatisticsResponseBodyFixStat extends TeaModel {
-        // The number of vulnerabilities that are fixed on the current day.
         @NameInMap("FixedTodayNum")
         public Integer fixedTodayNum;
 
-        // The total number of fixed vulnerabilities.
         @NameInMap("FixedTotalNum")
         public Integer fixedTotalNum;
 
-        // The number of vulnerabilities that are being fixed.
         @NameInMap("FixingNum")
         public Integer fixingNum;
 
-        // The number of unfixed vulnerabilities.
         @NameInMap("NeedFixNum")
         public Integer needFixNum;
 
-        // The type of the vulnerability. Valid values:
-        // 
-        // *   **cve**: Linux software vulnerability
-        // *   **sys**: Windows system vulnerability
-        // *   **cms**: Web-CMS vulnerability
-        // *   **app**: application vulnerability
-        // *   **emg**: urgent vulnerability
         @NameInMap("Type")
         public String type;
 
@@ -120,19 +106,15 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulFixStatisticsResponseBodyFixTotal extends TeaModel {
-        // The number of vulnerabilities that are fixed on the current day.
         @NameInMap("FixedTodayNum")
         public Integer fixedTodayNum;
 
-        // The total number of fixed vulnerabilities.
         @NameInMap("FixedTotalNum")
         public Integer fixedTotalNum;
 
-        // The number of vulnerabilities that are being fixed.
         @NameInMap("FixingNum")
         public Integer fixingNum;
 
-        // The number of unfixed vulnerabilities.
         @NameInMap("NeedFixNum")
         public Integer needFixNum;
 

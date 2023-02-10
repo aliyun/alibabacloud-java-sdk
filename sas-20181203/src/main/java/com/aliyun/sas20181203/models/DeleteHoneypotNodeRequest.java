@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteHoneypotNodeRequest extends TeaModel {
+    /**
+     * <p>The ID of the management node.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

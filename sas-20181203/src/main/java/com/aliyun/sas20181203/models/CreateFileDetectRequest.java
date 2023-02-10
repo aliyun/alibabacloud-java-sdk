@@ -4,26 +4,34 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectRequest extends TeaModel {
-    // The identifier of the file. Only MD5 hash values are supported.
+    /**
+     * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+     */
     @NameInMap("HashKey")
     public String hashKey;
 
-    // The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
+    /**
+     * <p>The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.</p>
+     */
     @NameInMap("OssKey")
     public String ossKey;
 
-    // The source IP address of the request.
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The type of the file. Valid values:
-    // 
-    // *   **0**: unknown files
-    // *   **1**: binary files
-    // *   **2**: webshell files
-    // *   **4**: script files
-    // 
-    // >  If you do not know the type of the file, set this parameter to 0.
+    /**
+     * <p>The type of the file. Valid values:</p>
+     * <br>
+     * <p>*   **0**: unknown files</p>
+     * <p>*   **1**: binary files</p>
+     * <p>*   **2**: webshell files</p>
+     * <p>*   **4**: script files</p>
+     * <br>
+     * <p>>  If you do not know the type of the file, set this parameter to 0.</p>
+     */
     @NameInMap("Type")
     public Integer type;
 

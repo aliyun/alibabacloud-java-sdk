@@ -7,23 +7,18 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     @NameInMap("Count")
     public Integer count;
 
-    // The page number of the returned page.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The number of entries returned per page.
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // An array that consists of the whitelist of vulnerabilities.
     @NameInMap("VulWhitelists")
     public java.util.List<DescribeVulWhitelistResponseBodyVulWhitelists> vulWhitelists;
 
@@ -81,38 +76,21 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeVulWhitelistResponseBodyVulWhitelists extends TeaModel {
-        // The alias of the vulnerability.
         @NameInMap("AliasName")
         public String aliasName;
 
-        // The ID of the rule.
         @NameInMap("Id")
         public String id;
 
-        // The name of the vulnerability.
         @NameInMap("Name")
         public String name;
 
-        // The reason why the vulnerability is added to the whitelist.
         @NameInMap("Reason")
         public String reason;
 
-        // The application scope of the rule. The value is a JSON string that contains the following fields:
-        // 
-        // *   **type**: the type of the asset to which the rule is applied. Valid values:
-        // 
-        //        -  **Uuid**: server
-        //        -  **GroupId**: server group
-        // 
-        // *   **groupIds**: the IDs of server groups.
-        // 
-        // *   **uuids**: the UUIDs of servers.
-        // 
-        // >  If this field is empty, the rule is applied to all assets.
         @NameInMap("TargetInfo")
         public String targetInfo;
 
-        // The type of the vulnerability.
         @NameInMap("Type")
         public String type;
 

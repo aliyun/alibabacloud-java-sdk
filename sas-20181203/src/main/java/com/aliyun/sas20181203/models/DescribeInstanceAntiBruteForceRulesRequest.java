@@ -4,24 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAntiBruteForceRulesRequest extends TeaModel {
-    // The number of the page to return. Default value: **1**.
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The number of entries to return on each page. Default value: **10000**.
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // An array that consists of the UUIDs of the servers.
-    // 
-    // >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

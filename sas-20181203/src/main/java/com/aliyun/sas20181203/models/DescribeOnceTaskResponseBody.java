@@ -4,15 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnceTaskResponseBody extends TeaModel {
-    // The pagination information.
     @NameInMap("PageInfo")
     public DescribeOnceTaskResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // An array that consists of the tasks.
     @NameInMap("TaskManageResponseList")
     public java.util.List<DescribeOnceTaskResponseBodyTaskManageResponseList> taskManageResponseList;
 
@@ -46,19 +43,15 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeOnceTaskResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page. Default value: **20**.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,27 +95,12 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeOnceTaskResponseBodyTaskManageResponseList extends TeaModel {
-        // The execution details of the task. The value of this parameter is in the JSON format.
-        // 
-        // *   **causeCode**: the returned code for the cause
-        // *   **causeMsg**: the returned information for the cause
-        // *   **resCode**: the returned code of troubleshooting
-        // *   **resMsg**: the returned information about troubleshooting
-        // *   **problemType**: the type of the issue
-        // *   **dispatchType**: the task delivery method
-        // *   **uuid**: the UUID of the server
-        // *   **instanceId**: the instance ID of the server
-        // *   **internetIp**: the public IP address of the server
-        // *   **intranetIp**: the private IP address of the server
-        // *   **instanceName**: the instance name of the server
-        // *   **url**: the download link of the troubleshooting log
         @NameInMap("DetailData")
         public String detailData;
 
         @NameInMap("FailCount")
         public Integer failCount;
 
-        // The progress of the task. Unit: %.
         @NameInMap("Progress")
         public String progress;
 
@@ -132,47 +110,24 @@ public class DescribeOnceTaskResponseBody extends TeaModel {
         @NameInMap("SuccessCount")
         public Integer successCount;
 
-        // The timestamp when the task ends. Unit: milliseconds.
         @NameInMap("TaskEndTime")
         public Long taskEndTime;
 
-        // The ID of the task.
         @NameInMap("TaskId")
         public String taskId;
 
-        // The name of the task.
         @NameInMap("TaskName")
         public String taskName;
 
-        // The timestamp when the task starts. Unit: milliseconds.
         @NameInMap("TaskStartTime")
         public Long taskStartTime;
 
-        // The status of the task. Valid values:
-        // 
-        // *   **1**: started
-        // *   **2**: complete
-        // *   **3**: failed
-        // *   **4**: timed out
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
-        // The text description of the status for the task. Valid values:
-        // 
-        // *   **INIT**: The task is to be started.
-        // *   **START**: The task is started.
-        // *   **DISPATCH**: The self-check command is issued.
-        // *   **SUCCESS**: The self-check is complete.
-        // *   **FAIL**: The task fails.
-        // *   **TIMEOUT**: The task times out.
         @NameInMap("TaskStatusText")
         public String taskStatusText;
 
-        // The type of the task. Valid values:
-        // 
-        // *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
-        // *   **CLIENT\_DEV_OPS**: an O&M task of Cloud Assistant
-        // *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
         @NameInMap("TaskType")
         public String taskType;
 

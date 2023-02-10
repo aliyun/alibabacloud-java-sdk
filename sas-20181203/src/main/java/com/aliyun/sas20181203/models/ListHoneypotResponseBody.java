@@ -4,33 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotResponseBody extends TeaModel {
-    // The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
     @NameInMap("Code")
     public String code;
 
-    // The HTTP status code returned.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("List")
     public java.util.List<ListHoneypotResponseBodyList> list;
 
-    // The error message returned.
     @NameInMap("Message")
     public String message;
 
-    // The pagination information.
     @NameInMap("PageInfo")
     public ListHoneypotResponseBodyPageInfo pageInfo;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful. Valid values:
-    // 
-    // *   **true**: The request was successful.
-    // *   **false**: The request failed.
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,39 +87,30 @@ public class ListHoneypotResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotResponseBodyList extends TeaModel {
-        // The name of the management node to which the honeypot is deployed.
         @NameInMap("ControlNodeName")
         public String controlNodeName;
 
-        // The ID of the honeypot.
         @NameInMap("HoneypotId")
         public String honeypotId;
 
-        // The display name of the image that is used for the honeypot.
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
-        // The ID of the image that is used for the honeypot.
         @NameInMap("HoneypotImageId")
         public String honeypotImageId;
 
-        // The name of the image that is used for the honeypot.
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
-        // The name of the honeypot.
         @NameInMap("HoneypotName")
         public String honeypotName;
 
-        // The ID of the management node.
         @NameInMap("NodeId")
         public String nodeId;
 
-        // The ID of the custom configuration for the honeypot.
         @NameInMap("PresetId")
         public String presetId;
 
-        // An array that consists of the status information of the honeypot.
         @NameInMap("State")
         public java.util.List<String> state;
 
@@ -212,19 +194,15 @@ public class ListHoneypotResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotResponseBodyPageInfo extends TeaModel {
-        // The number of entries returned on the current page.
         @NameInMap("Count")
         public Integer count;
 
-        // The page number of the returned page.
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        // The number of entries returned per page.
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
         @NameInMap("TotalCount")
         public Integer totalCount;
 

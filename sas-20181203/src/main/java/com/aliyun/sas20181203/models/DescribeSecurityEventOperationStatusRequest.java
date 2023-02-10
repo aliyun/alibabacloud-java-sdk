@@ -7,19 +7,12 @@ public class DescribeSecurityEventOperationStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The IDs of the alert events.
-    // 
-    // >  You must specify at least one of the TaskId and SecurityEventIds parameters.
     @NameInMap("SecurityEventIds")
     public java.util.List<String> securityEventIds;
 
-    // The source IP address of the request.
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The ID of the task that handles the alert events.
-    // 
-    // >  You must specify at least one of the TaskId and SecurityEventIds parameters.
     @NameInMap("TaskId")
     public Long taskId;
 

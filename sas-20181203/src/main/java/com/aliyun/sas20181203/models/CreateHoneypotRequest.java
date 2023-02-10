@@ -4,49 +4,59 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateHoneypotRequest extends TeaModel {
-    // The ID of the image that is used for the honeypot.
-    // 
-    // >  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the IDs of images from the **HoneypotImageId** response parameter.
+    /**
+     * <p>The ID of the image that is used for the honeypot.</p>
+     * <br>
+     * <p>>  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the IDs of images from the **HoneypotImageId** response parameter.</p>
+     */
     @NameInMap("HoneypotImageId")
     public String honeypotImageId;
 
-    // The name of the image that is used for the honeypot.
-    // 
-    // >  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the names of images from the **HoneypotImageName** response parameter.
+    /**
+     * <p>The name of the image that is used for the honeypot.</p>
+     * <br>
+     * <p>>  You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to obtain the names of images from the **HoneypotImageName** response parameter.</p>
+     */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
 
-    // The custom name of the honeypot.
+    /**
+     * <p>The custom name of the honeypot.</p>
+     */
     @NameInMap("HoneypotName")
     public String honeypotName;
 
-    // The custom configuration of the honeypot in the JSON format. The value contains the following fields:
-    // 
-    // *   **trojan_git**: Git-specific Defense. Valid values:
-    // 
-    //     *   **zip**: Git Source Code Package
-    //     *   **web**: Git Directory Leak
-    //     *   **close**: Disabled
-    // 
-    // *   **trojan\_git_addr**: Git Trojan Address.
-    // 
-    // *   **trojan_git.zip**: Git Trojan.
-    // 
-    // *   **burp**: Burp-specific Defense. Valid values:
-    // 
-    //     *   **open**: Enabled
-    //     *   **close**: Disabled
-    // 
-    // *   **portrait_option**: Source Tracing Configuration. Valid values:
-    // 
-    //     *   **false**: Disable
-    //     *   **true**: Enable
+    /**
+     * <p>The custom configuration of the honeypot in the JSON format. The value contains the following fields:</p>
+     * <br>
+     * <p>*   **trojan_git**: Git-specific Defense. Valid values:</p>
+     * <br>
+     * <p>    *   **zip**: Git Source Code Package</p>
+     * <p>    *   **web**: Git Directory Leak</p>
+     * <p>    *   **close**: Disabled</p>
+     * <br>
+     * <p>*   **trojan\_git_addr**: Git Trojan Address.</p>
+     * <br>
+     * <p>*   **trojan_git.zip**: Git Trojan.</p>
+     * <br>
+     * <p>*   **burp**: Burp-specific Defense. Valid values:</p>
+     * <br>
+     * <p>    *   **open**: Enabled</p>
+     * <p>    *   **close**: Disabled</p>
+     * <br>
+     * <p>*   **portrait_option**: Source Tracing Configuration. Valid values:</p>
+     * <br>
+     * <p>    *   **false**: Disable</p>
+     * <p>    *   **true**: Enable</p>
+     */
     @NameInMap("Meta")
     public String meta;
 
-    // The ID of the management node to which you want to deploy the honeypot.
-    // 
-    // >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes.
+    /**
+     * <p>The ID of the management node to which you want to deploy the honeypot.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

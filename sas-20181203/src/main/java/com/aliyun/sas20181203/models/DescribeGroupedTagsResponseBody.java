@@ -4,26 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedTagsResponseBody extends TeaModel {
-    // This parameter is deprecated.
     @NameInMap("Count")
     public Integer count;
 
-    // An array that consists of the statistics of the asset tags.
     @NameInMap("GroupedFileds")
     public java.util.List<DescribeGroupedTagsResponseBodyGroupedFileds> groupedFileds;
 
-    // The HTTP status code of the request.
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // The ID of the request, which is used to locate and troubleshoot issues.
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request is successful. Valid values:
-    // 
-    // *   **true**: The request is successful.
-    // *   **false**: The request fails.
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,15 +65,12 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedTagsResponseBodyGroupedFileds extends TeaModel {
-        // The number of assets to which the tag is added.
         @NameInMap("Count")
         public String count;
 
-        // The name of the tag.
         @NameInMap("Name")
         public String name;
 
-        // The ID of the tag.
         @NameInMap("TagId")
         public Integer tagId;
 
