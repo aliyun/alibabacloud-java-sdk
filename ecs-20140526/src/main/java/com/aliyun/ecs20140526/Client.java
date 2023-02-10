@@ -15678,6 +15678,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DataDisk", request.dataDisk);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.schedulerOptions)) {
+            query.put("SchedulerOptions", request.schedulerOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemDisk)) {
             query.put("SystemDisk", request.systemDisk);
         }

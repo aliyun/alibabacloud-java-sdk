@@ -7,6 +7,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("DataDisk")
     public java.util.List<DescribePriceRequestDataDisk> dataDisk;
 
+    @NameInMap("SchedulerOptions")
+    public DescribePriceRequestSchedulerOptions schedulerOptions;
+
     @NameInMap("SystemDisk")
     public DescribePriceRequestSystemDisk systemDisk;
 
@@ -208,6 +211,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public java.util.List<DescribePriceRequestDataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    public DescribePriceRequest setSchedulerOptions(DescribePriceRequestSchedulerOptions schedulerOptions) {
+        this.schedulerOptions = schedulerOptions;
+        return this;
+    }
+    public DescribePriceRequestSchedulerOptions getSchedulerOptions() {
+        return this.schedulerOptions;
     }
 
     public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
@@ -479,6 +490,25 @@ public class DescribePriceRequest extends TeaModel {
         }
         public Long getSize() {
             return this.size;
+        }
+
+    }
+
+    public static class DescribePriceRequestSchedulerOptions extends TeaModel {
+        @NameInMap("DedicatedHostId")
+        public String dedicatedHostId;
+
+        public static DescribePriceRequestSchedulerOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceRequestSchedulerOptions self = new DescribePriceRequestSchedulerOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceRequestSchedulerOptions setDedicatedHostId(String dedicatedHostId) {
+            this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+        public String getDedicatedHostId() {
+            return this.dedicatedHostId;
         }
 
     }
