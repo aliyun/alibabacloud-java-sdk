@@ -8,7 +8,7 @@ public class PredictClassifierModelRequest extends TeaModel {
     public Boolean autoPrediction;
 
     @NameInMap("ClassifierId")
-    public String classifierId;
+    public Long classifierId;
 
     @NameInMap("Content")
     public String content;
@@ -26,11 +26,11 @@ public class PredictClassifierModelRequest extends TeaModel {
         return this.autoPrediction;
     }
 
-    public PredictClassifierModelRequest setClassifierId(String classifierId) {
+    public PredictClassifierModelRequest setClassifierId(Long classifierId) {
         this.classifierId = classifierId;
         return this;
     }
-    public String getClassifierId() {
+    public Long getClassifierId() {
         return this.classifierId;
     }
 
