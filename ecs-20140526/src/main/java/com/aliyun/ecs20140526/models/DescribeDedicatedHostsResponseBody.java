@@ -98,6 +98,88 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity extends TeaModel {
+        @NameInMap("AvailableMemory")
+        public Float availableMemory;
+
+        @NameInMap("AvailableVcpu")
+        public Integer availableVcpu;
+
+        @NameInMap("SocketId")
+        public Integer socketId;
+
+        @NameInMap("TotalMemory")
+        public Float totalMemory;
+
+        @NameInMap("TotalVcpu")
+        public Integer totalVcpu;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity setAvailableMemory(Float availableMemory) {
+            this.availableMemory = availableMemory;
+            return this;
+        }
+        public Float getAvailableMemory() {
+            return this.availableMemory;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity setAvailableVcpu(Integer availableVcpu) {
+            this.availableVcpu = availableVcpu;
+            return this;
+        }
+        public Integer getAvailableVcpu() {
+            return this.availableVcpu;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity setSocketId(Integer socketId) {
+            this.socketId = socketId;
+            return this;
+        }
+        public Integer getSocketId() {
+            return this.socketId;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity setTotalMemory(Float totalMemory) {
+            this.totalMemory = totalMemory;
+            return this;
+        }
+        public Float getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity setTotalVcpu(Integer totalVcpu) {
+            this.totalVcpu = totalVcpu;
+            return this;
+        }
+        public Integer getTotalVcpu() {
+            return this.totalVcpu;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities extends TeaModel {
+        @NameInMap("SocketCapacity")
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity> socketCapacity;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities setSocketCapacity(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity> socketCapacity) {
+            this.socketCapacity = socketCapacity;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity> getSocketCapacity() {
+            return this.socketCapacity;
+        }
+
+    }
+
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity extends TeaModel {
         /**
          * <p>The amount of available space on the local disks. Unit: GiB.</p>
@@ -128,6 +210,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
+
+        @NameInMap("SocketCapacities")
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities socketCapacities;
 
         /**
          * <p>The total capacity of the local disks. Unit: GiB.</p>
@@ -196,6 +281,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
         public String getLocalStorageCategory() {
             return this.localStorageCategory;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setSocketCapacities(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities socketCapacities) {
+            this.socketCapacities = socketCapacities;
+            return this;
+        }
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities getSocketCapacities() {
+            return this.socketCapacities;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setTotalLocalStorage(Integer totalLocalStorage) {
@@ -267,6 +360,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("SocketId")
+        public String socketId;
+
         public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance();
             return TeaModel.build(map, self);
@@ -286,6 +382,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance setSocketId(String socketId) {
+            this.socketId = socketId;
+            return this;
+        }
+        public String getSocketId() {
+            return this.socketId;
         }
 
     }

@@ -7,7 +7,7 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
      * <br>
-     * <p>>  Common Cloud Assistant commands can be run based on their names. For more information, see [View and run common Cloud Assistant commands](~~429635~~).</p>
+     * <p>> Common Cloud Assistant commands can be run based on their names. For more information, see [View and run common Cloud Assistant commands](~~429635~~).</p>
      */
     @NameInMap("CommandId")
     public String commandId;
@@ -19,7 +19,7 @@ public class InvokeCommandShrinkRequest extends TeaModel {
      * <br>
      * <p>*   If this parameter is specified, Cloud Assistant runs scripts in the specified container of the instance.</p>
      * <br>
-     * <p>*   If this parameter is specified, scripts can be run only on Linux instances on which Cloud Assistant client versions not earlier than 2.2.3.44 are installed.</p>
+     * <p>*   If this parameter is specified, scripts can be run only on Linux instances on which Cloud Assistant client versions not earlier than 2.2.3.344 are installed.</p>
      * <br>
      * <p>    *   For information about how to view the version of the Cloud Assistant client, see [Install the Cloud Assistant client](~~64921~~).</p>
      * <p>    *   For information about how to upgrade the version of the Cloud Assistant client, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).</p>
@@ -38,7 +38,7 @@ public class InvokeCommandShrinkRequest extends TeaModel {
      * <br>
      * <p>*   If this parameter is specified, Cloud Assistant runs scripts in the specified container of the instance.</p>
      * <br>
-     * <p>*   If this parameter is specified, scripts can be run only on Linux instances on which Cloud Assistant client versions not earlier than 2.2.3.44 are installed.</p>
+     * <p>*   If this parameter is specified, scripts can be run only on Linux instances on which Cloud Assistant client versions not earlier than 2.2.3.344 are installed.</p>
      * <br>
      * <p>    *   For information about how to view the version of the Cloud Assistant client, see [Install the Cloud Assistant client](~~64921~~).</p>
      * <p>    *   For information about how to upgrade the version of the Cloud Assistant client, see [Upgrade or disable upgrades for the Cloud Assistant client](~~134383~~).</p>
@@ -51,41 +51,39 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String containerName;
 
     /**
-     * <p>The schedule on which to run the command. You must specify this parameter when you set `Timed` to `true`. You can specify a schedule to run the command at a fixed interval based on a rate expression, only once at a specified time, or at designated times based on a cron expression.</p>
+     * <p>The schedule on which to run the command. You must specify this parameter when you set `Timed` to `true`. You can configure a command to run at a fixed interval based on a rate expression, run only once at a specified time, or run at designated times based on a cron expression.</p>
      * <br>
-     * <p>*   Run at Fixed Interval: To run the command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is applicable when tasks need to be executed at a fixed interval. Specify the interval in the following format: `rate(<Execution interval value><Execution interval unit>)`. For example, specify `rate(5m)` to run the command every 5 minutes. Take note of the following limits when you set an interval:</p>
+     * <p>*   To run a command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is applicable when tasks need to be executed at a fixed interval. Specify the interval in the following format: `rate(<Execution interval value><Execution interval unit>)`. For example, specify `rate(5m)` to run the command every 5 minutes. Take note of the following limits when you set an interval:</p>
      * <br>
      * <p>    *   The specified interval can be anywhere from 60 seconds to 7 days and must be longer than the timeout period of the scheduled task.</p>
-     * <p>    *   The interval is the duration between two consecutive executions. The interval is irrelevant to the amount of time required to run the command once. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. Each time the command is run, the system waits 3 minutes before it runs the command again.</p>
-     * <p>    *   A task is not executed immediately after it is created. For example, assume that you set the interval to 5 minutes for a task. The task begins to be executed 5 minutes after it is created.</p>
+     * <p>    *   The interval is the amount of time elapsed between two consecutive executions. The interval is irrelevant to the amount of time required to run the command once. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. Each time the command is run, the system waits 3 minutes before it runs the command again.</p>
+     * <p>    *   A task is not executed immediately after it is created. For example, assume that you set the interval to 5 minutes and create a task to run the command. The task begins to run 5 minutes after it is created.</p>
      * <br>
-     * <p>*   Run Only Once at Specified Time: To run the command only once at a specified time, specify a point in time and a time zone. Specify the time in the following format: `at(yyyy-MM-dd HH:mm:ss <Time zone>)`, which indicates `at(Year-Month-Day Hour:Minute:Second <Time zone>)`. If you do not specify a time zone, the UTC time zone is used by default. The time zone supports the following forms:</p>
+     * <p>*   To run a command only once at a specified time, specify a point in time and a time zone. Specify the point in time in the following format: `at(yyyy-MM-dd HH:mm:ss <Time zone>)`, which indicates `at(Year-Month-Day Hour:Minute:Second <Time zone>)`. If you do not specify a time zone, the default time zone is UTC. You can specify the time zone in the following forms:</p>
      * <br>
      * <p>    *   The time zone name. Examples: `Asia/Shanghai` and `America/Los_Angeles`.</p>
-     * <br>
-     * <p>    *   The time offset from Greenwich Mean Time (GMT). Example: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, do not pad leading zeros to the hour value.</p>
-     * <br>
-     * <p>    *   The time zone abbreviation: Only UTC is supported.</p>
-     * <br>
-     * <p>        To specify a command to run only once at 13:15:30 on June 06, 2022 (Shanghai time), set the time to `at(2022-06-06 13:15:30 Asia/Shanghai)`. To specify a command to run only once at 13:15:30 on June 06, 2022 (UTC-7), set the time to `at(2022-06-06 13:15:30 GMT-7:00)`.</p>
-     * <br>
-     * <p>*   Run on Clock-based Schedule: To run the command at designated times, specify a cron expression. Specify the time in the following format: `<Cron expression> <Time zone>`, where the cron expression is in the format of `<seconds> <minutes> <hours> <day of the month> <month> <day of the week> <year (optional)> <time zone>`. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which to run the command is used by default. For more information about cron expressions, see [Cron expressions](~~64769~~). The time zone supports the following forms:</p>
-     * <br>
-     * <p>    *   The time zone name. Examples: `Asia/Shanghai` and `sAmerica/Los_Angeles`.</p>
-     * <br>
      * <p>    *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, do not pad leading zeros to the hour value.</p>
+     * <p>    *   The time zone abbreviation. Only UTC is supported.</p>
      * <br>
-     * <p>    *   The time zone abbreviation: Only UTC is supported.</p>
+     * <p>    For example, to specify a command to run only once at 13:15:30 on June 06, 2022 (Shanghai time), set the time to `at(2022-06-06 13:15:30 Asia/Shanghai)`. To specify a command to run only once at 13:15:30 on June 06, 2022 (UTC-7), set the time to `at(2022-06-06 13:15:30 GMT-7:00)`.</p>
      * <br>
-     * <p>        For example, to specify a command to run at 10:15:00 every day in 2022 (Shanghai time), set the time to `0 15 10 ? * * 2022 Asia/Shanghai`. To specify a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the time to `0 0/30 10-11 * ? 2022 GMT +8:00`. To specify a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 (UTC), set the time to `0 0/5 14 * 10 ? 2022/2 UTC`.</p>
+     * <p>*   To run a command at designated times, specify a cron expression. Specify the time in the following format: `<Cron expression> <Time zone>`, where the cron expression is in the format of `<seconds> <minutes> <hours> <day of the month> <month> <day of the week> <year (optional)>`. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which to run the command is used by default. For more information about cron expressions, see [Cron expressions](~~64769~~). You can specify the time zone in the following forms:</p>
      * <br>
-     * <p>        > The minimum interval must be 10 seconds or more and cannot be shorter than the timeout period of scheduled executions.</p>
+     * <p>    *   The time zone name. Examples: `Asia/Shanghai` and `America/Los_Angeles`.</p>
+     * <p>    *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, do not pad leading zeros to the hour value.</p>
+     * <p>    *   The time zone abbreviation. Only UTC is supported.</p>
+     * <br>
+     * <p>    For example, to specify a command to run at 10:15:00 every day in 2022 (Shanghai time), set the time to `0 15 10 ? * * 2022 Asia/Shanghai`. To specify a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the time to `0 0/30 10-11 * * ? 2022 GMT +8:00`. To specify a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years since 2022 (UTC), set the time to `0 0/5 14 * 10 ? 2022/2 UTC`.</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note**The minimum interval must be 10 seconds or more and cannot be shorter than the timeout period of scheduled executions.</p>
      */
     @NameInMap("Frequency")
     public String frequency;
 
     /**
-     * <p>The IDs of instances on which to run the command. You can specify up to 50 instance IDs in each request.</p>
+     * <p>The ID of instance N on which to run the command. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -102,7 +100,7 @@ public class InvokeCommandShrinkRequest extends TeaModel {
      * <p>*   Each key in a Map collection cannot be an empty string and can be up to 64 characters in length.</p>
      * <p>*   Values in a Map collection can be empty strings.</p>
      * <p>*   The size of the command (including custom parameters and original command content) after Base64 encoding cannot exceed 18 KB.</p>
-     * <p>*   The custom parameter names specified in the value of Parameters must be included in the custom parameters specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</p>
+     * <p>*   The custom parameter names specified in the value of Parameters must all be included in the custom parameter names specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</p>
      * <br>
      * <p>You can leave this parameter empty to disable the custom parameter feature.</p>
      */
@@ -116,9 +114,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The execution mode of the command. Valid values:</p>
+     * <p>Specifies how to run the command. Valid values:</p>
      * <br>
-     * <p>*   Once: runs the command instantly.</p>
+     * <p>*   Once: immediately runs the command.</p>
      * <p>*   Period: runs the command on a schedule. If you set this parameter to `Period`, you must set `Timed` to true and specify `Frequency`.</p>
      * <p>*   NextRebootOnly: automatically runs the command the next time the instance starts.</p>
      * <p>*   EveryReboot: automatically runs the command every time the instance starts.</p>
@@ -130,14 +128,17 @@ public class InvokeCommandShrinkRequest extends TeaModel {
      * <br>
      * <p>Take note of the following items:</p>
      * <br>
-     * <p>*   When this parameter is set to `Period`, `NextRebootOnly`, or `EveryReboot`, you can call the [StopInvocation](~~64838~~) operation to stop the pending or scheduled executions of the command.</p>
+     * <p>*   When this parameter is set to `Period`, `NextRebootOnly`, or `EveryReboot`, you can call the [StopInvocation](~~64838~~) operation to stop the pending or scheduled execution of the command.</p>
      * <p>*   When this parameter is set to `Period` or `EveryReboot`, you can call the [DescribeInvocationResults](~~64845~~) operation and set `IncludeHistory` to true to view the results of historical scheduled executions.</p>
      */
     @NameInMap("RepeatMode")
     public String repeatMode;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which to assign the command executions. When you set this parameter, take note of the following items:</p>
+     * <br>
+     * <p>*   The instances specified by the InstanceId.N parameter must belong to the specified resource group.</p>
+     * <p>*   You can set this parameter to call the [DescribeInvocations](~~64840~~) or [DescribeInvocationResults](~~64845~~) operation to query execution results in the specified resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -149,7 +150,7 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the command.</p>
      */
     @NameInMap("Tag")
     public java.util.List<InvokeCommandShrinkRequestTag> tag;
@@ -166,30 +167,33 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public Boolean timed;
 
     /**
-     * <p>The maximum timeout period for the command execution on the instance. Unit: seconds. When a command cannot be run, a timeout error occurs. After that, the command process is forcefully terminated by canceling the PID of the command.</p>
+     * <p>The timeout period for the command execution. Unit: seconds.</p>
      * <br>
-     * <p>Default value: 60.</p>
+     * <p>*   The timeout period cannot be less than 10 seconds.</p>
+     * <p>*   A timeout error occurs when a command cannot be run because the process slows down or because a specific module or the Cloud Assistant client does not exist. When an execution times out, the command process is forcefully terminated.</p>
+     * <p>*   If this parameter is not specified, the timeout period specified when the command is created prevails and</p>
+     * <p>*   is used only as the timeout period for this execution. The timeout period of the command is not modified.</p>
      */
     @NameInMap("Timeout")
     public Long timeout;
 
     /**
-     * <p>The username to use to run the command on ECS instances.</p>
+     * <p>The username to use to run the command on instances.</p>
      * <br>
-     * <p>*   For Linux instances, the root user is used.</p>
-     * <p>*   For Windows instances, the System user is used.</p>
+     * <p>*   For Linux instances, the root username is used.</p>
+     * <p>*   For Windows instances, the System username is used.</p>
      * <br>
-     * <p>You can also specify other usernames that already exist in the ECS instance to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see [Configure a regular user to run Cloud Assistant commands](~~203771~~).</p>
+     * <p>You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see [Run Cloud Assistant commands as a regular user](~~203771~~).</p>
      */
     @NameInMap("Username")
     public String username;
 
     /**
-     * <p>The name of the password to use to run the command on a Windows instance.</p>
+     * <p>The name of the password to use to run the command on Windows instances.</p>
      * <br>
-     * <p>If you want to use a username other than the default System username to run the command on the Windows instance, you must specify both the WindowsPasswordName and `Username` parameter. The password is hosted in plaintext in the parameter repository of Operation Orchestration Service (OOS) to reduce the risk of password leaks. Only the name of the password is passed in by using the WindowsPasswordName parameter. For more information, see [Manage encryption parameters](~~186828~~) and [Run Cloud Assistant commands as a regular user](~~203771~~).</p>
+     * <p>If you do not want to use the default System username to run the command on Windows instances, you must specify both the WindowsPasswordName and `Username` parameters. The password is hosted in plaintext in the parameter repository of Operation Orchestration Service (OOS) to mitigate the risk of password leaks. Only the name of the password is passed in by using the WindowsPasswordName parameter. For more information, see [Encrypt parameters](~~186828~~) and [Configure a regular user to run Cloud Assistant commands](~~203771~~).</p>
      * <br>
-     * <p>>  When you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify the WindowsPasswordName parameter.</p>
+     * <p>> If you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify the WindowsPasswordName parameter.</p>
      */
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
@@ -345,13 +349,19 @@ public class InvokeCommandShrinkRequest extends TeaModel {
 
     public static class InvokeCommandShrinkRequestTag extends TeaModel {
         /**
-         * <p>The key of tag of the resource.</p>
+         * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag of the resource.</p>
+         * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <br>
+         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

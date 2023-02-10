@@ -8,7 +8,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public ReplaceSystemDiskRequestSystemDisk systemDisk;
 
     /**
-     * <p>The system architecture. Valid values:</p>
+     * <p>The operating system architecture. Valid values:</p>
      * <br>
      * <p>*   i386</p>
      * <p>*   x86\_64</p>
@@ -23,17 +23,17 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public java.util.List<ReplaceSystemDiskRequestArn> arn;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the disk.</p>
+     * <p>The ID of the disk to be used to replace the operating system.</p>
      * <br>
      * <p>If the `ImageId` parameter is not specified, this parameter is required.</p>
      * <br>
-     * <p>If the DiskId parameter is specified, the `Platform` and `Architecture` parameters are required. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` of the instance.</p>
+     * <p>If the DiskId parameter is specified, the `Platform` and `Architecture` parameters must be specified. The specified values of `Platform` and `Architecture` must be consistent with the `Platform` and `Architecture` values of the instance.</p>
      * <br>
      * <p>> This feature is in invitational preview. To use this feature, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex).</p>
      */
@@ -58,7 +58,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The ID of the image to be used to replace the system disk.</p>
      * <br>
      * <p>If the `DiskId` parameter is not specified, this parameter is required.</p>
      */
@@ -80,7 +80,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>The name of the key pair.</p>
      * <br>
-     * <p>> This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After the SSH key pair is bound, the username and password-based logon method is disabled for the instance.</p>
+     * <p>> This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After the key pair is bound, the username and password logon method is disabled for the instance.</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -106,11 +106,11 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Specifies whether to use the password preset in the image.</p>
+     * <p>Specifies whether to use the preset password of the image.</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>> If the PasswordInherit parameter is specified, you must leave the Password parameter empty and make sure that the selected image has a password preset.</p>
+     * <p>> If the PasswordInherit parameter is specified, you must leave the Password parameter empty. Before you use this parameter, make sure that a password is preset for the image.</p>
      */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
@@ -131,10 +131,10 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to activate Security Center for free after the system disk is replaced. Valid values:</p>
+     * <p>Specifies whether to use Security Center Basic after the system disk is replaced. Valid values:</p>
      * <br>
-     * <p>*   Active: Security Center is activated for free after the system disk is replaced. This value supports only public images.</p>
-     * <p>*   Deactive: Security Center is not activated for free after the system disk is replaced. This value supports all images.</p>
+     * <p>*   Active: uses Security Center Basic after the system disk is replaced. This value is applicable only to public images.</p>
+     * <p>*   Deactive: does not use Security Center Basic after the system disk is replaced. This value is applicable to all images.</p>
      * <br>
      * <p>Default value: Deactive.</p>
      */

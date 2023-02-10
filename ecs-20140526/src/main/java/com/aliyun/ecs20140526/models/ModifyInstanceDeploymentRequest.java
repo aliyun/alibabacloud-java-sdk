@@ -8,7 +8,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
      * <p>Specifies whether to associate the instance with a dedicated host. Valid values:</p>
      * <br>
      * <p>*   host: associates the instance with a dedicated host. When you start a stopped instance in economical mode, the instance remains on its original dedicated host.</p>
-     * <p>*   default: does not associate the instance with a dedicated host. When you start a stopped instance in economical mode, the instance can be automatically deployed to another dedicated host in the automatic deployment resource pool if resources of the original dedicated host are insufficient.</p>
+     * <p>*   default: does not associate the instance with a dedicated host. When you start a stopped instance in economical mode, the instance can be automatically deployed to another dedicated host in the automatic deployment resource pool if the resources of the original dedicated host are insufficient.</p>
      * <br>
      * <p>If you want to migrate the instance from a shared host to a dedicated host, use the default value. Default value: default.</p>
      */
@@ -75,7 +75,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance type to which to change the instance. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.</p>
+     * <p>The instance type to which the instance is changed. You can call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.</p>
      * <br>
      * <p>You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see [Dedicated host types](~~68564~~).</p>
      * <br>
@@ -103,13 +103,13 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to remove the selected instance from the selected deployment set. Valid values:</p>
+     * <p>Specifies whether to remove the specified instance from the specified deployment set. Valid values:</p>
      * <br>
      * <p>*   true: removes the instance from the deployment set.</p>
      * <p>*   false: does not remove the instance from the deployment set.</p>

@@ -14,7 +14,7 @@ public class DescribeCommandsRequest extends TeaModel {
      * <p>The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:</p>
      * <br>
      * <p>*   PlainText: returns the original command content and command output.</p>
-     * <p>*   Base64: returns the Base64-encoded command content and command output.</p>
+     * <p>*   Base64: returns the Base64-encoded command content and command output</p>
      * <br>
      * <p>Default value: Base64.</p>
      */
@@ -22,7 +22,7 @@ public class DescribeCommandsRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>>  This parameter is deprecated and does not take effect.</p>
+     * <p>> This parameter is deprecated and does not take effect.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -51,7 +51,7 @@ public class DescribeCommandsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the page to return.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -61,7 +61,7 @@ public class DescribeCommandsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
      * <p>Maximum value: 50.</p>
      * <br>
@@ -86,7 +86,7 @@ public class DescribeCommandsRequest extends TeaModel {
     public String provider;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,6 +97,9 @@ public class DescribeCommandsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags of the command.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeCommandsRequestTag> tag;
 
@@ -237,11 +240,11 @@ public class DescribeCommandsRequest extends TeaModel {
 
     public static class DescribeCommandsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>he key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
          * <br>
          * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
          * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;

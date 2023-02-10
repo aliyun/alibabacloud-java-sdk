@@ -81,6 +81,9 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SocketDetails")
+    public String socketDetails;
+
     /**
      * <p>The service state of the dedicated host. Valid values:</p>
      * <br>
@@ -214,6 +217,14 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeDedicatedHostsRequest setSocketDetails(String socketDetails) {
+        this.socketDetails = socketDetails;
+        return this;
+    }
+    public String getSocketDetails() {
+        return this.socketDetails;
     }
 
     public DescribeDedicatedHostsRequest setStatus(String status) {

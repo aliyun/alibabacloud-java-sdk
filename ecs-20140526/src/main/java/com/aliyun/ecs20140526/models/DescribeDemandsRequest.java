@@ -11,13 +11,13 @@ public class DescribeDemandsRequest extends TeaModel {
     public String demandId;
 
     /**
-     * <p>The status of the filing ticket or resource usage. Valid values:</p>
+     * <p>The status of the filing ticket or resource consumption. Valid values:</p>
      * <br>
      * <p>*   Creating: The filing ticket is being created.</p>
      * <p>*   Active: The filed resources are being supplied.</p>
      * <p>*   Expired: The filing ticket expires.</p>
      * <p>*   Finished: The filed resources are consumed.</p>
-     * <p>*   Refused: The filing request is denied. For reasons why the request is denied, see the `Comment` response parameter.</p>
+     * <p>*   Refused: The filing request is denied. To view the reason for denial, see the `Comment` parameter in the response.</p>
      * <p>*   Cancelled: The filing request is canceled.</p>
      */
     @NameInMap("DemandStatus")
@@ -33,10 +33,10 @@ public class DescribeDemandsRequest extends TeaModel {
     public String demandType;
 
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
      * <br>
-     * <p>*   true: sends a check request, without querying the status of the filing ticket. The system checks whether your AccessKey pair is valid, whether RAM users are authorized, and whether the required parameters are set. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
-     * <p>*   false: sends an API request. If the request succeeds, a 2XX HTTP status code is returned and the status of the filing ticket is queried.</p>
+     * <p>*   true: performs a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
+     * <p>*   false: performs a dry run and sends the request . If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -69,7 +69,7 @@ public class DescribeDemandsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <p>The page number of the page to return. Pages start from page 1.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -77,7 +77,7 @@ public class DescribeDemandsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -85,7 +85,7 @@ public class DescribeDemandsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region for which to query resources. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,13 +97,13 @@ public class DescribeDemandsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags that are attached to the resources.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDemandsRequestTag> tag;
 
     /**
-     * <p>The zone ID. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The ID of the zone for which to query resources. You can call the [DescribeZones](~~25610~~) operation to query the most recent region list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -243,13 +243,13 @@ public class DescribeDemandsRequest extends TeaModel {
 
     public static class DescribeDemandsRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -66,6 +66,9 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeSendFileResultsRequestTag> tag;
+
     public static DescribeSendFileResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSendFileResultsRequest self = new DescribeSendFileResultsRequest();
         return TeaModel.build(map, self);
@@ -157,6 +160,44 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeSendFileResultsRequest setTag(java.util.List<DescribeSendFileResultsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeSendFileResultsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeSendFileResultsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeSendFileResultsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSendFileResultsRequestTag self = new DescribeSendFileResultsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSendFileResultsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeSendFileResultsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

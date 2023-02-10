@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that is required for the next query.</p>
+     * <p>The token used to start the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -17,7 +17,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about resources and tags, including resource IDs, resource types, and tag key-value pairs.</p>
+     * <p>Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -76,20 +76,20 @@ public class ListTagResourcesResponseBody extends TeaModel {
          * <p>*   snapshotpolicy: automatic snapshot policy</p>
          * <p>*   elasticityassurance: elasticity assurance</p>
          * <p>*   capacityreservation: capacity reservation</p>
-         * <p>*   command: Cloud Assistant command</p>
+         * <p>*   command: Cloud Assistant command.</p>
          * <p>*   invocation: Cloud Assistant command execution result</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

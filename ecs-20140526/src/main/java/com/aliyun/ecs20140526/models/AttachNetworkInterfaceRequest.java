@@ -11,9 +11,9 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The index of the network interface controller (NIC).</p>
+     * <p>网卡指定的物理网卡索引。</p>
      * <br>
-     * <p>> The value of this parameter varies based on the instance family of the specified instance. If the instance type of the specified instance does not support NICs, leave this parameter empty. If the instance type supports NICs, set this parameter to a valid value. For information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
+     * <p>>NetworkCardIndex 取值与实例规格族有关。如果实例规格不支持NetworkCard则不能指定；如果支持，取值请参见[实例规格族](~~25378~~)。</p>
      */
     @NameInMap("NetworkCardIndex")
     public Integer networkCardIndex;
@@ -31,7 +31,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token that is required for the next query.</p>
+     * <p>The token used to start the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -52,14 +52,14 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>*   snapshotpolicy: automatic snapshot policy</p>
      * <p>*   elasticityassurance: elasticity assurance</p>
      * <p>*   capacityreservation: capacity reservation</p>
-     * <p>*   command: Cloud Assistant command</p>
+     * <p>*   command: Cloud Assistant command.</p>
      * <p>*   invocation: Cloud Assistant command execution result</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>Details about the tags.</p>
+     * <p>The tags that are added to the resources.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -170,7 +170,7 @@ public class ListTagResourcesRequest extends TeaModel {
          * <p>*   Method 2: Use this parameter pair to query resource information of a non-default resource group. Set `Tag.1.Key` to `acs:rm:rgId` and `Tag.1.Value` to the ID of a resource group.</p>
          * <br>
          * <p>    *   If you set `Tag.1.Key` to `acs:rm:rgId`, you must set `Tag.1.Value` to the ID of a non-default resource group. If you set Tag.1.Value to the ID of the default resource group, an error message is returned.</p>
-         * <p>    *   If you set `Tag.1.Key` to `acs:rm:rgId`, you cannot specify other Tag.N parameter pairs. If you specify multiple `Tag.N` parameter pairs to query resource groups and resource tags at the same time, an error message is returned.</p>
+         * <p>    *   If you set `Tag.1.Key` to `acs:rm:rgId`, you cannot specify other Tag.N parameter pairs. If you specify multiple `Tag.N` parameter pairs to query resource groups and resources at the same time, an error message is returned.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -214,7 +214,7 @@ public class ListTagResourcesRequest extends TeaModel {
          * <br>
          * <p>*   When you use `TagFilter.N.TagKey` for fuzzy search of ECS resources, you must leave `TagFilter.N.TagValues.N` empty. For example, to query ECS resources whose tags contain the `environment` tag key, you can set `TagFilter.1.TagKey` to `env*` for prefix search, `*env*` for infix search, or `env` for exact search, but you must leave `TagFilter.1.TagValues` empty.</p>
          * <p>*   When you use `TagFilter.N.TagValues.N` for fuzzy search of ECS resources, you must set `TagFilter.N.TagKey` to an exact value. For example, to query ECS resources that have a tag consisting of the `env` tag key and the `product` tag value, you must set `TagFilter.1.TagKey` to `env` and can set `TagFilter.1.TagValues.1` to `proc*` for prefix search, to `*proc*` for infix search, or to `proc` for exact search. Only one of the preceding search methods can be used for each tag key (`TagFilter.N.TagKey`). If multiple search methods are configured for a tag key, the first search method prevails.</p>
-         * <p>*   If you specify multiple tag keys, only the ECS resources that have all of the specified tag keys added are returned.</p>
+         * <p>*   If you specify multiple tag keys, only the ECS resources that have all the specified tag keys added are returned.</p>
          * <p>*   If you specify a tag key that corresponds to multiple tag values, all the ECS resources that have one or more of these tag key-value pairs added are returned.</p>
          * <br>
          * <p>> The `TagFilter.N` parameter pair (TagFilter.N.TagKey and TagFilter.N.TagValues.N) cannot be used together with the `Tag.N` parameter pair (Tag.N.Key and Tag.N.Value). Otherwise, an error message is returned.</p>

@@ -13,10 +13,11 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Boolean allocatePublicIp;
 
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <br>
-     * <p>*   true: enables automatic payment. After bandwidth configurations are upgraded, the payment is automatically made. Make sure that you have sufficient balance in your account when you set AutoPay to true. If your account balance is insufficient, your order cannot be paid in the ECS console and becomes invalid. You must cancel the order.</p>
-     * <p>*   false: does not enable automatic payment. After bandwidth configurations are upgraded, an order is generated but is not paid. If your account balance is insufficient, you can set AutoPay to false. In this case, when you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. You can then log on to the [ECS console](https://ecs.console.aliyun.com) to pay for the order.</p>
+     * <p>*   true: After you modify the bandwidth configurations, the payment (if any) is automatically completed. Make sure that you have a sufficient balance in your account when you set AutoPay to true. If your account balance is insufficient, your order cannot be paid in the ECS console and becomes invalid. You must cancel the order.</p>
+     * <p>*   false: After you modify the bandwidth configurations, an order is generated but the payment is automatically completed. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the [ECS console](https://ecs.console.aliyun.com) to pay for the order.</p>
+     * <p>*</p>
      * <br>
      * <p>Default value: true.</p>
      */
@@ -24,21 +25,21 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that it is unique among different requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The end time of the temporary bandwidth upgrade. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThhZ format. The time must be in UTC and accurate to **hours** (hh).</p>
+     * <p>The end time of the temporary bandwidth upgrade. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThhZ format. The time must be in UTC and accurate to **hours (hh)**.</p>
      * <br>
-     * <p>>  The interval between the end time and the start time of the temporary bandwidth upgrade must be greater than or equal to 3 hours.</p>
+     * <p>> The interval between the end time and the start time of the temporary bandwidth upgrade must be greater than or equal to 3 hours.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>>  This parameter is currently in invitational preview and unavailable for general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
      */
     @NameInMap("ISP")
     public String ISP;
@@ -52,8 +53,8 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
      * <br>
-     * <p>*   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of InternetMaxBandwidthIn are 1 to 10, and the default value is 10.</p>
-     * <p>*   When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of InternetMaxBandwidthIn are 1 to the `InternetMaxBandwidthOut` value, and the default value is the `InternetMaxBandwidthOut` value.</p>
+     * <p>*   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</p>
+     * <p>*   When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.</p>
      */
     @NameInMap("InternetMaxBandwidthIn")
     public Integer internetMaxBandwidthIn;
@@ -65,12 +66,12 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>The billing method for network usage. Valid values:</p>
+     * <p>The new billing method for network usage. Valid values:</p>
      * <br>
      * <p>*   PayByBandwidth: pay-by-bandwidth</p>
      * <p>*   PayByTraffic: pay-by-traffic</p>
      * <br>
-     * <p>>  When the **pay-by-traffic** billing method is used, the maximum inbound and outbound bandwidths are both the upper limits of bandwidths instead of guaranteed performance. When demands exceed resource supplies, these maximum bandwidths may be limited. If you want guaranteed bandwidths for your instances, use the **pay-by-bandwidth** billing method.</p>
+     * <p>> When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.</p>
      */
     @NameInMap("NetworkChargeType")
     public String networkChargeType;
@@ -88,7 +89,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the temporary bandwidth upgrade. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time must be in UTC and accurate to the **minute** (mm).</p>
+     * <p>The start time of the temporary bandwidth upgrade. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time must be in UTC and accurate to **minutes (mm)**.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

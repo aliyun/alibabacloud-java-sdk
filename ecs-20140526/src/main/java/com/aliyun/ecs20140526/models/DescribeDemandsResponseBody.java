@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDemandsResponseBody extends TeaModel {
     /**
-     * <p>Details about the filing tickets whose regions meet the filter condition.</p>
+     * <p>The filing tickets whose regions meet the filter condition.</p>
      */
     @NameInMap("Demands")
     public DescribeDemandsResponseBodyDemands demands;
@@ -23,7 +23,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -217,13 +217,13 @@ public class DescribeDemandsResponseBody extends TeaModel {
         public String demandName;
 
         /**
-         * <p>The status of the filing ticket or resource usage. Valid values:</p>
+         * <p>The status of the filing ticket or resource consumption. Valid values:</p>
          * <br>
          * <p>*   Creating: The filing ticket is being created.</p>
          * <p>*   Active: The filed resources are being supplied.</p>
          * <p>*   Expired: The filing ticket expires.</p>
          * <p>*   Finished: The filed resources are consumed.</p>
-         * <p>*   Refused: The filing request is denied. For reasons why the request is denied, see the `Comment` response parameter.</p>
+         * <p>*   Refused: The filing request is denied. For reasons why the request is denied, see the `Comment` parameter in the response.</p>
          * <p>*   Cancelled: The filing request is canceled. After the filing request is canceled, the delivery status of the resources becomes invalid.</p>
          */
         @NameInMap("DemandStatus")
@@ -273,6 +273,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
          * <br>
          * <p>*   Hour</p>
          * <p>*   Day</p>
+         * <p>*   Week</p>
          * <p>*   Month</p>
          */
         @NameInMap("PeriodUnit")
@@ -291,21 +292,19 @@ public class DescribeDemandsResponseBody extends TeaModel {
         public DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos;
 
         /**
-         * <p>The amount of total instances.</p>
+         * <p>The number of filed instances.</p>
          */
         @NameInMap("TotalAmount")
         public Integer totalAmount;
 
         /**
-         * <p>The amount of instances that have been used.</p>
+         * <p>The number of consumed instances.</p>
          */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
         /**
-         * <p>The ID of the zone for which to query resources.</p>
-         * <br>
-         * <p>This parameter is empty by default. When this parameter is empty, the system returns resources that match the other criteria in all zones within the region specified by `RegionId`.</p>
+         * <p>The ID of the zone where the filed resource resides.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
