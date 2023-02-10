@@ -31,14 +31,26 @@ public class Instance extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     @NameInMap("RestartCount")
     public Integer restartCount;
+
+    @NameInMap("Role")
+    public String role;
 
     @NameInMap("StartAt")
     public String startAt;
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("TenantHostIP")
+    public String tenantHostIP;
+
+    @NameInMap("TenantInstanceIP")
+    public String tenantInstanceIP;
 
     @NameInMap("TotalProcesses")
     public Integer totalProcesses;
@@ -120,12 +132,28 @@ public class Instance extends TeaModel {
         return this.reason;
     }
 
+    public Instance setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public Instance setRestartCount(Integer restartCount) {
         this.restartCount = restartCount;
         return this;
     }
     public Integer getRestartCount() {
         return this.restartCount;
+    }
+
+    public Instance setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
     }
 
     public Instance setStartAt(String startAt) {
@@ -142,6 +170,22 @@ public class Instance extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public Instance setTenantHostIP(String tenantHostIP) {
+        this.tenantHostIP = tenantHostIP;
+        return this;
+    }
+    public String getTenantHostIP() {
+        return this.tenantHostIP;
+    }
+
+    public Instance setTenantInstanceIP(String tenantInstanceIP) {
+        this.tenantInstanceIP = tenantInstanceIP;
+        return this;
+    }
+    public String getTenantInstanceIP() {
+        return this.tenantInstanceIP;
     }
 
     public Instance setTotalProcesses(Integer totalProcesses) {
