@@ -3,7 +3,7 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class StartCpuResponse extends TeaModel {
+public class ClearDeviceDesiredPropertyResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class StartCpuResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public StartCpuResponseBody body;
+    public ClearDeviceDesiredPropertyResponseBody body;
 
-    public static StartCpuResponse build(java.util.Map<String, ?> map) throws Exception {
-        StartCpuResponse self = new StartCpuResponse();
+    public static ClearDeviceDesiredPropertyResponse build(java.util.Map<String, ?> map) throws Exception {
+        ClearDeviceDesiredPropertyResponse self = new ClearDeviceDesiredPropertyResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartCpuResponse setHeaders(java.util.Map<String, String> headers) {
+    public ClearDeviceDesiredPropertyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class StartCpuResponse extends TeaModel {
         return this.headers;
     }
 
-    public StartCpuResponse setStatusCode(Integer statusCode) {
+    public ClearDeviceDesiredPropertyResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class StartCpuResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public StartCpuResponse setBody(StartCpuResponseBody body) {
+    public ClearDeviceDesiredPropertyResponse setBody(ClearDeviceDesiredPropertyResponseBody body) {
         this.body = body;
         return this;
     }
-    public StartCpuResponseBody getBody() {
+    public ClearDeviceDesiredPropertyResponseBody getBody() {
         return this.body;
     }
 
