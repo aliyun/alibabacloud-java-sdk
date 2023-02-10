@@ -64,25 +64,6 @@ public class RegisterDeviceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class BatchRegisterDeviceResponseBodyData extends TeaModel {
-        @NameInMap("ApplyId")
-        public Long applyId;
-
-        public static BatchRegisterDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            BatchRegisterDeviceResponseBodyData self = new BatchRegisterDeviceResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchRegisterDeviceResponseBodyData setApplyId(Long applyId) {
-            this.applyId = applyId;
-            return this;
-        }
-        public Long getApplyId() {
-            return this.applyId;
-        }
-
-    }
-
     public static class RegisterDeviceResponseBodyData extends TeaModel {
         @NameInMap("DevEui")
         public String devEui;

@@ -3,7 +3,7 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class SpeechByCombinationResponseBody extends TeaModel {
+public class UpdateTopicConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -16,12 +16,12 @@ public class SpeechByCombinationResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static SpeechByCombinationResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SpeechByCombinationResponseBody self = new SpeechByCombinationResponseBody();
+    public static UpdateTopicConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateTopicConfigResponseBody self = new UpdateTopicConfigResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SpeechByCombinationResponseBody setCode(String code) {
+    public UpdateTopicConfigResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -29,7 +29,7 @@ public class SpeechByCombinationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SpeechByCombinationResponseBody setErrorMessage(String errorMessage) {
+    public UpdateTopicConfigResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -37,7 +37,7 @@ public class SpeechByCombinationResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public SpeechByCombinationResponseBody setRequestId(String requestId) {
+    public UpdateTopicConfigResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -45,7 +45,7 @@ public class SpeechByCombinationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SpeechByCombinationResponseBody setSuccess(Boolean success) {
+    public UpdateTopicConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

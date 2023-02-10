@@ -43,6 +43,9 @@ public class CreateSubscribeRelationRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("SubscribeFlags")
+    public String subscribeFlags;
+
     @NameInMap("ThingHistoryFlag")
     public Boolean thingHistoryFlag;
 
@@ -156,6 +159,14 @@ public class CreateSubscribeRelationRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
+    }
+
+    public CreateSubscribeRelationRequest setSubscribeFlags(String subscribeFlags) {
+        this.subscribeFlags = subscribeFlags;
+        return this;
+    }
+    public String getSubscribeFlags() {
+        return this.subscribeFlags;
     }
 
     public CreateSubscribeRelationRequest setThingHistoryFlag(Boolean thingHistoryFlag) {

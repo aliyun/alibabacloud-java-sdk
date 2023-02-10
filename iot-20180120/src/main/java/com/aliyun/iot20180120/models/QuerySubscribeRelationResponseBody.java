@@ -49,6 +49,9 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SubscribeFlags")
+    public String subscribeFlags;
+
     @NameInMap("Success")
     public Boolean success;
 
@@ -181,6 +184,14 @@ public class QuerySubscribeRelationResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QuerySubscribeRelationResponseBody setSubscribeFlags(String subscribeFlags) {
+        this.subscribeFlags = subscribeFlags;
+        return this;
+    }
+    public String getSubscribeFlags() {
+        return this.subscribeFlags;
     }
 
     public QuerySubscribeRelationResponseBody setSuccess(Boolean success) {
