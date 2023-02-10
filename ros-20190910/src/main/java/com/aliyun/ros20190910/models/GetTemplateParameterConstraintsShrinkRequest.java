@@ -19,6 +19,9 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StackId")
+    public String stackId;
+
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -74,6 +77,14 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetTemplateParameterConstraintsShrinkRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
     }
 
     public GetTemplateParameterConstraintsShrinkRequest setTemplateBody(String templateBody) {
