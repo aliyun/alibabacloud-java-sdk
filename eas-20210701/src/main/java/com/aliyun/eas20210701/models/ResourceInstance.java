@@ -43,6 +43,9 @@ public class ResourceInstance extends TeaModel {
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    @NameInMap("InstanceTenantIp")
+    public String instanceTenantIp;
+
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -50,7 +53,10 @@ public class ResourceInstance extends TeaModel {
     public Float instanceUsedCpu;
 
     @NameInMap("InstanceUsedGpu")
-    public Integer instanceUsedGpu;
+    public Float instanceUsedGpu;
+
+    @NameInMap("InstanceUsedGpuMemory")
+    public String instanceUsedGpuMemory;
 
     @NameInMap("InstanceUsedMemory")
     public String instanceUsedMemory;
@@ -170,6 +176,14 @@ public class ResourceInstance extends TeaModel {
         return this.instanceStatus;
     }
 
+    public ResourceInstance setInstanceTenantIp(String instanceTenantIp) {
+        this.instanceTenantIp = instanceTenantIp;
+        return this;
+    }
+    public String getInstanceTenantIp() {
+        return this.instanceTenantIp;
+    }
+
     public ResourceInstance setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -186,12 +200,20 @@ public class ResourceInstance extends TeaModel {
         return this.instanceUsedCpu;
     }
 
-    public ResourceInstance setInstanceUsedGpu(Integer instanceUsedGpu) {
+    public ResourceInstance setInstanceUsedGpu(Float instanceUsedGpu) {
         this.instanceUsedGpu = instanceUsedGpu;
         return this;
     }
-    public Integer getInstanceUsedGpu() {
+    public Float getInstanceUsedGpu() {
         return this.instanceUsedGpu;
+    }
+
+    public ResourceInstance setInstanceUsedGpuMemory(String instanceUsedGpuMemory) {
+        this.instanceUsedGpuMemory = instanceUsedGpuMemory;
+        return this;
+    }
+    public String getInstanceUsedGpuMemory() {
+        return this.instanceUsedGpuMemory;
     }
 
     public ResourceInstance setInstanceUsedMemory(String instanceUsedMemory) {

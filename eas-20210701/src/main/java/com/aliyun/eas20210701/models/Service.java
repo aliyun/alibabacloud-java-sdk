@@ -34,6 +34,9 @@ public class Service extends TeaModel {
     @NameInMap("IntranetEndpoint")
     public String intranetEndpoint;
 
+    @NameInMap("Labels")
+    public java.util.List<ServiceLabels> labels;
+
     @NameInMap("LatestVersion")
     public Integer latestVersion;
 
@@ -192,6 +195,14 @@ public class Service extends TeaModel {
     }
     public String getIntranetEndpoint() {
         return this.intranetEndpoint;
+    }
+
+    public Service setLabels(java.util.List<ServiceLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<ServiceLabels> getLabels() {
+        return this.labels;
     }
 
     public Service setLatestVersion(Integer latestVersion) {
@@ -392,6 +403,36 @@ public class Service extends TeaModel {
     }
     public Integer getWeight() {
         return this.weight;
+    }
+
+    public static class ServiceLabels extends TeaModel {
+        @NameInMap("LabelKey")
+        public String labelKey;
+
+        @NameInMap("LabelValue")
+        public String labelValue;
+
+        public static ServiceLabels build(java.util.Map<String, ?> map) throws Exception {
+            ServiceLabels self = new ServiceLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ServiceLabels setLabelKey(String labelKey) {
+            this.labelKey = labelKey;
+            return this;
+        }
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        public ServiceLabels setLabelValue(String labelValue) {
+            this.labelValue = labelValue;
+            return this;
+        }
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
     }
 
 }

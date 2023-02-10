@@ -3,7 +3,7 @@ package com.aliyun.eas20210701.models;
 
 import com.aliyun.tea.*;
 
-public class ListServicesRequest extends TeaModel {
+public class ListServicesShrinkRequest extends TeaModel {
     /**
      * <p>关键字搜索。</p>
      */
@@ -17,7 +17,7 @@ public class ListServicesRequest extends TeaModel {
     public String groupName;
 
     @NameInMap("Label")
-    public java.util.Map<String, String> label;
+    public String labelShrink;
 
     /**
      * <p>排序顺序，支持升序或将序。</p>
@@ -55,12 +55,12 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
-    public static ListServicesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListServicesRequest self = new ListServicesRequest();
+    public static ListServicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListServicesShrinkRequest self = new ListServicesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListServicesRequest setFilter(String filter) {
+    public ListServicesShrinkRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
@@ -68,7 +68,7 @@ public class ListServicesRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListServicesRequest setGroupName(String groupName) {
+    public ListServicesShrinkRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
@@ -76,15 +76,15 @@ public class ListServicesRequest extends TeaModel {
         return this.groupName;
     }
 
-    public ListServicesRequest setLabel(java.util.Map<String, String> label) {
-        this.label = label;
+    public ListServicesShrinkRequest setLabelShrink(String labelShrink) {
+        this.labelShrink = labelShrink;
         return this;
     }
-    public java.util.Map<String, String> getLabel() {
-        return this.label;
+    public String getLabelShrink() {
+        return this.labelShrink;
     }
 
-    public ListServicesRequest setOrder(String order) {
+    public ListServicesShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -92,7 +92,7 @@ public class ListServicesRequest extends TeaModel {
         return this.order;
     }
 
-    public ListServicesRequest setPageNumber(Integer pageNumber) {
+    public ListServicesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -100,7 +100,7 @@ public class ListServicesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListServicesRequest setPageSize(Integer pageSize) {
+    public ListServicesShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -108,7 +108,7 @@ public class ListServicesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListServicesRequest setParentServiceUid(String parentServiceUid) {
+    public ListServicesShrinkRequest setParentServiceUid(String parentServiceUid) {
         this.parentServiceUid = parentServiceUid;
         return this;
     }
@@ -116,7 +116,7 @@ public class ListServicesRequest extends TeaModel {
         return this.parentServiceUid;
     }
 
-    public ListServicesRequest setServiceType(String serviceType) {
+    public ListServicesShrinkRequest setServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
     }
@@ -124,7 +124,7 @@ public class ListServicesRequest extends TeaModel {
         return this.serviceType;
     }
 
-    public ListServicesRequest setSort(String sort) {
+    public ListServicesShrinkRequest setSort(String sort) {
         this.sort = sort;
         return this;
     }
