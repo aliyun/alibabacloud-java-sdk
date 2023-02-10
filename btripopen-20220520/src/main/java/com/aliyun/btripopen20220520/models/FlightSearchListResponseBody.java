@@ -1498,6 +1498,9 @@ public class FlightSearchListResponseBody extends TeaModel {
         @NameInMap("agent_id")
         public Long agentId;
 
+        @NameInMap("basic_cabin_price")
+        public Integer basicCabinPrice;
+
         @NameInMap("build_price")
         public Integer buildPrice;
 
@@ -1578,6 +1581,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
         public Long getAgentId() {
             return this.agentId;
+        }
+
+        public FlightSearchListResponseBodyModuleFlightListCabinInfoList setBasicCabinPrice(Integer basicCabinPrice) {
+            this.basicCabinPrice = basicCabinPrice;
+            return this;
+        }
+        public Integer getBasicCabinPrice() {
+            return this.basicCabinPrice;
         }
 
         public FlightSearchListResponseBodyModuleFlightListCabinInfoList setBuildPrice(Integer buildPrice) {

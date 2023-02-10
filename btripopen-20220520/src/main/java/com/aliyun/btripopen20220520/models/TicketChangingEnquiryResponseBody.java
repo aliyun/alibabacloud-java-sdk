@@ -179,6 +179,915 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
 
     }
 
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription extends TeaModel {
+        @NameInMap("desc")
+        public String desc;
+
+        @NameInMap("icon")
+        public String icon;
+
+        @NameInMap("image")
+        public String image;
+
+        @NameInMap("title")
+        public String title;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO extends TeaModel {
+        @NameInMap("image")
+        public String image;
+
+        @NameInMap("largest")
+        public String largest;
+
+        @NameInMap("middle")
+        public String middle;
+
+        @NameInMap("smallest")
+        public String smallest;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO setLargest(String largest) {
+            this.largest = largest;
+            return this;
+        }
+        public String getLargest() {
+            return this.largest;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO setMiddle(String middle) {
+            this.middle = middle;
+            return this;
+        }
+        public String getMiddle() {
+            return this.middle;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO setSmallest(String smallest) {
+            this.smallest = smallest;
+            return this;
+        }
+        public String getSmallest() {
+            return this.smallest;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes extends TeaModel {
+        @NameInMap("baggage_desc")
+        public java.util.List<String> baggageDesc;
+
+        @NameInMap("baggage_sub_content_type")
+        public Integer baggageSubContentType;
+
+        @NameInMap("description")
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription description;
+
+        @NameInMap("imageDO")
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO imageDO;
+
+        @NameInMap("is_highlight")
+        public Boolean isHighlight;
+
+        @NameInMap("subTitle")
+        public String subTitle;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes setBaggageDesc(java.util.List<String> baggageDesc) {
+            this.baggageDesc = baggageDesc;
+            return this;
+        }
+        public java.util.List<String> getBaggageDesc() {
+            return this.baggageDesc;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes setBaggageSubContentType(Integer baggageSubContentType) {
+            this.baggageSubContentType = baggageSubContentType;
+            return this;
+        }
+        public Integer getBaggageSubContentType() {
+            return this.baggageSubContentType;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes setDescription(TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription description) {
+            this.description = description;
+            return this;
+        }
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesDescription getDescription() {
+            return this.description;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes setImageDO(TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO imageDO) {
+            this.imageDO = imageDO;
+            return this;
+        }
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO getImageDO() {
+            return this.imageDO;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes setIsHighlight(Boolean isHighlight) {
+            this.isHighlight = isHighlight;
+            return this;
+        }
+        public Boolean getIsHighlight() {
+            return this.isHighlight;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes setSubTitle(String subTitle) {
+            this.subTitle = subTitle;
+            return this;
+        }
+        public String getSubTitle() {
+            return this.subTitle;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents extends TeaModel {
+        @NameInMap("baggage_desc")
+        public String baggageDesc;
+
+        @NameInMap("icon")
+        public String icon;
+
+        @NameInMap("style")
+        public Integer style;
+
+        @NameInMap("sub_title")
+        public String subTitle;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents setBaggageDesc(String baggageDesc) {
+            this.baggageDesc = baggageDesc;
+            return this;
+        }
+        public String getBaggageDesc() {
+            return this.baggageDesc;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents setStyle(Integer style) {
+            this.style = style;
+            return this;
+        }
+        public Integer getStyle() {
+            return this.style;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents setSubTitle(String subTitle) {
+            this.subTitle = subTitle;
+            return this;
+        }
+        public String getSubTitle() {
+            return this.subTitle;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems extends TeaModel {
+        @NameInMap("attributes")
+        public java.util.Map<String, ?> attributes;
+
+        @NameInMap("baggage_sub_content_visualizes")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes;
+
+        @NameInMap("baggage_sub_contents")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents> baggageSubContents;
+
+        @NameInMap("content")
+        public String content;
+
+        @NameInMap("is_struct")
+        public Boolean isStruct;
+
+        @NameInMap("ptc")
+        public String ptc;
+
+        @NameInMap("title")
+        public String title;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems setAttributes(java.util.Map<String, ?> attributes) {
+            this.attributes = attributes;
+            return this;
+        }
+        public java.util.Map<String, ?> getAttributes() {
+            return this.attributes;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems setBaggageSubContentVisualizes(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes) {
+            this.baggageSubContentVisualizes = baggageSubContentVisualizes;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizes> getBaggageSubContentVisualizes() {
+            return this.baggageSubContentVisualizes;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems setBaggageSubContents(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents> baggageSubContents) {
+            this.baggageSubContents = baggageSubContents;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents> getBaggageSubContents() {
+            return this.baggageSubContents;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems setIsStruct(Boolean isStruct) {
+            this.isStruct = isStruct;
+            return this;
+        }
+        public Boolean getIsStruct() {
+            return this.isStruct;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems setPtc(String ptc) {
+            this.ptc = ptc;
+            return this;
+        }
+        public String getPtc() {
+            return this.ptc;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips extends TeaModel {
+        @NameInMap("logo")
+        public String logo;
+
+        @NameInMap("tips_desc")
+        public String tipsDesc;
+
+        @NameInMap("tips_image")
+        public String tipsImage;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips setLogo(String logo) {
+            this.logo = logo;
+            return this;
+        }
+        public String getLogo() {
+            return this.logo;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips setTipsDesc(String tipsDesc) {
+            this.tipsDesc = tipsDesc;
+            return this;
+        }
+        public String getTipsDesc() {
+            return this.tipsDesc;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips setTipsImage(String tipsImage) {
+            this.tipsImage = tipsImage;
+            return this;
+        }
+        public String getTipsImage() {
+            return this.tipsImage;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails extends TeaModel {
+        @NameInMap("baggage_sub_items")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems> baggageSubItems;
+
+        @NameInMap("index")
+        public Integer index;
+
+        @NameInMap("table_head")
+        public String tableHead;
+
+        @NameInMap("tips")
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips tips;
+
+        @NameInMap("title")
+        public String title;
+
+        @NameInMap("type")
+        public Integer type;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails setBaggageSubItems(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems> baggageSubItems) {
+            this.baggageSubItems = baggageSubItems;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems> getBaggageSubItems() {
+            return this.baggageSubItems;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails setTableHead(String tableHead) {
+            this.tableHead = tableHead;
+            return this;
+        }
+        public String getTableHead() {
+            return this.tableHead;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails setTips(TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips tips) {
+            this.tips = tips;
+            return this;
+        }
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips getTips() {
+            return this.tips;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents extends TeaModel {
+        @NameInMap("content")
+        public String content;
+
+        @NameInMap("icon")
+        public String icon;
+
+        @NameInMap("title")
+        public String title;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents extends TeaModel {
+        @NameInMap("fee_desc")
+        public String feeDesc;
+
+        @NameInMap("fee_range")
+        public String feeRange;
+
+        @NameInMap("style")
+        public String style;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents setFeeDesc(String feeDesc) {
+            this.feeDesc = feeDesc;
+            return this;
+        }
+        public String getFeeDesc() {
+            return this.feeDesc;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents setFeeRange(String feeRange) {
+            this.feeRange = feeRange;
+            return this;
+        }
+        public String getFeeRange() {
+            return this.feeRange;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents setStyle(String style) {
+            this.style = style;
+            return this;
+        }
+        public String getStyle() {
+            return this.style;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems extends TeaModel {
+        @NameInMap("content")
+        public String content;
+
+        @NameInMap("is_struct")
+        public Boolean isStruct;
+
+        @NameInMap("ptc")
+        public String ptc;
+
+        @NameInMap("refund_sub_contents")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents> refundSubContents;
+
+        @NameInMap("title")
+        public String title;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems setIsStruct(Boolean isStruct) {
+            this.isStruct = isStruct;
+            return this;
+        }
+        public Boolean getIsStruct() {
+            return this.isStruct;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems setPtc(String ptc) {
+            this.ptc = ptc;
+            return this;
+        }
+        public String getPtc() {
+            return this.ptc;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems setRefundSubContents(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents> refundSubContents) {
+            this.refundSubContents = refundSubContents;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItemsRefundSubContents> getRefundSubContents() {
+            return this.refundSubContents;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails extends TeaModel {
+        @NameInMap("extra_contents")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents> extraContents;
+
+        @NameInMap("index")
+        public Integer index;
+
+        @NameInMap("refund_sub_items")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems> refundSubItems;
+
+        @NameInMap("table_head")
+        public String tableHead;
+
+        @NameInMap("title")
+        public String title;
+
+        @NameInMap("type")
+        public Integer type;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails setExtraContents(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents> extraContents) {
+            this.extraContents = extraContents;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents> getExtraContents() {
+            return this.extraContents;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails setRefundSubItems(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems> refundSubItems) {
+            this.refundSubItems = refundSubItems;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems> getRefundSubItems() {
+            return this.refundSubItems;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails setTableHead(String tableHead) {
+            this.tableHead = tableHead;
+            return this;
+        }
+        public String getTableHead() {
+            return this.tableHead;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents extends TeaModel {
+        @NameInMap("content")
+        public String content;
+
+        @NameInMap("icon")
+        public String icon;
+
+        @NameInMap("title")
+        public String title;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents extends TeaModel {
+        @NameInMap("fee_desc")
+        public String feeDesc;
+
+        @NameInMap("fee_range")
+        public String feeRange;
+
+        @NameInMap("style")
+        public String style;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents setFeeDesc(String feeDesc) {
+            this.feeDesc = feeDesc;
+            return this;
+        }
+        public String getFeeDesc() {
+            return this.feeDesc;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents setFeeRange(String feeRange) {
+            this.feeRange = feeRange;
+            return this;
+        }
+        public String getFeeRange() {
+            return this.feeRange;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents setStyle(String style) {
+            this.style = style;
+            return this;
+        }
+        public String getStyle() {
+            return this.style;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems extends TeaModel {
+        @NameInMap("content")
+        public String content;
+
+        @NameInMap("is_struct")
+        public Boolean isStruct;
+
+        @NameInMap("ptc")
+        public String ptc;
+
+        @NameInMap("refund_sub_contents")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents> refundSubContents;
+
+        @NameInMap("title")
+        public String title;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems setIsStruct(Boolean isStruct) {
+            this.isStruct = isStruct;
+            return this;
+        }
+        public Boolean getIsStruct() {
+            return this.isStruct;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems setPtc(String ptc) {
+            this.ptc = ptc;
+            return this;
+        }
+        public String getPtc() {
+            return this.ptc;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems setRefundSubContents(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents> refundSubContents) {
+            this.refundSubContents = refundSubContents;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItemsRefundSubContents> getRefundSubContents() {
+            return this.refundSubContents;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails extends TeaModel {
+        @NameInMap("extra_contents")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents> extraContents;
+
+        @NameInMap("index")
+        public Integer index;
+
+        @NameInMap("refund_sub_items")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems> refundSubItems;
+
+        @NameInMap("table_head")
+        public String tableHead;
+
+        @NameInMap("title")
+        public String title;
+
+        @NameInMap("type")
+        public Integer type;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails setExtraContents(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents> extraContents) {
+            this.extraContents = extraContents;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents> getExtraContents() {
+            return this.extraContents;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails setRefundSubItems(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems> refundSubItems) {
+            this.refundSubItems = refundSubItems;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems> getRefundSubItems() {
+            return this.refundSubItems;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails setTableHead(String tableHead) {
+            this.tableHead = tableHead;
+            return this;
+        }
+        public String getTableHead() {
+            return this.tableHead;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq extends TeaModel {
+        @NameInMap("baggage_details")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails> baggageDetails;
+
+        @NameInMap("change_details")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails> changeDetails;
+
+        @NameInMap("refund_details")
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails> refundDetails;
+
+        public static TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq build(java.util.Map<String, ?> map) throws Exception {
+            TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq self = new TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq();
+            return TeaModel.build(map, self);
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq setBaggageDetails(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails> baggageDetails) {
+            this.baggageDetails = baggageDetails;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetails> getBaggageDetails() {
+            return this.baggageDetails;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq setChangeDetails(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails> changeDetails) {
+            this.changeDetails = changeDetails;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetails> getChangeDetails() {
+            return this.changeDetails;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq setRefundDetails(java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails> refundDetails) {
+            this.refundDetails = refundDetails;
+            return this;
+        }
+        public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetails> getRefundDetails() {
+            return this.refundDetails;
+        }
+
+    }
+
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListModifyPriceList extends TeaModel {
         @NameInMap("passenger_type")
         public Integer passengerType;
@@ -244,6 +1153,9 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("cabin_discount")
         public Integer cabinDiscount;
 
+        @NameInMap("change_ota_item_rule_rq")
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq changeOtaItemRuleRq;
+
         @NameInMap("child_cabin")
         public String childCabin;
 
@@ -291,6 +1203,14 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         }
         public Integer getCabinDiscount() {
             return this.cabinDiscount;
+        }
+
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinList setChangeOtaItemRuleRq(TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq changeOtaItemRuleRq) {
+            this.changeOtaItemRuleRq = changeOtaItemRuleRq;
+            return this;
+        }
+        public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq getChangeOtaItemRuleRq() {
+            return this.changeOtaItemRuleRq;
         }
 
         public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinList setChildCabin(String childCabin) {
