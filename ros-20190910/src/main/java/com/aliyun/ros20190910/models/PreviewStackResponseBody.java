@@ -134,6 +134,9 @@ public class PreviewStackResponseBody extends TeaModel {
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        @NameInMap("PhysicalResourceId")
+        public String physicalResourceId;
+
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
@@ -184,6 +187,14 @@ public class PreviewStackResponseBody extends TeaModel {
         }
         public String getLogicalResourceId() {
             return this.logicalResourceId;
+        }
+
+        public PreviewStackResponseBodyStackResources setPhysicalResourceId(String physicalResourceId) {
+            this.physicalResourceId = physicalResourceId;
+            return this;
+        }
+        public String getPhysicalResourceId() {
+            return this.physicalResourceId;
         }
 
         public PreviewStackResponseBodyStackResources setProperties(java.util.Map<String, ?> properties) {
