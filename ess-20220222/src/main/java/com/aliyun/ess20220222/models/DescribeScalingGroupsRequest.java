@@ -7,7 +7,7 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     /**
      * <p>The type of instances that are managed by the scaling group. Valid values:</p>
      * <br>
-     * <p>*   ECS: ECS instances</p>
+     * <p>*   ECS: Elastic Compute Service (ECS) instances</p>
      * <p>*   ECI: elastic container instances</p>
      * <br>
      * <p>Default value: ECS.</p>
@@ -43,6 +43,11 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the scaling group you want to query belongs.</p>
+     * <br>
+     * <p>> If the specified resource group contains no scaling groups, null is returned, and no error is reported.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
