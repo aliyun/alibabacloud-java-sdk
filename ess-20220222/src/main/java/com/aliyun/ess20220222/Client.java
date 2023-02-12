@@ -348,6 +348,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachLoadBalancersWithOptions(request, runtime);
     }
 
+    public AttachServerGroupsResponse attachServerGroupsWithOptions(AttachServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceAttach)) {
+            query.put("ForceAttach", request.forceAttach);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
+            query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverGroups)) {
+            query.put("ServerGroups", request.serverGroups);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachServerGroups"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachServerGroupsResponse());
+    }
+
+    public AttachServerGroupsResponse attachServerGroups(AttachServerGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachServerGroupsWithOptions(request, runtime);
+    }
+
     /**
       * Attaches one or more vServer groups of a Classic Load Balancer (CLB) instance to a scaling group.
       *
@@ -414,6 +467,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachVServerGroupsWithOptions(request, runtime);
     }
 
+    /**
+      * A resource is an entity of cloud services that you create on Alibaba Cloud. For example, a scaling group is a resource. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources, monitor resources, and perform operations in a centralized manner. This way, you do not need to view and check your Alibaba Cloud resources in each Alibaba Cloud service.
+      *
+      * @param request ChangeResourceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -458,6 +518,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
     }
 
+    /**
+      * A resource is an entity of cloud services that you create on Alibaba Cloud. For example, a scaling group is a resource. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources, monitor resources, and perform operations in a centralized manner. This way, you do not need to view and check your Alibaba Cloud resources in each Alibaba Cloud service.
+      *
+      * @param request ChangeResourceGroupRequest
+      * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeResourceGroupWithOptions(request, runtime);
@@ -1276,26 +1342,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * A scaling group is a group of Elastic Compute Service (ECS) instances that can be used in similar business scenarios.
       * You can create only a limited number of scaling groups in a region. Go to Quota Center to check the quota of the scaling groups.
-      * A scaling group does not immediately take effect after you create the scaling group. You must call the EnableScalingGroup operation to enable the scaling group. After you enable the scaling group, Auto Scaling can execute scaling rules to trigger scaling activities in the scaling group.
-      * The Classic Load Balancer (CLB) instances and ApsaraDB RDS instances must reside in the same region as the scaling group with which you want to associate the instances. CLB instances are formerly known as Server Load Balancer (SLB) instances. For more information, see the "Regions and zones" topic in ECS Product Introduction.
-      * If you associate a CLB instance when you create a scaling group, Auto Scaling automatically adds ECS instances in the scaling group to the backend server group of the associated CLB instance. You can specify a server group to which ECS instances are to be added. You can add ECS instances to the following types of server groups:
+      * A scaling group does not immediately take effect after you create it. You must call the EnableScalingGroup operation to enable a scaling group. After you enable a scaling group, Auto Scaling can execute scaling rules to trigger scaling activities in the scaling group.
+      * The Classic Load Balancer (CLB) instances and ApsaraDB RDS instances that you want to associate with a scaling group must reside in the same region as the scaling group. CLB instances are formerly known as Server Load Balancer (SLB) instances. For more information, see the "Regions and zones" topic in ECS Product Introduction.
+      * If you associate a CLB instance with a scaling group, Auto Scaling automatically adds ECS instances in the scaling group to the backend server group of the CLB instance. You can specify a server group to which ECS instances can be added. You can add ECS instances to the following types of server groups:
       * *   Default server group: a group of ECS instances that are used to receive requests. If you do not specify a vServer group or a primary/secondary server group for a listener, requests are forwarded to the ECS instances in the default server group.
       * *   vServer group: If you want to forward requests to backend servers that are not in the default server group or configure domain name-based or URL-based forwarding rules, you can use vServer groups.
       * > If you specify the default server group and multiple vServer groups at the same time, ECS instances are added to all specified server groups.
       * The default weight of an ECS instance that is added as a backend server of a CLB instance is 50. The CLB instance that you want to associate with your scaling group must meet the following requirements:
-      * *   The CLB instance must be in the Active state. You can call the DescribeLoadBalancers operation to query the state of the specified CLB instance.
+      * *   The CLB instance must be in the Active state. You can call the DescribeLoadBalancers operation to query the state of the CLB instance.
       * *   The health check feature must be enabled on all listener ports that are configured for the CLB instance. Otherwise, the scaling group fails to be created.
-      * If you have associated an Application Load Balancer (ALB) server group with a scaling group, Auto Scaling automatically adds ECS instances in the scaling group to the ALB server group to process requests distributed by the ALB instance to which the ALB server group belongs. You can specify multiple ALB server groups. The server groups must belong to the same virtual private cloud (VPC) as the scaling group. For more information, see the AttachAlbServerGroups topic.
-      * If you associated an ApsaraDB RDS instance when you created a scaling group, Auto Scaling automatically adds the private IP addresses of the ECS instances in the scaling group to the IP whitelist that manages access to the associated ApsaraDB RDS instance. The ApsaraDB RDS instance that you want to associate with your scaling group must meet the following requirements:
-      * *   The ApsaraDB RDS instance must be in the Running state. You can call the DescribeDBInstances operation to query the state of the specified ApsaraDB RDS instance.
-      * *   The number of IP addresses in the IP whitelist that manages access to the ApsaraDB RDS instance cannot exceed the upper limit. For more information, see the Configure whitelists topic in ApsaraDB RDS User Guide.
-      * If the MultiAZPolicy parameter of the scaling group is set to COST_OPTIMIZED, the following rules apply:
-      * *   You can use the OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, and SpotInstancePools parameters to specify an instance allocation method based on the cost optimization policy. The specified instance allocation method is prioritized during scaling.
+      * If you associate an Application Load Balancer (ALB) server group with a scaling group, Auto Scaling automatically adds ECS instances in the scaling group to the ALB server group to process requests distributed by the ALB instance to which the ALB server group belongs. You can specify multiple ALB server groups. The server groups must reside in the same virtual private cloud (VPC) as the scaling group. For more information, see the "AttachAlbServerGroups" topic.
+      * If you associate an ApsaraDB RDS instance with a scaling group, Auto Scaling automatically adds the private IP addresses of the ECS instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance. The ApsaraDB RDS instance that you want to associate with your scaling group must meet the following requirements:
+      * *   The ApsaraDB RDS instance must be in the Running state. You can call the DescribeDBInstances operation to query the state of the ApsaraDB RDS instance.
+      * *   The number of IP addresses in the IP address whitelist of the ApsaraDB RDS instance cannot exceed the upper limit. For more information, see the "Configure whitelists" topic in ApsaraDB RDS User Guide.
+      * If you set the MultiAZPolicy parameter of the scaling group to COST_OPTIMIZED, take note of the following items:
+      * *   You can use the OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, and SpotInstancePools parameters to specify the instance allocation method based on the cost optimization policy. This instance allocation method is prioritized during scaling.
       * *   If you do not specify the OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, or SpotInstancePools parameter, the instance types that are provided at the lowest price are used to create instances based on the cost optimization policy.
-      * If you set the `Tag.N.Propagate` parameter for the scaling group to true, tags that you add to the scaling group are propagated to new instances.
-      * *   Tags that you add to the scaling group cannot be propagated to existing instances in the scaling group.
+      * If you set the `Tags.Propagate` parameter for the scaling group to true, the following rules apply:
+      * *   Tags that you add to the scaling group cannot be propagated to existing instances in the scaling group. Tags that you add to the scaling group are propagated to only new instances.
       * *   If you specify instance tags in the scaling configuration that is used to create instances, and propagate the tags that you add to the scaling group to the instances, all tags exist at the same time.
-      * *   If you specify the same tag key for a scaling configuration and a scaling group that uses the scaling configuration, the tag value in the scaling configuration is used.
+      * *   If the tag key that you specify in a scaling configuration and the tag key that you add to the scaling group that uses the scaling configuration are the same, the tag value that you specify in the scaling configuration is preferentially used.
       *
       * @param request CreateScalingGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1436,6 +1502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScalingPolicy", request.scalingPolicy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serverGroups)) {
+            query.put("ServerGroups", request.serverGroups);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.spotAllocationStrategy)) {
             query.put("SpotAllocationStrategy", request.spotAllocationStrategy);
         }
@@ -1488,26 +1558,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * A scaling group is a group of Elastic Compute Service (ECS) instances that can be used in similar business scenarios.
       * You can create only a limited number of scaling groups in a region. Go to Quota Center to check the quota of the scaling groups.
-      * A scaling group does not immediately take effect after you create the scaling group. You must call the EnableScalingGroup operation to enable the scaling group. After you enable the scaling group, Auto Scaling can execute scaling rules to trigger scaling activities in the scaling group.
-      * The Classic Load Balancer (CLB) instances and ApsaraDB RDS instances must reside in the same region as the scaling group with which you want to associate the instances. CLB instances are formerly known as Server Load Balancer (SLB) instances. For more information, see the "Regions and zones" topic in ECS Product Introduction.
-      * If you associate a CLB instance when you create a scaling group, Auto Scaling automatically adds ECS instances in the scaling group to the backend server group of the associated CLB instance. You can specify a server group to which ECS instances are to be added. You can add ECS instances to the following types of server groups:
+      * A scaling group does not immediately take effect after you create it. You must call the EnableScalingGroup operation to enable a scaling group. After you enable a scaling group, Auto Scaling can execute scaling rules to trigger scaling activities in the scaling group.
+      * The Classic Load Balancer (CLB) instances and ApsaraDB RDS instances that you want to associate with a scaling group must reside in the same region as the scaling group. CLB instances are formerly known as Server Load Balancer (SLB) instances. For more information, see the "Regions and zones" topic in ECS Product Introduction.
+      * If you associate a CLB instance with a scaling group, Auto Scaling automatically adds ECS instances in the scaling group to the backend server group of the CLB instance. You can specify a server group to which ECS instances can be added. You can add ECS instances to the following types of server groups:
       * *   Default server group: a group of ECS instances that are used to receive requests. If you do not specify a vServer group or a primary/secondary server group for a listener, requests are forwarded to the ECS instances in the default server group.
       * *   vServer group: If you want to forward requests to backend servers that are not in the default server group or configure domain name-based or URL-based forwarding rules, you can use vServer groups.
       * > If you specify the default server group and multiple vServer groups at the same time, ECS instances are added to all specified server groups.
       * The default weight of an ECS instance that is added as a backend server of a CLB instance is 50. The CLB instance that you want to associate with your scaling group must meet the following requirements:
-      * *   The CLB instance must be in the Active state. You can call the DescribeLoadBalancers operation to query the state of the specified CLB instance.
+      * *   The CLB instance must be in the Active state. You can call the DescribeLoadBalancers operation to query the state of the CLB instance.
       * *   The health check feature must be enabled on all listener ports that are configured for the CLB instance. Otherwise, the scaling group fails to be created.
-      * If you have associated an Application Load Balancer (ALB) server group with a scaling group, Auto Scaling automatically adds ECS instances in the scaling group to the ALB server group to process requests distributed by the ALB instance to which the ALB server group belongs. You can specify multiple ALB server groups. The server groups must belong to the same virtual private cloud (VPC) as the scaling group. For more information, see the AttachAlbServerGroups topic.
-      * If you associated an ApsaraDB RDS instance when you created a scaling group, Auto Scaling automatically adds the private IP addresses of the ECS instances in the scaling group to the IP whitelist that manages access to the associated ApsaraDB RDS instance. The ApsaraDB RDS instance that you want to associate with your scaling group must meet the following requirements:
-      * *   The ApsaraDB RDS instance must be in the Running state. You can call the DescribeDBInstances operation to query the state of the specified ApsaraDB RDS instance.
-      * *   The number of IP addresses in the IP whitelist that manages access to the ApsaraDB RDS instance cannot exceed the upper limit. For more information, see the Configure whitelists topic in ApsaraDB RDS User Guide.
-      * If the MultiAZPolicy parameter of the scaling group is set to COST_OPTIMIZED, the following rules apply:
-      * *   You can use the OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, and SpotInstancePools parameters to specify an instance allocation method based on the cost optimization policy. The specified instance allocation method is prioritized during scaling.
+      * If you associate an Application Load Balancer (ALB) server group with a scaling group, Auto Scaling automatically adds ECS instances in the scaling group to the ALB server group to process requests distributed by the ALB instance to which the ALB server group belongs. You can specify multiple ALB server groups. The server groups must reside in the same virtual private cloud (VPC) as the scaling group. For more information, see the "AttachAlbServerGroups" topic.
+      * If you associate an ApsaraDB RDS instance with a scaling group, Auto Scaling automatically adds the private IP addresses of the ECS instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance. The ApsaraDB RDS instance that you want to associate with your scaling group must meet the following requirements:
+      * *   The ApsaraDB RDS instance must be in the Running state. You can call the DescribeDBInstances operation to query the state of the ApsaraDB RDS instance.
+      * *   The number of IP addresses in the IP address whitelist of the ApsaraDB RDS instance cannot exceed the upper limit. For more information, see the "Configure whitelists" topic in ApsaraDB RDS User Guide.
+      * If you set the MultiAZPolicy parameter of the scaling group to COST_OPTIMIZED, take note of the following items:
+      * *   You can use the OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, and SpotInstancePools parameters to specify the instance allocation method based on the cost optimization policy. This instance allocation method is prioritized during scaling.
       * *   If you do not specify the OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, or SpotInstancePools parameter, the instance types that are provided at the lowest price are used to create instances based on the cost optimization policy.
-      * If you set the `Tag.N.Propagate` parameter for the scaling group to true, tags that you add to the scaling group are propagated to new instances.
-      * *   Tags that you add to the scaling group cannot be propagated to existing instances in the scaling group.
+      * If you set the `Tags.Propagate` parameter for the scaling group to true, the following rules apply:
+      * *   Tags that you add to the scaling group cannot be propagated to existing instances in the scaling group. Tags that you add to the scaling group are propagated to only new instances.
       * *   If you specify instance tags in the scaling configuration that is used to create instances, and propagate the tags that you add to the scaling group to the instances, all tags exist at the same time.
-      * *   If you specify the same tag key for a scaling configuration and a scaling group that uses the scaling configuration, the tag value in the scaling configuration is used.
+      * *   If the tag key that you specify in a scaling configuration and the tag key that you add to the scaling group that uses the scaling configuration are the same, the tag value that you specify in the scaling configuration is preferentially used.
       *
       * @param request CreateScalingGroupRequest
       * @return CreateScalingGroupResponse
@@ -3404,6 +3474,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DetachLoadBalancersResponse detachLoadBalancers(DetachLoadBalancersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachLoadBalancersWithOptions(request, runtime);
+    }
+
+    public DetachServerGroupsResponse detachServerGroupsWithOptions(DetachServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceDetach)) {
+            query.put("ForceDetach", request.forceDetach);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
+            query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverGroups)) {
+            query.put("ServerGroups", request.serverGroups);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachServerGroups"),
+            new TeaPair("version", "2022-02-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachServerGroupsResponse());
+    }
+
+    public DetachServerGroupsResponse detachServerGroups(DetachServerGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachServerGroupsWithOptions(request, runtime);
     }
 
     /**

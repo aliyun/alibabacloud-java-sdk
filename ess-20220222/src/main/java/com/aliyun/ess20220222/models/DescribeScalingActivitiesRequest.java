@@ -19,7 +19,7 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -41,7 +41,7 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     /**
      * <p>The IDs of the scaling activities that you want to query.</p>
      * <br>
-     * <p>> When you call this operation, you must specify a value for the ScalingGroupId or ScalingActivityIds parameter.</p>
+     * <p>> When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.</p>
      */
     @NameInMap("ScalingActivityIds")
     public java.util.List<String> scalingActivityIds;
@@ -49,7 +49,7 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     /**
      * <p>The ID of the scaling group.</p>
      * <br>
-     * <p>> When you call this operation, you must specify a value for the ScalingGroupId or ScalingActivityIds parameter.</p>
+     * <p>> When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

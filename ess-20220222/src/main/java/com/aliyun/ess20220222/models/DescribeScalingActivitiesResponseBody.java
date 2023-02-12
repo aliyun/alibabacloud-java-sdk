@@ -17,7 +17,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -93,14 +93,20 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String autoCreatedCapacity;
 
         /**
-         * <p>The cause that triggered the scaling activity.</p>
+         * <p>The reason why the scaling activity was triggered.</p>
          */
         @NameInMap("Cause")
         public String cause;
 
+        /**
+         * <p>The number of instances that were created during the scaling activity.</p>
+         */
         @NameInMap("CreatedCapacity")
         public Integer createdCapacity;
 
+        /**
+         * <p>The instances that were created during the scaling activity.</p>
+         */
         @NameInMap("CreatedInstances")
         public java.util.List<String> createdInstances;
 
@@ -110,12 +116,21 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The number of instances that were released during the scaling activity.</p>
+         */
         @NameInMap("DestroyedCapacity")
         public Integer destroyedCapacity;
 
+        /**
+         * <p>The instances that were released during the scaling activity.</p>
+         */
         @NameInMap("DestroyedInstances")
         public java.util.List<String> destroyedInstances;
 
+        /**
+         * <p>Details of the scaling activity.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
@@ -125,9 +140,15 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The error code that is returned when the scaling activity failed.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message that is returned when the scaling activity failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -150,9 +171,9 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         public String scalingGroupId;
 
         /**
-         * <p>The number of instances that were created or restarted from the economical mode during the scale-out activity.</p>
+         * <p>If the scaling activity is a scale-out activity, the value of this parameter indicates the number of instances that were created during the scaling activity or the number of instances that were started from Economical Mode.</p>
          * <br>
-         * <p>The number of instances that were deleted or put into the economical mode during the scale-in activity.</p>
+         * <p>If the scaling activity is a scale-in activity, the value of this parameter indicates the number of instances that were deleted during the scaling activity or the number of instances that were stopped in Economical Mode.</p>
          */
         @NameInMap("ScalingInstanceNumber")
         public Integer scalingInstanceNumber;
@@ -163,9 +184,15 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The number of instances that were started from Economical Mode during the scaling activity.</p>
+         */
         @NameInMap("StartedCapacity")
         public Integer startedCapacity;
 
+        /**
+         * <p>The instances that were started from Economical Mode during the scaling activity.</p>
+         */
         @NameInMap("StartedInstances")
         public java.util.List<String> startedInstances;
 
@@ -187,9 +214,15 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        /**
+         * <p>The number of instances that were stopped in Economical Mode during the scaling activity.</p>
+         */
         @NameInMap("StoppedCapacity")
         public Integer stoppedCapacity;
 
+        /**
+         * <p>The instances that were stopped in Economical Mode during the scaling activity.</p>
+         */
         @NameInMap("StoppedInstances")
         public java.util.List<String> stoppedInstances;
 
