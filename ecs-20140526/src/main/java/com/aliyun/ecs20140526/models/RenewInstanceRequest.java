@@ -4,25 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The synchronized expiration date. Set the value to a synchronized expiration date that you specified. Otherwise, the call fails. If you set this parameter, your instance will be renewed to the specified synchronized expiration date. Valid values: 1 to 28.</p>
-     * <br>
-     * <p>For information about how to synchronize the expiration dates of instances, see [Synchronize the expiration dates of subscription instances](~~108486~~).</p>
-     * <br>
-     * <p>>  The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.</p>
-     */
     @NameInMap("ExpectedRenewDay")
     public Integer expectedRenewDay;
 
-    /**
-     * <p>The ID of the instance.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -32,23 +19,9 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The renewal period of the subscription instance. If the `DedicatedHostId` parameter is specified, the value of Period must not exceed the subscription period of the specified dedicated host. Valid values:</p>
-     * <br>
-     * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
-     * <br>
-     * <p>>  The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.</p>
-     */
     @NameInMap("Period")
     public Integer period;
 
-    /**
-     * <p>The unit of the renewal period. Valid value:</p>
-     * <br>
-     * <p>Month</p>
-     * <br>
-     * <p>Default value: Month.</p>
-     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 

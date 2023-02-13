@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEniMonitorDataResponseBody extends TeaModel {
-    /**
-     * <p>Details about the monitored data of the ENI.</p>
-     */
     @NameInMap("MonitorData")
     public DescribeEniMonitorDataResponseBodyMonitorData monitorData;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of returned entries.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -52,51 +43,27 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData extends TeaModel {
-        /**
-         * <p>The number of dropped packets received by the secondary ENI over the internal network.</p>
-         */
         @NameInMap("DropPacketRx")
         public String dropPacketRx;
 
-        /**
-         * <p>The number of dropped packets sent by the secondary ENI over the internal network.</p>
-         */
         @NameInMap("DropPacketTx")
         public String dropPacketTx;
 
-        /**
-         * <p>The ID of the secondary ENI.</p>
-         */
         @NameInMap("EniId")
         public String eniId;
 
-        /**
-         * <p>The average rate of data traffic received by the secondary ENI over the internal network. Unit: Kbit/s.</p>
-         */
         @NameInMap("IntranetRx")
         public String intranetRx;
 
-        /**
-         * <p>The average rate of data traffic sent by the secondary ENI over the internal network. Unit: Kbit/s.</p>
-         */
         @NameInMap("IntranetTx")
         public String intranetTx;
 
-        /**
-         * <p>The number of packets received by the secondary ENI over the internal network.</p>
-         */
         @NameInMap("PacketRx")
         public String packetRx;
 
-        /**
-         * <p>The number of packets sent by the secondary ENI over the internal network.</p>
-         */
         @NameInMap("PacketTx")
         public String packetTx;
 
-        /**
-         * <p>The timestamp of the monitored data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

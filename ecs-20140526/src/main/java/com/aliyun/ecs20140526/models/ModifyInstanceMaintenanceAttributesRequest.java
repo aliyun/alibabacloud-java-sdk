@@ -4,36 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
-    /**
-     * <p>The maintenance action. Valid values:</p>
-     * <br>
-     * <p>*   Stop: stops the instance.</p>
-     * <p>*   AutoRecover: automatically recovers the instance.</p>
-     * <p>*   AutoRedeploy: redeploys the instance, which may damage the data of the local disks (if any).</p>
-     */
     @NameInMap("ActionOnMaintenance")
     public String actionOnMaintenance;
 
-    /**
-     * <p>The ID of instance N. Valid values of N: 1 to 100.</p>
-     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
-    /**
-     * <p>The maintenance windows.</p>
-     */
     @NameInMap("MaintenanceWindow")
     public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow;
 
-    /**
-     * <p>Specifies whether to send an event notification before maintenance. Valid values:</p>
-     * <br>
-     * <p>*   True: sends an event notification.</p>
-     * <p>*   False: does not send an event notification.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("NotifyOnMaintenance")
     public Boolean notifyOnMaintenance;
 
@@ -43,9 +22,6 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -133,15 +109,9 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     }
 
     public static class ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow extends TeaModel {
-        /**
-         * <p>The end time of the maintenance window. The time must be on the hour at exactly 0 minute and 0 second. The StartTime and EndTime parameters must be specified at the same time. The EndTime value must be 1 to 23 hours later than the StartTime value. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The start time of the maintenance window. The time must be on the hour at exactly 0 minute and 0 second. The StartTime and EndTime parameters must be specified at the same time. The EndTime value must be 1 to 23 hours later than the StartTime value. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 

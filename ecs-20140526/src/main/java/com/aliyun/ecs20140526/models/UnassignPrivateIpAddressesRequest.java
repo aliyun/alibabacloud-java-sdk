@@ -7,9 +7,6 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
-    /**
-     * <p>The ID of the ENI.</p>
-     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -19,15 +16,9 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The secondary private IP addresses to unassign.</p>
-     */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 
-    /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

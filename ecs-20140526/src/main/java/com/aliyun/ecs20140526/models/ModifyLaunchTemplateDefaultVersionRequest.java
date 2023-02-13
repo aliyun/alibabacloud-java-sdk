@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
-    /**
-     * <p>The default version number of the instance launch template.</p>
-     */
     @NameInMap("DefaultVersionNumber")
     public Long defaultVersionNumber;
 
-    /**
-     * <p>The ID of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
-     */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
-    /**
-     * <p>The name of the launch template. You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
-     */
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
 
@@ -28,9 +19,6 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

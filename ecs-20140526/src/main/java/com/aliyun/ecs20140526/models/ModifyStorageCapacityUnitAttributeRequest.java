@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyStorageCapacityUnitAttributeRequest extends TeaModel {
-    /**
-     * <p>The description of the SCU. It must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The name of the SCU. It must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.</p>
-     */
     @NameInMap("Name")
     public String name;
 
@@ -22,9 +16,6 @@ public class ModifyStorageCapacityUnitAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the SCU. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,9 +25,6 @@ public class ModifyStorageCapacityUnitAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the SCU.</p>
-     */
     @NameInMap("StorageCapacityUnitId")
     public String storageCapacityUnitId;
 

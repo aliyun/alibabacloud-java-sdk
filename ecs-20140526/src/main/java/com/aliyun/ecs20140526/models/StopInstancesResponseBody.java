@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StopInstancesResponseBody extends TeaModel {
-    /**
-     * <p>Details about instance-specific responses, which contain the states of each instance before and after the operation is called and the results of the operation.</p>
-     */
     @NameInMap("InstanceResponses")
     public StopInstancesResponseBodyInstanceResponses instanceResponses;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,33 +32,18 @@ public class StopInstancesResponseBody extends TeaModel {
     }
 
     public static class StopInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
-        /**
-         * <p>The error code of the instance operation result. The return value 200 indicates success. For more information, see the "Error codes" section in this topic.</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The current state of the instance.</p>
-         */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
-        /**
-         * <p>The ID of instance N.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The error message for instance operation. The return value Success indicates operation success. For more information, see the "Error codes" section in this topic.</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>The state of the instance before the operation is called.</p>
-         */
         @NameInMap("PreviousStatus")
         public String previousStatus;
 

@@ -4,54 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePrefixListAttributesResponseBody extends TeaModel {
-    /**
-     * <p>The IP address family of the prefix list. Valid values:</p>
-     * <br>
-     * <p>*   IPv4</p>
-     * <p>*   IPv6</p>
-     */
     @NameInMap("AddressFamily")
     public String addressFamily;
 
-    /**
-     * <p>The time when the prefix list was created.</p>
-     */
     @NameInMap("CreationTime")
     public String creationTime;
 
-    /**
-     * <p>The description of the prefix list.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>Details about the entries in the prefix list.</p>
-     */
     @NameInMap("Entries")
     public DescribePrefixListAttributesResponseBodyEntries entries;
 
-    /**
-     * <p>The maximum number of entries that the prefix list can contain.</p>
-     */
     @NameInMap("MaxEntries")
     public Integer maxEntries;
 
-    /**
-     * <p>The ID of the prefix list.</p>
-     */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
-    /**
-     * <p>The name of the prefix list.</p>
-     */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -125,15 +98,9 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListAttributesResponseBodyEntriesEntry extends TeaModel {
-        /**
-         * <p>The CIDR block in the entry in the prefix list.</p>
-         */
         @NameInMap("Cidr")
         public String cidr;
 
-        /**
-         * <p>The description of the entry in the prefix list.</p>
-         */
         @NameInMap("Description")
         public String description;
 

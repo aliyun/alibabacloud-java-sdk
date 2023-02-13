@@ -4,34 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartInstancesRequest extends TeaModel {
-    /**
-     * <p>The batch operation mode. Valid values:</p>
-     * <br>
-     * <p>*   AllTogether: In this mode, if all instances are started, a success message is returned. If an instance fails the check when DryRun is set to false, all the specified instances cannot be started and an error message is returned.</p>
-     * <p>*   SuccessFirst: In this mode, each instance is started separately. The response contains the operation results of each instance.</p>
-     * <br>
-     * <p>Default value: AllTogether.</p>
-     */
     @NameInMap("BatchOptimization")
     public String batchOptimization;
 
-    /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
-     * <br>
-     * <p>*   true: The validity of the request is checked but the request is not made. Check items include the request format, instance status, and whether the required parameters are specified. If the check fails, the corresponding error message is returned. If the check succeeds, `DRYRUN.SUCCESS` is returned.</p>
-     * <br>
-     * <p>    > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the check succeeds.</p>
-     * <br>
-     * <p>*   false: The validity of the request is checked, and the instances are started if the check succeeds.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    /**
-     * <p>The instance IDs. Up to 100.</p>
-     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -41,9 +19,6 @@ public class StartInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
