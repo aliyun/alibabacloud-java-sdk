@@ -4,12 +4,21 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DescribeCACertificateResponseBody extends TeaModel {
+    /**
+     * <p>The details about the CA certificate.</p>
+     */
     @NameInMap("Certificate")
     public DescribeCACertificateResponseBodyCertificate certificate;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The validity period of the CA certificate. Unit: years.</p>
+     */
     @NameInMap("Years")
     public Integer years;
 
@@ -43,72 +52,162 @@ public class DescribeCACertificateResponseBody extends TeaModel {
     }
 
     public static class DescribeCACertificateResponseBodyCertificate extends TeaModel {
+        /**
+         * <p>The expiration date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("AfterDate")
         public Long afterDate;
 
+        /**
+         * <p>The encryption algorithm of the CA certificate. Valid values:</p>
+         * <br>
+         * <p>*   **RSA**: the Rivest-Shamir-Adleman (RSA) algorithm.</p>
+         * <p>*   **ECC**: the elliptic curve cryptography (ECC) algorithm.</p>
+         * <p>*   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
+        /**
+         * <p>The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        /**
+         * <p>The type of the CA certificate. Valid values:</p>
+         * <br>
+         * <p>*   **ROOT**: root CA certificate</p>
+         * <p>*   **SUB_ROOT**: intermediate CA certificate</p>
+         */
         @NameInMap("CertificateType")
         public String certificateType;
 
+        /**
+         * <p>The common name or abbreviation of the organization that is associated with the CA certificate.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The code of the country in which the organization is located.</p>
+         * <br>
+         * <p>For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.</p>
+         */
         @NameInMap("CountryCode")
         public String countryCode;
 
+        /**
+         * <p>The status of the certificate revocation list (CRL) feature.</p>
+         */
         @NameInMap("CrlStatus")
         public String crlStatus;
 
+        /**
+         * <p>The address of the CRL.</p>
+         */
         @NameInMap("CrlUrl")
         public String crlUrl;
 
+        /**
+         * <p>The unique identifier of the CA certificate.</p>
+         */
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>The key length of the CA certificate.</p>
+         */
         @NameInMap("KeySize")
         public Integer keySize;
 
+        /**
+         * <p>The name of the city in which the organization is located.</p>
+         */
         @NameInMap("Locality")
         public String locality;
 
+        /**
+         * <p>The MD5 fingerprint of the CA certificate.</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>The name of the organization that is associated with the CA certificate.</p>
+         */
         @NameInMap("Organization")
         public String organization;
 
+        /**
+         * <p>The name of the department or branch in the organization that is associated with the CA certificate.</p>
+         */
         @NameInMap("OrganizationUnit")
         public String organizationUnit;
 
+        /**
+         * <p>The unique identifier of the root CA certificate from which the CA certificate is issued.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the value of the **CertificateType** parameter is **SUB_ROOT**. The value SUB_ROOT indicates an intermediate CA certificate.</p>
+         */
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Sans")
         public String sans;
 
+        /**
+         * <p>The serial number of the CA certificate.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
+        /**
+         * <p>The SHA-256 fingerprint of the CA certificate.</p>
+         */
         @NameInMap("Sha2")
         public String sha2;
 
+        /**
+         * <p>The signature algorithm of the CA certificate.</p>
+         */
         @NameInMap("SignAlgorithm")
         public String signAlgorithm;
 
+        /**
+         * <p>The name of the province, municipality, or autonomous region in which the organization is located.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The status of the CA certificate. Valid values:</p>
+         * <br>
+         * <p>*   **ISSUE**: The CA certificate is issued.</p>
+         * <p>*   **REVOKE**: The CA certificate is revoked.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The user attribute of the CA certificate, which contains the following information:</p>
+         * <br>
+         * <p>*   **C**: the country code in which the organization is located</p>
+         * <p>*   **O**: the name of the organization</p>
+         * <p>*   **OU**: the name of the department or branch in the organization</p>
+         * <p>*   **L**: the name of the city in which the organization is located</p>
+         * <p>*   **ST**: the name of the province, municipality, or autonomous region in which the organization is located</p>
+         * <p>*   **CN**: the common name or abbreviation of the organization</p>
+         */
         @NameInMap("SubjectDN")
         public String subjectDN;
 
+        /**
+         * <p>The content of the CA certificate.</p>
+         */
         @NameInMap("X509Certificate")
         public String x509Certificate;
 

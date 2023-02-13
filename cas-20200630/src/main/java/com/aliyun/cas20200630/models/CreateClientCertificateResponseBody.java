@@ -4,21 +4,30 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateClientCertificateResponseBody extends TeaModel {
+    /**
+     * <p>The certificate chain of the client certificate.</p>
+     */
     @NameInMap("CertificateChain")
     public String certificateChain;
 
+    /**
+     * <p>The unique identifier of the client certificate.</p>
+     */
     @NameInMap("Identifier")
     public String identifier;
 
-    @NameInMap("ParentX509Certificate")
-    public String parentX509Certificate;
-
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RootX509Certificate")
-    public String rootX509Certificate;
+    @NameInMap("SerialNumber")
+    public String serialNumber;
 
+    /**
+     * <p>The content of the client certificate.</p>
+     */
     @NameInMap("X509Certificate")
     public String x509Certificate;
 
@@ -43,14 +52,6 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         return this.identifier;
     }
 
-    public CreateClientCertificateResponseBody setParentX509Certificate(String parentX509Certificate) {
-        this.parentX509Certificate = parentX509Certificate;
-        return this;
-    }
-    public String getParentX509Certificate() {
-        return this.parentX509Certificate;
-    }
-
     public CreateClientCertificateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -59,12 +60,12 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateClientCertificateResponseBody setRootX509Certificate(String rootX509Certificate) {
-        this.rootX509Certificate = rootX509Certificate;
+    public CreateClientCertificateResponseBody setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
         return this;
     }
-    public String getRootX509Certificate() {
-        return this.rootX509Certificate;
+    public String getSerialNumber() {
+        return this.serialNumber;
     }
 
     public CreateClientCertificateResponseBody setX509Certificate(String x509Certificate) {

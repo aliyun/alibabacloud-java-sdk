@@ -4,27 +4,65 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateRootCACertificateRequest extends TeaModel {
+    /**
+     * <p>The key algorithm of the root CA certificate. The key algorithm is in the `<Encryption algorithm>_<Key length>` format. Valid values:</p>
+     * <br>
+     * <p>*   **RSA\_1024**: The signature algorithm is Sha256WithRSA.</p>
+     * <p>*   **RSA\_2048**: The signature algorithm is Sha256WithRSA.</p>
+     * <p>*   **RSA\_4096**: The signature algorithm is Sha256WithRSA.</p>
+     * <p>*   **ECC\_256**: The signature algorithm is Sha256WithECDSA.</p>
+     * <p>*   **ECC\_384**: The signature algorithm is Sha256WithECDSA.</p>
+     * <p>*   **ECC\_512**: The signature algorithm is Sha256WithECDSA.</p>
+     * <p>*   **SM2\_256**: The signature algorithm is SM3WithSM2.</p>
+     * <br>
+     * <p>The encryption algorithm of the root CA certificate must be consistent with the **encryption algorithm** of the private root CA instance that you purchase. For example, if the **encryption algorithm** of the private root CA instance that you purchase is **RSA**, the key algorithm of the root CA certificate must be **RSA\_1024**, **RSA\_2048**, or **RSA\_4096**.</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>The common name or abbreviation of the organization. The value can contain letters.</p>
+     */
     @NameInMap("CommonName")
     public String commonName;
 
+    /**
+     * <p>The code of the country or region in which the organization is located. You can enter an alpha-2 code. For example, you can use **CN** to indicate China and use **US** to indicate the United States.</p>
+     * <br>
+     * <p>For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.</p>
+     */
     @NameInMap("CountryCode")
     public String countryCode;
 
+    /**
+     * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+     */
     @NameInMap("Locality")
     public String locality;
 
+    /**
+     * <p>The name of the organization that is associated with the root CA certificate. You can enter the name of your enterprise or company. The value can contain letters.</p>
+     */
     @NameInMap("Organization")
     public String organization;
 
+    /**
+     * <p>The name of the department or branch in the organization. The value can contain letters.</p>
+     */
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
+    /**
+     * <p>The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The validity period of the root CA certificate. Unit: years.</p>
+     * <br>
+     * <p>>  We recommend that you set this parameter to a value from 5 to 10.</p>
+     */
     @NameInMap("Years")
     public Integer years;
 
