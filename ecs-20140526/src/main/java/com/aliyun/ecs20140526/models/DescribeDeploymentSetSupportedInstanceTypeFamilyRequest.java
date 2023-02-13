@@ -10,9 +10,6 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Tea
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

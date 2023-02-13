@@ -4,31 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachDiskRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to automatically release the system disk when the instance from which the system disk is to be detached is released. Valid values:</p>
-     * <br>
-     * <p>*   true: The system disk is released when the instance is released.</p>
-     * <p>*   false: The system disk is not released when the instance is released. The system disk is retained as a pay-as-you-go data disk.</p>
-     * <br>
-     * <p>Default value: true.</p>
-     * <br>
-     * <p>When you call this operation, take note of the following items:</p>
-     * <br>
-     * <p>*   This parameter cannot be set for disks for which the multi-attach feature is enabled.</p>
-     * <p>*   If a data disk is to be detached, the default value is `false`.</p>
-     */
     @NameInMap("DeleteWithInstance")
     public Boolean deleteWithInstance;
 
-    /**
-     * <p>The ID of the disk to be detached.</p>
-     */
     @NameInMap("DiskId")
     public String diskId;
 
-    /**
-     * <p>The ID of the ECS instance from which the disk is to be detached.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 

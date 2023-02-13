@@ -10,50 +10,18 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("NotBefore")
     public DescribeInstancesFullStatusRequestNotBefore notBefore;
 
-    /**
-     * <p>The IDs of the event. You can specify up to 100 event IDs in a single request.</p>
-     */
     @NameInMap("EventId")
     public java.util.List<String> eventId;
 
-    /**
-     * <p>The type of the system event. This parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values:</p>
-     * <br>
-     * <p>*   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</p>
-     * <p>*   SystemFailure.Reboot: The instance is restarted due to a system failure.</p>
-     * <p>*   InstanceFailure.Reboot: The instance is restarted due to an instance failure.</p>
-     * <p>*   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</p>
-     * <p>*   InstanceExpiration.Delete: The subscription instance is released due to expiration.</p>
-     * <p>*   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</p>
-     * <p>*   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</p>
-     */
     @NameInMap("EventType")
     public String eventType;
 
-    /**
-     * <p>The health state of the instance. Valid values:</p>
-     * <br>
-     * <p>*   Impaired: The instance is impaired.</p>
-     * <p>*   Warning: The performance of the instance is degraded.</p>
-     * <p>*   Maintaining: The instance is being maintained.</p>
-     * <p>*   Initializing: The instance is being initialized.</p>
-     * <p>*   InsufficientData: The state cannot be determined due to insufficient data.</p>
-     * <p>*   NotApplicable: The state is not applicable.</p>
-     * <br>
-     * <p>All these values are case-sensitive.</p>
-     */
     @NameInMap("HealthStatus")
     public String healthStatus;
 
-    /**
-     * <p>The types of system events. You can specify up to 30 event types in a single request.</p>
-     */
     @NameInMap("InstanceEventType")
     public java.util.List<String> instanceEventType;
 
-    /**
-     * <p>The IDs of the instances. You can specify up to 100 instance IDs in a single request.</p>
-     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -63,25 +31,12 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The number of the page to return. The value must be a positive integer.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
-     * <br>
-     * <p>Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -91,13 +46,6 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The lifecycle state of the instance. Valid values:</p>
-     * <br>
-     * <p>*   Starting: The instance is being started.</p>
-     * <p>*   Running: The instance is running.</p>
-     * <p>*   Stopped: The instance is stopped.</p>
-     */
     @NameInMap("Status")
     public String status;
 
@@ -227,15 +175,9 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusRequestEventPublishTime extends TeaModel {
-        /**
-         * <p>The end of the period during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-         */
         @NameInMap("End")
         public String end;
 
-        /**
-         * <p>The beginning of the period during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-         */
         @NameInMap("Start")
         public String start;
 
@@ -263,15 +205,9 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     }
 
     public static class DescribeInstancesFullStatusRequestNotBefore extends TeaModel {
-        /**
-         * <p>The end of the period during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-         */
         @NameInMap("End")
         public String end;
 
-        /**
-         * <p>The beginning of the period during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-         */
         @NameInMap("Start")
         public String start;
 

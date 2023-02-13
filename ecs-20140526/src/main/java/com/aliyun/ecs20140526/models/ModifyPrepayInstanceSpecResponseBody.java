@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the order.</p>
-     */
     @NameInMap("OrderId")
     public String orderId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

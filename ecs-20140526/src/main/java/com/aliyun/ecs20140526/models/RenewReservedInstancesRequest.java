@@ -4,29 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RenewReservedInstancesRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
-     * <br>
-     * <p>*   true: enables auto-renewal for the reserved instance.</p>
-     * <p>*   false: does not enable auto-renewal for the reserved instance.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    /**
-     * <p>The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
-     * <br>
-     * <p>*   Valid values when PeriodUnit is set to Month: 1, 12, 36, and 60. Default value: 1.</p>
-     * <p>*   Valid values when PeriodUnit is set to Year: 12, 36, and 60. Default value: 12.</p>
-     */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -36,36 +19,15 @@ public class RenewReservedInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The term of the reserved instance.</p>
-     * <br>
-     * <p>*   Valid values when `PeriodUnit` is set to `Year`: 1, 3, and 5.</p>
-     * <p>*   Valid values when `PeriodUnit` is set to `Month`: 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     */
     @NameInMap("Period")
     public Integer period;
 
-    /**
-     * <p>The unit of the term of the reserved instance.</p>
-     * <br>
-     * <p>Valid values: Year and Month.</p>
-     * <br>
-     * <p>Default value: Month.</p>
-     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the reserved instance.</p>
-     */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
 
