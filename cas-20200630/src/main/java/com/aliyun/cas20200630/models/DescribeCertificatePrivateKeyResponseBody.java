@@ -4,9 +4,15 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertificatePrivateKeyResponseBody extends TeaModel {
+    /**
+     * <p>The content of the encrypted private key.</p>
+     */
     @NameInMap("EncryptedData")
     public String encryptedData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

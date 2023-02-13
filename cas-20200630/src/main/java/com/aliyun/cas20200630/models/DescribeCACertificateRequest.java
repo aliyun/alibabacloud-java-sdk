@@ -4,6 +4,11 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DescribeCACertificateRequest extends TeaModel {
+    /**
+     * <p>The unique identifier of the CA certificate that you want to query.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifiers of all CA certificates.</p>
+     */
     @NameInMap("Identifier")
     public String identifier;
 

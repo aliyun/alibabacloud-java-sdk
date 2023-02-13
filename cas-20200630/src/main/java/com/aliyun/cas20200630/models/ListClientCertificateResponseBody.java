@@ -4,21 +4,39 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class ListClientCertificateResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details about all client certificates and server certificates.</p>
+     */
     @NameInMap("CertificateList")
     public java.util.List<ListClientCertificateResponseBodyCertificateList> certificateList;
 
+    /**
+     * <p>The page number of the current page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of certificates that are returned per page.</p>
+     */
     @NameInMap("ShowSize")
     public Integer showSize;
 
+    /**
+     * <p>The number of client certificates and server certificates that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,69 +94,165 @@ public class ListClientCertificateResponseBody extends TeaModel {
     }
 
     public static class ListClientCertificateResponseBodyCertificateList extends TeaModel {
+        /**
+         * <p>The expiration date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("AfterDate")
         public Long afterDate;
 
+        /**
+         * <p>The type of the encryption algorithm of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **RSA**: the Rivest-Shamir-Adleman (RSA) algorithm.</p>
+         * <p>*   **ECC**: the elliptic curve cryptography (ECC) algorithm.</p>
+         * <p>*   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
+        /**
+         * <p>The issuance date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        /**
+         * <p>The type of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **CLIENT**: client certificate</p>
+         * <p>*   **SERVER**: server certificate</p>
+         */
         @NameInMap("CertificateType")
         public String certificateType;
 
+        /**
+         * <p>The common name of the certificate.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <br>
+         * <p>For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.</p>
+         */
         @NameInMap("CountryCode")
         public String countryCode;
 
+        /**
+         * <p>The validity period of the certificate. Unit: days.</p>
+         */
         @NameInMap("Days")
         public Integer days;
 
+        /**
+         * <p>The unique identifier of the certificate.</p>
+         */
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>The key length of the certificate.</p>
+         */
         @NameInMap("KeySize")
         public Integer keySize;
 
+        /**
+         * <p>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         */
         @NameInMap("Locality")
         public String locality;
 
+        /**
+         * <p>The MD5 fingerprint of the certificate.</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         */
         @NameInMap("Organization")
         public String organization;
 
+        /**
+         * <p>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</p>
+         */
         @NameInMap("OrganizationUnit")
         public String organizationUnit;
 
+        /**
+         * <p>The unique identifier of the intermediate certificate from which the client certificate is issued.</p>
+         */
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
 
+        /**
+         * <p>The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.</p>
+         * <br>
+         * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
+         * <br>
+         * <p>*   **Type**: the type of the extension. Data type: integer. Valid values:</p>
+         * <br>
+         * <p>    *   **1**: an email address</p>
+         * <p>    *   **2**: a domain name</p>
+         * <p>    *   **6**: a Uniform Resource Identifier (URI)</p>
+         * <p>    *   **7**: an IP address</p>
+         * <br>
+         * <p>*   **Value**: the value of the extension. Data type: string.</p>
+         */
         @NameInMap("Sans")
         public String sans;
 
+        /**
+         * <p>The serial number of the certificate.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
+        /**
+         * <p>The SHA-256 fingerprint of the certificate.</p>
+         */
         @NameInMap("Sha2")
         public String sha2;
 
+        /**
+         * <p>The signature algorithm of the certificate.</p>
+         */
         @NameInMap("SignAlgorithm")
         public String signAlgorithm;
 
+        /**
+         * <p>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **ISSUE**: issued</p>
+         * <p>*   **REVOKE**: revoked</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The distinguished name (DN) extension of the certificate, which indicates the user of the certificate. The DN extension includes the following information:</p>
+         * <br>
+         * <p>*   **C**: the country</p>
+         * <p>*   **O**: the organization</p>
+         * <p>*   **OU**: the department</p>
+         * <p>*   **L**: the city</p>
+         * <p>*   **ST**: the province, municipality, or autonomous region</p>
+         * <p>*   **CN**: the common name</p>
+         */
         @NameInMap("SubjectDN")
         public String subjectDN;
 
+        /**
+         * <p>The content of the certificate.</p>
+         */
         @NameInMap("X509Certificate")
         public String x509Certificate;
 
