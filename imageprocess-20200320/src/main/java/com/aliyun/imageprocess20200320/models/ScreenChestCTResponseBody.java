@@ -43,9 +43,6 @@ public class ScreenChestCTResponseBody extends TeaModel {
     }
 
     public static class ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo extends TeaModel {
-        /**
-         * <p>1</p>
-         */
         @NameInMap("Area")
         public java.util.List<Float> area;
 
@@ -120,9 +117,6 @@ public class ScreenChestCTResponseBody extends TeaModel {
     }
 
     public static class ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo extends TeaModel {
-        /**
-         * <p>1</p>
-         */
         @NameInMap("Area")
         public java.util.List<Float> area;
 
@@ -829,8 +823,20 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("Lung")
         public String lung;
 
+        @NameInMap("MajorAxis")
+        public java.util.List<Float> majorAxis;
+
         @NameInMap("MeanValue")
         public Float meanValue;
+
+        @NameInMap("MinorAxis")
+        public java.util.List<Float> minorAxis;
+
+        @NameInMap("RecistSOPInstanceUID")
+        public String recistSOPInstanceUID;
+
+        @NameInMap("Risk")
+        public Float risk;
 
         @NameInMap("SOPInstanceUID")
         public String SOPInstanceUID;
@@ -916,12 +922,44 @@ public class ScreenChestCTResponseBody extends TeaModel {
             return this.lung;
         }
 
+        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setMajorAxis(java.util.List<Float> majorAxis) {
+            this.majorAxis = majorAxis;
+            return this;
+        }
+        public java.util.List<Float> getMajorAxis() {
+            return this.majorAxis;
+        }
+
         public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setMeanValue(Float meanValue) {
             this.meanValue = meanValue;
             return this;
         }
         public Float getMeanValue() {
             return this.meanValue;
+        }
+
+        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setMinorAxis(java.util.List<Float> minorAxis) {
+            this.minorAxis = minorAxis;
+            return this;
+        }
+        public java.util.List<Float> getMinorAxis() {
+            return this.minorAxis;
+        }
+
+        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setRecistSOPInstanceUID(String recistSOPInstanceUID) {
+            this.recistSOPInstanceUID = recistSOPInstanceUID;
+            return this;
+        }
+        public String getRecistSOPInstanceUID() {
+            return this.recistSOPInstanceUID;
+        }
+
+        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setRisk(Float risk) {
+            this.risk = risk;
+            return this;
+        }
+        public Float getRisk() {
+            return this.risk;
         }
 
         public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setSOPInstanceUID(String SOPInstanceUID) {
@@ -1115,8 +1153,8 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("Lesion")
         public ScreenChestCTResponseBodyDataScreenEcLesion lesion;
 
-        @NameInMap("SeriesInsanceUid")
-        public String seriesInsanceUid;
+        @NameInMap("SeriesInstanceUid")
+        public String seriesInstanceUid;
 
         public static ScreenChestCTResponseBodyDataScreenEc build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyDataScreenEc self = new ScreenChestCTResponseBodyDataScreenEc();
@@ -1131,12 +1169,12 @@ public class ScreenChestCTResponseBody extends TeaModel {
             return this.lesion;
         }
 
-        public ScreenChestCTResponseBodyDataScreenEc setSeriesInsanceUid(String seriesInsanceUid) {
-            this.seriesInsanceUid = seriesInsanceUid;
+        public ScreenChestCTResponseBodyDataScreenEc setSeriesInstanceUid(String seriesInstanceUid) {
+            this.seriesInstanceUid = seriesInstanceUid;
             return this;
         }
-        public String getSeriesInsanceUid() {
-            return this.seriesInsanceUid;
+        public String getSeriesInstanceUid() {
+            return this.seriesInstanceUid;
         }
 
     }
