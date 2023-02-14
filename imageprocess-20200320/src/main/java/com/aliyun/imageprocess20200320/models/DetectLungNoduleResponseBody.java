@@ -67,8 +67,20 @@ public class DetectLungNoduleResponseBody extends TeaModel {
         @NameInMap("Lung")
         public String lung;
 
+        @NameInMap("MajorAxis")
+        public java.util.List<Float> majorAxis;
+
         @NameInMap("MeanValue")
         public Float meanValue;
+
+        @NameInMap("MinorAxis")
+        public java.util.List<Float> minorAxis;
+
+        @NameInMap("RecistSOPInstanceUID")
+        public String recistSOPInstanceUID;
+
+        @NameInMap("Risk")
+        public Float risk;
 
         @NameInMap("SOPInstanceUID")
         public String SOPInstanceUID;
@@ -154,12 +166,44 @@ public class DetectLungNoduleResponseBody extends TeaModel {
             return this.lung;
         }
 
+        public DetectLungNoduleResponseBodyDataSeriesElements setMajorAxis(java.util.List<Float> majorAxis) {
+            this.majorAxis = majorAxis;
+            return this;
+        }
+        public java.util.List<Float> getMajorAxis() {
+            return this.majorAxis;
+        }
+
         public DetectLungNoduleResponseBodyDataSeriesElements setMeanValue(Float meanValue) {
             this.meanValue = meanValue;
             return this;
         }
         public Float getMeanValue() {
             return this.meanValue;
+        }
+
+        public DetectLungNoduleResponseBodyDataSeriesElements setMinorAxis(java.util.List<Float> minorAxis) {
+            this.minorAxis = minorAxis;
+            return this;
+        }
+        public java.util.List<Float> getMinorAxis() {
+            return this.minorAxis;
+        }
+
+        public DetectLungNoduleResponseBodyDataSeriesElements setRecistSOPInstanceUID(String recistSOPInstanceUID) {
+            this.recistSOPInstanceUID = recistSOPInstanceUID;
+            return this;
+        }
+        public String getRecistSOPInstanceUID() {
+            return this.recistSOPInstanceUID;
+        }
+
+        public DetectLungNoduleResponseBodyDataSeriesElements setRisk(Float risk) {
+            this.risk = risk;
+            return this;
+        }
+        public Float getRisk() {
+            return this.risk;
         }
 
         public DetectLungNoduleResponseBodyDataSeriesElements setSOPInstanceUID(String SOPInstanceUID) {
