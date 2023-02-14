@@ -4,7 +4,9 @@ package com.aliyun.antirisk20221128.models;
 import com.aliyun.tea.*;
 
 public class GetZidTagByAtokenRequest extends TeaModel {
-    // atoken
+    /**
+     * <p>atoken</p>
+     */
     @NameInMap("atoken")
     public String atoken;
 

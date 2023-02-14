@@ -7,7 +7,9 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
     @NameInMap("Msg")
     public String msg;
 
-    // code
+    /**
+     * <p>code</p>
+     */
     @NameInMap("code")
     public Long code;
 
@@ -17,7 +19,9 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    // success
+    /**
+     * <p>success</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -67,7 +71,9 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
     }
 
     public static class GetZidTagByAtokenResponseBodyData extends TeaModel {
-        // aHook
+        /**
+         * <p>aHook</p>
+         */
         @NameInMap("aHook")
         public String aHook;
 
@@ -77,7 +83,9 @@ public class GetZidTagByAtokenResponseBody extends TeaModel {
         @NameInMap("doubleOpen")
         public String doubleOpen;
 
-        // javaHook
+        /**
+         * <p>javaHook</p>
+         */
         @NameInMap("javaHook")
         public String javaHook;
 
