@@ -7,6 +7,9 @@ public class ExtractAddressResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>RequestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
