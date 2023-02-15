@@ -25,6 +25,9 @@ public class ExecJobRequest extends TeaModel {
     @NameInMap("JarStartOptions")
     public String jarStartOptions;
 
+    @NameInMap("Replicas")
+    public String replicas;
+
     @NameInMap("Time")
     public String time;
 
@@ -90,6 +93,14 @@ public class ExecJobRequest extends TeaModel {
     }
     public String getJarStartOptions() {
         return this.jarStartOptions;
+    }
+
+    public ExecJobRequest setReplicas(String replicas) {
+        this.replicas = replicas;
+        return this;
+    }
+    public String getReplicas() {
+        return this.replicas;
     }
 
     public ExecJobRequest setTime(String time) {

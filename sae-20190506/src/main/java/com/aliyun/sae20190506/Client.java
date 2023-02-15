@@ -2626,6 +2626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JarStartOptions", request.jarStartOptions);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
+            query.put("Replicas", request.replicas);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.time)) {
             query.put("Time", request.time);
         }
