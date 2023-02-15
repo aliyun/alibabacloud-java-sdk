@@ -837,6 +837,9 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("Duration")
+        public Integer duration;
+
         /**
          * <p>The ID of the matched file in the media fingerprint library.</p>
          */
@@ -927,6 +930,14 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJob setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
         }
 
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJob setFileId(String fileId) {
