@@ -38,7 +38,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String domainIdListJSON;
 
     /**
-     * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+     * <p>Specifies whether to enable Web Application Firewall (WAF).</p>
      */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;

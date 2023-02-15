@@ -17,7 +17,7 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
@@ -175,6 +175,9 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
         @NameInMap("ServiceCount")
         public String serviceCount;
 
+        /**
+         * <p>The source from which the namespace was created.</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 

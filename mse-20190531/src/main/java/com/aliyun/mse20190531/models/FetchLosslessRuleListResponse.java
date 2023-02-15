@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class ListUserInstancesResponse extends TeaModel {
+public class FetchLosslessRuleListResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListUserInstancesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListUserInstancesResponseBody body;
+    public FetchLosslessRuleListResponseBody body;
 
-    public static ListUserInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListUserInstancesResponse self = new ListUserInstancesResponse();
+    public static FetchLosslessRuleListResponse build(java.util.Map<String, ?> map) throws Exception {
+        FetchLosslessRuleListResponse self = new FetchLosslessRuleListResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListUserInstancesResponse setHeaders(java.util.Map<String, String> headers) {
+    public FetchLosslessRuleListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListUserInstancesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListUserInstancesResponse setStatusCode(Integer statusCode) {
+    public FetchLosslessRuleListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListUserInstancesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListUserInstancesResponse setBody(ListUserInstancesResponseBody body) {
+    public FetchLosslessRuleListResponse setBody(FetchLosslessRuleListResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListUserInstancesResponseBody getBody() {
+    public FetchLosslessRuleListResponseBody getBody() {
         return this.body;
     }
 

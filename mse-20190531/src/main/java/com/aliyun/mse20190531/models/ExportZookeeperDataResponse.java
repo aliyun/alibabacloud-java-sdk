@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class ListInstancesResponse extends TeaModel {
+public class ExportZookeeperDataResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListInstancesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListInstancesResponseBody body;
+    public ExportZookeeperDataResponseBody body;
 
-    public static ListInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListInstancesResponse self = new ListInstancesResponse();
+    public static ExportZookeeperDataResponse build(java.util.Map<String, ?> map) throws Exception {
+        ExportZookeeperDataResponse self = new ExportZookeeperDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListInstancesResponse setHeaders(java.util.Map<String, String> headers) {
+    public ExportZookeeperDataResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListInstancesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListInstancesResponse setStatusCode(Integer statusCode) {
+    public ExportZookeeperDataResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListInstancesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListInstancesResponse setBody(ListInstancesResponseBody body) {
+    public ExportZookeeperDataResponse setBody(ExportZookeeperDataResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListInstancesResponseBody getBody() {
+    public ExportZookeeperDataResponseBody getBody() {
         return this.body;
     }
 

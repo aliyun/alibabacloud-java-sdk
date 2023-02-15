@@ -16,6 +16,12 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 

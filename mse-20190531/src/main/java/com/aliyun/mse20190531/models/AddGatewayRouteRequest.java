@@ -38,7 +38,7 @@ public class AddGatewayRouteRequest extends TeaModel {
     public String domainIdListJSON;
 
     /**
-     * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+     * <p>Specifies whether to enable Web Application Firewall (WAF).</p>
      */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
@@ -272,7 +272,7 @@ public class AddGatewayRouteRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -302,7 +302,7 @@ public class AddGatewayRouteRequest extends TeaModel {
         public Integer servicePort;
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The source type.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -460,7 +460,7 @@ public class AddGatewayRouteRequest extends TeaModel {
          * <br>
          * <p>*   PRE: prefix matching</p>
          * <p>*   EQUAL: exact matching</p>
-         * <p>*   ERGULAR: regular expression matching</p>
+         * <p>*   REGULAR: regular expression matching</p>
          */
         @NameInMap("Type")
         public String type;
@@ -944,7 +944,7 @@ public class AddGatewayRouteRequest extends TeaModel {
         public Integer servicePort;
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The source type.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
