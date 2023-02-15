@@ -32,11 +32,14 @@ public class UpdateClusterSpecRequest extends TeaModel {
     public Integer instanceCount;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The MSE version.</p>
+     */
     @NameInMap("MseVersion")
     public String mseVersion;
 

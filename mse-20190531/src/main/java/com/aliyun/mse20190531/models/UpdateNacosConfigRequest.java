@@ -50,7 +50,7 @@ public class UpdateNacosConfigRequest extends TeaModel {
     public String encryptedDataKey;
 
     /**
-     * <p>The group.</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("Group")
     public String group;

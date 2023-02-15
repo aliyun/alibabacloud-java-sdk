@@ -11,10 +11,13 @@ public class AddGatewayRouteResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public Long data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
@@ -62,6 +65,14 @@ public class AddGatewayRouteResponseBody extends TeaModel {
     }
     public Long getData() {
         return this.data;
+    }
+
+    public AddGatewayRouteResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public AddGatewayRouteResponseBody setHttpStatusCode(Integer httpStatusCode) {
