@@ -606,29 +606,29 @@ public class VerifyAdvertisingRequest extends TeaModel {
 
     public static class VerifyAdvertisingRequestVerifyad extends TeaModel {
         @NameInMap("Id")
-        public Long id;
+        public String id;
 
         @NameInMap("Seat")
-        public Long seat;
+        public String seat;
 
         public static VerifyAdvertisingRequestVerifyad build(java.util.Map<String, ?> map) throws Exception {
             VerifyAdvertisingRequestVerifyad self = new VerifyAdvertisingRequestVerifyad();
             return TeaModel.build(map, self);
         }
 
-        public VerifyAdvertisingRequestVerifyad setId(Long id) {
+        public VerifyAdvertisingRequestVerifyad setId(String id) {
             this.id = id;
             return this;
         }
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
-        public VerifyAdvertisingRequestVerifyad setSeat(Long seat) {
+        public VerifyAdvertisingRequestVerifyad setSeat(String seat) {
             this.seat = seat;
             return this;
         }
-        public Long getSeat() {
+        public String getSeat() {
             return this.seat;
         }
 
