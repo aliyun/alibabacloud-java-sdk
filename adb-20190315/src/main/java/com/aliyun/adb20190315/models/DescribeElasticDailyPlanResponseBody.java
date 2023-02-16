@@ -38,6 +38,12 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
         @NameInMap("ElasticNodeNum")
         public Integer elasticNodeNum;
 
+        @NameInMap("ElasticPlanType")
+        public String elasticPlanType;
+
+        @NameInMap("ElasticPlanWorkerSpec")
+        public String elasticPlanWorkerSpec;
+
         @NameInMap("EndTs")
         public String endTs;
 
@@ -78,6 +84,22 @@ public class DescribeElasticDailyPlanResponseBody extends TeaModel {
         }
         public Integer getElasticNodeNum() {
             return this.elasticNodeNum;
+        }
+
+        public DescribeElasticDailyPlanResponseBodyElasticDailyPlanList setElasticPlanType(String elasticPlanType) {
+            this.elasticPlanType = elasticPlanType;
+            return this;
+        }
+        public String getElasticPlanType() {
+            return this.elasticPlanType;
+        }
+
+        public DescribeElasticDailyPlanResponseBodyElasticDailyPlanList setElasticPlanWorkerSpec(String elasticPlanWorkerSpec) {
+            this.elasticPlanWorkerSpec = elasticPlanWorkerSpec;
+            return this;
+        }
+        public String getElasticPlanWorkerSpec() {
+            return this.elasticPlanWorkerSpec;
         }
 
         public DescribeElasticDailyPlanResponseBodyElasticDailyPlanList setEndTs(String endTs) {

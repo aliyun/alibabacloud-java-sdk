@@ -3,7 +3,7 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDBClusterHealthReportResponse extends TeaModel {
+public class DescribeDiagnosisTasksResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeDBClusterHealthReportResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeDBClusterHealthReportResponseBody body;
+    public DescribeDiagnosisTasksResponseBody body;
 
-    public static DescribeDBClusterHealthReportResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDBClusterHealthReportResponse self = new DescribeDBClusterHealthReportResponse();
+    public static DescribeDiagnosisTasksResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDiagnosisTasksResponse self = new DescribeDiagnosisTasksResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBClusterHealthReportResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeDiagnosisTasksResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeDBClusterHealthReportResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDBClusterHealthReportResponse setStatusCode(Integer statusCode) {
+    public DescribeDiagnosisTasksResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeDBClusterHealthReportResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDBClusterHealthReportResponse setBody(DescribeDBClusterHealthReportResponseBody body) {
+    public DescribeDiagnosisTasksResponse setBody(DescribeDiagnosisTasksResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDBClusterHealthReportResponseBody getBody() {
+    public DescribeDiagnosisTasksResponseBody getBody() {
         return this.body;
     }
 

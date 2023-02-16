@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBResourcePoolResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("PoolsInfo")
     public java.util.List<DescribeDBResourcePoolResponseBodyPoolsInfo> poolsInfo;
 
@@ -13,6 +16,14 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
     public static DescribeDBResourcePoolResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBResourcePoolResponseBody self = new DescribeDBResourcePoolResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBResourcePoolResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public DescribeDBResourcePoolResponseBody setPoolsInfo(java.util.List<DescribeDBResourcePoolResponseBodyPoolsInfo> poolsInfo) {

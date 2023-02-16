@@ -3,16 +3,16 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class TagResourcesResponseBody extends TeaModel {
+public class AttachUserENIResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static TagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        TagResourcesResponseBody self = new TagResourcesResponseBody();
+    public static AttachUserENIResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AttachUserENIResponseBody self = new AttachUserENIResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public TagResourcesResponseBody setRequestId(String requestId) {
+    public AttachUserENIResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

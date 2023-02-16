@@ -35,6 +35,12 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         @NameInMap("ElasticNodeNum")
         public Integer elasticNodeNum;
 
+        @NameInMap("ElasticPlanType")
+        public String elasticPlanType;
+
+        @NameInMap("ElasticPlanWorkerSpec")
+        public String elasticPlanWorkerSpec;
+
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -70,6 +76,22 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         }
         public Integer getElasticNodeNum() {
             return this.elasticNodeNum;
+        }
+
+        public DescribeElasticPlanResponseBodyElasticPlanList setElasticPlanType(String elasticPlanType) {
+            this.elasticPlanType = elasticPlanType;
+            return this;
+        }
+        public String getElasticPlanType() {
+            return this.elasticPlanType;
+        }
+
+        public DescribeElasticPlanResponseBodyElasticPlanList setElasticPlanWorkerSpec(String elasticPlanWorkerSpec) {
+            this.elasticPlanWorkerSpec = elasticPlanWorkerSpec;
+            return this;
+        }
+        public String getElasticPlanWorkerSpec() {
+            return this.elasticPlanWorkerSpec;
         }
 
         public DescribeElasticPlanResponseBodyElasticPlanList setEnable(Boolean enable) {
