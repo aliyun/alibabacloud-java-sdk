@@ -3,7 +3,7 @@ package com.aliyun.eflo20220530.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateVpdResponse extends TeaModel {
+public class GetLniPrivateIpAddressResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateVpdResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateVpdResponseBody body;
+    public GetLniPrivateIpAddressResponseBody body;
 
-    public static UpdateVpdResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateVpdResponse self = new UpdateVpdResponse();
+    public static GetLniPrivateIpAddressResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetLniPrivateIpAddressResponse self = new GetLniPrivateIpAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateVpdResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetLniPrivateIpAddressResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateVpdResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateVpdResponse setStatusCode(Integer statusCode) {
+    public GetLniPrivateIpAddressResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateVpdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateVpdResponse setBody(UpdateVpdResponseBody body) {
+    public GetLniPrivateIpAddressResponse setBody(GetLniPrivateIpAddressResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateVpdResponseBody getBody() {
+    public GetLniPrivateIpAddressResponseBody getBody() {
         return this.body;
     }
 

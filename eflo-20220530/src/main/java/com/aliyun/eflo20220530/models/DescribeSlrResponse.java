@@ -3,7 +3,7 @@ package com.aliyun.eflo20220530.models;
 
 import com.aliyun.tea.*;
 
-public class GetVpdResponse extends TeaModel {
+public class DescribeSlrResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetVpdResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetVpdResponseBody body;
+    public DescribeSlrResponseBody body;
 
-    public static GetVpdResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetVpdResponse self = new GetVpdResponse();
+    public static DescribeSlrResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSlrResponse self = new DescribeSlrResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetVpdResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeSlrResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetVpdResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetVpdResponse setStatusCode(Integer statusCode) {
+    public DescribeSlrResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetVpdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetVpdResponse setBody(GetVpdResponseBody body) {
+    public DescribeSlrResponse setBody(DescribeSlrResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetVpdResponseBody getBody() {
+    public DescribeSlrResponseBody getBody() {
         return this.body;
     }
 
