@@ -3,7 +3,7 @@ package com.aliyun.eflo20220530.models;
 
 import com.aliyun.tea.*;
 
-public class CreateVccResponse extends TeaModel {
+public class UnAssignPrivateIpAddressResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateVccResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateVccResponseBody body;
+    public UnAssignPrivateIpAddressResponseBody body;
 
-    public static CreateVccResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateVccResponse self = new CreateVccResponse();
+    public static UnAssignPrivateIpAddressResponse build(java.util.Map<String, ?> map) throws Exception {
+        UnAssignPrivateIpAddressResponse self = new UnAssignPrivateIpAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateVccResponse setHeaders(java.util.Map<String, String> headers) {
+    public UnAssignPrivateIpAddressResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateVccResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateVccResponse setStatusCode(Integer statusCode) {
+    public UnAssignPrivateIpAddressResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateVccResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateVccResponse setBody(CreateVccResponseBody body) {
+    public UnAssignPrivateIpAddressResponse setBody(UnAssignPrivateIpAddressResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateVccResponseBody getBody() {
+    public UnAssignPrivateIpAddressResponseBody getBody() {
         return this.body;
     }
 

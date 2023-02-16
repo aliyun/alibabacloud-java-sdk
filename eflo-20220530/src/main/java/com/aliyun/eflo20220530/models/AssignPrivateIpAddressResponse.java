@@ -3,7 +3,7 @@ package com.aliyun.eflo20220530.models;
 
 import com.aliyun.tea.*;
 
-public class GetSubnetResponse extends TeaModel {
+public class AssignPrivateIpAddressResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetSubnetResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetSubnetResponseBody body;
+    public AssignPrivateIpAddressResponseBody body;
 
-    public static GetSubnetResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetSubnetResponse self = new GetSubnetResponse();
+    public static AssignPrivateIpAddressResponse build(java.util.Map<String, ?> map) throws Exception {
+        AssignPrivateIpAddressResponse self = new AssignPrivateIpAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSubnetResponse setHeaders(java.util.Map<String, String> headers) {
+    public AssignPrivateIpAddressResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetSubnetResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetSubnetResponse setStatusCode(Integer statusCode) {
+    public AssignPrivateIpAddressResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetSubnetResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetSubnetResponse setBody(GetSubnetResponseBody body) {
+    public AssignPrivateIpAddressResponse setBody(AssignPrivateIpAddressResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetSubnetResponseBody getBody() {
+    public AssignPrivateIpAddressResponseBody getBody() {
         return this.body;
     }
 
