@@ -28,8 +28,14 @@ public class CreateElasticPlanRequest extends TeaModel {
     @NameInMap("ElasticPlanTimeStart")
     public String elasticPlanTimeStart;
 
+    @NameInMap("ElasticPlanType")
+    public String elasticPlanType;
+
     @NameInMap("ElasticPlanWeeklyRepeat")
     public String elasticPlanWeeklyRepeat;
+
+    @NameInMap("ElasticPlanWorkerSpec")
+    public String elasticPlanWorkerSpec;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -115,12 +121,28 @@ public class CreateElasticPlanRequest extends TeaModel {
         return this.elasticPlanTimeStart;
     }
 
+    public CreateElasticPlanRequest setElasticPlanType(String elasticPlanType) {
+        this.elasticPlanType = elasticPlanType;
+        return this;
+    }
+    public String getElasticPlanType() {
+        return this.elasticPlanType;
+    }
+
     public CreateElasticPlanRequest setElasticPlanWeeklyRepeat(String elasticPlanWeeklyRepeat) {
         this.elasticPlanWeeklyRepeat = elasticPlanWeeklyRepeat;
         return this;
     }
     public String getElasticPlanWeeklyRepeat() {
         return this.elasticPlanWeeklyRepeat;
+    }
+
+    public CreateElasticPlanRequest setElasticPlanWorkerSpec(String elasticPlanWorkerSpec) {
+        this.elasticPlanWorkerSpec = elasticPlanWorkerSpec;
+        return this;
+    }
+    public String getElasticPlanWorkerSpec() {
+        return this.elasticPlanWorkerSpec;
     }
 
     public CreateElasticPlanRequest setOwnerAccount(String ownerAccount) {

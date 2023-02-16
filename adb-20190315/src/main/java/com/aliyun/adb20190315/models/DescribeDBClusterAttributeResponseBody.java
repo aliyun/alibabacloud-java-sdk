@@ -123,6 +123,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        @NameInMap("DiskPerformanceLevel")
+        public String diskPerformanceLevel;
+
         @NameInMap("DiskType")
         public String diskType;
 
@@ -131,6 +134,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         @NameInMap("ElasticIOResource")
         public Integer elasticIOResource;
+
+        @NameInMap("ElasticIOResourceSize")
+        public String elasticIOResourceSize;
 
         @NameInMap("EnableAirflow")
         public Boolean enableAirflow;
@@ -327,6 +333,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.DBVersion;
         }
 
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDiskPerformanceLevel(String diskPerformanceLevel) {
+            this.diskPerformanceLevel = diskPerformanceLevel;
+            return this;
+        }
+        public String getDiskPerformanceLevel() {
+            return this.diskPerformanceLevel;
+        }
+
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDiskType(String diskType) {
             this.diskType = diskType;
             return this;
@@ -349,6 +363,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public Integer getElasticIOResource() {
             return this.elasticIOResource;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setElasticIOResourceSize(String elasticIOResourceSize) {
+            this.elasticIOResourceSize = elasticIOResourceSize;
+            return this;
+        }
+        public String getElasticIOResourceSize() {
+            return this.elasticIOResourceSize;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setEnableAirflow(Boolean enableAirflow) {

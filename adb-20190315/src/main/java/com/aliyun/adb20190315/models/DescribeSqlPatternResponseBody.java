@@ -101,6 +101,9 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         @NameInMap("MaxTaskCount")
         public String maxTaskCount;
 
+        /**
+         * <p>SQL Pattern。</p>
+         */
         @NameInMap("Pattern")
         public String pattern;
 

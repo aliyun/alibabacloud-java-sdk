@@ -22,8 +22,14 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
 
+    @NameInMap("DiskPerformanceLevel")
+    public String diskPerformanceLevel;
+
     @NameInMap("ElasticIOResource")
     public Integer elasticIOResource;
+
+    @NameInMap("ElasticIOResourceSize")
+    public String elasticIOResourceSize;
 
     @NameInMap("ExecutorCount")
     public String executorCount;
@@ -105,12 +111,28 @@ public class ModifyDBClusterRequest extends TeaModel {
         return this.DBNodeStorage;
     }
 
+    public ModifyDBClusterRequest setDiskPerformanceLevel(String diskPerformanceLevel) {
+        this.diskPerformanceLevel = diskPerformanceLevel;
+        return this;
+    }
+    public String getDiskPerformanceLevel() {
+        return this.diskPerformanceLevel;
+    }
+
     public ModifyDBClusterRequest setElasticIOResource(Integer elasticIOResource) {
         this.elasticIOResource = elasticIOResource;
         return this;
     }
     public Integer getElasticIOResource() {
         return this.elasticIOResource;
+    }
+
+    public ModifyDBClusterRequest setElasticIOResourceSize(String elasticIOResourceSize) {
+        this.elasticIOResourceSize = elasticIOResourceSize;
+        return this;
+    }
+    public String getElasticIOResourceSize() {
+        return this.elasticIOResourceSize;
     }
 
     public ModifyDBClusterRequest setExecutorCount(String executorCount) {

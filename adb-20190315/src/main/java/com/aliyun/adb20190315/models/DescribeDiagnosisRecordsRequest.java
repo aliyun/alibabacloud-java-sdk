@@ -44,7 +44,7 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("PatternId")
-    public Long patternId;
+    public String patternId;
 
     @NameInMap("QueryCondition")
     public String queryCondition;
@@ -170,11 +170,11 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDiagnosisRecordsRequest setPatternId(Long patternId) {
+    public DescribeDiagnosisRecordsRequest setPatternId(String patternId) {
         this.patternId = patternId;
         return this;
     }
-    public Long getPatternId() {
+    public String getPatternId() {
         return this.patternId;
     }
 
