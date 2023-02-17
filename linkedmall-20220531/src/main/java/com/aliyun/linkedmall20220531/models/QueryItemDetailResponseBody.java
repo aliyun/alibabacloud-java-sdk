@@ -22,7 +22,9 @@ public class QueryItemDetailResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // pageSize
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -527,7 +529,9 @@ public class QueryItemDetailResponseBody extends TeaModel {
         @NameInMap("SimpleQuantity")
         public String simpleQuantity;
 
-        // sku list
+        /**
+         * <p>sku list</p>
+         */
         @NameInMap("SkuModels")
         public java.util.List<QueryItemDetailResponseBodyModelSkuModels> skuModels;
 

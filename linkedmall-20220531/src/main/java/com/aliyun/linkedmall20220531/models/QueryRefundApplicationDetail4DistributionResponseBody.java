@@ -19,7 +19,9 @@ public class QueryRefundApplicationDetail4DistributionResponseBody extends TeaMo
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // pageSize
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

@@ -19,7 +19,9 @@ public class CancelRefund4DistributionResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // pageSize
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

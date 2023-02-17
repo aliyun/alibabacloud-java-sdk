@@ -19,7 +19,9 @@ public class ModifyRefund4DistributionResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // pageSize
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -129,151 +131,6 @@ public class ModifyRefund4DistributionResponseBody extends TeaModel {
     }
     public Long getTotalCount() {
         return this.totalCount;
-    }
-
-    public static class InitModifyRefund4DistributionResponseBodyModelMaxRefundFeeData extends TeaModel {
-        @NameInMap("MaxRefundFee")
-        public Long maxRefundFee;
-
-        @NameInMap("MinRefundFee")
-        public Long minRefundFee;
-
-        public static InitModifyRefund4DistributionResponseBodyModelMaxRefundFeeData build(java.util.Map<String, ?> map) throws Exception {
-            InitModifyRefund4DistributionResponseBodyModelMaxRefundFeeData self = new InitModifyRefund4DistributionResponseBodyModelMaxRefundFeeData();
-            return TeaModel.build(map, self);
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModelMaxRefundFeeData setMaxRefundFee(Long maxRefundFee) {
-            this.maxRefundFee = maxRefundFee;
-            return this;
-        }
-        public Long getMaxRefundFee() {
-            return this.maxRefundFee;
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModelMaxRefundFeeData setMinRefundFee(Long minRefundFee) {
-            this.minRefundFee = minRefundFee;
-            return this;
-        }
-        public Long getMinRefundFee() {
-            return this.minRefundFee;
-        }
-
-    }
-
-    public static class InitModifyRefund4DistributionResponseBodyModelRefundReasonList extends TeaModel {
-        @NameInMap("ProofRequired")
-        public Boolean proofRequired;
-
-        @NameInMap("ReasonTextId")
-        public String reasonTextId;
-
-        @NameInMap("ReasonTips")
-        public String reasonTips;
-
-        @NameInMap("RefundDescRequired")
-        public Boolean refundDescRequired;
-
-        public static InitModifyRefund4DistributionResponseBodyModelRefundReasonList build(java.util.Map<String, ?> map) throws Exception {
-            InitModifyRefund4DistributionResponseBodyModelRefundReasonList self = new InitModifyRefund4DistributionResponseBodyModelRefundReasonList();
-            return TeaModel.build(map, self);
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModelRefundReasonList setProofRequired(Boolean proofRequired) {
-            this.proofRequired = proofRequired;
-            return this;
-        }
-        public Boolean getProofRequired() {
-            return this.proofRequired;
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModelRefundReasonList setReasonTextId(String reasonTextId) {
-            this.reasonTextId = reasonTextId;
-            return this;
-        }
-        public String getReasonTextId() {
-            return this.reasonTextId;
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModelRefundReasonList setReasonTips(String reasonTips) {
-            this.reasonTips = reasonTips;
-            return this;
-        }
-        public String getReasonTips() {
-            return this.reasonTips;
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModelRefundReasonList setRefundDescRequired(Boolean refundDescRequired) {
-            this.refundDescRequired = refundDescRequired;
-            return this;
-        }
-        public Boolean getRefundDescRequired() {
-            return this.refundDescRequired;
-        }
-
-    }
-
-    public static class InitModifyRefund4DistributionResponseBodyModel extends TeaModel {
-        @NameInMap("BizClaimType")
-        public Integer bizClaimType;
-
-        @NameInMap("MainOrderRefund")
-        public Boolean mainOrderRefund;
-
-        @NameInMap("MaxRefundFeeData")
-        public InitModifyRefund4DistributionResponseBodyModelMaxRefundFeeData maxRefundFeeData;
-
-        @NameInMap("RefundReasonList")
-        public java.util.List<InitModifyRefund4DistributionResponseBodyModelRefundReasonList> refundReasonList;
-
-        @NameInMap("SubDistributionOrderId")
-        public String subDistributionOrderId;
-
-        public static InitModifyRefund4DistributionResponseBodyModel build(java.util.Map<String, ?> map) throws Exception {
-            InitModifyRefund4DistributionResponseBodyModel self = new InitModifyRefund4DistributionResponseBodyModel();
-            return TeaModel.build(map, self);
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModel setBizClaimType(Integer bizClaimType) {
-            this.bizClaimType = bizClaimType;
-            return this;
-        }
-        public Integer getBizClaimType() {
-            return this.bizClaimType;
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModel setMainOrderRefund(Boolean mainOrderRefund) {
-            this.mainOrderRefund = mainOrderRefund;
-            return this;
-        }
-        public Boolean getMainOrderRefund() {
-            return this.mainOrderRefund;
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModel setMaxRefundFeeData(InitModifyRefund4DistributionResponseBodyModelMaxRefundFeeData maxRefundFeeData) {
-            this.maxRefundFeeData = maxRefundFeeData;
-            return this;
-        }
-        public InitModifyRefund4DistributionResponseBodyModelMaxRefundFeeData getMaxRefundFeeData() {
-            return this.maxRefundFeeData;
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModel setRefundReasonList(java.util.List<InitModifyRefund4DistributionResponseBodyModelRefundReasonList> refundReasonList) {
-            this.refundReasonList = refundReasonList;
-            return this;
-        }
-        public java.util.List<InitModifyRefund4DistributionResponseBodyModelRefundReasonList> getRefundReasonList() {
-            return this.refundReasonList;
-        }
-
-        public InitModifyRefund4DistributionResponseBodyModel setSubDistributionOrderId(String subDistributionOrderId) {
-            this.subDistributionOrderId = subDistributionOrderId;
-            return this;
-        }
-        public String getSubDistributionOrderId() {
-            return this.subDistributionOrderId;
-        }
-
     }
 
     public static class ModifyRefund4DistributionResponseBodyModel extends TeaModel {
