@@ -444,6 +444,9 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         @NameInMap("hotel_fee_detail")
         public java.util.List<EstimatedPriceQueryResponseBodyModuleHotelFeeDetail> hotelFeeDetail;
 
+        @NameInMap("total_hotel_fee")
+        public Long totalHotelFee;
+
         @NameInMap("traffic_fee")
         public EstimatedPriceQueryResponseBodyModuleTrafficFee trafficFee;
 
@@ -458,6 +461,14 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
         public java.util.List<EstimatedPriceQueryResponseBodyModuleHotelFeeDetail> getHotelFeeDetail() {
             return this.hotelFeeDetail;
+        }
+
+        public EstimatedPriceQueryResponseBodyModule setTotalHotelFee(Long totalHotelFee) {
+            this.totalHotelFee = totalHotelFee;
+            return this;
+        }
+        public Long getTotalHotelFee() {
+            return this.totalHotelFee;
         }
 
         public EstimatedPriceQueryResponseBodyModule setTrafficFee(EstimatedPriceQueryResponseBodyModuleTrafficFee trafficFee) {
