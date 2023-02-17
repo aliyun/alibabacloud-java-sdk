@@ -11,10 +11,13 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database engine of the instance. The value is set to **MongoDB**.</p>
+     * <p>The engine of the instance. The value is set to **MongoDB**.</p>
      */
     @NameInMap("Engine")
     public String engine;
+
+    @NameInMap("IsDelete")
+    public Boolean isDelete;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -25,7 +28,7 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).</p>
      * <br>
-     * <p>>  This parameter is available only if you use the China site (aliyun.com).</p>
+     * <p>> This parameter is available only if you use the China site (aliyun.com).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -58,6 +61,14 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public DescribeDBInstanceAttributeRequest setIsDelete(Boolean isDelete) {
+        this.isDelete = isDelete;
+        return this;
+    }
+    public Boolean getIsDelete() {
+        return this.isDelete;
     }
 
     public DescribeDBInstanceAttributeRequest setOwnerAccount(String ownerAccount) {

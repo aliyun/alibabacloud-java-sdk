@@ -7,7 +7,7 @@ public class EvaluateResourceRequest extends TeaModel {
     /**
      * <p>The instance type.</p>
      * <br>
-     * <p>>  This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).</p>
+     * <p>> This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
@@ -25,13 +25,13 @@ public class EvaluateResourceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance. Valid values:</p>
+     * <p>The major engine version of the instance. Valid values:</p>
      * <br>
+     * <p>*   **6.0**</p>
      * <p>*   **5.0**</p>
      * <p>*   **4.4**</p>
      * <p>*   **4.2**</p>
      * <p>*   **4.0**</p>
-     * <p>*   **3.4**</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -44,12 +44,14 @@ public class EvaluateResourceRequest extends TeaModel {
 
     /**
      * <p>The number of read-only nodes. Valid values: **1** to **5**.</p>
+     * <br>
+     * <p>> This parameter is not required for standalone or serverless instances.</p>
      */
     @NameInMap("ReadonlyReplicas")
     public String readonlyReplicas;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID of the instance.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -59,6 +61,8 @@ public class EvaluateResourceRequest extends TeaModel {
      * <br>
      * <p>*   Valid values for standalone instances: **1**</p>
      * <p>*   Valid values for replica set instances: **3**, **5**, and **7**</p>
+     * <br>
+     * <p>> This parameter is not required for serverless instances.</p>
      */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
@@ -75,39 +79,44 @@ public class EvaluateResourceRequest extends TeaModel {
     /**
      * <p>The node information. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.</p>
      * <br>
-     * <p>*   To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:</p>
+     * <p>To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:</p>
      * <br>
-     * <p>        {</p>
-     * <p>             "ConfigSvrs":</p>
-     * <p>                 [{"Storage":20,"DBInstanceClass":"dds.cs.mid"}],</p>
-     * <p>             "Mongos":</p>
-     * <p>                 [{"DBInstanceClass":"dds.mongos.standard"},{"DBInstanceClass":"dds.mongos.standard"}],</p>
-     * <p>             "Shards":</p>
-     * <p>                 [{"Storage":50,"DBInstanceClass":"dds.shard.standard"},{"Storage":50,"DBInstanceClass":"dds.shard.standard"},   {"Storage":50,"DBInstanceClass":"dds.shard.standard"}]</p>
-     * <p>         }</p>
+     * <p>    {</p>
+     * <p>         "ConfigSvrs":</p>
+     * <p>             [{"Storage":20,"DBInstanceClass":"dds.cs.mid"}],</p>
+     * <p>         "Mongos":</p>
+     * <p>             [{"DBInstanceClass":"dds.mongos.standard"},{"DBInstanceClass":"dds.mongos.standard"}],</p>
+     * <p>         "Shards":</p>
+     * <p>             [{"Storage":50,"DBInstanceClass":"dds.shard.standard"},{"Storage":50,"DBInstanceClass":"dds.shard.standard"},   {"Storage":50,"DBInstanceClass":"dds.shard.standard"}]</p>
+     * <p>     }</p>
      * <br>
-     * <p>    Parameters in the example:</p>
+     * <p>Parameters in the example:</p>
      * <br>
-     * <p>    *   ConfigSvrs: the Configserver node.</p>
-     * <p>    *   Mongos: the mongos node.</p>
-     * <p>    *   Shards: the shard node.</p>
-     * <p>    *   Storage: the storage space of the node.</p>
-     * <p>    *   DBInstanceClass: the instance type of the node. For more information, see [Instance types](~~57141~~).</p>
+     * <p>*   ConfigSvrs: the Configserver node.</p>
+     * <p>*   Mongos: the mongos node.</p>
+     * <p>*   Shards: the shard node.</p>
+     * <p>*   Storage: the storage space of the node.</p>
+     * <p>*   DBInstanceClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).</p>
      * <br>
-     * <p>*   To check whether resources are sufficient for upgrading a node of a sharded cluster instance, specify only the information of the node to be upgraded. The value must be a JSON string. Example:</p>
+     * <p>To check whether resources are sufficient for upgrading a node of a sharded cluster instance, specify only the information of the node to be upgraded. The value must be a JSON string. Example:</p>
      * <br>
-     * <p>        {</p>
-     * <p>             "NodeId": "d-bp147c4d9ca7****", "NodeClass": "dds.shard.standard"</p>
-     * <p>        } </p>
+     * <p>    {</p>
+     * <p>         "NodeId": "d-bp147c4d9ca7****", "NodeClass": "dds.shard.standard"</p>
+     * <p>    } </p>
      * <br>
-     * <p>    Parameters in the example:</p>
+     * <p>Parameters in the example:</p>
      * <br>
-     * <p>    *   NodeId: the ID of the node. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the node ID.</p>
-     * <p>    *   NodeClass: the instance type of the node. For more information, see [Instance types](~~57141~~).</p>
+     * <p>*   NodeId: the ID of the node.</p>
+     * <p>*   NodeClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).</p>
      */
     @NameInMap("ShardsInfo")
     public String shardsInfo;
 
+    /**
+     * <p>The storage capacity of the replica set instance. Unit: GB.</p>
+     * <br>
+     * <p>> This parameter is required for the instances that use cloud disks.</p>
+     */
     @NameInMap("Storage")
     public String storage;
 

@@ -20,7 +20,7 @@ public class EvaluateResourceResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The major engine version of the instance.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
