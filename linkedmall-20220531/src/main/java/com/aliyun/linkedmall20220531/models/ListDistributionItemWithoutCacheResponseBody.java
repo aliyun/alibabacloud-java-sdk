@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20220531.models;
 
 import com.aliyun.tea.*;
 
-public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
+public class ListDistributionItemWithoutCacheResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -14,14 +14,11 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
     public String message;
 
     @NameInMap("Model")
-    public QueryItemDetailWithDivisionResponseBodyModel model;
+    public java.util.List<ListDistributionItemWithoutCacheResponseBodyModel> model;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    /**
-     * <p>pageSize</p>
-     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -40,12 +37,12 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    public static QueryItemDetailWithDivisionResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        QueryItemDetailWithDivisionResponseBody self = new QueryItemDetailWithDivisionResponseBody();
+    public static ListDistributionItemWithoutCacheResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListDistributionItemWithoutCacheResponseBody self = new ListDistributionItemWithoutCacheResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryItemDetailWithDivisionResponseBody setCode(String code) {
+    public ListDistributionItemWithoutCacheResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -53,7 +50,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setLogsId(String logsId) {
+    public ListDistributionItemWithoutCacheResponseBody setLogsId(String logsId) {
         this.logsId = logsId;
         return this;
     }
@@ -61,7 +58,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.logsId;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setMessage(String message) {
+    public ListDistributionItemWithoutCacheResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -69,15 +66,15 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setModel(QueryItemDetailWithDivisionResponseBodyModel model) {
+    public ListDistributionItemWithoutCacheResponseBody setModel(java.util.List<ListDistributionItemWithoutCacheResponseBodyModel> model) {
         this.model = model;
         return this;
     }
-    public QueryItemDetailWithDivisionResponseBodyModel getModel() {
+    public java.util.List<ListDistributionItemWithoutCacheResponseBodyModel> getModel() {
         return this.model;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setPageNumber(Long pageNumber) {
+    public ListDistributionItemWithoutCacheResponseBody setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -85,7 +82,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setPageSize(Long pageSize) {
+    public ListDistributionItemWithoutCacheResponseBody setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -93,7 +90,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setRequestId(String requestId) {
+    public ListDistributionItemWithoutCacheResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -101,7 +98,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setSubCode(String subCode) {
+    public ListDistributionItemWithoutCacheResponseBody setSubCode(String subCode) {
         this.subCode = subCode;
         return this;
     }
@@ -109,7 +106,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.subCode;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setSubMessage(String subMessage) {
+    public ListDistributionItemWithoutCacheResponseBody setSubMessage(String subMessage) {
         this.subMessage = subMessage;
         return this;
     }
@@ -117,7 +114,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.subMessage;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setSuccess(Boolean success) {
+    public ListDistributionItemWithoutCacheResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -125,7 +122,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryItemDetailWithDivisionResponseBody setTotalCount(Long totalCount) {
+    public ListDistributionItemWithoutCacheResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
@@ -133,13 +130,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class QueryItemDetailWithDivisionResponseBodyModelSkuModels extends TeaModel {
-        @NameInMap("CanNotBeSoldCode")
-        public String canNotBeSoldCode;
-
-        @NameInMap("CanNotBeSoldMassage")
-        public String canNotBeSoldMassage;
-
+    public static class ListDistributionItemWithoutCacheResponseBodyModelSkuModels extends TeaModel {
         @NameInMap("CustomizedAttributeMap")
         public java.util.Map<String, String> customizedAttributeMap;
 
@@ -154,6 +145,12 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
 
         @NameInMap("InvoiceType")
         public Integer invoiceType;
+
+        @NameInMap("IsCanNotBeSoldCode")
+        public String isCanNotBeSoldCode;
+
+        @NameInMap("IsCanNotBeSoldMessage")
+        public String isCanNotBeSoldMessage;
 
         @NameInMap("ItemId")
         public Long itemId;
@@ -170,8 +167,8 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         @NameInMap("Quantity")
         public Integer quantity;
 
-        @NameInMap("ReservePrice")
-        public Long reservePrice;
+        @NameInMap("ReservedPrice")
+        public Long reservedPrice;
 
         @NameInMap("SimpleQuantity")
         public String simpleQuantity;
@@ -194,28 +191,12 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         @NameInMap("SupplierPrice")
         public Long supplierPrice;
 
-        public static QueryItemDetailWithDivisionResponseBodyModelSkuModels build(java.util.Map<String, ?> map) throws Exception {
-            QueryItemDetailWithDivisionResponseBodyModelSkuModels self = new QueryItemDetailWithDivisionResponseBodyModelSkuModels();
+        public static ListDistributionItemWithoutCacheResponseBodyModelSkuModels build(java.util.Map<String, ?> map) throws Exception {
+            ListDistributionItemWithoutCacheResponseBodyModelSkuModels self = new ListDistributionItemWithoutCacheResponseBodyModelSkuModels();
             return TeaModel.build(map, self);
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setCanNotBeSoldCode(String canNotBeSoldCode) {
-            this.canNotBeSoldCode = canNotBeSoldCode;
-            return this;
-        }
-        public String getCanNotBeSoldCode() {
-            return this.canNotBeSoldCode;
-        }
-
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setCanNotBeSoldMassage(String canNotBeSoldMassage) {
-            this.canNotBeSoldMassage = canNotBeSoldMassage;
-            return this;
-        }
-        public String getCanNotBeSoldMassage() {
-            return this.canNotBeSoldMassage;
-        }
-
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setCustomizedAttributeMap(java.util.Map<String, String> customizedAttributeMap) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setCustomizedAttributeMap(java.util.Map<String, String> customizedAttributeMap) {
             this.customizedAttributeMap = customizedAttributeMap;
             return this;
         }
@@ -223,7 +204,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.customizedAttributeMap;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setDistributionMallId(String distributionMallId) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setDistributionMallId(String distributionMallId) {
             this.distributionMallId = distributionMallId;
             return this;
         }
@@ -231,7 +212,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.distributionMallId;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setExtJson(String extJson) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setExtJson(String extJson) {
             this.extJson = extJson;
             return this;
         }
@@ -239,7 +220,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.extJson;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setHasQuantity(Boolean hasQuantity) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setHasQuantity(Boolean hasQuantity) {
             this.hasQuantity = hasQuantity;
             return this;
         }
@@ -247,7 +228,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.hasQuantity;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setInvoiceType(Integer invoiceType) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setInvoiceType(Integer invoiceType) {
             this.invoiceType = invoiceType;
             return this;
         }
@@ -255,7 +236,23 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.invoiceType;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setItemId(Long itemId) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setIsCanNotBeSoldCode(String isCanNotBeSoldCode) {
+            this.isCanNotBeSoldCode = isCanNotBeSoldCode;
+            return this;
+        }
+        public String getIsCanNotBeSoldCode() {
+            return this.isCanNotBeSoldCode;
+        }
+
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setIsCanNotBeSoldMessage(String isCanNotBeSoldMessage) {
+            this.isCanNotBeSoldMessage = isCanNotBeSoldMessage;
+            return this;
+        }
+        public String getIsCanNotBeSoldMessage() {
+            return this.isCanNotBeSoldMessage;
+        }
+
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setItemId(Long itemId) {
             this.itemId = itemId;
             return this;
         }
@@ -263,7 +260,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.itemId;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setLmItemId(String lmItemId) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setLmItemId(String lmItemId) {
             this.lmItemId = lmItemId;
             return this;
         }
@@ -271,7 +268,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.lmItemId;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setLmSkuAttributeMap(java.util.Map<String, String> lmSkuAttributeMap) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setLmSkuAttributeMap(java.util.Map<String, String> lmSkuAttributeMap) {
             this.lmSkuAttributeMap = lmSkuAttributeMap;
             return this;
         }
@@ -279,7 +276,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.lmSkuAttributeMap;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setPriceCent(Long priceCent) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setPriceCent(Long priceCent) {
             this.priceCent = priceCent;
             return this;
         }
@@ -287,7 +284,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.priceCent;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setQuantity(Integer quantity) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setQuantity(Integer quantity) {
             this.quantity = quantity;
             return this;
         }
@@ -295,15 +292,15 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.quantity;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setReservePrice(Long reservePrice) {
-            this.reservePrice = reservePrice;
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setReservedPrice(Long reservedPrice) {
+            this.reservedPrice = reservedPrice;
             return this;
         }
-        public Long getReservePrice() {
-            return this.reservePrice;
+        public Long getReservedPrice() {
+            return this.reservedPrice;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setSimpleQuantity(String simpleQuantity) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setSimpleQuantity(String simpleQuantity) {
             this.simpleQuantity = simpleQuantity;
             return this;
         }
@@ -311,7 +308,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.simpleQuantity;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setSkuId(Long skuId) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setSkuId(Long skuId) {
             this.skuId = skuId;
             return this;
         }
@@ -319,7 +316,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.skuId;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setSkuPicUrl(String skuPicUrl) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setSkuPicUrl(String skuPicUrl) {
             this.skuPicUrl = skuPicUrl;
             return this;
         }
@@ -327,7 +324,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.skuPicUrl;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setSkuPvs(String skuPvs) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setSkuPvs(String skuPvs) {
             this.skuPvs = skuPvs;
             return this;
         }
@@ -335,7 +332,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.skuPvs;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setSkuTitle(String skuTitle) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setSkuTitle(String skuTitle) {
             this.skuTitle = skuTitle;
             return this;
         }
@@ -343,7 +340,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.skuTitle;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setStatus(Integer status) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setStatus(Integer status) {
             this.status = status;
             return this;
         }
@@ -351,7 +348,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.status;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuModels setSupplierPrice(Long supplierPrice) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuModels setSupplierPrice(Long supplierPrice) {
             this.supplierPrice = supplierPrice;
             return this;
         }
@@ -361,19 +358,19 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
 
     }
 
-    public static class QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues extends TeaModel {
+    public static class ListDistributionItemWithoutCacheResponseBodyModelSkuPropertysValues extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("Text")
         public String text;
 
-        public static QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues build(java.util.Map<String, ?> map) throws Exception {
-            QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues self = new QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues();
+        public static ListDistributionItemWithoutCacheResponseBodyModelSkuPropertysValues build(java.util.Map<String, ?> map) throws Exception {
+            ListDistributionItemWithoutCacheResponseBodyModelSkuPropertysValues self = new ListDistributionItemWithoutCacheResponseBodyModelSkuPropertysValues();
             return TeaModel.build(map, self);
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues setId(Long id) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuPropertysValues setId(Long id) {
             this.id = id;
             return this;
         }
@@ -381,7 +378,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.id;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues setText(String text) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuPropertysValues setText(String text) {
             this.text = text;
             return this;
         }
@@ -391,7 +388,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
 
     }
 
-    public static class QueryItemDetailWithDivisionResponseBodyModelSkuPropertys extends TeaModel {
+    public static class ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
@@ -399,14 +396,14 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         public String text;
 
         @NameInMap("Values")
-        public java.util.List<QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues> values;
+        public java.util.List<ListDistributionItemWithoutCacheResponseBodyModelSkuPropertysValues> values;
 
-        public static QueryItemDetailWithDivisionResponseBodyModelSkuPropertys build(java.util.Map<String, ?> map) throws Exception {
-            QueryItemDetailWithDivisionResponseBodyModelSkuPropertys self = new QueryItemDetailWithDivisionResponseBodyModelSkuPropertys();
+        public static ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys build(java.util.Map<String, ?> map) throws Exception {
+            ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys self = new ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys();
             return TeaModel.build(map, self);
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuPropertys setId(Long id) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys setId(Long id) {
             this.id = id;
             return this;
         }
@@ -414,7 +411,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.id;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuPropertys setText(String text) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys setText(String text) {
             this.text = text;
             return this;
         }
@@ -422,26 +419,17 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.text;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModelSkuPropertys setValues(java.util.List<QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues> values) {
+        public ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys setValues(java.util.List<ListDistributionItemWithoutCacheResponseBodyModelSkuPropertysValues> values) {
             this.values = values;
             return this;
         }
-        public java.util.List<QueryItemDetailWithDivisionResponseBodyModelSkuPropertysValues> getValues() {
+        public java.util.List<ListDistributionItemWithoutCacheResponseBodyModelSkuPropertysValues> getValues() {
             return this.values;
         }
 
     }
 
-    public static class QueryItemDetailWithDivisionResponseBodyModel extends TeaModel {
-        @NameInMap("CanNotBeSoldCode")
-        public String canNotBeSoldCode;
-
-        @NameInMap("CanNotBeSoldMassage")
-        public String canNotBeSoldMassage;
-
-        @NameInMap("CanSell")
-        public Boolean canSell;
-
+    public static class ListDistributionItemWithoutCacheResponseBodyModel extends TeaModel {
         @NameInMap("CategoryId")
         public Long categoryId;
 
@@ -480,6 +468,18 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
 
         @NameInMap("InvoiceType")
         public Integer invoiceType;
+
+        @NameInMap("IsCanNotBeSoldCode")
+        public String isCanNotBeSoldCode;
+
+        @NameInMap("IsCanNotBeSoldMessage")
+        public String isCanNotBeSoldMessage;
+
+        @NameInMap("IsCanSell")
+        public Boolean isCanSell;
+
+        @NameInMap("IsSellerPayPostfee")
+        public Boolean isSellerPayPostfee;
 
         @NameInMap("ItemId")
         public Long itemId;
@@ -520,26 +520,20 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         @NameInMap("Quantity")
         public Integer quantity;
 
-        @NameInMap("ReservePrice")
-        public Long reservePrice;
+        @NameInMap("ReservedPrice")
+        public Long reservedPrice;
 
         @NameInMap("SecuredTransactions")
         public Integer securedTransactions;
 
-        @NameInMap("SellerPayPostfee")
-        public Boolean sellerPayPostfee;
-
         @NameInMap("SimpleQuantity")
         public String simpleQuantity;
 
-        /**
-         * <p>sku list</p>
-         */
         @NameInMap("SkuModels")
-        public java.util.List<QueryItemDetailWithDivisionResponseBodyModelSkuModels> skuModels;
+        public java.util.List<ListDistributionItemWithoutCacheResponseBodyModelSkuModels> skuModels;
 
         @NameInMap("SkuPropertys")
-        public java.util.List<QueryItemDetailWithDivisionResponseBodyModelSkuPropertys> skuPropertys;
+        public java.util.List<ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys> skuPropertys;
 
         @NameInMap("ThirdPartyItemId")
         public String thirdPartyItemId;
@@ -559,36 +553,12 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
         @NameInMap("VirtualItemType")
         public String virtualItemType;
 
-        public static QueryItemDetailWithDivisionResponseBodyModel build(java.util.Map<String, ?> map) throws Exception {
-            QueryItemDetailWithDivisionResponseBodyModel self = new QueryItemDetailWithDivisionResponseBodyModel();
+        public static ListDistributionItemWithoutCacheResponseBodyModel build(java.util.Map<String, ?> map) throws Exception {
+            ListDistributionItemWithoutCacheResponseBodyModel self = new ListDistributionItemWithoutCacheResponseBodyModel();
             return TeaModel.build(map, self);
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setCanNotBeSoldCode(String canNotBeSoldCode) {
-            this.canNotBeSoldCode = canNotBeSoldCode;
-            return this;
-        }
-        public String getCanNotBeSoldCode() {
-            return this.canNotBeSoldCode;
-        }
-
-        public QueryItemDetailWithDivisionResponseBodyModel setCanNotBeSoldMassage(String canNotBeSoldMassage) {
-            this.canNotBeSoldMassage = canNotBeSoldMassage;
-            return this;
-        }
-        public String getCanNotBeSoldMassage() {
-            return this.canNotBeSoldMassage;
-        }
-
-        public QueryItemDetailWithDivisionResponseBodyModel setCanSell(Boolean canSell) {
-            this.canSell = canSell;
-            return this;
-        }
-        public Boolean getCanSell() {
-            return this.canSell;
-        }
-
-        public QueryItemDetailWithDivisionResponseBodyModel setCategoryId(Long categoryId) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setCategoryId(Long categoryId) {
             this.categoryId = categoryId;
             return this;
         }
@@ -596,7 +566,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.categoryId;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setCategoryIds(java.util.List<Long> categoryIds) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setCategoryIds(java.util.List<Long> categoryIds) {
             this.categoryIds = categoryIds;
             return this;
         }
@@ -604,7 +574,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.categoryIds;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setCity(String city) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setCity(String city) {
             this.city = city;
             return this;
         }
@@ -612,7 +582,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.city;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setCurrent(String current) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setCurrent(String current) {
             this.current = current;
             return this;
         }
@@ -620,7 +590,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.current;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setCustomizedAttributeMap(java.util.Map<String, String> customizedAttributeMap) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setCustomizedAttributeMap(java.util.Map<String, String> customizedAttributeMap) {
             this.customizedAttributeMap = customizedAttributeMap;
             return this;
         }
@@ -628,7 +598,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.customizedAttributeMap;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setDescOption(String descOption) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setDescOption(String descOption) {
             this.descOption = descOption;
             return this;
         }
@@ -636,7 +606,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.descOption;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setDescPath(String descPath) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setDescPath(String descPath) {
             this.descPath = descPath;
             return this;
         }
@@ -644,7 +614,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.descPath;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setDistributionMallId(String distributionMallId) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setDistributionMallId(String distributionMallId) {
             this.distributionMallId = distributionMallId;
             return this;
         }
@@ -652,7 +622,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.distributionMallId;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setFeatures(java.util.Map<String, String> features) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setFeatures(java.util.Map<String, String> features) {
             this.features = features;
             return this;
         }
@@ -660,7 +630,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.features;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setFirstPicUrl(String firstPicUrl) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setFirstPicUrl(String firstPicUrl) {
             this.firstPicUrl = firstPicUrl;
             return this;
         }
@@ -668,7 +638,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.firstPicUrl;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setHasQuantity(Boolean hasQuantity) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setHasQuantity(Boolean hasQuantity) {
             this.hasQuantity = hasQuantity;
             return this;
         }
@@ -676,7 +646,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.hasQuantity;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setIforestProps(java.util.List<java.util.Map<String, String>> iforestProps) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setIforestProps(java.util.List<java.util.Map<String, String>> iforestProps) {
             this.iforestProps = iforestProps;
             return this;
         }
@@ -684,7 +654,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.iforestProps;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setInvoiceType(Integer invoiceType) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setInvoiceType(Integer invoiceType) {
             this.invoiceType = invoiceType;
             return this;
         }
@@ -692,7 +662,39 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.invoiceType;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setItemId(Long itemId) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setIsCanNotBeSoldCode(String isCanNotBeSoldCode) {
+            this.isCanNotBeSoldCode = isCanNotBeSoldCode;
+            return this;
+        }
+        public String getIsCanNotBeSoldCode() {
+            return this.isCanNotBeSoldCode;
+        }
+
+        public ListDistributionItemWithoutCacheResponseBodyModel setIsCanNotBeSoldMessage(String isCanNotBeSoldMessage) {
+            this.isCanNotBeSoldMessage = isCanNotBeSoldMessage;
+            return this;
+        }
+        public String getIsCanNotBeSoldMessage() {
+            return this.isCanNotBeSoldMessage;
+        }
+
+        public ListDistributionItemWithoutCacheResponseBodyModel setIsCanSell(Boolean isCanSell) {
+            this.isCanSell = isCanSell;
+            return this;
+        }
+        public Boolean getIsCanSell() {
+            return this.isCanSell;
+        }
+
+        public ListDistributionItemWithoutCacheResponseBodyModel setIsSellerPayPostfee(Boolean isSellerPayPostfee) {
+            this.isSellerPayPostfee = isSellerPayPostfee;
+            return this;
+        }
+        public Boolean getIsSellerPayPostfee() {
+            return this.isSellerPayPostfee;
+        }
+
+        public ListDistributionItemWithoutCacheResponseBodyModel setItemId(Long itemId) {
             this.itemId = itemId;
             return this;
         }
@@ -700,7 +702,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.itemId;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setItemImages(java.util.List<String> itemImages) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setItemImages(java.util.List<String> itemImages) {
             this.itemImages = itemImages;
             return this;
         }
@@ -708,7 +710,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.itemImages;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setItemTitle(String itemTitle) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setItemTitle(String itemTitle) {
             this.itemTitle = itemTitle;
             return this;
         }
@@ -716,7 +718,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.itemTitle;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setItemTotalSimpleValue(String itemTotalSimpleValue) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setItemTotalSimpleValue(String itemTotalSimpleValue) {
             this.itemTotalSimpleValue = itemTotalSimpleValue;
             return this;
         }
@@ -724,7 +726,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.itemTotalSimpleValue;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setItemTotalValue(Integer itemTotalValue) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setItemTotalValue(Integer itemTotalValue) {
             this.itemTotalValue = itemTotalValue;
             return this;
         }
@@ -732,7 +734,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.itemTotalValue;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setLmItemAttributeMap(java.util.Map<String, String> lmItemAttributeMap) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setLmItemAttributeMap(java.util.Map<String, String> lmItemAttributeMap) {
             this.lmItemAttributeMap = lmItemAttributeMap;
             return this;
         }
@@ -740,7 +742,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.lmItemAttributeMap;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setLmItemCategory(String lmItemCategory) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setLmItemCategory(String lmItemCategory) {
             this.lmItemCategory = lmItemCategory;
             return this;
         }
@@ -748,7 +750,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.lmItemCategory;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setLmItemId(String lmItemId) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setLmItemId(String lmItemId) {
             this.lmItemId = lmItemId;
             return this;
         }
@@ -756,7 +758,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.lmItemId;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setMainPicUrl(String mainPicUrl) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setMainPicUrl(String mainPicUrl) {
             this.mainPicUrl = mainPicUrl;
             return this;
         }
@@ -764,7 +766,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.mainPicUrl;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setMinPrice(Long minPrice) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setMinPrice(Long minPrice) {
             this.minPrice = minPrice;
             return this;
         }
@@ -772,7 +774,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.minPrice;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setProperties(java.util.Map<String, java.util.List<String>> properties) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setProperties(java.util.Map<String, java.util.List<String>> properties) {
             this.properties = properties;
             return this;
         }
@@ -780,7 +782,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.properties;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setProv(String prov) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setProv(String prov) {
             this.prov = prov;
             return this;
         }
@@ -788,7 +790,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.prov;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setQuantity(Integer quantity) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setQuantity(Integer quantity) {
             this.quantity = quantity;
             return this;
         }
@@ -796,15 +798,15 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.quantity;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setReservePrice(Long reservePrice) {
-            this.reservePrice = reservePrice;
+        public ListDistributionItemWithoutCacheResponseBodyModel setReservedPrice(Long reservedPrice) {
+            this.reservedPrice = reservedPrice;
             return this;
         }
-        public Long getReservePrice() {
-            return this.reservePrice;
+        public Long getReservedPrice() {
+            return this.reservedPrice;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setSecuredTransactions(Integer securedTransactions) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setSecuredTransactions(Integer securedTransactions) {
             this.securedTransactions = securedTransactions;
             return this;
         }
@@ -812,15 +814,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.securedTransactions;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setSellerPayPostfee(Boolean sellerPayPostfee) {
-            this.sellerPayPostfee = sellerPayPostfee;
-            return this;
-        }
-        public Boolean getSellerPayPostfee() {
-            return this.sellerPayPostfee;
-        }
-
-        public QueryItemDetailWithDivisionResponseBodyModel setSimpleQuantity(String simpleQuantity) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setSimpleQuantity(String simpleQuantity) {
             this.simpleQuantity = simpleQuantity;
             return this;
         }
@@ -828,23 +822,23 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.simpleQuantity;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setSkuModels(java.util.List<QueryItemDetailWithDivisionResponseBodyModelSkuModels> skuModels) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setSkuModels(java.util.List<ListDistributionItemWithoutCacheResponseBodyModelSkuModels> skuModels) {
             this.skuModels = skuModels;
             return this;
         }
-        public java.util.List<QueryItemDetailWithDivisionResponseBodyModelSkuModels> getSkuModels() {
+        public java.util.List<ListDistributionItemWithoutCacheResponseBodyModelSkuModels> getSkuModels() {
             return this.skuModels;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setSkuPropertys(java.util.List<QueryItemDetailWithDivisionResponseBodyModelSkuPropertys> skuPropertys) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setSkuPropertys(java.util.List<ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys> skuPropertys) {
             this.skuPropertys = skuPropertys;
             return this;
         }
-        public java.util.List<QueryItemDetailWithDivisionResponseBodyModelSkuPropertys> getSkuPropertys() {
+        public java.util.List<ListDistributionItemWithoutCacheResponseBodyModelSkuPropertys> getSkuPropertys() {
             return this.skuPropertys;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setThirdPartyItemId(String thirdPartyItemId) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setThirdPartyItemId(String thirdPartyItemId) {
             this.thirdPartyItemId = thirdPartyItemId;
             return this;
         }
@@ -852,7 +846,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.thirdPartyItemId;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setThirdPartyName(String thirdPartyName) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setThirdPartyName(String thirdPartyName) {
             this.thirdPartyName = thirdPartyName;
             return this;
         }
@@ -860,7 +854,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.thirdPartyName;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setUserType(Integer userType) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setUserType(Integer userType) {
             this.userType = userType;
             return this;
         }
@@ -868,7 +862,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.userType;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setVideoPicUrl(String videoPicUrl) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setVideoPicUrl(String videoPicUrl) {
             this.videoPicUrl = videoPicUrl;
             return this;
         }
@@ -876,7 +870,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.videoPicUrl;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setVideoUrl(String videoUrl) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setVideoUrl(String videoUrl) {
             this.videoUrl = videoUrl;
             return this;
         }
@@ -884,7 +878,7 @@ public class QueryItemDetailWithDivisionResponseBody extends TeaModel {
             return this.videoUrl;
         }
 
-        public QueryItemDetailWithDivisionResponseBodyModel setVirtualItemType(String virtualItemType) {
+        public ListDistributionItemWithoutCacheResponseBodyModel setVirtualItemType(String virtualItemType) {
             this.virtualItemType = virtualItemType;
             return this;
         }

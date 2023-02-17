@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20220531.models;
 
 import com.aliyun.tea.*;
 
-public class UnbindChannelBizToDistributionMallResponse extends TeaModel {
+public class ListDistributionItemWithoutCacheResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UnbindChannelBizToDistributionMallResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UnbindChannelBizToDistributionMallResponseBody body;
+    public ListDistributionItemWithoutCacheResponseBody body;
 
-    public static UnbindChannelBizToDistributionMallResponse build(java.util.Map<String, ?> map) throws Exception {
-        UnbindChannelBizToDistributionMallResponse self = new UnbindChannelBizToDistributionMallResponse();
+    public static ListDistributionItemWithoutCacheResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListDistributionItemWithoutCacheResponse self = new ListDistributionItemWithoutCacheResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnbindChannelBizToDistributionMallResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListDistributionItemWithoutCacheResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UnbindChannelBizToDistributionMallResponse extends TeaModel {
         return this.headers;
     }
 
-    public UnbindChannelBizToDistributionMallResponse setStatusCode(Integer statusCode) {
+    public ListDistributionItemWithoutCacheResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UnbindChannelBizToDistributionMallResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UnbindChannelBizToDistributionMallResponse setBody(UnbindChannelBizToDistributionMallResponseBody body) {
+    public ListDistributionItemWithoutCacheResponse setBody(ListDistributionItemWithoutCacheResponseBody body) {
         this.body = body;
         return this;
     }
-    public UnbindChannelBizToDistributionMallResponseBody getBody() {
+    public ListDistributionItemWithoutCacheResponseBody getBody() {
         return this.body;
     }
 
