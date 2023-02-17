@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateShardingDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>Instance IDs.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

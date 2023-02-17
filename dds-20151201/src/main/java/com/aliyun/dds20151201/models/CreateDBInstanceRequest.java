@@ -20,7 +20,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>*   **true**</p>
      * <p>*   **false**</p>
      * <br>
-     * <p>>  If you set the **ChargeType** parameter to **PrePaid**, you must configure this optional parameter.</p>
+     * <p>> If you set the **ChargeType** parameter to **PrePaid**, this parameter is valid and optional.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
@@ -28,7 +28,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the backup set. You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.</p>
      * <br>
-     * <p>>  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.</p>
+     * <p>> This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -42,20 +42,23 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
-     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid:** pay-as-you-go</p>
+     * <p>*   **PrePaid:** subscription</p>
      * <br>
-     * <p>>  If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.</p>
+     * <p>> If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the dedicated cluster to which the instance belongs.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -76,7 +79,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   The name must start with a letter.</p>
      * <p>*   The name can contain digits, letters, underscores (\_), and hyphens (-).</p>
-     * <p>*   The name must be 2 to 256 characters in length.</p>
+     * <p>*   It must be 2 to 256 characters in length.</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -84,7 +87,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage capacity of the instance. Unit: GB.</p>
      * <br>
-     * <p>The values that can be specified for this parameter are subject to the instance types. For more information, see [Replica set instance types](~~311410~~).</p>
+     * <p>The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](~~311410~~).</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
@@ -92,31 +95,59 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
      * <br>
-     * <p>>  When you call this operation to clone an instance, you can set the databases that are specified by this parameter for cloning. Otherwise, all databases of the instance are cloned.</p>
+     * <p>> When you call this operation to clone an instance, you can set the databases that are specified by this parameter for cloning. Otherwise, all databases of the instance are cloned.</p>
      */
     @NameInMap("DatabaseNames")
     public String databaseNames;
 
     /**
-     * <p>The engine of the instance. The value is set to **MongoDB**.</p>
+     * <p>The database engine of the instance. Set the value to **MongoDB**.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The engine version of the instance. Valid values:</p>
+     * <p>The version of the database engine. Valid values:</p>
      * <br>
-     * <p>* **5.0**</p>
-     * <p>* **4.4**</p>
-     * <p>* **4.2**</p>
-     * <p>* **4.0**</p>
-     * <p>* **3.4**</p>
+     * <p>*   **6.0**</p>
+     * <p>*   **5.0**</p>
+     * <p>*   **4.4**</p>
+     * <p>*   **4.2**</p>
+     * <p>*   **4.0**</p>
      * <br>
-     * <p>> If you call this operation to clone an instance, set the value to the engine of the source instance.</p>
+     * <p>> If you call this operation to clone an instance or restore an instance from the recycle bin, set the value to the engine of the source instance.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The zone where the hidden node is deployed for multi-zone deployment. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou-g**: Hangzhou Zone G</p>
+     * <p>*   **cn-hangzhou-h**: Hangzhou Zone H</p>
+     * <p>*   **cn-hangzhou-i**: Hangzhou Zone I</p>
+     * <p>*   **cn-hongkong-b**: Hongkong Zone B.</p>
+     * <p>*   **cn-hongkong-c**: Hongkong Zone C</p>
+     * <p>*   **cn-hongkong-d**: Hongkong Zone D</p>
+     * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A</p>
+     * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B</p>
+     * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C</p>
+     * <p>*   **ap-southeast-1a**: Singapore Zone A</p>
+     * <p>*   **ap-southeast-1b**: Singapore Zone B</p>
+     * <p>*   **ap-southeast-1c**: Singapore Zone C</p>
+     * <p>*   **ap-southeast-5a**: Jakarta Zone A</p>
+     * <p>*   **ap-southeast-5b**: Jakarta Zone B</p>
+     * <p>*   **ap-southeast-5c**: Jakarta Zone C</p>
+     * <p>*   **eu-central-1a**: Frankfurt Zone A</p>
+     * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
+     * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.</p>
+     * <br>
+     * <p>*   The value of this parameter cannot be the same as the value of the **ZoneId** or **SecondaryZoneId** parameter.</p>
+     */
     @NameInMap("HiddenZoneId")
     public String hiddenZoneId;
 
@@ -139,7 +170,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.</p>
      * <br>
-     * <p>>  If you set the ChargeType property to PrePaid, you must configure this property.</p>
+     * <p>> If you specify the **ChargeType** parameter to **PrePaid**, this parameter is valid and required.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -152,6 +183,8 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>> If you call this operation to clone an instance or restore an instance from the recycle bin, set the value to the engine of the source instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -167,7 +200,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String replicationFactor;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the instances you want to query belong.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -181,23 +214,54 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The point in time to clone the instance, which must be within seven days. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>>  This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.</p>
+     * <p>> This parameter is required only when you call this operation to clone an instance. If you specify this parameter, you must also specify the **SrcDBInstanceId** parameter.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    /**
+     * <p>The zone where the secondary node is deployed for multi-zone deployment. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou-g**: Hangzhou Zone G</p>
+     * <p>*   **cn-hangzhou-h**: Hangzhou Zone H</p>
+     * <p>*   **cn-hangzhou-i**: Hangzhou Zone I</p>
+     * <p>*   **cn-hongkong-b**: Hongkong Zone B.</p>
+     * <p>*   **cn-hongkong-c**: Hongkong Zone C</p>
+     * <p>*   **cn-hongkong-d**: Hongkong Zone D</p>
+     * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A</p>
+     * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B</p>
+     * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C</p>
+     * <p>*   **ap-southeast-1a**: Singapore Zone A</p>
+     * <p>*   **ap-southeast-1b**: Singapore Zone B</p>
+     * <p>*   **ap-southeast-1c**: Singapore Zone C</p>
+     * <p>*   **ap-southeast-5a**: Jakarta Zone A</p>
+     * <p>*   **ap-southeast-5b**: Jakarta Zone B</p>
+     * <p>*   **ap-southeast-5c**: Jakarta Zone C</p>
+     * <p>*   **eu-central-1a**: Frankfurt Zone A</p>
+     * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
+     * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.</p>
+     * <br>
+     * <p>*   The value of this parameter cannot be the same as the value of the **ZoneId** or **HiddenZoneId** parameter.</p>
+     */
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
 
     /**
      * <p>The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The following types of IP addresses are supported:</p>
      * <br>
-     * <p>* 0.0.0.0/0</p>
-     * <p>* IP addresses, such as 10.23.12.24.</p>
-     * <p>* Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</p>
+     * <p>*   0.0.0.0/0</p>
+     * <p>*   IP addresses, such as 10.23.12.24.</p>
+     * <p>*   Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</p>
      * <br>
-     * <p>> * A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</p>
-     * <p>> * If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</p>
+     * <br>
+     * <p>*   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance.</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
@@ -208,20 +272,19 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the source instance.</p>
      * <br>
-     * <p>>  This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter.</p>
+     * <p>> This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter. If you call this operation to restore an instance from the recycle bin, this parameter is required. The **BackupId** and **RestoreTime** parameters are not required.</p>
      */
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
 
     /**
-     * <p>The storage engine of the instance. Default value: WiredTiger. Valid values:</p>
+     * <p>The storage engine used by the instance. Set the value to **WiredTiger**.</p>
      * <br>
-     * <p>* **WiredTiger**</p>
-     * <p>* **RocksDB**</p>
-     * <p>* **TerarkDB**</p>
+     * <p>> </p>
      * <br>
-     * <p>> * If you call this operation to clone an instance, set the value to the engine of the source instance.</p>
-     * <p>> * For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
+     * <p>*   If you call this operation to clone an instance or restore an instance from the recycle bin, set the value to the engine of the source instance.</p>
+     * <br>
+     * <p>*   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
      */
     @NameInMap("StorageEngine")
     public String storageEngine;
@@ -229,7 +292,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
+     * <p>*   **cloud_essd1** :ESSD PL1</p>
+     * <p>*   **cloud_essd2**: ESSD PL2</p>
+     * <p>*   **cloud_essd3**: ESSD PL3</p>
      * <p>*   **local_ssd**: local SSD</p>
      */
     @NameInMap("StorageType")
@@ -242,7 +307,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The VPC ID of the instance.</p>
+     * <p>The ID of the VPC.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

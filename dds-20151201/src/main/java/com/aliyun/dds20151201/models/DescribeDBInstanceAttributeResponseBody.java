@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>Details of the instance.</p>
+     * <p>Details about instances.</p>
      */
     @NameInMap("DBInstances")
     public DescribeDBInstanceAttributeResponseBodyDBInstances DBInstances;
@@ -57,7 +57,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxIOPS;
 
         /**
-         * <p>The type of the Configserver node.</p>
+         * <p>The instance type of the Configserver node.</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
@@ -210,7 +210,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxIOPS;
 
         /**
-         * <p>The type of the mongos node.</p>
+         * <p>The instance type of the Mongos node.</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
@@ -240,17 +240,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID of the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the network type of the instance is VPC.</p>
+         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID of the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the network type of the instance is VPC.</p>
+         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -391,8 +391,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Classic**: classic network</p>
-         * <p>*   **VPC**: VPC</p>
+         * <p>*   **Classic**</p>
+         * <p>*   **VPC**</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
@@ -409,23 +409,23 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the network type of the instance is VPC.</p>
+         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
         @NameInMap("VPCCloudInstanceId")
         public String VPCCloudInstanceId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID of the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the network type of the instance is VPC.</p>
+         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID of the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the network type of the instance is Virtual Private Cloud (VPC).</p>
+         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -532,7 +532,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxIOPS;
 
         /**
-         * <p>The type of the shard node.</p>
+         * <p>The instance type of the shard node.</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
@@ -681,13 +681,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the instance.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the instance.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -736,7 +736,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance extends TeaModel {
         /**
-         * <p>The I/O throughput consumed by the instance.</p>
+         * <p>The read and write throughput consumed by the instance.</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
@@ -751,15 +751,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>Details of the Configserver nodes.</p>
+         * <p>Details about Configserver nodes.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
          */
         @NameInMap("ConfigserverList")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceConfigserverList configserverList;
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -771,7 +771,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String currentKernelVersion;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The edition of the instance.</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
@@ -788,11 +788,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        @NameInMap("DBInstanceOrderStatus")
+        public String DBInstanceOrderStatus;
+
         /**
          * <p>Indicates whether release protection is enabled for the instance. Valid values:</p>
          * <br>
          * <p>*   **true**: Release protection is enabled.</p>
-         * <p>*   **false**: Release protection is disabled.</p>
+         * <p>*   **false**: disabled</p>
          */
         @NameInMap("DBInstanceReleaseProtection")
         public Boolean DBInstanceReleaseProtection;
@@ -814,33 +817,31 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <br>
          * <p>*   **replicate**: replica set instance</p>
          * <p>*   **sharding**: sharded cluster instance</p>
+         * <p>*   **serverless**: serverless instance</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
         /**
-         * <p>The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.  </p>
-         * <br>
-         * <p>> - Subscription instances are released 15 days after expiration. After an instance is released, its data is deleted and cannot be restored.</p>
-         * <p>> - Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.</p>
+         * <p>实例数据销毁时间，格式为yyyy-MM-ddTHH:mm:ssZ（UTC时间）。</p>
          */
         @NameInMap("DestroyTime")
         public String destroyTime;
 
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The database engine version of the instance. Valid values:</p>
+         * <p>The engine version of the instance.</p>
          * <br>
+         * <p>*   **6.0**</p>
          * <p>*   **5.0**</p>
          * <p>*   **4.4**</p>
          * <p>*   **4.2**</p>
          * <p>*   **4.0**</p>
-         * <p>*   **3.4**</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -848,7 +849,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The time when the subscription instance expires. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a subscription instance.</p>
+         * <p>> This parameter is returned if the instance is a subscription instance.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -876,7 +877,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
          * <br>
          * <p>> </p>
+         * <br>
          * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * <br>
          * <p>*   This parameter is returned only if you use the Chine site (aliyun.com).</p>
          */
         @NameInMap("HiddenZoneId")
@@ -913,7 +916,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The end time of the maintenance window of the instance.</p>
+         * <p>The end time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
@@ -937,9 +940,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxIOPS;
 
         /**
-         * <p>Details of the mongos nodes.</p>
+         * <p>Details about mongos nodes.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
          */
         @NameInMap("MongosList")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosList mongosList;
@@ -947,8 +950,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Classic**: classic network</p>
-         * <p>*   **VPC**: VPC</p>
+         * <p>*   **Classic**</p>
+         * <p>*   **VPC**</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
@@ -956,10 +959,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The access protocol type of the instance. Valid values:</p>
          * <br>
-         * <p>- **mongodb**: the MongoDB protocol</p>
-         * <p>- **dynamodb**: the DynamoDB protocol</p>
+         * <p>*   **mongodb**: the MongoDB protocol</p>
+         * <p>*   **dynamodb**: the DynamoDB protocol</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
@@ -977,9 +980,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The logical ID of the replica instance. </p>
+         * <p>The logical ID of the replica instance.</p>
          * <br>
-         * <p>>  ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica instances.</p>
+         * <p>> ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica instances.</p>
          */
         @NameInMap("ReplacateId")
         public String replacateId;
@@ -987,15 +990,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The name of the replica set instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a replica set instance.</p>
+         * <p>> This parameter is returned if the instance is a replica set instance.</p>
          */
         @NameInMap("ReplicaSetName")
         public String replicaSetName;
 
         /**
-         * <p>Details of the replica set instance.</p>
+         * <p>Details about replica set instances.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a replica set instance.</p>
+         * <p>> This parameter is returned if the instance is a replica set instance.</p>
          */
         @NameInMap("ReplicaSets")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceReplicaSets replicaSets;
@@ -1003,15 +1006,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The number of nodes in the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a replica set instance.</p>
+         * <p>> This parameter is returned if the instance is a replica set instance.</p>
          */
         @NameInMap("ReplicationFactor")
         public String replicationFactor;
 
         /**
-         * <p>The ID of the resource group. </p>
+         * <p>The ID of the resource group.</p>
          * <br>
-         * <p>>  This parameter is returned only if you use the Chine site (aliyun.com).</p>
+         * <p>> This parameter is returned only if you use the China site (aliyun.com).</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -1039,16 +1042,18 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
          * <br>
          * <p>> </p>
+         * <br>
          * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * <br>
          * <p>*   This parameter is returned only if you use the Chine site (aliyun.com).</p>
          */
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
 
         /**
-         * <p>Details of the shard nodes.</p>
+         * <p>Details about shard nodes.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
          */
         @NameInMap("ShardList")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardList shardList;
@@ -1062,14 +1067,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The storage type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
-         * <p>*   **local_ssd**: local SSD</p>
+         * <p>**cloud_essd1** :ESSD PL1. **cloud_essd2**: ESSD of PL2. **cloud_essd3**: ESSD of PL3. **local_ssd**: local SSD.</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
-         * <p>Details of the instance tags.</p>
+         * <p>Details about instance tags.</p>
          */
         @NameInMap("Tags")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTags tags;
@@ -1077,23 +1081,23 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the network type of the instance is VPC.</p>
+         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
         @NameInMap("VPCCloudInstanceIds")
         public String VPCCloudInstanceIds;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID of the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the network type of the instance is VPC.</p>
+         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID of the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the network type of the instance is VPC.</p>
+         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -1101,9 +1105,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether password-free access within the VPC is enabled. Valid values:</p>
          * <br>
-         * <p>- **Open**: Password-free access is enabled.</p>
-         * <p>- **Close**: Password-free access is disabled, and you must use a password for access.</p>
-         * <p>- **NotSupport**: Password-free access is not supported.</p>
+         * <p>*   **Open**: Password-free access is enabled.</p>
+         * <p>*   **Close**: Password-free access is disabled, and you must use a password for access.</p>
+         * <p>*   **NotSupport**: Password-free access is not supported.</p>
          */
         @NameInMap("VpcAuthMode")
         public String vpcAuthMode;
@@ -1181,6 +1185,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getDBInstanceId() {
             return this.DBInstanceId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setDBInstanceOrderStatus(String DBInstanceOrderStatus) {
+            this.DBInstanceOrderStatus = DBInstanceOrderStatus;
+            return this;
+        }
+        public String getDBInstanceOrderStatus() {
+            return this.DBInstanceOrderStatus;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setDBInstanceReleaseProtection(Boolean DBInstanceReleaseProtection) {
