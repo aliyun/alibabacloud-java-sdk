@@ -61,6 +61,9 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateVpnAttachmentRequestTags> tags;
+
     public static CreateVpnAttachmentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVpnAttachmentRequest self = new CreateVpnAttachmentRequest();
         return TeaModel.build(map, self);
@@ -216,6 +219,44 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateVpnAttachmentRequest setTags(java.util.List<CreateVpnAttachmentRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateVpnAttachmentRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class CreateVpnAttachmentRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateVpnAttachmentRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateVpnAttachmentRequestTags self = new CreateVpnAttachmentRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateVpnAttachmentRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateVpnAttachmentRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

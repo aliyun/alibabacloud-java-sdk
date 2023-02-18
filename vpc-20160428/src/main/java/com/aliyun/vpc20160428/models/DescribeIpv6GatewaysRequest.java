@@ -25,11 +25,17 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tags")
+    public java.util.List<DescribeIpv6GatewaysRequestTags> tags;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -95,6 +101,14 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeIpv6GatewaysRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeIpv6GatewaysRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -111,12 +125,50 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribeIpv6GatewaysRequest setTags(java.util.List<DescribeIpv6GatewaysRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeIpv6GatewaysRequestTags> getTags() {
+        return this.tags;
+    }
+
     public DescribeIpv6GatewaysRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class DescribeIpv6GatewaysRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeIpv6GatewaysRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIpv6GatewaysRequestTags self = new DescribeIpv6GatewaysRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIpv6GatewaysRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeIpv6GatewaysRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -10,6 +10,9 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateIpv6GatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateIpv6GatewayResponseBody self = new CreateIpv6GatewayResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateIpv6GatewayResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -61,6 +61,9 @@ public class CreateVpnConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateVpnConnectionRequestTags> tags;
+
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
@@ -221,12 +224,50 @@ public class CreateVpnConnectionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateVpnConnectionRequest setTags(java.util.List<CreateVpnConnectionRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateVpnConnectionRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateVpnConnectionRequest setVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     public String getVpnGatewayId() {
         return this.vpnGatewayId;
+    }
+
+    public static class CreateVpnConnectionRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateVpnConnectionRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateVpnConnectionRequestTags self = new CreateVpnConnectionRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateVpnConnectionRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateVpnConnectionRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

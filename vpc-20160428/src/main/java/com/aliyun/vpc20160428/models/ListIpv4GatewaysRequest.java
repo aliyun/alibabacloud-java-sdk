@@ -25,11 +25,17 @@ public class ListIpv4GatewaysRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tags")
+    public java.util.List<ListIpv4GatewaysRequestTags> tags;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -95,6 +101,14 @@ public class ListIpv4GatewaysRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListIpv4GatewaysRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ListIpv4GatewaysRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -111,12 +125,50 @@ public class ListIpv4GatewaysRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ListIpv4GatewaysRequest setTags(java.util.List<ListIpv4GatewaysRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListIpv4GatewaysRequestTags> getTags() {
+        return this.tags;
+    }
+
     public ListIpv4GatewaysRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class ListIpv4GatewaysRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListIpv4GatewaysRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListIpv4GatewaysRequestTags self = new ListIpv4GatewaysRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIpv4GatewaysRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListIpv4GatewaysRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

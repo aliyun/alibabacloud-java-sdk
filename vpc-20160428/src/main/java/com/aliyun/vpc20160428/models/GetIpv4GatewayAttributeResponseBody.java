@@ -25,8 +25,14 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Tags")
+    public java.util.List<GetIpv4GatewayAttributeResponseBodyTags> tags;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -92,6 +98,14 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetIpv4GatewayAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public GetIpv4GatewayAttributeResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -100,12 +114,50 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         return this.status;
     }
 
+    public GetIpv4GatewayAttributeResponseBody setTags(java.util.List<GetIpv4GatewayAttributeResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetIpv4GatewayAttributeResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public GetIpv4GatewayAttributeResponseBody setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class GetIpv4GatewayAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetIpv4GatewayAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetIpv4GatewayAttributeResponseBodyTags self = new GetIpv4GatewayAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetIpv4GatewayAttributeResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetIpv4GatewayAttributeResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

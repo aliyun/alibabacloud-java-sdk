@@ -64,6 +64,55 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag self = new DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag> tag;
+
+        public static DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags self = new DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags setTag(java.util.List<DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway extends TeaModel {
         @NameInMap("Asn")
         public Long asn;
@@ -85,6 +134,9 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Tags")
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags tags;
 
         public static DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway build(java.util.Map<String, ?> map) throws Exception {
             DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway self = new DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway();
@@ -145,6 +197,14 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setTags(DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags getTags() {
+            return this.tags;
         }
 
     }

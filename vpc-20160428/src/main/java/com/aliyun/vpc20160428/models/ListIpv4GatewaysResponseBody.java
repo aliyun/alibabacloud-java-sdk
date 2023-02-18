@@ -53,6 +53,36 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags self = new ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListIpv4GatewaysResponseBodyIpv4GatewayModels extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -72,8 +102,14 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
         @NameInMap("Ipv4GatewayRouteTableId")
         public String ipv4GatewayRouteTableId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags> tags;
 
         @NameInMap("VpcId")
         public String vpcId;
@@ -131,12 +167,28 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
             return this.ipv4GatewayRouteTableId;
         }
 
+        public ListIpv4GatewaysResponseBodyIpv4GatewayModels setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListIpv4GatewaysResponseBodyIpv4GatewayModels setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListIpv4GatewaysResponseBodyIpv4GatewayModels setTags(java.util.List<ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags> getTags() {
+            return this.tags;
         }
 
         public ListIpv4GatewaysResponseBodyIpv4GatewayModels setVpcId(String vpcId) {

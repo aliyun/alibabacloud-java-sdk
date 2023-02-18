@@ -64,6 +64,55 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag self = new DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag> tag;
+
+        public static DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags self = new DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags setTag(java.util.List<DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway extends TeaModel {
         @NameInMap("BusinessStatus")
         public String businessStatus;
@@ -89,8 +138,14 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags tags;
 
         @NameInMap("VpcId")
         public String vpcId;
@@ -164,12 +219,28 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setTags(DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags getTags() {
+            return this.tags;
         }
 
         public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setVpcId(String vpcId) {

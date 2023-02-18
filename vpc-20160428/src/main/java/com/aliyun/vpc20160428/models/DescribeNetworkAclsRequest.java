@@ -37,6 +37,9 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeNetworkAclsRequestTags> tags;
+
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -133,12 +136,50 @@ public class DescribeNetworkAclsRequest extends TeaModel {
         return this.resourceType;
     }
 
+    public DescribeNetworkAclsRequest setTags(java.util.List<DescribeNetworkAclsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeNetworkAclsRequestTags> getTags() {
+        return this.tags;
+    }
+
     public DescribeNetworkAclsRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class DescribeNetworkAclsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeNetworkAclsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAclsRequestTags self = new DescribeNetworkAclsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAclsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNetworkAclsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -75,6 +75,55 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag self = new DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag> tag;
+
+        public static DescribeFlowLogsResponseBodyFlowLogsFlowLogTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowLogsResponseBodyFlowLogsFlowLogTags self = new DescribeFlowLogsResponseBodyFlowLogsFlowLogTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLogTags setTag(java.util.List<DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath extends TeaModel {
         @NameInMap("trafficPathList")
         public java.util.List<String> trafficPathList;
@@ -122,6 +171,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("ResourceId")
         public String resourceId;
 
@@ -133,6 +185,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLogTags tags;
 
         @NameInMap("TrafficPath")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath trafficPath;
@@ -217,6 +272,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
@@ -247,6 +310,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setTags(DescribeFlowLogsResponseBodyFlowLogsFlowLogTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLogTags getTags() {
+            return this.tags;
         }
 
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setTrafficPath(DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath trafficPath) {

@@ -64,6 +64,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tags")
+    public DescribeVpnConnectionResponseBodyTags tags;
+
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
@@ -248,6 +251,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeVpnConnectionResponseBody setTags(DescribeVpnConnectionResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeVpnConnectionResponseBodyTags getTags() {
+        return this.tags;
     }
 
     public DescribeVpnConnectionResponseBody setTransitRouterId(String transitRouterId) {
@@ -461,6 +472,55 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
         public String getIpsecPfs() {
             return this.ipsecPfs;
+        }
+
+    }
+
+    public static class DescribeVpnConnectionResponseBodyTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVpnConnectionResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnConnectionResponseBodyTagsTag self = new DescribeVpnConnectionResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnConnectionResponseBodyTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVpnConnectionResponseBodyTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeVpnConnectionResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeVpnConnectionResponseBodyTagsTag> tag;
+
+        public static DescribeVpnConnectionResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnConnectionResponseBodyTags self = new DescribeVpnConnectionResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnConnectionResponseBodyTags setTag(java.util.List<DescribeVpnConnectionResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeVpnConnectionResponseBodyTagsTag> getTag() {
+            return this.tag;
         }
 
     }

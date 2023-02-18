@@ -40,6 +40,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tags")
+    public DescribeVSwitchAttributesResponseBodyTags tags;
+
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -153,6 +156,14 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         return this.status;
     }
 
+    public DescribeVSwitchAttributesResponseBody setTags(DescribeVSwitchAttributesResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeVSwitchAttributesResponseBodyTags getTags() {
+        return this.tags;
+    }
+
     public DescribeVSwitchAttributesResponseBody setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -211,6 +222,55 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
         public String getRouteTableType() {
             return this.routeTableType;
+        }
+
+    }
+
+    public static class DescribeVSwitchAttributesResponseBodyTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVSwitchAttributesResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVSwitchAttributesResponseBodyTagsTag self = new DescribeVSwitchAttributesResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVSwitchAttributesResponseBodyTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVSwitchAttributesResponseBodyTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeVSwitchAttributesResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeVSwitchAttributesResponseBodyTagsTag> tag;
+
+        public static DescribeVSwitchAttributesResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVSwitchAttributesResponseBodyTags self = new DescribeVSwitchAttributesResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVSwitchAttributesResponseBodyTags setTag(java.util.List<DescribeVSwitchAttributesResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeVSwitchAttributesResponseBodyTagsTag> getTag() {
+            return this.tag;
         }
 
     }

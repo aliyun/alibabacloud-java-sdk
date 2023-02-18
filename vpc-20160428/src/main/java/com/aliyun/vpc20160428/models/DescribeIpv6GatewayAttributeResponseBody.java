@@ -31,8 +31,14 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Tags")
+    public DescribeIpv6GatewayAttributeResponseBodyTags tags;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -114,6 +120,14 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeIpv6GatewayAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeIpv6GatewayAttributeResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -122,12 +136,69 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         return this.status;
     }
 
+    public DescribeIpv6GatewayAttributeResponseBody setTags(DescribeIpv6GatewayAttributeResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeIpv6GatewayAttributeResponseBodyTags getTags() {
+        return this.tags;
+    }
+
     public DescribeIpv6GatewayAttributeResponseBody setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class DescribeIpv6GatewayAttributeResponseBodyTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeIpv6GatewayAttributeResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIpv6GatewayAttributeResponseBodyTagsTag self = new DescribeIpv6GatewayAttributeResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIpv6GatewayAttributeResponseBodyTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeIpv6GatewayAttributeResponseBodyTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeIpv6GatewayAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeIpv6GatewayAttributeResponseBodyTagsTag> tag;
+
+        public static DescribeIpv6GatewayAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIpv6GatewayAttributeResponseBodyTags self = new DescribeIpv6GatewayAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIpv6GatewayAttributeResponseBodyTags setTag(java.util.List<DescribeIpv6GatewayAttributeResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeIpv6GatewayAttributeResponseBodyTagsTag> getTag() {
+            return this.tag;
+        }
+
     }
 
 }

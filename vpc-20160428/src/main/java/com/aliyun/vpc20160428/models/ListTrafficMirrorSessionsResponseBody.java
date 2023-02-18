@@ -53,6 +53,36 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         return this.trafficMirrorSessions;
     }
 
+    public static class ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags self = new ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -62,6 +92,12 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
         @NameInMap("Priority")
         public Integer priority;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public java.util.List<ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags> tags;
 
         @NameInMap("TrafficMirrorFilterId")
         public String trafficMirrorFilterId;
@@ -120,6 +156,22 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         }
         public Integer getPriority() {
             return this.priority;
+        }
+
+        public ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions setTags(java.util.List<ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags> getTags() {
+            return this.tags;
         }
 
         public ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions setTrafficMirrorFilterId(String trafficMirrorFilterId) {

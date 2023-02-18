@@ -102,6 +102,55 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHaVipsResponseBodyHaVipsHaVipTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeHaVipsResponseBodyHaVipsHaVipTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHaVipsResponseBodyHaVipsHaVipTagsTag self = new DescribeHaVipsResponseBodyHaVipsHaVipTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHaVipsResponseBodyHaVipsHaVipTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeHaVipsResponseBodyHaVipsHaVipTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeHaVipsResponseBodyHaVipsHaVipTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeHaVipsResponseBodyHaVipsHaVipTagsTag> tag;
+
+        public static DescribeHaVipsResponseBodyHaVipsHaVipTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHaVipsResponseBodyHaVipsHaVipTags self = new DescribeHaVipsResponseBodyHaVipsHaVipTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHaVipsResponseBodyHaVipsHaVipTags setTag(java.util.List<DescribeHaVipsResponseBodyHaVipsHaVipTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeHaVipsResponseBodyHaVipsHaVipTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeHaVipsResponseBodyHaVipsHaVip extends TeaModel {
         @NameInMap("AssociatedEipAddresses")
         public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses associatedEipAddresses;
@@ -136,8 +185,14 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeHaVipsResponseBodyHaVipsHaVipTags tags;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -238,12 +293,28 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeHaVipsResponseBodyHaVipsHaVip setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeHaVipsResponseBodyHaVipsHaVip setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeHaVipsResponseBodyHaVipsHaVip setTags(DescribeHaVipsResponseBodyHaVipsHaVipTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeHaVipsResponseBodyHaVipsHaVipTags getTags() {
+            return this.tags;
         }
 
         public DescribeHaVipsResponseBodyHaVipsHaVip setVSwitchId(String vSwitchId) {
