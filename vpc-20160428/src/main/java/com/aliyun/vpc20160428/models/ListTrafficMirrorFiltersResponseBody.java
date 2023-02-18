@@ -311,12 +311,48 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     }
 
+    public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags self = new ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters extends TeaModel {
         @NameInMap("EgressRules")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules> egressRules;
 
         @NameInMap("IngressRules")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules> ingressRules;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags> tags;
 
         @NameInMap("TrafficMirrorFilterDescription")
         public String trafficMirrorFilterDescription;
@@ -349,6 +385,22 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules> getIngressRules() {
             return this.ingressRules;
+        }
+
+        public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters setTags(java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags> getTags() {
+            return this.tags;
         }
 
         public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters setTrafficMirrorFilterDescription(String trafficMirrorFilterDescription) {

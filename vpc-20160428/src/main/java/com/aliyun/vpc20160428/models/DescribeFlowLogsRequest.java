@@ -34,6 +34,9 @@ public class DescribeFlowLogsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -48,6 +51,9 @@ public class DescribeFlowLogsRequest extends TeaModel {
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Tags")
+    public java.util.List<DescribeFlowLogsRequestTags> tags;
 
     @NameInMap("TrafficType")
     public String trafficType;
@@ -140,6 +146,14 @@ public class DescribeFlowLogsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeFlowLogsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeFlowLogsRequest setResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -180,6 +194,14 @@ public class DescribeFlowLogsRequest extends TeaModel {
         return this.status;
     }
 
+    public DescribeFlowLogsRequest setTags(java.util.List<DescribeFlowLogsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeFlowLogsRequestTags> getTags() {
+        return this.tags;
+    }
+
     public DescribeFlowLogsRequest setTrafficType(String trafficType) {
         this.trafficType = trafficType;
         return this;
@@ -194,6 +216,36 @@ public class DescribeFlowLogsRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class DescribeFlowLogsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeFlowLogsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowLogsRequestTags self = new DescribeFlowLogsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowLogsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeFlowLogsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

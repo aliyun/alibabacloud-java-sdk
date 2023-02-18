@@ -37,6 +37,9 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateCustomerGatewayRequestTags> tags;
+
     public static CreateCustomerGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomerGatewayRequest self = new CreateCustomerGatewayRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,44 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateCustomerGatewayRequest setTags(java.util.List<CreateCustomerGatewayRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateCustomerGatewayRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class CreateCustomerGatewayRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCustomerGatewayRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateCustomerGatewayRequestTags self = new CreateCustomerGatewayRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCustomerGatewayRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCustomerGatewayRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

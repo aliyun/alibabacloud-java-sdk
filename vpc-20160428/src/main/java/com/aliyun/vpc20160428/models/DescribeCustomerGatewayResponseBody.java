@@ -28,6 +28,9 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Tags")
+    public DescribeCustomerGatewayResponseBodyTags tags;
+
     public static DescribeCustomerGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomerGatewayResponseBody self = new DescribeCustomerGatewayResponseBody();
         return TeaModel.build(map, self);
@@ -95,6 +98,63 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeCustomerGatewayResponseBody setTags(DescribeCustomerGatewayResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeCustomerGatewayResponseBodyTags getTags() {
+        return this.tags;
+    }
+
+    public static class DescribeCustomerGatewayResponseBodyTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCustomerGatewayResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomerGatewayResponseBodyTagsTag self = new DescribeCustomerGatewayResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomerGatewayResponseBodyTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCustomerGatewayResponseBodyTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeCustomerGatewayResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeCustomerGatewayResponseBodyTagsTag> tag;
+
+        public static DescribeCustomerGatewayResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomerGatewayResponseBodyTags self = new DescribeCustomerGatewayResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomerGatewayResponseBodyTags setTag(java.util.List<DescribeCustomerGatewayResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeCustomerGatewayResponseBodyTagsTag> getTag() {
+            return this.tag;
+        }
+
     }
 
 }

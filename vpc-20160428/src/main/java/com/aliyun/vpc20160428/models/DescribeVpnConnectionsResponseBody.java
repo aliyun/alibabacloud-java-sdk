@@ -223,6 +223,55 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag self = new DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag> tag;
+
+        public static DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag self = new DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag setTag(java.util.List<DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTagTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionVcoHealthCheck extends TeaModel {
         @NameInMap("Dip")
         public String dip;
@@ -451,6 +500,9 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tag")
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag tag;
+
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
@@ -624,6 +676,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setTag(DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag tag) {
+            this.tag = tag;
+            return this;
+        }
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag getTag() {
+            return this.tag;
         }
 
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setTransitRouterId(String transitRouterId) {

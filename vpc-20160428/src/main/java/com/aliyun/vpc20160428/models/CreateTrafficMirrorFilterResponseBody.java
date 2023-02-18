@@ -7,6 +7,9 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("TrafficMirrorFilterId")
     public String trafficMirrorFilterId;
 
@@ -21,6 +24,14 @@ public class CreateTrafficMirrorFilterResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateTrafficMirrorFilterResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateTrafficMirrorFilterResponseBody setTrafficMirrorFilterId(String trafficMirrorFilterId) {

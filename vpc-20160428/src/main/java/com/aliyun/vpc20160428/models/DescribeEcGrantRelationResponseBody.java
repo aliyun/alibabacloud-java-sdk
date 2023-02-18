@@ -82,6 +82,9 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        @NameInMap("GrantType")
+        public String grantType;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -125,6 +128,14 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
         }
         public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public DescribeEcGrantRelationResponseBodyEcGrantRelations setGrantType(String grantType) {
+            this.grantType = grantType;
+            return this;
+        }
+        public String getGrantType() {
+            return this.grantType;
         }
 
         public DescribeEcGrantRelationResponseBodyEcGrantRelations setInstanceId(String instanceId) {

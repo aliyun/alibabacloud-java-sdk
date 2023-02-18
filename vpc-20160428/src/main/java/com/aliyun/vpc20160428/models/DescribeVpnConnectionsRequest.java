@@ -28,6 +28,9 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeVpnConnectionsRequestTag> tag;
+
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;
 
@@ -103,6 +106,14 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribeVpnConnectionsRequest setTag(java.util.List<DescribeVpnConnectionsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeVpnConnectionsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeVpnConnectionsRequest setVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -117,6 +128,36 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     }
     public String getVpnGatewayId() {
         return this.vpnGatewayId;
+    }
+
+    public static class DescribeVpnConnectionsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVpnConnectionsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnConnectionsRequestTag self = new DescribeVpnConnectionsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnConnectionsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVpnConnectionsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

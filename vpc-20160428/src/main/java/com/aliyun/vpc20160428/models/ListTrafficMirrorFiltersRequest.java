@@ -19,11 +19,17 @@ public class ListTrafficMirrorFiltersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tags")
+    public java.util.List<ListTrafficMirrorFiltersRequestTags> tags;
 
     @NameInMap("TrafficMirrorFilterIds")
     public java.util.List<String> trafficMirrorFilterIds;
@@ -76,6 +82,14 @@ public class ListTrafficMirrorFiltersRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListTrafficMirrorFiltersRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ListTrafficMirrorFiltersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -92,6 +106,14 @@ public class ListTrafficMirrorFiltersRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ListTrafficMirrorFiltersRequest setTags(java.util.List<ListTrafficMirrorFiltersRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListTrafficMirrorFiltersRequestTags> getTags() {
+        return this.tags;
+    }
+
     public ListTrafficMirrorFiltersRequest setTrafficMirrorFilterIds(java.util.List<String> trafficMirrorFilterIds) {
         this.trafficMirrorFilterIds = trafficMirrorFilterIds;
         return this;
@@ -106,6 +128,36 @@ public class ListTrafficMirrorFiltersRequest extends TeaModel {
     }
     public String getTrafficMirrorFilterName() {
         return this.trafficMirrorFilterName;
+    }
+
+    public static class ListTrafficMirrorFiltersRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTrafficMirrorFiltersRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTrafficMirrorFiltersRequestTags self = new ListTrafficMirrorFiltersRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTrafficMirrorFiltersRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTrafficMirrorFiltersRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

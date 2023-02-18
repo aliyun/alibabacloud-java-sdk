@@ -332,6 +332,55 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag self = new DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag> tag;
+
+        public static DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags self = new DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags setTag(java.util.List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAcl extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
@@ -362,6 +411,9 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags tags;
 
         @NameInMap("VpcId")
         public String vpcId;
@@ -449,6 +501,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAcl setTags(DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclTags getTags() {
+            return this.tags;
         }
 
         public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAcl setVpcId(String vpcId) {
