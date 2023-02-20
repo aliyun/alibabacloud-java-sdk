@@ -75,9 +75,119 @@ public class MonthBillGetResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class MonthBillGetResponseBodyModuleMonthAccountBillDetail extends TeaModel {
+        @NameInMap("carAmount")
+        public Double carAmount;
+
+        @NameInMap("damageAmount")
+        public Double damageAmount;
+
+        @NameInMap("flightAmount")
+        public Double flightAmount;
+
+        @NameInMap("fuPoint")
+        public Double fuPoint;
+
+        @NameInMap("hotelAmount")
+        public Double hotelAmount;
+
+        @NameInMap("ieFlightAmount")
+        public Double ieFlightAmount;
+
+        @NameInMap("mailBillDate")
+        public Long mailBillDate;
+
+        @NameInMap("serviceAmount")
+        public Double serviceAmount;
+
+        @NameInMap("trainAmount")
+        public Double trainAmount;
+
+        public static MonthBillGetResponseBodyModuleMonthAccountBillDetail build(java.util.Map<String, ?> map) throws Exception {
+            MonthBillGetResponseBodyModuleMonthAccountBillDetail self = new MonthBillGetResponseBodyModuleMonthAccountBillDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setCarAmount(Double carAmount) {
+            this.carAmount = carAmount;
+            return this;
+        }
+        public Double getCarAmount() {
+            return this.carAmount;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setDamageAmount(Double damageAmount) {
+            this.damageAmount = damageAmount;
+            return this;
+        }
+        public Double getDamageAmount() {
+            return this.damageAmount;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setFlightAmount(Double flightAmount) {
+            this.flightAmount = flightAmount;
+            return this;
+        }
+        public Double getFlightAmount() {
+            return this.flightAmount;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setFuPoint(Double fuPoint) {
+            this.fuPoint = fuPoint;
+            return this;
+        }
+        public Double getFuPoint() {
+            return this.fuPoint;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setHotelAmount(Double hotelAmount) {
+            this.hotelAmount = hotelAmount;
+            return this;
+        }
+        public Double getHotelAmount() {
+            return this.hotelAmount;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setIeFlightAmount(Double ieFlightAmount) {
+            this.ieFlightAmount = ieFlightAmount;
+            return this;
+        }
+        public Double getIeFlightAmount() {
+            return this.ieFlightAmount;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setMailBillDate(Long mailBillDate) {
+            this.mailBillDate = mailBillDate;
+            return this;
+        }
+        public Long getMailBillDate() {
+            return this.mailBillDate;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setServiceAmount(Double serviceAmount) {
+            this.serviceAmount = serviceAmount;
+            return this;
+        }
+        public Double getServiceAmount() {
+            return this.serviceAmount;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setTrainAmount(Double trainAmount) {
+            this.trainAmount = trainAmount;
+            return this;
+        }
+        public Double getTrainAmount() {
+            return this.trainAmount;
+        }
+
+    }
+
     public static class MonthBillGetResponseBodyModule extends TeaModel {
         @NameInMap("end_date")
         public String endDate;
+
+        @NameInMap("monthAccountBillDetail")
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail monthAccountBillDetail;
 
         @NameInMap("start_date")
         public String startDate;
@@ -96,6 +206,14 @@ public class MonthBillGetResponseBody extends TeaModel {
         }
         public String getEndDate() {
             return this.endDate;
+        }
+
+        public MonthBillGetResponseBodyModule setMonthAccountBillDetail(MonthBillGetResponseBodyModuleMonthAccountBillDetail monthAccountBillDetail) {
+            this.monthAccountBillDetail = monthAccountBillDetail;
+            return this;
+        }
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail getMonthAccountBillDetail() {
+            return this.monthAccountBillDetail;
         }
 
         public MonthBillGetResponseBodyModule setStartDate(String startDate) {
