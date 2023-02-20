@@ -3,16 +3,10 @@ package com.aliyun.governance20210120;
 
 import com.aliyun.tea.*;
 import com.aliyun.governance20210120.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this.checkConfig(config);
@@ -32,7 +26,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public EnrollAccountResponse enrollAccountWithOptions(EnrollAccountRequest request, RuntimeOptions runtime) throws Exception {
+    public EnrollAccountResponse enrollAccountWithOptions(EnrollAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountNamePrefix)) {
@@ -41,6 +35,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.accountUid)) {
             query.put("AccountUid", request.accountUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.baselineId)) {
+            query.put("BaselineId", request.baselineId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.baselineItems)) {
@@ -63,10 +61,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "EnrollAccount"),
             new TeaPair("version", "2021-01-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -81,11 +79,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public EnrollAccountResponse enrollAccount(EnrollAccountRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enrollAccountWithOptions(request, runtime);
     }
 
-    public GetEnrolledAccountResponse getEnrolledAccountWithOptions(GetEnrolledAccountRequest request, RuntimeOptions runtime) throws Exception {
+    public GetEnrolledAccountResponse getEnrolledAccountWithOptions(GetEnrolledAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountUid)) {
@@ -96,10 +94,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetEnrolledAccount"),
             new TeaPair("version", "2021-01-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -114,11 +112,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetEnrolledAccountResponse getEnrolledAccount(GetEnrolledAccountRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEnrolledAccountWithOptions(request, runtime);
     }
 
-    public ListEnrolledAccountsResponse listEnrolledAccountsWithOptions(ListEnrolledAccountsRequest request, RuntimeOptions runtime) throws Exception {
+    public ListEnrolledAccountsResponse listEnrolledAccountsWithOptions(ListEnrolledAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -133,10 +131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListEnrolledAccounts"),
             new TeaPair("version", "2021-01-20"),
             new TeaPair("protocol", "HTTPS"),
@@ -151,7 +149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public ListEnrolledAccountsResponse listEnrolledAccounts(ListEnrolledAccountsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEnrolledAccountsWithOptions(request, runtime);
     }
 }

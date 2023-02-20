@@ -4,31 +4,30 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class EnrollAccountRequest extends TeaModel {
-    // 账号名称前缀
     @NameInMap("AccountNamePrefix")
     public String accountNamePrefix;
 
-    // 注册账号ID
     @NameInMap("AccountUid")
     public Long accountUid;
 
-    // 基线项配置数组
+    @NameInMap("BaselineId")
+    public String baselineId;
+
     @NameInMap("BaselineItems")
     public java.util.List<EnrollAccountRequestBaselineItems> baselineItems;
 
-    // 账号显示名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 父资源夹ID
     @NameInMap("FolderId")
     public String folderId;
 
-    // 结算账号ID
     @NameInMap("PayerAccountUid")
     public Long payerAccountUid;
 
-    // RegionId
+    /**
+     * <p>RegionId</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -51,6 +50,14 @@ public class EnrollAccountRequest extends TeaModel {
     }
     public Long getAccountUid() {
         return this.accountUid;
+    }
+
+    public EnrollAccountRequest setBaselineId(String baselineId) {
+        this.baselineId = baselineId;
+        return this;
+    }
+    public String getBaselineId() {
+        return this.baselineId;
     }
 
     public EnrollAccountRequest setBaselineItems(java.util.List<EnrollAccountRequestBaselineItems> baselineItems) {
@@ -94,19 +101,15 @@ public class EnrollAccountRequest extends TeaModel {
     }
 
     public static class EnrollAccountRequestBaselineItems extends TeaModel {
-        // 基线项配置
         @NameInMap("Config")
         public String config;
 
-        // 基线项名称
         @NameInMap("Name")
         public String name;
 
-        // 是否跳过基线项
         @NameInMap("Skip")
         public Boolean skip;
 
-        // 基线项版本
         @NameInMap("Version")
         public String version;
 
