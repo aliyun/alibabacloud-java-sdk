@@ -4,15 +4,15 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class ListEnrolledAccountsRequest extends TeaModel {
-    // 每页的最大数据条数
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 查询返回结果下一页的令牌。首次调用API不需要NextToken
     @NameInMap("NextToken")
     public String nextToken;
 
-    // RegionId
+    /**
+     * <p>RegionId</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

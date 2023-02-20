@@ -4,55 +4,45 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class GetEnrolledAccountResponseBody extends TeaModel {
-    // 账号ID
     @NameInMap("AccountUid")
     public Long accountUid;
 
-    // 创建时间
+    @NameInMap("BaselineId")
+    public String baselineId;
+
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 账号显示名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 错误信息
     @NameInMap("ErrorInfo")
     public GetEnrolledAccountResponseBodyErrorInfo errorInfo;
 
-    // 父资源夹ID
     @NameInMap("FolderId")
     public String folderId;
 
-    // 是否初始化完成
     @NameInMap("Initialized")
     public Boolean initialized;
 
-    // 注册账号时的输入参数
     @NameInMap("Inputs")
     public GetEnrolledAccountResponseBodyInputs inputs;
 
-    // 所属的Master账号ID
     @NameInMap("MasterAccountUid")
     public Long masterAccountUid;
 
-    // 结算账号ID
     @NameInMap("PayerAccountUid")
     public Long payerAccountUid;
 
-    // 基线实施进度
     @NameInMap("Progress")
     public java.util.List<GetEnrolledAccountResponseBodyProgress> progress;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 账号注册状态
     @NameInMap("Status")
     public String status;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
@@ -67,6 +57,14 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     }
     public Long getAccountUid() {
         return this.accountUid;
+    }
+
+    public GetEnrolledAccountResponseBody setBaselineId(String baselineId) {
+        this.baselineId = baselineId;
+        return this;
+    }
+    public String getBaselineId() {
+        return this.baselineId;
     }
 
     public GetEnrolledAccountResponseBody setCreateTime(String createTime) {
@@ -166,19 +164,15 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     }
 
     public static class GetEnrolledAccountResponseBodyErrorInfo extends TeaModel {
-        // 错误码
         @NameInMap("Code")
         public String code;
 
-        // 错误信息
         @NameInMap("Message")
         public String message;
 
-        // 错误处理建议
         @NameInMap("Recommend")
         public String recommend;
 
-        // 请求ID
         @NameInMap("RequestId")
         public String requestId;
 
@@ -222,19 +216,15 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     }
 
     public static class GetEnrolledAccountResponseBodyInputsBaselineItems extends TeaModel {
-        // 基线项配置
         @NameInMap("Config")
         public String config;
 
-        // 基线项名称
         @NameInMap("Name")
         public String name;
 
-        // 是否跳过基线项
         @NameInMap("Skip")
         public Boolean skip;
 
-        // 基线项版本
         @NameInMap("Version")
         public String version;
 
@@ -278,27 +268,21 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     }
 
     public static class GetEnrolledAccountResponseBodyInputs extends TeaModel {
-        // 账号名称前缀
         @NameInMap("AccountNamePrefix")
         public String accountNamePrefix;
 
-        // 账号ID
         @NameInMap("AccountUid")
         public Long accountUid;
 
-        // 基线项配置数组
         @NameInMap("BaselineItems")
         public java.util.List<GetEnrolledAccountResponseBodyInputsBaselineItems> baselineItems;
 
-        // 账号展示名称
         @NameInMap("DisplayName")
         public String displayName;
 
-        // 父资源夹ID
         @NameInMap("FolderId")
         public String folderId;
 
-        // 结算账号ID
         @NameInMap("PayerAccountUid")
         public Long payerAccountUid;
 
@@ -358,11 +342,9 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     }
 
     public static class GetEnrolledAccountResponseBodyProgress extends TeaModel {
-        // 基线项名称
         @NameInMap("Name")
         public String name;
 
-        // 基线项实施状态
         @NameInMap("Status")
         public String status;
 

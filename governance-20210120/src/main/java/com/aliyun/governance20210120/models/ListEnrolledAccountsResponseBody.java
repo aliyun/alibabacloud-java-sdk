@@ -4,15 +4,12 @@ package com.aliyun.governance20210120.models;
 import com.aliyun.tea.*;
 
 public class ListEnrolledAccountsResponseBody extends TeaModel {
-    // 账号列表
     @NameInMap("EnrolledAccounts")
     public java.util.List<ListEnrolledAccountsResponseBodyEnrolledAccounts> enrolledAccounts;
 
-    // 查询返回结果下一页的令牌
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,31 +43,27 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
     }
 
     public static class ListEnrolledAccountsResponseBodyEnrolledAccounts extends TeaModel {
-        // 账号ID
         @NameInMap("AccountUid")
         public Long accountUid;
 
-        // 创建时间
+        @NameInMap("BaselineId")
+        public String baselineId;
+
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 账号显示名称
         @NameInMap("DisplayName")
         public String displayName;
 
-        // 父资源夹ID
         @NameInMap("FolderId")
         public String folderId;
 
-        // 结算账号ID
         @NameInMap("PayerAccountUid")
         public Long payerAccountUid;
 
-        // 创建状态
         @NameInMap("Status")
         public String status;
 
-        // 更新时间
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -85,6 +78,14 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         }
         public Long getAccountUid() {
             return this.accountUid;
+        }
+
+        public ListEnrolledAccountsResponseBodyEnrolledAccounts setBaselineId(String baselineId) {
+            this.baselineId = baselineId;
+            return this;
+        }
+        public String getBaselineId() {
+            return this.baselineId;
         }
 
         public ListEnrolledAccountsResponseBodyEnrolledAccounts setCreateTime(String createTime) {
