@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResetDisksResponseBody extends TeaModel {
+    /**
+     * <p>Details about the rollback operation.</p>
+     */
     @NameInMap("OperationProgressSet")
     public ResetDisksResponseBodyOperationProgressSet operationProgressSet;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -81,15 +93,33 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgress extends TeaModel {
+        /**
+         * <p>The error code. This parameter is empty when the operation was successful.</p>
+         * <br>
+         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message. This parameter is empty when the operation was successful.</p>
+         * <br>
+         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>Indicates whether the operation was successful.</p>
+         * <br>
+         * <p>If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.</p>
+         */
         @NameInMap("OperationStatus")
         public String operationStatus;
 
+        /**
+         * <p>Detail about the resources.</p>
+         */
         @NameInMap("RelatedItemSet")
         public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 

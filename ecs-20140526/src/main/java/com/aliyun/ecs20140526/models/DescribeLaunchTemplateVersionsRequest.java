@@ -24,7 +24,7 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     /**
      * <p>The ID of the launch template.</p>
      * <br>
-     * <p>You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.</p>
+     * <p>You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
@@ -35,6 +35,9 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
 
+    /**
+     * <p>Version N of the launch template.</p>
+     */
     @NameInMap("LaunchTemplateVersion")
     public java.util.List<Long> launchTemplateVersion;
 
@@ -69,7 +72,7 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

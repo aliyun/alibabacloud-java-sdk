@@ -101,18 +101,18 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The risk that the check item may have.</p>
+         * <p>The risk that is detected on the check item.</p>
          */
         @NameInMap("RiskCode")
         public String riskCode;
 
         /**
-         * <p>Indicates the severity of the risk that the check item of the imported custom image has. If the check item is at risk, this parameter is returned. If the check item is not at risk, this parameter is not returned.  </p>
+         * <p>Indicates the severity of the risk that is detected on the check item of the imported custom image. If the system detects a risk on the check item, this parameter is returned. If the system does not detect a risk on the check item, this parameter is not returned.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>- High: The check item has a high risk, which may affect instance startup. We strongly recommended that you handle the risk.</p>
-         * <p>- Medium: The check item has a medium risk, which may affect the startup performance or configurations of the instance. We recommend that you handle the risk.</p>
+         * <p>*   High: The check item is a high-risk item that may affect the startup of the instance. We strongly recommended that you fix this item at your earliest convenience.</p>
+         * <p>*   Medium: The check item is a medium-risk item that may affect the startup performance or configurations of the instance. We recommend that you fix this item.</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -191,8 +191,8 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * <p>The state of the image check task. Valid values:</p>
          * <br>
-         * <p>- Processing: The image check task is in progress.</p>
-         * <p>- Finished: The image check task is completed.</p>
+         * <p>*   Processing: The image check task is in progress.</p>
+         * <p>*   Finished: The image check task is completed.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -224,7 +224,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * <p>The device name of the disk. Example: /dev/xvdb.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure compatibility.</p>
+         * <p>> This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.</p>
          */
         @NameInMap("Device")
         public String device;
@@ -260,7 +260,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public Integer remainTime;
 
         /**
-         * <p>The size of the disk.</p>
+         * <p>The size of the cloud disk.</p>
          */
         @NameInMap("Size")
         public String size;
@@ -379,8 +379,8 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the image supports Non-Volatile Memory Express (NVMe). Valid values:</p>
          * <br>
-         * <p>- supported: The image supports NVMe. Instances created from this image support the NVMe protocol.</p>
-         * <p>- unsupported: The image does not support NVMe. Instances created from this image do not support the NVMe protocol.</p>
+         * <p>*   supported: The image supports NVMe. Instances created from this image also support NVMe.</p>
+         * <p>*   unsupported: The image does not support NVMe. Instances created from this image do not support NVMe.</p>
          */
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
@@ -457,7 +457,7 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     public static class DescribeImagesResponseBodyImagesImage extends TeaModel {
         /**
-         * <p>The image architecture. Valid values:</p>
+         * <p>The architecture of the image. Valid values:</p>
          * <br>
          * <p>*   i386</p>
          * <p>*   x86\_64</p>
@@ -467,12 +467,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String architecture;
 
         /**
-         * <p>The boot mode of the custom image. Valid values:</p>
+         * <p>The new boot mode of the image. Valid values:</p>
          * <br>
          * <p>*   BIOS</p>
          * <p>*   UEFI</p>
          * <br>
-         * <p>>  You must know which boot modes the specified image supports. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances which use this image can start normally.</p>
+         * <p>> You need to be aware of the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can start as expected.</p>
          */
         @NameInMap("BootMode")
         public String bootMode;
@@ -496,7 +496,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public DescribeImagesResponseBodyImagesImageDetectionOptions detectionOptions;
 
         /**
-         * <p>The mappings between disks and snapshots in the image.</p>
+         * <p>The mappings between disks and snapshots that belong to the image.</p>
          */
         @NameInMap("DiskDeviceMappings")
         public DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
@@ -537,7 +537,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String imageOwnerAlias;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only when you query shared images or community images.</p>
+         * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter is valid only when you query shared images or community images.</p>
          */
         @NameInMap("ImageOwnerId")
         public Long imageOwnerId;
@@ -555,10 +555,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         public Boolean isCopied;
 
         /**
-         * <p>Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values: </p>
+         * <p>Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values:</p>
          * <br>
-         * <p>- true: The image is publicly available.</p>
-         * <p>- false: The image is not publicly available.</p>
+         * <p>*   true: The image is publicly available.</p>
+         * <p>*   false: The image is not publicly available.</p>
          */
         @NameInMap("IsPublic")
         public Boolean isPublic;
@@ -590,26 +590,26 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the image supports logons of non-root users. Valid values:</p>
          * <br>
-         * <p>- true: The image supports logons of non-root users.</p>
-         * <p>- false: The image does not support logons of non-root users.</p>
+         * <p>*   true: The image supports logons of non-root users.</p>
+         * <p>*   false: The image does not support logons of non-root users.</p>
          */
         @NameInMap("LoginAsNonRootSupported")
         public Boolean loginAsNonRootSupported;
 
         /**
-         * <p>The Chinese name of the operating system.</p>
+         * <p>The display name of the operating system in Chinese.</p>
          */
         @NameInMap("OSName")
         public String OSName;
 
         /**
-         * <p>The English name of the operating system.</p>
+         * <p>The display name of the operating system in English.</p>
          */
         @NameInMap("OSNameEn")
         public String OSNameEn;
 
         /**
-         * <p>The type of the operating system. Valid values:</p>
+         * <p>The OS type of the image. Valid values:</p>
          * <br>
          * <p>*   windows</p>
          * <p>*   linux</p>

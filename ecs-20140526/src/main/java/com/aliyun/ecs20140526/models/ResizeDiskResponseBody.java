@@ -4,9 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResizeDiskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the order.</p>
+     * <br>
+     * <p>>  This parameter is returned only when subscription disks are resized.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
+    /**
+     * <p>Details about the prices and promotion rules.</p>
+     */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule extends TeaModel {
+        /**
+         * <p>The description of the pricing rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the pricing rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -81,18 +93,33 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel extends TeaModel {
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>Details about the pricing rules.</p>
+         */
         @NameInMap("SubRules")
         public DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules subRules;
 
+        /**
+         * <p>The transaction price.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -163,21 +190,45 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
+        /**
+         * <p>The currency unit.</p>
+         * <br>
+         * <p>Alibaba Cloud China site (aliyun.com): CNY</p>
+         * <br>
+         * <p>Alibaba Cloud International site (alibabacloud.com): USD</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>Details about the price.</p>
+         * <br>
+         * <p>> This parameter is in invitational preview and unavailable.</p>
+         */
         @NameInMap("DetailInfos")
         public DescribePriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The hourly price of the reserved instance for which the No Upfront or Partial Upfront payment option is used.</p>
+         */
         @NameInMap("ReservedInstanceHourPrice")
         public Float reservedInstanceHourPrice;
 
+        /**
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -237,9 +288,15 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoRulesRule extends TeaModel {
+        /**
+         * <p>The description of the promotion rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the promotion rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -286,9 +343,15 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
+        /**
+         * <p>The price.</p>
+         */
         @NameInMap("Price")
         public DescribePriceResponseBodyPriceInfoPrice price;
 
+        /**
+         * <p>Details about the promotion rules.</p>
+         */
         @NameInMap("Rules")
         public DescribePriceResponseBodyPriceInfoRules rules;
 

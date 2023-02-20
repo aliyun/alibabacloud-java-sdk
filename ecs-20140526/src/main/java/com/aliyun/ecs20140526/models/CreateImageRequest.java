@@ -22,35 +22,38 @@ public class CreateImageRequest extends TeaModel {
      * <p>*   BIOS</p>
      * <p>*   UEFI</p>
      * <br>
-     * <p>> You must be aware of the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can start as expected.</p>
+     * <p>> You must be aware of the boot modes supported by the image. When you use this parameter to change the boot mode of an image, specify a boot mode supported by the image to ensure that instances that use this image can start as expected.</p>
      */
     @NameInMap("BootMode")
     public String bootMode;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the custom image. The description must be 2 to 256 characters in length and cannot start with [http:// or https://.](http://https://。)</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The mode in which to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.</p>
+     * <p>The mode in which to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates the standard check mode.</p>
      * <br>
      * <p>The following items are checked in standard check mode:</p>
      * <br>
      * <p>*   Virtio: whether the virtio driver is installed.</p>
-     * <p>*   Fstab: whether mounting configurations in the fstab file are correct.</p>
+     * <p>*   Fstab: whether mount configurations in the fstab file are correct.</p>
      * <p>*   Grub: whether GRand Unified Bootloader (GRUB) configurations are correct.</p>
      * <p>*   SystemImage: whether the image is valid. Do not import images that are in the ISO format or empty.</p>
      * <p>*   CloudInit: whether cloud-init is installed.</p>
-     * <p>*   NVMe: whether the NVMe driver is installed.</p>
+     * <p>*   NVMe: whether the Non-Volatile Memory Express (NVMe) driver is installed.</p>
      * <p>*   Selinux: whether SElinux is enabled.</p>
      * <p>*   OnlineResizeFS: whether the root partition can be automatically resized.</p>
-     * <p>*   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).</p>
-     * <p>*   RtcTimeMode: the RTC time mode.</p>
+     * <p>*   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interfaces.</p>
+     * <p>*   RtcTimeMode: the real-time clock (RTC) time mode.</p>
      * <p>*   Platform: the platform. Example: Linux or Windows.</p>
      * <p>*   OSVersion: the operating system version. Example: Centos 7.9.</p>
      * <p>*   Architecture: the architecture. Example: ARM or x86\_64.</p>
@@ -63,27 +66,33 @@ public class CreateImageRequest extends TeaModel {
     public String detectionStrategy;
 
     /**
-     * <p>Details about the custom images.</p>
+     * <p>The information of the custom image.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
 
+    /**
+     * <p>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`. The name can contain letters, digits, colons (.), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("ImageFamily")
     public String imageFamily;
 
+    /**
+     * <p>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
      * <p>The version of the custom image.</p>
      * <br>
-     * <p>> If you specify an instance by setting `InstanceId` and the instance uses an Alibaba Cloud Marketplace image or a custom image derived from an Alibaba Cloud Marketplace image, this parameter must be left empty or set to the value of the ImageVersion parameter of the instance.</p>
+     * <p>> If you specify an instance by setting the `InstanceId` parameter and the instance uses an Alibaba Cloud Marketplace image or a custom image derived from an Alibaba Cloud Marketplace image, the ImageVersion parameter must be left empty or set to the image version of the specified instance.</p>
      */
     @NameInMap("ImageVersion")
     public String imageVersion;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance that is used to create the custom image.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -124,7 +133,7 @@ public class CreateImageRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.</p>
      * <br>
-     * <p>> If you call the CopyImage operation as a Resource Access Management (RAM) user who is not authorized to manage the default resource group and do not specify the `ResourceGroupId` parameter, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CreateImage operation again.</p>
+     * <p>> If you call the CopyImage operation as a RAM user who is not authorized to manage the default resource group and do not specify the `ResourceGroupId` parameter, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group before you call the CopyImage operation again.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -142,7 +151,7 @@ public class CreateImageRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The tags of the custom image.</p>
+     * <p>The tags to add to the custom image.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateImageRequestTag> tag;
@@ -308,8 +317,8 @@ public class CreateImageRequest extends TeaModel {
         /**
          * <p>The device name of disk N in the custom image. Valid values:</p>
          * <br>
-         * <p>*   For disk categories other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values are in alphabetical order from /dev/vda to /dev/vdz.</p>
-         * <p>*   For basic disks, the valid values are in alphabetical order from /dev/xvda to /dev/xvdz.</p>
+         * <p>*   For disk categories other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values are in the /dev/vd? format in alphabetical order from /dev/vda to /dev/vdz.</p>
+         * <p>*   For basic disks, the valid values are in the /dev/xvd? format in alphabetical order from /dev/xvda to /dev/xvdz.</p>
          */
         @NameInMap("Device")
         public String device;
@@ -337,7 +346,7 @@ public class CreateImageRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot that is used to create the custom image.</p>
+         * <p>The ID of snapshot N that is used to create the custom image.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -383,13 +392,13 @@ public class CreateImageRequest extends TeaModel {
 
     public static class CreateImageRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The key of tag N to add to the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

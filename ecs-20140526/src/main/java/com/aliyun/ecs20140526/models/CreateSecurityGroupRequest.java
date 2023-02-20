@@ -11,7 +11,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the security group. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <p>The description of the security group. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with `http://` or `https://`.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -25,13 +25,13 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The ID of the region in which to create the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the security group belongs.</p>
+     * <p>The ID of the resource group to which to assign the security group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -45,7 +45,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     /**
      * <p>The name of the security group.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`. This parameter is empty by default.</p>
+     * <p>The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). This parameter is empty by default.</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
@@ -53,8 +53,8 @@ public class CreateSecurityGroupRequest extends TeaModel {
     /**
      * <p>The type of the security group. Valid values:</p>
      * <br>
-     * <p>*   normal: basic security group</p>
-     * <p>*   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).</p>
+     * <p>*   normal: basic security group.</p>
+     * <p>*   enterprise: advanced security group. For more information, see [Advanced security groups](~~120621~~).</p>
      */
     @NameInMap("SecurityGroupType")
     public String securityGroupType;
@@ -66,7 +66,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The tags that are bound to the security group.</p>
+     * <p>The tags to add to the security group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSecurityGroupRequestTag> tag;
@@ -74,7 +74,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     /**
      * <p>The ID of the VPC in which to create the security group.</p>
      * <br>
-     * <p>> The VpcId parameter is required only when you want to create security groups of the VPC type. In regions that support the classic network, you can create security groups of the classic network type without specifying the VpcId parameter.</p>
+     * <p>> If the specified region supports the classic network, you can create security groups of the classic network type without specifying the VpcId parameter. If the specified region does not support the classic network, you must specify the VpcId parameter to create security groups of the VPC type.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -190,17 +190,17 @@ public class CreateSecurityGroupRequest extends TeaModel {
 
     public static class CreateSecurityGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of tag N to add to the security group.</p>
          * <br>
-         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
+         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of tag N to add the security group.</p>
          * <br>
-         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain `http://` or `https://`.</p>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

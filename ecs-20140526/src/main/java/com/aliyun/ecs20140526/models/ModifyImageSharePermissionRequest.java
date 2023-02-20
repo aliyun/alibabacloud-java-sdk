@@ -4,15 +4,32 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageSharePermissionRequest extends TeaModel {
+    /**
+     * <p>The ID of Alibaba Cloud account N to which to share the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.</p>
+     */
     @NameInMap("AddAccount")
     public java.util.List<String> addAccount;
 
+    /**
+     * <p>The ID of the custom image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>Specifies whether to publish or unpublish the custom image as a community image. Valid values:</p>
+     * <br>
+     * <p>*   true: publishes the image as a community image.</p>
+     * <p>*   false: unpublishes the image as a community image. If the image is not a community image before the operation, it remains unchanged.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("IsPublic")
     public Boolean isPublic;
 
+    /**
+     * <p>>  This parameter is in invitational preview and is unavailable to general users.</p>
+     */
     @NameInMap("LaunchPermission")
     public String launchPermission;
 
@@ -22,9 +39,15 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of Alibaba Cloud account N from which to unshare the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.</p>
+     */
     @NameInMap("RemoveAccount")
     public java.util.List<String> removeAccount;
 

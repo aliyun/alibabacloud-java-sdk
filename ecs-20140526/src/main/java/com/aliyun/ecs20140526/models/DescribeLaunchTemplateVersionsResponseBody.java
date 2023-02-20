@@ -209,9 +209,18 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk extends TeaModel {
+        /**
+         * <p>The ID of the automatic snapshot policy.</p>
+         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
+        /**
+         * <p>Indicates whether to enable the performance burst feature for the data disk. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
@@ -236,7 +245,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The device name of the data disk.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>> This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.</p>
          */
         @NameInMap("Device")
         public String device;
@@ -248,13 +257,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String diskName;
 
         /**
-         * <p>Specifies whether to encrypt the data disk.</p>
+         * <p>Indicates whether the data disk is encrypted.</p>
          */
         @NameInMap("Encrypted")
         public String encrypted;
 
         /**
-         * <p>The performance level of ESSD used as the data disk. This parameter is returned only when `Category` is set to cloud_essd. Valid values:</p>
+         * <p>The performance level of ESSD to use as the data disk. This parameter is returned only when `Category` is set to cloud_essd. Valid values:</p>
          * <br>
          * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
          * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
@@ -264,6 +273,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the data disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
+         * <br>
+         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+         * <br>
+         * <p>> This parameter is available only if you set the DiskCategory parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
+         */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
@@ -274,7 +290,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot used to create the data disk.</p>
+         * <p>The ID of the snapshot to use to create the data disk.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -427,6 +443,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The instance type of the instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -436,6 +455,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
 
+        /**
+         * <p>The communication mode of the primary ENI. Valid values:</p>
+         * <br>
+         * <p>*   Standard: The TCP communication mode is used.</p>
+         * <p>*   HighPerformance: Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.</p>
+         */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
@@ -446,23 +471,23 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String primaryIpAddress;
 
         /**
-         * <p>The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.  </p>
+         * <p>The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.</p>
          * <br>
-         * <p>>  The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.</p>
+         * <p>> The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The IDs of the security groups to which to assign the secondary ENI. </p>
+         * <p>The IDs of the security groups to which to assign the secondary ENI.</p>
          * <br>
-         * <p>>  The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.</p>
+         * <p>> The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.</p>
          */
         @NameInMap("SecurityGroupIds")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterfaceSecurityGroupIds securityGroupIds;
 
         /**
-         * <p>The ID of the vSwitch to which to connect the ENI.</p>
+         * <p>The ID of the vSwitch to which to connect the secondary ENI.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -655,13 +680,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String deploymentSetId;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The description of the system disk.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether to enable the operating system configuration of the instance.</p>
+         * <p>Specifies whether to enable the operating system configuration of the instance.</p>
          */
         @NameInMap("EnableVmOsConfig")
         public Boolean enableVmOsConfig;
@@ -681,10 +706,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The source of the image. Valid values:</p>
          * <br>
-         * <p>*   system: public images provided by Alibaba Cloud.</p>
-         * <p>*   self: custom images that you create.</p>
-         * <p>*   others: shared images from other Alibaba Cloud accounts.</p>
-         * <p>*   marketplace: Alibaba Cloud Marketplace images.</p>
+         * <p>*   system: public images provided by Alibaba Cloud</p>
+         * <p>*   self: custom images that you create</p>
+         * <p>*   others: shared images from other Alibaba Cloud accounts</p>
+         * <p>*   marketplace: Alibaba Cloud Marketplace images</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
@@ -729,7 +754,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public Integer internetMaxBandwidthOut;
 
         /**
-         * <p>Specifies whether the instance is I/O optimized.</p>
+         * <p>Indicates whether the instance is I/O optimized.</p>
          */
         @NameInMap("IoOptimized")
         public String ioOptimized;
@@ -741,7 +766,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public Integer ipv6AddressCount;
 
         /**
-         * <p>The name of the key pair.</p>
+         * <p>The name of the key pair. This parameter is empty by default.</p>
          */
         @NameInMap("KeyPairName")
         public String keyPairName;
@@ -762,25 +787,25 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>Indicates whether the username and password pair preset in the image is used.</p>
+         * <p>Indicates whether to use the password preset in the image.</p>
          */
         @NameInMap("PasswordInherit")
         public Boolean passwordInherit;
 
         /**
-         * <p>The subscription duration.</p>
+         * <p>The subscription duration of the resource.</p>
          */
         @NameInMap("Period")
         public Integer period;
 
         /**
-         * <p>The private IP address of the instance.</p>
+         * <p>The private IP address to assign to the instance.</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
         /**
-         * <p>The name of the instance RAM role.</p>
+         * <p>The name of the instance Resource Access Management (RAM) role.</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
@@ -792,7 +817,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether to enable security hardening.</p>
+         * <p>Indicates whether security hardening is enabled.</p>
          */
         @NameInMap("SecurityEnhancementStrategy")
         public String securityEnhancementStrategy;
@@ -800,32 +825,32 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The ID of the security group to which to assign the instance.</p>
          * <br>
-         * <p>>  The `SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.</p>
+         * <p>> `The SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The IDs of the security groups to which to assign the instance. </p>
+         * <p>The IDs of the security groups to which to assign the instance.</p>
          * <br>
-         * <p>>  The `SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.</p>
+         * <p>> `The SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.</p>
          */
         @NameInMap("SecurityGroupIds")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSecurityGroupIds securityGroupIds;
 
         /**
-         * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
+         * <p>The retention period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
-         * <p>*   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.</p>
-         * <p>*   A value of 0 indicates that no protection period is configured for the preemptible instance.</p>
+         * <p>*   The following protection periods are in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.</p>
+         * <p>*   If this parameter is set to 0, no protection period is configured for the preemptible instance.</p>
          */
         @NameInMap("SpotDuration")
         public Integer spotDuration;
 
         /**
-         * <p>The maximum hourly price of the preemptible instance.</p>
+         * <p>The maximum hourly price of the instance.</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
@@ -833,15 +858,15 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
          * <br>
-         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
+         * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tags to add to the instance.</p>
          */
         @NameInMap("Tags")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags tags;
@@ -1167,13 +1192,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSet extends TeaModel {
         /**
-         * <p>The time when the launch template was created.</p>
+         * <p>The time when the launch template version was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The creator of the launch template.</p>
+         * <p>The creator of the launch template version.</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
@@ -1197,13 +1222,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String launchTemplateId;
 
         /**
-         * <p>The name of the launch template.</p>
+         * <p>The name of the launch template version.</p>
          */
         @NameInMap("LaunchTemplateName")
         public String launchTemplateName;
 
         /**
-         * <p>The time when the launch template was modified.</p>
+         * <p>The time when the launch template version was modified.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;

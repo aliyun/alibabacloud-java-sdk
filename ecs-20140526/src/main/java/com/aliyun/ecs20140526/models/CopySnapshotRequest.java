@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopySnapshotRequest extends TeaModel {
     /**
-     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     * <p>> This parameter is currently in invitational preview and unavailable for public use.</p>
      */
     @NameInMap("Arn")
     public java.util.List<CopySnapshotRequestArn> arn;
@@ -17,7 +17,7 @@ public class CopySnapshotRequest extends TeaModel {
     public String destinationRegionId;
 
     /**
-     * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -25,7 +25,7 @@ public class CopySnapshotRequest extends TeaModel {
     public String destinationSnapshotDescription;
 
     /**
-     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with http:// or https://.</p>
+     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -33,10 +33,10 @@ public class CopySnapshotRequest extends TeaModel {
     public String destinationSnapshotName;
 
     /**
-     * <p>Specifies whether to query only encrypted cloud disks.</p>
+     * <p>Specifies whether to encrypt the disk. Valid values:</p>
      * <br>
-     * <p>*   true: queries only encrypted cloud disks.</p>
-     * <p>*   false: does not query encrypted cloud disks.</p>
+     * <p>*   true: encrypts the disk.</p>
+     * <p>*   false: does not encrypt the disk.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -44,7 +44,7 @@ public class CopySnapshotRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the Key Management Service (KMS) key used for the data disk.</p>
+     * <p>The customer master keys (CMK) managed by Key Management Service (KMS) in the destination region.</p>
      */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
@@ -53,13 +53,13 @@ public class CopySnapshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>This parameter is unavailable.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -71,9 +71,9 @@ public class CopySnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of the new snapshot. Unit: days. The new snapshot will be automatically released when it expires. Valid values: 1 to 65536.</p>
+     * <p>The retention period of the new snapshot. Unit: days. The new snapshot is automatically released when its retention period ends. Valid values: 1 to 65536.</p>
      * <br>
-     * <p>This parameter is empty by default, which indicates that the snapshot will not be automatically released.</p>
+     * <p>This parameter is empty by default, which indicates that the snapshot is not automatically released.</p>
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
@@ -85,7 +85,7 @@ public class CopySnapshotRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The tags of the new snapshot.</p>
+     * <p>The tag key and value of the new snapshot.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CopySnapshotRequestTag> tag;
@@ -209,19 +209,19 @@ public class CopySnapshotRequest extends TeaModel {
 
     public static class CopySnapshotRequestArn extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("RoleType")
         public String roleType;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("Rolearn")
         public String rolearn;
@@ -259,13 +259,13 @@ public class CopySnapshotRequest extends TeaModel {
 
     public static class CopySnapshotRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to be bound to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.</p>
+         * <p>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with acs: or aliyun or contain http:// or https://.[](http://https://。)</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to be bound to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.</p>
+         * <p>The value of tag N to add to the new snapshot. The tag value can be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with `acs:` or `aliyun` or contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

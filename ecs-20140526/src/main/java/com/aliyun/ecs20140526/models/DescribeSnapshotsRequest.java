@@ -8,7 +8,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public java.util.List<DescribeSnapshotsRequestFilter> filter;
 
     /**
-     * <p>The category of the snapshot. Valid values:</p>
+     * <p>The type of the snapshot. Valid values:</p>
      * <br>
      * <p>*   Standard: normal snapshot</p>
      * <p>*   Flash: local snapshot</p>
@@ -32,10 +32,10 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
      * <br>
-     * <p>*   true: The validity of the request is checked but the request is not made. Check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
-     * <p>*   false: The validity of the request is checked. If the check succeeds, a 2XX HTTP status code is returned, and the request is made.</p>
+     * <p>*   true: performs a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
+     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -81,7 +81,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -101,7 +101,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the snapshot belongs. If a resource group is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The ID of the resource group to which the snapshot belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
      * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      */
@@ -133,11 +133,11 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotName;
 
     /**
-     * <p>The type of the snapshot. Default value: all. Valid values:</p>
+     * <p>The type of the snapshot. Valid values:</p>
      * <br>
      * <p>*   auto: automatic snapshot</p>
      * <p>*   user: manual snapshot</p>
-     * <p>*   all: all snapshot types</p>
+     * <p>*   all: This parameter indicates all snapshot types.</p>
      */
     @NameInMap("SnapshotType")
     public String snapshotType;
@@ -159,7 +159,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <p>*   progressing: The snapshot is being created.</p>
      * <p>*   accomplished: The snapshot is created.</p>
      * <p>*   failed: The snapshot fails to be created.</p>
-     * <p>*   all: This value indicates all snapshot states.</p>
+     * <p>*   all: This parameter indicates all snapshot states.</p>
      */
     @NameInMap("Status")
     public String status;
@@ -394,7 +394,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+         * <p>The value of the filter that is used to query resources. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
          */
         @NameInMap("Value")
         public String value;

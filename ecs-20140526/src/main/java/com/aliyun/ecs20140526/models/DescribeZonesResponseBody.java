@@ -4,9 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the zones and their supported resources.</p>
+     */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
 
@@ -222,24 +228,45 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfo extends TeaModel {
+        /**
+         * <p>The categories of data disks that can be created.</p>
+         */
         @NameInMap("DataDiskCategories")
         public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoDataDiskCategories dataDiskCategories;
 
+        /**
+         * <p>The supported generations of instance families.</p>
+         */
         @NameInMap("InstanceGenerations")
         public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoInstanceGenerations instanceGenerations;
 
+        /**
+         * <p>The supported instance families.</p>
+         */
         @NameInMap("InstanceTypeFamilies")
         public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoInstanceTypeFamilies instanceTypeFamilies;
 
+        /**
+         * <p>The supported instance types.</p>
+         */
         @NameInMap("InstanceTypes")
         public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoInstanceTypes instanceTypes;
 
+        /**
+         * <p>Indicates whether the instance is I/O optimized.</p>
+         */
         @NameInMap("IoOptimized")
         public Boolean ioOptimized;
 
+        /**
+         * <p>The supported network types</p>
+         */
         @NameInMap("NetworkTypes")
         public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoNetworkTypes networkTypes;
 
+        /**
+         * <p>The supported categories of system disks that can be created.</p>
+         */
         @NameInMap("SystemDiskCategories")
         public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoSystemDiskCategories systemDiskCategories;
 
@@ -364,33 +391,77 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
+        /**
+         * <p>The supported dedicated host types.</p>
+         */
         @NameInMap("AvailableDedicatedHostTypes")
         public DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes availableDedicatedHostTypes;
 
+        /**
+         * <p>The supported disk categories. Valid values:</p>
+         * <br>
+         * <p>*   cloud: basic disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_essd: ESSD</p>
+         */
         @NameInMap("AvailableDiskCategories")
         public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories availableDiskCategories;
 
+        /**
+         * <p>The supported instance types.</p>
+         */
         @NameInMap("AvailableInstanceTypes")
         public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes availableInstanceTypes;
 
+        /**
+         * <p>The types of resources that can be created. Valid values:</p>
+         * <br>
+         * <p>*   VSwitch: vSwitch</p>
+         * <p>*   IoOptimized: I/O optimized instance</p>
+         * <p>*   Instance: instance</p>
+         * <p>*   DedicatedHost: dedicated host</p>
+         * <p>*   disk: disk</p>
+         */
         @NameInMap("AvailableResourceCreation")
         public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation availableResourceCreation;
 
+        /**
+         * <p>Details about the resources that can be created in the zone.</p>
+         */
         @NameInMap("AvailableResources")
         public DescribeZonesResponseBodyZonesZoneAvailableResources availableResources;
 
+        /**
+         * <p>The supported Shared Block Storage device categories.</p>
+         */
         @NameInMap("AvailableVolumeCategories")
         public DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories availableVolumeCategories;
 
+        /**
+         * <p>The supported generations of dedicated hosts.</p>
+         */
         @NameInMap("DedicatedHostGenerations")
         public DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations dedicatedHostGenerations;
 
+        /**
+         * <p>The name of the zone in the local language.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>The type of the zone. Valid values:</p>
+         * <br>
+         * <p>*   AvailabilityZone: zone for the Alibaba Cloud public cloud</p>
+         * <p>*   CloudBoxZone: zone for CloudBox</p>
+         */
         @NameInMap("ZoneType")
         public String zoneType;
 

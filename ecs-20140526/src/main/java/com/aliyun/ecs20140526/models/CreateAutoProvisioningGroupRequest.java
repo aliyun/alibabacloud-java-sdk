@@ -860,6 +860,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("Arn")
         public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> arn;
 
+        @NameInMap("AutoReleaseTime")
+        public String autoReleaseTime;
+
         /**
          * <p>The performance mode of the burstable instance. Valid values:</p>
          * <br>
@@ -1124,6 +1127,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationArn> getArn() {
             return this.arn;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setAutoReleaseTime(String autoReleaseTime) {
+            this.autoReleaseTime = autoReleaseTime;
+            return this;
+        }
+        public String getAutoReleaseTime() {
+            return this.autoReleaseTime;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setCreditSpecification(String creditSpecification) {

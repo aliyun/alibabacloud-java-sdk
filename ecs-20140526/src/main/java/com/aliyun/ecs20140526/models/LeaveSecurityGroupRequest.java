@@ -4,9 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class LeaveSecurityGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the ENI.</p>
+     * <br>
+     * <p>> If this parameter is specified, the `InstanceId` parameter cannot be specified.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -16,6 +26,12 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>*   If you want to remove an instance from a security group, you do not need to specify a region ID.</p>
+     * <p>*   If you want to remove an ENI from a security group, you must specify the ID of the region in which the ENI resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +41,9 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the security group.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
