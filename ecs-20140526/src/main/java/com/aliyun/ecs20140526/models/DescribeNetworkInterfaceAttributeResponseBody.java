@@ -11,13 +11,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp associatedPublicIp;
 
     /**
-     * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
      */
     @NameInMap("Attachment")
     public DescribeNetworkInterfaceAttributeResponseBodyAttachment attachment;
 
     /**
-     * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
      */
     @NameInMap("BondInterfaceSpecification")
     public DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecification bondInterfaceSpecification;
@@ -43,13 +43,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+     * <p>The IPv4 address prefixes of the ENI.</p>
      */
     @NameInMap("Ipv4PrefixSets")
     public DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
     /**
-     * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+     * <p>The IPv6 address prefixes of the ENI.</p>
      */
     @NameInMap("Ipv6PrefixSets")
     public DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSets ipv6PrefixSets;
@@ -102,7 +102,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>Details about the private IP addresses of the ENI.</p>
+     * <p>Details about the private IP addresses.</p>
      */
     @NameInMap("PrivateIpSets")
     public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets privateIpSets;
@@ -128,7 +128,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public Integer queueNumber;
 
     /**
-     * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
      */
     @NameInMap("QueuePairNumber")
     public Integer queuePairNumber;
@@ -140,7 +140,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the associated instance belongs. If a resource group is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+     * <p>The ID of the resource group to which the instance belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
      * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      */
@@ -166,7 +166,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable.</p>
      */
     @NameInMap("SlaveInterfaceSpecification")
     public DescribeNetworkInterfaceAttributeResponseBodySlaveInterfaceSpecification slaveInterfaceSpecification;
@@ -180,7 +180,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      * <p>*   Detaching: The ENI is being detached from an instance.</p>
      * <p>*   Deleting: The ENI is being deleted.</p>
      * <br>
-     * <p>This parameter is empty by default, which indicates that ENIs in all states are queried.</p>
+     * <p>This parameter is empty by default, which indicates that all states are queried.</p>
      */
     @NameInMap("Status")
     public String status;
@@ -213,7 +213,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID of the ENI.</p>
+     * <p>The ID of the zone.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -471,7 +471,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The EIP of the ENI.</p>
+         * <p>The EIP.</p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
@@ -520,34 +520,33 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyAttachment extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("DeviceIndex")
         public Integer deviceIndex;
 
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("MemberNetworkInterfaceIds")
         public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds memberNetworkInterfaceIds;
 
         /**
-         * <p>The index of the network interface controller (NIC).</p>
-         * <br>
-         * <p>*   If the ENI is in the Available state or if no NIC index was specified when the ENI was attached, this parameter has no value.</p>
-         * <p>*   If the ENI is in the InUse state and an NIC index was specified when the ENI was attached, the specified NIC index is returned as the value of this parameter.</p>
+         * <p>网卡挂载指定的物理网卡索引。</p>
+         * <p>- 如果网卡是未挂载（Available）状态或者挂载时未指定索引，则不返回此值。</p>
+         * <p>- 如果网卡是已挂载（InUse）状态且挂载时指定，此值表示网卡挂载指定的物理网卡索引。</p>
          */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
 
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("TrunkNetworkInterfaceId")
         public String trunkNetworkInterfaceId;
@@ -601,19 +600,19 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecificationSlaveInterfaceSpecificationSlaveInterfaceSpecificationSet extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("BondNetworkInterfaceId")
         public String bondNetworkInterfaceId;
 
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("SlaveNetworkInterfaceId")
         public String slaveNetworkInterfaceId;
 
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("WorkState")
         public String workState;
@@ -670,13 +669,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecification extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("BondMode")
         public String bondMode;
 
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("SlaveInterfaceSpecification")
         public DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecificationSlaveInterfaceSpecification slaveInterfaceSpecification;
@@ -706,7 +705,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>The IPv4 address prefix.</p>
          */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
@@ -747,7 +746,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>The IPv6 address prefix.</p>
          */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
@@ -788,7 +787,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyIpv6SetsIpv6Set extends TeaModel {
         /**
-         * <p>The IPv6 address of the ENI.</p>
+         * <p>The IPv6 address assigned to the ENI.</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
@@ -829,13 +828,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("AllocationId")
         public String allocationId;
 
         /**
-         * <p>The EIP of the ENI.</p>
+         * <p>The EIP.</p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
@@ -874,7 +873,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
          * <br>
          * <p>*   true: The IP address is the primary private IP address.</p>
-         * <p>*   false: The IP address is a secondary private IP address.</p>
+         * <p>*   false: The IP address is the secondary private IP address.</p>
          */
         @NameInMap("Primary")
         public Boolean primary;
@@ -956,19 +955,19 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodySlaveInterfaceSpecification extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("BondNetworkInterfaceId")
         public String bondNetworkInterfaceId;
 
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("SlaveNetworkInterfaceId")
         public String slaveNetworkInterfaceId;
 
         /**
-         * <p>> This parameter is in invitational preview and unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("WorkState")
         public String workState;
@@ -1006,13 +1005,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

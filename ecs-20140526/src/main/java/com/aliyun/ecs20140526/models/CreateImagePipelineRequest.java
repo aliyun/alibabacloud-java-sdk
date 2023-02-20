@@ -4,14 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImagePipelineRequest extends TeaModel {
+    /**
+     * <p>The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("AddAccount")
     public java.util.List<Long> addAccount;
 
     /**
      * <p>The source image.</p>
      * <br>
-     * <p>*   When you set `BaseImageType` to IMAGE, set BaseImage to the ID of a custom image.</p>
-     * <p>*   When you set `BaseImageType` to IMAGE_FAMILY, set BaseImage to the name of an image family.</p>
+     * <p>*   When you set `BaseImageType` to IMAGE, set the BaseImage parameter to the ID of a custom image.</p>
+     * <p>*   When `BaseImageType` is set to IMAGE_FAMILY, set the BaseImage parameter to the name of an image family.</p>
      */
     @NameInMap("BaseImage")
     public String baseImage;
@@ -19,14 +22,14 @@ public class CreateImagePipelineRequest extends TeaModel {
     /**
      * <p>The type of the source image. Valid values:</p>
      * <br>
-     * <p>*   IMAGE: custom image</p>
+     * <p>*   IMAGE: image</p>
      * <p>*   IMAGE_FAMILY: image family</p>
      */
     @NameInMap("BaseImageType")
     public String baseImageType;
 
     /**
-     * <p>The content of the image template. The content cannot be greater than 16 KB in size, and can contain up to 127 commands. For more information about the commands that are supported, see the "Description" section in this topic.</p>
+     * <p>The content of the image template. The content cannot exceed 16 KB in size and can contain up to 127 commands. For more information about the commands that are supported, see the "Description" section of this topic.</p>
      */
     @NameInMap("BuildContent")
     public String buildContent;
@@ -45,29 +48,29 @@ public class CreateImagePipelineRequest extends TeaModel {
      * <br>
      * <p>Default value: true.</p>
      * <br>
-     * <p>>  If the intermediate instance cannot be started, the instance is released by default.</p>
+     * <p>> If the intermediate instance cannot be started, the instance is released by default.</p>
      */
     @NameInMap("DeleteInstanceOnFailure")
     public Boolean deleteInstanceOnFailure;
 
     /**
-     * <p>The description of the image template. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the image template. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name prefix of the image to be created. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.),and hyphens (-).</p>
+     * <p>The name prefix of the image that will be created based on the image template. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      * <br>
-     * <p>The system generates the final complete image name that consists of the prefix and the ID of the image build task (`ExecutionId`) in the format of `{ImageName}_{ExecutionId}`.</p>
+     * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (`ExecutionId`) in the format of `{ImageName}_{ExecutionId}`.</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
-     * <p>The instance type of the instance. You can call the [DescribeInstanceTypes](~~25620~~) operation to query instance types.</p>
+     * <p>The instance type. You can call the [DescribeInstanceTypes](~~25620~~) to query instance types.</p>
      * <br>
-     * <p>If you do not specify this parameter, an instance type that provides the fewest vCPUs and memory resources is automatically selected. This configuration is subject to resource availability of instance types. For example, the ecs.g6.large instance type is selected by default. If available ecs.g6.large resources are insufficient, the ecs.g6.xlarge instance type is selected.</p>
+     * <p>If you do not configure this parameter, an instance type that provides the fewest vCPUs and memory resources is automatically selected. This configuration is subject to resource availability of instance types. For example, the ecs.g6.large instance type is selected by default. If available ecs.g6.large resources are insufficient, the ecs.g6.xlarge instance type is selected.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -81,9 +84,9 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>The name of the image template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.),and hyphens (-).</p>
+     * <p>The name of the image template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      * <br>
-     * <p>>  If you do not specify the `Name` parameter, the return value of `ImagePipelineId` is used by default.</p>
+     * <p>> If you do not specify the `Name` parameter, the return value of `ImagePipelineId` is used by default.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -95,13 +98,13 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to create the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the image template.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -113,23 +116,31 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The size of the system disk of the intermediate instance. Unit: GiB. Valid values: 20 to 500.</p>
+     * <p>The system disk size of the intermediate instance. Unit: GiB. Valid values: 20 to 500.</p>
      * <br>
      * <p>Default value: 40.</p>
      */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
+    /**
+     * <p>The tags to add to the image template.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateImagePipelineRequestTag> tag;
 
+    /**
+     * <p>The IDs of regions to which to distribute the image that will be created based on the image template. Valid values of N: 1 to 20.</p>
+     * <br>
+     * <p>If you do not configure this parameter, the image is created only in the current region by default.</p>
+     */
     @NameInMap("ToRegionId")
     public java.util.List<String> toRegionId;
 
     /**
      * <p>The ID of the vSwitch.</p>
      * <br>
-     * <p>If you do not specify this parameter, a virtual private cloud (VPC) and a vSwitch are created by default. Make sure that the VPC quota in your account is sufficient. For more information, see [Limits](~~27750~~).</p>
+     * <p>If you do not configure this parameter, a new VPC and vSwitch are created by default. Make sure that the VPC quota in your account is sufficient. For more information, see[Limits](~~27750~~).</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -309,13 +320,13 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     public static class CreateImagePipelineRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.</p>
+         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value must be 0 to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

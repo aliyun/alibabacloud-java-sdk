@@ -8,7 +8,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public ReplaceSystemDiskRequestSystemDisk systemDisk;
 
     /**
-     * <p>The operating system architecture. Valid values:</p>
+     * <p>The system architecture. Valid values:</p>
      * <br>
      * <p>*   i386</p>
      * <p>*   x86\_64</p>
@@ -29,11 +29,11 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the disk to be used to replace the operating system.</p>
+     * <p>The ID of the disk to use to replace the operating system.</p>
      * <br>
      * <p>If the `ImageId` parameter is not specified, this parameter is required.</p>
      * <br>
-     * <p>If the DiskId parameter is specified, the `Platform` and `Architecture` parameters must be specified. The specified values of `Platform` and `Architecture` must be consistent with the `Platform` and `Architecture` values of the instance.</p>
+     * <p>If the DiskId parameter is specified, the `Platform` and `Architecture` parameters must be specified. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` of the instance.</p>
      * <br>
      * <p>> This feature is in invitational preview. To use this feature, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex).</p>
      */
@@ -58,7 +58,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the image to be used to replace the system disk.</p>
+     * <p>The ID of the image to use to replace the system disk.</p>
      * <br>
      * <p>If the `DiskId` parameter is not specified, this parameter is required.</p>
      */
@@ -80,7 +80,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>The name of the key pair.</p>
      * <br>
-     * <p>> This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After the key pair is bound, the username and password logon method is disabled for the instance.</p>
+     * <p>> This parameter is applicable to only Linux instances. You can bind an SSH key pair to the instance as a logon credential. After the SSH key pair is bound, the username and password logon method is disabled for the instance.</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -92,7 +92,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
+     * <p>Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
      * <br>
      * <p>    ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /</p>
      * <br>
@@ -110,7 +110,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>> If the PasswordInherit parameter is specified, you must leave the Password parameter empty. Before you use this parameter, make sure that a password is preset for the image.</p>
+     * <p>> If the PasswordInherit parameter is specified, you must leave the Password parameter empty and make sure that the selected image has a password preset. Before you use this parameter, make sure that a password is preconfigured for the image.</p>
      */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;

@@ -135,7 +135,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the activation code is disabled.</p>
+         * <p>Indicates whether the activation code was disabled.</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
@@ -153,7 +153,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+         * <p>The IP address range of hosts that are allowed to use the activation code.</p>
          */
         @NameInMap("IpAddressRange")
         public String ipAddressRange;

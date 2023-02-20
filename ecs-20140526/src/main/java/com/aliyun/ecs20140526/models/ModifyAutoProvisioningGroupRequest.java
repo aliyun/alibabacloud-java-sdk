@@ -11,7 +11,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String autoProvisioningGroupId;
 
     /**
-     * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the auto provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (`:`), underscores (`_`), and hyphens (`-`).</p>
      */
     @NameInMap("AutoProvisioningGroupName")
     public String autoProvisioningGroupName;
@@ -19,8 +19,8 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:</p>
      * <br>
-     * <p>*   PayAsYouGo: pay-as-you-go instances</p>
-     * <p>*   Spot: preemptible instances</p>
+     * <p>*   PayAsYouGo: pay-as-you-go instances.</p>
+     * <p>*   Spot: preemptible instances.</p>
      */
     @NameInMap("DefaultTargetCapacityType")
     public String defaultTargetCapacityType;
@@ -35,7 +35,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String excessCapacityTerminationPolicy;
 
     /**
-     * <p>The extended configurations of the launch template.</p>
+     * <p>The extended configurations.</p>
      */
     @NameInMap("LaunchTemplateConfig")
     public java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
@@ -43,7 +43,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>The maximum price of preemptible instances in the auto provisioning group.</p>
      * <br>
-     * <p>> When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto provisioning group is created, and cannot be modified.</p>
+     * <p>> When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is set when the auto provisioning group is created, and cannot be modified.</p>
      */
     @NameInMap("MaxSpotPrice")
     public Float maxSpotPrice;
@@ -55,13 +55,13 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
+     * <p>The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be smaller than the TotalTargetCapacity value.</p>
      */
     @NameInMap("PayAsYouGoTargetCapacity")
     public String payAsYouGoTargetCapacity;
 
     /**
-     * <p>The region ID of the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the auto provisioning group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -73,7 +73,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The target capacity of preemptible instances in the auto provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
+     * <p>The target capacity of preemptible instances in the auto provisioning group. The value must be smaller than the TotalTargetCapacity value.</p>
      */
     @NameInMap("SpotTargetCapacity")
     public String spotTargetCapacity;
@@ -222,31 +222,31 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
 
     public static class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
         /**
-         * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
+         * <p>The instance type in the extended configuration. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The maximum price of preemptible instances in extended configuration N.</p>
+         * <p>The highest price of preemptible instances that is specified in the extended configuration.</p>
          */
         @NameInMap("MaxPrice")
         public Double maxPrice;
 
         /**
-         * <p>The priority of extended configuration N. A value of 0 indicates the highest priority. The value must be greater than 0.</p>
+         * <p>The priority of the extended configuration. A value of 0 indicates the highest priority. The value must be greater than 0.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.</p>
+         * <p>The ID of the vSwitch in extended configuration. The zone of the instances created from the extended configuration is determined by the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The weight of the instance type specified in extended configuration N. A greater weight indicates that a single instance has more computing power and that fewer instances are required. The value must be greater than 0.</p>
+         * <p>The weight of the instance type in the extended configuration. A greater weight indicates that a single instance has more computing power and that fewer instances are required. The value must be greater than 0.</p>
          * <br>
          * <p>The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster to be created by the auto provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.</p>
          * <br>

@@ -15,7 +15,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     public String currency;
 
     /**
-     * <p>The start row of the next page. It is the value of the `Offset` parameter.</p>
+     * <p>The start line of the next page. It is the value of the `Offset` request parameter.</p>
      */
     @NameInMap("NextOffset")
     public Integer nextOffset;
@@ -27,7 +27,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about the spot prices.</p>
+     * <p>Details about the price history of the preemptible instance.</p>
      */
     @NameInMap("SpotPrices")
     public DescribeSpotPriceHistoryResponseBodySpotPrices spotPrices;
@@ -89,13 +89,13 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.</p>
+         * <p>The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.</p>
          */
         @NameInMap("OriginPrice")
         public Float originPrice;
 
         /**
-         * <p>The spot price of the preemptible instance.</p>
+         * <p>The spot price (market price) of the preemptible instance.</p>
          */
         @NameInMap("SpotPrice")
         public Float spotPrice;

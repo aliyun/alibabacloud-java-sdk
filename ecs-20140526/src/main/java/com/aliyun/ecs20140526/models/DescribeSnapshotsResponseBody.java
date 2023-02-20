@@ -152,7 +152,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The category of the snapshot.</p>
          * <br>
-         * <p>> This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
+         * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -176,16 +176,16 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
+         * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
          * <br>
-         * <p>*   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
+         * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
         /**
-         * <p>The duration of the instant access feature. The instant access feature is automatically disabled when the specified duration expires.</p>
+         * <p>The validity period of the instant access feature. The instant access feature is automatically disabled when the specified period expires.</p>
          * <br>
          * <p>By default, the value of this parameter is the same as that of `RetentionDays`.</p>
          */
@@ -193,7 +193,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Integer instantAccessRetentionDays;
 
         /**
-         * <p>The ID of the KMS key used by the data disk.</p>
+         * <p>The ID of the KMS key used for the data disk.</p>
          */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
@@ -205,7 +205,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String lastModifiedTime;
 
         /**
-         * <p>The product code of the Alibaba Cloud Marketplace image.</p>
+         * <p>The product number inherited from Alibaba Cloud Marketplace.</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
@@ -217,13 +217,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The remaining time that is required to create the snapshot. Unit: seconds.</p>
+         * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
         /**
-         * <p>The ID of the resource group to which the snapshot belongs.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -263,13 +263,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotType;
 
         /**
-         * <p>The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.</p>
+         * <p>The ID of the source disk. This parameter is retained even after the source disk is released.</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
         /**
-         * <p>The capacity of the source disk. Unit: GiB.</p>
+         * <p>The capacity of the source disk for which the snapshot was created. Unit: GiB.</p>
          */
         @NameInMap("SourceDiskSize")
         public String sourceDiskSize;
@@ -320,7 +320,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags;
 
         /**
-         * <p>Indicates whether the snapshot has been used to create images or disks. Valid values:</p>
+         * <p>Indicates whether the snapshot has been used to create custom images or disks. Valid values:</p>
          * <br>
          * <p>*   image</p>
          * <p>*   disk</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The attribute of the ENI.</p>
+     * <p>The attributes of the ENI.</p>
      */
     @NameInMap("Attribute")
     public String attribute;
@@ -23,7 +23,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

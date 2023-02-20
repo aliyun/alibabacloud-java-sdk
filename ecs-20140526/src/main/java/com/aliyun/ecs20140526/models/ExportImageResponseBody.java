@@ -4,12 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ExportImageResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the image export task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
