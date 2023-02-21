@@ -10,9 +10,6 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
     @NameInMap("DBClusterNetworkType")
     public String DBClusterNetworkType;
 
@@ -22,9 +19,6 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("EnableDefaultResourcePool")
     public Boolean enableDefaultResourcePool;
 
-    @NameInMap("Mode")
-    public String mode;
-
     @NameInMap("PayType")
     public String payType;
 
@@ -33,9 +27,6 @@ public class CreateDBClusterRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("StorageResource")
     public String storageResource;
@@ -73,14 +64,6 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.DBClusterDescription;
     }
 
-    public CreateDBClusterRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
     public CreateDBClusterRequest setDBClusterNetworkType(String DBClusterNetworkType) {
         this.DBClusterNetworkType = DBClusterNetworkType;
         return this;
@@ -105,14 +88,6 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.enableDefaultResourcePool;
     }
 
-    public CreateDBClusterRequest setMode(String mode) {
-        this.mode = mode;
-        return this;
-    }
-    public String getMode() {
-        return this.mode;
-    }
-
     public CreateDBClusterRequest setPayType(String payType) {
         this.payType = payType;
         return this;
@@ -135,14 +110,6 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CreateDBClusterRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public CreateDBClusterRequest setStorageResource(String storageResource) {

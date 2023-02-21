@@ -10,9 +10,6 @@ public class DeleteDBClusterResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TaskId")
-    public Integer taskId;
-
     public static DeleteDBClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBClusterResponseBody self = new DeleteDBClusterResponseBody();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DeleteDBClusterResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteDBClusterResponseBody setTaskId(Integer taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Integer getTaskId() {
-        return this.taskId;
     }
 
 }

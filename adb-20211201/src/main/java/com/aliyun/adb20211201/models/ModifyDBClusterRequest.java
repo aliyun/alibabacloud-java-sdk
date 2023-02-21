@@ -10,12 +10,6 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("Mode")
-    public String mode;
-
-    @NameInMap("ModifyType")
-    public String modifyType;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -50,22 +44,6 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
-    }
-
-    public ModifyDBClusterRequest setMode(String mode) {
-        this.mode = mode;
-        return this;
-    }
-    public String getMode() {
-        return this.mode;
-    }
-
-    public ModifyDBClusterRequest setModifyType(String modifyType) {
-        this.modifyType = modifyType;
-        return this;
-    }
-    public String getModifyType() {
-        return this.modifyType;
     }
 
     public ModifyDBClusterRequest setOwnerAccount(String ownerAccount) {

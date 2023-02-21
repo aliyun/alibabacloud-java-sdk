@@ -10,6 +10,9 @@ public class SparkAppInfo extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("Detail")
     public Detail detail;
 
@@ -38,6 +41,14 @@ public class SparkAppInfo extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public SparkAppInfo setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public SparkAppInfo setDetail(Detail detail) {
