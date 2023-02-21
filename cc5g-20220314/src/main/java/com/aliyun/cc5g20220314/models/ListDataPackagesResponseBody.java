@@ -80,12 +80,18 @@ public class ListDataPackagesResponseBody extends TeaModel {
         @NameInMap("ISP")
         public String ISP;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("Status")
         public String status;
 

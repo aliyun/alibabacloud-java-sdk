@@ -43,18 +43,33 @@ public class ListIoTCloudConnectorBackhaulRouteResponseBody extends TeaModel {
     }
 
     public static class ListIoTCloudConnectorBackhaulRouteResponseBodyRoutes extends TeaModel {
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("Status")
         public String status;
 

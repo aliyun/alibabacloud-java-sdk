@@ -201,9 +201,15 @@ public class GetWirelessCloudConnectorResponseBody extends TeaModel {
         @NameInMap("ISP")
         public String ISP;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("NetLinkId")
         public String netLinkId;
 

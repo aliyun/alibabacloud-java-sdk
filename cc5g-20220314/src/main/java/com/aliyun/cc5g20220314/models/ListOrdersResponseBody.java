@@ -65,6 +65,9 @@ public class ListOrdersResponseBody extends TeaModel {
     }
 
     public static class ListOrdersResponseBodyOrders extends TeaModel {
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("Action")
         public String action;
 
@@ -113,6 +116,9 @@ public class ListOrdersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("Status")
         public String status;
 

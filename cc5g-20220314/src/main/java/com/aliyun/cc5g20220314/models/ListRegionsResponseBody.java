@@ -32,12 +32,15 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static class ListRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
-        @NameInMap("RegionEndpoint")
-        public String regionEndpoint;
-
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -52,14 +55,6 @@ public class ListRegionsResponseBody extends TeaModel {
         }
         public String getLocalName() {
             return this.localName;
-        }
-
-        public ListRegionsResponseBodyRegions setRegionEndpoint(String regionEndpoint) {
-            this.regionEndpoint = regionEndpoint;
-            return this;
-        }
-        public String getRegionEndpoint() {
-            return this.regionEndpoint;
         }
 
         public ListRegionsResponseBodyRegions setRegionId(String regionId) {
