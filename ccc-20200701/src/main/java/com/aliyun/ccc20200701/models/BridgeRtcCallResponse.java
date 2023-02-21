@@ -3,7 +3,7 @@ package com.aliyun.ccc20200701.models;
 
 import com.aliyun.tea.*;
 
-public class ListSipTracesResponse extends TeaModel {
+public class BridgeRtcCallResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListSipTracesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListSipTracesResponseBody body;
+    public BridgeRtcCallResponseBody body;
 
-    public static ListSipTracesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListSipTracesResponse self = new ListSipTracesResponse();
+    public static BridgeRtcCallResponse build(java.util.Map<String, ?> map) throws Exception {
+        BridgeRtcCallResponse self = new BridgeRtcCallResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListSipTracesResponse setHeaders(java.util.Map<String, String> headers) {
+    public BridgeRtcCallResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListSipTracesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListSipTracesResponse setStatusCode(Integer statusCode) {
+    public BridgeRtcCallResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListSipTracesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListSipTracesResponse setBody(ListSipTracesResponseBody body) {
+    public BridgeRtcCallResponse setBody(BridgeRtcCallResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListSipTracesResponseBody getBody() {
+    public BridgeRtcCallResponseBody getBody() {
         return this.body;
     }
 

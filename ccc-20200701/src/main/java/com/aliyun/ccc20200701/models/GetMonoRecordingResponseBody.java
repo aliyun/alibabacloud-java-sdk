@@ -65,6 +65,9 @@ public class GetMonoRecordingResponseBody extends TeaModel {
     }
 
     public static class GetMonoRecordingResponseBodyData extends TeaModel {
+        @NameInMap("Duration")
+        public Long duration;
+
         @NameInMap("FileName")
         public String fileName;
 
@@ -74,6 +77,14 @@ public class GetMonoRecordingResponseBody extends TeaModel {
         public static GetMonoRecordingResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMonoRecordingResponseBodyData self = new GetMonoRecordingResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMonoRecordingResponseBodyData setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
         }
 
         public GetMonoRecordingResponseBodyData setFileName(String fileName) {

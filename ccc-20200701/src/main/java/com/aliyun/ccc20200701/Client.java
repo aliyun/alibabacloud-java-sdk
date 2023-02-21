@@ -544,6 +544,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.blindTransferWithOptions(request, runtime);
     }
 
+    public BridgeRtcCallResponse bridgeRtcCallWithOptions(BridgeRtcCallRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callee)) {
+            query.put("Callee", request.callee);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.caller)) {
+            query.put("Caller", request.caller);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            query.put("Provider", request.provider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeoutSeconds)) {
+            query.put("TimeoutSeconds", request.timeoutSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEnabled)) {
+            query.put("VideoEnabled", request.videoEnabled);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BridgeRtcCall"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BridgeRtcCallResponse());
+    }
+
+    public BridgeRtcCallResponse bridgeRtcCall(BridgeRtcCallRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bridgeRtcCallWithOptions(request, runtime);
+    }
+
     public CancelAttendedTransferResponse cancelAttendedTransferWithOptions(CancelAttendedTransferRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
