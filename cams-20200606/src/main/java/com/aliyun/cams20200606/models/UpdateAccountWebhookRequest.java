@@ -4,15 +4,27 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UpdateAccountWebhookRequest extends TeaModel {
+    /**
+     * <p>The space ID of the user under the ISV account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>Specifies whether to use HTTP callbacks to receive message receipts. Valid values: Y and N. A value of Y indicates that HTTP callbacks are used to receive message receipts. A value of N indicates that HTTP callbacks are not used to receive message receipts.</p>
+     */
     @NameInMap("HttpFlag")
     public String httpFlag;
 
+    /**
+     * <p>Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values: Y and N. A value of Y indicates that MNS queues are used to receive receipts. A value of N indicates that MNS queues are not used to receive receipts.</p>
+     */
     @NameInMap("QueueFlag")
     public String queueFlag;
 
+    /**
+     * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
+     */
     @NameInMap("StatusCallbackUrl")
     public String statusCallbackUrl;
 

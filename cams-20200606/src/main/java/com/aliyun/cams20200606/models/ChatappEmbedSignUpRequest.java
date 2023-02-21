@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ChatappEmbedSignUpRequest extends TeaModel {
+    /**
+     * <p>The InputToken returned after the embedded signup flow is complete.</p>
+     */
     @NameInMap("InputToken")
     public String inputToken;
 

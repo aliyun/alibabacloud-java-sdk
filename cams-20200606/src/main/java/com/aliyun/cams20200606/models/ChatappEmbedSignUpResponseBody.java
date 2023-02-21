@@ -4,15 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ChatappEmbedSignUpResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of WhatsApp Business accounts.</p>
+     */
     @NameInMap("Wabas")
     public java.util.List<ChatappEmbedSignUpResponseBodyWabas> wabas;
 
@@ -54,9 +69,15 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
     }
 
     public static class ChatappEmbedSignUpResponseBodyWabas extends TeaModel {
+        /**
+         * <p>The review status of the WhatsApp Business account.</p>
+         */
         @NameInMap("AccountReviewStatus")
         public String accountReviewStatus;
 
+        /**
+         * <p>The currency.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
@@ -66,6 +87,9 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The namespace of the message template.</p>
+         */
         @NameInMap("MessageTemplateNamespace")
         public String messageTemplateNamespace;
 

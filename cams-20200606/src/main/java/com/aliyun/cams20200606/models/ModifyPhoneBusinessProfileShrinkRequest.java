@@ -4,27 +4,51 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
+    /**
+     * <p>The address.</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The space ID of the user under the ISV account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The email address.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The phone number.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>The URL of the profile picture.</p>
+     */
     @NameInMap("ProfilePictureUrl")
     public String profilePictureUrl;
 
+    /**
+     * <p>The industry.</p>
+     */
     @NameInMap("Vertical")
     public String vertical;
 
+    /**
+     * <p>The websites.</p>
+     */
     @NameInMap("Websites")
     public String websitesShrink;
 

@@ -4,15 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryPhoneBusinessProfileResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +69,39 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     }
 
     public static class QueryPhoneBusinessProfileResponseBodyData extends TeaModel {
+        /**
+         * <p>The address.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The email address.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The URL of the profile picture.</p>
+         */
         @NameInMap("ProfilePictureUrl")
         public String profilePictureUrl;
 
+        /**
+         * <p>The industry.</p>
+         */
         @NameInMap("Vertical")
         public String vertical;
 
+        /**
+         * <p>The websites.</p>
+         */
         @NameInMap("Websites")
         public java.util.List<String> websites;
 

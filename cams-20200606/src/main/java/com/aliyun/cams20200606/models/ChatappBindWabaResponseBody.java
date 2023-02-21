@@ -4,15 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ChatappBindWabaResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ChatappBindWabaResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +69,9 @@ public class ChatappBindWabaResponseBody extends TeaModel {
     }
 
     public static class ChatappBindWabaResponseBodyData extends TeaModel {
+        /**
+         * <p>The space ID of the user.</p>
+         */
         @NameInMap("CustSpaceId")
         public String custSpaceId;
 
