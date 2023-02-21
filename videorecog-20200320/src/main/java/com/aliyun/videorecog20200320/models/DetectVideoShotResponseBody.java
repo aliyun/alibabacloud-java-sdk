@@ -43,6 +43,9 @@ public class DetectVideoShotResponseBody extends TeaModel {
     }
 
     public static class DetectVideoShotResponseBodyData extends TeaModel {
+        /**
+         * <p>1</p>
+         */
         @NameInMap("ShotFrameIds")
         public java.util.List<Integer> shotFrameIds;
 

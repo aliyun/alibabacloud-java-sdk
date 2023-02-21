@@ -7,9 +7,6 @@ public class RecognizeVideoCastCrewListShrinkRequest extends TeaModel {
     @NameInMap("Params")
     public String paramsShrink;
 
-    @NameInMap("RegisterUrl")
-    public String registerUrl;
-
     @NameInMap("VideoUrl")
     public String videoUrl;
 
@@ -24,14 +21,6 @@ public class RecognizeVideoCastCrewListShrinkRequest extends TeaModel {
     }
     public String getParamsShrink() {
         return this.paramsShrink;
-    }
-
-    public RecognizeVideoCastCrewListShrinkRequest setRegisterUrl(String registerUrl) {
-        this.registerUrl = registerUrl;
-        return this;
-    }
-    public String getRegisterUrl() {
-        return this.registerUrl;
     }
 
     public RecognizeVideoCastCrewListShrinkRequest setVideoUrl(String videoUrl) {
