@@ -35,6 +35,9 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         @NameInMap("LastUsedDate")
         public String lastUsedDate;
 
+        @NameInMap("ServiceName")
+        public String serviceName;
+
         public static GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed build(java.util.Map<String, ?> map) throws Exception {
             GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed self = new GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed();
             return TeaModel.build(map, self);
@@ -46,6 +49,14 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         }
         public String getLastUsedDate() {
             return this.lastUsedDate;
+        }
+
+        public GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
     }
