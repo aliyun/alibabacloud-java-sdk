@@ -38,6 +38,9 @@ public class KillSparkAppResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
         @NameInMap("Message")
         public String message;
 
@@ -63,6 +66,14 @@ public class KillSparkAppResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public KillSparkAppResponseBodyData setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
         public KillSparkAppResponseBodyData setMessage(String message) {

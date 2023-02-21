@@ -64,55 +64,6 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class DescribeDBClustersResponseBodyItemsDBClusterTagsTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static DescribeDBClustersResponseBodyItemsDBClusterTagsTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClustersResponseBodyItemsDBClusterTagsTag self = new DescribeDBClustersResponseBodyItemsDBClusterTagsTag();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClustersResponseBodyItemsDBClusterTagsTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeDBClustersResponseBodyItemsDBClusterTagsTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class DescribeDBClustersResponseBodyItemsDBClusterTags extends TeaModel {
-        @NameInMap("Tag")
-        public java.util.List<DescribeDBClustersResponseBodyItemsDBClusterTagsTag> tag;
-
-        public static DescribeDBClustersResponseBodyItemsDBClusterTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClustersResponseBodyItemsDBClusterTags self = new DescribeDBClustersResponseBodyItemsDBClusterTags();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClustersResponseBodyItemsDBClusterTags setTag(java.util.List<DescribeDBClustersResponseBodyItemsDBClusterTagsTag> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<DescribeDBClustersResponseBodyItemsDBClusterTagsTag> getTag() {
-            return this.tag;
-        }
-
-    }
-
     public static class DescribeDBClustersResponseBodyItemsDBCluster extends TeaModel {
         @NameInMap("CommodityCode")
         public String commodityCode;
@@ -141,17 +92,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("DBClusterType")
         public String DBClusterType;
 
-        @NameInMap("DBNodeClass")
-        public String DBNodeClass;
-
-        @NameInMap("DBNodeStorage")
-        public Long DBNodeStorage;
-
         @NameInMap("DBVersion")
         public String DBVersion;
-
-        @NameInMap("DiskType")
-        public String diskType;
 
         @NameInMap("Engine")
         public String engine;
@@ -188,9 +130,6 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         @NameInMap("StorageResource")
         public String storageResource;
-
-        @NameInMap("Tags")
-        public DescribeDBClustersResponseBodyItemsDBClusterTags tags;
 
         @NameInMap("VPCId")
         public String VPCId;
@@ -278,36 +217,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             return this.DBClusterType;
         }
 
-        public DescribeDBClustersResponseBodyItemsDBCluster setDBNodeClass(String DBNodeClass) {
-            this.DBNodeClass = DBNodeClass;
-            return this;
-        }
-        public String getDBNodeClass() {
-            return this.DBNodeClass;
-        }
-
-        public DescribeDBClustersResponseBodyItemsDBCluster setDBNodeStorage(Long DBNodeStorage) {
-            this.DBNodeStorage = DBNodeStorage;
-            return this;
-        }
-        public Long getDBNodeStorage() {
-            return this.DBNodeStorage;
-        }
-
         public DescribeDBClustersResponseBodyItemsDBCluster setDBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
             return this;
         }
         public String getDBVersion() {
             return this.DBVersion;
-        }
-
-        public DescribeDBClustersResponseBodyItemsDBCluster setDiskType(String diskType) {
-            this.diskType = diskType;
-            return this;
-        }
-        public String getDiskType() {
-            return this.diskType;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setEngine(String engine) {
@@ -404,14 +319,6 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getStorageResource() {
             return this.storageResource;
-        }
-
-        public DescribeDBClustersResponseBodyItemsDBCluster setTags(DescribeDBClustersResponseBodyItemsDBClusterTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeDBClustersResponseBodyItemsDBClusterTags getTags() {
-            return this.tags;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setVPCId(String VPCId) {

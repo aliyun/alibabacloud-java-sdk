@@ -31,64 +31,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag self = new DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTags extends TeaModel {
-        @NameInMap("Tag")
-        public java.util.List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag> tag;
-
-        public static DescribeDBClusterAttributeResponseBodyItemsDBClusterTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAttributeResponseBodyItemsDBClusterTags self = new DescribeDBClusterAttributeResponseBodyItemsDBClusterTags();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTags setTag(java.util.List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag> getTag() {
-            return this.tag;
-        }
-
-    }
-
     public static class DescribeDBClusterAttributeResponseBodyItemsDBCluster extends TeaModel {
-        @NameInMap("Category")
-        public String category;
-
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         @NameInMap("ComputeResource")
         public String computeResource;
+
+        @NameInMap("ComputeResourceTotal")
+        public String computeResourceTotal;
 
         @NameInMap("ConnectionString")
         public String connectionString;
@@ -111,26 +62,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("DBClusterType")
         public String DBClusterType;
 
-        @NameInMap("DBNodeClass")
-        public String DBNodeClass;
-
-        @NameInMap("DBNodeCount")
-        public Long DBNodeCount;
-
-        @NameInMap("DBNodeStorage")
-        public Long DBNodeStorage;
-
         @NameInMap("DBVersion")
         public String DBVersion;
-
-        @NameInMap("DiskType")
-        public String diskType;
-
-        @NameInMap("DtsJobId")
-        public String dtsJobId;
-
-        @NameInMap("ElasticIOResource")
-        public Integer elasticIOResource;
 
         @NameInMap("Engine")
         public String engine;
@@ -138,17 +71,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         public String engineVersion;
 
-        @NameInMap("ExecutorCount")
-        public String executorCount;
-
         @NameInMap("ExpireTime")
         public String expireTime;
 
         @NameInMap("Expired")
         public String expired;
-
-        @NameInMap("KmsId")
-        public String kmsId;
 
         @NameInMap("LockMode")
         public String lockMode;
@@ -168,9 +95,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
-        @NameInMap("RdsInstanceId")
-        public String rdsInstanceId;
-
         @NameInMap("RegionId")
         public String regionId;
 
@@ -183,14 +107,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("StorageResource")
         public String storageResource;
 
-        @NameInMap("Tags")
-        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTags tags;
+        @NameInMap("StorageResourceTotal")
+        public String storageResourceTotal;
 
         @NameInMap("UserENIStatus")
         public Boolean userENIStatus;
-
-        @NameInMap("VPCCloudInstanceId")
-        public String VPCCloudInstanceId;
 
         @NameInMap("VPCId")
         public String VPCId;
@@ -204,14 +125,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public static DescribeDBClusterAttributeResponseBodyItemsDBCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterAttributeResponseBodyItemsDBCluster self = new DescribeDBClusterAttributeResponseBodyItemsDBCluster();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setCommodityCode(String commodityCode) {
@@ -228,6 +141,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getComputeResource() {
             return this.computeResource;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setComputeResourceTotal(String computeResourceTotal) {
+            this.computeResourceTotal = computeResourceTotal;
+            return this;
+        }
+        public String getComputeResourceTotal() {
+            return this.computeResourceTotal;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setConnectionString(String connectionString) {
@@ -286,60 +207,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.DBClusterType;
         }
 
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDBNodeClass(String DBNodeClass) {
-            this.DBNodeClass = DBNodeClass;
-            return this;
-        }
-        public String getDBNodeClass() {
-            return this.DBNodeClass;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDBNodeCount(Long DBNodeCount) {
-            this.DBNodeCount = DBNodeCount;
-            return this;
-        }
-        public Long getDBNodeCount() {
-            return this.DBNodeCount;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDBNodeStorage(Long DBNodeStorage) {
-            this.DBNodeStorage = DBNodeStorage;
-            return this;
-        }
-        public Long getDBNodeStorage() {
-            return this.DBNodeStorage;
-        }
-
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
             return this;
         }
         public String getDBVersion() {
             return this.DBVersion;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDiskType(String diskType) {
-            this.diskType = diskType;
-            return this;
-        }
-        public String getDiskType() {
-            return this.diskType;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDtsJobId(String dtsJobId) {
-            this.dtsJobId = dtsJobId;
-            return this;
-        }
-        public String getDtsJobId() {
-            return this.dtsJobId;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setElasticIOResource(Integer elasticIOResource) {
-            this.elasticIOResource = elasticIOResource;
-            return this;
-        }
-        public Integer getElasticIOResource() {
-            return this.elasticIOResource;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setEngine(String engine) {
@@ -358,14 +231,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.engineVersion;
         }
 
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setExecutorCount(String executorCount) {
-            this.executorCount = executorCount;
-            return this;
-        }
-        public String getExecutorCount() {
-            return this.executorCount;
-        }
-
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setExpireTime(String expireTime) {
             this.expireTime = expireTime;
             return this;
@@ -380,14 +245,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getExpired() {
             return this.expired;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setKmsId(String kmsId) {
-            this.kmsId = kmsId;
-            return this;
-        }
-        public String getKmsId() {
-            return this.kmsId;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setLockMode(String lockMode) {
@@ -438,14 +295,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setRdsInstanceId(String rdsInstanceId) {
-            this.rdsInstanceId = rdsInstanceId;
-            return this;
-        }
-        public String getRdsInstanceId() {
-            return this.rdsInstanceId;
-        }
-
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -478,12 +327,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.storageResource;
         }
 
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setTags(DescribeDBClusterAttributeResponseBodyItemsDBClusterTags tags) {
-            this.tags = tags;
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setStorageResourceTotal(String storageResourceTotal) {
+            this.storageResourceTotal = storageResourceTotal;
             return this;
         }
-        public DescribeDBClusterAttributeResponseBodyItemsDBClusterTags getTags() {
-            return this.tags;
+        public String getStorageResourceTotal() {
+            return this.storageResourceTotal;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setUserENIStatus(Boolean userENIStatus) {
@@ -492,14 +341,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public Boolean getUserENIStatus() {
             return this.userENIStatus;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setVPCCloudInstanceId(String VPCCloudInstanceId) {
-            this.VPCCloudInstanceId = VPCCloudInstanceId;
-            return this;
-        }
-        public String getVPCCloudInstanceId() {
-            return this.VPCCloudInstanceId;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setVPCId(String VPCId) {

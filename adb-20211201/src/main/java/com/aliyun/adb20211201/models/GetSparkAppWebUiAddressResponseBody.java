@@ -35,6 +35,9 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
         @NameInMap("ExpirationTimeInMillis")
         public Long expirationTimeInMillis;
 
@@ -52,6 +55,14 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+        public GetSparkAppWebUiAddressResponseBodyData setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
         public GetSparkAppWebUiAddressResponseBodyData setExpirationTimeInMillis(Long expirationTimeInMillis) {

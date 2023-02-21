@@ -1,3 +1,6 @@
+2023-02-21 Version: 1.0.14
+- Release API for das metrics.
+
 2022-09-19 Version: 1.0.11
 - ADBMySQL For 5.
 

@@ -35,6 +35,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("ElasticMinComputeResource")
+        public String elasticMinComputeResource;
+
         @NameInMap("GroupName")
         public String groupName;
 
@@ -67,6 +70,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setElasticMinComputeResource(String elasticMinComputeResource) {
+            this.elasticMinComputeResource = elasticMinComputeResource;
+            return this;
+        }
+        public String getElasticMinComputeResource() {
+            return this.elasticMinComputeResource;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfo setGroupName(String groupName) {

@@ -32,6 +32,9 @@ public class GetSparkAppLogResponseBody extends TeaModel {
     }
 
     public static class GetSparkAppLogResponseBodyData extends TeaModel {
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
+
         @NameInMap("LogContent")
         public String logContent;
 
@@ -41,6 +44,14 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         public static GetSparkAppLogResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetSparkAppLogResponseBodyData self = new GetSparkAppLogResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetSparkAppLogResponseBodyData setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
         public GetSparkAppLogResponseBodyData setLogContent(String logContent) {
