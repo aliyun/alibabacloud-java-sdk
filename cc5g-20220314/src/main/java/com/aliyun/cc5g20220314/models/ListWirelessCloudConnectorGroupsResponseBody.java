@@ -211,15 +211,24 @@ public class ListWirelessCloudConnectorGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("WirelessCloudConnectorGroupId")
         public String wirelessCloudConnectorGroupId;
 

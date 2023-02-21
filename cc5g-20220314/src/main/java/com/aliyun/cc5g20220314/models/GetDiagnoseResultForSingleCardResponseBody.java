@@ -130,12 +130,56 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
         return this.wirelessCloudConnectorId;
     }
 
+    public static class GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems extends TeaModel {
+        @NameInMap("SubItem")
+        public String subItem;
+
+        @NameInMap("SubItemInfo")
+        public String subItemInfo;
+
+        @NameInMap("SubItemStatus")
+        public String subItemStatus;
+
+        public static GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems build(java.util.Map<String, ?> map) throws Exception {
+            GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems self = new GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems setSubItem(String subItem) {
+            this.subItem = subItem;
+            return this;
+        }
+        public String getSubItem() {
+            return this.subItem;
+        }
+
+        public GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems setSubItemInfo(String subItemInfo) {
+            this.subItemInfo = subItemInfo;
+            return this;
+        }
+        public String getSubItemInfo() {
+            return this.subItemInfo;
+        }
+
+        public GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems setSubItemStatus(String subItemStatus) {
+            this.subItemStatus = subItemStatus;
+            return this;
+        }
+        public String getSubItemStatus() {
+            return this.subItemStatus;
+        }
+
+    }
+
     public static class GetDiagnoseResultForSingleCardResponseBodyDiagnoseItem extends TeaModel {
         @NameInMap("Part")
         public String part;
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("SubItems")
+        public java.util.List<GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems> subItems;
 
         public static GetDiagnoseResultForSingleCardResponseBodyDiagnoseItem build(java.util.Map<String, ?> map) throws Exception {
             GetDiagnoseResultForSingleCardResponseBodyDiagnoseItem self = new GetDiagnoseResultForSingleCardResponseBodyDiagnoseItem();
@@ -158,11 +202,22 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
             return this.status;
         }
 
+        public GetDiagnoseResultForSingleCardResponseBodyDiagnoseItem setSubItems(java.util.List<GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems> subItems) {
+            this.subItems = subItems;
+            return this;
+        }
+        public java.util.List<GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems> getSubItems() {
+            return this.subItems;
+        }
+
     }
 
     public static class GetDiagnoseResultForSingleCardResponseBodyErrorResult extends TeaModel {
         @NameInMap("ErrorDesc")
         public String errorDesc;
+
+        @NameInMap("ErrorItem")
+        public String errorItem;
 
         @NameInMap("ErrorLevel")
         public String errorLevel;
@@ -184,6 +239,14 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
         }
         public String getErrorDesc() {
             return this.errorDesc;
+        }
+
+        public GetDiagnoseResultForSingleCardResponseBodyErrorResult setErrorItem(String errorItem) {
+            this.errorItem = errorItem;
+            return this;
+        }
+        public String getErrorItem() {
+            return this.errorItem;
         }
 
         public GetDiagnoseResultForSingleCardResponseBodyErrorResult setErrorLevel(String errorLevel) {

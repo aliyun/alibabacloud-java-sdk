@@ -65,6 +65,9 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
     }
 
     public static class ListAuthorizationRulesResponseBodyAuthorizationRules extends TeaModel {
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("AuthorizationRuleId")
         public String authorizationRuleId;
 
@@ -86,6 +89,9 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         @NameInMap("Dns")
         public Boolean dns;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -98,6 +104,9 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         @NameInMap("SourceCidr")
         public String sourceCidr;
 
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -95,6 +95,9 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
     }
 
     public static class ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasks extends TeaModel {
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("BatchOperateCardsTaskId")
         public String batchOperateCardsTaskId;
 
@@ -116,6 +119,9 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
         @NameInMap("OperateResultOssFilePath")
         public String operateResultOssFilePath;
 
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("OperateType")
         public String operateType;
 

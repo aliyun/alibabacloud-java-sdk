@@ -3,7 +3,7 @@ package com.aliyun.cc5g20220314.models;
 
 import com.aliyun.tea.*;
 
-public class InnerLimitRateCardsResponse extends TeaModel {
+public class ListCardUsagesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class InnerLimitRateCardsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public InnerLimitRateCardsResponseBody body;
+    public ListCardUsagesResponseBody body;
 
-    public static InnerLimitRateCardsResponse build(java.util.Map<String, ?> map) throws Exception {
-        InnerLimitRateCardsResponse self = new InnerLimitRateCardsResponse();
+    public static ListCardUsagesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListCardUsagesResponse self = new ListCardUsagesResponse();
         return TeaModel.build(map, self);
     }
 
-    public InnerLimitRateCardsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListCardUsagesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class InnerLimitRateCardsResponse extends TeaModel {
         return this.headers;
     }
 
-    public InnerLimitRateCardsResponse setStatusCode(Integer statusCode) {
+    public ListCardUsagesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class InnerLimitRateCardsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public InnerLimitRateCardsResponse setBody(InnerLimitRateCardsResponseBody body) {
+    public ListCardUsagesResponse setBody(ListCardUsagesResponseBody body) {
         this.body = body;
         return this;
     }
-    public InnerLimitRateCardsResponseBody getBody() {
+    public ListCardUsagesResponseBody getBody() {
         return this.body;
     }
 

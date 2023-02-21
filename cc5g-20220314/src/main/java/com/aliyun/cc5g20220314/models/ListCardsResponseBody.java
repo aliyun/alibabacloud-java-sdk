@@ -65,6 +65,9 @@ public class ListCardsResponseBody extends TeaModel {
     }
 
     public static class ListCardsResponseBodyCards extends TeaModel {
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("APN")
         public String APN;
 
@@ -80,6 +83,9 @@ public class ListCardsResponseBody extends TeaModel {
         @NameInMap("ISP")
         public String ISP;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("Iccid")
         public String iccid;
 
@@ -101,6 +107,9 @@ public class ListCardsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("NetType")
         public String netType;
 

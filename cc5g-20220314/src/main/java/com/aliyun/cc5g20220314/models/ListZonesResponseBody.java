@@ -32,9 +32,15 @@ public class ListZonesResponseBody extends TeaModel {
     }
 
     public static class ListZonesResponseBodyZones extends TeaModel {
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>代表资源名称的资源属性字段</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
