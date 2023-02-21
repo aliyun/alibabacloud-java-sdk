@@ -5,65 +5,74 @@ import com.aliyun.tea.*;
 
 public class SendChatappMassMessageRequest extends TeaModel {
     /**
-     * <p>The type of the message channel. Valid values:</p>
-     * <br>
-     * <p>*   **whatsapp**</p>
-     * <p>*   viber (under development)</p>
-     * <p>*   line (under development)</p>
+     * <p>The channel type. Valid values: whatsapp, viber, and line.</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
 
+    /**
+     * <p>The space ID of the user.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The unique identifier of the WhatsApp account that you register.</p>
+     * <p>The ID of the WhatApp Business account of the ISV account.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
     /**
-     * <p>Fallback message content.</p>
+     * <p>The fallback content.</p>
      */
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
     /**
-     * <p>Fallback strategy id. Fallback Strategy can be created on the ChatApp console.</p>
+     * <p>The ID of the fallback strategy.</p>
      */
     @NameInMap("FallBackId")
     public String fallBackId;
 
     /**
-     * <p>The mobile phone number of the message sender.</p>
-     * <br>
-     * <p><notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice></p>
+     * <p>The message sender.</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
-     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template.</p>
+     * <p>Viber消息类型，取值：pormotion或transation。</p>
+     */
+    @NameInMap("Label")
+    public String label;
+
+    /**
+     * <p>The language. For more information about language codes, see [Language codes](~~463420~~).</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>Target number and parameter list.</p>
+     * <p>The list of phone numbers that receive the message.</p>
      */
     @NameInMap("SenderList")
     public java.util.List<SendChatappMassMessageRequestSenderList> senderList;
 
     /**
-     * <p>User-define ID to identify a single batch of messages.</p>
+     * <p>Viber消息发送时tag信息。</p>
+     */
+    @NameInMap("Tag")
+    public String tag;
+
+    /**
+     * <p>The ID of the task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
@@ -73,6 +82,12 @@ public class SendChatappMassMessageRequest extends TeaModel {
      */
     @NameInMap("TemplateCode")
     public String templateCode;
+
+    /**
+     * <p>Viber消息发送超时时间，单位：秒，取值范围 30~1209600。</p>
+     */
+    @NameInMap("Ttl")
+    public Long ttl;
 
     public static SendChatappMassMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         SendChatappMassMessageRequest self = new SendChatappMassMessageRequest();
@@ -135,6 +150,14 @@ public class SendChatappMassMessageRequest extends TeaModel {
         return this.isvCode;
     }
 
+    public SendChatappMassMessageRequest setLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    public String getLabel() {
+        return this.label;
+    }
+
     public SendChatappMassMessageRequest setLanguage(String language) {
         this.language = language;
         return this;
@@ -149,6 +172,14 @@ public class SendChatappMassMessageRequest extends TeaModel {
     }
     public java.util.List<SendChatappMassMessageRequestSenderList> getSenderList() {
         return this.senderList;
+    }
+
+    public SendChatappMassMessageRequest setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    public String getTag() {
+        return this.tag;
     }
 
     public SendChatappMassMessageRequest setTaskId(String taskId) {
@@ -167,21 +198,29 @@ public class SendChatappMassMessageRequest extends TeaModel {
         return this.templateCode;
     }
 
+    public SendChatappMassMessageRequest setTtl(Long ttl) {
+        this.ttl = ttl;
+        return this;
+    }
+    public Long getTtl() {
+        return this.ttl;
+    }
+
     public static class SendChatappMassMessageRequestSenderList extends TeaModel {
         /**
-         * <p>Payload list.</p>
+         * <p>The payload.</p>
          */
         @NameInMap("Payload")
         public java.util.List<String> payload;
 
         /**
-         * <p>Template parameters.</p>
+         * <p>The parameters of the message template.</p>
          */
         @NameInMap("TemplateParams")
         public java.util.Map<String, String> templateParams;
 
         /**
-         * <p>Target number.</p>
+         * <p>The phone number that receives the message.</p>
          */
         @NameInMap("To")
         public String to;

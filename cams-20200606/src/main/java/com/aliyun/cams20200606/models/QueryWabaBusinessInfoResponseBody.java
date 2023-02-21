@@ -4,15 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryWabaBusinessInfoResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business information about the WhatsApp Business account.</p>
+     */
     @NameInMap("Data")
     public QueryWabaBusinessInfoResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +69,27 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
     }
 
     public static class QueryWabaBusinessInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the business platform.</p>
+         */
         @NameInMap("BusinessId")
         public String businessId;
 
+        /**
+         * <p>The name of the business platform.</p>
+         */
         @NameInMap("BusinessName")
         public String businessName;
 
+        /**
+         * <p>The verification status.</p>
+         */
         @NameInMap("VerificationStatus")
         public String verificationStatus;
 
+        /**
+         * <p>The industry.</p>
+         */
         @NameInMap("Vertical")
         public String vertical;
 

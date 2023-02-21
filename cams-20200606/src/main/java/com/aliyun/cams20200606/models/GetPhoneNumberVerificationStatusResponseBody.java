@@ -4,15 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetPhoneNumberVerificationStatusResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +69,21 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
     }
 
     public static class GetPhoneNumberVerificationStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The verification status of the phone number.</p>
+         */
         @NameInMap("CodeVerificationStatus")
         public String codeVerificationStatus;
 
+        /**
+         * <p>The ID of the phone number.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The phone number.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 

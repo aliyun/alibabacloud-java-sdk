@@ -8,8 +8,8 @@ public class SendChatappMessageRequest extends TeaModel {
      * <p>The type of the message channel. Valid values:</p>
      * <br>
      * <p>*   **whatsapp**</p>
-     * <p>*   viber (under development)</p>
-     * <p>*   line (under development)</p>
+     * <p>*   **viber**. This message channel is supported only when you set the Type parameter to message.</p>
+     * <p>*   line. The feature ChatApp sends messages by using Line is under development.</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
@@ -17,16 +17,42 @@ public class SendChatappMessageRequest extends TeaModel {
     /**
      * <p>The content of the message.</p>
      * <br>
-     * <p>**</p>
+     * <p>**Usage notes when you set the ChannelType parameter to whatsapp**</p>
      * <br>
-     * <p>**Note** The **Content** parameter is required if you set the **Type** parameter to **message**.</p>
+     * <p>*   When you set the **MessageType** parameter to **text**, the **text** parameter is required and the **caption** parameter cannot be specified.</p>
+     * <p>*   When you set the **MessageType** parameter to **image**, the **link** parameter is required.</p>
+     * <p>*   When you set the **MessageType** parameter to **video**, the **link** parameter is required.</p>
+     * <p>*   When you set the **MessageType** parameter to **audio**, the **link** parameter is required and **caption** parameter is invalid.</p>
+     * <p>*   When you set the **MessageType** parameter to**document**, the **link** and **fileName** parameters are required and **caption** parameter is invalid.</p>
+     * <p>*   When you set the **MessageType** parameter to **interactive**, the **type** and **action** parameters are required.</p>
+     * <p>*   When you set the **MessageType** parameter to **contacts**, the **name** parameter is required.</p>
+     * <p>*   When you set the **MessageType** parameter to **location**, the **longitude** and **latitude** parameters are required.</p>
+     * <p>*   When you set the **MessageType** parameter to **sticker**, the **link** parameter is required, and the **caption** and **fileName** parameters are invalid.</p>
+     * <p>*   When you set the **MessageType** parameter to **reaction**, the **messageId** and **emoji** parameters are required.</p>
+     * <br>
+     * <p>**Usage notes when you set the ChannelType parameter to viber**</p>
+     * <br>
+     * <p>*   When you set the **MessageType** parameter to **text**, the **text** parameter is required.</p>
+     * <p>*   When you set the **MessageType** parameter to **image**, the **link** parameter is required.</p>
+     * <p>*   When you set the **MessageType** parameter to **video**, the **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.</p>
+     * <p>*   When you set the **MessageType** parameter to **document**, the **link**, **fileName**, and **fileType** parameters are required.</p>
+     * <p>*   When you set the **MessageType** parameter to **text_button**, the **text**, **caption**, and **action** parameters are required.</p>
+     * <p>*   When you set the **MessageType** parameter to **text_image_button**, the **text**, **link**, **caption**, and **action** parameters are required.</p>
+     * <p>*   When you set the **MessageType** parameter to **text_video**, the **text**, **link**, **thumbnail**, **fileSize**, and **duration** parameters are required.</p>
+     * <p>*   When you set the **MessageType** parameter to **text_video_button**, the **text**, **link**, **thumbnail**, **fileSize**, **duration**, and **caption** parameters are required, and the **action** parameter is invalid.</p>
      */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The ID of the reply message.</p>
+     */
     @NameInMap("ContextMessageId")
     public String contextMessageId;
 
+    /**
+     * <p>The space ID of the user.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
@@ -38,48 +64,71 @@ public class SendChatappMessageRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>Fallback message content.</p>
+     * <p>The content of the fallback message.</p>
      */
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
     /**
-     * <p>Fallback strategy id. Fallback Strategy can be created on the ChatApp console.</p>
+     * <p>The ID of the fallback strategy. You can create a fallback strategy and view the information in the console.</p>
      */
     @NameInMap("FallBackId")
     public String fallBackId;
 
     /**
-     * <p>The mobile phone number of the message sender.</p>
+     * <p>The phone number of the message sender.</p>
      * <br>
-     * <p><notice>You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</notice></p>
+     * <p>>  You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatApp console.</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
-     * <p>Assigned by ISV for RAM user authentication and authorization.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
+    /**
+     * <p>The message type when the ChannelType parameter is set to viber. Valid values: promotion and transaction.</p>
+     */
     @NameInMap("Label")
     public String label;
 
     /**
-     * <p>The language that is used in the message template.</p>
+     * <p>The language that is used in the message template. This parameter is required only if you set the Type parameter to **template**. For more information about language codes, see [Language codes](~~463420~~).</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>The type of the message. This parameter is required if you set the Type parameter to **message**. Valid values:</p>
+     * <p>The type of the message. This parameter is required only if you set the Type parameter to **message**. Valid values:</p>
      * <br>
-     * <p>*   **text**: a text message. The **Text** parameter is required if you set the MessageType parameter to text.</p>
-     * <p>*   **image**: an image message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to image.</p>
-     * <p>*   **video**: a video message. The **Link** parameter is required and the **Caption** parameter is optional if you set the MessageType parameter to video.</p>
-     * <p>*   **audio**: an audio message. The **Link** parameter is required and the **Caption** parameter is invalid if you set the MessageType parameter to audio.</p>
-     * <p>*   **document**: a document message. The **Link** and **FileName** parameters are required and the **Caption** parameter is invalid if you set the MessageType parameter to document.</p>
+     * <p>**When you set the ChannelType parameter to whatsapp**</p>
+     * <br>
+     * <p>*   **text**: the text message.</p>
+     * <p>*   **image**: the image message.</p>
+     * <p>*   **video**: the video message.</p>
+     * <p>*   **audio**: the audio message.</p>
+     * <p>*   **document**: the document message.</p>
+     * <p>*   **interactive**: the interactive message.</p>
+     * <p>*   **contacts**: the contact message.</p>
+     * <p>*   **location**: the location message.</p>
+     * <p>*   **sticker**: the sticker message.</p>
+     * <p>*   **reaction**: the reaction message.</p>
+     * <br>
+     * <p>**When you set the ChannelType parameter to viber**</p>
+     * <br>
+     * <p>*   **text**: the text message.</p>
+     * <p>*   **image**: the image message.</p>
+     * <p>*   **video**: the video message.</p>
+     * <p>*   **document**: the document message.</p>
+     * <p>*   **text_button**: messages that contain the text and button media objects.</p>
+     * <p>*   **text_image_button**: messages that contain multiple media objects, including the text, image, and button.</p>
+     * <p>*   **text_video**: messages that contain the text and video media objects.</p>
+     * <p>*   **text_video_button**: messages that contain multiple media objects, including text, video, and button.</p>
+     * <br>
+     * <p>>  For more information, see [Parameters of a message template](~~454530~~).</p>
      */
     @NameInMap("MessageType")
     public String messageType;
@@ -90,11 +139,14 @@ public class SendChatappMessageRequest extends TeaModel {
     @NameInMap("Payload")
     public java.util.List<String> payload;
 
+    /**
+     * <p>The tag information when the ChannelType parameter is set to viber.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
     /**
-     * <p>The code of the message template. This parameter is required if you set the Type parameter to **template**.</p>
+     * <p>The code of the message template. This parameter is required only if you set the Type parameter to **template**.</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
@@ -106,21 +158,27 @@ public class SendChatappMessageRequest extends TeaModel {
     public java.util.Map<String, String> templateParams;
 
     /**
-     * <p>The mobile phone number of the message recipient.</p>
+     * <p>The phone number of the message receiver.</p>
      */
     @NameInMap("To")
     public String to;
 
+    /**
+     * <p>The tracking ID when the ChannelType parameter is set to viber.</p>
+     */
     @NameInMap("TrackingData")
     public String trackingData;
 
+    /**
+     * <p>The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.</p>
+     */
     @NameInMap("Ttl")
     public Integer ttl;
 
     /**
      * <p>The type of the message. Valid values:</p>
      * <br>
-     * <p>*   **template**: a template message. A template message is sent based on a template that is created in the ChatApp console and is approved. You can send template messages based on your business requirements.</p>
+     * <p>*   **template**: a template message. A template message is sent based on a template that is created in the ChatApp console and is approved. You can send template messages at any time based on your business requirements.</p>
      * <p>*   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.</p>
      */
     @NameInMap("Type")

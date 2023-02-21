@@ -4,15 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of phone numbers.</p>
+     */
     @NameInMap("PhoneNumbers")
     public java.util.List<ChatappSyncPhoneNumberResponseBodyPhoneNumbers> phoneNumbers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,39 +69,75 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     }
 
     public static class ChatappSyncPhoneNumberResponseBodyPhoneNumbers extends TeaModel {
+        /**
+         * <p>The verification status.</p>
+         */
         @NameInMap("CodeVerificationStatus")
         public String codeVerificationStatus;
 
+        /**
+         * <p>The maximum number of messages that can be sent to users by using the phone number.</p>
+         */
         @NameInMap("MessagingLimitTier")
         public String messagingLimitTier;
 
+        /**
+         * <p>The review status of the business display name.</p>
+         */
         @NameInMap("NameStatus")
         public String nameStatus;
 
+        /**
+         * <p>The review status of the new business display name.</p>
+         */
         @NameInMap("NewNameStatus")
         public String newNameStatus;
 
+        /**
+         * <p>The phone number.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>The quality rating of the phone number. Valid values: GREEN, YELLOW, and RED.</p>
+         */
         @NameInMap("QualityRating")
         public String qualityRating;
 
+        /**
+         * <p>The status of the phone number.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
+         */
         @NameInMap("StatusCallbackUrl")
         public String statusCallbackUrl;
 
+        /**
+         * <p>The status report queue.</p>
+         */
         @NameInMap("StatusQueue")
         public String statusQueue;
 
+        /**
+         * <p>The callback URL to which MO messages are sent by using HTTP callbacks.</p>
+         */
         @NameInMap("UpCallbackUrl")
         public String upCallbackUrl;
 
+        /**
+         * <p>The mobile originated (MO) message queue.</p>
+         */
         @NameInMap("UpQueue")
         public String upQueue;
 
+        /**
+         * <p>The display name of your business.</p>
+         */
         @NameInMap("VerifiedName")
         public String verifiedName;
 

@@ -4,12 +4,21 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappMigrationInitiateRequest extends TeaModel {
+    /**
+     * <p>The country code of the phone number.</p>
+     */
     @NameInMap("CountryCode")
     public String countryCode;
 
+    /**
+     * <p>The space ID of the user under the ISV account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The phone number without the country code.</p>
+     */
     @NameInMap("MobileNumber")
     public String mobileNumber;
 

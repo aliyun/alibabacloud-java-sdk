@@ -70,25 +70,25 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbers extends TeaModel {
         /**
-         * <p>号码校验状态。</p>
+         * <p>The verification status of the phone number.</p>
          */
         @NameInMap("CodeVerificationStatus")
         public String codeVerificationStatus;
 
         /**
-         * <p>号码发送量。</p>
+         * <p>The maximum number of messages that can be sent to users by using the phone number.</p>
          */
         @NameInMap("MessagingLimitTier")
         public String messagingLimitTier;
 
         /**
-         * <p>名称状态。</p>
+         * <p>The status of the business name.</p>
          */
         @NameInMap("NameStatus")
         public String nameStatus;
 
         /**
-         * <p>新名称审核状态。</p>
+         * <p>The review status of the new business name.</p>
          */
         @NameInMap("NewNameStatus")
         public String newNameStatus;
@@ -100,19 +100,36 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>The quality rating of the phone number. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         * <p>The quality rating of the phone number. Valid values:</p>
+         * <br>
+         * <p>*   **GREEN**</p>
+         * <p>*   **YELLOW**</p>
+         * <p>*   **RED**</p>
+         * <p>*   **UNKNOWN**</p>
          */
         @NameInMap("QualityRating")
         public String qualityRating;
 
         /**
-         * <p>The status of the phone number. Valid values: PENDING, DELETED, MIGRATED, BANNED, RESTRICTED, RATE_LIMITED, FLAGGED, CONNECTED, DISCONNECTED, UNKNOWN, and UNVERIFIED.</p>
+         * <p>The status of the phone number.</p>
+         * <br>
+         * <p>*   PENDING</p>
+         * <p>*   DELETED</p>
+         * <p>*   MIGRATED</p>
+         * <p>*   BANNED</p>
+         * <p>*   RESTRICTED</p>
+         * <p>*   RATE_LIMITED</p>
+         * <p>*   FLAGGED</p>
+         * <p>*   CONNECTED</p>
+         * <p>*   DISCONNECTED</p>
+         * <p>*   UNKNOWN</p>
+         * <p>*   UNVERIFIED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The status report notification URL.</p>
+         * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
          */
         @NameInMap("StatusCallbackUrl")
         public String statusCallbackUrl;
@@ -124,7 +141,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String statusQueue;
 
         /**
-         * <p>The MO message notification URL.</p>
+         * <p>The callback URL to which MO messages are sent by using HTTP callbacks.</p>
          */
         @NameInMap("UpCallbackUrl")
         public String upCallbackUrl;
@@ -136,7 +153,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String upQueue;
 
         /**
-         * <p>The name of the company to which the phone number is associated with.</p>
+         * <p>The name of the company with which the phone number is associated.</p>
          */
         @NameInMap("VerifiedName")
         public String verifiedName;
