@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateDBInstanceEndpointResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
     }
 
     public static class CreateDBInstanceEndpointResponseBodyData extends TeaModel {
+        /**
+         * <p>The internal endpoint.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The endpoint ID of the instance.</p>
+         */
         @NameInMap("DBInstanceEndpointId")
         public String DBInstanceEndpointId;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 

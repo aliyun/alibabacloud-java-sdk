@@ -4,9 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceDescriptionRequest extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     * <br>
+     * <p>> The name must be 2 to 64 characters in length.</p>
+     */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

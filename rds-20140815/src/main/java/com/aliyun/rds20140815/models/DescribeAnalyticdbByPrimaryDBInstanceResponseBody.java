@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnalyticdbByPrimaryDBInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The number of associated analytic instances.</p>
+     */
     @NameInMap("AnalyticDBCount")
     public Integer analyticDBCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

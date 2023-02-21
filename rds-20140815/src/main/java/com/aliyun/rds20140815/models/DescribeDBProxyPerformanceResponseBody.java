@@ -4,21 +4,39 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
+    /**
+     * <p>The end of the time range that is queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>An array that consists of the performance metrics that are returned.</p>
+     */
     @NameInMap("PerformanceKeys")
     public DescribeDBProxyPerformanceResponseBodyPerformanceKeys performanceKeys;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range that is queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +94,15 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue extends TeaModel {
+        /**
+         * <p>The time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>The value of the performance metric.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -125,12 +149,21 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
+        /**
+         * <p>The name of the performance metric.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The format in which the value of the performance metric is returned.</p>
+         */
         @NameInMap("ValueFormat")
         public String valueFormat;
 
+        /**
+         * <p>An array that consists of the values of the performance metric in the following format: {value1, value2, ...}.</p>
+         */
         @NameInMap("Values")
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValues values;
 

@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ListClassesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the instance types that are available.</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListClassesResponseBodyItems> items;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +52,70 @@ public class ListClassesResponseBody extends TeaModel {
     }
 
     public static class ListClassesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).</p>
+         */
         @NameInMap("ClassCode")
         public String classCode;
 
+        /**
+         * <p>The instance family of the instance. For more information, see [Instance families](~~57184~~).</p>
+         */
         @NameInMap("ClassGroup")
         public String classGroup;
 
+        /**
+         * <p>The number of cores that are supported by the instance type. Unit: cores.</p>
+         */
         @NameInMap("Cpu")
         public String cpu;
 
+        /**
+         * <p>The size of the encrypted memory that is supported by the security-enhanced instance type. Unit: GB.</p>
+         */
         @NameInMap("EncryptedMemory")
         public String encryptedMemory;
 
+        /**
+         * <p>The architecture of the instance type.</p>
+         * <br>
+         * <p>>  If the architecture of the instance type is **x86**, an empty string is returned by default. If the architecture of the instance type is ARM, arm is returned.</p>
+         */
         @NameInMap("InstructionSetArch")
         public String instructionSetArch;
 
+        /**
+         * <p>The maximum number of connections that are supported by the instance type. Unit: connections.</p>
+         */
         @NameInMap("MaxConnections")
         public String maxConnections;
 
+        /**
+         * <p>The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.</p>
+         */
         @NameInMap("MaxIOMBPS")
         public String maxIOMBPS;
 
+        /**
+         * <p>The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.</p>
+         */
         @NameInMap("MaxIOPS")
         public String maxIOPS;
 
+        /**
+         * <p>The memory capacity that is supported by the instance type. Unit: GB.</p>
+         */
         @NameInMap("MemoryClass")
         public String memoryClass;
 
+        /**
+         * <p>The fee that you must pay for the instance type.</p>
+         * <br>
+         * <p>*   Unit: cent (USD).</p>
+         * <br>
+         * <p>> * If you set the **CommodityCode** parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</p>
+         * <p>> * If you set the **CommodityCode** parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</p>
+         */
         @NameInMap("ReferencePrice")
         public String referencePrice;
 

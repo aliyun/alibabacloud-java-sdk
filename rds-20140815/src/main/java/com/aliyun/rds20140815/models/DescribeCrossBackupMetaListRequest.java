@@ -4,27 +4,54 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrossBackupMetaListRequest extends TeaModel {
+    /**
+     * <p>The ID of the cross-region backup file that you want to use. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the cross-region backup file.</p>
+     */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
+    /**
+     * <p>The name of the database to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of the tables in the matched database.</p>
+     */
     @NameInMap("GetDbName")
     public String getDbName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <br>
+     * <p>>  This parameter is valid only when you specify the **PageSize** parameter.</p>
+     */
     @NameInMap("PageIndex")
     public String pageIndex;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **1**.</p>
+     * <br>
+     * <p>>  This parameter is valid only when you specify the **PageIndex** parameter.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The name of the database to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.</p>
+     * <br>
+     * <p>>  You can implement fuzzy match and then exact match. For example, you can set the Pattern parameter to test to query the testdb1 and testdb2 databases. Then, you can specify the **GetDbName** parameter to query only the matched database and the tables in the matched database.</p>
+     */
     @NameInMap("Pattern")
     public String pattern;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

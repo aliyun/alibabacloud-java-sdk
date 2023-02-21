@@ -4,30 +4,56 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DbNames")
     public String dbNames;
 
+    /**
+     * <p>The description of the credential.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The engine of the database.</p>
+     * <br>
+     * <p>> Only MySQL is supported.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The password that is used to access the database.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -37,9 +63,15 @@ public class CreateSecretRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the credential.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>The username that is used to access the database.</p>
+     */
     @NameInMap("Username")
     public String username;
 

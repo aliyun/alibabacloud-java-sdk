@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The details about the instance.</p>
+     */
     @NameInMap("Items")
     public DescribeDBInstancesByPerformanceResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,21 +80,39 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance extends TeaModel {
+        /**
+         * <p>The CPU utilization of the instance in percentage.</p>
+         */
         @NameInMap("CPUUsage")
         public String CPUUsage;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The disk usage of the instance in percentage.</p>
+         */
         @NameInMap("DiskUsage")
         public String diskUsage;
 
+        /**
+         * <p>The IOPS usage of the instance in percentage.</p>
+         */
         @NameInMap("IOPSUsage")
         public String IOPSUsage;
 
+        /**
+         * <p>The number of sessions.</p>
+         */
         @NameInMap("SessionUsage")
         public String sessionUsage;
 

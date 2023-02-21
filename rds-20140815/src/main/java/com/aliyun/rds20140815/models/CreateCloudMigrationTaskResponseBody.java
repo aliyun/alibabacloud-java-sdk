@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudMigrationTaskResponseBody extends TeaModel {
+    /**
+     * <p>The name of the ApsaraDB RDS for PostgreSQL instance.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 
+    /**
+     * <p>The name of the task.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

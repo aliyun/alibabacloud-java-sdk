@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The details about a diagnostic report.</p>
+     */
     @NameInMap("ReportList")
     public java.util.List<DescribeDiagnosticReportListResponseBodyReportList> reportList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +52,33 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosticReportListResponseBodyReportList extends TeaModel {
+        /**
+         * <p>The time when the diagnosis was performed.</p>
+         */
         @NameInMap("DiagnosticTime")
         public String diagnosticTime;
 
+        /**
+         * <p>The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.</p>
+         */
         @NameInMap("DownloadURL")
         public String downloadURL;
 
+        /**
+         * <p>The end time of the monitoring data.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The diagnostic score.</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <p>The start time of the monitoring data.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

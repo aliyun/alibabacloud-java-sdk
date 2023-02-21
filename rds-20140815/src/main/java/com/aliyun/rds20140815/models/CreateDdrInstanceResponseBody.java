@@ -4,18 +4,37 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateDdrInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The endpoint that is used to connect to the destination instance.</p>
+     * <br>
+     * <p>> The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    /**
+     * <p>The ID of the destination instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The port number that is used to connect to the destination instance.</p>
+     * <br>
+     * <p>> The **DBInstanceNetType** parameter indicates whether the port is internal or public.</p>
+     */
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

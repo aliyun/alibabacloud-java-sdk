@@ -4,18 +4,34 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class MigrateDBInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the IDs of dedicated clusters.</p>
+     */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
+    /**
+     * <p>The time when you want the system to start the migration. Valid values:</p>
+     * <br>
+     * <p>*   **Immediately**: The system immediately starts the migration. This is the default value.</p>
+     * <p>*   **MaintainTime**: The system starts the migration during the specified maintenance window.</p>
+     * <p>*   **Specified**: The system starts the migration at the specified point in time.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,18 +41,35 @@ public class MigrateDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The point in time when you want the system to start the migration. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  This parameter must be specified when you set the **EffectiveTime** parameter to **Specified**.</p>
+     */
     @NameInMap("SpecifiedTime")
     public String specifiedTime;
 
+    /**
+     * <p>The ID of the host to which you want to migrate the primary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the IDs of hosts.</p>
+     */
     @NameInMap("TargetDedicatedHostIdForMaster")
     public String targetDedicatedHostIdForMaster;
 
+    /**
+     * <p>The ID of the host to which you want to migrate the secondary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the IDs of hosts.</p>
+     */
     @NameInMap("TargetDedicatedHostIdForSlave")
     public String targetDedicatedHostIdForSlave;
 
+    /**
+     * <p>The zone ID of the secondary instance.</p>
+     */
     @NameInMap("ZoneIdForFollower")
     public String zoneIdForFollower;
 
+    /**
+     * <p>The zone ID of the logger instance.</p>
+     */
     @NameInMap("ZoneIdForLog")
     public String zoneIdForLog;
 

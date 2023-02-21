@@ -4,24 +4,62 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateParameterGroupRequest extends TeaModel {
+    /**
+     * <p>The database engine. Valid values:</p>
+     * <br>
+     * <p>*   **mysql**</p>
+     * <p>*   **PostgreSQL**</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The database engine version that is run on the instance. Valid values:</p>
+     * <br>
+     * <p>*   If the instance runs MySQL, the instance must run one of the following MySQL versions:</p>
+     * <br>
+     * <p>    *   **5.6**</p>
+     * <p>    *   **5.7**</p>
+     * <p>    *   **8.0**</p>
+     * <br>
+     * <p>*   If the instance runs PostgreSQL, the instance must run one of the following PostgreSQL versions:</p>
+     * <br>
+     * <p>    *   **10.0**</p>
+     * <p>    *   **11.0**</p>
+     * <p>    *   **12.0**</p>
+     * <p>    *   **13.0**</p>
+     * <p>    *   **14.0**</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The description of the parameter template. The description can be up to 200 characters in length.</p>
+     */
     @NameInMap("ParameterGroupDesc")
     public String parameterGroupDesc;
 
+    /**
+     * <p>The name of the parameter template.</p>
+     * <br>
+     * <p>*   The name can contain letters, digits, periods (.), and underscores (\_) and must start with a letter.</p>
+     * <p>*   The name can be 8 to 64 characters in length.</p>
+     */
     @NameInMap("ParameterGroupName")
     public String parameterGroupName;
 
+    /**
+     * <p>A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~).</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>The region ID of the parameter template. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

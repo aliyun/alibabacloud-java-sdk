@@ -4,12 +4,25 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabasesRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The status of the database. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**</p>
+     * <p>*   **Running**</p>
+     * <p>*   **Deleting**</p>
+     */
     @NameInMap("DBStatus")
     public String DBStatus;
 
@@ -19,12 +32,29 @@ public class DescribeDatabasesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <br>
+     * <p>*   **30**</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
+     * <br>
+     * <p>Default value: 30.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

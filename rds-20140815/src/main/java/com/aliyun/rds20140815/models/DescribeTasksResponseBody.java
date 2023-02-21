@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
+    /**
+     * <p>The details of the task execution.</p>
+     */
     @NameInMap("Items")
     public DescribeTasksResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,48 +80,103 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyItemsTaskProgressInfo extends TeaModel {
+        /**
+         * <p>The start time of the task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC .</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <p>The name of the subtask.</p>
+         */
         @NameInMap("CurrentStepName")
         public String currentStepName;
 
+        /**
+         * <p>The name of the database. If the task involves a database, the database name is returned.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The estimated end time of the task.</p>
+         * <br>
+         * <p>> In most cases, this parameter is empty.</p>
+         */
         @NameInMap("ExpectedFinishTime")
         public String expectedFinishTime;
 
+        /**
+         * <p>The end time of the task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The progress of the task in percentage.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The description of the task progress.</p>
+         * <br>
+         * <p>> If no progress description is provided for the task, this parameter is empty.</p>
+         */
         @NameInMap("ProgressInfo")
         public String progressInfo;
 
+        /**
+         * <p>The estimated remaining time of the task. Unit: seconds.</p>
+         * <br>
+         * <p>>  If the task is not running, this parameter is not returned or the returned value is **0**.</p>
+         */
         @NameInMap("Remain")
         public Integer remain;
 
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The progress of the subtask. For example, a value of `1/4` indicates that the task consists of four subtasks and the first subtask is in progress.</p>
+         */
         @NameInMap("StepProgressInfo")
         public String stepProgressInfo;
 
+        /**
+         * <p>The details of the subtasks.</p>
+         */
         @NameInMap("StepsInfo")
         public String stepsInfo;
 
+        /**
+         * <p>The operation that is used by the task, such as **CreateDBInstance**.</p>
+         */
         @NameInMap("TaskAction")
         public String taskAction;
 
+        /**
+         * <p>The error code that is returned when an error occurs.</p>
+         * <br>
+         * <p>> This parameter is returned only when an error occurs.</p>
+         */
         @NameInMap("TaskErrorCode")
         public String taskErrorCode;
 
+        /**
+         * <p>The error message that is returned when an error occurs.</p>
+         * <br>
+         * <p>>  This parameter is returned only when an error occurs.</p>
+         */
         @NameInMap("TaskErrorMessage")
         public String taskErrorMessage;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

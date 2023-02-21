@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
+    /**
+     * <p>Details of the assessment report.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeCloudMigrationPrecheckResultResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalSize")
     public Integer totalSize;
 
@@ -65,39 +80,79 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudMigrationPrecheckResultResponseBodyItems extends TeaModel {
+        /**
+         * <p>The content of the assessment report.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The time when the task was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("SourceAccount")
         public String sourceAccount;
 
+        /**
+         * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
+         * <br>
+         * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in an on-premises data center that can communicate with the virtual private cloud (VPC) in which the ApsaraDB RDS for PostgreSQL instance resides.</p>
+         * <p>*   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.</p>
+         * <p>*   **internet**: The self-managed PostgreSQL instance resides on a device that is connected over the Internet.</p>
+         */
         @NameInMap("SourceCategory")
         public String sourceCategory;
 
+        /**
+         * <p>The private public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         */
         @NameInMap("SourceIpAddress")
         public String sourceIpAddress;
 
+        /**
+         * <p>The password of the account.</p>
+         */
         @NameInMap("SourcePassword")
         public String sourcePassword;
 
+        /**
+         * <p>The port number that is used to connect to the self-managed PostgreSQL instance.</p>
+         */
         @NameInMap("SourcePort")
         public Long sourcePort;
 
+        /**
+         * <p>A reserved parameter. The return value of this parameter is null.</p>
+         */
         @NameInMap("TargetEip")
         public String targetEip;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
+        /**
+         * <p>The ID of the cloud migration task.</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <p>The name of the cloud migration task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 

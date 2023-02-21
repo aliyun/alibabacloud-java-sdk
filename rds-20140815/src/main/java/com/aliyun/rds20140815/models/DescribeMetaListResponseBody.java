@@ -4,24 +4,45 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetaListResponseBody extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>An array consisting of the information about the databases and tables whose data is included in the data backup file.</p>
+     */
     @NameInMap("Items")
     public DescribeMetaListResponseBodyItems items;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("TotalPageCount")
     public Integer totalPageCount;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -87,12 +108,21 @@ public class DescribeMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetaListResponseBodyItemsMeta extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The size of the table. Unit: KB.</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("Tables")
         public String tables;
 

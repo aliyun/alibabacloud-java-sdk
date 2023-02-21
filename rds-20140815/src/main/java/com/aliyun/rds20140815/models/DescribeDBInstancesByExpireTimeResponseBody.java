@@ -4,18 +4,35 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details about the instances.</p>
+     */
     @NameInMap("Items")
     public DescribeDBInstancesByExpireTimeResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page. Valid values: any **non-zero** positive integer.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of instances returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,21 +82,51 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime extends TeaModel {
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The status of the instance. For more information, see [Instance state table](~~26315~~).</p>
+         */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
+        /**
+         * <p>The expiration date and time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <br>
+         * <p>> Pay-as-you-go instances never expire.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The lock mode of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Unlock**: The instance is not locked.</p>
+         * <p>*   **ManualLock**: The instance is manually locked.</p>
+         * <p>*   **LockByExpiration**: The instance is automatically locked after it expires.</p>
+         * <p>*   **LockByRestoration**: The instance is automatically locked before it is rolled back.</p>
+         * <p>*   **LockByDiskQuota**: The instance is automatically locked after its storage capacity is exhausted.</p>
+         * <p>*   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked after its storage capacity is exhausted.</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Postpaid**: pay-as-you-go</p>
+         * <p>*   **Prepaid**: subscription</p>
+         */
         @NameInMap("PayType")
         public String payType;
 

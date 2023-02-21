@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
+    /**
+     * <p>The endpoint that is used to connect to the instance.</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DbInstanceName")
     public String dbInstanceName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

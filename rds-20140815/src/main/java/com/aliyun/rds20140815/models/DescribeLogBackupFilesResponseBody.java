@@ -4,21 +4,39 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogBackupFilesResponseBody extends TeaModel {
+    /**
+     * <p>The details of log files.</p>
+     */
     @NameInMap("Items")
     public DescribeLogBackupFilesResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of log files on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total size of log files. Unit: bytes.</p>
+     */
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
 
+    /**
+     * <p>The total number of log files.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -76,21 +94,39 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeLogBackupFilesResponseBodyItemsBinLogFile extends TeaModel {
+        /**
+         * <p>The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.</p>
+         */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
+        /**
+         * <p>The size of the log file. Unit: bytes.</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <p>The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.</p>
+         */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
+        /**
+         * <p>The expiration time of the URL. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
+        /**
+         * <p>The start time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LogBeginTime")
         public String logBeginTime;
 
+        /**
+         * <p>The end time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LogEndTime")
         public String logEndTime;
 

@@ -4,45 +4,126 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateReadOnlyDBInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-renewal for the read-only instance. If you set the PayType parameter to Prepaid, you must also specify this parameter. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables auto-renewal for the read-only instance.</p>
+     * <p>*   **false**: disables auto-renewal for the read-only instance.</p>
+     * <br>
+     * <p>> *   If you set the Period parameter to Month, the auto-renewal cycle is one month.</p>
+     * <p>> *   If you set the Period parameter to Year, the auto-renewal cycle is one year.</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <p>The RDS edition of the read-only instance. Valid values:</p>
+     * <br>
+     * <p>*   **Basic**: RDS Basic Edition.</p>
+     * <p>*   **HighAvailability**: RDS High-availability Edition. This is the default value.</p>
+     * <p>*   **AlwaysOn**: RDS Cluster Edition.</p>
+     * <br>
+     * <p>> If the primary instance runs PostgreSQL with standard SSDs or ESSDs, you must set this parameter to **Basic**.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The instance type of the read-only instance. For more information, see [Read-only ApsaraDB RDS instance types](~~145759~~). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</p>
+     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
+    /**
+     * <p>The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter</p>
+     * <br>
+     * <p>> The value cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    /**
+     * <p>The ID of the primary instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The storage capacity of the read-only instance. For more information, see the **Storage space** column in [Read-only instance types](~~145759~~). This value must be a multiple of 5 GB. Unit: GB.</p>
+     */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
 
+    /**
+     * <p>The storage type of the read-only instance. Valid values:</p>
+     * <br>
+     * <p>*   **local_ssd**: local SSDs</p>
+     * <p>*   **cloud_ssd**: standard SSDs</p>
+     * <p>*   **cloud_essd**: ESSDs of performance level 1 (PL1)</p>
+     * <p>*   **cloud_essd2**: ESSDs of PL2</p>
+     * <p>*   **cloud_essd3**: ESSDs of PL3</p>
+     * <br>
+     * <p>> *   If the primary instance runs MySQL with local SSDs, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with standard SSDs or ESSDs, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
+     * <p>> *   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
+     */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
+    /**
+     * <p>The ID of the dedicated cluster to which the read-only instance belongs. This parameter is valid when you create the read-only instance in a dedicated cluster.</p>
+     */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
+    /**
+     * <p>Specifies whether to enable the release protection feature for the read-only instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables the feature.</p>
+     * <p>*   **false**: disables the feature. This is the default value.</p>
+     * <br>
+     * <p>> This feature can be enabled only when you set the **PayType** parameter to **Postpaid**.</p>
+     */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
+    /**
+     * <p>The major engine version of the read-only instance. The read-only instance and the primary instance must run the same major engine version.</p>
+     * <br>
+     * <p>*   If the read-only instance runs MySQL, set this parameter to **5.6**, **5.7**, or **8.0**.</p>
+     * <p>*   If the read-only instance runs SQL Server, set this parameter to **2017\_ent or 2019\_ent**.</p>
+     * <p>*   If the read-only instance runs PostgreSQL, set this parameter to **10.0, 11.0, 12.0, 13.0, 14.0, or 15.0**</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("GdnInstanceName")
     public String gdnInstanceName;
 
+    /**
+     * <p>The network type of the read-only instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **Classic**</p>
+     * <br>
+     * <p>Default value: VPC. If you set this parameter to VPC, you must also specify the **VPCId** and **VSwitchId** parameters.</p>
+     * <br>
+     * <p>> The network type of the read-only instance can be different from the network type of the primary instance.</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("InstructionSetArch")
     public String instructionSetArch;
 
@@ -52,18 +133,39 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The billing method of the read-only instance. Valid values:</p>
+     * <br>
+     * <p>*   **Postpaid**: pay-as-you-go</p>
+     * <p>*   **Prepaid**: subscription</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The renewal cycle of the read-only instance. Valid values:</p>
+     * <br>
+     * <p>*   **Year**</p>
+     * <p>*   **Month**</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The private IP address of the read-only instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system assigns a private IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    /**
+     * <p>The region ID of the read-only instance. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the read-only instance belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -73,24 +175,53 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the host to which the read-only instance belongs. This parameter is valid when you create the read-only instance in a dedicated cluster.</p>
+     */
     @NameInMap("TargetDedicatedHostIdForMaster")
     public String targetDedicatedHostIdForMaster;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("TddlBizType")
     public String tddlBizType;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("TddlRegionConfig")
     public String tddlRegionConfig;
 
+    /**
+     * <p>The subscription duration of the read-only instance. Valid values:</p>
+     * <br>
+     * <p>*   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1** to **5**.</p>
+     * <p>*   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1** to **9**.</p>
+     * <br>
+     * <p>> If you set the **PayType** parameter to **Prepaid**, you must specify the UsedTime parameter.</p>
+     */
     @NameInMap("UsedTime")
     public String usedTime;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the read-only instance belongs. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must also specify this parameter.</p>
+     * <br>
+     * <p>> *   If the primary instance uses local SSDs, the read-only instance and the primary instance can belong to the same VPC or different VPCs.</p>
+     * <p>> *   If the primary instance uses standard SSDs or ESSDs, the read-only instance and the primary instance must belong to the same VPC.</p>
+     */
     @NameInMap("VPCId")
     public String VPCId;
 
+    /**
+     * <p>The ID of the vSwitch to which the read-only instance belongs. If you leave the **InstanceNetworkType** parameter empty or set it to **VPC**, you must specify the VSwitchId parameter.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The zone ID of the read-only instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

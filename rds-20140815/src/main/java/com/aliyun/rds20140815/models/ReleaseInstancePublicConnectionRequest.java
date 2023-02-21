@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstancePublicConnectionRequest extends TeaModel {
+    /**
+     * <p>The public endpoint.</p>
+     */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

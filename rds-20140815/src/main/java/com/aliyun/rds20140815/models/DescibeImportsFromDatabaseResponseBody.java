@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of migration tasks.</p>
+     */
     @NameInMap("Items")
     public DescibeImportsFromDatabaseResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,18 +80,47 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
     }
 
     public static class DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB extends TeaModel {
+        /**
+         * <p>The status of the migration task. Valid values:</p>
+         * <br>
+         * <p>*   **NotStart**: The migration task has not started.</p>
+         * <p>*   **FullExporting**: The migration task is exporting full data.</p>
+         * <p>*   **FullImporting**: The migration task is importing full data.</p>
+         * <p>*   **Success**: The migration task is successful.</p>
+         * <p>*   **Failed**: The migration task fails.</p>
+         * <p>*   **Canceled**: The migration task is canceled.</p>
+         * <p>*   **Canceling**: The migration task is being canceled.</p>
+         * <p>*   **IncrementalWaiting**: The migration task is waiting to synchronize incremental data.</p>
+         * <p>*   **IncrementalImporting**: The migration task is synchronizing incremental data.</p>
+         * <p>*   **StopSyncing**: The migration task stops synchronizing data.</p>
+         */
         @NameInMap("ImportDataStatus")
         public String importDataStatus;
 
+        /**
+         * <p>The description of the migration task.</p>
+         */
         @NameInMap("ImportDataStatusDescription")
         public String importDataStatusDescription;
 
+        /**
+         * <p>The type of the migration task. Valid values:</p>
+         * <br>
+         * <p>*   **Full**: full migration</p>
+         * <p>*   **Incremental:**: incremental migration</p>
+         */
         @NameInMap("ImportDataType")
         public String importDataType;
 
+        /**
+         * <p>The ID of the migration task.</p>
+         */
         @NameInMap("ImportId")
         public Integer importId;
 
+        /**
+         * <p>The time when the migration task synchronized incremental data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("IncrementalImportingTime")
         public String incrementalImportingTime;
 

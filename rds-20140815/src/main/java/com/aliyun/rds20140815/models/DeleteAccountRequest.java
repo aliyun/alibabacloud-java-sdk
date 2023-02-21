@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
+    /**
+     * <p>The name of the account.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

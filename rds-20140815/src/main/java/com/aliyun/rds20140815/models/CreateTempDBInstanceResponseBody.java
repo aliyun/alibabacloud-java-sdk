@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateTempDBInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the temporary instance.</p>
+     */
     @NameInMap("TempDBInstanceId")
     public String tempDBInstanceId;
 

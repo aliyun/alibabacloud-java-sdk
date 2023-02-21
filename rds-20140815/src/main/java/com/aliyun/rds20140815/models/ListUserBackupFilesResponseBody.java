@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ListUserBackupFilesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information about the full backup files that are returned.</p>
+     */
     @NameInMap("Records")
     public java.util.List<ListUserBackupFilesResponseBodyRecords> records;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,60 +38,123 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
     }
 
     public static class ListUserBackupFilesResponseBodyRecords extends TeaModel {
+        /**
+         * <p>The ID of the full backup file.</p>
+         */
         @NameInMap("BackupId")
         public String backupId;
 
+        /**
+         * <p>The information about the binary log file that contains incremental data. If incremental data is generated during the full backup, this parameter is returned.</p>
+         */
         @NameInMap("BinlogInfo")
         public String binlogInfo;
 
+        /**
+         * <p>The description of the full backup file.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The time when the system started to import the full backup file. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The database engine of the instance.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine version that the instance runs.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The time when the system finished importing the full backup file. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The time when the system finished importing the full backup file. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <p>The name of the OSS bucket in which the full backup file is stored as an object.</p>
+         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        /**
+         * <p>The metadata of the full backup file. For more information, see [Manage object metadata](~~31859~~).</p>
+         */
         @NameInMap("OssFileMetaData")
         public String ossFileMetaData;
 
+        /**
+         * <p>The name of the full backup file that is stored as an object in an OSS bucket.</p>
+         */
         @NameInMap("OssFileName")
         public String ossFileName;
 
+        /**
+         * <p>The path of the full backup file that is stored as an object in an OSS bucket.</p>
+         */
         @NameInMap("OssFilePath")
         public String ossFilePath;
 
+        /**
+         * <p>The size of the full backup file that is stored as an object in an OSS bucket. Unit: KB.</p>
+         */
         @NameInMap("OssFileSize")
         public Long ossFileSize;
 
+        /**
+         * <p>The OSS download URL of the full backup file.</p>
+         */
         @NameInMap("OssUrl")
         public String ossUrl;
 
+        /**
+         * <p>The reason why the full backup file failed to be imported.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The amount of storage that is required to restore the data of the full backup file. Unit: GB.</p>
+         */
         @NameInMap("RestoreSize")
         public String restoreSize;
 
+        /**
+         * <p>The retention period of the full backup file. Unit: days.</p>
+         */
         @NameInMap("Retention")
         public Integer retention;
 
+        /**
+         * <p>The status of the full backup file. Valid values:</p>
+         * <br>
+         * <p>*   **Importing**: The full backup file is being imported.</p>
+         * <p>*   **Failed**: The full backup file fails to be imported.</p>
+         * <p>*   **CheckSucccess**: The full backup file passes the check.</p>
+         * <p>*   **BackupSuccess**: The full backup file is imported.</p>
+         * <p>*   **Deleted**: The full backup file is deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The zone ID of the full backup file.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -16,9 +22,15 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Valid values: any non-zero positive integer. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30 to 100**. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -28,12 +40,21 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The status of the task. This parameter is invalid.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The operation that is used by the task.</p>
+     */
     @NameInMap("TaskAction")
     public String taskAction;
 

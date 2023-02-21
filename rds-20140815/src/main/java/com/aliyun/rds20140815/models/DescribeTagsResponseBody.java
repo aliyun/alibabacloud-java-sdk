@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
+    /**
+     * <p>The array that consists of tag data.</p>
+     */
     @NameInMap("Items")
     public DescribeTagsResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,12 +57,21 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyItemsTagInfos extends TeaModel {
+        /**
+         * <p>The IDs of instances to which the tag is added.</p>
+         */
         @NameInMap("DBInstanceIds")
         public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

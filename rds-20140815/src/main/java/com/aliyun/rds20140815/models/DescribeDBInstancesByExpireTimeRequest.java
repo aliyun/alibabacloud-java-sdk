@@ -4,9 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
+    /**
+     * <p>The number of remaining days for which the instances are available. Valid values: **0 to 180**.</p>
+     */
     @NameInMap("ExpirePeriod")
     public Integer expirePeriod;
 
+    /**
+     * <p>Specifies whether to query instances that have expired. Valid values:</p>
+     * <br>
+     * <p>*   **True**: queries instances that have expired.</p>
+     * <p>*   **False**: does not query instances that have expired.</p>
+     */
     @NameInMap("Expired")
     public Boolean expired;
 
@@ -16,12 +25,25 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Valid values: any **non-zero** positive integer.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1 to 100**.</p>
+     * <br>
+     * <p>Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,9 +53,15 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag that is added to the instance. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: `{"key1":"value1","key2":"value2"...}`.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <p>A deprecated parameter.</p>
+     */
     @NameInMap("proxyId")
     public String proxyId;
 

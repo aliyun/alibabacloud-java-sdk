@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the primary instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The latency of data replication between the primary instance and the read-only instance.</p>
+     */
     @NameInMap("DelayTime")
     public Integer delayTime;
 
+    /**
+     * <p>An array that consists of latency information.</p>
+     */
     @NameInMap("Items")
     public DescribeReadDBInstanceDelayResponseBodyItems items;
 
+    /**
+     * <p>The ID of the read-only instance.</p>
+     */
     @NameInMap("ReadDBInstanceId")
     public String readDBInstanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -103,27 +118,51 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
     }
 
     public static class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay extends TeaModel {
+        /**
+         * <p>The duration that is allowed for the latency in the persistence of WAL data. Unit: seconds.</p>
+         */
         @NameInMap("FlushLag")
         public String flushLag;
 
+        /**
+         * <p>The data size that is allowed for the latency in the persistence of WAL data. Unit: MB.</p>
+         */
         @NameInMap("FlushLatency")
         public String flushLatency;
 
+        /**
+         * <p>The ID of the read-only instance.</p>
+         */
         @NameInMap("ReadDBInstanceName")
         public String readDBInstanceName;
 
+        /**
+         * <p>The duration that is allowed for the latency in the playback of WAL data. Unit: seconds.</p>
+         */
         @NameInMap("ReplayLag")
         public String replayLag;
 
+        /**
+         * <p>The data size that is allowed for the latency in the playback of WAL data. Unit: MB.</p>
+         */
         @NameInMap("ReplayLatency")
         public String replayLatency;
 
+        /**
+         * <p>The data size that is allowed for the latency in the sending of WAL data. Unit: MB.</p>
+         */
         @NameInMap("SendLatency")
         public String sendLatency;
 
+        /**
+         * <p>The duration that is allowed for the latency in the write-back of WAL data. Unit: seconds.</p>
+         */
         @NameInMap("WriteLag")
         public String writeLag;
 
+        /**
+         * <p>The data size that is allowed for the latency in the write-back of WAL data. Unit: MB.</p>
+         */
         @NameInMap("WriteLatency")
         public String writeLatency;
 
@@ -218,15 +257,33 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
     }
 
     public static class DescribeReadDBInstanceDelayResponseBodyItemsItems extends TeaModel {
+        /**
+         * <p>The ID of the primary instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>An array that consists of information about the read-only instance.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the primary instance runs the MySQL database engine.</p>
+         */
         @NameInMap("ReadDBInstanceNames")
         public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames readDBInstanceNames;
 
+        /**
+         * <p>An array that consists of latencies.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the primary instance runs the MySQL database engine.</p>
+         */
         @NameInMap("ReadDelayTimes")
         public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes readDelayTimes;
 
+        /**
+         * <p>An array that consists of information about the write-ahead log (WAL) latency.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the primary instance runs the PostgreSQL database engine.</p>
+         */
         @NameInMap("ReadonlyInstanceDelay")
         public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay readonlyInstanceDelay;
 

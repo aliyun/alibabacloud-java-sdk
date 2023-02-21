@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeErrorLogsResponseBody extends TeaModel {
+    /**
+     * <p>The list of items in an error log.</p>
+     */
     @NameInMap("Items")
     public DescribeErrorLogsResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of error logs on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of error logs.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,9 +80,15 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeErrorLogsResponseBodyItemsErrorLog extends TeaModel {
+        /**
+         * <p>The time when the error log was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The error log information.</p>
+         */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 

@@ -4,18 +4,38 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateOnlineDatabaseTaskRequest extends TeaModel {
+    /**
+     * <p>The consistency check method after the database is open. Valid values:</p>
+     * <br>
+     * <p>*   **SyncExecuteDBCheck**: synchronous database check</p>
+     * <p>*   **AsyncExecuteDBCheck**: asynchronous database check</p>
+     * <br>
+     * <p>>  The check methods are supported for RDS instances that run SQL Server 2008 R2.</p>
+     */
     @NameInMap("CheckDBMode")
     public String checkDBMode;
 
+    /**
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The ID of the migration task.</p>
+     */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
 

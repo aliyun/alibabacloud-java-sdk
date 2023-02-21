@@ -4,12 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>The backup type. Valid values:</p>
+     * <br>
+     * <p>*   **DataBackupPolicy**: data backup</p>
+     * <p>*   **LogBackupPolicy**: log backup</p>
+     */
     @NameInMap("BackupPolicyMode")
     public String backupPolicyMode;
 
+    /**
+     * <p>The method that is used to compress backup data. Valid values:</p>
+     * <br>
+     * <p>*   **0**: Backup data is not compressed.</p>
+     * <p>*   **1**: Backup data is compressed by using zlib.</p>
+     * <p>*   **2**: Backup data is compressed by using zlib that invokes more than one thread in parallel for each backup.</p>
+     * <p>*   **4**: Backup data is compressed by using QuickLZ and can be used to restore individual databases and tables.</p>
+     * <p>*   **8**: Backup data is compressed by using QuickLZ but cannot be used to restore individual databases or tables. This value is available only when the instance runs MySQL 8.0.</p>
+     */
     @NameInMap("CompressType")
     public String compressType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -19,6 +37,13 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The policy that is used to retain archived backup files if the instance is released. Valid values:</p>
+     * <br>
+     * <p>*   **None**: No archived backup files are retained.</p>
+     * <p>*   **Lastest**: Only the last archived backup file is retained.</p>
+     * <p>*   **All**: All archived backup files are retained.</p>
+     */
     @NameInMap("ReleasedKeepPolicy")
     public String releasedKeepPolicy;
 

@@ -4,9 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can specify up to 30 instance IDs in a single request. If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Specifies whether the instance expires. Valid values:</p>
+     * <br>
+     * <p>*   **True**: The instance expires.</p>
+     * <p>*   **False**: The instance does not expire.</p>
+     */
     @NameInMap("Expired")
     public String expired;
 

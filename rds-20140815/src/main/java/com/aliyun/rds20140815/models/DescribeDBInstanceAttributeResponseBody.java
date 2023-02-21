@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details about the instance.</p>
+     */
     @NameInMap("Items")
     public DescribeDBInstanceAttributeResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig extends TeaModel {
+        /**
+         * <p>The switch to enable or disable Babelfish. </p>
+         * <br>
+         * <p>>  If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as **true**.</p>
+         */
         @NameInMap("BabelfishEnabled")
         public String babelfishEnabled;
 
+        /**
+         * <p>The migration mode for Babelfish. Valid values:</p>
+         * <br>
+         * <p>- **single-db**</p>
+         * <p>- **multi-db**</p>
+         * <br>
+         * <p>>  For more information about migration modes for Babelfish, see [Migration modes](https://www.alibabacloud.com/help/en/apsaradb-for-rds/latest/babelfish-for-pg).</p>
+         */
         @NameInMap("MigrationMode")
         public String migrationMode;
 
@@ -62,18 +81,36 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode extends TeaModel {
+        /**
+         * <p>The specification of the node.</p>
+         */
         @NameInMap("ClassCode")
         public String classCode;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The region ID of the node.</p>
+         */
         @NameInMap("NodeRegionId")
         public String nodeRegionId;
 
+        /**
+         * <p>The role of node. The valid values:</p>
+         * <br>
+         * <p>- **primary**: primary node.</p>
+         * <p>- **secondary**: standby node.</p>
+         */
         @NameInMap("NodeRole")
         public String nodeRole;
 
+        /**
+         * <p>The zone ID of the node.</p>
+         */
         @NameInMap("NodeZoneId")
         public String nodeZoneId;
 
@@ -163,6 +200,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra extends TeaModel {
+        /**
+         * <p>The IDs of the instances.</p>
+         */
         @NameInMap("DBInstanceIds")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds DBInstanceIds;
 
@@ -182,6 +222,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIdsReadOnlyDBInstanceId extends TeaModel {
+        /**
+         * <p>The ID of the read-only RDS instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
@@ -220,15 +263,37 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig extends TeaModel {
+        /**
+         * <p>Indicates whether the automatic suspension feature is enabled for the serverless instance. Valid values: </p>
+         * <br>
+         * <p>- **true**: The feature is enabled.</p>
+         * <p>- **false**: The feature is disabled. This is the default value.</p>
+         * <br>
+         * <p>>  After the automatic suspension feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance is automatically resumed.</p>
+         */
         @NameInMap("AutoPause")
         public Boolean autoPause;
 
+        /**
+         * <p>The maximum value of RCU.</p>
+         */
         @NameInMap("ScaleMax")
         public Double scaleMax;
 
+        /**
+         * <p>The minimum value of RDS Capacity Unit (RCU).</p>
+         */
         @NameInMap("ScaleMin")
         public Double scaleMin;
 
+        /**
+         * <p>Indicates whether the forced scaling feature is enabled for the serverless instance.</p>
+         * <br>
+         * <p>- **true**: The feature is enabled.</p>
+         * <p>- **false**: The feature is disabled. This is the default value.</p>
+         * <br>
+         * <p>>  In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In some cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance.</p>
+         */
         @NameInMap("SwitchForce")
         public Boolean switchForce;
 
@@ -272,6 +337,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZonesSlaveZone extends TeaModel {
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -310,204 +378,484 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute extends TeaModel {
+        /**
+         * <p>The maximum number of accounts that can be created on an instance.</p>
+         */
         @NameInMap("AccountMaxQuantity")
         public Integer accountMaxQuantity;
 
+        /**
+         * <p>The advanced features that are enabled for the instance. If multiple advanced features are enabled, the advanced features are separated by commas (,). This parameter is available only to instances that run **SQL Server**. Valid values:</p>
+         * <br>
+         * <p>*   **LinkedServer**</p>
+         * <p>*   **DistributeTransaction**</p>
+         */
         @NameInMap("AdvancedFeatures")
         public String advancedFeatures;
 
+        /**
+         * <p>The method that is used to update the minor engine version of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Auto:** automatic update.</p>
+         * <p>*   **Manual**: manual update. ApsaraDB RDS automatically updates the minor engine version of the instance only when the minor engine version is phased out.</p>
+         */
         @NameInMap("AutoUpgradeMinorVersion")
         public String autoUpgradeMinorVersion;
 
+        /**
+         * <p>The availability status of the instance in percentage.</p>
+         */
         @NameInMap("AvailabilityValue")
         public String availabilityValue;
 
+        /**
+         * <p>The configuration of Babelfish for the instance. </p>
+         * <br>
+         * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](https://www.alibabacloud.com/help/en/apsaradb-for-rds/latest/babelfish-for-pg).</p>
+         */
         @NameInMap("BabelfishConfig")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig babelfishConfig;
 
+        /**
+         * <p>The RDS edition of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Basic**: RDS Basic Edition</p>
+         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
+         * <p>*   **AlwaysOn**: RDS Cluster Edition</p>
+         * <p>*   **Finance**: RDS Enterprise Edition</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The character set collation of the instance.</p>
+         */
         @NameInMap("Collation")
         public String collation;
 
+        /**
+         * <p>The connection mode of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Standard**: standard mode</p>
+         * <p>*   **Safe**: proxy mode</p>
+         */
         @NameInMap("ConnectionMode")
         public String connectionMode;
 
+        /**
+         * <p>The internal endpoint of the instance.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The type of the proxy that is used by the instance. Valid values:</p>
+         * <br>
+         * <p>*   **1**: shared proxy</p>
+         * <p>*   **2**: dedicated proxy</p>
+         * <br>
+         * <p>>  We recommend that you use the **ProxyType** parameter instead of this parameter.</p>
+         */
         @NameInMap("ConsoleVersion")
         public String consoleVersion;
 
+        /**
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The minor engine version of the instance.</p>
+         */
         @NameInMap("CurrentKernelVersion")
         public String currentKernelVersion;
 
+        /**
+         * <p>The nodes of cluster.</p>
+         */
         @NameInMap("DBClusterNodes")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes DBClusterNodes;
 
+        /**
+         * <p>The number of cores that are configured for the instance.</p>
+         */
         @NameInMap("DBInstanceCPU")
         public String DBInstanceCPU;
 
+        /**
+         * <p>The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+         */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
+        /**
+         * <p>The instance family to which the instance belongs. Valid values:</p>
+         * <br>
+         * <p>*   **s**: shared instance family</p>
+         * <p>*   **x**: general-purpose instance family</p>
+         * <p>*   **d**: dedicated instance family</p>
+         * <p>*   **h**: dedicated host instance family</p>
+         */
         @NameInMap("DBInstanceClassType")
         public String DBInstanceClassType;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The memory size of the instance. Unit: MB.</p>
+         */
         @NameInMap("DBInstanceMemory")
         public Long DBInstanceMemory;
 
+        /**
+         * <p>The type of the network over which the instance is connected. Valid values:</p>
+         * <br>
+         * <p>*   **Internet**</p>
+         * <p>*   **Intranet**</p>
+         */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
+        /**
+         * <p>The status of the instance. For more information, see [Instance states](~~26315~~).</p>
+         */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
+        /**
+         * <p>The storage capacity of the instance. Unit: GB.</p>
+         */
         @NameInMap("DBInstanceStorage")
         public Integer DBInstanceStorage;
 
+        /**
+         * <p>The storage type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **local_ssd** and **ephemeral_ssd**: local SSD</p>
+         * <p>*   **cloud_ssd**: standard SSD</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
+         */
         @NameInMap("DBInstanceStorageType")
         public String DBInstanceStorageType;
 
+        /**
+         * <p>The type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Primary**: primary instance</p>
+         * <p>*   **Readonly**: read-only instance</p>
+         * <p>*   **Guard**: disaster recovery instance</p>
+         * <p>*   **Temp**: temporary instance</p>
+         */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
+        /**
+         * <p>The maximum number of databases that can be created on the instance.</p>
+         */
         @NameInMap("DBMaxQuantity")
         public Integer DBMaxQuantity;
 
+        /**
+         * <p>The ID of the dedicated cluster to which the instance belongs.</p>
+         */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
+        /**
+         * <p>Indicates whether the release protection feature is enabled. Valid values:</p>
+         * <br>
+         * <p>- **true**: The feature is enabled.</p>
+         * <p>- **false**: The feature is disabled.</p>
+         */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
+        /**
+         * <p>The database engine of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **MySQL**</p>
+         * <p>*   **PostgreSQL**</p>
+         * <p>*   **SQLServer**</p>
+         * <p>*   **MariaDB**</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine version of the instance.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The time at which the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <br>
+         * <p>>  Pay-as-you-go instances never expire.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The extended information of the instance.</p>
+         */
         @NameInMap("Extra")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra extra;
 
+        /**
+         * <p>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+         */
         @NameInMap("GeneralGroupName")
         public String generalGroupName;
 
+        /**
+         * <p>The ID of the disaster recovery instance that is attached to the instance.</p>
+         */
         @NameInMap("GuardDBInstanceId")
         public String guardDBInstanceId;
 
+        /**
+         * <p>The type of the IP address that is used by the instance. The value is fixed as **IPv4**.</p>
+         */
         @NameInMap("IPType")
         public String IPType;
 
+        /**
+         * <p>The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</p>
+         */
         @NameInMap("IncrementSourceDBInstanceId")
         public String incrementSourceDBInstanceId;
 
+        /**
+         * <p>The network type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Classic**</p>
+         * <p>*   **VPC**</p>
+         */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
+        /**
+         * <p>The architecture type of the instance. Valid values:</p>
+         * <br>
+         * <p>- **x86**</p>
+         * <p>- **arm**</p>
+         */
         @NameInMap("InstructionSetArch")
         public String instructionSetArch;
 
+        /**
+         * <p>The latest minor engine version that is supported by the instance.</p>
+         */
         @NameInMap("LatestKernelVersion")
         public String latestKernelVersion;
 
+        /**
+         * <p>The lock mode of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Unlock**: The instance is not locked.</p>
+         * <p>*   **ManualLock**: The instance is manually locked.</p>
+         * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
+         * <p>*   **LockByRestoration**: The instance is automatically locked due to instance restoration.</p>
+         * <p>*   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage.</p>
+         * <p>*   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked when the disk space is exhausted.</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <p>The reason why the instance was locked.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <p>The maintenance window of the instance. The time is displayed in UTC. Take note that the maintenance window displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.</p>
+         */
         @NameInMap("MaintainTime")
         public String maintainTime;
 
+        /**
+         * <p>The ID of the primary instance.</p>
+         * <br>
+         * <p>>  If this parameter is not returned, the instance is the primary instance.</p>
+         */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
+        /**
+         * <p>The ID of the primary zone.</p>
+         */
         @NameInMap("MasterZone")
         public String masterZone;
 
+        /**
+         * <p>The maximum number of concurrent connections that are allowed by the instance.</p>
+         */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
+        /**
+         * <p>The maximum I/O throughput. Unit: MB/s.</p>
+         */
         @NameInMap("MaxIOMBPS")
         public Integer maxIOMBPS;
 
+        /**
+         * <p>The maximum number of I/O requests that can be processed by the instance per second.</p>
+         */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Postpaid**: pay-as-you-go</p>
+         * <p>*   **Prepaid**: subscription</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The internal port number that is used to connect to the instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The type of the proxy that is supported by the instance. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The instance does not support database proxies.</p>
+         * <p>*   **1**: The instance supports shared proxies, with which the instance runs in multi-tenant mode.</p>
+         * <p>*   **2**: The instance supports dedicated proxies, with which the instance runs in single-tenant mode.</p>
+         */
         @NameInMap("ProxyType")
         public Integer proxyType;
 
+        /**
+         * <p>An array that consists of the IDs of the read-only instances that are attached to the primary instance.</p>
+         */
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
+        /**
+         * <p>The latency at which the read-only instances replicate data. The read-only instances replicate data from the primary instance at the latency that is specified by the **ReadonlyInstanceSQLDelayedTime** parameter. Unit: seconds.</p>
+         */
         @NameInMap("ReadonlyInstanceSQLDelayedTime")
         public String readonlyInstanceSQLDelayedTime;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The IP addresses in the IP address whitelist.</p>
+         */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
+        /**
+         * <p>The whitelist mode of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: standard whitelist mode</p>
+         * <p>*   **safety**: enhanced whitelist mode</p>
+         */
         @NameInMap("SecurityIPMode")
         public String securityIPMode;
 
+        /**
+         * <p>The settings of the serverless instance.</p>
+         */
         @NameInMap("ServerlessConfig")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig serverlessConfig;
 
+        /**
+         * <p>An array that consists of the details about the secondary zones.</p>
+         */
         @NameInMap("SlaveZones")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZones slaveZones;
 
+        /**
+         * <p>Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.</p>
+         * <br>
+         * <p>*   **Enable**: Superuser accounts are supported.</p>
+         * <p>*   **Disabled**: Superuser accounts are not supported.</p>
+         */
         @NameInMap("SuperPermissionMode")
         public String superPermissionMode;
 
+        /**
+         * <p>The ID of the temporary instance that is attached to the instance.</p>
+         */
         @NameInMap("TempDBInstanceId")
         public String tempDBInstanceId;
 
+        /**
+         * <p>The time zone of the instance.</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
+        /**
+         * <p>The information about the exception that is detected on the instance. This parameter is returned only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+         */
         @NameInMap("Tips")
         public String tips;
 
+        /**
+         * <p>The severity level of the exception that is detected on the instance. This parameter is returned only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The instance is normal.</p>
+         * <p>*   **2**: The specifications of the read-only instances do not match the specifications of the primary instance. You must adjust the specifications of these instances based on your business requirements.</p>
+         */
         @NameInMap("TipsLevel")
         public Integer tipsLevel;
 
+        /**
+         * <p>The ID of the vSwitch that serves the instance.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC to which the instance belongs. This parameter is returned only when the instance resides in a VPC.</p>
+         */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the instance belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone to which the instances belong.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>An internal parameter. This operation does not return a value for this parameter.</p>
+         */
         @NameInMap("kindCode")
         public String kindCode;
 

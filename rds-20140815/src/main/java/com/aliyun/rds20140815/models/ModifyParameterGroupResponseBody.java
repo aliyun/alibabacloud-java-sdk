@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyParameterGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the parameter template.</p>
+     */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCollationTimeZonesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the character set collations and time zones that are available for use in ApsaraDB RDS.</p>
+     */
     @NameInMap("CollationTimeZones")
     public DescribeCollationTimeZonesResponseBodyCollationTimeZones collationTimeZones;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone extends TeaModel {
+        /**
+         * <p>The description of the character set collations and time zones.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The offset of the UTC time. The offset is in the following format: (UTC+\<i>HH:mm\</i>).</p>
+         */
         @NameInMap("StandardTimeOffset")
         public String standardTimeOffset;
 
+        /**
+         * <p>The time zone that is available for use in ApsaraDB RDS.</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 

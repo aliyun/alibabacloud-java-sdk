@@ -4,21 +4,42 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateMigrateTaskResponseBody extends TeaModel {
+    /**
+     * <p>The type of the migration task. Valid values:</p>
+     * <br>
+     * <p>*   **FULL**: The migration task migrates full backup files.</p>
+     * <p>*   **UPDF**: The migration task migrates incremental or log backup files.</p>
+     */
     @NameInMap("BackupMode")
     public String backupMode;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The ID of the migration task.</p>
+     */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

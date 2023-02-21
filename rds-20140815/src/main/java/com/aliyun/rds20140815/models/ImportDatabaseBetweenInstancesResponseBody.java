@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ImportDatabaseBetweenInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the import task.</p>
+     */
     @NameInMap("ImportId")
     public String importId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

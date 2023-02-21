@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDatabaseRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup file.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

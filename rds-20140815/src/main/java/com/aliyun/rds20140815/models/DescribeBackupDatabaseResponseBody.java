@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The name of the database. Format: "db1,db2".</p>
+     */
     @NameInMap("DatabaseNames")
     public String databaseNames;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyDBInstanceEndpointAddressResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
     }
 
     public static class ModifyDBInstanceEndpointAddressResponseBodyData extends TeaModel {
+        /**
+         * <p>The endpoint ID of the instance.</p>
+         */
         @NameInMap("DBInstanceEndpointId")
         public String DBInstanceEndpointId;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 

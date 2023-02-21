@@ -4,24 +4,51 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup file based on which you want to copy databases. When you copy databases based on the backup file, you can call the [DescribeBackups](~~26273~~) operation to obtain the backup file ID.</p>
+     * <br>
+     * <p>>  You must specify one of the **BackupId** or **RestoreTime** parameter.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>The ID of the source instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The names of the databases to be copied. Format: {"Source instance database name":"Destination instance database name"}.</p>
+     */
     @NameInMap("DbNames")
     public String dbNames;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The point in time when the system copies databases. You can select a point in time within the backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  You must specify one of the **BackupId** or **RestoreTime** parameter.</p>
+     */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    /**
+     * <p>Specifies whether to copy users and permissions.</p>
+     * <br>
+     * <p>*   **YES**: copies users and permissions. If the destination instance has a user whose name is the same as a user in the source instance, the permissions of the user in the source instance will also be granted to the user in the destination instance after you copy user permissions.</p>
+     * <p>*   **NO**: does not copy users and permissions.</p>
+     * <br>
+     * <p>Default value: **NO**.</p>
+     */
     @NameInMap("SyncUserPrivilege")
     public String syncUserPrivilege;
 
+    /**
+     * <p>The ID of the destination instance, which must differ from the ID of the source instance.</p>
+     */
     @NameInMap("TargetDBInstanceId")
     public String targetDBInstanceId;
 

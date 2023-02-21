@@ -4,9 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query backup set IDs. Up to 100 IDs can be specified in a single request. Separate multiple IDs with commas (,).</p>
+     * <br>
+     * <p>>  Only the backup sets whose **StoreStatus** is **Enabled** when you call the [DescribeBackups](~~26273~~) operation can be deleted.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

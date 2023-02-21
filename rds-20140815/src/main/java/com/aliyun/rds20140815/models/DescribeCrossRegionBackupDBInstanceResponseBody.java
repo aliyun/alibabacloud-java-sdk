@@ -4,24 +4,47 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of instances and their cross-region backup settings.</p>
+     */
     @NameInMap("Items")
     public DescribeCrossRegionBackupDBInstanceResponseBodyItems items;
 
+    /**
+     * <p>The total number of items returned for cross-region backup settings.</p>
+     */
     @NameInMap("ItemsNumbers")
     public Integer itemsNumbers;
 
+    /**
+     * <p>The page number of the returned page. Valid values: any non-zero positive integer.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Default value: 30.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecords")
     public Integer totalRecords;
 
@@ -87,45 +110,101 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeCrossRegionBackupDBInstanceResponseBodyItemsItem extends TeaModel {
+        /**
+         * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Disable**</p>
+         * <p>*   **Enable**</p>
+         */
         @NameInMap("BackupEnabled")
         public String backupEnabled;
 
+        /**
+         * <p>The time when cross-region backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupEnabledTime")
         public String backupEnabledTime;
 
+        /**
+         * <p>The ID of the region in which the cross-region data backup file is stored.</p>
+         */
         @NameInMap("CrossBackupRegion")
         public String crossBackupRegion;
 
+        /**
+         * <p>The policy that is used to save the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that all cross-region backup files are saved.</p>
+         */
         @NameInMap("CrossBackupType")
         public String crossBackupType;
 
+        /**
+         * <p>The name of the instance. It must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <br>
+         * <p>> The value cannot start with http:// or https://.</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The status of the instance. For more information, see [Instance states](~~26315~~).</p>
+         */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
+        /**
+         * <p>The database engine of the instance.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine version of the instance.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The lock status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Unlock**: The instance is not locked.</p>
+         * <p>*   **ManualLock**: The instance is manually locked.</p>
+         * <p>*   **LockByExpiration**: The instance is automatically locked after it expires.</p>
+         * <p>*   **LockByRestoration**: The instance is automatically locked before it is rolled back.</p>
+         * <p>*   **LockByDiskQuota**: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Disable**</p>
+         * <p>*   **Enable**</p>
+         */
         @NameInMap("LogBackupEnabled")
         public String logBackupEnabled;
 
+        /**
+         * <p>The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LogBackupEnabledTime")
         public String logBackupEnabledTime;
 
+        /**
+         * <p>The policy that is used to retain the cross-region backup files of the instance. Cross-region backups can be retained only based on the specified retention period. Default value: **1**.</p>
+         */
         @NameInMap("RetentType")
         public Integer retentType;
 
+        /**
+         * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.</p>
+         */
         @NameInMap("Retention")
         public Integer retention;
 

@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>An array that consists of ECS security groups.</p>
+     */
     @NameInMap("Items")
     public ModifySecurityGroupConfigurationResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,24 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
     }
 
     public static class ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
+        /**
+         * <p>The network type of an ECS security group. Valid values:</p>
+         * <br>
+         * <p>*   **Classic**</p>
+         * <p>*   **VPC**</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the ECS security group.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

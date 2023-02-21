@@ -4,21 +4,50 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ListClassesRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The commodity code of the instances.</p>
+     * <br>
+     * <p>*   **bards_intl**: The instances are pay-as-you-go primary instances.</p>
+     * <p>*   **rds_intl**: The instances are subscription primary instances.</p>
+     * <p>*   **rords_intl**: The instances are pay-as-you-go read-only instances.</p>
+     * <p>*   **rds_rordspre_public_intl**: The instances are subscription read-only instances.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     * <br>
+     * <p>>  If you use the **CommodityCode** parameter to query the instance types that are available to read-only instances, you must specify the DBInstanceId parameter.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The type of order that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **BUY**: specifies the query orders that are used to purchase instances.</p>
+     * <p>*   **UPGRADE**: specifies the query orders that are used to change the specifications of instances.</p>
+     * <p>*   **RENEW**: specifies the query orders that are used to renew instances.</p>
+     * <p>*   **CONVERT**: specifies the query orders that are used to change the billing methods of instances.</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>>  If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify the RegionId parameter.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

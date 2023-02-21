@@ -4,60 +4,154 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
+    /**
+     * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. Valid values:</p>
+     * <br>
+     * <p>*   **cert**</p>
+     * <p>*   **perfer**</p>
+     * <p>*   **verify-ca**</p>
+     * <p>*   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)</p>
+     */
     @NameInMap("ACL")
     public String ACL;
 
+    /**
+     * <p>The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. Valid values:</p>
+     * <br>
+     * <p>*   **aliyun**: a cloud certificate</p>
+     * <p>*   **custom**: a custom certificate</p>
+     */
     @NameInMap("CAType")
     public String CAType;
 
+    /**
+     * <p>The public key of the CA that issues client certificates. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     */
     @NameInMap("ClientCACert")
     public String clientCACert;
 
+    /**
+     * <p>The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.</p>
+     */
     @NameInMap("ClientCACertExpireTime")
     public String clientCACertExpireTime;
 
+    /**
+     * <p>The certificate revocation list (CRL) that contains revoked client certificates. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     */
     @NameInMap("ClientCertRevocationList")
     public String clientCertRevocationList;
 
+    /**
+     * <p>The endpoint that is protected by SSL encryption.</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    /**
+     * <p>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. Valid values:</p>
+     * <br>
+     * <p>*   **success**</p>
+     * <p>*   **setting**</p>
+     * <p>*   **failed**</p>
+     */
     @NameInMap("LastModifyStatus")
     public String lastModifyStatus;
 
+    /**
+     * <p>The reason why the SSL link stays in the current state. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     */
     @NameInMap("ModifyStatusReason")
     public String modifyStatusReason;
 
+    /**
+     * <p>The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. Valid values:</p>
+     * <br>
+     * <p>*   **cert**</p>
+     * <p>*   **perfer**</p>
+     * <p>*   **verify-ca**</p>
+     * <p>*   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)</p>
+     */
     @NameInMap("ReplicationACL")
     public String replicationACL;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the server certificate needs to be updated.</p>
+     * <br>
+     * <p>*   Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:</p>
+     * <br>
+     * <p>    *   **No**</p>
+     * <p>    *   **Yes**</p>
+     * <br>
+     * <p>*   Valid values for ApsaraDB RDS for PostgreSQL instances:</p>
+     * <br>
+     * <p>    *   **0**: no</p>
+     * <p>    *   **1**: yes</p>
+     */
     @NameInMap("RequireUpdate")
     public String requireUpdate;
 
+    /**
+     * <p>The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     */
     @NameInMap("RequireUpdateItem")
     public String requireUpdateItem;
 
+    /**
+     * <p>The reason why the server certificate needs to be updated. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     */
     @NameInMap("RequireUpdateReason")
     public String requireUpdateReason;
 
+    /**
+     * <p>The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs. In addition, this parameter is valid only when the CAType parameter is set to aliyun.</p>
+     */
     @NameInMap("SSLCreateTime")
     public String SSLCreateTime;
 
+    /**
+     * <p>Indicates whether SSL encryption is enabled.</p>
+     * <br>
+     * <p>*   Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:</p>
+     * <br>
+     * <p>    *   **Yes**: enabled</p>
+     * <p>    *   **No**: disabled</p>
+     * <br>
+     * <p>*   Valid values for ApsaraDB RDS for PostgreSQL instances:</p>
+     * <br>
+     * <p>    *   **on**: enabled</p>
+     * <p>    *   **off**: disabled</p>
+     */
     @NameInMap("SSLEnabled")
     public String SSLEnabled;
 
+    /**
+     * <p>The time when the server certificate expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("SSLExpireTime")
     public String SSLExpireTime;
 
+    /**
+     * <p>The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     */
     @NameInMap("ServerCAUrl")
     public String serverCAUrl;
 
+    /**
+     * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     */
     @NameInMap("ServerCert")
     public String serverCert;
 
+    /**
+     * <p>The private key of the server certificate. This parameter is supported only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
+     */
     @NameInMap("ServerKey")
     public String serverKey;
 

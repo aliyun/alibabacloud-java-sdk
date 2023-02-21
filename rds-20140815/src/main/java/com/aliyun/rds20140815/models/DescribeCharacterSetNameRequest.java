@@ -4,6 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharacterSetNameRequest extends TeaModel {
+    /**
+     * <p>The database engine that is run on the instance. Valid values:</p>
+     * <br>
+     * <p>*   **mysql**: MySQL</p>
+     * <p>*   **mssql**: SQL Server</p>
+     * <p>*   **PostgreSQL**: PostgreSQL</p>
+     * <p>*   **MariaDB**: MariaDB</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
@@ -13,6 +21,9 @@ public class DescribeCharacterSetNameRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

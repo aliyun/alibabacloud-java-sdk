@@ -3,7 +3,7 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class RequestServiceOfCloudDBAResponse extends TeaModel {
+public class CreateDBInstanceForRebuildResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class RequestServiceOfCloudDBAResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public RequestServiceOfCloudDBAResponseBody body;
+    public CreateDBInstanceForRebuildResponseBody body;
 
-    public static RequestServiceOfCloudDBAResponse build(java.util.Map<String, ?> map) throws Exception {
-        RequestServiceOfCloudDBAResponse self = new RequestServiceOfCloudDBAResponse();
+    public static CreateDBInstanceForRebuildResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateDBInstanceForRebuildResponse self = new CreateDBInstanceForRebuildResponse();
         return TeaModel.build(map, self);
     }
 
-    public RequestServiceOfCloudDBAResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateDBInstanceForRebuildResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class RequestServiceOfCloudDBAResponse extends TeaModel {
         return this.headers;
     }
 
-    public RequestServiceOfCloudDBAResponse setStatusCode(Integer statusCode) {
+    public CreateDBInstanceForRebuildResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class RequestServiceOfCloudDBAResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RequestServiceOfCloudDBAResponse setBody(RequestServiceOfCloudDBAResponseBody body) {
+    public CreateDBInstanceForRebuildResponse setBody(CreateDBInstanceForRebuildResponseBody body) {
         this.body = body;
         return this;
     }
-    public RequestServiceOfCloudDBAResponseBody getBody() {
+    public CreateDBInstanceForRebuildResponseBody getBody() {
         return this.body;
     }
 

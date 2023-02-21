@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
+    /**
+     * <p>The additional business information about the instance.</p>
+     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The instance type of the instance. For more information, see [Primary instance types](~~26312~~). By default, the current instance type applies.</p>
+     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The type of the order that you want to place. Set the value to **BUY**.</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
@@ -25,12 +40,24 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Postpaid**: pay-as-you-go</p>
+     * <p>*   **Prepaid**: subscription</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The number of the instances. Default value: **1**.</p>
+     */
     @NameInMap("Quantity")
     public Integer quantity;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -40,9 +67,21 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The renewal cycle of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Year**</p>
+     * <p>*   **Month**</p>
+     */
     @NameInMap("TimeType")
     public String timeType;
 
+    /**
+     * <p>The subscription duration of the instance. Valid values:</p>
+     * <br>
+     * <p>*   If you set the **TimeType** parameter to **Year**, the value of the UsedTime parameter is within the range of **1 to 3**.</p>
+     * <p>*   If you set the **TimeType** parameter to **Month**, the value of the UsedTime parameter is within the range of **1 to 9**.</p>
+     */
     @NameInMap("UsedTime")
     public Integer usedTime;
 

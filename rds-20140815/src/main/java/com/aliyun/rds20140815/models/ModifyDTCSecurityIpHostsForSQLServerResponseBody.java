@@ -4,15 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The result of the whitelist configuration. Valid values:</p>
+     * <br>
+     * <p>*   **Success**</p>
+     * <p>*   **Fail**</p>
+     */
     @NameInMap("DTCSetResult")
     public String DTCSetResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

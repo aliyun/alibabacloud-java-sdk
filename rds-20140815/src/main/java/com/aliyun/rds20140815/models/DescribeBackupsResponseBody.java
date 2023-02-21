@@ -4,21 +4,39 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details of the returned data backup files.</p>
+     */
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of data backup files on the page.</p>
+     */
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The size of the snapshot chain of the instance. Unit: bytes.</p>
+     */
     @NameInMap("TotalEcsSnapshotSize")
     public Long totalEcsSnapshotSize;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public String totalRecordCount;
 
@@ -76,12 +94,21 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DataBase")
         public String dataBase;
 
+        /**
+         * <p>The public URL from which you can download the data backup file.</p>
+         */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
+        /**
+         * <p>The internal URL from which you can download the data backup file.</p>
+         */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
@@ -136,72 +163,181 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
+        /**
+         * <p>The URL from which you can download the data backup file of the individual database.</p>
+         */
         @NameInMap("BackupDownloadLinkByDB")
         public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB backupDownloadLinkByDB;
 
+        /**
+         * <p>The URL that is used to download the data backup file over the Internet. If the data backup file cannot be downloaded, null is returned.</p>
+         * <br>
+         * <p>>  For example, if the instance runs SQL Server and the BackupMethod parameter is set to **Snapshot**, null is returned.</p>
+         */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
+        /**
+         * <p>The end time of the backup task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        /**
+         * <p>The ID of the data backup file.</p>
+         */
         @NameInMap("BackupId")
         public String backupId;
 
+        /**
+         * <p>The initiator of the backup task. Valid values:</p>
+         * <br>
+         * <p>*   **System**</p>
+         * <p>*   **User**</p>
+         */
         @NameInMap("BackupInitiator")
         public String backupInitiator;
 
+        /**
+         * <p>The URL that is used to download the data backup file over an internal network. If the data backup file cannot be downloaded, null is returned.</p>
+         * <br>
+         * <p>>  For example, if the instance runs SQL Server and the BackupMethod parameter is set to **Snapshot**, null is returned.</p>
+         */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
+        /**
+         * <p>The method that is used to generate the data backup file. Valid values:</p>
+         * <br>
+         * <p>*   **Logical**: logical backup</p>
+         * <p>*   **Physical**: physical backup</p>
+         * <p>*   **Snapshot**: snapshot backup</p>
+         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
+        /**
+         * <p>The backup mode of the data backup file. Valid values:</p>
+         * <br>
+         * <p>*   **Automated**</p>
+         * <p>*   **Manual**</p>
+         */
         @NameInMap("BackupMode")
         public String backupMode;
 
+        /**
+         * <p>The size of the data backup file. Unit: bytes.</p>
+         */
         @NameInMap("BackupSize")
         public Long backupSize;
 
+        /**
+         * <p>The start time of the backup task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        /**
+         * <p>The status of the data backup file.</p>
+         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
+        /**
+         * <p>The backup type of the data backup file. Valid values:</p>
+         * <br>
+         * <p>*   **FullBackup**</p>
+         * <p>*   **IncrementalBackup**</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>The checksum. The value of this parameter is calculated by using the CRC64 algorithm.</p>
+         */
         @NameInMap("Checksum")
         public String checksum;
 
+        /**
+         * <p>The point in time at which the data in the data backup file is consistent. The return value of this parameter is a timestamp.</p>
+         * <br>
+         * <p>>  If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
+         */
         @NameInMap("ConsistentTime")
         public Long consistentTime;
 
+        /**
+         * <p>The backup mode of the data backup file. Valid values:</p>
+         * <br>
+         * <p>*   0: the standard mode. This mode supports full backups and incremental backups.</p>
+         * <br>
+         * <p>*   1: the copy-only mode. This mode supports only full backups.</p>
+         * <br>
+         * <p>> This parameter is returned only when the instance runs SQL Server.</p>
+         */
         @NameInMap("CopyOnlyBackup")
         public String copyOnlyBackup;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The encryption information of the data backup file.</p>
+         */
         @NameInMap("Encryption")
         public String encryption;
 
+        /**
+         * <p>The No. of the instance that generates the data backup file. This parameter is used to indicate whether the instance that generates the data backup file is a primary instance or a secondary instance.</p>
+         */
         @NameInMap("HostInstanceID")
         public String hostInstanceID;
 
+        /**
+         * <p>Indicates whether the data backup file is available. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The data backup file is unavailable.</p>
+         * <p>*   **1**: The data backup file is available.</p>
+         */
         @NameInMap("IsAvail")
         public Integer isAvail;
 
+        /**
+         * <p>The status of the data backup file that is used to restore individual databases or tables. Valid values:</p>
+         * <br>
+         * <p>*   **OK**: The data backup file is normal.</p>
+         * <p>*   **LARGE**: The data backup file contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</p>
+         * <p>*   **EMPTY**: The data backup file is generated from a failed backup task.</p>
+         * <br>
+         * <p>>  If an empty string is returned, the data backup file cannot be used to restore individual databases or tables.</p>
+         */
         @NameInMap("MetaStatus")
         public String metaStatus;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The storage class of the data backup file. Valid values:</p>
+         * <br>
+         * <p>*   **0**: regular storage</p>
+         * <p>*   **1**: archive storage</p>
+         */
         @NameInMap("StorageClass")
         public String storageClass;
 
+        /**
+         * <p>Indicates whether the data backup file can be deleted. Valid values:</p>
+         * <br>
+         * <p>*   **Enabled**: The data backup file can be deleted.</p>
+         * <p>*   **Disabled**: The data backup file cannot be deleted.</p>
+         */
         @NameInMap("StoreStatus")
         public String storeStatus;
 

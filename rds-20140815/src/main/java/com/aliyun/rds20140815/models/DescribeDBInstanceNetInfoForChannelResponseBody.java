@@ -4,12 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the network information about the instance.</p>
+     */
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
 
+    /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **Classic**</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +55,33 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight extends TeaModel {
+        /**
+         * <p>The availability of the instance. Valid values:</p>
+         * <br>
+         * <p>- **Unavailable**</p>
+         * <p>- **Available**</p>
+         */
         @NameInMap("Availability")
         public String availability;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The type of the instance. Valid values:</p>
+         * <br>
+         * <p>- **Master**: primary instance</p>
+         * <p>- **Readonly**: read-only instance</p>
+         */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
+        /**
+         * <p>The weight of the instance.</p>
+         */
         @NameInMap("Weight")
         public String weight;
 
@@ -114,9 +144,15 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup extends TeaModel {
+        /**
+         * <p>The name of the IP address whitelist.</p>
+         */
         @NameInMap("SecurityIPGroupName")
         public String securityIPGroupName;
 
+        /**
+         * <p>The IP addresses contained in the IP address whitelist.</p>
+         */
         @NameInMap("SecurityIPs")
         public String securityIPs;
 
@@ -163,45 +199,102 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfo extends TeaModel {
+        /**
+         * <p>The availability of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Unavailable**</p>
+         * <p>*   **Available**</p>
+         */
         @NameInMap("Availability")
         public String availability;
 
+        /**
+         * <p>The endpoint of the instance.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: a regular endpoint</p>
+         * <p>*   **ReadWriteSplitting**: a read/write splitting endpoint that is assigned after the shared proxy feature is enabled.</p>
+         */
         @NameInMap("ConnectionStringType")
         public String connectionStringType;
 
+        /**
+         * <p>An array that consists of the information about read/write splitting after the shared proxy feature is enabled.</p>
+         */
         @NameInMap("DBInstanceWeights")
         public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights;
 
+        /**
+         * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint that is assigned after the shared proxy feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **Standard**: ApsaraDB RDS automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</p>
+         * <p>*   **Custom**: You must manually assign read weights to the instance and its read-only instances.</p>
+         */
         @NameInMap("DistributionType")
         public String distributionType;
 
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The network type of the IP address. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: the Internet</p>
+         * <p>*   **Inner**: the classic network</p>
+         * <p>*   **Private**: a virtual private cloud (VPC)</p>
+         */
         @NameInMap("IPType")
         public String IPType;
 
+        /**
+         * <p>The latency threshold that is allowed for read/write splitting of the shared proxy feature. Unit: seconds</p>
+         * <br>
+         * <p>>  This parameter is returned only when **ConnectionStringType** is set to **ReadWriteSplitting**.</p>
+         */
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
 
+        /**
+         * <p>The service port.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>An array that consists of the IP address whitelists of the instance.</p>
+         */
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
 
+        /**
+         * <p>An internal parameter. You can ignore this parameter.</p>
+         */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
+        /**
+         * <p>The ID of the VPC to which the instance belongs.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The ID of the vSwitch to which the instance belongs.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The expiration time of the endpoint of the classic network type. Unit: seconds.</p>
+         */
         @NameInMap("expiredTime")
         public String expiredTime;
 

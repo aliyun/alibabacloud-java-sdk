@@ -4,24 +4,51 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribePGHbaConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>An array that consists of the default configuration items in the pg_hba.conf file.</p>
+     */
     @NameInMap("DefaultHbaItems")
     public DescribePGHbaConfigResponseBodyDefaultHbaItems defaultHbaItems;
 
+    /**
+     * <p>The time when the previous modification was made to the pg_hba.conf file.</p>
+     */
     @NameInMap("HbaModifyTime")
     public String hbaModifyTime;
 
+    /**
+     * <p>The status of the previous modification to the pg_hba.conf file.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **success**: The modification is successful.</p>
+     * <p>*   **setting**: The modification is being applied.</p>
+     * <p>*   **failed**: The modification fails.</p>
+     */
     @NameInMap("LastModifyStatus")
     public String lastModifyStatus;
 
+    /**
+     * <p>The reason why the previous modification was made to the pg_hba.conf file.</p>
+     */
     @NameInMap("ModifyStatusReason")
     public String modifyStatusReason;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the current configuration items in the pg_hba.conf file.</p>
+     */
     @NameInMap("RunningHbaItems")
     public DescribePGHbaConfigResponseBodyRunningHbaItems runningHbaItems;
 
@@ -87,27 +114,51 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
     }
 
     public static class DescribePGHbaConfigResponseBodyDefaultHbaItemsHbaItem extends TeaModel {
+        /**
+         * <p>The IP addresses from which the specified users can access the specified databases. The value is fixed as 0.0.0.0/0.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The names of the databases that the specified users are allowed to access. The value is fixed as all or replication.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The mask of the instance. The value is fixed as null.</p>
+         */
         @NameInMap("Mask")
         public String mask;
 
+        /**
+         * <p>The authentication method. The value is fixed as md5.</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The value of this parameter is based on the value of the Method parameter. The value is fixed as null.</p>
+         */
         @NameInMap("Option")
         public String option;
 
+        /**
+         * <p>The priority of the configuration items in the pg_hba.conf file. This value is automatically generated.</p>
+         */
         @NameInMap("PriorityId")
         public Integer priorityId;
 
+        /**
+         * <p>The type of connection to the instance. The value is fixed as host.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The user that is allowed to access the instance. The value is fixed as all.</p>
+         */
         @NameInMap("User")
         public String user;
 
@@ -202,27 +253,55 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
     }
 
     public static class DescribePGHbaConfigResponseBodyRunningHbaItemsHbaItem extends TeaModel {
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The name of the database that the specified users are allowed to access.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The mask of the instance.</p>
+         */
         @NameInMap("Mask")
         public String mask;
 
+        /**
+         * <p>The authentication method.</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The value of this parameter varies based on the value of the Method parameter. The value is fixed as null.</p>
+         */
         @NameInMap("Option")
         public String option;
 
+        /**
+         * <p>The priority of the instance.</p>
+         */
         @NameInMap("PriorityId")
         public Integer priorityId;
 
+        /**
+         * <p>The type of the connection. </p>
+         * <br>
+         * <p>- **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.</p>
+         * <p>- **hostssl**: The record matches only TCP/IP connections that are established over SSL.</p>
+         * <p>- **hostnossl**: The record matches only TCP/IP connections that are not established over SSL.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The username of the account that is used to connect to the instance.</p>
+         */
         @NameInMap("User")
         public String user;
 

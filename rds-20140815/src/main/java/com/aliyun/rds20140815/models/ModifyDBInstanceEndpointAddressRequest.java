@@ -4,33 +4,62 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceEndpointAddressRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.</p>
+     * <br>
+     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The endpoint that you want to modify. The endpoint can be a public endpoint or an internal endpoint.</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    /**
+     * <p>The prefix of the endpoint. You can modify only the prefix of the endpoint that is specified by the ConnectionString parameter.</p>
+     */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
+    /**
+     * <p>The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~464379~~) operation to query the endpoint ID of the instance.</p>
+     */
     @NameInMap("DBInstanceEndpointId")
     public String DBInstanceEndpointId;
 
+    /**
+     * <p>The ID of the instance You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The port number of the endpoint.</p>
+     */
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <p>The internal IP address.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The vSwitch ID of the internal endpoint.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The VPC ID of the internal endpoint.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

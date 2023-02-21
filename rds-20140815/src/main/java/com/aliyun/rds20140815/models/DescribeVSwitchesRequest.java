@@ -4,6 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
+    /**
+     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster. If you specify this parameter, the details about all vSwitches in the VPC to which the dedicated cluster belongs are returned.</p>
+     * <br>
+     * <p>>  You must specify this parameter or the **VpcId** parameter.</p>
+     */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
@@ -13,15 +18,27 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1 to 50**. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region to which the vSwitch belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,9 +51,17 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the VPC to which the vSwitch belongs.</p>
+     * <br>
+     * <p>>  You must specify this parameter or the **DedicatedHostGroupId** parameter.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the zone to which the vSwitch belongs. You can call the [DescribeAvailableZones](~~169126~~) operation to query the ID of the zone. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details about the vSwitches that are deployed in the specified zone are returned.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

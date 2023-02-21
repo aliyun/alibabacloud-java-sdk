@@ -4,30 +4,57 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The end date of the time range that was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The database engine of the instance.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>An array that consists of the information about each slow query.</p>
+     */
     @NameInMap("Items")
     public DescribeSlowLogsResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of SQL statements that are returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start date of the time range that was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The total number of entries that are returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -109,138 +136,321 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogsResponseBodyItemsSQLSlowLog extends TeaModel {
+        /**
+         * <p>The average execution duration per SQL statement in the query. Unit: seconds.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("AvgExecutionTime")
         public Long avgExecutionTime;
 
+        /**
+         * <p>The average number of I/O writes per SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("AvgIOWriteCounts")
         public Long avgIOWriteCounts;
 
+        /**
+         * <p>The average number of rows that are affected by the last SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("AvgLastRowsAffectedCounts")
         public Long avgLastRowsAffectedCounts;
 
+        /**
+         * <p>The average number of logical reads per SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("AvgLogicalReadCounts")
         public Long avgLogicalReadCounts;
 
+        /**
+         * <p>The average number of physical reads per SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("AvgPhysicalReadCounts")
         public Long avgPhysicalReadCounts;
 
+        /**
+         * <p>The average number of rows that were affected per SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("AvgRowsAffectedCounts")
         public Long avgRowsAffectedCounts;
 
+        /**
+         * <p>The date when the data was generated.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The name of the database that was queried.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The longest execution duration of a specific SQL statement in the query. Unit: seconds.</p>
+         */
         @NameInMap("MaxExecutionTime")
         public Long maxExecutionTime;
 
+        /**
+         * <p>The largest number of I/O writes that were performed by a specific SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MaxIOWriteCounts")
         public Long maxIOWriteCounts;
 
+        /**
+         * <p>The largest number of rows that were affected by the last SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MaxLastRowsAffectedCounts")
         public Long maxLastRowsAffectedCounts;
 
+        /**
+         * <p>The longest lock duration that was caused by a specific SQL statement in the query. Unit: seconds.</p>
+         */
         @NameInMap("MaxLockTime")
         public Long maxLockTime;
 
+        /**
+         * <p>The largest number of logical reads that were performed by a specific SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MaxLogicalReadCounts")
         public Long maxLogicalReadCounts;
 
+        /**
+         * <p>The largest number of physical reads that were performed by a specific SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MaxPhysicalReadCounts")
         public Long maxPhysicalReadCounts;
 
+        /**
+         * <p>The largest number of rows that were affected by a specific SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MaxRowsAffectedCounts")
         public Long maxRowsAffectedCounts;
 
+        /**
+         * <p>The smallest number of I/O writes that were performed by a specific SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MinIOWriteCounts")
         public Long minIOWriteCounts;
 
+        /**
+         * <p>The smallest number of rows that were affected by the last SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MinLastRowsAffectedCounts")
         public Long minLastRowsAffectedCounts;
 
+        /**
+         * <p>The smallest number of logical reads that were performed by a specific SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MinLogicalReadCounts")
         public Long minLogicalReadCounts;
 
+        /**
+         * <p>The smallest number of physical reads that were performed by a specific SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MinPhysicalReadCounts")
         public Long minPhysicalReadCounts;
 
+        /**
+         * <p>The smallest number of rows that were affected by a specific SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("MinRowsAffectedCounts")
         public Long minRowsAffectedCounts;
 
+        /**
+         * <p>The total number of SQL statements that were executed in the query. This parameter is returned only for instances that run MySQL.</p>
+         */
         @NameInMap("MySQLTotalExecutionCounts")
         public Long mySQLTotalExecutionCounts;
 
+        /**
+         * <p>The total execution duration of all SQL statements in the query. This parameter is returned only for instances that run MySQL. Unit: seconds.</p>
+         */
         @NameInMap("MySQLTotalExecutionTimes")
         public Long mySQLTotalExecutionTimes;
 
+        /**
+         * <p>The largest number of rows that were parsed by a specific SQL statement in the query.</p>
+         */
         @NameInMap("ParseMaxRowCount")
         public Long parseMaxRowCount;
 
+        /**
+         * <p>The total number of rows that were parsed by all SQL statements in the query.</p>
+         */
         @NameInMap("ParseTotalRowCounts")
         public Long parseTotalRowCounts;
 
+        /**
+         * <p>The date on which the data report was generated.</p>
+         */
         @NameInMap("ReportTime")
         public String reportTime;
 
+        /**
+         * <p>The largest number of rows that were returned by a specific SQL statement in the query.</p>
+         */
         @NameInMap("ReturnMaxRowCount")
         public Long returnMaxRowCount;
 
+        /**
+         * <p>The total number of rows that were returned by all SQL statements in the query.</p>
+         */
         @NameInMap("ReturnTotalRowCounts")
         public Long returnTotalRowCounts;
 
+        /**
+         * <p>The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.</p>
+         */
         @NameInMap("SQLHASH")
         public String SQLHASH;
 
+        /**
+         * <p>The ID of the SQL statement in the statistical template of slow query logs. This parameter is replaced by the **SQLHASH** parameter.</p>
+         */
         @NameInMap("SQLIdStr")
         public String SQLIdStr;
 
+        /**
+         * <p>The average amount of CPU time per SQL statement in the query. Unit: seconds.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("SQLServerAvgCpuTime")
         public Long SQLServerAvgCpuTime;
 
+        /**
+         * <p>The average execution duration per SQL statement in the query. Unit: seconds.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("SQLServerAvgExecutionTime")
         public Long SQLServerAvgExecutionTime;
 
+        /**
+         * <p>The largest amount of CPU time that was used by a specific SQL statement in the query. Unit: seconds.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("SQLServerMaxCpuTime")
         public Long SQLServerMaxCpuTime;
 
+        /**
+         * <p>The smallest amount of CPU time that was used by a specific SQL statement. Unit: seconds.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("SQLServerMinCpuTime")
         public Long SQLServerMinCpuTime;
 
+        /**
+         * <p>The smallest execution duration of a specific SQL statement in the query. Unit: seconds.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("SQLServerMinExecutionTime")
         public Long SQLServerMinExecutionTime;
 
+        /**
+         * <p>The total amount of CPU time that was used by all SQL statements in the query. Unit: seconds.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("SQLServerTotalCpuTime")
         public Long SQLServerTotalCpuTime;
 
+        /**
+         * <p>The total number of SQL statements that were executed in the query. This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("SQLServerTotalExecutionCounts")
         public Long SQLServerTotalExecutionCounts;
 
+        /**
+         * <p>The total execution duration of all SQL statements in the query. This parameter is returned only for instances that run SQL Server. Unit: milliseconds.</p>
+         */
         @NameInMap("SQLServerTotalExecutionTimes")
         public Long SQLServerTotalExecutionTimes;
 
+        /**
+         * <p>The SQL statement that was executed in the query.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The ID of the slow query log summary.</p>
+         */
         @NameInMap("SlowLogId")
         public Long slowLogId;
 
+        /**
+         * <p>The total number of I/O writes that were performed by all SQL statements in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("TotalIOWriteCounts")
         public Long totalIOWriteCounts;
 
+        /**
+         * <p>The total number of rows that were affected by the last SQL statement in the query.</p>
+         * <br>
+         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("TotalLastRowsAffectedCounts")
         public Long totalLastRowsAffectedCounts;
 
+        /**
+         * <p>The total lock duration that was caused by all SQL statements in the query. Unit: seconds.</p>
+         */
         @NameInMap("TotalLockTimes")
         public Long totalLockTimes;
 
+        /**
+         * <p>The total number of logical reads that were performed by all SQL statements in the query.</p>
+         */
         @NameInMap("TotalLogicalReadCounts")
         public Long totalLogicalReadCounts;
 
+        /**
+         * <p>The total number of physical reads that were performed by all SQL statements in the query.</p>
+         */
         @NameInMap("TotalPhysicalReadCounts")
         public Long totalPhysicalReadCounts;
 
+        /**
+         * <p>The total number of rows that were affected by all SQL statements in the query.</p>
+         */
         @NameInMap("TotalRowsAffectedCounts")
         public Long totalRowsAffectedCounts;
 

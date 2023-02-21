@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ReceiveDBInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the disaster recovery instance after the switchover.</p>
+     */
     @NameInMap("GuardDBInstanceId")
     public String guardDBInstanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

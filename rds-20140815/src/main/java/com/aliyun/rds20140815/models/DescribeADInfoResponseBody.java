@@ -4,21 +4,43 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeADInfoResponseBody extends TeaModel {
+    /**
+     * <p>The DNS information about the AD domain.</p>
+     */
     @NameInMap("ADDNS")
     public String ADDNS;
 
+    /**
+     * <p>The service IP address of the AD domain.</p>
+     */
     @NameInMap("ADServerIpAddress")
     public String ADServerIpAddress;
 
+    /**
+     * <p>The status of the AD domain. Valid values:</p>
+     * <br>
+     * <p>*   **-1**: The instance is being added to the AD domain.</p>
+     * <p>*   **0**: The instance fails to be added to the AD domain.</p>
+     * <p>*   **1**: The instance is added to the AD domain.</p>
+     */
     @NameInMap("ADStatus")
     public String ADStatus;
 
+    /**
+     * <p>The cause of the exception.</p>
+     */
     @NameInMap("AbnormalReason")
     public String abnormalReason;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The username of the AD domain.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

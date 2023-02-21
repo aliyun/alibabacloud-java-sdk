@@ -4,18 +4,35 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceEndpointRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.</p>
+     * <br>
+     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The user-defined description of the endpoint.</p>
+     */
     @NameInMap("DBInstanceEndpointDescription")
     public String DBInstanceEndpointDescription;
 
+    /**
+     * <p>The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~464397~~) operation to query the endpoint ID of the instance.</p>
+     */
     @NameInMap("DBInstanceEndpointId")
     public String DBInstanceEndpointId;
 
+    /**
+     * <p>The ID of the instance You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The details about the node that is configured for the endpoint.</p>
+     */
     @NameInMap("NodeItems")
     public java.util.List<ModifyDBInstanceEndpointRequestNodeItems> nodeItems;
 
@@ -76,12 +93,28 @@ public class ModifyDBInstanceEndpointRequest extends TeaModel {
     }
 
     public static class ModifyDBInstanceEndpointRequestNodeItems extends TeaModel {
+        /**
+         * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The ID of the node.</p>
+         * <br>
+         * <p>You can use one of the following methods to query the ID of the node:</p>
+         * <br>
+         * <p>*   Log on to the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology in the lower part of the instance details page.</p>
+         * <p>*   Call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The weight of the node. Read requests are distributed based on the weight.</p>
+         * <br>
+         * <p>Valid values: 0 to 100.</p>
+         */
         @NameInMap("Weight")
         public Long weight;
 

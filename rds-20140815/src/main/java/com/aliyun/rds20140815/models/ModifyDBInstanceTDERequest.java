@@ -4,18 +4,54 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceTDERequest extends TeaModel {
+    /**
+     * <p>The file that contains the certificate.\</p>
+     * <p>Format:</p>
+     * <br>
+     * <p>*   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)</p>
+     * <p>*   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+     * <br>
+     * <p>*   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("Certificate")
     public String certificate;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database for which you want to enable TDE. You can specify up to 50 database names in a single request. If you specify multiple database names, separate the database names with commas (,).</p>
+     * <br>
+     * <p>> This parameter is available and must be specified only when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The ID of the custom key.</p>
+     * <br>
+     * <p>> This parameter is available when the instance runs MySQL or PostgreSQL.</p>
+     */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    /**
+     * <p>Specifies whether to replace the key. Valid values:</p>
+     * <br>
+     * <p>*   **true**: replaces the key.</p>
+     * <p>*   **false**: does not replace the key.</p>
+     * <br>
+     * <p>Default value: **false**</p>
+     * <br>
+     * <p>> This parameter is available only when the instance runs PostgreSQL.</p>
+     */
     @NameInMap("IsRotate")
     public Boolean isRotate;
 
@@ -25,9 +61,27 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The password of the certificate.</p>
+     * <br>
+     * <p>> This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+     */
     @NameInMap("PassWord")
     public String passWord;
 
+    /**
+     * <p>The file that contains the private key of the certificate.\</p>
+     * <p>Format:</p>
+     * <br>
+     * <p>*   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)</p>
+     * <p>*   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+     * <br>
+     * <p>*   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("PrivateKey")
     public String privateKey;
 
@@ -37,9 +91,20 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).</p>
+     * <br>
+     * <p>> This parameter is available when the instance runs MySQL or PostgreSQL.</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>The status of TDE. Valid values:</p>
+     * <br>
+     * <p>*   **Enabled**</p>
+     * <p>*   **Disabled**</p>
+     */
     @NameInMap("TDEStatus")
     public String TDEStatus;
 

@@ -4,15 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserBackupFileRequest extends TeaModel {
+    /**
+     * <p>The ID of the full backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the information about all full backup files in a region.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>The new description of the full backup file.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the full backup file. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +31,9 @@ public class UpdateUserBackupFileRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The new retention period of the full backup file. Unit: days. Valid values: any non-zero positive integer.</p>
+     */
     @NameInMap("Retention")
     public Integer retention;
 

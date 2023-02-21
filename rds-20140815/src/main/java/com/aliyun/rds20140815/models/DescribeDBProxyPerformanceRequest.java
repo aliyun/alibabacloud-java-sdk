@@ -4,24 +4,56 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyPerformanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
+    /**
+     * <p>The type of proxy that is enabled on the instance. Set the value to **DedicatedProxy**.</p>
+     */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The performance metrics that you want to query.</p>
+     * <br>
+     * <p>If the instance runs MySQL, you can query only the **Maxscale_CpuUsage** performance metric, which indicates the CPU utilization of the instance.</p>
+     * <br>
+     * <p>If the instance runs PostgreSQL, you can query the following performance metrics:</p>
+     * <br>
+     * <p>*   **Maxscale_TotalConns**: the number of connections per second</p>
+     * <p>*   **Maxscale_CurrentConns**: the number of connections that are established</p>
+     * <p>*   **Maxscale_DownFlows**: outbound traffic</p>
+     * <p>*   **Maxscale_UpFlows**: inbound traffic</p>
+     * <p>*   **Maxscale_QPS**: QPS</p>
+     * <p>*   **Maxscale_MemUsage**: memory usage</p>
+     * <p>*   **Maxscale_CpuUsage**: CPU utilization</p>
+     * <br>
+     * <p>If you want to query more than one performance metric, separate the performance metrics with commas (,). You can specify up to six performance metrics in a single request.</p>
+     */
     @NameInMap("MetricsName")
     public String metricsName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the instance resides. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +63,9 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

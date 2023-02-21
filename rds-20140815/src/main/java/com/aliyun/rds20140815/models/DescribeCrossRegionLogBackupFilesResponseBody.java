@@ -4,30 +4,59 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The end of the time range queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>An array that consists of cross-region log backup files.</p>
+     */
     @NameInMap("Items")
     public DescribeCrossRegionLogBackupFilesResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of cross-region log backup files on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -109,33 +138,63 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeCrossRegionLogBackupFilesResponseBodyItemsItem extends TeaModel {
+        /**
+         * <p>The ID of the destination region where the cross-region log backup file is stored.</p>
+         */
         @NameInMap("CrossBackupRegion")
         public String crossBackupRegion;
 
+        /**
+         * <p>The external URL from which you can download the cross-region log backup file.</p>
+         */
         @NameInMap("CrossDownloadLink")
         public String crossDownloadLink;
 
+        /**
+         * <p>The internal URL from which you can download the cross-region log backup file.</p>
+         */
         @NameInMap("CrossIntranetDownloadLink")
         public String crossIntranetDownloadLink;
 
+        /**
+         * <p>The ID of the cross-region log backup file.</p>
+         */
         @NameInMap("CrossLogBackupId")
         public Integer crossLogBackupId;
 
+        /**
+         * <p>The size of the cross-region log backup file. Unit: bytes.</p>
+         */
         @NameInMap("CrossLogBackupSize")
         public Long crossLogBackupSize;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public Integer instanceId;
 
+        /**
+         * <p>The time when the download URL of the cross-region log backup file expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
+        /**
+         * <p>The start time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LogBeginTime")
         public String logBeginTime;
 
+        /**
+         * <p>The end time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LogEndTime")
         public String logEndTime;
 
+        /**
+         * <p>The name of the cross-region log backup file.</p>
+         */
         @NameInMap("LogFileName")
         public String logFileName;
 

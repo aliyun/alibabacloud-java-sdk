@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeReadDBInstanceDelayRequest extends TeaModel {
+    /**
+     * <p>The ID of the primary instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -13,9 +16,15 @@ public class DescribeReadDBInstanceDelayRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the read-only instance.</p>
+     */
     @NameInMap("ReadInstanceId")
     public String readInstanceId;
 
+    /**
+     * <p>The ID of the region where the global active database clusters that you want to query reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceKeywordsResponseBody extends TeaModel {
+    /**
+     * <p>The type of reserved keyword returned.</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of reserved keywords.</p>
+     */
     @NameInMap("Words")
     public DescribeInstanceKeywordsResponseBodyWords words;
 

@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLCollectorRetentionRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -13,6 +16,9 @@ public class DescribeSQLCollectorRetentionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

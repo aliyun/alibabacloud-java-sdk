@@ -4,12 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceConnectionRequest extends TeaModel {
+    /**
+     * <p>The public endpoint of the instance.</p>
+     */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **Classic**</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 

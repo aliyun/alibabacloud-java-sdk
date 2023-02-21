@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the backup task.</p>
+     */
     @NameInMap("BackupJobId")
     public String backupJobId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,30 +4,63 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Disable**</p>
+     * <p>*   **Enable**</p>
+     */
     @NameInMap("BackupEnabled")
     public String backupEnabled;
 
+    /**
+     * <p>The ID of the destination region where the cross-region backup files of the instance are stored.</p>
+     */
     @NameInMap("CrossBackupRegion")
     public String crossBackupRegion;
 
+    /**
+     * <p>The policy that is used to save the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that all cross-region backup files are saved.</p>
+     */
     @NameInMap("CrossBackupType")
     public String crossBackupType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Disable**</p>
+     * <p>*   **Enable**</p>
+     */
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;
 
+    /**
+     * <p>The ID of the region to which the source instance belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The policy that is used to retain the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.</p>
+     */
     @NameInMap("RetentType")
     public Integer retentType;
 
+    /**
+     * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.</p>
+     */
     @NameInMap("Retention")
     public Integer retention;
 

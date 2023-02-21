@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpgradeMajorVersionTasksRequest extends TeaModel {
+    /**
+     * <p>The ID of the original instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -13,9 +16,23 @@ public class DescribeUpgradeMajorVersionTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Valid values: any non-zero positive integer.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: **30** to **100**.</p>
+     * <br>
+     * <p>Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -25,9 +42,20 @@ public class DescribeUpgradeMajorVersionTasksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The major engine version of the new instance. Valid values:</p>
+     * <br>
+     * <p>*   **10.0**</p>
+     * <p>*   **11.0**</p>
+     * <p>*   **12.0**</p>
+     * <p>*   **13.0**</p>
+     */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
+    /**
+     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+     */
     @NameInMap("TaskId")
     public Integer taskId;
 

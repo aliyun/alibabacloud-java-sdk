@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+     */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
 
+    /**
+     * <p>The port number that is used to connect to the self-managed PostgreSQL instance.</p>
+     */
     @NameInMap("SourcePort")
     public Long sourcePort;
 
+    /**
+     * <p>The ID of the job.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

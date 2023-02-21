@@ -4,18 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
+    /**
+     * <p>The ID of the cross-region backup file. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query IDs of backup files.</p>
+     */
     @NameInMap("CrossBackupId")
     public Integer crossBackupId;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

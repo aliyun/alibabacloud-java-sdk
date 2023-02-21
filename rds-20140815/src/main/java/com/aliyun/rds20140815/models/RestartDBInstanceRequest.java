@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RestartDBInstanceRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of an instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

@@ -4,18 +4,38 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogRecordsRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database. You can enter only one database name. If you specify this parameter, this operation returns only the logs that are generated for the specified database. If you do not specify this parameter, this operation returns the logs that are generated for all databases on the instance.</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time must be less than 30 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Specifies whether to generate an SQL audit log file or return SQL audit log entries. Valid values:</p>
+     * <br>
+     * <p>*   **File**: If you set this parameter to File, this operation generates an SQL audit log file and returns only common response parameters. After you call this operation, you must call the [DescribeSQLLogFiles](~~26295~~) operation to obtain the download URL of the SQL audit log file.</p>
+     * <p>*   **Stream**: If you set this parameter to Stream, this operation returns SQL audit log entries. This is the default value.</p>
+     * <br>
+     * <p>> If you set this parameter to **File**, only ApsaraDB RDS for MySQL instances that use local SSDs and ApsaraDB RDS for SQL Server instances are supported, and a maximum of 1 million log entries are returned.</p>
+     */
     @NameInMap("Form")
     public String form;
 
@@ -25,12 +45,28 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30** to **100**. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The keyword that is used for the query.</p>
+     * <br>
+     * <p>*   You can specify up to 10 keywords. The keywords use a logical **AND**. Separate multiple keywords with spaces.</p>
+     * <p>*   If a field name in the specified SQL statement is enclosed in backquotes (\`) and you want to use the field name as a keyword, you must enter the backquotes (\`) as part of the field name. For example, if the field name is **id**, enter **\`id\`** rather than **id**.</p>
+     * <br>
+     * <p>> After you enter a keyword, the system matches the keyword based on the **Database**, **User**, and **QueryKeywords** parameters. The parameters use a logical **OR**.</p>
+     */
     @NameInMap("QueryKeywords")
     public String queryKeywords;
 
@@ -40,12 +76,21 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The unique ID of the SQL statement.</p>
+     */
     @NameInMap("SQLId")
     public Long SQLId;
 
+    /**
+     * <p>The beginning of the time range to query. You can query the logs that are generated within the most recent 30 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The username of the account. You can enter only one username. If you specify this parameter, this operation returns only the logs that are generated for the specified account. If you do not specify this parameter, this operation returns the logs that are generated for all accounts on the instance.</p>
+     */
     @NameInMap("User")
     public String user;
 

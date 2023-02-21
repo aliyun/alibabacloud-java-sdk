@@ -4,12 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends TeaModel {
+    /**
+     * <p>The method to update the minor version of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Auto:** automatic upgrade.</p>
+     * <p>*   **Manual**: Instances are forcibly upgraded to a higher minor version when the current version goes offline.</p>
+     */
     @NameInMap("AutoUpgradeMinorVersion")
     public String autoUpgradeMinorVersion;
 
+    /**
+     * <p>The client token that is used to ensure the idempotency of requests. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

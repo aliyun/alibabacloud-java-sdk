@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogRecordsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details about each SQL audit log entry.</p>
+     */
     @NameInMap("Items")
     public DescribeSQLLogRecordsResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of SQL audit log entries on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -65,27 +80,51 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogRecordsResponseBodyItemsSQLRecord extends TeaModel {
+        /**
+         * <p>The username of the account that is recorded in the SQL audit log entry.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
+        /**
+         * <p>The IP address of the client that is connected to the instance.</p>
+         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
+        /**
+         * <p>The number of SQL audit log entries that are returned.</p>
+         */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
+        /**
+         * <p>The SQL statement that is executed in the query.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The ID of the thread.</p>
+         */
         @NameInMap("ThreadID")
         public String threadID;
 
+        /**
+         * <p>The execution duration of the SQL statement. Unit: microseconds.</p>
+         */
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;
 

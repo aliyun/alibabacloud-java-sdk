@@ -4,15 +4,31 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CopyDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The status of the database. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**</p>
+     * <p>*   **Running**</p>
+     * <p>*   **Deleting**</p>
+     */
     @NameInMap("DBStatus")
     public String DBStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

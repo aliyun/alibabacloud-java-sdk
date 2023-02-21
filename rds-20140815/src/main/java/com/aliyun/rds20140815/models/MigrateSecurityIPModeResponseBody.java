@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class MigrateSecurityIPModeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The network isolation mode after the switching. Valid value: **safety**, which indicates the enhanced whitelist mode.</p>
+     */
     @NameInMap("SecurityIPMode")
     public String securityIPMode;
 

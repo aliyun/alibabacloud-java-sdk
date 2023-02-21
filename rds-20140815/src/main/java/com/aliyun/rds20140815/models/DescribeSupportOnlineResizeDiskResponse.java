@@ -3,7 +3,7 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeHistoryTasksResponse extends TeaModel {
+public class DescribeSupportOnlineResizeDiskResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeHistoryTasksResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeHistoryTasksResponseBody body;
+    public DescribeSupportOnlineResizeDiskResponseBody body;
 
-    public static DescribeHistoryTasksResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeHistoryTasksResponse self = new DescribeHistoryTasksResponse();
+    public static DescribeSupportOnlineResizeDiskResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSupportOnlineResizeDiskResponse self = new DescribeSupportOnlineResizeDiskResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeHistoryTasksResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeSupportOnlineResizeDiskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeHistoryTasksResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeHistoryTasksResponse setStatusCode(Integer statusCode) {
+    public DescribeSupportOnlineResizeDiskResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeHistoryTasksResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeHistoryTasksResponse setBody(DescribeHistoryTasksResponseBody body) {
+    public DescribeSupportOnlineResizeDiskResponse setBody(DescribeSupportOnlineResizeDiskResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeHistoryTasksResponseBody getBody() {
+    public DescribeSupportOnlineResizeDiskResponseBody getBody() {
         return this.body;
     }
 

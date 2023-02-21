@@ -4,12 +4,23 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information about the parameter template.</p>
+     */
     @NameInMap("ParamGroup")
     public DescribeParameterGroupResponseBodyParamGroup paramGroup;
 
+    /**
+     * <p>The instance to which the parameter template was applied. </p>
+     * <br>
+     * <p>>  The RelatedCustinsInfo parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
+     */
     @NameInMap("RelatedCustinsInfo")
     public DescribeParameterGroupResponseBodyRelatedCustinsInfo relatedCustinsInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +54,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetailParameterDetail extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParamName")
         public String paramName;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 
@@ -92,36 +109,76 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterGroupResponseBodyParamGroupParameterGroup extends TeaModel {
+        /**
+         * <p>The time when the parameter template was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The database engine.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine version.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>Indicates whether the restart of an instance is required for the parameter template to take effect. Valid values:</p>
+         * <br>
+         * <p>*   **0**: A restart is not required.</p>
+         * <p>*   **1**: A restart is required.</p>
+         */
         @NameInMap("ForceRestart")
         public Integer forceRestart;
 
+        /**
+         * <p>The number of parameters in the parameter template.</p>
+         */
         @NameInMap("ParamCounts")
         public Integer paramCounts;
 
+        /**
+         * <p>The array of parameters.</p>
+         */
         @NameInMap("ParamDetail")
         public DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail paramDetail;
 
+        /**
+         * <p>The description of the parameter template.</p>
+         */
         @NameInMap("ParameterGroupDesc")
         public String parameterGroupDesc;
 
+        /**
+         * <p>The ID of the parameter template.</p>
+         */
         @NameInMap("ParameterGroupId")
         public String parameterGroupId;
 
+        /**
+         * <p>The name of the parameter template.</p>
+         */
         @NameInMap("ParameterGroupName")
         public String parameterGroupName;
 
+        /**
+         * <p>The type of the parameter template. Valid values:</p>
+         * <br>
+         * <p>*   **0**: the default parameter template.</p>
+         * <p>*   **1**: a custom parameter template.</p>
+         * <p>*   **2**: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</p>
+         */
         @NameInMap("ParameterGroupType")
         public Integer parameterGroupType;
 
+        /**
+         * <p>The time when the parameter template was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -240,9 +297,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterGroupResponseBodyRelatedCustinsInfoRelatedCustinsInfo extends TeaModel {
+        /**
+         * <p>The time when the parameter template was applied.</p>
+         */
         @NameInMap("AppliedTime")
         public String appliedTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 

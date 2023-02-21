@@ -4,27 +4,89 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateMigrateTaskRequest extends TeaModel {
+    /**
+     * <p>The type of the migration task. Valid values:</p>
+     * <br>
+     * <p>*   **FULL**: The migration task migrates full backup files.</p>
+     * <p>*   **UPDF**: The migration task migrates incremental or log backup files.</p>
+     */
     @NameInMap("BackupMode")
     public String backupMode;
 
+    /**
+     * <p>The consistency check method for the database. Valid values:</p>
+     * <br>
+     * <p>*   **SyncExecuteDBCheck**: synchronous database check</p>
+     * <p>*   **AsyncExecuteDBCheck**: asynchronous database check</p>
+     * <br>
+     * <p>Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).</p>
+     * <br>
+     * <p>>  This parameter is valid when **IsOnlineDB** is set to **True**.</p>
+     */
     @NameInMap("CheckDBMode")
     public String checkDBMode;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database that you want to back up.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>Specifies whether to make the restored database data available for user access. Valid values:</p>
+     * <br>
+     * <p>*   **True**</p>
+     * <p>*   **False**</p>
+     * <br>
+     * <p>>  Set the value to **True** for instances that run SQL Server 2008 R2.</p>
+     */
     @NameInMap("IsOnlineDB")
     public String isOnlineDB;
 
+    /**
+     * <p>The ID of the migration task. Valid values:</p>
+     * <br>
+     * <p>*   If **BackupMode** is set to **FULL**, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.</p>
+     * <p>*   If **BackupMode** is set to **UPDF**, the value of this parameter is the ID of the required full migration task.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If **IsOnlineDB** is set to **True**, **BackupMode** must be set to **FULL**.</p>
+     * <p>*   If **IsOnlineDB** is set to **False**, **BackupMode** must be set to **UPDF**.</p>
+     */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
 
+    /**
+     * <p>The shared URL of the backup file in the OSS bucket. The URL must be encoded.</p>
+     * <br>
+     * <p>If you specify multiple URLs, separate them with vertical bars (|) and then encode them.</p>
+     * <br>
+     * <p>>  This parameter is required for instances that run SQL Server 2008 R2.</p>
+     */
     @NameInMap("OSSUrls")
     public String OSSUrls;
 
+    /**
+     * <p>The location of the backup file in the OSS bucket.</p>
+     * <br>
+     * <p>The value consists of the following parts that are separated by colons (:):</p>
+     * <br>
+     * <p>*   The OSS endpoint: oss-ap-southeast-1.aliyuncs.com.</p>
+     * <p>*   The name of the OSS bucket: rdsmssqlsingapore.</p>
+     * <p>*   The key of the backup file in the OSS bucket: autotest\_2008R2\_TestMigration_FULL.bak.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is optional for instances that run SQL Server 2008 R2.</p>
+     * <p>*   This parameter is required for instances that run a database engine later than SQL Server 2008 R2.</p>
+     */
     @NameInMap("OssObjectPositions")
     public String ossObjectPositions;
 

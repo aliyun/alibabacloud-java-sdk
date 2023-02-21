@@ -4,27 +4,51 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the RDS instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The database engine that the RDS instance runs.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The version of the database engine that the RDS instance runs.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>An array that consists of parameter reconfiguration log entries.</p>
+     */
     @NameInMap("Items")
     public DescribeModifyParameterLogResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -98,18 +122,36 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     }
 
     public static class DescribeModifyParameterLogResponseBodyItemsParameterChangeLog extends TeaModel {
+        /**
+         * <p>The time when the parameter was reconfigured. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The new value of the parameter.</p>
+         */
         @NameInMap("NewParameterValue")
         public String newParameterValue;
 
+        /**
+         * <p>The original value of the parameter.</p>
+         */
         @NameInMap("OldParameterValue")
         public String oldParameterValue;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The status of the new value specified for the parameter. Valid values:</p>
+         * <br>
+         * <p>*   **Applied:** The new value has taken effect.</p>
+         * <p>*   **Syncing:** The new value is being applied and has not taken effect.</p>
+         */
         @NameInMap("Status")
         public String status;
 

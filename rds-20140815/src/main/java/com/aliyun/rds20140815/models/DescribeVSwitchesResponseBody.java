@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page. The value of this parameter is the same as the value of the **PageSize** parameter in the request parameters.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The details about the vSwitches.</p>
+     */
     @NameInMap("VSwitchs")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitchs> vSwitchs;
 
@@ -65,24 +80,51 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchesResponseBodyVSwitchs extends TeaModel {
+        /**
+         * <p>The CIDR block of the vSwitches.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>The description of the vSwitches.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The vSwitch is the default vSwitch.</p>
+         * <p>*   **false**: The vSwitch is not the default vSwitch.</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         */
         @NameInMap("IzNo")
         public String izNo;
 
+        /**
+         * <p>The status of the vSwitch. Valid values:</p>
+         * <br>
+         * <p>*   **Pending**: The vSwitch is being configured.</p>
+         * <p>*   **Available**: The vSwitch is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the vSwitch</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The name of the vSwitch.</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 

@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cross-region backup file.</p>
+     */
     @NameInMap("CrossBackupId")
     public Integer crossBackupId;
 
+    /**
+     * <p>The start time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("RecoveryBeginTime")
     public String recoveryBeginTime;
 
+    /**
+     * <p>The end time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("RecoveryEndTime")
     public String recoveryEndTime;
 
+    /**
+     * <p>The region ID of the source instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

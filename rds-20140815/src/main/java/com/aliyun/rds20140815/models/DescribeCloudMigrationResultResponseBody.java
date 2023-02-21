@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudMigrationResultResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details about the cloud migration task.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeCloudMigrationResultResponseBodyItems> items;
 
+    /**
+     * <p>The number of returned pages.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalSize")
     public Integer totalSize;
 
@@ -65,51 +80,116 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudMigrationResultResponseBodyItems extends TeaModel {
+        /**
+         * <p>The details about the task.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The time when the task was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The migration phase in which the task stays.</p>
+         * <br>
+         * <p>*   **precheck**: precheck</p>
+         * <p>*   **basebackup**: full data backup</p>
+         * <p>*   **startup**: link establishment</p>
+         * <p>*   **increment**: incremental data synchronization</p>
+         * <p>*   **switch**: cloud migration-triggered switchover</p>
+         * <p>*   **success**: cloud migration completed</p>
+         */
         @NameInMap("MigrateStage")
         public String migrateStage;
 
+        /**
+         * <p>The information about the replication link.</p>
+         */
         @NameInMap("ReplicationInfo")
         public String replicationInfo;
 
+        /**
+         * <p>The status of data replication.</p>
+         * <br>
+         * <p>*   **unstarted**</p>
+         * <p>*   **catchup**</p>
+         * <p>*   **streaming**</p>
+         * <p>*   **disconnect**</p>
+         * <p>*   **finish**</p>
+         */
         @NameInMap("ReplicationState")
         public String replicationState;
 
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("SourceAccount")
         public String sourceAccount;
 
+        /**
+         * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
+         * <br>
+         * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center, which can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</p>
+         * <p>*   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.</p>
+         * <p>*   **internet**: The self-managed PostgreSQL instance resides on a device that is connected over the Internet.</p>
+         */
         @NameInMap("SourceCategory")
         public String sourceCategory;
 
+        /**
+         * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         */
         @NameInMap("SourceIpAddress")
         public String sourceIpAddress;
 
+        /**
+         * <p>The password of the account.</p>
+         */
         @NameInMap("SourcePassword")
         public String sourcePassword;
 
+        /**
+         * <p>The port number that is used to connect to the self-managed PostgreSQL instance.</p>
+         */
         @NameInMap("SourcePort")
         public Long sourcePort;
 
+        /**
+         * <p>The time when a switchover was performed.</p>
+         */
         @NameInMap("SwitchTime")
         public String switchTime;
 
+        /**
+         * <p>A reserved parameter. The return value of this parameter is null.</p>
+         */
         @NameInMap("TargetEip")
         public String targetEip;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 

@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogReportListResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of SQL log reports.</p>
+     */
     @NameInMap("Items")
     public DescribeSQLLogReportListResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of reports on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of records returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,12 +80,23 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem extends TeaModel {
+        /**
+         * <p>The average time that is required to execute the SQL statement. Unit: milliseconds.</p>
+         */
         @NameInMap("AvgLatency")
         public Long avgLatency;
 
+        /**
+         * <p>The number of times that the SQL statement is executed.</p>
+         */
         @NameInMap("SQLExecuteTimes")
         public Long SQLExecuteTimes;
 
+        /**
+         * <p>The SQL statement returned.</p>
+         * <br>
+         * <p>>  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
@@ -125,9 +151,17 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItemsQPSTopNItem extends TeaModel {
+        /**
+         * <p>The number of times that the SQL statement is executed.</p>
+         */
         @NameInMap("SQLExecuteTimes")
         public Long SQLExecuteTimes;
 
+        /**
+         * <p>The SQL statement returned. </p>
+         * <br>
+         * <p>>  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
@@ -174,12 +208,21 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogReportListResponseBodyItemsItem extends TeaModel {
+        /**
+         * <p>An array that consists of SQL statements executed with the highest latency.</p>
+         */
         @NameInMap("LatencyTopNItems")
         public DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItems latencyTopNItems;
 
+        /**
+         * <p>An array that consists of SQL statements executed the most frequently.</p>
+         */
         @NameInMap("QPSTopNItems")
         public DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItems QPSTopNItems;
 
+        /**
+         * <p>The time when the report was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ReportTime")
         public String reportTime;
 

@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the read-only instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The latency at which data is replicated from the primary instance to the read-only instance. Unit: seconds.</p>
+     */
     @NameInMap("ReadSQLReplicationTime")
     public String readSQLReplicationTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the replication task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

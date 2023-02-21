@@ -4,48 +4,93 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceUsageResponseBody extends TeaModel {
+    /**
+     * <p>The storage that is occupied by archived backup files on the instance. Unit: bytes.</p>
+     */
     @NameInMap("ArchiveBackupSize")
     public Long archiveBackupSize;
 
+    /**
+     * <p>The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
+     */
     @NameInMap("BackupDataSize")
     public Long backupDataSize;
 
+    /**
+     * <p>The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
+     */
     @NameInMap("BackupLogSize")
     public Long backupLogSize;
 
+    /**
+     * <p>The size of data backup files that are stored in Object Storage Service (OSS) buckets. Unit: bytes. The value 0 indicates no data backup files are stored in OSS buckets.</p>
+     */
     @NameInMap("BackupOssDataSize")
     public Long backupOssDataSize;
 
+    /**
+     * <p>The size of log backup files that are stored in OSS buckets. Unit: bytes. The value 0 indicates no log backup files are stored in OSS buckets.</p>
+     */
     @NameInMap("BackupOssLogSize")
     public Long backupOssLogSize;
 
+    /**
+     * <p>The storage that is used to store backup files. Unit: bytes. The value -1 indicates that no backup files are stored.</p>
+     */
     @NameInMap("BackupSize")
     public Long backupSize;
 
+    /**
+     * <p>The storage that is used to store cold backup files. Unit: bytes. The value -1 indicates that no cold backup files are stored.</p>
+     */
     @NameInMap("ColdBackupSize")
     public Long coldBackupSize;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The storage that is used to store data files. Unit: bytes. The value -1 indicates that no data files are stored.</p>
+     */
     @NameInMap("DataSize")
     public Long dataSize;
 
+    /**
+     * <p>The total storage that is occupied by data files and log files on the instance. Unit: bytes. The value -1 indicates that no data files or log files are stored on the instance.</p>
+     */
     @NameInMap("DiskUsed")
     public Long diskUsed;
 
+    /**
+     * <p>The database engine that the instance runs.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The storage that is used to store log files. Unit: bytes. The value -1 indicates that no log files are stored.</p>
+     */
     @NameInMap("LogSize")
     public Long logSize;
 
+    /**
+     * <p>The backup storage for which you must pay. ApsaraDB RDS provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.</p>
+     */
     @NameInMap("PaidBackupSize")
     public Long paidBackupSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The storage that is occupied to execute SQL statements on the instance. Unit: bytes. The value -1 indicates that no SQL statements are executed.</p>
+     */
     @NameInMap("SQLSize")
     public Long SQLSize;
 

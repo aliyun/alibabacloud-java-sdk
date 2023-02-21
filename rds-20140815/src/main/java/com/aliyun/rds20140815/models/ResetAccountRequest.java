@@ -4,12 +4,25 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ResetAccountRequest extends TeaModel {
+    /**
+     * <p>The name of the privileged account.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The new password of the privileged account.</p>
+     * <br>
+     * <p>> *   The password must be 8 to 32 characters in length.</p>
+     * <p>> *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>> *   Special characters include: `!@#$\&amp;%^\*()\_+-=`</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

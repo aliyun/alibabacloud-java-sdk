@@ -4,12 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyParameterRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Specifies whether to restart the instance for a new parameter value to take effect. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The system forcefully restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.</p>
+     * <p>*   **false**: The system does not forcefully restart the instance.</p>
+     * <br>
+     * <p>Default value: **false**.</p>
+     */
     @NameInMap("Forcerestart")
     public Boolean forcerestart;
 
@@ -19,9 +33,20 @@ public class ModifyParameterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the parameter template.</p>
+     * <br>
+     * <p>> * If you specify this parameter, you do not need to specify the **Parameters** parameter.</p>
+     * <p>> * If the parameter template can be applied only after the instance is restarted, you must specify the **Forcerestart** parameter.</p>
+     */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
+    /**
+     * <p>The JSON strings of parameters and their values. All the parameter values are of the string type. Format: {"Parameter name 1":"Parameter value 1","Parameter name 2":"Parameter value 2"...}. You can call the [DescribeParameterTemplates](~~26284~~) operation to query parameter names and values.</p>
+     * <br>
+     * <p>> If you specify this parameter, you do not need to specify the **ParameterGroupId** parameter.</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 
@@ -31,9 +56,21 @@ public class ModifyParameterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The time at which the modification takes effect. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>> This time must be later than the time at which you call this operation.</p>
+     */
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    /**
+     * <p>The time at which the modification takes effect. Valid values:</p>
+     * <br>
+     * <p>*   **Immediately**: immediately modifies the parameter. This is the default value.</p>
+     * <p>*   **MaintainTime**: modifies the parameter during the maintenance window of the instance. You can call the [ModifyDBInstanceMaintainTime](~~26249~~) operation to change the maintenance window of the instance.</p>
+     * <p>*   **ScheduleTime**: The modification takes effect at the point in time that you specify. If you specify this value, you must also specify the **SwitchTime** parameter.</p>
+     */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 

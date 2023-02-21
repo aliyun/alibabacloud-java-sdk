@@ -4,9 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CheckInstanceExistResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the instance exists. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The instance exists.</p>
+     * <p>*   **false**: The instance does not exist.</p>
+     */
     @NameInMap("IsExistInstance")
     public Boolean isExistInstance;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

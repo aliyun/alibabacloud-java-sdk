@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The new major engine version of the instance.</p>
+     */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
+    /**
+     * <p>The ID of the upgrade check task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
