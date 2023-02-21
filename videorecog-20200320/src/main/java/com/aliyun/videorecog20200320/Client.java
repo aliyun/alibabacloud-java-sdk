@@ -278,10 +278,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Params", request.paramsShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.registerUrl)) {
-            body.put("RegisterUrl", request.registerUrl);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
             body.put("VideoUrl", request.videoUrl);
         }
@@ -352,32 +348,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeVideoCastCrewListRequest recognizeVideoCastCrewListReq = new RecognizeVideoCastCrewListRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeVideoCastCrewListReq);
-        if (!com.aliyun.teautil.Common.isUnset(request.registerUrlObject)) {
-            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-            ossConfig.accessKeyId = authResponse.body.accessKeyId;
-            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
-            ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
-                new TeaPair("filename", authResponse.body.objectKey),
-                new TeaPair("content", request.registerUrlObject),
-                new TeaPair("contentType", "")
-            ));
-            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
-                new TeaPair("policy", authResponse.body.encodedPolicy),
-                new TeaPair("signature", authResponse.body.signature),
-                new TeaPair("key", authResponse.body.objectKey),
-                new TeaPair("file", fileObj),
-                new TeaPair("successActionStatus", "201")
-            ));
-            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
-                new TeaPair("bucketName", authResponse.body.bucket),
-                new TeaPair("header", ossHeader)
-            ));
-            ossClient.postObject(uploadRequest, ossRuntime);
-            recognizeVideoCastCrewListReq.registerUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.videoUrlObject)) {
             authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.accessKeyId = authResponse.body.accessKeyId;
@@ -411,6 +381,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SplitVideoPartsResponse splitVideoPartsWithOptions(SplitVideoPartsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.template)) {
+            body.put("Template", request.template);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
             body.put("VideoUrl", request.videoUrl);
         }

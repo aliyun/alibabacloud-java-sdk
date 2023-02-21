@@ -7,9 +7,6 @@ public class RecognizeVideoCastCrewListAdvanceRequest extends TeaModel {
     @NameInMap("Params")
     public java.util.List<RecognizeVideoCastCrewListAdvanceRequestParams> params;
 
-    @NameInMap("RegisterUrl")
-    public java.io.InputStream registerUrlObject;
-
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
 
@@ -24,14 +21,6 @@ public class RecognizeVideoCastCrewListAdvanceRequest extends TeaModel {
     }
     public java.util.List<RecognizeVideoCastCrewListAdvanceRequestParams> getParams() {
         return this.params;
-    }
-
-    public RecognizeVideoCastCrewListAdvanceRequest setRegisterUrlObject(java.io.InputStream registerUrlObject) {
-        this.registerUrlObject = registerUrlObject;
-        return this;
-    }
-    public java.io.InputStream getRegisterUrlObject() {
-        return this.registerUrlObject;
     }
 
     public RecognizeVideoCastCrewListAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
