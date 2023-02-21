@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details about the instances.</p>
+     */
     @NameInMap("Items")
     public DescribeDBInstancesForCloneResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,6 +80,9 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesForCloneResponseBodyItemsDBInstanceReadOnlyDBInstanceIdsReadOnlyDBInstanceId extends TeaModel {
+        /**
+         * <p>The ID of the read-only instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
@@ -103,96 +121,231 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesForCloneResponseBodyItemsDBInstance extends TeaModel {
+        /**
+         * <p>The RDS edition of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Basic**: RDS Basic Edition</p>
+         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
+         * <p>*   **Finance**: RDS Enterprise Edition</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The connection mode of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Standard**: standard mode</p>
+         * <p>*   **Safe**: database proxy mode</p>
+         */
         @NameInMap("ConnectionMode")
         public String connectionMode;
 
+        /**
+         * <p>The time when the instance is created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The instance type of the instance. For more information, see [Instance types](~~26312~~).</p>
+         */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
+        /**
+         * <p>The name of the instance. It must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <br>
+         * <p>> The name cannot start with http:// or https://.</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The network connection type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Internet**</p>
+         * <p>*   **Intranet**</p>
+         */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
+        /**
+         * <p>The status of the instance. For more information, see [Instance state table](~~26315~~).</p>
+         */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
+        /**
+         * <p>The storage type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **local_ssd/ephemeral_ssd**: local SSD</p>
+         * <p>*   **cloud_ssd**: standard SSD</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
+         */
         @NameInMap("DBInstanceStorageType")
         public String DBInstanceStorageType;
 
+        /**
+         * <p>The role of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Primary**: primary instance</p>
+         * <p>*   **Readonly**: read-only instance</p>
+         * <p>*   **Guard**: disaster recovery instance</p>
+         * <p>*   **Temp**: temporary instance</p>
+         */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
+        /**
+         * <p>The time when the instance was destroyed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("DestroyTime")
         public String destroyTime;
 
+        /**
+         * <p>The type of the database engine. Valid values:</p>
+         * <br>
+         * <p>*   MySQL</p>
+         * <p>*   SQLServer</p>
+         * <p>*   PostgreSQL</p>
+         * <p>*   PPAS</p>
+         * <p>*   MariaDB</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine version of the instance.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The time when the instance expired. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance.</p>
+         */
         @NameInMap("GuardDBInstanceId")
         public String guardDBInstanceId;
 
+        /**
+         * <p>The ID of the instance role.</p>
+         */
         @NameInMap("InsId")
         public Integer insId;
 
+        /**
+         * <p>The network type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Classic**</p>
+         * <p>*   **VPC**</p>
+         */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
+        /**
+         * <p>The lock method of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Unlock**: The instance is not locked.</p>
+         * <p>*   **ManualLock**: The instance is manually locked.</p>
+         * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
+         * <p>*   **LockByRestoration**: The instance is automatically locked due to instance restoration.</p>
+         * <p>*   **LockByDiskQuota**: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <p>The reason why the instance was locked.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <p>The ID of the primary instance. If the value of this parameter is null, the instance is a primary instance.</p>
+         */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
+        /**
+         * <p>Indicates whether multi-region deployment is used. Valid values:</p>
+         * <br>
+         * <p>*   **true**: Multi-region deployment is used.</p>
+         * <p>*   **false**: Multi-region deployment is not used.</p>
+         */
         @NameInMap("MutriORsignle")
         public Boolean mutriORsignle;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Postpaid**: pay-as-you-go</p>
+         * <p>*   **Prepaid**: subscription</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>An array that consists of the IDs of the read-only instances that are attached to the primary instance.</p>
+         */
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>None.</p>
+         */
         @NameInMap("ReplicateId")
         public String replicateId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the temporary instance.</p>
+         */
         @NameInMap("TempDBInstanceId")
         public String tempDBInstanceId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the instance in the VPC.</p>
+         */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The zone ID of the instance.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

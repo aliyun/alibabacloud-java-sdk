@@ -4,12 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyActionEventPolicyRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the event history feature. Valid values: **True | False**.</p>
+     */
     @NameInMap("EnableEventLog")
     public String enableEventLog;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region for which you want to enable the event history feature. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

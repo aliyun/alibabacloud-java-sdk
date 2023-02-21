@@ -4,24 +4,45 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
+    /**
+     * <p>The instance to which the cross-region backup file belongs.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>An array that consists of the information about the databases and tables whose data is included in the cross-region backup file.</p>
+     */
     @NameInMap("Items")
     public DescribeCrossBackupMetaListResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned pages.</p>
+     */
     @NameInMap("TotalPageCount")
     public Integer totalPageCount;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -87,12 +108,21 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeCrossBackupMetaListResponseBodyItemsMeta extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The size of the table. Unit: KB. If the database contains more than one table, the names of these tables are separated by commas (,).</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>An array that consists of the names of the tables that the database contains. If the database contains more than one table, the names of these tables are separated by commas (,).</p>
+         */
         @NameInMap("Tables")
         public String tables;
 

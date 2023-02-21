@@ -4,15 +4,37 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class SwitchDBInstanceHARequest extends TeaModel {
+    /**
+     * <p>The ID of the primary instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The time when the switching takes effect. Valid values:</p>
+     * <br>
+     * <p>*   **Immediate**: The switching immediately takes effect.</p>
+     * <p>*   **MaintainTime**: The switching takes effect during the maintenance time.</p>
+     * <br>
+     * <p>Default value: **Immediate**.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    /**
+     * <p>Specifies whether to enable forcible switching. Valid values:</p>
+     * <br>
+     * <p>*   **Yes**</p>
+     * <p>*   **No**</p>
+     * <br>
+     * <p>Default value: **No**.</p>
+     */
     @NameInMap("Force")
     public String force;
 
+    /**
+     * <p>The unique ID of the secondary instance. You can call [DescribeDBInstanceHAConfig](~~26244~~) to query the secondary instance ID.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

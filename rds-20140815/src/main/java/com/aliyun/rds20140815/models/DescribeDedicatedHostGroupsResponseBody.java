@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of dedicated clusters returned.</p>
+     */
     @NameInMap("DedicatedHostGroups")
     public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroups dedicatedHostGroups;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,84 +57,178 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups extends TeaModel {
+        /**
+         * <p>The policy based on which the system allocates resources in the dedicated cluster. Valid values:</p>
+         * <br>
+         * <p>*   **Evenly**: The system evenly allocates the resources to all the hosts in the dedicated cluster.</p>
+         * <p>*   **Intensively**: The system preferentially allocates the resources to the heavily loaded hosts in the dedicated cluster.</p>
+         */
         @NameInMap("AllocationPolicy")
         public String allocationPolicy;
 
+        /**
+         * <p>The ID of the bastion host.</p>
+         */
         @NameInMap("BastionInstanceId")
         public String bastionInstanceId;
 
+        /**
+         * <p>The percentage of allocated cores in the dedicated cluster. Unit: %.</p>
+         */
         @NameInMap("CpuAllocateRation")
         public Float cpuAllocateRation;
 
+        /**
+         * <p>The number of allocated cores in the dedicated cluster.</p>
+         */
         @NameInMap("CpuAllocatedAmount")
         public Float cpuAllocatedAmount;
 
+        /**
+         * <p>The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         */
         @NameInMap("CpuAllocationRatio")
         public Integer cpuAllocationRatio;
 
+        /**
+         * <p>The timestamp when the dedicated cluster was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The type of storage media that is used for the hosts in the dedicated cluster. Valid values:</p>
+         * <br>
+         * <p>*   **dhg_cloud_ssd**: standard or enhanced solid-state drive (SSD)</p>
+         * <p>*   **dhg_local_ssd**: local SSD</p>
+         */
         @NameInMap("DedicatedHostCountGroupByHostType")
         public java.util.Map<String, ?> dedicatedHostCountGroupByHostType;
 
+        /**
+         * <p>The name of the dedicated cluster.</p>
+         */
         @NameInMap("DedicatedHostGroupDesc")
         public String dedicatedHostGroupDesc;
 
+        /**
+         * <p>The ID of the dedicated cluster.</p>
+         */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
+        /**
+         * <p>The percentage of allocated disk space in the dedicated cluster. Unit: %.</p>
+         */
         @NameInMap("DiskAllocateRation")
         public Float diskAllocateRation;
 
+        /**
+         * <p>The amount of allocated disk space in the dedicated cluster. Unit: GB.</p>
+         */
         @NameInMap("DiskAllocatedAmount")
         public Float diskAllocatedAmount;
 
+        /**
+         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the disk overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         */
         @NameInMap("DiskAllocationRatio")
         public Integer diskAllocationRatio;
 
+        /**
+         * <p>The amount of used disk space in the dedicated cluster. Unit: GB.</p>
+         */
         @NameInMap("DiskUsedAmount")
         public Float diskUsedAmount;
 
+        /**
+         * <p>The disk usage of the dedicated cluster. Unit: %.</p>
+         */
         @NameInMap("DiskUtility")
         public Float diskUtility;
 
+        /**
+         * <p>The database engine that is run on the instances in the dedicated cluster.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The total number of hosts in the dedicated cluster.</p>
+         */
         @NameInMap("HostNumber")
         public Integer hostNumber;
 
+        /**
+         * <p>The policy based on which the system handles host failures. Valid values:</p>
+         * <br>
+         * <p>*   **Auto**: The system automatically replaces faulty hosts.</p>
+         * <p>*   **Manual**: You must manually replace faulty hosts.</p>
+         */
         @NameInMap("HostReplacePolicy")
         public String hostReplacePolicy;
 
+        /**
+         * <p>The total number of instances in the dedicated cluster.</p>
+         */
         @NameInMap("InstanceNumber")
         public Integer instanceNumber;
 
+        /**
+         * <p>The percentage of allocated memory space in the dedicated cluster. Unit: %.</p>
+         */
         @NameInMap("MemAllocateRation")
         public Float memAllocateRation;
 
+        /**
+         * <p>The amount of allocated memory space in the dedicated cluster.</p>
+         */
         @NameInMap("MemAllocatedAmount")
         public Float memAllocatedAmount;
 
+        /**
+         * <p>The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the memory overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         */
         @NameInMap("MemAllocationRatio")
         public Integer memAllocationRatio;
 
+        /**
+         * <p>The amount of used memory space in the dedicated cluster. Unit: MB.</p>
+         */
         @NameInMap("MemUsedAmount")
         public Float memUsedAmount;
 
+        /**
+         * <p>The memory usage of the dedicated cluster. Unit: %.</p>
+         */
         @NameInMap("MemUtility")
         public Float memUtility;
 
+        /**
+         * <p>Indicates whether the operating system permissions of the hosts in the dedicated cluster can be granted. Valid values:</p>
+         * <br>
+         * <p>*   **0** or **null**: The permissions cannot be granted.</p>
+         * <p>*   **1**: The permissions can be granted.</p>
+         * <p>*   **3**: The permissions have been granted.</p>
+         */
         @NameInMap("OpenPermission")
         public String openPermission;
 
+        /**
+         * <p>The name and ID of the dedicated cluster. The value of this parameter consists of two parts: the value of the **DedicatedHostGroupDesc** parameter and the value of the **DedicatedHostGroupId** parameter. Format: DedicatedHostGroupDesc/DedicatedHostGroupId.</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the dedicated cluster belongs.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>A list of zones to which the hosts of the dedicated cluster belong.</p>
+         */
         @NameInMap("ZoneIDList")
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroupsZoneIDList zoneIDList;
 

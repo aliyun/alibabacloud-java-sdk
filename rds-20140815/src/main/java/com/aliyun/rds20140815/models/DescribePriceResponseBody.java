@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
+    /**
+     * <p>The information about the price.</p>
+     */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the details of the promotion rule.</p>
+     */
     @NameInMap("Rules")
     public DescribePriceResponseBodyRules rules;
 
@@ -43,12 +52,21 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoActivityInfo extends TeaModel {
+        /**
+         * <p>The returned message.</p>
+         */
         @NameInMap("CheckErrMsg")
         public String checkErrMsg;
 
+        /**
+         * <p>The error code that is returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether the request was successful.</p>
+         */
         @NameInMap("Success")
         public String success;
 
@@ -84,15 +102,27 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoCouponsCoupon extends TeaModel {
+        /**
+         * <p>The ID of the coupon.</p>
+         */
         @NameInMap("CouponNo")
         public String couponNo;
 
+        /**
+         * <p>The description of the coupon.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the coupon is selected.</p>
+         */
         @NameInMap("IsSelected")
         public String isSelected;
 
+        /**
+         * <p>The name of the coupon.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -174,24 +204,45 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
+        /**
+         * <p>The information about the promotion.</p>
+         */
         @NameInMap("ActivityInfo")
         public DescribePriceResponseBodyPriceInfoActivityInfo activityInfo;
 
+        /**
+         * <p>An array that consists of information about the coupon.</p>
+         */
         @NameInMap("Coupons")
         public DescribePriceResponseBodyPriceInfoCoupons coupons;
 
+        /**
+         * <p>The currency unit.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>An array that consists of the ID of the promotion rule.</p>
+         */
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyPriceInfoRuleIds ruleIds;
 
+        /**
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -259,12 +310,21 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyRulesRule extends TeaModel {
+        /**
+         * <p>The description of the promotion rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the promotion rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the promotion rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 

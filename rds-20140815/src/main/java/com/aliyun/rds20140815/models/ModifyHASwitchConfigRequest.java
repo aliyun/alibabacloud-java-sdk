@@ -4,18 +4,39 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyHASwitchConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The status of the automatic primary/secondary switchover feature. Valid values:</p>
+     * <br>
+     * <p>*   **Auto:** The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</p>
+     * <p>*   **Manual:** The automatic primary/secondary switchover feature is disabled. You must manually switch your workloads over from the instance to its secondary instance in the event of a fault.</p>
+     * <br>
+     * <p>Default value: **Auto**.</p>
+     * <br>
+     * <p>>  If you set this parameter to **Manual**, you must specify the **ManualHATime** parameter.</p>
+     */
     @NameInMap("HAConfig")
     public String HAConfig;
 
+    /**
+     * <p>The time after which the automatic primary/secondary switchover feature is enabled. At most, you can set this parameter to 23:59:59 seven days later. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when you set the **HAConfig** parameter to **Manual**.</p>
+     */
     @NameInMap("ManualHATime")
     public String manualHATime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

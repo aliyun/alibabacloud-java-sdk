@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information about the tasks that are returned.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeUpgradeMajorVersionTasksResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,39 +80,100 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeUpgradeMajorVersionTasksResponseBodyItems extends TeaModel {
+        /**
+         * <p>The time at which ApsaraDB RDS collects the statistics of the new RDS instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **After**: ApsaraDB RDS collects the statistics of the new instance after a switchover.</p>
+         * <p>*   **Before**: ApsaraDB RDS collects the statistics of the new instance before a switchover.</p>
+         */
         @NameInMap("CollectStatMode")
         public String collectStatMode;
 
+        /**
+         * <p>The details of the task.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <p>The time at which the task ended.</p>
+         * <br>
+         * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The status of the task.</p>
+         * <br>
+         * <p>*   **Success**: The task is successful.</p>
+         * <p>*   **Failed**: The task failed.</p>
+         * <p>*   **Running**: The task is in the phase in which data is being migrated to a new instance.</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The ID of the original instance.</p>
+         */
         @NameInMap("SourceInsName")
         public String sourceInsName;
 
+        /**
+         * <p>The major engine version of the original instance.</p>
+         */
         @NameInMap("SourceMajorVersion")
         public String sourceMajorVersion;
 
+        /**
+         * <p>The time at which the task started.</p>
+         * <br>
+         * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The time at which your workloads are switched over from the original instance to the new instance.</p>
+         * <br>
+         * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         */
         @NameInMap("SwitchTime")
         public String switchTime;
 
+        /**
+         * <p>The ID of the new instance.</p>
+         */
         @NameInMap("TargetInsName")
         public String targetInsName;
 
+        /**
+         * <p>The major engine version of the new instance. Valid values:</p>
+         * <br>
+         * <p>*   **10.0**</p>
+         * <p>*   **11.0**</p>
+         * <p>*   **12.0**</p>
+         * <p>*   **13.0**</p>
+         */
         @NameInMap("TargetMajorVersion")
         public String targetMajorVersion;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public Integer taskId;
 
+        /**
+         * <p>Indicates whether ApsaraDB RDS migrates data to the new instance and switches your workloads over to the new instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **clone**: ApsaraDB RDS does not migrate data to the new instance and does not switch your workloads over to the new instance.</p>
+         * <p>*   **switch**: ApsaraDB RDS migrates data to the new instance and switches your workloads over to the new instance.</p>
+         */
         @NameInMap("UpgradeMode")
         public String upgradeMode;
 

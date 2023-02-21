@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeGadInstancesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details about the global active database clusters that are returned.</p>
+     */
     @NameInMap("GadInstances")
     public java.util.List<DescribeGadInstancesResponseBodyGadInstances> gadInstances;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,61 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers extends TeaModel {
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("DBInstanceID")
         public String DBInstanceID;
 
+        /**
+         * <p>A JSON array that consists of the details about the Data Transmission Service (DTS) synchronization task.</p>
+         * <br>
+         * <p>>  Each unit node uses DTS to synchronize data with the central node. This parameter contains the ID of the DTS synchronization link and the ID of the DTS synchronization request.</p>
+         */
         @NameInMap("DtsInstance")
         public String dtsInstance;
 
+        /**
+         * <p>The database engine that is run by the node.</p>
+         * <br>
+         * <p>>  The value of this parameter is fixed as **mysql**.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine version that is run by the node.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The ID of the region where the node resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The type of the node. Valid values:</p>
+         * <br>
+         * <p>*   **CENTRAL**: The node is the central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.</p>
+         * <p>*   **UNIT**: The node is a unit node. Each global active database cluster can have up to 10 unit nodes. All unit nodes synchronize data from the central node.</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The status of the node. Valid values:</p>
+         * <br>
+         * <p>*   **activation**: The node is running.</p>
+         * <p>*   **creating**: The node is being created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -128,24 +168,51 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGadInstancesResponseBodyGadInstances extends TeaModel {
+        /**
+         * <p>The time when the global active database cluster was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The name of the global active database cluster.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>An array that consists of the details about the nodes in the global active database cluster.</p>
+         */
         @NameInMap("GadInstanceMembers")
         public java.util.List<DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers> gadInstanceMembers;
 
+        /**
+         * <p>The ID of the global active database cluster.</p>
+         */
         @NameInMap("GadInstanceName")
         public String gadInstanceName;
 
+        /**
+         * <p>The time when the most recent modification was made to the global active database cluster. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <p>The database engine that is run by the global active database cluster.</p>
+         * <br>
+         * <p>>  The value of this parameter is fixed as **mysql**.</p>
+         */
         @NameInMap("Service")
         public String service;
 
+        /**
+         * <p>The status of the global active database cluster. Valid values:</p>
+         * <br>
+         * <p>*   **activation**: The global active database cluster is running.</p>
+         * <p>*   **creating**: The global active database cluster is being created.</p>
+         * <p>*   **replica_adding**: Nodes are being added to the global active database cluster.</p>
+         */
         @NameInMap("Status")
         public String status;
 

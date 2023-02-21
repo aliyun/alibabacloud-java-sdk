@@ -4,9 +4,22 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionModeRequest extends TeaModel {
+    /**
+     * <p>The connection mode of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Standard**: standard mode</p>
+     * <p>*   **Safe**: database proxy mode</p>
+     * <br>
+     * <p>The system automatically assigns a connection mode to the instance.</p>
+     * <br>
+     * <p>>  SQL Server 2012, SQL Server 2016, and SQL Server 2017 support only the standard mode.</p>
+     */
     @NameInMap("ConnectionMode")
     public String connectionMode;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The database engine.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The version of the database engine.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The number of parameters.</p>
+     */
     @NameInMap("ParameterCount")
     public String parameterCount;
 
+    /**
+     * <p>The list of parameters.</p>
+     */
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,21 +80,39 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
+        /**
+         * <p>The value range of the parameter.</p>
+         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        /**
+         * <p>Indicates whether the parameter can be modified. Valid values: **true | false**</p>
+         */
         @NameInMap("ForceModify")
         public String forceModify;
 
+        /**
+         * <p>Indicates whether the modified parameter takes effect only after a database restart. Valid values: **true | false**</p>
+         */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The default value of the parameter.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

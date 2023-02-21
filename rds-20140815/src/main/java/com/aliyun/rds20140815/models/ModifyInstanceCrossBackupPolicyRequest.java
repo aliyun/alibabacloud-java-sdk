@@ -4,24 +4,52 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>The status of the cross-region backup feature on the instance. This parameter specifies whether you can back up data and logs. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disables the feature.</p>
+     * <p>*   **1**: enables the feature.</p>
+     * <br>
+     * <p>>  Before you enable the cross-region backup feature, you must configure the CrossBackupRegion parameter.</p>
+     */
     @NameInMap("BackupEnabled")
     public String backupEnabled;
 
+    /**
+     * <p>The ID of the destination region where the cross-region backup files of the instance are stored.</p>
+     */
     @NameInMap("CrossBackupRegion")
     public String crossBackupRegion;
 
+    /**
+     * <p>The policy that is used to save the cross-region backup files of the instance. Set the value to **1**. The value 1 specifies that all cross-region backup files are saved.</p>
+     */
     @NameInMap("CrossBackupType")
     public String crossBackupType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disables the feature.</p>
+     * <p>*   **1**: enables the feature.</p>
+     * <br>
+     * <p>>  You can enable the cross-region log backup feature only when the cross-region backup feature is enabled.</p>
+     */
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the source instance belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,9 +59,15 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The policy that is used to retain the cross-region backup files of the instance. Set the value to 1. The value **1** specifies that the cross-region backup files of the instance are retained based on the specified retention period.</p>
+     */
     @NameInMap("RetentType")
     public Integer retentType;
 
+    /**
+     * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.</p>
+     */
     @NameInMap("Retention")
     public Integer retention;
 

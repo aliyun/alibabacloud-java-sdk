@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogsRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database that you want to query.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the *yyyy-MM-dd*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -19,9 +28,17 @@ public class DescribeSlowLogsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30** to **100**. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -31,9 +48,22 @@ public class DescribeSlowLogsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The dimension based on which ApsaraDB RDS sorts the returned entries. Valid values:</p>
+     * <br>
+     * <p>*   **TotalExecutionCounts**: ApsaraDB RDS sorts the returned entries based on the total number of SQL statements that are executed.</p>
+     * <p>*   **TotalQueryTimes**: ApsaraDB RDS sorts the returned entries based on the total execution duration.</p>
+     * <p>*   **TotalLogicalReads**: ApsaraDB RDS sorts the returned entries based on the total number of logical reads.</p>
+     * <p>*   **TotalPhysicalReads**: ApsaraDB RDS sorts the returned entries based on the total number of physical reads.</p>
+     * <br>
+     * <p>>  This parameter is supported only for instances that run SQL Server 2008 R2.</p>
+     */
     @NameInMap("SortKey")
     public String sortKey;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

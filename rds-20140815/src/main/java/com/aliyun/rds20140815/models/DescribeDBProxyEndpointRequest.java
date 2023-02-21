@@ -4,21 +4,36 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyEndpointRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The proxy endpoint that you want to query. You can call the [DescribeDBProxy](~~141055~~) operation to query the proxy endpoint.</p>
+     */
     @NameInMap("DBProxyConnectString")
     public String DBProxyConnectString;
 
+    /**
+     * <p>The name of the proxy terminal to which the proxy endpoint belongs. You can call the [DescribeDBProxy](~~141055~~) operation to query the name of the proxy terminal.</p>
+     */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
+    /**
+     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CheckCreateDdrDBInstanceResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the data of the source instance can be restored across regions. Valid values:** true and false**</p>
+     */
     @NameInMap("IsValid")
     public String isValid;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

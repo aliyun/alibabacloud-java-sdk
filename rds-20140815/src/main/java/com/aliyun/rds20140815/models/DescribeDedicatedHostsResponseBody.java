@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the dedicated cluster.</p>
+     */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
+    /**
+     * <p>An array that consists of hosts returned.</p>
+     */
     @NameInMap("DedicatedHosts")
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,87 +52,193 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts extends TeaModel {
+        /**
+         * <p>The account of the host. You can call the [CreateDedicatedHostAccount](~~196877~~) operation to create a host account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>Indicates whether the system allows you to create instances on the host. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The system does not allow you to create instances on the host.</p>
+         * <p>*   **1**: The system allows you to create instances on the host.</p>
+         */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
+        /**
+         * <p>The ID of the bastion host.</p>
+         */
         @NameInMap("BastionInstanceId")
         public String bastionInstanceId;
 
+        /**
+         * <p>The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         */
         @NameInMap("CPUAllocationRatio")
         public String CPUAllocationRatio;
 
+        /**
+         * <p>The number of used cores on the host.</p>
+         */
         @NameInMap("CpuUsed")
         public String cpuUsed;
 
+        /**
+         * <p>The time when the host was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The ID of the dedicated cluster.</p>
+         */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
+        /**
+         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the disk overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         */
         @NameInMap("DiskAllocationRatio")
         public String diskAllocationRatio;
 
+        /**
+         * <p>The time when the host expires.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The database engine of instances that are created on the host.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The total number of cores that are configured for the host.</p>
+         */
         @NameInMap("HostCPU")
         public String hostCPU;
 
+        /**
+         * <p>The specifications of the host.</p>
+         */
         @NameInMap("HostClass")
         public String hostClass;
 
+        /**
+         * <p>The total memory space of the host. Unit: MB.</p>
+         */
         @NameInMap("HostMem")
         public String hostMem;
 
+        /**
+         * <p>The name of the host.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The status of the host. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The host is being created.</p>
+         * <p>*   **1**: The host is running.</p>
+         * <p>*   **2**: The host is faulty.</p>
+         * <p>*   **3**: The host is being replaced.</p>
+         * <p>*   **4**: The host is deprecated.</p>
+         * <p>*   **5**: The host is being deleted.</p>
+         * <p>*   **6**: The host is restarting.</p>
+         */
         @NameInMap("HostStatus")
         public String hostStatus;
 
+        /**
+         * <p>The storage capacity of the host. Unit: MB.</p>
+         */
         @NameInMap("HostStorage")
         public String hostStorage;
 
+        /**
+         * <p>The type of storage media that is used for the host. Valid values:</p>
+         * <br>
+         * <p>*   **dhg_cloud_ssd**: enhanced SSD</p>
+         * <p>*   **dhg_local_ssd**: local SSD</p>
+         */
         @NameInMap("HostType")
         public String hostType;
 
+        /**
+         * <p>The internal IP address of the host.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The image of the host. This parameter is returned only when the **Engine** parameter is set to **mssql**. Valid values:</p>
+         * <br>
+         * <p>*   **WindowsWithMssqlStdLicense**: a Windows image, which contains the licenses of the SQL Server Standard Edition</p>
+         * <p>*   **WindowsWithMssqlEntLisence**: a Windows image, which contains the licenses of the SQL Server Enterprise Edition</p>
+         * <p>*   **WindowsWithMssqlWebLisence**: a Windows image, which contains the licenses of the SQL Server Web Edition</p>
+         */
         @NameInMap("ImageCategory")
         public String imageCategory;
 
+        /**
+         * <p>The total number of instances that are created on the host.</p>
+         */
         @NameInMap("InstanceNumber")
         public String instanceNumber;
 
+        /**
+         * <p>The maximum memory usage per host in the dedicated cluster.</p>
+         */
         @NameInMap("MemAllocationRatio")
         public String memAllocationRatio;
 
+        /**
+         * <p>The amount of used memory space on the host. Unit: MB.</p>
+         */
         @NameInMap("MemoryUsed")
         public String memoryUsed;
 
+        /**
+         * <p>Indicates whether the operating system permissions of the host can be granted. Valid values:</p>
+         * <br>
+         * <p>*   **0** or **null**: The permissions cannot be granted.</p>
+         * <p>*   **1**: The permissions can be granted.</p>
+         * <p>*   **3**: The permissions have been granted.</p>
+         */
         @NameInMap("OpenPermission")
         public String openPermission;
 
+        /**
+         * <p>The amount of used storage space on the host.</p>
+         */
         @NameInMap("StorageUsed")
         public String storageUsed;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the host belongs.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The ID of the vSwitch associated with the specified VPC.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The zone ID of the host.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

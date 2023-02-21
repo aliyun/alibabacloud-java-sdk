@@ -4,12 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyHADiagnoseConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +25,12 @@ public class ModifyHADiagnoseConfigRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The availability check method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **SHORT**: Alibaba Cloud uses short-lived connections to check the availability of the instance.</p>
+     * <p>*   **LONG**: Alibaba Cloud uses persistent connections to check the availability of the instance.</p>
+     */
     @NameInMap("TcpConnectionType")
     public String tcpConnectionType;
 

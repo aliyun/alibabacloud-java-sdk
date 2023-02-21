@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateGADInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the information returned.</p>
+     */
     @NameInMap("Result")
     public CreateGADInstanceResponseBodyResult result;
 
@@ -32,12 +38,21 @@ public class CreateGADInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateGADInstanceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The number of unit nodes that are created by calling this operation.</p>
+         */
         @NameInMap("CreateMemberCount")
         public String createMemberCount;
 
+        /**
+         * <p>The ID of the global active database cluster.</p>
+         */
         @NameInMap("GadInstanceName")
         public String gadInstanceName;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskID")
         public String taskID;
 

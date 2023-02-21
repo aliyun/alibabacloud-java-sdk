@@ -4,21 +4,39 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the account.</p>
+     */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The first time when the superuser account was enabled. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("SystemAdminAccountFirstActivationTime")
     public String systemAdminAccountFirstActivationTime;
 
+    /**
+     * <p>Indicates whether the superuser account is enabled.</p>
+     */
     @NameInMap("SystemAdminAccountStatus")
     public String systemAdminAccountStatus;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -76,12 +94,27 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivilegesDatabasePrivilege extends TeaModel {
+        /**
+         * <p>The type of the permissions. Valid values:</p>
+         * <br>
+         * <p>*   **ReadWrite**: read and write permissions</p>
+         * <p>*   **ReadOnly**: read-only permissions</p>
+         * <p>*   **DDLOnly**: DDL-only permissions</p>
+         * <p>*   **DMLOnly**: DML-only permissions</p>
+         * <p>*   **Custom**: custom permissions (which can be modified by using SQL statements)</p>
+         */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
+        /**
+         * <p>The permissions that are granted to the account. For more information, see [Account permissions](~~146395~~).</p>
+         */
         @NameInMap("AccountPrivilegeDetail")
         public String accountPrivilegeDetail;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
@@ -136,39 +169,111 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccount extends TeaModel {
+        /**
+         * <p>The description of the account.</p>
+         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The state of the account. Valid values:</p>
+         * <br>
+         * <p>*   **Unavailable**</p>
+         * <p>*   **Available**</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <p>The type of the account. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: standard account</p>
+         * <p>*   **Super**: privileged account</p>
+         * <p>*   **Sysadmin**: superuser account that has the system administrator permissions</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>Indicates whether the account has the row-level security (RLS) permissions. Valid values: </p>
+         * <br>
+         * <p>- **t**: The account has the RLS permissions.</p>
+         * <p>- **f**: The account does not have the RLS permissions.</p>
+         * <br>
+         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         */
         @NameInMap("BypassRLS")
         public String bypassRLS;
 
+        /**
+         * <p>Indicates whether the account has the permissions to create databases. Valid values:</p>
+         * <br>
+         * <p>- **t**: The account has the permissions to create databases.</p>
+         * <p>- **f**: The account does not have the permissions to create databases.</p>
+         * <br>
+         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         */
         @NameInMap("CreateDB")
         public String createDB;
 
+        /**
+         * <p>Indicates whether the account has the permissions to create roles. Valid values:</p>
+         * <br>
+         * <p>- **t**: The account has the permissions to create roles.</p>
+         * <p>- **f**: The account does not have the permissions to create roles.</p>
+         * <br>
+         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         */
         @NameInMap("CreateRole")
         public String createRole;
 
+        /**
+         * <p>The ID of the instance to which the account belongs.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>Details of the permissions that are granted to the account.</p>
+         */
         @NameInMap("DatabasePrivileges")
         public DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges databasePrivileges;
 
+        /**
+         * <p>Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The number of databases that are managed by the account exceeds the upper limit.</p>
+         * <p>*   **0**: The number of databases that are managed by the account does not exceed the upper limit.</p>
+         */
         @NameInMap("PrivExceeded")
         public String privExceeded;
 
+        /**
+         * <p>Indicates whether the account has the replication permissions. Valid values:</p>
+         * <br>
+         * <p>- **t**: The account has the replication permissions.</p>
+         * <p>- **f**: The account does not have the replication permissions.</p>
+         * <br>
+         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         */
         @NameInMap("Replication")
         public String replication;
 
+        /**
+         * <p>The expiration time of the password. Valid values:</p>
+         * <br>
+         * <p>- **infinity**: The password never expires.</p>
+         * <p>- **Empty**: The expiration time is not specified.</p>
+         * <p>- **Actual expiration time** in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.</p>
+         * <br>
+         * <p>>  This parameter is returned only for ApsaraDB RDS for PostgreSQL instances.</p>
+         */
         @NameInMap("ValidUntil")
         public String validUntil;
 

@@ -4,42 +4,96 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyResponseBody extends TeaModel {
+    /**
+     * <p>An array consisting of the information about the proxy endpoint that is created for the instance.</p>
+     */
     @NameInMap("DBProxyConnectStringItems")
     public DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems;
 
+    /**
+     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
+    /**
+     * <p>The proxy version that is run by the instance.</p>
+     */
     @NameInMap("DBProxyInstanceCurrentMinorVersion")
     public String DBProxyInstanceCurrentMinorVersion;
 
+    /**
+     * <p>The latest proxy version that is available for the instance.</p>
+     */
     @NameInMap("DBProxyInstanceLatestMinorVersion")
     public String DBProxyInstanceLatestMinorVersion;
 
+    /**
+     * <p>The name of the proxy instance.</p>
+     */
     @NameInMap("DBProxyInstanceName")
     public String DBProxyInstanceName;
 
+    /**
+     * <p>The number of proxies that are enabled on the instance.</p>
+     */
     @NameInMap("DBProxyInstanceNum")
     public Integer DBProxyInstanceNum;
 
+    /**
+     * <p>The specifications of the proxy instance. This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
+     * <br>
+     * <p>Format: Number of cores/Memory capacity. For example, the value 4/8 indicates that the proxy instance has 4 cores and 8 GB of memory.</p>
+     */
     @NameInMap("DBProxyInstanceSize")
     public String DBProxyInstanceSize;
 
+    /**
+     * <p>The status of the proxy instance. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**: The proxy instance is being created.</p>
+     * <p>*   **Running**: The proxy instance is running.</p>
+     * <p>*   **DBInstanceClassChanging**: The specifications of the proxy instance are being changed.</p>
+     * <p>*   **Deleting**: The proxy instance is being deleted.</p>
+     */
     @NameInMap("DBProxyInstanceStatus")
     public String DBProxyInstanceStatus;
 
+    /**
+     * <p>The type of the database proxy that is enabled on the instance. Valid values:</p>
+     * <br>
+     * <p>*   **1**: shared proxy</p>
+     * <p>*   **2**: dedicated proxy</p>
+     * <br>
+     * <p>>  ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</p>
+     */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    /**
+     * <p>The status of the database proxy feature. Valid values:</p>
+     * <br>
+     * <p>*   **Startup**: enabled</p>
+     * <p>*   **Shutdown**: disabled</p>
+     */
     @NameInMap("DBProxyServiceStatus")
     public String DBProxyServiceStatus;
 
+    /**
+     * <p>An array consisting of the information about the proxy terminal.</p>
+     */
     @NameInMap("DbProxyEndpointItems")
     public DescribeDBProxyResponseBodyDbProxyEndpointItems dbProxyEndpointItems;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -153,24 +207,52 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems extends TeaModel {
+        /**
+         * <p>The endpoint of the proxy terminal.</p>
+         */
         @NameInMap("DBProxyConnectString")
         public String DBProxyConnectString;
 
+        /**
+         * <p>The network type of the proxy endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **InnerString**: internal network</p>
+         * <p>*   **OuterString**: Internet</p>
+         */
         @NameInMap("DBProxyConnectStringNetType")
         public String DBProxyConnectStringNetType;
 
+        /**
+         * <p>The network type of the database proxy. Valid values:</p>
+         * <br>
+         * <p>*   **0**: Internet</p>
+         * <p>*   **1**: classic network</p>
+         * <p>*   **2**: virtual private cloud (VPC)</p>
+         */
         @NameInMap("DBProxyConnectStringNetWorkType")
         public String DBProxyConnectStringNetWorkType;
 
+        /**
+         * <p>The port number that is associated with the proxy endpoint.</p>
+         */
         @NameInMap("DBProxyConnectStringPort")
         public String DBProxyConnectStringPort;
 
+        /**
+         * <p>The ID of the proxy terminal to which the proxy endpoint belongs.</p>
+         */
         @NameInMap("DBProxyEndpointId")
         public String DBProxyEndpointId;
 
+        /**
+         * <p>The name of the proxy terminal to which the proxy endpoint belongs.</p>
+         */
         @NameInMap("DBProxyEndpointName")
         public String DBProxyEndpointName;
 
+        /**
+         * <p>The ID of the proxy instance.</p>
+         */
         @NameInMap("DBProxyVpcInstanceId")
         public String DBProxyVpcInstanceId;
 
@@ -257,15 +339,33 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems extends TeaModel {
+        /**
+         * <p>The description of the proxy terminal.</p>
+         */
         @NameInMap("DbProxyEndpointAliases")
         public String dbProxyEndpointAliases;
 
+        /**
+         * <p>The ID of the proxy terminal.</p>
+         */
         @NameInMap("DbProxyEndpointName")
         public String dbProxyEndpointName;
 
+        /**
+         * <p>The type of the proxy terminal. Valid values:</p>
+         * <br>
+         * <p>- **RWSplit**: default proxy terminal</p>
+         * <p>- **Custom**: custom proxy terminal</p>
+         */
         @NameInMap("DbProxyEndpointType")
         public String dbProxyEndpointType;
 
+        /**
+         * <p>The read and write attributes of the proxy terminal.</p>
+         * <br>
+         * <p>- **ReadWrite**: The proxy terminal supports read and write requests.</p>
+         * <p>- **ReadOnly**: The proxy terminal supports only read requests.</p>
+         */
         @NameInMap("DbProxyReadWriteMode")
         public String dbProxyReadWriteMode;
 

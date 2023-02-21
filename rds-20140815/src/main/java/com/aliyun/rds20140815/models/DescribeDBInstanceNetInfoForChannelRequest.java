@@ -4,15 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoForChannelRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The type of the endpoint to query. Valid values:</p>
+     * <br>
+     * <p>*   **0**: a regular endpoint. This is the default value.</p>
+     * <p>*   **1**: a read/write splitting endpoint that is assigned after the shared proxy feature is enabled.</p>
+     */
     @NameInMap("DBInstanceNetRWSplitType")
     public String DBInstanceNetRWSplitType;
 
+    /**
+     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     */
     @NameInMap("Flag")
     public String flag;
 

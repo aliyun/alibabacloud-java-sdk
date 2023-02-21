@@ -4,18 +4,66 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
+    /**
+     * <p>The description of the account. The description must be 2 to 256 characters in length The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <br>
+     * <p>> The name cannot start with http:// or https://.</p>
+     */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
+    /**
+     * <p>The name of the database account.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   The username must be unique.</p>
+     * <br>
+     * <p>*   The name starts with a lowercase letter and ends with a lowercase letter or a digit.</p>
+     * <br>
+     * <p>*   The name can contain lowercase letters, digits, and underscores (\_).</p>
+     * <br>
+     * <p>*   The length of the username must meet the following requirements:</p>
+     * <br>
+     * <p>    *   If the instance runs MySQL 5.7 or MySQL 8.0, the username must be 2 to 32 characters in length.</p>
+     * <p>    *   If the instance runs MySQL 5.6, the username must be 2 to 16 characters in length.</p>
+     * <p>    *   If the instance runs SQL Server, the username must be 2 to 64 characters in length.</p>
+     * <p>    *   If the instance runs PostgreSQL with standard SSDs or ESSDs, the username must be 2 to 63 characters in length.</p>
+     * <p>    *   If the instance runs PostgreSQL with local SSDs, the username must be 2 to 16 characters in length.</p>
+     * <p>    *   If the instance runs MariaDB TX, the username must be 2 to 16 characters in length.</p>
+     * <br>
+     * <p>*   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The password of the account.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   The password of the account must be 8 to 32 characters in length.</p>
+     * <br>
+     * <p>*   A password must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>*   The password can contain the following special characters: ! @ # $ % ^ & \* () \_ + - =</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>The type of the account. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: standard account</p>
+     * <p>*   **Super**: privileged account</p>
+     * <br>
+     * <p>Default value: **Normal**.</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>The ID of the instance You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

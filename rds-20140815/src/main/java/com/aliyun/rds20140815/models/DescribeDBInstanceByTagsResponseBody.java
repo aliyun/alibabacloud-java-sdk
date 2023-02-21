@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information about the instance.</p>
+     */
     @NameInMap("Items")
     public DescribeDBInstanceByTagsResponseBodyItems items;
 
+    /**
+     * <p>The page number of the page returned.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,9 +80,15 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -114,9 +135,15 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTag extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>An array that consists of the queried tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTags tags;
 

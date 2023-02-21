@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupFileResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the IDs of deleted backup files.</p>
+     */
     @NameInMap("DeletedBaksetIds")
     public DeleteBackupFileResponseBodyDeletedBaksetIds deletedBaksetIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabasesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information about the database.</p>
+     */
     @NameInMap("Databases")
     public DescribeDatabasesResponseBodyDatabases databases;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,26 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccountPrivilegeInfo extends TeaModel {
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <p>The permissions that the account has on the database. Valid values:</p>
+         * <br>
+         * <p>*   **ReadWrite**: read and write permissions</p>
+         * <p>*   **ReadOnly**: read-only permissions</p>
+         * <p>*   **DMLOnly**: DML-only permissions</p>
+         * <p>*   **DDLOnly**: DDL-only permissions</p>
+         */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
+        /**
+         * <p>The details of the permissions that the account has on the database.</p>
+         */
         @NameInMap("AccountPrivilegeDetail")
         public String accountPrivilegeDetail;
 
@@ -92,48 +112,105 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesDatabase extends TeaModel {
+        /**
+         * <p>An array that consists of the details of the account. Each account has specific permissions on the database.</p>
+         */
         @NameInMap("Accounts")
         public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts;
 
+        /**
+         * <p>The name of the character set.</p>
+         */
         @NameInMap("CharacterSetName")
         public String characterSetName;
 
+        /**
+         * <p>The collation of the character set. The example value C stands for localization.</p>
+         * <br>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
+         */
         @NameInMap("Collate")
         public String collate;
 
+        /**
+         * <p>The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.</p>
+         * <br>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
+         */
         @NameInMap("ConnLimit")
         public String connLimit;
 
+        /**
+         * <p>The type of the character set.</p>
+         * <br>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
+         */
         @NameInMap("Ctype")
         public String ctype;
 
+        /**
+         * <p>The description of the database.</p>
+         */
         @NameInMap("DBDescription")
         public String DBDescription;
 
+        /**
+         * <p>The ID of the instance to which the database belongs.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The status of the database. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Running**</p>
+         * <p>*   **Deleting**</p>
+         */
         @NameInMap("DBStatus")
         public String DBStatus;
 
+        /**
+         * <p>The database engine of the instance.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The reserved attribute.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The reserved attribute.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The tablespace of the database.</p>
+         * <br>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
+         */
         @NameInMap("Tablespace")
         public String tablespace;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

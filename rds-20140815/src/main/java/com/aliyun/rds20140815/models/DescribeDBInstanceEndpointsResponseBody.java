@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeDBInstanceEndpointsResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,42 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItemsAddressItem extends TeaModel {
+        /**
+         * <p>The endpoint of the instance.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The IP address of the endpoint.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The type of the IP address. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: Internet</p>
+         * <p>*   **Private**: internal network</p>
+         */
         @NameInMap("IpType")
         public String ipType;
 
+        /**
+         * <p>The port number of the endpoint.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -125,12 +152,23 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItemsNodeItem extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The weight of the node. Read requests are distributed based on the weight.</p>
+         * <br>
+         * <p>Valid values: 0 to 100.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -185,18 +223,36 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpoint extends TeaModel {
+        /**
+         * <p>The information about the endpoint.</p>
+         */
         @NameInMap("AddressItems")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItems addressItems;
 
+        /**
+         * <p>The user-defined description of the endpoint.</p>
+         */
         @NameInMap("EndpointDescription")
         public String endpointDescription;
 
+        /**
+         * <p>The endpoint ID of the instance.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Primary**: the read/write endpoint of the instance.</p>
+         * <p>*   **Readonly**: the read-only endpoint of the instance</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The details about the node that is configured for the endpoint.</p>
+         */
         @NameInMap("NodeItems")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItems nodeItems;
 
@@ -267,12 +323,24 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceEndpointsResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the endpoint of the instance.</p>
+         */
         @NameInMap("DBInstanceEndpoints")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpoints DBInstanceEndpoints;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The version of the IP protocol. Valid values:</p>
+         * <br>
+         * <p>*   **ipv4**</p>
+         * <p>*   **ipv6**</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 

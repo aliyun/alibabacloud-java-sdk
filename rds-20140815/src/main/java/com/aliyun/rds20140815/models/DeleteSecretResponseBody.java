@@ -4,15 +4,30 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecretResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ARN of the credential for the Data API account.</p>
+     */
     @NameInMap("SecretArn")
     public String secretArn;
 
+    /**
+     * <p>The name of the credential.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

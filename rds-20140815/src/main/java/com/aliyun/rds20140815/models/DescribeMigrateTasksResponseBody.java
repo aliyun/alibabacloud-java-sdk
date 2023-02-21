@@ -4,21 +4,39 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeMigrateTasksResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Details of the migration task.</p>
+     */
     @NameInMap("Items")
     public DescribeMigrateTasksResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -76,27 +94,60 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeMigrateTasksResponseBodyItemsMigrateTask extends TeaModel {
+        /**
+         * <p>The type of the migration task. Valid values:</p>
+         * <br>
+         * <p>*   **FULL**: The migration task migrates full backup files that can be used to restore the full data of the instance.</p>
+         * <p>*   **UPDF**: The migration task migrates incremental or log backup files that can be used to restore the incremental data of the instance.</p>
+         */
         @NameInMap("BackupMode")
         public String backupMode;
 
+        /**
+         * <p>The time when the migration task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The description of the migration task.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the migration task was completed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>Indicates whether the imported data overwrites the existing data.</p>
+         */
         @NameInMap("IsDBReplaced")
         public String isDBReplaced;
 
+        /**
+         * <p>The ID of the migration task.</p>
+         */
         @NameInMap("MigrateTaskId")
         public String migrateTaskId;
 
+        /**
+         * <p>The status of the migration task. Valid values:</p>
+         * <br>
+         * <p>*   **NoStart**: The task has not started.</p>
+         * <p>*   **Running**:The task is in progress.</p>
+         * <p>*   **Success**: The task is successful.</p>
+         * <p>*   **Failed**: The task failed.</p>
+         * <p>*   **Waiting**: The task is waiting for an incremental backup file to be imported.</p>
+         */
         @NameInMap("Status")
         public String status;
 

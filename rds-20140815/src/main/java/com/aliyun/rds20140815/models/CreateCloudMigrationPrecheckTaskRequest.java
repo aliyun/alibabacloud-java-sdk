@@ -4,27 +4,55 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudMigrationPrecheckTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The username of the account that is used to connect to the self-managed PostgreSQL instance. Enter the username of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) topic.</p>
+     */
     @NameInMap("SourceAccount")
     public String sourceAccount;
 
+    /**
+     * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
+     * <br>
+     * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center, which can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</p>
+     * <p>*   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.</p>
+     * <p>*   **internet**: The self-managed PostgreSQL instance resides on a device that is connected over the Internet.</p>
+     */
     @NameInMap("SourceCategory")
     public String sourceCategory;
 
+    /**
+     * <p>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+     * <br>
+     * <p>*   If the self-managed PostgreSQL instance resides on an ECS instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](~~273914~~).</p>
+     * <p>*   If the self-managed PostgreSQL instance resides in a data center, enter the IP address of the DNS server.</p>
+     */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
 
+    /**
+     * <p>The password of the account that is used to connect to the self-managed PostgreSQL instance. Enter the password of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) topic.</p>
+     */
     @NameInMap("SourcePassword")
     public String sourcePassword;
 
+    /**
+     * <p>The port that is used to connect to the self-managed PostgreSQL instance. You can run the `netstat -a grep PGSQL` command to view the port.</p>
+     */
     @NameInMap("SourcePort")
     public Long sourcePort;
 
+    /**
+     * <p>The name of the cloud migration task. If you do not specify this parameter, ApsaraDB RDS automatically generates a name for the cloud migration task.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

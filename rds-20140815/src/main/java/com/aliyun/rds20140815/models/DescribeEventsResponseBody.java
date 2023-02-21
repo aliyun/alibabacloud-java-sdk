@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the events.</p>
+     */
     @NameInMap("EventItems")
     public DescribeEventsResponseBodyEventItems eventItems;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,39 +80,75 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyEventItemsEventItems extends TeaModel {
+        /**
+         * <p>The ID of the user who executed the event.</p>
+         */
         @NameInMap("CallerUid")
         public Long callerUid;
 
+        /**
+         * <p>The ID of the event.</p>
+         */
         @NameInMap("EventId")
         public Integer eventId;
 
+        /**
+         * <p>The name of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The request or context parameters of the event.</p>
+         */
         @NameInMap("EventPayload")
         public String eventPayload;
 
+        /**
+         * <p>The source of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         */
         @NameInMap("EventReason")
         public String eventReason;
 
+        /**
+         * <p>The time when the event was recorded. The time is slightly later than the time the event occurred.</p>
+         */
         @NameInMap("EventRecordTime")
         public String eventRecordTime;
 
+        /**
+         * <p>The time when the event occurred.</p>
+         */
         @NameInMap("EventTime")
         public String eventTime;
 
+        /**
+         * <p>The type of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The type of the user who executed the event.</p>
+         */
         @NameInMap("EventUserType")
         public String eventUserType;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the resource associated with the event. Only instance IDs are supported for this parameter.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The type of the resource associated with the event. Only instances are supported for this parameter.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

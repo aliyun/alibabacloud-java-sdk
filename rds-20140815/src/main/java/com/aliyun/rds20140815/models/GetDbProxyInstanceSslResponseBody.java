@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class GetDbProxyInstanceSslResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of SSL encryption settings.</p>
+     */
     @NameInMap("DbProxyCertListItems")
     public GetDbProxyInstanceSslResponseBodyDbProxyCertListItems dbProxyCertListItems;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
     }
 
     public static class GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems extends TeaModel {
+        /**
+         * <p>The dedicated proxy endpoint for which SSL encryption is enabled.</p>
+         */
         @NameInMap("CertCommonName")
         public String certCommonName;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DbInstanceName")
         public String dbInstanceName;
 
+        /**
+         * <p>The ID of the dedicated proxy endpoint.</p>
+         */
         @NameInMap("EndpointName")
         public String endpointName;
 
+        /**
+         * <p>The default identifier of the dedicated proxy endpoint. The value is fixed as **RWSplit**.</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The time when the certificate expires.</p>
+         */
         @NameInMap("SslExpiredTime")
         public String sslExpiredTime;
 

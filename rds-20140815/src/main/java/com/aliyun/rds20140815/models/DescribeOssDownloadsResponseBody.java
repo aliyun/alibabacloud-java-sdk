@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssDownloadsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Details of the backup file.</p>
+     */
     @NameInMap("Items")
     public DescribeOssDownloadsResponseBodyItems items;
 
+    /**
+     * <p>The ID of the migration task.</p>
+     */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,27 +66,68 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
     }
 
     public static class DescribeOssDownloadsResponseBodyItemsOssDownload extends TeaModel {
+        /**
+         * <p>The backup type. Valid values:</p>
+         * <br>
+         * <p>*   **Database**: full backup file</p>
+         * <p>*   **Differential_Database**: incremental backup file</p>
+         * <p>*   **Transaction_Log**: log backup file</p>
+         */
         @NameInMap("BackupMode")
         public String backupMode;
 
+        /**
+         * <p>The time when the backup file was created in the download list. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the file.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The end of the time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The name of the backup file stored in the Object Storage Service (OSS) bucket.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The size of the backup file. Unit: MB</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
+        /**
+         * <p>Indicates whether the backup file is available. Valid values: **True and False**.</p>
+         */
         @NameInMap("IsAvailable")
         public String isAvailable;
 
+        /**
+         * <p>The state of the backup file. Valid values:</p>
+         * <br>
+         * <p>*   **NoStart**:</p>
+         * <p>*   **Downloading**</p>
+         * <p>*   **Finished**</p>
+         * <p>*   **DownloadFailed**</p>
+         * <p>*   **VerifyFailed**</p>
+         * <p>*   **Deleted**</p>
+         * <p>*   **DeleteFailed**</p>
+         * <p>*   **CheckSuccess**</p>
+         * <p>*   **CheckFailed**</p>
+         * <p>*   **Restoring**</p>
+         * <p>*   **Restored**</p>
+         * <p>*   **RestoredFailed**</p>
+         */
         @NameInMap("Status")
         public String status;
 

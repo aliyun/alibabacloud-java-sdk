@@ -4,15 +4,29 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostGroupsRequest extends TeaModel {
+    /**
+     * <p>The ID of the dedicated cluster.</p>
+     */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
+    /**
+     * <p>The image based on which the hosts in the dedicated clusters are created. Valid values:</p>
+     * <br>
+     * <p>*   **WindowsWithMssqlStdLicense**: a Windows image, which contains the licenses of the SQL Server Standard Edition</p>
+     * <p>*   **WindowsWithMssqlEntLisence**: a Windows image, which contains the licenses of the SQL Server Enterprise Edition</p>
+     * <p>*   **WindowsWithMssqlWebLisence**: a Windows image, which contains the licenses of the SQL Server Web Edition</p>
+     * <p>*   **AliLinux**: a Linux image</p>
+     */
     @NameInMap("ImageCategory")
     public String imageCategory;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the dedicated clusters. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,15 +4,34 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecretsRequest extends TeaModel {
+    /**
+     * <p>The language of the text within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh-CN**: Chinese</p>
+     * <p>*   **en-US**: English</p>
+     * <br>
+     * <p>> The default value is **en-US**.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
+    /**
+     * <p>The engine of the database.</p>
+     * <br>
+     * <p>> Only MySQL is supported.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
@@ -22,12 +41,23 @@ public class DescribeSecretsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <br>
+     * <p>> The default value is 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,15 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class TransformDBInstancePayTypeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Auto-renewal is enabled.</p>
+     * <p>*   **false**: Auto-renewal is disabled.</p>
+     * <br>
+     * <p>> * This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</p>
+     * <p>> * All strings except **true** are considered **false**.</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <p>The extended business information of the instance.</p>
+     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -22,9 +40,23 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Postpaid**: pay-as-you-go</p>
+     * <p>*   **Prepaid**: subscription</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The subscription type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Year**: yearly subscription</p>
+     * <p>*   **Month**: monthly subscription</p>
+     * <br>
+     * <p>>  This parameter must be specified if you set the **PayType** parameter to **Prepaid**.</p>
+     */
     @NameInMap("Period")
     public String period;
 
@@ -34,6 +66,14 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The subscription period of the instance. Valid values:</p>
+     * <br>
+     * <p>*   If you set the **Period** parameter to **Year**, the value of the UsedTime parameter ranges from **1 to 5**.</p>
+     * <p>*   If you set the **Period** parameter to **Month**, the value of the UsedTime parameter ranges from **1 to 9**.</p>
+     * <br>
+     * <p>>  This parameter must be specified if you set the **PayType** parameter to **Prepaid**.</p>
+     */
     @NameInMap("UsedTime")
     public Integer usedTime;
 

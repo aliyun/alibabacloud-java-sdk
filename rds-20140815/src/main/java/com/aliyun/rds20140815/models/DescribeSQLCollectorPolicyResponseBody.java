@@ -4,12 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the SQL Explorer (SQL Audit) feature. Valid values:</p>
+     * <br>
+     * <p>*   **Enable**</p>
+     * <p>*   **Disabled**</p>
+     */
     @NameInMap("SQLCollectorStatus")
     public String SQLCollectorStatus;
 
+    /**
+     * <p>None</p>
+     */
     @NameInMap("StoragePeriod")
     public Integer storagePeriod;
 

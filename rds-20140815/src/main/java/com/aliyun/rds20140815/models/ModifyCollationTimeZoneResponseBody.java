@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyCollationTimeZoneResponseBody extends TeaModel {
+    /**
+     * <p>The character set collation of the instance.</p>
+     */
     @NameInMap("Collation")
     public String collation;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The time zone of the instance.</p>
+     */
     @NameInMap("Timezone")
     public String timezone;
 

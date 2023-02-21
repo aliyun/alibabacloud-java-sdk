@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceKeywordsRequest extends TeaModel {
+    /**
+     * <p>The type of reserved keyword to query. Valid values:</p>
+     * <br>
+     * <p>*   **account**</p>
+     * <p>*   **database**</p>
+     */
     @NameInMap("Key")
     public String key;
 

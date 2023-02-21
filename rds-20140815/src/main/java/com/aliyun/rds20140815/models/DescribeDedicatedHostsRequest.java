@@ -4,27 +4,62 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to query the hosts on which you can create instances or those on which you cannot create instances. Valid values:</p>
+     * <br>
+     * <p>*   **0**: queries the hosts on which you cannot create instances</p>
+     * <p>*   **1**: queries the hosts on which you can create instances</p>
+     */
     @NameInMap("AllocationStatus")
     public String allocationStatus;
 
+    /**
+     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the IDs of dedicated clusters.</p>
+     */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
+    /**
+     * <p>The ID of the host.</p>
+     */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
+    /**
+     * <p>The status of the hosts. Valid values:</p>
+     * <br>
+     * <p>*   **0**: queries the hosts that are being created</p>
+     * <p>*   **1**: queries the hosts that are running</p>
+     * <p>*   **2**: queries the hosts that are faulty</p>
+     * <p>*   **3**: queries the hosts that are being replaced</p>
+     * <p>*   **4**: queries the hosts that are deprecated</p>
+     * <p>*   **5**: queries the hosts that are being deleted</p>
+     * <p>*   **6**: queries the hosts that are restarting</p>
+     */
     @NameInMap("HostStatus")
     public String hostStatus;
 
+    /**
+     * <p>The type of storage media that is used for the hosts. Valid values:</p>
+     * <br>
+     * <p>*   **dhg_cloud_ssd**: enhanced solid-state drive (SSD)</p>
+     * <p>*   **dhg_local_ssd**: local SSD</p>
+     */
     @NameInMap("HostType")
     public String hostType;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the hosts. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,6 +69,9 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The zone ID of the hosts.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

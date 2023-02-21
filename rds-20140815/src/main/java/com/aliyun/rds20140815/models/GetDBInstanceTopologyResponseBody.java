@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class GetDBInstanceTopologyResponseBody extends TeaModel {
+    /**
+     * <p>An internal parameter. You can ignore this parameter.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Details about the topology.</p>
+     */
     @NameInMap("Data")
     public GetDBInstanceTopologyResponseBodyData data;
 
+    /**
+     * <p>An internal parameter. You can ignore this parameter.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,30 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class GetDBInstanceTopologyResponseBodyDataConnections extends TeaModel {
+        /**
+         * <p>The endpoint that is used to connect to the instance.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **vpc**</p>
+         * <p>*   **public**</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -106,21 +133,48 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class GetDBInstanceTopologyResponseBodyDataNodes extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The ID of the dedicated cluster.</p>
+         * <br>
+         * <p>>  If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
+        /**
+         * <p>The ID of the host on which the instance resides in the dedicated cluster.</p>
+         * <br>
+         * <p>>  If the instance does not reside in the dedicated cluster, no value is returned.</p>
+         */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
+        /**
+         * <p>The ID of the instance.</p>
+         * <br>
+         * <p>>  The value **-1** is returned for an instance that does not reside in a dedicated cluster.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The type of the node. Valid values:</p>
+         * <br>
+         * <p>*   **Master**: a primary node</p>
+         * <p>*   **Slave**: a secondary node</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -180,12 +234,21 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class GetDBInstanceTopologyResponseBodyData extends TeaModel {
+        /**
+         * <p>The network connection of the instance.</p>
+         */
         @NameInMap("Connections")
         public java.util.List<GetDBInstanceTopologyResponseBodyDataConnections> connections;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The node information.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<GetDBInstanceTopologyResponseBodyDataNodes> nodes;
 

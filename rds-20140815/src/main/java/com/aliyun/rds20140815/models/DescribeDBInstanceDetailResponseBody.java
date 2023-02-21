@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDetailResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the instance is in the active state.</p>
+     */
     @NameInMap("ActivationState")
     public String activationState;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The type of the license.</p>
+     */
     @NameInMap("LicenseType")
     public String licenseType;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

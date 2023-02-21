@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
+    /**
+     * <p>The endpoint that is used to connect to the instance after the switch of endpoints.</p>
+     */
     @NameInMap("NewConnectionString")
     public String newConnectionString;
 
+    /**
+     * <p>The endpoint that is used to connect to the instance before the switch of endpoints.</p>
+     */
     @NameInMap("OldConnectionString")
     public String oldConnectionString;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

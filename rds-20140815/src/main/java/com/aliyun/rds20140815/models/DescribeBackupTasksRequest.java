@@ -4,21 +4,47 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTasksRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup task.</p>
+     */
     @NameInMap("BackupJobId")
     public Integer backupJobId;
 
+    /**
+     * <p>The status of the backup task. Valid values:</p>
+     * <br>
+     * <p>*   **NoStart**: The backup task is not started.</p>
+     * <p>*   **Progressing**: The backup task is in progress.</p>
+     * <br>
+     * <p>By default, this operation returns backup tasks in both states.</p>
+     */
     @NameInMap("BackupJobStatus")
     public String backupJobStatus;
 
+    /**
+     * <p>The backup mode. Valid values:</p>
+     * <br>
+     * <p>*   **Automated**</p>
+     * <p>*   **Manual**</p>
+     */
     @NameInMap("BackupMode")
     public String backupMode;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("Flag")
     public String flag;
 

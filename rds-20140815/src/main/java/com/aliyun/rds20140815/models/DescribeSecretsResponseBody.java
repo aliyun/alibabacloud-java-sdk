@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecretsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details about the credential.</p>
+     */
     @NameInMap("Secrets")
     public java.util.List<DescribeSecretsResponseBodySecrets> secrets;
 
@@ -54,21 +66,39 @@ public class DescribeSecretsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecretsResponseBodySecrets extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The description of the credential.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ARN of the credential for the created Data API account.</p>
+         */
         @NameInMap("SecretArn")
         public String secretArn;
 
+        /**
+         * <p>The name of the credential.</p>
+         */
         @NameInMap("SecretName")
         public String secretName;
 
+        /**
+         * <p>The username that is used to access the database.</p>
+         */
         @NameInMap("Username")
         public String username;
 

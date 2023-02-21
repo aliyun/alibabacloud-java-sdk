@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ImportUserBackupFileResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the full backup file.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the full backup file is imported into the ApsaraDB RDS for MySQL instance. If the full backup file is imported, the **true** is returned. Otherwise, an error message is returned.</p>
+     */
     @NameInMap("Status")
     public Boolean status;
 

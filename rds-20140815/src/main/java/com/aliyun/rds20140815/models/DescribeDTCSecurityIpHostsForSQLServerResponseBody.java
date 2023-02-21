@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The number of distributed transaction whitelists.</p>
+     */
     @NameInMap("IpHostPairNum")
     public String ipHostPairNum;
 
+    /**
+     * <p>Details of distributed transaction whitelists.</p>
+     */
     @NameInMap("Items")
     public DescribeDTCSecurityIpHostsForSQLServerResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
     }
 
     public static class DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups extends TeaModel {
+        /**
+         * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: IP address,Hostname. Multiple values are separated with semicolons (;).</p>
+         */
         @NameInMap("SecurityIpHosts")
         public String securityIpHosts;
 
+        /**
+         * <p>The name of the distributed transaction whitelist.</p>
+         */
         @NameInMap("WhitelistGroupName")
         public String whitelistGroupName;
 

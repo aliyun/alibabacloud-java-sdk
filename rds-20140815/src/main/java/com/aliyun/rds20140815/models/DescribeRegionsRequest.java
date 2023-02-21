@@ -4,6 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The language that is used for the return value of the **LocalName** parameter. Valid values:</p>
+     * <br>
+     * <p>*   **zh-CN**: Chinese</p>
+     * <p>*   **en-US**: English</p>
+     * <br>
+     * <p>Default value: **en-US**.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

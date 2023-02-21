@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The start of the time range to which the instance can be restored.</p>
+     */
     @NameInMap("RecoveryBeginTime")
     public String recoveryBeginTime;
 
+    /**
+     * <p>The end of the time range to which the instance can be restored.</p>
+     */
     @NameInMap("RecoveryEndTime")
     public String recoveryEndTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

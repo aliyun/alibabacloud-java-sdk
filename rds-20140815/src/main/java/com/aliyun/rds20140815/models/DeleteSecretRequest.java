@@ -4,18 +4,34 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecretRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <br>
+     * <p>> If you specify this parameter, you must also specify the **SecretName** parameter.</p>
+     */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
+    /**
+     * <p>The engine of the database.</p>
+     * <br>
+     * <p>> Only MySQL is supported.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~446624~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +41,23 @@ public class DeleteSecretRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ARN of the credential for the created Data API account. You can call the [CreateSecret](~~446607~~) operation to obtain the value of this parameter.</p>
+     * <br>
+     * <p>> You must specify one of the **SecretName** and SecretArn parameters.</p>
+     */
     @NameInMap("SecretArn")
     public String secretArn;
 
+    /**
+     * <p>The name of the credential.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   You must specify one of the **SecretArn** and SecretName parameters.</p>
+     * <br>
+     * <p>*   If you specify this parameter, you must also specify the **DbInstanceId** parameter.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 

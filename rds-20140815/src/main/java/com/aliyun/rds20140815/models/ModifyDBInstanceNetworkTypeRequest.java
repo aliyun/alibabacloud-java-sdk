@@ -4,12 +4,23 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
+    /**
+     * <p>The number of days for which you want to retain the classic network endpoint. Valid values: **1 to 120**. Default value: **7**.</p>
+     * <br>
+     * <p>> If you set the **RetainClassic** parameter to **True**, you must also specify this parameter.</p>
+     */
     @NameInMap("ClassicExpiredDays")
     public String classicExpiredDays;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The network type after the modification. Set the value to **VPC**.</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
@@ -19,12 +30,25 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The internal IP address of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. ApsaraDB RDS automatically assigns an internal IP address to the instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    /**
+     * <p>The number of days for which you want to retain the read/write splitting endpoint of the classic network type. Valid values: **1 to 120**. Default value: **7**.</p>
+     * <br>
+     * <p>> This parameter takes effect only when a read/write splitting endpoint of the classic network type exists and the **RetainClassic** paramter is set to **True**.</p>
+     */
     @NameInMap("ReadWriteSplittingClassicExpiredDays")
     public Integer readWriteSplittingClassicExpiredDays;
 
+    /**
+     * <p>The internal IP address that corresponds to the read/write splitting endpoint of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. ApsaraDB RDS automatically assigns an internal IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     * <br>
+     * <p>> This parameter is valid when a read/write splitting endpoint of the classic network type exists.</p>
+     */
     @NameInMap("ReadWriteSplittingPrivateIpAddress")
     public String readWriteSplittingPrivateIpAddress;
 
@@ -34,12 +58,26 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to retain the classic network endpoint. Valid values:</p>
+     * <br>
+     * <p>*   **True**: retains the classic network endpoint.</p>
+     * <p>*   **False**: does not retain the classic network endpoint.</p>
+     * <br>
+     * <p>Default value: **False**.</p>
+     */
     @NameInMap("RetainClassic")
     public String retainClassic;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     */
     @NameInMap("VPCId")
     public String VPCId;
 
+    /**
+     * <p>The ID of the vSwitch. This parameter is required if the **VPCId** parameter is specified.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

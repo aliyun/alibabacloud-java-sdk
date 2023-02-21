@@ -7,6 +7,9 @@ public class CreateServiceLinkedRoleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the instance resides. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -16,6 +19,12 @@ public class CreateServiceLinkedRoleRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the service-linked role.</p>
+     * <br>
+     * <p>*   **AliyunServiceRoleForRdsPgsqlOnEcs**: the service-linked role for ApsaraDB RDS for PostgreSQL instances.</p>
+     * <p>*   **AliyunServiceRoleForRDSProxyOnEcs**: the service-linked role for the database proxy feature of ApsaraDB RDS instances.</p>
+     */
     @NameInMap("ServiceLinkedRole")
     public String serviceLinkedRole;
 

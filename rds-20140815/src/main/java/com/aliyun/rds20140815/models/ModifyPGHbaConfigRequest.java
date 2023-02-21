@@ -4,15 +4,29 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyPGHbaConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("HbaItem")
     public java.util.List<ModifyPGHbaConfigRequestHbaItem> hbaItem;
 
+    /**
+     * <p>The method that you use to modify the pg_hba.conf file. Valid values:</p>
+     * <br>
+     * <p>*   **add**: adds one or more records. If you use this method, make sure that the value of the PriorityId parameter for each new record is different from the value of the PriorityId parameter for any existing record.</p>
+     * <p>*   **delete**: deletes one or more records. If you use this method, the record that corresponds to the specified value of the **PriorityId** parameter is deleted from the pg_hba.conf file.</p>
+     * <p>*   **modify**: modifies one or more records. If you use this method, the record that corresponds to the specified value of the **PriorityId** parameter is modified.</p>
+     * <p>*   **update**: overwrites the existing configuration in the pg_hba.conf file by using the new configuration.</p>
+     */
     @NameInMap("OpsType")
     public String opsType;
 
@@ -98,27 +112,77 @@ public class ModifyPGHbaConfigRequest extends TeaModel {
     }
 
     public static class ModifyPGHbaConfigRequestHbaItem extends TeaModel {
+        /**
+         * <p>The IP addresses from which the specified users can access the specified databases. If you set this parameter to 0.0.0.0/0, the specified users are allowed to access the specified databases from all IP addresses.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The name of the database for record N. If you set this parameter to all, the specified users are allowed to access all databases on the instance.</p>
+         * <br>
+         * <p>If you specify multiple databases, separate the database names with commas (,).</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The mask for record N. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.</p>
+         */
         @NameInMap("Mask")
         public String mask;
 
+        /**
+         * <p>The authentication method. Valid values:</p>
+         * <br>
+         * <p>*   **trust**</p>
+         * <p>*   **reject**</p>
+         * <p>*   **scram-sha-256**</p>
+         * <p>*   **md5**</p>
+         * <p>*   **password**</p>
+         * <p>*   **gss**</p>
+         * <p>*   **sspi**</p>
+         * <p>*   **ldap**</p>
+         * <p>*   **radius**</p>
+         * <p>*   **cert**</p>
+         * <p>*   **pam**</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>Optional. The value of this parameter varies based on the value of the HbaItem.N.Method parameter. In this topic, LDAP is used as an example. You must specify this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).</p>
+         */
         @NameInMap("Option")
         public String option;
 
+        /**
+         * <p>The priority of record N. If you set this parameter to 0, the record has the highest priority. Valid values: 0 to 10000.</p>
+         * <br>
+         * <p>This parameter is used to identify each record. When you add a record, the value of the PriorityId parameter for the new record must be different from the value of the PriorityId parameter of any existing record. When you modify or delete a record, you must also modify or delete the value of the PriorityId parameter for this record.</p>
+         */
         @NameInMap("PriorityId")
         public Integer priorityId;
 
+        /**
+         * <p>The connection type of record N.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.</p>
+         * <br>
+         * <p>*   **hostssl**: The record matches only TCP/IP connections that are established over SSL.</p>
+         * <br>
+         * <p>*   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL.</p>
+         * <br>
+         * <p>> You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see [Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance](~~229518~~).</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The user who is allowed to access the specified databases. You must specify the user that is used to log on to the RDS instance. If you specify multiple users, separate the usernames with commas (,).</p>
+         */
         @NameInMap("User")
         public String user;
 

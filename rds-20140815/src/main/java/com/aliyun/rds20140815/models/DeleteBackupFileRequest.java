@@ -4,21 +4,39 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupFileRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup set. You can specify the IDs of up to 100 backup files at a time. Separate the IDs with commas (,).</p>
+     * <br>
+     * <p>> * Only the IDs of the backup files for the database is supported.</p>
+     * <p>> * You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup files.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>Specifies whether to delete the backup files that are generated before the specified point in time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("BackupTime")
     public String backupTime;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

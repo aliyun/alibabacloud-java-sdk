@@ -4,27 +4,60 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The format into which backups are compressed. Valid values:</p>
+     * <br>
+     * <p>*   **0**: Backups are not compressed.</p>
+     * <p>*   **1**: Backups are compressed by using the zlib tool.</p>
+     * <p>*   **2**: Backups are compressed in parallel by using the zlib tool.</p>
+     * <p>*   **4**: Backups are compressed by using the QuickLZ tool and can be used to restore individual databases and tables.</p>
+     * <p>*   **8**: Backups are compressed by using the QuickLZ tool but cannot be used to restore individual databases or tables. This value is supported only by instances that run MySQL 8.0.</p>
+     */
     @NameInMap("CompressType")
     public String compressType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceID")
     public String DBInstanceID;
 
+    /**
+     * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **1**: The log backup feature is enabled.</p>
+     * <p>*   **0**: The log backup feature is disabled.</p>
+     */
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
+    /**
+     * <p>Indicates whether ApsaraDB RDS forcibly deletes log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB.</p>
+     */
     @NameInMap("HighSpaceUsageProtection")
     public String highSpaceUsageProtection;
 
+    /**
+     * <p>The number of hours for which log backup files are retained on the instance.</p>
+     */
     @NameInMap("LocalLogRetentionHours")
     public Integer localLogRetentionHours;
 
+    /**
+     * <p>The maximum storage usage that is allowed for log backup files on the instance.</p>
+     */
     @NameInMap("LocalLogRetentionSpace")
     public String localLogRetentionSpace;
 
+    /**
+     * <p>The number of binary log files that are retained on the instance.</p>
+     */
     @NameInMap("LogBackupLocalRetentionNumber")
     public Integer logBackupLocalRetentionNumber;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

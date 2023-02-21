@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UnlockAccountRequest extends TeaModel {
+    /**
+     * <p>The account that you want to unlock. You can unlock only one account at a time.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The ID of the ApsaraDB RDS for PostgreSQL instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

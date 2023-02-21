@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDasInstanceConfigRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -19,12 +25,37 @@ public class ModifyDasInstanceConfigRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to enable automatic storage expansion. Valid values:</p>
+     * <br>
+     * <p>*   **Enable**</p>
+     * <p>*   **Disable**</p>
+     */
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;
 
+    /**
+     * <p>The threshold in percentage based on which an automatic storage expansion is triggered. If the available storage reaches the threshold, ApsaraDB RDS increases the storage capacity of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **10**</p>
+     * <p>*   **20**</p>
+     * <p>*   **30**</p>
+     * <p>*   **40**</p>
+     * <p>*   **50**</p>
+     * <br>
+     * <p>>  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.</p>
+     */
     @NameInMap("StorageThreshold")
     public Integer storageThreshold;
 
+    /**
+     * <p>The maximum storage capacity that is allowed by automatic storage expansion. The value of this parameter must be equal to or greater than the current storage capacity of the instance.</p>
+     * <br>
+     * <p>*   Valid value for instances with ESSDs: 32000. Unit: GB</p>
+     * <p>*   Valid value for instances with standard SSDs: 6000. Unit: GB</p>
+     * <br>
+     * <p>    > If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.</p>
+     */
     @NameInMap("StorageUpperBound")
     public Integer storageUpperBound;
 

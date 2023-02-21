@@ -4,9 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  If you specify this parameter, the other filtering conditions are invalid.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -16,6 +24,9 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,12 +36,21 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Set the value to **INSTANCE**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags to be queried. Each tag includes a TagKey and a TagValue. Format: {"key1":"value1"}.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <p>The ID of the proxy mode.</p>
+     */
     @NameInMap("proxyId")
     public String proxyId;
 

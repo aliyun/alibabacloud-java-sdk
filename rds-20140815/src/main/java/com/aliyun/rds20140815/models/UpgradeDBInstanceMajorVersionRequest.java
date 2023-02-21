@@ -4,63 +4,188 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
+    /**
+     * <p>The time at which ApsaraDB RDS collects the statistics of the new RDS instance. Valid values:</p>
+     * <br>
+     * <p>*   Before: ApsaraDB RDS collects the statistics of the new instance before the switchover to ensure service stability. If the original RDS instance contains a large amount of data, the upgrade may require a long period of time.</p>
+     * <p>*   After: ApsaraDB RDS collects the statistics of the new instance after the switchover to accelerate the upgrade. If you access tables for which no statistics are generated, the query plans that you specify may be inaccurately executed. In addition, your database service may be unavailable during peak hours.</p>
+     * <br>
+     * <p>>  If you set the SwitchOver parameter to false, the value Before specifies that ApsaraDB RDS collects the statistics of the new instance before the new instance starts to process read and write requests, and the value After specifies that ApsaraDB RDS collects the statistics of the new instance after the new instance starts to process read and write requests.</p>
+     */
     @NameInMap("CollectStatMode")
     public String collectStatMode;
 
+    /**
+     * <p>The instance type of the new instance. The vCPU and memory specifications of the new instance must be higher than or equal to the vCPU and memory specifications of the original instance.</p>
+     * <br>
+     * <p>For example, if the instance type of the original instance is `pg.n2.small.2c`, which provides 1 core and 2 GB of memory, the instance type of the new instance can be `pg.n2.medium.2c`, which provides 2 cores and 4 GB of memory.</p>
+     * <br>
+     * <p>>  For more information about the supported instance types, see [Primary ApsaraDB RDS for PostgreSQL instance types](~~276990~~).</p>
+     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
+    /**
+     * <p>The ID of the original instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The storage capacity of the new instance.</p>
+     * <br>
+     * <p>Unit: GB.</p>
+     * <br>
+     * <p>*   Valid values if you use enhanced SSDs (ESSDs) of performance level 1 (PL1): 20 to 3200</p>
+     * <p>*   Valid values if you use ESSDs of PL2: 500 to 3200</p>
+     * <p>*   Valid values if you use ESSDs of PL3: 1500 to 3200</p>
+     * <br>
+     * <p>>  If the original instance uses local SSDs, you can reduce the storage capacity of the instance when you upgrade the major engine version of the instance. For more information about the minimum available storage capacity, see [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).</p>
+     */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
 
+    /**
+     * <p>The storage type of the new instance.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   cloud_ssd: standard SSDs</p>
+     * <p>*   cloud_essd: ESSDs of PL1</p>
+     * <p>*   cloud_essd2: ESSDs of PL2</p>
+     * <p>*   cloud_essd3: ESSDs of PL3</p>
+     * <br>
+     * <p>The major version upgrade feature is based on SSD snapshots. You can select a storage type based on the following conditions:</p>
+     * <br>
+     * <p>*   If the original RDS instance uses standard SSDs, you can select standard SSDs.</p>
+     * <p>*   If the original RDS instance uses ESSDs, you can select ESSDs of PL1, ESSDs of PL2, or ESSDs of PL3.</p>
+     * <p>*   If the original RDS instance uses local SSDs, you can select ESSDs of PL1, ESSDs of PL2, or ESSDs of PL3.</p>
+     */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
+    /**
+     * <p>The network type of the new instance. The value is fixed as VPC. The major version upgrade feature is supported only for instances that reside in VPCs.</p>
+     * <br>
+     * <p>If the original instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~).</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    /**
+     * <p>The billing method. The value is fixed as Postpaid.</p>
+     * <br>
+     * <p>>  For more information about how to change the billing method of the new instance after an upgrade, see [Switch the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription](~~96743~~).</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The internal IP address of the new instance. You do not need to specify this parameter. ApsaraDB RDS automatically assigns an internal IP address based on the values of the VPCId and vSwitchId parameters.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether ApsaraDB RDS automatically switches your workloads over to the new instance after data is migrated to the new instance.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true: ApsaraDB RDS automatically switches workloads over to the new instance.</p>
+     * <p>*   false: ApsaraDB RDS does not automatically switch your workloads over to the new instance. Before you perform an upgrade, we recommend that you set this parameter to false to test whether the new major engine version is compatible with your workloads.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you set this parameter to true, you must take note of the following information:</p>
+     * <br>
+     * <p>    *   After the switchover is complete, you cannot roll your workloads back to the original RDS instance. Proceed with caution.</p>
+     * <p>    *   During the switchover, the original RDS instance processes only read requests. You must perform the switchover during off-peak hours.</p>
+     * <p>    *   If read-only instances are attached to the original instance, you can set this parameter only to false. In this case, the read-only instances that are attached to the original instance cannot be cloned. After the upgrade is complete, you must create read-only instances for the new instance.</p>
+     * <br>
+     * <p>*   If you set this parameter to false, you must take note of the following information:</p>
+     * <br>
+     * <p>    *   The data migration does not interrupt your workloads on the original instance.</p>
+     * <p>    *   After data is migrated to the new instance, you must update the endpoint configuration on your application. This update requires you to replace the endpoint of the original instance with the endpoint of the new instance. For more information about how to view the endpoint of an instance, see [View and change the internal and public endpoints and port numbers of an ApsaraDB RDS for PostgreSQL instance](~~96788~~).</p>
+     */
     @NameInMap("SwitchOver")
     public String switchOver;
 
+    /**
+     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+     */
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    /**
+     * <p>The time at which ApsaraDB RDS switches your workloads over to the new instance. This parameter is used together with the SwitchOver parameter and takes effect only when you set the SwitchOver parameter to true.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Immediate: After data is migrated to the new instance, ApsaraDB RDS immediately switches your workloads over to the new instance.</p>
+     * <p>*   MaintainTime: After data is migrated to the new instance, ApsaraDB RDS switches your workloads over to the new instance during the maintenance window that you specify. You can call the [ModifyDBInstanceMaintainTime](~~26249~~) operation to change the maintenance window of an instance.</p>
+     */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 
+    /**
+     * <p>The major engine version of the new instance. The value of this parameter must be the major engine version on which an upgrade check is performed.</p>
+     * <br>
+     * <p>>  You can call the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation to perform an upgrade check on a major engine version.</p>
+     */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
+    /**
+     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+     */
     @NameInMap("UsedTime")
     public String usedTime;
 
+    /**
+     * <p>The ID of the VPC in which the original instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the VPC IDs of instances.</p>
+     */
     @NameInMap("VPCId")
     public String VPCId;
 
+    /**
+     * <p>*   If the original instance runs RDS Basic Edition, enter the vSwitch ID of the new instance.</p>
+     * <p>*   If the original instance runs RDS High-availability Edition, enter the vSwitch ID of the new instance and the vSwitch ID of the secondary instance of the new instance. Make sure that you separate the vSwitch IDs with commas (,).</p>
+     * <br>
+     * <p>>  The vSwitches that you specify must reside in the same zone as the original instance. You can call the [DescribeVSwitches](~~35748~~) operation to query vSwitch IDs.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the zone to which the new instance belongs. You can call the [DescribeRegions](~~26243~~) operation to query zone IDs.</p>
+     * <br>
+     * <p>You can select a zone that belongs to the region where the original instance resides.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
+    /**
+     * <p>The ID of the zone to which the secondary instance of the new instance belongs. You can specify this parameter only when the original instance runs RDS High-availability Edition.</p>
+     * <br>
+     * <p>You can select a zone that belongs to the region where the original instance resides.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~26243~~) operation to query zone IDs.</p>
+     */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
 
+    /**
+     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+     */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;
 

@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -13,6 +16,9 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,12 +28,20 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: IP address,Hostname. Multiple values are separated with semicolons (;).</p>
+     * <br>
+     * <p>>  For more information about how to query the computer hostname, see [Configure a distributed transaction whitelist](~~124321~~).</p>
+     */
     @NameInMap("SecurityIpHosts")
     public String securityIpHosts;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The name of the whitelist.</p>
+     */
     @NameInMap("WhiteListGroupName")
     public String whiteListGroupName;
 

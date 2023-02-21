@@ -4,27 +4,48 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyADInfoRequest extends TeaModel {
+    /**
+     * <p>The account of the AD domain.</p>
+     */
     @NameInMap("ADAccountName")
     public String ADAccountName;
 
+    /**
+     * <p>The DNS information about the AD domain.</p>
+     */
     @NameInMap("ADDNS")
     public String ADDNS;
 
+    /**
+     * <p>The password for the account of the AD domain.</p>
+     */
     @NameInMap("ADPassword")
     public String ADPassword;
 
+    /**
+     * <p>The IP address of the AD domain.</p>
+     */
     @NameInMap("ADServerIpAddress")
     public String ADServerIpAddress;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

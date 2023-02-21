@@ -4,18 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogFilesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the returned audit log files.</p>
+     */
     @NameInMap("Items")
     public DescribeSQLLogFilesResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,21 +80,43 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogFilesResponseBodyItemsLogFile extends TeaModel {
+        /**
+         * <p>The name of the audit log file.</p>
+         */
         @NameInMap("FileID")
         public String fileID;
 
+        /**
+         * <p>The download URL of the audit log file. If the audit log file cannot be downloaded, this parameter is null.</p>
+         */
         @NameInMap("LogDownloadURL")
         public String logDownloadURL;
 
+        /**
+         * <p>The time at which the last SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LogEndTime")
         public String logEndTime;
 
+        /**
+         * <p>The size of the audit log file. Unit: bytes.</p>
+         */
         @NameInMap("LogSize")
         public String logSize;
 
+        /**
+         * <p>The time at which the first SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("LogStartTime")
         public String logStartTime;
 
+        /**
+         * <p>The status of the audit log file. Valid values:</p>
+         * <br>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
+         * <p>*   **Generating**</p>
+         */
         @NameInMap("LogStatus")
         public String logStatus;
 

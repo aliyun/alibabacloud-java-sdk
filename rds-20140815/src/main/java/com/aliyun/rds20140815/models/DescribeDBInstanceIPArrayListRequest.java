@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -13,6 +16,15 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The network type of IP address whitelist to query. Valid values:</p>
+     * <br>
+     * <p>*   **Classic**: classic network type. This value applies in enhanced whitelist mode.</p>
+     * <p>*   **VPC**: VPC network type. This value applies in enhanced whitelist mode.</p>
+     * <p>*   **MIX**: classic and VPC network types. This value applies in standard whitelist mode.</p>
+     * <br>
+     * <p>This operation returns IP address whitelists of all network types by default.</p>
+     */
     @NameInMap("WhitelistNetworkType")
     public String whitelistNetworkType;
 

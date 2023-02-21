@@ -4,9 +4,18 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The availability check method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **LONG**: Alibaba Cloud uses persistent connections to check the availability of the instance.</p>
+     * <p>*   **SHORT**: Alibaba Cloud uses short-lived connections to check the availability of the instance.</p>
+     */
     @NameInMap("TcpConnectionType")
     public String tcpConnectionType;
 

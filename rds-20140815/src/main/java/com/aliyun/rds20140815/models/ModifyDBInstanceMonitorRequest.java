@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceMonitorRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -16,6 +22,16 @@ public class ModifyDBInstanceMonitorRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The monitoring frequency that you want to use. Valid values:</p>
+     * <br>
+     * <p>*   **5**</p>
+     * <p>*   **10**</p>
+     * <p>*   **60**</p>
+     * <p>*   **300**</p>
+     * <br>
+     * <p>Unit: seconds.</p>
+     */
     @NameInMap("Period")
     public String period;
 

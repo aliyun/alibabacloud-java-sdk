@@ -4,15 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
+    /**
+     * <p>Details of the endpoints of the instance.</p>
+     */
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
 
+    /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Classic**</p>
+     * <p>*   **VPC**</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The whitelist mode of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **normal**: standard whitelist mode</p>
+     * <p>*   **safety**: enhanced whitelist mode</p>
+     */
     @NameInMap("SecurityIPMode")
     public String securityIPMode;
 
@@ -54,18 +72,39 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight extends TeaModel {
+        /**
+         * <p>The availability of the instance. Valid values:</p>
+         * <br>
+         * <p>- **Unavailable**</p>
+         * <p>- **Available**</p>
+         */
         @NameInMap("Availability")
         public String availability;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The role of the instance. Valid values:</p>
+         * <br>
+         * <p>- **Master**: primary instance</p>
+         * <p>- **Readonly**: read-only instance</p>
+         */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
+        /**
+         * <p>A deprecated parameter.</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The weight of the instance.</p>
+         */
         @NameInMap("Weight")
         public String weight;
 
@@ -136,9 +175,15 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup extends TeaModel {
+        /**
+         * <p>The name of the IP address whitelist.</p>
+         */
         @NameInMap("SecurityIPGroupName")
         public String securityIPGroupName;
 
+        /**
+         * <p>The IP addresses contained in the IP address whitelist.</p>
+         */
         @NameInMap("SecurityIPs")
         public String securityIPs;
 
@@ -185,45 +230,113 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo extends TeaModel {
+        /**
+         * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
+         * <br>
+         * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
+         */
         @NameInMap("BabelfishPort")
         public String babelfishPort;
 
+        /**
+         * <p>The endpoint of the instance.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: regular endpoint</p>
+         * <p>*   **ReadWriteSplitting**: read/write splitting endpoint</p>
+         */
         @NameInMap("ConnectionStringType")
         public String connectionStringType;
 
+        /**
+         * <p>Details of the weight. This parameter is returned only when the read/write splitting feature is enabled for the instance.</p>
+         */
         @NameInMap("DBInstanceWeights")
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights;
 
+        /**
+         * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Standard**: ApsaraDB RDS automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.</p>
+         * <p>*   **Custom**: You must manually assign read weights to the instance and its read-only instances.</p>
+         */
         @NameInMap("DistributionType")
         public String distributionType;
 
+        /**
+         * <p>The remaining validity period of the instance of the classic network in hybrid access mode. Unit: seconds.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The network type.</p>
+         * <br>
+         * <p>*   Valid values when the instance resides in the classic network:</p>
+         * <br>
+         * <p>    *   **Inner:**: internal network</p>
+         * <p>    *   **Public**: Internet</p>
+         * <br>
+         * <p>*   Valid values when the instance resides in a virtual private cloud (VPC):</p>
+         * <br>
+         * <p>    *   **Private**: internal network</p>
+         * <p>    *   **Public**: Internet</p>
+         */
         @NameInMap("IPType")
         public String IPType;
 
+        /**
+         * <p>The latency threshold. This parameter is returned only for a read/write splitting endpoint. Unit: seconds.</p>
+         * <br>
+         * <p>>  If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.</p>
+         */
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
 
+        /**
+         * <p>The port that is used to connect to the instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>Details about the IP whitelists of the instance.</p>
+         */
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
 
+        /**
+         * <p>Indicates whether the IP version can be updated. Valid values:</p>
+         * <br>
+         * <p>*   **Enable**: The IP version can be updated.</p>
+         * <br>
+         * <p>*   **Disabled**: The IP version cannot be updated.</p>
+         * <br>
+         * <p>> The IP version can be updated from IPv4 to IPv6.</p>
+         */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
+        /**
+         * <p>The ID of the VPC to which the instance belongs.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

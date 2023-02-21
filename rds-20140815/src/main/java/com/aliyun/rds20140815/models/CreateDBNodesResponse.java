@@ -3,7 +3,7 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeHistoryTasksStatResponse extends TeaModel {
+public class CreateDBNodesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeHistoryTasksStatResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeHistoryTasksStatResponseBody body;
+    public CreateDBNodesResponseBody body;
 
-    public static DescribeHistoryTasksStatResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeHistoryTasksStatResponse self = new DescribeHistoryTasksStatResponse();
+    public static CreateDBNodesResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateDBNodesResponse self = new CreateDBNodesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeHistoryTasksStatResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateDBNodesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeHistoryTasksStatResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeHistoryTasksStatResponse setStatusCode(Integer statusCode) {
+    public CreateDBNodesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeHistoryTasksStatResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeHistoryTasksStatResponse setBody(DescribeHistoryTasksStatResponseBody body) {
+    public CreateDBNodesResponse setBody(CreateDBNodesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeHistoryTasksStatResponseBody getBody() {
+    public CreateDBNodesResponseBody getBody() {
         return this.body;
     }
 

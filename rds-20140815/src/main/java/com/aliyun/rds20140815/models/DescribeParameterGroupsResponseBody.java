@@ -4,12 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The details of parameter templates.</p>
+     */
     @NameInMap("ParameterGroups")
     public DescribeParameterGroupsResponseBodyParameterGroups parameterGroups;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether parameter templates exist in the specified region. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("SignalForOptimizeParams")
     public Boolean signalForOptimizeParams;
 
@@ -43,33 +55,74 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterGroupsResponseBodyParameterGroupsParameterGroup extends TeaModel {
+        /**
+         * <p>The time when the parameter template was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The database engine.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine version of the instance.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>Indicates whether the restart of an instance is required for the parameter template to take effect. Valid values:</p>
+         * <br>
+         * <p>*   0: A restart is not required.</p>
+         * <p>*   1: A restart is required.</p>
+         */
         @NameInMap("ForceRestart")
         public Integer forceRestart;
 
+        /**
+         * <p>The number of parameters in the parameter template.</p>
+         */
         @NameInMap("ParamCounts")
         public Integer paramCounts;
 
+        /**
+         * <p>The type of the parameter template. Valid values:</p>
+         * <br>
+         * <p>*   0: the default parameter template.</p>
+         * <p>*   1: a custom parameter template.</p>
+         * <p>*   2: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</p>
+         */
         @NameInMap("ParameterGroupDesc")
         public String parameterGroupDesc;
 
+        /**
+         * <p>The ID of the parameter template.</p>
+         */
         @NameInMap("ParameterGroupId")
         public String parameterGroupId;
 
+        /**
+         * <p>The name of the parameter template.</p>
+         */
         @NameInMap("ParameterGroupName")
         public String parameterGroupName;
 
+        /**
+         * <p>The type of the parameter template. Valid values:</p>
+         * <br>
+         * <p>*   0: the default parameter template.</p>
+         * <p>*   1: a custom parameter template.</p>
+         * <p>*   2: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</p>
+         */
         @NameInMap("ParameterGroupType")
         public Integer parameterGroupType;
 
+        /**
+         * <p>The time when the parameter template was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
