@@ -22,6 +22,9 @@ public class CreateAppSessionRequest extends TeaModel {
     @NameInMap("CustomUserId")
     public String customUserId;
 
+    @NameInMap("DistrictId")
+    public String districtId;
+
     @NameInMap("EnablePostpaid")
     public Boolean enablePostpaid;
 
@@ -88,6 +91,14 @@ public class CreateAppSessionRequest extends TeaModel {
     }
     public String getCustomUserId() {
         return this.customUserId;
+    }
+
+    public CreateAppSessionRequest setDistrictId(String districtId) {
+        this.districtId = districtId;
+        return this;
+    }
+    public String getDistrictId() {
+        return this.districtId;
     }
 
     public CreateAppSessionRequest setEnablePostpaid(Boolean enablePostpaid) {

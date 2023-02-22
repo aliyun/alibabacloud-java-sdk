@@ -17,6 +17,7 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String districtId;
 
     @NameInMap("ExpectResourceReadyTime")
+    @Deprecated
     public String expectResourceReadyTime;
 
     @NameInMap("ExpectSessionCapacity")

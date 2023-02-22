@@ -1,3 +1,6 @@
+2023-02-22 Version: 2.5.1
+- Update CreateAppSessionBatch Api.
+
 2022-12-09 Version: 2.5.0
 - Update BatchCheckSession Api.
 

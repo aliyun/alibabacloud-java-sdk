@@ -144,6 +144,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AppType", request.appType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.streamingAppId)) {
+            body.put("StreamingAppId", request.streamingAppId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamingSolution)) {
+            body.put("StreamingSolution", request.streamingSolution);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -193,6 +201,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CustomUserId", request.customUserId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.districtId)) {
+            query.put("DistrictId", request.districtId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enablePostpaid)) {
             query.put("EnablePostpaid", request.enablePostpaid);
         }
@@ -233,6 +245,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAppSessionResponse createAppSession(CreateAppSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAppSessionWithOptions(request, runtime);
+    }
+
+    public CreateAppSessionBatchResponse createAppSessionBatchWithOptions(CreateAppSessionBatchRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAppSessionBatchShrinkRequest request = new CreateAppSessionBatchShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.appInfos)) {
+            request.appInfosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.appInfos, "AppInfos", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInfosShrink)) {
+            query.put("AppInfos", request.appInfosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customTaskId)) {
+            query.put("CustomTaskId", request.customTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAppSessionBatch"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAppSessionBatchResponse());
+    }
+
+    public CreateAppSessionBatchResponse createAppSessionBatch(CreateAppSessionBatchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAppSessionBatchWithOptions(request, runtime);
     }
 
     public CreateAppSessionBatchSyncResponse createAppSessionBatchSyncWithOptions(CreateAppSessionBatchSyncRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -638,35 +693,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAppVersionResponse getAppVersion(GetAppVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAppVersionWithOptions(request, runtime);
-    }
-
-    public GetAutoPickPicResponse getAutoPickPicWithOptions(GetAutoPickPicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            query.put("TaskId", request.taskId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetAutoPickPic"),
-            new TeaPair("version", "2021-11-11"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoPickPicResponse());
-    }
-
-    public GetAutoPickPicResponse getAutoPickPic(GetAutoPickPicRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getAutoPickPicWithOptions(request, runtime);
     }
 
     public GetCapacityResponse getCapacityWithOptions(GetCapacityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

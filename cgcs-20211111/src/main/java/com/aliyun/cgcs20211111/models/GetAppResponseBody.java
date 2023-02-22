@@ -22,6 +22,12 @@ public class GetAppResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("StreamingAppId")
+    public String streamingAppId;
+
+    @NameInMap("StreamingSolution")
+    public String streamingSolution;
+
     @NameInMap("VersionAdaptNum")
     public Long versionAdaptNum;
 
@@ -79,6 +85,22 @@ public class GetAppResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAppResponseBody setStreamingAppId(String streamingAppId) {
+        this.streamingAppId = streamingAppId;
+        return this;
+    }
+    public String getStreamingAppId() {
+        return this.streamingAppId;
+    }
+
+    public GetAppResponseBody setStreamingSolution(String streamingSolution) {
+        this.streamingSolution = streamingSolution;
+        return this;
+    }
+    public String getStreamingSolution() {
+        return this.streamingSolution;
     }
 
     public GetAppResponseBody setVersionAdaptNum(Long versionAdaptNum) {
