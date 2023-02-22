@@ -16,8 +16,8 @@ public class BridgeRtcCallRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Provider")
-    public String provider;
+    @NameInMap("ServiceProvider")
+    public String serviceProvider;
 
     @NameInMap("Tags")
     public String tags;
@@ -68,12 +68,12 @@ public class BridgeRtcCallRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public BridgeRtcCallRequest setProvider(String provider) {
-        this.provider = provider;
+    public BridgeRtcCallRequest setServiceProvider(String serviceProvider) {
+        this.serviceProvider = serviceProvider;
         return this;
     }
-    public String getProvider() {
-        return this.provider;
+    public String getServiceProvider() {
+        return this.serviceProvider;
     }
 
     public BridgeRtcCallRequest setTags(String tags) {
