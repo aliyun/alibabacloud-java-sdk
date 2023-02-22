@@ -16,6 +16,9 @@ public class CreateResourceAccountRequest extends TeaModel {
     @NameInMap("PayerAccountId")
     public String payerAccountId;
 
+    @NameInMap("ResellAccountType")
+    public String resellAccountType;
+
     @NameInMap("Tag")
     public java.util.List<CreateResourceAccountRequestTag> tag;
 
@@ -54,6 +57,14 @@ public class CreateResourceAccountRequest extends TeaModel {
     }
     public String getPayerAccountId() {
         return this.payerAccountId;
+    }
+
+    public CreateResourceAccountRequest setResellAccountType(String resellAccountType) {
+        this.resellAccountType = resellAccountType;
+        return this;
+    }
+    public String getResellAccountType() {
+        return this.resellAccountType;
     }
 
     public CreateResourceAccountRequest setTag(java.util.List<CreateResourceAccountRequestTag> tag) {
