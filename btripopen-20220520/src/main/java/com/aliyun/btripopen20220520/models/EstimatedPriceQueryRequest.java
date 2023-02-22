@@ -22,6 +22,9 @@ public class EstimatedPriceQueryRequest extends TeaModel {
     @NameInMap("start_time")
     public Long startTime;
 
+    @NameInMap("sub_corp_id")
+    public String subCorpId;
+
     @NameInMap("user_id")
     public String userId;
 
@@ -76,6 +79,14 @@ public class EstimatedPriceQueryRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public EstimatedPriceQueryRequest setSubCorpId(String subCorpId) {
+        this.subCorpId = subCorpId;
+        return this;
+    }
+    public String getSubCorpId() {
+        return this.subCorpId;
     }
 
     public EstimatedPriceQueryRequest setUserId(String userId) {
