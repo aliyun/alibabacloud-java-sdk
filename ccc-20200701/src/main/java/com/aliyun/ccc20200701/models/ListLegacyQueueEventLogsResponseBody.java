@@ -94,6 +94,9 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         @NameInMap("Dnis")
         public String dnis;
 
+        @NameInMap("Id")
+        public Long id;
+
         @NameInMap("QueueTime")
         public Long queueTime;
 
@@ -157,6 +160,14 @@ public class ListLegacyQueueEventLogsResponseBody extends TeaModel {
         }
         public String getDnis() {
             return this.dnis;
+        }
+
+        public ListLegacyQueueEventLogsResponseBodyDataList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public ListLegacyQueueEventLogsResponseBodyDataList setQueueTime(Long queueTime) {
