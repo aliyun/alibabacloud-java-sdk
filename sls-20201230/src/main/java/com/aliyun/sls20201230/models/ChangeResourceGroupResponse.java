@@ -3,7 +3,7 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class GetEtlJobResponse extends TeaModel {
+public class ChangeResourceGroupResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -12,16 +12,12 @@ public class GetEtlJobResponse extends TeaModel {
     @Validation(required = true)
     public Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    public EtlJob body;
-
-    public static GetEtlJobResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetEtlJobResponse self = new GetEtlJobResponse();
+    public static ChangeResourceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        ChangeResourceGroupResponse self = new ChangeResourceGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetEtlJobResponse setHeaders(java.util.Map<String, String> headers) {
+    public ChangeResourceGroupResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,20 +25,12 @@ public class GetEtlJobResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetEtlJobResponse setStatusCode(Integer statusCode) {
+    public ChangeResourceGroupResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     public Integer getStatusCode() {
         return this.statusCode;
-    }
-
-    public GetEtlJobResponse setBody(EtlJob body) {
-        this.body = body;
-        return this;
-    }
-    public EtlJob getBody() {
-        return this.body;
     }
 
 }

@@ -10,6 +10,9 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("projectName")
     public String projectName;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     public static CreateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProjectRequest self = new CreateProjectRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateProjectRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public CreateProjectRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

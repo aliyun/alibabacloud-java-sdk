@@ -42,36 +42,6 @@ public class TagResourcesRequest extends TeaModel {
         return this.tags;
     }
 
-    public static class ListTagResourcesRequestTags extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("value")
-        public String value;
-
-        public static ListTagResourcesRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesRequestTags self = new ListTagResourcesRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class TagResourcesRequestTags extends TeaModel {
         @NameInMap("key")
         public String key;

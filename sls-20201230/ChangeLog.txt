@@ -1,3 +1,6 @@
+2023-02-22 Version: 1.5.4
+- Fix api pathname.
+
 2022-10-26 Version: 1.5.3
 - Add productType to logstore API.
 

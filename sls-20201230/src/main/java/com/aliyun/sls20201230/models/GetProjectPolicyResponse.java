@@ -12,6 +12,10 @@ public class GetProjectPolicyResponse extends TeaModel {
     @Validation(required = true)
     public Integer statusCode;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public String body;
+
     public static GetProjectPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         GetProjectPolicyResponse self = new GetProjectPolicyResponse();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class GetProjectPolicyResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public GetProjectPolicyResponse setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

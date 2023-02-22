@@ -46,6 +46,9 @@ public class GetCheckPointResponse extends TeaModel {
     }
 
     public static class GetCheckPointResponseBody extends TeaModel {
+        /**
+         * <p>Shard ID。</p>
+         */
         @NameInMap("shard")
         public Integer shard;
 
