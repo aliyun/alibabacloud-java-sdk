@@ -810,6 +810,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyQueryWithOptions(request, headers, runtime);
     }
 
+    public BtripBillInfoAdjustResponse btripBillInfoAdjustWithOptions(BtripBillInfoAdjustRequest request, BtripBillInfoAdjustHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryId)) {
+            body.put("primary_id", request.primaryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartCostCenterId)) {
+            body.put("third_part_cost_center_id", request.thirdPartCostCenterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartDepartmentId)) {
+            body.put("third_part_department_id", request.thirdPartDepartmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartInvoiceId)) {
+            body.put("third_part_invoice_id", request.thirdPartInvoiceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdPartProjectId)) {
+            body.put("third_part_project_id", request.thirdPartProjectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BtripBillInfoAdjust"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/bill/v1/info/action/adjust"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BtripBillInfoAdjustResponse());
+    }
+
+    public BtripBillInfoAdjustResponse btripBillInfoAdjust(BtripBillInfoAdjustRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        BtripBillInfoAdjustHeaders headers = new BtripBillInfoAdjustHeaders();
+        return this.btripBillInfoAdjustWithOptions(request, headers, runtime);
+    }
+
     public CarApplyAddResponse carApplyAddWithOptions(CarApplyAddRequest request, CarApplyAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3366,6 +3426,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         IsvUserSaveHeaders headers = new IsvUserSaveHeaders();
         return this.isvUserSaveWithOptions(request, headers, runtime);
+    }
+
+    public MonthBillConfirmResponse monthBillConfirmWithOptions(MonthBillConfirmRequest request, MonthBillConfirmHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mailBillDate)) {
+            body.put("mail_bill_date", request.mailBillDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MonthBillConfirm"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/bill/v1/status/action/confirm"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MonthBillConfirmResponse());
+    }
+
+    public MonthBillConfirmResponse monthBillConfirm(MonthBillConfirmRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        MonthBillConfirmHeaders headers = new MonthBillConfirmHeaders();
+        return this.monthBillConfirmWithOptions(request, headers, runtime);
     }
 
     public MonthBillGetResponse monthBillGetWithOptions(MonthBillGetRequest request, MonthBillGetHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
