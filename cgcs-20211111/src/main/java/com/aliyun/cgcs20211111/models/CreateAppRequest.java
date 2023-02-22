@@ -10,6 +10,12 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("AppType")
     public String appType;
 
+    @NameInMap("StreamingAppId")
+    public String streamingAppId;
+
+    @NameInMap("StreamingSolution")
+    public String streamingSolution;
+
     public static CreateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppRequest self = new CreateAppRequest();
         return TeaModel.build(map, self);
@@ -29,6 +35,22 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getAppType() {
         return this.appType;
+    }
+
+    public CreateAppRequest setStreamingAppId(String streamingAppId) {
+        this.streamingAppId = streamingAppId;
+        return this;
+    }
+    public String getStreamingAppId() {
+        return this.streamingAppId;
+    }
+
+    public CreateAppRequest setStreamingSolution(String streamingSolution) {
+        this.streamingSolution = streamingSolution;
+        return this;
+    }
+    public String getStreamingSolution() {
+        return this.streamingSolution;
     }
 
 }

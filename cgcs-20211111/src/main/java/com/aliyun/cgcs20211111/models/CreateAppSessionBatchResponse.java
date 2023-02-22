@@ -3,7 +3,7 @@ package com.aliyun.cgcs20211111.models;
 
 import com.aliyun.tea.*;
 
-public class CancelUploadTaskResponse extends TeaModel {
+public class CreateAppSessionBatchResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CancelUploadTaskResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CancelUploadTaskResponseBody body;
+    public CreateAppSessionBatchResponseBody body;
 
-    public static CancelUploadTaskResponse build(java.util.Map<String, ?> map) throws Exception {
-        CancelUploadTaskResponse self = new CancelUploadTaskResponse();
+    public static CreateAppSessionBatchResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateAppSessionBatchResponse self = new CreateAppSessionBatchResponse();
         return TeaModel.build(map, self);
     }
 
-    public CancelUploadTaskResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateAppSessionBatchResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CancelUploadTaskResponse extends TeaModel {
         return this.headers;
     }
 
-    public CancelUploadTaskResponse setStatusCode(Integer statusCode) {
+    public CreateAppSessionBatchResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CancelUploadTaskResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CancelUploadTaskResponse setBody(CancelUploadTaskResponseBody body) {
+    public CreateAppSessionBatchResponse setBody(CreateAppSessionBatchResponseBody body) {
         this.body = body;
         return this;
     }
-    public CancelUploadTaskResponseBody getBody() {
+    public CreateAppSessionBatchResponseBody getBody() {
         return this.body;
     }
 
