@@ -3,7 +3,7 @@ package com.aliyun.resourcemanager20200331.models;
 
 import com.aliyun.tea.*;
 
-public class GetResourceGroupListAclModeResponse extends TeaModel {
+public class RetryChangeAccountEmailResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetResourceGroupListAclModeResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetResourceGroupListAclModeResponseBody body;
+    public RetryChangeAccountEmailResponseBody body;
 
-    public static GetResourceGroupListAclModeResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetResourceGroupListAclModeResponse self = new GetResourceGroupListAclModeResponse();
+    public static RetryChangeAccountEmailResponse build(java.util.Map<String, ?> map) throws Exception {
+        RetryChangeAccountEmailResponse self = new RetryChangeAccountEmailResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetResourceGroupListAclModeResponse setHeaders(java.util.Map<String, String> headers) {
+    public RetryChangeAccountEmailResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetResourceGroupListAclModeResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetResourceGroupListAclModeResponse setStatusCode(Integer statusCode) {
+    public RetryChangeAccountEmailResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetResourceGroupListAclModeResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetResourceGroupListAclModeResponse setBody(GetResourceGroupListAclModeResponseBody body) {
+    public RetryChangeAccountEmailResponse setBody(RetryChangeAccountEmailResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetResourceGroupListAclModeResponseBody getBody() {
+    public RetryChangeAccountEmailResponseBody getBody() {
         return this.body;
     }
 

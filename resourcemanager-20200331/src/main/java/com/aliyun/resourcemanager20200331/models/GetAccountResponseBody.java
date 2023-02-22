@@ -71,6 +71,9 @@ public class GetAccountResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        @NameInMap("EmailStatus")
+        public String emailStatus;
+
         @NameInMap("FolderId")
         public String folderId;
 
@@ -131,6 +134,14 @@ public class GetAccountResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public GetAccountResponseBodyAccount setEmailStatus(String emailStatus) {
+            this.emailStatus = emailStatus;
+            return this;
+        }
+        public String getEmailStatus() {
+            return this.emailStatus;
         }
 
         public GetAccountResponseBodyAccount setFolderId(String folderId) {
