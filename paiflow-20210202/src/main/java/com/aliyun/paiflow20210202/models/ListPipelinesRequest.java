@@ -4,6 +4,9 @@ package com.aliyun.paiflow20210202.models;
 import com.aliyun.tea.*;
 
 public class ListPipelinesRequest extends TeaModel {
+    @NameInMap("FuzzyMatching")
+    public Boolean fuzzyMatching;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -25,6 +28,14 @@ public class ListPipelinesRequest extends TeaModel {
     public static ListPipelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPipelinesRequest self = new ListPipelinesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPipelinesRequest setFuzzyMatching(Boolean fuzzyMatching) {
+        this.fuzzyMatching = fuzzyMatching;
+        return this;
+    }
+    public Boolean getFuzzyMatching() {
+        return this.fuzzyMatching;
     }
 
     public ListPipelinesRequest setPageNumber(Integer pageNumber) {

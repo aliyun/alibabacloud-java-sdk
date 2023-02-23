@@ -1,3 +1,6 @@
+2023-02-23 Version: 1.1.0
+- For public cloud.
+
 2021-09-22 Version: 1.0.35-tea1.1.13
 - Specify tea sdk 1113.
 
