@@ -4,21 +4,39 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the job instance in the running state.</p>
+     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <p>The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 
+    /**
+     * <p>The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region in which the application resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

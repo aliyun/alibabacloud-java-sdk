@@ -4,18 +4,33 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class DeleteWorkflowRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the workflow.</p>
+     */
     @NameInMap("WorkflowId")
     public Long workflowId;
 

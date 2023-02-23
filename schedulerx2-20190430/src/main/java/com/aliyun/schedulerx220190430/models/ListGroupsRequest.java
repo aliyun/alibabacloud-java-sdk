@@ -4,12 +4,21 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
+    /**
+     * <p>The namespace. You can obtain the namespace on the **Namespace** page in Distributed Task Scheduling Platform.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>Required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region in which the application is located.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

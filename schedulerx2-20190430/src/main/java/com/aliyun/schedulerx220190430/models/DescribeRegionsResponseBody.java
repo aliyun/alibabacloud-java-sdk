@@ -4,18 +4,36 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The error message that is returned only if the error occurs.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call is successful.</p>
+     * <p>*   **false**: The call fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The displayed name of the region, which varies based on the current language.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The endpoint of the region.</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

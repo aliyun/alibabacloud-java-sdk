@@ -4,15 +4,30 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class DeleteWorkflowResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The error message that is returned only if the error occurs.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The unique ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the workflow is deleted. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The workflow is deleted.</p>
+     * <p>*   **false**: Failed to delete the workflow.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

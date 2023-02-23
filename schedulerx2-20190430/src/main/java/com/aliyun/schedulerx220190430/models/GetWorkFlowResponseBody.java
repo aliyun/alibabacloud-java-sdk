@@ -4,18 +4,33 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetWorkFlowResponseBody extends TeaModel {
+    /**
+     * <p>The error code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data of the workflow.</p>
+     */
     @NameInMap("Data")
     public GetWorkFlowResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the API call.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +80,39 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyDataWorkFlowInfo extends TeaModel {
+        /**
+         * <p>The description of the workflow.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the workflow.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the workflow.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time expression of the workflow.</p>
+         */
         @NameInMap("TimeExpression")
         public String timeExpression;
 
+        /**
+         * <p>The time type of the workflow.</p>
+         */
         @NameInMap("TimeType")
         public String timeType;
 
+        /**
+         * <p>The ID of the workflow.</p>
+         */
         @NameInMap("WorkflowId")
         public Long workflowId;
 
@@ -139,9 +172,15 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges extends TeaModel {
+        /**
+         * <p>The ID of the source job.</p>
+         */
         @NameInMap("Source")
         public Long source;
 
+        /**
+         * <p>The ID of the target job.</p>
+         */
         @NameInMap("Target")
         public Long target;
 
@@ -169,12 +208,21 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes extends TeaModel {
+        /**
+         * <p>The ID of the job.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the job.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The status of the job.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -210,9 +258,15 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyDataWorkFlowNodeInfo extends TeaModel {
+        /**
+         * <p>The workflow edges.</p>
+         */
         @NameInMap("Edges")
         public java.util.List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges> edges;
 
+        /**
+         * <p>The list of workflow nodes.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes> nodes;
 
@@ -240,9 +294,15 @@ public class GetWorkFlowResponseBody extends TeaModel {
     }
 
     public static class GetWorkFlowResponseBodyData extends TeaModel {
+        /**
+         * <p>The basic information of the workflow.</p>
+         */
         @NameInMap("WorkFlowInfo")
         public GetWorkFlowResponseBodyDataWorkFlowInfo workFlowInfo;
 
+        /**
+         * <p>The node information of the workflow.</p>
+         */
         @NameInMap("WorkFlowNodeInfo")
         public GetWorkFlowResponseBodyDataWorkFlowNodeInfo workFlowNodeInfo;
 

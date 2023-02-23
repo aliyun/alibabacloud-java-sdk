@@ -4,33 +4,63 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ExecuteJobRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to check the job status. Valid values: -**true**: The job can be run only if the job is enabled. -**false**: The job can be run even if the job is disabled.</p>
+     */
     @NameInMap("CheckJobStatus")
     public Boolean checkJobStatus;
 
+    /**
+     * <p>The type of the designated machine. Valid values: -**1**: worker. -**2**: label.</p>
+     */
     @NameInMap("DesignateType")
     public Integer designateType;
 
+    /**
+     * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The parameters that are passed to trigger the job to run. The input value can be any string. The parameters that are passed are obtained by calling the `context.getInstanceParameters()` class in the `processor` code. The parameters are different from custom parameters for creating jobs.</p>
+     */
     @NameInMap("InstanceParameters")
     public String instanceParameters;
 
+    /**
+     * <p>The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 
+    /**
+     * <p>The label of the worker.</p>
+     */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <p>The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The worker address of the application. To query the worker address, call the GetWokerList operation.</p>
+     */
     @NameInMap("Worker")
     public String worker;
 

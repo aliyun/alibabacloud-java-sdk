@@ -4,30 +4,57 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class DesignateWorkersRequest extends TeaModel {
+    /**
+     * <p>The type of the designated machines. Valid values: 1: worker. 2: label.</p>
+     */
     @NameInMap("DesignateType")
     public Integer designateType;
 
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the job.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 
+    /**
+     * <p>The designated `labels`. The value is a `JSON` string.</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The source of the namespace.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to allow a failover.</p>
+     */
     @NameInMap("Transferable")
     public Boolean transferable;
 
+    /**
+     * <p>The designated workers. The value is a JSON string.</p>
+     */
     @NameInMap("Workers")
     public String workers;
 

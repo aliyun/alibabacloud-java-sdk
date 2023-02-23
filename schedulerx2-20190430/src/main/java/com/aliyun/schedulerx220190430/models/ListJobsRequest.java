@@ -4,21 +4,42 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The name of the job.</p>
+     */
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>The ID of the namespace. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region in which the job resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to enable the job. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disables the job.</p>
+     * <p>*   **1**: enables the job.</p>
+     */
     @NameInMap("Status")
     public String status;
 

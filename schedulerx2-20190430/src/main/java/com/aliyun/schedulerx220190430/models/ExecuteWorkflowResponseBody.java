@@ -4,18 +4,33 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ExecuteWorkflowResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>If the call is successful, the ID of the workflow instance is returned.</p>
+     */
     @NameInMap("Data")
     public ExecuteWorkflowResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned only if the error occurs.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +80,9 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
     }
 
     public static class ExecuteWorkflowResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the workflow instance.</p>
+         */
         @NameInMap("WfInstanceId")
         public Long wfInstanceId;
 

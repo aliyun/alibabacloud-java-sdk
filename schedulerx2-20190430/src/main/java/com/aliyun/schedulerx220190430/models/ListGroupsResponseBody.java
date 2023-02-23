@@ -4,18 +4,36 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the list of applications.</p>
+     */
     @NameInMap("Data")
     public ListGroupsResponseBodyData data;
 
+    /**
+     * <p>The additional information returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call is successful.</p>
+     * <p>*   **false**: The call fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +83,47 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static class ListGroupsResponseBodyDataAppGroups extends TeaModel {
+        /**
+         * <p>应用分组ID</p>
+         */
+        @NameInMap("AppGroupId")
+        public Long appGroupId;
+
+        /**
+         * <p>The key for the application.</p>
+         */
         @NameInMap("AppKey")
         public String appKey;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The application description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
         public static ListGroupsResponseBodyDataAppGroups build(java.util.Map<String, ?> map) throws Exception {
             ListGroupsResponseBodyDataAppGroups self = new ListGroupsResponseBodyDataAppGroups();
             return TeaModel.build(map, self);
+        }
+
+        public ListGroupsResponseBodyDataAppGroups setAppGroupId(Long appGroupId) {
+            this.appGroupId = appGroupId;
+            return this;
+        }
+        public Long getAppGroupId() {
+            return this.appGroupId;
         }
 
         public ListGroupsResponseBodyDataAppGroups setAppKey(String appKey) {
@@ -117,6 +161,9 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static class ListGroupsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of applications and details of applications.</p>
+         */
         @NameInMap("AppGroups")
         public java.util.List<ListGroupsResponseBodyDataAppGroups> appGroups;
 
