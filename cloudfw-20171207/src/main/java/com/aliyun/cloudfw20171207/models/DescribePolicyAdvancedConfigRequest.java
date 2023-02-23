@@ -4,14 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyAdvancedConfigRequest extends TeaModel {
-    // The natural language of the request and response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The natural language of the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The source IP address of the request.
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

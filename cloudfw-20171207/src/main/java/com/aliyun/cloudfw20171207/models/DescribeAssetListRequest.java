@@ -4,89 +4,116 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetListRequest extends TeaModel {
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // The IP version of the asset that is protected by Cloud Firewall. Valid values:
-    // 
-    // *   **4**: IPv4 (default)
-    // *   **6**: IPv6
+    /**
+     * <p>The IP version of the asset that is protected by Cloud Firewall. Valid values:</p>
+     * <br>
+     * <p>*   **4**: IPv4 (default)</p>
+     * <p>*   **6**: IPv6</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
-    // The language of the content within the response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The UID of the member that is added in Cloud Firewall.
+    /**
+     * <p>The UID of the member that is added in Cloud Firewall.</p>
+     */
     @NameInMap("MemberUid")
     public Long memberUid;
 
-    // The number of entries to return on each page.
+    @NameInMap("NewResourceTag")
+    public String newResourceTag;
+
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The ID of the region in which Cloud Firewall is supported.
-    // 
-    // >  For more information about the regions in which Cloud Firewall is supported, see [Supported regions](~~195657~~).
+    /**
+     * <p>The ID of the region in which Cloud Firewall is supported.</p>
+     * <br>
+     * <p>>  For more information about the regions in which Cloud Firewall is supported, see [Supported regions](~~195657~~).</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
-    // The type of the asset. Valid values:
-    // 
-    // *   **BastionHostEgressIP**: the egress IP address of a bastion host
-    // *   **BastionHostIngressIP**: the ingress IP address of a bastion host
-    // *   **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance
-    // *   **EcsPublicIP**: the public IP address of an ECS instance
-    // *   **EIP**: the EIP
-    // *   **EniEIP**: the EIP of an elastic network interface (ENI)
-    // *   **NatEIP**: the EIP of a Network Address Translation (NAT) gateway
-    // *   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance
-    // *   **SlbPublicIP**: the public IP address of an SLB instance
-    // *   **NatPublicIP**: the public IP address of a NAT gateway
-    // *   **HAVIP**: the high-availability virtual IP address (HAVIP)
+    /**
+     * <p>The type of the asset. Valid values:</p>
+     * <br>
+     * <p>*   **BastionHostEgressIP**: the egress IP address of a bastion host</p>
+     * <p>*   **BastionHostIngressIP**: the ingress IP address of a bastion host</p>
+     * <p>*   **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</p>
+     * <p>*   **EcsPublicIP**: the public IP address of an ECS instance</p>
+     * <p>*   **EIP**: the EIP</p>
+     * <p>*   **EniEIP**: the EIP of an elastic network interface (ENI)</p>
+     * <p>*   **NatEIP**: the EIP of a Network Address Translation (NAT) gateway</p>
+     * <p>*   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance</p>
+     * <p>*   **SlbPublicIP**: the public IP address of an SLB instance</p>
+     * <p>*   **NatPublicIP**: the public IP address of a NAT gateway</p>
+     * <p>*   **HAVIP**: the high-availability virtual IP address (HAVIP)</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The instance ID or the IP address of the asset.
+    /**
+     * <p>The instance ID or the IP address of the asset.</p>
+     */
     @NameInMap("SearchItem")
     public String searchItem;
 
-    // The status of the security group policy. Valid values:
-    // 
-    // *   **pass**: delivered
-    // 
-    // *   **block**: undelivered
-    // 
-    // *   **unsupport**: unsupported
-    // 
-    // > If you do not specify this parameter, the assets on which security group policies in all states take effect are queried.
+    /**
+     * <p>The status of the security group policy. Valid values:</p>
+     * <br>
+     * <p>*   **pass**: delivered</p>
+     * <br>
+     * <p>*   **block**: undelivered</p>
+     * <br>
+     * <p>*   **unsupport**: unsupported</p>
+     * <br>
+     * <p>> If you do not specify this parameter, the assets on which security group policies in all states take effect are queried.</p>
+     */
     @NameInMap("SgStatus")
     public String sgStatus;
 
-    // The status of the firewall. Valid values:
-    // 
-    // *   **open**: The firewall is enabled.
-    // *   **opening**: The firewall is being enabled.
-    // *   **closed**: The firewall is disabled.
-    // *   **closing**: The firewall is being disabled.
-    // 
-    // >  If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.
+    /**
+     * <p>The status of the firewall. Valid values:</p>
+     * <br>
+     * <p>*   **open**: The firewall is enabled.</p>
+     * <p>*   **opening**: The firewall is being enabled.</p>
+     * <p>*   **closed**: The firewall is disabled.</p>
+     * <p>*   **closing**: The firewall is being disabled.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // This parameter is deprecated.
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("Type")
     public String type;
 
-    // The edition of Cloud Firewall. Valid values:
-    // 
-    // *   **buy**: a paid edition (default)
-    // *   **free**: a free edition
+    /**
+     * <p>The edition of Cloud Firewall. Valid values:</p>
+     * <br>
+     * <p>*   **buy**: a paid edition (default)</p>
+     * <p>*   **free**: a free edition</p>
+     */
     @NameInMap("UserType")
     public String userType;
 
@@ -125,6 +152,14 @@ public class DescribeAssetListRequest extends TeaModel {
     }
     public Long getMemberUid() {
         return this.memberUid;
+    }
+
+    public DescribeAssetListRequest setNewResourceTag(String newResourceTag) {
+        this.newResourceTag = newResourceTag;
+        return this;
+    }
+    public String getNewResourceTag() {
+        return this.newResourceTag;
     }
 
     public DescribeAssetListRequest setPageSize(String pageSize) {

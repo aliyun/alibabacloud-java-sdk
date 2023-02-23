@@ -4,46 +4,60 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallDefaultIPSConfigRequest extends TeaModel {
-    // Specifies whether to enable basic protection. Valid values:
-    // 
-    // *   **1**: yes
-    // *   **0**: no
+    /**
+     * <p>Specifies whether to enable basic protection. Valid values:</p>
+     * <br>
+     * <p>*   **1**: yes</p>
+     * <p>*   **0**: no</p>
+     */
     @NameInMap("BasicRules")
     public String basicRules;
 
-    // Specifies whether to enable virtual patching. Valid values:
-    // 
-    // *   **1**: yes
-    // *   **0**: no
+    /**
+     * <p>Specifies whether to enable virtual patching. Valid values:</p>
+     * <br>
+     * <p>*   **1**: yes</p>
+     * <p>*   **0**: no</p>
+     */
     @NameInMap("EnableAllPatch")
     public String enableAllPatch;
 
-    // The language of the content within the request and response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The UID of the member that is managed by your Alibaba Cloud account.
+    /**
+     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
-    // The mode of the intrusion prevention system (IPS). Valid values:
-    // 
-    // *   **1**: block mode
-    // *   **0**: monitor mode
+    /**
+     * <p>The mode of the intrusion prevention system (IPS). Valid values:</p>
+     * <br>
+     * <p>*   **1**: block mode</p>
+     * <p>*   **0**: monitor mode</p>
+     */
     @NameInMap("RunMode")
     public String runMode;
 
-    // The source IP address of the request.
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The instance ID of the VPC firewall. Valid values:
-    // 
-    // *   If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the IDs of CEN instances.
-    // *   If the VPC firewall protects mutual access traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the ID of the VPC firewall. You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
+    /**
+     * <p>The instance ID of the VPC firewall. Valid values:</p>
+     * <br>
+     * <p>*   If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the IDs of CEN instances.</p>
+     * <p>*   If the VPC firewall protects mutual access traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the ID of the VPC firewall. You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 

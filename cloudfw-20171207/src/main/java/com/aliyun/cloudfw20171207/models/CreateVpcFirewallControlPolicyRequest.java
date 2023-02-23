@@ -4,126 +4,158 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
-    // The action that Cloud Firewall performs on the traffic. Valid values:
-    // 
-    // - **accept**: allows the traffic.
-    // - **drop**: blocks the traffic.
-    // - **log**: monitors the traffic.
+    /**
+     * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+     * <br>
+     * <p>- **accept**: allows the traffic.</p>
+     * <p>- **drop**: blocks the traffic.</p>
+     * <p>- **log**: monitors the traffic.</p>
+     */
     @NameInMap("AclAction")
     public String aclAction;
 
-    // The type of the applications that the access control policy supports. Valid values:
-    // 
-    // - **FTP**
-    // - **HTTP**
-    // - **HTTPS**
-    // - **MySQL**
-    // - **SMTP**
-    // - **SMTPS**
-    // - **RDP**
-    // - **VNC**
-    // - **SSH**
-    // - **Redis**
-    // - **MQTT**
-    // - **MongoDB**
-    // - **Memcache**
-    // - **SSL**
-    // - **ANY**: all types of applications
+    /**
+     * <p>The type of the applications that the access control policy supports. Valid values:</p>
+     * <br>
+     * <p>- **FTP**</p>
+     * <p>- **HTTP**</p>
+     * <p>- **HTTPS**</p>
+     * <p>- **MySQL**</p>
+     * <p>- **SMTP**</p>
+     * <p>- **SMTPS**</p>
+     * <p>- **RDP**</p>
+     * <p>- **VNC**</p>
+     * <p>- **SSH**</p>
+     * <p>- **Redis**</p>
+     * <p>- **MQTT**</p>
+     * <p>- **MongoDB**</p>
+     * <p>- **Memcache**</p>
+     * <p>- **SSL**</p>
+     * <p>- **ANY**: all types of applications</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
-    // The description of the access control policy.
+    /**
+     * <p>The description of the access control policy.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The destination port in the access control policy. 
-    // 
-    // >  If **DestPortType** is set to `port`, you must specify this parameter.
+    /**
+     * <p>The destination port in the access control policy. </p>
+     * <br>
+     * <p>>  If **DestPortType** is set to `port`, you must specify this parameter.</p>
+     */
     @NameInMap("DestPort")
     public String destPort;
 
-    // The name of the destination port address book in the access control policy. 
-    // 
-    // >  If **DestPortType** is set to `group`, you must specify this parameter.
+    /**
+     * <p>The name of the destination port address book in the access control policy. </p>
+     * <br>
+     * <p>>  If **DestPortType** is set to `group`, you must specify this parameter.</p>
+     */
     @NameInMap("DestPortGroup")
     public String destPortGroup;
 
-    // The type of the destination port in the access control policy. Valid values:
-    // 
-    // - **port**: port
-    // - **group**: port address book
+    /**
+     * <p>The type of the destination port in the access control policy. Valid values:</p>
+     * <br>
+     * <p>- **port**: port</p>
+     * <p>- **group**: port address book</p>
+     */
     @NameInMap("DestPortType")
     public String destPortType;
 
-    // The destination address in the access control policy. Valid values:
-    // 
-    // - If **DestinationType** is set to `net`, the value of **Destination** must be a CIDR block.
-    // - If **DestinationType** is set to `group`, the value of **Destination** must be an address book.
-    // - If **DestinationType** is set to `domain`, the value of **Destination** must be a domain name.
+    /**
+     * <p>The destination address in the access control policy. Valid values:</p>
+     * <br>
+     * <p>- If **DestinationType** is set to `net`, the value of **Destination** must be a CIDR block.</p>
+     * <p>- If **DestinationType** is set to `group`, the value of **Destination** must be an address book.</p>
+     * <p>- If **DestinationType** is set to `domain`, the value of **Destination** must be a domain name.</p>
+     */
     @NameInMap("Destination")
     public String destination;
 
-    // The type of the destination address in the access control policy. Valid values:
-    // 
-    // - **net**: CIDR block
-    // - **group**: address book
-    // - **domain**: domain name
+    /**
+     * <p>The type of the destination address in the access control policy. Valid values:</p>
+     * <br>
+     * <p>- **net**: CIDR block</p>
+     * <p>- **group**: address book</p>
+     * <p>- **domain**: domain name</p>
+     */
     @NameInMap("DestinationType")
     public String destinationType;
 
-    // The language of the content within the request and response. Valid values:
-    // 
-    // - **zh**: Chinese (default)
-    // - **en**: English
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>- **zh**: Chinese (default)</p>
+     * <p>- **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The UID of the member that is managed by your Alibaba Cloud account.
+    /**
+     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
-    // The priority of the access control policy. 
-    // 
-    // The priority value starts from 1. A smaller priority value indicates a higher priority.
+    /**
+     * <p>The priority of the access control policy. </p>
+     * <br>
+     * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+     */
     @NameInMap("NewOrder")
     public String newOrder;
 
-    // The type of the protocol in the access control policy. Valid values:
-    // 
-    // - **ANY** (If you are not sure about the protocol type, you can set this parameter to ANY.)
-    // - **TCP**
-    // - **UDP**
-    // - **ICMP**
+    /**
+     * <p>The type of the protocol in the access control policy. Valid values:</p>
+     * <br>
+     * <p>- **ANY** (If you are not sure about the protocol type, you can set this parameter to ANY.)</p>
+     * <p>- **TCP**</p>
+     * <p>- **UDP**</p>
+     * <p>- **ICMP**</p>
+     */
     @NameInMap("Proto")
     public String proto;
 
-    // Specifies whether to enable the access control policy. By default, an access control policy is enabled after the policy is created. Valid values: 
-    // 
-    // - **true**: enables the access control policy.
-    // - **false**: disables the access control policy.
+    /**
+     * <p>Specifies whether to enable the access control policy. By default, an access control policy is enabled after the policy is created. Valid values: </p>
+     * <br>
+     * <p>- **true**: enables the access control policy.</p>
+     * <p>- **false**: disables the access control policy.</p>
+     */
     @NameInMap("Release")
     public String release;
 
-    // The source address in the access control policy. 
-    // 
-    // - If SourceType is set to `net`, the value of Source must be a CIDR block.
-    // - If SourceType is set to `group`, the value of Source must be an address book.
+    /**
+     * <p>The source address in the access control policy. </p>
+     * <br>
+     * <p>- If SourceType is set to `net`, the value of Source must be a CIDR block.</p>
+     * <p>- If SourceType is set to `group`, the value of Source must be an address book.</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The type of the source address in the access control policy. Valid values:
-    // 
-    // - **net**: CIDR block
-    // - **group**: address book
+    /**
+     * <p>The type of the source address in the access control policy. Valid values:</p>
+     * <br>
+     * <p>- **net**: CIDR block</p>
+     * <p>- **group**: address book</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
-    // The ID of the policy group in which you want to create the access control policy. 
-    // 
-    // - If a VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.
-    // - If a VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.
-    // 
-    // >  You can call the [DescribeVpcFirewallAclGroupList](https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallaclgrouplist) operation to query the IDs.
+    /**
+     * <p>The ID of the policy group in which you want to create the access control policy. </p>
+     * <br>
+     * <p>- If a VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</p>
+     * <p>- If a VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</p>
+     * <br>
+     * <p>>  You can call the [DescribeVpcFirewallAclGroupList](https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallaclgrouplist) operation to query the IDs.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 

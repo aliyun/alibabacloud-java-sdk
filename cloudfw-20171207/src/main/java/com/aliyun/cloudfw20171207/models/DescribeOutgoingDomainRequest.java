@@ -4,104 +4,126 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDomainRequest extends TeaModel {
-    // The ID of the product category. Default value: empty. Valid values:
-    // 
-    // -  **All**: All categories.
-    // - **RiskDomain**: Risk domain name category.
-    // - **RiskIP**: Risk IP category.
-    // - **AliYun**: Cloud product category.
-    // - **NotAliYun**: Non-Cloud products.
+    /**
+     * <p>The type of the service. This parameter is empty by default. Valid values:</p>
+     * <br>
+     * <p>*   **All**: all services</p>
+     * <p>*   **RiskDomain**: risky domain names</p>
+     * <p>*   **RiskIP**: risky IP addresses</p>
+     * <p>*   **AliYun**: Alibaba Cloud services</p>
+     * <p>*   **NotAliYun**: third-party services</p>
+     */
     @NameInMap("CategoryId")
     public String categoryId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1. Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // The domain name in outbound connections.
+    /**
+     * <p>The domain name in outbound connections.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
-    // The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+    /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The language of the content within the request. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the request. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The order in which you want to sort the queried information. Valid values:
-    // 
-    // *   **asc**: the ascending order
-    // *   **desc**: the descending order. This is the default value.
+    /**
+     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   **asc**: the ascending order.</p>
+     * <p>*   **desc**: the descending order. This is the default value.</p>
+     */
     @NameInMap("Order")
     public String order;
 
-    // The number of entries to return on each page.
-    // 
-    // Default value: 6. Maximum value: 100.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 6. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The public IP address of the Elastic Compute Service (ECS) instance that initiates the outbound connection.
+    /**
+     * <p>The public IP address of the Elastic Compute Service (ECS) instance that initiates outbound connections.</p>
+     */
     @NameInMap("PublicIP")
     public String publicIP;
 
-    // The field based on which you want to sort the queried information. Valid values:
-    // 
-    // *   **SessionCount**: the number of requests. This is the default value.
-    // *   **TotalBytes**: the total volume of traffic.
+    /**
+     * <p>The field based on which you want to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   **SessionCount**: the number of requests. This is the default value.</p>
+     * <p>*   **TotalBytes**: the total volume of traffic.</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
-    // The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+    /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // 情报标签ID。取值：
-    // 
-    // - **AliYun**：Alibaba cloud products.
-    // - **RiskDomain**：The risk domain.
-    // - **RiskIP**: The risk IP.
-    // - **TrustedDomain**：The trusted domain.
-    // - **AliPay**：Alipay
-    // - **DingDing**：Ding talk.
-    // - **WeChat**：Wechat.
-    // - **QQ**：Tencent QQ.
-    // - **SecurityService**：The security service.
-    // - **Microsoft**：The Microsoft.
-    // - **Amazon**：Amazon.
-    // - **Pan**：Pan.
-    // - **Map**：Map.
-    // - **Code**：Code hosting
-    // - **SystemService**：System service.
-    // - **Taobao**：Taobao.
-    // - **Google**：Google.
-    // - **ThirdPartyService**：The third party service.
-    // - **FirstFlow**：首次
-    // - **Downloader**：恶意下载
-    // - **Alexa Top1M**：热门网站
-    // - **Miner**：矿池
-    // - **Intelligence**：威胁情报
-    // - **DDoS**：DDoS木马
-    // - **Ransomware**：勒索软件
-    // - **Spyware**：间谍软件
-    // - **Rogue**：流氓软件
-    // - **Botnet**：僵尸网络
-    // - **Suspicious**：可疑网站
-    // - **C&C**：远控
-    // - **Gang**：团伙
-    // - **CVE**：漏洞CVE
-    // - **Backdoor**：木马后门
-    // - **Phishing**：钓鱼网站
-    // - **APT**：APT攻击
-    // - **Supply Chain Attack**：供应链攻击
-    // - **Malicious software**：恶意软件
+    /**
+     * <p>The ID of the tag. Valid values:</p>
+     * <br>
+     * <p>*   **AliYun**: Alibaba Cloud service</p>
+     * <p>*   **RiskDomain**: risky domain name</p>
+     * <p>*   **RiskIP**: risky IP address</p>
+     * <p>*   **TrustedDomain**: trusted website</p>
+     * <p>*   **AliPay**: Alipay</p>
+     * <p>*   **DingDing**: DingTalk</p>
+     * <p>*   **WeChat**: WeChat</p>
+     * <p>*   **QQ**: Tencent QQ</p>
+     * <p>*   **SecurityService**: security service</p>
+     * <p>*   **Microsoft**: Microsoft</p>
+     * <p>*   **Amazon**: Amazon Web Services (AWS)</p>
+     * <p>*   **Pan**: cloud disk</p>
+     * <p>*   **Map**: map</p>
+     * <p>*   **Code**: code hosting</p>
+     * <p>*   **SystemService**: system service</p>
+     * <p>*   **Taobao**: Taobao</p>
+     * <p>*   **Google**: Google</p>
+     * <p>*   **ThirdPartyService**: third-party service</p>
+     * <p>*   **FirstFlow**: the first time when an outbound connection is initiated</p>
+     * <p>*   **Downloader**: malicious download</p>
+     * <p>*   **Alexa Top1M**: popular website</p>
+     * <p>*   **Miner**: mining pool</p>
+     * <p>*   **Intelligence**: threat intelligence</p>
+     * <p>*   **DDoS**: DDoS trojan</p>
+     * <p>*   **Ransomware**: ransomware</p>
+     * <p>*   **Spyware**: spyware</p>
+     * <p>*   **Rogue**: rogue software</p>
+     * <p>*   **Botnet**: botnet</p>
+     * <p>*   **Suspicious**: suspicious website</p>
+     * <p>*   **C\&C**: command and control (C\&C)</p>
+     * <p>*   **Gang**: gang</p>
+     * <p>*   **CVE**: Common Vulnerabilities and Exposures (CVE)</p>
+     * <p>*   **Backdoor**: webshell</p>
+     * <p>*   **Phishing**: phishing website</p>
+     * <p>*   **APT**: advanced persistent threat (APT) attack</p>
+     * <p>*   **Supply Chain Attack**: supply chain attack</p>
+     * <p>*   **Malicious software**: malware</p>
+     */
     @NameInMap("TagIdNew")
     public String tagIdNew;
 

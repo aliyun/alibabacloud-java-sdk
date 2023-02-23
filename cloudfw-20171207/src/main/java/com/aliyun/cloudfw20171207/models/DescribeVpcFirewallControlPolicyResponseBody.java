@@ -4,15 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
-    // The details of the access control policies.
+    /**
+     * <p>The details of the access control policies.</p>
+     */
     @NameInMap("Policys")
     public java.util.List<DescribeVpcFirewallControlPolicyResponseBodyPolicys> policys;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of the access control policies that are returned.
+    /**
+     * <p>The total number of the access control policies that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -46,140 +52,184 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallControlPolicyResponseBodyPolicys extends TeaModel {
-        // The action that Cloud Firewall performs on the traffic. Valid values:
-        // 
-        // *   **accept**: allows the traffic.
-        // *   **drop**: blocks the traffic.
-        // *   **log**: monitors the traffic.
+        /**
+         * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+         * <br>
+         * <p>*   **accept**: allows the traffic.</p>
+         * <p>*   **drop**: blocks the traffic.</p>
+         * <p>*   **log**: monitors the traffic.</p>
+         */
         @NameInMap("AclAction")
         public String aclAction;
 
-        // The unique ID of the access control policy.
+        /**
+         * <p>The unique ID of the access control policy.</p>
+         */
         @NameInMap("AclUuid")
         public String aclUuid;
 
-        // The application ID in the access control policy.
+        /**
+         * <p>The application ID in the access control policy.</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
-        // The application type in the access control policy. Valid values:
-        // 
-        // *   **HTTP**
-        // *   **HTTPS**
-        // *   **MySQL**
-        // *   **SMTP**
-        // *   **SMTPS**
-        // *   **RDP**
-        // *   **VNC**
-        // *   **SSH**
-        // *   **Redis**
-        // *   **MQTT**
-        // *   **MongoDB**
-        // *   **Memcache**
-        // *   **SSL**
-        // *   **ANY**: all application types
+        /**
+         * <p>The application type in the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   **HTTP**</p>
+         * <p>*   **HTTPS**</p>
+         * <p>*   **MySQL**</p>
+         * <p>*   **SMTP**</p>
+         * <p>*   **SMTPS**</p>
+         * <p>*   **RDP**</p>
+         * <p>*   **VNC**</p>
+         * <p>*   **SSH**</p>
+         * <p>*   **Redis**</p>
+         * <p>*   **MQTT**</p>
+         * <p>*   **MongoDB**</p>
+         * <p>*   **Memcache**</p>
+         * <p>*   **SSL**</p>
+         * <p>*   **ANY**: all application types</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
-        // The description of the access control policy.
+        /**
+         * <p>The description of the access control policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The destination port in the access control policy.
+        /**
+         * <p>The destination port in the access control policy.</p>
+         */
         @NameInMap("DestPort")
         public String destPort;
 
-        // The name of the destination port address book in the access control policy.
+        /**
+         * <p>The name of the destination port address book in the access control policy.</p>
+         */
         @NameInMap("DestPortGroup")
         public String destPortGroup;
 
-        // The ports in the destination port address book of the access control policy.
+        /**
+         * <p>The ports in the destination port address book of the access control policy.</p>
+         */
         @NameInMap("DestPortGroupPorts")
         public java.util.List<String> destPortGroupPorts;
 
-        // The type of the destination port in the access control policy. Valid values:
-        // 
-        // *   **port**: port
-        // *   **group**: port address book
+        /**
+         * <p>The type of the destination port in the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   **port**: port</p>
+         * <p>*   **group**: port address book</p>
+         */
         @NameInMap("DestPortType")
         public String destPortType;
 
-        // The destination address in the access control policy. Valid values:
-        // 
-        // *   If **DestinationType** is set to `net`, the value of this parameter is a CIDR block.
-        // *   If **DestinationType** is set to `domain`, the value of this parameter is a domain name.
-        // *   If **DestinationType** is set to `group`, the value of this parameter is the name of an address book name.
+        /**
+         * <p>The destination address in the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   If **DestinationType** is set to `net`, the value of this parameter is a CIDR block.</p>
+         * <p>*   If **DestinationType** is set to `domain`, the value of this parameter is a domain name.</p>
+         * <p>*   If **DestinationType** is set to `group`, the value of this parameter is the name of an address book name.</p>
+         */
         @NameInMap("Destination")
         public String destination;
 
-        // The CIDR blocks in the destination address book of the access control policy.
+        /**
+         * <p>The CIDR blocks in the destination address book of the access control policy.</p>
+         */
         @NameInMap("DestinationGroupCidrs")
         public java.util.List<String> destinationGroupCidrs;
 
-        // The type of the destination address book in the access control policy. Valid values:
-        // 
-        // *   **ip**: an address book that includes one or more CIDR blocks
-        // *   **domain**: an address book that includes one or more domain names
+        /**
+         * <p>The type of the destination address book in the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   **ip**: an address book that includes one or more CIDR blocks</p>
+         * <p>*   **domain**: an address book that includes one or more domain names</p>
+         */
         @NameInMap("DestinationGroupType")
         public String destinationGroupType;
 
-        // The type of the destination address in the access control policy. Valid values:
-        // 
-        // *   **net**: CIDR block
-        // *   **group**: address book
-        // *   **domain**: domain name
+        /**
+         * <p>The type of the destination address in the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   **net**: CIDR block</p>
+         * <p>*   **group**: address book</p>
+         * <p>*   **domain**: domain name</p>
+         */
         @NameInMap("DestinationType")
         public String destinationType;
 
-        // The number of hits for the access control policy.
+        /**
+         * <p>The number of hits for the access control policy.</p>
+         */
         @NameInMap("HitTimes")
         public Integer hitTimes;
 
-        // The UID of the member that is managed by your Alibaba Cloud account.
+        /**
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         */
         @NameInMap("MemberUid")
         public String memberUid;
 
-        // The priority of the access control policy.
-        // 
-        // The priority value starts from 1. A smaller priority value indicates a higher priority.
+        /**
+         * <p>The priority of the access control policy.</p>
+         * <br>
+         * <p>The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+         */
         @NameInMap("Order")
         public Integer order;
 
-        // The protocol type in the access control policy. Valid values:
-        // 
-        // *   **TCP**
-        // *   **UDP**
-        // *   **ICMP**
-        // *   **ANY**: all protocol types
+        /**
+         * <p>The protocol type in the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   **TCP**</p>
+         * <p>*   **UDP**</p>
+         * <p>*   **ICMP**</p>
+         * <p>*   **ANY**: all protocol types</p>
+         */
         @NameInMap("Proto")
         public String proto;
 
-        // Indicates whether the access control policy is enabled. By default, an access control policy is enabled after the policy is created. Valid values:
-        // 
-        // *   **true**: The access control policy is enabled.
-        // *   **false**: The access control policy is disabled.
+        /**
+         * <p>Indicates whether the access control policy is enabled. By default, an access control policy is enabled after the policy is created. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The access control policy is enabled.</p>
+         * <p>*   **false**: The access control policy is disabled.</p>
+         */
         @NameInMap("Release")
         public String release;
 
-        // The source address in the access control policy. Valid values:
-        // 
-        // *   If **SourceType** is set to `net`, the value of this parameter is a CIDR block.
-        // *   If **SourceType** is set to `group`, the value of this parameter is an address book name.
+        /**
+         * <p>The source address in the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   If **SourceType** is set to `net`, the value of this parameter is a CIDR block.</p>
+         * <p>*   If **SourceType** is set to `group`, the value of this parameter is an address book name.</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The CIDR blocks in the source address book of the access control policy.
+        /**
+         * <p>The CIDR blocks in the source address book of the access control policy.</p>
+         */
         @NameInMap("SourceGroupCidrs")
         public java.util.List<String> sourceGroupCidrs;
 
-        // The type of the source address in the access control policy. The value is fixed as **ip**. The value indicates an address book that includes one or more CIDR blocks.
+        /**
+         * <p>The type of the source address in the access control policy. The value is fixed as **ip**. The value indicates an address book that includes one or more CIDR blocks.</p>
+         */
         @NameInMap("SourceGroupType")
         public String sourceGroupType;
 
-        // The type of the source address in the access control policy. Valid values:
-        // 
-        // *   **net**: CIDR block
-        // *   **group**: address book
+        /**
+         * <p>The type of the source address in the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   **net**: CIDR block</p>
+         * <p>*   **group**: address book</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 

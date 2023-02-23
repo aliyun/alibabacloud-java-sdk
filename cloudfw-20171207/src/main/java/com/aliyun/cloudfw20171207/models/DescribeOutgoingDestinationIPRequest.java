@@ -4,87 +4,162 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationIPRequest extends TeaModel {
-    // The type of the applications that the access control policy supports. Valid values:
-    // 
-    // - **FTP**
-    // - **HTTP**
-    // - **HTTPS**
-    // - **MySQL**
-    // - **SMTP**
-    // - **SMTPS**
-    // - **RDP**
-    // - **VNC**
-    // - **SSH**
-    // - **Redis**
-    // - **MQTT**
-    // - **MongoDB**
-    // - **Memcache**
-    // - **SSL**
-    // - **ANY**: all types of applications
+    /**
+     * <p>The application type in the access control policy. Valid values:</p>
+     * <br>
+     * <p>*   **FTP**</p>
+     * <p>*   **HTTP**</p>
+     * <p>*   **HTTPS**</p>
+     * <p>*   **Memcache**</p>
+     * <p>*   **MongoDB**</p>
+     * <p>*   **MQTT**</p>
+     * <p>*   **MySQL**</p>
+     * <p>*   **RDP**</p>
+     * <p>*   **Redis**</p>
+     * <p>*   **SMTP**</p>
+     * <p>*   **SMTPS**</p>
+     * <p>*   **SSH**</p>
+     * <p>*   **SSL_No_Cert**</p>
+     * <p>*   **SSL**</p>
+     * <p>*   **VNC**</p>
+     * <br>
+     * <p>>  The value of this parameter depends on the value of Proto. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you specify both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The ID of the service to which the destination IP address belongs. This parameter is left empty by default. Valid values:</p>
+     * <br>
+     * <p>*   **All**: all services</p>
+     * <p>*   **RiskDomain**: risky domain names</p>
+     * <p>*   **RiskIP**: risky IP addresses</p>
+     * <p>*   **AliYun**: Alibaba Cloud services</p>
+     * <p>*   **NotAliYun**: third-party services</p>
+     */
     @NameInMap("CategoryId")
     public String categoryId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1. Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // The destination IP address in the outbound connection that is initiated to access a domain name.
+    /**
+     * <p>The destination IP address in the outbound connection that is initiated to access a domain name.</p>
+     */
     @NameInMap("DstIP")
     public String dstIP;
 
-    // The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+    /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The language of the content within the response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The field based on which you want to sort the queried information. Valid values:
-    // 
-    // *   **SessionCount**: the number of requests. This is the default value.
-    // *   **InBytes**: the inbound traffic.
-    // *   **OutBytes**: the outbound traffic.
+    /**
+     * <p>The order in which you want to sort the queried information. Valid values:</p>
+     * <br>
+     * <p>*   **asc**: the ascending order.</p>
+     * <p>*   **desc**: the descending order. This is the default value.</p>
+     */
     @NameInMap("Order")
     public String order;
 
-    // The number of entries to return on each page.
-    // 
-    // Default value: 6. Maximum value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 6. Maximum value: 10.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The port number.
+    /**
+     * <p>The port number.</p>
+     */
     @NameInMap("Port")
     public String port;
 
-    // The private IP address of the ECS instance that initiates the outbound connection.
+    /**
+     * <p>The private IP address of the ECS instance that initiates the outbound connection.</p>
+     */
     @NameInMap("PrivateIP")
     public String privateIP;
 
-    // The public IP address of the Elastic Compute Service (ECS) instance that initiates the outbound connection.
+    /**
+     * <p>The public IP address of the Elastic Compute Service (ECS) instance that initiates the outbound connection.</p>
+     */
     @NameInMap("PublicIP")
     public String publicIP;
 
-    // The order in which you want to sort the queried information. Valid values:
-    // 
-    // *   **asc**: the ascending order
-    // *   **desc**: the descending order
+    /**
+     * <p>The field based on which you want to sort the queried information. Valid values:</p>
+     * <br>
+     * <p>*   **SessionCount**: the number of requests. This is the default value.</p>
+     * <p>*   **TotalBytes**: the total volume of traffic.</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
-    // The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+    /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The ID of the tag. Valid values:</p>
+     * <br>
+     * <p>*   **AliYun**: Alibaba Cloud service</p>
+     * <p>*   **RiskDomain**: risky domain name</p>
+     * <p>*   **RiskIP**: risky IP address</p>
+     * <p>*   **TrustedDomain**: trusted website</p>
+     * <p>*   **AliPay**: Alipay</p>
+     * <p>*   **DingDing**: DingTalk</p>
+     * <p>*   **WeChat**: WeChat</p>
+     * <p>*   **QQ**: Tencent QQ</p>
+     * <p>*   **SecurityService**: security service</p>
+     * <p>*   **Microsoft**: Microsoft</p>
+     * <p>*   **Amazon**: Amazon Web Services (AWS)</p>
+     * <p>*   **Pan**: cloud disk</p>
+     * <p>*   **Map**: map</p>
+     * <p>*   **Code**: code hosting</p>
+     * <p>*   **SystemService**: system service</p>
+     * <p>*   **Taobao**: Taobao</p>
+     * <p>*   **Google**: Google</p>
+     * <p>*   **ThirdPartyService**: third-party service</p>
+     * <p>*   **FirstFlow**: the first time</p>
+     * <p>*   **Downloader**: malicious download</p>
+     * <p>*   **Alexa Top1M**: popular website</p>
+     * <p>*   **Miner**: mining pool</p>
+     * <p>*   **Intelligence**: threat intelligence</p>
+     * <p>*   **DDoS**: DDoS trojan</p>
+     * <p>*   **Ransomware**: ransomware</p>
+     * <p>*   **Spyware**: spyware</p>
+     * <p>*   **Rogue**: rogue software</p>
+     * <p>*   **Botnet**: botnet</p>
+     * <p>*   **Suspicious**: suspicious website</p>
+     * <p>*   **C\&C**: command and control (C\&C)</p>
+     * <p>*   **Gang**: gang</p>
+     * <p>*   **CVE**: Common Vulnerabilities and Exposures (CVE)</p>
+     * <p>*   **Backdoor**: webshell</p>
+     * <p>*   **Phishing**: phishing website</p>
+     * <p>*   **APT**: advanced persistent threat (APT) attack</p>
+     * <p>*   **Supply Chain Attack**: supply chain attack</p>
+     * <p>*   **Malicious software**: malware</p>
+     */
     @NameInMap("TagIdNew")
     public String tagIdNew;
 

@@ -4,78 +4,102 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallCenListRequest extends TeaModel {
-    // The ID of the CEN instance.
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1. Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // The status of the VPC firewall. Valid values:
-    // 
-    // *   **opened**: The VPC firewall is enabled.
-    // *   **closed**: The VPC firewall is disabled.
-    // *   **notconfigured**: The VPC firewall is not created.
-    // *   **configured**: The VPC firewall is created but is not enabled.
-    // 
-    // >  If you do not specify this parameter, VPC firewalls in all states are queried.
+    /**
+     * <p>The status of the VPC firewall. Valid values:</p>
+     * <br>
+     * <p>*   **opened**: The VPC firewall is enabled.</p>
+     * <p>*   **closed**: The VPC firewall is disabled.</p>
+     * <p>*   **notconfigured**: The VPC firewall is not created.</p>
+     * <p>*   **configured**: The VPC firewall is created but is not enabled.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     */
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
 
-    // The language of the content within the response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The UID of the member that is manged by your Alibaba Cloud account. The member is also an Alibaba Cloud account.
+    /**
+     * <p>The UID of the member that is manged by your Alibaba Cloud account. The member is also an Alibaba Cloud account.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
-    // The ID of the network instance.
+    /**
+     * <p>The ID of the network instance.</p>
+     */
     @NameInMap("NetworkInstanceId")
     public String networkInstanceId;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // The number of entries to return on each page.
-    // 
-    // Default value: 10. Maximum value: 50.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 10. Maximum value: 50.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The region ID of the VPC.
-    // 
-    // >  For more information about the regions, see [Supported regions](~~195657~~).
+    /**
+     * <p>The region ID of the VPC.</p>
+     * <br>
+     * <p>>  For more information about the regions, see [Supported regions](~~195657~~).</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
-    // The routing mode of the VPC firewall. Valid values:
-    // 
-    // *   **auto**: automatic mode
-    // *   **manual**: manual mode
-    // 
-    // >  If you do not specify this parameter, VPC firewalls in all routing modes are queried.
+    /**
+     * <p>The routing mode of the VPC firewall. Valid values:</p>
+     * <br>
+     * <p>*   **auto**: automatic mode</p>
+     * <p>*   **manual**: manual mode</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+     */
     @NameInMap("RouteMode")
     public String routeMode;
 
-    // The type of the transit router. Valid values:
-    // 
-    // *   **Basic**: Basic Edition transit router
-    // *   **Enterprise**: Enterprise Edition transit router
+    /**
+     * <p>The type of the transit router. Valid values:</p>
+     * <br>
+     * <p>*   **Basic**: Basic Edition transit router</p>
+     * <p>*   **Enterprise**: Enterprise Edition transit router</p>
+     */
     @NameInMap("TransitRouterType")
     public String transitRouterType;
 
-    // The instance ID of the VPC firewall.
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
-    // The instance name of the VPC firewall.
+    /**
+     * <p>The instance name of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
 

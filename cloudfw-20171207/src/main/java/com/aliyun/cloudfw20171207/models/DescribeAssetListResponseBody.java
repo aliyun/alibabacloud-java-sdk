@@ -4,15 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetListResponseBody extends TeaModel {
-    // The details about the assets that are protected by Cloud Firewall.
+    /**
+     * <p>The details about the assets that are protected by Cloud Firewall.</p>
+     */
     @NameInMap("Assets")
     public java.util.List<DescribeAssetListResponseBodyAssets> assets;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of the assets that are protected by Cloud Firewall.
+    /**
+     * <p>The total number of the assets that are protected by Cloud Firewall.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,122 +52,166 @@ public class DescribeAssetListResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetListResponseBodyAssets extends TeaModel {
-        // The UID of the Alibaba Cloud account.
-        // 
-        // >  The value of this parameter indicates the management account to which the member is added.
+        /**
+         * <p>The UID of the Alibaba Cloud account.</p>
+         * <br>
+         * <p>>  The value of this parameter indicates the management account to which the member is added.</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
-        // The instance ID of the asset that is bound to Cloud Firewall.
+        /**
+         * <p>The instance ID of the asset that is bound to Cloud Firewall.</p>
+         */
         @NameInMap("BindInstanceId")
         public String bindInstanceId;
 
-        // The instance name of the asset that is bound to Cloud Firewall.
+        /**
+         * <p>The instance name of the asset that is bound to Cloud Firewall.</p>
+         */
         @NameInMap("BindInstanceName")
         public String bindInstanceName;
 
-        // The public IP address of the server.
+        @NameInMap("CreateTimeStamp")
+        public String createTimeStamp;
+
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
-        // The internal IP address of the server.
+        /**
+         * <p>The internal IP address of the server.</p>
+         */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
-        // The IP version of the asset that is protected by Cloud Firewall.
-        // 
-        // Valid values:
-        // 
-        // *   **4**: IPv4
-        // *   **6**: IPv6
+        /**
+         * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **4**: IPv4</p>
+         * <p>*   **6**: IPv6</p>
+         */
         @NameInMap("IpVersion")
         public Integer ipVersion;
 
-        // The UID of the member that is added in Cloud Firewall.
+        /**
+         * <p>The UID of the member that is added in Cloud Firewall.</p>
+         */
         @NameInMap("MemberUid")
         public Long memberUid;
 
-        // The instance name of the asset that is protected by Cloud Firewall.
+        /**
+         * <p>The instance name of the asset that is protected by Cloud Firewall.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The remarks of the asset. Valid values:
-        // 
-        // *   **REGION\_NOT\_SUPPORT**: The region is not supported.
-        // *   **NETWORK\_NOT\_SUPPORT**: The network is not supported.
+        @NameInMap("NewResourceTag")
+        public String newResourceTag;
+
+        /**
+         * <p>The remarks of the asset. Valid values:</p>
+         * <br>
+         * <p>*   **REGION\_NOT\_SUPPORT**: The region is not supported.</p>
+         * <p>*   **NETWORK\_NOT\_SUPPORT**: The network is not supported.</p>
+         */
         @NameInMap("Note")
         public String note;
 
-        // The status of the firewall. Valid values:
-        // 
-        // *   **open**: The firewall is enabled.
-        // *   **opening**: The firewall is being enabled.
-        // *   **closed**: The firewall is disabled.
-        // *   **closing**: The firewall is being disabled.
+        /**
+         * <p>The status of the firewall. Valid values:</p>
+         * <br>
+         * <p>*   **open**: The firewall is enabled.</p>
+         * <p>*   **opening**: The firewall is being enabled.</p>
+         * <p>*   **closed**: The firewall is disabled.</p>
+         * <p>*   **closing**: The firewall is being disabled.</p>
+         */
         @NameInMap("ProtectStatus")
         public String protectStatus;
 
-        // The ID of the region in which the asset resides.
+        /**
+         * <p>The ID of the region in which the asset resides.</p>
+         */
         @NameInMap("RegionID")
         public String regionID;
 
-        // Indicates whether the firewall is supported in the region in which the asset resides. Valid values:
-        // 
-        // *   **enable**: supported
-        // *   **disable**: unsupported
+        /**
+         * <p>Indicates whether the firewall is supported in the region in which the asset resides. Valid values:</p>
+         * <br>
+         * <p>*   **enable**: supported</p>
+         * <p>*   **disable**: unsupported</p>
+         */
         @NameInMap("RegionStatus")
         public String regionStatus;
 
-        // The instance ID of the asset.
+        /**
+         * <p>The instance ID of the asset.</p>
+         */
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
-        // The type of the asset. Valid values:
-        // 
-        // *   **BastionHostEgressIP**: the egress IP address of a bastion host
-        // *   **BastionHostIngressIP**: the ingress IP address of a bastion host
-        // *   **EcsEIP**: the EIP of an ECS instance
-        // *   **EcsPublicIP**: the public IP address of an ECS instance
-        // *   **EIP**: the EIP
-        // *   **EniEIP**: the EIP of an ENI
-        // *   **NatEIP**: the EIP of a NAT gateway
-        // *   **SlbEIP**: the EIP of an SLB instance
-        // *   **SlbPublicIP**: the public IP address of an SLB instance
-        // *   **NatPublicIP**: the public IP address of a NAT gateway
-        // *   **HAVIP**: the HAVIP
+        /**
+         * <p>The type of the asset. Valid values:</p>
+         * <br>
+         * <p>*   **BastionHostEgressIP**: the egress IP address of a bastion host</p>
+         * <p>*   **BastionHostIngressIP**: the ingress IP address of a bastion host</p>
+         * <p>*   **EcsEIP**: the EIP of an ECS instance</p>
+         * <p>*   **EcsPublicIP**: the public IP address of an ECS instance</p>
+         * <p>*   **EIP**: the EIP</p>
+         * <p>*   **EniEIP**: the EIP of an ENI</p>
+         * <p>*   **NatEIP**: the EIP of a NAT gateway</p>
+         * <p>*   **SlbEIP**: the EIP of an SLB instance</p>
+         * <p>*   **SlbPublicIP**: the public IP address of an SLB instance</p>
+         * <p>*   **NatPublicIP**: the public IP address of a NAT gateway</p>
+         * <p>*   **HAVIP**: the HAVIP</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // The risk level of the asset. Valid values:
-        // 
-        // *   **low**: low
-        // *   **middle**: medium
-        // *   **hight**: high
-        // 
-        // >  The value of this parameter is returned only when the UserType parameter is set to free.
+        /**
+         * <p>The risk level of the asset. Valid values:</p>
+         * <br>
+         * <p>*   **low**: low</p>
+         * <p>*   **middle**: medium</p>
+         * <p>*   **hight**: high</p>
+         * <br>
+         * <p>>  The value of this parameter is returned only when the UserType parameter is set to free.</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
-        // The status of the security group policy. Valid values:
-        // 
-        // *   **pass**: delivered
-        // *   **block**: undelivered
-        // *   **unsupport**: unsupported
+        /**
+         * <p>The status of the security group policy. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: delivered</p>
+         * <p>*   **block**: undelivered</p>
+         * <p>*   **unsupport**: unsupported</p>
+         */
         @NameInMap("SgStatus")
         public String sgStatus;
 
-        // The time when the status of the security group was last checked. The value is a UNIX timestamp. Unit: seconds.
+        /**
+         * <p>The time when the status of the security group was last checked. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("SgStatusTime")
         public Long sgStatusTime;
 
-        // The status of traffic redirection for the asset. Valid values:
-        // 
-        // *   **enable**: Traffic redirection is enabled.
-        // *   **disable**: Traffic redirection is disabled.
+        /**
+         * <p>The status of traffic redirection for the asset. Valid values:</p>
+         * <br>
+         * <p>*   **enable**: Traffic redirection is enabled.</p>
+         * <p>*   **disable**: Traffic redirection is disabled.</p>
+         */
         @NameInMap("SyncStatus")
         public String syncStatus;
 
-        // This parameter is deprecated.
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -192,6 +242,14 @@ public class DescribeAssetListResponseBody extends TeaModel {
         }
         public String getBindInstanceName() {
             return this.bindInstanceName;
+        }
+
+        public DescribeAssetListResponseBodyAssets setCreateTimeStamp(String createTimeStamp) {
+            this.createTimeStamp = createTimeStamp;
+            return this;
+        }
+        public String getCreateTimeStamp() {
+            return this.createTimeStamp;
         }
 
         public DescribeAssetListResponseBodyAssets setInternetAddress(String internetAddress) {
@@ -232,6 +290,14 @@ public class DescribeAssetListResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeAssetListResponseBodyAssets setNewResourceTag(String newResourceTag) {
+            this.newResourceTag = newResourceTag;
+            return this;
+        }
+        public String getNewResourceTag() {
+            return this.newResourceTag;
         }
 
         public DescribeAssetListResponseBodyAssets setNote(String note) {

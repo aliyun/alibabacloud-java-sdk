@@ -4,9 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcFirewallConfigureResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 

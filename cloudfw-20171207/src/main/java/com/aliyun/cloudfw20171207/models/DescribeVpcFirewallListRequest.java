@@ -4,66 +4,88 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallListRequest extends TeaModel {
-    // The sub type of connection. Valid values:
-    // 
-    // - **vpc2vpc**: High-speed channel.
-    // - **vppeer**: Peer connection.
+    /**
+     * <p>The sub-type of the connection. Valid values:</p>
+     * <br>
+     * <p>*   **vpc2vpc**: Express Connect connection</p>
+     * <p>*   **vpcpeer**: peer connection</p>
+     */
     @NameInMap("ConnectSubType")
     public String connectSubType;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page **1**. Default value: **1**.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // The status of the VPC firewall. Valid values:
-    // 
-    // *   **opened**: The VPC firewall is enabled.
-    // *   **closed**: The VPC firewall is disabled.
-    // *   **notconfigured**: The VPC firewall is not configured.
-    // *   **configured**: The VPC firewall is configured.
-    // 
-    // >  If you do not specify this parameter, VPC firewalls in all states are queried.
+    /**
+     * <p>The status of the VPC firewall. Valid values:</p>
+     * <br>
+     * <p>*   **opened**: The VPC firewall is enabled.</p>
+     * <p>*   **closed**: The VPC firewall is disabled.</p>
+     * <p>*   **notconfigured**: The VPC firewall is not created.</p>
+     * <p>*   **configured**: The VPC firewall is created.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     */
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
 
-    // The natural language of the request and response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The UID of the member that is managed by your Alibaba Cloud account.
+    /**
+     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
-    // The number of entries to return on each page.
-    // 
-    // Default value: **10**.**** Maximum value: **50**.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: **10**.**** Maximum value: **50**.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The cloud account UID of the peer VPC.
+    /**
+     * <p>The UID of the Alibaba Cloud account to which the peer VPC belongs.</p>
+     */
     @NameInMap("PeerUid")
     public String peerUid;
 
-    // The region ID of the VPC.
-    // 
-    // >  For more information about regions in which Cloud Firewall is supported, see [Supported regions](~~195657~~).
+    /**
+     * <p>The region ID of the VPC.</p>
+     * <br>
+     * <p>>  For more information about the regions, see [Supported regions](~~195657~~).</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
-    // The instance ID of the VPC firewall.
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
-    // The instance name of the VPC firewall.
+    /**
+     * <p>The instance name of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
 
-    // The ID of the VPC.
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

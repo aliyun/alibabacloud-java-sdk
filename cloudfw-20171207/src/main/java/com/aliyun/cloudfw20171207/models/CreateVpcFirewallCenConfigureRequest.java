@@ -4,39 +4,56 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
-    // The ID of the CEN instance.
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
-    // Specifies whether to enable the VPC firewall. Valid values:
-    // 
-    // *   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.
-    // *   **close**: After you create the VPC firewall, the VPC firewall is disabled. You can call the [ModifyVpcFirewallCenSwitchStatus](~~345780~~) operation to manually enable the VPC firewall.
+    /**
+     * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
+     * <br>
+     * <p>*   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.</p>
+     * <p>*   **close**: After you create the VPC firewall, the VPC firewall is disabled. You can call the [ModifyVpcFirewallCenSwitchStatus](~~345780~~) operation to manually enable the VPC firewall.</p>
+     */
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
 
-    // The language of the content within the request and response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The UID of the member that is managed by your Alibaba Cloud account.
+    /**
+     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
-    // The ID of the VPC for which you want to create the VPC firewall.
+    /**
+     * <p>The ID of the VPC for which you want to create the VPC firewall.</p>
+     */
     @NameInMap("NetworkInstanceId")
     public String networkInstanceId;
 
-    // The instance name of the VPC firewall.
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    /**
+     * <p>The instance name of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
 
-    // The ID of the region to which the VPC belongs.
-    // 
-    // >  For more information about the regions, see [Supported regions](~~195657~~).
+    /**
+     * <p>The ID of the region to which the VPC belongs.</p>
+     * <br>
+     * <p>>  For more information about the regions, see [Supported regions](~~195657~~).</p>
+     */
     @NameInMap("VpcRegion")
     public String vpcRegion;
 
@@ -83,6 +100,14 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     }
     public String getNetworkInstanceId() {
         return this.networkInstanceId;
+    }
+
+    public CreateVpcFirewallCenConfigureRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
     public CreateVpcFirewallCenConfigureRequest setVpcFirewallName(String vpcFirewallName) {

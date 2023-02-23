@@ -4,29 +4,37 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainResolveRequest extends TeaModel {
-    // The domain name whose DNS record you want to query.
+    /**
+     * <p>The domain name whose DNS record you want to query.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
-    // The IP version of the asset that is protected by Cloud Firewall.
-    // 
-    // Valid values:
-    // 
-    // *   **4**: IPv4 (default)
-    // *   **6**: IPv6
+    /**
+     * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **4**: IPv4 (default)</p>
+     * <p>*   **6**: IPv6</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
-    // The natural language of the response.
-    // 
-    // Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The natural language of the response.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The source IP address of the request.
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

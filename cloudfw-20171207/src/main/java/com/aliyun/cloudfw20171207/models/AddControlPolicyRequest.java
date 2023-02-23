@@ -4,173 +4,209 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class AddControlPolicyRequest extends TeaModel {
-    // The action that Cloud Firewall performs on the traffic. Valid values:
-    // 
-    // * **accept**: allows the traffic.
-    // * **drop**: denies the traffic.
-    // * **log**: monitors the traffic.
+    /**
+     * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
+     * <br>
+     * <p>* **accept**: allows the traffic.</p>
+     * <p>* **drop**: denies the traffic.</p>
+     * <p>* **log**: monitors the traffic.</p>
+     */
     @NameInMap("AclAction")
     public String aclAction;
 
-    // The type of the application that the access control policy supports. Valid values:
-    // 
-    // * **FTP**
-    // * **HTTP**
-    // * **HTTPS**
-    // * **Memcache**
-    // * **MongoDB**
-    // * **MQTT**
-    // * **MySQL**
-    // * **RDP**
-    // * **Redis**
-    // * **SMTP**
-    // * **SMTPS**
-    // * **SSH**
-    // * **SSL_No_Cert**
-    // * **SSL**
-    // * **VNC**
-    // * **ANY**: all types of applications
-    // 
-    // > The value of this parameter depends on the value of Proto. If Proto is set to TCP, you can set ApplicationName to any valid value. If Proto is set to UDP, ICMP, or ANY, you can set ApplicationName only to ANY.
+    /**
+     * <p>The type of the application that the access control policy supports. Valid values:</p>
+     * <br>
+     * <p>* **FTP**</p>
+     * <p>* **HTTP**</p>
+     * <p>* **HTTPS**</p>
+     * <p>* **Memcache**</p>
+     * <p>* **MongoDB**</p>
+     * <p>* **MQTT**</p>
+     * <p>* **MySQL**</p>
+     * <p>* **RDP**</p>
+     * <p>* **Redis**</p>
+     * <p>* **SMTP**</p>
+     * <p>* **SMTPS**</p>
+     * <p>* **SSH**</p>
+     * <p>* **SSL_No_Cert**</p>
+     * <p>* **SSL**</p>
+     * <p>* **VNC**</p>
+     * <p>* **ANY**: all types of applications</p>
+     * <br>
+     * <p>> The value of this parameter depends on the value of Proto. If Proto is set to TCP, you can set ApplicationName to any valid value. If Proto is set to UDP, ICMP, or ANY, you can set ApplicationName only to ANY.</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
-    // The types of the application that the access control policy supports.
+    /**
+     * <p>The types of the application that the access control policy supports.</p>
+     */
     @NameInMap("ApplicationNameList")
     public java.util.List<String> applicationNameList;
 
-    // The description of the access control policy.
+    /**
+     * <p>The description of the access control policy.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The destination port in the access control policy. Valid values:
-    // 
-    // * If Proto is set to ICMP, the value of DestPort is empty.
-    // 
-    // > If Proto is set to ICMP, access control does not take effect on the destination port.
-    // 
-    // * If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, the value of DestPort is empty.
-    // 
-    // > If DestPortType is set to group, you do not need to specify the destination port number. All ports that the access control policy controls are included in the destination port address book.
-    // 
-    // * If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.
+    /**
+     * <p>The destination port in the access control policy. Valid values:</p>
+     * <br>
+     * <p>* If Proto is set to ICMP, the value of DestPort is empty.</p>
+     * <br>
+     * <p>> If Proto is set to ICMP, access control does not take effect on the destination port.</p>
+     * <br>
+     * <p>* If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, the value of DestPort is empty.</p>
+     * <br>
+     * <p>> If DestPortType is set to group, you do not need to specify the destination port number. All ports that the access control policy controls are included in the destination port address book.</p>
+     * <br>
+     * <p>* If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.</p>
+     */
     @NameInMap("DestPort")
     public String destPort;
 
-    // The name of the destination port address book in the access control policy.
-    // 
-    // >  If DestPortType is set to group, you must specify the name of the destination port address book.
+    /**
+     * <p>The name of the destination port address book in the access control policy.</p>
+     * <br>
+     * <p>>  If DestPortType is set to group, you must specify the name of the destination port address book.</p>
+     */
     @NameInMap("DestPortGroup")
     public String destPortGroup;
 
-    // The type of the destination port in the access control policy.
-    // 
-    // Valid values:
-    // 
-    // *   **port**: port
-    // *   **group**: port address book
+    /**
+     * <p>The type of the destination port in the access control policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **port**: port</p>
+     * <p>*   **group**: port address book</p>
+     */
     @NameInMap("DestPortType")
     public String destPortType;
 
-    // The destination address in the access control policy.
-    // 
-    // Valid values:
-    // 
-    // * If DestinationType is set to net, the value of this parameter is a CIDR block.
-    // 
-    //     Example: 1.2.XX.XX/24
-    // 
-    // * If DestinationType is set to group, the value of this parameter is an address book.
-    // 
-    //     Example: db_group
-    // 
-    // * If DestinationType is set to domain, the value of this parameter is a domain name.
-    // 
-    //     Example: \*.aliyuncs.com
-    // 
-    // * If DestinationType is set to location, the value of this parameter is a location.
-    // 
-    //     Example: \["BJ11", "ZB"]
+    /**
+     * <p>The destination address in the access control policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>* If DestinationType is set to net, the value of this parameter is a CIDR block.</p>
+     * <br>
+     * <p>    Example: 1.2.XX.XX/24</p>
+     * <br>
+     * <p>* If DestinationType is set to group, the value of this parameter is an address book.</p>
+     * <br>
+     * <p>    Example: db_group</p>
+     * <br>
+     * <p>* If DestinationType is set to domain, the value of this parameter is a domain name.</p>
+     * <br>
+     * <p>    Example: \*.aliyuncs.com</p>
+     * <br>
+     * <p>* If DestinationType is set to location, the value of this parameter is a location.</p>
+     * <br>
+     * <p>    Example: \["BJ11", "ZB"]</p>
+     */
     @NameInMap("Destination")
     public String destination;
 
-    // The type of the destination address in the access control policy. Valid values:
-    // 
-    // * **net**: destination CIDR block
-    // * **group**: destination address book
-    // * **domain**: destination domain name
-    // * **location**: destination location
+    /**
+     * <p>The type of the destination address in the access control policy. Valid values:</p>
+     * <br>
+     * <p>* **net**: destination CIDR block</p>
+     * <p>* **group**: destination address book</p>
+     * <p>* **domain**: destination domain name</p>
+     * <p>* **location**: destination location</p>
+     */
     @NameInMap("DestinationType")
     public String destinationType;
 
-    // The direction of the traffic to which the access control policy applies. Valid values:
-    // 
-    // * **in**: inbound traffic
-    // * **out**: outbound traffic
+    /**
+     * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+     * <br>
+     * <p>* **in**: inbound traffic</p>
+     * <p>* **out**: outbound traffic</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
-    // The IP version of the address in the access control policy.
-    // 
-    // Valid values:
-    // 
-    // * **4**: IPv4
-    // * **6**: IPv6
+    /**
+     * <p>The IP version of the address in the access control policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>* **4**: IPv4</p>
+     * <p>* **6**: IPv6</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
-    // The language of the content within the request and response. Valid values:
-    // 
-    // * **zh**: Chinese (default)
-    // * **en**: English
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>* **zh**: Chinese (default)</p>
+     * <p>* **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The priority of the access control policy. The priority value starts from 1. A small priority value indicates a high priority.
+    /**
+     * <p>The priority of the access control policy. The priority value starts from 1. A small priority value indicates a high priority.</p>
+     */
     @NameInMap("NewOrder")
     public String newOrder;
 
-    // The type of the protocol in the access control policy. Valid values:
-    // 
-    // * **ANY**: any protocol type
-    // * **TCP**
-    // * **UDP**
-    // * **ICMP**
+    /**
+     * <p>The type of the protocol in the access control policy. Valid values:</p>
+     * <br>
+     * <p>* **ANY**: any protocol type</p>
+     * <p>* **TCP**</p>
+     * <p>* **UDP**</p>
+     * <p>* **ICMP**</p>
+     */
     @NameInMap("Proto")
     public String proto;
 
-    // Specifies whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:
-    // 
-    // *   **true**: The access control policy is enabled.
-    // *   **false**: The access control policy is disabled.
+    /**
+     * <p>Specifies whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The access control policy is enabled.</p>
+     * <p>*   **false**: The access control policy is disabled.</p>
+     */
     @NameInMap("Release")
     public String release;
 
-    // The source address in the access control policy. Valid values:
-    // 
-    // * If SourceType is set to net, the value of this parameter is a CIDR block.
-    // 
-    //     Example: 1.1.XX.XX/24
-    // 
-    // * If SourceType is set to group, the value of this parameter is an address book.
-    // 
-    //     Example: db_group
-    // 
-    // * If SourceType is set to location, the value of this parameter is a location.
-    // 
-    //     Example: \["BJ11", "ZB"]
+    /**
+     * <p>The source address in the access control policy. Valid values:</p>
+     * <br>
+     * <p>* If SourceType is set to net, the value of this parameter is a CIDR block.</p>
+     * <br>
+     * <p>    Example: 1.1.XX.XX/24</p>
+     * <br>
+     * <p>* If SourceType is set to group, the value of this parameter is an address book.</p>
+     * <br>
+     * <p>    Example: db_group</p>
+     * <br>
+     * <p>* If SourceType is set to location, the value of this parameter is a location.</p>
+     * <br>
+     * <p>    Example: \["BJ11", "ZB"]</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The source IP address of the request.
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The type of the source address book in the access control policy. Valid values:
-    // 
-    // * **net**: source CIDR block
-    // * **group**: source address book
-    // * **location**: source location
+    /**
+     * <p>The type of the source address book in the access control policy. Valid values:</p>
+     * <br>
+     * <p>* **net**: source CIDR block</p>
+     * <p>* **group**: source address book</p>
+     * <p>* **location**: source location</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 

@@ -4,30 +4,38 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
-    // The number of the page to return. 
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return. </p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // Specifies whether VPC firewalls are configured. Valid values: 
-    // 
-    // - **notconfigured**: VPC firewalls are not configured.
-    // - **configured**: VPC firewalls are configured.
-    // - If this parameter is left empty, all policy groups of access control policies are queried.
+    /**
+     * <p>Specifies whether VPC firewalls are configured. Valid values: </p>
+     * <br>
+     * <p>- **notconfigured**: VPC firewalls are not configured.</p>
+     * <p>- **configured**: VPC firewalls are configured.</p>
+     * <p>- If this parameter is left empty, all policy groups of access control policies are queried.</p>
+     */
     @NameInMap("FirewallConfigureStatus")
     public String firewallConfigureStatus;
 
-    // The language of the content within the response. Valid values: 
-    // 
-    // - **zh**: Chinese (default)
-    // - **en**: English
+    /**
+     * <p>The language of the content within the response. Valid values: </p>
+     * <br>
+     * <p>- **zh**: Chinese (default)</p>
+     * <p>- **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The number of entries to return on each page. 
-    // 
-    // Maximum value: 50.
+    /**
+     * <p>The number of entries to return on each page. </p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
