@@ -4,7 +4,6 @@ package com.aliyun.paiflow20210202.models;
 import com.aliyun.tea.*;
 
 public class DeletePipelineResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

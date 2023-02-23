@@ -3,16 +3,16 @@ package com.aliyun.paiflow20210202.models;
 
 import com.aliyun.tea.*;
 
-public class UpdatePipelineResponseBody extends TeaModel {
+public class TerminatePipelineRunResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static UpdatePipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdatePipelineResponseBody self = new UpdatePipelineResponseBody();
+    public static TerminatePipelineRunResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        TerminatePipelineRunResponseBody self = new TerminatePipelineRunResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePipelineResponseBody setRequestId(String requestId) {
+    public TerminatePipelineRunResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

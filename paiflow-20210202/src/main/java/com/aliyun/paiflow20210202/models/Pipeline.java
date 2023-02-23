@@ -3,7 +3,7 @@ package com.aliyun.paiflow20210202.models;
 
 import com.aliyun.tea.*;
 
-public class GetPipelineResponseBody extends TeaModel {
+public class Pipeline extends TeaModel {
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -13,17 +13,11 @@ public class GetPipelineResponseBody extends TeaModel {
     @NameInMap("Identifier")
     public String identifier;
 
-    @NameInMap("Manifest")
-    public String manifest;
-
     @NameInMap("PipelineId")
     public String pipelineId;
 
     @NameInMap("Provider")
     public String provider;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Uuid")
     public String uuid;
@@ -34,12 +28,12 @@ public class GetPipelineResponseBody extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static GetPipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetPipelineResponseBody self = new GetPipelineResponseBody();
+    public static Pipeline build(java.util.Map<String, ?> map) throws Exception {
+        Pipeline self = new Pipeline();
         return TeaModel.build(map, self);
     }
 
-    public GetPipelineResponseBody setGmtCreateTime(String gmtCreateTime) {
+    public Pipeline setGmtCreateTime(String gmtCreateTime) {
         this.gmtCreateTime = gmtCreateTime;
         return this;
     }
@@ -47,7 +41,7 @@ public class GetPipelineResponseBody extends TeaModel {
         return this.gmtCreateTime;
     }
 
-    public GetPipelineResponseBody setGmtModifiedTime(String gmtModifiedTime) {
+    public Pipeline setGmtModifiedTime(String gmtModifiedTime) {
         this.gmtModifiedTime = gmtModifiedTime;
         return this;
     }
@@ -55,7 +49,7 @@ public class GetPipelineResponseBody extends TeaModel {
         return this.gmtModifiedTime;
     }
 
-    public GetPipelineResponseBody setIdentifier(String identifier) {
+    public Pipeline setIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
@@ -63,15 +57,7 @@ public class GetPipelineResponseBody extends TeaModel {
         return this.identifier;
     }
 
-    public GetPipelineResponseBody setManifest(String manifest) {
-        this.manifest = manifest;
-        return this;
-    }
-    public String getManifest() {
-        return this.manifest;
-    }
-
-    public GetPipelineResponseBody setPipelineId(String pipelineId) {
+    public Pipeline setPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
     }
@@ -79,7 +65,7 @@ public class GetPipelineResponseBody extends TeaModel {
         return this.pipelineId;
     }
 
-    public GetPipelineResponseBody setProvider(String provider) {
+    public Pipeline setProvider(String provider) {
         this.provider = provider;
         return this;
     }
@@ -87,15 +73,7 @@ public class GetPipelineResponseBody extends TeaModel {
         return this.provider;
     }
 
-    public GetPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetPipelineResponseBody setUuid(String uuid) {
+    public Pipeline setUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
@@ -103,7 +81,7 @@ public class GetPipelineResponseBody extends TeaModel {
         return this.uuid;
     }
 
-    public GetPipelineResponseBody setVersion(String version) {
+    public Pipeline setVersion(String version) {
         this.version = version;
         return this;
     }
@@ -111,7 +89,7 @@ public class GetPipelineResponseBody extends TeaModel {
         return this.version;
     }
 
-    public GetPipelineResponseBody setWorkspaceId(String workspaceId) {
+    public Pipeline setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
