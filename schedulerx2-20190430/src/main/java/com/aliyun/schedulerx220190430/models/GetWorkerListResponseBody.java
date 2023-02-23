@@ -4,18 +4,36 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetWorkerListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The job information.</p>
+     */
     @NameInMap("Data")
     public GetWorkerListResponseBodyData data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call is successful.</p>
+     * <p>*   **false**: The call fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +83,39 @@ public class GetWorkerListResponseBody extends TeaModel {
     }
 
     public static class GetWorkerListResponseBodyDataWorkerInfos extends TeaModel {
+        /**
+         * <p>The IP address of the worker.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The label of the worker.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The port number of the worker.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The startup method of the worker.</p>
+         */
         @NameInMap("Starter")
         public String starter;
 
+        /**
+         * <p>The version of the worker.</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The address of the worker. The address is in the format of ${worker_id}@${worker_ip}:${worker_port}.</p>
+         */
         @NameInMap("WorkerAddress")
         public String workerAddress;
 
@@ -139,6 +175,9 @@ public class GetWorkerListResponseBody extends TeaModel {
     }
 
     public static class GetWorkerListResponseBodyData extends TeaModel {
+        /**
+         * <p>The worker information.</p>
+         */
         @NameInMap("WorkerInfos")
         public java.util.List<GetWorkerListResponseBodyDataWorkerInfos> workerInfos;
 

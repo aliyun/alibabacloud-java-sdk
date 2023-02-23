@@ -4,18 +4,33 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class RevokePermissionRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The unique ID (UID) of the RAM user.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

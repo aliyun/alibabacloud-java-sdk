@@ -4,24 +4,45 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GrantPermissionRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to grant the permissions with the GRANT option. Valid values: -**true**: grants the permissions with the GRANT option. -**false**: does not grant the permissions with the GRANT option.</p>
+     */
     @NameInMap("GrantOption")
     public Boolean grantOption;
 
+    /**
+     * <p>The ID of the application group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user ID.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The username.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

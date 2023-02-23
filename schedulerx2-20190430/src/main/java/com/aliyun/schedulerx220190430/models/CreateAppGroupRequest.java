@@ -4,42 +4,81 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class CreateAppGroupRequest extends TeaModel {
+    /**
+     * <p>The AppKey for the application.</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("AppType")
     public Integer appType;
 
+    /**
+     * <p>The description of the application.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableLog")
+    public Boolean enableLog;
+
+    /**
+     * <p>The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The maximum number of jobs.</p>
+     */
     @NameInMap("MaxJobs")
     public Integer maxJobs;
 
+    /**
+     * <p>The configuration of the alert. The value is a JSON string. For more information about this parameter, see **Additional information about request parameters**.</p>
+     */
     @NameInMap("MonitorConfigJson")
     public String monitorConfigJson;
 
+    /**
+     * <p>The configuration of alert contacts. The value is a JSON string.</p>
+     */
     @NameInMap("MonitorContactsJson")
     public String monitorContactsJson;
 
+    /**
+     * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    /**
+     * <p>This parameter is not supported. You do not need to specify this parameter.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to schedule a busy worker.</p>
+     */
     @NameInMap("ScheduleBusyWorkers")
     public Boolean scheduleBusyWorkers;
 
@@ -78,6 +117,14 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAppGroupRequest setEnableLog(Boolean enableLog) {
+        this.enableLog = enableLog;
+        return this;
+    }
+    public Boolean getEnableLog() {
+        return this.enableLog;
     }
 
     public CreateAppGroupRequest setGroupId(String groupId) {

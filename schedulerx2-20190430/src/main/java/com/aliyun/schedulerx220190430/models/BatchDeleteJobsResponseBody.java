@@ -4,15 +4,30 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteJobsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether jobs are deleted in batches. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Jobs are deleted in batches.</p>
+     * <p>*   **false**: Failed to delete jobs in batches.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

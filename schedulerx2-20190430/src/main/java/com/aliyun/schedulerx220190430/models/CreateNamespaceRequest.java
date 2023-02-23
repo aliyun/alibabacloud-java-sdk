@@ -4,15 +4,27 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
+    /**
+     * <p>The description of the namespace.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The UID of the namespace, which is globally unique. We recommend that you use the UUID to generate the UID.</p>
+     */
     @NameInMap("Uid")
     public String uid;
 

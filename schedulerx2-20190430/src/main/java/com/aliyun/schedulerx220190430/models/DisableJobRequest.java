@@ -4,18 +4,33 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class DisableJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can obtain the ID of the application on the Application Management page in the SchedulerX console.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 
+    /**
+     * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>Required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

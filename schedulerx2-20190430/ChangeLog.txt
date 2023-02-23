@@ -1,3 +1,6 @@
+2023-02-23 Version: 1.1.6
+- Get Job Instance Add RegionId.
+
 2022-11-02 Version: 1.1.5
 - ListJobs return JobType and XAttrs.
 - GetJobInfo return JobType and XAttrs.
