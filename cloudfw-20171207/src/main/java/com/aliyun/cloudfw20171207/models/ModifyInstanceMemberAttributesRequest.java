@@ -4,7 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceMemberAttributesRequest extends TeaModel {
-    // The members that to be modified.
+    /**
+     * <p>The members that to be modified.</p>
+     */
     @NameInMap("Members")
     public java.util.List<ModifyInstanceMemberAttributesRequestMembers> members;
 
@@ -22,11 +24,15 @@ public class ModifyInstanceMemberAttributesRequest extends TeaModel {
     }
 
     public static class ModifyInstanceMemberAttributesRequestMembers extends TeaModel {
-        // The remarks of the member in Cloud Firewall.
+        /**
+         * <p>The remarks of the member in Cloud Firewall.</p>
+         */
         @NameInMap("MemberDesc")
         public String memberDesc;
 
-        // The UID of the member in Cloud Firewall.
+        /**
+         * <p>The UID of the member in Cloud Firewall.</p>
+         */
         @NameInMap("MemberUid")
         public Long memberUid;
 

@@ -4,14 +4,18 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyAdvancedConfigResponseBody extends TeaModel {
-    // Indicates whether the strict mode is enabled for the access control policy. Valid values:
-    // 
-    // *   **on**: The strict mode is enabled.
-    // *   **off**: The strict mode is disabled.
+    /**
+     * <p>Indicates whether the strict mode is enabled for the access control policy. Valid values:</p>
+     * <br>
+     * <p>*   **on**: The strict mode is enabled.</p>
+     * <p>*   **off**: The strict mode is disabled.</p>
+     */
     @NameInMap("InternetSwitch")
     public String internetSwitch;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

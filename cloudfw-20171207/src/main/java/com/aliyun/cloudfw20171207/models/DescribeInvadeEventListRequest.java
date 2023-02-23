@@ -4,77 +4,109 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvadeEventListRequest extends TeaModel {
-    // The IP address of the affected asset.
+    /**
+     * <p>The IP address of the affected asset.</p>
+     */
     @NameInMap("AssetsIP")
     public String assetsIP;
 
-    // The ID of the instance.
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("AssetsInstanceId")
     public String assetsInstanceId;
 
-    // The name of the instance.
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("AssetsInstanceName")
     public String assetsInstanceName;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1. Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+    /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the breach awareness event.
+    /**
+     * <p>The ID of the breach awareness event.</p>
+     */
     @NameInMap("EventKey")
     public String eventKey;
 
-    // The name of the breach awareness event.
+    /**
+     * <p>The name of the breach awareness event.</p>
+     */
     @NameInMap("EventName")
     public String eventName;
 
-    // The UUID of the breach awareness event.
+    /**
+     * <p>The UUID of the breach awareness event.</p>
+     */
     @NameInMap("EventUuid")
     public String eventUuid;
 
-    // Specifies whether to ignore the breach awareness event. Valid values:
-    // 
-    // *   **true**: ignores the breach awareness event.
-    // *   **false**: does not ignore the breach awareness event.
+    /**
+     * <p>Specifies whether to ignore the breach awareness event. Valid values:</p>
+     * <br>
+     * <p>*   **true**: ignores the breach awareness event.</p>
+     * <p>*   **false**: does not ignore the breach awareness event.</p>
+     */
     @NameInMap("IsIgnore")
     public String isIgnore;
 
-    // The language of the content within the response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The ID of the member.
+    /**
+     * <p>The ID of the member.</p>
+     */
     @NameInMap("MemberUid")
     public Long memberUid;
 
-    // The number of entries to return on each page.
-    // 
-    // Default value: 6. Maximum value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 6. Maximum value: 10.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The list of process statuses.
+    /**
+     * <p>The list of process statuses.</p>
+     */
     @NameInMap("ProcessStatusList")
     public java.util.List<Integer> processStatusList;
 
-    // The list of risk levels.
+    /**
+     * <p>The list of risk levels.</p>
+     */
     @NameInMap("RiskLevel")
     public java.util.List<Integer> riskLevel;
 
-    // The source IP address of the request.
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    // The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+    /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

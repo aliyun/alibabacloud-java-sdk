@@ -4,31 +4,43 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
-    // The connection type of the VPC firewall. The value is fixed as **cen**, which indicates CEN instances.
+    /**
+     * <p>The connection type of the VPC firewall. The value is fixed as **cen**, which indicates CEN instances.</p>
+     */
     @NameInMap("ConnectType")
     public String connectType;
 
-    // The status of the VPC firewall. Valid values:
-    // 
-    // *   **opened**: enabled
-    // *   **closed**: disabled
-    // *   **notconfigured**: not configured
+    /**
+     * <p>The status of the VPC firewall. Valid values:</p>
+     * <br>
+     * <p>*   **opened**: enabled</p>
+     * <p>*   **closed**: disabled</p>
+     * <p>*   **notconfigured**: not configured</p>
+     */
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
 
-    // The details about the VPC.
+    /**
+     * <p>The details about the VPC.</p>
+     */
     @NameInMap("LocalVpc")
     public DescribeVpcFirewallCenDetailResponseBodyLocalVpc localVpc;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The instance ID of the VPC firewall.
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
-    // The instance name of the VPC firewall.
+    /**
+     * <p>The instance name of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
 
@@ -86,11 +98,15 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList extends TeaModel {
-        // The ID of the ENI that belongs to the VPC.
+        /**
+         * <p>The ID of the ENI that belongs to the VPC.</p>
+         */
         @NameInMap("EniId")
         public String eniId;
 
-        // The private IP address of the ENI that belongs to the VPC.
+        /**
+         * <p>The private IP address of the ENI that belongs to the VPC.</p>
+         */
         @NameInMap("EniPrivateIpAddress")
         public String eniPrivateIpAddress;
 
@@ -118,11 +134,15 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableListRouteEntryList extends TeaModel {
-        // The destination CIDR block of the VPC.
+        /**
+         * <p>The destination CIDR block of the VPC.</p>
+         */
         @NameInMap("DestinationCidr")
         public String destinationCidr;
 
-        // The instance ID of the next hop for the VPC.
+        /**
+         * <p>The instance ID of the next hop for the VPC.</p>
+         */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
 
@@ -150,11 +170,15 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableList extends TeaModel {
-        // The route entries of the VPC.
+        /**
+         * <p>The route entries of the VPC.</p>
+         */
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableListRouteEntryList> routeEntryList;
 
-        // The ID of the route table for the VPC.
+        /**
+         * <p>The ID of the route table for the VPC.</p>
+         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
@@ -182,80 +206,114 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpc extends TeaModel {
-        // The ID of the connection between two network instances.
+        /**
+         * <p>The ID of the connection between two network instances.</p>
+         */
         @NameInMap("AttachmentId")
         public String attachmentId;
 
-        // The name of the connection between two network instances.
+        /**
+         * <p>The name of the connection between two network instances.</p>
+         */
         @NameInMap("AttachmentName")
         public String attachmentName;
 
-        // The CIDR blocks that are protected by the VPC firewall.
+        /**
+         * <p>The CIDR blocks that are protected by the VPC firewall.</p>
+         */
         @NameInMap("DefendCidrList")
         public java.util.List<String> defendCidrList;
 
-        // The Elastic Network Interfaces (ENIs).
+        /**
+         * <p>The Elastic Network Interfaces (ENIs).</p>
+         */
         @NameInMap("EniList")
         public java.util.List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList> eniList;
 
-        // The ID of the vSwitch. The value of this parameter is returned only when the RouteMode parameter is set to manual.
+        /**
+         * <p>The ID of the vSwitch. The value of this parameter is returned only when the RouteMode parameter is set to manual.</p>
+         */
         @NameInMap("ManualVSwitchId")
         public String manualVSwitchId;
 
-        // The ID of the VPC for which the VPC firewall is created.
+        /**
+         * <p>The ID of the VPC for which the VPC firewall is created.</p>
+         */
         @NameInMap("NetworkInstanceId")
         public String networkInstanceId;
 
-        // The name of the network instance.
+        /**
+         * <p>The name of the network instance.</p>
+         */
         @NameInMap("NetworkInstanceName")
         public String networkInstanceName;
 
-        // The type of the network instance. The value is fixed as **VPC**.
+        /**
+         * <p>The type of the network instance. The value is fixed as **VPC**.</p>
+         */
         @NameInMap("NetworkInstanceType")
         public String networkInstanceType;
 
-        // The UID of the Alibaba Cloud account to which the VPC belongs.
+        /**
+         * <p>The UID of the Alibaba Cloud account to which the VPC belongs.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
-        // The ID of the region in which the VPC resides.
+        /**
+         * <p>The ID of the region in which the VPC resides.</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
-        // The routing mode. Valid values:
-        // 
-        // *   auto
-        // *   manual
+        /**
+         * <p>The routing mode. Valid values:</p>
+         * <br>
+         * <p>*   auto</p>
+         * <p>*   manual</p>
+         */
         @NameInMap("RouteMode")
         public String routeMode;
 
-        // Indicates whether the routing mode can be set to manual. Valid values:
-        // 
-        // *   **1**: yes
-        // *   **0**: no
+        /**
+         * <p>Indicates whether the routing mode can be set to manual. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("SupportManualMode")
         public String supportManualMode;
 
-        // The instance ID of the CEN transit router.
+        /**
+         * <p>The instance ID of the CEN transit router.</p>
+         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
-        // The edition of the CEN transit router. Valid values:
-        // 
-        // *   **Basic**: Basic Edition
-        // *   **Enterprise**: Enterprise Edition
+        /**
+         * <p>The edition of the CEN transit router. Valid values:</p>
+         * <br>
+         * <p>*   **Basic**: Basic Edition</p>
+         * <p>*   **Enterprise**: Enterprise Edition</p>
+         */
         @NameInMap("TransitRouterType")
         public String transitRouterType;
 
-        // The CIDR blocks of the VPC.
+        /**
+         * <p>The CIDR blocks of the VPC.</p>
+         */
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableList> vpcCidrTableList;
 
-        // The ID of the VPC.
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        // The name of the VPC.
+        /**
+         * <p>The name of the VPC.</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 

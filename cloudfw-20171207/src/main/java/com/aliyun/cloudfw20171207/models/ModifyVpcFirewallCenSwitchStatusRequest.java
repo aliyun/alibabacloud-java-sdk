@@ -4,27 +4,35 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallCenSwitchStatusRequest extends TeaModel {
-    // Specifies whether to enable the VPC firewall. Valid values:
-    // 
-    // *   **open**: yes
-    // *   **close**: no
+    /**
+     * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
+     * <br>
+     * <p>*   **open**: yes</p>
+     * <p>*   **close**: no</p>
+     */
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
 
-    // The language of the content within the request and response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The UID of the member that is managed by your Alibaba Cloud account.
+    /**
+     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
-    // The instance ID of the VPC firewall.
-    // 
-    // >  You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     * <br>
+     * <p>> You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 

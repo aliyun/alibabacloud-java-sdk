@@ -4,15 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
-    // An array that consists of destination IP addresses in outbound connections.
+    /**
+     * <p>The destination IP addresses in outbound connections.</p>
+     */
     @NameInMap("DstIPList")
     public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPList> dstIPList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of destination IP addresses in outbound connections.
+    /**
+     * <p>The total number of destination IP addresses in outbound connections.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,9 +52,15 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList extends TeaModel {
+        /**
+         * <p>The name of the address book.</p>
+         */
         @NameInMap("AddressGroupName")
         public String addressGroupName;
 
+        /**
+         * <p>The UUID of the address book.</p>
+         */
         @NameInMap("AddressGroupUUID")
         public String addressGroupUUID;
 
@@ -76,11 +88,33 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList extends TeaModel {
-        // The type of the application.
+        /**
+         * <p>The application type in the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   **FTP**</p>
+         * <p>*   **HTTP**</p>
+         * <p>*   **HTTPS**</p>
+         * <p>*   **Memcache**</p>
+         * <p>*   **MongoDB**</p>
+         * <p>*   **MQTT**</p>
+         * <p>*   **MySQL**</p>
+         * <p>*   **RDP**</p>
+         * <p>*   **Redis**</p>
+         * <p>*   **SMTP**</p>
+         * <p>*   **SMTPS**</p>
+         * <p>*   **SSH**</p>
+         * <p>*   **SSL_No_Cert**</p>
+         * <p>*   **SSL**</p>
+         * <p>*   **VNC**</p>
+         * <br>
+         * <p>>  The value of this parameter depends on the value of Proto. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you specify both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
-        // The port of the application.
+        /**
+         * <p>The port of the application.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
@@ -108,26 +142,41 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDestinationIPResponseBodyDstIPListTagList extends TeaModel {
+        /**
+         * <p>The type of the tag. Valid values:</p>
+         * <br>
+         * <p>*   **Suspicious**</p>
+         * <p>*   **Malicious**</p>
+         * <p>*   **Trusted**</p>
+         */
         @NameInMap("ClassId")
         public String classId;
 
-        // The risk level. Valid values:
-        // 
-        // *   **1**: low
-        // *   **2**: medium
-        // *   **3**: high
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **1**: low</p>
+         * <p>*   **2**: medium</p>
+         * <p>*   **3**: high</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
-        // The description of the tag.
+        /**
+         * <p>The description of the tag.</p>
+         */
         @NameInMap("TagDescribe")
         public String tagDescribe;
 
-        // The ID of the tag.
+        /**
+         * <p>The ID of the tag.</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
-        // The name of the tag.
+        /**
+         * <p>The name of the tag.</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 
@@ -179,108 +228,164 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDestinationIPResponseBodyDstIPList extends TeaModel {
-        // Indicates whether an access control policy is configured. Valid values:
-        // 
-        // *   **Uncovered**: No access control policies are configured.
-        // *   **FullCoverage**: An access control policy is configured.
+        /**
+         * <p>Indicates whether an access control policy is configured. Valid values:</p>
+         * <br>
+         * <p>*   **Uncovered**: No access control policies are configured.</p>
+         * <p>*   **FullCoverage**: An access control policy is configured.</p>
+         */
         @NameInMap("AclCoverage")
         public String aclCoverage;
 
-        // The suggestion in an access control policy.
+        /**
+         * <p>The suggestion in an access control policy.</p>
+         */
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
 
-        // The state of the access control policy. Valid values:
-        // 
-        // *   **normal**: healthy
-        // *   **abnormal**: unhealthy
+        /**
+         * <p>The state of the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: healthy</p>
+         * <p>*   **Abnormal**: unhealthy</p>
+         */
         @NameInMap("AclStatus")
         public String aclStatus;
 
+        /**
+         * <p>The information about the address book.</p>
+         */
         @NameInMap("AddressGroupList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListAddressGroupList> addressGroupList;
 
-        // An array that consists of application ports.
+        /**
+         * <p>An array that consists of application ports.</p>
+         */
         @NameInMap("ApplicationPortList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList> applicationPortList;
 
+        /**
+         * <p>The type of the tag. Valid values:</p>
+         * <br>
+         * <p>*   **Suspicious**</p>
+         * <p>*   **Malicious**</p>
+         * <p>*   **Trusted**</p>
+         */
         @NameInMap("CategoryClassId")
         public String categoryClassId;
 
-        // The ID of the service to which the destination IP address belongs. Valid values:
-        // 
-        // *   **Aliyun**: Alibaba Cloud services
-        // *   **NotAliyun**: third-party services
+        /**
+         * <p>The ID of the service to which the destination IP address belongs. Valid values:</p>
+         * <br>
+         * <p>*   **Aliyun**: Alibaba Cloud services</p>
+         * <p>*   **NotAliyun**: third-party services</p>
+         */
         @NameInMap("CategoryId")
         public String categoryId;
 
-        // The type of the service to which the destination IP address belongs. Valid values:
-        // 
-        // *   **Alibaba Cloud services**
-        // *   **third-party services**
+        /**
+         * <p>The type of the service to which the destination IP address belongs. Valid values:</p>
+         * <br>
+         * <p>*   **Alibaba Cloud services**</p>
+         * <p>*   **third-party services**</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
-        // The destination IP address in the outbound connection that is initiated to access a domain name.
+        /**
+         * <p>The destination IP address in the outbound connection that is initiated to access a domain name.</p>
+         */
         @NameInMap("DstIP")
         public String dstIP;
 
-        // The name of the group to which the access control policy belongs.
+        /**
+         * <p>The name of the group to which the access control policy belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>Indicates whether an access control policy is configured. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("HasAcl")
         public String hasAcl;
 
-        // Indicates whether an access control policy is recommended. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
+        /**
+         * <p>Indicates whether an access control policy is recommended. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("HasAclRecommend")
         public Boolean hasAclRecommend;
 
-        // The inbound traffic. Unit: bytes.
+        /**
+         * <p>The inbound traffic. Unit: bytes.</p>
+         */
         @NameInMap("InBytes")
         public Long inBytes;
 
-        // Indicates whether the destination IP address is added to an allowlist. Valid values:
-        // 
-        // *   **true**: added
-        // *   **false**: not added
+        /**
+         * <p>Indicates whether the destination IP address is added to a whitelist. Valid values:</p>
+         * <br>
+         * <p>*   **true**: added</p>
+         * <p>*   **false**: not added</p>
+         */
         @NameInMap("IsMarkNormal")
         public Boolean isMarkNormal;
 
-        // The outbound traffic. Unit: bytes.
+        /**
+         * <p>The outbound traffic. Unit: bytes.</p>
+         */
         @NameInMap("OutBytes")
         public Long outBytes;
 
-        // The UUID of the access control policy.
+        /**
+         * <p>The UUID of the access control policy.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        // The name of the access control policy.
+        /**
+         * <p>The name of the access control policy.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The reason why the domain name is secure.</p>
+         */
         @NameInMap("SecurityReason")
         public String securityReason;
 
-        // The suggestion to handle the traffic of the domain name in outbound connections. Valid values:
-        // 
-        // *   **pass**: allow
-        // *   **alert**: deny
-        // *   **drop**: monitor
+        /**
+         * <p>The suggestion to handle the traffic of the domain name in outbound connections. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: allow</p>
+         * <p>*   **alert**: deny</p>
+         * <p>*   **drop**: monitor</p>
+         */
         @NameInMap("SecuritySuggest")
         public String securitySuggest;
 
-        // The number of requests.
+        /**
+         * <p>The number of requests.</p>
+         */
         @NameInMap("SessionCount")
         public Long sessionCount;
 
-        // An array that consists of tags.
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<DescribeOutgoingDestinationIPResponseBodyDstIPListTagList> tagList;
 
+        /**
+         * <p>The total volume of traffic. Unit: bytes.</p>
+         */
         @NameInMap("TotalBytes")
         public String totalBytes;
 

@@ -4,24 +4,32 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallDetailRequest extends TeaModel {
-    // The natural language of the request and response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The natural language of the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The ID of the local VPC.
+    /**
+     * <p>The ID of the local VPC.</p>
+     */
     @NameInMap("LocalVpcId")
     public String localVpcId;
 
-    // The ID of the peer VPC.
+    /**
+     * <p>The ID of the peer VPC.</p>
+     */
     @NameInMap("PeerVpcId")
     public String peerVpcId;
 
-    // The instance ID of the VPC firewall.
-    // 
-    // >  You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     * <br>
+     * <p>>  You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 

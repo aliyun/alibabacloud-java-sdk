@@ -4,31 +4,39 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DeleteControlPolicyRequest extends TeaModel {
-    // The ID of the access control policy.
-    // 
-    // To delete an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to query the ID.
+    /**
+     * <p>The ID of the access control policy.</p>
+     * <br>
+     * <p>To delete an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to query the ID.</p>
+     */
     @NameInMap("AclUuid")
     public String aclUuid;
 
-    // The direction of the traffic to which the access control policy applies.
-    // 
-    // Valid values:
-    // 
-    // *   **in**: inbound traffic
-    // *   **out**: outbound traffic
+    /**
+     * <p>The direction of the traffic to which the access control policy applies.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **in**: inbound traffic</p>
+     * <p>*   **out**: outbound traffic</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
-    // The natural language of the request and response.
-    // 
-    // Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The natural language of the request and response.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The source IP address of the traffic.
+    /**
+     * <p>The source IP address of the traffic.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

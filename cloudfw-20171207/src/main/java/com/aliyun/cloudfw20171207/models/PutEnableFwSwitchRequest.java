@@ -4,32 +4,42 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class PutEnableFwSwitchRequest extends TeaModel {
-    // The list of IP addresses.
-    // 
-    // >  You must specify at least one of the IpaddrList, RegionList, ResourceTypeList parameters.
+    /**
+     * <p>The list of IP addresses.</p>
+     * <br>
+     * <p>>  You must specify at least one of the IpaddrList, RegionList, ResourceTypeList parameters.</p>
+     */
     @NameInMap("IpaddrList")
     public java.util.List<String> ipaddrList;
 
-    // The language of the content within the request and response.
-    // 
-    // *   **zh**: Chinese
-    // *   **en**: English
+    /**
+     * <p>The language of the content within the request and response.</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The list of regions.
-    // 
-    // >  You must specify at least one of the IpaddrList, RegionList, ResourceTypeList parameters.
+    /**
+     * <p>The list of regions.</p>
+     * <br>
+     * <p>>  You must specify at least one of the IpaddrList, RegionList, ResourceTypeList parameters.</p>
+     */
     @NameInMap("RegionList")
     public java.util.List<String> regionList;
 
-    // The list of asset types.
-    // 
-    // >  You must specify at least one of the IpaddrList, RegionList, ResourceTypeList parameters.
+    /**
+     * <p>The list of asset types.</p>
+     * <br>
+     * <p>>  You must specify at least one of the IpaddrList, RegionList, ResourceTypeList parameters.</p>
+     */
     @NameInMap("ResourceTypeList")
     public java.util.List<String> resourceTypeList;
 
-    // The source IP address of the request.
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

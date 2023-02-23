@@ -4,144 +4,174 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
-    // The action that Cloud Firewall performs on the traffic. 
-    // 
-    // Valid values:
-    // 
-    // - **accept**: allows the traffic.
-    // - **drop**: denies the traffic.
-    // - **log**: monitors the traffic.
+    /**
+     * <p>The action that Cloud Firewall performs on the traffic. </p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>- **accept**: allows the traffic.</p>
+     * <p>- **drop**: denies the traffic.</p>
+     * <p>- **log**: monitors the traffic.</p>
+     */
     @NameInMap("AclAction")
     public String aclAction;
 
-    // The ID of the access control policy. 
-    // 
-    // If you want to modify the configurations of an access control policy, you must provide the ID of the policy. You can call the [DescribeVpcFirewallControlPolicy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallcontrolpolicy#doc-api-Cloudfw-DescribeVpcFirewallControlPolicy) operation to query the ID.
+    /**
+     * <p>The ID of the access control policy. </p>
+     * <br>
+     * <p>If you want to modify the configurations of an access control policy, you must provide the ID of the policy. You can call the [DescribeVpcFirewallControlPolicy](https://www.alibabacloud.com/help/en/cloud-firewall/latest/describevpcfirewallcontrolpolicy#doc-api-Cloudfw-DescribeVpcFirewallControlPolicy) operation to query the ID.</p>
+     */
     @NameInMap("AclUuid")
     public String aclUuid;
 
-    // The type of the application that the access control policy supports. 
-    // 
-    // Valid values:
-    // 
-    // - FTP
-    // - HTTP
-    // - HTTPS
-    // - MySQL
-    // - SMTP
-    // - SMTPS
-    // - RDP
-    // - VNC
-    // - SSH
-    // - Redis
-    // - MQTT
-    // - MongoDB
-    // - Memcache
-    // - SSL
-    // - ANY: all types of applications
+    /**
+     * <p>The type of the application that the access control policy supports. </p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>- FTP</p>
+     * <p>- HTTP</p>
+     * <p>- HTTPS</p>
+     * <p>- MySQL</p>
+     * <p>- SMTP</p>
+     * <p>- SMTPS</p>
+     * <p>- RDP</p>
+     * <p>- VNC</p>
+     * <p>- SSH</p>
+     * <p>- Redis</p>
+     * <p>- MQTT</p>
+     * <p>- MongoDB</p>
+     * <p>- Memcache</p>
+     * <p>- SSL</p>
+     * <p>- ANY: all types of applications</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
-    // The description of the access control policy.
+    /**
+     * <p>The description of the access control policy.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The destination port in the access control policy.
+    /**
+     * <p>The destination port in the access control policy.</p>
+     */
     @NameInMap("DestPort")
     public String destPort;
 
-    // The name of the destination port address book in the access control policy.
+    /**
+     * <p>The name of the destination port address book in the access control policy.</p>
+     */
     @NameInMap("DestPortGroup")
     public String destPortGroup;
 
-    // The type of the destination port in the access control policy. 
-    // 
-    // - **port**: port
-    // - **group**: port address book
+    /**
+     * <p>The type of the destination port in the access control policy. </p>
+     * <br>
+     * <p>- **port**: port</p>
+     * <p>- **group**: port address book</p>
+     */
     @NameInMap("DestPortType")
     public String destPortType;
 
-    // The destination address in the access control policy. 
-    // 
-    // - If **DestinationType** is set to `net`, the value of Destination is a CIDR block.  
-    // 
-    // Example: 10.2.3.0/24
-    // - If **DestinationType** is set to `group`, the value of Destination is an address book.  
-    // 
-    // Example: db_group
-    // - If **DestinationType** is set to `domain`, the value of Destination is a domain name.  
-    // 
-    // Example: *.aliyuncs.com
+    /**
+     * <p>The destination address in the access control policy. </p>
+     * <br>
+     * <p>- If **DestinationType** is set to `net`, the value of Destination is a CIDR block.  </p>
+     * <br>
+     * <p>Example: 10.2.3.0/24</p>
+     * <p>- If **DestinationType** is set to `group`, the value of Destination is an address book.  </p>
+     * <br>
+     * <p>Example: db_group</p>
+     * <p>- If **DestinationType** is set to `domain`, the value of Destination is a domain name.  </p>
+     * <br>
+     * <p>Example: *.aliyuncs.com</p>
+     */
     @NameInMap("Destination")
     public String destination;
 
-    // The type of the destination address in the access control policy. 
-    // 
-    // Valid values:
-    // 
-    // - **net**: destination CIDR block
-    // - **group**: destination address book
-    // - **domain**: destination domain name
+    /**
+     * <p>The type of the destination address in the access control policy. </p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>- **net**: destination CIDR block</p>
+     * <p>- **group**: destination address book</p>
+     * <p>- **domain**: destination domain name</p>
+     */
     @NameInMap("DestinationType")
     public String destinationType;
 
-    // The natural language of the request and response. 
-    // 
-    // Valid values:
-    // 
-    // - **zh**: Chinese
-    // - **en**: English
+    /**
+     * <p>The natural language of the request and response. </p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>- **zh**: Chinese</p>
+     * <p>- **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The type of the protocol in the access control policy. 
-    // 
-    // Valid values:
-    // 
-    // - ANY: all types of protocols
-    // - TCP
-    // - UDP
-    // - ICMP
+    /**
+     * <p>The type of the protocol in the access control policy. </p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>- ANY: all types of protocols</p>
+     * <p>- TCP</p>
+     * <p>- UDP</p>
+     * <p>- ICMP</p>
+     */
     @NameInMap("Proto")
     public String proto;
 
-    // Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values: 
-    // 
-    // - **true**: The access control policy is enabled.
-    // - **false**: The access control policy is disabled.
+    /**
+     * <p>Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values: </p>
+     * <br>
+     * <p>- **true**: The access control policy is enabled.</p>
+     * <p>- **false**: The access control policy is disabled.</p>
+     */
     @NameInMap("Release")
     public String release;
 
-    // The source address in the access control policy. 
-    // 
-    // Valid values:
-    // 
-    // - If **SourceType** is set to `net`, the value of Source is a CIDR block.  
-    // 
-    // Example: 10.2.4.0/24
-    // - If **SourceType** is set to `group`, the value of Source is an address book.  
-    // 
-    // Example: db_group
+    /**
+     * <p>The source address in the access control policy. </p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>- If **SourceType** is set to `net`, the value of Source is a CIDR block.  </p>
+     * <br>
+     * <p>Example: 10.2.4.0/24</p>
+     * <p>- If **SourceType** is set to `group`, the value of Source is an address book.  </p>
+     * <br>
+     * <p>Example: db_group</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The type of the source address in the access control policy. 
-    // 
-    // Valid values:
-    // 
-    // - **net**: source CIDR block
-    // - **group**: source address book
+    /**
+     * <p>The type of the source address in the access control policy. </p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>- **net**: source CIDR block</p>
+     * <p>- **group**: source address book</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
-    // The ID of the policy group to which the access control policy belongs. You can call the DescribeVpcFirewallAclGroupList operation to query the ID.  
-    // 
-    // - If the VPC firewall is used to protect a CEN instance, the value of this parameter is the ID of the CEN instance.  
-    // 
-    // Example: cen-ervw0g12b5jbw****
-    // - If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.  
-    // 
-    // Example: vfw-a42bbb7b887148c9****
+    /**
+     * <p>The ID of the policy group to which the access control policy belongs. You can call the DescribeVpcFirewallAclGroupList operation to query the ID.  </p>
+     * <br>
+     * <p>- If the VPC firewall is used to protect a CEN instance, the value of this parameter is the ID of the CEN instance.  </p>
+     * <br>
+     * <p>Example: cen-ervw0g12b5jbw****</p>
+     * <p>- If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.  </p>
+     * <br>
+     * <p>Example: vfw-a42bbb7b887148c9****</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 

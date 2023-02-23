@@ -4,39 +4,57 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
-    // The end of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
+    /**
+     * <p>The end of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    // The network throughput, which indicates the inbound traffic rate. Unit: bit/s.
+    /**
+     * <p>The network throughput, which indicates the inbound traffic rate. Unit: bit/s.</p>
+     */
     @NameInMap("InBps")
     public Long inBps;
 
-    // The network throughput, which indicates the inbound packet rate. Unit: packets per second (pps).
+    /**
+     * <p>The network throughput, which indicates the inbound packet rate. Unit: packets per second (pps).</p>
+     */
     @NameInMap("InPps")
     public Long inPps;
 
-    // The number of new connections.
+    /**
+     * <p>The number of new connections.</p>
+     */
     @NameInMap("NewConn")
     public Long newConn;
 
-    // The network throughput, which indicates the outbound traffic rate. Unit: bit/s.
+    /**
+     * <p>The network throughput, which indicates the outbound traffic rate. Unit: bit/s.</p>
+     */
     @NameInMap("OutBps")
     public Long outBps;
 
-    // The network throughput, which indicates the outbound packet rate. Unit: pps.
+    /**
+     * <p>The network throughput, which indicates the outbound packet rate. Unit: pps.</p>
+     */
     @NameInMap("OutPps")
     public Long outPps;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of requests.
+    /**
+     * <p>The number of requests.</p>
+     */
     @NameInMap("SessionCount")
     public Long sessionCount;
 
-    // The beginning of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
+    /**
+     * <p>The beginning of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

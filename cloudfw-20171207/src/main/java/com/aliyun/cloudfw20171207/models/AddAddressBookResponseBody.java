@@ -4,11 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class AddAddressBookResponseBody extends TeaModel {
-    // The UUID of the returned address book.
+    /**
+     * <p>The UUID of the returned address book.</p>
+     */
     @NameInMap("GroupUuid")
     public String groupUuid;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

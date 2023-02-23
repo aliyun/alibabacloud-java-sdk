@@ -4,42 +4,54 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallConfigureRequest extends TeaModel {
-    // The natural language of the request and response. Valid values:
-    // 
-    // *   **zh**: Chinese (default)
-    // *   **en**: English
+    /**
+     * <p>The natural language of the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The CIDR blocks of the local VPC. The value is a JSON string that contains the following parameters:
-    // 
-    // *   **RouteTableId**: the ID of the route table for the local VPC.
-    // *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.
-    // 
-    // >  You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of local VPCs for VPC firewalls.
+    /**
+     * <p>The CIDR blocks of the local VPC. The value is a JSON string that contains the following parameters:</p>
+     * <br>
+     * <p>*   **RouteTableId**: the ID of the route table for the local VPC.</p>
+     * <p>*   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.</p>
+     * <br>
+     * <p>>  You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of local VPCs for VPC firewalls.</p>
+     */
     @NameInMap("LocalVpcCidrTableList")
     public String localVpcCidrTableList;
 
-    // The UID of the member that is managed by your Alibaba Cloud account.
+    /**
+     * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
-    // The CIDR blocks of the peer VPC. The value is a JSON string that contains the following parameters:
-    // 
-    // *   **RouteTableId**: the ID of the route table for the peer VPC.
-    // *   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.
-    // 
-    // >  You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of peer VPCs for VPC firewalls.
+    /**
+     * <p>The CIDR blocks of the peer VPC. The value is a JSON string that contains the following parameters:</p>
+     * <br>
+     * <p>*   **RouteTableId**: the ID of the route table for the peer VPC.</p>
+     * <p>*   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.</p>
+     * <br>
+     * <p>>  You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of peer VPCs for VPC firewalls.</p>
+     */
     @NameInMap("PeerVpcCidrTableList")
     public String peerVpcCidrTableList;
 
-    // The instance ID of the VPC firewall.
-    // 
-    // >  You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     * <br>
+     * <p>>  You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.</p>
+     */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
-    // The instance name of the VPC firewall.
+    /**
+     * <p>The instance name of the VPC firewall.</p>
+     */
     @NameInMap("VpcFirewallName")
     public String vpcFirewallName;
 

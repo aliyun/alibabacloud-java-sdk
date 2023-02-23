@@ -4,15 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeOutgoingDomainResponseBody extends TeaModel {
-    // An array that consists of the domain names in outbound connections.
+    /**
+     * <p>An array that consists of the domain names in outbound connections.</p>
+     */
     @NameInMap("DomainList")
     public java.util.List<DescribeOutgoingDomainResponseBodyDomainList> domainList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of the domain names in outbound connections.
+    /**
+     * <p>The total number of the domain names in outbound connections.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,31 +52,41 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDomainResponseBodyDomainListTagList extends TeaModel {
-        // The type of the tag. Valid values:
-        // 
-        // *   **Suspicious**
-        // *   **Malicious**
-        // *   **Trusted**
+        /**
+         * <p>The type of the tag. Valid values:</p>
+         * <br>
+         * <p>*   **Suspicious**</p>
+         * <p>*   **Malicious**</p>
+         * <p>*   **Trusted**</p>
+         */
         @NameInMap("ClassId")
         public String classId;
 
-        // The risk level. Valid values:
-        // 
-        // *   **1**: low
-        // *   **2**: medium
-        // *   **3**: high
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **1**: low</p>
+         * <p>*   **2**: medium</p>
+         * <p>*   **3**: high</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
-        // The description of the tag.
+        /**
+         * <p>The description of the tag.</p>
+         */
         @NameInMap("TagDescribe")
         public String tagDescribe;
 
-        // The ID of the tag.
+        /**
+         * <p>The ID of the tag.</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
-        // The name of the tag.
+        /**
+         * <p>The name of the tag.</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 
@@ -122,128 +138,176 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
     }
 
     public static class DescribeOutgoingDomainResponseBodyDomainList extends TeaModel {
-        // Indicates whether an access control policy is configured. Valid values:
-        // 
-        // *   **Uncovered**: No access control policies are configured.
-        // *   **FullCoverage**: An access control policy is configured.
+        /**
+         * <p>Indicates whether an access control policy is configured. Valid values:</p>
+         * <br>
+         * <p>*   **Uncovered**: no</p>
+         * <p>*   **FullCoverage**: yes</p>
+         */
         @NameInMap("AclCoverage")
         public String aclCoverage;
 
-        // The suggestion in an access control policy.
+        /**
+         * <p>The suggestion in an access control policy.</p>
+         */
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
 
-        // The state of the access control policy. Valid values:
-        // 
-        // *   **normal**: healthy
-        // *   **abnormal**: unhealthy
+        /**
+         * <p>The state of the access control policy. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: healthy</p>
+         * <p>*   **abnormal**: unhealthy</p>
+         */
         @NameInMap("AclStatus")
         public String aclStatus;
 
-        // The name of the address book.
+        /**
+         * <p>The name of the address book.</p>
+         */
         @NameInMap("AddressGroupName")
         public String addressGroupName;
 
-        // The UUID of the address book.
+        /**
+         * <p>The UUID of the address book.</p>
+         */
         @NameInMap("AddressGroupUUID")
         public String addressGroupUUID;
 
-        // The website service.
+        /**
+         * <p>The website service.</p>
+         */
         @NameInMap("Business")
         public String business;
 
-        // The type of the tag. Valid values:
-        // 
-        // *   **Suspicious**
-        // *   **Malicious**
-        // *   **Trusted**
+        /**
+         * <p>The type of the tag. Valid values:</p>
+         * <br>
+         * <p>*   **Suspicious**</p>
+         * <p>*   **Malicious**</p>
+         * <p>*   **Trusted**</p>
+         */
         @NameInMap("CategoryClassId")
         public String categoryClassId;
 
-        // The ID of the service to which the destination IP address belongs. Valid values:
-        // 
-        // *   **Aliyun**: Alibaba Cloud services
-        // *   **NotAliyun**: third-party services
+        /**
+         * <p>The type ID of the service to which the domain name belongs. Valid values:</p>
+         * <br>
+         * <p>*   **Aliyun**: Alibaba Cloud services</p>
+         * <p>*   **NotAliyun**: third-party services</p>
+         */
         @NameInMap("CategoryId")
         public String categoryId;
 
-        // The type of the service to which the domain name belongs. Valid values:
-        // 
-        // *   **Alibaba Cloud services**
-        // *   **third-party services**
+        /**
+         * <p>The type of the service to which the domain name belongs. Valid values:</p>
+         * <br>
+         * <p>*   **Alibaba Cloud services**</p>
+         * <p>*   **Third-party services**</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
-        // The domain name in outbound connections.
+        /**
+         * <p>The domain name in outbound connections.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
-        // The name of the group to which the access control policy belongs.
+        /**
+         * <p>The name of the group to which the access control policy belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
-        // Indicates whether an `access control policy` is configured for the domain name. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
+        /**
+         * <p>Indicates whether an `access control policy` is configured for the domain name. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("HasAcl")
         public String hasAcl;
 
-        // Indicates whether an access control policy is recommended. Valid values:
-        // 
-        // *   **true**: yes
-        // *   **false**: no
+        /**
+         * <p>Indicates whether an access control policy is recommended. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("HasAclRecommend")
         public Boolean hasAclRecommend;
 
-        // The inbound traffic.
+        /**
+         * <p>The volume of inbound traffic.</p>
+         */
         @NameInMap("InBytes")
         public Long inBytes;
 
-        // Indicates whether the domain name is marked as normal. Valid values:
-        // 
-        // *   **true**: normal
-        // *   **false**: abnormal
+        /**
+         * <p>Indicates whether the domain name is marked as normal. Valid values:</p>
+         * <br>
+         * <p>*   **true**: normal</p>
+         * <p>*   **false**: abnormal</p>
+         */
         @NameInMap("IsMarkNormal")
         public Boolean isMarkNormal;
 
-        // The name of the organization.
+        /**
+         * <p>The name of the organization.</p>
+         */
         @NameInMap("Organization")
         public String organization;
 
-        // The outbound traffic.
+        /**
+         * <p>The volume of outbound traffic.</p>
+         */
         @NameInMap("OutBytes")
         public Long outBytes;
 
-        // The ID of the access control policy.
+        /**
+         * <p>The ID of the access control policy.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
-        // The name of the access control policy.
+        /**
+         * <p>The name of the access control policy.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        // The reason why the domain name is secure.
+        /**
+         * <p>The reason why the domain name is secure.</p>
+         */
         @NameInMap("SecurityReason")
         public String securityReason;
 
-        // The suggestion to handle the traffic of the domain name in outbound connections. Valid values:
-        // 
-        // *   **pass**: allow
-        // *   **alert**: monitor
-        // *   **drop**: deny
+        /**
+         * <p>The suggestion to handle the traffic of the domain name in outbound connections. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: allow</p>
+         * <p>*   **alert**: monitor</p>
+         * <p>*   **drop**: deny</p>
+         */
         @NameInMap("SecuritySuggest")
         public String securitySuggest;
 
-        // The number of requests.
+        /**
+         * <p>The number of requests.</p>
+         */
         @NameInMap("SessionCount")
         public Long sessionCount;
 
-        // An array that consists of tags.
+        /**
+         * <p>An array that consists of tags.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<DescribeOutgoingDomainResponseBodyDomainListTagList> tagList;
 
-        // The total volume of traffic. Unit: bytes.
+        /**
+         * <p>The total volume of traffic. Unit: bytes.</p>
+         */
         @NameInMap("TotalBytes")
         public String totalBytes;
 

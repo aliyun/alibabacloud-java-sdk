@@ -4,43 +4,55 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddressBookRequest extends TeaModel {
-    // The port that is included in the address book. This parameter takes effect only when the **GroupType** parameter is set to **port**.
+    /**
+     * <p>The port that is included in the address book. This parameter takes effect only when the **GroupType** parameter is set to **port**.</p>
+     */
     @NameInMap("ContainPort")
     public String containPort;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1. Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // The type of the address book. Valid values:
-    // 
-    // * **ip**: IP address book
-    // * **domain**: domain address book
-    // * **port**: port address book
-    // * **tag**: Elastic Compute Service (ECS) tag-based address book
-    // * **allCloud**: cloud service address book
-    // * **threat**: threat intelligence address book
-    // 
-    // > If you do not specify a type, the domain address books and ECS tag-based address books are queried.
+    /**
+     * <p>The type of the address book. Valid values:</p>
+     * <br>
+     * <p>* **ip**: IP address book</p>
+     * <p>* **domain**: domain address book</p>
+     * <p>* **port**: port address book</p>
+     * <p>* **tag**: Elastic Compute Service (ECS) tag-based address book</p>
+     * <p>* **allCloud**: cloud service address book</p>
+     * <p>* **threat**: threat intelligence address book</p>
+     * <br>
+     * <p>> If you do not specify a type, the domain address books and ECS tag-based address books are queried.</p>
+     */
     @NameInMap("GroupType")
     public String groupType;
 
-    // The language of the content within the request. Valid values:
-    // 
-    // * **zh**: Chinese (default)
-    // * **en**: English
+    /**
+     * <p>The language of the content within the request. Valid values:</p>
+     * <br>
+     * <p>* **zh**: Chinese (default)</p>
+     * <p>* **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The number of entries to return on each page.
-    // 
-    // Default value: 10. Maximum value: 50.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 10. Maximum value: 50.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The query condition that is used to search for the address book.
+    /**
+     * <p>The query condition that is used to search for the address book.</p>
+     */
     @NameInMap("Query")
     public String query;
 

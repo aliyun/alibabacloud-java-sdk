@@ -4,27 +4,37 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMembersRequest extends TeaModel {
-    // The number of the page to return.
-    // 
-    // Pages start from page 1. Default value: **1**.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    // The remarks of the member in Cloud Firewall. The length is 1 ~ 256 characters.
+    /**
+     * <p>The remarks of the member in Cloud Firewall. The length is 1 ~ 256 characters.</p>
+     */
     @NameInMap("MemberDesc")
     public String memberDesc;
 
-    // The name of the member in Cloud Firewall.
+    /**
+     * <p>The name of the member in Cloud Firewall.</p>
+     */
     @NameInMap("MemberDisplayName")
     public String memberDisplayName;
 
-    // The unique identifier (UID) of the member in Cloud Firewall.
+    /**
+     * <p>The unique identifier (UID) of the member in Cloud Firewall.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
-    // The number of entries to return on each page.
-    // 
-    // Default value: **20**.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
