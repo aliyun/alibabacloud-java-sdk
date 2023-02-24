@@ -13,7 +13,9 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -65,6 +67,69 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetWorkitemCommentListResponseBodyCommentListUser extends TeaModel {
+        @NameInMap("account")
+        public String account;
+
+        @NameInMap("avatar")
+        public String avatar;
+
+        @NameInMap("identifier")
+        public String identifier;
+
+        @NameInMap("nickName")
+        public String nickName;
+
+        @NameInMap("realName")
+        public String realName;
+
+        public static GetWorkitemCommentListResponseBodyCommentListUser build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkitemCommentListResponseBodyCommentListUser self = new GetWorkitemCommentListResponseBodyCommentListUser();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkitemCommentListResponseBodyCommentListUser setAccount(String account) {
+            this.account = account;
+            return this;
+        }
+        public String getAccount() {
+            return this.account;
+        }
+
+        public GetWorkitemCommentListResponseBodyCommentListUser setAvatar(String avatar) {
+            this.avatar = avatar;
+            return this;
+        }
+        public String getAvatar() {
+            return this.avatar;
+        }
+
+        public GetWorkitemCommentListResponseBodyCommentListUser setIdentifier(String identifier) {
+            this.identifier = identifier;
+            return this;
+        }
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        public GetWorkitemCommentListResponseBodyCommentListUser setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
+        }
+
+        public GetWorkitemCommentListResponseBodyCommentListUser setRealName(String realName) {
+            this.realName = realName;
+            return this;
+        }
+        public String getRealName() {
+            return this.realName;
+        }
+
+    }
+
     public static class GetWorkitemCommentListResponseBodyCommentList extends TeaModel {
         @NameInMap("content")
         public String content;
@@ -95,6 +160,9 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
 
         @NameInMap("topTime")
         public Long topTime;
+
+        @NameInMap("user")
+        public GetWorkitemCommentListResponseBodyCommentListUser user;
 
         public static GetWorkitemCommentListResponseBodyCommentList build(java.util.Map<String, ?> map) throws Exception {
             GetWorkitemCommentListResponseBodyCommentList self = new GetWorkitemCommentListResponseBodyCommentList();
@@ -179,6 +247,14 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         }
         public Long getTopTime() {
             return this.topTime;
+        }
+
+        public GetWorkitemCommentListResponseBodyCommentList setUser(GetWorkitemCommentListResponseBodyCommentListUser user) {
+            this.user = user;
+            return this;
+        }
+        public GetWorkitemCommentListResponseBodyCommentListUser getUser() {
+            return this.user;
         }
 
     }

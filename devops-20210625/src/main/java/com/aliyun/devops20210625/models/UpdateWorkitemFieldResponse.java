@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class UpdatePipelineResponse extends TeaModel {
+public class UpdateWorkitemFieldResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdatePipelineResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdatePipelineResponseBody body;
+    public UpdateWorkitemFieldResponseBody body;
 
-    public static UpdatePipelineResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdatePipelineResponse self = new UpdatePipelineResponse();
+    public static UpdateWorkitemFieldResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateWorkitemFieldResponse self = new UpdateWorkitemFieldResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePipelineResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateWorkitemFieldResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdatePipelineResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdatePipelineResponse setStatusCode(Integer statusCode) {
+    public UpdateWorkitemFieldResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdatePipelineResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdatePipelineResponse setBody(UpdatePipelineResponseBody body) {
+    public UpdateWorkitemFieldResponse setBody(UpdateWorkitemFieldResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdatePipelineResponseBody getBody() {
+    public UpdateWorkitemFieldResponseBody getBody() {
         return this.body;
     }
 

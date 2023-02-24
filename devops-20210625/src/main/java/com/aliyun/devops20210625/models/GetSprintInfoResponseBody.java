@@ -89,6 +89,9 @@ public class GetSprintInfoResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("owners")
+        public java.util.List<String> owners;
+
         @NameInMap("scope")
         public String scope;
 
@@ -168,6 +171,14 @@ public class GetSprintInfoResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetSprintInfoResponseBodySprint setOwners(java.util.List<String> owners) {
+            this.owners = owners;
+            return this;
+        }
+        public java.util.List<String> getOwners() {
+            return this.owners;
         }
 
         public GetSprintInfoResponseBodySprint setScope(String scope) {

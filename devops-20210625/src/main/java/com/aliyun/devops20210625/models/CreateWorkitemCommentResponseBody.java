@@ -13,7 +13,9 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

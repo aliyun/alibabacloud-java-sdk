@@ -13,7 +13,9 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
     @NameInMap("relationList")
     public java.util.List<GetWorkitemRelationsResponseBodyRelationList> relationList;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

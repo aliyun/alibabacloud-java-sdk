@@ -74,7 +74,9 @@ public class GetRepositoryResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
-        // id
+        /**
+         * <p>id</p>
+         */
         @NameInMap("id")
         public Long id;
 
