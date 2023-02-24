@@ -10,6 +10,9 @@ public class InsertHotelSceneBookItemResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>RequestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,12 +4,21 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class UpdateHotelSceneItemShrinkRequest extends TeaModel {
+    /**
+     * <p>hotelID</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>updateHotelSceneReq</p>
+     */
     @NameInMap("UpdateHotelSceneOperateReq")
     public String updateHotelSceneOperateReqShrink;
 
+    /**
+     * <p>UpdateHotelSceneReq</p>
+     */
     @NameInMap("UpdateHotelSceneReq")
     public String updateHotelSceneReqShrink;
 

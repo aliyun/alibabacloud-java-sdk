@@ -10,7 +10,9 @@ public class GetHotelNoticeResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // RequestId
+    /**
+     * <p>RequestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

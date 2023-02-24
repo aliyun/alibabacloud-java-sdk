@@ -4,7 +4,9 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class PushHotelMessageShrinkRequest extends TeaModel {
-    // pushHotelMessageReq
+    /**
+     * <p>pushHotelMessageReq</p>
+     */
     @NameInMap("PushHotelMessageReq")
     public String pushHotelMessageReqShrink;
 
