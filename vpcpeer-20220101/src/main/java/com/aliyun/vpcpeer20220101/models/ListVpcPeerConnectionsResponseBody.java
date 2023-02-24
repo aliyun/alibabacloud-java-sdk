@@ -105,6 +105,36 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
 
     }
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static Tags build(java.util.Map<String, ?> map) throws Exception {
+            Tags self = new Tags();
+            return TeaModel.build(map, self);
+        }
+
+        public Tags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public Tags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class Vpc extends TeaModel {
         @NameInMap("Ipv4Cidrs")
         public java.util.List<String> ipv4Cidrs;
@@ -188,6 +218,9 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<Tags> tags;
 
         @NameInMap("Vpc")
         public Vpc vpc;
@@ -307,6 +340,14 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public VpcPeerConnects setTags(java.util.List<Tags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<Tags> getTags() {
+            return this.tags;
         }
 
         public VpcPeerConnects setVpc(Vpc vpc) {

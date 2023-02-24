@@ -19,6 +19,9 @@ public class ListVpcPeerConnectionsShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tags")
+    public java.util.List<Tags> tags;
+
     @NameInMap("VpcId")
     public String vpcIdShrink;
 
@@ -67,12 +70,50 @@ public class ListVpcPeerConnectionsShrinkRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListVpcPeerConnectionsShrinkRequest setTags(java.util.List<Tags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public ListVpcPeerConnectionsShrinkRequest setVpcIdShrink(String vpcIdShrink) {
         this.vpcIdShrink = vpcIdShrink;
         return this;
     }
     public String getVpcIdShrink() {
         return this.vpcIdShrink;
+    }
+
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static Tags build(java.util.Map<String, ?> map) throws Exception {
+            Tags self = new Tags();
+            return TeaModel.build(map, self);
+        }
+
+        public Tags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public Tags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
