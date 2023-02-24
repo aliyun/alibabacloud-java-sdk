@@ -4,12 +4,26 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UpdateRotationPolicyRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic key rotation. Valid values:</p>
+     * <br>
+     * <p>*   true: enables automatic key rotation.</p>
+     * <p>*   false: disables automatic key rotation.</p>
+     */
     @NameInMap("EnableAutomaticRotation")
     public Boolean enableAutomaticRotation;
 
+    /**
+     * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The period of automatic key rotation. Specify the value in the integer\[unit] format. The following units are supported: d (day), h (hour), m (minute), and s (second). For example, you can use either 7d or 604800s to specify a seven-day period. The period can range from 7 days to 730 days.</p>
+     * <br>
+     * <p>>  If you set the EnableAutomaticRotation parameter to true, you must also specify this parameter. If you set the EnableAutomaticRotation parameter to false, you can leave this parameter unspecified.</p>
+     */
     @NameInMap("RotationInterval")
     public String rotationInterval;
 

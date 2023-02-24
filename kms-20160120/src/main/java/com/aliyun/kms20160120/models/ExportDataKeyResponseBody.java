@@ -4,15 +4,29 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ExportDataKeyResponseBody extends TeaModel {
+    /**
+     * <p>The data key encrypted by using the public key and then exported.</p>
+     */
     @NameInMap("ExportedDataKey")
     public String exportedDataKey;
 
+    /**
+     * <p>The ID of the CMK that is used to decrypt the specified ciphertext of the data key.</p>
+     * <br>
+     * <p>This parameter is the globally unique ID of the CMK.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The ID of the CMK version that is used to decrypt the specified ciphertext of the data key.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

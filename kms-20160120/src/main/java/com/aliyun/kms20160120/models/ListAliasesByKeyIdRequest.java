@@ -4,12 +4,29 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesByKeyIdRequest extends TeaModel {
+    /**
+     * <p>The globally unique ID of the CMK.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Valid values: an integer that is greater than 0.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 0 to 101.</p>
+     * <br>
+     * <p>Default value: 10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

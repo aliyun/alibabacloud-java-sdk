@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateKeyResponseBody extends TeaModel {
+    /**
+     * <p>The metadata of the CMK.</p>
+     */
     @NameInMap("KeyMetadata")
     public CreateKeyResponseBodyKeyMetadata keyMetadata;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,54 +38,133 @@ public class CreateKeyResponseBody extends TeaModel {
     }
 
     public static class CreateKeyResponseBodyKeyMetadata extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the CMK.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>Indicates whether automatic key rotation is enabled. Valid values:</p>
+         * <br>
+         * <p>*   Enabled: Automatic key rotation is enabled.</p>
+         * <p>*   Disabled: Automatic key rotation is disabled.</p>
+         * <p>*   Suspended: Automatic key rotation is suspended. For more information, see [Automatic key rotation](~~134270~~).</p>
+         * <br>
+         * <p>>  Automatic key rotation is available only for symmetric CMKs.</p>
+         */
         @NameInMap("AutomaticRotation")
         public String automaticRotation;
 
+        /**
+         * <p>The date and time when the CMK was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationDate")
         public String creationDate;
 
+        /**
+         * <p>The creator of the CMK.</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The ID of the dedicated KMS instance.</p>
+         */
+        @NameInMap("DKMSInstanceId")
+        public String DKMSInstanceId;
+
+        /**
+         * <p>The time when the CMK is scheduled for deletion.</p>
+         * <br>
+         * <p>For more information, see [ScheduleKeyDeletion](~~44196~~).</p>
+         * <br>
+         * <p>>  This value is returned only when the value of the KeyState parameter is PendingDeletion.</p>
+         */
         @NameInMap("DeleteDate")
         public String deleteDate;
 
+        /**
+         * <p>The description of the CMK.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the CMK. The ID must be globally unique.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 
+        /**
+         * <p>The type of the CMK.</p>
+         */
         @NameInMap("KeySpec")
         public String keySpec;
 
+        /**
+         * <p>The status of the CMK.</p>
+         * <br>
+         * <p>For more information, see [Impact of CMK status on API operations](~~44211~~).</p>
+         */
         @NameInMap("KeyState")
         public String keyState;
 
+        /**
+         * <p>The usage of the CMK.</p>
+         */
         @NameInMap("KeyUsage")
         public String keyUsage;
 
+        /**
+         * <p>The time when the last rotation was performed. The time is displayed in UTC.</p>
+         * <br>
+         * <p>For a new CMK, this parameter value is the time when the initial version of the CMK was generated.</p>
+         */
         @NameInMap("LastRotationDate")
         public String lastRotationDate;
 
+        /**
+         * <p>The time when the key material expires. The time is displayed in UTC.</p>
+         * <br>
+         * <p>If this parameter value is empty, the key material does not expire.</p>
+         */
         @NameInMap("MaterialExpireTime")
         public String materialExpireTime;
 
+        /**
+         * <p>The time when the next rotation will be performed.</p>
+         * <br>
+         * <p>>  This value is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
+         */
         @NameInMap("NextRotationDate")
         public String nextRotationDate;
 
+        /**
+         * <p>The source of the key material for the CMK.</p>
+         */
         @NameInMap("Origin")
         public String origin;
 
+        /**
+         * <p>The ID of the current primary key version of the symmetric CMK.</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   The primary key version of a symmetric CMK is an active encryption key. KMS uses the primary key version of a specified CMK to encrypt data.</p>
+         * <p>*   This parameter is unavailable for asymmetric CMKs.</p>
+         */
         @NameInMap("PrimaryKeyVersion")
         public String primaryKeyVersion;
 
+        /**
+         * <p>The protection level of the CMK.</p>
+         */
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
+        /**
+         * <p>The period of automatic key rotation. Unit: seconds. The value is in the format of an integer followed by the letter s. For example, if the rotation period is seven days, this parameter is set to 604800s. This value is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.</p>
+         */
         @NameInMap("RotationInterval")
         public String rotationInterval;
 
@@ -118,6 +203,14 @@ public class CreateKeyResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public CreateKeyResponseBodyKeyMetadata setDKMSInstanceId(String DKMSInstanceId) {
+            this.DKMSInstanceId = DKMSInstanceId;
+            return this;
+        }
+        public String getDKMSInstanceId() {
+            return this.DKMSInstanceId;
         }
 
         public CreateKeyResponseBodyKeyMetadata setDeleteDate(String deleteDate) {

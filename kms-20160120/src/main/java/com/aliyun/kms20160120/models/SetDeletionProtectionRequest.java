@@ -4,12 +4,28 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class SetDeletionProtectionRequest extends TeaModel {
+    /**
+     * <p>The description of deletion protection.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when you set the EnableDeletionProtection parameter to true.</p>
+     */
     @NameInMap("DeletionProtectionDescription")
     public String deletionProtectionDescription;
 
+    /**
+     * <p>Specifies whether to enable deletion protection. Valid values:</p>
+     * <br>
+     * <p>*   true: enables deletion protection.</p>
+     * <p>*   false: disables deletion protection.</p>
+     */
     @NameInMap("EnableDeletionProtection")
     public Boolean enableDeletionProtection;
 
+    /**
+     * <p>The ARN of the CMK for which you want to set deletion protection.</p>
+     * <br>
+     * <p>You can call the [DescribeKey](~~28952~~) operation to query the CMK ARN.</p>
+     */
     @NameInMap("ProtectedResourceArn")
     public String protectedResourceArn;
 

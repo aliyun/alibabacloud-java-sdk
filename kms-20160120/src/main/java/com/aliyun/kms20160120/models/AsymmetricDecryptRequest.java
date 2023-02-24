@@ -4,15 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class AsymmetricDecryptRequest extends TeaModel {
+    /**
+     * <p>The decryption algorithm.</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>The ciphertext that you want to decrypt.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   The value is encoded in Base64.</p>
+     * <p>*   You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.</p>
+     */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
+    /**
+     * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+     * <br>
+     * <p>>  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The version ID of the CMK. The ID must be globally unique.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 

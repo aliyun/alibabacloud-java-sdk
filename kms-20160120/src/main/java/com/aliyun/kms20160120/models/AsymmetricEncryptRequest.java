@@ -4,15 +4,31 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class AsymmetricEncryptRequest extends TeaModel {
+    /**
+     * <p>The encryption algorithm.</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>The ID of the CMK. The ID must be globally unique.</p>
+     * <br>
+     * <p>>  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Overview of aliases](~~68522~~).</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The version ID of the CMK. The ID must be globally unique.</p>
+     * <br>
+     * <p>>  You can call the [ListKeyVersions](~~133966~~) operation to query the versions of a CMK. The ID of a version is specified by the KeyVersionId parameter.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <p>The plaintext that you want to encrypt. The plaintext must be Base64-encoded.</p>
+     */
     @NameInMap("Plaintext")
     public String plaintext;
 

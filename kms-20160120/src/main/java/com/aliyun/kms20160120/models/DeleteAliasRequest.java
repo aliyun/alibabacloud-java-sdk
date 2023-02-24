@@ -4,6 +4,11 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DeleteAliasRequest extends TeaModel {
+    /**
+     * <p>The alias that you want to delete.</p>
+     * <br>
+     * <p>The value must be 1 to 255 characters in length and must include the alias/ prefix.</p>
+     */
     @NameInMap("AliasName")
     public String aliasName;
 

@@ -4,15 +4,29 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class AsymmetricVerifyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the CMK. The ID must be globally unique.</p>
+     * <br>
+     * <p>>  If you set the KeyId parameter in the request to an alias, the ID of the CMK to which the alias is bound is returned.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The version ID of the CMK that is used to encrypt the plaintext.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the signature passed the verification.</p>
+     */
     @NameInMap("Value")
     public Boolean value;
 

@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DeleteCertificateRequest extends TeaModel {
+    /**
+     * <p>The ID of the certificate. It is the globally unique identifier (GUID) of the certificate in Alibaba Cloud Certificate Manager.</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 

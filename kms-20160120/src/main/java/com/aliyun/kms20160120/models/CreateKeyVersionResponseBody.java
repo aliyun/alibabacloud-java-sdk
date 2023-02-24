@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateKeyVersionResponseBody extends TeaModel {
+    /**
+     * <p>The metadata of the version.</p>
+     */
     @NameInMap("KeyVersion")
     public CreateKeyVersionResponseBodyKeyVersion keyVersion;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class CreateKeyVersionResponseBody extends TeaModel {
     }
 
     public static class CreateKeyVersionResponseBodyKeyVersion extends TeaModel {
+        /**
+         * <p>The date and time when the version was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationDate")
         public String creationDate;
 
+        /**
+         * <p>The ID of the CMK. The ID must be globally unique.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 
+        /**
+         * <p>The ID of the version.</p>
+         */
         @NameInMap("KeyVersionId")
         public String keyVersionId;
 

@@ -4,15 +4,29 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DecryptResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the customer master key (CMK) that is used to decrypt the ciphertext.</p>
+     * <br>
+     * <p>It is the GUID of the CMK.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The ID of the CMK version that is used to decrypt the ciphertext.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <p>The plaintext that is generated after decryption.</p>
+     */
     @NameInMap("Plaintext")
     public String plaintext;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

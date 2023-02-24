@@ -4,15 +4,27 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class EncryptResponseBody extends TeaModel {
+    /**
+     * <p>The ciphertext of the data that is encrypted by using the primary CMK version.</p>
+     */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
+    /**
+     * <p>The globally unique ID of the CMK. If you set the KeyId parameter to an alias, the ID of the CMK to which the alias is bound is returned.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The ID of the key version that is used to encrypt the plaintext. It is the primary version of the CMK.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

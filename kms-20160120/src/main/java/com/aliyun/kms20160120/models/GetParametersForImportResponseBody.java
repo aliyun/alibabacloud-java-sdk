@@ -4,18 +4,39 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetParametersForImportResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used to import key material.</p>
+     * <br>
+     * <p>The token is valid for 24 hours. The value of this parameter is required when you call the [ImportKeyMaterial](~~68622~~) operation.</p>
+     */
     @NameInMap("ImportToken")
     public String importToken;
 
+    /**
+     * <p>The globally unique ID of the CMK.</p>
+     * <br>
+     * <p>The value of this parameter is required when you call the [ImportKeyMaterial](~~68622~~) operation.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The public key that is used to encrypt key material.</p>
+     * <br>
+     * <p>The public key is Base64-encoded.</p>
+     */
     @NameInMap("PublicKey")
     public String publicKey;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the token expires.</p>
+     */
     @NameInMap("TokenExpireTime")
     public String tokenExpireTime;
 

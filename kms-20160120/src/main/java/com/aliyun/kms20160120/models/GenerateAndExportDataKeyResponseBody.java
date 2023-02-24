@@ -4,18 +4,35 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GenerateAndExportDataKeyResponseBody extends TeaModel {
+    /**
+     * <p>The ciphertext of the data key encrypted by using the primary CMK version.</p>
+     */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
+    /**
+     * <p>The data key encrypted by using the public key and then exported.</p>
+     */
     @NameInMap("ExportedDataKey")
     public String exportedDataKey;
 
+    /**
+     * <p>The globally unique ID of the CMK.</p>
+     * <br>
+     * <p>>  If you set the KeyId parameter to an alias, the ID of the CMK to which the alias is bound is returned.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The ID of the CMK version that is used to encrypt the plaintext. It is the primary version of the CMK.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

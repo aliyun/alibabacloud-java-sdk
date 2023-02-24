@@ -4,12 +4,21 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UploadCertificateRequest extends TeaModel {
+    /**
+     * <p>The certificate issued by the CA, which is in the Privacy Enhanced Mail (PEM) format.</p>
+     */
     @NameInMap("Certificate")
     public String certificate;
 
+    /**
+     * <p>The certificate chain issued by the CA, which is in the PEM format.</p>
+     */
     @NameInMap("CertificateChain")
     public String certificateChain;
 
+    /**
+     * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 

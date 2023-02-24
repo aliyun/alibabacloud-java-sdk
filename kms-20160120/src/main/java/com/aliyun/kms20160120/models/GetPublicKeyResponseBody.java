@@ -4,15 +4,29 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetPublicKeyResponseBody extends TeaModel {
+    /**
+     * <p>The globally unique ID of the CMK.</p>
+     * <br>
+     * <p>>  If you set the KeyId parameter to the alias of the CMK, the ID of the CMK to which the alias is bound is returned.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The version of the CMK that is used to encrypt the plaintext.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <p>The public key returned in the PEM format.</p>
+     */
     @NameInMap("PublicKey")
     public String publicKey;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,12 +4,31 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CertificatePrivateKeyDecryptRequest extends TeaModel {
+    /**
+     * <p>The encryption algorithm. Valid values:</p>
+     * <br>
+     * <p>*   RSAES_OAEP_SHA\_1</p>
+     * <br>
+     * <p>*   RSAES_OAEP_SHA\_256</p>
+     * <br>
+     * <p>*   SM2PKE</p>
+     * <br>
+     * <p>> The SM2PKE encryption algorithm is supported only in regions in mainland China. In these regions, managed hardware security modules (HSMs) are used. For more information, see [Managed HSM overview](~~125803~~).</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 
+    /**
+     * <p>The data that you want to decrypt.</p>
+     * <br>
+     * <p>The value is encoded in Base64.</p>
+     */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 

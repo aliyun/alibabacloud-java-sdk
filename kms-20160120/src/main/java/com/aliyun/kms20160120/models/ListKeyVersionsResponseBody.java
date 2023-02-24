@@ -4,18 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListKeyVersionsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of key versions.</p>
+     */
     @NameInMap("KeyVersions")
     public ListKeyVersionsResponseBodyKeyVersions keyVersions;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned key versions.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,23 @@ public class ListKeyVersionsResponseBody extends TeaModel {
     }
 
     public static class ListKeyVersionsResponseBodyKeyVersionsKeyVersion extends TeaModel {
+        /**
+         * <p>The date and time when the CMK version was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationDate")
         public String creationDate;
 
+        /**
+         * <p>The globally unique ID of the CMK.</p>
+         * <br>
+         * <p>>  If you set the KeyId parameter to the alias of the CMK, the ID of the CMK to which the alias is bound is returned.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 
+        /**
+         * <p>The globally unique ID of the CMK version.</p>
+         */
         @NameInMap("KeyVersionId")
         public String keyVersionId;
 

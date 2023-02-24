@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetPublicKeyRequest extends TeaModel {
+    /**
+     * <p>The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see [Use aliases](~~68522~~).</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The globally unique ID of the CMK version.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 

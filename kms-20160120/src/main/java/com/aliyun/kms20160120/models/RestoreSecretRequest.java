@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class RestoreSecretRequest extends TeaModel {
+    /**
+     * <p>The name of the secret you want to restore.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 

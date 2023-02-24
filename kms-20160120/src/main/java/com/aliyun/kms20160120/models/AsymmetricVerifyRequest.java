@@ -4,18 +4,39 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class AsymmetricVerifyRequest extends TeaModel {
+    /**
+     * <p>The signature algorithm.</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the **Algorithm** parameter.</p>
+     * <br>
+     * <p>>  The value is encoded in Base64.</p>
+     */
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>The ID of the CMK. The ID must be globally unique.</p>
+     * <br>
+     * <p>>  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Overview of aliases](~~68522~~).</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The version ID of the CMK. The ID must be globally unique.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <p>The signature value to be verified.</p>
+     * <br>
+     * <p>>  The value is encoded in Base64.</p>
+     */
     @NameInMap("Value")
     public String value;
 

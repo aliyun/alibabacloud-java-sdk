@@ -4,12 +4,23 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetParametersForImportRequest extends TeaModel {
+    /**
+     * <p>The globally unique ID of the CMK.</p>
+     * <br>
+     * <p>>  You can import key material only for CMKs whose Origin parameter is set to EXTERNAL.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The algorithm that is used to encrypt key material.</p>
+     */
     @NameInMap("WrappingAlgorithm")
     public String wrappingAlgorithm;
 
+    /**
+     * <p>The type of the public key that is used to encrypt key material.</p>
+     */
     @NameInMap("WrappingKeySpec")
     public String wrappingKeySpec;
 
