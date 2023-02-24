@@ -4,18 +4,36 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class PutSecretValueRequest extends TeaModel {
+    /**
+     * <p>The secret value. The value is encrypted and then stored in the new version.</p>
+     */
     @NameInMap("SecretData")
     public String secretData;
 
+    /**
+     * <p>The type of the secret value. Valid values:</p>
+     * <br>
+     * <p>*   text: This is the default value.</p>
+     * <p>*   binary</p>
+     */
     @NameInMap("SecretDataType")
     public String secretDataType;
 
+    /**
+     * <p>The name of the secret.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>The new version of the secret value. Version numbers must be unique in each secret.</p>
+     */
     @NameInMap("VersionId")
     public String versionId;
 
+    /**
+     * <p>The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.</p>
+     */
     @NameInMap("VersionStages")
     public String versionStages;
 

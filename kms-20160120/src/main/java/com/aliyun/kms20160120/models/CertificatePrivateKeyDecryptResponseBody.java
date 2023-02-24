@@ -4,12 +4,23 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CertificatePrivateKeyDecryptResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the certificate.</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 
+    /**
+     * <p>The plaintext after data is decrypted.</p>
+     * <br>
+     * <p>The value is encoded in Base64.</p>
+     */
     @NameInMap("Plaintext")
     public String plaintext;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

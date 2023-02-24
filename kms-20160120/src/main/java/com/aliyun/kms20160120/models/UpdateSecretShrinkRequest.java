@@ -7,9 +7,15 @@ public class UpdateSecretShrinkRequest extends TeaModel {
     @NameInMap("ExtendedConfig")
     public UpdateSecretShrinkRequestExtendedConfig extendedConfig;
 
+    /**
+     * <p>The description of the secret.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the secret.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
@@ -43,6 +49,13 @@ public class UpdateSecretShrinkRequest extends TeaModel {
     }
 
     public static class UpdateSecretShrinkRequestExtendedConfig extends TeaModel {
+        /**
+         * <p>The custom data in the extended configuration of the secret.</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   If this parameter is specified, the existing extended configuration of the secret is updated.</p>
+         * <p>*   This parameter is unavailable for generic secrets.</p>
+         */
         @NameInMap("CustomData")
         public String customData;
 

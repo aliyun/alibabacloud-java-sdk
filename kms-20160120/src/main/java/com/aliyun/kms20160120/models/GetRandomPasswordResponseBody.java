@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetRandomPasswordResponseBody extends TeaModel {
+    /**
+     * <p>The generated random password.</p>
+     */
     @NameInMap("RandomPassword")
     public String randomPassword;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTagsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tags of the CMK.</p>
+     */
     @NameInMap("Tags")
     public ListResourceTagsResponseBodyTags tags;
 
@@ -32,12 +38,21 @@ public class ListResourceTagsResponseBody extends TeaModel {
     }
 
     public static class ListResourceTagsResponseBodyTagsTag extends TeaModel {
+        /**
+         * <p>The globally unique ID of the CMK.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

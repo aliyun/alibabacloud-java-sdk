@@ -4,15 +4,38 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class TagResourceRequest extends TeaModel {
+    /**
+     * <p>The ID of the certificate.</p>
+     * <br>
+     * <p>>  You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 
+    /**
+     * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+     * <br>
+     * <p>>  You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The name of the secret.</p>
+     * <br>
+     * <p>>  You can configure only one of the KeyId, SecretName, and CertificateId parameters.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>One or more tags that you want to add. The value is in the array format.</p>
+     * <br>
+     * <p>Tag attributes:</p>
+     * <br>
+     * <p>*   TagKey: the tag key.</p>
+     * <p>*   TagValue: the tag value.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

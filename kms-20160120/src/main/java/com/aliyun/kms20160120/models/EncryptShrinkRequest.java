@@ -4,12 +4,21 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class EncryptShrinkRequest extends TeaModel {
+    /**
+     * <p>A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see [EncryptionContext](~~42975~~).</p>
+     */
     @NameInMap("EncryptionContext")
     public String encryptionContextShrink;
 
+    /**
+     * <p>The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see [Use aliases](~~68522~~).</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The plaintext to be encrypted. The plaintext must be Base64 encoded.</p>
+     */
     @NameInMap("Plaintext")
     public String plaintext;
 

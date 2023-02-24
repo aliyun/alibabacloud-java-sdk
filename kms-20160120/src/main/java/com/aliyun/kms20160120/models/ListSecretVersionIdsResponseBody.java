@@ -4,21 +4,39 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListSecretVersionIdsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the secret.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of secret versions.</p>
+     */
     @NameInMap("VersionIds")
     public ListSecretVersionIdsResponseBodyVersionIds versionIds;
 
@@ -95,12 +113,21 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
     }
 
     public static class ListSecretVersionIdsResponseBodyVersionIdsVersionId extends TeaModel {
+        /**
+         * <p>The time when the secret version was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("VersionId")
         public String versionId;
 
+        /**
+         * <p>The stage labels that mark the secret version.</p>
+         */
         @NameInMap("VersionStages")
         public ListSecretVersionIdsResponseBodyVersionIdsVersionIdVersionStages versionStages;
 

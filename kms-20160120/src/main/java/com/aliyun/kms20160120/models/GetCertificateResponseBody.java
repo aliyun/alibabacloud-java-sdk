@@ -4,18 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetCertificateResponseBody extends TeaModel {
+    /**
+     * <p>The certificate in the Privacy Enhanced Mail (PEM) format.</p>
+     */
     @NameInMap("Certificate")
     public String certificate;
 
+    /**
+     * <p>The certificate chain in the PEM format.</p>
+     */
     @NameInMap("CertificateChain")
     public String certificateChain;
 
+    /**
+     * <p>The ID of the certificate.</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 
+    /**
+     * <p>The CSR in the PEM format.</p>
+     */
     @NameInMap("Csr")
     public String csr;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UpdateSecretResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the secret.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 

@@ -4,18 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListAliasesByKeyIdResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of aliases.</p>
+     */
     @NameInMap("Aliases")
     public ListAliasesByKeyIdResponseBodyAliases aliases;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned CMKs.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,21 @@ public class ListAliasesByKeyIdResponseBody extends TeaModel {
     }
 
     public static class ListAliasesByKeyIdResponseBodyAliasesAlias extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the alias.</p>
+         */
         @NameInMap("AliasArn")
         public String aliasArn;
 
+        /**
+         * <p>The ID of the alias.</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>The CMK to which an alias is bound.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 

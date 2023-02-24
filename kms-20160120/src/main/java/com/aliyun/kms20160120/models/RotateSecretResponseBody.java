@@ -4,15 +4,27 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class RotateSecretResponseBody extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the secret.</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the secret.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>The version number of the secret after the secret is rotated.</p>
+     */
     @NameInMap("VersionId")
     public String versionId;
 

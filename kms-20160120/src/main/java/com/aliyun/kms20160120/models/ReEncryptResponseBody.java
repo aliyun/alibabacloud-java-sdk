@@ -4,15 +4,29 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ReEncryptResponseBody extends TeaModel {
+    /**
+     * <p>The ciphertext re-encrypted.</p>
+     */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 
+    /**
+     * <p>The ID of the CMK that is used to decrypt the original ciphertext.</p>
+     * <br>
+     * <p>This parameter is the globally unique ID of the CMK.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>The ID of the CMK version that is used to decrypt the original ciphertext.</p>
+     */
     @NameInMap("KeyVersionId")
     public String keyVersionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

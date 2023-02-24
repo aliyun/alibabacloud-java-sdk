@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DisableKeyRequest extends TeaModel {
+    /**
+     * <p>The ID of the CMK. The ID must be globally unique.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 

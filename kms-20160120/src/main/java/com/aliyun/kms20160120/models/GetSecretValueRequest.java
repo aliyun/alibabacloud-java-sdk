@@ -4,15 +4,38 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetSecretValueRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to obtain the extended configuration of the secret. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false: This is the default value.</p>
+     * <br>
+     * <p>>  This parameter is ignored for a generic secret.</p>
+     */
     @NameInMap("FetchExtendedConfig")
     public Boolean fetchExtendedConfig;
 
+    /**
+     * <p>The name of the secret.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>The version number of the secret value. If you specify this parameter, Secrets Manager returns the secret value of the specified version.</p>
+     * <br>
+     * <p>>  This parameter is ignored for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</p>
+     */
     @NameInMap("VersionId")
     public String versionId;
 
+    /**
+     * <p>The stage label that marks the secret version. If you specify this parameter, Secrets Manager returns the secret value of the version that is marked with the specified stage label.</p>
+     * <br>
+     * <p>Default value: ACSCurrent.</p>
+     * <br>
+     * <p>>  For a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret, Secrets Manager can return only the secret value of the version marked with ACSPrevious or ACSCurrent.</p>
+     */
     @NameInMap("VersionStage")
     public String versionStage;
 

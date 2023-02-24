@@ -4,15 +4,27 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateCertificateResponseBody extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the certificate.</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The ID of the certificate. It is the globally unique identifier (GUID) of the certificate in Certificates Manager.</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 
+    /**
+     * <p>The CSR in the PEM format.</p>
+     */
     @NameInMap("Csr")
     public String csr;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

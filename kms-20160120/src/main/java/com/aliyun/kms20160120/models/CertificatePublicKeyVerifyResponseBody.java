@@ -4,12 +4,24 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CertificatePublicKeyVerifyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the certificate.</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The verification result. Valid values:</p>
+     * <br>
+     * <p>*   true: The signature is valid.</p>
+     * <p>*   false: The signature is invalid.</p>
+     */
     @NameInMap("SignatureValid")
     public Boolean signatureValid;
 

@@ -4,6 +4,9 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTagsRequest extends TeaModel {
+    /**
+     * <p>The globally unique ID of the CMK.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 

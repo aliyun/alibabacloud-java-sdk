@@ -4,18 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListSecretsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of secrets.</p>
+     */
     @NameInMap("SecretList")
     public ListSecretsResponseBodySecretList secretList;
 
+    /**
+     * <p>The number of returned secrets.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodySecretListSecretTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -114,21 +135,44 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodySecretListSecret extends TeaModel {
+        /**
+         * <p>The time when the secret was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the secret is scheduled to be deleted.</p>
+         */
         @NameInMap("PlannedDeleteTime")
         public String plannedDeleteTime;
 
+        /**
+         * <p>The secret name.</p>
+         */
         @NameInMap("SecretName")
         public String secretName;
 
+        /**
+         * <p>The type of the secret. Valid values:</p>
+         * <br>
+         * <p>*   Generic: indicates a generic secret.</p>
+         * <p>*   Rds: indicates a managed ApsaraDB RDS secret.</p>
+         */
         @NameInMap("SecretType")
         public String secretType;
 
+        /**
+         * <p>The resource tags of the secret.</p>
+         * <br>
+         * <p>This parameter is not returned if you set the FetchTags parameter to false or do not specify the FetchTags parameter.</p>
+         */
         @NameInMap("Tags")
         public ListSecretsResponseBodySecretListSecretTags tags;
 
+        /**
+         * <p>The time when the secret was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
