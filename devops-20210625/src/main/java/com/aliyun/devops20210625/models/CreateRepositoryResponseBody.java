@@ -74,7 +74,9 @@ public class CreateRepositoryResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
-        // id
+        /**
+         * <p>id</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -211,7 +213,9 @@ public class CreateRepositoryResponseBody extends TeaModel {
         @NameInMap("httpUrlToRepo")
         public String httpUrlToRepo;
 
-        // id
+        /**
+         * <p>id</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -239,7 +243,9 @@ public class CreateRepositoryResponseBody extends TeaModel {
         @NameInMap("visibilityLevel")
         public String visibilityLevel;
 
-        // web url
+        /**
+         * <p>web url</p>
+         */
         @NameInMap("webUrl")
         public String webUrl;
 

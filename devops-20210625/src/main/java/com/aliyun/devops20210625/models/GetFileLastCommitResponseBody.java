@@ -65,10 +65,10 @@ public class GetFileLastCommitResponseBody extends TeaModel {
     }
 
     public static class GetFileLastCommitResponseBodyResultSignature extends TeaModel {
-        @NameInMap("GpgKeyId")
+        @NameInMap("gpgKeyId")
         public String gpgKeyId;
 
-        @NameInMap("VerificationStatus")
+        @NameInMap("verificationStatus")
         public String verificationStatus;
 
         public static GetFileLastCommitResponseBodyResultSignature build(java.util.Map<String, ?> map) throws Exception {
@@ -116,7 +116,9 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         @NameInMap("createdAt")
         public String createdAt;
 
-        // Commit ID
+        /**
+         * <p>Commit ID</p>
+         */
         @NameInMap("id")
         public String id;
 

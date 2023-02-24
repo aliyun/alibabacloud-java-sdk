@@ -4,7 +4,9 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryCommitDiffRequest extends TeaModel {
-    // accessToken
+    /**
+     * <p>accessToken</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 

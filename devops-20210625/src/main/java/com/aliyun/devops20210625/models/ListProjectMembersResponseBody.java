@@ -154,6 +154,9 @@ public class ListProjectMembersResponseBody extends TeaModel {
         @NameInMap("realNamePinyin")
         public String realNamePinyin;
 
+        @NameInMap("roleName")
+        public String roleName;
+
         @NameInMap("stamp")
         public String stamp;
 
@@ -299,6 +302,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
         public String getRealNamePinyin() {
             return this.realNamePinyin;
+        }
+
+        public ListProjectMembersResponseBodyMembers setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
         public ListProjectMembersResponseBodyMembers setStamp(String stamp) {

@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteWorkitemCommentResponseBody extends TeaModel {
+public class DeleteWorkitemResponseBody extends TeaModel {
     @NameInMap("deleteFlag")
     public Boolean deleteFlag;
 
@@ -19,15 +19,18 @@ public class DeleteWorkitemCommentResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>true/false</p>
+     */
     @NameInMap("success")
-    public String success;
+    public Boolean success;
 
-    public static DeleteWorkitemCommentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteWorkitemCommentResponseBody self = new DeleteWorkitemCommentResponseBody();
+    public static DeleteWorkitemResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteWorkitemResponseBody self = new DeleteWorkitemResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteWorkitemCommentResponseBody setDeleteFlag(Boolean deleteFlag) {
+    public DeleteWorkitemResponseBody setDeleteFlag(Boolean deleteFlag) {
         this.deleteFlag = deleteFlag;
         return this;
     }
@@ -35,7 +38,7 @@ public class DeleteWorkitemCommentResponseBody extends TeaModel {
         return this.deleteFlag;
     }
 
-    public DeleteWorkitemCommentResponseBody setErrorCode(String errorCode) {
+    public DeleteWorkitemResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -43,7 +46,7 @@ public class DeleteWorkitemCommentResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DeleteWorkitemCommentResponseBody setErrorMsg(String errorMsg) {
+    public DeleteWorkitemResponseBody setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
         return this;
     }
@@ -51,7 +54,7 @@ public class DeleteWorkitemCommentResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public DeleteWorkitemCommentResponseBody setRequestId(String requestId) {
+    public DeleteWorkitemResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -59,11 +62,11 @@ public class DeleteWorkitemCommentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteWorkitemCommentResponseBody setSuccess(String success) {
+    public DeleteWorkitemResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
