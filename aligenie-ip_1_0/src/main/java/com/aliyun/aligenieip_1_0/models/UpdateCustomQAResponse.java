@@ -3,7 +3,7 @@ package com.aliyun.aligenieip_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class QueryHotelListByTbOpenIdResponse extends TeaModel {
+public class UpdateCustomQAResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class QueryHotelListByTbOpenIdResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public QueryHotelListByTbOpenIdResponseBody body;
+    public UpdateCustomQAResponseBody body;
 
-    public static QueryHotelListByTbOpenIdResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryHotelListByTbOpenIdResponse self = new QueryHotelListByTbOpenIdResponse();
+    public static UpdateCustomQAResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateCustomQAResponse self = new UpdateCustomQAResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryHotelListByTbOpenIdResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateCustomQAResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class QueryHotelListByTbOpenIdResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryHotelListByTbOpenIdResponse setStatusCode(Integer statusCode) {
+    public UpdateCustomQAResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class QueryHotelListByTbOpenIdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryHotelListByTbOpenIdResponse setBody(QueryHotelListByTbOpenIdResponseBody body) {
+    public UpdateCustomQAResponse setBody(UpdateCustomQAResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryHotelListByTbOpenIdResponseBody getBody() {
+    public UpdateCustomQAResponseBody getBody() {
         return this.body;
     }
 

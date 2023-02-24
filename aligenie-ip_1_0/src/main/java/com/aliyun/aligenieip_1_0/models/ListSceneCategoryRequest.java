@@ -4,6 +4,9 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListSceneCategoryRequest extends TeaModel {
+    /**
+     * <p>hotelId</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 

@@ -4,6 +4,9 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class RemoveHotelRequest extends TeaModel {
+    /**
+     * <p>appkey</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 

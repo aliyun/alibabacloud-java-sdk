@@ -3,7 +3,7 @@ package com.aliyun.aligenieip_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class QueryHotelListByTbOpenIdHeaders extends TeaModel {
+public class UpdateTicketHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
@@ -13,12 +13,12 @@ public class QueryHotelListByTbOpenIdHeaders extends TeaModel {
     @NameInMap("Authorization")
     public String authorization;
 
-    public static QueryHotelListByTbOpenIdHeaders build(java.util.Map<String, ?> map) throws Exception {
-        QueryHotelListByTbOpenIdHeaders self = new QueryHotelListByTbOpenIdHeaders();
+    public static UpdateTicketHeaders build(java.util.Map<String, ?> map) throws Exception {
+        UpdateTicketHeaders self = new UpdateTicketHeaders();
         return TeaModel.build(map, self);
     }
 
-    public QueryHotelListByTbOpenIdHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public UpdateTicketHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -26,7 +26,7 @@ public class QueryHotelListByTbOpenIdHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public QueryHotelListByTbOpenIdHeaders setXAcsAligenieAccessToken(String xAcsAligenieAccessToken) {
+    public UpdateTicketHeaders setXAcsAligenieAccessToken(String xAcsAligenieAccessToken) {
         this.xAcsAligenieAccessToken = xAcsAligenieAccessToken;
         return this;
     }
@@ -34,7 +34,7 @@ public class QueryHotelListByTbOpenIdHeaders extends TeaModel {
         return this.xAcsAligenieAccessToken;
     }
 
-    public QueryHotelListByTbOpenIdHeaders setAuthorization(String authorization) {
+    public UpdateTicketHeaders setAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }

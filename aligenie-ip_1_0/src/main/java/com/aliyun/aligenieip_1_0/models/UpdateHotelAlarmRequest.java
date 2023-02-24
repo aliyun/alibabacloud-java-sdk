@@ -202,7 +202,9 @@ public class UpdateHotelAlarmRequest extends TeaModel {
         @NameInMap("Once")
         public UpdateHotelAlarmRequestScheduleInfoOnce once;
 
-        // ONCE, WEEKLY
+        /**
+         * <p>ONCE, WEEKLY</p>
+         */
         @NameInMap("Type")
         public String type;
 

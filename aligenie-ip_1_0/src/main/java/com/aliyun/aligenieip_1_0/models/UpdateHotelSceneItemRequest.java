@@ -4,12 +4,21 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class UpdateHotelSceneItemRequest extends TeaModel {
+    /**
+     * <p>hotelID</p>
+     */
     @NameInMap("HotelId")
     public String hotelId;
 
+    /**
+     * <p>updateHotelSceneReq</p>
+     */
     @NameInMap("UpdateHotelSceneOperateReq")
     public UpdateHotelSceneItemRequestUpdateHotelSceneOperateReq updateHotelSceneOperateReq;
 
+    /**
+     * <p>UpdateHotelSceneReq</p>
+     */
     @NameInMap("UpdateHotelSceneReq")
     public UpdateHotelSceneItemRequestUpdateHotelSceneReq updateHotelSceneReq;
 
@@ -88,6 +97,9 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
         @NameInMap("Question")
         public String question;
 
+        /**
+         * <p>itemId</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
@@ -172,9 +184,15 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
         @NameInMap("DialogueList")
         public java.util.List<UpdateHotelSceneItemRequestUpdateHotelSceneReqDialogueList> dialogueList;
 
+        /**
+         * <p>icon</p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <p>itemID</p>
+         */
         @NameInMap("Id")
         public Long id;
 

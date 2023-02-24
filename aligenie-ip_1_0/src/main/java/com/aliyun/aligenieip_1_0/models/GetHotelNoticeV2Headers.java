@@ -3,7 +3,7 @@ package com.aliyun.aligenieip_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class QueryHotelListByAkHeaders extends TeaModel {
+public class GetHotelNoticeV2Headers extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
@@ -13,12 +13,12 @@ public class QueryHotelListByAkHeaders extends TeaModel {
     @NameInMap("Authorization")
     public String authorization;
 
-    public static QueryHotelListByAkHeaders build(java.util.Map<String, ?> map) throws Exception {
-        QueryHotelListByAkHeaders self = new QueryHotelListByAkHeaders();
+    public static GetHotelNoticeV2Headers build(java.util.Map<String, ?> map) throws Exception {
+        GetHotelNoticeV2Headers self = new GetHotelNoticeV2Headers();
         return TeaModel.build(map, self);
     }
 
-    public QueryHotelListByAkHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public GetHotelNoticeV2Headers setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -26,7 +26,7 @@ public class QueryHotelListByAkHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public QueryHotelListByAkHeaders setXAcsAligenieAccessToken(String xAcsAligenieAccessToken) {
+    public GetHotelNoticeV2Headers setXAcsAligenieAccessToken(String xAcsAligenieAccessToken) {
         this.xAcsAligenieAccessToken = xAcsAligenieAccessToken;
         return this;
     }
@@ -34,7 +34,7 @@ public class QueryHotelListByAkHeaders extends TeaModel {
         return this.xAcsAligenieAccessToken;
     }
 
-    public QueryHotelListByAkHeaders setAuthorization(String authorization) {
+    public GetHotelNoticeV2Headers setAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }
