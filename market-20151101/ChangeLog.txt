@@ -1,3 +1,6 @@
+2023-02-24 Version: 3.0.3
+- Add CrossAccountVerifyToken API.
+
 2022-03-10 Version: 3.0.2
 - Remove private api.
 

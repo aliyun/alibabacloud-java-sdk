@@ -3,7 +3,7 @@ package com.aliyun.market20151101.models;
 
 import com.aliyun.tea.*;
 
-public class FinishCurrentProjectNodeResponse extends TeaModel {
+public class CrossAccountVerifyTokenResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class FinishCurrentProjectNodeResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public FinishCurrentProjectNodeResponseBody body;
+    public CrossAccountVerifyTokenResponseBody body;
 
-    public static FinishCurrentProjectNodeResponse build(java.util.Map<String, ?> map) throws Exception {
-        FinishCurrentProjectNodeResponse self = new FinishCurrentProjectNodeResponse();
+    public static CrossAccountVerifyTokenResponse build(java.util.Map<String, ?> map) throws Exception {
+        CrossAccountVerifyTokenResponse self = new CrossAccountVerifyTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public FinishCurrentProjectNodeResponse setHeaders(java.util.Map<String, String> headers) {
+    public CrossAccountVerifyTokenResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class FinishCurrentProjectNodeResponse extends TeaModel {
         return this.headers;
     }
 
-    public FinishCurrentProjectNodeResponse setStatusCode(Integer statusCode) {
+    public CrossAccountVerifyTokenResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class FinishCurrentProjectNodeResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public FinishCurrentProjectNodeResponse setBody(FinishCurrentProjectNodeResponseBody body) {
+    public CrossAccountVerifyTokenResponse setBody(CrossAccountVerifyTokenResponseBody body) {
         this.body = body;
         return this;
     }
-    public FinishCurrentProjectNodeResponseBody getBody() {
+    public CrossAccountVerifyTokenResponseBody getBody() {
         return this.body;
     }
 

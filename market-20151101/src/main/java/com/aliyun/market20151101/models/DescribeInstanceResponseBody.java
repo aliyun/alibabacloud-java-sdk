@@ -7,6 +7,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("AppJson")
     public String appJson;
 
+    @NameInMap("AutoRenewal")
+    public String autoRenewal;
+
     @NameInMap("BeganOn")
     public Long beganOn;
 
@@ -72,6 +75,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
     public String getAppJson() {
         return this.appJson;
+    }
+
+    public DescribeInstanceResponseBody setAutoRenewal(String autoRenewal) {
+        this.autoRenewal = autoRenewal;
+        return this;
+    }
+    public String getAutoRenewal() {
+        return this.autoRenewal;
     }
 
     public DescribeInstanceResponseBody setBeganOn(Long beganOn) {
