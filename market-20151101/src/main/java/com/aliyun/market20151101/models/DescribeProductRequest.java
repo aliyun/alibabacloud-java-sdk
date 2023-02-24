@@ -4,6 +4,9 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProductRequest extends TeaModel {
+    /**
+     * <p>AliUid</p>
+     */
     @NameInMap("AliUid")
     public String aliUid;
 
