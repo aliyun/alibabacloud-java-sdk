@@ -19,6 +19,9 @@ public class BindAxbRequest extends TeaModel {
     @NameInMap("CallTimeout")
     public Integer callTimeout;
 
+    @NameInMap("DtmfConfig")
+    public String dtmfConfig;
+
     @NameInMap("ExpectCity")
     public String expectCity;
 
@@ -101,6 +104,14 @@ public class BindAxbRequest extends TeaModel {
     }
     public Integer getCallTimeout() {
         return this.callTimeout;
+    }
+
+    public BindAxbRequest setDtmfConfig(String dtmfConfig) {
+        this.dtmfConfig = dtmfConfig;
+        return this;
+    }
+    public String getDtmfConfig() {
+        return this.dtmfConfig;
     }
 
     public BindAxbRequest setExpectCity(String expectCity) {
