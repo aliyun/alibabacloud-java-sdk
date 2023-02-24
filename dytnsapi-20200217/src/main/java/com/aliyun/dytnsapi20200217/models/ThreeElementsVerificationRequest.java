@@ -28,6 +28,9 @@ public class ThreeElementsVerificationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RouteName")
+    public String routeName;
+
     public static ThreeElementsVerificationRequest build(java.util.Map<String, ?> map) throws Exception {
         ThreeElementsVerificationRequest self = new ThreeElementsVerificationRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ThreeElementsVerificationRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ThreeElementsVerificationRequest setRouteName(String routeName) {
+        this.routeName = routeName;
+        return this;
+    }
+    public String getRouteName() {
+        return this.routeName;
     }
 
 }
