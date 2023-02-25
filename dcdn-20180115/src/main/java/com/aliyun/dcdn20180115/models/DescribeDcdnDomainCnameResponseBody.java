@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
+    /**
+     * <p>The CNAME information.</p>
+     */
     @NameInMap("CnameDatas")
     public DescribeDcdnDomainCnameResponseBodyCnameDatas cnameDatas;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,14 +39,20 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainCnameResponseBodyCnameDatasData extends TeaModel {
         /**
-         * <p>CNAME。</p>
+         * <p>The CNAME.</p>
          */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The name of the accelerated domain returned.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The configuration status of the CNAME record. If the operations returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
+    /**
+     * <p>The certificate information of the domain name.</p>
+     */
     @NameInMap("CertInfos")
     public DescribeDcdnDomainCertificateInfoResponseBodyCertInfos certInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,87 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
+        /**
+         * <p>The domain name that matches the certificate.</p>
+         */
         @NameInMap("CertDomainName")
         public String certDomainName;
 
+        /**
+         * <p>The expiration time of the certificate.</p>
+         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
+        @NameInMap("CertId")
+        public String certId;
+
+        /**
+         * <p>The validity period of the certificate. Unit: **months** or **years**.</p>
+         */
         @NameInMap("CertLife")
         public String certLife;
 
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         */
         @NameInMap("CertOrg")
         public String certOrg;
 
+        @NameInMap("CertRegion")
+        public String certRegion;
+
+        /**
+         * <p>The type of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **free**: a free certificate</p>
+         * <p>*   **cas**: a certificate that is purchased from Alibaba Cloud SSL Certificates Service</p>
+         * <p>*   **upload**: a certificate that is uploaded by the user</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The status of HTTPS. Valid values:</p>
+         * <br>
+         * <p>*   **on**: enabled</p>
+         * <p>*   **off**: disabled</p>
+         */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
+        /**
+         * <p>The public key of the certificate.</p>
+         */
         @NameInMap("SSLPub")
         public String SSLPub;
 
+        /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **success**: The certificate has taken effect.</p>
+         * <p>*   **checking**: The system is checking whether the domain name is using Dynamic Route for CDN (DCDN).</p>
+         * <p>*   **cname_error**: The domain name is not using DCDN.</p>
+         * <p>*   **domain_invalid**: The domain name contains invalid characters.</p>
+         * <p>*   **unsupport_wildcard**: The wildcard domain name is not supported.</p>
+         * <p>*   **applying**: Certificate application is in progress.</p>
+         * <p>*   **get_token_timeout**: The certificate application request has timed out.</p>
+         * <p>*   **check_token_timeout**: The verification has timed out.</p>
+         * <p>*   **get_cert_timeout**: The request to obtain the certificate has timed out.</p>
+         * <p>*   **failed**: The certificate application request failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -83,6 +143,14 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             return this.certExpireTime;
         }
 
+        public DescribeDcdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertId(String certId) {
+            this.certId = certId;
+            return this;
+        }
+        public String getCertId() {
+            return this.certId;
+        }
+
         public DescribeDcdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertLife(String certLife) {
             this.certLife = certLife;
             return this;
@@ -105,6 +173,14 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
         }
         public String getCertOrg() {
             return this.certOrg;
+        }
+
+        public DescribeDcdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertRegion(String certRegion) {
+            this.certRegion = certRegion;
+            return this;
+        }
+        public String getCertRegion() {
+            return this.certRegion;
         }
 
         public DescribeDcdnDomainCertificateInfoResponseBodyCertInfosCertInfo setCertType(String certType) {

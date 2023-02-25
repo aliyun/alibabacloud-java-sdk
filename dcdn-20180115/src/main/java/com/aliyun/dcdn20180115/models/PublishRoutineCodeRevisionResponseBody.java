@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class PublishRoutineCodeRevisionResponseBody extends TeaModel {
+    /**
+     * <p>The version of the routine code that is published to the specified environment.</p>
+     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

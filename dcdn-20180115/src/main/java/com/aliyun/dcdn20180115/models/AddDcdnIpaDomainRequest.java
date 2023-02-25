@@ -4,9 +4,17 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class AddDcdnIpaDomainRequest extends TeaModel {
+    /**
+     * <p>The URL that is used to check the accessibility of the origin server.</p>
+     */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
+    /**
+     * <p>The domain name to be added to IPA.</p>
+     * <br>
+     * <p>A wildcard domain that starts with a period (.) is supported, such as .example.com.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -16,21 +24,45 @@ public class AddDcdnIpaDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <br>
+     * <p>*   **udp**</p>
+     * <p>*   **tcp**</p>
+     * <br>
+     * <p>>  Example: `{"protocol":"udp"}`.</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The acceleration region. Valid values:</p>
+     * <br>
+     * <p>*   **domestic**: Chinese mainland</p>
+     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **global**: global</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The information about the addresses of origin servers.</p>
+     */
     @NameInMap("Sources")
     public String sources;
 
+    /**
+     * <p>The top-level domain name.</p>
+     */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 

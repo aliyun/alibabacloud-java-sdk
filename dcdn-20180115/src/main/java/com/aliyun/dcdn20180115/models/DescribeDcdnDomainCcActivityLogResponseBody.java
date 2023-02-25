@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
+    /**
+     * <p>The log data of the event that triggered rate limiting.</p>
+     */
     @NameInMap("ActivityLog")
     public java.util.List<DescribeDcdnDomainCcActivityLogResponseBodyActivityLog> activityLog;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageIndex")
     public Long pageIndex;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -65,24 +80,45 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainCcActivityLogResponseBodyActivityLog extends TeaModel {
+        /**
+         * <p>The action that was triggered.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The name of the rule that was triggered.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The timestamp of the data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The object that triggered rate limiting.</p>
+         */
         @NameInMap("TriggerObject")
         public String triggerObject;
 
+        /**
+         * <p>The period of time during which rate limiting remains effective.</p>
+         */
         @NameInMap("Ttl")
         public Long ttl;
 
+        /**
+         * <p>The value of the object that triggered rate limiting.</p>
+         */
         @NameInMap("Value")
         public String value;
 

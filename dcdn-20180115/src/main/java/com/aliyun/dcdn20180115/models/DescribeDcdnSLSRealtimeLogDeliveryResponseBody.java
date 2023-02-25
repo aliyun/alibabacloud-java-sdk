@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
+    /**
+     * <p>The configuration results of the domain name.</p>
+     */
     @NameInMap("Content")
     public DescribeDcdnSLSRealtimeLogDeliveryResponseBodyContent content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +38,76 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnSLSRealtimeLogDeliveryResponseBodyContent extends TeaModel {
+        /**
+         * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
+         * <br>
+         * <p>*   **cdn_log_access_l1**: access logs of Dynamic Route for CDN (DCDN) points of presence (POPs)</p>
+         * <p>*   **cdn_log_origin**: back-to-origin logs</p>
+         * <p>*   **cdn_log_er**: EdgeRoutine logs</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <p>The region from which logs were collected.</p>
+         */
         @NameInMap("DataCenter")
         public String dataCenter;
 
+        /**
+         * <p>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](~~324199~~).</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <p>The name of the Log Service project</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The name of the Logstore.</p>
+         */
         @NameInMap("SLSLogStore")
         public String SLSLogStore;
 
+        /**
+         * <p>The name of the Log Service project.</p>
+         */
         @NameInMap("SLSProject")
         public String SLSProject;
 
+        /**
+         * <p>The region to which logs were delivered.</p>
+         */
         @NameInMap("SLSRegion")
         public String SLSRegion;
 
+        /**
+         * <p>The sampling rate.</p>
+         */
         @NameInMap("SamplingRate")
         public String samplingRate;
 
+        /**
+         * <p>The status of real-time logs.</p>
+         * <br>
+         * <p>*   **success**: The transcoded stream is uploaded.</p>
+         * <p>*   **fail**: The transcoded stream fails to be uploaded.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of log delivery. Only **SLS_POST** is supported.</p>
+         */
         @NameInMap("Type")
         public String type;
 

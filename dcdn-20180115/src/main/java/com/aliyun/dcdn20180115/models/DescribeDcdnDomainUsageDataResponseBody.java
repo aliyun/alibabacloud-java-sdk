@@ -4,27 +4,51 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
+    /**
+     * <p>The billable region where the usage data was collected.</p>
+     */
     @NameInMap("Area")
     public String area;
 
+    /**
+     * <p>The time interval between the data entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The type of the content returned.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The network traffic that was collected at each interval.</p>
+     */
     @NameInMap("UsageDataPerInterval")
     public DescribeDcdnDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
 
@@ -98,15 +122,29 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>If the **Field** parameter in the request is set to **bps**, this parameter returns the time of the peak bandwidth value. Otherwise, this parameter returns the same value as the **TimeStamp** parameter.</p>
+         */
         @NameInMap("PeakTime")
         public String peakTime;
 
+        /**
+         * <p>The data usage in a specific scenario.</p>
+         * <br>
+         * <p>> SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
+         */
         @NameInMap("SpecialValue")
         public String specialValue;
 
+        /**
+         * <p>The timestamp of the returned data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The amount of resource usage.</p>
+         */
         @NameInMap("Value")
         public String value;
 

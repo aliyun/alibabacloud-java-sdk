@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnCertificateListResponseBody extends TeaModel {
+    /**
+     * <p>Details about certificates.</p>
+     */
     @NameInMap("CertificateListModel")
     public DescribeDcdnCertificateListResponseBodyCertificateListModel certificateListModel;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertId")
         public Long certId;
 
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
+         */
         @NameInMap("Common")
         public String common;
 
+        /**
+         * <p>The fingerprint of the certificate.</p>
+         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        /**
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The timestamp.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
@@ -125,9 +149,15 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnCertificateListResponseBodyCertificateListModel extends TeaModel {
+        /**
+         * <p>Details about each certificate.</p>
+         */
         @NameInMap("CertList")
         public DescribeDcdnCertificateListResponseBodyCertificateListModelCertList certList;
 
+        /**
+         * <p>The number of certificates.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 

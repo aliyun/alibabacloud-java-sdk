@@ -4,15 +4,29 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class SetDcdnDomainSMCertificateRequest extends TeaModel {
+    /**
+     * <p>The identifier of the certificate. The value must be Certificate ID-cn-hangzhou. If the ID of the certificate is 123, CertIdentifier is set to 123-cn-hangzhou.</p>
+     */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>The accelerated domain name for which the SM certificate is configured.</p>
+     * <br>
+     * <p>>  HTTPS acceleration must be enabled for the accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 

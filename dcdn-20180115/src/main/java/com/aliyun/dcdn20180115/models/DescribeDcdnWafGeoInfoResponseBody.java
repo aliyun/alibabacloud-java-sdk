@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
+    /**
+     * <p>The type of information about the country or region.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeDcdnWafGeoInfoResponseBodyContent> content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafGeoInfoResponseBodyContentContinentsRegions extends TeaModel {
+        /**
+         * <p>The name of the country or region.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The code of the country or region.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,9 +74,15 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafGeoInfoResponseBodyContentContinents extends TeaModel {
+        /**
+         * <p>The district to which the country or region belongs.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The region information.</p>
+         */
         @NameInMap("Regions")
         public java.util.List<DescribeDcdnWafGeoInfoResponseBodyContentContinentsRegions> regions;
 
@@ -92,9 +110,18 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafGeoInfoResponseBodyContent extends TeaModel {
+        /**
+         * <p>The information about the country or region.</p>
+         */
         @NameInMap("Continents")
         public java.util.List<DescribeDcdnWafGeoInfoResponseBodyContentContinents> continents;
 
+        /**
+         * <p>The type of the region.</p>
+         * <br>
+         * <p>*   CN: China</p>
+         * <p>*   Other: outside China</p>
+         */
         @NameInMap("Type")
         public String type;
 

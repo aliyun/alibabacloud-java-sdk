@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DeleteDcdnRealTimeLogProjectRequest extends TeaModel {
+    /**
+     * <p>The name of a real-time log delivery project.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

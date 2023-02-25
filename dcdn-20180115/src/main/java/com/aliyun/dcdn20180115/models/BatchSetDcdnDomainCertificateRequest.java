@@ -4,27 +4,58 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchSetDcdnDomainCertificateRequest extends TeaModel {
+    /**
+     * <p>The name of the certificate.</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
+    /**
+     * <p>The type of the certificate. Valid values:</p>
+     * <br>
+     * <p>*   **upload**: a custom certificate that you upload.</p>
+     * <p>*   **cas**: a certificate that is purchased from Alibaba Cloud SSL Certificates Service</p>
+     */
     @NameInMap("CertType")
     public String certType;
 
+    /**
+     * <p>The name of the accelerated domain for which you want to configure the HTTPS certificate. The accelerated domain must have HTTPS acceleration enabled. You can specify multiple domain names and separate them with commas (,).</p>
+     * <br>
+     * <p>>  You can configure up to 10 domain names at a time.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The private key. This parameter is required only if you enable the certificate.</p>
+     */
     @NameInMap("SSLPri")
     public String SSLPri;
 
+    /**
+     * <p>Specifies whether to enable the HTTPS certificate. Valid values:</p>
+     * <br>
+     * <p>*   **on:**</p>
+     * <p>*   **off**</p>
+     * <br>
+     * <p>The default value is **off**.</p>
+     */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
+    /**
+     * <p>The content of the certificate. This parameter is required only if you enable the certificate.</p>
+     */
     @NameInMap("SSLPub")
     public String SSLPub;
 

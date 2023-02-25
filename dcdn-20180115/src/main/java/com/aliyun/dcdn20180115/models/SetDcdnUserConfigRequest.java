@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class SetDcdnUserConfigRequest extends TeaModel {
+    /**
+     * <p>The configuration parameters of the features.</p>
+     */
     @NameInMap("Configs")
     public String configs;
 
+    /**
+     * <p>The ID of the feature.</p>
+     */
     @NameInMap("FunctionId")
     public Integer functionId;
 

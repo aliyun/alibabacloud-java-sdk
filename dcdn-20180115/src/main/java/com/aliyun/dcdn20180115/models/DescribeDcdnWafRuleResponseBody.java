@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the protection rule.</p>
+     */
     @NameInMap("Rule")
     public DescribeDcdnWafRuleResponseBodyRule rule;
 
@@ -32,24 +38,52 @@ public class DescribeDcdnWafRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafRuleResponseBodyRule extends TeaModel {
+        /**
+         * <p>The type of the protection policy. Valid values:</p>
+         * <br>
+         * <p>- waf_group: basic web protection</p>
+         * <p>- custom_acl: custom</p>
+         * <p>- whitelist: whitelist</p>
+         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        /**
+         * <p>The time at which the protection rule was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the protection policy.</p>
+         */
         @NameInMap("PolicyId")
         public Long policyId;
 
+        /**
+         * <p>The configurations of the protection rule.</p>
+         */
         @NameInMap("RuleConfig")
         public String ruleConfig;
 
+        /**
+         * <p>The ID of the protection rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The name of the protection rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The status of the protection rule. Valid values:</p>
+         * <br>
+         * <p>- on</p>
+         * <p>- off</p>
+         */
         @NameInMap("RuleStatus")
         public String ruleStatus;
 

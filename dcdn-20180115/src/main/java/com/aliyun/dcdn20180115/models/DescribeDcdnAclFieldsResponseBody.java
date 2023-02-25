@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnAclFieldsResponseBody extends TeaModel {
+    /**
+     * <p>The details about the rules.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeDcdnAclFieldsResponseBodyContent> content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DescribeDcdnAclFieldsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnAclFieldsResponseBodyContent extends TeaModel {
+        /**
+         * <p>The rules and policies that were configured. The JSON string must be decoded.</p>
+         */
         @NameInMap("Fields")
         public String fields;
 

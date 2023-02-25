@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the protection rule. You can specify only one ID in each request.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class PreloadDcdnObjectCachesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the prefetch task. Multiple IDs are separated by commas (,).</p>
+     */
     @NameInMap("PreloadTaskId")
     public String preloadTaskId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,6 +7,9 @@ public class DescribeDcdnTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Set the value to **DOMAIN**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -43,9 +46,15 @@ public class DescribeDcdnTagResourcesRequest extends TeaModel {
     }
 
     public static class DescribeDcdnTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N. Valid values of N: **1** to **20**.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N. Valid values of N: **1** to **20**.</p>
+         */
         @NameInMap("Value")
         public String value;
 

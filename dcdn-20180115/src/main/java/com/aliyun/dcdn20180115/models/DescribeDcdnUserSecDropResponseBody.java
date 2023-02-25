@@ -4,15 +4,30 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
+    /**
+     * <p>The number of packets that are blocked.</p>
+     */
     @NameInMap("Drops")
     public Integer drops;
 
+    /**
+     * <p>Indicates whether the information is found.</p>
+     * <br>
+     * <p>*   Found: yes</p>
+     * <p>*   Not Found: no</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The character string that is concatenated based on the request parameters and is used to locate causes when data is not found.</p>
+     */
     @NameInMap("UuidStr")
     public String uuidStr;
 

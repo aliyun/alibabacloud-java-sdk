@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainCnameRequest extends TeaModel {
+    /**
+     * <p>The names of the accelerated domains. If you need to specify multiple accelerated domain names, separate them with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

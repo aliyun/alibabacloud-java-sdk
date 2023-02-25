@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the protected domain names.</p>
+     */
     @NameInMap("Domains")
     public java.util.List<DescribeDcdnWafPolicyValidDomainsResponseBodyDomains> domains;
 
+    /**
+     * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of domain names returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,21 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies extends TeaModel {
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the policy.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -106,18 +130,36 @@ public class DescribeDcdnWafPolicyValidDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafPolicyValidDomainsResponseBodyDomains extends TeaModel {
+        /**
+         * <p>The protected domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The policy that is bound to the domain name.</p>
+         */
         @NameInMap("Policies")
         public java.util.List<DescribeDcdnWafPolicyValidDomainsResponseBodyDomainsPolicies> policies;
 
+        /**
+         * <p>The ID of the protection policy.</p>
+         */
         @NameInMap("PolicyId")
         public Long policyId;
 
+        /**
+         * <p>The name of the protection policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>Indicates whether the protection policy is the default policy. Valid values:</p>
+         * <br>
+         * <p>*   default: The protection policy is the default policy.</p>
+         * <p>*   custom: The protection policy is not the default policy.</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 

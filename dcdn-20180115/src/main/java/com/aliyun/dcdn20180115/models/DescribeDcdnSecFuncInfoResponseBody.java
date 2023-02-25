@@ -4,18 +4,36 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
+    /**
+     * <p>The parameters required by the code.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeDcdnSecFuncInfoResponseBodyContent> content;
 
+    /**
+     * <p>The description of HTTP responses.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatus")
     public String httpStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return value for HTTP requests.</p>
+     * <br>
+     * <p>*   0: OK.</p>
+     * <p>*   Values other than 0: an error.</p>
+     */
     @NameInMap("RetCode")
     public String retCode;
 
@@ -65,9 +83,15 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnSecFuncInfoResponseBodyContent extends TeaModel {
+        /**
+         * <p>The language (Chinese or English).</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The options in the drop-down list.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnIpInfoRequest extends TeaModel {
+    /**
+     * <p>The IP address. You can specify only one IP address.</p>
+     */
     @NameInMap("IP")
     public String IP;
 

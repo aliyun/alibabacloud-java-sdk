@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The byte hit ratio at each time interval. The byte hit ratio is measured in percentage.</p>
+     */
     @NameInMap("HitRatePerInterval")
     public DescribeDcdnDomainHitRateDataResponseBodyHitRatePerInterval hitRatePerInterval;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +94,21 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The byte hit ratio.</p>
+         */
         @NameInMap("ByteHitRate")
         public Float byteHitRate;
 
+        /**
+         * <p>The request hit ratio.</p>
+         */
         @NameInMap("ReqHitRate")
         public Float reqHitRate;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

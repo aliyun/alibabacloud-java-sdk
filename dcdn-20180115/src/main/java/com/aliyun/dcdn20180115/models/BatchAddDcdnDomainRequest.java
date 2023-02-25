@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchAddDcdnDomainRequest extends TeaModel {
+    /**
+     * <p>The URL that is used to check whether the origin server can be accessed.</p>
+     */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
+    /**
+     * <p>You can add up to 50 domain names to DCDN for each of your Alibaba Cloud account. Separate multiple domain names with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -16,18 +22,34 @@ public class BatchAddDcdnDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The accelerated region. Default value: domestic. Valid values:</p>
+     * <br>
+     * <p>*   domestic: Chinese mainland</p>
+     * <p>*   overseas: global (excluding the Chinese mainland)</p>
+     * <p>*   global: global</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The information about the addresses of origin servers.</p>
+     */
     @NameInMap("Sources")
     public String sources;
 
+    /**
+     * <p>The top-level domain name.</p>
+     */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 

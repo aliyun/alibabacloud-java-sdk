@@ -4,9 +4,17 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchSetDcdnIpaDomainConfigsRequest extends TeaModel {
+    /**
+     * <p>The domain names accelerated by IPA. Separate multiple domain names with commas (,).</p>
+     */
     @NameInMap("DomainNames")
     public String domainNames;
 
+    /**
+     * <p>The list of features.</p>
+     * <br>
+     * <p>    [{"functionArgs":[{"argName":"Parameter name","argValue":"Parameter value"}],"functionName":"Feature name"}]</p>
+     */
     @NameInMap("Functions")
     public String functions;
 

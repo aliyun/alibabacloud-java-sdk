@@ -4,33 +4,79 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnServiceResponseBody extends TeaModel {
+    /**
+     * <p>The start time when the next billing method takes effect. The time is displayed in UTC.</p>
+     */
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
+    /**
+     * <p>The next billing method that takes effect. Valid values:</p>
+     * <br>
+     * <p>*   **PayByTraffic**: traffic</p>
+     * <p>*   **PayByBandwidth**: bandwidth</p>
+     * <p>*   **PayByBandwidth95**: 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_monthavg**: monthly average bandwidth</p>
+     * <p>*   **PayByBandwidth_month4th**: the fourth peak bandwidth in each month</p>
+     * <p>*   **PayByBandwidth_monthday95avg**: monthly average 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_nighthalf95**: 95th percentile bandwidth of half idle bandwidth in the nighttime</p>
+     */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The current billing method. Valid values:</p>
+     * <br>
+     * <p>*   **PayByTraffic**: traffic</p>
+     * <p>*   **PayByBandwidth**: bandwidth</p>
+     * <p>*   **PayByBandwidth95**: 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_monthavg**: monthly average bandwidth</p>
+     * <p>*   **PayByBandwidth_month4th**: the fourth peak bandwidth in each month</p>
+     * <p>*   **PayByBandwidth_monthday95avg**: monthly average 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_nighthalf95**: 95th percentile bandwidth of half idle bandwidth in the nighttime</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The time when the DCDN service was activated. The time follows the ISO 8601 standard.</p>
+     */
     @NameInMap("OpeningTime")
     public String openingTime;
 
+    /**
+     * <p>The lock status of the DCDN service.</p>
+     */
     @NameInMap("OperationLocks")
     public DescribeDcdnServiceResponseBodyOperationLocks operationLocks;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the changes of the WebSocket configuration take effect. The value is the same as that of the ChangingAffectTime parameter. This parameter can be displayed in the console only if the specified time is later than the current time.</p>
+     */
     @NameInMap("WebsocketChangingTime")
     public String websocketChangingTime;
 
+    /**
+     * <p>The next effective billing method of WebSocket. Valid values: **websockettraffic** and **websocketbps**. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.</p>
+     */
     @NameInMap("WebsocketChangingType")
     public String websocketChangingType;
 
+    /**
+     * <p>The current billing method of WebSocket. Valid values: **websockettraffic** and **websocketbps**. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.</p>
+     */
     @NameInMap("WebsocketType")
     public String websocketType;
 
@@ -120,6 +166,9 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnServiceResponseBodyOperationLocksLockReason extends TeaModel {
+        /**
+         * <p>The reason why the service was locked. For example, a value of financial indicates that an overdue payment exists.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 

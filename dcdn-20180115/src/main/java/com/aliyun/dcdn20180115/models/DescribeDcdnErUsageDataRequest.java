@@ -4,18 +4,41 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnErUsageDataRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the ER.</p>
+     */
     @NameInMap("RoutineID")
     public String routineID;
 
+    /**
+     * <p>The specification of the ER. Valid values:</p>
+     * <br>
+     * <p>*   5ms</p>
+     * <p>*   50ms</p>
+     * <p>*   100ms</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>Specifies how the results are grouped. If you set this parameter to routine, the returned results are grouped based on the ER ID. If you set this parameter to spec, the returned results are grouped based on the ER specification.</p>
+     * <br>
+     * <p>>  If you leave this parameter empty, the returned results are not grouped.</p>
+     */
     @NameInMap("SplitBy")
     public String splitBy;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

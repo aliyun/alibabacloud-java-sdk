@@ -4,9 +4,20 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainByCertificateRequest extends TeaModel {
+    /**
+     * <p>The public key of the certificate.</p>
+     * <br>
+     * <p>You must use Base64 encoding schemes and then the encodeURIComponent method to encode the public key. PEM files are supported.</p>
+     */
     @NameInMap("SSLPub")
     public String SSLPub;
 
+    /**
+     * <p>Indicates the returned domain name list contains only domain names with HTTPS enabled or disabled.</p>
+     * <br>
+     * <p>*   true: The list contains only domain names with HTTPS enabled.</p>
+     * <p>*   false: The list contains only domain names with HTTPS disabled..</p>
+     */
     @NameInMap("SSLStatus")
     public Boolean SSLStatus;
 

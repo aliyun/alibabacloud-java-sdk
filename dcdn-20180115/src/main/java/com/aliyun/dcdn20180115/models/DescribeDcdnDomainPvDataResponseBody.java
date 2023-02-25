@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
+    /**
+     * <p>The data collection interval. Unit: second.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The name of the accelerated domain for which the data was returned.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which the data was collected.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The number of PVs at each interval.</p>
+     */
     @NameInMap("PvDataInterval")
     public DescribeDcdnDomainPvDataResponseBodyPvDataInterval pvDataInterval;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which the data was collected.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +94,15 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainPvDataResponseBodyPvDataIntervalUsageData extends TeaModel {
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The consumed network traffic.</p>
+         */
         @NameInMap("Value")
         public String value;
 

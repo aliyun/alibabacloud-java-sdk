@@ -4,15 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The list of the returned data.</p>
+     */
     @NameInMap("ErAccData")
     public DescribeDcdnErUsageDataResponseBodyErAccData erAccData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -54,15 +66,27 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnErUsageDataResponseBodyErAccDataErAccItem extends TeaModel {
+        /**
+         * <p>The number of ER requests.</p>
+         */
         @NameInMap("ErAcc")
         public Long erAcc;
 
+        /**
+         * <p>The ID of the ER. This parameter is returned only when SplitBy is set to routine.</p>
+         */
         @NameInMap("Routine")
         public String routine;
 
+        /**
+         * <p>The specification of the ER. This parameter is returned only when SplitBy is set to spec.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The timestamp of the returned data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

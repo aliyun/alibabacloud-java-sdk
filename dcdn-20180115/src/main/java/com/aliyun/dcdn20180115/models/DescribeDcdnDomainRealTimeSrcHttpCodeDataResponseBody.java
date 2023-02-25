@@ -4,21 +4,43 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     * <br>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The proportions of HTTP status codes at each time interval.</p>
+     */
     @NameInMap("RealTimeSrcHttpCodeData")
     public DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeData realTimeSrcHttpCodeData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried. </p>
+     * <br>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +98,21 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
     }
 
     public static class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValueRealTimeSrcCodeProportionData extends TeaModel {
+        /**
+         * <p>The HTTP status code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The number of HTTP status codes.</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The proportion of the HTTP status code.</p>
+         */
         @NameInMap("Proportion")
         public String proportion;
 
@@ -136,9 +167,15 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
     }
 
     public static class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData extends TeaModel {
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The proportions of HTTP status codes.</p>
+         */
         @NameInMap("Value")
         public DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValue value;
 

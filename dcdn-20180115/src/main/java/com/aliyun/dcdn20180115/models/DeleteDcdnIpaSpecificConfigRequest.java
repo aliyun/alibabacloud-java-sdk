@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DeleteDcdnIpaSpecificConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the configuration. You can call the [DescribeDcdnDomainConfigs](~~130625~~) operation to query configuration IDs.</p>
+     */
     @NameInMap("ConfigId")
     public String configId;
 
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

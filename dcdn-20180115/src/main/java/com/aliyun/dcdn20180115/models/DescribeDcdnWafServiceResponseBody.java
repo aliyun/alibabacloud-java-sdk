@@ -4,24 +4,53 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafServiceResponseBody extends TeaModel {
+    /**
+     * <p>The edition of WAF.</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
+    /**
+     * <p>The activation status of WAF. Valid values:</p>
+     * <br>
+     * <p>*   on</p>
+     * <p>*   off</p>
+     */
     @NameInMap("Enabled")
     public String enabled;
 
+    /**
+     * <p>The time when WAF was enabled.</p>
+     */
     @NameInMap("OpeningTime")
     public String openingTime;
 
+    /**
+     * <p>The billing method for requests.</p>
+     */
     @NameInMap("RequestBillingType")
     public String requestBillingType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The billing method for rules. You are charged for the number of SeCUs.</p>
+     */
     @NameInMap("RuleBillingType")
     public String ruleBillingType;
 
+    /**
+     * <p>The status of WAF. Valid values:</p>
+     * <br>
+     * <p>*   Normal</p>
+     * <p>*   WaitForExpire</p>
+     * <p>*   Expired</p>
+     * <p>*   Released</p>
+     */
     @NameInMap("Status")
     public String status;
 

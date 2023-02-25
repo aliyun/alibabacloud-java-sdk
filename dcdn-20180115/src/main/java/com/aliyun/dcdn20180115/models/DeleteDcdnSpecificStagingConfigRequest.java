@@ -4,9 +4,17 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DeleteDcdnSpecificStagingConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).</p>
+     * <br>
+     * <p>You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.</p>
+     */
     @NameInMap("ConfigId")
     public String configId;
 
+    /**
+     * <p>The name of the accelerated domain. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

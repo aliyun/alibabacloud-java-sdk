@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class UpdateDcdnDeliverTaskRequest extends TeaModel {
+    /**
+     * <p>The method that is used to send operations reports. Operations reports are sent to you only by email. The settings must be escaped in JSON.</p>
+     */
     @NameInMap("Deliver")
     public String deliver;
 
+    /**
+     * <p>The ID of the tracking task that you want to update.</p>
+     */
     @NameInMap("DeliverId")
     public Long deliverId;
 
+    /**
+     * <p>The domain names from which the tracking task collects data. Separate domain names with commas (,). If you do not specify a domain name, the task collects data from all domain names that belong to your Alibaba Cloud account.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The name of the tracking task.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The operations reports that are tracked by the task. The data must be escaped in JSON.</p>
+     */
     @NameInMap("Reports")
     public String reports;
 
+    /**
+     * <p>The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.</p>
+     */
     @NameInMap("Schedule")
     public String schedule;
 

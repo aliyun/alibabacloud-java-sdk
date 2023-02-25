@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafScenesResponseBody extends TeaModel {
+    /**
+     * <p>The types of the protection policies.</p>
+     */
     @NameInMap("DefenseScenes")
     public java.util.List<DescribeDcdnWafScenesResponseBodyDefenseScenes> defenseScenes;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafScenesResponseBodyDefenseScenes extends TeaModel {
+        /**
+         * <p>The type of the protection policy, which is the same as the DefenseScenes parameter in request parameters.</p>
+         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        /**
+         * <p>The total number of policies of this type that were configured.</p>
+         */
         @NameInMap("PolicyCount")
         public Integer policyCount;
 
+        /**
+         * <p>The total number of protection rules that were configured in this type of the policy.</p>
+         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 

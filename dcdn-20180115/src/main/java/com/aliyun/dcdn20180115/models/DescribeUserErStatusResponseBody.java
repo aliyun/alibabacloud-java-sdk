@@ -4,18 +4,45 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserErStatusResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether ER is activated.</p>
+     * <br>
+     * <p>*   true: activated</p>
+     * <p>*   false: not activated</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>Indicates whether ER has an overdue payment.</p>
+     * <br>
+     * <p>*   true: has an overdue payment</p>
+     * <p>*   false: does not have an overdue payment</p>
+     */
     @NameInMap("InDebt")
     public Boolean inDebt;
 
+    /**
+     * <p>Indicates whether an overdue payment of ER has passed the grace period.</p>
+     * <br>
+     * <p>*   true: has passed the grace period</p>
+     * <p>*   false: has not passed the grace period</p>
+     */
     @NameInMap("InDebtOverdue")
     public Boolean inDebtOverdue;
 
+    /**
+     * <p>Indicates whether ER is available.</p>
+     * <br>
+     * <p>*   true: available</p>
+     * <p>*   false: unavailable</p>
+     */
     @NameInMap("OnService")
     public Boolean onService;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

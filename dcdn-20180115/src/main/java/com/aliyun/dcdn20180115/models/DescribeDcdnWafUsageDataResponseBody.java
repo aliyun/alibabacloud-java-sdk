@@ -4,15 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The WAF information about the accelerated domain name.</p>
+     */
     @NameInMap("WafUsageData")
     public DescribeDcdnWafUsageDataResponseBodyWafUsageData wafUsageData;
 
@@ -54,21 +66,39 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafUsageDataResponseBodyWafUsageDataWafUsageDataItem extends TeaModel {
+        /**
+         * <p>The number of allowed requests.</p>
+         */
         @NameInMap("AccessCnt")
         public Long accessCnt;
 
+        /**
+         * <p>The number of blocked requests.</p>
+         */
         @NameInMap("BlockCnt")
         public Long blockCnt;
 
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The number of monitored requests.</p>
+         */
         @NameInMap("ObserveCnt")
         public Long observeCnt;
 
+        /**
+         * <p>The number of used SeCUs.</p>
+         */
         @NameInMap("SecCu")
         public Long secCu;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

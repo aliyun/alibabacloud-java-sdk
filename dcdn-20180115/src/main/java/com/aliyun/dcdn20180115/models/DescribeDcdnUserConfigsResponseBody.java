@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The user configurations.</p>
+     */
     @NameInMap("Configs")
     public java.util.List<DescribeDcdnUserConfigsResponseBodyConfigs> configs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,31 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserConfigsResponseBodyConfigs extends TeaModel {
+        /**
+         * <p>The name of the configuration.</p>
+         * <br>
+         * <p>The configuration that is specified by enterprise users and public service sectors.</p>
+         */
         @NameInMap("ArgName")
         public String argName;
 
+        /**
+         * <p>The value of the configuration. Valid values:</p>
+         * <br>
+         * <p>*   cc_rule: HTTP flood protection</p>
+         * <p>*   ddos_dispatch: DDoS mitigation</p>
+         * <p>*   edge_safe: application security on edge nodes</p>
+         * <p>*   blocked_regions: region blacklist</p>
+         * <p>*   http_acl_policy: precise access control</p>
+         * <p>*   bot_manager: bot traffic management</p>
+         * <p>*   ip_reputation: IP reputation library</p>
+         */
         @NameInMap("ArgValue")
         public String argValue;
 
+        /**
+         * <p>The configuration returned.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 

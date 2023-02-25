@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainIpaBpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The bandwidth data returned at each interval.</p>
+     */
     @NameInMap("BpsDataPerInterval")
     public DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
+    /**
+     * <p>The time interval at which data is collected. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +94,15 @@ public class DescribeDcdnDomainIpaBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The bandwidth value. Unit: bit/s.</p>
+         */
         @NameInMap("IpaBps")
         public Float ipaBps;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The information about the protection policy.</p>
+     */
     @NameInMap("Policy")
     public DescribeDcdnWafPolicyResponseBodyPolicy policy;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,67 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafPolicyResponseBodyPolicy extends TeaModel {
+        /**
+         * <p>The type of the protection policy. Valid values:</p>
+         * <br>
+         * <p>*   waf_group: basic web protection</p>
+         * <p>*   custom_acl: custom</p>
+         * <p>*   whitelist: whitelist</p>
+         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        /**
+         * <p>The number of domain names that use the protection policy.</p>
+         */
         @NameInMap("DomainCount")
         public Integer domainCount;
 
+        /**
+         * <p>The time when the protection policy was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the protection policy.</p>
+         */
         @NameInMap("PolicyId")
         public Long policyId;
 
+        /**
+         * <p>The name of the protection policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The status of the protection policy. Valid values:</p>
+         * <br>
+         * <p>*   on</p>
+         * <p>*   off</p>
+         */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
+        /**
+         * <p>Indicates whether the current policy is the default policy. Valid values:</p>
+         * <br>
+         * <p>*   default: The current policy is the default policy.</p>
+         * <p>*   custom: The current policy is not the default policy.</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The protection rule configurations corresponding to the protection policy. The configurations only support Bot management. For more information, see [Configure protection rules](~~423350~~).</p>
+         */
         @NameInMap("RuleConfigs")
         public String ruleConfigs;
 
+        /**
+         * <p>The number of protection rules in the protection policy.</p>
+         */
         @NameInMap("RuleCount")
         public Long ruleCount;
 

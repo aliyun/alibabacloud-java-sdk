@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The QPS returned at each time interval.</p>
+     */
     @NameInMap("QpsDataPerInterval")
     public DescribeDcdnDomainQpsDataResponseBodyQpsDataPerInterval qpsDataPerInterval;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,36 +94,69 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainQpsDataResponseBodyQpsDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("Acc")
         public Float acc;
 
+        /**
+         * <p>The number of requests for dynamic content delivery over HTTP.</p>
+         */
         @NameInMap("DynamicHttpAcc")
         public Float dynamicHttpAcc;
 
+        /**
+         * <p>The QPS for dynamic content delivery over HTTP.</p>
+         */
         @NameInMap("DynamicHttpQps")
         public Float dynamicHttpQps;
 
+        /**
+         * <p>The number of requests for dynamic content delivery over HTTPS.</p>
+         */
         @NameInMap("DynamicHttpsAcc")
         public Float dynamicHttpsAcc;
 
+        /**
+         * <p>The QPS for dynamic content delivery over HTTPS.</p>
+         */
         @NameInMap("DynamicHttpsQps")
         public Float dynamicHttpsQps;
 
+        /**
+         * <p>The total QPS.</p>
+         */
         @NameInMap("Qps")
         public Float qps;
 
+        /**
+         * <p>The number of requests for static content delivery over HTTP.</p>
+         */
         @NameInMap("StaticHttpAcc")
         public Float staticHttpAcc;
 
+        /**
+         * <p>The QPS for static content delivery over HTTP.</p>
+         */
         @NameInMap("StaticHttpQps")
         public Float staticHttpQps;
 
+        /**
+         * <p>The number of requests for static content delivery over HTTPS.</p>
+         */
         @NameInMap("StaticHttpsAcc")
         public Float staticHttpsAcc;
 
+        /**
+         * <p>The QPS for static content delivery over HTTPS.</p>
+         */
         @NameInMap("StaticHttpsQps")
         public Float staticHttpsQps;
 
+        /**
+         * <p>The timestamp of the returned data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

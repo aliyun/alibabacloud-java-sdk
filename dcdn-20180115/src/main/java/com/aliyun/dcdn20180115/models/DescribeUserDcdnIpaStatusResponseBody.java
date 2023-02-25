@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the IPA service is activated.</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>Indicates whether your IPA service has overdue payments.</p>
+     */
     @NameInMap("InDebt")
     public Boolean inDebt;
 
+    /**
+     * <p>Indicates whether an overdue bill has been paid within a specified period.</p>
+     */
     @NameInMap("InDebtOverdue")
     public Boolean inDebtOverdue;
 
+    /**
+     * <p>Indicates whether the IPA service is available. The IPA service is available when no payment is overdue.</p>
+     */
     @NameInMap("OnService")
     public Boolean onService;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

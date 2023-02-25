@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserDcdnStatusResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the DCDN service is activated.</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>Indicates whether the DCDN service has overdue payments.</p>
+     */
     @NameInMap("InDebt")
     public Boolean inDebt;
 
+    /**
+     * <p>Indicates whether an overdue bill has been paid within the specified period.</p>
+     */
     @NameInMap("InDebtOverdue")
     public Boolean inDebtOverdue;
 
+    /**
+     * <p>Indicates whether the service is available.</p>
+     */
     @NameInMap("OnService")
     public Boolean onService;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

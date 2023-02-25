@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainLogResponseBody extends TeaModel {
+    /**
+     * <p>The log information. The log information is indicated by the DomainLogDetail parameter.</p>
+     */
     @NameInMap("DomainLogDetails")
     public DescribeDcdnDomainLogResponseBodyDomainLogDetails domainLogDetails;
 
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +52,35 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
+        /**
+         * <p>The end of the time range during which data was queried.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The name of the log file.</p>
+         */
         @NameInMap("LogName")
         public String logName;
 
+        /**
+         * <p>The path of the log file.</p>
+         * <br>
+         * <p>Take note of the Expires field (expiration timestamp) in the response parameter LogPath. If the log download URL expires, you must obtain it again. For more information, see [LogPath field](~~31952~~).</p>
+         */
         @NameInMap("LogPath")
         public String logPath;
 
+        /**
+         * <p>The size of the log file. Unit: bytes.</p>
+         */
         @NameInMap("LogSize")
         public Long logSize;
 
+        /**
+         * <p>The beginning of the time range during which data was queried.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -125,12 +151,21 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
@@ -166,12 +201,21 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
+        /**
+         * <p>The total number of entries returned on the current page.</p>
+         */
         @NameInMap("LogCount")
         public Long logCount;
 
+        /**
+         * <p>The log information. The log information is indicated by the LogInfoDetail parameter.</p>
+         */
         @NameInMap("LogInfos")
         public DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
+        /**
+         * <p>The page information. The page information is indicated by the PageInfoDetail parameter.</p>
+         */
         @NameInMap("PageInfos")
         public DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;
 

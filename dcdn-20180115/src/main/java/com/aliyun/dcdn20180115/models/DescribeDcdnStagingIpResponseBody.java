@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnStagingIpResponseBody extends TeaModel {
+    /**
+     * <p>The IPv4 addresses.format</p>
+     */
     @NameInMap("IPV4s")
     public DescribeDcdnStagingIpResponseBodyIPV4s IPV4s;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

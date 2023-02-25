@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
+    /**
+     * <p>The returned information.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeDcdnWafFilterInfoResponseBodyContent> content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbolRegexp extends TeaModel {
+        /**
+         * <p>The error message returned because no items match the regular expression.</p>
+         */
         @NameInMap("ErrMsg")
         public String errMsg;
 
+        /**
+         * <p>The regular expression.</p>
+         */
         @NameInMap("Pattern")
         public String pattern;
 
@@ -62,21 +74,47 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol extends TeaModel {
+        /**
+         * <p>The logical symbol that is displayed in the Dynamic Route for CDN (DCDN) console.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The maximum number of match contents that you can specify. The value of this parameter varies based on the value of the Type parameter. Valid values:</p>
+         * <br>
+         * <p>*   If the value of the Type parameter is **multi**, the value of this parameter is the maximum number of match contents.</p>
+         * <p>*   If the value of the Type parameter is **single**, the value of this parameter is 1.</p>
+         * <p>*   If the value of the Type parameter is **none**, the value of this parameter is 0.</p>
+         */
         @NameInMap("MaxLength")
         public Integer maxLength;
 
+        /**
+         * <p>The information about the regular expression.</p>
+         */
         @NameInMap("Regexp")
         public DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbolRegexp regexp;
 
+        /**
+         * <p>The logical symbol that is passed to the backend.</p>
+         */
         @NameInMap("Symbol")
         public String symbol;
 
+        /**
+         * <p>The tips that are displayed in the match content.</p>
+         */
         @NameInMap("Tip")
         public String tip;
 
+        /**
+         * <p>The number of match contents that you can specify. Valid values:</p>
+         * <br>
+         * <p>*   multi: You can specify multiple match contents.</p>
+         * <p>*   single: You can specify only a match content.</p>
+         * <p>*   none: You cannot specify a match content.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -136,12 +174,21 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFields extends TeaModel {
+        /**
+         * <p>The description of the match field. If this parameter is not returned or if this parameter is empty, the match field does not have a description.</p>
+         */
         @NameInMap("ExtendField")
         public String extendField;
 
+        /**
+         * <p>The information about the logical symbol.</p>
+         */
         @NameInMap("LogicalSymbol")
         public java.util.List<DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol> logicalSymbol;
 
+        /**
+         * <p>The match field.</p>
+         */
         @NameInMap("MatchField")
         public String matchField;
 
@@ -177,9 +224,15 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContent extends TeaModel {
+        /**
+         * <p>The type of the protection policy, which is the same as the DefenseScenes parameter in request parameters.</p>
+         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        /**
+         * <p>The information about the match condition.</p>
+         */
         @NameInMap("Fields")
         public java.util.List<DescribeDcdnWafFilterInfoResponseBodyContentFields> fields;
 

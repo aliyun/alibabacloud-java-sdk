@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The protected domain names.</p>
+     */
     @NameInMap("Domains")
     public java.util.List<DescribeDcdnWafDomainsResponseBodyDomains> domains;
 
+    /**
+     * <p>The page number of the returned page, which is the same as the PageNumber parameter in request parameters.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of protected domain names.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,21 @@ public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafDomainsResponseBodyDomains extends TeaModel {
+        /**
+         * <p>The header of IP address of the client that is connected to the point of presence (POP).</p>
+         */
         @NameInMap("ClientIpTag")
         public String clientIpTag;
 
+        /**
+         * <p>The protected domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The number of protection policies that were configured for the protected domain name.</p>
+         */
         @NameInMap("PolicyCount")
         public Integer policyCount;
 

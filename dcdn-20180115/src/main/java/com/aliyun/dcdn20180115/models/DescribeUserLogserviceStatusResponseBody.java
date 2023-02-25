@@ -4,18 +4,45 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether Log Service is activated.</p>
+     * <br>
+     * <p>*   true: activated</p>
+     * <p>*   false: not activated</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>Indicates whether your Log Service has overdue payments.</p>
+     * <br>
+     * <p>*   true: Your Log Service has overdue payments.</p>
+     * <p>*   false: Your Log Service does not have overdue payments.</p>
+     */
     @NameInMap("InDebt")
     public Boolean inDebt;
 
+    /**
+     * <p>Indicates whether the overdue payments of Log Service have passed the grace period.</p>
+     * <br>
+     * <p>*   true: The overdue payments of Log Service have passed the grace period.</p>
+     * <p>*   false: The overdue payments of Log Service have not passed the grace period.</p>
+     */
     @NameInMap("InDebtOverdue")
     public Boolean inDebtOverdue;
 
+    /**
+     * <p>Indicates whether Log Service is available.</p>
+     * <br>
+     * <p>*   true: available</p>
+     * <p>*   false: unavailable</p>
+     */
     @NameInMap("OnService")
     public Boolean onService;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

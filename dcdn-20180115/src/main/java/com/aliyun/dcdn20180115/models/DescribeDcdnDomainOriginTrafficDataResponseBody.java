@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The amount of back-to-origin traffic returned at each time interval. Unit: bytes.</p>
+     */
     @NameInMap("OriginTrafficDataPerInterval")
     public DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerInterval originTrafficDataPerInterval;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,21 +94,39 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTP.</p>
+         */
         @NameInMap("DynamicHttpOriginTraffic")
         public Float dynamicHttpOriginTraffic;
 
+        /**
+         * <p>The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTPS.</p>
+         */
         @NameInMap("DynamicHttpsOriginTraffic")
         public Float dynamicHttpsOriginTraffic;
 
+        /**
+         * <p>The amount of back-to-origin traffic.</p>
+         */
         @NameInMap("OriginTraffic")
         public Float originTraffic;
 
+        /**
+         * <p>The amount of back-to-origin traffic that was consumed to deliver static content over HTTP.</p>
+         */
         @NameInMap("StaticHttpOriginTraffic")
         public Float staticHttpOriginTraffic;
 
+        /**
+         * <p>The amount of back-to-origin traffic that was consumed to deliver static content over HTTPS.</p>
+         */
         @NameInMap("StaticHttpsOriginTraffic")
         public Float staticHttpsOriginTraffic;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CreateDcdnWafPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the protection policy that you created.</p>
+     */
     @NameInMap("PolicyId")
     public Long policyId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

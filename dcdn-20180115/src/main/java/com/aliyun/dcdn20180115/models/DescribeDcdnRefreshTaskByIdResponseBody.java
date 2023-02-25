@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of prefetch or refresh tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<DescribeDcdnRefreshTaskByIdResponseBodyTasks> tasks;
 
+    /**
+     * <p>The total number of tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,24 +52,58 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnRefreshTaskByIdResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The error returned when the refresh or prefetch task failed. Valid values:</p>
+         * <br>
+         * <p>*   **Internal Error**: An internal error occurred.</p>
+         * <p>*   **Origin Timeout**: The response from the origin server timed out.</p>
+         * <p>*   **Origin Return StatusCode 5XX**: The origin server returned an HTTP 5xx status code.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The path of the refresh or prefetch object.</p>
+         */
         @NameInMap("ObjectPath")
         public String objectPath;
 
+        /**
+         * <p>The type of the refresh or prefetch task. Valid values:</p>
+         * <br>
+         * <p>*   **file**: refreshes an individual file.</p>
+         * <p>*   **directory**: refreshes files under a specified directory.</p>
+         * <p>*   **preload**: prefetches an individual file.</p>
+         */
         @NameInMap("ObjectType")
         public String objectType;
 
+        /**
+         * <p>The progress of the task, in percentage.</p>
+         */
         @NameInMap("Process")
         public String process;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **Complete**: The task has completed.</p>
+         * <p>*   **Pending**: The task is pending.</p>
+         * <p>*   **Refreshing**: The task is in progress.</p>
+         * <p>*   **Failed**: The task has failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

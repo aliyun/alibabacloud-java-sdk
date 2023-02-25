@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The list of the data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeDcdnDomainRealTimeQpsDataResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainRealTimeQpsDataResponseBodyDataQpsModel extends TeaModel {
+        /**
+         * <p>The QPS data.</p>
+         */
         @NameInMap("Qps")
         public Float qps;
 
+        /**
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

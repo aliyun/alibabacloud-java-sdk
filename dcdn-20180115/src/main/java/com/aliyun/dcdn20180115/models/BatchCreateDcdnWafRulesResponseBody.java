@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The IDs of created rules.</p>
+     */
     @NameInMap("RuleIds")
     public BatchCreateDcdnWafRulesResponseBodyRuleIds ruleIds;
 

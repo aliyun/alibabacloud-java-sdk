@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The access statistics by ISP.</p>
+     */
     @NameInMap("Value")
     public DescribeDcdnDomainIspDataResponseBodyValue value;
 
@@ -76,36 +94,69 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainIspDataResponseBodyValueIspProportionData extends TeaModel {
+        /**
+         * <p>The average response size. Unit: bytes.</p>
+         */
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
+        /**
+         * <p>The average response speed. Unit: byte/ms.</p>
+         */
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
+        /**
+         * <p>The average response time. Unit: milliseconds.</p>
+         */
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
+        /**
+         * <p>The bandwidth.</p>
+         */
         @NameInMap("Bps")
         public String bps;
 
+        /**
+         * <p>The proportion of network traffic. For example, a value of 90 indicates that 90% of network traffic was coming from the specified ISP.</p>
+         */
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
+        /**
+         * <p>The information about the ISP.</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>The name of the ISP.</p>
+         */
         @NameInMap("IspEname")
         public String ispEname;
 
+        /**
+         * <p>The proportion of requests.</p>
+         */
         @NameInMap("Proportion")
         public String proportion;
 
+        /**
+         * <p>The number of queries per second.</p>
+         */
         @NameInMap("Qps")
         public String qps;
 
+        /**
+         * <p>The total amount of network traffic.</p>
+         */
         @NameInMap("TotalBytes")
         public String totalBytes;
 
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("TotalQuery")
         public String totalQuery;
 

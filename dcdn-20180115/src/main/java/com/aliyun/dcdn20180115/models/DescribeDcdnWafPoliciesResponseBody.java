@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page. Valid values: **1** to **100000**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of protection policies returned per page. Valid values: an integer from **1** to **500**. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The protection policies.</p>
+     */
     @NameInMap("Policies")
     public java.util.List<DescribeDcdnWafPoliciesResponseBodyPolicies> policies;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of protection policies.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,51 @@ public class DescribeDcdnWafPoliciesResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafPoliciesResponseBodyPolicies extends TeaModel {
+        /**
+         * <p>The type of the protection policy, which is the same as the DefenseScenes field in the QueryArgs parameter in request parameters.</p>
+         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        /**
+         * <p>The number of domain names that use this protection policy.</p>
+         */
         @NameInMap("DomainCount")
         public Integer domainCount;
 
+        /**
+         * <p>The time when the protection policy was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the protection policy.</p>
+         */
         @NameInMap("PolicyId")
         public Long policyId;
 
+        /**
+         * <p>The name of the protection policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The status of the protection policy, which is the same as the PolicyStatus field in the QueryArgs parameter in request parameters.</p>
+         */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
+        /**
+         * <p>Indicates whether this protection policy is the default policy, which is the same as the PolicyType field in the QueryArgs parameter in request parameters.</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The number of protection rules in this protection policy.</p>
+         */
         @NameInMap("RuleCount")
         public Long ruleCount;
 

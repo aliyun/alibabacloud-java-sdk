@@ -4,27 +4,61 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CreateDcdnSLSRealTimeLogDeliveryRequest extends TeaModel {
+    /**
+     * <p>The type of the collected logs. Default value: cdn_log_access_l1. Valid values:</p>
+     * <br>
+     * <p>*   **cdn_log_access_l1**: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)</p>
+     * <p>*   **cdn_log_origin**: back-to-origin logs</p>
+     * <p>*   **cdn_log_er**: EdgeRoutine logs</p>
+     */
     @NameInMap("BusinessType")
     public String businessType;
 
+    /**
+     * <p>The data center. Valid values:</p>
+     * <br>
+     * <p>*   cn: China</p>
+     * <p>*   sg: Singapore</p>
+     * <p>*   in: India</p>
+     * <p>*   eu: Europe</p>
+     * <p>*   us: United States</p>
+     */
     @NameInMap("DataCenter")
     public String dataCenter;
 
+    /**
+     * <p>The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The name of a real-time log delivery project.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The name of the Log Service Logstore.</p>
+     */
     @NameInMap("SLSLogStore")
     public String SLSLogStore;
 
+    /**
+     * <p>The name of the Log Service project.</p>
+     */
     @NameInMap("SLSProject")
     public String SLSProject;
 
+    /**
+     * <p>The region to which real-time logs are delivered.</p>
+     */
     @NameInMap("SLSRegion")
     public String SLSRegion;
 
+    /**
+     * <p>The sampling rate.</p>
+     */
     @NameInMap("SamplingRate")
     public String samplingRate;
 

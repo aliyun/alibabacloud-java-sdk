@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The HTTP status codes.</p>
+     */
     @NameInMap("HttpCodeDataPerInterval")
     public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerInterval httpCodeDataPerInterval;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +94,21 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
     }
 
     public static class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCodeHttpCodeDataModule extends TeaModel {
+        /**
+         * <p>The HTTP status code.</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>The total number of times that the HTTP status code was returned.</p>
+         */
         @NameInMap("Count")
         public Float count;
 
+        /**
+         * <p>The proportion of the HTTP status code.</p>
+         */
         @NameInMap("Proportion")
         public Float proportion;
 
@@ -136,9 +163,15 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
     }
 
     public static class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The information about the HTTP status codes.</p>
+         */
         @NameInMap("WebsocketHttpCode")
         public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCode websocketHttpCode;
 

@@ -4,15 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
+    /**
+     * <p>The number of user connections at each time interval.</p>
+     */
     @NameInMap("ConnectionDataPerInterval")
     public DescribeDcdnDomainIpaConnDataResponseBodyConnectionDataPerInterval connectionDataPerInterval;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -54,12 +66,21 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainIpaConnDataResponseBodyConnectionDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The number of IPA user connections.</p>
+         */
         @NameInMap("Connections")
         public Long connections;
 
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
+    /**
+     * <p>The certificate information of the domain name.</p>
+     */
     @NameInMap("CertInfos")
     public DescribeDcdnDomainByCertificateResponseBodyCertInfos certInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,65 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo extends TeaModel {
+        /**
+         * <p>Indicates whether the CA certificate has been revoked. Valid values:</p>
+         * <br>
+         * <p>*   **yes**: The certificate has been revoked.</p>
+         * <p>*   **no**: The certificate is normal.</p>
+         */
         @NameInMap("CertCaIsLegacy")
         public String certCaIsLegacy;
 
+        /**
+         * <p>The time when the certificate expires.</p>
+         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
+        /**
+         * <p>Indicates whether the certificate is expired. Valid values:</p>
+         * <br>
+         * <p>*   **yes**: The certificate is expired.</p>
+         * <p>*   **no**: The certificate is not expired.</p>
+         */
         @NameInMap("CertExpired")
         public String certExpired;
 
+        /**
+         * <p>The time at which the certificate started to take effect.</p>
+         */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
+        /**
+         * <p>The name of the SSL certificate owner.</p>
+         */
         @NameInMap("CertSubjectCommonName")
         public String certSubjectCommonName;
 
+        /**
+         * <p>The type of the certificate. **RSA**, **DSA**, and **ECDSA**.</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
+        /**
+         * <p>The list of domain names that use the certificate.</p>
+         * <br>
+         * <p>If one or more domain names are returned, the domain names are matched with the specified certificate. Multiple domain names are separated with commas (,).</p>
+         */
         @NameInMap("DomainList")
         public String domainList;
 
+        /**
+         * <p>The domain names (DNS fields) that match the certificate. Multiple domain names are separated with commas (,).</p>
+         */
         @NameInMap("DomainNames")
         public String domainNames;
 
+        /**
+         * <p>The certificate authority CA that issued the certificate.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 

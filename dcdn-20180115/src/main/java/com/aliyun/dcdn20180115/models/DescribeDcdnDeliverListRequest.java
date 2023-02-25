@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDeliverListRequest extends TeaModel {
+    /**
+     * <p>The ID of the tracking task that you want to query. If you do not specify an ID, all tracking tasks are queried.</p>
+     */
     @NameInMap("DeliverId")
     public Long deliverId;
 
