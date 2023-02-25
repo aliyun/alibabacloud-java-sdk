@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
+    /**
+     * <p>The list of request hit ratios.</p>
+     */
     @NameInMap("Data")
     public DescribeDcdnDomainRealTimeReqHitRateDataResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
     }
 
     public static class DescribeDcdnDomainRealTimeReqHitRateDataResponseBodyDataReqHitRateDataModel extends TeaModel {
+        /**
+         * <p>The request hit ratio.</p>
+         */
         @NameInMap("ReqHitRate")
         public Float reqHitRate;
 
+        /**
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,24 +4,61 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
+    /**
+     * <p>The time when the change of the billing method starts to take effect. The time is in GMT. This time appears on the frontend only when it is later than the current time.</p>
+     */
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
+    /**
+     * <p>The new billing method to take effect. Valid values:</p>
+     * <br>
+     * <p>*   **PayByTraffic**</p>
+     * <p>*   **PayByBandwidth**</p>
+     * <p>*   **PayByBandwidth95**</p>
+     * <p>*   **PayByBandwidth_monthavg**</p>
+     * <p>*   **PayByBandwidth_month4th**</p>
+     * <p>*   **PayByBandwidth_monthday95avg**</p>
+     * <p>*   **PayByBandwidth_nighthalf95**</p>
+     */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The current billing method. Valid values:</p>
+     * <br>
+     * <p>*   **PayByTraffic**</p>
+     * <p>*   **PayByBandwidth**</p>
+     * <p>*   **PayByBandwidth95**</p>
+     * <p>*   **PayByBandwidth_monthavg**</p>
+     * <p>*   **PayByBandwidth_month4th**</p>
+     * <p>*   **PayByBandwidth_monthday95avg**</p>
+     * <p>*   **PayByBandwidth_nighthalf95**</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The time when the IPA service was activated. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format.</p>
+     */
     @NameInMap("OpeningTime")
     public String openingTime;
 
+    /**
+     * <p>The lock status of the IPA service.</p>
+     */
     @NameInMap("OperationLocks")
     public DescribeDcdnIpaServiceResponseBodyOperationLocks operationLocks;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -87,6 +124,9 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnIpaServiceResponseBodyOperationLocksLockReason extends TeaModel {
+        /**
+         * <p>The reason why the IPA service was locked. A value of **financial** indicates that your account has an overdue payment.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 

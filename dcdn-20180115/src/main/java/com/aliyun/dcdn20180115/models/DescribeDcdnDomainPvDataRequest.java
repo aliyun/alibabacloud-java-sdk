@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainPvDataRequest extends TeaModel {
+    /**
+     * <p>The name of the accelerated domain. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

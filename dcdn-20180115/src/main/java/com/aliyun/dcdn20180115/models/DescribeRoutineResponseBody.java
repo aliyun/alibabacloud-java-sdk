@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoutineResponseBody extends TeaModel {
+    /**
+     * <p>The metadata of the routine. The next table describes the fields.</p>
+     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

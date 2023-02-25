@@ -4,15 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The BGP bandwidth data that is collected for each interval.</p>
+     */
     @NameInMap("BgpDataInterval")
     public java.util.List<DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval> bgpDataInterval;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -54,12 +66,21 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval extends TeaModel {
+        /**
+         * <p>The inbound bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("In")
         public Float in;
 
+        /**
+         * <p>The outbound bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("Out")
         public Float out;
 
+        /**
+         * <p>The timestamp of the returned data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

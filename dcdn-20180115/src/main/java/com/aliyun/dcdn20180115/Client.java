@@ -82,6 +82,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * > 
+      * *   The Dynamic Route for CDN (DCDN) service is activated.
+      * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+      * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request AddDcdnDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddDcdnDomainResponse
+     */
     public AddDcdnDomainResponse addDcdnDomainWithOptions(AddDcdnDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -142,11 +153,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddDcdnDomainResponse());
     }
 
+    /**
+      * > 
+      * *   The Dynamic Route for CDN (DCDN) service is activated.
+      * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+      * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request AddDcdnDomainRequest
+      * @return AddDcdnDomainResponse
+     */
     public AddDcdnDomainResponse addDcdnDomain(AddDcdnDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addDcdnDomainWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   Make sure that the IPA service is activated before you add a domain name to accelerate.
+      * *   Make sure that the Internet content provider (ICP) filling is complete for the domain name to accelerate.
+      * *   If the content on the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review is complete by the end of the next business day after you submit the request.
+      * *   You can call this operation up to 10 times per second per account.
+      *
+      * @param request AddDcdnIpaDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddDcdnIpaDomainResponse
+     */
     public AddDcdnIpaDomainResponse addDcdnIpaDomainWithOptions(AddDcdnIpaDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -207,11 +239,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddDcdnIpaDomainResponse());
     }
 
+    /**
+      * > 
+      * *   Make sure that the IPA service is activated before you add a domain name to accelerate.
+      * *   Make sure that the Internet content provider (ICP) filling is complete for the domain name to accelerate.
+      * *   If the content on the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review is complete by the end of the next business day after you submit the request.
+      * *   You can call this operation up to 10 times per second per account.
+      *
+      * @param request AddDcdnIpaDomainRequest
+      * @return AddDcdnIpaDomainResponse
+     */
     public AddDcdnIpaDomainResponse addDcdnIpaDomain(AddDcdnIpaDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addDcdnIpaDomainWithOptions(request, runtime);
     }
 
+    /**
+      * **Prerequisites**:
+      * *   The [DCDN service is activated](~~64926~~).
+      * *   Internet Content Provider (ICP) filing is complete for the accelerated domain names.
+      * > 
+      * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * *   The maximum number of domain names configured at a time is 50.
+      * *   The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request BatchAddDcdnDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchAddDcdnDomainResponse
+     */
     public BatchAddDcdnDomainResponse batchAddDcdnDomainWithOptions(BatchAddDcdnDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -268,11 +323,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchAddDcdnDomainResponse());
     }
 
+    /**
+      * **Prerequisites**:
+      * *   The [DCDN service is activated](~~64926~~).
+      * *   Internet Content Provider (ICP) filing is complete for the accelerated domain names.
+      * > 
+      * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * *   The maximum number of domain names configured at a time is 50.
+      * *   The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request BatchAddDcdnDomainRequest
+      * @return BatchAddDcdnDomainResponse
+     */
     public BatchAddDcdnDomainResponse batchAddDcdnDomain(BatchAddDcdnDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchAddDcdnDomainWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 20 times per second per account.
+      *
+      * @param request BatchCreateDcdnWafRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchCreateDcdnWafRulesResponse
+     */
     public BatchCreateDcdnWafRulesResponse batchCreateDcdnWafRulesWithOptions(BatchCreateDcdnWafRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -301,11 +375,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateDcdnWafRulesResponse());
     }
 
+    /**
+      * >  You can call this operation up to 20 times per second per account.
+      *
+      * @param request BatchCreateDcdnWafRulesRequest
+      * @return BatchCreateDcdnWafRulesResponse
+     */
     public BatchCreateDcdnWafRulesResponse batchCreateDcdnWafRules(BatchCreateDcdnWafRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchCreateDcdnWafRulesWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   You can specify up to 50 domain names in each request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request BatchDeleteDcdnDomainConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchDeleteDcdnDomainConfigsResponse
+     */
     public BatchDeleteDcdnDomainConfigsResponse batchDeleteDcdnDomainConfigsWithOptions(BatchDeleteDcdnDomainConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -346,11 +435,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeleteDcdnDomainConfigsResponse());
     }
 
+    /**
+      * > 
+      * *   You can specify up to 50 domain names in each request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request BatchDeleteDcdnDomainConfigsRequest
+      * @return BatchDeleteDcdnDomainConfigsResponse
+     */
     public BatchDeleteDcdnDomainConfigsResponse batchDeleteDcdnDomainConfigs(BatchDeleteDcdnDomainConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchDeleteDcdnDomainConfigsWithOptions(request, runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request BatchDeleteDcdnWafRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchDeleteDcdnWafRulesResponse
+     */
     public BatchDeleteDcdnWafRulesResponse batchDeleteDcdnWafRulesWithOptions(BatchDeleteDcdnWafRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -375,11 +480,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeleteDcdnWafRulesResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request BatchDeleteDcdnWafRulesRequest
+      * @return BatchDeleteDcdnWafRulesResponse
+     */
     public BatchDeleteDcdnWafRulesResponse batchDeleteDcdnWafRules(BatchDeleteDcdnWafRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchDeleteDcdnWafRulesWithOptions(request, runtime);
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request BatchModifyDcdnWafRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchModifyDcdnWafRulesResponse
+     */
     public BatchModifyDcdnWafRulesResponse batchModifyDcdnWafRulesWithOptions(BatchModifyDcdnWafRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -408,11 +527,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchModifyDcdnWafRulesResponse());
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request BatchModifyDcdnWafRulesRequest
+      * @return BatchModifyDcdnWafRulesResponse
+     */
     public BatchModifyDcdnWafRulesResponse batchModifyDcdnWafRules(BatchModifyDcdnWafRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchModifyDcdnWafRulesWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 10 times per second per account.
+      *
+      * @param request BatchSetDcdnDomainCertificateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchSetDcdnDomainCertificateResponse
+     */
     public BatchSetDcdnDomainCertificateResponse batchSetDcdnDomainCertificateWithOptions(BatchSetDcdnDomainCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -469,11 +601,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchSetDcdnDomainCertificateResponse());
     }
 
+    /**
+      * >  You can call this operation up to 10 times per second per account.
+      *
+      * @param request BatchSetDcdnDomainCertificateRequest
+      * @return BatchSetDcdnDomainCertificateResponse
+     */
     public BatchSetDcdnDomainCertificateResponse batchSetDcdnDomainCertificate(BatchSetDcdnDomainCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchSetDcdnDomainCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,)
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request BatchSetDcdnDomainConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchSetDcdnDomainConfigsResponse
+     */
     public BatchSetDcdnDomainConfigsResponse batchSetDcdnDomainConfigsWithOptions(BatchSetDcdnDomainConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -514,11 +661,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchSetDcdnDomainConfigsResponse());
     }
 
+    /**
+      * > 
+      * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,)
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request BatchSetDcdnDomainConfigsRequest
+      * @return BatchSetDcdnDomainConfigsResponse
+     */
     public BatchSetDcdnDomainConfigsResponse batchSetDcdnDomainConfigs(BatchSetDcdnDomainConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchSetDcdnDomainConfigsWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request BatchSetDcdnIpaDomainConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchSetDcdnIpaDomainConfigsResponse
+     */
     public BatchSetDcdnIpaDomainConfigsResponse batchSetDcdnIpaDomainConfigsWithOptions(BatchSetDcdnIpaDomainConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -559,11 +721,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchSetDcdnIpaDomainConfigsResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request BatchSetDcdnIpaDomainConfigsRequest
+      * @return BatchSetDcdnIpaDomainConfigsResponse
+     */
     public BatchSetDcdnIpaDomainConfigsResponse batchSetDcdnIpaDomainConfigs(BatchSetDcdnIpaDomainConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchSetDcdnIpaDomainConfigsWithOptions(request, runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request BatchSetDcdnWafDomainConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchSetDcdnWafDomainConfigsResponse
+     */
     public BatchSetDcdnWafDomainConfigsResponse batchSetDcdnWafDomainConfigsWithOptions(BatchSetDcdnWafDomainConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -596,11 +772,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchSetDcdnWafDomainConfigsResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request BatchSetDcdnWafDomainConfigsRequest
+      * @return BatchSetDcdnWafDomainConfigsResponse
+     */
     public BatchSetDcdnWafDomainConfigsResponse batchSetDcdnWafDomainConfigs(BatchSetDcdnWafDomainConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchSetDcdnWafDomainConfigsWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request CheckDcdnProjectExistRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CheckDcdnProjectExistResponse
+     */
     public CheckDcdnProjectExistResponse checkDcdnProjectExistWithOptions(CheckDcdnProjectExistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -621,11 +811,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckDcdnProjectExistResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request CheckDcdnProjectExistRequest
+      * @return CheckDcdnProjectExistResponse
+     */
     public CheckDcdnProjectExistResponse checkDcdnProjectExist(CheckDcdnProjectExistRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkDcdnProjectExistWithOptions(request, runtime);
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request CommitStagingRoutineCodeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CommitStagingRoutineCodeResponse
+     */
     public CommitStagingRoutineCodeResponse commitStagingRoutineCodeWithOptions(CommitStagingRoutineCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -654,11 +857,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CommitStagingRoutineCodeResponse());
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request CommitStagingRoutineCodeRequest
+      * @return CommitStagingRoutineCodeResponse
+     */
     public CommitStagingRoutineCodeResponse commitStagingRoutineCode(CommitStagingRoutineCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.commitStagingRoutineCodeWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to three times per second per account.
+      *
+      * @param request CreateDcdnDeliverTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDcdnDeliverTaskResponse
+     */
     public CreateDcdnDeliverTaskResponse createDcdnDeliverTaskWithOptions(CreateDcdnDeliverTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -699,11 +915,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDcdnDeliverTaskResponse());
     }
 
+    /**
+      * >  You can call this operation up to three times per second per account.
+      *
+      * @param request CreateDcdnDeliverTaskRequest
+      * @return CreateDcdnDeliverTaskResponse
+     */
     public CreateDcdnDeliverTaskResponse createDcdnDeliverTask(CreateDcdnDeliverTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDcdnDeliverTaskWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request CreateDcdnSLSRealTimeLogDeliveryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDcdnSLSRealTimeLogDeliveryResponse
+     */
     public CreateDcdnSLSRealTimeLogDeliveryResponse createDcdnSLSRealTimeLogDeliveryWithOptions(CreateDcdnSLSRealTimeLogDeliveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -756,11 +985,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDcdnSLSRealTimeLogDeliveryResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request CreateDcdnSLSRealTimeLogDeliveryRequest
+      * @return CreateDcdnSLSRealTimeLogDeliveryResponse
+     */
     public CreateDcdnSLSRealTimeLogDeliveryResponse createDcdnSLSRealTimeLogDelivery(CreateDcdnSLSRealTimeLogDeliveryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDcdnSLSRealTimeLogDeliveryWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+      * *   You can call this operation up to three times per second.
+      *
+      * @param request CreateDcdnSubTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDcdnSubTaskResponse
+     */
     public CreateDcdnSubTaskResponse createDcdnSubTaskWithOptions(CreateDcdnSubTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -789,11 +1033,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDcdnSubTaskResponse());
     }
 
+    /**
+      * > 
+      * *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+      * *   You can call this operation up to three times per second.
+      *
+      * @param request CreateDcdnSubTaskRequest
+      * @return CreateDcdnSubTaskResponse
+     */
     public CreateDcdnSubTaskResponse createDcdnSubTask(CreateDcdnSubTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDcdnSubTaskWithOptions(request, runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request CreateDcdnWafPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDcdnWafPolicyResponse
+     */
     public CreateDcdnWafPolicyResponse createDcdnWafPolicyWithOptions(CreateDcdnWafPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -830,11 +1090,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDcdnWafPolicyResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request CreateDcdnWafPolicyRequest
+      * @return CreateDcdnWafPolicyResponse
+     */
     public CreateDcdnWafPolicyResponse createDcdnWafPolicy(CreateDcdnWafPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDcdnWafPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+      * *   This operation creates a routine that contains only production and staging environments.
+      * *   You can call this operation up to 100 times per second.
+      *
+      * @param tmpReq CreateRoutineRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRoutineResponse
+     */
     public CreateRoutineResponse createRoutineWithOptions(CreateRoutineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateRoutineShrinkRequest request = new CreateRoutineShrinkRequest();
@@ -873,11 +1150,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoutineResponse());
     }
 
+    /**
+      * > 
+      * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+      * *   This operation creates a routine that contains only production and staging environments.
+      * *   You can call this operation up to 100 times per second.
+      *
+      * @param request CreateRoutineRequest
+      * @return CreateRoutineResponse
+     */
     public CreateRoutineResponse createRoutine(CreateRoutineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRoutineWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request CreateSlrAndSlsProjectRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateSlrAndSlsProjectResponse
+     */
     public CreateSlrAndSlsProjectResponse createSlrAndSlsProjectWithOptions(CreateSlrAndSlsProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -906,11 +1199,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSlrAndSlsProjectResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request CreateSlrAndSlsProjectRequest
+      * @return CreateSlrAndSlsProjectResponse
+     */
     public CreateSlrAndSlsProjectResponse createSlrAndSlsProject(CreateSlrAndSlsProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSlrAndSlsProjectWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 3.
+      *
+      * @param request DeleteDcdnDeliverTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnDeliverTaskResponse
+     */
     public DeleteDcdnDeliverTaskResponse deleteDcdnDeliverTaskWithOptions(DeleteDcdnDeliverTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -935,11 +1241,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnDeliverTaskResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 3.
+      *
+      * @param request DeleteDcdnDeliverTaskRequest
+      * @return DeleteDcdnDeliverTaskResponse
+     */
     public DeleteDcdnDeliverTaskResponse deleteDcdnDeliverTask(DeleteDcdnDeliverTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnDeliverTaskWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   Before you delete your domain name, you must request the Domain Name System (DNS) provider to restore the A record of the domain name. Otherwise, the domain name may become inaccessible after you delete it.
+      * *   If you call the **DeleteDcdnDomain** operation, all the information about the accelerated domain name is deleted. If you want to disable an accelerated domain name, call the [StopDcdnDomain](~~130622~~) operation.
+      * *   The maximum number of times that each user can call this operation per second is 10.
+      *
+      * @param request DeleteDcdnDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnDomainResponse
+     */
     public DeleteDcdnDomainResponse deleteDcdnDomainWithOptions(DeleteDcdnDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -976,11 +1298,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnDomainResponse());
     }
 
+    /**
+      * > 
+      * *   Before you delete your domain name, you must request the Domain Name System (DNS) provider to restore the A record of the domain name. Otherwise, the domain name may become inaccessible after you delete it.
+      * *   If you call the **DeleteDcdnDomain** operation, all the information about the accelerated domain name is deleted. If you want to disable an accelerated domain name, call the [StopDcdnDomain](~~130622~~) operation.
+      * *   The maximum number of times that each user can call this operation per second is 10.
+      *
+      * @param request DeleteDcdnDomainRequest
+      * @return DeleteDcdnDomainResponse
+     */
     public DeleteDcdnDomainResponse deleteDcdnDomain(DeleteDcdnDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnDomainWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   Before you delete your domain name, we recommend that you request the Domain Name System (DNS) provider to restore the A record of the domain name. Otherwise, the domain name may become inaccessible after you delete it.
+      * *   If you call the **DeleteDcdnIpaDomain** operation to delete an accelerated domain name, all the relevant information is deleted. If you want to only disable an accelerated domain name, we recommend that you call the **StopDcdnIpaDomain** operation.
+      * *   The maximum number of times that users can call this operation per second is 10.
+      *
+      * @param request DeleteDcdnIpaDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnIpaDomainResponse
+     */
     public DeleteDcdnIpaDomainResponse deleteDcdnIpaDomainWithOptions(DeleteDcdnIpaDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1017,11 +1358,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnIpaDomainResponse());
     }
 
+    /**
+      * > 
+      * *   Before you delete your domain name, we recommend that you request the Domain Name System (DNS) provider to restore the A record of the domain name. Otherwise, the domain name may become inaccessible after you delete it.
+      * *   If you call the **DeleteDcdnIpaDomain** operation to delete an accelerated domain name, all the relevant information is deleted. If you want to only disable an accelerated domain name, we recommend that you call the **StopDcdnIpaDomain** operation.
+      * *   The maximum number of times that users can call this operation per second is 10.
+      *
+      * @param request DeleteDcdnIpaDomainRequest
+      * @return DeleteDcdnIpaDomainResponse
+     */
     public DeleteDcdnIpaDomainResponse deleteDcdnIpaDomain(DeleteDcdnIpaDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnIpaDomainWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 10.
+      *
+      * @param request DeleteDcdnIpaSpecificConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnIpaSpecificConfigResponse
+     */
     public DeleteDcdnIpaSpecificConfigResponse deleteDcdnIpaSpecificConfigWithOptions(DeleteDcdnIpaSpecificConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1058,11 +1415,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnIpaSpecificConfigResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 10.
+      *
+      * @param request DeleteDcdnIpaSpecificConfigRequest
+      * @return DeleteDcdnIpaSpecificConfigResponse
+     */
     public DeleteDcdnIpaSpecificConfigResponse deleteDcdnIpaSpecificConfig(DeleteDcdnIpaSpecificConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnIpaSpecificConfigWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 50 times per second per account.
+      *
+      * @param request DeleteDcdnKvRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnKvResponse
+     */
     public DeleteDcdnKvResponse deleteDcdnKvWithOptions(DeleteDcdnKvRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1091,11 +1461,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnKvResponse());
     }
 
+    /**
+      * >  You can call this operation up to 50 times per second per account.
+      *
+      * @param request DeleteDcdnKvRequest
+      * @return DeleteDcdnKvResponse
+     */
     public DeleteDcdnKvResponse deleteDcdnKv(DeleteDcdnKvRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnKvWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DeleteDcdnRealTimeLogProjectRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnRealTimeLogProjectResponse
+     */
     public DeleteDcdnRealTimeLogProjectResponse deleteDcdnRealTimeLogProjectWithOptions(DeleteDcdnRealTimeLogProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1120,11 +1503,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnRealTimeLogProjectResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DeleteDcdnRealTimeLogProjectRequest
+      * @return DeleteDcdnRealTimeLogProjectResponse
+     */
     public DeleteDcdnRealTimeLogProjectResponse deleteDcdnRealTimeLogProject(DeleteDcdnRealTimeLogProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnRealTimeLogProjectWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request DeleteDcdnSpecificConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnSpecificConfigResponse
+     */
     public DeleteDcdnSpecificConfigResponse deleteDcdnSpecificConfigWithOptions(DeleteDcdnSpecificConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1161,11 +1557,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnSpecificConfigResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request DeleteDcdnSpecificConfigRequest
+      * @return DeleteDcdnSpecificConfigResponse
+     */
     public DeleteDcdnSpecificConfigResponse deleteDcdnSpecificConfig(DeleteDcdnSpecificConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnSpecificConfigWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request DeleteDcdnSpecificStagingConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnSpecificStagingConfigResponse
+     */
     public DeleteDcdnSpecificStagingConfigResponse deleteDcdnSpecificStagingConfigWithOptions(DeleteDcdnSpecificStagingConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1202,11 +1611,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnSpecificStagingConfigResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request DeleteDcdnSpecificStagingConfigRequest
+      * @return DeleteDcdnSpecificStagingConfigResponse
+     */
     public DeleteDcdnSpecificStagingConfigResponse deleteDcdnSpecificStagingConfig(DeleteDcdnSpecificStagingConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnSpecificStagingConfigWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to three times per second per account.
+      *
+      * @param request DeleteDcdnSubTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnSubTaskResponse
+     */
     public DeleteDcdnSubTaskResponse deleteDcdnSubTaskWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1223,11 +1645,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnSubTaskResponse());
     }
 
+    /**
+      * >  You can call this operation up to three times per second per account.
+      *
+      * @return DeleteDcdnSubTaskResponse
+     */
     public DeleteDcdnSubTaskResponse deleteDcdnSubTask() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnSubTaskWithOptions(runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request DeleteDcdnWafPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDcdnWafPolicyResponse
+     */
     public DeleteDcdnWafPolicyResponse deleteDcdnWafPolicyWithOptions(DeleteDcdnWafPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1252,11 +1687,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnWafPolicyResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request DeleteDcdnWafPolicyRequest
+      * @return DeleteDcdnWafPolicyResponse
+     */
     public DeleteDcdnWafPolicyResponse deleteDcdnWafPolicy(DeleteDcdnWafPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnWafPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request DeleteRoutineRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRoutineResponse
+     */
     public DeleteRoutineResponse deleteRoutineWithOptions(DeleteRoutineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1281,11 +1730,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRoutineResponse());
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request DeleteRoutineRequest
+      * @return DeleteRoutineResponse
+     */
     public DeleteRoutineResponse deleteRoutine(DeleteRoutineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRoutineWithOptions(request, runtime);
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request DeleteRoutineCodeRevisionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRoutineCodeRevisionResponse
+     */
     public DeleteRoutineCodeRevisionResponse deleteRoutineCodeRevisionWithOptions(DeleteRoutineCodeRevisionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1314,11 +1776,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRoutineCodeRevisionResponse());
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request DeleteRoutineCodeRevisionRequest
+      * @return DeleteRoutineCodeRevisionResponse
+     */
     public DeleteRoutineCodeRevisionResponse deleteRoutineCodeRevision(DeleteRoutineCodeRevisionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRoutineCodeRevisionWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   This operation deletes only custom preset canary release environments. You cannot delete production or staging environments.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param tmpReq DeleteRoutineConfEnvsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRoutineConfEnvsResponse
+     */
     public DeleteRoutineConfEnvsResponse deleteRoutineConfEnvsWithOptions(DeleteRoutineConfEnvsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteRoutineConfEnvsShrinkRequest request = new DeleteRoutineConfEnvsShrinkRequest();
@@ -1353,11 +1830,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRoutineConfEnvsResponse());
     }
 
+    /**
+      * > 
+      * *   This operation deletes only custom preset canary release environments. You cannot delete production or staging environments.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DeleteRoutineConfEnvsRequest
+      * @return DeleteRoutineConfEnvsResponse
+     */
     public DeleteRoutineConfEnvsResponse deleteRoutineConfEnvs(DeleteRoutineConfEnvsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRoutineConfEnvsWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to three times per second.
+      *
+      * @param request DescribeDcdnAclFieldsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnAclFieldsResponse
+     */
     public DescribeDcdnAclFieldsResponse describeDcdnAclFieldsWithOptions(DescribeDcdnAclFieldsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1382,11 +1874,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnAclFieldsResponse());
     }
 
+    /**
+      * >  You can call this operation up to three times per second.
+      *
+      * @param request DescribeDcdnAclFieldsRequest
+      * @return DescribeDcdnAclFieldsResponse
+     */
     public DescribeDcdnAclFieldsResponse describeDcdnAclFields(DescribeDcdnAclFieldsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnAclFieldsWithOptions(request, runtime);
     }
 
+    /**
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both of them empty.
+      * *   If you specify multiple Internet service providers (ISPs), the data for the ISPs is aggregated.
+      * *   You can query data in the last 90 days.
+      * *   The maximum time range from the start time to the end time is 31 days. The start time is specified by the StartTime parameter and the end time is specified by the EndTime parameter.
+      * *   If the time range from the start time to the end time is 72 hours or shorter, you can specify the interval as 5 minutes. If the time range is longer than 72 hours, you must specify the interval as 1 hour.
+      * *   You can call this operation up to five times per second per account.
+      *
+      * @param request DescribeDcdnBgpBpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnBgpBpsDataResponse
+     */
     public DescribeDcdnBgpBpsDataResponse describeDcdnBgpBpsDataWithOptions(DescribeDcdnBgpBpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1431,11 +1941,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnBgpBpsDataResponse());
     }
 
+    /**
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both of them empty.
+      * *   If you specify multiple Internet service providers (ISPs), the data for the ISPs is aggregated.
+      * *   You can query data in the last 90 days.
+      * *   The maximum time range from the start time to the end time is 31 days. The start time is specified by the StartTime parameter and the end time is specified by the EndTime parameter.
+      * *   If the time range from the start time to the end time is 72 hours or shorter, you can specify the interval as 5 minutes. If the time range is longer than 72 hours, you must specify the interval as 1 hour.
+      * *   You can call this operation up to five times per second per account.
+      *
+      * @param request DescribeDcdnBgpBpsDataRequest
+      * @return DescribeDcdnBgpBpsDataResponse
+     */
     public DescribeDcdnBgpBpsDataResponse describeDcdnBgpBpsData(DescribeDcdnBgpBpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnBgpBpsDataWithOptions(request, runtime);
     }
 
+    /**
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both of them empty.
+      * *   If you specify multiple Internet service providers (ISPs), the data for the ISPs is aggregated.
+      * *   You can query data in the last 90 days.
+      * *   The maximum time range from the start time to the end time is 31 days. The start time is specified by the StartTime parameter and the end time is specified by the EndTime parameter.
+      * *   If the time range from the start time to the end time is 72 hours or shorter, you can specify the interval as 5 minutes. If the time range is longer than 72 hours, you must specify the interval as 1 hour.
+      * *   You can call this operation up to five times per second per account.
+      *
+      * @param request DescribeDcdnBgpTrafficDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnBgpTrafficDataResponse
+     */
     public DescribeDcdnBgpTrafficDataResponse describeDcdnBgpTrafficDataWithOptions(DescribeDcdnBgpTrafficDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1472,11 +2005,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnBgpTrafficDataResponse());
     }
 
+    /**
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both of them empty.
+      * *   If you specify multiple Internet service providers (ISPs), the data for the ISPs is aggregated.
+      * *   You can query data in the last 90 days.
+      * *   The maximum time range from the start time to the end time is 31 days. The start time is specified by the StartTime parameter and the end time is specified by the EndTime parameter.
+      * *   If the time range from the start time to the end time is 72 hours or shorter, you can specify the interval as 5 minutes. If the time range is longer than 72 hours, you must specify the interval as 1 hour.
+      * *   You can call this operation up to five times per second per account.
+      *
+      * @param request DescribeDcdnBgpTrafficDataRequest
+      * @return DescribeDcdnBgpTrafficDataResponse
+     */
     public DescribeDcdnBgpTrafficDataResponse describeDcdnBgpTrafficData(DescribeDcdnBgpTrafficDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnBgpTrafficDataWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnBlockedRegionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnBlockedRegionsResponse
+     */
     public DescribeDcdnBlockedRegionsResponse describeDcdnBlockedRegionsWithOptions(DescribeDcdnBlockedRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1497,11 +2048,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnBlockedRegionsResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnBlockedRegionsRequest
+      * @return DescribeDcdnBlockedRegionsResponse
+     */
     public DescribeDcdnBlockedRegionsResponse describeDcdnBlockedRegions(DescribeDcdnBlockedRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnBlockedRegionsWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnCertificateDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnCertificateDetailResponse
+     */
     public DescribeDcdnCertificateDetailResponse describeDcdnCertificateDetailWithOptions(DescribeDcdnCertificateDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1534,11 +2098,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnCertificateDetailResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnCertificateDetailRequest
+      * @return DescribeDcdnCertificateDetailResponse
+     */
     public DescribeDcdnCertificateDetailResponse describeDcdnCertificateDetail(DescribeDcdnCertificateDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnCertificateDetailWithOptions(request, runtime);
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnCertificateListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnCertificateListResponse
+     */
     public DescribeDcdnCertificateListResponse describeDcdnCertificateListWithOptions(DescribeDcdnCertificateListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1571,11 +2148,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnCertificateListResponse());
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnCertificateListRequest
+      * @return DescribeDcdnCertificateListResponse
+     */
     public DescribeDcdnCertificateListResponse describeDcdnCertificateList(DescribeDcdnCertificateListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnCertificateListWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 10 times per second per account.
+      *
+      * @param request DescribeDcdnDeletedDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDeletedDomainsResponse
+     */
     public DescribeDcdnDeletedDomainsResponse describeDcdnDeletedDomainsWithOptions(DescribeDcdnDeletedDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1604,11 +2194,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDeletedDomainsResponse());
     }
 
+    /**
+      * >  You can call this operation up to 10 times per second per account.
+      *
+      * @param request DescribeDcdnDeletedDomainsRequest
+      * @return DescribeDcdnDeletedDomainsResponse
+     */
     public DescribeDcdnDeletedDomainsResponse describeDcdnDeletedDomains(DescribeDcdnDeletedDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDeletedDomainsWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 3.
+      *
+      * @param request DescribeDcdnDeliverListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDeliverListResponse
+     */
     public DescribeDcdnDeliverListResponse describeDcdnDeliverListWithOptions(DescribeDcdnDeliverListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1633,6 +2236,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDeliverListResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 3.
+      *
+      * @param request DescribeDcdnDeliverListRequest
+      * @return DescribeDcdnDeliverListResponse
+     */
     public DescribeDcdnDeliverListResponse describeDcdnDeliverList(DescribeDcdnDeliverListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDeliverListWithOptions(request, runtime);
@@ -1716,6 +2325,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnDomainBpsDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 20 times per second.
+      * - If you do not set the **StartTime** or **EndTime** parameters, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data is available | Data delay |
+      * | ---------------- | ---------------------------- | ---------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainBpsDataByLayerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainBpsDataByLayerResponse
+     */
     public DescribeDcdnDomainBpsDataByLayerResponse describeDcdnDomainBpsDataByLayerWithOptions(DescribeDcdnDomainBpsDataByLayerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1764,11 +2387,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainBpsDataByLayerResponse());
     }
 
+    /**
+      * - You can call this operation up to 20 times per second.
+      * - If you do not set the **StartTime** or **EndTime** parameters, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data is available | Data delay |
+      * | ---------------- | ---------------------------- | ---------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainBpsDataByLayerRequest
+      * @return DescribeDcdnDomainBpsDataByLayerResponse
+     */
     public DescribeDcdnDomainBpsDataByLayerResponse describeDcdnDomainBpsDataByLayer(DescribeDcdnDomainBpsDataByLayerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainBpsDataByLayerWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnDomainByCertificateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainByCertificateResponse
+     */
     public DescribeDcdnDomainByCertificateResponse describeDcdnDomainByCertificateWithOptions(DescribeDcdnDomainByCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1797,11 +2440,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainByCertificateResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnDomainByCertificateRequest
+      * @return DescribeDcdnDomainByCertificateResponse
+     */
     public DescribeDcdnDomainByCertificateResponse describeDcdnDomainByCertificate(DescribeDcdnDomainByCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainByCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   If you do not configure the StartTime or EndTime parameter, data collected over the last 24 hours is queried. If you configure both the StartTime and EndTime parameters, data collected within the specified time range is queried.
+      * *   You can query data collected over the last 30 days.
+      * *   You can call this operation up to 50 times per second.
+      *
+      * @param request DescribeDcdnDomainCcActivityLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainCcActivityLogResponse
+     */
     public DescribeDcdnDomainCcActivityLogResponse describeDcdnDomainCcActivityLogWithOptions(DescribeDcdnDomainCcActivityLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1854,11 +2513,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainCcActivityLogResponse());
     }
 
+    /**
+      * > 
+      * *   If you do not configure the StartTime or EndTime parameter, data collected over the last 24 hours is queried. If you configure both the StartTime and EndTime parameters, data collected within the specified time range is queried.
+      * *   You can query data collected over the last 30 days.
+      * *   You can call this operation up to 50 times per second.
+      *
+      * @param request DescribeDcdnDomainCcActivityLogRequest
+      * @return DescribeDcdnDomainCcActivityLogResponse
+     */
     public DescribeDcdnDomainCcActivityLogResponse describeDcdnDomainCcActivityLog(DescribeDcdnDomainCcActivityLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainCcActivityLogWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnDomainCertificateInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainCertificateInfoResponse
+     */
     public DescribeDcdnDomainCertificateInfoResponse describeDcdnDomainCertificateInfoWithOptions(DescribeDcdnDomainCertificateInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1883,11 +2558,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainCertificateInfoResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnDomainCertificateInfoRequest
+      * @return DescribeDcdnDomainCertificateInfoResponse
+     */
     public DescribeDcdnDomainCertificateInfoResponse describeDcdnDomainCertificateInfo(DescribeDcdnDomainCertificateInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainCertificateInfoWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 80.
+      *
+      * @param request DescribeDcdnDomainCnameRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainCnameResponse
+     */
     public DescribeDcdnDomainCnameResponse describeDcdnDomainCnameWithOptions(DescribeDcdnDomainCnameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1908,11 +2596,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainCnameResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 80.
+      *
+      * @param request DescribeDcdnDomainCnameRequest
+      * @return DescribeDcdnDomainCnameResponse
+     */
     public DescribeDcdnDomainCnameResponse describeDcdnDomainCname(DescribeDcdnDomainCnameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainCnameWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   You can query the configurations of one or more features in a request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnDomainConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainConfigsResponse
+     */
     public DescribeDcdnDomainConfigsResponse describeDcdnDomainConfigsWithOptions(DescribeDcdnDomainConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1953,11 +2656,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainConfigsResponse());
     }
 
+    /**
+      * > 
+      * *   You can query the configurations of one or more features in a request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnDomainConfigsRequest
+      * @return DescribeDcdnDomainConfigsResponse
+     */
     public DescribeDcdnDomainConfigsResponse describeDcdnDomainConfigs(DescribeDcdnDomainConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainConfigsWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnDomainDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainDetailResponse
+     */
     public DescribeDcdnDomainDetailResponse describeDcdnDomainDetailWithOptions(DescribeDcdnDomainDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1990,11 +2708,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainDetailResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnDomainDetailRequest
+      * @return DescribeDcdnDomainDetailResponse
+     */
     public DescribeDcdnDomainDetailResponse describeDcdnDomainDetail(DescribeDcdnDomainDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainDetailWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 100 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainHitRateDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainHitRateDataResponse
+     */
     public DescribeDcdnDomainHitRateDataResponse describeDcdnDomainHitRateDataWithOptions(DescribeDcdnDomainHitRateDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2031,11 +2769,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainHitRateDataResponse());
     }
 
+    /**
+      * - You can call this operation up to 100 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainHitRateDataRequest
+      * @return DescribeDcdnDomainHitRateDataResponse
+     */
     public DescribeDcdnDomainHitRateDataResponse describeDcdnDomainHitRateData(DescribeDcdnDomainHitRateDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainHitRateDataWithOptions(request, runtime);
     }
 
+    /**
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * * You can call this operation up to 100 times per second per account.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainHttpCodeDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainHttpCodeDataResponse
+     */
     public DescribeDcdnDomainHttpCodeDataResponse describeDcdnDomainHttpCodeDataWithOptions(DescribeDcdnDomainHttpCodeDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2080,11 +2846,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainHttpCodeDataResponse());
     }
 
+    /**
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * * You can call this operation up to 100 times per second per account.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainHttpCodeDataRequest
+      * @return DescribeDcdnDomainHttpCodeDataResponse
+     */
     public DescribeDcdnDomainHttpCodeDataResponse describeDcdnDomainHttpCodeData(DescribeDcdnDomainHttpCodeDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainHttpCodeDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 20 times per second per account.
+      * - You cannot query the distribution of HTTP status codes by IP protocol.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainHttpCodeDataByLayerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainHttpCodeDataByLayerResponse
+     */
     public DescribeDcdnDomainHttpCodeDataByLayerResponse describeDcdnDomainHttpCodeDataByLayerWithOptions(DescribeDcdnDomainHttpCodeDataByLayerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2133,11 +2928,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainHttpCodeDataByLayerResponse());
     }
 
+    /**
+      * - You can call this operation up to 20 times per second per account.
+      * - You cannot query the distribution of HTTP status codes by IP protocol.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainHttpCodeDataByLayerRequest
+      * @return DescribeDcdnDomainHttpCodeDataByLayerResponse
+     */
     public DescribeDcdnDomainHttpCodeDataByLayerResponse describeDcdnDomainHttpCodeDataByLayer(DescribeDcdnDomainHttpCodeDataByLayerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainHttpCodeDataByLayerWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   Unit: bit/s.
+      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnDomainIpaBpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainIpaBpsDataResponse
+     */
     public DescribeDcdnDomainIpaBpsDataResponse describeDcdnDomainIpaBpsDataWithOptions(DescribeDcdnDomainIpaBpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2190,11 +3009,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainIpaBpsDataResponse());
     }
 
+    /**
+      * > 
+      * *   Unit: bit/s.
+      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnDomainIpaBpsDataRequest
+      * @return DescribeDcdnDomainIpaBpsDataResponse
+     */
     public DescribeDcdnDomainIpaBpsDataResponse describeDcdnDomainIpaBpsData(DescribeDcdnDomainIpaBpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainIpaBpsDataWithOptions(request, runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 10 times per second per account.
+      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * *   The minimum time granularity at which the data is queried is 5 minutes. The maximum time range for a single query is 31 days. The period within which historical data is available is 366 days. The data latency is no more than 10 minutes.
+      *
+      * @param request DescribeDcdnDomainIpaConnDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainIpaConnDataResponse
+     */
     public DescribeDcdnDomainIpaConnDataResponse describeDcdnDomainIpaConnDataWithOptions(DescribeDcdnDomainIpaConnDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2231,11 +3068,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainIpaConnDataResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 10 times per second per account.
+      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * *   The minimum time granularity at which the data is queried is 5 minutes. The maximum time range for a single query is 31 days. The period within which historical data is available is 366 days. The data latency is no more than 10 minutes.
+      *
+      * @param request DescribeDcdnDomainIpaConnDataRequest
+      * @return DescribeDcdnDomainIpaConnDataResponse
+     */
     public DescribeDcdnDomainIpaConnDataResponse describeDcdnDomainIpaConnData(DescribeDcdnDomainIpaConnDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainIpaConnDataWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   If you do not set **StartTime** or **EndTime**, data collected within the last 24 hours is queried. If you set both **StartTime** and **EndTime**, data collected within the specified time range is queried.
+      * *   The monitoring data is measured in bytes.
+      * *   The maximum number of times that users can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnDomainIpaTrafficDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainIpaTrafficDataResponse
+     */
     public DescribeDcdnDomainIpaTrafficDataResponse describeDcdnDomainIpaTrafficDataWithOptions(DescribeDcdnDomainIpaTrafficDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2288,11 +3143,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainIpaTrafficDataResponse());
     }
 
+    /**
+      * > 
+      * *   If you do not set **StartTime** or **EndTime**, data collected within the last 24 hours is queried. If you set both **StartTime** and **EndTime**, data collected within the specified time range is queried.
+      * *   The monitoring data is measured in bytes.
+      * *   The maximum number of times that users can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnDomainIpaTrafficDataRequest
+      * @return DescribeDcdnDomainIpaTrafficDataResponse
+     */
     public DescribeDcdnDomainIpaTrafficDataResponse describeDcdnDomainIpaTrafficData(DescribeDcdnDomainIpaTrafficDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainIpaTrafficDataWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   You can call this operation up to 100 times per second.
+      * *   If **StartTime** is set but **EndTime** is not set, the data within the hour that starts from **StartTime** is queried.
+      * *   If **EndTime** is set but **StartTime** is not set, the data within the last hour that precedes **EndTime** is queried.
+      * *   You can query data of a domain name or all domain names that belong to your account.
+      * *   You can view data that is collected over the last seven days. The interval at which data is queried is based on the time range specified by **StartTime** and **EndTime**.
+      *     *   **If the time range is shorter than or equal to one hour**, data is queried every minute.
+      *     *   **If the time range is longer than 1 hour but shorter than or equal to three days**, data is queried every five minutes.
+      *     *   **If the time range is longer than three days but shorter than or equal to seven days**, data is queried every hour.
+      *
+      * @param request DescribeDcdnDomainIspDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainIspDataResponse
+     */
     public DescribeDcdnDomainIspDataResponse describeDcdnDomainIspDataWithOptions(DescribeDcdnDomainIspDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2325,11 +3204,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainIspDataResponse());
     }
 
+    /**
+      * > 
+      * *   You can call this operation up to 100 times per second.
+      * *   If **StartTime** is set but **EndTime** is not set, the data within the hour that starts from **StartTime** is queried.
+      * *   If **EndTime** is set but **StartTime** is not set, the data within the last hour that precedes **EndTime** is queried.
+      * *   You can query data of a domain name or all domain names that belong to your account.
+      * *   You can view data that is collected over the last seven days. The interval at which data is queried is based on the time range specified by **StartTime** and **EndTime**.
+      *     *   **If the time range is shorter than or equal to one hour**, data is queried every minute.
+      *     *   **If the time range is longer than 1 hour but shorter than or equal to three days**, data is queried every five minutes.
+      *     *   **If the time range is longer than three days but shorter than or equal to seven days**, data is queried every hour.
+      *
+      * @param request DescribeDcdnDomainIspDataRequest
+      * @return DescribeDcdnDomainIspDataResponse
+     */
     public DescribeDcdnDomainIspDataResponse describeDcdnDomainIspData(DescribeDcdnDomainIspDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainIspDataWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   If you specify neither the **StartTime** parameter nor the **EndTime** parameter, the data in the last 24 hours is returned. If you specify the **StartTime** and **EndTime** parameters, the data within the specified time range is returned.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnDomainLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainLogResponse
+     */
     public DescribeDcdnDomainLogResponse describeDcdnDomainLogWithOptions(DescribeDcdnDomainLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2370,11 +3272,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainLogResponse());
     }
 
+    /**
+      * > 
+      * *   If you specify neither the **StartTime** parameter nor the **EndTime** parameter, the data in the last 24 hours is returned. If you specify the **StartTime** and **EndTime** parameters, the data within the specified time range is returned.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnDomainLogRequest
+      * @return DescribeDcdnDomainLogResponse
+     */
     public DescribeDcdnDomainLogResponse describeDcdnDomainLog(DescribeDcdnDomainLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainLogWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following rules:
+      * *   If you do not set the StartTime or EndTime parameter, data within the last 10 minutes is queried. You can set both the StartTime and EndTime parameters to specify a time range.
+      * *   You can specify one or more accelerated domain names. Separate domain names with commas (,).
+      * *   You can query data up to the last 90 days.
+      * *   The time range cannot exceed 1 hour.
+      *
+      * @param request DescribeDcdnDomainMultiUsageDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainMultiUsageDataResponse
+     */
     public DescribeDcdnDomainMultiUsageDataResponse describeDcdnDomainMultiUsageDataWithOptions(DescribeDcdnDomainMultiUsageDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2407,11 +3328,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainMultiUsageDataResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following rules:
+      * *   If you do not set the StartTime or EndTime parameter, data within the last 10 minutes is queried. You can set both the StartTime and EndTime parameters to specify a time range.
+      * *   You can specify one or more accelerated domain names. Separate domain names with commas (,).
+      * *   You can query data up to the last 90 days.
+      * *   The time range cannot exceed 1 hour.
+      *
+      * @param request DescribeDcdnDomainMultiUsageDataRequest
+      * @return DescribeDcdnDomainMultiUsageDataResponse
+     */
     public DescribeDcdnDomainMultiUsageDataResponse describeDcdnDomainMultiUsageData(DescribeDcdnDomainMultiUsageDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainMultiUsageDataWithOptions(request, runtime);
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainOriginBpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainOriginBpsDataResponse
+     */
     public DescribeDcdnDomainOriginBpsDataResponse describeDcdnDomainOriginBpsDataWithOptions(DescribeDcdnDomainOriginBpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2448,11 +3394,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainOriginBpsDataResponse());
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainOriginBpsDataRequest
+      * @return DescribeDcdnDomainOriginBpsDataResponse
+     */
     public DescribeDcdnDomainOriginBpsDataResponse describeDcdnDomainOriginBpsData(DescribeDcdnDomainOriginBpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainOriginBpsDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 100 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameters, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainOriginTrafficDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainOriginTrafficDataResponse
+     */
     public DescribeDcdnDomainOriginTrafficDataResponse describeDcdnDomainOriginTrafficDataWithOptions(DescribeDcdnDomainOriginTrafficDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2489,11 +3463,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainOriginTrafficDataResponse());
     }
 
+    /**
+      * - You can call this operation up to 100 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameters, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainOriginTrafficDataRequest
+      * @return DescribeDcdnDomainOriginTrafficDataResponse
+     */
     public DescribeDcdnDomainOriginTrafficDataResponse describeDcdnDomainOriginTrafficData(DescribeDcdnDomainOriginTrafficDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainOriginTrafficDataWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 10.
+      *
+      * @param request DescribeDcdnDomainPropertyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainPropertyResponse
+     */
     public DescribeDcdnDomainPropertyResponse describeDcdnDomainPropertyWithOptions(DescribeDcdnDomainPropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2518,6 +3512,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainPropertyResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 10.
+      *
+      * @param request DescribeDcdnDomainPropertyRequest
+      * @return DescribeDcdnDomainPropertyResponse
+     */
     public DescribeDcdnDomainPropertyResponse describeDcdnDomainProperty(DescribeDcdnDomainPropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainPropertyWithOptions(request, runtime);
@@ -2560,6 +3560,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnDomainPvDataWithOptions(request, runtime);
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainQpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainQpsDataResponse
+     */
     public DescribeDcdnDomainQpsDataResponse describeDcdnDomainQpsDataWithOptions(DescribeDcdnDomainQpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2604,11 +3619,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainQpsDataResponse());
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainQpsDataRequest
+      * @return DescribeDcdnDomainQpsDataResponse
+     */
     public DescribeDcdnDomainQpsDataResponse describeDcdnDomainQpsData(DescribeDcdnDomainQpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainQpsDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 20 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainQpsDataByLayerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainQpsDataByLayerResponse
+     */
     public DescribeDcdnDomainQpsDataByLayerResponse describeDcdnDomainQpsDataByLayerWithOptions(DescribeDcdnDomainQpsDataByLayerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2657,11 +3700,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainQpsDataByLayerResponse());
     }
 
+    /**
+      * - You can call this operation up to 20 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainQpsDataByLayerRequest
+      * @return DescribeDcdnDomainQpsDataByLayerResponse
+     */
     public DescribeDcdnDomainQpsDataByLayerResponse describeDcdnDomainQpsDataByLayer(DescribeDcdnDomainQpsDataByLayerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainQpsDataByLayerWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeBpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeBpsDataResponse
+     */
     public DescribeDcdnDomainRealTimeBpsDataResponse describeDcdnDomainRealTimeBpsDataWithOptions(DescribeDcdnDomainRealTimeBpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2682,11 +3752,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeBpsDataResponse());
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeBpsDataRequest
+      * @return DescribeDcdnDomainRealTimeBpsDataResponse
+     */
     public DescribeDcdnDomainRealTimeBpsDataResponse describeDcdnDomainRealTimeBpsData(DescribeDcdnDomainRealTimeBpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeBpsDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeByteHitRateDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeByteHitRateDataResponse
+     */
     public DescribeDcdnDomainRealTimeByteHitRateDataResponse describeDcdnDomainRealTimeByteHitRateDataWithOptions(DescribeDcdnDomainRealTimeByteHitRateDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2707,11 +3805,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeByteHitRateDataResponse());
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeByteHitRateDataRequest
+      * @return DescribeDcdnDomainRealTimeByteHitRateDataResponse
+     */
     public DescribeDcdnDomainRealTimeByteHitRateDataResponse describeDcdnDomainRealTimeByteHitRateData(DescribeDcdnDomainRealTimeByteHitRateDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeByteHitRateDataWithOptions(request, runtime);
     }
 
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      * **Time granularity of general data returned by the operation**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * Unless otherwise specified, statistics in the preceding table prevail.
+      *
+      * @param request DescribeDcdnDomainRealTimeDetailDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeDetailDataResponse
+     */
     public DescribeDcdnDomainRealTimeDetailDataResponse describeDcdnDomainRealTimeDetailDataWithOptions(DescribeDcdnDomainRealTimeDetailDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2732,11 +3859,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeDetailDataResponse());
     }
 
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      * **Time granularity of general data returned by the operation**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * Unless otherwise specified, statistics in the preceding table prevail.
+      *
+      * @param request DescribeDcdnDomainRealTimeDetailDataRequest
+      * @return DescribeDcdnDomainRealTimeDetailDataResponse
+     */
     public DescribeDcdnDomainRealTimeDetailDataResponse describeDcdnDomainRealTimeDetailData(DescribeDcdnDomainRealTimeDetailDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeDetailDataWithOptions(request, runtime);
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+      * @param request DescribeDcdnDomainRealTimeHttpCodeDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeHttpCodeDataResponse
+     */
     public DescribeDcdnDomainRealTimeHttpCodeDataResponse describeDcdnDomainRealTimeHttpCodeDataWithOptions(DescribeDcdnDomainRealTimeHttpCodeDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2777,11 +3933,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeHttpCodeDataResponse());
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+      * @param request DescribeDcdnDomainRealTimeHttpCodeDataRequest
+      * @return DescribeDcdnDomainRealTimeHttpCodeDataResponse
+     */
     public DescribeDcdnDomainRealTimeHttpCodeDataResponse describeDcdnDomainRealTimeHttpCodeData(DescribeDcdnDomainRealTimeHttpCodeDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeHttpCodeDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeQpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeQpsDataResponse
+     */
     public DescribeDcdnDomainRealTimeQpsDataResponse describeDcdnDomainRealTimeQpsDataWithOptions(DescribeDcdnDomainRealTimeQpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2802,11 +3986,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeQpsDataResponse());
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeQpsDataRequest
+      * @return DescribeDcdnDomainRealTimeQpsDataResponse
+     */
     public DescribeDcdnDomainRealTimeQpsDataResponse describeDcdnDomainRealTimeQpsData(DescribeDcdnDomainRealTimeQpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeQpsDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeReqHitRateDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeReqHitRateDataResponse
+     */
     public DescribeDcdnDomainRealTimeReqHitRateDataResponse describeDcdnDomainRealTimeReqHitRateDataWithOptions(DescribeDcdnDomainRealTimeReqHitRateDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2827,11 +4039,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeReqHitRateDataResponse());
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeReqHitRateDataRequest
+      * @return DescribeDcdnDomainRealTimeReqHitRateDataResponse
+     */
     public DescribeDcdnDomainRealTimeReqHitRateDataResponse describeDcdnDomainRealTimeReqHitRateData(DescribeDcdnDomainRealTimeReqHitRateDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeReqHitRateDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeSrcBpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeSrcBpsDataResponse
+     */
     public DescribeDcdnDomainRealTimeSrcBpsDataResponse describeDcdnDomainRealTimeSrcBpsDataWithOptions(DescribeDcdnDomainRealTimeSrcBpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2864,11 +4104,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeSrcBpsDataResponse());
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeSrcBpsDataRequest
+      * @return DescribeDcdnDomainRealTimeSrcBpsDataResponse
+     */
     public DescribeDcdnDomainRealTimeSrcBpsDataResponse describeDcdnDomainRealTimeSrcBpsData(DescribeDcdnDomainRealTimeSrcBpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeSrcBpsDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - If you do not set the StartTime or EndTime parameter, data collected over the last one hour is queried. If you set both the StartTime and EndTime parameters, data collected within the specified time range is queried.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse
+     */
     public DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse describeDcdnDomainRealTimeSrcHttpCodeDataWithOptions(DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2909,11 +4176,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse());
     }
 
+    /**
+      * - You can call this operation up to 10 times per second per account.
+      * - If you do not set the StartTime or EndTime parameter, data collected over the last one hour is queried. If you set both the StartTime and EndTime parameters, data collected within the specified time range is queried.
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest
+      * @return DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse
+     */
     public DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse describeDcdnDomainRealTimeSrcHttpCodeData(DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeSrcHttpCodeDataWithOptions(request, runtime);
     }
 
+    /**
+      * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+      * @param request DescribeDcdnDomainRealTimeSrcTrafficDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeSrcTrafficDataResponse
+     */
     public DescribeDcdnDomainRealTimeSrcTrafficDataResponse describeDcdnDomainRealTimeSrcTrafficDataWithOptions(DescribeDcdnDomainRealTimeSrcTrafficDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2946,11 +4240,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeSrcTrafficDataResponse());
     }
 
+    /**
+      * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+      * @param request DescribeDcdnDomainRealTimeSrcTrafficDataRequest
+      * @return DescribeDcdnDomainRealTimeSrcTrafficDataResponse
+     */
     public DescribeDcdnDomainRealTimeSrcTrafficDataResponse describeDcdnDomainRealTimeSrcTrafficData(DescribeDcdnDomainRealTimeSrcTrafficDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeSrcTrafficDataWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 50 times per second per account.  
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeTrafficDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRealTimeTrafficDataResponse
+     */
     public DescribeDcdnDomainRealTimeTrafficDataResponse describeDcdnDomainRealTimeTrafficDataWithOptions(DescribeDcdnDomainRealTimeTrafficDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2983,11 +4303,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRealTimeTrafficDataResponse());
     }
 
+    /**
+      * You can call this operation up to 50 times per second per account.  
+      * **Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+      * @param request DescribeDcdnDomainRealTimeTrafficDataRequest
+      * @return DescribeDcdnDomainRealTimeTrafficDataResponse
+     */
     public DescribeDcdnDomainRealTimeTrafficDataResponse describeDcdnDomainRealTimeTrafficData(DescribeDcdnDomainRealTimeTrafficDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRealTimeTrafficDataWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   If you do not specify the StartTime or EndTime parameters, the data within the last 24 hours is queried by default.
+      * *   If you specify the StartTime and EndTime parameters, the data within the specified time range is queried.
+      * *   The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnDomainRegionDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainRegionDataResponse
+     */
     public DescribeDcdnDomainRegionDataResponse describeDcdnDomainRegionDataWithOptions(DescribeDcdnDomainRegionDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3020,6 +4362,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainRegionDataResponse());
     }
 
+    /**
+      * > 
+      * *   If you do not specify the StartTime or EndTime parameters, the data within the last 24 hours is queried by default.
+      * *   If you specify the StartTime and EndTime parameters, the data within the specified time range is queried.
+      * *   The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnDomainRegionDataRequest
+      * @return DescribeDcdnDomainRegionDataResponse
+     */
     public DescribeDcdnDomainRegionDataResponse describeDcdnDomainRegionData(DescribeDcdnDomainRegionDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainRegionDataWithOptions(request, runtime);
@@ -3058,6 +4409,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnDomainStagingConfigWithOptions(request, runtime);
     }
 
+    /**
+      * **Before you call this operation, take note of the following considerations:**
+      * *   If you do not set the StartTime parameter, the data on the previous day is queried.
+      * *   You can specify only one domain name.
+      *
+      * @param request DescribeDcdnDomainTopReferVisitRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainTopReferVisitResponse
+     */
     public DescribeDcdnDomainTopReferVisitResponse describeDcdnDomainTopReferVisitWithOptions(DescribeDcdnDomainTopReferVisitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3090,11 +4450,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainTopReferVisitResponse());
     }
 
+    /**
+      * **Before you call this operation, take note of the following considerations:**
+      * *   If you do not set the StartTime parameter, the data on the previous day is queried.
+      * *   You can specify only one domain name.
+      *
+      * @param request DescribeDcdnDomainTopReferVisitRequest
+      * @return DescribeDcdnDomainTopReferVisitResponse
+     */
     public DescribeDcdnDomainTopReferVisitResponse describeDcdnDomainTopReferVisit(DescribeDcdnDomainTopReferVisitRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainTopReferVisitWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can only query the data within the last seven days.
+      *
+      * @param request DescribeDcdnDomainTopUrlVisitRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainTopUrlVisitResponse
+     */
     public DescribeDcdnDomainTopUrlVisitResponse describeDcdnDomainTopUrlVisitWithOptions(DescribeDcdnDomainTopUrlVisitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3127,11 +4502,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainTopUrlVisitResponse());
     }
 
+    /**
+      * >  You can only query the data within the last seven days.
+      *
+      * @param request DescribeDcdnDomainTopUrlVisitRequest
+      * @return DescribeDcdnDomainTopUrlVisitResponse
+     */
     public DescribeDcdnDomainTopUrlVisitResponse describeDcdnDomainTopUrlVisit(DescribeDcdnDomainTopUrlVisitRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainTopUrlVisitWithOptions(request, runtime);
     }
 
+    /**
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * * You can call this operation up to 100 times per second per account.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainTrafficDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainTrafficDataResponse
+     */
     public DescribeDcdnDomainTrafficDataResponse describeDcdnDomainTrafficDataWithOptions(DescribeDcdnDomainTrafficDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3176,11 +4572,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainTrafficDataResponse());
     }
 
+    /**
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * * You can call this operation up to 100 times per second per account.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainTrafficDataRequest
+      * @return DescribeDcdnDomainTrafficDataResponse
+     */
     public DescribeDcdnDomainTrafficDataResponse describeDcdnDomainTrafficData(DescribeDcdnDomainTrafficDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainTrafficDataWithOptions(request, runtime);
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
+      * **Time granularity**:
+      * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainUsageDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainUsageDataResponse
+     */
     public DescribeDcdnDomainUsageDataResponse describeDcdnDomainUsageDataWithOptions(DescribeDcdnDomainUsageDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3212,6 +4637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3229,11 +4658,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainUsageDataResponse());
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
+      * **Time granularity**:
+      * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainUsageDataRequest
+      * @return DescribeDcdnDomainUsageDataResponse
+     */
     public DescribeDcdnDomainUsageDataResponse describeDcdnDomainUsageData(DescribeDcdnDomainUsageDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainUsageDataWithOptions(request, runtime);
     }
 
+    /**
+      * **Before you call this operation, pay attention to the following considerations:**
+      * *   If you do not specify the StartTime or EndTime parameter, the data collected within the last 24 hours is queried by default. If you specify the StartTime and EndTime parameters, the data collected within the specified time range is queried.
+      * *   You can specify only one accelerated domain or all the accelerated domains under your account.
+      *
+      * @param request DescribeDcdnDomainUvDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainUvDataResponse
+     */
     public DescribeDcdnDomainUvDataResponse describeDcdnDomainUvDataWithOptions(DescribeDcdnDomainUvDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3266,11 +4718,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainUvDataResponse());
     }
 
+    /**
+      * **Before you call this operation, pay attention to the following considerations:**
+      * *   If you do not specify the StartTime or EndTime parameter, the data collected within the last 24 hours is queried by default. If you specify the StartTime and EndTime parameters, the data collected within the specified time range is queried.
+      * *   You can specify only one accelerated domain or all the accelerated domains under your account.
+      *
+      * @param request DescribeDcdnDomainUvDataRequest
+      * @return DescribeDcdnDomainUvDataResponse
+     */
     public DescribeDcdnDomainUvDataResponse describeDcdnDomainUvData(DescribeDcdnDomainUvDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainUvDataWithOptions(request, runtime);
     }
 
+    /**
+      * - You can call this operation up to 100 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainWebsocketBpsDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainWebsocketBpsDataResponse
+     */
     public DescribeDcdnDomainWebsocketBpsDataResponse describeDcdnDomainWebsocketBpsDataWithOptions(DescribeDcdnDomainWebsocketBpsDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3315,11 +4789,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainWebsocketBpsDataResponse());
     }
 
+    /**
+      * - You can call this operation up to 100 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainWebsocketBpsDataRequest
+      * @return DescribeDcdnDomainWebsocketBpsDataResponse
+     */
     public DescribeDcdnDomainWebsocketBpsDataResponse describeDcdnDomainWebsocketBpsData(DescribeDcdnDomainWebsocketBpsDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainWebsocketBpsDataWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account.  
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainWebsocketHttpCodeDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainWebsocketHttpCodeDataResponse
+     */
     public DescribeDcdnDomainWebsocketHttpCodeDataResponse describeDcdnDomainWebsocketHttpCodeDataWithOptions(DescribeDcdnDomainWebsocketHttpCodeDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3364,11 +4864,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainWebsocketHttpCodeDataResponse());
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account.  
+      * **Time granularity**The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+      * @param request DescribeDcdnDomainWebsocketHttpCodeDataRequest
+      * @return DescribeDcdnDomainWebsocketHttpCodeDataResponse
+     */
     public DescribeDcdnDomainWebsocketHttpCodeDataResponse describeDcdnDomainWebsocketHttpCodeData(DescribeDcdnDomainWebsocketHttpCodeDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainWebsocketHttpCodeDataWithOptions(request, runtime);
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainWebsocketTrafficDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnDomainWebsocketTrafficDataResponse
+     */
     public DescribeDcdnDomainWebsocketTrafficDataResponse describeDcdnDomainWebsocketTrafficDataWithOptions(DescribeDcdnDomainWebsocketTrafficDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3413,11 +4940,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnDomainWebsocketTrafficDataResponse());
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+      * @param request DescribeDcdnDomainWebsocketTrafficDataRequest
+      * @return DescribeDcdnDomainWebsocketTrafficDataResponse
+     */
     public DescribeDcdnDomainWebsocketTrafficDataResponse describeDcdnDomainWebsocketTrafficData(DescribeDcdnDomainWebsocketTrafficDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnDomainWebsocketTrafficDataWithOptions(request, runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 10 times per second per account.
+      * *   The minimum time granularity for a query is one hour. The maximum time span for a query is 24 hours. The time period within which historical data is available for a query is 366 days.
+      *
+      * @param request DescribeDcdnErUsageDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnErUsageDataResponse
+     */
     public DescribeDcdnErUsageDataResponse describeDcdnErUsageDataWithOptions(DescribeDcdnErUsageDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3458,11 +5007,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnErUsageDataResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 10 times per second per account.
+      * *   The minimum time granularity for a query is one hour. The maximum time span for a query is 24 hours. The time period within which historical data is available for a query is 366 days.
+      *
+      * @param request DescribeDcdnErUsageDataRequest
+      * @return DescribeDcdnErUsageDataResponse
+     */
     public DescribeDcdnErUsageDataResponse describeDcdnErUsageData(DescribeDcdnErUsageDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnErUsageDataWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnHttpsDomainListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnHttpsDomainListResponse
+     */
     public DescribeDcdnHttpsDomainListResponse describeDcdnHttpsDomainListWithOptions(DescribeDcdnHttpsDomainListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3495,11 +5058,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnHttpsDomainListResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnHttpsDomainListRequest
+      * @return DescribeDcdnHttpsDomainListResponse
+     */
     public DescribeDcdnHttpsDomainListResponse describeDcdnHttpsDomainList(DescribeDcdnHttpsDomainListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnHttpsDomainListWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnIpInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnIpInfoResponse
+     */
     public DescribeDcdnIpInfoResponse describeDcdnIpInfoWithOptions(DescribeDcdnIpInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3524,11 +5100,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnIpInfoResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnIpInfoRequest
+      * @return DescribeDcdnIpInfoResponse
+     */
     public DescribeDcdnIpInfoResponse describeDcdnIpInfo(DescribeDcdnIpInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnIpInfoWithOptions(request, runtime);
     }
 
+    /**
+      * > You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnIpaDomainConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnIpaDomainConfigsResponse
+     */
     public DescribeDcdnIpaDomainConfigsResponse describeDcdnIpaDomainConfigsWithOptions(DescribeDcdnIpaDomainConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3565,11 +5154,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnIpaDomainConfigsResponse());
     }
 
+    /**
+      * > You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnIpaDomainConfigsRequest
+      * @return DescribeDcdnIpaDomainConfigsResponse
+     */
     public DescribeDcdnIpaDomainConfigsResponse describeDcdnIpaDomainConfigs(DescribeDcdnIpaDomainConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnIpaDomainConfigsWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnIpaDomainDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnIpaDomainDetailResponse
+     */
     public DescribeDcdnIpaDomainDetailResponse describeDcdnIpaDomainDetailWithOptions(DescribeDcdnIpaDomainDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3602,11 +5204,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnIpaDomainDetailResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnIpaDomainDetailRequest
+      * @return DescribeDcdnIpaDomainDetailResponse
+     */
     public DescribeDcdnIpaDomainDetailResponse describeDcdnIpaDomainDetail(DescribeDcdnIpaDomainDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnIpaDomainDetailWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request DescribeDcdnIpaServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnIpaServiceResponse
+     */
     public DescribeDcdnIpaServiceResponse describeDcdnIpaServiceWithOptions(DescribeDcdnIpaServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3635,11 +5250,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnIpaServiceResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request DescribeDcdnIpaServiceRequest
+      * @return DescribeDcdnIpaServiceResponse
+     */
     public DescribeDcdnIpaServiceResponse describeDcdnIpaService(DescribeDcdnIpaServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnIpaServiceWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnIpaUserDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnIpaUserDomainsResponse
+     */
     public DescribeDcdnIpaUserDomainsResponse describeDcdnIpaUserDomainsWithOptions(DescribeDcdnIpaUserDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3704,6 +5332,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnIpaUserDomainsResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnIpaUserDomainsRequest
+      * @return DescribeDcdnIpaUserDomainsResponse
+     */
     public DescribeDcdnIpaUserDomainsResponse describeDcdnIpaUserDomains(DescribeDcdnIpaUserDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnIpaUserDomainsWithOptions(request, runtime);
@@ -3738,6 +5372,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnL2VipsWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnRealTimeDeliveryFieldRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnRealTimeDeliveryFieldResponse
+     */
     public DescribeDcdnRealTimeDeliveryFieldResponse describeDcdnRealTimeDeliveryFieldWithOptions(DescribeDcdnRealTimeDeliveryFieldRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3762,11 +5403,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnRealTimeDeliveryFieldResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnRealTimeDeliveryFieldRequest
+      * @return DescribeDcdnRealTimeDeliveryFieldResponse
+     */
     public DescribeDcdnRealTimeDeliveryFieldResponse describeDcdnRealTimeDeliveryField(DescribeDcdnRealTimeDeliveryFieldRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnRealTimeDeliveryFieldWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   You can call the **RefreshDcdnObjectCaches** operation to refresh content and call the **PreloadDcdnObjectCaches** operation to prefetch content.
+      * *   You can call this operation up to 20 times per second.
+      *
+      * @param request DescribeDcdnRefreshQuotaRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnRefreshQuotaResponse
+     */
     public DescribeDcdnRefreshQuotaResponse describeDcdnRefreshQuotaWithOptions(DescribeDcdnRefreshQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3795,11 +5451,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnRefreshQuotaResponse());
     }
 
+    /**
+      * > 
+      * *   You can call the **RefreshDcdnObjectCaches** operation to refresh content and call the **PreloadDcdnObjectCaches** operation to prefetch content.
+      * *   You can call this operation up to 20 times per second.
+      *
+      * @param request DescribeDcdnRefreshQuotaRequest
+      * @return DescribeDcdnRefreshQuotaResponse
+     */
     public DescribeDcdnRefreshQuotaResponse describeDcdnRefreshQuota(DescribeDcdnRefreshQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnRefreshQuotaWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   You can query data within the last three days.
+      * *   The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnRefreshTaskByIdRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnRefreshTaskByIdResponse
+     */
     public DescribeDcdnRefreshTaskByIdResponse describeDcdnRefreshTaskByIdWithOptions(DescribeDcdnRefreshTaskByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3824,11 +5497,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnRefreshTaskByIdResponse());
     }
 
+    /**
+      * > 
+      * *   You can query data within the last three days.
+      * *   The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnRefreshTaskByIdRequest
+      * @return DescribeDcdnRefreshTaskByIdResponse
+     */
     public DescribeDcdnRefreshTaskByIdResponse describeDcdnRefreshTaskById(DescribeDcdnRefreshTaskByIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnRefreshTaskByIdWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   You can query the status information by task ID or URL.
+      * *   You can set both the **TaskId** parameter and the **ObjectPath** parameter to query. If you set neither the **TaskId** parameter nor the **ObjectPath** parameter, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
+      * *   If you specify the **DomainName** or **Status** parameter, you must also specify the **ObjectType** parameter.
+      * *   You can call this operation up to 10 times per second per account.
+      *
+      * @param request DescribeDcdnRefreshTasksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnRefreshTasksResponse
+     */
     public DescribeDcdnRefreshTasksResponse describeDcdnRefreshTasksWithOptions(DescribeDcdnRefreshTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3893,11 +5585,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnRefreshTasksResponse());
     }
 
+    /**
+      * > 
+      * *   You can query the status information by task ID or URL.
+      * *   You can set both the **TaskId** parameter and the **ObjectPath** parameter to query. If you set neither the **TaskId** parameter nor the **ObjectPath** parameter, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
+      * *   If you specify the **DomainName** or **Status** parameter, you must also specify the **ObjectType** parameter.
+      * *   You can call this operation up to 10 times per second per account.
+      *
+      * @param request DescribeDcdnRefreshTasksRequest
+      * @return DescribeDcdnRefreshTasksResponse
+     */
     public DescribeDcdnRefreshTasksResponse describeDcdnRefreshTasks(DescribeDcdnRefreshTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnRefreshTasksWithOptions(request, runtime);
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnRegionAndIspRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnRegionAndIspResponse
+     */
     public DescribeDcdnRegionAndIspResponse describeDcdnRegionAndIspWithOptions(DescribeDcdnRegionAndIspRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3926,11 +5635,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnRegionAndIspResponse());
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnRegionAndIspRequest
+      * @return DescribeDcdnRegionAndIspResponse
+     */
     public DescribeDcdnRegionAndIspResponse describeDcdnRegionAndIsp(DescribeDcdnRegionAndIspRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnRegionAndIspWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 3.
+      *
+      * @param request DescribeDcdnReportRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnReportResponse
+     */
     public DescribeDcdnReportResponse describeDcdnReportWithOptions(DescribeDcdnReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3979,11 +5701,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnReportResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 3.
+      *
+      * @param request DescribeDcdnReportRequest
+      * @return DescribeDcdnReportResponse
+     */
     public DescribeDcdnReportResponse describeDcdnReport(DescribeDcdnReportRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnReportWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
+      * *   You can call this API operation up to three times per second per account.
+      *
+      * @param request DescribeDcdnReportListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnReportListResponse
+     */
     public DescribeDcdnReportListResponse describeDcdnReportListWithOptions(DescribeDcdnReportListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4008,11 +5745,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnReportListResponse());
     }
 
+    /**
+      * > 
+      * *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
+      * *   You can call this API operation up to three times per second per account.
+      *
+      * @param request DescribeDcdnReportListRequest
+      * @return DescribeDcdnReportListResponse
+     */
     public DescribeDcdnReportListResponse describeDcdnReportList(DescribeDcdnReportListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnReportListWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnSLSRealtimeLogDeliveryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnSLSRealtimeLogDeliveryResponse
+     */
     public DescribeDcdnSLSRealtimeLogDeliveryResponse describeDcdnSLSRealtimeLogDeliveryWithOptions(DescribeDcdnSLSRealtimeLogDeliveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4037,11 +5789,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnSLSRealtimeLogDeliveryResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnSLSRealtimeLogDeliveryRequest
+      * @return DescribeDcdnSLSRealtimeLogDeliveryResponse
+     */
     public DescribeDcdnSLSRealtimeLogDeliveryResponse describeDcdnSLSRealtimeLogDelivery(DescribeDcdnSLSRealtimeLogDeliveryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnSLSRealtimeLogDeliveryWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second.
+      *
+      * @param request DescribeDcdnSMCertificateDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnSMCertificateDetailResponse
+     */
     public DescribeDcdnSMCertificateDetailResponse describeDcdnSMCertificateDetailWithOptions(DescribeDcdnSMCertificateDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4074,11 +5839,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnSMCertificateDetailResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second.
+      *
+      * @param request DescribeDcdnSMCertificateDetailRequest
+      * @return DescribeDcdnSMCertificateDetailResponse
+     */
     public DescribeDcdnSMCertificateDetailResponse describeDcdnSMCertificateDetail(DescribeDcdnSMCertificateDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnSMCertificateDetailWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnSMCertificateListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnSMCertificateListResponse
+     */
     public DescribeDcdnSMCertificateListResponse describeDcdnSMCertificateListWithOptions(DescribeDcdnSMCertificateListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4111,11 +5889,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnSMCertificateListResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnSMCertificateListRequest
+      * @return DescribeDcdnSMCertificateListResponse
+     */
     public DescribeDcdnSMCertificateListResponse describeDcdnSMCertificateList(DescribeDcdnSMCertificateListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnSMCertificateListWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnSecFuncInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnSecFuncInfoResponse
+     */
     public DescribeDcdnSecFuncInfoResponse describeDcdnSecFuncInfoWithOptions(DescribeDcdnSecFuncInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4144,11 +5935,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnSecFuncInfoResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnSecFuncInfoRequest
+      * @return DescribeDcdnSecFuncInfoResponse
+     */
     public DescribeDcdnSecFuncInfoResponse describeDcdnSecFuncInfo(DescribeDcdnSecFuncInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnSecFuncInfoWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 50 times per second.
+      *
+      * @param request DescribeDcdnSecSpecInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnSecSpecInfoResponse
+     */
     public DescribeDcdnSecSpecInfoResponse describeDcdnSecSpecInfoWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4165,11 +5969,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnSecSpecInfoResponse());
     }
 
+    /**
+      * >  You can call this operation up to 50 times per second.
+      *
+      * @return DescribeDcdnSecSpecInfoResponse
+     */
     public DescribeDcdnSecSpecInfoResponse describeDcdnSecSpecInfo() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnSecSpecInfoWithOptions(runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnServiceResponse
+     */
     public DescribeDcdnServiceResponse describeDcdnServiceWithOptions(DescribeDcdnServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4198,11 +6014,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnServiceResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnServiceRequest
+      * @return DescribeDcdnServiceResponse
+     */
     public DescribeDcdnServiceResponse describeDcdnService(DescribeDcdnServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnServiceWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnStagingIpRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnStagingIpResponse
+     */
     public DescribeDcdnStagingIpResponse describeDcdnStagingIpWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4219,11 +6048,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnStagingIpResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @return DescribeDcdnStagingIpResponse
+     */
     public DescribeDcdnStagingIpResponse describeDcdnStagingIp() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnStagingIpWithOptions(runtime);
     }
 
+    /**
+      * > 
+      * *   By default, this operation queries all custom report tasks. However, only one task can be displayed. Therefore, only one task is returned.
+      * *   You can call this operation up to three times per second per account.
+      *
+      * @param request DescribeDcdnSubListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnSubListResponse
+     */
     public DescribeDcdnSubListResponse describeDcdnSubListWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4240,11 +6083,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnSubListResponse());
     }
 
+    /**
+      * > 
+      * *   By default, this operation queries all custom report tasks. However, only one task can be displayed. Therefore, only one task is returned.
+      * *   You can call this operation up to three times per second per account.
+      *
+      * @return DescribeDcdnSubListResponse
+     */
     public DescribeDcdnSubListResponse describeDcdnSubList() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnSubListWithOptions(runtime);
     }
 
+    /**
+      * >  You can call this operation up to 10 times per second per account.
+      *
+      * @param request DescribeDcdnTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnTagResourcesResponse
+     */
     public DescribeDcdnTagResourcesResponse describeDcdnTagResourcesWithOptions(DescribeDcdnTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4277,11 +6134,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnTagResourcesResponse());
     }
 
+    /**
+      * >  You can call this operation up to 10 times per second per account.
+      *
+      * @param request DescribeDcdnTagResourcesRequest
+      * @return DescribeDcdnTagResourcesResponse
+     */
     public DescribeDcdnTagResourcesResponse describeDcdnTagResources(DescribeDcdnTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * **Before you call this operation, pay attention to the following considerations:**If you do not specify the StartTime and EndTime parameters, the data within the current month is queried by default. If you specify the StartTime and EndTime parameters, the data within the specified time range is queried.
+      *
+      * @param request DescribeDcdnTopDomainsByFlowRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnTopDomainsByFlowResponse
+     */
     public DescribeDcdnTopDomainsByFlowResponse describeDcdnTopDomainsByFlowWithOptions(DescribeDcdnTopDomainsByFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4314,11 +6184,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnTopDomainsByFlowResponse());
     }
 
+    /**
+      * **Before you call this operation, pay attention to the following considerations:**If you do not specify the StartTime and EndTime parameters, the data within the current month is queried by default. If you specify the StartTime and EndTime parameters, the data within the specified time range is queried.
+      *
+      * @param request DescribeDcdnTopDomainsByFlowRequest
+      * @return DescribeDcdnTopDomainsByFlowResponse
+     */
     public DescribeDcdnTopDomainsByFlowResponse describeDcdnTopDomainsByFlow(DescribeDcdnTopDomainsByFlowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnTopDomainsByFlowWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnUserBillHistoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserBillHistoryResponse
+     */
     public DescribeDcdnUserBillHistoryResponse describeDcdnUserBillHistoryWithOptions(DescribeDcdnUserBillHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4347,6 +6230,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserBillHistoryResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnUserBillHistoryRequest
+      * @return DescribeDcdnUserBillHistoryResponse
+     */
     public DescribeDcdnUserBillHistoryResponse describeDcdnUserBillHistory(DescribeDcdnUserBillHistoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserBillHistoryWithOptions(request, runtime);
@@ -4385,6 +6274,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnUserBillTypeWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnUserCertificateExpireCountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserCertificateExpireCountResponse
+     */
     public DescribeDcdnUserCertificateExpireCountResponse describeDcdnUserCertificateExpireCountWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4401,11 +6297,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserCertificateExpireCountResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @return DescribeDcdnUserCertificateExpireCountResponse
+     */
     public DescribeDcdnUserCertificateExpireCountResponse describeDcdnUserCertificateExpireCount() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserCertificateExpireCountWithOptions(runtime);
     }
 
+    /**
+      * >You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnUserConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserConfigsResponse
+     */
     public DescribeDcdnUserConfigsResponse describeDcdnUserConfigsWithOptions(DescribeDcdnUserConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4430,11 +6338,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserConfigsResponse());
     }
 
+    /**
+      * >You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnUserConfigsRequest
+      * @return DescribeDcdnUserConfigsResponse
+     */
     public DescribeDcdnUserConfigsResponse describeDcdnUserConfigs(DescribeDcdnUserConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserConfigsWithOptions(request, runtime);
     }
 
+    /**
+      * > You can call this operation up to 80 times per second per account.
+      *
+      * @param request DescribeDcdnUserDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserDomainsResponse
+     */
     public DescribeDcdnUserDomainsResponse describeDcdnUserDomainsWithOptions(DescribeDcdnUserDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4507,11 +6428,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserDomainsResponse());
     }
 
+    /**
+      * > You can call this operation up to 80 times per second per account.
+      *
+      * @param request DescribeDcdnUserDomainsRequest
+      * @return DescribeDcdnUserDomainsResponse
+     */
     public DescribeDcdnUserDomainsResponse describeDcdnUserDomains(DescribeDcdnUserDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserDomainsWithOptions(request, runtime);
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnUserDomainsByFuncRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserDomainsByFuncResponse
+     */
     public DescribeDcdnUserDomainsByFuncResponse describeDcdnUserDomainsByFuncWithOptions(DescribeDcdnUserDomainsByFuncRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4556,11 +6490,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserDomainsByFuncResponse());
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnUserDomainsByFuncRequest
+      * @return DescribeDcdnUserDomainsByFuncResponse
+     */
     public DescribeDcdnUserDomainsByFuncResponse describeDcdnUserDomainsByFunc(DescribeDcdnUserDomainsByFuncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserDomainsByFuncWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnUserQuotaRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserQuotaResponse
+     */
     public DescribeDcdnUserQuotaResponse describeDcdnUserQuotaWithOptions(DescribeDcdnUserQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4589,11 +6536,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserQuotaResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeDcdnUserQuotaRequest
+      * @return DescribeDcdnUserQuotaResponse
+     */
     public DescribeDcdnUserQuotaResponse describeDcdnUserQuota(DescribeDcdnUserQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserQuotaWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnUserRealTimeDeliveryFieldRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserRealTimeDeliveryFieldResponse
+     */
     public DescribeDcdnUserRealTimeDeliveryFieldResponse describeDcdnUserRealTimeDeliveryFieldWithOptions(DescribeDcdnUserRealTimeDeliveryFieldRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -4614,11 +6574,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserRealTimeDeliveryFieldResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnUserRealTimeDeliveryFieldRequest
+      * @return DescribeDcdnUserRealTimeDeliveryFieldResponse
+     */
     public DescribeDcdnUserRealTimeDeliveryFieldResponse describeDcdnUserRealTimeDeliveryField(DescribeDcdnUserRealTimeDeliveryFieldRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserRealTimeDeliveryFieldWithOptions(request, runtime);
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnUserResourcePackageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserResourcePackageResponse
+     */
     public DescribeDcdnUserResourcePackageResponse describeDcdnUserResourcePackageWithOptions(DescribeDcdnUserResourcePackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4651,11 +6624,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserResourcePackageResponse());
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnUserResourcePackageRequest
+      * @return DescribeDcdnUserResourcePackageResponse
+     */
     public DescribeDcdnUserResourcePackageResponse describeDcdnUserResourcePackage(DescribeDcdnUserResourcePackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserResourcePackageWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnUserSecDropRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserSecDropResponse
+     */
     public DescribeDcdnUserSecDropResponse describeDcdnUserSecDropWithOptions(DescribeDcdnUserSecDropRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4688,11 +6674,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserSecDropResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnUserSecDropRequest
+      * @return DescribeDcdnUserSecDropResponse
+     */
     public DescribeDcdnUserSecDropResponse describeDcdnUserSecDrop(DescribeDcdnUserSecDropRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserSecDropWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnUserSecDropByMinuteRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserSecDropByMinuteResponse
+     */
     public DescribeDcdnUserSecDropByMinuteResponse describeDcdnUserSecDropByMinuteWithOptions(DescribeDcdnUserSecDropByMinuteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4749,11 +6748,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserSecDropByMinuteResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 50.
+      *
+      * @param request DescribeDcdnUserSecDropByMinuteRequest
+      * @return DescribeDcdnUserSecDropByMinuteResponse
+     */
     public DescribeDcdnUserSecDropByMinuteResponse describeDcdnUserSecDropByMinute(DescribeDcdnUserSecDropByMinuteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserSecDropByMinuteWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnUserTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserTagsResponse
+     */
     public DescribeDcdnUserTagsResponse describeDcdnUserTagsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4770,11 +6782,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserTagsResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 100.
+      *
+      * @return DescribeDcdnUserTagsResponse
+     */
     public DescribeDcdnUserTagsResponse describeDcdnUserTags() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserTagsWithOptions(runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnVerifyContentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnVerifyContentResponse
+     */
     public DescribeDcdnVerifyContentResponse describeDcdnVerifyContentWithOptions(DescribeDcdnVerifyContentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4799,11 +6823,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnVerifyContentResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request DescribeDcdnVerifyContentRequest
+      * @return DescribeDcdnVerifyContentResponse
+     */
     public DescribeDcdnVerifyContentResponse describeDcdnVerifyContent(DescribeDcdnVerifyContentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnVerifyContentWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 150 times per second per account.
+      *
+      * @param request DescribeDcdnWafDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafDomainResponse
+     */
     public DescribeDcdnWafDomainResponse describeDcdnWafDomainWithOptions(DescribeDcdnWafDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4836,11 +6873,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafDomainResponse());
     }
 
+    /**
+      * >  You can call this operation up to 150 times per second per account.
+      *
+      * @param request DescribeDcdnWafDomainRequest
+      * @return DescribeDcdnWafDomainResponse
+     */
     public DescribeDcdnWafDomainResponse describeDcdnWafDomain(DescribeDcdnWafDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafDomainWithOptions(request, runtime);
     }
 
+    /**
+      * # Usage notes
+      * You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafDomainDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafDomainDetailResponse
+     */
     public DescribeDcdnWafDomainDetailResponse describeDcdnWafDomainDetailWithOptions(DescribeDcdnWafDomainDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4865,11 +6916,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafDomainDetailResponse());
     }
 
+    /**
+      * # Usage notes
+      * You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafDomainDetailRequest
+      * @return DescribeDcdnWafDomainDetailResponse
+     */
     public DescribeDcdnWafDomainDetailResponse describeDcdnWafDomainDetail(DescribeDcdnWafDomainDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafDomainDetailWithOptions(request, runtime);
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafDomainsResponse
+     */
     public DescribeDcdnWafDomainsResponse describeDcdnWafDomainsWithOptions(DescribeDcdnWafDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4902,11 +6967,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafDomainsResponse());
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafDomainsRequest
+      * @return DescribeDcdnWafDomainsResponse
+     */
     public DescribeDcdnWafDomainsResponse describeDcdnWafDomains(DescribeDcdnWafDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafDomainsWithOptions(request, runtime);
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafFilterInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafFilterInfoResponse
+     */
     public DescribeDcdnWafFilterInfoResponse describeDcdnWafFilterInfoWithOptions(DescribeDcdnWafFilterInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4935,11 +7013,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafFilterInfoResponse());
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafFilterInfoRequest
+      * @return DescribeDcdnWafFilterInfoResponse
+     */
     public DescribeDcdnWafFilterInfoResponse describeDcdnWafFilterInfo(DescribeDcdnWafFilterInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafFilterInfoWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafGeoInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafGeoInfoResponse
+     */
     public DescribeDcdnWafGeoInfoResponse describeDcdnWafGeoInfoWithOptions(DescribeDcdnWafGeoInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4964,11 +7055,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafGeoInfoResponse());
     }
 
+    /**
+      * >  You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafGeoInfoRequest
+      * @return DescribeDcdnWafGeoInfoResponse
+     */
     public DescribeDcdnWafGeoInfoResponse describeDcdnWafGeoInfo(DescribeDcdnWafGeoInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafGeoInfoWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   If you do not set StartTime or EndTime, data collected in the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * *   The log data is collected every hour.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnWafLogsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafLogsResponse
+     */
     public DescribeDcdnWafLogsResponse describeDcdnWafLogsWithOptions(DescribeDcdnWafLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5009,11 +7116,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafLogsResponse());
     }
 
+    /**
+      * > 
+      * *   If you do not set StartTime or EndTime, data collected in the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+      * *   The log data is collected every hour.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeDcdnWafLogsRequest
+      * @return DescribeDcdnWafLogsResponse
+     */
     public DescribeDcdnWafLogsResponse describeDcdnWafLogs(DescribeDcdnWafLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafLogsWithOptions(request, runtime);
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafPoliciesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafPoliciesResponse
+     */
     public DescribeDcdnWafPoliciesResponse describeDcdnWafPoliciesWithOptions(DescribeDcdnWafPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5046,11 +7169,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafPoliciesResponse());
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafPoliciesRequest
+      * @return DescribeDcdnWafPoliciesResponse
+     */
     public DescribeDcdnWafPoliciesResponse describeDcdnWafPolicies(DescribeDcdnWafPoliciesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafPoliciesWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafPolicyResponse
+     */
     public DescribeDcdnWafPolicyResponse describeDcdnWafPolicyWithOptions(DescribeDcdnWafPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5075,11 +7211,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafPolicyResponse());
     }
 
+    /**
+      * >  You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafPolicyRequest
+      * @return DescribeDcdnWafPolicyResponse
+     */
     public DescribeDcdnWafPolicyResponse describeDcdnWafPolicy(DescribeDcdnWafPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafPolicyDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafPolicyDomainsResponse
+     */
     public DescribeDcdnWafPolicyDomainsResponse describeDcdnWafPolicyDomainsWithOptions(DescribeDcdnWafPolicyDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5112,11 +7261,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafPolicyDomainsResponse());
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafPolicyDomainsRequest
+      * @return DescribeDcdnWafPolicyDomainsResponse
+     */
     public DescribeDcdnWafPolicyDomainsResponse describeDcdnWafPolicyDomains(DescribeDcdnWafPolicyDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafPolicyDomainsWithOptions(request, runtime);
     }
 
+    /**
+      * # Usage notes
+      * You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafPolicyValidDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafPolicyValidDomainsResponse
+     */
     public DescribeDcdnWafPolicyValidDomainsResponse describeDcdnWafPolicyValidDomainsWithOptions(DescribeDcdnWafPolicyValidDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5153,11 +7316,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafPolicyValidDomainsResponse());
     }
 
+    /**
+      * # Usage notes
+      * You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafPolicyValidDomainsRequest
+      * @return DescribeDcdnWafPolicyValidDomainsResponse
+     */
     public DescribeDcdnWafPolicyValidDomainsResponse describeDcdnWafPolicyValidDomains(DescribeDcdnWafPolicyValidDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafPolicyValidDomainsWithOptions(request, runtime);
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafRuleResponse
+     */
     public DescribeDcdnWafRuleResponse describeDcdnWafRuleWithOptions(DescribeDcdnWafRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5182,6 +7359,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafRuleResponse());
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafRuleRequest
+      * @return DescribeDcdnWafRuleResponse
+     */
     public DescribeDcdnWafRuleResponse describeDcdnWafRule(DescribeDcdnWafRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafRuleWithOptions(request, runtime);
@@ -5237,6 +7420,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnWafRulesWithOptions(request, runtime);
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafScenesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafScenesResponse
+     */
     public DescribeDcdnWafScenesResponse describeDcdnWafScenesWithOptions(DescribeDcdnWafScenesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5261,11 +7451,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafScenesResponse());
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafScenesRequest
+      * @return DescribeDcdnWafScenesResponse
+     */
     public DescribeDcdnWafScenesResponse describeDcdnWafScenes(DescribeDcdnWafScenesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafScenesWithOptions(request, runtime);
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafServiceResponse
+     */
     public DescribeDcdnWafServiceResponse describeDcdnWafServiceWithOptions(DescribeDcdnWafServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5294,13 +7497,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafServiceResponse());
     }
 
+    /**
+      * >You can call this operation up to 20 times per second per account.
+      *
+      * @param request DescribeDcdnWafServiceRequest
+      * @return DescribeDcdnWafServiceResponse
+     */
     public DescribeDcdnWafServiceResponse describeDcdnWafService(DescribeDcdnWafServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafServiceWithOptions(request, runtime);
     }
 
     /**
-      * You can call this operation up to 20 times per second per account.
+      * >You can call this operation up to 20 times per second per account.
       *
       * @param request DescribeDcdnWafSpecInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5323,7 +7532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 20 times per second per account.
+      * >You can call this operation up to 20 times per second per account.
       *
       * @return DescribeDcdnWafSpecInfoResponse
      */
@@ -5332,6 +7541,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnWafSpecInfoWithOptions(runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 10 times per second per account.
+      * *   The minimum time granularity for a query is 5 minutes. The maximum time span for a query is 31 days. The time period within which historical data is available for a query is 90 days.
+      *
+      * @param request DescribeDcdnWafUsageDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnWafUsageDataResponse
+     */
     public DescribeDcdnWafUsageDataResponse describeDcdnWafUsageDataWithOptions(DescribeDcdnWafUsageDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5372,11 +7589,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnWafUsageDataResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 10 times per second per account.
+      * *   The minimum time granularity for a query is 5 minutes. The maximum time span for a query is 31 days. The time period within which historical data is available for a query is 90 days.
+      *
+      * @param request DescribeDcdnWafUsageDataRequest
+      * @return DescribeDcdnWafUsageDataResponse
+     */
     public DescribeDcdnWafUsageDataResponse describeDcdnWafUsageData(DescribeDcdnWafUsageDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnWafUsageDataWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 20 times per second.
+      *
+      * @param request DescribeDcdnsecServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnsecServiceResponse
+     */
     public DescribeDcdnsecServiceResponse describeDcdnsecServiceWithOptions(DescribeDcdnsecServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5405,6 +7636,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnsecServiceResponse());
     }
 
+    /**
+      * >  You can call this operation up to 20 times per second.
+      *
+      * @param request DescribeDcdnsecServiceRequest
+      * @return DescribeDcdnsecServiceResponse
+     */
     public DescribeDcdnsecServiceResponse describeDcdnsecService(DescribeDcdnsecServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnsecServiceWithOptions(request, runtime);
@@ -5476,6 +7713,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRDDomainsWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeRoutineRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRoutineResponse
+     */
     public DescribeRoutineResponse describeRoutineWithOptions(DescribeRoutineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5500,11 +7744,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRoutineResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeRoutineRequest
+      * @return DescribeRoutineResponse
+     */
     public DescribeRoutineResponse describeRoutine(DescribeRoutineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRoutineWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeRoutineCanaryEnvsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRoutineCanaryEnvsResponse
+     */
     public DescribeRoutineCanaryEnvsResponse describeRoutineCanaryEnvsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5521,11 +7778,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRoutineCanaryEnvsResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @return DescribeRoutineCanaryEnvsResponse
+     */
     public DescribeRoutineCanaryEnvsResponse describeRoutineCanaryEnvs() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRoutineCanaryEnvsWithOptions(runtime);
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request DescribeRoutineCodeRevisionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRoutineCodeRevisionResponse
+     */
     public DescribeRoutineCodeRevisionResponse describeRoutineCodeRevisionWithOptions(DescribeRoutineCodeRevisionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5554,11 +7823,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRoutineCodeRevisionResponse());
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request DescribeRoutineCodeRevisionRequest
+      * @return DescribeRoutineCodeRevisionResponse
+     */
     public DescribeRoutineCodeRevisionResponse describeRoutineCodeRevision(DescribeRoutineCodeRevisionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRoutineCodeRevisionWithOptions(request, runtime);
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request DescribeRoutineSpecRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRoutineSpecResponse
+     */
     public DescribeRoutineSpecResponse describeRoutineSpecWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5575,11 +7857,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRoutineSpecResponse());
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+      * @return DescribeRoutineSpecResponse
+     */
     public DescribeRoutineSpecResponse describeRoutineSpec() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRoutineSpecWithOptions(runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request DescribeRoutineUserInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRoutineUserInfoResponse
+     */
     public DescribeRoutineUserInfoResponse describeRoutineUserInfoWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5596,11 +7890,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRoutineUserInfoResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @return DescribeRoutineUserInfoResponse
+     */
     public DescribeRoutineUserInfoResponse describeRoutineUserInfo() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRoutineUserInfoWithOptions(runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request DescribeUserDcdnIpaStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeUserDcdnIpaStatusResponse
+     */
     public DescribeUserDcdnIpaStatusResponse describeUserDcdnIpaStatusWithOptions(DescribeUserDcdnIpaStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5629,11 +7935,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserDcdnIpaStatusResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request DescribeUserDcdnIpaStatusRequest
+      * @return DescribeUserDcdnIpaStatusResponse
+     */
     public DescribeUserDcdnIpaStatusResponse describeUserDcdnIpaStatus(DescribeUserDcdnIpaStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUserDcdnIpaStatusWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeUserDcdnStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeUserDcdnStatusResponse
+     */
     public DescribeUserDcdnStatusResponse describeUserDcdnStatusWithOptions(DescribeUserDcdnStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5658,11 +7977,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserDcdnStatusResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeUserDcdnStatusRequest
+      * @return DescribeUserDcdnStatusResponse
+     */
     public DescribeUserDcdnStatusResponse describeUserDcdnStatus(DescribeUserDcdnStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUserDcdnStatusWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeUserErStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeUserErStatusResponse
+     */
     public DescribeUserErStatusResponse describeUserErStatusWithOptions(DescribeUserErStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5687,11 +8019,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserErStatusResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request DescribeUserErStatusRequest
+      * @return DescribeUserErStatusResponse
+     */
     public DescribeUserErStatusResponse describeUserErStatus(DescribeUserErStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUserErStatusWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 20.
+      *
+      * @param request DescribeUserLogserviceStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeUserLogserviceStatusResponse
+     */
     public DescribeUserLogserviceStatusResponse describeUserLogserviceStatusWithOptions(DescribeUserLogserviceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5720,11 +8065,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserLogserviceStatusResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 20.
+      *
+      * @param request DescribeUserLogserviceStatusRequest
+      * @return DescribeUserLogserviceStatusResponse
+     */
     public DescribeUserLogserviceStatusResponse describeUserLogserviceStatus(DescribeUserLogserviceStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUserLogserviceStatusWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   This operation modifies only the specified configurations. Other configurations remain unchanged.
+      * *   If you want to delete a setting, delete the parameter value.
+      * *   This operation can add canary release environments. Make sure that the environment names comply with the naming rules. Otherwise, you will fail to add the environments.
+      * *   Dynamic Route for CDN (DCDN) provides 35 canary release environments. Among these environments, 34 are deployed in China and 1 is deployed outside China. The canary release environments are:
+      *     *   Outside China: presetCanaryOverseas.
+      *     *   In China: The 34 canary release environments are named in the format of presetCanaryXX. For example, presetCanaryBeijing represents the canary release environment in Beijing. A canary release environment is in each of the following regions: Anhui, Beijing, Chongqing, Fujian, Gansu, Guangdong, Guangxi, Guizhou, Hainan, Hebei, Heilongjiang, Henan, Hong Kong, Hubei, Hunan, Jiangsu, Jiangxi, Jilin, Liaoning, Macao, Neimenggu, Ningxia, Qinghai, Shaanxi, Shandong, Shanghai, Shanxi, Sichuan, Taiwan, Tianjin, Xinjiang, Xizang, Yunan, and Zhejiang.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param tmpReq EditRoutineConfRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EditRoutineConfResponse
+     */
     public EditRoutineConfResponse editRoutineConfWithOptions(EditRoutineConfRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         EditRoutineConfShrinkRequest request = new EditRoutineConfShrinkRequest();
@@ -5763,11 +8128,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EditRoutineConfResponse());
     }
 
+    /**
+      * > 
+      * *   This operation modifies only the specified configurations. Other configurations remain unchanged.
+      * *   If you want to delete a setting, delete the parameter value.
+      * *   This operation can add canary release environments. Make sure that the environment names comply with the naming rules. Otherwise, you will fail to add the environments.
+      * *   Dynamic Route for CDN (DCDN) provides 35 canary release environments. Among these environments, 34 are deployed in China and 1 is deployed outside China. The canary release environments are:
+      *     *   Outside China: presetCanaryOverseas.
+      *     *   In China: The 34 canary release environments are named in the format of presetCanaryXX. For example, presetCanaryBeijing represents the canary release environment in Beijing. A canary release environment is in each of the following regions: Anhui, Beijing, Chongqing, Fujian, Gansu, Guangdong, Guangxi, Guizhou, Hainan, Hebei, Heilongjiang, Henan, Hong Kong, Hubei, Hunan, Jiangsu, Jiangxi, Jilin, Liaoning, Macao, Neimenggu, Ningxia, Qinghai, Shaanxi, Shandong, Shanghai, Shanxi, Sichuan, Taiwan, Tianjin, Xinjiang, Xizang, Yunan, and Zhejiang.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request EditRoutineConfRequest
+      * @return EditRoutineConfResponse
+     */
     public EditRoutineConfResponse editRoutineConf(EditRoutineConfRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.editRoutineConfWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListDcdnRealTimeDeliveryProjectRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDcdnRealTimeDeliveryProjectResponse
+     */
     public ListDcdnRealTimeDeliveryProjectResponse listDcdnRealTimeDeliveryProjectWithOptions(ListDcdnRealTimeDeliveryProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5804,11 +8189,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDcdnRealTimeDeliveryProjectResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request ListDcdnRealTimeDeliveryProjectRequest
+      * @return ListDcdnRealTimeDeliveryProjectResponse
+     */
     public ListDcdnRealTimeDeliveryProjectResponse listDcdnRealTimeDeliveryProject(ListDcdnRealTimeDeliveryProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDcdnRealTimeDeliveryProjectWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request ModifyDCdnDomainSchdmByPropertyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDCdnDomainSchdmByPropertyResponse
+     */
     public ModifyDCdnDomainSchdmByPropertyResponse modifyDCdnDomainSchdmByPropertyWithOptions(ModifyDCdnDomainSchdmByPropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5837,11 +8235,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDCdnDomainSchdmByPropertyResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request ModifyDCdnDomainSchdmByPropertyRequest
+      * @return ModifyDCdnDomainSchdmByPropertyResponse
+     */
     public ModifyDCdnDomainSchdmByPropertyResponse modifyDCdnDomainSchdmByProperty(ModifyDCdnDomainSchdmByPropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDCdnDomainSchdmByPropertyWithOptions(request, runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request ModifyDcdnWafPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDcdnWafPolicyResponse
+     */
     public ModifyDcdnWafPolicyResponse modifyDcdnWafPolicyWithOptions(ModifyDcdnWafPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5874,11 +8286,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDcdnWafPolicyResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request ModifyDcdnWafPolicyRequest
+      * @return ModifyDcdnWafPolicyResponse
+     */
     public ModifyDcdnWafPolicyResponse modifyDcdnWafPolicy(ModifyDcdnWafPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDcdnWafPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request ModifyDcdnWafPolicyDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDcdnWafPolicyDomainsResponse
+     */
     public ModifyDcdnWafPolicyDomainsResponse modifyDcdnWafPolicyDomainsWithOptions(ModifyDcdnWafPolicyDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5915,11 +8342,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDcdnWafPolicyDomainsResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+      * @param request ModifyDcdnWafPolicyDomainsRequest
+      * @return ModifyDcdnWafPolicyDomainsResponse
+     */
     public ModifyDcdnWafPolicyDomainsResponse modifyDcdnWafPolicyDomains(ModifyDcdnWafPolicyDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDcdnWafPolicyDomainsWithOptions(request, runtime);
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      * *   You must configure at least one of the **RuleStatus**, **RuleName** and **RuleConfig** parameters.
+      *
+      * @param request ModifyDcdnWafRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDcdnWafRuleResponse
+     */
     public ModifyDcdnWafRuleResponse modifyDcdnWafRuleWithOptions(ModifyDcdnWafRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5956,11 +8399,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDcdnWafRuleResponse());
     }
 
+    /**
+      * >*   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      * *   You must configure at least one of the **RuleStatus**, **RuleName** and **RuleConfig** parameters.
+      *
+      * @param request ModifyDcdnWafRuleRequest
+      * @return ModifyDcdnWafRuleResponse
+     */
     public ModifyDcdnWafRuleResponse modifyDcdnWafRule(ModifyDcdnWafRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDcdnWafRuleWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   DCDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must pass real-name verification.
+      * *   You can call this operation up to five times per second per account.
+      *
+      * @param request OpenDcdnServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return OpenDcdnServiceResponse
+     */
     public OpenDcdnServiceResponse openDcdnServiceWithOptions(OpenDcdnServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5997,11 +8457,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenDcdnServiceResponse());
     }
 
+    /**
+      * > 
+      * *   DCDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must pass real-name verification.
+      * *   You can call this operation up to five times per second per account.
+      *
+      * @param request OpenDcdnServiceRequest
+      * @return OpenDcdnServiceResponse
+     */
     public OpenDcdnServiceResponse openDcdnService(OpenDcdnServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openDcdnServiceWithOptions(request, runtime);
     }
 
+    /**
+      * # Usage notes
+      * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
+      * *   Dynamic Route for CDN (DCDN) supports POST requests in which parameters are sent as a form.
+      * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
+      * *   Each Alibaba Cloud account can submit up to 100 URLs in a request.
+      * *   The prefetch queue of each Alibaba Cloud account can contain up to 50,000 URLs. DCDN executes prefetch tasks based on the time at which you submit the URLs.
+      * *   You can call this operation up to 15 times per second per account.
+      * # Precautions
+      * *   After a refresh task is submitted and executed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+      * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks take 5 to 30 minutes to complete. A task with a smaller average file size takes less time.
+      * *   To allow Resource Access Management (RAM) users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~445051~~).
+      *
+      * @param request PreloadDcdnObjectCachesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PreloadDcdnObjectCachesResponse
+     */
     public PreloadDcdnObjectCachesResponse preloadDcdnObjectCachesWithOptions(PreloadDcdnObjectCachesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6046,11 +8531,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PreloadDcdnObjectCachesResponse());
     }
 
+    /**
+      * # Usage notes
+      * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
+      * *   Dynamic Route for CDN (DCDN) supports POST requests in which parameters are sent as a form.
+      * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
+      * *   Each Alibaba Cloud account can submit up to 100 URLs in a request.
+      * *   The prefetch queue of each Alibaba Cloud account can contain up to 50,000 URLs. DCDN executes prefetch tasks based on the time at which you submit the URLs.
+      * *   You can call this operation up to 15 times per second per account.
+      * # Precautions
+      * *   After a refresh task is submitted and executed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+      * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks take 5 to 30 minutes to complete. A task with a smaller average file size takes less time.
+      * *   To allow Resource Access Management (RAM) users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~445051~~).
+      *
+      * @param request PreloadDcdnObjectCachesRequest
+      * @return PreloadDcdnObjectCachesResponse
+     */
     public PreloadDcdnObjectCachesResponse preloadDcdnObjectCaches(PreloadDcdnObjectCachesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.preloadDcdnObjectCachesWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 30.
+      *
+      * @param request PublishDcdnStagingConfigToProductionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PublishDcdnStagingConfigToProductionResponse
+     */
     public PublishDcdnStagingConfigToProductionResponse publishDcdnStagingConfigToProductionWithOptions(PublishDcdnStagingConfigToProductionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6079,11 +8587,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PublishDcdnStagingConfigToProductionResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 30.
+      *
+      * @param request PublishDcdnStagingConfigToProductionRequest
+      * @return PublishDcdnStagingConfigToProductionResponse
+     */
     public PublishDcdnStagingConfigToProductionResponse publishDcdnStagingConfigToProduction(PublishDcdnStagingConfigToProductionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.publishDcdnStagingConfigToProductionWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param tmpReq PublishRoutineCodeRevisionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PublishRoutineCodeRevisionResponse
+     */
     public PublishRoutineCodeRevisionResponse publishRoutineCodeRevisionWithOptions(PublishRoutineCodeRevisionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         PublishRoutineCodeRevisionShrinkRequest request = new PublishRoutineCodeRevisionShrinkRequest();
@@ -6122,11 +8643,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PublishRoutineCodeRevisionResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request PublishRoutineCodeRevisionRequest
+      * @return PublishRoutineCodeRevisionResponse
+     */
     public PublishRoutineCodeRevisionResponse publishRoutineCodeRevision(PublishRoutineCodeRevisionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.publishRoutineCodeRevisionWithOptions(request, runtime);
     }
 
+    /**
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests in which parameters are sent as a form.
+      * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
+      * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories per day, including subdirectories. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to apply for an increased upper limit. Alibaba Cloud will review your application and then increase the quota accordingly.
+      * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+      * *   You can call this operation up to 30 times per second per account.
+      * - After a refresh task is submitted and completed, your resources that are stored on CDN POPs are removed. When a POP receives a request your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected back to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
+      * - A refresh task takes effect five to six minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+      * - If you want to use Resource Access Management (RAM) users to refresh or prefetch resources, you must acquire the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://www.alibabacloud.com/help/en/dynamic-route-for-cdn/latest/to-grant-the-ram-users-refresh-and-preheating-permissions).
+      *
+      * @param request RefreshDcdnObjectCachesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RefreshDcdnObjectCachesResponse
+     */
     public RefreshDcdnObjectCachesResponse refreshDcdnObjectCachesWithOptions(RefreshDcdnObjectCachesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6163,11 +8705,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshDcdnObjectCachesResponse());
     }
 
+    /**
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests in which parameters are sent as a form.
+      * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
+      * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories per day, including subdirectories. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to apply for an increased upper limit. Alibaba Cloud will review your application and then increase the quota accordingly.
+      * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+      * *   You can call this operation up to 30 times per second per account.
+      * - After a refresh task is submitted and completed, your resources that are stored on CDN POPs are removed. When a POP receives a request your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected back to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
+      * - A refresh task takes effect five to six minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+      * - If you want to use Resource Access Management (RAM) users to refresh or prefetch resources, you must acquire the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://www.alibabacloud.com/help/en/dynamic-route-for-cdn/latest/to-grant-the-ram-users-refresh-and-preheating-permissions).
+      *
+      * @param request RefreshDcdnObjectCachesRequest
+      * @return RefreshDcdnObjectCachesResponse
+     */
     public RefreshDcdnObjectCachesResponse refreshDcdnObjectCaches(RefreshDcdnObjectCachesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.refreshDcdnObjectCachesWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request RollbackDcdnStagingConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RollbackDcdnStagingConfigResponse
+     */
     public RollbackDcdnStagingConfigResponse rollbackDcdnStagingConfigWithOptions(RollbackDcdnStagingConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6192,11 +8755,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackDcdnStagingConfigResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request RollbackDcdnStagingConfigRequest
+      * @return RollbackDcdnStagingConfigResponse
+     */
     public RollbackDcdnStagingConfigResponse rollbackDcdnStagingConfig(RollbackDcdnStagingConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rollbackDcdnStagingConfigWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request SetDcdnDomainCertificateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDcdnDomainCertificateResponse
+     */
     public SetDcdnDomainCertificateResponse setDcdnDomainCertificateWithOptions(SetDcdnDomainCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6257,11 +8833,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDcdnDomainCertificateResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request SetDcdnDomainCertificateRequest
+      * @return SetDcdnDomainCertificateResponse
+     */
     public SetDcdnDomainCertificateResponse setDcdnDomainCertificate(SetDcdnDomainCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDcdnDomainCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request SetDcdnDomainSMCertificateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDcdnDomainSMCertificateResponse
+     */
     public SetDcdnDomainSMCertificateResponse setDcdnDomainSMCertificateWithOptions(SetDcdnDomainSMCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6302,11 +8891,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDcdnDomainSMCertificateResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request SetDcdnDomainSMCertificateRequest
+      * @return SetDcdnDomainSMCertificateResponse
+     */
     public SetDcdnDomainSMCertificateResponse setDcdnDomainSMCertificate(SetDcdnDomainSMCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDcdnDomainSMCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 30.
+      *
+      * @param request SetDcdnDomainStagingConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDcdnDomainStagingConfigResponse
+     */
     public SetDcdnDomainStagingConfigResponse setDcdnDomainStagingConfigWithOptions(SetDcdnDomainStagingConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6335,11 +8937,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDcdnDomainStagingConfigResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 30.
+      *
+      * @param request SetDcdnDomainStagingConfigRequest
+      * @return SetDcdnDomainStagingConfigResponse
+     */
     public SetDcdnDomainStagingConfigResponse setDcdnDomainStagingConfig(SetDcdnDomainStagingConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDcdnDomainStagingConfigWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second.
+      *
+      * @param request SetDcdnUserConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDcdnUserConfigResponse
+     */
     public SetDcdnUserConfigResponse setDcdnUserConfigWithOptions(SetDcdnUserConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6380,11 +8995,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDcdnUserConfigResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second.
+      *
+      * @param request SetDcdnUserConfigRequest
+      * @return SetDcdnUserConfigResponse
+     */
     public SetDcdnUserConfigResponse setDcdnUserConfig(SetDcdnUserConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDcdnUserConfigWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   Each subdomain is globally unique. Resource Access Management (RAM) users cannot create duplicate subdomains.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param tmpReq SetRoutineSubdomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetRoutineSubdomainResponse
+     */
     public SetRoutineSubdomainResponse setRoutineSubdomainWithOptions(SetRoutineSubdomainRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SetRoutineSubdomainShrinkRequest request = new SetRoutineSubdomainShrinkRequest();
@@ -6415,11 +9045,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetRoutineSubdomainResponse());
     }
 
+    /**
+      * > 
+      * *   Each subdomain is globally unique. Resource Access Management (RAM) users cannot create duplicate subdomains.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request SetRoutineSubdomainRequest
+      * @return SetRoutineSubdomainResponse
+     */
     public SetRoutineSubdomainResponse setRoutineSubdomain(SetRoutineSubdomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setRoutineSubdomainWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   If an accelerated domain is in an invalid state or your account has an overdue payment, the accelerated domain cannot be enabled.
+      * *   The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request StartDcdnDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartDcdnDomainResponse
+     */
     public StartDcdnDomainResponse startDcdnDomainWithOptions(StartDcdnDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6452,11 +9099,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartDcdnDomainResponse());
     }
 
+    /**
+      * > 
+      * *   If an accelerated domain is in an invalid state or your account has an overdue payment, the accelerated domain cannot be enabled.
+      * *   The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request StartDcdnDomainRequest
+      * @return StartDcdnDomainResponse
+     */
     public StartDcdnDomainResponse startDcdnDomain(StartDcdnDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDcdnDomainWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   The maximum number of times that users can call this operation per second is 20.
+      * *   If an accelerated domain is in an invalid state or your account has an overdue payment, the accelerated domain cannot be enabled.
+      *
+      * @param request StartDcdnIpaDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartDcdnIpaDomainResponse
+     */
     public StartDcdnIpaDomainResponse startDcdnIpaDomainWithOptions(StartDcdnIpaDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6489,11 +9153,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartDcdnIpaDomainResponse());
     }
 
+    /**
+      * > 
+      * *   The maximum number of times that users can call this operation per second is 20.
+      * *   If an accelerated domain is in an invalid state or your account has an overdue payment, the accelerated domain cannot be enabled.
+      *
+      * @param request StartDcdnIpaDomainRequest
+      * @return StartDcdnIpaDomainResponse
+     */
     public StartDcdnIpaDomainResponse startDcdnIpaDomain(StartDcdnIpaDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDcdnIpaDomainWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   After the accelerated domain is disabled, Dynamic Route for CDN retains its information and reroutes all the requests that are destined for the accelerated domain to the origin.
+      * *   The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request StopDcdnDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopDcdnDomainResponse
+     */
     public StopDcdnDomainResponse stopDcdnDomainWithOptions(StopDcdnDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6526,11 +9207,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopDcdnDomainResponse());
     }
 
+    /**
+      * > 
+      * *   After the accelerated domain is disabled, Dynamic Route for CDN retains its information and reroutes all the requests that are destined for the accelerated domain to the origin.
+      * *   The maximum number of times that each user can call this operation per second is 30.
+      *
+      * @param request StopDcdnDomainRequest
+      * @return StopDcdnDomainResponse
+     */
     public StopDcdnDomainResponse stopDcdnDomain(StopDcdnDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDcdnDomainWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   The maximum number of times that users can call this operation per second is 20.
+      * *   If you disable an accelerated domain, the configurations of the accelerated domain are still retained. The system automatically forwards all the requests that are destined for this domain to the origin.
+      *
+      * @param request StopDcdnIpaDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopDcdnIpaDomainResponse
+     */
     public StopDcdnIpaDomainResponse stopDcdnIpaDomainWithOptions(StopDcdnIpaDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6563,6 +9261,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopDcdnIpaDomainResponse());
     }
 
+    /**
+      * > 
+      * *   The maximum number of times that users can call this operation per second is 20.
+      * *   If you disable an accelerated domain, the configurations of the accelerated domain are still retained. The system automatically forwards all the requests that are destined for this domain to the origin.
+      *
+      * @param request StopDcdnIpaDomainRequest
+      * @return StopDcdnIpaDomainResponse
+     */
     public StopDcdnIpaDomainResponse stopDcdnIpaDomain(StopDcdnIpaDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDcdnIpaDomainWithOptions(request, runtime);
@@ -6672,6 +9378,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.untagDcdnResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to three times per second per account.
+      *
+      * @param request UpdateDcdnDeliverTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDcdnDeliverTaskResponse
+     */
     public UpdateDcdnDeliverTaskResponse updateDcdnDeliverTaskWithOptions(UpdateDcdnDeliverTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -6716,11 +9429,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDcdnDeliverTaskResponse());
     }
 
+    /**
+      * >  You can call this operation up to three times per second per account.
+      *
+      * @param request UpdateDcdnDeliverTaskRequest
+      * @return UpdateDcdnDeliverTaskResponse
+     */
     public UpdateDcdnDeliverTaskResponse updateDcdnDeliverTask(UpdateDcdnDeliverTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDcdnDeliverTaskWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request UpdateDcdnDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDcdnDomainResponse
+     */
     public UpdateDcdnDomainResponse updateDcdnDomainWithOptions(UpdateDcdnDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6765,11 +9491,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDcdnDomainResponse());
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+      * @param request UpdateDcdnDomainRequest
+      * @return UpdateDcdnDomainResponse
+     */
     public UpdateDcdnDomainResponse updateDcdnDomain(UpdateDcdnDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDcdnDomainWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request UpdateDcdnIpaDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDcdnIpaDomainResponse
+     */
     public UpdateDcdnIpaDomainResponse updateDcdnIpaDomainWithOptions(UpdateDcdnIpaDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6814,11 +9553,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDcdnIpaDomainResponse());
     }
 
+    /**
+      * >  The maximum number of times that users can call this operation per second is 20.
+      *
+      * @param request UpdateDcdnIpaDomainRequest
+      * @return UpdateDcdnIpaDomainResponse
+     */
     public UpdateDcdnIpaDomainResponse updateDcdnIpaDomain(UpdateDcdnIpaDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDcdnIpaDomainWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request UpdateDcdnSLSRealtimeLogDeliveryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDcdnSLSRealtimeLogDeliveryResponse
+     */
     public UpdateDcdnSLSRealtimeLogDeliveryResponse updateDcdnSLSRealtimeLogDeliveryWithOptions(UpdateDcdnSLSRealtimeLogDeliveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -6867,11 +9619,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDcdnSLSRealtimeLogDeliveryResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request UpdateDcdnSLSRealtimeLogDeliveryRequest
+      * @return UpdateDcdnSLSRealtimeLogDeliveryResponse
+     */
     public UpdateDcdnSLSRealtimeLogDeliveryResponse updateDcdnSLSRealtimeLogDelivery(UpdateDcdnSLSRealtimeLogDeliveryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDcdnSLSRealtimeLogDeliveryWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to three times per second per account.
+      *
+      * @param request UpdateDcdnSubTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDcdnSubTaskResponse
+     */
     public UpdateDcdnSubTaskResponse updateDcdnSubTaskWithOptions(UpdateDcdnSubTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -6908,11 +9673,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDcdnSubTaskResponse());
     }
 
+    /**
+      * >  You can call this operation up to three times per second per account.
+      *
+      * @param request UpdateDcdnSubTaskRequest
+      * @return UpdateDcdnSubTaskResponse
+     */
     public UpdateDcdnSubTaskResponse updateDcdnSubTask(UpdateDcdnSubTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDcdnSubTaskWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request UpdateDcdnUserRealTimeDeliveryFieldRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDcdnUserRealTimeDeliveryFieldResponse
+     */
     public UpdateDcdnUserRealTimeDeliveryFieldResponse updateDcdnUserRealTimeDeliveryFieldWithOptions(UpdateDcdnUserRealTimeDeliveryFieldRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -6933,11 +9711,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDcdnUserRealTimeDeliveryFieldResponse());
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+      * @param request UpdateDcdnUserRealTimeDeliveryFieldRequest
+      * @return UpdateDcdnUserRealTimeDeliveryFieldResponse
+     */
     public UpdateDcdnUserRealTimeDeliveryFieldResponse updateDcdnUserRealTimeDeliveryField(UpdateDcdnUserRealTimeDeliveryFieldRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDcdnUserRealTimeDeliveryFieldWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   Each time you submit code, a version of the code is generated. You can manage and publish code by version.
+      * *   Each routine can retain at most 10 versions. If the upper limit is reached, you must call the DeleteRoutineCodeRevision operation to manually delete versions that are no longer needed before new versions can be saved.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request UploadRoutineCodeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UploadRoutineCodeResponse
+     */
     public UploadRoutineCodeResponse uploadRoutineCodeWithOptions(UploadRoutineCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -6966,11 +9760,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadRoutineCodeResponse());
     }
 
+    /**
+      * > 
+      * *   Each time you submit code, a version of the code is generated. You can manage and publish code by version.
+      * *   Each routine can retain at most 10 versions. If the upper limit is reached, you must call the DeleteRoutineCodeRevision operation to manually delete versions that are no longer needed before new versions can be saved.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+      * @param request UploadRoutineCodeRequest
+      * @return UploadRoutineCodeResponse
+     */
     public UploadRoutineCodeResponse uploadRoutineCode(UploadRoutineCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadRoutineCodeWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   Each time you upload code to a routine, a version is generated. The number of versions is counted by CodeRev. The uploaded code is used only for testing.
+      * *   The code is automatically published to a staging environment.
+      * *   Each routine can retain at most 10 versions. If the upper limit is reached, you must call the DeleteRoutineCodeRevision operation to manually delete versions that are no longer needed before new versions can be saved.
+      * *   The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request UploadStagingRoutineCodeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UploadStagingRoutineCodeResponse
+     */
     public UploadStagingRoutineCodeResponse uploadStagingRoutineCodeWithOptions(UploadStagingRoutineCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -6999,11 +9813,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadStagingRoutineCodeResponse());
     }
 
+    /**
+      * > 
+      * *   Each time you upload code to a routine, a version is generated. The number of versions is counted by CodeRev. The uploaded code is used only for testing.
+      * *   The code is automatically published to a staging environment.
+      * *   Each routine can retain at most 10 versions. If the upper limit is reached, you must call the DeleteRoutineCodeRevision operation to manually delete versions that are no longer needed before new versions can be saved.
+      * *   The call frequency of the API is no more than 100 queries per second.
+      *
+      * @param request UploadStagingRoutineCodeRequest
+      * @return UploadStagingRoutineCodeResponse
+     */
     public UploadStagingRoutineCodeResponse uploadStagingRoutineCode(UploadStagingRoutineCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadStagingRoutineCodeWithOptions(request, runtime);
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request VerifyDcdnDomainOwnerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return VerifyDcdnDomainOwnerResponse
+     */
     public VerifyDcdnDomainOwnerResponse verifyDcdnDomainOwnerWithOptions(VerifyDcdnDomainOwnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7032,6 +9863,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyDcdnDomainOwnerResponse());
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+      * @param request VerifyDcdnDomainOwnerRequest
+      * @return VerifyDcdnDomainOwnerResponse
+     */
     public VerifyDcdnDomainOwnerResponse verifyDcdnDomainOwner(VerifyDcdnDomainOwnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.verifyDcdnDomainOwnerWithOptions(request, runtime);

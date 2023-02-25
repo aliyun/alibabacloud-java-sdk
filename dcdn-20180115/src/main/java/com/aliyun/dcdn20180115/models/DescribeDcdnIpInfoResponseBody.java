@@ -4,21 +4,42 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnIpInfoResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the specified IP address is assigned to an Alibaba Cloud DCDN node.</p>
+     * <br>
+     * <p>*   True: The specified IP address is assigned to an Alibaba Cloud DCDN node.</p>
+     * <p>*   False: The specified IP address is not assigned to an Alibaba Cloud DCDN node.</p>
+     */
     @NameInMap("DcdnIp")
     public String dcdnIp;
 
+    /**
+     * <p>The Internet service provider (ISP) to which the specified IP address belongs.</p>
+     */
     @NameInMap("ISP")
     public String ISP;
 
+    /**
+     * <p>The name of the ISP.</p>
+     */
     @NameInMap("IspEname")
     public String ispEname;
 
+    /**
+     * <p>The region to which the specified IP address belongs.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The name of the region.</p>
+     */
     @NameInMap("RegionEname")
     public String regionEname;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

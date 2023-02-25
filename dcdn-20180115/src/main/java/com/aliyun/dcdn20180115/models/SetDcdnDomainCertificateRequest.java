@@ -4,30 +4,67 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class SetDcdnDomainCertificateRequest extends TeaModel {
+    /**
+     * <p>The name of the certificate.</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
+    /**
+     * <p>The type of the certificate.</p>
+     * <br>
+     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
+     * <p>*   **cas**: a certificate that is acquired through SSL Certificates Service.</p>
+     * <p>*   **free**: a free certificate.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   If the value of the CertType parameter is **cas**, the **SSLPri** parameter is not required.</p>
+     * <p>*   If the value of the CertType parameter is **free**, the **SSLPri** and **SSLPub** parameters are not required.</p>
+     */
     @NameInMap("CertType")
     public String certType;
 
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     * <br>
+     * <p>HTTPS acceleration must be enabled for the accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.</p>
+     */
     @NameInMap("ForceSet")
     public String forceSet;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region. Default value: ch-hangzhou.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The private key. This parameter is required only if you enable the SSL certificate.</p>
+     */
     @NameInMap("SSLPri")
     public String SSLPri;
 
+    /**
+     * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
+     * <br>
+     * <p>*   **on**: enables the SSL certificate.</p>
+     * <p>*   **off**: disables the SSL certificate.</p>
+     */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
+    /**
+     * <p>The content of the certificate. This parameter is required only if you enable the SSL certificate.</p>
+     */
     @NameInMap("SSLPub")
     public String SSLPub;
 

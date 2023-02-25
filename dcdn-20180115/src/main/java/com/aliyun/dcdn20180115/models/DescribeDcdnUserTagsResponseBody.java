@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserTagsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeDcdnUserTagsResponseBodyTags> tags;
 
@@ -32,9 +38,15 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserTagsResponseBodyTags extends TeaModel {
+        /**
+         * <p>The key of the returned tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the returned tag.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

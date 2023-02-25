@@ -4,27 +4,51 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
+    /**
+     * <p>A list of frequently requested URLs.</p>
+     */
     @NameInMap("AllUrlList")
     public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList allUrlList;
 
+    /**
+     * <p>The accelerated domain name for which the data was returned.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which the data was collected.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>A list of URLs for which 2xx status codes were returned.</p>
+     */
     @NameInMap("Url200List")
     public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200List url200List;
 
+    /**
+     * <p>A list of URLs for which 3xx status codes were returned.</p>
+     */
     @NameInMap("Url300List")
     public DescribeDcdnDomainTopUrlVisitResponseBodyUrl300List url300List;
 
+    /**
+     * <p>A list of URLs for which 4xx status codes were returned.</p>
+     */
     @NameInMap("Url400List")
     public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List url400List;
 
+    /**
+     * <p>A list of URLs for which 5xx status codes were returned.</p>
+     */
     @NameInMap("Url500List")
     public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List url500List;
 
@@ -98,18 +122,33 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList extends TeaModel {
+        /**
+         * <p>The network traffic that was consumed by visits to the URLs. Unit: bytes.</p>
+         */
         @NameInMap("Flow")
         public String flow;
 
+        /**
+         * <p>The proportion of network traffic consumed for accessing the URL.</p>
+         */
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        /**
+         * <p>The complete string of the URL that was queried.</p>
+         */
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        /**
+         * <p>The number of visits to the URL.</p>
+         */
         @NameInMap("VisitData")
         public String visitData;
 
+        /**
+         * <p>The proportion of visits.</p>
+         */
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
@@ -180,18 +219,33 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList extends TeaModel {
+        /**
+         * <p>The network traffic that was consumed by visits to the URLs. Unit: bytes.</p>
+         */
         @NameInMap("Flow")
         public String flow;
 
+        /**
+         * <p>The proportion of network traffic consumed for accessing the URL.</p>
+         */
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        /**
+         * <p>The complete string of the URL that was queried.</p>
+         */
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        /**
+         * <p>The number of visits to the URL.</p>
+         */
         @NameInMap("VisitData")
         public String visitData;
 
+        /**
+         * <p>The proportion of visits to the URL.</p>
+         */
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
@@ -262,18 +316,33 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList extends TeaModel {
+        /**
+         * <p>The network traffic that was consumed by visits to the URLs. Unit: bytes.</p>
+         */
         @NameInMap("Flow")
         public String flow;
 
+        /**
+         * <p>The proportion of network traffic consumed for accessing the URL.</p>
+         */
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        /**
+         * <p>The complete string of the URL that was queried.</p>
+         */
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        /**
+         * <p>The number of visits to the URL.</p>
+         */
         @NameInMap("VisitData")
         public String visitData;
 
+        /**
+         * <p>The proportion of visits.</p>
+         */
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
@@ -344,18 +413,33 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList extends TeaModel {
+        /**
+         * <p>The network traffic that was consumed by visits to the URLs. Unit: bytes.</p>
+         */
         @NameInMap("Flow")
         public String flow;
 
+        /**
+         * <p>The proportion of network traffic consumed for accessing the URL.</p>
+         */
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        /**
+         * <p>The complete string of the URL that was queried.</p>
+         */
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        /**
+         * <p>The number of visits to the URL.</p>
+         */
         @NameInMap("VisitData")
         public String visitData;
 
+        /**
+         * <p>The proportion of visits.</p>
+         */
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
@@ -426,18 +510,33 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList extends TeaModel {
+        /**
+         * <p>The network traffic that was consumed by visits to the URLs. Unit: bytes.</p>
+         */
         @NameInMap("Flow")
         public String flow;
 
+        /**
+         * <p>The proportion of network traffic consumed for accessing the URL.</p>
+         */
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
+        /**
+         * <p>The complete string of the URL that was queried.</p>
+         */
         @NameInMap("UrlDetail")
         public String urlDetail;
 
+        /**
+         * <p>The number of visits to the URL.</p>
+         */
         @NameInMap("VisitData")
         public String visitData;
 
+        /**
+         * <p>The proportion of visits.</p>
+         */
         @NameInMap("VisitProportion")
         public Float visitProportion;
 

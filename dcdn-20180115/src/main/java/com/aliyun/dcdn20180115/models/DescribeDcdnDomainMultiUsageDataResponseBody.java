@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
+    /**
+     * <p>The end of the time range that was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about requests collected every 5 minutes.</p>
+     */
     @NameInMap("RequestPerInterval")
     public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval;
 
+    /**
+     * <p>The beginning of the time range that was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The statistics of network traffic collected every 5 minutes.</p>
+     */
     @NameInMap("TrafficPerInterval")
     public DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerInterval trafficPerInterval;
 
@@ -65,15 +80,27 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule extends TeaModel {
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The number of requests.</p>
+         */
         @NameInMap("Request")
         public Long request;
 
+        /**
+         * <p>The timestamp of the data entry.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The type of the requests. Valid values: StaticHttps, DynamicHttps, DynamicHttp, StaticQuic, and DynamicQuic.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -136,18 +163,33 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule extends TeaModel {
+        /**
+         * <p>The name of the district.</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The number of bits per second.</p>
+         */
         @NameInMap("Bps")
         public Float bps;
 
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The timestamp of the data entry.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The type of the network traffic. Valid values: Simple, IPA, and WebSocket.</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class VerifyDcdnDomainOwnerResponseBody extends TeaModel {
+    /**
+     * <p>The verification information.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

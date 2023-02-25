@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnCertificateDetailResponseBody extends TeaModel {
+    /**
+     * <p>The content of the certificate.</p>
+     */
     @NameInMap("Cert")
     public String cert;
 
+    /**
+     * <p>The ID of the certificate.</p>
+     */
     @NameInMap("CertId")
     public Long certId;
 
+    /**
+     * <p>The name of the certificate.</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
+    /**
+     * <p>The key of the certificate.</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

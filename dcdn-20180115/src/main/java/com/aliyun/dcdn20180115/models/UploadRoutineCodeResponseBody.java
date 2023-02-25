@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class UploadRoutineCodeResponseBody extends TeaModel {
+    /**
+     * <p>The content returned that includes the code version number and information about code upload.</p>
+     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
+    /**
+     * <p>The configuration results of the domain name.</p>
+     */
     @NameInMap("Content")
     public CreateDcdnSLSRealTimeLogDeliveryResponseBodyContent content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
     }
 
     public static class CreateDcdnSLSRealTimeLogDeliveryResponseBodyContentDomains extends TeaModel {
+        /**
+         * <p>The description of the returned result.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>The domain name from which real-time logs were collected.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The region to which real-time logs were delivered.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The status of real-time logs.</p>
+         */
         @NameInMap("Status")
         public String status;
 

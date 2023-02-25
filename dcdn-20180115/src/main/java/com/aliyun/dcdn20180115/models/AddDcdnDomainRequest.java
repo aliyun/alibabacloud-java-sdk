@@ -4,9 +4,17 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class AddDcdnDomainRequest extends TeaModel {
+    /**
+     * <p>The URL that is used to check the accessibility of the origin server.</p>
+     */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
+    /**
+     * <p>The domain name that you want to add. You can specify only one domain name in each request.</p>
+     * <br>
+     * <p>Wildcard domain names are supported. A wildcard domain name must start with a period (.), such as .example.com.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -16,21 +24,42 @@ public class AddDcdnDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The acceleration region. Valid values:</p>
+     * <br>
+     * <p>*   **domestic**: Chinese mainland</p>
+     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **global**: global</p>
+     * <br>
+     * <p>Default value: **domestic**.</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The information about the addresses of origin servers.</p>
+     */
     @NameInMap("Sources")
     public String sources;
 
+    /**
+     * <p>The information about the tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<AddDcdnDomainRequestTag> tag;
 
+    /**
+     * <p>The top-level domain.</p>
+     */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 
@@ -120,9 +149,15 @@ public class AddDcdnDomainRequest extends TeaModel {
     }
 
     public static class AddDcdnDomainRequestTag extends TeaModel {
+        /**
+         * <p>The key of a tag. Valid values of N: **1 to 20**.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of a tag. Valid values of N: **1 to 20**.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,12 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class PreloadDcdnObjectCachesRequest extends TeaModel {
+    /**
+     * <p>The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.</p>
+     * <br>
+     * <p>*   **domestic**: Chinese mainland</p>
+     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     */
     @NameInMap("Area")
     public String area;
 
+    /**
+     * <p>Specifies whether to prefetch content to POPs. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**: prefetches content to POPs that include L2 POPs.</p>
+     * <p>*   **false**: prefetches content to L2 POPs or L3 POPs.</p>
+     */
     @NameInMap("L2Preload")
     public Boolean l2Preload;
 
+    /**
+     * <p>The path of the content that you want to prefetch. Separate multiple URLs with line feed characters (\n) or a pair of carriage return and line feed characters (\r\n).</p>
+     */
     @NameInMap("ObjectPath")
     public String objectPath;
 
@@ -19,6 +34,9 @@ public class PreloadDcdnObjectCachesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The custom header for prefetch in JSON format.</p>
+     */
     @NameInMap("WithHeader")
     public String withHeader;
 

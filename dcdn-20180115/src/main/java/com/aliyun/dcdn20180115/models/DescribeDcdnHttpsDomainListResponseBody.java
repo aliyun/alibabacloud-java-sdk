@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
+    /**
+     * <p>The certificate information about the domain name.</p>
+     */
     @NameInMap("CertInfos")
     public DescribeDcdnHttpsDomainListResponseBodyCertInfos certInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,27 +52,60 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnHttpsDomainListResponseBodyCertInfosCertInfo extends TeaModel {
+        /**
+         * <p>The returned primary domain name of the certificate.</p>
+         */
         @NameInMap("CertCommonName")
         public String certCommonName;
 
+        /**
+         * <p>The time when the certificate expires.</p>
+         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The time when the certificate became effective.</p>
+         */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
+        /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **ok**: The certificate is working as expected.</p>
+         * <p>*   **mismatch**: The certificate does not match the specified domain name.</p>
+         * <p>*   **expired**: The certificate has expired.</p>
+         * <p>*   **expire_soon**: The certificate is about to expire.</p>
+         */
         @NameInMap("CertStatus")
         public String certStatus;
 
+        /**
+         * <p>The type of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **free**: A free certificate.</p>
+         * <p>*   **cas**: A certificate that is purchased through Alibaba Cloud SSL Certificates Service.</p>
+         * <p>*   **upload**: A user-uploaded certificate.</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
+        /**
+         * <p>The time when the certificate was updated.</p>
+         */
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
+        /**
+         * <p>The accelerated domain name for which the certificate information was queried.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 

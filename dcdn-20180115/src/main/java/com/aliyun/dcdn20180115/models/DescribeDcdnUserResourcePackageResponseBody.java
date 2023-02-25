@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The detailed information about resource plans. The returned information is displayed in the format that is specified by the ResourcePackageInfo parameter.</p>
+     */
     @NameInMap("ResourcePackageInfos")
     public DescribeDcdnUserResourcePackageResponseBodyResourcePackageInfos resourcePackageInfos;
 
@@ -32,30 +38,66 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo extends TeaModel {
+        /**
+         * <p>The commodity code of the resource plan.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The remaining quota of the resource plan.</p>
+         * <br>
+         * <p>*   The unit for traffic: bytes.</p>
+         * <p>*   The unit for requests: count.</p>
+         */
         @NameInMap("CurrCapacity")
         public String currCapacity;
 
+        /**
+         * <p>The name of the resource plan.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The time when the resource plan expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The total quota of the resource plan.</p>
+         * <br>
+         * <p>*   The unit for traffic: bytes.</p>
+         * <p>*   The unit for requests: count.</p>
+         */
         @NameInMap("InitCapacity")
         public String initCapacity;
 
+        /**
+         * <p>The ID of the resource plan.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The time when the resource plan takes effect. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the resource plan. Valid values:</p>
+         * <br>
+         * <p>*   **valid**: The resource plan is valid.</p>
+         * <p>*   **closed**: The resource package is expired.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

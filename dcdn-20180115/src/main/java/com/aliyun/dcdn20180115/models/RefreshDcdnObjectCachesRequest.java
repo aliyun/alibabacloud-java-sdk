@@ -4,9 +4,18 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class RefreshDcdnObjectCachesRequest extends TeaModel {
+    /**
+     * <p>The path of the objects that you want to refresh. Separate multiple URLs with line feed characters (\n) or a pair of carriage return and line feed characters (\r\n).</p>
+     */
     @NameInMap("ObjectPath")
     public String objectPath;
 
+    /**
+     * <p>The refresh type. Default value: File. Valid values:</p>
+     * <br>
+     * <p>*   **File**: URL</p>
+     * <p>*   **Directory**: directory</p>
+     */
     @NameInMap("ObjectType")
     public String objectType;
 

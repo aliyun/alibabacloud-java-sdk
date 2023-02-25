@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel {
+    /**
+     * <p>The configuration results of the domain name.</p>
+     */
     @NameInMap("Content")
     public DescribeDcdnUserRealTimeDeliveryFieldResponseBodyContent content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,24 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
     }
 
     public static class DescribeDcdnUserRealTimeDeliveryFieldResponseBodyContentFields extends TeaModel {
+        /**
+         * <p>The description of the field.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 
+        /**
+         * <p>Indicates whether a field was selected.</p>
+         * <br>
+         * <p>*   **true**: The field was selected.</p>
+         * <p>*   **false**: The field was not selected.</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 

@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteDcdnWafRulesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the protection rules that you want to delete. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("RuleIds")
     public String ruleIds;
 

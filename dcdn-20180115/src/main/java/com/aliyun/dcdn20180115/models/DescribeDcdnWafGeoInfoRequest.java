@@ -4,6 +4,12 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafGeoInfoRequest extends TeaModel {
+    /**
+     * <p>The language of the information to return. Valid values:</p>
+     * <br>
+     * <p>*   cn: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("Language")
     public String language;
 

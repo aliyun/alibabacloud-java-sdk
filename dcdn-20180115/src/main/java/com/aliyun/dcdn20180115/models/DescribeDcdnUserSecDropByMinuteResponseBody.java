@@ -4,24 +4,45 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
+    /**
+     * <p>The description of HTTP responses.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Len")
     public Integer len;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array returned.</p>
+     */
     @NameInMap("Rows")
     public java.util.List<DescribeDcdnUserSecDropByMinuteResponseBodyRows> rows;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,21 +108,39 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserSecDropByMinuteResponseBodyRows extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The number of packets blocked within 5 minutes.</p>
+         */
         @NameInMap("Drops")
         public Integer drops;
 
+        /**
+         * <p>The object that triggered the rule.</p>
+         */
         @NameInMap("Object")
         public String object;
 
+        /**
+         * <p>The rule that is triggered.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The security feature that blocked the packets.</p>
+         */
         @NameInMap("SecFunc")
         public String secFunc;
 
+        /**
+         * <p>The beginning of the time range that was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
+         */
         @NameInMap("TmStr")
         public String tmStr;
 

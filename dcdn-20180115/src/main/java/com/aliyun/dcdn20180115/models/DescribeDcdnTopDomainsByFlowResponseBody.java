@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
+    /**
+     * <p>The total number of accelerated domains under your account.</p>
+     */
     @NameInMap("DomainCount")
     public Long domainCount;
 
+    /**
+     * <p>The total number of accelerated domains that are in the **Enabled** state under your account.</p>
+     */
     @NameInMap("DomainOnlineCount")
     public Long domainOnlineCount;
 
+    /**
+     * <p>The end of the time range during which the data was collected.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which the data was collected.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The top N domain names ranked by network traffic.</p>
+     */
     @NameInMap("TopDomains")
     public DescribeDcdnTopDomainsByFlowResponseBodyTopDomains topDomains;
 
@@ -76,24 +94,45 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
+        /**
+         * <p>The name of the accelerated domain.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The peak bandwidth.</p>
+         */
         @NameInMap("MaxBps")
         public Long maxBps;
 
+        /**
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
+        /**
+         * <p>The ranking of the domains.</p>
+         */
         @NameInMap("Rank")
         public Long rank;
 
+        /**
+         * <p>The number of visits to the URL that was queried.</p>
+         */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
+        /**
+         * <p>The total amount of network traffic.</p>
+         */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
+        /**
+         * <p>The proportion of the network traffic that was consumed for accessing the URL.</p>
+         */
         @NameInMap("TrafficPercent")
         public String trafficPercent;
 

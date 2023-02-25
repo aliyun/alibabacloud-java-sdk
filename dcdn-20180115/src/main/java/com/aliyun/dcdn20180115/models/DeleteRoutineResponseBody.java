@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DeleteRoutineResponseBody extends TeaModel {
+    /**
+     * <p>Returns ""Status": "OK"".</p>
+     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

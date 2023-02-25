@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
+    /**
+     * <p>The list of ISPs.</p>
+     */
     @NameInMap("Isps")
     public DescribeDcdnRegionAndIspResponseBodyIsps isps;
 
+    /**
+     * <p>The list of regions.</p>
+     */
     @NameInMap("Regions")
     public DescribeDcdnRegionAndIspResponseBodyRegions regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnRegionAndIspResponseBodyIspsIsp extends TeaModel {
+        /**
+         * <p>The English name of the ISP.</p>
+         */
         @NameInMap("NameEn")
         public String nameEn;
 
+        /**
+         * <p>The Chinese name of the ISP.</p>
+         */
         @NameInMap("NameZh")
         public String nameZh;
 
@@ -92,9 +107,15 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnRegionAndIspResponseBodyRegionsRegion extends TeaModel {
+        /**
+         * <p>The English name of the region.</p>
+         */
         @NameInMap("NameEn")
         public String nameEn;
 
+        /**
+         * <p>The Chinese name of the region.</p>
+         */
         @NameInMap("NameZh")
         public String nameZh;
 

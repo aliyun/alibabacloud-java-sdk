@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
+    /**
+     * <p>The information about the metering method.</p>
+     */
     @NameInMap("BillTypeData")
     public DescribeDcdnUserBillTypeResponseBodyBillTypeData billTypeData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,57 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem extends TeaModel {
+        /**
+         * <p>The metering method. Valid values:</p>
+         * <br>
+         * <p>*   **hour_flow**: pay by data transfer per hour</p>
+         * <p>*   **day_bandwidth**: pay by bandwidth per day</p>
+         * <p>*   **month\_95**: pay by 95th percentile</p>
+         * <p>*   **month_avg_day_bandwidth**: pay by average daily peak bandwidth per month</p>
+         * <p>*   **month\_4th_day_bandwidth**: pay by 4th peak bandwidth per month</p>
+         * <p>*   **month_avg_day\_95**: pay by average daily 95th percentile per month</p>
+         * <p>*   **month\_95\_night_half**: pay by 95th percentile (50 % off during nighttime)</p>
+         * <p>*   **hour_vas**: pay by value-added service per month</p>
+         * <p>*   **quic_hour_count**: pay by QUIC request per hour</p>
+         * <p>*   **hour_count**: pay by request per hour</p>
+         * <p>*   **rtlog_count_day**: pay by real-time log entry</p>
+         */
         @NameInMap("BillType")
         public String billType;
 
+        /**
+         * <p>The billing cycle.</p>
+         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
+        /**
+         * <p>The dimension. Valid values:</p>
+         * <br>
+         * <p>*   **flow**: network traffic and bandwidth</p>
+         * <p>*   **vas**: value-added services (HTTPS and requests for dynamic content)</p>
+         * <p>*   **websocket**: WebSocket</p>
+         * <p>*   **quic**: the number of QUIC requests</p>
+         * <p>*   **rtlog2sls**: log entries delivered to Log Service in real time</p>
+         */
         @NameInMap("Dimension")
         public String dimension;
 
+        /**
+         * <p>The time when the metering method ends.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The time when the metering method takes effect.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

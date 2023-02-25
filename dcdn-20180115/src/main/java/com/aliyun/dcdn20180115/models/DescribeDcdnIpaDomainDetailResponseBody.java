@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
+    /**
+     * <p>The details about the accelerated domain name.</p>
+     */
     @NameInMap("DomainDetail")
     public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail domainDetail;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,43 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
+        /**
+         * <p>The address of the origin server.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The status of the origin server.</p>
+         */
         @NameInMap("Enabled")
         public String enabled;
 
+        /**
+         * <p>The custom port. Valid values: **0** to **65535**.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The priority of the origin server if multiple origin servers are specified.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The type of the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **ipaddr**: an IP address.</p>
+         * <p>*   **domain**: a domain name.</p>
+         * <p>*   **oss**: Object Storage Service (OSS) buckets are not supported.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of the origin server if multiple origin servers are specified.</p>
+         */
         @NameInMap("Weight")
         public String weight;
 
@@ -125,42 +153,89 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnIpaDomainDetailResponseBodyDomainDetail extends TeaModel {
+        /**
+         * <p>Indicates the name of the certificate if the HTTPS protocol is enabled.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
         /**
-         * <p>CNAME。</p>
+         * <p>The CNAME assigned to the domain name.</p>
          */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The accelerated domain names.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The status of the accelerated domain name. Valid values:</p>
+         * <br>
+         * <p>*   **online**: The domain name is enabled.</p>
+         * <p>*   **offline**: The domain name is disabled.</p>
+         * <p>*   **configuring**: The domain name is being configured.</p>
+         * <p>*   **configure_failed**: The domain name failed to be configured.</p>
+         * <p>*   **checking**: The domain name is under review.</p>
+         * <p>*   **check_failed**: The domain name failed the review.</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        /**
+         * <p>The time when the accelerated domain name was created.</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The time when the accelerated domain name was last modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Indicates whether the Security Socket Layer (SSL) certificate is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: The SSL certificate is enabled.</p>
+         * <p>*   **off**: The SSL certificate is disabled.</p>
+         */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
+        /**
+         * <p>Indicates the public key of the certificate if the HTTPS protocol is enabled.</p>
+         */
         @NameInMap("SSLPub")
         public String SSLPub;
 
+        /**
+         * <p>The accelerated region. Valid values:</p>
+         * <br>
+         * <p>*   domestic: Chinese mainland</p>
+         * <p>*   overseas: global (excluding the Chinese mainland)</p>
+         * <p>*   global: global</p>
+         */
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <p>The information about the origin server.</p>
+         */
         @NameInMap("Sources")
         public DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSources sources;
 

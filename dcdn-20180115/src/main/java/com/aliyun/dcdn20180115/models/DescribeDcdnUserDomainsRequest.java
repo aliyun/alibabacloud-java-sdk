@@ -4,42 +4,98 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserDomainsRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <br>
+     * <p>> The end time must be later than the start time.</p>
+     */
     @NameInMap("ChangeEndTime")
     public String changeEndTime;
 
+    /**
+     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     */
     @NameInMap("ChangeStartTime")
     public String changeStartTime;
 
+    /**
+     * <p>Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:</p>
+     * <br>
+     * <p>*   true: displays domain names.</p>
+     * <p>*   false: does not display domain names.</p>
+     */
     @NameInMap("CheckDomainShow")
     public Boolean checkDomainShow;
 
+    /**
+     * <p>The acceleration region. By default, all acceleration regions are queried.</p>
+     * <br>
+     * <p>*   **domestic**: Chinese mainland</p>
+     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **global**: global</p>
+     */
     @NameInMap("Coverage")
     public String coverage;
 
+    /**
+     * <p>The accelerated domain names. If you do not set this parameter, configurations of all domain names that match the conditions are returned.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The search method. Default value: full_match. Valid values:</p>
+     * <br>
+     * <p>*   **fuzzy_match**: fuzzy match</p>
+     * <p>*   **pre_match**: prefix match</p>
+     * <p>*   **suf_match**: suffix match</p>
+     * <p>*   **full_match**: exact match</p>
+     * <br>
+     * <p>> If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.</p>
+     */
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
+    /**
+     * <p>The status of the domain name. Valid values:</p>
+     * <br>
+     * <p>*   **online**: enabled</p>
+     * <p>*   **offline**: disabled</p>
+     * <p>*   **configuring**: configuring</p>
+     * <p>*   **configure_failed**: configuration failed</p>
+     * <p>*   **checking**: reviewing</p>
+     * <p>*   **check_failed:** review failed</p>
+     */
     @NameInMap("DomainStatus")
     public String domainStatus;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**. Valid values: **1** to **500**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tags of the domain names.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDcdnUserDomainsRequestTag> tag;
 
@@ -153,9 +209,15 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
     }
 
     public static class DescribeDcdnUserDomainsRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. Valid values of N: **1** to **20**. You can call the TagDcdnResources operation to set a tag for a domain name.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. Valid values of N: **1** to **20**.</p>
+         */
         @NameInMap("Value")
         public String value;
 

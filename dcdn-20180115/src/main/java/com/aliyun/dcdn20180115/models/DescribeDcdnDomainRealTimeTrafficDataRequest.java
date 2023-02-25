@@ -4,12 +4,25 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeTrafficDataRequest extends TeaModel {
+    /**
+     * <p>The accelerated domain name. You can specify one or more domain names and separate them with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <br>
+     * <p>>  If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

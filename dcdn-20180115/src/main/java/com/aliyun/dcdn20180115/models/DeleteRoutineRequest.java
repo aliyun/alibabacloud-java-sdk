@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DeleteRoutineRequest extends TeaModel {
+    /**
+     * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+     */
     @NameInMap("Name")
     public String name;
 

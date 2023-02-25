@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The billing records.</p>
+     */
     @NameInMap("BillHistoryData")
     public DescribeDcdnUserBillHistoryResponseBodyBillHistoryData billHistoryData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem extends TeaModel {
+        /**
+         * <p>The bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Float bandwidth;
 
+        /**
+         * <p>The region for which the billing records are generated. Valid values: **CN**, **OverSeas**, **AP1**, **AP2**, **AP3**, **NA**, **SA**, **EU**, and **MEAA**.</p>
+         */
         @NameInMap("CdnRegion")
         public String cdnRegion;
 
+        /**
+         * <p>The billing type. Valid values: **StaticHttp**, **DynamicHttp**, and **DynamicHttps**.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The number of billing entries.</p>
+         */
         @NameInMap("Count")
         public Float count;
 
+        /**
+         * <p>The traffic. Unit: byte.</p>
+         */
         @NameInMap("Flow")
         public Float flow;
 
@@ -114,15 +135,27 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem extends TeaModel {
+        /**
+         * <p>The start time of the billing cycle.</p>
+         */
         @NameInMap("BillTime")
         public String billTime;
 
+        /**
+         * <p>The billing method.</p>
+         */
         @NameInMap("BillType")
         public String billType;
 
+        /**
+         * <p>The billing data.</p>
+         */
         @NameInMap("BillingData")
         public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData;
 
+        /**
+         * <p>The dimension.</p>
+         */
         @NameInMap("Dimension")
         public String dimension;
 

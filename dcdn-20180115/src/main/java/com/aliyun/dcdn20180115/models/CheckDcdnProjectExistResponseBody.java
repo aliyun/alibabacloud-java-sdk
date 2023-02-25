@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CheckDcdnProjectExistResponseBody extends TeaModel {
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Content")
     public CheckDcdnProjectExistResponseBodyContent content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,12 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
     }
 
     public static class CheckDcdnProjectExistResponseBodyContent extends TeaModel {
+        /**
+         * <p>Indicates whether the real-time log delivery project exists. Valid values:</p>
+         * <br>
+         * <p>*   **false**: The real-time log delivery project does not exist.</p>
+         * <p>*   **true**: The real-time log delivery project exists.</p>
+         */
         @NameInMap("Exist")
         public String exist;
 

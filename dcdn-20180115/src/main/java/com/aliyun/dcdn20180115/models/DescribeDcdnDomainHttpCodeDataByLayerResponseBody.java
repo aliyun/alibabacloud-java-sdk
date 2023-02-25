@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The distribution of HTTP status codes at each time interval.</p>
+     */
     @NameInMap("HttpCodeDataInterval")
     public DescribeDcdnDomainHttpCodeDataByLayerResponseBodyHttpCodeDataInterval httpCodeDataInterval;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,21 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
     }
 
     public static class DescribeDcdnDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule extends TeaModel {
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The total number of times that HTTP status codes were returned.</p>
+         */
         @NameInMap("TotalValue")
         public String totalValue;
 
+        /**
+         * <p>The number of times that the HTTP status code was returned.</p>
+         */
         @NameInMap("Value")
         public java.util.Map<String, ?> value;
 

@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.</p>
+     */
     @NameInMap("Domains")
     public DescribeDcdnIpaUserDomainsResponseBodyDomains domains;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of domain names returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of domain names returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,18 +80,33 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnIpaUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
+        /**
+         * <p>The address of the origin server.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The port of the origin server.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The priority of the origin server.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The type of the origin server.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+         */
         @NameInMap("Weight")
         public String weight;
 
@@ -147,33 +177,73 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnIpaUserDomainsResponseBodyDomainsPageData extends TeaModel {
+        /**
+         * <p>The CNAME assigned to the accelerated domain name.</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The reason why the accelerated domain name failed the review.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The status of the accelerated domain name. Valid values:</p>
+         * <br>
+         * <p>*   **online**: enabled</p>
+         * <p>*   **offline**: disabled</p>
+         * <p>*   **configuring**: configuring</p>
+         * <p>*   **configure_failed**: configuration failed</p>
+         * <p>*   **checking**: reviewing</p>
+         * <p>*   **check_failed**: review failed</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        /**
+         * <p>The time when the accelerated domain name was added to Alibaba Cloud Dynamic Route for CDN (DCDN).</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The time when the accelerated domain name was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The status of HTTPS.</p>
+         * <br>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
+         */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
+        /**
+         * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
+         */
         @NameInMap("Sandbox")
         public String sandbox;
 
+        /**
+         * <p>The information about the origin server.</p>
+         */
         @NameInMap("Sources")
         public DescribeDcdnIpaUserDomainsResponseBodyDomainsPageDataSources sources;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoutineCodeRevisionResponseBody extends TeaModel {
+    /**
+     * <p>The JavaScript code returned.</p>
+     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

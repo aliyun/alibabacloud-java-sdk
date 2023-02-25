@@ -4,21 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The network traffic returned at each time interval. Unit: bytes.</p>
+     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeDcdnDomainWebsocketTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -76,9 +94,15 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
     }
 
     public static class DescribeDcdnDomainWebsocketTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The timestamp of the returned data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The total volume of traffic.</p>
+         */
         @NameInMap("WebsocketTraffic")
         public Float websocketTraffic;
 

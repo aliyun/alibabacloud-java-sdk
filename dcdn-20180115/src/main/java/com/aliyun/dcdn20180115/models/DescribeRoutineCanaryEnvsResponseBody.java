@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoutineCanaryEnvsResponseBody extends TeaModel {
+    /**
+     * <p>The canary release environments that are supported by the edge routine.</p>
+     */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

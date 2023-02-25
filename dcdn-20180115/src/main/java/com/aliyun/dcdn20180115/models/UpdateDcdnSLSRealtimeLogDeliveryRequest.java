@@ -4,24 +4,51 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends TeaModel {
+    /**
+     * <p>The region from which logs are collected.</p>
+     * <br>
+     * <p>*   **cn**: Chinese mainland</p>
+     * <p>*   **sg**: Singapore</p>
+     * <p>*   **in**: India</p>
+     * <p>*   **eu**: Europe</p>
+     * <p>*   **us**: United States</p>
+     */
     @NameInMap("DataCenter")
     public String dataCenter;
 
+    /**
+     * <p>The domain names. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The name of the real-time log delivery project.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The name of the Logstore.</p>
+     */
     @NameInMap("SLSLogStore")
     public String SLSLogStore;
 
+    /**
+     * <p>The name of the Log Service project.</p>
+     */
     @NameInMap("SLSProject")
     public String SLSProject;
 
+    /**
+     * <p>The region to which logs are delivered.</p>
+     */
     @NameInMap("SLSRegion")
     public String SLSRegion;
 
+    /**
+     * <p>The sampling rate.</p>
+     */
     @NameInMap("SamplingRate")
     public String samplingRate;
 

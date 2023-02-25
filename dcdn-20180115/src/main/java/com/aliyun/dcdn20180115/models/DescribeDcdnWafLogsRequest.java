@@ -4,18 +4,37 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafLogsRequest extends TeaModel {
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range to query the logs.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The number of the page to return. Valid values: positive integers.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **300**. Valid values: **1 to 1000**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The beginning of the time range to query the logs.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

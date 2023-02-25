@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Content")
     public DescribeDcdnRealTimeDeliveryFieldResponseBodyContent content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnRealTimeDeliveryFieldResponseBodyContentFields extends TeaModel {
+        /**
+         * <p>The description of the field.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the field. For more information about the fields in real-time log entries, see [Fields in a real-time log](~~324199~~).</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 

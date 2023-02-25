@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information about each accelerated domain name. The returned information is displayed in the format that is specified by the PageData parameter.</p>
+     */
     @NameInMap("Domains")
     public DescribeDcdnUserDomainsResponseBodyDomains domains;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,18 +80,33 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
+        /**
+         * <p>The address of the origin server.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The port of the origin server.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The priority.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The type of the origin server.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight.</p>
+         */
         @NameInMap("Weight")
         public String weight;
 
@@ -147,36 +177,79 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserDomainsResponseBodyDomainsPageData extends TeaModel {
+        /**
+         * <p>The CNAME assigned to the accelerated domain name.</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The reason why the accelerated domain name failed the review.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the accelerated domain name.</p>
+         */
         @NameInMap("DomainId")
         public Long domainId;
 
+        /**
+         * <p>The information about the accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The status of the accelerated domain name.</p>
+         * <br>
+         * <p>*   **online**: enabled</p>
+         * <p>*   **offline**: disabled</p>
+         * <p>*   **configuring**: configuring</p>
+         * <p>*   **configure_failed**: configuration failed</p>
+         * <p>*   **checking**: reviewing</p>
+         * <p>*   **check_failed:** review failed</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        /**
+         * <p>The time when the accelerated domain name was added.</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The time when the accelerated domain name was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Indicates whether HTTPS is enabled.</p>
+         * <br>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
+         */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
+        /**
+         * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
+         */
         @NameInMap("Sandbox")
         public String sandbox;
 
+        /**
+         * <p>The information about the origin server.</p>
+         */
         @NameInMap("Sources")
         public DescribeDcdnUserDomainsResponseBodyDomainsPageDataSources sources;
 

@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainDetailRequest extends TeaModel {
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

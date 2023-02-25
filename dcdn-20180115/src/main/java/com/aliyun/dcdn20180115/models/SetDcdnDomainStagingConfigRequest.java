@@ -4,9 +4,19 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class SetDcdnDomainStagingConfigRequest extends TeaModel {
+    /**
+     * <p>The accelerated domain names. Separate multiple accelerated domain names with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The list of features. Specify the features in the following format:</p>
+     * <br>
+     * <p>`[{"functionArgs":[{"argName":"parameter key","argValue":"parameter value"},{"argName":"xx","argValue":"xx"}],"functionName": feature name"}]`</p>
+     * <br>
+     * <p>>  Separate multiple parameters with commas (,).</p>
+     */
     @NameInMap("Functions")
     public String functions;
 

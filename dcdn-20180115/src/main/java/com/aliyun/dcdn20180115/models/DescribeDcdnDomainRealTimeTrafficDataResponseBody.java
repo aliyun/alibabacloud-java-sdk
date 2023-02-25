@@ -4,21 +4,41 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <br>
+     * <p>The time granularity varies with the maximum time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600 (1 hour). For more information, see **Description**.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The amount of back-to-origin network traffic returned at each interval.</p>
+     */
     @NameInMap("RealTimeTrafficDataPerInterval")
     public DescribeDcdnDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +96,17 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
     }
 
     public static class DescribeDcdnDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The amount of back-to-origin network traffic.</p>
+         * <br>
+         * <p>>  The network traffic is measured in bytes.</p>
+         */
         @NameInMap("Value")
         public String value;
 

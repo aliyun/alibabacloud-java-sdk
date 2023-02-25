@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The code and configurations of the security rules.</p>
+     */
     @NameInMap("SpecInfos")
     public java.util.List<DescribeDcdnSecSpecInfoResponseBodySpecInfos> specInfos;
 
+    /**
+     * <p>The version of secure DCDN.</p>
+     */
     @NameInMap("Version")
     public String version;
 
@@ -43,12 +52,21 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnSecSpecInfoResponseBodySpecInfosRuleConfigs extends TeaModel {
+        /**
+         * <p>The configuration code of the security rule.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The configuration expression of the security rule.</p>
+         */
         @NameInMap("Expr")
         public String expr;
 
+        /**
+         * <p>The value of the configuration expression of the security rule.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -84,9 +102,15 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnSecSpecInfoResponseBodySpecInfos extends TeaModel {
+        /**
+         * <p>The code of the security rule.</p>
+         */
         @NameInMap("RuleCode")
         public String ruleCode;
 
+        /**
+         * <p>The configurations of the security rule.</p>
+         */
         @NameInMap("RuleConfigs")
         public java.util.List<DescribeDcdnSecSpecInfoResponseBodySpecInfosRuleConfigs> ruleConfigs;
 

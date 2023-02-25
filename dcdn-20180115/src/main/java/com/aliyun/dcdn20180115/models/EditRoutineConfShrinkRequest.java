@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class EditRoutineConfShrinkRequest extends TeaModel {
+    /**
+     * <p>The description of the routine.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The configurations of the specified environment.</p>
+     */
     @NameInMap("EnvConf")
     public String envConfShrink;
 
+    /**
+     * <p>The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.</p>
+     */
     @NameInMap("Name")
     public String name;
 

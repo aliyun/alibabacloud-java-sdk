@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafDomainResponseBody extends TeaModel {
+    /**
+     * <p>Details about the accelerated domain names.</p>
+     */
     @NameInMap("OutPutDomains")
     public java.util.List<DescribeDcdnWafDomainResponseBodyOutPutDomains> outPutDomains;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of accelerated domain names returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,18 +52,46 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafDomainResponseBodyOutPutDomains extends TeaModel {
+        /**
+         * <p>The status of the ACL. Valid values:</p>
+         * <br>
+         * <p>*   0: disabled</p>
+         * <p>*   1: enabled</p>
+         */
         @NameInMap("AclStatus")
         public Integer aclStatus;
 
+        /**
+         * <p>The status of protection against HTTP flood attacks. Valid values:</p>
+         * <br>
+         * <p>*   0: disabled</p>
+         * <p>*   1: enabled</p>
+         */
         @NameInMap("CcStatus")
         public Integer ccStatus;
 
+        /**
+         * <p>The domain name that has WAF enabled.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The status of the domain name. Valid values:</p>
+         * <br>
+         * <p>*   1: The domain name is added to WAF, or the domain name is valid.</p>
+         * <p>*   10: The domain name is being added to WAF.</p>
+         * <p>*   11: The domain name failed to be added to WAF.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The status of WAF. Valid values:</p>
+         * <br>
+         * <p>*   0: disabled</p>
+         * <p>*   1: enabled</p>
+         */
         @NameInMap("WafStatus")
         public Integer wafStatus;
 
