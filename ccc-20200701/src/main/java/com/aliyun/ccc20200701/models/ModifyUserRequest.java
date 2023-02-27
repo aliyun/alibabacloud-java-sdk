@@ -7,6 +7,9 @@ public class ModifyUserRequest extends TeaModel {
     @NameInMap("DisplayId")
     public String displayId;
 
+    @NameInMap("DisplayName")
+    public String displayName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -33,6 +36,14 @@ public class ModifyUserRequest extends TeaModel {
     }
     public String getDisplayId() {
         return this.displayId;
+    }
+
+    public ModifyUserRequest setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
     }
 
     public ModifyUserRequest setInstanceId(String instanceId) {
