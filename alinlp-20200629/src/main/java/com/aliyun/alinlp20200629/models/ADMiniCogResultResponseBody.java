@@ -3,19 +3,19 @@ package com.aliyun.alinlp20200629.models;
 
 import com.aliyun.tea.*;
 
-public class InsertCustomResponseBody extends TeaModel {
+public class ADMiniCogResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    public static InsertCustomResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        InsertCustomResponseBody self = new InsertCustomResponseBody();
+    public static ADMiniCogResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ADMiniCogResultResponseBody self = new ADMiniCogResultResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public InsertCustomResponseBody setData(String data) {
+    public ADMiniCogResultResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -23,7 +23,7 @@ public class InsertCustomResponseBody extends TeaModel {
         return this.data;
     }
 
-    public InsertCustomResponseBody setRequestId(String requestId) {
+    public ADMiniCogResultResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -3,7 +3,7 @@ package com.aliyun.alinlp20200629.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateCustomResponse extends TeaModel {
+public class ADMiniCogResultResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateCustomResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateCustomResponseBody body;
+    public ADMiniCogResultResponseBody body;
 
-    public static UpdateCustomResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateCustomResponse self = new UpdateCustomResponse();
+    public static ADMiniCogResultResponse build(java.util.Map<String, ?> map) throws Exception {
+        ADMiniCogResultResponse self = new ADMiniCogResultResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateCustomResponse setHeaders(java.util.Map<String, String> headers) {
+    public ADMiniCogResultResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateCustomResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateCustomResponse setStatusCode(Integer statusCode) {
+    public ADMiniCogResultResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateCustomResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateCustomResponse setBody(UpdateCustomResponseBody body) {
+    public ADMiniCogResultResponse setBody(ADMiniCogResultResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateCustomResponseBody getBody() {
+    public ADMiniCogResultResponseBody getBody() {
         return this.body;
     }
 
