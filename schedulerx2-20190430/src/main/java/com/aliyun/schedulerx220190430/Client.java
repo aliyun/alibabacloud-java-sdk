@@ -462,6 +462,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TimeoutKillEnable", request.timeoutKillEnable);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            body.put("Timezone", request.timezone);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.XAttrs)) {
             body.put("XAttrs", request.XAttrs);
         }
@@ -1880,6 +1884,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeoutKillEnable)) {
             body.put("TimeoutKillEnable", request.timeoutKillEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            body.put("Timezone", request.timezone);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

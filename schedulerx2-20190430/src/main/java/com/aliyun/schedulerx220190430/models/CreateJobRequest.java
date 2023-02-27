@@ -245,6 +245,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("TimeoutKillEnable")
     public Boolean timeoutKillEnable;
 
+    @NameInMap("Timezone")
+    public String timezone;
+
     /**
      * <p>If the Task type parameter is set to k8s, this parameter is required. xxljob task: {"resource":"job"} shell task: {"image":"busybox","resource":"shell"}</p>
      */
@@ -526,6 +529,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public Boolean getTimeoutKillEnable() {
         return this.timeoutKillEnable;
+    }
+
+    public CreateJobRequest setTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+    public String getTimezone() {
+        return this.timezone;
     }
 
     public CreateJobRequest setXAttrs(String XAttrs) {

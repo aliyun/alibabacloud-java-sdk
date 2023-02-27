@@ -230,6 +230,9 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("TimeoutKillEnable")
     public Boolean timeoutKillEnable;
 
+    @NameInMap("Timezone")
+    public String timezone;
+
     public static UpdateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateJobRequest self = new UpdateJobRequest();
         return TeaModel.build(map, self);
@@ -505,6 +508,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public Boolean getTimeoutKillEnable() {
         return this.timeoutKillEnable;
+    }
+
+    public UpdateJobRequest setTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+    public String getTimezone() {
+        return this.timezone;
     }
 
     public static class UpdateJobRequestContactInfo extends TeaModel {
