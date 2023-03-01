@@ -109,6 +109,9 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowTaskResponseBodyWorkflowTask extends TeaModel {
+        @NameInMap("ActivityResults")
+        public String activityResults;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -124,12 +127,23 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         @NameInMap("TaskInput")
         public String taskInput;
 
+        @NameInMap("UserData")
+        public String userData;
+
         @NameInMap("Workflow")
         public GetWorkflowTaskResponseBodyWorkflowTaskWorkflow workflow;
 
         public static GetWorkflowTaskResponseBodyWorkflowTask build(java.util.Map<String, ?> map) throws Exception {
             GetWorkflowTaskResponseBodyWorkflowTask self = new GetWorkflowTaskResponseBodyWorkflowTask();
             return TeaModel.build(map, self);
+        }
+
+        public GetWorkflowTaskResponseBodyWorkflowTask setActivityResults(String activityResults) {
+            this.activityResults = activityResults;
+            return this;
+        }
+        public String getActivityResults() {
+            return this.activityResults;
         }
 
         public GetWorkflowTaskResponseBodyWorkflowTask setCreateTime(String createTime) {
@@ -170,6 +184,14 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         }
         public String getTaskInput() {
             return this.taskInput;
+        }
+
+        public GetWorkflowTaskResponseBodyWorkflowTask setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
         public GetWorkflowTaskResponseBodyWorkflowTask setWorkflow(GetWorkflowTaskResponseBodyWorkflowTaskWorkflow workflow) {

@@ -7,6 +7,9 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("JobResult")
+    public GetSmartHandleJobResponseBodyJobResult jobResult;
+
     @NameInMap("Output")
     public String output;
 
@@ -33,6 +36,14 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public GetSmartHandleJobResponseBody setJobResult(GetSmartHandleJobResponseBodyJobResult jobResult) {
+        this.jobResult = jobResult;
+        return this;
+    }
+    public GetSmartHandleJobResponseBodyJobResult getJobResult() {
+        return this.jobResult;
     }
 
     public GetSmartHandleJobResponseBody setOutput(String output) {
@@ -73,6 +84,36 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public static class GetSmartHandleJobResponseBodyJobResult extends TeaModel {
+        @NameInMap("AiResult")
+        public String aiResult;
+
+        @NameInMap("MediaId")
+        public String mediaId;
+
+        public static GetSmartHandleJobResponseBodyJobResult build(java.util.Map<String, ?> map) throws Exception {
+            GetSmartHandleJobResponseBodyJobResult self = new GetSmartHandleJobResponseBodyJobResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSmartHandleJobResponseBodyJobResult setAiResult(String aiResult) {
+            this.aiResult = aiResult;
+            return this;
+        }
+        public String getAiResult() {
+            return this.aiResult;
+        }
+
+        public GetSmartHandleJobResponseBodyJobResult setMediaId(String mediaId) {
+            this.mediaId = mediaId;
+            return this;
+        }
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
     }
 
     public static class GetSmartHandleJobResponseBodySmartJobInfoInputConfig extends TeaModel {
