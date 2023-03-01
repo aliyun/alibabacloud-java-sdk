@@ -11,7 +11,7 @@ public class ListReservedCapacitiesRequest extends TeaModel {
     public String limit;
 
     /**
-     * <p>The token that is required for pagination.</p>
+     * <p>The token that determines the start point of the query.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListReservedCapacitiesResponseBody extends TeaModel {
     /**
-     * <p>The pagination token to request the next page of results.</p>
+     * <p>The token used to obtain more results.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

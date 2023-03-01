@@ -59,7 +59,7 @@ public class ClaimGPUInstanceRequest extends TeaModel {
     public String sourceCidrIp;
 
     /**
-     * <p>The range of TCP ports that are open to the security group of the GPU-rendered instance.</p>
+     * <p>The range of TCP ports that are open to the security group of the GPU rendering instance.</p>
      */
     @NameInMap("tcpPortRange")
     public java.util.List<String> tcpPortRange;
@@ -71,7 +71,7 @@ public class ClaimGPUInstanceRequest extends TeaModel {
     public java.util.List<String> udpPortRange;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the VPC in which the instance resides.</p>
      */
     @NameInMap("vpcId")
     public String vpcId;

@@ -71,6 +71,12 @@ public class CreateFunctionRequest extends TeaModel {
     public String functionName;
 
     /**
+     * <p>GPU instance memory specifications of the function. Unit: MB. The value is a multiple of 1024.</p>
+     */
+    @NameInMap("gpuMemorySize")
+    public Integer gpuMemorySize;
+
+    /**
      * <p>The handler of the function. The format varies based on the programming language. For more information, see [Function handlers](~~157704~~).</p>
      */
     @NameInMap("handler")
@@ -234,6 +240,14 @@ public class CreateFunctionRequest extends TeaModel {
     }
     public String getFunctionName() {
         return this.functionName;
+    }
+
+    public CreateFunctionRequest setGpuMemorySize(Integer gpuMemorySize) {
+        this.gpuMemorySize = gpuMemorySize;
+        return this;
+    }
+    public Integer getGpuMemorySize() {
+        return this.gpuMemorySize;
     }
 
     public CreateFunctionRequest setHandler(String handler) {

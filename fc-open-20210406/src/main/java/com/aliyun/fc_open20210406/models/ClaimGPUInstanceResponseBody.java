@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ClaimGPUInstanceResponseBody extends TeaModel {
     /**
-     * <p>The time when the product instance was created.</p>
+     * <p>The time when the product instance is created.</p>
      */
     @NameInMap("createdTime")
     public String createdTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance that you query.</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>The public IP address.</p>
+     * <p>The public IP address of the server.</p>
      */
     @NameInMap("publicIp")
     public String publicIp;

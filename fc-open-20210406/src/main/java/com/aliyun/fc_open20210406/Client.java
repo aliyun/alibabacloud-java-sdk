@@ -328,6 +328,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("functionName", request.functionName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuMemorySize)) {
+            body.put("gpuMemorySize", request.gpuMemorySize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.handler)) {
             body.put("handler", request.handler);
         }
@@ -3717,6 +3721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.environmentVariables)) {
             body.put("environmentVariables", request.environmentVariables);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuMemorySize)) {
+            body.put("gpuMemorySize", request.gpuMemorySize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.handler)) {

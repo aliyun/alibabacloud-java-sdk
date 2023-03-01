@@ -13,9 +13,9 @@ public class UpdateCustomDomainRequest extends TeaModel {
     /**
      * <p>The protocol types supported by the domain name. Valid values:</p>
      * <br>
-     * <p>- **HTTP**: Only HTTP is supported.</p>
-     * <p>- **HTTPS**: Only HTTPS is supported.</p>
-     * <p>- **HTTP,HTTPS**: Both HTTP and HTTPS are supported.</p>
+     * <p>*   **HTTP**: Only HTTP is supported.</p>
+     * <p>*   **HTTPS**: Only HTTPS is supported.</p>
+     * <p>*   **HTTP,HTTPS**: HTTP and HTTPS are supported.</p>
      */
     @NameInMap("protocol")
     public String protocol;
@@ -27,11 +27,14 @@ public class UpdateCustomDomainRequest extends TeaModel {
     public RouteConfig routeConfig;
 
     /**
-     * <p>The configurations of the TLS.</p>
+     * <p>The Transport Layer Security (TLS) configuration.</p>
      */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
+    /**
+     * <p>The Web Application Firewall (WAF) configuration.</p>
+     */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;
 

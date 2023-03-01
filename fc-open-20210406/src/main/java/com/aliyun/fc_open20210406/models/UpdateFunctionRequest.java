@@ -17,10 +17,10 @@ public class UpdateFunctionRequest extends TeaModel {
     public Integer caPort;
 
     /**
-     * <p>**Function code packages** can be provided with the following two methods. You must use only one of the methods in a single request.</p>
+     * <p>**Function code packages** can be provided with the following two methods. You must use only one of the methods in a request.</p>
      * <br>
-     * <p>*   Specify the names of the **Object Storage Service (OSS) bucket** and **object** where the code package is stored.</p>
-     * <p>*   Set the **zipFile** parameter to the Base64-encoded content of the ZIP file.</p>
+     * <p>*   Specify the name of the **Object Storage Service (OSS) bucket** and **object** where the code package is stored.</p>
+     * <p>*   Specify that the **zipFile** parameter is used as the Base64-encoded content of the ZIP file.</p>
      */
     @NameInMap("code")
     public Code code;
@@ -32,19 +32,19 @@ public class UpdateFunctionRequest extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The configurations of the custom container runtime. After you configure the custom container, Function Compute can execute functions in a container created from a custom image.</p>
+     * <p>The configuration of the custom container. After you configure the custom container, Function Compute can execute functions in a container created from a custom image.</p>
      */
     @NameInMap("customContainerConfig")
     public CustomContainerConfig customContainerConfig;
 
     /**
-     * <p>The custom Domain Name System (DNS) configurations of the function.</p>
+     * <p>The custom DNS configurations of the function.</p>
      */
     @NameInMap("customDNS")
     public CustomDNS customDNS;
 
     /**
-     * <p>The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.</p>
+     * <p>The custom health check configurations of the function. This parameter is applicable to only custom runtimes and custom containers.</p>
      */
     @NameInMap("customHealthCheckConfig")
     public CustomHealthCheckConfig customHealthCheckConfig;
@@ -68,10 +68,13 @@ public class UpdateFunctionRequest extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>The environment variables that you configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Overview](~~69777~~).</p>
+     * <p>The environment variables that are configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Environment variables](~~69777~~).</p>
      */
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
+
+    @NameInMap("gpuMemorySize")
+    public Integer gpuMemorySize;
 
     /**
      * <p>The handler of the function. The format varies based on the programming language. For more information, see [Function handlers](~~157704~~).</p>
@@ -80,7 +83,7 @@ public class UpdateFunctionRequest extends TeaModel {
     public String handler;
 
     /**
-     * <p>The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Minimum value: 1. When this period ends, the execution of the initializer function is terminated.</p>
+     * <p>The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the initializer function is terminated.</p>
      */
     @NameInMap("initializationTimeout")
     public Integer initializationTimeout;
@@ -98,9 +101,9 @@ public class UpdateFunctionRequest extends TeaModel {
     public InstanceLifecycleConfig instanceLifecycleConfig;
 
     /**
-     * <p>The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long term to start, you can specify a suitable soft concurrency to start the instance in advance.</p>
+     * <p>The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.</p>
      * <br>
-     * <p>The value must be less than or equal to that of **instanceConcurrency**.</p>
+     * <p>The value must be less than or equal to that of the **instanceConcurrency** parameter.</p>
      */
     @NameInMap("instanceSoftConcurrency")
     public Integer instanceSoftConcurrency;
@@ -115,9 +118,9 @@ public class UpdateFunctionRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>An array that consists of the information of layers.</p>
+     * <p>The information about layers.</p>
      * <br>
-     * <p>>  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript.</p>
+     * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name and a larger subscript in the layer.</p>
      */
     @NameInMap("layers")
     public java.util.List<String> layers;
@@ -129,13 +132,13 @@ public class UpdateFunctionRequest extends TeaModel {
     public Integer memorySize;
 
     /**
-     * <p>The runtime environment of the function. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom** and **custom-container**.</p>
+     * <p>The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom** and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).</p>
      */
     @NameInMap("runtime")
     public String runtime;
 
     /**
-     * <p>The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When this period ends, the execution of the function is terminated.</p>
+     * <p>The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the function is terminated.</p>
      */
     @NameInMap("timeout")
     public Integer timeout;
@@ -231,6 +234,14 @@ public class UpdateFunctionRequest extends TeaModel {
     }
     public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    public UpdateFunctionRequest setGpuMemorySize(Integer gpuMemorySize) {
+        this.gpuMemorySize = gpuMemorySize;
+        return this;
+    }
+    public Integer getGpuMemorySize() {
+        return this.gpuMemorySize;
     }
 
     public UpdateFunctionRequest setHandler(String handler) {
