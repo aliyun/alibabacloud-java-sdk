@@ -16,6 +16,9 @@ public class PathConfig extends TeaModel {
     @NameInMap("qualifier")
     public String qualifier;
 
+    @NameInMap("rewriteConfig")
+    public RewriteConfig rewriteConfig;
+
     @NameInMap("serviceName")
     public String serviceName;
 
@@ -54,6 +57,14 @@ public class PathConfig extends TeaModel {
     }
     public String getQualifier() {
         return this.qualifier;
+    }
+
+    public PathConfig setRewriteConfig(RewriteConfig rewriteConfig) {
+        this.rewriteConfig = rewriteConfig;
+        return this;
+    }
+    public RewriteConfig getRewriteConfig() {
+        return this.rewriteConfig;
     }
 
     public PathConfig setServiceName(String serviceName) {

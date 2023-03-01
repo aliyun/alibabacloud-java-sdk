@@ -11,7 +11,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
     public java.util.List<ListCustomDomainsResponseBodyCustomDomains> customDomains;
 
     /**
-     * <p>The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * <p>The pagination token to use to request the next page of results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -39,7 +39,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
 
     public static class ListCustomDomainsResponseBodyCustomDomains extends TeaModel {
         /**
-         * <p>The ID of the account.</p>
+         * <p>The ID of your Alibaba Cloud account.</p>
          */
         @NameInMap("accountId")
         public String accountId;
@@ -57,7 +57,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
         public CertConfig certConfig;
 
         /**
-         * <p>The time when the domain name was added.</p>
+         * <p>The time when the custom domain name was created.</p>
          */
         @NameInMap("createdTime")
         public String createdTime;
@@ -75,11 +75,11 @@ public class ListCustomDomainsResponseBody extends TeaModel {
         public String lastModifiedTime;
 
         /**
-         * <p>The protocol types supported by the domain name. Valid values: </p>
+         * <p>The protocol type that is supported by the custom domain name.</p>
          * <br>
-         * <p>- **HTTP**: Only HTTP is supported. </p>
-         * <p>- **HTTPS**: Only HTTPS is supported. </p>
-         * <p>- **HTTP,HTTPS**: Both HTTP and HTTPS are supported.</p>
+         * <p>*   **HTTP**: Only HTTP is supported.</p>
+         * <p>*   **HTTPS**: Only HTTPS is supported.</p>
+         * <p>*   **HTTP,HTTPS**: HTTP and HTTPS are supported.</p>
          */
         @NameInMap("protocol")
         public String protocol;
@@ -91,11 +91,14 @@ public class ListCustomDomainsResponseBody extends TeaModel {
         public RouteConfig routeConfig;
 
         /**
-         * <p>The configurations of the TLS.</p>
+         * <p>The Transport Layer Security (TLS) configuration.</p>
          */
         @NameInMap("tlsConfig")
         public TLSConfig tlsConfig;
 
+        /**
+         * <p>The Web Application Firewall (WAF) configuration.</p>
+         */
         @NameInMap("wafConfig")
         public WAFConfig wafConfig;
 

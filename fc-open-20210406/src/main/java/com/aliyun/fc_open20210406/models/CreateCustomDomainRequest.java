@@ -12,6 +12,7 @@ public class CreateCustomDomainRequest extends TeaModel {
 
     /**
      * <p>The domain name.</p>
+     * <p>Enter a custom domain name that has obtained an ICP filing in the Alibaba Cloud ICP Filing system, or a custom domain name whose ICP filing information includes Alibaba Cloud as a service provider.</p>
      */
     @NameInMap("domainName")
     public String domainName;
@@ -19,9 +20,9 @@ public class CreateCustomDomainRequest extends TeaModel {
     /**
      * <p>The protocol types supported by the domain name. Valid values:</p>
      * <br>
-     * <p>- **HTTP**: Only HTTP is supported. </p>
-     * <p>- **HTTPS**: Only HTTPS is supported. </p>
-     * <p>- **HTTP,HTTPS**: Both HTTP and HTTPS are supported.</p>
+     * <p>*   **HTTP**: Only HTTP is supported.</p>
+     * <p>*   **HTTPS**: Only HTTPS is supported.</p>
+     * <p>*   **HTTP,HTTPS**: HTTP and HTTPS are supported.</p>
      */
     @NameInMap("protocol")
     public String protocol;
@@ -33,11 +34,14 @@ public class CreateCustomDomainRequest extends TeaModel {
     public RouteConfig routeConfig;
 
     /**
-     * <p>The configurations of the TLS.</p>
+     * <p>The Transport Layer Security (TLS) configuration.</p>
      */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
+    /**
+     * <p>The Web Application Firewall (WAF) configuration.</p>
+     */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;
 

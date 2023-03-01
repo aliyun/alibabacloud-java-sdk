@@ -43,6 +43,9 @@ public class NASConfig extends TeaModel {
     }
 
     public static class NASConfigMountPoints extends TeaModel {
+        @NameInMap("enableTLS")
+        public Boolean enableTLS;
+
         @NameInMap("mountDir")
         public String mountDir;
 
@@ -52,6 +55,14 @@ public class NASConfig extends TeaModel {
         public static NASConfigMountPoints build(java.util.Map<String, ?> map) throws Exception {
             NASConfigMountPoints self = new NASConfigMountPoints();
             return TeaModel.build(map, self);
+        }
+
+        public NASConfigMountPoints setEnableTLS(Boolean enableTLS) {
+            this.enableTLS = enableTLS;
+            return this;
+        }
+        public Boolean getEnableTLS() {
+            return this.enableTLS;
         }
 
         public NASConfigMountPoints setMountDir(String mountDir) {

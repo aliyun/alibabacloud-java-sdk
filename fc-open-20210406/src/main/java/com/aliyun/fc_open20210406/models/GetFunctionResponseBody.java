@@ -88,6 +88,9 @@ public class GetFunctionResponseBody extends TeaModel {
     @NameInMap("functionName")
     public String functionName;
 
+    @NameInMap("gpuMemorySize")
+    public Integer gpuMemorySize;
+
     /**
      * <p>The handler of the function. For more information, see [Function handler](~~157704~~).</p>
      */
@@ -285,6 +288,14 @@ public class GetFunctionResponseBody extends TeaModel {
     }
     public String getFunctionName() {
         return this.functionName;
+    }
+
+    public GetFunctionResponseBody setGpuMemorySize(Integer gpuMemorySize) {
+        this.gpuMemorySize = gpuMemorySize;
+        return this;
+    }
+    public Integer getGpuMemorySize() {
+        return this.gpuMemorySize;
     }
 
     public GetFunctionResponseBody setHandler(String handler) {

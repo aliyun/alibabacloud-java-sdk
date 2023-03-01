@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the account.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("accountId")
     public String accountId;
 
     /**
-     * <p>The version number of the API.</p>
+     * <p>The version of the API.</p>
      */
     @NameInMap("apiVersion")
     public String apiVersion;
@@ -23,7 +23,7 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
     public CertConfig certConfig;
 
     /**
-     * <p>The time when the domain name was added.</p>
+     * <p>The time when the custom domain name was created.</p>
      */
     @NameInMap("createdTime")
     public String createdTime;
@@ -41,11 +41,11 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
     public String lastModifiedTime;
 
     /**
-     * <p>The protocol types supported by the domain name. Valid values: </p>
+     * <p>The protocol type that is supported by the custom domain name.</p>
      * <br>
-     * <p>- **HTTP**: Only HTTP is supported.</p>
-     * <p>- **HTTPS**: Only HTTPS is supported.</p>
-     * <p>- **HTTP,HTTPS**: Both HTTP and HTTPS are supported.</p>
+     * <p>*   **HTTP**: Only HTTP is supported.</p>
+     * <p>*   **HTTPS**: Only HTTPS is supported.</p>
+     * <p>*   **HTTP,HTTPS**: HTTP and HTTPS are supported.</p>
      */
     @NameInMap("protocol")
     public String protocol;
@@ -57,11 +57,14 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
     public RouteConfig routeConfig;
 
     /**
-     * <p>The configurations of the TLS.</p>
+     * <p>The Transport Layer Security (TLS) configuration.</p>
      */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
+    /**
+     * <p>The Web Application Firewall (WAF) configuration.</p>
+     */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;
 

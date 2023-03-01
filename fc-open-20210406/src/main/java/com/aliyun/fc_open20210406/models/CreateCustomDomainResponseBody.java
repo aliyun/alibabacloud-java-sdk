@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomDomainResponseBody extends TeaModel {
     /**
-     * <p>The ID of the account.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("accountId")
     public String accountId;
@@ -43,9 +43,9 @@ public class CreateCustomDomainResponseBody extends TeaModel {
     /**
      * <p>The protocol types supported by the domain name. Valid values:</p>
      * <br>
-     * <p>- **HTTP**: Only HTTP is supported. </p>
-     * <p>- **HTTPS**: Only HTTPS is supported. </p>
-     * <p>- **HTTP,HTTPS**: Both HTTP and HTTPS are supported.</p>
+     * <p>*   **HTTP**: Only HTTP is supported.</p>
+     * <p>*   **HTTPS**: Only HTTPS is supported.</p>
+     * <p>*   **HTTP,HTTPS**: HTTP and HTTPS are supported.</p>
      */
     @NameInMap("protocol")
     public String protocol;
@@ -57,11 +57,14 @@ public class CreateCustomDomainResponseBody extends TeaModel {
     public RouteConfig routeConfig;
 
     /**
-     * <p>The configurations of the TLS.</p>
+     * <p>The Transport Layer Security (TLS) configuration.</p>
      */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
+    /**
+     * <p>The Web Application Firewall (WAF) configuration.</p>
+     */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;
 
