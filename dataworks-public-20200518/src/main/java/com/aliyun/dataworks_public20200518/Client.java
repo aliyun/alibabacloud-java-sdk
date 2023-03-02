@@ -837,12 +837,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RequestMethod", request.requestMethod);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.responseContentType)) {
             body.put("ResponseContentType", request.responseContentType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scriptDetails)) {
             body.put("ScriptDetails", request.scriptDetails);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlMode)) {
+            body.put("SqlMode", request.sqlMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
@@ -10427,6 +10435,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.requestMethod)) {
             body.put("RequestMethod", request.requestMethod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.responseContentType)) {
