@@ -4,27 +4,55 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class FetchLosslessRuleListRequest extends TeaModel {
+    /**
+     * <p>The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.</p>
+     * <br>
+     * <p>*   By default, this parameter is left empty.</p>
+     * <p>*   zh-CN: Chinese</p>
+     * <p>*   en-US: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The service source that the application accesses.</p>
+     */
     @NameInMap("Source")
     public String source;
 

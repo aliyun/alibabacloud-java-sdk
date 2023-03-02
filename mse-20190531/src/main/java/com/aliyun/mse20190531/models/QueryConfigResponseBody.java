@@ -179,6 +179,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ConfigSecretSupported")
         public Boolean configSecretSupported;
 
+        @NameInMap("EurekaSupported")
+        public Boolean eurekaSupported;
+
         /**
          * <p>Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.</p>
          */
@@ -388,6 +391,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public Boolean getConfigSecretSupported() {
             return this.configSecretSupported;
+        }
+
+        public QueryConfigResponseBodyData setEurekaSupported(Boolean eurekaSupported) {
+            this.eurekaSupported = eurekaSupported;
+            return this;
+        }
+        public Boolean getEurekaSupported() {
+            return this.eurekaSupported;
         }
 
         public QueryConfigResponseBodyData setExtendedTypesEnable(Boolean extendedTypesEnable) {

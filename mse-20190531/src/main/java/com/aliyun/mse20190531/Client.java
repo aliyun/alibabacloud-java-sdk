@@ -378,6 +378,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.policies)) {
+            query.put("Policies", request.policies);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.predicatesShrink)) {
             query.put("Predicates", request.predicatesShrink);
         }
@@ -388,6 +392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.routeOrder)) {
             query.put("RouteOrder", request.routeOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeType)) {
+            query.put("RouteType", request.routeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.servicesShrink)) {
@@ -2681,6 +2689,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.exportZookeeperDataWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query the rules for graceful start and shutdown.
+      *
+      * @param request FetchLosslessRuleListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return FetchLosslessRuleListResponse
+     */
     public FetchLosslessRuleListResponse fetchLosslessRuleListWithOptions(FetchLosslessRuleListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2701,6 +2716,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FetchLosslessRuleListResponse());
     }
 
+    /**
+      * You can call this operation to query the rules for graceful start and shutdown.
+      *
+      * @param request FetchLosslessRuleListRequest
+      * @return FetchLosslessRuleListResponse
+     */
     public FetchLosslessRuleListResponse fetchLosslessRuleList(FetchLosslessRuleListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.fetchLosslessRuleListWithOptions(request, runtime);
@@ -3487,6 +3508,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getNacosHistoryConfigWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the GetOverview operation to query overview information about service governance.
+      *
+      * @param request GetOverviewRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetOverviewResponse
+     */
     public GetOverviewResponse getOverviewWithOptions(GetOverviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3519,6 +3547,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetOverviewResponse());
     }
 
+    /**
+      * You can call the GetOverview operation to query overview information about service governance.
+      *
+      * @param request GetOverviewRequest
+      * @return GetOverviewResponse
+     */
     public GetOverviewResponse getOverview(GetOverviewRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getOverviewWithOptions(request, runtime);

@@ -17,13 +17,13 @@ public class ListSecurityGroupResponseBody extends TeaModel {
     public java.util.List<ListSecurityGroupResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -113,7 +113,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
          * <p>The type of the security group. Valid values:</p>
          * <br>
          * <p>*   normal: basic security group</p>
-         * <p>*   enterprise: advanced security group. For more information, see [Advanced security groups](~~120621~~).</p>
+         * <p>*   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).</p>
          */
         @NameInMap("SecurityGroupType")
         public String securityGroupType;
