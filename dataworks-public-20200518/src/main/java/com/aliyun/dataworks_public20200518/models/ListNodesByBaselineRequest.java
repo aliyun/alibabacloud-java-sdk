@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListNodesByBaselineRequest extends TeaModel {
+    /**
+     * <p>The ID of the baseline. You can call the [ListBaselineConfigs](~~173964~~) operation to query the ID.</p>
+     */
     @NameInMap("BaselineId")
     public Long baselineId;
 

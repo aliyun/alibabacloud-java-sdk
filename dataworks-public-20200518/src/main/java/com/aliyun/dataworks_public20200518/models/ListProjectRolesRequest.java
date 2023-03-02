@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListProjectRolesRequest extends TeaModel {
+    /**
+     * <p>Dataworks ID of the workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

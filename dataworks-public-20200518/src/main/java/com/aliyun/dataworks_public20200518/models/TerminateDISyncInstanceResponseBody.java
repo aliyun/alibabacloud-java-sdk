@@ -4,12 +4,24 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class TerminateDISyncInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The result of the operation.</p>
+     */
     @NameInMap("Data")
     public TerminateDISyncInstanceResponseBodyData data;
 
+    /**
+     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request is successful.</p>
+     * <p>*   false: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +55,18 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
     }
 
     public static class TerminateDISyncInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The reason why the real-time synchronization node fails to be terminated. If the real-time synchronization node is terminated, this parameter is left empty.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether the real-time synchronization node is terminated. Valid values:</p>
+         * <br>
+         * <p>*   success</p>
+         * <p>*   fail</p>
+         */
         @NameInMap("Status")
         public String status;
 

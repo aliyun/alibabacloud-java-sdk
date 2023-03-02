@@ -4,18 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListMigrationsRequest extends TeaModel {
+    /**
+     * <p>The type of the migration task. Valid values: IMPORT and EXPORT.</p>
+     */
     @NameInMap("MigrationType")
     public String migrationType;
 
+    /**
+     * <p>The ID of the owner.</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

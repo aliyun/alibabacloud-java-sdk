@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetExtensionResponseBody extends TeaModel {
+    /**
+     * <p>The details of the extension.</p>
+     */
     @NameInMap("Extension")
     public GetExtensionResponseBodyExtension extension;
 
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class GetExtensionResponseBody extends TeaModel {
     }
 
     public static class GetExtensionResponseBodyExtensionBindEventList extends TeaModel {
+        /**
+         * <p>The code of the extension point event.</p>
+         */
         @NameInMap("EventCode")
         public String eventCode;
 
+        /**
+         * <p>The name of the extension point event.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
@@ -62,9 +74,15 @@ public class GetExtensionResponseBody extends TeaModel {
     }
 
     public static class GetExtensionResponseBodyExtensionEventCategoryList extends TeaModel {
+        /**
+         * <p>The code of the event type.</p>
+         */
         @NameInMap("CategoryCode")
         public String categoryCode;
 
+        /**
+         * <p>The name of the event type.</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
@@ -92,36 +110,69 @@ public class GetExtensionResponseBody extends TeaModel {
     }
 
     public static class GetExtensionResponseBodyExtension extends TeaModel {
+        /**
+         * <p>The extension point events.</p>
+         */
         @NameInMap("BindEventList")
         public java.util.List<GetExtensionResponseBodyExtensionBindEventList> bindEventList;
 
+        /**
+         * <p>The URL of the help document about the extension. You can visit the URL for the details of the extension.</p>
+         */
         @NameInMap("DetailUrl")
         public String detailUrl;
 
+        /**
+         * <p>The types of the events.</p>
+         */
         @NameInMap("EventCategoryList")
         public java.util.List<GetExtensionResponseBodyExtensionEventCategoryList> eventCategoryList;
 
+        /**
+         * <p>The unique code of the extension.</p>
+         */
         @NameInMap("ExtensionCode")
         public String extensionCode;
 
+        /**
+         * <p>The description of the extension.</p>
+         */
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
 
+        /**
+         * <p>The name of the extension.</p>
+         */
         @NameInMap("ExtensionName")
         public String extensionName;
 
+        /**
+         * <p>The URL of the help document about the extension.</p>
+         */
         @NameInMap("HelpDocUrl")
         public String helpDocUrl;
 
+        /**
+         * <p>The option settings of the extension.</p>
+         */
         @NameInMap("OptionSetting")
         public String optionSetting;
 
+        /**
+         * <p>The parameter settings of the extension. For more information, visit https://www.alibabacloud.com/help/en/dataworks/latest/set-extension-parameters.</p>
+         */
         @NameInMap("ParameterSetting")
         public String parameterSetting;
 
+        /**
+         * <p>The workspace for testing. If the extension is in the testing state, the extension can be used only in the workspace for testing.</p>
+         */
         @NameInMap("ProjectTesting")
         public Long projectTesting;
 
+        /**
+         * <p>The state of the extension. 0: testing. 1: publishing. 3: disabled. 4: approving. 5: approved. 6: approval failed.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

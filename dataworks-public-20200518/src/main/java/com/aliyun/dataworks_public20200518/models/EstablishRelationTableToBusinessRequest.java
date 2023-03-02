@@ -4,18 +4,35 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class EstablishRelationTableToBusinessRequest extends TeaModel {
+    /**
+     * <p>The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the ID.</p>
+     */
     @NameInMap("BusinessId")
     public String businessId;
 
+    /**
+     * <p>The ID of the folder. You can call the [GetFolder](~~173952~~) or [ListFolders](~~173955~~) operation to query the ID.</p>
+     */
     @NameInMap("FolderId")
     public String folderId;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.</p>
+     * <br>
+     * <p>You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.</p>
+     */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
+    /**
+     * <p>The universally unique identifier (UUID) of the table. You can call the [SearchMetaTables](~~173919~~) operation to query the UUID.</p>
+     */
     @NameInMap("TableGuid")
     public String tableGuid;
 

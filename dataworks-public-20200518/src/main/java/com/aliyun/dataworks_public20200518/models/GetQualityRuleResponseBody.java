@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetQualityRuleResponseBody extends TeaModel {
+    /**
+     * <p>The information of the monitoring rule.</p>
+     */
     @NameInMap("Data")
     public GetQualityRuleResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,75 +94,153 @@ public class GetQualityRuleResponseBody extends TeaModel {
     }
 
     public static class GetQualityRuleResponseBodyData extends TeaModel {
+        /**
+         * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
+         * <br>
+         * <p>*   1: indicates that the monitoring rule is a strong rule.</p>
+         * <br>
+         * <p>*   0: indicates that the monitoring rule is a weak rule.</p>
+         * <br>
+         * <p>    You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.</p>
+         */
         @NameInMap("BlockType")
         public Integer blockType;
 
+        /**
+         * <p>The ID of the checker. The value of this parameter corresponds to the ID at the frontend and is converted from the ID of the primary key.</p>
+         */
         @NameInMap("Checker")
         public Integer checker;
 
+        /**
+         * <p>The name of the checker.</p>
+         */
         @NameInMap("CheckerName")
         public String checkerName;
 
+        /**
+         * <p>The description of the monitoring rule.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The threshold for an error alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.</p>
+         */
         @NameInMap("CriticalThreshold")
         public String criticalThreshold;
 
+        /**
+         * <p>The ID of the partition filter expression.</p>
+         */
         @NameInMap("EntityId")
         public Long entityId;
 
+        /**
+         * <p>The expected value.</p>
+         */
         @NameInMap("ExpectValue")
         public String expectValue;
 
+        /**
+         * <p>Indicates whether the monitoring is performed based on a fixed value.</p>
+         */
         @NameInMap("FixCheck")
         public Boolean fixCheck;
 
+        /**
+         * <p>The ID of the monitoring rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the sampling method of the monitoring rule.</p>
+         */
         @NameInMap("MethodId")
         public Integer methodId;
 
+        /**
+         * <p>The name of the method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         */
         @NameInMap("MethodName")
         public String methodName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         */
         @NameInMap("OnDuty")
         public String onDuty;
 
+        /**
+         * <p>The name of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         */
         @NameInMap("OnDutyAccountName")
         public String onDutyAccountName;
 
         @NameInMap("OpenSwitch")
         public Boolean openSwitch;
 
+        /**
+         * <p>The comparison operator of the monitoring rule.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>Indicates whether the threshold is a dynamic threshold. Valid values:</p>
+         * <br>
+         * <p>*   0: The threshold is not a dynamic threshold.</p>
+         * <p>*   1: The threshold is a dynamic threshold.</p>
+         */
         @NameInMap("PredictType")
         public Integer predictType;
 
+        /**
+         * <p>The field that is monitored. This field is a column name in the data source table that is monitored.</p>
+         */
         @NameInMap("Property")
         public String property;
 
+        /**
+         * <p>The name of the monitoring rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The type of the monitoring rule.</p>
+         */
         @NameInMap("RuleType")
         public Integer ruleType;
 
+        /**
+         * <p>The ID of the monitoring template.</p>
+         */
         @NameInMap("TemplateId")
         public Integer templateId;
 
+        /**
+         * <p>The name of the monitoring template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>The trend of the monitoring result.</p>
+         */
         @NameInMap("Trend")
         public String trend;
 
+        /**
+         * <p>The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.</p>
+         */
         @NameInMap("WarningThreshold")
         public String warningThreshold;
 
+        /**
+         * <p>The filter condition or custom SQL statement that is used for monitoring.</p>
+         */
         @NameInMap("WhereCondition")
         public String whereCondition;
 

@@ -4,18 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListShiftPersonnelsRequest extends TeaModel {
+    /**
+     * <p>The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.</p>
+     */
     @NameInMap("BeginTime")
     public Long beginTime;
 
+    /**
+     * <p>The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to obtain the ID.</p>
+     */
     @NameInMap("ShiftPersonUID")
     public String shiftPersonUID;
 
+    /**
+     * <p>The unique identifier of the shift schedule.</p>
+     */
     @NameInMap("ShiftScheduleIdentifier")
     public String shiftScheduleIdentifier;
 
+    /**
+     * <p>The type of on-duty engineers that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.</p>
+     */
     @NameInMap("UserType")
     public String userType;
 

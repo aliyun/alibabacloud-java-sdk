@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaCategoryResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public GetMetaCategoryResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +94,57 @@ public class GetMetaCategoryResponseBody extends TeaModel {
     }
 
     public static class GetMetaCategoryResponseBodyDataDataEntityList extends TeaModel {
+        /**
+         * <p>The ID of the category.</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <p>The remarks of the category.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The time when the category was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The number of category levels.</p>
+         */
         @NameInMap("Depth")
         public Integer depth;
 
+        /**
+         * <p>The ID of the user that performed the last operation.</p>
+         */
         @NameInMap("LastOperatorId")
         public String lastOperatorId;
 
+        /**
+         * <p>The time when the category was last modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <p>The name of the category.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the category owner.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The ID of the parent category.</p>
+         */
         @NameInMap("ParentCategoryId")
         public Long parentCategoryId;
 
@@ -183,15 +228,27 @@ public class GetMetaCategoryResponseBody extends TeaModel {
     }
 
     public static class GetMetaCategoryResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the category tree.</p>
+         */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaCategoryResponseBodyDataDataEntityList> dataEntityList;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of categories.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

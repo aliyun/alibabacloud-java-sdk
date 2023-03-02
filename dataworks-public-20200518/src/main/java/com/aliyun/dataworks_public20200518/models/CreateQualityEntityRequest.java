@@ -4,18 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateQualityEntityRequest extends TeaModel {
+    /**
+     * <p>Valid values: 0 (corrected when SQl is completed) and 1 (corrected when task is completed).</p>
+     */
     @NameInMap("EntityLevel")
     public Integer entityLevel;
 
+    /**
+     * <p>The engine or data source type.</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <p>The partition expression.</p>
+     */
     @NameInMap("MatchExpression")
     public String matchExpression;
 
+    /**
+     * <p>The name of the maxcompute project or data source.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The name of the table.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

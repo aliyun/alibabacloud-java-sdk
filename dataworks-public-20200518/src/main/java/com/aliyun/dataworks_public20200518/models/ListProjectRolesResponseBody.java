@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListProjectRolesResponseBody extends TeaModel {
+    /**
+     * <p>The roles of the workspace.</p>
+     */
     @NameInMap("ProjectRoleList")
     public java.util.List<ListProjectRolesResponseBodyProjectRoleList> projectRoleList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class ListProjectRolesResponseBody extends TeaModel {
     }
 
     public static class ListProjectRolesResponseBodyProjectRoleList extends TeaModel {
+        /**
+         * <p>The role Code of the workspace.</p>
+         */
         @NameInMap("ProjectRoleCode")
         public String projectRoleCode;
 
+        /**
+         * <p>The role ID of the workspace.</p>
+         */
         @NameInMap("ProjectRoleId")
         public Integer projectRoleId;
 
+        /**
+         * <p>The role name of the workspace.</p>
+         */
         @NameInMap("ProjectRoleName")
         public String projectRoleName;
 
+        /**
+         * <p>The role type of the workspace. Valid values:</p>
+         */
         @NameInMap("ProjectRoleType")
         public String projectRoleType;
 

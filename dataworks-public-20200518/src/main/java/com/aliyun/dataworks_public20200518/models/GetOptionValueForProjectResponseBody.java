@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetOptionValueForProjectResponseBody extends TeaModel {
+    /**
+     * <p>The option settings. In the example, cuNumber is a custom key.</p>
+     */
     @NameInMap("OptionValue")
     public String optionValue;
 

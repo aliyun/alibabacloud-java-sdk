@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataServiceApiAuthorityRequest extends TeaModel {
+    /**
+     * <p>The ID of the API.</p>
+     */
     @NameInMap("ApiId")
     public Long apiId;
 
+    /**
+     * <p>The ID of the workspace from which you want to revoke the access permissions on the API.</p>
+     */
     @NameInMap("AuthorizedProjectId")
     public Long authorizedProjectId;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 

@@ -4,9 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMigrationSummaryRequest extends TeaModel {
+    /**
+     * <p>The ID of the migration task.</p>
+     * <br>
+     * <p>You can call the [CreateImportMigration](~~2809123~~) operation to obtain the ID of the import task and call the [CreateExportMigration](~~3241603~~) operation to obtain the ID of the export task.</p>
+     */
     @NameInMap("MigrationId")
     public Long migrationId;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

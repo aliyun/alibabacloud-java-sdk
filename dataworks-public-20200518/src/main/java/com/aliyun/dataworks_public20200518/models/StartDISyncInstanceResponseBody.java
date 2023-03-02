@@ -4,12 +4,24 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class StartDISyncInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The result returned for the start.</p>
+     */
     @NameInMap("Data")
     public StartDISyncInstanceResponseBodyData data;
 
+    /**
+     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request succeeded.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +55,20 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
     }
 
     public static class StartDISyncInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The reason why the real-time synchronization node or the data synchronization solution fails to be started.</p>
+         * <br>
+         * <p>If the real-time synchronization node or the data synchronization solution is started, the value null is returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether the real-time synchronization node or the data synchronization solution is started. Valid values:</p>
+         * <br>
+         * <p>*   success: The real-time synchronization node or the data synchronization solution is started.</p>
+         * <p>*   fail: The real-time synchronization node or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,12 +4,24 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class StopDISyncInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The information returned for the synchronization node.</p>
+     */
     @NameInMap("Data")
     public StopDISyncInstanceResponseBodyData data;
 
+    /**
+     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request is successful.</p>
+     * <p>*   false: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +55,20 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
     }
 
     public static class StopDISyncInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The reason why the synchronization node fails to be stopped.</p>
+         * <br>
+         * <p>If the synchronization node is stopped, the value null is returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether the synchronization node is stopped. Valid values:</p>
+         * <br>
+         * <p>*   success: The synchronization node is stopped.</p>
+         * <p>*   fail: The synchronization node fails to be stopped.</p>
+         */
         @NameInMap("Status")
         public String status;
 

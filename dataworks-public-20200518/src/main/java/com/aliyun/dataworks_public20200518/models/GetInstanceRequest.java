@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can call the [ListInstances](~~173982~~) operation to query the ID.</p>
+     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 

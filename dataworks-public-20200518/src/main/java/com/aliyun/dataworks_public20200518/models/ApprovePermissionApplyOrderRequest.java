@@ -4,12 +4,24 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ApprovePermissionApplyOrderRequest extends TeaModel {
+    /**
+     * <p>The approval action. Valid values:</p>
+     * <br>
+     * <p>*   1: Approve the permission request order.</p>
+     * <p>*   2: Reject the permission request order.</p>
+     */
     @NameInMap("ApproveAction")
     public Integer approveAction;
 
+    /**
+     * <p>The comment on the approval.</p>
+     */
     @NameInMap("ApproveComment")
     public String approveComment;
 
+    /**
+     * <p>The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.</p>
+     */
     @NameInMap("FlowId")
     public String flowId;
 

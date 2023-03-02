@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourcesResponseBody extends TeaModel {
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public ListDataSourcesResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,57 +66,225 @@ public class ListDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListDataSourcesResponseBodyDataDataSources extends TeaModel {
+        /**
+         * <p>The ID of the compute engine instance with which the data source is associated.</p>
+         */
         @NameInMap("BindingCalcEngineId")
         public Integer bindingCalcEngineId;
 
+        /**
+         * <p>The status of the data source. Valid values:</p>
+         * <br>
+         * <p>*   1: The data source is accessible.</p>
+         * <p>*   2: The data source is inaccessible.</p>
+         */
         @NameInMap("ConnectStatus")
         public Integer connectStatus;
 
+        /**
+         * <p>The data connection string. The value of this parameter is in the JSON format. Sample connection strings of common data sources:</p>
+         * <br>
+         * <p>*   MaxCompute</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>    json</p>
+         * <p>    {</p>
+         * <p>      "pubEndpoint": "http://service.cn.maxcompute.aliyun.com/api",</p>
+         * <p>      "accessId": "xxxxxxx",</p>
+         * <p>      "securityToken": null,</p>
+         * <p>      "endpoint": "http://service.cn.maxcompute.aliyun-inc.com/api",</p>
+         * <p>      "accessKey": "***",</p>
+         * <p>      "name": "PRE_PROJECT_A_engine",</p>
+         * <p>      "project": "PRE_PROJECT_A",</p>
+         * <p>      "vpcEndpoint": "http://service.cn.maxcompute.aliyun-inc.com/api",</p>
+         * <p>      "region": "cn-shanghai",</p>
+         * <p>      "authType": "2"</p>
+         * <p>    }</p>
+         * <br>
+         * <p>*   mysql</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>    json</p>
+         * <p>    {</p>
+         * <p>      "configType": "1",</p>
+         * <p>      "database": "mysql_d111b",</p>
+         * <p>      "instanceName": "rm-xxxxxx",</p>
+         * <p>      "password": "***",</p>
+         * <p>      "rdsOwnerId": "12133xxxxxx",</p>
+         * <p>      "tag": "rds",</p>
+         * <p>      "username": "mysql_db111"</p>
+         * <p>    }</p>
+         * <br>
+         * <p>*   sqlserver</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>    json</p>
+         * <p>    {</p>
+         * <p>      "configType": "1",</p>
+         * <p>      "jdbcUrl": "jdbc:sqlserver://rm-xxxxx.sqlserver.rds.aliyuncs.com:1433;DatabaseName=sqlserver_db1",</p>
+         * <p>      "password": "***",</p>
+         * <p>      "tag": "public",</p>
+         * <p>      "username": "sqlserver_db111"</p>
+         * <p>    }</p>
+         * <br>
+         * <p>*   oss</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>    json</p>
+         * <p>    {</p>
+         * <p>      "accessId": "LTAINbR9Uxxxx",</p>
+         * <p>      "accessKey": "***",</p>
+         * <p>      "bucket": "bigxxx1223",</p>
+         * <p>      "configType": "1",</p>
+         * <p>      "endpoint": "http://oss-cn-hangzhou.aliyuncs.com",</p>
+         * <p>      "tag": "public"</p>
+         * <p>    }</p>
+         * <br>
+         * <p>*   postgresql</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>    json</p>
+         * <p>    {</p>
+         * <p>      "configType": "1",</p>
+         * <p>      "database": "cdp_xxx",</p>
+         * <p>      "instanceName": "rm-xxxx",</p>
+         * <p>      "password": "***",</p>
+         * <p>      "rdsOwnerId": "121xxxxx",</p>
+         * <p>      "tag": "rds",</p>
+         * <p>      "username": "cdp_xxx"</p>
+         * <p>    }</p>
+         * <br>
+         * <p>*   ads</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>    json</p>
+         * <p>    {</p>
+         * <p>      "configType": "1",</p>
+         * <p>      "password": "***",</p>
+         * <p>      "schema": "ads_demo",</p>
+         * <p>      "tag": "public",</p>
+         * <p>      "url": "ads-xxx-xxxx.cn-hangzhou-1.ads.aliyuncs.com:3029",</p>
+         * <p>      "username": "lslslsls"</p>
+         * <p>    }</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The type of the data source. Valid values:</p>
+         * <br>
+         * <p>*   odps</p>
+         * <p>*   mysql</p>
+         * <p>*   rds</p>
+         * <p>*   oss</p>
+         * <p>*   sqlserver</p>
+         * <p>*   polardb</p>
+         * <p>*   oracle</p>
+         * <p>*   mongodb</p>
+         * <p>*   emr</p>
+         * <p>*   postgresql</p>
+         * <p>*   analyticdb_for_mysql</p>
+         * <p>*   hybriddb_for_postgresql</p>
+         * <p>*   holo</p>
+         */
         @NameInMap("DataSourceType")
         public String dataSourceType;
 
+        /**
+         * <p>Indicates whether the compute engine instance that is associated with the data source is the default compute engine instance used by data sources of the same type.</p>
+         */
         @NameInMap("DefaultEngine")
         public Boolean defaultEngine;
 
+        /**
+         * <p>The description of the data source.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The environment in which the data source is used. Valid values:</p>
+         * <br>
+         * <p>*   0: development environment</p>
+         * <p>*   1: production environment</p>
+         */
         @NameInMap("EnvType")
         public Integer envType;
 
+        /**
+         * <p>The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the data source.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The name of the data source.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to last modify the data source.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The ID of the workspace to which the data source belongs.</p>
+         */
         @NameInMap("ProjectId")
         public Integer projectId;
 
+        /**
+         * <p>The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.</p>
+         */
         @NameInMap("Sequence")
         public Integer sequence;
 
+        /**
+         * <p>Indicates whether the data source is a shared data source.</p>
+         */
         @NameInMap("Shared")
         public Boolean shared;
 
+        /**
+         * <p>The status of the data source. Valid values:</p>
+         * <br>
+         * <p>*   1: The data source is accessible.</p>
+         * <p>*   2: The data source is inaccessible.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The subtype of the data source. This parameter takes effect only if the DataSourceType parameter is set to rds.</p>
+         * <br>
+         * <p>If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.</p>
+         */
         @NameInMap("SubType")
         public String subType;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 
@@ -260,15 +440,27 @@ public class ListDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ListDataSourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>The data sources.</p>
+         */
         @NameInMap("DataSources")
         public java.util.List<ListDataSourcesResponseBodyDataDataSources> dataSources;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of data sources.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

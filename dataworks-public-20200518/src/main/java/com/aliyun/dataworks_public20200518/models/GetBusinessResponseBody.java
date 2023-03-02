@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetBusinessResponseBody extends TeaModel {
+    /**
+     * <p>The details of the workflow.</p>
+     */
     @NameInMap("Data")
     public GetBusinessResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +94,39 @@ public class GetBusinessResponseBody extends TeaModel {
     }
 
     public static class GetBusinessResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the workflow.</p>
+         */
         @NameInMap("BusinessId")
         public Long businessId;
 
+        /**
+         * <p>The name of the workflow.</p>
+         */
         @NameInMap("BusinessName")
         public String businessName;
 
+        /**
+         * <p>The description of the workflow.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the workflow owner.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the workspace to which the workflow belongs.</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <p>The module to which the workflow belongs. Valid values: NORMAL and MANUAL_BIZ.</p>
+         */
         @NameInMap("UseType")
         public String useType;
 

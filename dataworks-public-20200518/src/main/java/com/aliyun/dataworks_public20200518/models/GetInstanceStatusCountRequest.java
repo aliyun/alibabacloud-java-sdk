@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceStatusCountRequest extends TeaModel {
+    /**
+     * <p>The business date of the instance.</p>
+     */
     @NameInMap("BizDate")
     public String bizDate;
 
+    /**
+     * <p>The running environment in PROD and DEV modes.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
+    /**
+     * <p>The ID of the DataWorks workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

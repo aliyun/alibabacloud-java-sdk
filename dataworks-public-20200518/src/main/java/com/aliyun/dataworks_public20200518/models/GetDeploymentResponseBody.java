@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDeploymentResponseBody extends TeaModel {
+    /**
+     * <p>The data about the deployment task.</p>
+     */
     @NameInMap("Data")
     public GetDeploymentResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -117,33 +135,66 @@ public class GetDeploymentResponseBody extends TeaModel {
     }
 
     public static class GetDeploymentResponseBodyDataDeployment extends TeaModel {
+        /**
+         * <p>The check status of one or more files in the deployment task. If the value of the ToEnvironment parameter is 1, the files can be deployed to the production environment only when the value of the Status parameter is 1 and the CheckingStatus parameter is empty. Valid values:</p>
+         * <br>
+         * <p>*   7: The file failed the check.</p>
+         * <p>*   8: The file is being checked.</p>
+         */
         @NameInMap("CheckingStatus")
         public Integer checkingStatus;
 
+        /**
+         * <p>The time when the deployment task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the user who created the deployment task.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
+        /**
+         * <p>The environment in which the deployment task was run. Valid values: 0 and 1. A value of 0 indicates the on-premises environment. A value of 1 indicates the development environment.</p>
+         */
         @NameInMap("FromEnvironment")
         public Integer fromEnvironment;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the user who ran the deployment task.</p>
+         */
         @NameInMap("HandlerId")
         public String handlerId;
 
+        /**
+         * <p>The name of the deployment task. The value is the same as the name of the specific deployment task that is displayed on the Release Package page in the Deploy module.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the deployment task. Valid values: 0, 1, and 2. A value of 0 indicates that the task is ready. A value of 1 indicates that the task was successful. A value of 2 indicates that the task failed.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The environment to which the file was deployed. Valid values: 1 and 2. A value of 1 indicates the development environment. A value of 2 indicates the production environment.</p>
+         */
         @NameInMap("ToEnvironment")
         public Integer toEnvironment;
 
@@ -238,6 +289,9 @@ public class GetDeploymentResponseBody extends TeaModel {
         @NameInMap("DeployedItems")
         public java.util.List<GetDeploymentResponseBodyDataDeployedItems> deployedItems;
 
+        /**
+         * <p>The details of the deployment task.</p>
+         */
         @NameInMap("Deployment")
         public GetDeploymentResponseBodyDataDeployment deployment;
 

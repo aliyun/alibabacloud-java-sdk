@@ -4,27 +4,70 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourcesRequest extends TeaModel {
+    /**
+     * <p>The type of the data source. Valid values:</p>
+     * <br>
+     * <p>*   odps</p>
+     * <p>*   mysql</p>
+     * <p>*   rds</p>
+     * <p>*   oss</p>
+     * <p>*   sqlserver</p>
+     * <p>*   polardb</p>
+     * <p>*   oracle</p>
+     * <p>*   mongodb</p>
+     * <p>*   emr</p>
+     * <p>*   postgresql</p>
+     * <p>*   analyticdb_for_mysql</p>
+     * <p>*   hybriddb_for_postgresql</p>
+     * <p>*   holo</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>The environment in which the data source is used. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+     */
     @NameInMap("EnvType")
     public Integer envType;
 
+    /**
+     * <p>The name of the data source that you want to query.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of the page to return. The value of this parameter must be an integer greater than or equal to 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](~~178393~~) operation to obtain the ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The status of the data source. Valid values:</p>
+     * <br>
+     * <p>*   ENABLED: The data source is accessible.</p>
+     * <p>*   DISABLED: The data source is inaccessible.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The subtype of the data source. This parameter takes effect only if the DataSourceType parameter is set to rds.</p>
+     * <br>
+     * <p>If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.</p>
+     */
     @NameInMap("SubType")
     public String subType;
 

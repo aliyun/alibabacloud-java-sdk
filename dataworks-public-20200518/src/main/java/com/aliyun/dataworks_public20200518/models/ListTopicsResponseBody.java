@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListTopicsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the events returned.</p>
+     */
     @NameInMap("Data")
     public ListTopicsResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,39 +94,75 @@ public class ListTopicsResponseBody extends TeaModel {
     }
 
     public static class ListTopicsResponseBodyDataTopics extends TeaModel {
+        /**
+         * <p>The timestamp when the event was found.</p>
+         */
         @NameInMap("AddTime")
         public Long addTime;
 
+        /**
+         * <p>The timestamp when the event was processed.</p>
+         */
         @NameInMap("FixTime")
         public Long fixTime;
 
+        /**
+         * <p>The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.</p>
+         */
         @NameInMap("HappenTime")
         public Long happenTime;
 
+        /**
+         * <p>The ID of the node instance that triggers the event.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The ID of the node that triggers the event.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used by the node owner.</p>
+         */
         @NameInMap("NodeOwner")
         public String nodeOwner;
 
+        /**
+         * <p>The ID of the workspace to which the node belongs.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The ID of the event.</p>
+         */
         @NameInMap("TopicId")
         public Long topicId;
 
+        /**
+         * <p>The name of the event.</p>
+         */
         @NameInMap("TopicName")
         public String topicName;
 
+        /**
+         * <p>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being processed. The value RECOVER indicates that the event is processed.</p>
+         */
         @NameInMap("TopicStatus")
         public String topicStatus;
 
+        /**
+         * <p>The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the running duration of the node in the current scheduling cycle is significantly longer than the average running duration of the node in previous scheduling cycles. The value ERROR indicates that the node fails to run.</p>
+         */
         @NameInMap("TopicType")
         public String topicType;
 
@@ -216,15 +270,27 @@ public class ListTopicsResponseBody extends TeaModel {
     }
 
     public static class ListTopicsResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The events returned.</p>
+         */
         @NameInMap("Topics")
         public java.util.List<ListTopicsResponseBodyDataTopics> topics;
 
+        /**
+         * <p>The total number of the events returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

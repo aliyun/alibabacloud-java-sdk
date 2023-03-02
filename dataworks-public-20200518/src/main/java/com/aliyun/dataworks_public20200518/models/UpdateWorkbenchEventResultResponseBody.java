@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkbenchEventResultResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListRefDISyncTasksResponseBody extends TeaModel {
+    /**
+     * <p>The data returned for the query.</p>
+     */
     @NameInMap("Data")
     public ListRefDISyncTasksResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,18 +52,44 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
     }
 
     public static class ListRefDISyncTasksResponseBodyDataDISyncTasks extends TeaModel {
+        /**
+         * <p>The destination data source of the sync node.</p>
+         * <br>
+         * <p>If the sync node has multiple destination data sources, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\".</p>
+         * <br>
+         * <p>If the RefType parameter is set to to, the sync nodes that use the specified data source as the destination data source are returned. In this case, the value of this parameter indicates the specified data source.</p>
+         */
         @NameInMap("DiDestinationDatasource")
         public String diDestinationDatasource;
 
+        /**
+         * <p>The source data source of the sync node.</p>
+         * <br>
+         * <p>If the sync node has multiple source data sources, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\".</p>
+         * <br>
+         * <p>If the RefType parameter is set to from, the sync nodes that use the specified data source as the source data source are returned. In this case, the value of this parameter indicates the specified data source.</p>
+         */
         @NameInMap("DiSourceDatasource")
         public String diSourceDatasource;
 
+        /**
+         * <p>The ID of the sync node.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the sync node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The type of the sync node. Valid values:</p>
+         * <br>
+         * <p>*   DI_OFFLINE: batch sync node</p>
+         * <p>*   DI_REALTIME: real-time sync node</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
@@ -106,6 +141,11 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
     }
 
     public static class ListRefDISyncTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the sync nodes.</p>
+         * <br>
+         * <p>A data source is usually associated with multiple sync nodes. Therefore, the value of this parameter is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sync node.</p>
+         */
         @NameInMap("DISyncTasks")
         public java.util.List<ListRefDISyncTasksResponseBodyDataDISyncTasks> DISyncTasks;
 

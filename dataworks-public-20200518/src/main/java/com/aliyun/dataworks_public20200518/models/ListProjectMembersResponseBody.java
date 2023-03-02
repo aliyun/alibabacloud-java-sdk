@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListProjectMembersResponseBody extends TeaModel {
+    /**
+     * <p>The results that are returned.</p>
+     */
     @NameInMap("Data")
     public ListProjectMembersResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,34 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyDataProjectMemberListProjectRoleList extends TeaModel {
+        /**
+         * <p>The code of the role.</p>
+         * <br>
+         * <p>DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).</p>
+         */
         @NameInMap("ProjectRoleCode")
         public String projectRoleCode;
 
+        /**
+         * <p>The ID of the role.</p>
+         */
         @NameInMap("ProjectRoleId")
         public Integer projectRoleId;
 
+        /**
+         * <p>The name of the role.</p>
+         * <br>
+         * <p>DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).</p>
+         */
         @NameInMap("ProjectRoleName")
         public String projectRoleName;
 
+        /**
+         * <p>The type of the role. Valid values:</p>
+         * <br>
+         * <p>*   0: SYSTEM, which indicates that the role is a built-in role.</p>
+         * <p>*   2: USER_CUSTOM, which indicates that the role is a custom role.</p>
+         */
         @NameInMap("ProjectRoleType")
         public String projectRoleType;
 
@@ -84,21 +109,47 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyDataProjectMemberList extends TeaModel {
+        /**
+         * <p>The nickname of the member.</p>
+         */
         @NameInMap("Nick")
         public String nick;
 
+        /**
+         * <p>The ID of the member.</p>
+         */
         @NameInMap("ProjectMemberId")
         public String projectMemberId;
 
+        /**
+         * <p>The name of the member.</p>
+         */
         @NameInMap("ProjectMemberName")
         public String projectMemberName;
 
+        /**
+         * <p>The type of the member. Valid values:</p>
+         * <br>
+         * <p>*   1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.</p>
+         * <p>*   5: USER_UBACCOUNT, which indicates that the member is a RAM user.</p>
+         * <p>*   6: USER_STS_ROLE, which indicates that the member is a RAM role.</p>
+         */
         @NameInMap("ProjectMemberType")
         public String projectMemberType;
 
+        /**
+         * <p>The roles that are assigned to the member.</p>
+         */
         @NameInMap("ProjectRoleList")
         public java.util.List<ListProjectMembersResponseBodyDataProjectMemberListProjectRoleList> projectRoleList;
 
+        /**
+         * <p>The status of the member. Valid values:</p>
+         * <br>
+         * <p>*   0: NORMAL, which indicates that the member is in a normal state.</p>
+         * <p>*   1: FORBIDDEN, which indicates that the member is disabled.</p>
+         * <p>*   2: DELETED, which indicates that the member is deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -158,15 +209,27 @@ public class ListProjectMembersResponseBody extends TeaModel {
     }
 
     public static class ListProjectMembersResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The information of members in the DataWorks workspace.</p>
+         */
         @NameInMap("ProjectMemberList")
         public java.util.List<ListProjectMembersResponseBodyDataProjectMemberList> projectMemberList;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

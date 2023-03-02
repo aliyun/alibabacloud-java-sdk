@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetFileVersionResponseBody extends TeaModel {
+    /**
+     * <p>The details of the file version.</p>
+     */
     @NameInMap("Data")
     public GetFileVersionResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,42 +94,81 @@ public class GetFileVersionResponseBody extends TeaModel {
     }
 
     public static class GetFileVersionResponseBodyData extends TeaModel {
+        /**
+         * <p>The change type of the file version. Valid values: CREATE, UPDATE, and DELETE.</p>
+         */
         @NameInMap("ChangeType")
         public String changeType;
 
+        /**
+         * <p>The description of the file version.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The time when the version was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CommitTime")
         public Long commitTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to create the file version.</p>
+         */
         @NameInMap("CommitUser")
         public String commitUser;
 
+        /**
+         * <p>The file code.</p>
+         */
         @NameInMap("FileContent")
         public String fileContent;
 
+        /**
+         * <p>The file name.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The basic information about the file.</p>
+         */
         @NameInMap("FilePropertyContent")
         public String filePropertyContent;
 
+        /**
+         * <p>The file version.</p>
+         */
         @NameInMap("FileVersion")
         public Integer fileVersion;
 
+        /**
+         * <p>Indicates whether the version is the latest version in the production environment.</p>
+         */
         @NameInMap("IsCurrentProd")
         public Boolean isCurrentProd;
 
+        /**
+         * <p>The scheduling configurations of the node that corresponds to the file version.</p>
+         */
         @NameInMap("NodeContent")
         public String nodeContent;
 
+        /**
+         * <p>The ID of the node that corresponds to the file version.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The status of the file version. Valid values: COMMITTING, COMMITTED, CHECK_OK, PACKAGED, DEPLOYING, DEPLOYED, and CANCELLED. The value CHECK_OK is equivalent to the value COMMITTED.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value NORMAL indicates DataStudio. The value MANUAL indicates a manually triggered node. The value MANUAL_BIZ indicates a manually triggered workflow. The value SKIP indicates a dry-run DataStudio node. The value ADHOCQUERY indicates an ad hoc query. The value COMPONENT indicates snippets.</p>
+         */
         @NameInMap("UseType")
         public String useType;
 

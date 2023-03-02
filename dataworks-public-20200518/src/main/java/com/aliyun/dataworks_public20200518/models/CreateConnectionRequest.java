@@ -4,24 +4,45 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateConnectionRequest extends TeaModel {
+    /**
+     * <p>The type of the connection string.</p>
+     */
     @NameInMap("ConnectionType")
     public String connectionType;
 
+    /**
+     * <p>Details of the data source.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The description of the connection string.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Environment of the data source.</p>
+     */
     @NameInMap("EnvType")
     public Integer envType;
 
+    /**
+     * <p>The name of the data source.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the workspace to be associated with the data source.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The sub-type of a connection string.</p>
+     */
     @NameInMap("SubType")
     public String subType;
 

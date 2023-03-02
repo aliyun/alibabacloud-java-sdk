@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDataServiceFolderResponseBody extends TeaModel {
+    /**
+     * <p>The details of the folder.</p>
+     */
     @NameInMap("Folder")
     public GetDataServiceFolderResponseBodyFolder folder;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,51 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
     }
 
     public static class GetDataServiceFolderResponseBodyFolder extends TeaModel {
+        /**
+         * <p>The time when the folder was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The ID of the folder.</p>
+         */
         @NameInMap("FolderId")
         public Long folderId;
 
+        /**
+         * <p>The name of the folder.</p>
+         */
         @NameInMap("FolderName")
         public String folderName;
 
+        /**
+         * <p>The ID of the business process to which the folder belongs.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The time when the folder was last modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The ID of the parent folder. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 

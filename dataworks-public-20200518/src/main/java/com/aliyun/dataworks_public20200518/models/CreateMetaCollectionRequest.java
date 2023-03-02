@@ -4,15 +4,31 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateMetaCollectionRequest extends TeaModel {
+    /**
+     * <p>The type of the collection.</p>
+     */
     @NameInMap("CollectionType")
     public String collectionType;
 
+    /**
+     * <p>The comment of the collection.</p>
+     * <br>
+     * <p>The comment must be 1 to 64 characters in length.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The name of the collection.</p>
+     * <br>
+     * <p>The name must be 1 to 32 characters in length.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The unique identifier of the parent collection.</p>
+     */
     @NameInMap("ParentQualifiedName")
     public String parentQualifiedName;
 

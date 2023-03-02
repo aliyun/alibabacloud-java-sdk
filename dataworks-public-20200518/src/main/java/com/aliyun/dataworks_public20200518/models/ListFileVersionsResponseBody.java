@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListFileVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The file versions returned.</p>
+     */
     @NameInMap("Data")
     public ListFileVersionsResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,42 +94,81 @@ public class ListFileVersionsResponseBody extends TeaModel {
     }
 
     public static class ListFileVersionsResponseBodyDataFileVersions extends TeaModel {
+        /**
+         * <p>The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.</p>
+         */
         @NameInMap("ChangeType")
         public String changeType;
 
+        /**
+         * <p>The description of the file version.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The time when the file version was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CommitTime")
         public Long commitTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used to create the file of the current version.</p>
+         */
         @NameInMap("CommitUser")
         public String commitUser;
 
+        /**
+         * <p>The code in the file of the current version.</p>
+         */
         @NameInMap("FileContent")
         public String fileContent;
 
+        /**
+         * <p>The name of the file of the current version.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The basic information about the file of the current version.</p>
+         */
         @NameInMap("FilePropertyContent")
         public String filePropertyContent;
 
+        /**
+         * <p>The version of the file.</p>
+         */
         @NameInMap("FileVersion")
         public Integer fileVersion;
 
+        /**
+         * <p>Indicates whether the file version is the same as the latest file version in the production environment.</p>
+         */
         @NameInMap("IsCurrentProd")
         public Boolean isCurrentProd;
 
+        /**
+         * <p>The scheduling configurations for the node that corresponds to the file of the current version.</p>
+         */
         @NameInMap("NodeContent")
         public String nodeContent;
 
+        /**
+         * <p>The ID of the auto triggered node that corresponds to the file of the current version.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The status of the file of the current version. Valid values: COMMITTING, COMMITTED, CHECK_OK, PACKAGED, DEPLOYING, DEPLOYED, and CANCELLED.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value SKIP indicates that the node corresponding to the file is run in dry-run mode.</p>
+         */
         @NameInMap("UseType")
         public String useType;
 
@@ -227,15 +284,27 @@ public class ListFileVersionsResponseBody extends TeaModel {
     }
 
     public static class ListFileVersionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the file version.</p>
+         */
         @NameInMap("FileVersions")
         public java.util.List<ListFileVersionsResponseBodyDataFileVersions> fileVersions;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

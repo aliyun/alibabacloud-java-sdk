@@ -4,30 +4,57 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RunManualDagNodesRequest extends TeaModel {
+    /**
+     * <p>The data timestamp. The value must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Specify this parameter in the YYYY-MM-DD 00:00:00 format.</p>
+     */
     @NameInMap("BizDate")
     public String bizDate;
 
+    /**
+     * <p>The parameters of the manually triggered workflow, which are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a node, the value of the scheduling parameter is replaced with the value of the workflow parameter.</p>
+     */
     @NameInMap("DagParameters")
     public String dagParameters;
 
+    /**
+     * <p>The IDs of the nodes that you do not need to run in the manually triggered workflow. The system generates dry-run instances for all these nodes. After the dry-run instances are scheduled, the states of these instances are directly set to successful, but the scripts are not run. Separate multiple node IDs with commas (,).</p>
+     */
     @NameInMap("ExcludeNodeIds")
     public String excludeNodeIds;
 
+    /**
+     * <p>The name of the manually triggered workflow.</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 
+    /**
+     * <p>The IDs of the nodes that you need to run in the manually triggered workflow. Separate multiple node IDs with commas (,). You can call the ListNodes operation to query the node IDs.</p>
+     */
     @NameInMap("IncludeNodeIds")
     public String includeNodeIds;
 
+    /**
+     * <p>The parameters transmitted between nodes in the manually triggered workflow. The parameters are in the following JSON format: { "\<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the Parameters parameter on the Properties tab of the DataStudio page", "\<ID of a node in the manually triggered workflow>": "Scheduling parameter settings of the node, which are in the same format as the Parameters parameter on the Properties tab of the DataStudio page" }.</p>
+     */
     @NameInMap("NodeParameters")
     public String nodeParameters;
 
+    /**
+     * <p>The environment type. Valid values: PROD and DEV. A value of PROD indicates the production environment. A value of DEV indicates the development environment.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
+    /**
+     * <p>The ID of the workspace to which the manually triggered workflow belongs.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The name of the workspace to which the manually triggered workflow belongs.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

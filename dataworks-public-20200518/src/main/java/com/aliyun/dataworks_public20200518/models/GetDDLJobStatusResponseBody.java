@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDDLJobStatusResponseBody extends TeaModel {
+    /**
+     * <p>The details of the task.</p>
+     */
     @NameInMap("Data")
     public GetDDLJobStatusResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
     }
 
     public static class GetDDLJobStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The content of the task.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The ID of the ongoing task. If no value is returned for this parameter, all subtasks are complete.</p>
+         */
         @NameInMap("NextTaskId")
         public String nextTaskId;
 
+        /**
+         * <p>The status of the task</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

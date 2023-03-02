@@ -4,18 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableModelInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the first-level table folder.</p>
+     */
     @NameInMap("FirstLevelThemeId")
     public Long firstLevelThemeId;
 
+    /**
+     * <p>The ID of the table level.</p>
+     */
     @NameInMap("LevelId")
     public Long levelId;
 
+    /**
+     * <p>The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.</p>
+     */
     @NameInMap("LevelType")
     public Integer levelType;
 
+    /**
+     * <p>The ID of the second-level table folder.</p>
+     */
     @NameInMap("SecondLevelThemeId")
     public Long secondLevelThemeId;
 
+    /**
+     * <p>The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.</p>
+     */
     @NameInMap("TableGuid")
     public String tableGuid;
 

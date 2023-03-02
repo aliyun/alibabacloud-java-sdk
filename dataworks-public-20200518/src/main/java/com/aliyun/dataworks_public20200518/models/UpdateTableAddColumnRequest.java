@@ -7,6 +7,9 @@ public class UpdateTableAddColumnRequest extends TeaModel {
     @NameInMap("Column")
     public java.util.List<UpdateTableAddColumnRequestColumn> column;
 
+    /**
+     * <p>The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.</p>
+     */
     @NameInMap("TableGuid")
     public String tableGuid;
 
@@ -32,15 +35,27 @@ public class UpdateTableAddColumnRequest extends TeaModel {
     }
 
     public static class UpdateTableAddColumnRequestColumn extends TeaModel {
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The display name of the field.</p>
+         */
         @NameInMap("ColumnNameCn")
         public String columnNameCn;
 
+        /**
+         * <p>The type of the field. For more information, see MaxCompute field types.</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <p>The comment of the field.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 

@@ -4,36 +4,77 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionApplyOrdersRequest extends TeaModel {
+    /**
+     * <p>The end time. You can query all permission request orders that have been submitted before the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders that are submitted before the current time are queried.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in MaxCompute compute engine instances.</p>
+     */
     @NameInMap("EngineType")
     public String engineType;
 
+    /**
+     * <p>The status of the permission request order. Valid values:</p>
+     * <br>
+     * <p>*   1: pending approval</p>
+     * <p>*   2: approved and authorized</p>
+     * <p>*   3: approved but authorization failed</p>
+     * <p>*   4: rejected</p>
+     */
     @NameInMap("FlowStatus")
     public Integer flowStatus;
 
+    /**
+     * <p>The name of the MaxCompute project to which the permission request order belongs. If you do not specify the parameter, the permission request orders of all MaxCompute projects are returned.</p>
+     */
     @NameInMap("MaxComputeProjectName")
     public String maxComputeProjectName;
 
+    /**
+     * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+     */
     @NameInMap("OrderType")
     public Integer orderType;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The query type of the permission request order. Valid values:</p>
+     * <br>
+     * <p>*   0: The permission request orders you submitted.</p>
+     * <p>*   1: The permission request orders you approved.</p>
+     */
     @NameInMap("QueryType")
     public Integer queryType;
 
+    /**
+     * <p>The start time. You can query all permission request orders that have been submitted after the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders are queried.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The name of the table with which the permission request order is associated. If you do not specify the parameter, the permission request orders of all tables are returned.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>The ID of the DataWorks workspace to which the permission request order belongs. If you do not specify the parameter, the permission request orders of all workspaces are returned. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.</p>
+     */
     @NameInMap("WorkspaceId")
     public Integer workspaceId;
 

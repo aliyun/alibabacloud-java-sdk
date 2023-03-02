@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetQualityEntityResponseBody extends TeaModel {
+    /**
+     * <p>The information about the partition filter expression.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetQualityEntityResponseBodyData> data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,51 +94,108 @@ public class GetQualityEntityResponseBody extends TeaModel {
     }
 
     public static class GetQualityEntityResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the partition filter expression was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The level of the partition filter expression. Valid values:</p>
+         * <br>
+         * <p>*   0: The partition filter expression is at the SQL level. This indicates that the system checks data quality after each SQL statement is executed.</p>
+         * <p>*   1: The partition filter expression is at the node level. This indicates that the system checks data quality after all the SQL statements for a node are executed.</p>
+         */
         @NameInMap("EntityLevel")
         public Integer entityLevel;
 
+        /**
+         * <p>The type of the compute engine instance or data source.</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to receive alert notifications.</p>
+         */
         @NameInMap("Followers")
         public String followers;
 
+        /**
+         * <p>Indicates whether the partition filter expression is associated with a node. Valid values:</p>
+         * <br>
+         * <p>*   true: The partition filter expression is associated with a node.</p>
+         * <p>*   false: The partition filter expression is not associated with a node.</p>
+         */
         @NameInMap("HasRelativeNode")
         public Boolean hasRelativeNode;
 
+        /**
+         * <p>The ID of the partition filter expression.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The partition filter expression.</p>
+         */
         @NameInMap("MatchExpression")
         public String matchExpression;
 
+        /**
+         * <p>The time when the partition filter expression was modified.</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to modify the partition filter expression.</p>
+         */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to configure the partition filter expression.</p>
+         */
         @NameInMap("OnDuty")
         public String onDuty;
 
+        /**
+         * <p>The name of the Alibaba Cloud account that is used to configure the partition filter expression.</p>
+         */
         @NameInMap("OnDutyAccountName")
         public String onDutyAccountName;
 
+        /**
+         * <p>The name of the compute engine instance or data source.</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The information about the node with which the partition filter expression is associated. The information includes the following items:</p>
+         * <br>
+         * <p>*   ProjectName: the name of the workspace to which the node belongs.</p>
+         * <p>*   NodeID: the ID of the node.</p>
+         */
         @NameInMap("RelativeNode")
         public String relativeNode;
 
+        /**
+         * <p>Indicates that the partition filter expression is at the SQL level.</p>
+         */
         @NameInMap("Sql")
         public Integer sql;
 
+        /**
+         * <p>The name of the partitioned table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The node.</p>
+         */
         @NameInMap("Task")
         public Integer task;
 

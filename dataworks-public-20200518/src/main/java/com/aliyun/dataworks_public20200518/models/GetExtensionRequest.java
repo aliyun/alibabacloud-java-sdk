@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetExtensionRequest extends TeaModel {
+    /**
+     * <p>The unique code of the extension.</p>
+     */
     @NameInMap("ExtensionCode")
     public String extensionCode;
 

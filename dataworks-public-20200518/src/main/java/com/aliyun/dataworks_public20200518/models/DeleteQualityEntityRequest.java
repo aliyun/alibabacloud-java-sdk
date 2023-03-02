@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteQualityEntityRequest extends TeaModel {
+    /**
+     * <p>The ID of the partition filter expression.</p>
+     */
     @NameInMap("EntityId")
     public Long entityId;
 
+    /**
+     * <p>The type of the compute engine instance or data source. Valid values: EMR, Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka and DataHub.</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <p>The name of the compute engine instance or data source.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

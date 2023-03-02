@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The details about the instance.</p>
+     */
     @NameInMap("Data")
     public GetInstanceResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned because the instance fails to be scheduled.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,84 +94,195 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the baseline.</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The time when the instance started to run.</p>
+         */
         @NameInMap("BeginRunningTime")
         public Long beginRunningTime;
 
+        /**
+         * <p>The time when the instance started to wait for resources.</p>
+         */
         @NameInMap("BeginWaitResTime")
         public Long beginWaitResTime;
 
+        /**
+         * <p>The time when the instance started to wait to be run.</p>
+         */
         @NameInMap("BeginWaitTimeTime")
         public Long beginWaitTimeTime;
 
+        /**
+         * <p>The data timestamp. In most cases, the value is one day before the date when the instance is run.</p>
+         */
         @NameInMap("Bizdate")
         public Long bizdate;
 
+        /**
+         * <p>The ID of the workflow.</p>
+         */
         @NameInMap("BusinessId")
         public Long businessId;
 
+        /**
+         * <p>The connection string.</p>
+         */
         @NameInMap("Connection")
         public String connection;
 
+        /**
+         * <p>The time when the instance was generated.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The owner of the instance.</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The scheduled time of the instance.</p>
+         */
         @NameInMap("CycTime")
         public Long cycTime;
 
+        /**
+         * <p>The ID of the workflow.</p>
+         */
         @NameInMap("DagId")
         public Long dagId;
 
+        /**
+         * <p>The type of the workflow. Valid values:</p>
+         * <br>
+         * <p>*   DAILY: The workflow is used to run auto triggered nodes.</p>
+         * <p>*   MANUAL: The workflow is used to run manually triggered nodes.</p>
+         * <p>*   SMOKE_TEST: The workflow is used to perform smoke testing.</p>
+         * <p>*   SUPPLY_DATA: The workflow is used to backfill data.</p>
+         */
         @NameInMap("DagType")
         public String dagType;
 
+        /**
+         * <p>The table and partition filter expression in Data Quality that are associated with the instance.</p>
+         */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
+        /**
+         * <p>Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:</p>
+         * <br>
+         * <p>*   0: The instance is associated with a monitoring rule in Data Quality.</p>
+         * <p>*   1: The instance is not associated with a monitoring rule in Data Quality.</p>
+         */
         @NameInMap("DqcType")
         public Integer dqcType;
 
+        /**
+         * <p>The time when the running of the instance was complete.</p>
+         */
         @NameInMap("FinishTime")
         public Long finishTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The time when the instance was last modified.</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The ID of the node that generates the instance.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node that generates the instance.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The values of the parameters related to the node.</p>
+         */
         @NameInMap("ParamValues")
         public String paramValues;
 
+        /**
+         * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8. A great value indicates a high priority. Default value: 1.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The ID of the workflow to which the node that generates the instance belongs.</p>
+         */
         @NameInMap("RelatedFlowId")
         public Long relatedFlowId;
 
+        /**
+         * <p>The interval at which the node that generates the instance is rerun after the node fails to run. Unit: milliseconds.</p>
+         */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
+        /**
+         * <p>Indicates whether the node that generates the instance can be rerun.</p>
+         */
         @NameInMap("Repeatability")
         public Boolean repeatability;
 
+        /**
+         * <p>The status of the node that generates the instance. Valid values:</p>
+         * <br>
+         * <p>*   NOT_RUN: The node is not run.</p>
+         * <p>*   WAIT_TIME: The node is waiting for its scheduled time to arrive.</p>
+         * <p>*   WAIT_RESOURCE: The node is waiting for resources.</p>
+         * <p>*   RUNNING: The node is running.</p>
+         * <p>*   CHECKING: Data quality is being checked for the node.</p>
+         * <p>*   CHECKING_CONDITION: Branch conditions are being checked for the node.</p>
+         * <p>*   FAILURE: The node fails to run.</p>
+         * <p>*   SUCCESS: The node is successfully run.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The number of times the node that generates the instance can be rerun. This parameter can be left empty, or the value of this parameter can be an integer that is greater than or equal to 0.</p>
+         * <br>
+         * <p>*   If this parameter is left empty, the number of rerun times is not specified for the node.</p>
+         * <p>*   If the value of this parameter is 0, the node cannot be rerun.</p>
+         * <p>*   If the value of this parameter is n (an integer that is greater than 0), the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun two times, and so on.</p>
+         */
         @NameInMap("TaskRerunTime")
         public Integer taskRerunTime;
 
+        /**
+         * <p>The scheduling type of the node that generates the instance. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL(0): The node is an auto triggered node. It is run on a regular basis.</p>
+         * <p>*   MANUAL(1): The node is a manually triggered node. It is not run on a regular basis.</p>
+         * <p>*   PAUSE(2): The node is a frozen node. The scheduling system still runs the node on a regular basis but sets it to FAILURE when the scheduling system starts to run the node.</p>
+         * <p>*   SKIP(3): The node is a dry-run node. The scheduling system still runs the node on a regular basis but sets it to SUCCESS when the scheduling system starts to run the node.</p>
+         * <p>*   SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the node to SUCCESS when the scheduling system starts to run the node.</p>
+         * <p>*   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for its scheduled time. The scheduling system still runs the node on a regular basis but sets it to SUCCESS when the scheduling system starts to run the node.</p>
+         * <p>*   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</p>
+         * <p>*   REALTIME_DEPRECATED(7): The node has instances generated in real time but deprecated. The scheduling system directly sets the node to SUCCESS.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

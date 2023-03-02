@@ -4,57 +4,115 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateQualityRuleRequest extends TeaModel {
+    /**
+     * <p>The strength of the monitoring rule. Valid values: 0 and 1. 0 indicates that the monitoring rule is a weak rule. 1 indicates that the monitoring rule is a strong rule.</p>
+     */
     @NameInMap("BlockType")
     public Integer blockType;
 
+    /**
+     * <p>The ID of the checker.</p>
+     */
     @NameInMap("Checker")
     public Integer checker;
 
+    /**
+     * <p>The description of the monitoring rule.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.</p>
+     */
     @NameInMap("CriticalThreshold")
     public String criticalThreshold;
 
+    /**
+     * <p>The ID of the partition filter expression.</p>
+     */
     @NameInMap("EntityId")
     public Long entityId;
 
+    /**
+     * <p>The expected value of the monitoring result.</p>
+     */
     @NameInMap("ExpectValue")
     public String expectValue;
 
+    /**
+     * <p>The method used to collect sample data. If you want to use a custom SQL statement as a sampling method, set this parameter to user_defined.</p>
+     */
     @NameInMap("MethodName")
     public String methodName;
 
+    /**
+     * <p>The comparison operator of the monitoring rule.</p>
+     */
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <p>Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. 0 indicates that the monitoring rule is not a dynamic threshold rule. 2 indicates that the monitoring rule is a dynamic threshold rule.</p>
+     */
     @NameInMap("PredictType")
     public Integer predictType;
 
+    /**
+     * <p>The name of the compute engine instance or data source.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The fields that you want to monitor. If you want to monitor all fields in a table and check the table rows, set this parameter to table_count. If you want to monitor all fields in a table and check the table size, set this parameter to table_size.</p>
+     */
     @NameInMap("Property")
     public String property;
 
+    /**
+     * <p>The data type of the fields that you want to monitor. If you want to monitor all fields in a table, set this parameter to table. If you want to monitor only a specific field, set this parameter to bigint.</p>
+     */
     @NameInMap("PropertyType")
     public String propertyType;
 
+    /**
+     * <p>The name of the monitoring rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The type of the monitoring rule. Valid values: 0, 1, and 2. 0 indicates that the monitoring rule is created by the system. 1 indicates that the monitoring rule is created by a user. 2 indicates that the monitoring rule is a workspace-level rule.</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <p>The ID of the template that is used to create the monitoring rule.</p>
+     */
     @NameInMap("TemplateId")
     public Integer templateId;
 
+    /**
+     * <p>The trend of the monitoring result. Valid values:</p>
+     * <br>
+     * <p>*   up: increasing</p>
+     * <p>*   down: decreasing</p>
+     * <p>*   abs: absolute value</p>
+     */
     @NameInMap("Trend")
     public String trend;
 
+    /**
+     * <p>The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.</p>
+     */
     @NameInMap("WarningThreshold")
     public String warningThreshold;
 
+    /**
+     * <p>The filter condition or custom SQL statement.</p>
+     */
     @NameInMap("WhereCondition")
     public String whereCondition;
 

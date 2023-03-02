@@ -4,18 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateConnectionRequest extends TeaModel {
+    /**
+     * <p>The ID of the data source.</p>
+     */
     @NameInMap("ConnectionId")
     public Long connectionId;
 
+    /**
+     * <p>Details of the data source.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>Describes the data source.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Environment of the data source.</p>
+     */
     @NameInMap("EnvType")
     public Integer envType;
 
+    /**
+     * <p>The status of the data source.</p>
+     */
     @NameInMap("Status")
     public String status;
 

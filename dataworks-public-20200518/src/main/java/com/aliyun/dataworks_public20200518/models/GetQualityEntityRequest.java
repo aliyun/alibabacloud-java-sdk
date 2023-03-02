@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetQualityEntityRequest extends TeaModel {
+    /**
+     * <p>The type of the compute engine instance or data source.</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <p>The partition filter expression.</p>
+     */
     @NameInMap("MatchExpression")
     public String matchExpression;
 
+    /**
+     * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The name of the partitioned table. You can call the [GetMetaTablePartition](~~173923~~) operation to obtain the name.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

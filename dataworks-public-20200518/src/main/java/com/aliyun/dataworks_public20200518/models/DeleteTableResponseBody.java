@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteTableResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the task that is used to delete the table.</p>
+     */
     @NameInMap("TaskInfo")
     public DeleteTableResponseBodyTaskInfo taskInfo;
 
@@ -32,15 +38,27 @@ public class DeleteTableResponseBody extends TeaModel {
     }
 
     public static class DeleteTableResponseBodyTaskInfo extends TeaModel {
+        /**
+         * <p>The content of the task.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The ID of the task that is running.</p>
+         */
         @NameInMap("NextTaskId")
         public String nextTaskId;
 
+        /**
+         * <p>The status of the task that is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task that is complete.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
