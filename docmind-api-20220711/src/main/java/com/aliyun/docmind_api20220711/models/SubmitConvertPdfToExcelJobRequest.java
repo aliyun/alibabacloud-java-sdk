@@ -10,6 +10,9 @@ public class SubmitConvertPdfToExcelJobRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    @NameInMap("ForceMergeExcel")
+    public Boolean forceMergeExcel;
+
     public static SubmitConvertPdfToExcelJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertPdfToExcelJobRequest self = new SubmitConvertPdfToExcelJobRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class SubmitConvertPdfToExcelJobRequest extends TeaModel {
     }
     public String getFileUrl() {
         return this.fileUrl;
+    }
+
+    public SubmitConvertPdfToExcelJobRequest setForceMergeExcel(Boolean forceMergeExcel) {
+        this.forceMergeExcel = forceMergeExcel;
+        return this;
+    }
+    public Boolean getForceMergeExcel() {
+        return this.forceMergeExcel;
     }
 
 }

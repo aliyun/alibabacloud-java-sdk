@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitConvertImageToExcelJobShrinkRequest extends TeaModel {
+    @NameInMap("ForceMergeExcel")
+    public Boolean forceMergeExcel;
+
     @NameInMap("ImageNameExtension")
     public String imageNameExtension;
 
@@ -16,6 +19,14 @@ public class SubmitConvertImageToExcelJobShrinkRequest extends TeaModel {
     public static SubmitConvertImageToExcelJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertImageToExcelJobShrinkRequest self = new SubmitConvertImageToExcelJobShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitConvertImageToExcelJobShrinkRequest setForceMergeExcel(Boolean forceMergeExcel) {
+        this.forceMergeExcel = forceMergeExcel;
+        return this;
+    }
+    public Boolean getForceMergeExcel() {
+        return this.forceMergeExcel;
     }
 
     public SubmitConvertImageToExcelJobShrinkRequest setImageNameExtension(String imageNameExtension) {
