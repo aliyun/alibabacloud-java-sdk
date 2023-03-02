@@ -4,15 +4,27 @@ package com.aliyun.sts20150401.models;
 import com.aliyun.tea.*;
 
 public class AssumeRoleWithOIDCResponseBody extends TeaModel {
+    /**
+     * <p>The temporary identity that you use to assume the RAM role.</p>
+     */
     @NameInMap("AssumedRoleUser")
     public AssumeRoleWithOIDCResponseBodyAssumedRoleUser assumedRoleUser;
 
+    /**
+     * <p>The access credentials.</p>
+     */
     @NameInMap("Credentials")
     public AssumeRoleWithOIDCResponseBodyCredentials credentials;
 
+    /**
+     * <p>The information about the OIDC token.</p>
+     */
     @NameInMap("OIDCTokenInfo")
     public AssumeRoleWithOIDCResponseBodyOIDCTokenInfo OIDCTokenInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleWithOIDCResponseBodyAssumedRoleUser extends TeaModel {
+        /**
+         * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The ID of the temporary identity that you use to assume the RAM role.</p>
+         */
         @NameInMap("AssumedRoleId")
         public String assumedRoleId;
 
@@ -84,15 +102,27 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleWithOIDCResponseBodyCredentials extends TeaModel {
+        /**
+         * <p>The AccessKey ID.</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <p>The AccessKey secret.</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <p>The time when the STS token expires. The time is displayed in UTC.</p>
+         */
         @NameInMap("Expiration")
         public String expiration;
 
+        /**
+         * <p>The STS token.</p>
+         */
         @NameInMap("SecurityToken")
         public String securityToken;
 
@@ -136,12 +166,27 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleWithOIDCResponseBodyOIDCTokenInfo extends TeaModel {
+        /**
+         * <p>The audience. If multiple audiences are returned, the audiences are separated by commas (,).</p>
+         * <br>
+         * <p>The audience is represented by the `aud` field in the OIDC Token.</p>
+         */
         @NameInMap("ClientIds")
         public String clientIds;
 
+        /**
+         * <p>The URL of the issuer,</p>
+         * <br>
+         * <p>which is represented by the `iss` field in the OIDC Token.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The subject,</p>
+         * <br>
+         * <p>which is represented by the `sub` field in the OIDC Token.</p>
+         */
         @NameInMap("Subject")
         public String subject;
 

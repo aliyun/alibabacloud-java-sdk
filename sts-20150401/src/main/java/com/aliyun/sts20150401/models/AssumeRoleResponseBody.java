@@ -4,12 +4,21 @@ package com.aliyun.sts20150401.models;
 import com.aliyun.tea.*;
 
 public class AssumeRoleResponseBody extends TeaModel {
+    /**
+     * <p>The temporary identity that you use to assume the RAM role.</p>
+     */
     @NameInMap("AssumedRoleUser")
     public AssumeRoleResponseBodyAssumedRoleUser assumedRoleUser;
 
+    /**
+     * <p>The STS credentials.</p>
+     */
     @NameInMap("Credentials")
     public AssumeRoleResponseBodyCredentials credentials;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class AssumeRoleResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleResponseBodyAssumedRoleUser extends TeaModel {
+        /**
+         * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The ID of the temporary identity that you use to assume the RAM role.</p>
+         */
         @NameInMap("AssumedRoleId")
         public String assumedRoleId;
 
@@ -73,15 +88,27 @@ public class AssumeRoleResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleResponseBodyCredentials extends TeaModel {
+        /**
+         * <p>The AccessKey ID.</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <p>The AccessKey secret.</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <p>The time when the STS token expires. The time is displayed in UTC.</p>
+         */
         @NameInMap("Expiration")
         public String expiration;
 
+        /**
+         * <p>The STS token.</p>
+         */
         @NameInMap("SecurityToken")
         public String securityToken;
 

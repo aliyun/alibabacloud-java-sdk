@@ -4,15 +4,27 @@ package com.aliyun.sts20150401.models;
 import com.aliyun.tea.*;
 
 public class AssumeRoleWithSAMLResponseBody extends TeaModel {
+    /**
+     * <p>The temporary identity that you use to assume the RAM role.</p>
+     */
     @NameInMap("AssumedRoleUser")
     public AssumeRoleWithSAMLResponseBodyAssumedRoleUser assumedRoleUser;
 
+    /**
+     * <p>The access credentials.</p>
+     */
     @NameInMap("Credentials")
     public AssumeRoleWithSAMLResponseBodyCredentials credentials;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information in the SAML assertion.</p>
+     */
     @NameInMap("SAMLAssertionInfo")
     public AssumeRoleWithSAMLResponseBodySAMLAssertionInfo SAMLAssertionInfo;
 
@@ -54,9 +66,15 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleWithSAMLResponseBodyAssumedRoleUser extends TeaModel {
+        /**
+         * <p>The ARN of the temporary identity that you use to assume the RAM role.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The ID of the temporary identity that you use to assume the RAM role.</p>
+         */
         @NameInMap("AssumedRoleId")
         public String assumedRoleId;
 
@@ -84,15 +102,27 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleWithSAMLResponseBodyCredentials extends TeaModel {
+        /**
+         * <p>The AccessKey ID.</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <p>The AccessKey secret.</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <p>The time when the STS token expires. The time is displayed in UTC.</p>
+         */
         @NameInMap("Expiration")
         public String expiration;
 
+        /**
+         * <p>The STS token.</p>
+         */
         @NameInMap("SecurityToken")
         public String securityToken;
 
@@ -136,15 +166,27 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
     }
 
     public static class AssumeRoleWithSAMLResponseBodySAMLAssertionInfo extends TeaModel {
+        /**
+         * <p>The value in the `Issuer` element in the SAML assertion.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The `Recipient` attribute of the SubjectConfirmationData sub-element. SubjectConfirmationData is a sub-element of the `Subject` element in the SAML assertion.</p>
+         */
         @NameInMap("Recipient")
         public String recipient;
 
+        /**
+         * <p>The value in the NameID sub-element of the `Subject` element in the SAML assertion.</p>
+         */
         @NameInMap("Subject")
         public String subject;
 
+        /**
+         * <p>The Format attribute of the `NameID` element in the SAML assertion. If the Format attribute is prefixed with `urn:oasis:names:tc:SAML:2.0:nameid-format:`, the prefix is not included in the value of this parameter. For example, if the value of the Format attribute is urn:oasis:names:tc:SAML:2.0:nameid-format:persistent/transient, the value of this parameter is `persistent/transient`.</p>
+         */
         @NameInMap("SubjectType")
         public String subjectType;
 
