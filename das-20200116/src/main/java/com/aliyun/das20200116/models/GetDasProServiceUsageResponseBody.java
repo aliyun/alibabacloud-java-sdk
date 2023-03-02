@@ -8,7 +8,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
     public Long code;
 
     @NameInMap("Data")
-    public java.util.List<GetDasProServiceUsageResponseBodyData> data;
+    public GetDasProServiceUsageResponseBodyData data;
 
     @NameInMap("Message")
     public String message;
@@ -32,11 +32,11 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetDasProServiceUsageResponseBody setData(java.util.List<GetDasProServiceUsageResponseBodyData> data) {
+    public GetDasProServiceUsageResponseBody setData(GetDasProServiceUsageResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<GetDasProServiceUsageResponseBodyData> getData() {
+    public GetDasProServiceUsageResponseBodyData getData() {
         return this.data;
     }
 
@@ -116,9 +116,6 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         @NameInMap("uuid")
         public String uuid;
 
-        /**
-         * <p>VPC ID。</p>
-         */
         @NameInMap("vpcId")
         public String vpcId;
 

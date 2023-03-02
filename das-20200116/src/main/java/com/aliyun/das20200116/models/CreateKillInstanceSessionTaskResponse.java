@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDasAdvancedInfoResponse extends TeaModel {
+public class CreateKillInstanceSessionTaskResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeDasAdvancedInfoResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeDasAdvancedInfoResponseBody body;
+    public CreateKillInstanceSessionTaskResponseBody body;
 
-    public static DescribeDasAdvancedInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDasAdvancedInfoResponse self = new DescribeDasAdvancedInfoResponse();
+    public static CreateKillInstanceSessionTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateKillInstanceSessionTaskResponse self = new CreateKillInstanceSessionTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDasAdvancedInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateKillInstanceSessionTaskResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeDasAdvancedInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDasAdvancedInfoResponse setStatusCode(Integer statusCode) {
+    public CreateKillInstanceSessionTaskResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeDasAdvancedInfoResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDasAdvancedInfoResponse setBody(DescribeDasAdvancedInfoResponseBody body) {
+    public CreateKillInstanceSessionTaskResponse setBody(CreateKillInstanceSessionTaskResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDasAdvancedInfoResponseBody getBody() {
+    public CreateKillInstanceSessionTaskResponseBody getBody() {
         return this.body;
     }
 

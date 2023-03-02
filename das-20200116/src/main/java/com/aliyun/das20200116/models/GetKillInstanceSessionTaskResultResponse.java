@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSqlLogInstancesPagingResponse extends TeaModel {
+public class GetKillInstanceSessionTaskResultResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeSqlLogInstancesPagingResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeSqlLogInstancesPagingResponseBody body;
+    public GetKillInstanceSessionTaskResultResponseBody body;
 
-    public static DescribeSqlLogInstancesPagingResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSqlLogInstancesPagingResponse self = new DescribeSqlLogInstancesPagingResponse();
+    public static GetKillInstanceSessionTaskResultResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetKillInstanceSessionTaskResultResponse self = new GetKillInstanceSessionTaskResultResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSqlLogInstancesPagingResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetKillInstanceSessionTaskResultResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeSqlLogInstancesPagingResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeSqlLogInstancesPagingResponse setStatusCode(Integer statusCode) {
+    public GetKillInstanceSessionTaskResultResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeSqlLogInstancesPagingResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeSqlLogInstancesPagingResponse setBody(DescribeSqlLogInstancesPagingResponseBody body) {
+    public GetKillInstanceSessionTaskResultResponse setBody(GetKillInstanceSessionTaskResultResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeSqlLogInstancesPagingResponseBody getBody() {
+    public GetKillInstanceSessionTaskResultResponseBody getBody() {
         return this.body;
     }
 
