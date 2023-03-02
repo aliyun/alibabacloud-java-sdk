@@ -10,7 +10,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     @NameInMap("AppStatus")
     public DescribeDeviceServiceResponseBodyAppStatus appStatus;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

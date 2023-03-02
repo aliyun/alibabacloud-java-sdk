@@ -28,6 +28,9 @@ public class DescribeDisksRequest extends TeaModel {
     @NameInMap("EnsRegionIds")
     public String ensRegionIds;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("OrderByParams")
     public String orderByParams;
 
@@ -36,6 +39,9 @@ public class DescribeDisksRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public String pageSize;
+
+    @NameInMap("SnapshotId")
+    public String snapshotId;
 
     @NameInMap("Status")
     public String status;
@@ -112,6 +118,14 @@ public class DescribeDisksRequest extends TeaModel {
         return this.ensRegionIds;
     }
 
+    public DescribeDisksRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public DescribeDisksRequest setOrderByParams(String orderByParams) {
         this.orderByParams = orderByParams;
         return this;
@@ -134,6 +148,14 @@ public class DescribeDisksRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDisksRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
     public DescribeDisksRequest setStatus(String status) {

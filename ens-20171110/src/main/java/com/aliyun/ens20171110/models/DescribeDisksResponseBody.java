@@ -106,6 +106,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("Size")
         public Integer size;
 
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
         @NameInMap("Status")
         public String status;
 
@@ -195,6 +198,14 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
+        }
+
+        public DescribeDisksResponseBodyDisksDisks setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
         public DescribeDisksResponseBodyDisksDisks setStatus(String status) {

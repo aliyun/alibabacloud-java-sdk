@@ -7,7 +7,9 @@ public class CreateForwardEntryResponseBody extends TeaModel {
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

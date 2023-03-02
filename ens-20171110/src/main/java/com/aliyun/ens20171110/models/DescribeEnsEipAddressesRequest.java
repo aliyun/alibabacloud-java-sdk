@@ -16,6 +16,9 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     @NameInMap("EipAddress")
     public String eipAddress;
 
+    @NameInMap("EipName")
+    public String eipName;
+
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
@@ -60,6 +63,14 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     }
     public String getEipAddress() {
         return this.eipAddress;
+    }
+
+    public DescribeEnsEipAddressesRequest setEipName(String eipName) {
+        this.eipName = eipName;
+        return this;
+    }
+    public String getEipName() {
+        return this.eipName;
     }
 
     public DescribeEnsEipAddressesRequest setEnsRegionId(String ensRegionId) {

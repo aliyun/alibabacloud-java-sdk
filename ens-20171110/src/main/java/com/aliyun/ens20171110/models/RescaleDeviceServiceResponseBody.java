@@ -10,7 +10,9 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

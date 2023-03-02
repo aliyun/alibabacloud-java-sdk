@@ -10,7 +10,9 @@ public class ReInitDiskRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
-    // 2017-11-10
+    /**
+     * <p>2017-11-10</p>
+     */
     @NameInMap("Version")
     public String version;
 

@@ -46,6 +46,9 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         @NameInMap("Architecture")
         public String architecture;
 
+        @NameInMap("ComputeType")
+        public String computeType;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -70,6 +73,9 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         @NameInMap("Platform")
         public String platform;
 
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
         @NameInMap("Status")
         public String status;
 
@@ -84,6 +90,14 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
         public String getArchitecture() {
             return this.architecture;
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImage setComputeType(String computeType) {
+            this.computeType = computeType;
+            return this;
+        }
+        public String getComputeType() {
+            return this.computeType;
         }
 
         public DescribeSelfImagesResponseBodyImagesImage setCreationTime(String creationTime) {
@@ -148,6 +162,14 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
         public String getPlatform() {
             return this.platform;
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImage setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
         public DescribeSelfImagesResponseBodyImagesImage setStatus(String status) {

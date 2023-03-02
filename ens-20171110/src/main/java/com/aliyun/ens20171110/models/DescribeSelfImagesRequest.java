@@ -16,6 +16,9 @@ public class DescribeSelfImagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SnapshotId")
+    public String snapshotId;
+
     public static DescribeSelfImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSelfImagesRequest self = new DescribeSelfImagesRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DescribeSelfImagesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeSelfImagesRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
 }

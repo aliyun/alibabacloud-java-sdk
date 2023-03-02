@@ -7,7 +7,9 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
     @NameInMap("Isps")
     public java.util.List<DescribeRegionIspsResponseBodyIsps> isps;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
