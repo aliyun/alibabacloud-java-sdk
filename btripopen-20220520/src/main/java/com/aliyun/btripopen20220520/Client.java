@@ -76,6 +76,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("phone", request.phone);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.subCorpId)) {
+            query.put("sub_corp_id", request.subCorpId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("type", request.type);
         }
