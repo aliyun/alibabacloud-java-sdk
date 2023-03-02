@@ -13,6 +13,9 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("phone")
     public String phone;
 
+    @NameInMap("sub_corp_id")
+    public String subCorpId;
+
     @NameInMap("type")
     public Integer type;
 
@@ -46,6 +49,14 @@ public class AddressGetRequest extends TeaModel {
     }
     public String getPhone() {
         return this.phone;
+    }
+
+    public AddressGetRequest setSubCorpId(String subCorpId) {
+        this.subCorpId = subCorpId;
+        return this;
+    }
+    public String getSubCorpId() {
+        return this.subCorpId;
     }
 
     public AddressGetRequest setType(Integer type) {
