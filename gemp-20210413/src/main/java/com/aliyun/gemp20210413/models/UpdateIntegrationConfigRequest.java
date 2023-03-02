@@ -4,7 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntegrationConfigRequest extends TeaModel {
-    // accessKey
+    /**
+     * <p>accessKey</p>
+     */
     @NameInMap("accessKey")
     public String accessKey;
 

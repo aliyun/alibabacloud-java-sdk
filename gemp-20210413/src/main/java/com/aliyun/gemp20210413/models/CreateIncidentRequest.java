@@ -28,7 +28,9 @@ public class CreateIncidentRequest extends TeaModel {
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
 
-    // 12000
+    /**
+     * <p>12000</p>
+     */
     @NameInMap("serviceGroupId")
     public Long serviceGroupId;
 

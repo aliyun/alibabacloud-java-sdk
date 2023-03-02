@@ -4,11 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetSubscriptionResponseBody extends TeaModel {
-    // Object
+    /**
+     * <p>Object</p>
+     */
     @NameInMap("data")
     public GetSubscriptionResponseBodyData data;
 
-    // requestId
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -334,7 +338,9 @@ public class GetSubscriptionResponseBody extends TeaModel {
         @NameInMap("scope")
         public String scope;
 
-        // Array
+        /**
+         * <p>Array</p>
+         */
         @NameInMap("scopeObjectList")
         public java.util.List<GetSubscriptionResponseBodyDataScopeObjectList> scopeObjectList;
 

@@ -4,23 +4,33 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationConfigTimelinesResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public java.util.List<ListIntegrationConfigTimelinesResponseBodyData> data;
 
-    // pageNumber
+    /**
+     * <p>pageNumber</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
-    // pageSize
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // requestId
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
-    // totalCount
+    /**
+     * <p>totalCount</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 

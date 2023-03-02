@@ -16,6 +16,12 @@ public class CreateRouteRuleRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    @NameInMap("convergenceFields")
+    public java.util.List<String> convergenceFields;
+
+    @NameInMap("convergenceType")
+    public Integer convergenceType;
+
     @NameInMap("coverageProblemLevels")
     public java.util.List<String> coverageProblemLevels;
 
@@ -93,6 +99,22 @@ public class CreateRouteRuleRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateRouteRuleRequest setConvergenceFields(java.util.List<String> convergenceFields) {
+        this.convergenceFields = convergenceFields;
+        return this;
+    }
+    public java.util.List<String> getConvergenceFields() {
+        return this.convergenceFields;
+    }
+
+    public CreateRouteRuleRequest setConvergenceType(Integer convergenceType) {
+        this.convergenceType = convergenceType;
+        return this;
+    }
+    public Integer getConvergenceType() {
+        return this.convergenceType;
     }
 
     public CreateRouteRuleRequest setCoverageProblemLevels(java.util.List<String> coverageProblemLevels) {

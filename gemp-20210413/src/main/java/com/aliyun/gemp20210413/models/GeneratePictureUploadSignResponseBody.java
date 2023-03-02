@@ -4,11 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GeneratePictureUploadSignResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public GeneratePictureUploadSignResponseBodyData data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -43,7 +47,9 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
         @NameInMap("fileType")
         public String fileType;
 
-        // oss key
+        /**
+         * <p>oss key</p>
+         */
         @NameInMap("key")
         public String key;
 
@@ -87,27 +93,39 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
     }
 
     public static class GeneratePictureUploadSignResponseBodyData extends TeaModel {
-        // accessKeyId
+        /**
+         * <p>accessKeyId</p>
+         */
         @NameInMap("accessKeyId")
         public String accessKeyId;
 
-        // oss bucket name
+        /**
+         * <p>oss bucket name</p>
+         */
         @NameInMap("bucketName")
         public String bucketName;
 
-        // files
+        /**
+         * <p>files</p>
+         */
         @NameInMap("files")
         public java.util.List<GeneratePictureUploadSignResponseBodyDataFiles> files;
 
-        // policy
+        /**
+         * <p>policy</p>
+         */
         @NameInMap("policy")
         public String policy;
 
-        // signature
+        /**
+         * <p>signature</p>
+         */
         @NameInMap("signature")
         public String signature;
 
-        // url
+        /**
+         * <p>url</p>
+         */
         @NameInMap("url")
         public String url;
 

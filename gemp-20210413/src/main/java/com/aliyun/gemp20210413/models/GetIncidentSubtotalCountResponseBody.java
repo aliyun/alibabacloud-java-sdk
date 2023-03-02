@@ -4,7 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIncidentSubtotalCountResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public GetIncidentSubtotalCountResponseBodyData data;
 
@@ -22,11 +24,15 @@ public class GetIncidentSubtotalCountResponseBody extends TeaModel {
     }
 
     public static class GetIncidentSubtotalCountResponseBodyData extends TeaModel {
-        // id of the request
+        /**
+         * <p>id of the request</p>
+         */
         @NameInMap("requestId")
         public String requestId;
 
-        // map
+        /**
+         * <p>map</p>
+         */
         @NameInMap("subtotalCount")
         public java.util.Map<String, ?> subtotalCount;
 

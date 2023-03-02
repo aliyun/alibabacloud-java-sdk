@@ -8,6 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("gemp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -780,6 +781,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.convergenceFields)) {
+            body.put("convergenceFields", request.convergenceFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.convergenceType)) {
+            body.put("convergenceType", request.convergenceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.coverageProblemLevels)) {
@@ -2408,6 +2417,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getIncidentWithOptions(request, headers, runtime);
+    }
+
+    public GetIncidentListByIdListResponse getIncidentListByIdListWithOptions(GetIncidentListByIdListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.incidentIdList)) {
+            body.put("incidentIdList", request.incidentIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIncidentListByIdList"),
+            new TeaPair("version", "2021-04-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/incident/getIncidentListByIdList"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIncidentListByIdListResponse());
+    }
+
+    public GetIncidentListByIdListResponse getIncidentListByIdList(GetIncidentListByIdListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIncidentListByIdListWithOptions(request, headers, runtime);
     }
 
     public GetIncidentStatisticsResponse getIncidentStatisticsWithOptions(GetIncidentStatisticsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -4868,6 +4912,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listUsersWithOptions(request, headers, runtime);
     }
 
+    public PushMonitorResponse pushMonitorWithOptions(String apiKey, PushMonitorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", request.body)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PushMonitor"),
+            new TeaPair("version", "2021-04-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/monitor/push/" + com.aliyun.openapiutil.Client.getEncodeParam(apiKey) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushMonitorResponse());
+    }
+
+    public PushMonitorResponse pushMonitor(String apiKey, PushMonitorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.pushMonitorWithOptions(apiKey, request, headers, runtime);
+    }
+
     public RecoverProblemResponse recoverProblemWithOptions(RecoverProblemRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5724,6 +5794,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.convergenceFields)) {
+            body.put("convergenceFields", request.convergenceFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.convergenceType)) {
+            body.put("convergenceType", request.convergenceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.coverageProblemLevels)) {

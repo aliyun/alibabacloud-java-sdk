@@ -7,7 +7,9 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
     @NameInMap("data")
     public java.util.List<ListServiceGroupMonitorSourceTemplatesResponseBodyData> data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

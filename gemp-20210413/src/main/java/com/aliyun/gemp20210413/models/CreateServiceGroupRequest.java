@@ -22,7 +22,9 @@ public class CreateServiceGroupRequest extends TeaModel {
     @NameInMap("userIds")
     public java.util.List<Long> userIds;
 
-    // webhooklink
+    /**
+     * <p>webhooklink</p>
+     */
     @NameInMap("webhookLink")
     public String webhookLink;
 

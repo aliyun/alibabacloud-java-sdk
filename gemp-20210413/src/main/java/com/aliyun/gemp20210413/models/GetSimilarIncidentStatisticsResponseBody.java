@@ -4,11 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public GetSimilarIncidentStatisticsResponseBodyData data;
 
-    // id of the request
+    /**
+     * <p>id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -441,11 +445,15 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
         @NameInMap("dailySimilarIncidents")
         public java.util.List<GetSimilarIncidentStatisticsResponseBodyDataDailySimilarIncidents> dailySimilarIncidents;
 
-        // id of the request
+        /**
+         * <p>id of the request</p>
+         */
         @NameInMap("requestId")
         public String requestId;
 
-        // topFiveIncidents
+        /**
+         * <p>topFiveIncidents</p>
+         */
         @NameInMap("topFiveIncidents")
         public java.util.List<GetSimilarIncidentStatisticsResponseBodyDataTopFiveIncidents> topFiveIncidents;
 

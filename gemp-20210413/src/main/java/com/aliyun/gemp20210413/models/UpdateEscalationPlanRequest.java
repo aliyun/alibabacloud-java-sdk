@@ -4,7 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateEscalationPlanRequest extends TeaModel {
-    // clientToken
+    /**
+     * <p>clientToken</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -77,11 +79,15 @@ public class UpdateEscalationPlanRequest extends TeaModel {
     }
 
     public static class UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanConditions extends TeaModel {
-        // LOW HIGH
+        /**
+         * <p>LOW HIGH</p>
+         */
         @NameInMap("effection")
         public String effection;
 
-        // P1 P2 P3 P4
+        /**
+         * <p>P1 P2 P3 P4</p>
+         */
         @NameInMap("level")
         public String level;
 

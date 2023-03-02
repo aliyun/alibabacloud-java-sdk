@@ -57,6 +57,9 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends TeaModel {
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
+        @NameInMap("schedulingObjectType")
+        public String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
@@ -65,6 +68,9 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends TeaModel {
 
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
+
+        @NameInMap("schedulingUserIdList")
+        public java.util.List<Long> schedulingUserIdList;
 
         public static UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays self = new UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays();
@@ -77,6 +83,14 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends TeaModel {
         }
         public String getSchedulingEndTime() {
             return this.schedulingEndTime;
+        }
+
+        public UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays setSchedulingObjectType(String schedulingObjectType) {
+            this.schedulingObjectType = schedulingObjectType;
+            return this;
+        }
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
         }
 
         public UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays setSchedulingOrder(Integer schedulingOrder) {
@@ -101,6 +115,14 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends TeaModel {
         }
         public Long getSchedulingUserId() {
             return this.schedulingUserId;
+        }
+
+        public UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays setSchedulingUserIdList(java.util.List<Long> schedulingUserIdList) {
+            this.schedulingUserIdList = schedulingUserIdList;
+            return this;
+        }
+        public java.util.List<Long> getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
         }
 
     }

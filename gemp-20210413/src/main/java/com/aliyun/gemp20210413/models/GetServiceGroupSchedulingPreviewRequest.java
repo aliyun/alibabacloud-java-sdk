@@ -117,7 +117,9 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingPreviewRequestFastScheduling extends TeaModel {
-        // FAST_CHOICE
+        /**
+         * <p>FAST_CHOICE</p>
+         */
         @NameInMap("dutyPlan")
         public String dutyPlan;
 
@@ -127,7 +129,9 @@ public class GetServiceGroupSchedulingPreviewRequest extends TeaModel {
         @NameInMap("singleDuration")
         public Integer singleDuration;
 
-        // DAY
+        /**
+         * <p>DAY</p>
+         */
         @NameInMap("singleDurationUnit")
         public String singleDurationUnit;
 

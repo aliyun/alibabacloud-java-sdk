@@ -7,7 +7,9 @@ public class GetHomePageGuidanceResponseBody extends TeaModel {
     @NameInMap("data")
     public GetHomePageGuidanceResponseBodyData data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

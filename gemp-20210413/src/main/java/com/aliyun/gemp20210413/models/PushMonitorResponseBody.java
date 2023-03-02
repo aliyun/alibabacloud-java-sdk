@@ -3,30 +3,27 @@ package com.aliyun.gemp20210413.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateServiceResponseBody extends TeaModel {
+public class PushMonitorResponseBody extends TeaModel {
     @NameInMap("data")
-    public Long data;
+    public Object data;
 
-    /**
-     * <p>Id of the request</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    public static UpdateServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateServiceResponseBody self = new UpdateServiceResponseBody();
+    public static PushMonitorResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        PushMonitorResponseBody self = new PushMonitorResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateServiceResponseBody setData(Long data) {
+    public PushMonitorResponseBody setData(Object data) {
         this.data = data;
         return this;
     }
-    public Long getData() {
+    public Object getData() {
         return this.data;
     }
 
-    public UpdateServiceResponseBody setRequestId(String requestId) {
+    public PushMonitorResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

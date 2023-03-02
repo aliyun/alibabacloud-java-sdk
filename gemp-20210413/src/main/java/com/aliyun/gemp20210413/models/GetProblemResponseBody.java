@@ -506,6 +506,9 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
+        @NameInMap("isRuleTrigger")
+        public Boolean isRuleTrigger;
+
         @NameInMap("mainHandler")
         public Long mainHandler;
 
@@ -521,7 +524,9 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("preliminaryReason")
         public String preliminaryReason;
 
-        // ID
+        /**
+         * <p>ID</p>
+         */
         @NameInMap("problemId")
         public Long problemId;
 
@@ -558,7 +563,9 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("restoredProblemOperateLogs")
         public java.util.List<GetProblemResponseBodyDataRestoredProblemOperateLogs> restoredProblemOperateLogs;
 
-        // serviceDeleteType
+        /**
+         * <p>serviceDeleteType</p>
+         */
         @NameInMap("serviceDeleteType")
         public Integer serviceDeleteType;
 
@@ -667,6 +674,14 @@ public class GetProblemResponseBody extends TeaModel {
         }
         public String getIncidentNumber() {
             return this.incidentNumber;
+        }
+
+        public GetProblemResponseBodyData setIsRuleTrigger(Boolean isRuleTrigger) {
+            this.isRuleTrigger = isRuleTrigger;
+            return this;
+        }
+        public Boolean getIsRuleTrigger() {
+            return this.isRuleTrigger;
         }
 
         public GetProblemResponseBodyData setMainHandler(Long mainHandler) {

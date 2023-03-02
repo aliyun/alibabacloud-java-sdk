@@ -7,7 +7,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
     @NameInMap("data")
     public GetServiceGroupSchedulingResponseBodyData data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -33,11 +35,17 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingResponseBodyDataFastSchedulingSchedulingUsers extends TeaModel {
+        @NameInMap("schedulingObjectType")
+        public String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
+
+        @NameInMap("schedulingUserIdList")
+        public java.util.List<Long> schedulingUserIdList;
 
         @NameInMap("schedulingUserName")
         public String schedulingUserName;
@@ -45,6 +53,14 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         public static GetServiceGroupSchedulingResponseBodyDataFastSchedulingSchedulingUsers build(java.util.Map<String, ?> map) throws Exception {
             GetServiceGroupSchedulingResponseBodyDataFastSchedulingSchedulingUsers self = new GetServiceGroupSchedulingResponseBodyDataFastSchedulingSchedulingUsers();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceGroupSchedulingResponseBodyDataFastSchedulingSchedulingUsers setSchedulingObjectType(String schedulingObjectType) {
+            this.schedulingObjectType = schedulingObjectType;
+            return this;
+        }
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
         }
 
         public GetServiceGroupSchedulingResponseBodyDataFastSchedulingSchedulingUsers setSchedulingOrder(Integer schedulingOrder) {
@@ -61,6 +77,14 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         }
         public Long getSchedulingUserId() {
             return this.schedulingUserId;
+        }
+
+        public GetServiceGroupSchedulingResponseBodyDataFastSchedulingSchedulingUsers setSchedulingUserIdList(java.util.List<Long> schedulingUserIdList) {
+            this.schedulingUserIdList = schedulingUserIdList;
+            return this;
+        }
+        public java.util.List<Long> getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
         }
 
         public GetServiceGroupSchedulingResponseBodyDataFastSchedulingSchedulingUsers setSchedulingUserName(String schedulingUserName) {
@@ -143,6 +167,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
+        @NameInMap("schedulingObjectType")
+        public String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
@@ -151,6 +178,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
+
+        @NameInMap("schedulingUserIdList")
+        public java.util.List<Long> schedulingUserIdList;
 
         @NameInMap("schedulingUserName")
         public String schedulingUserName;
@@ -182,6 +212,14 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             return this.schedulingEndTime;
         }
 
+        public GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingFineShifts setSchedulingObjectType(String schedulingObjectType) {
+            this.schedulingObjectType = schedulingObjectType;
+            return this;
+        }
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
+        }
+
         public GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingFineShifts setSchedulingOrder(Integer schedulingOrder) {
             this.schedulingOrder = schedulingOrder;
             return this;
@@ -204,6 +242,14 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         }
         public Long getSchedulingUserId() {
             return this.schedulingUserId;
+        }
+
+        public GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingFineShifts setSchedulingUserIdList(java.util.List<Long> schedulingUserIdList) {
+            this.schedulingUserIdList = schedulingUserIdList;
+            return this;
+        }
+        public java.util.List<Long> getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
         }
 
         public GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingFineShifts setSchedulingUserName(String schedulingUserName) {
@@ -236,6 +282,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
+        @NameInMap("schedulingObjectType")
+        public String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         public Long schedulingOrder;
 
@@ -244,6 +293,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
         @NameInMap("schedulingUserId")
         public String schedulingUserId;
+
+        @NameInMap("schedulingUserIdList")
+        public java.util.List<Long> schedulingUserIdList;
 
         @NameInMap("schedulingUserName")
         public String schedulingUserName;
@@ -265,6 +317,14 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         }
         public String getSchedulingEndTime() {
             return this.schedulingEndTime;
+        }
+
+        public GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingTemplateFineShifts setSchedulingObjectType(String schedulingObjectType) {
+            this.schedulingObjectType = schedulingObjectType;
+            return this;
+        }
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
         }
 
         public GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingTemplateFineShifts setSchedulingOrder(Long schedulingOrder) {
@@ -289,6 +349,14 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         }
         public String getSchedulingUserId() {
             return this.schedulingUserId;
+        }
+
+        public GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingTemplateFineShifts setSchedulingUserIdList(java.util.List<Long> schedulingUserIdList) {
+            this.schedulingUserIdList = schedulingUserIdList;
+            return this;
+        }
+        public java.util.List<Long> getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
         }
 
         public GetServiceGroupSchedulingResponseBodyDataFineSchedulingSchedulingTemplateFineShifts setSchedulingUserName(String schedulingUserName) {
@@ -318,11 +386,15 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
     }
 
     public static class GetServiceGroupSchedulingResponseBodyDataFineScheduling extends TeaModel {
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("id")
         public Long id;
 
-        // 1
+        /**
+         * <p>1</p>
+         */
         @NameInMap("period")
         public Integer period;
 

@@ -7,7 +7,9 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("data")
     public GetUserResponseBodyData data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -69,7 +71,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("createTime")
         public String createTime;
 
-        // email
+        /**
+         * <p>email</p>
+         */
         @NameInMap("email")
         public String email;
 
@@ -82,7 +86,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("phone")
         public String phone;
 
-        // ramId
+        /**
+         * <p>ramId</p>
+         */
         @NameInMap("ramId")
         public String ramId;
 

@@ -4,7 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GeneratePictureLinkRequest extends TeaModel {
-    // keys
+    /**
+     * <p>keys</p>
+     */
     @NameInMap("keys")
     public java.util.List<String> keys;
 

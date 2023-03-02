@@ -7,7 +7,9 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
     @NameInMap("data")
     public java.util.List<GetServiceGroupSpecialPersonSchedulingResponseBodyData> data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

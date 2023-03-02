@@ -4,7 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentsResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public java.util.List<ListIncidentsResponseBodyData> data;
 
@@ -14,7 +16,9 @@ public class ListIncidentsResponseBody extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // requestId
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -70,41 +74,57 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("assignToWhoIsValid")
         public Long assignToWhoIsValid;
 
-        // 代表创建时间的资源属性字段
+        /**
+         * <p>代表创建时间的资源属性字段</p>
+         */
         @NameInMap("assignUserId")
         public Long assignUserId;
 
-        // 代表资源一级ID的资源属性字段
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         */
         @NameInMap("assignUserName")
         public String assignUserName;
 
         @NameInMap("assignUserPhone")
         public String assignUserPhone;
 
-        // 事件级别
+        /**
+         * <p>事件级别</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
-        // 时间指派人ID
+        /**
+         * <p>时间指派人ID</p>
+         */
         @NameInMap("effect")
         public String effect;
 
-        // 修改时间
+        /**
+         * <p>修改时间</p>
+         */
         @NameInMap("incidentId")
         public Long incidentId;
 
-        // 影响程度
+        /**
+         * <p>影响程度</p>
+         */
         @NameInMap("incidentLevel")
         public String incidentLevel;
 
         @NameInMap("incidentNumber")
         public String incidentNumber;
 
-        // 关联流转规则ID
+        /**
+         * <p>关联流转规则ID</p>
+         */
         @NameInMap("incidentStatus")
         public String incidentStatus;
 
-        // 事件内容
+        /**
+         * <p>事件内容</p>
+         */
         @NameInMap("incidentTitle")
         public String incidentTitle;
 
@@ -117,14 +137,18 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("relServiceDeleteType")
         public Integer relServiceDeleteType;
 
-        // 事件状态
+        /**
+         * <p>事件状态</p>
+         */
         @NameInMap("relatedServiceId")
         public Long relatedServiceId;
 
         @NameInMap("relatedServiceName")
         public String relatedServiceName;
 
-        // 关联的服务ID
+        /**
+         * <p>关联的服务ID</p>
+         */
         @NameInMap("routeRuleId")
         public Long routeRuleId;
 

@@ -3,33 +3,33 @@ package com.aliyun.gemp20210413.models;
 
 import com.aliyun.tea.*;
 
-public class GetIncidentResponseBody extends TeaModel {
+public class GetIncidentListByIdListResponseBody extends TeaModel {
     /**
      * <p>data</p>
      */
     @NameInMap("data")
-    public GetIncidentResponseBodyData data;
+    public java.util.List<GetIncidentListByIdListResponseBodyData> data;
 
     /**
-     * <p>requestId</p>
+     * <p>Id of the request</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    public static GetIncidentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetIncidentResponseBody self = new GetIncidentResponseBody();
+    public static GetIncidentListByIdListResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetIncidentListByIdListResponseBody self = new GetIncidentListByIdListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetIncidentResponseBody setData(GetIncidentResponseBodyData data) {
+    public GetIncidentListByIdListResponseBody setData(java.util.List<GetIncidentListByIdListResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public GetIncidentResponseBodyData getData() {
+    public java.util.List<GetIncidentListByIdListResponseBodyData> getData() {
         return this.data;
     }
 
-    public GetIncidentResponseBody setRequestId(String requestId) {
+    public GetIncidentListByIdListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -37,7 +37,7 @@ public class GetIncidentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetIncidentResponseBodyData extends TeaModel {
+    public static class GetIncidentListByIdListResponseBodyData extends TeaModel {
         @NameInMap("assignToWhoIsValid")
         public Integer assignToWhoIsValid;
 
@@ -63,7 +63,7 @@ public class GetIncidentResponseBody extends TeaModel {
         public String defaultAssignToWhoName;
 
         @NameInMap("durationTime")
-        public Long durationTime;
+        public String durationTime;
 
         @NameInMap("effect")
         public String effect;
@@ -131,12 +131,12 @@ public class GetIncidentResponseBody extends TeaModel {
         @NameInMap("routeRuleName")
         public String routeRuleName;
 
-        public static GetIncidentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetIncidentResponseBodyData self = new GetIncidentResponseBodyData();
+        public static GetIncidentListByIdListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetIncidentListByIdListResponseBodyData self = new GetIncidentListByIdListResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetIncidentResponseBodyData setAssignToWhoIsValid(Integer assignToWhoIsValid) {
+        public GetIncidentListByIdListResponseBodyData setAssignToWhoIsValid(Integer assignToWhoIsValid) {
             this.assignToWhoIsValid = assignToWhoIsValid;
             return this;
         }
@@ -144,7 +144,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.assignToWhoIsValid;
         }
 
-        public GetIncidentResponseBodyData setAssignUserId(Long assignUserId) {
+        public GetIncidentListByIdListResponseBodyData setAssignUserId(Long assignUserId) {
             this.assignUserId = assignUserId;
             return this;
         }
@@ -152,7 +152,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.assignUserId;
         }
 
-        public GetIncidentResponseBodyData setAssignUserName(String assignUserName) {
+        public GetIncidentListByIdListResponseBodyData setAssignUserName(String assignUserName) {
             this.assignUserName = assignUserName;
             return this;
         }
@@ -160,7 +160,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.assignUserName;
         }
 
-        public GetIncidentResponseBodyData setAssignUserPhone(String assignUserPhone) {
+        public GetIncidentListByIdListResponseBodyData setAssignUserPhone(String assignUserPhone) {
             this.assignUserPhone = assignUserPhone;
             return this;
         }
@@ -168,7 +168,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.assignUserPhone;
         }
 
-        public GetIncidentResponseBodyData setCreateTime(String createTime) {
+        public GetIncidentListByIdListResponseBodyData setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -176,7 +176,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetIncidentResponseBodyData setDefaultAssignToWho(Integer defaultAssignToWho) {
+        public GetIncidentListByIdListResponseBodyData setDefaultAssignToWho(Integer defaultAssignToWho) {
             this.defaultAssignToWho = defaultAssignToWho;
             return this;
         }
@@ -184,7 +184,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.defaultAssignToWho;
         }
 
-        public GetIncidentResponseBodyData setDefaultAssignToWhoIsValid(Integer defaultAssignToWhoIsValid) {
+        public GetIncidentListByIdListResponseBodyData setDefaultAssignToWhoIsValid(Integer defaultAssignToWhoIsValid) {
             this.defaultAssignToWhoIsValid = defaultAssignToWhoIsValid;
             return this;
         }
@@ -192,7 +192,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.defaultAssignToWhoIsValid;
         }
 
-        public GetIncidentResponseBodyData setDefaultAssignToWhoName(String defaultAssignToWhoName) {
+        public GetIncidentListByIdListResponseBodyData setDefaultAssignToWhoName(String defaultAssignToWhoName) {
             this.defaultAssignToWhoName = defaultAssignToWhoName;
             return this;
         }
@@ -200,15 +200,15 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.defaultAssignToWhoName;
         }
 
-        public GetIncidentResponseBodyData setDurationTime(Long durationTime) {
+        public GetIncidentListByIdListResponseBodyData setDurationTime(String durationTime) {
             this.durationTime = durationTime;
             return this;
         }
-        public Long getDurationTime() {
+        public String getDurationTime() {
             return this.durationTime;
         }
 
-        public GetIncidentResponseBodyData setEffect(String effect) {
+        public GetIncidentListByIdListResponseBodyData setEffect(String effect) {
             this.effect = effect;
             return this;
         }
@@ -216,7 +216,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.effect;
         }
 
-        public GetIncidentResponseBodyData setIncidentDescription(String incidentDescription) {
+        public GetIncidentListByIdListResponseBodyData setIncidentDescription(String incidentDescription) {
             this.incidentDescription = incidentDescription;
             return this;
         }
@@ -224,7 +224,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.incidentDescription;
         }
 
-        public GetIncidentResponseBodyData setIncidentId(Long incidentId) {
+        public GetIncidentListByIdListResponseBodyData setIncidentId(Long incidentId) {
             this.incidentId = incidentId;
             return this;
         }
@@ -232,7 +232,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.incidentId;
         }
 
-        public GetIncidentResponseBodyData setIncidentLevel(String incidentLevel) {
+        public GetIncidentListByIdListResponseBodyData setIncidentLevel(String incidentLevel) {
             this.incidentLevel = incidentLevel;
             return this;
         }
@@ -240,7 +240,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.incidentLevel;
         }
 
-        public GetIncidentResponseBodyData setIncidentNumber(String incidentNumber) {
+        public GetIncidentListByIdListResponseBodyData setIncidentNumber(String incidentNumber) {
             this.incidentNumber = incidentNumber;
             return this;
         }
@@ -248,7 +248,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.incidentNumber;
         }
 
-        public GetIncidentResponseBodyData setIncidentStatus(String incidentStatus) {
+        public GetIncidentListByIdListResponseBodyData setIncidentStatus(String incidentStatus) {
             this.incidentStatus = incidentStatus;
             return this;
         }
@@ -256,7 +256,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.incidentStatus;
         }
 
-        public GetIncidentResponseBodyData setIncidentTitle(String incidentTitle) {
+        public GetIncidentListByIdListResponseBodyData setIncidentTitle(String incidentTitle) {
             this.incidentTitle = incidentTitle;
             return this;
         }
@@ -264,7 +264,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.incidentTitle;
         }
 
-        public GetIncidentResponseBodyData setIsManual(Boolean isManual) {
+        public GetIncidentListByIdListResponseBodyData setIsManual(Boolean isManual) {
             this.isManual = isManual;
             return this;
         }
@@ -272,7 +272,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.isManual;
         }
 
-        public GetIncidentResponseBodyData setIsUpgrade(Boolean isUpgrade) {
+        public GetIncidentListByIdListResponseBodyData setIsUpgrade(Boolean isUpgrade) {
             this.isUpgrade = isUpgrade;
             return this;
         }
@@ -280,7 +280,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.isUpgrade;
         }
 
-        public GetIncidentResponseBodyData setNotifyChannels(java.util.List<String> notifyChannels) {
+        public GetIncidentListByIdListResponseBodyData setNotifyChannels(java.util.List<String> notifyChannels) {
             this.notifyChannels = notifyChannels;
             return this;
         }
@@ -288,7 +288,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.notifyChannels;
         }
 
-        public GetIncidentResponseBodyData setProblemId(Long problemId) {
+        public GetIncidentListByIdListResponseBodyData setProblemId(Long problemId) {
             this.problemId = problemId;
             return this;
         }
@@ -296,7 +296,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.problemId;
         }
 
-        public GetIncidentResponseBodyData setProblemNumber(String problemNumber) {
+        public GetIncidentListByIdListResponseBodyData setProblemNumber(String problemNumber) {
             this.problemNumber = problemNumber;
             return this;
         }
@@ -304,7 +304,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.problemNumber;
         }
 
-        public GetIncidentResponseBodyData setRelRouteRuleDeleteType(Integer relRouteRuleDeleteType) {
+        public GetIncidentListByIdListResponseBodyData setRelRouteRuleDeleteType(Integer relRouteRuleDeleteType) {
             this.relRouteRuleDeleteType = relRouteRuleDeleteType;
             return this;
         }
@@ -312,7 +312,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.relRouteRuleDeleteType;
         }
 
-        public GetIncidentResponseBodyData setRelServiceDeleteType(Integer relServiceDeleteType) {
+        public GetIncidentListByIdListResponseBodyData setRelServiceDeleteType(Integer relServiceDeleteType) {
             this.relServiceDeleteType = relServiceDeleteType;
             return this;
         }
@@ -320,7 +320,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.relServiceDeleteType;
         }
 
-        public GetIncidentResponseBodyData setRelServiceGroupIsValid(Integer relServiceGroupIsValid) {
+        public GetIncidentListByIdListResponseBodyData setRelServiceGroupIsValid(Integer relServiceGroupIsValid) {
             this.relServiceGroupIsValid = relServiceGroupIsValid;
             return this;
         }
@@ -328,7 +328,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.relServiceGroupIsValid;
         }
 
-        public GetIncidentResponseBodyData setRelatedServiceDescription(String relatedServiceDescription) {
+        public GetIncidentListByIdListResponseBodyData setRelatedServiceDescription(String relatedServiceDescription) {
             this.relatedServiceDescription = relatedServiceDescription;
             return this;
         }
@@ -336,7 +336,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.relatedServiceDescription;
         }
 
-        public GetIncidentResponseBodyData setRelatedServiceGroupId(Long relatedServiceGroupId) {
+        public GetIncidentListByIdListResponseBodyData setRelatedServiceGroupId(Long relatedServiceGroupId) {
             this.relatedServiceGroupId = relatedServiceGroupId;
             return this;
         }
@@ -344,7 +344,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.relatedServiceGroupId;
         }
 
-        public GetIncidentResponseBodyData setRelatedServiceGroupName(String relatedServiceGroupName) {
+        public GetIncidentListByIdListResponseBodyData setRelatedServiceGroupName(String relatedServiceGroupName) {
             this.relatedServiceGroupName = relatedServiceGroupName;
             return this;
         }
@@ -352,7 +352,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.relatedServiceGroupName;
         }
 
-        public GetIncidentResponseBodyData setRelatedServiceId(Long relatedServiceId) {
+        public GetIncidentListByIdListResponseBodyData setRelatedServiceId(Long relatedServiceId) {
             this.relatedServiceId = relatedServiceId;
             return this;
         }
@@ -360,7 +360,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.relatedServiceId;
         }
 
-        public GetIncidentResponseBodyData setRelatedServiceName(String relatedServiceName) {
+        public GetIncidentListByIdListResponseBodyData setRelatedServiceName(String relatedServiceName) {
             this.relatedServiceName = relatedServiceName;
             return this;
         }
@@ -368,7 +368,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.relatedServiceName;
         }
 
-        public GetIncidentResponseBodyData setRouteRuleId(Long routeRuleId) {
+        public GetIncidentListByIdListResponseBodyData setRouteRuleId(Long routeRuleId) {
             this.routeRuleId = routeRuleId;
             return this;
         }
@@ -376,7 +376,7 @@ public class GetIncidentResponseBody extends TeaModel {
             return this.routeRuleId;
         }
 
-        public GetIncidentResponseBodyData setRouteRuleName(String routeRuleName) {
+        public GetIncidentListByIdListResponseBodyData setRouteRuleName(String routeRuleName) {
             this.routeRuleName = routeRuleName;
             return this;
         }
