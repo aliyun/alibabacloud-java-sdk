@@ -25,6 +25,9 @@ public class UpdateDataServiceApiRequest extends TeaModel {
     @NameInMap("RequestMethod")
     public Integer requestMethod;
 
+    @NameInMap("ResourceGroupId")
+    public Long resourceGroupId;
+
     @NameInMap("ResponseContentType")
     public Integer responseContentType;
 
@@ -102,6 +105,14 @@ public class UpdateDataServiceApiRequest extends TeaModel {
     }
     public Integer getRequestMethod() {
         return this.requestMethod;
+    }
+
+    public UpdateDataServiceApiRequest setResourceGroupId(Long resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public Long getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public UpdateDataServiceApiRequest setResponseContentType(Integer responseContentType) {
