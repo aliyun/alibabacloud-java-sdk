@@ -32,13 +32,13 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public Long domainId;
 
     /**
-     * <p>The list of domain names.</p>
+     * <p>The IDs of domains.</p>
      */
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
     /**
-     * <p>Specifies whether to enable Web Application Firewall (WAF).</p>
+     * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
      */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
@@ -73,6 +73,9 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Policies")
+    public String policies;
+
     /**
      * <p>The matching rule.</p>
      */
@@ -90,6 +93,9 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
      */
     @NameInMap("RouteOrder")
     public Integer routeOrder;
+
+    @NameInMap("RouteType")
+    public String routeType;
 
     /**
      * <p>The information about services.</p>
@@ -190,6 +196,14 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
         return this.name;
     }
 
+    public AddGatewayRouteShrinkRequest setPolicies(String policies) {
+        this.policies = policies;
+        return this;
+    }
+    public String getPolicies() {
+        return this.policies;
+    }
+
     public AddGatewayRouteShrinkRequest setPredicatesShrink(String predicatesShrink) {
         this.predicatesShrink = predicatesShrink;
         return this;
@@ -212,6 +226,14 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     }
     public Integer getRouteOrder() {
         return this.routeOrder;
+    }
+
+    public AddGatewayRouteShrinkRequest setRouteType(String routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    public String getRouteType() {
+        return this.routeType;
     }
 
     public AddGatewayRouteShrinkRequest setServicesShrink(String servicesShrink) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOverviewResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;

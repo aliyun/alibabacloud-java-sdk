@@ -1245,6 +1245,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Policies")
+        public String policies;
+
         /**
          * <p>The matching conditions.</p>
          */
@@ -1477,6 +1480,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetGatewayRouteDetailResponseBodyData setPolicies(String policies) {
+            this.policies = policies;
+            return this;
+        }
+        public String getPolicies() {
+            return this.policies;
         }
 
         public GetGatewayRouteDetailResponseBodyData setPredicates(String predicates) {

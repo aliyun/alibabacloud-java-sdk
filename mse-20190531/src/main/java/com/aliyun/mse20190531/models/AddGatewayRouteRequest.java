@@ -32,13 +32,13 @@ public class AddGatewayRouteRequest extends TeaModel {
     public Long domainId;
 
     /**
-     * <p>The list of domain names.</p>
+     * <p>The IDs of domains.</p>
      */
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
     /**
-     * <p>Specifies whether to enable Web Application Firewall (WAF).</p>
+     * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
      */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
@@ -73,6 +73,9 @@ public class AddGatewayRouteRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Policies")
+    public String policies;
+
     /**
      * <p>The matching rule.</p>
      */
@@ -90,6 +93,9 @@ public class AddGatewayRouteRequest extends TeaModel {
      */
     @NameInMap("RouteOrder")
     public Integer routeOrder;
+
+    @NameInMap("RouteType")
+    public String routeType;
 
     /**
      * <p>The information about services.</p>
@@ -190,6 +196,14 @@ public class AddGatewayRouteRequest extends TeaModel {
         return this.name;
     }
 
+    public AddGatewayRouteRequest setPolicies(String policies) {
+        this.policies = policies;
+        return this;
+    }
+    public String getPolicies() {
+        return this.policies;
+    }
+
     public AddGatewayRouteRequest setPredicates(AddGatewayRouteRequestPredicates predicates) {
         this.predicates = predicates;
         return this;
@@ -212,6 +226,14 @@ public class AddGatewayRouteRequest extends TeaModel {
     }
     public Integer getRouteOrder() {
         return this.routeOrder;
+    }
+
+    public AddGatewayRouteRequest setRouteType(String routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    public String getRouteType() {
+        return this.routeType;
     }
 
     public AddGatewayRouteRequest setServices(java.util.List<AddGatewayRouteRequestServices> services) {
@@ -260,7 +282,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestFallbackServices extends TeaModel {
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The type of the protocol.</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
@@ -444,7 +466,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestPredicatesPathPredicates extends TeaModel {
         /**
-         * <p>Specifies whether to perform case-insensitive matching.</p>
+         * <p>Specifies whether to ignore case sensitivity.</p>
          */
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
@@ -612,7 +634,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestRedirectJSON extends TeaModel {
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code returned.</p>
          */
         @NameInMap("Code")
         public Integer code;
@@ -832,7 +854,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestServicesHttpDubboTranscoder extends TeaModel {
         /**
-         * <p>The service group.</p>
+         * <p>The name of the service group.</p>
          */
         @NameInMap("DubboServiceGroup")
         public String dubboServiceGroup;
@@ -896,7 +918,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestServices extends TeaModel {
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The type of the protocol.</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;

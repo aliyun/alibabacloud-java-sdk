@@ -14,13 +14,13 @@ public class GetOverviewRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The subscription period of the instance. Unit: months. Valid values: 1, 2, 3, 6, and 12.</p>
+     * <p>The time range for the query. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("Region")
     public String region;
