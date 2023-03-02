@@ -14,13 +14,13 @@ public class GetApplicationListRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ID of an application.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The name of an application.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -31,6 +31,9 @@ public class GetApplicationListRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The microservice namespace to which the application belongs.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
@@ -47,7 +50,7 @@ public class GetApplicationListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("Region")
     public String region;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayRouteResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The HTTP status code that is returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -16,6 +16,9 @@ public class UpdateGatewayRouteResponseBody extends TeaModel {
     @NameInMap("Data")
     public Long data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 

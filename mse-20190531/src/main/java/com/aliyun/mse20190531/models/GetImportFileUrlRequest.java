@@ -14,7 +14,7 @@ public class GetImportFileUrlRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The type of the file.</p>
+     * <p>The file type.</p>
      */
     @NameInMap("ContentType")
     public String contentType;

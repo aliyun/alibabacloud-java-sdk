@@ -41,7 +41,7 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     public String mseVersion;
 
     /**
-     * <p>The ID of the region where the Microservices Engine (MSE) instance resides. Examples:</p>
+     * <p>The ID of the region where the instance resides. Examples:</p>
      * <br>
      * <p>*   cn-hangzhou: China (Hangzhou)</p>
      * <p>*   cn-beijing: China (Beijing)</p>
@@ -59,7 +59,7 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     public String sentinelEnable;
 
     /**
-     * <p>The service source.</p>
+     * <p>The source.</p>
      */
     @NameInMap("Source")
     public String source;

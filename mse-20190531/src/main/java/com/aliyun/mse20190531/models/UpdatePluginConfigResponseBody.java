@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePluginConfigResponseBody extends TeaModel {
     /**
-     * <p>Code.</p>
+     * <p>The status code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -47,7 +47,7 @@ public class UpdatePluginConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

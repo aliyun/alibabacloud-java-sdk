@@ -22,8 +22,8 @@ public class UpdatePluginConfigRequest extends TeaModel {
      * <p>The application scope of the plug-in.</p>
      * <br>
      * <p>*   0: global</p>
-     * <p>*   1: domain names</p>
-     * <p>*   2: routes</p>
+     * <p>*   1: route</p>
+     * <p>*   2: domain name</p>
      */
     @NameInMap("ConfigLevel")
     public Integer configLevel;

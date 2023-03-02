@@ -302,7 +302,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public Integer servicePort;
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The source type.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -608,7 +608,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     public static class UpdateGatewayRouteRequestRedirectJSON extends TeaModel {
         /**
-         * <p>The status code.</p>
+         * <p>The status code returned.</p>
          */
         @NameInMap("Code")
         public Integer code;
@@ -942,7 +942,7 @@ public class UpdateGatewayRouteRequest extends TeaModel {
         public Integer servicePort;
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The source type.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;

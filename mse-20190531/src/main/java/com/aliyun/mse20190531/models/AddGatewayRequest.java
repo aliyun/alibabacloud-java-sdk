@@ -57,7 +57,7 @@ public class AddGatewayRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -117,7 +117,7 @@ public class AddGatewayRequest extends TeaModel {
     public String vSwitchId2;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the virtual private cloud (VPC) in which the instances reside.</p>
      */
     @NameInMap("Vpc")
     public String vpc;

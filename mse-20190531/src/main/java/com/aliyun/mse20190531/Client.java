@@ -2623,6 +2623,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.exportNacosConfigWithOptions(request, runtime);
     }
 
+    /**
+      * Only one task can run at a time.
+      *
+      * @param request ExportZookeeperDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExportZookeeperDataResponse
+     */
     public ExportZookeeperDataResponse exportZookeeperDataWithOptions(ExportZookeeperDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2663,6 +2670,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExportZookeeperDataResponse());
     }
 
+    /**
+      * Only one task can run at a time.
+      *
+      * @param request ExportZookeeperDataRequest
+      * @return ExportZookeeperDataResponse
+     */
     public ExportZookeeperDataResponse exportZookeeperData(ExportZookeeperDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exportZookeeperDataWithOptions(request, runtime);
@@ -3894,6 +3907,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.importServicesWithOptions(request, runtime);
     }
 
+    /**
+      * **
+      * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
+      *
+      * @param request ImportZookeeperDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ImportZookeeperDataResponse
+     */
     public ImportZookeeperDataResponse importZookeeperDataWithOptions(ImportZookeeperDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3938,6 +3959,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ImportZookeeperDataResponse());
     }
 
+    /**
+      * **
+      * **Danger** This operation clears existing data. Exercise caution when you call this API operation.
+      *
+      * @param request ImportZookeeperDataRequest
+      * @return ImportZookeeperDataResponse
+     */
     public ImportZookeeperDataResponse importZookeeperData(ImportZookeeperDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importZookeeperDataWithOptions(request, runtime);
@@ -6543,6 +6571,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
             query.put("ConfigType", request.configType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eurekaSupported)) {
+            query.put("EurekaSupported", request.eurekaSupported);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.extendedTypesEnable)) {

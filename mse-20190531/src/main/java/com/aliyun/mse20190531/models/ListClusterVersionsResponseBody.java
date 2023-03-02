@@ -138,7 +138,7 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The type of the instance.</p>
+         * <p>The version of the instance.</p>
          */
         @NameInMap("ShowName")
         public String showName;

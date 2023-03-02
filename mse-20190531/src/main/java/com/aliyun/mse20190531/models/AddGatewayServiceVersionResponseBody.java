@@ -11,7 +11,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The ID of the created service version.</p>
+     * <p>The ID of the gateway service.</p>
      */
     @NameInMap("Data")
     public Long data;
@@ -23,7 +23,7 @@ public class AddGatewayServiceVersionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;

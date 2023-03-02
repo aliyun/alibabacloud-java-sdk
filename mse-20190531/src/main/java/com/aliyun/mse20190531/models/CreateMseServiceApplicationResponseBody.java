@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMseServiceApplicationResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return value.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -98,7 +98,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
 
     public static class CreateMseServiceApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("AppId")
         public String appId;
@@ -134,7 +134,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         public String licenseKey;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -146,7 +146,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The status.</p>
+         * <p>The status. Valid values: 1: available; 2: deleted</p>
          */
         @NameInMap("Status")
         public Integer status;

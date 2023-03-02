@@ -260,7 +260,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestFallbackServices extends TeaModel {
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The type of the protocol. Valid values:</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
@@ -612,7 +612,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestRedirectJSON extends TeaModel {
         /**
-         * <p>The status code returned.</p>
+         * <p>The HTTP status code.</p>
          */
         @NameInMap("Code")
         public Integer code;
@@ -896,7 +896,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestServices extends TeaModel {
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The type of the protocol. Valid values:</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;

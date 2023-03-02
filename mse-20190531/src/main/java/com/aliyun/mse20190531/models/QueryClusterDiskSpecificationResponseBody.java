@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The status code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;

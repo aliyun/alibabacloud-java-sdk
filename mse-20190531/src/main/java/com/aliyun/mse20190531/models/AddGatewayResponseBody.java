@@ -11,7 +11,7 @@ public class AddGatewayResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public AddGatewayResponseBodyData data;

@@ -20,7 +20,7 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The names of the applications.</p>
+     * <p>The name of the application.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -38,7 +38,7 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("Region")
     public String region;

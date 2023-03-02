@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportNacosConfigResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,7 +17,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
     public ImportNacosConfigResponseBodyData data;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.</p>
      * <br>
      * <p>> If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
      */
@@ -200,7 +200,7 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
     public static class ImportNacosConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The information about configurations failed to be imported.</p>
+         * <p>The information about configurations that are failed to be imported.</p>
          */
         @NameInMap("FailData")
         public java.util.List<ImportNacosConfigResponseBodyDataFailData> failData;

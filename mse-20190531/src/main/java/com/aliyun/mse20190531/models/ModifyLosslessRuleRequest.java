@@ -58,6 +58,9 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     @NameInMap("LossLessDetail")
     public Boolean lossLessDetail;
 
+    /**
+     * <p>The microservice namespace to which the rule applies.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
