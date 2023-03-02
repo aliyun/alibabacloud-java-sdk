@@ -4,31 +4,39 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodAIDataRequest extends TeaModel {
-    // The type of video AI. If you do not set this parameter, the data of all video AI types is returned. You can specify multiple types. Separate them with commas (,). Valid values:
-    // 
-    // *   **AIVideoCensor**: automated review
-    // *   **AIVideoFPShot**: media fingerprinting
-    // *   **AIVideoTag**: smart tag
+    /**
+     * <p>The type of video AI. If you do not set this parameter, the data of all video AI types is returned. You can specify multiple types. Separate them with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **AIVideoCensor**: automated review</p>
+     * <p>*   **AIVideoFPShot**: media fingerprinting</p>
+     * <p>*   **AIVideoTag**: smart tag</p>
+     */
     @NameInMap("AIType")
     public String AIType;
 
-    // The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region where the processed file is stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:
-    // 
-    // *   **cn-shanghai**: China (Shanghai)
-    // *   **cn-beijing**: China (Beijing)
-    // *   **eu-central-1**: Germany (Frankfurt)
-    // *   **ap-southeast-1**: Singapore
+    /**
+     * <p>The region where the processed file is stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **cn-shanghai**: China (Shanghai)</p>
+     * <p>*   **cn-beijing**: China (Beijing)</p>
+     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
+     * <p>*   **ap-southeast-1**: Singapore</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -4,21 +4,27 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteTranscodeTemplateGroupRequest extends TeaModel {
-    // Specifies whether to forcibly delete the entire transcoding template group. Valid values:
-    // 
-    // *   **true**: deletes the entire transcoding template group and its transcoding templates.
-    // *   **false**: removes the specified transcoding templates from the transcoding template group. This is the default value.
+    /**
+     * <p>Specifies whether to forcibly delete the entire transcoding template group. Valid values:</p>
+     * <br>
+     * <p>*   **true**: deletes the entire transcoding template group and its transcoding templates.</p>
+     * <p>*   **false**: removes the specified transcoding templates from the transcoding template group. This is the default value.</p>
+     */
     @NameInMap("ForceDelGroup")
     public String forceDelGroup;
 
-    // The ID of the transcoding template group.
+    /**
+     * <p>The ID of the transcoding template group.</p>
+     */
     @NameInMap("TranscodeTemplateGroupId")
     public String transcodeTemplateGroupId;
 
-    // The IDs of the transcoding templates that you want to remove.
-    // 
-    // *   Separate multiple IDs with commas (,).
-    // *   You can specify a maximum of 10 IDs.
+    /**
+     * <p>The IDs of the transcoding templates that you want to remove.</p>
+     * <br>
+     * <p>*   Separate multiple IDs with commas (,).</p>
+     * <p>*   You can specify a maximum of 10 IDs.</p>
+     */
     @NameInMap("TranscodeTemplateIds")
     public String transcodeTemplateIds;
 

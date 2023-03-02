@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetPlayInfoResponseBody extends TeaModel {
-    // The information about the audio or video stream.
+    /**
+     * <p>The information about the audio or video stream.</p>
+     */
     @NameInMap("PlayInfoList")
     public GetPlayInfoResponseBodyPlayInfoList playInfoList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The basic information about the audio or video file.
+    /**
+     * <p>The basic information about the audio or video file.</p>
+     */
     @NameInMap("VideoBase")
     public GetPlayInfoResponseBodyVideoBase videoBase;
 
@@ -46,125 +52,167 @@ public class GetPlayInfoResponseBody extends TeaModel {
     }
 
     public static class GetPlayInfoResponseBodyPlayInfoListPlayInfo extends TeaModel {
-        // The color depth. This value must be an integer.
+        /**
+         * <p>The color depth. This value must be an integer.</p>
+         */
         @NameInMap("BitDepth")
         public Integer bitDepth;
 
-        // The bitrate of the media stream. Unit: Kbit/s.
+        /**
+         * <p>The bitrate of the media stream. Unit: Kbit/s.</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
-        // The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The quality of the video stream. Valid values:
-        // 
-        // *   **FD**: low definition
-        // *   **LD**: standard definition
-        // *   **SD**: high definition
-        // *   **HD**: ultra-high definition
-        // *   **OD**: original definition
-        // *   **2K**: 2K
-        // *   **4K**: 4K
-        // *   **SQ**: standard sound quality
-        // *   **HQ**: high sound quality
-        // *   **AUTO**: adaptive bitrate
+        /**
+         * <p>The quality of the video stream. Valid values:</p>
+         * <br>
+         * <p>*   **FD**: low definition</p>
+         * <p>*   **LD**: standard definition</p>
+         * <p>*   **SD**: high definition</p>
+         * <p>*   **HD**: ultra-high definition</p>
+         * <p>*   **OD**: original definition</p>
+         * <p>*   **2K**: 2K</p>
+         * <p>*   **4K**: 4K</p>
+         * <p>*   **SQ**: standard sound quality</p>
+         * <p>*   **HQ**: high sound quality</p>
+         * <p>*   **AUTO**: adaptive bitrate</p>
+         */
         @NameInMap("Definition")
         public String definition;
 
-        // The duration of the media stream. Unit: seconds.
+        /**
+         * <p>The duration of the media stream. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
-        // Indicates whether the video stream was encrypted. Valid values:
-        // 
-        // *   **0**: no
-        // *   **1**: yes
+        /**
+         * <p>Indicates whether the video stream was encrypted. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("Encrypt")
         public Long encrypt;
 
-        // The encryption type of the media stream. Valid values:
-        // 
-        // *   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography
-        // *   **HLSEncryption**: HTTP Live Streaming (HLS) encryption
-        // 
-        // > If the encryption type is **AliyunVoDEncryption**, only ApsaraVideo Player SDK can be used to play videos.
+        /**
+         * <p>The encryption type of the media stream. Valid values:</p>
+         * <br>
+         * <p>*   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography</p>
+         * <p>*   **HLSEncryption**: HTTP Live Streaming (HLS) encryption</p>
+         * <br>
+         * <p>> If the encryption type is **AliyunVoDEncryption**, only ApsaraVideo Player SDK can be used to play videos.</p>
+         */
         @NameInMap("EncryptType")
         public String encryptType;
 
-        // The format of the media stream.
-        // 
-        // *   If the media file is a video file, the valid values are **mp4** and **m3u8**.
-        // *   If the media file is an audio-only file, the value is **mp3**.
+        /**
+         * <p>The format of the media stream.</p>
+         * <br>
+         * <p>*   If the media file is a video file, the valid values are **mp4** and **m3u8**.</p>
+         * <p>*   If the media file is an audio-only file, the value is **mp3**.</p>
+         */
         @NameInMap("Format")
         public String format;
 
-        // The frame rate of the media stream. Unit: frames per second.
+        /**
+         * <p>The frame rate of the media stream. Unit: frames per second.</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
-        // The HDR type of the media stream. Valid values:
-        // 
-        // *   HDR
-        // *   HDR10
-        // *   HLG
-        // *   DolbyVision
-        // *   HDRVivid
-        // *   SDR+
+        /**
+         * <p>The HDR type of the media stream. Valid values:</p>
+         * <br>
+         * <p>*   HDR</p>
+         * <p>*   HDR10</p>
+         * <p>*   HLG</p>
+         * <p>*   DolbyVision</p>
+         * <p>*   HDRVivid</p>
+         * <p>*   SDR+</p>
+         */
         @NameInMap("HDRType")
         public String HDRType;
 
-        // The height of the media stream. Unit: pixels.
+        /**
+         * <p>The height of the media stream. Unit: pixels.</p>
+         */
         @NameInMap("Height")
         public Long height;
 
-        // The ID of the media transcoding job. This ID uniquely identifies a media stream.
+        /**
+         * <p>The ID of the media transcoding job. This ID uniquely identifies a media stream.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
-        // The update time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The update time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        // The type of Narrowband HD transcoding. Valid values:
-        // 
-        // *   **0**: regular
-        // *   **1.0**: Narrowband HD 1.0
-        // *   **2.0**: Narrowband HD 2.0
-        // 
-        // This parameter is returned only when a quality that is available in the built-in Narrowband HD 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.
+        /**
+         * <p>The type of Narrowband HD transcoding. Valid values:</p>
+         * <br>
+         * <p>*   **0**: regular</p>
+         * <p>*   **1.0**: Narrowband HD 1.0</p>
+         * <p>*   **2.0**: Narrowband HD 2.0</p>
+         * <br>
+         * <p>This parameter is returned only when a quality that is available in the built-in Narrowband HD 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.</p>
+         */
         @NameInMap("NarrowBandType")
         public String narrowBandType;
 
-        // The playback URL of the video stream.
+        /**
+         * <p>The playback URL of the video stream.</p>
+         */
         @NameInMap("PlayURL")
         public String playURL;
 
-        // The size of the media stream. Unit: bytes.
+        /**
+         * <p>The size of the media stream. Unit: bytes.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671~~).
+        /**
+         * <p>The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671~~).</p>
+         */
         @NameInMap("Specification")
         public String specification;
 
-        // The status of the media stream. Valid values:
-        // 
-        // *   **Normal**
-        // *   **Invisible**
+        /**
+         * <p>The status of the media stream. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**</p>
+         * <p>*   **Invisible**</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The type of the media stream. If the media stream is a video stream, the value is **video**. If the media stream is an audio-only stream, the value is **audio**.
+        /**
+         * <p>The type of the media stream. If the media stream is a video stream, the value is **video**. If the media stream is an audio-only stream, the value is **audio**.</p>
+         */
         @NameInMap("StreamType")
         public String streamType;
 
-        // The ID of the watermark that is associated with the media stream.
+        /**
+         * <p>The ID of the watermark that is associated with the media stream.</p>
+         */
         @NameInMap("WatermarkId")
         public String watermarkId;
 
-        // The width of the media stream. Unit: pixels.
+        /**
+         * <p>The width of the media stream. Unit: pixels.</p>
+         */
         @NameInMap("Width")
         public Long width;
 
@@ -363,38 +411,54 @@ public class GetPlayInfoResponseBody extends TeaModel {
     }
 
     public static class GetPlayInfoResponseBodyVideoBase extends TeaModel {
-        // The thumbnail URL of the audio or video file.
+        /**
+         * <p>The thumbnail URL of the audio or video file.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The URL of the masked live comment data.
+        /**
+         * <p>The URL of the masked live comment data.</p>
+         */
         @NameInMap("DanMuURL")
         public String danMuURL;
 
-        // The duration of the audio or video file. Unit: seconds.
+        /**
+         * <p>The duration of the audio or video file. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
-        // The type of the media file. Valid values:
-        // 
-        // *   **video**
-        // *   **audio**
+        /**
+         * <p>The type of the media file. Valid values:</p>
+         * <br>
+         * <p>*   **video**</p>
+         * <p>*   **audio**</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
-        // The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.
+        /**
+         * <p>The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The title of the audio or video file.
+        /**
+         * <p>The title of the audio or video file.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The ID of the media file.
+        /**
+         * <p>The ID of the media file.</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 

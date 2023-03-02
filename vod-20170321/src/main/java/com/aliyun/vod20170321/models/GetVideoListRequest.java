@@ -4,46 +4,62 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVideoListRequest extends TeaModel {
-    // The ID of the video category.
+    /**
+     * <p>The ID of the video category.</p>
+     */
     @NameInMap("CateId")
     public Long cateId;
 
-    // The end of the time range for querying videos based on their creation time. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The end of the time range for querying videos based on their creation time. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The number of the page to return. Default value: **1**.
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
-    // Optional. The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+    /**
+     * <p>Optional. The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The method for sorting the results. Valid values:
-    // 
-    // *   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.
-    // *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
+    /**
+     * <p>The method for sorting the results. Valid values:</p>
+     * <br>
+     * <p>*   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.</p>
+     * <p>*   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
-    // The beginning of the time range for querying videos based on their creation time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range for querying videos based on their creation time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The status of the video. By default, you can obtain videos in all states. Separate multiple states with commas (,). Valid values:
-    // 
-    // *   **Uploading**: The video is being uploaded.
-    // *   **UploadFail**: The video fails to be uploaded.
-    // *   **UploadSucc**: The video is uploaded.
-    // *   **Transcoding**: The video is being transcoded.
-    // *   **TranscodeFail**: The video fails to be transcoded.
-    // *   **Blocked**: The video is blocked.
-    // *   **Normal**: The video can be played.
+    /**
+     * <p>The status of the video. By default, you can obtain videos in all states. Separate multiple states with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **Uploading**: The video is being uploaded.</p>
+     * <p>*   **UploadFail**: The video fails to be uploaded.</p>
+     * <p>*   **UploadSucc**: The video is uploaded.</p>
+     * <p>*   **Transcoding**: The video is being transcoded.</p>
+     * <p>*   **TranscodeFail**: The video fails to be transcoded.</p>
+     * <p>*   **Blocked**: The video is blocked.</p>
+     * <p>*   **Normal**: The video can be played.</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // The Object Storage Service (OSS) bucket where the video file is stored.
+    /**
+     * <p>The Object Storage Service (OSS) bucket where the video file is stored.</p>
+     */
     @NameInMap("StorageLocation")
     public String storageLocation;
 

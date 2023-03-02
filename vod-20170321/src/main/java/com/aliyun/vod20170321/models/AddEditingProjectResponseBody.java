@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddEditingProjectResponseBody extends TeaModel {
-    // The information about the online editing project. For more information about the structure, see [EditingProject](~~52839~~).
+    /**
+     * <p>The information about the online editing project. For more information about the structure, see [EditingProject](~~52839~~).</p>
+     */
     @NameInMap("Project")
     public AddEditingProjectResponseBodyProject project;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,32 +38,44 @@ public class AddEditingProjectResponseBody extends TeaModel {
     }
 
     public static class AddEditingProjectResponseBodyProject extends TeaModel {
-        // The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the online editing project.
+        /**
+         * <p>The description of the online editing project.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // The ID of the online editing project.
+        /**
+         * <p>The ID of the online editing project.</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
-        // The status of the online editing project. Valid values:
-        // 
-        // - **Normal**: indicates that the online editing project is in draft.
-        // - **Producing**: indicates that the video is being produced.
-        // - **Produced**: indicates that the video was produced.
-        // - **ProduceFailed**: indicates that the video failed to be produced.
+        /**
+         * <p>The status of the online editing project. Valid values:</p>
+         * <br>
+         * <p>- **Normal**: indicates that the online editing project is in draft.</p>
+         * <p>- **Producing**: indicates that the video is being produced.</p>
+         * <p>- **Produced**: indicates that the video was produced.</p>
+         * <p>- **ProduceFailed**: indicates that the video failed to be produced.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The title of the online editing project.
+        /**
+         * <p>The title of the online editing project.</p>
+         */
         @NameInMap("Title")
         public String title;
 

@@ -4,11 +4,13 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetEditingProjectMaterialsRequest extends TeaModel {
-    // The type of the material. Valid values:
-    // 
-    // *   **video**
-    // *   **audio**
-    // *   **image**
+    /**
+     * <p>The type of the material. Valid values:</p>
+     * <br>
+     * <p>*   **video**</p>
+     * <p>*   **audio**</p>
+     * <p>*   **image**</p>
+     */
     @NameInMap("MaterialType")
     public String materialType;
 
@@ -18,10 +20,12 @@ public class GetEditingProjectMaterialsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:
-    // 
-    // *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to obtain the ID of the specified online editing project.
-    // *   Call the **AddEditingProject** operation. The value of the response parameter ProjectId is the ID of the specified online editing project.
+    /**
+     * <p>The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:</p>
+     * <br>
+     * <p>*   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to obtain the ID of the specified online editing project.</p>
+     * <p>*   Call the **AddEditingProject** operation. The value of the response parameter ProjectId is the ID of the specified online editing project.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -31,10 +35,12 @@ public class GetEditingProjectMaterialsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public String resourceOwnerId;
 
-    // The type of the material. Valid values:
-    // 
-    // *   **video**
-    // *   **audio**
+    /**
+     * <p>The type of the material. Valid values:</p>
+     * <br>
+     * <p>*   **video**</p>
+     * <p>*   **audio**</p>
+     */
     @NameInMap("Type")
     public String type;
 

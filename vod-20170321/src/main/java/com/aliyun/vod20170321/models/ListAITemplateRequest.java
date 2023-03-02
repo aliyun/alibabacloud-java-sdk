@@ -4,10 +4,12 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAITemplateRequest extends TeaModel {
-    // The type of the AI template. Valid values:
-    // 
-    // *   **AIMediaAudit**: automated review
-    // *   **AIImage**: smart thumbnail
+    /**
+     * <p>The type of the AI template. Valid values:</p>
+     * <br>
+     * <p>*   **AIMediaAudit**: automated review</p>
+     * <p>*   **AIImage**: smart thumbnail</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 

@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainConfigsResponseBody extends TeaModel {
-    // The configurations of the domain name.
+    /**
+     * <p>The configurations of the domain name.</p>
+     */
     @NameInMap("DomainConfigs")
     public DescribeVodDomainConfigsResponseBodyDomainConfigs domainConfigs;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
-        // The name of the parameter.
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ArgName")
         public String argName;
 
-        // The value of the parameter.
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ArgValue")
         public String argValue;
 
@@ -85,23 +93,31 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
-        // The ID of the configuration.
+        /**
+         * <p>The ID of the configuration.</p>
+         */
         @NameInMap("ConfigId")
         public String configId;
 
-        // The parameters of each feature.
+        /**
+         * <p>The parameters of each feature.</p>
+         */
         @NameInMap("FunctionArgs")
         public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs;
 
-        // The name of the function.
+        /**
+         * <p>The name of the function.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 
-        // The status of the configuration. Valid values:
-        // - **success**
-        // - **testing**
-        // - **failed**
-        // - **configuring**
+        /**
+         * <p>The status of the configuration. Valid values:</p>
+         * <p>- **success**</p>
+         * <p>- **testing**</p>
+         * <p>- **failed**</p>
+         * <p>- **configuring**</p>
+         */
         @NameInMap("Status")
         public String status;
 

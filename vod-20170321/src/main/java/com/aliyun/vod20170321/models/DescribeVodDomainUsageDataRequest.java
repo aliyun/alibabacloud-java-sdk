@@ -4,40 +4,55 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainUsageDataRequest extends TeaModel {
-    // The region where the data is queried. The default value is CN, which indicates mainland China. Valid values:
-    // 
-    // *   **CN**: mainland China.
-    // *   **OverSeas**: outside mainland China.
+    /**
+     * <p>The region where the data is queried. The default value is CN, which indicates mainland China. Valid values:</p>
+     * <br>
+     * <p>*   **CN**: mainland China.</p>
+     * <p>*   **OverSeas**: outside mainland China.</p>
+     */
     @NameInMap("Area")
     public String area;
 
-    // The domain name for CDN. If you do not specify this parameter, the merged data of all your domain names for CDN is returned. You can specify multiple domain names. Separate them with commas (,).
+    /**
+     * <p>The domain name for CDN. If you do not specify this parameter, the merged data of all your domain names for CDN is returned. You can specify multiple domain names. Separate them with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The type of the data to be queried. Valid values:
-    // 
-    // *   **bps**: bandwidth.
-    // *   **traf**: traffic.
+    /**
+     * <p>The type of the data to be queried. Valid values:</p>
+     * <br>
+     * <p>*   **bps**: bandwidth.</p>
+     * <p>*   **traf**: traffic.</p>
+     */
     @NameInMap("Field")
     public String field;
+
+    @NameInMap("Interval")
+    public String interval;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The type of the content based on which the data is generated. Valid values:
-    // 
-    // *   **static**
-    // *   **dynamic**
-    // *   **all**
+    /**
+     * <p>The type of the content based on which the data is generated. Valid values:</p>
+     * <br>
+     * <p>*   **static**</p>
+     * <p>*   **dynamic**</p>
+     * <p>*   **all**</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -76,6 +91,14 @@ public class DescribeVodDomainUsageDataRequest extends TeaModel {
     }
     public String getField() {
         return this.field;
+    }
+
+    public DescribeVodDomainUsageDataRequest setInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    public String getInterval() {
+        return this.interval;
     }
 
     public DescribeVodDomainUsageDataRequest setOwnerId(Long ownerId) {

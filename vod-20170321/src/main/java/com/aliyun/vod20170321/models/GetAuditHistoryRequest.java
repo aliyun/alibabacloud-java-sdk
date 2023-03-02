@@ -4,21 +4,29 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAuditHistoryRequest extends TeaModel {
-    // The number of the page to return. Default value: **1**.
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
-    // The number of entries to return on each page. Default value: **10**. Maximum value: **100**.
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The sorting rule of the results. Valid values:
-    // *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
-    // *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
+    /**
+     * <p>The sorting rule of the results. Valid values:</p>
+     * <p>*   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.</p>
+     * <p>*   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
-    // The ID of the video.
+    /**
+     * <p>The ID of the video.</p>
+     */
     @NameInMap("VideoId")
     public String videoId;
 

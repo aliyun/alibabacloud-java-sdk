@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAttachedMediaInfoResponseBody extends TeaModel {
-    // The information about the media asset.
+    /**
+     * <p>The information about the media asset.</p>
+     */
     @NameInMap("AttachedMediaList")
     public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaList> attachedMediaList;
 
-    // The IDs of the auxiliary media assets that do not exist.
+    /**
+     * <p>The IDs of the auxiliary media assets that do not exist.</p>
+     */
     @NameInMap("NonExistMediaIds")
     public java.util.List<String> nonExistMediaIds;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,21 +52,29 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetAttachedMediaInfoResponseBodyAttachedMediaListCategories extends TeaModel {
-        // The ID of the video category.
+        /**
+         * <p>The ID of the video category.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
-        // The name of the category.
-        // - The value can be up to 64 bytes in length.
-        // - The string must be encoded in the UTF-8 format.
+        /**
+         * <p>The name of the category.</p>
+         * <p>- The value can be up to 64 bytes in length.</p>
+         * <p>- The string must be encoded in the UTF-8 format.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
-        // The level of the category. A value of 0 indicates a level 1 category.
+        /**
+         * <p>The level of the category. A value of 0 indicates a level 1 category.</p>
+         */
         @NameInMap("Level")
         public Long level;
 
-        // The ID of the parent category. The parent category ID of a level 1 category is -1.
+        /**
+         * <p>The ID of the parent category. The parent category ID of a level 1 category is -1.</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
@@ -104,58 +118,82 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetAttachedMediaInfoResponseBodyAttachedMediaList extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The list of categories.
+        /**
+         * <p>The list of categories.</p>
+         */
         @NameInMap("Categories")
         public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> categories;
 
-        // The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the auxiliary media asset.
+        /**
+         * <p>The description of the auxiliary media asset.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the auxiliary media asset.
+        /**
+         * <p>The ID of the auxiliary media asset.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
-        // The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        // The status of the auxiliary media asset. Valid values:
-        // - **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.
-        // - **Normal**: The auxiliary media asset is uploaded.
-        // - **UploadFail**: The auxiliary media asset fails to be uploaded.
+        /**
+         * <p>The status of the auxiliary media asset. Valid values:</p>
+         * <p>- **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.</p>
+         * <p>- **Normal**: The auxiliary media asset is uploaded.</p>
+         * <p>- **UploadFail**: The auxiliary media asset fails to be uploaded.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The OSS bucket where the auxiliary media asset is stored.
+        /**
+         * <p>The OSS bucket where the auxiliary media asset is stored.</p>
+         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
-        // The tags of the auxiliary media asset.
+        /**
+         * <p>The tags of the auxiliary media asset.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
-        // The title of the auxiliary media asset.
+        /**
+         * <p>The title of the auxiliary media asset.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The type of the auxiliary media asset. Valid values:
-        // - **watermark**
-        // - **subtitle**
-        // - **material**
+        /**
+         * <p>The type of the auxiliary media asset. Valid values:</p>
+         * <p>- **watermark**</p>
+         * <p>- **subtitle**</p>
+         * <p>- **material**</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The URL of the auxiliary media asset.
-        // > If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
+        /**
+         * <p>The URL of the auxiliary media asset.</p>
+         * <p>> If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+         */
         @NameInMap("URL")
         public String URL;
 

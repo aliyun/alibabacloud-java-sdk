@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class RegisterMediaResponseBody extends TeaModel {
-    // The URLs of the media files that failed to be registered.
+    /**
+     * <p>The URLs of the media files that failed to be registered.</p>
+     */
     @NameInMap("FailedFileURLs")
     public java.util.List<String> failedFileURLs;
 
-    // The media files that are registered, including newly registered and repeatedly registered media files.
+    /**
+     * <p>The media files that are registered, including newly registered and repeatedly registered media files.</p>
+     */
     @NameInMap("RegisteredMediaList")
     public java.util.List<RegisterMediaResponseBodyRegisteredMediaList> registeredMediaList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,17 +52,23 @@ public class RegisterMediaResponseBody extends TeaModel {
     }
 
     public static class RegisterMediaResponseBodyRegisteredMediaList extends TeaModel {
-        // The OSS URL of the media file.
+        /**
+         * <p>The OSS URL of the media file.</p>
+         */
         @NameInMap("FileURL")
         public String fileURL;
 
-        // The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of the VideoId parameter returned by ApsaraVideo VOD takes effect.
+        /**
+         * <p>The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of the VideoId parameter returned by ApsaraVideo VOD takes effect.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
-        // Indicates whether the media file is newly registered or repeatedly registered. Valid values:  
-        // - **true**: The media file is newly registered.
-        // - **false**: The media file is repeatedly registered.
+        /**
+         * <p>Indicates whether the media file is newly registered or repeatedly registered. Valid values:  </p>
+         * <p>- **true**: The media file is newly registered.</p>
+         * <p>- **false**: The media file is repeatedly registered.</p>
+         */
         @NameInMap("NewRegister")
         public Boolean newRegister;
 

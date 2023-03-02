@@ -4,33 +4,45 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CreateUploadImageResponseBody extends TeaModel {
-    // The OSS URL of the file. The URL does not contain the information used for URL signing. You can set FileUrl to this URL when you call the [AddWatermark](~~98617~~) operation.
+    /**
+     * <p>The OSS URL of the file. The URL does not contain the information used for URL signing. You can set FileUrl to this URL when you call the [AddWatermark](~~98617~~) operation.</p>
+     */
     @NameInMap("FileURL")
     public String fileURL;
 
-    // The ID of the image file.
+    /**
+     * <p>The ID of the image file.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
-    // The URL of the image.
-    // 
-    // > If you enable the URL signing feature in ApsaraVideo VOD, the returned URL may not be accessible from a browser and an HTTP 403 status code may be returned. To resolve this issue, you can disable the [URL signing](~~86090~~) feature or [generate a signed URL](~~57007~~).
+    /**
+     * <p>The URL of the image.</p>
+     * <br>
+     * <p>> If you enable the URL signing feature in ApsaraVideo VOD, the returned URL may not be accessible from a browser and an HTTP 403 status code may be returned. To resolve this issue, you can disable the [URL signing](~~86090~~) feature or [generate a signed URL](~~57007~~).</p>
+     */
     @NameInMap("ImageURL")
     public String imageURL;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The upload URL.
-    // 
-    // > The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use the OSS SDK or call an OSS API operation to upload media files.
+    /**
+     * <p>The upload URL.</p>
+     * <br>
+     * <p>> The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded upload URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use the OSS SDK or call an OSS API operation to upload media files.</p>
+     */
     @NameInMap("UploadAddress")
     public String uploadAddress;
 
-    // The upload credential.
-    // 
-    // > The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload media files.
+    /**
+     * <p>The upload credential.</p>
+     * <br>
+     * <p>> The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload media files.</p>
+     */
     @NameInMap("UploadAuth")
     public String uploadAuth;
 

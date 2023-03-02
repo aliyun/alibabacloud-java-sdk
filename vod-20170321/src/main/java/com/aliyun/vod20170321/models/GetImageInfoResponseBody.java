@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetImageInfoResponseBody extends TeaModel {
-    // The information about the image.
+    /**
+     * <p>The information about the image.</p>
+     */
     @NameInMap("ImageInfo")
     public GetImageInfoResponseBodyImageInfo imageInfo;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,23 +38,33 @@ public class GetImageInfoResponseBody extends TeaModel {
     }
 
     public static class GetImageInfoResponseBodyImageInfoMezzanine extends TeaModel {
-        // The size of the file. Unit: byte.
+        /**
+         * <p>The size of the file. Unit: byte.</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
-        // The OSS URL of the image.
+        /**
+         * <p>The OSS URL of the image.</p>
+         */
         @NameInMap("FileURL")
         public String fileURL;
 
-        // The height of the image. Unit: pixel.
+        /**
+         * <p>The height of the image. Unit: pixel.</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
-        // The name of the uploaded file.
+        /**
+         * <p>The name of the uploaded file.</p>
+         */
         @NameInMap("OriginalFileName")
         public String originalFileName;
 
-        // The width of the image. Unit: pixel.
+        /**
+         * <p>The width of the image. Unit: pixel.</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -102,65 +116,91 @@ public class GetImageInfoResponseBody extends TeaModel {
     }
 
     public static class GetImageInfoResponseBodyImageInfo extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The ID of the category.
+        /**
+         * <p>The ID of the category.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
-        // The name of the category.
+        /**
+         * <p>The name of the category.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
-        // The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the image.
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the image.
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The type of the image. Valid values:
-        // 
-        // - **CoverSnapshot**: thumbnail snapshot.
-        // - **NormalSnapshot**: normal snapshot.
-        // - **SpriteSnapshot**: sprite snapshot.
-        // - **SpriteOriginSnapshot**: sprite source snapshot.
-        // - **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate them with commas (,).
+        /**
+         * <p>The type of the image. Valid values:</p>
+         * <br>
+         * <p>- **CoverSnapshot**: thumbnail snapshot.</p>
+         * <p>- **NormalSnapshot**: normal snapshot.</p>
+         * <p>- **SpriteSnapshot**: sprite snapshot.</p>
+         * <p>- **SpriteOriginSnapshot**: sprite source snapshot.</p>
+         * <p>- **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate them with commas (,).</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 
-        // The information about the image mezzanine file.
+        /**
+         * <p>The information about the image mezzanine file.</p>
+         */
         @NameInMap("Mezzanine")
         public GetImageInfoResponseBodyImageInfoMezzanine mezzanine;
 
-        // The status of the image. Valid values:
-        // 
-        // - **Uploading**: The image is being uploaded. This is the initial status.
-        // - **Normal**: The image is uploaded.
-        // - **UploadFail**: The image fails to be uploaded.
+        /**
+         * <p>The status of the image. Valid values:</p>
+         * <br>
+         * <p>- **Uploading**: The image is being uploaded. This is the initial status.</p>
+         * <p>- **Normal**: The image is uploaded.</p>
+         * <p>- **UploadFail**: The image fails to be uploaded.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The OSS bucket where the image is stored.
+        /**
+         * <p>The OSS bucket where the image is stored.</p>
+         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
-        // The tag of the image. Multiple tags are separated by commas (,).
+        /**
+         * <p>The tag of the image. Multiple tags are separated by commas (,).</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
-        // The title of the image.
+        /**
+         * <p>The title of the image.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The URL of the image. If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
+        /**
+         * <p>The URL of the image. If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+         */
         @NameInMap("URL")
         public String URL;
 

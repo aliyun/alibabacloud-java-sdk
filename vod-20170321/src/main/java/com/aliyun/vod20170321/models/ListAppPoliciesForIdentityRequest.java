@@ -4,21 +4,27 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAppPoliciesForIdentityRequest extends TeaModel {
-    // The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+    /**
+     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // The name of the identity.
-    // 
-    // *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
-    // *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
+    /**
+     * <p>The name of the identity.</p>
+     * <br>
+     * <p>*   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.</p>
+     * <p>*   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.</p>
+     */
     @NameInMap("IdentityName")
     public String identityName;
 
-    // The type of the identity. Valid values:
-    // 
-    // *   **RamUser**: a RAM user.
-    // *   **RamRole**: a RAM role.
+    /**
+     * <p>The type of the identity. Valid values:</p>
+     * <br>
+     * <p>*   **RamUser**: a RAM user.</p>
+     * <p>*   **RamRole**: a RAM role.</p>
+     */
     @NameInMap("IdentityType")
     public String identityType;
 

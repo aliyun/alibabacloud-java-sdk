@@ -4,18 +4,24 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodAIDataResponseBody extends TeaModel {
-    // The statistics on video AI.
+    /**
+     * <p>The statistics on video AI.</p>
+     */
     @NameInMap("AIData")
     public DescribeVodAIDataResponseBodyAIData AIData;
 
-    // The time granularity at which the data was queried. Valid values:
-    // 
-    // - **hour**
-    // - **day**
+    /**
+     * <p>The time granularity at which the data was queried. Valid values:</p>
+     * <br>
+     * <p>- **hour**</p>
+     * <p>- **day**</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -49,15 +55,19 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodAIDataResponseBodyAIDataAIDataItemDataDataItem extends TeaModel {
-        // The type of video AI. Valid values:
-        // 
-        // - **AIVideoCensor**: automated review
-        // - **AIVideoFPShot**: media fingerprinting
-        // - **AIVideoTag**: smart tag
+        /**
+         * <p>The type of video AI. Valid values:</p>
+         * <br>
+         * <p>- **AIVideoCensor**: automated review</p>
+         * <p>- **AIVideoFPShot**: media fingerprinting</p>
+         * <p>- **AIVideoTag**: smart tag</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The processing duration. Unit: seconds.
+        /**
+         * <p>The processing duration. Unit: seconds.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -104,11 +114,15 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodAIDataResponseBodyAIDataAIDataItem extends TeaModel {
-        // The statistics on video AI of each type.
+        /**
+         * <p>The statistics on video AI of each type.</p>
+         */
         @NameInMap("Data")
         public DescribeVodAIDataResponseBodyAIDataAIDataItemData data;
 
-        // The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

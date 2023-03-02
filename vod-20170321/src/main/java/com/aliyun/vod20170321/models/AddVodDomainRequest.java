@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddVodDomainRequest extends TeaModel {
-    // The URL that is used for health checks.
+    /**
+     * <p>The URL that is used for health checks.</p>
+     */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
-    // The domain name for CDN that you want to add to ApsaraVideo VOD. Wildcard domain names are supported. Start the domain name with a period (.). Example: .example.com.
+    /**
+     * <p>The domain name for CDN that you want to add to ApsaraVideo VOD. Wildcard domain names are supported. Start the domain name with a period (.). Example: .example.com.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -18,22 +22,28 @@ public class AddVodDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:
-    // 
-    // - **domestic**: mainland China. This is the default value.
-    // - **overseas**: outside mainland China.
-    // - **global**: regions in and outside mainland China.
+    /**
+     * <p>This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:</p>
+     * <br>
+     * <p>- **domestic**: mainland China. This is the default value.</p>
+     * <p>- **overseas**: outside mainland China.</p>
+     * <p>- **global**: regions in and outside mainland China.</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The information about the address of the origin server. For more information about the Sources parameter, see the **Sources** section.
+    /**
+     * <p>The information about the address of the origin server. For more information about the Sources parameter, see the **Sources** section.</p>
+     */
     @NameInMap("Sources")
     public String sources;
 
-    // The top-level domain name.
+    /**
+     * <p>The top-level domain name.</p>
+     */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 

@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVideoPlayAuthResponseBody extends TeaModel {
-    // The credential for video or audio playback.
+    /**
+     * <p>The credential for video or audio playback.</p>
+     */
     @NameInMap("PlayAuth")
     public String playAuth;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The metadata of the audio or video file.
+    /**
+     * <p>The metadata of the audio or video file.</p>
+     */
     @NameInMap("VideoMeta")
     public GetVideoPlayAuthResponseBodyVideoMeta videoMeta;
 
@@ -46,23 +52,33 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
     }
 
     public static class GetVideoPlayAuthResponseBodyVideoMeta extends TeaModel {
-        // The thumbnail URL of the audio or video file.
+        /**
+         * <p>The thumbnail URL of the audio or video file.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // The duration of the audio or video file. Unit: seconds.
+        /**
+         * <p>The duration of the audio or video file. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
-        // The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.
+        /**
+         * <p>The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The title of the audio or video file.
+        /**
+         * <p>The title of the audio or video file.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The ID of the audio or video file.
+        /**
+         * <p>The ID of the audio or video file.</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 

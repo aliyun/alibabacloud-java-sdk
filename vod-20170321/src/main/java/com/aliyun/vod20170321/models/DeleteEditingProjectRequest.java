@@ -10,7 +10,9 @@ public class DeleteEditingProjectRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    // The ID of the online editing project. Separate multiple IDs with commas (,).
+    /**
+     * <p>The ID of the online editing project. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("ProjectIds")
     public String projectIds;
 

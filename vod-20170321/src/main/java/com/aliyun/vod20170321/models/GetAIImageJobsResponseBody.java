@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAIImageJobsResponseBody extends TeaModel {
-    // The image AI processing jobs.
+    /**
+     * <p>The image AI processing jobs.</p>
+     */
     @NameInMap("AIImageJobList")
     public java.util.List<GetAIImageJobsResponseBodyAIImageJobList> AIImageJobList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,54 +38,74 @@ public class GetAIImageJobsResponseBody extends TeaModel {
     }
 
     public static class GetAIImageJobsResponseBodyAIImageJobList extends TeaModel {
-        // The Object Storage Service (OSS) URL of the image file.
-        // 
-        // > This parameter does not include the complete authentication information. To obtain the authentication information, you must generate a signed URL. Alternatively, you can call the [ListAIImage](~~ListAIImage~~) operation to obtain the image information.
+        /**
+         * <p>The Object Storage Service (OSS) URL of the image file.</p>
+         * <br>
+         * <p>> This parameter does not include the complete authentication information. To obtain the authentication information, you must generate a signed URL. Alternatively, you can call the [ListAIImage](~~ListAIImage~~) operation to obtain the image information.</p>
+         */
         @NameInMap("AIImageResult")
         public String AIImageResult;
 
-        // The error code.
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
-        // The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The ID of the image AI processing job.
+        /**
+         * <p>The ID of the image AI processing job.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
-        // The error message.
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // The status of the job. Valid values:
-        // 
-        // *   **success**
-        // *   **fail**
+        /**
+         * <p>The status of the job. Valid values:</p>
+         * <br>
+         * <p>*   **success**</p>
+         * <p>*   **fail**</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The configurations of the AI template that was used to submit the job.
+        /**
+         * <p>The configurations of the AI template that was used to submit the job.</p>
+         */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
-        // The ID of the AI template.
+        /**
+         * <p>The ID of the AI template.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        // The user data.
-        // 
-        // *   The value must be a JSON string.
-        // *   The MessageCallback or Extend parameter is returned.
-        // *   The value contains a maximum of 512 bytes.
-        // 
-        // For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+        /**
+         * <p>The user data.</p>
+         * <br>
+         * <p>*   The value must be a JSON string.</p>
+         * <p>*   The MessageCallback or Extend parameter is returned.</p>
+         * <p>*   The value contains a maximum of 512 bytes.</p>
+         * <br>
+         * <p>For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
-        // The ID of the video.
+        /**
+         * <p>The ID of the video.</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 

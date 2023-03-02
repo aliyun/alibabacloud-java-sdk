@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayUserTotalResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The statistics on total playback each day.
+    /**
+     * <p>The statistics on total playback each day.</p>
+     */
     @NameInMap("UserPlayStatisTotals")
     public DescribePlayUserTotalResponseBodyUserPlayStatisTotals userPlayStatisTotals;
 
@@ -34,19 +38,27 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV extends TeaModel {
-        // The total number of unique visitors who use ApsaraVideo Player SDK for Android.
+        /**
+         * <p>The total number of unique visitors who use ApsaraVideo Player SDK for Android.</p>
+         */
         @NameInMap("Android")
         public String android;
 
-        // The total number of unique visitors who use ApsaraVideo Player SDK for Flash.
+        /**
+         * <p>The total number of unique visitors who use ApsaraVideo Player SDK for Flash.</p>
+         */
         @NameInMap("Flash")
         public String flash;
 
-        // The total number of unique visitors who use ApsaraVideo Player SDK for HTML5.
+        /**
+         * <p>The total number of unique visitors who use ApsaraVideo Player SDK for HTML5.</p>
+         */
         @NameInMap("HTML5")
         public String HTML5;
 
-        // The total number of unique visitors who use ApsaraVideo Player SDK for iOS.
+        /**
+         * <p>The total number of unique visitors who use ApsaraVideo Player SDK for iOS.</p>
+         */
         @NameInMap("iOS")
         public String iOS;
 
@@ -90,19 +102,27 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV extends TeaModel {
-        // The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Android.
+        /**
+         * <p>The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Android.</p>
+         */
         @NameInMap("Android")
         public String android;
 
-        // The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Flash.
+        /**
+         * <p>The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Flash.</p>
+         */
         @NameInMap("Flash")
         public String flash;
 
-        // The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for HTML5.
+        /**
+         * <p>The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for HTML5.</p>
+         */
         @NameInMap("HTML5")
         public String HTML5;
 
-        // The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for iOS.
+        /**
+         * <p>The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for iOS.</p>
+         */
         @NameInMap("iOS")
         public String iOS;
 
@@ -146,23 +166,33 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal extends TeaModel {
-        // The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
+        /**
+         * <p>The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.</p>
+         */
         @NameInMap("Date")
         public String date;
 
-        // The total playback duration. Unit: milliseconds.
+        /**
+         * <p>The total playback duration. Unit: milliseconds.</p>
+         */
         @NameInMap("PlayDuration")
         public String playDuration;
 
-        // The distribution of the playback duration.
+        /**
+         * <p>The distribution of the playback duration.</p>
+         */
         @NameInMap("PlayRange")
         public String playRange;
 
-        // The total number of unique visitors.
+        /**
+         * <p>The total number of unique visitors.</p>
+         */
         @NameInMap("UV")
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV UV;
 
-        // The total number of video views.
+        /**
+         * <p>The total number of video views.</p>
+         */
         @NameInMap("VV")
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV VV;
 

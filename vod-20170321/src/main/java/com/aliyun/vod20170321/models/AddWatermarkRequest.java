@@ -4,28 +4,38 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddWatermarkRequest extends TeaModel {
-    // The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+    /**
+     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // The Object Storage Service (OSS) URL of the watermark file. You must set this parameter if you add image watermarks.
+    /**
+     * <p>The Object Storage Service (OSS) URL of the watermark file. You must set this parameter if you add image watermarks.</p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
-    // The name of the watermark. Only letters and digits are supported.
-    // *   The name can be up to 128 bytes in length.
-    // *   The value must be encoded in UTF-8.
+    /**
+     * <p>The name of the watermark. Only letters and digits are supported.</p>
+     * <p>*   The name can be up to 128 bytes in length.</p>
+     * <p>*   The value must be encoded in UTF-8.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The type of the watermark. Valid values:
-    // *   **Image**: This is the default value.
-    // *   **Text**
+    /**
+     * <p>The type of the watermark. Valid values:</p>
+     * <p>*   **Image**: This is the default value.</p>
+     * <p>*   **Text**</p>
+     */
     @NameInMap("Type")
     public String type;
 
-    // The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.
-    // > The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
+    /**
+     * <p>The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.</p>
+     * <p>> The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.</p>
+     */
     @NameInMap("WatermarkConfig")
     public String watermarkConfig;
 

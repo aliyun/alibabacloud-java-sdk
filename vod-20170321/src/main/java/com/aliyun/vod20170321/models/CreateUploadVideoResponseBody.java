@@ -4,23 +4,31 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CreateUploadVideoResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The upload URL.
-    // 
-    // > The upload URL returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload URL, you must decode the upload URL by using the Base64 algorithm. You must parse the upload URL only if you use native OSS SDKs or OSS API for uploads.
+    /**
+     * <p>The upload URL.</p>
+     * <br>
+     * <p>> The returned upload URL is a Base64-encoded URL. You must decode the Base64-encoded URL before you use an SDK or call an API operation to upload media files. You need to parse UploadAddress only if you use the Object Storage Service (OSS) SDK or call an OSS API operation to upload media files.</p>
+     */
     @NameInMap("UploadAddress")
     public String uploadAddress;
 
-    // The upload credential.
-    // 
-    // > The upload credential returned by this operation is Base64-encoded. Before you can use an SDK or an API operation to upload a media asset based on the upload credential, you must decode the upload credential by using the Base64 algorithm. You must parse the upload credential only if you use native OSS SDKs or OSS API for uploads.
+    /**
+     * <p>The upload credential.</p>
+     * <br>
+     * <p>> The returned upload credential is a Base64-encoded value. You must decode the Base64-encoded credential before you use an SDK or call an API operation to upload media files. You need to parse UploadAuth only if you use the OSS SDK or call an OSS API operation to upload media files.</p>
+     */
     @NameInMap("UploadAuth")
     public String uploadAuth;
 
-    // The ID of the audio or video file. You can set the request parameter VideoId to this ID when you call an operation for media asset management, media processing, or media review.
+    /**
+     * <p>The ID of the audio or video file. VideoId can be used as a request parameter when you call an operation for media asset management, media processing, or media review.</p>
+     */
     @NameInMap("VideoId")
     public String videoId;
 

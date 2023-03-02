@@ -4,13 +4,17 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
-    // The details of each policy.
-    // 
-    // > A maximum of 100 entries can be returned.
+    /**
+     * <p>The details of each policy.</p>
+     * <br>
+     * <p>> A maximum of 100 entries can be returned.</p>
+     */
     @NameInMap("AppPolicyList")
     public java.util.List<ListAppPoliciesForIdentityResponseBodyAppPolicyList> appPolicyList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,34 +40,48 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     }
 
     public static class ListAppPoliciesForIdentityResponseBodyAppPolicyList extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The time when the application policy was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the application policy was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the policy.
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The last time when the application policy was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The last time when the application policy was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        // The name of the policy.
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
-        // The type of the policy. Valid values:
-        // 
-        // *   **System**
-        // *   **Custom**
+        /**
+         * <p>The type of the policy. Valid values:</p>
+         * <br>
+         * <p>*   **System**</p>
+         * <p>*   **Custom**</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
-        // The content of the policy.
+        /**
+         * <p>The content of the policy.</p>
+         */
         @NameInMap("PolicyValue")
         public String policyValue;
 

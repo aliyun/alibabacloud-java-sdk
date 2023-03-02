@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitDynamicImageJobRequest extends TeaModel {
-    // The ID of the animated image template.
+    /**
+     * <p>The ID of the animated image template.</p>
+     */
     @NameInMap("DynamicImageTemplateId")
     public String dynamicImageTemplateId;
 
-    // The parameters used for overriding. The value is a JSON-formatted string. For more information, see the "OverrideParams" section of the [Media processing parameters](~~98618~~) topic. The parameters are used to replace the parameters in the animated image template. For more information, see the [Basic data types](~~52839~~) topic.
+    /**
+     * <p>The parameters used for overriding. The value is a JSON-formatted string. For more information, see the "OverrideParams" section of the [Media processing parameters](~~98618~~) topic. The parameters are used to replace the parameters in the animated image template. For more information, see the [Basic data types](~~52839~~) topic.</p>
+     */
     @NameInMap("OverrideParams")
     public String overrideParams;
 
-    // The ID of the video.
+    /**
+     * <p>The ID of the video.</p>
+     */
     @NameInMap("VideoId")
     public String videoId;
 

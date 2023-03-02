@@ -4,7 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVodTemplateRequest extends TeaModel {
-    // The ID of the snapshot template.
+    /**
+     * <p>The ID of the snapshot template.</p>
+     */
     @NameInMap("VodTemplateId")
     public String vodTemplateId;
 

@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAIImageInfoResponseBody extends TeaModel {
-    // The image files that are uploaded for AI processing.
+    /**
+     * <p>The image files that are uploaded for AI processing.</p>
+     */
     @NameInMap("AIImageInfoList")
     public java.util.List<ListAIImageInfoResponseBodyAIImageInfoList> AIImageInfoList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,35 +38,51 @@ public class ListAIImageInfoResponseBody extends TeaModel {
     }
 
     public static class ListAIImageInfoResponseBodyAIImageInfoList extends TeaModel {
-        // The ID of the image information.
+        /**
+         * <p>The ID of the image information.</p>
+         */
         @NameInMap("AIImageInfoId")
         public String AIImageInfoId;
 
-        // The time when the file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The URL of the image file.
+        /**
+         * <p>The URL of the image file.</p>
+         */
         @NameInMap("FileURL")
         public String fileURL;
 
-        // The format of the image. Valid values: **gif** and **png**.
+        /**
+         * <p>The format of the image. Valid values: **gif** and **png**.</p>
+         */
         @NameInMap("Format")
         public String format;
 
-        // The ID of the image AI processing job.
+        /**
+         * <p>The ID of the image AI processing job.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
-        // The score of the image.
+        /**
+         * <p>The score of the image.</p>
+         */
         @NameInMap("Score")
         public String score;
 
-        // The data version ID.
+        /**
+         * <p>The data version ID.</p>
+         */
         @NameInMap("Version")
         public String version;
 
-        // The ID of the video.
+        /**
+         * <p>The ID of the video.</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 

@@ -4,22 +4,30 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddVodTemplateRequest extends TeaModel {
-    // The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+    /**
+     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // The name of the template.
-    // 
-    // *   The name can be up to 128 bytes in length.
-    // *   The value must be encoded in UTF-8.
+    /**
+     * <p>The name of the template.</p>
+     * <br>
+     * <p>*   The name can be up to 128 bytes in length.</p>
+     * <p>*   The value must be encoded in UTF-8.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
+    /**
+     * <p>The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.</p>
+     */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
-    // The type of the template. Set the value to **Snapshot**.
+    /**
+     * <p>The type of the template. Set the value to **Snapshot**.</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 

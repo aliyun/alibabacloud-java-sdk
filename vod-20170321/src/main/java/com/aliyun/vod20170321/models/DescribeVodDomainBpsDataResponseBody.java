@@ -4,35 +4,51 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
-    // The bandwidth data that is collected for each interval.
+    /**
+     * <p>The bandwidth data that is collected for each interval.</p>
+     */
     @NameInMap("BpsDataPerInterval")
     public DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
-    // The time interval between the returned entries. Unit: seconds.
+    /**
+     * <p>The time interval between the returned entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The domain name for CDN.
+    /**
+     * <p>The domain name for CDN.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+    /**
+     * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The name of the ISP. By default, the data of all ISPs is returned.
+    /**
+     * <p>The name of the ISP. By default, the data of all ISPs is returned.</p>
+     */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
-    // The name of the region. By default, the data in all regions is returned.
+    /**
+     * <p>The name of the region. By default, the data in all regions is returned.</p>
+     */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+    /**
+     * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -106,31 +122,45 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
-        // The bandwidth in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.
+        /**
+         * <p>The bandwidth in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
+         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        // The HTTPS bandwidth on L1 nodes in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.
+        /**
+         * <p>The HTTPS bandwidth on L1 nodes in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
+         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        // The HTTPS bandwidth on L1 nodes outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.
+        /**
+         * <p>The HTTPS bandwidth on L1 nodes outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
+         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        // The total HTTPS bandwidth on L1 nodes. Unit: bit/s.
+        /**
+         * <p>The total HTTPS bandwidth on L1 nodes. Unit: bit/s.</p>
+         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        // The bandwidth outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.
+        /**
+         * <p>The bandwidth outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
+         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        // The timestamp of the returned data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The bandwidth. Unit: bit/s.
+        /**
+         * <p>The bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("Value")
         public String value;
 

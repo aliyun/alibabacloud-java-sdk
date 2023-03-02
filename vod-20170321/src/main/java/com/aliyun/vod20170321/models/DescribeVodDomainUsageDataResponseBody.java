@@ -4,39 +4,55 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
-    // The region where the data was queried.
+    /**
+     * <p>The region where the data was queried.</p>
+     */
     @NameInMap("Area")
     public String area;
 
-    // The time interval between the returned entries. Unit: seconds.
+    /**
+     * <p>The time interval between the returned entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The domain name for CDN.
+    /**
+     * <p>The domain name for CDN.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+    /**
+     * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+    /**
+     * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The type of the content based on which the data is generated. Valid values:
-    // 
-    // *   **static**
-    // *   **dynamic**
-    // *   **all**
+    /**
+     * <p>The type of the content based on which the data is generated. Valid values:</p>
+     * <br>
+     * <p>*   **static**</p>
+     * <p>*   **dynamic**</p>
+     * <p>*   **all**</p>
+     */
     @NameInMap("Type")
     public String type;
 
-    // The details of traffic or bandwidth data.
+    /**
+     * <p>The details of traffic or bandwidth data.</p>
+     */
     @NameInMap("UsageDataPerInterval")
     public DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
 
@@ -110,11 +126,15 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
-        // The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The traffic or bandwidth data. The unit of bandwidth is bit/s.
+        /**
+         * <p>The traffic or bandwidth data. The unit of bandwidth is bit/s.</p>
+         */
         @NameInMap("Value")
         public String value;
 

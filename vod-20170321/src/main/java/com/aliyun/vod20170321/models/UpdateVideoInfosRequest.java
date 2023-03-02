@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateVideoInfosRequest extends TeaModel {
-    // The new information about audios or videos. You can modify the information about up to 20 audios or videos at a time. Separate multiple audios or videos with commas (,). When you modify the information exceed 20 audios or videos at a time, the update will fail with an error code **CountExceededMax**.
-    // 
-    // The value is a JSON string. For more information, see the **UpdateContent** section of this topic.
+    /**
+     * <p>The new information about audios or videos. You can modify the information about up to 20 audios or videos at a time. Separate multiple audios or videos with commas (,). When you modify the information exceed 20 audios or videos at a time, the update will fail with an error code **CountExceededMax**.</p>
+     * <br>
+     * <p>The value is a JSON string. For more information, see the **UpdateContent** section of this topic.</p>
+     */
     @NameInMap("UpdateContent")
     public String updateContent;
 

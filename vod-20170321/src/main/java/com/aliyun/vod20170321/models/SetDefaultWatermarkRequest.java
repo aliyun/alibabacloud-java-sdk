@@ -4,7 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultWatermarkRequest extends TeaModel {
-    // The ID of the watermark.
+    /**
+     * <p>The ID of the watermark.</p>
+     */
     @NameInMap("WatermarkId")
     public String watermarkId;
 

@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteAttachedMediaResponseBody extends TeaModel {
-    // The ID of the auxiliary media asset that failed to be deleted.
+    /**
+     * <p>The ID of the auxiliary media asset that failed to be deleted.</p>
+     */
     @NameInMap("NonExistMediaIds")
     public java.util.List<String> nonExistMediaIds;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

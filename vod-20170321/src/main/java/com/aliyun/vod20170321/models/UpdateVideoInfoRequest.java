@@ -4,37 +4,49 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateVideoInfoRequest extends TeaModel {
-    // The ID of the video category.
+    /**
+     * <p>The ID of the video category.</p>
+     */
     @NameInMap("CateId")
     public Long cateId;
 
-    // The URL of the video thumbnail.
+    /**
+     * <p>The URL of the video thumbnail.</p>
+     */
     @NameInMap("CoverURL")
     public String coverURL;
 
-    // The description of the video.
-    // 
-    // *   The value can be up to 1,024 bytes in length.
-    // *   The string must be encoded in the UTF-8 format.
+    /**
+     * <p>The description of the video.</p>
+     * <br>
+     * <p>*   The value can be up to 1,024 bytes in length.</p>
+     * <p>*   The string must be encoded in the UTF-8 format.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The tags of the video.
-    // 
-    // *   Each tag can be up to 32 bytes in length. A maximum of 16 tags can be specified.
-    // *   Separate multiple tags with commas (,).
-    // *   The string must be encoded in the UTF-8 format.
+    /**
+     * <p>The tags of the video.</p>
+     * <br>
+     * <p>*   Each tag can be up to 32 bytes in length. A maximum of 16 tags can be specified.</p>
+     * <p>*   Separate multiple tags with commas (,).</p>
+     * <p>*   The string must be encoded in the UTF-8 format.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
-    // The title of the video.
-    // 
-    // *   The value can be up to 128 bytes in length.
-    // *   The string must be encoded in the UTF-8 format.
+    /**
+     * <p>The title of the video.</p>
+     * <br>
+     * <p>*   The value can be up to 128 bytes in length.</p>
+     * <p>*   The string must be encoded in the UTF-8 format.</p>
+     */
     @NameInMap("Title")
     public String title;
 
-    // The ID of the video.
+    /**
+     * <p>The ID of the video.</p>
+     */
     @NameInMap("VideoId")
     public String videoId;
 

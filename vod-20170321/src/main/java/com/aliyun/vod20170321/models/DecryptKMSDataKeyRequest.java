@@ -4,7 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DecryptKMSDataKeyRequest extends TeaModel {
-    // The ciphertext that you want to decrypt.
+    /**
+     * <p>The ciphertext that you want to decrypt.</p>
+     */
     @NameInMap("CipherText")
     public String cipherText;
 

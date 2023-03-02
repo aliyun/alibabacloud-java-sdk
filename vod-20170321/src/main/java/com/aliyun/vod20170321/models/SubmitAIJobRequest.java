@@ -4,15 +4,19 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitAIJobRequest extends TeaModel {
-    // The configurations of the AI job. The value is a JSON string.
+    /**
+     * <p>The configurations of the AI job. The value is a JSON string.</p>
+     */
     @NameInMap("Config")
     public String config;
 
-    // The ID of the video. You can use one of the following methods to obtain the ID:
-    // 
-    // *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
-    // *   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.
-    // *   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation after you upload media files.
+    /**
+     * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
+     * <br>
+     * <p>*   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</p>
+     * <p>*   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.</p>
+     * <p>*   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation after you upload media files.</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
@@ -28,14 +32,18 @@ public class SubmitAIJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public String resourceOwnerId;
 
-    // The type of the AI job. Separate multiple types with commas (,). Valid values:
-    // 
-    // *   **AIMediaDNA**: The media fingerprinting job.
-    // *   **AIVideoTag**: The smart tagging job.
+    /**
+     * <p>The type of the AI job. Separate multiple types with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **AIMediaDNA**: The media fingerprinting job.</p>
+     * <p>*   **AIVideoTag**: The smart tagging job.</p>
+     */
     @NameInMap("Types")
     public String types;
 
-    // The custom settings. The value is a JSON string. For more information, see [Request parameters](~~86952#h2--userdata-div-id-userdata-div-3~~).
+    /**
+     * <p>The custom settings. The value is a JSON string. For more information, see [Request parameters](~~86952#h2--userdata-div-id-userdata-div-3~~).</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
