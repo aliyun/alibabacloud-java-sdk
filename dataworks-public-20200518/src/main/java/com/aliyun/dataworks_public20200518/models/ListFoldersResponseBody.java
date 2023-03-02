@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListFoldersResponseBody extends TeaModel {
+    /**
+     * <p>The folders returned.</p>
+     */
     @NameInMap("Data")
     public ListFoldersResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +94,15 @@ public class ListFoldersResponseBody extends TeaModel {
     }
 
     public static class ListFoldersResponseBodyDataFolders extends TeaModel {
+        /**
+         * <p>The ID of the folder.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The path of the folder.</p>
+         */
         @NameInMap("FolderPath")
         public String folderPath;
 
@@ -106,15 +130,27 @@ public class ListFoldersResponseBody extends TeaModel {
     }
 
     public static class ListFoldersResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the folder.</p>
+         */
         @NameInMap("Folders")
         public java.util.List<ListFoldersResponseBodyDataFolders> folders;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries on the returned page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

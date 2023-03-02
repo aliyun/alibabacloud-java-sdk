@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectMemberRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the DataWorks workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The code of the role. This parameter is optional. If you specify the RoleCode parameter, the user is assigned the role.</p>
+     */
     @NameInMap("RoleCode")
     public String roleCode;
 
+    /**
+     * <p>The ID of the user to be added.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -4,12 +4,24 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateExportMigrationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the export task.</p>
+     */
     @NameInMap("Data")
     public Long data;
 
+    /**
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot errors.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call succeeded.</p>
+     * <p>*   false: The call failed. You can locate errors based on the request ID.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

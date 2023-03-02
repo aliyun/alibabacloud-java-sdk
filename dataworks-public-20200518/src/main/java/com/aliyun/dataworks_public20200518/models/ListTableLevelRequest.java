@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListTableLevelRequest extends TeaModel {
+    /**
+     * <p>The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.</p>
+     */
     @NameInMap("LevelType")
     public Integer levelType;
 
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

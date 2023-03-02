@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListQualityRulesRequest extends TeaModel {
+    /**
+     * <p>The ID of the partition filter expression. You can call the [GetQualityEntity](~~174003~~) operation to query the ID of the partition filter expression.</p>
+     */
     @NameInMap("EntityId")
     public Long entityId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 

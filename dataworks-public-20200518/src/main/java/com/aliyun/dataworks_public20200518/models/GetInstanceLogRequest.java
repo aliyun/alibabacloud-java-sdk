@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceLogRequest extends TeaModel {
+    /**
+     * <p>The historical record number of the instance. You can call the ListInstanceHistory operation to query the ID.</p>
+     */
     @NameInMap("InstanceHistoryId")
     public Long instanceHistoryId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 

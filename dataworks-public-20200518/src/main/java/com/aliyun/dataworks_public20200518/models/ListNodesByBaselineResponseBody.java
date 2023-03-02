@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListNodesByBaselineResponseBody extends TeaModel {
+    /**
+     * <p>The nodes in the baseline.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListNodesByBaselineResponseBodyData> data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -76,15 +94,27 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
     }
 
     public static class ListNodesByBaselineResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the workspace to which the node belongs.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 

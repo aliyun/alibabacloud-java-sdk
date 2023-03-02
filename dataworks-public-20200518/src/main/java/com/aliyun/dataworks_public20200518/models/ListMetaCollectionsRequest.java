@@ -4,30 +4,59 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListMetaCollectionsRequest extends TeaModel {
+    /**
+     * <p>The ID of the collection administrator.</p>
+     */
     @NameInMap("Administrator")
     public String administrator;
 
+    /**
+     * <p>ALBUM: data album</p>
+     * <br>
+     * <p>ALBUM_CATEGORY: category in a data album</p>
+     */
     @NameInMap("CollectionType")
     public String collectionType;
 
+    /**
+     * <p>The ID of the collection creator.</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <p>The ID of the collection follower.</p>
+     */
     @NameInMap("Follower")
     public String follower;
 
+    /**
+     * <p>The keyword.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The paging information. This parameter specifies the start point of the query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The name of the sorting field.</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The unique identifier of the parent collection.</p>
+     */
     @NameInMap("ParentQualifiedName")
     public String parentQualifiedName;
 

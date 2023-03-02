@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetRemindResponseBody extends TeaModel {
+    /**
+     * <p>The details of the custom alert rule.</p>
+     */
     @NameInMap("Data")
     public GetRemindResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The unique ID of the request. You can troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +94,15 @@ public class GetRemindResponseBody extends TeaModel {
     }
 
     public static class GetRemindResponseBodyDataBaselines extends TeaModel {
+        /**
+         * <p>The ID of the baseline.</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The name of the baseline.</p>
+         */
         @NameInMap("BaselineName")
         public String baselineName;
 
@@ -106,9 +130,15 @@ public class GetRemindResponseBody extends TeaModel {
     }
 
     public static class GetRemindResponseBodyDataBizProcesses extends TeaModel {
+        /**
+         * <p>The ID of the workflow.</p>
+         */
         @NameInMap("BizId")
         public Long bizId;
 
+        /**
+         * <p>The name of the workflow.</p>
+         */
         @NameInMap("BizProcessName")
         public String bizProcessName;
 
@@ -136,15 +166,27 @@ public class GetRemindResponseBody extends TeaModel {
     }
 
     public static class GetRemindResponseBodyDataNodes extends TeaModel {
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the owner of the node.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the workspace to which the node belongs.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
@@ -188,6 +230,9 @@ public class GetRemindResponseBody extends TeaModel {
     }
 
     public static class GetRemindResponseBodyDataProjects extends TeaModel {
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
@@ -207,9 +252,15 @@ public class GetRemindResponseBody extends TeaModel {
     }
 
     public static class GetRemindResponseBodyDataRobots extends TeaModel {
+        /**
+         * <p>Indicates whether all group members are notified when the alert notification is sent to a DingTalk group. Valid values: true and false.</p>
+         */
         @NameInMap("AtAll")
         public Boolean atAll;
 
+        /**
+         * <p>The webhook URL of the DingTalk chatbot.</p>
+         */
         @NameInMap("WebUrl")
         public String webUrl;
 
@@ -237,63 +288,136 @@ public class GetRemindResponseBody extends TeaModel {
     }
 
     public static class GetRemindResponseBodyData extends TeaModel {
+        /**
+         * <p>The minimum interval at which alerts are reported. Unit: seconds.</p>
+         */
         @NameInMap("AlertInterval")
         public Integer alertInterval;
 
+        /**
+         * <p>The notification method. Valid values:</p>
+         * <br>
+         * <p>*   MAIL: Alert notifications are sent by emails.</p>
+         * <br>
+         * <p>*   SMS: Alert notifications are sent by text messages.</p>
+         * <br>
+         * <p>    Alert notifications can be sent by text messages only in the Singapore (Singapore), Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.</p>
+         * <br>
+         * <p>*   Multiple notification methods are separated by commas (,).</p>
+         */
         @NameInMap("AlertMethods")
         public java.util.List<String> alertMethods;
 
+        /**
+         * <p>*   If the value of the AlertUnit parameter is OWNER, this parameter is left empty.</p>
+         * <p>*   If the value of the AlertUnit parameter is OTHER, the ID of the Alibaba Cloud account used by the specified user is returned. Multiple IDs are separated by commas (,).</p>
+         */
         @NameInMap("AlertTargets")
         public java.util.List<String> alertTargets;
 
+        /**
+         * <p>The recipient of the alert. Valid values: OWNER and OTHER. A value of OWNER indicates the node owner. A value of OTHER indicates a specified user.</p>
+         */
         @NameInMap("AlertUnit")
         public String alertUnit;
 
+        /**
+         * <p>The baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.</p>
+         */
         @NameInMap("Baselines")
         public java.util.List<GetRemindResponseBodyDataBaselines> baselines;
 
+        /**
+         * <p>The workflows to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BIZPROCESS.</p>
+         */
         @NameInMap("BizProcesses")
         public java.util.List<GetRemindResponseBodyDataBizProcesses> bizProcesses;
 
+        /**
+         * <p>*   If the value of the RemindType parameter is FINISHED, this parameter is left empty.</p>
+         * <p>*   If the value of the RemindType parameter is UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {"hour":23,"minu":59}. Valid values of hour: 0 to 47. Valid values of minu: 0 to 59.</p>
+         * <p>*   If the value of the RemindType parameter is ERROR, this parameter is left empty.</p>
+         * <p>*   If the value of the RemindType parameter is CYCLE_UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {"1":"05:50","2":"06:50","3":"07:50","4":"08:50","5":"09:50","6":"10:50","7":"11:50","8":"12:50","9":"13:50","10":"14:50","11":"15:50","12":"16:50","13":"17:50","14":"18:50","15":"19:50","16":"20:50","17":"21:50","18":"22:50","19":"23:50","20":"24:50","21":"25:50"}. The key indicates the ID of the cycle. Valid values: 1 to 288. The value indicates the timeout period of the node that is run in the cycle. The value is in the hh:mm format. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</p>
+         * <p>*   If the value of the RemindType parameter is TIMEOUT, the timeout period is returned. Unit: seconds. Example: 1800. This value indicates that an alert is reported if the node is run for more than 30 minutes.</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <p>The end time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.</p>
+         */
         @NameInMap("DndEnd")
         public String dndEnd;
 
+        /**
+         * <p>The start time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.</p>
+         */
         @NameInMap("DndStart")
         public String dndStart;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the creator of the custom alert rule.</p>
+         */
         @NameInMap("Founder")
         public String founder;
 
+        /**
+         * <p>The maximum number of alerts.</p>
+         */
         @NameInMap("MaxAlertTimes")
         public Integer maxAlertTimes;
 
+        /**
+         * <p>The nodes to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is NODE.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<GetRemindResponseBodyDataNodes> nodes;
 
+        /**
+         * <p>The workspaces to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is PROJECT.</p>
+         */
         @NameInMap("Projects")
         public java.util.List<GetRemindResponseBodyDataProjects> projects;
 
+        /**
+         * <p>The ID of the custom alert rule.</p>
+         */
         @NameInMap("RemindId")
         public Long remindId;
 
+        /**
+         * <p>The name of the custom alert rule.</p>
+         */
         @NameInMap("RemindName")
         public String remindName;
 
+        /**
+         * <p>The conditions that trigger an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT. A value of FINISHED indicates that the node is run. A value of UNFINISHED indicates that the node is still running at the specified point in time. A value of ERROR indicates that an error occurs when the node is running. A value of CYCLE_UNFINISHED indicates that the node is still running in the specified cycle. A value of TIMEOUT indicates that the node times out.</p>
+         */
         @NameInMap("RemindType")
         public String remindType;
 
+        /**
+         * <p>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. A value of NODE indicates that the monitored object is a node. A value of BASELINE indicates that the monitored object is a baseline. A value of PROJECT indicates that the monitored object is a workspace. A value of BIZPROCESS indicates that the monitored object is a workflow.</p>
+         */
         @NameInMap("RemindUnit")
         public String remindUnit;
 
+        /**
+         * <p>The webhook URLs of the DingTalk chatbots.</p>
+         */
         @NameInMap("Robots")
         public java.util.List<GetRemindResponseBodyDataRobots> robots;
 
+        /**
+         * <p>Indicates whether the custom alert rule is enabled. Valid values: true and false.</p>
+         */
         @NameInMap("Useflag")
         public Boolean useflag;
 
+        /**
+         * <p>-</p>
+         */
         @NameInMap("Webhooks")
         public java.util.List<String> webhooks;
 

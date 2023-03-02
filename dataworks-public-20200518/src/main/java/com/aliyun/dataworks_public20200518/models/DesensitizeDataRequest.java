@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DesensitizeDataRequest extends TeaModel {
+    /**
+     * <p>The data that you want to mask.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The code of the data masking scene. You can view the code on the Data Masking page in Data Security Guard of the DataWorks console.</p>
+     */
     @NameInMap("SceneCode")
     public String sceneCode;
 

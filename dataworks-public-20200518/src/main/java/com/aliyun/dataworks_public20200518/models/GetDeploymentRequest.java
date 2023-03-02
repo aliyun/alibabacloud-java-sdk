@@ -4,12 +4,23 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDeploymentRequest extends TeaModel {
+    /**
+     * <p>The ID of the deployment task. A deployment task ID is generated when you call the [SubmitFile](~~173944~~) or [DeployFile](~~173956~~) operation.</p>
+     */
     @NameInMap("DeploymentId")
     public Long deploymentId;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The GUID of the DataWorks workspace. You can view the GUID in the upper part of the DataStudio page. You can also select another GUID to switch to another workspace.</p>
+     * <br>
+     * <p>You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 

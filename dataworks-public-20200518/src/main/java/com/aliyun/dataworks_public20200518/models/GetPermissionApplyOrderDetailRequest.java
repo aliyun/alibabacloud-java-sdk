@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetPermissionApplyOrderDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.</p>
+     */
     @NameInMap("FlowId")
     public String flowId;
 

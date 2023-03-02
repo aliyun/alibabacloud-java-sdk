@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableThemeLevelResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Entity")
     public GetMetaTableThemeLevelResponseBodyEntity entity;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +94,30 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableThemeLevelResponseBodyEntityLevel extends TeaModel {
+        /**
+         * <p>The description of the table level.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the table level.</p>
+         */
         @NameInMap("LevelId")
         public Long levelId;
 
+        /**
+         * <p>The name of the table level.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the table level. Valid values:</p>
+         * <br>
+         * <p>*   1: indicates the logical level.</p>
+         * <p>*   2: indicates the physical level.</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -128,15 +161,30 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableThemeLevelResponseBodyEntityTheme extends TeaModel {
+        /**
+         * <p>The level of the table folder. Valid values:</p>
+         * <br>
+         * <p>*   1: indicates a table folder of level 1.</p>
+         * <p>*   2: indicates a table folder of level 2.</p>
+         */
         @NameInMap("Level")
         public Integer level;
 
+        /**
+         * <p>The name of the table folder.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the parent table folder.</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
+        /**
+         * <p>The ID of the table folder.</p>
+         */
         @NameInMap("ThemeId")
         public Long themeId;
 
@@ -180,9 +228,15 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableThemeLevelResponseBodyEntity extends TeaModel {
+        /**
+         * <p>The information about the table level.</p>
+         */
         @NameInMap("Level")
         public java.util.List<GetMetaTableThemeLevelResponseBodyEntityLevel> level;
 
+        /**
+         * <p>The information about the table folder.</p>
+         */
         @NameInMap("Theme")
         public java.util.List<GetMetaTableThemeLevelResponseBodyEntityTheme> theme;
 

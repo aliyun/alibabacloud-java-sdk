@@ -4,15 +4,31 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetFileRequest extends TeaModel {
+    /**
+     * <p>The ID of the file. You can call the [ListFiles](~~173942~~) operation to obtain the ID.</p>
+     */
     @NameInMap("FileId")
     public Long fileId;
 
+    /**
+     * <p>The ID of the node that is scheduled. You can call the [ListFiles](~~173942~~) operation to obtain the node ID.</p>
+     */
     @NameInMap("NodeId")
     public Long nodeId;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     * <br>
+     * <p>You must configure this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace name.</p>
+     * <br>
+     * <p>You must configure this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 

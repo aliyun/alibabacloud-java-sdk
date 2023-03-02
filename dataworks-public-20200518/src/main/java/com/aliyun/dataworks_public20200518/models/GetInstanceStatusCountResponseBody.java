@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceStatusCountResponseBody extends TeaModel {
+    /**
+     * <p>The request ID, which is used to locate the logs and troubleshoot problems.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status statistics of the instance.</p>
+     */
     @NameInMap("StatusCount")
     public GetInstanceStatusCountResponseBodyStatusCount statusCount;
 
@@ -32,24 +38,45 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
     }
 
     public static class GetInstanceStatusCountResponseBodyStatusCount extends TeaModel {
+        /**
+         * <p>The number of failed instances.</p>
+         */
         @NameInMap("FailureCount")
         public Integer failureCount;
 
+        /**
+         * <p>The number of instances that are not running.</p>
+         */
         @NameInMap("NotRunCount")
         public Integer notRunCount;
 
+        /**
+         * <p>The number of running instances.</p>
+         */
         @NameInMap("RunningCount")
         public Integer runningCount;
 
+        /**
+         * <p>The number of successful instances.</p>
+         */
         @NameInMap("SuccessCount")
         public Integer successCount;
 
+        /**
+         * <p>The total number of instances.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The number of instances waiting for resources.</p>
+         */
         @NameInMap("WaitResCount")
         public Integer waitResCount;
 
+        /**
+         * <p>The number of instances to be run that meet the conditions.</p>
+         */
         @NameInMap("WaitTimeCount")
         public Integer waitTimeCount;
 

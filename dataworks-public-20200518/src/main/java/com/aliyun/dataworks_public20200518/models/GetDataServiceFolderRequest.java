@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDataServiceFolderRequest extends TeaModel {
+    /**
+     * <p>The ID of the folder.</p>
+     */
     @NameInMap("FolderId")
     public Long folderId;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 

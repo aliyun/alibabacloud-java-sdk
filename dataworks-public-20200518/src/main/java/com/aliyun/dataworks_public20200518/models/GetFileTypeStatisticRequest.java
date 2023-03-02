@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetFileTypeStatisticRequest extends TeaModel {
+    /**
+     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

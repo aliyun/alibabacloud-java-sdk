@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableOutputResponseBody extends TeaModel {
+    /**
+     * <p>The output node and instance.</p>
+     */
     @NameInMap("Data")
     public GetMetaTableOutputResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,24 +94,45 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableOutputResponseBodyDataDataEntityList extends TeaModel {
+        /**
+         * <p>The end time of the node.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The start time of the node.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The GUID of the MaxCompute metatable.</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("TaskInstanceId")
         public Long taskInstanceId;
 
+        /**
+         * <p>The duration during which the node waits to start.</p>
+         */
         @NameInMap("WaitTime")
         public String waitTime;
 
@@ -161,15 +200,27 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableOutputResponseBodyData extends TeaModel {
+        /**
+         * <p>The information of the node and instance.</p>
+         */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> dataEntityList;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

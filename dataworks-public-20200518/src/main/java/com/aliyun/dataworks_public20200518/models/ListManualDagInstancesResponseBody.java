@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListManualDagInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The instances in the manually triggered workflow.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListManualDagInstancesResponseBodyInstances> instances;
 
+    /**
+     * <p>The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,54 +38,123 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
     }
 
     public static class ListManualDagInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <p>The time when the node started to run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("BeginRunningTime")
         public Long beginRunningTime;
 
+        /**
+         * <p>The time when the node started to wait for resources. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("BeginWaitResTime")
         public Long beginWaitResTime;
 
+        /**
+         * <p>The time when the node started to wait to be scheduled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("BeginWaitTimeTime")
         public Long beginWaitTimeTime;
 
+        /**
+         * <p>The data timestamp of the instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. In most cases, the value indicates one day before the time when the node was run.</p>
+         */
         @NameInMap("BizDate")
         public Long bizDate;
 
+        /**
+         * <p>The time when the node was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The name of the account used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The time when the node was scheduled to run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CycTime")
         public Long cycTime;
 
+        /**
+         * <p>The ID of the DAG for the manually triggered workflow.</p>
+         */
         @NameInMap("DagId")
         public Long dagId;
 
+        /**
+         * <p>The identifier of the manually triggered workflow.</p>
+         */
         @NameInMap("DagType")
         public String dagType;
 
+        /**
+         * <p>The time when the node stopped running. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("FinishTime")
         public Long finishTime;
 
+        /**
+         * <p>The ID of the instance in the manually triggered workflow.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The time when the node was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The ID of the node in the manually triggered workflow.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The parameters related to the instance.</p>
+         */
         @NameInMap("ParamValues")
         public String paramValues;
 
+        /**
+         * <p>The status of the node. Valid values:</p>
+         * <br>
+         * <p>*   NOT_RUN: The node is not run.</p>
+         * <p>*   WAIT_TIME: The node is waiting for its scheduled time to arrive.</p>
+         * <p>*   WAIT_RESOURCE: The node is waiting for resources.</p>
+         * <p>*   RUNNING: The node is running.</p>
+         * <p>*   CHECKING: Data quality is being checked for the node.</p>
+         * <p>*   CHECKING_CONDITION: Branch conditions are being checked for the node.</p>
+         * <p>*   FAILURE: The node fails to run.</p>
+         * <p>*   SUCCESS: The node is run as expected.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The scheduling type of the node. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL(0): The node is an auto triggered node. It is run on a regular basis.</p>
+         * <p>*   MANUAL(1): The node is a manually triggered node. It is not run on a regular basis.</p>
+         * <p>*   PAUSE(2): The node is a frozen node. The scheduling system still runs the node on a regular basis but sets it to Failed when the scheduling system starts to run the node.</p>
+         * <p>*   SKIP(3): The node is a dry-run node. The scheduling system still runs the node on a regular basis but sets it to Succeeded when the scheduling system starts to run the node.</p>
+         * <p>*   SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the node to Succeeded when the scheduling system starts to run the node.</p>
+         * <p>*   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for its scheduled time. The scheduling system still runs the node on a regular basis but sets it to Succeeded when the scheduling system starts to run the node.</p>
+         * <p>*   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</p>
+         * <p>*   REALTIME_DEPRECATED(7): The node has instances generated in real time but deprecated. The scheduling system directly sets the node to Succeeded.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

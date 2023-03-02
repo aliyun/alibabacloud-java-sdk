@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaCollectionDetailRequest extends TeaModel {
+    /**
+     * <p>The unique identifier of the collection.</p>
+     */
     @NameInMap("QualifiedName")
     public String qualifiedName;
 

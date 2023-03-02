@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMigrationProcessResponseBody extends TeaModel {
+    /**
+     * <p>The progress information of the migration task, including the names of all steps in and status of the migration task.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetMigrationProcessResponseBodyData> data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +94,20 @@ public class GetMigrationProcessResponseBody extends TeaModel {
     }
 
     public static class GetMigrationProcessResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the step in the migration task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The running status of the step in the migration task. Valid values:</p>
+         * <br>
+         * <p>*   INT</p>
+         * <p>*   RUNNING</p>
+         * <p>*   FAILURE</p>
+         * <p>*   SUCCESS</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 

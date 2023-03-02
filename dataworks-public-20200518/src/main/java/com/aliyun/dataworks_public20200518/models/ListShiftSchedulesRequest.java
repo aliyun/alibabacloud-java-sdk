@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListShiftSchedulesRequest extends TeaModel {
+    /**
+     * <p>The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to obtain the ID.</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The number of the page to return. Minimum value:1. Maximum value: 100. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The keyword used to perform a fuzzy search on shift schedules.</p>
+     */
     @NameInMap("ShiftScheduleName")
     public String shiftScheduleName;
 

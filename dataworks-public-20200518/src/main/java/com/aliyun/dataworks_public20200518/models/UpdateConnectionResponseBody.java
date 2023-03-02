@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateConnectionResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the update is successful.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request has failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

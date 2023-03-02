@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class OfflineNodeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 

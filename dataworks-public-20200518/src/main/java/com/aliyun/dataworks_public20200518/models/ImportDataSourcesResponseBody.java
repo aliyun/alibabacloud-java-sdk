@@ -4,12 +4,24 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ImportDataSourcesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the import operation.</p>
+     */
     @NameInMap("Data")
     public ImportDataSourcesResponseBodyData data;
 
+    /**
+     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +55,18 @@ public class ImportDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ImportDataSourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>The reason why the data sources failed to be imported. If the data sources were imported, this parameter is left empty.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether the data sources were imported. Valid values:</p>
+         * <br>
+         * <p>*   true: All the data sources were imported.</p>
+         * <p>*   false: Some of the data sources failed to be imported. You can troubleshoot issues based on the Message parameter.</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 

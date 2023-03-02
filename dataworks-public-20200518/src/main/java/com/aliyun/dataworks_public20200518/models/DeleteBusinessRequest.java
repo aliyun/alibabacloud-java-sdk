@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteBusinessRequest extends TeaModel {
+    /**
+     * <p>The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to query the workflow ID.</p>
+     */
     @NameInMap("BusinessId")
     public Long businessId;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID. You must specify either this parameter or ProjectIdentifier to determine the DataWorks workspace to which the operation is applied.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Settings panel to obtain the name. You must specify either this parameter or ProjectId to determine the DataWorks workspace to which the operation is applied.</p>
+     */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 

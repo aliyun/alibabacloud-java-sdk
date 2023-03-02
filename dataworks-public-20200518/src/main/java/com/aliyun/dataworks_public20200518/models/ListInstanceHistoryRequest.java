@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceHistoryRequest extends TeaModel {
+    /**
+     * <p>The IDs of the instances. You can call the ListInstances operation to query the instance IDs.</p>
+     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <p>The environment of the workspace. Valid values: PROD (production environment) and DEV (development environment).By default, data of instances in the production environment is queried.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 

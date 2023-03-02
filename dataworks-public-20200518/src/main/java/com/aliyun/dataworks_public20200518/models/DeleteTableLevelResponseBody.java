@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteTableLevelResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the table level is deleted.</p>
+     */
     @NameInMap("DeleteResult")
     public Boolean deleteResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

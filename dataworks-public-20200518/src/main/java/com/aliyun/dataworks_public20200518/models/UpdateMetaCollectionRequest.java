@@ -4,12 +4,23 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetaCollectionRequest extends TeaModel {
+    /**
+     * <p>The comment of the collection.</p>
+     * <br>
+     * <p>The comment must be 1 to 64 characters in length.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The name of the collection.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The unique identifier of the collection.</p>
+     */
     @NameInMap("QualifiedName")
     public String qualifiedName;
 

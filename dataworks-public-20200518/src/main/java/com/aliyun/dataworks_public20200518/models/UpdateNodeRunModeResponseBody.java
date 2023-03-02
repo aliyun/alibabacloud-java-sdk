@@ -4,9 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateNodeRunModeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request. You can use the ID to obtain logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: indicates that the request is successful.</p>
+     * <p>*   false: indicates that the request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

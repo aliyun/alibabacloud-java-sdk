@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDataServiceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The details of the business process.</p>
+     */
     @NameInMap("Group")
     public GetDataServiceGroupResponseBodyGroup group;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,57 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
     }
 
     public static class GetDataServiceGroupResponseBodyGroup extends TeaModel {
+        /**
+         * <p>The ID of the API group that is associated with the business process in the API Gateway console.</p>
+         */
         @NameInMap("ApiGatewayGroupId")
         public String apiGatewayGroupId;
 
+        /**
+         * <p>The time when the business process was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The description of the business process.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the business process.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the business process.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The time when the business process was last modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 

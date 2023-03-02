@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListTableThemeResponseBody extends TeaModel {
+    /**
+     * <p>The returned data about the level of the table folder.</p>
+     */
     @NameInMap("Data")
     public ListTableThemeResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,24 +94,45 @@ public class ListTableThemeResponseBody extends TeaModel {
     }
 
     public static class ListTableThemeResponseBodyDataThemeList extends TeaModel {
+        /**
+         * <p>The time when the level was created.</p>
+         */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
+        /**
+         * <p>The creator of the level.</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a table folder of level 1. A value of 2 indicates a table folder of level 2.</p>
+         */
         @NameInMap("Level")
         public Integer level;
 
+        /**
+         * <p>The name of the level of the table folder.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the parent node.</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
+        /**
+         * <p>The ID of the DataWorks workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The ID of the table folder.</p>
+         */
         @NameInMap("ThemeId")
         public Long themeId;
 
@@ -161,9 +200,15 @@ public class ListTableThemeResponseBody extends TeaModel {
     }
 
     public static class ListTableThemeResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of levels of the table folders.</p>
+         */
         @NameInMap("ThemeList")
         public java.util.List<ListTableThemeResponseBodyDataThemeList> themeList;
 
+        /**
+         * <p>The total number of table folders.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

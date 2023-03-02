@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableChangeLogResponseBody extends TeaModel {
+    /**
+     * <p>The business data returned.</p>
+     */
     @NameInMap("Data")
     public GetMetaTableChangeLogResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +94,39 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableChangeLogResponseBodyDataDataEntityList extends TeaModel {
+        /**
+         * <p>The content of the change.</p>
+         */
         @NameInMap("ChangeContent")
         public String changeContent;
 
+        /**
+         * <p>The type of the change.</p>
+         */
         @NameInMap("ChangeType")
         public String changeType;
 
+        /**
+         * <p>The time when the metatable was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The last time when the metatable was modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <p>The entity on which the change was made. Valid values: TABLE and PARTITION.</p>
+         */
         @NameInMap("ObjectType")
         public String objectType;
 
+        /**
+         * <p>The name of the operator.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
@@ -150,15 +186,27 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableChangeLogResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the change logs of the metatable.</p>
+         */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTableChangeLogResponseBodyDataDataEntityList> dataEntityList;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

@@ -4,63 +4,143 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateQualityRuleRequest extends TeaModel {
+    /**
+     * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
+     * <br>
+     * <p>*   1: indicates that the monitoring rule is a strong rule.</p>
+     * <br>
+     * <p>*   0: indicates that the monitoring rule is a weak rule.</p>
+     * <br>
+     * <p>    You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and a critical alert is triggered, nodes are blocked.</p>
+     */
     @NameInMap("BlockType")
     public Integer blockType;
 
+    /**
+     * <p>The ID of the checker. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the checker.</p>
+     */
     @NameInMap("Checker")
     public Integer checker;
 
+    /**
+     * <p>The description of the monitoring rule.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.</p>
+     */
     @NameInMap("CriticalThreshold")
     public String criticalThreshold;
 
+    /**
+     * <p>The ID of the partition filter expression. You can call the [GetQualityEntity](~~173995~~) operation to obtain the ID of the partition filter expression.</p>
+     */
     @NameInMap("EntityId")
     public Long entityId;
 
+    /**
+     * <p>The expected value of the monitoring result.</p>
+     */
     @NameInMap("ExpectValue")
     public String expectValue;
 
+    /**
+     * <p>The ID of the monitoring rule. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring rule.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+     */
     @NameInMap("MethodName")
     public String methodName;
 
+    /**
+     * <p>Specifies whether to enable the monitoring rule in the production environment.</p>
+     * <br>
+     * <p>*   true: The monitoring rule is triggered when the associated auto triggered node that generates the output data starts to run.</p>
+     * <p>*   false: The monitoring rule is not triggered when the associated auto triggered node that generates the output data starts to run.</p>
+     */
     @NameInMap("OpenSwitch")
     public Boolean openSwitch;
 
+    /**
+     * <p>The comparison operator, such as >, >=, =, ≠, <, or <=.</p>
+     */
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <p>Specifies whether the threshold is a dynamic threshold. Valid values:</p>
+     * <br>
+     * <p>*   0: indicates that the threshold is not a dynamic threshold.</p>
+     * <p>*   2: indicates that the threshold is a dynamic threshold.</p>
+     */
     @NameInMap("PredictType")
     public Integer predictType;
 
+    /**
+     * <p>The name of the compute engine instance or data source. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the name.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The name of the field to be monitored.</p>
+     */
     @NameInMap("Property")
     public String property;
 
+    /**
+     * <p>The data type of the field.</p>
+     */
     @NameInMap("PropertyType")
     public String propertyType;
 
+    /**
+     * <p>The name of the monitoring rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The type of the monitoring rule. Valid values:</p>
+     * <br>
+     * <p>*   0: The monitoring rule is created by the system.</p>
+     * <p>*   1: The monitoring rule is created by a user.</p>
+     * <p>*   2: The monitoring rule is a workspace-level rule.</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <p>The ID of the monitoring template. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring template that is used to create the monitoring rule.</p>
+     */
     @NameInMap("TemplateId")
     public Integer templateId;
 
+    /**
+     * <p>The trend of the monitoring result. Valid values:</p>
+     * <br>
+     * <p>*   up: increasing</p>
+     * <p>*   down: decreasing</p>
+     * <p>*   abs: absolute value</p>
+     */
     @NameInMap("Trend")
     public String trend;
 
+    /**
+     * <p>The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.</p>
+     */
     @NameInMap("WarningThreshold")
     public String warningThreshold;
 
+    /**
+     * <p>The filter condition or custom SQL statement that is used for monitoring.</p>
+     */
     @NameInMap("WhereCondition")
     public String whereCondition;
 

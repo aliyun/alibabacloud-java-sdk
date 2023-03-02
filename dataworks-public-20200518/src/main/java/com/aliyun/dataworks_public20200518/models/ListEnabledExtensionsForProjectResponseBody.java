@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
+    /**
+     * <p>The details of the extension.</p>
+     */
     @NameInMap("Extensions")
     public java.util.List<ListEnabledExtensionsForProjectResponseBodyExtensions> extensions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,63 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
     }
 
     public static class ListEnabledExtensionsForProjectResponseBodyExtensions extends TeaModel {
+        /**
+         * <p>The creator of the extension.</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>The unique code of the extension.</p>
+         */
         @NameInMap("ExtensionCode")
         public String extensionCode;
 
+        /**
+         * <p>The description of the extension.</p>
+         */
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
 
+        /**
+         * <p>The name of the extension.</p>
+         */
         @NameInMap("ExtensionName")
         public String extensionName;
 
+        /**
+         * <p>The time when the extension was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The timestamp when extension was modified.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The modifier of the extension.</p>
+         */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>The owner ID.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The parameter settings of the extension. For more information, see [Configure extension parameters](~~405354~~).</p>
+         */
         @NameInMap("ParameterSetting")
         public String parameterSetting;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 

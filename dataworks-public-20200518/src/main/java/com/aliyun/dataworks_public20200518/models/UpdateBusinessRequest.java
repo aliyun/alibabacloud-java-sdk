@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateBusinessRequest extends TeaModel {
+    /**
+     * <p>The ID of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow ID.</p>
+     */
     @NameInMap("BusinessId")
     public Long businessId;
 
+    /**
+     * <p>The name of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow name.</p>
+     */
     @NameInMap("BusinessName")
     public String businessName;
 
+    /**
+     * <p>The description of the workflow.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The owner of the workflow. You can call the [ListBusiness](~~173945~~) operation to obtain the workflow owner.</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 

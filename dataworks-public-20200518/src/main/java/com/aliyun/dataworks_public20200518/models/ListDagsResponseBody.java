@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDagsResponseBody extends TeaModel {
+    /**
+     * <p>The details of DAGs.</p>
+     */
     @NameInMap("Data")
     public ListDagsResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,48 +94,81 @@ public class ListDagsResponseBody extends TeaModel {
     }
 
     public static class ListDagsResponseBodyDataDags extends TeaModel {
+        /**
+         * <p>The data timestamp.</p>
+         */
         @NameInMap("Bizdate")
         public Long bizdate;
 
+        /**
+         * <p>The time at which the DAG was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The user who created the DAG.</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
-         * <p>DagId。</p>
+         * <p>The ID of the DAG.</p>
          */
         @NameInMap("DagId")
         public Long dagId;
 
+        /**
+         * <p>The time at which the DAG finished running. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("FinishTime")
         public Long finishTime;
 
         /**
-         * <p>Gmtdate。</p>
+         * <p>The time at which the DAG was scheduled to run.</p>
          */
         @NameInMap("Gmtdate")
         public Long gmtdate;
 
+        /**
+         * <p>The time at which the DAG was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The name of the DAG.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The sequence number of the operation.</p>
+         */
         @NameInMap("OpSeq")
         public Long opSeq;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The time at which the DAG started to run.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -233,6 +284,9 @@ public class ListDagsResponseBody extends TeaModel {
     }
 
     public static class ListDagsResponseBodyData extends TeaModel {
+        /**
+         * <p>The entities returned.</p>
+         */
         @NameInMap("Dags")
         public java.util.List<ListDagsResponseBodyDataDags> dags;
 

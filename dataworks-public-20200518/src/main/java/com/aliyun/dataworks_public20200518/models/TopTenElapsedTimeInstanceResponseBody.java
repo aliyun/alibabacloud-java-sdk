@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ranking record of the running durations of the instances.</p>
+     */
     @NameInMap("InstanceConsumeTimeRank")
     public TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRank instanceConsumeTimeRank;
 
+    /**
+     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,49 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
     }
 
     public static class TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRankConsumeTimeRank extends TeaModel {
+        /**
+         * <p>The data timestamp of the instance.</p>
+         */
         @NameInMap("BusinessDate")
         public Long businessDate;
 
+        /**
+         * <p>The running duration of the instance. Unit: seconds.</p>
+         */
         @NameInMap("Consumed")
         public Long consumed;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the owner of the node.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The type of the node.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
+         */
         @NameInMap("ProgramType")
         public Integer programType;
 
@@ -117,9 +148,15 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
     }
 
     public static class TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRank extends TeaModel {
+        /**
+         * <p>The ranking data of the running durations of the instances.</p>
+         */
         @NameInMap("ConsumeTimeRank")
         public java.util.List<TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRankConsumeTimeRank> consumeTimeRank;
 
+        /**
+         * <p>The timestamp at which the ranking of the running durations of the instances was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

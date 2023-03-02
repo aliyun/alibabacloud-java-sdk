@@ -4,18 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CheckMetaTableRequest extends TeaModel {
+    /**
+     * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The type of the data source. Valid values: odps and emr.</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>The name of the EMR database.</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The GUID of the table.</p>
+     */
     @NameInMap("TableGuid")
     public String tableGuid;
 
+    /**
+     * <p>The name of the EMR table.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

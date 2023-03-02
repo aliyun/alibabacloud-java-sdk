@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetRemindRequest extends TeaModel {
+    /**
+     * <p>The ID of the custom alert rule.</p>
+     */
     @NameInMap("RemindId")
     public Long remindId;
 

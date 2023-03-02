@@ -4,21 +4,47 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListRefDISyncTasksRequest extends TeaModel {
+    /**
+     * <p>The name of the data source. You can call the [ListDataSources](~~211431~~) operation to query the name of the data source.</p>
+     */
     @NameInMap("DatasourceName")
     public String datasourceName;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The condition used to filter sync nodes. Valid values:</p>
+     * <br>
+     * <p>*   from: queries the sync nodes that use the data source as the source data source.</p>
+     * <p>*   to: queries the sync nodes that use the data source as the destination data source.</p>
+     */
     @NameInMap("RefType")
     public String refType;
 
+    /**
+     * <p>The type of the sync node that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   DI_OFFLINE: batch sync node</p>
+     * <p>*   DI_REALTIME: real-time sync node</p>
+     * <br>
+     * <p>You can specify only one type. The sync solution type is not supported.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

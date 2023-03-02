@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDeploymentsResponseBody extends TeaModel {
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Data")
     public ListDeploymentsResponseBodyData data;
 
+    /**
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,56 @@ public class ListDeploymentsResponseBody extends TeaModel {
     }
 
     public static class ListDeploymentsResponseBodyDataDeployments extends TeaModel {
+        /**
+         * <p>The time when the deployment task was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the user who created the deployment tasks.</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The error message returned when the deployment task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the user who ran the deployment tasks.</p>
+         */
         @NameInMap("Executor")
         public String executor;
 
+        /**
+         * <p>The ID of the deployment task. You can call the [GetDeployment](~~173950~~) operation to query the details of the deployment task based on the ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the deployment task.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the deployment tasks. Valid values:</p>
+         * <br>
+         * <p>*   0: The deployment tasks are ready.</p>
+         * <p>*   1: The deployment tasks are successful.</p>
+         * <p>*   2: The deployment tasks fail.</p>
+         * <p>*   6: The deployment tasks are rejected.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -128,15 +163,27 @@ public class ListDeploymentsResponseBody extends TeaModel {
     }
 
     public static class ListDeploymentsResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the deployment tasks.</p>
+         */
         @NameInMap("Deployments")
         public java.util.List<ListDeploymentsResponseBodyDataDeployments> deployments;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

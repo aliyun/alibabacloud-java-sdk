@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListProgramTypeCountResponseBody extends TeaModel {
+    /**
+     * <p>The type and number of nodes.</p>
+     */
     @NameInMap("ProgramTypeAndCounts")
     public java.util.List<ListProgramTypeCountResponseBodyProgramTypeAndCounts> programTypeAndCounts;
 
+    /**
+     * <p>The ID of the request, which is used to locate logs and troubleshoot problems.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
     }
 
     public static class ListProgramTypeCountResponseBodyProgramTypeAndCounts extends TeaModel {
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The type of the node.</p>
+         */
         @NameInMap("ProgramType")
         public String programType;
 

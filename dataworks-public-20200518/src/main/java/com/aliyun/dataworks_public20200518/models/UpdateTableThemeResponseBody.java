@@ -4,21 +4,45 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableThemeResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request is successful.</p>
+     * <p>*   false: The request fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Indicates whether the update result is returned. Valid values:</p>
+     * <br>
+     * <p>*   true: The update result is returned.</p>
+     * <p>*   false: The update result is not returned.</p>
+     */
     @NameInMap("UpdateResult")
     public Boolean updateResult;
 

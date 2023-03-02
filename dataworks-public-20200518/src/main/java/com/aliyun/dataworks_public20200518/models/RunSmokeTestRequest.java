@@ -4,18 +4,35 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RunSmokeTestRequest extends TeaModel {
+    /**
+     * <p>The data timestamp.</p>
+     */
     @NameInMap("Bizdate")
     public String bizdate;
 
+    /**
+     * <p>The name of the workflow.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID.</p>
+     */
     @NameInMap("NodeId")
     public Long nodeId;
 
+    /**
+     * <p>The parameters related to the node. Set this parameter to a JSON string. A key in the string indicates a parameter, and a value in the string indicates the value of the related parameter.</p>
+     */
     @NameInMap("NodeParams")
     public String nodeParams;
 
+    /**
+     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+     * <br>
+     * <p>A workspace in basic mode does not have a development environment. For more information, see [Basic mode and standard mode](~~85772~~).</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 

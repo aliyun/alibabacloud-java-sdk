@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkbenchEventResultRequest extends TeaModel {
+    /**
+     * <p>The check status of the extension point event. Valid values: OK and Fail. A value of OK indicates that the event passes the check. A value of FAIL indicates that the event fails to pass the check.</p>
+     */
     @NameInMap("CheckResult")
     public String checkResult;
 
+    /**
+     * <p>The cause of the check failure.</p>
+     */
     @NameInMap("CheckResultTip")
     public String checkResultTip;
 
+    /**
+     * <p>The code of the extension.</p>
+     */
     @NameInMap("ExtensionCode")
     public String extensionCode;
 
+    /**
+     * <p>The ID of the message received when the related extension point event is triggered after you enable message subscription by using the OpenEvent module.</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 

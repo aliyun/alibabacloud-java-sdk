@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDDLJobStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the DDL task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

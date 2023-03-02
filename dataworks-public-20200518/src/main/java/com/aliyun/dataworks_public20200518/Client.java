@@ -122,6 +122,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addMetaCollectionEntityWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about how to add your Alibaba Cloud account or a RAM user as a member of a DataWorks workspace, see [Add a member to a DataWorks workspace](~~136941~~).
+      *
+      * @param request AddProjectMemberToRoleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddProjectMemberToRoleResponse
+     */
     public AddProjectMemberToRoleResponse addProjectMemberToRoleWithOptions(AddProjectMemberToRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -158,6 +165,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddProjectMemberToRoleResponse());
     }
 
+    /**
+      * For more information about how to add your Alibaba Cloud account or a RAM user as a member of a DataWorks workspace, see [Add a member to a DataWorks workspace](~~136941~~).
+      *
+      * @param request AddProjectMemberToRoleRequest
+      * @return AddProjectMemberToRoleResponse
+     */
     public AddProjectMemberToRoleResponse addProjectMemberToRole(AddProjectMemberToRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addProjectMemberToRoleWithOptions(request, runtime);
@@ -575,6 +588,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+      *
+      * @param request CreateDISyncTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDISyncTaskResponse
+     */
     public CreateDISyncTaskResponse createDISyncTaskWithOptions(CreateDISyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -619,6 +639,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDISyncTaskResponse());
     }
 
+    /**
+      * DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+      *
+      * @param request CreateDISyncTaskRequest
+      * @return CreateDISyncTaskResponse
+     */
     public CreateDISyncTaskResponse createDISyncTask(CreateDISyncTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDISyncTaskWithOptions(request, runtime);
@@ -1272,6 +1298,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createFolderWithOptions(request, runtime);
     }
 
+    /**
+      * The import package must be uploaded. Example of the upload method:
+      * Config config = new Config();
+      * config.setAccessKeyId(accessId);
+      * config.setAccessKeySecret(accessKey);
+      * config.setEndpoint(popEndpoint);
+      * config.setRegionId(regionId);
+      * Client client = new Client(config);
+      * CreateImportMigrationAdvanceRequest request = new CreateImportMigrationAdvanceRequest();
+      * request.setName("test_migration_api\\_" + System.currentTimeMillis());
+      * request.setProjectId(123456L);
+      * request.setPackageType("DATAWORKS_MODEL");
+      * request.setPackageFileObject(new FileInputStream("/home/admin/Downloads/test.zip"));
+      * RuntimeOptions runtime = new RuntimeOptions();
+      * CreateImportMigrationResponse response = client.createImportMigrationAdvance(request, runtime);
+      * ...
+      *
+      * @param request CreateImportMigrationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateImportMigrationResponse
+     */
     public CreateImportMigrationResponse createImportMigrationWithOptions(CreateImportMigrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1328,6 +1375,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateImportMigrationResponse());
     }
 
+    /**
+      * The import package must be uploaded. Example of the upload method:
+      * Config config = new Config();
+      * config.setAccessKeyId(accessId);
+      * config.setAccessKeySecret(accessKey);
+      * config.setEndpoint(popEndpoint);
+      * config.setRegionId(regionId);
+      * Client client = new Client(config);
+      * CreateImportMigrationAdvanceRequest request = new CreateImportMigrationAdvanceRequest();
+      * request.setName("test_migration_api\\_" + System.currentTimeMillis());
+      * request.setProjectId(123456L);
+      * request.setPackageType("DATAWORKS_MODEL");
+      * request.setPackageFileObject(new FileInputStream("/home/admin/Downloads/test.zip"));
+      * RuntimeOptions runtime = new RuntimeOptions();
+      * CreateImportMigrationResponse response = client.createImportMigrationAdvance(request, runtime);
+      * ...
+      *
+      * @param request CreateImportMigrationRequest
+      * @return CreateImportMigrationResponse
+     */
     public CreateImportMigrationResponse createImportMigration(CreateImportMigrationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createImportMigrationWithOptions(request, runtime);
@@ -1516,6 +1583,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createMetaCategoryWithOptions(request, runtime);
     }
 
+    /**
+      * Collections are classified into various types. The names of collections of the same type must be different.
+      *
+      * @param request CreateMetaCollectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateMetaCollectionResponse
+     */
     public CreateMetaCollectionResponse createMetaCollectionWithOptions(CreateMetaCollectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1552,6 +1626,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMetaCollectionResponse());
     }
 
+    /**
+      * Collections are classified into various types. The names of collections of the same type must be different.
+      *
+      * @param request CreateMetaCollectionRequest
+      * @return CreateMetaCollectionResponse
+     */
     public CreateMetaCollectionResponse createMetaCollection(CreateMetaCollectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createMetaCollectionWithOptions(request, runtime);
@@ -2768,6 +2848,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteQualityEntityWithOptions(request, runtime);
     }
 
+    /**
+      * In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transformation, load (ETL). Thereby, Data Quality automatically blocks the nodes that involve dirty data to stop dirty data from spreading downstream. This prevents nodes from producing unexpected dirty data that affects normal use and business decisions. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule described by the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors in a timely manner. For more information, see [Configure monitoring rules for MaxCompute](~~73690~~).
+      *
+      * @param request DeleteQualityFollowerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteQualityFollowerResponse
+     */
     public DeleteQualityFollowerResponse deleteQualityFollowerWithOptions(DeleteQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2796,6 +2883,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteQualityFollowerResponse());
     }
 
+    /**
+      * In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transformation, load (ETL). Thereby, Data Quality automatically blocks the nodes that involve dirty data to stop dirty data from spreading downstream. This prevents nodes from producing unexpected dirty data that affects normal use and business decisions. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule described by the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors in a timely manner. For more information, see [Configure monitoring rules for MaxCompute](~~73690~~).
+      *
+      * @param request DeleteQualityFollowerRequest
+      * @return DeleteQualityFollowerResponse
+     */
     public DeleteQualityFollowerResponse deleteQualityFollower(DeleteQualityFollowerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteQualityFollowerWithOptions(request, runtime);
@@ -3208,6 +3301,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.exportDataSourcesWithOptions(request, runtime);
     }
 
+    /**
+      * DataWorks allows you to use only the [CreateDISyncTask](~~278725~~) operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the [CreateDISyncTask](~~278725~~) operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+      * DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      *
+      * @param request GenerateDISyncTaskConfigForCreatingRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GenerateDISyncTaskConfigForCreatingResponse
+     */
     public GenerateDISyncTaskConfigForCreatingResponse generateDISyncTaskConfigForCreatingWithOptions(GenerateDISyncTaskConfigForCreatingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3244,11 +3345,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateDISyncTaskConfigForCreatingResponse());
     }
 
+    /**
+      * DataWorks allows you to use only the [CreateDISyncTask](~~278725~~) operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the [CreateDISyncTask](~~278725~~) operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+      * DataWorks allows you to create real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      *
+      * @param request GenerateDISyncTaskConfigForCreatingRequest
+      * @return GenerateDISyncTaskConfigForCreatingResponse
+     */
     public GenerateDISyncTaskConfigForCreatingResponse generateDISyncTaskConfigForCreating(GenerateDISyncTaskConfigForCreatingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateDISyncTaskConfigForCreatingWithOptions(request, runtime);
     }
 
+    /**
+      * DataWorks allows you to use only the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization node in Data Integration. To update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the UpdateDISyncTask operation and use the parameters as request parameters to update a real-time synchronization node or a synchronization solution in Data Integration. DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      *
+      * @param request GenerateDISyncTaskConfigForUpdatingRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GenerateDISyncTaskConfigForUpdatingResponse
+     */
     public GenerateDISyncTaskConfigForUpdatingResponse generateDISyncTaskConfigForUpdatingWithOptions(GenerateDISyncTaskConfigForUpdatingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3289,6 +3404,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateDISyncTaskConfigForUpdatingResponse());
     }
 
+    /**
+      * DataWorks allows you to use only the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization node in Data Integration. To update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the UpdateDISyncTask operation and use the parameters as request parameters to update a real-time synchronization node or a synchronization solution in Data Integration. DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      *
+      * @param request GenerateDISyncTaskConfigForUpdatingRequest
+      * @return GenerateDISyncTaskConfigForUpdatingResponse
+     */
     public GenerateDISyncTaskConfigForUpdatingResponse generateDISyncTaskConfigForUpdating(GenerateDISyncTaskConfigForUpdatingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateDISyncTaskConfigForUpdatingWithOptions(request, runtime);
@@ -3566,6 +3687,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDISyncTaskWithOptions(request, runtime);
     }
 
+    /**
+      * Supported DAG types:
+      * *   MANUAL: the DAG for a manually triggered workflow.
+      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
+      * *   SUPPLY_DATA: the DAG for a data backfill instance.
+      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
+      * Supported DAG states:
+      * *   CREATED: The DAG is created.
+      * *   RUNNING: The DAG is running.
+      * *   FAILURE: The DAG fails to run.
+      * *   SUCCESS: The DAG successfully runs.
+      *
+      * @param request GetDagRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetDagResponse
+     */
     public GetDagResponse getDagWithOptions(GetDagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3594,6 +3731,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDagResponse());
     }
 
+    /**
+      * Supported DAG types:
+      * *   MANUAL: the DAG for a manually triggered workflow.
+      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
+      * *   SUPPLY_DATA: the DAG for a data backfill instance.
+      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
+      * Supported DAG states:
+      * *   CREATED: The DAG is created.
+      * *   RUNNING: The DAG is running.
+      * *   FAILURE: The DAG fails to run.
+      * *   SUCCESS: The DAG successfully runs.
+      *
+      * @param request GetDagRequest
+      * @return GetDagResponse
+     */
     public GetDagResponse getDag(GetDagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDagWithOptions(request, runtime);
@@ -4286,6 +4438,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getInstanceErrorRankWithOptions(request, runtime);
     }
 
+    /**
+      * You may not obtain the instance logs that were generated more than seven days ago.
+      *
+      * @param request GetInstanceLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetInstanceLogResponse
+     */
     public GetInstanceLogResponse getInstanceLogWithOptions(GetInstanceLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4318,6 +4477,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceLogResponse());
     }
 
+    /**
+      * You may not obtain the instance logs that were generated more than seven days ago.
+      *
+      * @param request GetInstanceLogRequest
+      * @return GetInstanceLogResponse
+     */
     public GetInstanceLogResponse getInstanceLog(GetInstanceLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceLogWithOptions(request, runtime);
@@ -4599,6 +4764,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMetaColumnLineageWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query only the basic metadata information about a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      *
+      * @param request GetMetaDBInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetMetaDBInfoResponse
+     */
     public GetMetaDBInfoResponse getMetaDBInfoWithOptions(GetMetaDBInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -4619,6 +4791,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetaDBInfoResponse());
     }
 
+    /**
+      * You can call this operation to query only the basic metadata information about a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      *
+      * @param request GetMetaDBInfoRequest
+      * @return GetMetaDBInfoResponse
+     */
     public GetMetaDBInfoResponse getMetaDBInfo(GetMetaDBInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMetaDBInfoWithOptions(request, runtime);
@@ -4978,6 +5156,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMetaTableOutputWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      *
+      * @param tmpReq GetMetaTablePartitionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetMetaTablePartitionResponse
+     */
     public GetMetaTablePartitionResponse getMetaTablePartitionWithOptions(GetMetaTablePartitionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetMetaTablePartitionShrinkRequest request = new GetMetaTablePartitionShrinkRequest();
@@ -5036,6 +5221,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetaTablePartitionResponse());
     }
 
+    /**
+      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      *
+      * @param request GetMetaTablePartitionRequest
+      * @return GetMetaTablePartitionResponse
+     */
     public GetMetaTablePartitionResponse getMetaTablePartition(GetMetaTablePartitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMetaTablePartitionWithOptions(request, runtime);
@@ -5882,6 +6073,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTopicInfluenceWithOptions(request, runtime);
     }
 
+    /**
+      * You can import self-managed data sources or data sources that are exported from other Dataworks workspaces to a specified DataWorks workspace.
+      * *   To import a self-managed data source to DataWorks, the data source type must be supported by DataWorks. For more information about the types of data sources supported by DataWorks, see [Supported data stores](~~181656~~).
+      * *   For more information about how to export data sources from DataWorks workspaces to on-premises devices, see [ExportDataSources](~~279570~~).
+      *
+      * @param request ImportDataSourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ImportDataSourcesResponse
+     */
     public ImportDataSourcesResponse importDataSourcesWithOptions(ImportDataSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5910,6 +6110,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ImportDataSourcesResponse());
     }
 
+    /**
+      * You can import self-managed data sources or data sources that are exported from other Dataworks workspaces to a specified DataWorks workspace.
+      * *   To import a self-managed data source to DataWorks, the data source type must be supported by DataWorks. For more information about the types of data sources supported by DataWorks, see [Supported data stores](~~181656~~).
+      * *   For more information about how to export data sources from DataWorks workspaces to on-premises devices, see [ExportDataSources](~~279570~~).
+      *
+      * @param request ImportDataSourcesRequest
+      * @return ImportDataSourcesResponse
+     */
     public ImportDataSourcesResponse importDataSources(ImportDataSourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importDataSourcesWithOptions(request, runtime);
@@ -6289,6 +6497,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listConnectionsWithOptions(request, runtime);
     }
 
+    /**
+      * DataWorks allows you to set the default global configuration for only the processing rules of DDL messages in sync solutions. After you configure the **processing rules of DDL messages** in sync solutions, the configuration is set as the default global configuration and applies to all real-time sync nodes. You can also modify the **processing rules of DDL messages** based on your business requirements. For more information, see [Sync solutions](~~199008~~).
+      *
+      * @param request ListDIProjectConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDIProjectConfigResponse
+     */
     public ListDIProjectConfigResponse listDIProjectConfigWithOptions(ListDIProjectConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6321,11 +6536,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDIProjectConfigResponse());
     }
 
+    /**
+      * DataWorks allows you to set the default global configuration for only the processing rules of DDL messages in sync solutions. After you configure the **processing rules of DDL messages** in sync solutions, the configuration is set as the default global configuration and applies to all real-time sync nodes. You can also modify the **processing rules of DDL messages** based on your business requirements. For more information, see [Sync solutions](~~199008~~).
+      *
+      * @param request ListDIProjectConfigRequest
+      * @return ListDIProjectConfigResponse
+     */
     public ListDIProjectConfigResponse listDIProjectConfig(ListDIProjectConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDIProjectConfigWithOptions(request, runtime);
     }
 
+    /**
+      * Supported DAG types:
+      * *   MANUAL: the DAG for a manually triggered workflow.
+      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
+      * *   SUPPLY_DATA: the DAG for a data backfill instance.
+      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
+      * Supported DAG states:
+      * *   CREATED: The DAG is created.
+      * *   RUNNING: The DAG is running.
+      * *   FAILURE: The DAG fails to run.
+      * *   SUCCESS: The DAG successfully runs.
+      *
+      * @param request ListDagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDagsResponse
+     */
     public ListDagsResponse listDagsWithOptions(ListDagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -6354,6 +6591,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDagsResponse());
     }
 
+    /**
+      * Supported DAG types:
+      * *   MANUAL: the DAG for a manually triggered workflow.
+      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
+      * *   SUPPLY_DATA: the DAG for a data backfill instance.
+      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
+      * Supported DAG states:
+      * *   CREATED: The DAG is created.
+      * *   RUNNING: The DAG is running.
+      * *   FAILURE: The DAG fails to run.
+      * *   SUCCESS: The DAG successfully runs.
+      *
+      * @param request ListDagsRequest
+      * @return ListDagsResponse
+     */
     public ListDagsResponse listDags(ListDagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDagsWithOptions(request, runtime);
@@ -7369,6 +7621,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listMetaCollectionEntitiesWithOptions(request, runtime);
     }
 
+    /**
+      * The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+      *
+      * @param request ListMetaCollectionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListMetaCollectionsResponse
+     */
     public ListMetaCollectionsResponse listMetaCollectionsWithOptions(ListMetaCollectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7425,6 +7684,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListMetaCollectionsResponse());
     }
 
+    /**
+      * The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+      *
+      * @param request ListMetaCollectionsRequest
+      * @return ListMetaCollectionsResponse
+     */
     public ListMetaCollectionsResponse listMetaCollections(ListMetaCollectionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listMetaCollectionsWithOptions(request, runtime);
@@ -7825,6 +8090,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listProgramTypeCountWithOptions(request, runtime);
     }
 
+    /**
+      * For example, an Alibaba Cloud account can assume the developer, O&M engineer, or workspace administrator role in a workspace. For more information, see [Manage members and roles](~~136941~~).
+      *
+      * @param request ListProjectIdsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListProjectIdsResponse
+     */
     public ListProjectIdsResponse listProjectIdsWithOptions(ListProjectIdsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7849,6 +8121,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectIdsResponse());
     }
 
+    /**
+      * For example, an Alibaba Cloud account can assume the developer, O&M engineer, or workspace administrator role in a workspace. For more information, see [Manage members and roles](~~136941~~).
+      *
+      * @param request ListProjectIdsRequest
+      * @return ListProjectIdsResponse
+     */
     public ListProjectIdsResponse listProjectIds(ListProjectIdsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listProjectIdsWithOptions(request, runtime);
@@ -8509,6 +8787,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TargetType", request.targetType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetUserId)) {
+            body.put("TargetUserId", request.targetUserId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -8601,6 +8883,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.publishDataServiceApiWithOptions(request, runtime);
     }
 
+    /**
+      * DataWorks allows you to call only the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a batch synchronization node in Data Integration. To create or update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForCreating or GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask or UpdateDISyncTask operation and use the parameters as request parameters to create or update a real-time synchronization node or a synchronization solution.
+      * DataWorks allows you to create or update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      *
+      * @param request QueryDISyncTaskConfigProcessResultRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryDISyncTaskConfigProcessResultResponse
+     */
     public QueryDISyncTaskConfigProcessResultResponse queryDISyncTaskConfigProcessResultWithOptions(QueryDISyncTaskConfigProcessResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8633,11 +8923,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDISyncTaskConfigProcessResultResponse());
     }
 
+    /**
+      * DataWorks allows you to call only the [CreateDISyncTask](~~278725~~) or [UpdateDISyncTask](~~289109~~) operation to create or update a batch synchronization node in Data Integration. To create or update a real-time synchronization node or a synchronization solution, you must first call the GenerateDISyncTaskConfigForCreating or GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask or UpdateDISyncTask operation and use the parameters as request parameters to create or update a real-time synchronization node or a synchronization solution.
+      * DataWorks allows you to create or update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.
+      *
+      * @param request QueryDISyncTaskConfigProcessResultRequest
+      * @return QueryDISyncTaskConfigProcessResultResponse
+     */
     public QueryDISyncTaskConfigProcessResultResponse queryDISyncTaskConfigProcessResult(QueryDISyncTaskConfigProcessResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDISyncTaskConfigProcessResultWithOptions(request, runtime);
     }
 
+    /**
+      * *   You must use FML statements to query information about the data modeling engine when you call this operation.
+      * *   The information about the data modeling engine can be queried by page, except for data layers, business processes, and data domains. You can add an offset to the end of an FML statement.
+      *     The num LIMIT num statement specifies the offset when the information about the data modeling engine is queried, and the number of pages to return each time. The offset value must be a multiple of the number of pages.
+      * *   A maximum of 1,000 entries can be returned each time you call the operation.
+      *
+      * @param request QueryPublicModelEngineRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryPublicModelEngineResponse
+     */
     public QueryPublicModelEngineResponse queryPublicModelEngineWithOptions(QueryPublicModelEngineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -8666,6 +8973,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryPublicModelEngineResponse());
     }
 
+    /**
+      * *   You must use FML statements to query information about the data modeling engine when you call this operation.
+      * *   The information about the data modeling engine can be queried by page, except for data layers, business processes, and data domains. You can add an offset to the end of an FML statement.
+      *     The num LIMIT num statement specifies the offset when the information about the data modeling engine is queried, and the number of pages to return each time. The offset value must be a multiple of the number of pages.
+      * *   A maximum of 1,000 entries can be returned each time you call the operation.
+      *
+      * @param request QueryPublicModelEngineRequest
+      * @return QueryPublicModelEngineResponse
+     */
     public QueryPublicModelEngineResponse queryPublicModelEngine(QueryPublicModelEngineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryPublicModelEngineWithOptions(request, runtime);
@@ -8872,6 +9188,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.revokeTablePermissionWithOptions(request, runtime);
     }
 
+    /**
+      * For more information about data backfill, see [Backfill data](~~137937~~).
+      *
+      * @param request RunCycleDagNodesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RunCycleDagNodesResponse
+     */
     public RunCycleDagNodesResponse runCycleDagNodesWithOptions(RunCycleDagNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -8940,6 +9263,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RunCycleDagNodesResponse());
     }
 
+    /**
+      * For more information about data backfill, see [Backfill data](~~137937~~).
+      *
+      * @param request RunCycleDagNodesRequest
+      * @return RunCycleDagNodesResponse
+     */
     public RunCycleDagNodesResponse runCycleDagNodes(RunCycleDagNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.runCycleDagNodesWithOptions(request, runtime);
@@ -9117,6 +9446,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.scanSensitiveDataWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query only metatables in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      *
+      * @param request SearchMetaTablesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SearchMetaTablesResponse
+     */
     public SearchMetaTablesResponse searchMetaTablesWithOptions(SearchMetaTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9169,6 +9505,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SearchMetaTablesResponse());
     }
 
+    /**
+      * You can call this operation to query only metatables in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      *
+      * @param request SearchMetaTablesRequest
+      * @return SearchMetaTablesResponse
+     */
     public SearchMetaTablesResponse searchMetaTables(SearchMetaTablesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchMetaTablesWithOptions(request, runtime);
@@ -9735,6 +10077,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TargetType", request.targetType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetUserId)) {
+            body.put("TargetUserId", request.targetUserId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -9953,6 +10299,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+      *
+      * @param request UpdateDIProjectConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDIProjectConfigResponse
+     */
     public UpdateDIProjectConfigResponse updateDIProjectConfigWithOptions(UpdateDIProjectConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9989,6 +10342,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDIProjectConfigResponse());
     }
 
+    /**
+      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
+      *
+      * @param request UpdateDIProjectConfigRequest
+      * @return UpdateDIProjectConfigResponse
+     */
     public UpdateDIProjectConfigResponse updateDIProjectConfig(UpdateDIProjectConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDIProjectConfigWithOptions(request, runtime);
@@ -10161,6 +10520,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateDataSourceWithOptions(request, runtime);
     }
 
+    /**
+      * When you debug or call this operation, you must specify new values for the specified parameters to ensure that the values are different from the original configurations of the file. For example, if the original value of a parameter is A, you must change the value of this parameter to B before you commit the node. If you set the parameter to A, an exception that indicates invalid data occurs.
+      *
+      * @param request UpdateFileRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateFileResponse
+     */
     public UpdateFileResponse updateFileWithOptions(UpdateFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -10297,6 +10663,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFileResponse());
     }
 
+    /**
+      * When you debug or call this operation, you must specify new values for the specified parameters to ensure that the values are different from the original configurations of the file. For example, if the original value of a parameter is A, you must change the value of this parameter to B before you commit the node. If you set the parameter to A, an exception that indicates invalid data occurs.
+      *
+      * @param request UpdateFileRequest
+      * @return UpdateFileResponse
+     */
     public UpdateFileResponse updateFile(UpdateFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateFileWithOptions(request, runtime);
@@ -10421,6 +10793,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateMetaCategoryWithOptions(request, runtime);
     }
 
+    /**
+      * Only the name and comment of a collection can be updated.
+      *
+      * @param request UpdateMetaCollectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateMetaCollectionResponse
+     */
     public UpdateMetaCollectionResponse updateMetaCollectionWithOptions(UpdateMetaCollectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10453,6 +10832,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMetaCollectionResponse());
     }
 
+    /**
+      * Only the name and comment of a collection can be updated.
+      *
+      * @param request UpdateMetaCollectionRequest
+      * @return UpdateMetaCollectionResponse
+     */
     public UpdateMetaCollectionResponse updateMetaCollection(UpdateMetaCollectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateMetaCollectionWithOptions(request, runtime);

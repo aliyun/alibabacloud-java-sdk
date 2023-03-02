@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DesensitizeDataResponseBody extends TeaModel {
+    /**
+     * <p>The data returned after masking.</p>
+     */
     @NameInMap("DesensitizeData")
     public String desensitizeData;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

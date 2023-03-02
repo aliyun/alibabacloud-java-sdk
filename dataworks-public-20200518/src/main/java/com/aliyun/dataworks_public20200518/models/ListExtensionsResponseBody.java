@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListExtensionsResponseBody extends TeaModel {
+    /**
+     * <p>The extensions returned on pages.</p>
+     */
     @NameInMap("PagingInfo")
     public ListExtensionsResponseBodyPagingInfo pagingInfo;
 
@@ -35,9 +38,15 @@ public class ListExtensionsResponseBody extends TeaModel {
     }
 
     public static class ListExtensionsResponseBodyPagingInfoExtensionsBindEventList extends TeaModel {
+        /**
+         * <p>The code of the event.</p>
+         */
         @NameInMap("EventCode")
         public String eventCode;
 
+        /**
+         * <p>The name of the event.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
@@ -65,21 +74,51 @@ public class ListExtensionsResponseBody extends TeaModel {
     }
 
     public static class ListExtensionsResponseBodyPagingInfoExtensions extends TeaModel {
+        /**
+         * <p>The extension point events.</p>
+         */
         @NameInMap("BindEventList")
         public java.util.List<ListExtensionsResponseBodyPagingInfoExtensionsBindEventList> bindEventList;
 
+        /**
+         * <p>The unique code of the extension.</p>
+         */
         @NameInMap("ExtensionCode")
         public String extensionCode;
 
+        /**
+         * <p>The description of the extension.</p>
+         */
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
 
+        /**
+         * <p>The name of the extension.</p>
+         */
         @NameInMap("ExtensionName")
         public String extensionName;
 
+        /**
+         * <p>The ID of the RAM user.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The state of the extension. Valid values:</p>
+         * <br>
+         * <p>0: Testing</p>
+         * <br>
+         * <p>1: Publishing</p>
+         * <br>
+         * <p>3: Disabled</p>
+         * <br>
+         * <p>4: Processing</p>
+         * <br>
+         * <p>5: Approved</p>
+         * <br>
+         * <p>6: Approve Failed</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -139,15 +178,27 @@ public class ListExtensionsResponseBody extends TeaModel {
     }
 
     public static class ListExtensionsResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The extensions.</p>
+         */
         @NameInMap("Extensions")
         public java.util.List<ListExtensionsResponseBodyPagingInfoExtensions> extensions;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

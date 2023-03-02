@@ -4,15 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateTableThemeRequest extends TeaModel {
+    /**
+     * <p>The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a first-level table folder. A value of 2 indicates a second-level table folder.</p>
+     */
     @NameInMap("Level")
     public Integer level;
 
+    /**
+     * <p>The name of the table folder.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the level of the parent table folder.</p>
+     */
     @NameInMap("ParentId")
     public Long parentId;
 
+    /**
+     * <p>The ID of the DataWorks workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

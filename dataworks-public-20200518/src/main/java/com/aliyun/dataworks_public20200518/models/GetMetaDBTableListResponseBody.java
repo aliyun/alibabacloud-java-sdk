@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaDBTableListResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GetMetaDBTableListResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
     }
 
     public static class GetMetaDBTableListResponseBodyDataTableEntityList extends TeaModel {
+        /**
+         * <p>The name of the metadatabase.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The GUID of the metatable.</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        /**
+         * <p>The name of the metatable.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -73,15 +88,27 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
     }
 
     public static class GetMetaDBTableListResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of metatables in the compute engine instance.</p>
+         */
         @NameInMap("TableEntityList")
         public java.util.List<GetMetaDBTableListResponseBodyDataTableEntityList> tableEntityList;
 
+        /**
+         * <p>The total number of compute engine instances.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

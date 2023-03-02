@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListTableLevelResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The information about the table levels.</p>
+     */
     @NameInMap("TableLevelInfo")
     public ListTableLevelResponseBodyTableLevelInfo tableLevelInfo;
 
@@ -76,18 +94,33 @@ public class ListTableLevelResponseBody extends TeaModel {
     }
 
     public static class ListTableLevelResponseBodyTableLevelInfoLevelList extends TeaModel {
+        /**
+         * <p>The description of the table level.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the table level.</p>
+         */
         @NameInMap("LevelId")
         public Long levelId;
 
+        /**
+         * <p>The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.</p>
+         */
         @NameInMap("LevelType")
         public Integer levelType;
 
+        /**
+         * <p>The name of the table level.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the DataWorks workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
@@ -139,9 +172,15 @@ public class ListTableLevelResponseBody extends TeaModel {
     }
 
     public static class ListTableLevelResponseBodyTableLevelInfo extends TeaModel {
+        /**
+         * <p>The list of table levels.</p>
+         */
         @NameInMap("LevelList")
         public java.util.List<ListTableLevelResponseBodyTableLevelInfoLevelList> levelList;
 
+        /**
+         * <p>The total number of table levels returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

@@ -4,9 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetSensitiveDataResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the sensitive data returned. The information includes totalCount and sensDatas.</p>
+     * <br>
+     * <p>sensDatas includes the following parameters:</p>
+     * <br>
+     * <p>*   guid: the ID of the metadata of the tenant. For example, the ID of the metadata in the MaxCompute compute engine is in the Project name.Table name.Column name format.</p>
+     * <p>*   sensType: the type of the sensitive data.</p>
+     * <p>*   sensLevel: the sensitivity level of the sensitive data.</p>
+     */
     @NameInMap("SensitiveData")
     public java.util.Map<String, ?> sensitiveData;
 

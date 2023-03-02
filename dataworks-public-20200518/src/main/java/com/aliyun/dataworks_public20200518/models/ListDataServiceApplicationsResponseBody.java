@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceApplicationsResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public ListDataServiceApplicationsResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +94,21 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApplicationsResponseBodyDataApplications extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("ApplicationId")
         public Long applicationId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
@@ -117,15 +144,27 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApplicationsResponseBodyData extends TeaModel {
+        /**
+         * <p>The basic information of the applications.</p>
+         */
         @NameInMap("Applications")
         public java.util.List<ListDataServiceApplicationsResponseBodyDataApplications> applications;
 
+        /**
+         * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

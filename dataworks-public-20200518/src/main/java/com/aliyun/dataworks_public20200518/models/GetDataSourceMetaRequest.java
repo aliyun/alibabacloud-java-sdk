@@ -4,18 +4,36 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDataSourceMetaRequest extends TeaModel {
+    /**
+     * <p>The name of the data source.</p>
+     */
     @NameInMap("DatasourceName")
     public String datasourceName;
 
+    /**
+     * <p>The environment to which the data source belongs. Valid values:</p>
+     * <br>
+     * <p>*   0: development environment</p>
+     * <p>*   1: production environment</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

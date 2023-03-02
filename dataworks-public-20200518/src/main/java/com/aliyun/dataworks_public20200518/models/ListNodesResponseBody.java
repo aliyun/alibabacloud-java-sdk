@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
+    /**
+     * <p>The list of nodes.</p>
+     */
     @NameInMap("Data")
     public ListNodesResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,60 +94,128 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyDataNodes extends TeaModel {
+        /**
+         * <p>The ID of the baseline with which the node is associated.</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The ID of the workflow.</p>
+         */
         @NameInMap("BusinessId")
         public Long businessId;
 
+        /**
+         * <p>The connection string.</p>
+         */
         @NameInMap("Connection")
         public String connection;
 
+        /**
+         * <p>The cron expression returned.</p>
+         */
         @NameInMap("CronExpress")
         public String cronExpress;
 
+        /**
+         * <p>The description of the node.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
+        /**
+         * <p>Indicates whether the node is associated with a monitoring rule in Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with Data Quality. The value 1 indicates that the node is not associated with Data Quality.</p>
+         */
         @NameInMap("DqcType")
         public Integer dqcType;
 
+        @NameInMap("FileType")
+        public Integer fileType;
+
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the owner.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The additional parameters.</p>
+         */
         @NameInMap("ParamValues")
         public String paramValues;
 
+        /**
+         * <p>The priority for running the node. Valid values: 1, 3, 5, 7, and 8.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The type of the node.</p>
+         */
         @NameInMap("ProgramType")
         public String programType;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The ID of the associated workflow.</p>
+         */
         @NameInMap("RelatedFlowId")
         public Long relatedFlowId;
 
+        /**
+         * <p>The interval at which the node is rerun after the node fails to run.</p>
+         */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
+        /**
+         * <p>Indicates whether the node can be rerun.</p>
+         */
         @NameInMap("Repeatability")
         public Boolean repeatability;
 
+        @NameInMap("ResGroupIdentifier")
+        public String resGroupIdentifier;
+
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("ResGroupName")
         public String resGroupName;
 
+        /**
+         * <p>The scheduling type of the node. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL: indicates that the node is a normal auto triggered node.</p>
+         * <p>*   MANUAL: indicates that the node is a manually triggered node.</p>
+         * <p>*   PAUSE: indicates that the node is a paused node.</p>
+         * <p>*   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
+         */
         @NameInMap("SchedulerType")
         public String schedulerType;
 
@@ -192,6 +278,14 @@ public class ListNodesResponseBody extends TeaModel {
         }
         public Integer getDqcType() {
             return this.dqcType;
+        }
+
+        public ListNodesResponseBodyDataNodes setFileType(Integer fileType) {
+            this.fileType = fileType;
+            return this;
+        }
+        public Integer getFileType() {
+            return this.fileType;
         }
 
         public ListNodesResponseBodyDataNodes setNodeId(Long nodeId) {
@@ -274,6 +368,14 @@ public class ListNodesResponseBody extends TeaModel {
             return this.repeatability;
         }
 
+        public ListNodesResponseBodyDataNodes setResGroupIdentifier(String resGroupIdentifier) {
+            this.resGroupIdentifier = resGroupIdentifier;
+            return this;
+        }
+        public String getResGroupIdentifier() {
+            return this.resGroupIdentifier;
+        }
+
         public ListNodesResponseBodyDataNodes setResGroupName(String resGroupName) {
             this.resGroupName = resGroupName;
             return this;
@@ -293,15 +395,27 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the nodes.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<ListNodesResponseBodyDataNodes> nodes;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of nodes returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

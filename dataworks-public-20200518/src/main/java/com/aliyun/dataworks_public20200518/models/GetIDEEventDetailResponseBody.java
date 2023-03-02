@@ -4,9 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetIDEEventDetailResponseBody extends TeaModel {
+    /**
+     * <p>The data snapshot that is generated when the extension point event is triggered.</p>
+     * <br>
+     * <p>The fields contained in data snapshots vary based on the types of the triggered extension point events. For more information, see the description of the fields.</p>
+     */
     @NameInMap("EventDetail")
     public GetIDEEventDetailResponseBodyEventDetail eventDetail;
 
+    /**
+     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +40,39 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetailCommittedFileFilePropertyContent extends TeaModel {
+        /**
+         * <p>The ID of the workflow to which the file belongs.</p>
+         */
         @NameInMap("BusinessId")
         public Long businessId;
 
+        /**
+         * <p>The latest version number of the file.</p>
+         */
         @NameInMap("CurrentVersion")
         public Long currentVersion;
 
+        /**
+         * <p>The name of the compute engine instance with which the file is associated.</p>
+         */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
+        /**
+         * <p>The ID of the folder to which the file belongs. You can call the [GetFolder](~~173952~~) operation to query the details of the file based on the folder ID.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The owner of the file.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the do-while node or for-each node that corresponds to the file.</p>
+         */
         @NameInMap("ParentFileId")
         public Long parentFileId;
 
@@ -106,9 +132,20 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationInputList extends TeaModel {
+        /**
+         * <p>The output names of the parent files on which the current file depends.</p>
+         * <br>
+         * <p>This parameter is equivalent to the Output Name parameter under Parent Nodes in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
+         */
         @NameInMap("Input")
         public String input;
 
+        /**
+         * <p>The mode of the configuration file dependency. Valid values:</p>
+         * <br>
+         * <p>*   MANUAL: The scheduling dependencies are manually configured.</p>
+         * <p>*   AUTO: The scheduling dependencies are automatically parsed.</p>
+         */
         @NameInMap("ParseType")
         public String parseType;
 
@@ -136,9 +173,19 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationOutputList extends TeaModel {
+        /**
+         * <p>The output name of the current file.</p>
+         * <br>
+         * <p>This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
+         */
         @NameInMap("Output")
         public String output;
 
+        /**
+         * <p>The output table name of the current file.</p>
+         * <br>
+         * <p>This parameter is equivalent to the Output Table Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
+         */
         @NameInMap("RefTableName")
         public String refTableName;
 
@@ -166,39 +213,99 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfiguration extends TeaModel {
+        /**
+         * <p>The interval at which the node corresponding to the file is rerun. Unit: milliseconds.</p>
+         */
         @NameInMap("AutoRerunIntervalMillis")
         public Long autoRerunIntervalMillis;
 
+        /**
+         * <p>The number of times that the node corresponding to the file can be rerun.</p>
+         */
         @NameInMap("AutoRerunTimes")
         public Long autoRerunTimes;
 
+        /**
+         * <p>The CRON expression that is used to schedule the node corresponding to the file.</p>
+         */
         @NameInMap("CronExpress")
         public String cronExpress;
 
+        /**
+         * <p>The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. A value of NOT_DAY indicates that the node is scheduled to run by minute or hour. A value of DAY indicates that the node is scheduled to run by day, week, or month.</p>
+         * <br>
+         * <p>This parameter is equivalent to the Scheduling Cycle parameter in the Schedule section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
+         */
         @NameInMap("CycleType")
         public String cycleType;
 
+        /**
+         * <p>The IDs of the nodes on which the node corresponding to the file depends when the DependentType parameter is set to USER_DEFINE. Multiple IDs are separated by commas (,).</p>
+         * <br>
+         * <p>This parameter is equivalent to the field that appears after Previous Cycle is selected and the Depend On parameter is set to Other Nodes in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
+         */
         @NameInMap("DependentNodeIdList")
         public String dependentNodeIdList;
 
+        /**
+         * <p>The type of the cross-cycle scheduling dependency of the node that corresponds to the file. Valid values:</p>
+         * <br>
+         * <p>*   SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</p>
+         * <p>*   CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</p>
+         * <p>*   USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.</p>
+         * <p>*   NONE: No cross-cycle scheduling dependency type is selected for the node.</p>
+         */
         @NameInMap("DependentType")
         public String dependentType;
 
+        /**
+         * <p>The output names of the parent files on which the current file depends.</p>
+         */
         @NameInMap("InputList")
         public java.util.List<GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationInputList> inputList;
 
+        /**
+         * <p>The output names of the current file.</p>
+         * <br>
+         * <p>This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
+         */
         @NameInMap("OutputList")
         public java.util.List<GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfigurationOutputList> outputList;
 
+        /**
+         * <p>The scheduling parameters.</p>
+         * <br>
+         * <p>This parameter is equivalent to the configuration of the scheduling parameters in the Parameters section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console). For more information, see [Configure scheduling parameters](~~137548~~).</p>
+         */
         @NameInMap("ParaValue")
         public String paraValue;
 
+        /**
+         * <p>Indicates whether the node can be rerun. Valid values:</p>
+         * <br>
+         * <p>*   ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</p>
+         * <p>*   FAILURE_ALLOWED: The node can be rerun only after it fails to run.</p>
+         * <p>*   ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</p>
+         * <br>
+         * <p>This parameter is equivalent to the Rerun parameter in the Schedule section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
+         */
         @NameInMap("RerunMode")
         public String rerunMode;
 
+        /**
+         * <p>The ID of the resource group that is used to run the node that corresponds to the file. You can call the [ListResourceGroups](~~173913~~) operation to query the available resource groups in the workspace.</p>
+         */
         @NameInMap("ResourceGroupId")
         public Long resourceGroupId;
 
+        /**
+         * <p>The scheduling type of the node. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL: The node is an auto triggered node.</p>
+         * <p>*   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</p>
+         * <p>*   PAUSE: The node is a paused node.</p>
+         * <p>*   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
+         */
         @NameInMap("SchedulerType")
         public String schedulerType;
 
@@ -306,36 +413,76 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetailCommittedFile extends TeaModel {
+        /**
+         * <p>The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.</p>
+         */
         @NameInMap("ChangeType")
         public String changeType;
 
+        /**
+         * <p>The description of the file version.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to create the file of the current version.</p>
+         */
         @NameInMap("Committor")
         public String committor;
 
+        /**
+         * <p>The code in the file of the current version.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The ID of the file.</p>
+         */
         @NameInMap("FileId")
         public Long fileId;
 
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The details of the file.</p>
+         */
         @NameInMap("FilePropertyContent")
         public GetIDEEventDetailResponseBodyEventDetailCommittedFileFilePropertyContent filePropertyContent;
 
+        /**
+         * <p>The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).</p>
+         */
         @NameInMap("FileType")
         public Long fileType;
 
+        /**
+         * <p>The scheduling properties of the node that corresponds to the file.</p>
+         */
         @NameInMap("NodeConfiguration")
         public GetIDEEventDetailResponseBodyEventDetailCommittedFileNodeConfiguration nodeConfiguration;
 
+        /**
+         * <p>The ID of the node that is scheduled.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The module to which the file belongs. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL: The file is used for DataStudio.</p>
+         * <p>*   MANUAL: The file is used for a manually triggered node.</p>
+         * <p>*   MANUAL_BIZ: The file is used for a manually triggered workflow.</p>
+         * <p>*   SKIP: The file is used for a dry-run DataStudio node.</p>
+         * <p>*   ADHOCQUERY: The file is used for an ad hoc query.</p>
+         * <p>*   COMPONENT: The file is used for a snippet.</p>
+         */
         @NameInMap("UseType")
         public String useType;
 
@@ -435,39 +582,82 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetailDeletedFile extends TeaModel {
+        /**
+         * <p>The ID of the workflow to which the file belongs.</p>
+         */
         @NameInMap("BusinessId")
         public Long businessId;
 
+        /**
+         * <p>The code in the file of the current version.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The latest version number of the file.</p>
+         */
         @NameInMap("CurrentVersion")
         public Long currentVersion;
 
+        /**
+         * <p>The name of the compute engine instance with which the file is associated.</p>
+         */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
+        /**
+         * <p>The ID of the file.</p>
+         */
         @NameInMap("FileId")
         public Long fileId;
 
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).</p>
+         */
         @NameInMap("FileType")
         public Long fileType;
 
+        /**
+         * <p>The ID of the folder to which the file belongs. You can call the [GetFolder](~~173952~~) operation to query the details of the file based on the folder ID.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The ID of the node that is scheduled.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The owner of the file.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the do-while node or for-each node that corresponds to the file.</p>
+         */
         @NameInMap("ParentFileId")
         public Long parentFileId;
 
+        /**
+         * <p>The module to which the file belongs. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL: The file is used for DataStudio.</p>
+         * <p>*   MANUAL: The file is used for a manually triggered node.</p>
+         * <p>*   MANUAL_BIZ: The file is used for a manually triggered workflow.</p>
+         * <p>*   SKIP: The file is used for a dry-run DataStudio node.</p>
+         * <p>*   ADHOCQUERY: The file is used for an ad hoc query.</p>
+         * <p>*   COMPONENT: The file is used for a snippet.</p>
+         */
         @NameInMap("UseType")
         public String useType;
 
@@ -575,15 +765,27 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetailFileExecutionCommand extends TeaModel {
+        /**
+         * <p>The code in the file of the current version.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The name of the compute engine instance with which the file is associated.</p>
+         */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
+        /**
+         * <p>The ID of the file.</p>
+         */
         @NameInMap("FileId")
         public Long fileId;
 
+        /**
+         * <p>The type of the code in the file. Examples: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time sync), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).</p>
+         */
         @NameInMap("FileType")
         public Long fileType;
 
@@ -627,15 +829,30 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetailTableModelColumns extends TeaModel {
+        /**
+         * <p>The name of the column.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The data type of the column.</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <p>The remarks of the column.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>Indicates whether the column is a partition key column. Valid values:</p>
+         * <br>
+         * <p>- true: The column is a partition key column.</p>
+         * <p>- false: The column is not a partition key column.</p>
+         */
         @NameInMap("IsPartitionColumn")
         public Boolean isPartitionColumn;
 
@@ -679,24 +896,48 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetailTableModel extends TeaModel {
+        /**
+         * <p>The columns in the table.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<GetIDEEventDetailResponseBodyEventDetailTableModelColumns> columns;
 
+        /**
+         * <p>The description of the table.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The name of the compute engine instance to which the table belongs.</p>
+         */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
+        /**
+         * <p>The environment in which the table is used. Valid values:</p>
+         * <br>
+         * <p>- DEV: development environment</p>
+         * <p>- PROD: production environment</p>
+         */
         @NameInMap("Env")
         public String env;
 
+        /**
+         * <p>The lifecycle of the table. Unit: days.</p>
+         */
         @NameInMap("LifeCycle")
         public Long lifeCycle;
 
+        /**
+         * <p>The path of the table.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -764,15 +1005,29 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     }
 
     public static class GetIDEEventDetailResponseBodyEventDetail extends TeaModel {
+        /**
+         * <p>The data snapshot when the file is committed and deployed.</p>
+         * <br>
+         * <p>The value of this parameter is not empty only when the message type is IDE_FILE_SUBMIT_BEFORE or IDE_FILE_DEPLOY_BEFORE.</p>
+         */
         @NameInMap("CommittedFile")
         public GetIDEEventDetailResponseBodyEventDetailCommittedFile committedFile;
 
+        /**
+         * <p>The data snapshot when the file is deleted. The value of this parameter is not empty only when the message type is IDE_FILE_DELETE_BEFORE.</p>
+         */
         @NameInMap("DeletedFile")
         public GetIDEEventDetailResponseBodyEventDetailDeletedFile deletedFile;
 
+        /**
+         * <p>The data snapshot when the code in the file is run. The value of this parameter is not empty only when the message type is IDE_FILE_EXECUTE_BEFORE.</p>
+         */
         @NameInMap("FileExecutionCommand")
         public GetIDEEventDetailResponseBodyEventDetailFileExecutionCommand fileExecutionCommand;
 
+        /**
+         * <p>The data snapshot when the table is committed and deployed. The value of this parameter is not empty only when the message type is IDE_TABLE_SUBMIT_BEFORE or IDE_TABLE_DEPLOY_BEFORE.</p>
+         */
         @NameInMap("TableModel")
         public GetIDEEventDetailResponseBodyEventDetailTableModel tableModel;
 

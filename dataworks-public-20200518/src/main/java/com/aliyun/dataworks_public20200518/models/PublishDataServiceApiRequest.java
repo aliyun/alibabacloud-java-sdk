@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class PublishDataServiceApiRequest extends TeaModel {
+    /**
+     * <p>The ID of the API. You can call the [ListDataServiceApis](~~174009~~) operation to obtain the ID.</p>
+     */
     @NameInMap("ApiId")
     public Long apiId;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 

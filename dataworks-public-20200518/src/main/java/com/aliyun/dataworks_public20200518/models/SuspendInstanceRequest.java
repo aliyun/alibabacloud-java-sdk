@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class SuspendInstanceRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 

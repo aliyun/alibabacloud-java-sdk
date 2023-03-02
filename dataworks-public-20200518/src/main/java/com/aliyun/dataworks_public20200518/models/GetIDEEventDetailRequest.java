@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetIDEEventDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the message. You can obtain the ID from the received message when the extension point event is triggered.</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>The ID of the workspace. You can obtain the ID from the message.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

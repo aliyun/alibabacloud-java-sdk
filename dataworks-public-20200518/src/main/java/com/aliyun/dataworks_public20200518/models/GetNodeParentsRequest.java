@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetNodeParentsRequest extends TeaModel {
+    /**
+     * <p>The ID of the node. You can go to the Operation Center page in the DataWorks console to view the node ID.</p>
+     */
     @NameInMap("NodeId")
     public Long nodeId;
 
+    /**
+     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 

@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListSuccessInstanceAmountResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the trend of the number of auto triggered node instances that are successfully run every hour on the hour of the current day.</p>
+     */
     @NameInMap("InstanceStatusTrend")
     public ListSuccessInstanceAmountResponseBodyInstanceStatusTrend instanceStatusTrend;
 
+    /**
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
     }
 
     public static class ListSuccessInstanceAmountResponseBodyInstanceStatusTrendAvgTrend extends TeaModel {
+        /**
+         * <p>The number of instances that are successfully run.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.</p>
+         */
         @NameInMap("TimePoint")
         public String timePoint;
 
@@ -62,9 +74,15 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
     }
 
     public static class ListSuccessInstanceAmountResponseBodyInstanceStatusTrendTodayTrend extends TeaModel {
+        /**
+         * <p>The number of instances that are successfully run.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.</p>
+         */
         @NameInMap("TimePoint")
         public String timePoint;
 
@@ -92,9 +110,15 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
     }
 
     public static class ListSuccessInstanceAmountResponseBodyInstanceStatusTrendYesterdayTrend extends TeaModel {
+        /**
+         * <p>The number of instances that are successfully run.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.</p>
+         */
         @NameInMap("TimePoint")
         public String timePoint;
 
@@ -122,12 +146,21 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
     }
 
     public static class ListSuccessInstanceAmountResponseBodyInstanceStatusTrend extends TeaModel {
+        /**
+         * <p>The average trend.</p>
+         */
         @NameInMap("AvgTrend")
         public java.util.List<ListSuccessInstanceAmountResponseBodyInstanceStatusTrendAvgTrend> avgTrend;
 
+        /**
+         * <p>The trend of the number of auto triggered node instances that are successfully run on the current day.</p>
+         */
         @NameInMap("TodayTrend")
         public java.util.List<ListSuccessInstanceAmountResponseBodyInstanceStatusTrendTodayTrend> todayTrend;
 
+        /**
+         * <p>The trend of the number of auto triggered node instances that are successfully run one day earlier than the current day.</p>
+         */
         @NameInMap("YesterdayTrend")
         public java.util.List<ListSuccessInstanceAmountResponseBodyInstanceStatusTrendYesterdayTrend> yesterdayTrend;
 

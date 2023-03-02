@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ScanSensitiveDataRequest extends TeaModel {
+    /**
+     * <p>The data that you want to check.</p>
+     */
     @NameInMap("Data")
     public String data;
 

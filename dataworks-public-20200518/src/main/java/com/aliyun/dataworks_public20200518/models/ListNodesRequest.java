@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
+    /**
+     * <p>The name of the workflow.</p>
+     */
     @NameInMap("BizName")
     public String bizName;
 
+    /**
+     * <p>The name of the node.</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>The ID of the owner.</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The number of the page to return. Minimum value: 1. Maximum value: 100.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The types of the nodes. You can call the [ListNodes](~~173979~~) operation to query the type of the node.</p>
+     */
     @NameInMap("ProgramType")
     public String programType;
 
+    /**
+     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

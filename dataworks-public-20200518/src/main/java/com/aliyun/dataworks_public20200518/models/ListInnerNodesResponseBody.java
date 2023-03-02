@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListInnerNodesResponseBody extends TeaModel {
+    /**
+     * <p>The paging information.</p>
+     */
     @NameInMap("Paging")
     public ListInnerNodesResponseBodyPaging paging;
 
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,57 +52,116 @@ public class ListInnerNodesResponseBody extends TeaModel {
     }
 
     public static class ListInnerNodesResponseBodyPagingNodes extends TeaModel {
+        /**
+         * <p>The ID of the baseline with which the inner node is associated.</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The ID of the workflow.</p>
+         */
         @NameInMap("BusinessId")
         public Long businessId;
 
+        /**
+         * <p>The connection string.</p>
+         */
         @NameInMap("Connection")
         public String connection;
 
+        /**
+         * <p>The cron expression.</p>
+         */
         @NameInMap("CronExpress")
         public String cronExpress;
 
+        /**
+         * <p>The description of the inner node.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The table and partition filter expression in Data Quality that are associated with the inner node.</p>
+         */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
+        /**
+         * <p>Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with Data Quality. The value 1 indicates that the node is not associated with Data Quality.</p>
+         */
         @NameInMap("DqcType")
         public String dqcType;
 
+        /**
+         * <p>The ID of the inner node.</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the inner node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the owner of the inner node.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The values of other parameters related to the inner node.</p>
+         */
         @NameInMap("ParamValues")
         public String paramValues;
 
+        /**
+         * <p>The priority of the inner node. Valid values: 1, 3, 5, 7, and 8.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The type of the inner node.</p>
+         */
         @NameInMap("ProgramType")
         public String programType;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The interval at which the inner node is rerun after the inner node fails to be run.</p>
+         */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
+        /**
+         * <p>Indicates whether the inner node can be rerun.</p>
+         */
         @NameInMap("Repeatability")
         public Boolean repeatability;
 
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("ResGroupName")
         public String resGroupName;
 
+        /**
+         * <p>The scheduling type of the inner node. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL: The inner node is an auto triggered node.</p>
+         * <p>*   MANUAL: The inner node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</p>
+         * <p>*   PAUSE: The inner node is a paused node.</p>
+         * <p>*   SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled but the scheduling system sets the status of the nodes to succeeded when the scheduling system starts to run the nodes.</p>
+         */
         @NameInMap("SchedulerType")
         public String schedulerType;
 
@@ -249,15 +317,27 @@ public class ListInnerNodesResponseBody extends TeaModel {
     }
 
     public static class ListInnerNodesResponseBodyPaging extends TeaModel {
+        /**
+         * <p>The list of inner nodes.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<ListInnerNodesResponseBodyPagingNodes> nodes;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of inner nodes returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteTableLevelRequest extends TeaModel {
+    /**
+     * <p>The ID of the table level to be deleted. You can call the ListTableLevel operation to obtain the ID.</p>
+     */
     @NameInMap("LevelId")
     public Long levelId;
 
+    /**
+     * <p>The ID of the DataWorks workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

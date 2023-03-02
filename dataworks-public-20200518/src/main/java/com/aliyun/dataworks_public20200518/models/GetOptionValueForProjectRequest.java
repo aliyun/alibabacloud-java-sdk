@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetOptionValueForProjectRequest extends TeaModel {
+    /**
+     * <p>The unique code of the extension.</p>
+     */
     @NameInMap("ExtensionCode")
     public String extensionCode;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

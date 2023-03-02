@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableLineageResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GetMetaTableLineageResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +94,24 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableLineageResponseBodyDataDataEntityList extends TeaModel {
+        /**
+         * <p>The time when the metatable was created.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        @NameInMap("DatabaseName")
+        public String databaseName;
+
+        /**
+         * <p>The GUID of the metatable.</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        /**
+         * <p>The name of the metatable.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -96,6 +126,14 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        public GetMetaTableLineageResponseBodyDataDataEntityList setDatabaseName(String databaseName) {
+            this.databaseName = databaseName;
+            return this;
+        }
+        public String getDatabaseName() {
+            return this.databaseName;
         }
 
         public GetMetaTableLineageResponseBodyDataDataEntityList setTableGuid(String tableGuid) {
@@ -117,12 +155,21 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableLineageResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the metatable.</p>
+         */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTableLineageResponseBodyDataDataEntityList> dataEntityList;
 
+        /**
+         * <p>Indicates whether the next page has more query results.</p>
+         */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <p>The paging information.</p>
+         */
         @NameInMap("NextPrimaryKey")
         public String nextPrimaryKey;
 

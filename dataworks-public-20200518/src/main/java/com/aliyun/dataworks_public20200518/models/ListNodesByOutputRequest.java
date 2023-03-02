@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListNodesByOutputRequest extends TeaModel {
+    /**
+     * <p>The output name of the node. You can specify multiple output names. In this case, separate them with commas (,).</p>
+     */
     @NameInMap("Outputs")
     public String outputs;
 
+    /**
+     * <p>The environment type. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 

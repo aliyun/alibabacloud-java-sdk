@@ -4,12 +4,24 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateNodeRunModeRequest extends TeaModel {
+    /**
+     * <p>The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID.</p>
+     */
     @NameInMap("NodeId")
     public Long nodeId;
 
+    /**
+     * <p>The environment where the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment. The value PROD indicates the production environment.</p>
+     */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
+    /**
+     * <p>The operation that you want to perform on the node. Valid values:</p>
+     * <br>
+     * <p>*   0: indicates that you want to unfreeze the node.</p>
+     * <p>*   2: indicates that you want to freeze the node.</p>
+     */
     @NameInMap("SchedulerType")
     public Integer schedulerType;
 

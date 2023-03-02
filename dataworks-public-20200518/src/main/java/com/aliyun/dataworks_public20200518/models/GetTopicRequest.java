@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetTopicRequest extends TeaModel {
+    /**
+     * <p>The ID of the event. You can call the [listTopics](~~173973~~) operation to query the event ID.</p>
+     */
     @NameInMap("TopicId")
     public Long topicId;
 

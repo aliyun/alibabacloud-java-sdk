@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
+    /**
+     * <p>Indicates that the approval is successful.</p>
+     */
     @NameInMap("ApproveSuccess")
     public Boolean approveSuccess;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

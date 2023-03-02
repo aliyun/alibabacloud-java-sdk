@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListShiftSchedulesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination data.</p>
+     */
     @NameInMap("Paging")
     public ListShiftSchedulesResponseBodyPaging paging;
 
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
     }
 
     public static class ListShiftSchedulesResponseBodyPagingShiftSchedules extends TeaModel {
+        /**
+         * <p>The unique identifier of the shift schedule. You can use the identifier to query the on-duty engineers in the shift schedule.</p>
+         */
         @NameInMap("ShiftScheduleIdentifier")
         public String shiftScheduleIdentifier;
 
+        /**
+         * <p>The name of the shift schedule.</p>
+         */
         @NameInMap("ShiftScheduleName")
         public String shiftScheduleName;
 
@@ -62,15 +74,27 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
     }
 
     public static class ListShiftSchedulesResponseBodyPaging extends TeaModel {
+        /**
+         * <p>The page number of the returned page. Minimum value:1. Maximum value: 100.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The shift schedules.</p>
+         */
         @NameInMap("ShiftSchedules")
         public java.util.List<ListShiftSchedulesResponseBodyPagingShiftSchedules> shiftSchedules;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

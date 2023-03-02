@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableColumnResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GetMetaTableColumnResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,33 +94,72 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableColumnResponseBodyDataColumnList extends TeaModel {
+        /**
+         * <p>The description of the field.</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
+        /**
+         * <p>The GUID of the field.</p>
+         */
         @NameInMap("ColumnGuid")
         public String columnGuid;
 
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The data type of the field.</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <p>The remarks of the field.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>Indicates whether the field is a foreign key. Valid values:</p>
+         * <br>
+         * <p>*   true: The field is a foreign key.</p>
+         * <p>*   false: The field is not a foreign key.</p>
+         */
         @NameInMap("IsForeignKey")
         public Boolean isForeignKey;
 
+        /**
+         * <p>Indicates whether the field is a partition field. Valid values:</p>
+         * <br>
+         * <p>*   true: The field is a partition field.</p>
+         * <p>*   false: The field is not a partition field.</p>
+         */
         @NameInMap("IsPartitionColumn")
         public Boolean isPartitionColumn;
 
+        /**
+         * <p>Indicates whether the field is the primary key. Valid values:</p>
+         * <br>
+         * <p>*   true: The field is the primary key.</p>
+         * <p>*   false: The field is not the primary key.</p>
+         */
         @NameInMap("IsPrimaryKey")
         public Boolean isPrimaryKey;
 
+        /**
+         * <p>The ordinal number of the field.</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
+        /**
+         * <p>The number of times the field is read.</p>
+         */
         @NameInMap("RelationCount")
         public Long relationCount;
 
@@ -194,15 +251,27 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableColumnResponseBodyData extends TeaModel {
+        /**
+         * <p>The information of fields.</p>
+         */
         @NameInMap("ColumnList")
         public java.util.List<GetMetaTableColumnResponseBodyDataColumnList> columnList;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of fields.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
