@@ -107,7 +107,7 @@ public class GetMseSourceResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of cluster.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;

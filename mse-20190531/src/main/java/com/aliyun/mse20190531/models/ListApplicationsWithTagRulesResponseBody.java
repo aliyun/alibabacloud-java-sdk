@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The HTTP status code that is returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -23,7 +23,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * <br>
      * <p>*   If the request is successful, a success message is returned.</p>
      * <p>*   If the request fails, an error message is returned.</p>
@@ -38,7 +38,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: -\[unk]true\[unk]: The request is successful. -\[unk]false\[unk]: The request fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -104,10 +107,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public Boolean carryData;
 
         /**
-         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+         * <p>Indicates whether the alert rule is enabled. Valid value:</p>
          * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <p>*   `true`: enabled.</p>
+         * <p>*   `false`: disabled.</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
@@ -263,7 +266,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("AppId")
         public String appId;
@@ -275,7 +278,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>An array that consists of the rules.</p>
+         * <p>The information about the rules.</p>
          */
         @NameInMap("RouteRules")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> routeRules;

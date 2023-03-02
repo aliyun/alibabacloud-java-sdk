@@ -137,7 +137,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID of the instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

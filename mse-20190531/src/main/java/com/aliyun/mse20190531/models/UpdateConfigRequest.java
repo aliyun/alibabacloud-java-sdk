@@ -59,6 +59,9 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("ConfigType")
     public String configType;
 
+    @NameInMap("EurekaSupported")
+    public Boolean eurekaSupported;
+
     /**
      * <p>Specifies whether to enable the time to live (TTL) configuration.</p>
      */
@@ -232,6 +235,14 @@ public class UpdateConfigRequest extends TeaModel {
     }
     public String getConfigType() {
         return this.configType;
+    }
+
+    public UpdateConfigRequest setEurekaSupported(Boolean eurekaSupported) {
+        this.eurekaSupported = eurekaSupported;
+        return this;
+    }
+    public Boolean getEurekaSupported() {
+        return this.eurekaSupported;
     }
 
     public UpdateConfigRequest setExtendedTypesEnable(String extendedTypesEnable) {

@@ -11,7 +11,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public UpdateGatewayRouteWafStatusResponseBodyData data;
@@ -224,7 +224,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public String body;
 
         /**
-         * <p>The return value.</p>
+         * <p>The status code returned.</p>
          */
         @NameInMap("Code")
         public Integer code;
@@ -502,13 +502,13 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public Integer attempts;
 
         /**
-         * <p>The information about the HTTP status code.</p>
+         * <p>The HTTP status codes.</p>
          */
         @NameInMap("HttpCodes")
         public java.util.List<String> httpCodes;
 
         /**
-         * <p>The information about the retry condition.</p>
+         * <p>The retry condition.</p>
          */
         @NameInMap("RetryOn")
         public java.util.List<String> retryOn;
@@ -786,7 +786,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace to which the service belongs.</p>
+         * <p>The namespace.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -810,7 +810,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The source type of the service.</p>
+         * <p>The source type.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;

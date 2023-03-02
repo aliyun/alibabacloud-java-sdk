@@ -14,7 +14,7 @@ public class ImportNacosConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The download URL of the configuration file.</p>
+     * <p>The URL that is used to download the configuration file.</p>
      */
     @NameInMap("FileUrl")
     public String fileUrl;

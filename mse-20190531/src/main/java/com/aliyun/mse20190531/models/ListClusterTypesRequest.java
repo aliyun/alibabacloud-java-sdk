@@ -32,7 +32,7 @@ public class ListClusterTypesRequest extends TeaModel {
     public String mseVersion;
 
     /**
-     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+     * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

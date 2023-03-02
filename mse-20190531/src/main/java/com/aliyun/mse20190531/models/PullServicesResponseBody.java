@@ -17,7 +17,7 @@ public class PullServicesResponseBody extends TeaModel {
     public java.util.List<PullServicesResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -98,7 +98,7 @@ public class PullServicesResponseBody extends TeaModel {
 
     public static class PullServicesResponseBodyDataServices extends TeaModel {
         /**
-         * <p>The group.</p>
+         * <p>The name of the group.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -176,7 +176,7 @@ public class PullServicesResponseBody extends TeaModel {
 
     public static class PullServicesResponseBodyData extends TeaModel {
         /**
-         * <p>The group.</p>
+         * <p>The name of the group.</p>
          */
         @NameInMap("GroupName")
         public String groupName;

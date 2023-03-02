@@ -22,7 +22,7 @@ public class ListClusterVersionsRequest extends TeaModel {
     /**
      * <p>Valid values:</p>
      * <br>
-     * <p>*   `mse_dev`: Developer Edition</p>
+     * <p>*   `mse_dev`: Developer Edition.</p>
      * <p>*   `mse_pro`: Professional Edition. This is the default value.</p>
      */
     @NameInMap("MseVersion")

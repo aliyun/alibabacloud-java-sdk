@@ -23,7 +23,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -98,13 +98,13 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
     public static class ListServiceSourceResponseBodyDataIngressOptions extends TeaModel {
         /**
-         * <p>Indicates whether Ingresses are enabled.</p>
+         * <p>Indicates whether Ingress is enabled.</p>
          */
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
         /**
-         * <p>Indicates whether the Ingress gateway status is updated.</p>
+         * <p>Indicates whether the Ingress status is updated.</p>
          */
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
@@ -116,7 +116,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>The namespace whose resources you want to monitor.</p>
+         * <p>The namespace that you want to monitor.</p>
          */
         @NameInMap("WatchNamespace")
         public String watchNamespace;
@@ -210,7 +210,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Support for Ingresses of applications.</p>
+         * <p>Indicates whether Ingress is supported for applications.</p>
          */
         @NameInMap("IngressOptions")
         public ListServiceSourceResponseBodyDataIngressOptions ingressOptions;

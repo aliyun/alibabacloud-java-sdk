@@ -108,13 +108,13 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the migration task was created.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The time when the migration task was updated.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -126,7 +126,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The source instance node address.</p>
+         * <p>The address of the source instance node.</p>
          */
         @NameInMap("OriginInstanceAddress")
         public String originInstanceAddress;
@@ -138,7 +138,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String originInstanceName;
 
         /**
-         * <p>The list of namespaces. This parameter is optional if the source instance is a Nacos instance.</p>
+         * <p>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</p>
          */
         @NameInMap("OriginInstanceNamespace")
         public String originInstanceNamespace;
