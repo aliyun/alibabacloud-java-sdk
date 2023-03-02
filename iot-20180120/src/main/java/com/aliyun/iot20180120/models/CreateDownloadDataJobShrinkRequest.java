@@ -4,9 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDownloadDataJobShrinkRequest extends TeaModel {
-    @NameInMap("Context")
-    public String contextShrink;
-
     @NameInMap("DownloadDataType")
     public String downloadDataType;
 
@@ -28,14 +25,6 @@ public class CreateDownloadDataJobShrinkRequest extends TeaModel {
     public static CreateDownloadDataJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDownloadDataJobShrinkRequest self = new CreateDownloadDataJobShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDownloadDataJobShrinkRequest setContextShrink(String contextShrink) {
-        this.contextShrink = contextShrink;
-        return this;
-    }
-    public String getContextShrink() {
-        return this.contextShrink;
     }
 
     public CreateDownloadDataJobShrinkRequest setDownloadDataType(String downloadDataType) {

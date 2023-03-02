@@ -4,9 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDownloadDataJobRequest extends TeaModel {
-    @NameInMap("Context")
-    public java.util.Map<String, ?> context;
-
     @NameInMap("DownloadDataType")
     public String downloadDataType;
 
@@ -28,14 +25,6 @@ public class CreateDownloadDataJobRequest extends TeaModel {
     public static CreateDownloadDataJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDownloadDataJobRequest self = new CreateDownloadDataJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDownloadDataJobRequest setContext(java.util.Map<String, ?> context) {
-        this.context = context;
-        return this;
-    }
-    public java.util.Map<String, ?> getContext() {
-        return this.context;
     }
 
     public CreateDownloadDataJobRequest setDownloadDataType(String downloadDataType) {
