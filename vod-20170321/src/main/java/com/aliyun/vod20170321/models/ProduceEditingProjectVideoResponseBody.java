@@ -4,18 +4,24 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ProduceEditingProjectVideoResponseBody extends TeaModel {
-    // The ID of the produced video.
-    // 
-    // > *   This operation returns the ID of the produced video in synchronous mode.
-    // > *   If this operation returns the MediaId parameter, the video production task is being asynchronously processed.
+    /**
+     * <p>The ID of the produced video.</p>
+     * <br>
+     * <p>> *   This operation returns the ID of the produced video in synchronous mode.</p>
+     * <p>> *   If this operation returns the MediaId parameter, the video production task is being asynchronously processed.</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
-    // The ID of the online editing project.
+    /**
+     * <p>The ID of the online editing project.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

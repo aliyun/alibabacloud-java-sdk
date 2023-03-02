@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodCertificateListResponseBody extends TeaModel {
-    // The information about the returned certificates.
+    /**
+     * <p>The information about the returned certificates.</p>
+     */
     @NameInMap("CertificateListModel")
     public DescribeVodCertificateListResponseBodyCertificateListModel certificateListModel;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,27 +38,39 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeVodCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
-        // The ID of the certificate.
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertId")
         public Long certId;
 
-        // The name of the certificate.
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
-        // The common name of the certificate.
+        /**
+         * <p>The common name of the certificate.</p>
+         */
         @NameInMap("Common")
         public String common;
 
-        // The fingerprint of the certificate.
+        /**
+         * <p>The fingerprint of the certificate.</p>
+         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
-        // The certificate authority (CA) that issued the certificate.
+        /**
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
-        // The time when the certificate was issued. Unit: seconds.
+        /**
+         * <p>The time when the certificate was issued. Unit: seconds.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
@@ -133,11 +149,15 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeVodCertificateListResponseBodyCertificateListModel extends TeaModel {
-        // The details of each certificate.
+        /**
+         * <p>The details of each certificate.</p>
+         */
         @NameInMap("CertList")
         public DescribeVodCertificateListResponseBodyCertificateListModelCertList certList;
 
-        // The number of certificates.
+        /**
+         * <p>The number of certificates.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 

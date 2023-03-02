@@ -4,9 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageInfosRequest extends TeaModel {
-    // The new information about the one or more images. You can modify the information about up to 20 images at a time. For more information, see the **UpdateContent** section of this topic.
-    // 
-    // > The values of the nested parameters Title, Description, and Tags under the UpdateContent parameter cannot contain emoticons.
+    /**
+     * <p>The new information about the one or more images. You can modify the information about up to 20 images at a time. For more information, see the **UpdateContent** section of this topic.</p>
+     * <br>
+     * <p>> The values of the nested parameters Title, Description, and Tags under the UpdateContent parameter cannot contain emoticons.</p>
+     */
     @NameInMap("UpdateContent")
     public String updateContent;
 

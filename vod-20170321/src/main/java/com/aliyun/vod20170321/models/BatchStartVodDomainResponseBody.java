@@ -4,7 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class BatchStartVodDomainResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,10 +4,12 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteAttachedMediaRequest extends TeaModel {
-    // The list of auxiliary media asset IDs.
-    // 
-    // *   Separate multiple IDs with commas (,).
-    // *   A maximum of 20 IDs can be specified.
+    /**
+     * <p>The list of auxiliary media asset IDs.</p>
+     * <br>
+     * <p>*   Separate multiple IDs with commas (,).</p>
+     * <p>*   A maximum of 20 IDs can be specified.</p>
+     */
     @NameInMap("MediaIds")
     public String mediaIds;
 

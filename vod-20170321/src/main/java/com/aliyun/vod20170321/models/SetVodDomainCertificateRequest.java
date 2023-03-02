@@ -4,29 +4,39 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SetVodDomainCertificateRequest extends TeaModel {
-    // The name of the certificate.
+    /**
+     * <p>The name of the certificate.</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
-    // The domain name that is secured by the certificate. The domain name uses HTTPS acceleration.
+    /**
+     * <p>The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The private key. This parameter is required only if you enable the SSL certificate.
+    /**
+     * <p>The private key. This parameter is required only if you enable the SSL certificate.</p>
+     */
     @NameInMap("SSLPri")
     public String SSLPri;
 
-    // Specifies whether to enable the SSL certificate. Valid values:
-    // 
-    // *   **on**: enables the SSL certificate.
-    // *   **off**: disables the SSL certificate. Default value: off.
+    /**
+     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
-    // The content of the certificate. This parameter is required only if you enable the SSL certificate.
+    /**
+     * <p>The content of the certificate. This parameter is required only if you enable the SSL certificate.</p>
+     */
     @NameInMap("SSLPub")
     public String SSLPub;
 

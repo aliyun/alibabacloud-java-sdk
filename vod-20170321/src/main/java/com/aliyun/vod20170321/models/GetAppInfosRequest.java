@@ -4,7 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAppInfosRequest extends TeaModel {
-    // The ID of the application. You can specify a maximum of 10 application IDs. Separate them with commas (,).
+    /**
+     * <p>The ID of the application. You can specify a maximum of 10 application IDs. Separate them with commas (,).</p>
+     */
     @NameInMap("AppIds")
     public String appIds;
 

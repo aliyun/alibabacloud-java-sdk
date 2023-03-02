@@ -4,19 +4,27 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetUploadDetailsResponseBody extends TeaModel {
-    // The IDs of the media files that cannot be accessed.
+    /**
+     * <p>The IDs of the media files that cannot be accessed.</p>
+     */
     @NameInMap("ForbiddenMediaIds")
     public java.util.List<String> forbiddenMediaIds;
 
-    // The IDs of the media files that do not exist.
+    /**
+     * <p>The IDs of the media files that do not exist.</p>
+     */
     @NameInMap("NonExistMediaIds")
     public java.util.List<String> nonExistMediaIds;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The upload details.
+    /**
+     * <p>The upload details.</p>
+     */
     @NameInMap("UploadDetails")
     public java.util.List<GetUploadDetailsResponseBodyUploadDetails> uploadDetails;
 
@@ -58,55 +66,81 @@ public class GetUploadDetailsResponseBody extends TeaModel {
     }
 
     public static class GetUploadDetailsResponseBodyUploadDetails extends TeaModel {
-        // The time when the upload job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the upload job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CompletionTime")
         public String completionTime;
 
-        // The time when the upload job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the upload job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The device model.
+        /**
+         * <p>The device model.</p>
+         */
         @NameInMap("DeviceModel")
         public String deviceModel;
 
-        // The size of the uploaded file. Unit: byte.
+        /**
+         * <p>The size of the uploaded file. Unit: byte.</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
-        // The ID of the uploaded audio or video.
+        /**
+         * <p>The ID of the uploaded audio or video.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
-        // The time when the information about the media file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The time when the information about the media file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        // The status of the video. For more information about the valid values and value description of the parameter, see the "Status: the status of a video" section of the [Basic structures](~~52839~~) topic.
+        /**
+         * <p>The status of the video. For more information about the valid values and value description of the parameter, see the "Status: the status of a video" section of the [Basic structures](~~52839~~) topic.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The title of the media file.
+        /**
+         * <p>The title of the media file.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The IP address of the server that uploads the media file.
+        /**
+         * <p>The IP address of the server that uploads the media file.</p>
+         */
         @NameInMap("UploadIP")
         public String uploadIP;
 
-        // The upload ratio.
+        /**
+         * <p>The upload ratio.</p>
+         */
         @NameInMap("UploadRatio")
         public Float uploadRatio;
 
-        // The upload size. Unit: byte.
+        /**
+         * <p>The upload size. Unit: byte.</p>
+         */
         @NameInMap("UploadSize")
         public Long uploadSize;
 
-        // The method that is used to upload the media file.
+        /**
+         * <p>The method that is used to upload the media file.</p>
+         */
         @NameInMap("UploadSource")
         public String uploadSource;
 
-        // The status of the upload job. For more information about the valid values and value description of the parameter, see the "Status: the status of a URL-based upload job" section of the [Basic structures](~~52839~~) topic.
+        /**
+         * <p>The status of the upload job. For more information about the valid values and value description of the parameter, see the "Status: the status of a URL-based upload job" section of the [Basic structures](~~52839~~) topic.</p>
+         */
         @NameInMap("UploadStatus")
         public String uploadStatus;
 

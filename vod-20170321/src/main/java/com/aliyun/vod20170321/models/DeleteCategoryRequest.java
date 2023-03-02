@@ -4,7 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteCategoryRequest extends TeaModel {
-    // The ID of the category.
+    /**
+     * <p>The ID of the category.</p>
+     */
     @NameInMap("CateId")
     public Long cateId;
 

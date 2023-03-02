@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
-    // The certificate information.
+    /**
+     * <p>The certificate information.</p>
+     */
     @NameInMap("CertInfos")
     public DescribeVodDomainCertificateInfoResponseBodyCertInfos certInfos;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,59 +38,77 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
-        // The domain name that matches the certificate.
+        /**
+         * <p>The domain name that matches the certificate.</p>
+         */
         @NameInMap("CertDomainName")
         public String certDomainName;
 
-        // The time when the certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        // The validity period of the certificate. Unit: month or year.
+        /**
+         * <p>The validity period of the certificate. Unit: month or year.</p>
+         */
         @NameInMap("CertLife")
         public String certLife;
 
-        // The name of the certificate.
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
-        // The certificate authority (CA) that issued the certificate.
+        /**
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         */
         @NameInMap("CertOrg")
         public String certOrg;
 
-        // The type of the certificate. Valid values:
-        // 
-        // *   **free**: a free certificate.
-        // *   **cas**: a certificate that is purchased from Alibaba Cloud SSL Certificates Service.
-        // *   **upload**: a user-uploaded certificate.
+        /**
+         * <p>The type of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **free**: a free certificate.</p>
+         * <p>*   **cas**: a certificate that is purchased from Alibaba Cloud SSL Certificates Service.</p>
+         * <p>*   **upload**: a user-uploaded certificate.</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
-        // The domain name for CDN.
+        /**
+         * <p>The domain name for CDN.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The status of the server certificate.
-        // 
-        // *   **success**: indicates that the certificate has taken effect.
-        // *   **checking**: indicates that the system is checking whether the domain name has been added to ApsaraVideo VOD.
-        // *   **cname_error**: indicates that the domain name has not been added to ApsaraVideo VOD.
-        // *   **domain_invalid**: indicates that the domain name contains invalid characters.
-        // *   **unsupport_wildcard**: indicates that wildcard domain names are not supported.
-        // *   **applying**: indicates that the certificate is in the application process.
-        // *   **failed**: indicates that the request of applying for the certificate has failed.
+        /**
+         * <p>The status of the server certificate.</p>
+         * <br>
+         * <p>*   **success**: indicates that the certificate has taken effect.</p>
+         * <p>*   **checking**: indicates that the system is checking whether the domain name has been added to ApsaraVideo VOD.</p>
+         * <p>*   **cname_error**: indicates that the domain name has not been added to ApsaraVideo VOD.</p>
+         * <p>*   **domain_invalid**: indicates that the domain name contains invalid characters.</p>
+         * <p>*   **unsupport_wildcard**: indicates that wildcard domain names are not supported.</p>
+         * <p>*   **applying**: indicates that the certificate is in the application process.</p>
+         * <p>*   **failed**: indicates that the request of applying for the certificate has failed.</p>
+         */
         @NameInMap("ServerCertificateStatus")
         public String serverCertificateStatus;
 
-        // The status of the certificate.
-        // 
-        // *   **success**: indicates that the certificate has taken effect.
-        // *   **checking**: indicates that the system is checking whether the domain name has been added to ApsaraVideo VOD.
-        // *   **cname_error**: indicates that the domain name has not been added to ApsaraVideo VOD.
-        // *   **domain_invalid**: indicates that the domain name contains invalid characters.
-        // *   **unsupport_wildcard**: indicates that wildcard domain names are not supported.
-        // *   **applying**: indicates that the certificate is in the application process.
-        // *   **failed**: indicates that the request of applying for the certificate has failed.
+        /**
+         * <p>The status of the certificate.</p>
+         * <br>
+         * <p>*   **success**: indicates that the certificate has taken effect.</p>
+         * <p>*   **checking**: indicates that the system is checking whether the domain name has been added to ApsaraVideo VOD.</p>
+         * <p>*   **cname_error**: indicates that the domain name has not been added to ApsaraVideo VOD.</p>
+         * <p>*   **domain_invalid**: indicates that the domain name contains invalid characters.</p>
+         * <p>*   **unsupport_wildcard**: indicates that wildcard domain names are not supported.</p>
+         * <p>*   **applying**: indicates that the certificate is in the application process.</p>
+         * <p>*   **failed**: indicates that the request of applying for the certificate has failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 

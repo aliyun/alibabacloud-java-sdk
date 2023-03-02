@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListVodTemplateResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The snapshot templates.
+    /**
+     * <p>The snapshot templates.</p>
+     */
     @NameInMap("VodTemplateInfoList")
     public java.util.List<ListVodTemplateResponseBodyVodTemplateInfoList> vodTemplateInfoList;
 
@@ -34,41 +38,57 @@ public class ListVodTemplateResponseBody extends TeaModel {
     }
 
     public static class ListVodTemplateResponseBodyVodTemplateInfoList extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The time when the template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // Indicates whether the template is the default one. Valid values:
-        // 
-        // *   **Default**: The template is the default one.
-        // *   **NotDefault**: The template is not the default one.
+        /**
+         * <p>Indicates whether the template is the default one. Valid values:</p>
+         * <br>
+         * <p>*   **Default**: The template is the default one.</p>
+         * <p>*   **NotDefault**: The template is not the default one.</p>
+         */
         @NameInMap("IsDefault")
         public String isDefault;
 
-        // The time when the template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // The name of the template.
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The detailed configurations of the template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.
+        /**
+         * <p>The detailed configurations of the template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.</p>
+         */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
-        // The type of the template. Valid values:
-        // 
-        // *   **Snapshot**
-        // *   **DynamicImage**
+        /**
+         * <p>The type of the template. Valid values:</p>
+         * <br>
+         * <p>*   **Snapshot**</p>
+         * <p>*   **DynamicImage**</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 
-        // The ID of the template.
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("VodTemplateId")
         public String vodTemplateId;
 

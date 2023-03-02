@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
-    // Details of review results.
+    /**
+     * <p>Details of review results.</p>
+     */
     @NameInMap("MediaAuditAudioResultDetail")
     public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail mediaAuditAudioResultDetail;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,26 +38,34 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList extends TeaModel {
-        // The end time of the audio that failed the review. Unit: seconds.
+        /**
+         * <p>The end time of the audio that failed the review. Unit: seconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        // The review results. Valid values:
-        // *   **spam**
-        // *   **ad**
-        // *   **abuse**
-        // *   **flood**
-        // *   **contraband**
-        // *   **meaningless**
-        // *   **normal**
+        /**
+         * <p>The review results. Valid values:</p>
+         * <p>*   **spam**</p>
+         * <p>*   **ad**</p>
+         * <p>*   **abuse**</p>
+         * <p>*   **flood**</p>
+         * <p>*   **contraband**</p>
+         * <p>*   **meaningless**</p>
+         * <p>*   **normal**</p>
+         */
         @NameInMap("Label")
         public String label;
 
-        // The start time of the audio that failed the review. Unit: seconds.
+        /**
+         * <p>The start time of the audio that failed the review. Unit: seconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
-        // The text that corresponds to the audio.
+        /**
+         * <p>The text that corresponds to the audio.</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -97,15 +109,21 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail extends TeaModel {
-        // The list of results.
+        /**
+         * <p>The list of results.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> list;
 
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // The total number of pages returned.
+        /**
+         * <p>The total number of pages returned.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

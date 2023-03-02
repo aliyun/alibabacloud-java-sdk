@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListTranscodeTaskResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about transcoding tasks.
+    /**
+     * <p>Details about transcoding tasks.</p>
+     */
     @NameInMap("TranscodeTaskList")
     public java.util.List<ListTranscodeTaskResponseBodyTranscodeTaskList> transcodeTaskList;
 
@@ -34,38 +38,52 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
     }
 
     public static class ListTranscodeTaskResponseBodyTranscodeTaskList extends TeaModel {
-        // The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CompleteTime")
         public String completeTime;
 
-        // The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The status of the transcoding task. Valid values:
-        // *   **Processing**: In progress.
-        // *   **Partial**: Some transcoding jobs were complete.
-        // *   **CompleteAllSucc**: All transcoding jobs were successful.
-        // *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.
-        // *   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.
+        /**
+         * <p>The status of the transcoding task. Valid values:</p>
+         * <p>*   **Processing**: In progress.</p>
+         * <p>*   **Partial**: Some transcoding jobs were complete.</p>
+         * <p>*   **CompleteAllSucc**: All transcoding jobs were successful.</p>
+         * <p>*   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.</p>
+         * <p>*   **CompletePartialSucc**: All transcoding jobs were complete but only some were successful.</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        // The ID of the transcoding task.
+        /**
+         * <p>The ID of the transcoding task.</p>
+         */
         @NameInMap("TranscodeTaskId")
         public String transcodeTaskId;
 
-        // The ID of the transcoding template group.
+        /**
+         * <p>The ID of the transcoding template group.</p>
+         */
         @NameInMap("TranscodeTemplateGroupId")
         public String transcodeTemplateGroupId;
 
-        // The mode in which the transcoding task is triggered. Valid values:
-        // *   **Auto**: The transcoding task is automatically triggered when the video is uploaded.
-        // *   **Manual**: The transcoding task is triggered by calling the SubmitTranscodeJobs operation.
+        /**
+         * <p>The mode in which the transcoding task is triggered. Valid values:</p>
+         * <p>*   **Auto**: The transcoding task is automatically triggered when the video is uploaded.</p>
+         * <p>*   **Manual**: The transcoding task is triggered by calling the SubmitTranscodeJobs operation.</p>
+         */
         @NameInMap("Trigger")
         public String trigger;
 
-        // The ID of the audio or video file.
+        /**
+         * <p>The ID of the audio or video file.</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 

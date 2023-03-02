@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
-    // The collection of review result timelines.
+    /**
+     * <p>The collection of review result timelines.</p>
+     */
     @NameInMap("MediaAuditResultTimeline")
     public GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimeline mediaAuditResultTimeline;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,18 +38,24 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineAd extends TeaModel {
-        // The category of the review result. Valid values:
-        // 
-        // *   **normal**: normal content
-        // *   **ad**: ad or text violation
+        /**
+         * <p>The category of the review result. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: normal content</p>
+         * <p>*   **ad**: ad or text violation</p>
+         */
         @NameInMap("Label")
         public String label;
 
-        // The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+        /**
+         * <p>The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         */
         @NameInMap("Score")
         public String score;
 
-        // The position in the video. Unit: milliseconds.
+        /**
+         * <p>The position in the video. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -81,18 +91,24 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive extends TeaModel {
-        // The category of the review result. Valid values:
-        // 
-        // *   **normal**
-        // *   **terrorism**
+        /**
+         * <p>The category of the review result. Valid values:</p>
+         * <br>
+         * <p>*   **normal**</p>
+         * <p>*   **terrorism**</p>
+         */
         @NameInMap("Label")
         public String label;
 
-        // The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+        /**
+         * <p>The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         */
         @NameInMap("Score")
         public String score;
 
-        // The position in the video. Unit: milliseconds.
+        /**
+         * <p>The position in the video. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -128,18 +144,24 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLogo extends TeaModel {
-        // The category of the review result. Valid values:
-        // 
-        // *   **normal**
-        // *   **logo**
+        /**
+         * <p>The category of the review result. Valid values:</p>
+         * <br>
+         * <p>*   **normal**</p>
+         * <p>*   **logo**</p>
+         */
         @NameInMap("Label")
         public String label;
 
-        // The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+        /**
+         * <p>The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         */
         @NameInMap("Score")
         public String score;
 
-        // The position in the video. Unit: milliseconds.
+        /**
+         * <p>The position in the video. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -175,19 +197,25 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelinePorn extends TeaModel {
-        // The category of the review result. Valid values:
-        // 
-        // *   **porn**
-        // *   **sexy**
-        // *   **normal**
+        /**
+         * <p>The category of the review result. Valid values:</p>
+         * <br>
+         * <p>*   **porn**</p>
+         * <p>*   **sexy**</p>
+         * <p>*   **normal**</p>
+         */
         @NameInMap("Label")
         public String label;
 
-        // The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
+        /**
+         * <p>The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         */
         @NameInMap("Score")
         public String score;
 
-        // The position in the video. Unit: milliseconds.
+        /**
+         * <p>The position in the video. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -223,23 +251,29 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineTerrorism extends TeaModel {
-        // The category of the review result. Valid values:
-        // 
-        // *   **terrorism**: terrorist content
-        // *   **outfit**: special costume
-        // *   **logo**: special logo
-        // *   **weapon**: weapon
-        // *   **politics**: politically sensitive content
-        // *   **others**: other terrorist and politically sensitive content
-        // *   **normal**: normal content
+        /**
+         * <p>The category of the review result. Valid values:</p>
+         * <br>
+         * <p>*   **terrorism**: terrorist content</p>
+         * <p>*   **outfit**: special costume</p>
+         * <p>*   **logo**: special logo</p>
+         * <p>*   **weapon**: weapon</p>
+         * <p>*   **politics**: politically sensitive content</p>
+         * <p>*   **others**: other terrorist and politically sensitive content</p>
+         * <p>*   **normal**: normal content</p>
+         */
         @NameInMap("Label")
         public String label;
 
-        // The score of the review result category.
+        /**
+         * <p>The score of the review result category.</p>
+         */
         @NameInMap("Score")
         public String score;
 
-        // The position in the video. Unit: milliseconds.
+        /**
+         * <p>The position in the video. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -275,23 +309,33 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimeline extends TeaModel {
-        // The collection of ad timelines.
+        /**
+         * <p>The collection of ad timelines.</p>
+         */
         @NameInMap("Ad")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineAd> ad;
 
-        // The collection of undesirable scene timelines.
+        /**
+         * <p>The collection of undesirable scene timelines.</p>
+         */
         @NameInMap("Live")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive> live;
 
-        // The collection of logo timelines.
+        /**
+         * <p>The collection of logo timelines.</p>
+         */
         @NameInMap("Logo")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLogo> logo;
 
-        // The collection of pornographic content timelines.
+        /**
+         * <p>The collection of pornographic content timelines.</p>
+         */
         @NameInMap("Porn")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelinePorn> porn;
 
-        // The collection of terrorist content timelines.
+        /**
+         * <p>The collection of terrorist content timelines.</p>
+         */
         @NameInMap("Terrorism")
         public java.util.List<GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineTerrorism> terrorism;
 

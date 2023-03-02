@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaDNAResultResponseBody extends TeaModel {
-    // The media fingerprinting results.
+    /**
+     * <p>The media fingerprinting results.</p>
+     */
     @NameInMap("DNAResult")
     public GetMediaDNAResultResponseBodyDNAResult DNAResult;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication extends TeaModel {
-        // The duration of the video. Unit: seconds.
+        /**
+         * <p>The duration of the video. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
-        // The start time of the video. Unit: seconds.
+        /**
+         * <p>The start time of the video. Unit: seconds.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -66,11 +74,15 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput extends TeaModel {
-        // The duration of the video. Unit: seconds.
+        /**
+         * <p>The duration of the video. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
-        // The start time of the video. Unit: seconds.
+        /**
+         * <p>The start time of the video. Unit: seconds.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -98,11 +110,15 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetail extends TeaModel {
-        // The start time and duration of the matched video.
+        /**
+         * <p>The start time and duration of the matched video.</p>
+         */
         @NameInMap("Duplication")
         public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication duplication;
 
-        // The start time and duration of the input video.
+        /**
+         * <p>The start time and duration of the input video.</p>
+         */
         @NameInMap("Input")
         public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput input;
 
@@ -130,15 +146,21 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNA extends TeaModel {
-        // The details of the matched video. Information such as the location and duration of the video is returned.
+        /**
+         * <p>The details of the matched video. Information such as the location and duration of the video is returned.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<GetMediaDNAResultResponseBodyDNAResultVideoDNADetail> detail;
 
-        // The ID of the video that has a similar fingerprint.
+        /**
+         * <p>The ID of the video that has a similar fingerprint.</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
-        // The similarity between the fingerprints of the input video and the matched video. 1 indicates that the fingerprints of the two videos are the same.
+        /**
+         * <p>The similarity between the fingerprints of the input video and the matched video. 1 indicates that the fingerprints of the two videos are the same.</p>
+         */
         @NameInMap("Similarity")
         public String similarity;
 
@@ -174,7 +196,9 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaDNAResultResponseBodyDNAResult extends TeaModel {
-        // The video fingerprint recognition result.
+        /**
+         * <p>The video fingerprint recognition result.</p>
+         */
         @NameInMap("VideoDNA")
         public java.util.List<GetMediaDNAResultResponseBodyDNAResultVideoDNA> videoDNA;
 

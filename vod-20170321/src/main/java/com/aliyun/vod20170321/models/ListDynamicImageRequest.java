@@ -4,7 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListDynamicImageRequest extends TeaModel {
-    // The ID of the video.
+    /**
+     * <p>The ID of the video.</p>
+     */
     @NameInMap("VideoId")
     public String videoId;
 

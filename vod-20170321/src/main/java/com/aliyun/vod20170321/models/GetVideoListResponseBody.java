@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVideoListResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of videos.
+    /**
+     * <p>The total number of videos.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
-    // The information about the video. The information about a maximum of first 5,000 video records can be obtained in a single request.
+    /**
+     * <p>The information about the video. The information about a maximum of first 5,000 video records can be obtained in a single request.</p>
+     */
     @NameInMap("VideoList")
     public GetVideoListResponseBodyVideoList videoList;
 
@@ -65,71 +71,101 @@ public class GetVideoListResponseBody extends TeaModel {
     }
 
     public static class GetVideoListResponseBodyVideoListVideo extends TeaModel {
-        // The ID of the application. Default value: **app-1000000**.
+        /**
+         * <p>The ID of the application. Default value: **app-1000000**.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The ID of the video category.
+        /**
+         * <p>The ID of the video category.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
-        // The name of the video category.
+        /**
+         * <p>The name of the video category.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
-        // The URL of the video thumbnail.
+        /**
+         * <p>The URL of the video thumbnail.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the video.
+        /**
+         * <p>The description of the video.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The duration of the video. Unit: seconds.
+        /**
+         * <p>The duration of the video. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
-        // The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        // The size of the video mezzanine file. Unit: byte.
+        /**
+         * <p>The size of the video mezzanine file. Unit: byte.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The URL array of video snapshots.
+        /**
+         * <p>The URL array of video snapshots.</p>
+         */
         @NameInMap("Snapshots")
         public GetVideoListResponseBodyVideoListVideoSnapshots snapshots;
 
-        // The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:
-        // 
-        // *   **Uploading**: The video is being uploaded.
-        // *   **UploadFail**: The video fails to be uploaded.
-        // *   **UploadSucc**: The video is uploaded.
-        // *   **Transcoding**: The video is being transcoded.
-        // *   **TranscodeFail**: The video fails to be transcoded.
-        // *   **Blocked**: The video is blocked.
-        // *   **Normal**: The video can be played.
+        /**
+         * <p>The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:</p>
+         * <br>
+         * <p>*   **Uploading**: The video is being uploaded.</p>
+         * <p>*   **UploadFail**: The video fails to be uploaded.</p>
+         * <p>*   **UploadSucc**: The video is uploaded.</p>
+         * <p>*   **Transcoding**: The video is being transcoded.</p>
+         * <p>*   **TranscodeFail**: The video fails to be transcoded.</p>
+         * <p>*   **Blocked**: The video is blocked.</p>
+         * <p>*   **Normal**: The video can be played.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The OSS bucket where the video file is stored.
+        /**
+         * <p>The OSS bucket where the video file is stored.</p>
+         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
-        // The tags of the video. Multiple tags are separated by commas (,).
+        /**
+         * <p>The tags of the video. Multiple tags are separated by commas (,).</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
-        // The title of the video.
+        /**
+         * <p>The title of the video.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The ID of the video.
+        /**
+         * <p>The ID of the video.</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 

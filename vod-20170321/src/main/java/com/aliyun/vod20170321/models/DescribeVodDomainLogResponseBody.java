@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainLogResponseBody extends TeaModel {
-    // The detailed data of Alibaba Cloud CDN logs.
+    /**
+     * <p>The detailed data of Alibaba Cloud CDN logs.</p>
+     */
     @NameInMap("DomainLogDetails")
     public DescribeVodDomainLogResponseBodyDomainLogDetails domainLogDetails;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,23 +38,33 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
-        // The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
-        // The name of the log file.
+        /**
+         * <p>The name of the log file.</p>
+         */
         @NameInMap("LogName")
         public String logName;
 
-        // The path of the log file.
+        /**
+         * <p>The path of the log file.</p>
+         */
         @NameInMap("LogPath")
         public String logPath;
 
-        // The size of the log file.
+        /**
+         * <p>The size of the log file.</p>
+         */
         @NameInMap("LogSize")
         public Long logSize;
 
-        // The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -121,15 +135,21 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
@@ -165,19 +185,27 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
-        // The domain name.
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The total number of entries returned on the current page.
+        /**
+         * <p>The total number of entries returned on the current page.</p>
+         */
         @NameInMap("LogCount")
         public Long logCount;
 
-        // The detailed information about Alibaba Cloud CDN logs.
+        /**
+         * <p>The detailed information about Alibaba Cloud CDN logs.</p>
+         */
         @NameInMap("LogInfos")
         public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
-        // The pagination settings of Alibaba Cloud CDN logs.
+        /**
+         * <p>The pagination settings of Alibaba Cloud CDN logs.</p>
+         */
         @NameInMap("PageInfos")
         public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;
 

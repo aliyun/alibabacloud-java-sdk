@@ -4,13 +4,17 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteMezzaninesRequest extends TeaModel {
-    // Specifies whether to forcibly delete the mezzanine file. Default value: **false**.
-    // 
-    // > If a video is delivered without transcoding or is asynchronously transcoded, the mezzanine file of the video is used for original-quality playback. By default, the mezzanine file of the video cannot be deleted. To forcibly delete the mezzanine file, set this parameter to **true**.
+    /**
+     * <p>Specifies whether to forcibly delete the mezzanine file. Default value: **false**.</p>
+     * <br>
+     * <p>> If a video is delivered without transcoding or is asynchronously transcoded, the mezzanine file of the video is used for original-quality playback. By default, the mezzanine file of the video cannot be deleted. To forcibly delete the mezzanine file, set this parameter to **true**.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
-    // The list of video IDs. A maximum of 20 video IDs can be specified at a time. Separate multiple IDs with commas (,).
+    /**
+     * <p>The list of video IDs. A maximum of 20 video IDs can be specified at a time. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("VideoIds")
     public String videoIds;
 

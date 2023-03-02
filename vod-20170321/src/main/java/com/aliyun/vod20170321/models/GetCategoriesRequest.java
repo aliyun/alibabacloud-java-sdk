@@ -4,29 +4,39 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetCategoriesRequest extends TeaModel {
-    // The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.
+    /**
+     * <p>The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.</p>
+     */
     @NameInMap("CateId")
     public Long cateId;
 
-    // The number of the page where the subcategories to be returned are listed. Default value: **1**.
+    /**
+     * <p>The number of the page where the subcategories to be returned are listed. Default value: **1**.</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
-    // The number of entries to return on each page of the subcategory list. Default value: **10**. Maximum value: **100**.
+    /**
+     * <p>The number of entries to return on each page of the subcategory list. Default value: **10**. Maximum value: **100**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The method for sorting the results. Valid values:
-    // 
-    // *   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.
-    // *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
+    /**
+     * <p>The method for sorting the results. Valid values:</p>
+     * <br>
+     * <p>*   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.</p>
+     * <p>*   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
-    // The type of the category. Valid values:
-    // 
-    // *   **default** (default): default category
-    // *   **material**: material category
+    /**
+     * <p>The type of the category. Valid values:</p>
+     * <br>
+     * <p>*   **default** (default): default category</p>
+     * <p>*   **material**: material category</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,7 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SetCrossdomainContentRequest extends TeaModel {
-    // The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters.
+    /**
+     * <p>The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters.</p>
+     */
     @NameInMap("Content")
     public String content;
 
@@ -20,11 +22,15 @@ public class SetCrossdomainContentRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public String resourceOwnerId;
 
-    // The ID of the resource owner.
+    /**
+     * <p>The ID of the resource owner.</p>
+     */
     @NameInMap("ResourceRealOwnerId")
     public String resourceRealOwnerId;
 
-    // The URL of the Object Storage Service (OSS) bucket.
+    /**
+     * <p>The URL of the Object Storage Service (OSS) bucket.</p>
+     */
     @NameInMap("StorageLocation")
     public String storageLocation;
 

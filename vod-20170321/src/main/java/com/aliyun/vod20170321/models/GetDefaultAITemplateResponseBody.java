@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetDefaultAITemplateResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about the AI template.
+    /**
+     * <p>The information about the AI template.</p>
+     */
     @NameInMap("TemplateInfo")
     public GetDefaultAITemplateResponseBodyTemplateInfo templateInfo;
 
@@ -34,41 +38,57 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
     }
 
     public static class GetDefaultAITemplateResponseBodyTemplateInfo extends TeaModel {
-        // The time when the AI template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the AI template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // Indicates whether the template is the default template. Valid values:
-        // 
-        // *   **Default**
-        // *   **NotDefault**
+        /**
+         * <p>Indicates whether the template is the default AI template. Valid values:</p>
+         * <br>
+         * <p>*   **Default**</p>
+         * <p>*   **NotDefault**</p>
+         */
         @NameInMap("IsDefault")
         public String isDefault;
 
-        // The time when the AI template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the AI template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // The source of the AI template. Valid values:
-        // 
-        // *   **System**
-        // *   **Custom**
+        /**
+         * <p>The source of the AI template. Valid values:</p>
+         * <br>
+         * <p>*   **System**</p>
+         * <p>*   **Custom**</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The detailed configurations of the AI template. The value is a JSON string.
+        /**
+         * <p>The detailed configurations of the AI template. The value is a JSON string.</p>
+         */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
-        // The ID of the AI template.
+        /**
+         * <p>The ID of the AI template.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
-        // The name of the AI template.
+        /**
+         * <p>The name of the AI template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
-        // The type of the AI template. The value is **AIMediaAudit**, which indicates intelligent review.
+        /**
+         * <p>The type of the AI template. The value is **AIMediaAudit**, which indicates automated review.</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 

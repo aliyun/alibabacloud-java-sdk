@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetVideoInfoResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about the video.
+    /**
+     * <p>The information about the media file.</p>
+     */
     @NameInMap("Video")
     public GetVideoInfoResponseBodyVideo video;
 
@@ -53,90 +57,130 @@ public class GetVideoInfoResponseBody extends TeaModel {
     }
 
     public static class GetVideoInfoResponseBodyVideo extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The review status of the video. Valid values:
-        // 
-        // *   **Normal**: pass
-        // *   **Blocked**: failed
+        /**
+         * <p>The review status of the video. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: pass</p>
+         * <p>*   **Blocked**: failed</p>
+         */
         @NameInMap("AuditStatus")
         public String auditStatus;
 
-        // The category ID of the video.
+        /**
+         * <p>The category ID of the media file.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
-        // The category of the video.
+        /**
+         * <p>The name of the category.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
-        // The thumbnail URL of the video.
+        /**
+         * <p>The thumbnail URL of the media file.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // The time when the video was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the media file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The information about the custom media asset.
-        // > This parameter has been deprecated. This parameter is no longer returned when you call the API.
+        /**
+         * <p>The custom information about the media file.</p>
+         * <br>
+         * <p>> This parameter has been deprecated. This parameter is no longer returned after you call the operation.</p>
+         */
         @NameInMap("CustomMediaInfo")
         public String customMediaInfo;
 
-        // The description of the video.
+        /**
+         * <p>The description of the media file.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The duration of the video. Unit: seconds.
+        /**
+         * <p>The duration of the media file. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
-        // The time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the media file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
-        // The region ID of the Object Storage Service (OSS) bucket.
+        /**
+         * <p>The region where the media file is stored.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The size of the source video file. Unit: byte.
+        /**
+         * <p>The size of the source file. Unit: bytes.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The URL array of video snapshots.
+        /**
+         * <p>The video snapshot URLs.</p>
+         */
         @NameInMap("Snapshots")
         public GetVideoInfoResponseBodyVideoSnapshots snapshots;
 
-        // The video status. Valid values:
-        // *   **Uploading**: The video is being uploaded.
-        // *   **UploadFail**: The video failed to be uploaded.
-        // *   **UploadSucc**: The video has been uploaded.
-        // *   **Transcoding**: The video is being transcoded.
-        // *   **TranscodeFail**: The video failed to be transcoded.
-        // *   **Blocked**: The video failed the review.
-        // *   **Normal**: The video passed the review.
+        /**
+         * <p>The status of the video. For information about the operations that can be performed on videos in different statuses and limits, see the Status: the status of a video section of the [Basic data types](~~52839~~) topic. Valid values:</p>
+         * <br>
+         * <p>*   **Uploading**: The video is being uploaded.</p>
+         * <p>*   **UploadFail**: The video failed to be uploaded.</p>
+         * <p>*   **UploadSucc**: The video has been uploaded.</p>
+         * <p>*   **Transcoding**: The video is being transcoded.</p>
+         * <p>*   **TranscodeFail**: The video failed to be transcoded.</p>
+         * <p>*   **Blocked**: The video is blocked.</p>
+         * <p>*   **Normal**: The video is normal.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The OSS bucket where the video is stored.
+        /**
+         * <p>The storage address of the media file.</p>
+         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
-        // The tags of the video. Separate multiple tags with commas (,).
+        /**
+         * <p>The tags of the media file. Multiple tags are separated by commas (,).</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
-        // The ID of the template group.
+        /**
+         * <p>The ID of the transcoding template group.</p>
+         */
         @NameInMap("TemplateGroupId")
         public String templateGroupId;
 
-        // The title of the video.
+        /**
+         * <p>The title of the media file.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The ID of the video.
+        /**
+         * <p>The ID of the media file.</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 

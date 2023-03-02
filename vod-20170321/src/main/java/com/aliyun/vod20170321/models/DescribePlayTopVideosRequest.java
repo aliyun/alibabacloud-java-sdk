@@ -4,18 +4,24 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayTopVideosRequest extends TeaModel {
-    // The time to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The time to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("BizDate")
     public String bizDate;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. Default value: **1**.
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
-    // The number of entries to return on each page. Default value: **100**. Maximum value: **1000**.
+    /**
+     * <p>The number of entries to return on each page. Default value: **100**. Maximum value: **1000**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

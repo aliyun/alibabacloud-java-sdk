@@ -4,31 +4,45 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
-    // The time interval between the returned entries. Unit: seconds.
+    /**
+     * <p>The time interval between the returned entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The domain name for CDN.
+    /**
+     * <p>The domain name for CDN.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+    /**
+     * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+    /**
+     * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The total traffic.
+    /**
+     * <p>The total traffic.</p>
+     */
     @NameInMap("TotalTraffic")
     public String totalTraffic;
 
-    // The network traffic data that is collected for each interval.
+    /**
+     * <p>The network traffic data that is collected for each interval.</p>
+     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeVodDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -94,31 +108,45 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        // The volume of the network traffic in mainland China. Unit: byte.
+        /**
+         * <p>The volume of the network traffic in mainland China. Unit: byte.</p>
+         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        // The volume of the HTTPS network traffic on L1 nodes in mainland China. Unit: byte.
+        /**
+         * <p>The volume of the HTTPS network traffic on L1 nodes in mainland China. Unit: byte.</p>
+         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        // The volume of the HTTPS network traffic on L1 nodes outside mainland China. Unit: byte.
+        /**
+         * <p>The volume of the HTTPS network traffic on L1 nodes outside mainland China. Unit: byte.</p>
+         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        // The total volume of the HTTPS network traffic on L1 nodes. Unit: byte.
+        /**
+         * <p>The total volume of the HTTPS network traffic on L1 nodes. Unit: byte.</p>
+         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        // The volume of the network traffic outside mainland China. Unit: byte.
+        /**
+         * <p>The volume of the network traffic outside mainland China. Unit: byte.</p>
+         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        // The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The total volume of the network traffic. Unit: byte.
+        /**
+         * <p>The total volume of the network traffic. Unit: byte.</p>
+         */
         @NameInMap("Value")
         public String value;
 

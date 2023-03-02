@@ -4,16 +4,22 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobsResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The transcoding jobs.
-    // > This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.
+    /**
+     * <p>The transcoding jobs.</p>
+     * <p>> This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+     */
     @NameInMap("TranscodeJobs")
     public SubmitTranscodeJobsResponseBodyTranscodeJobs transcodeJobs;
 
-    // The ID of the transcoding job that was submitted.
+    /**
+     * <p>The ID of the transcoding job that was submitted.</p>
+     */
     @NameInMap("TranscodeTaskId")
     public String transcodeTaskId;
 
@@ -47,7 +53,9 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobsResponseBodyTranscodeJobsTranscodeJob extends TeaModel {
-        // The ID of the job.
+        /**
+         * <p>The ID of the job.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 

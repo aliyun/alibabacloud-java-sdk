@@ -4,18 +4,24 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayVideoStatisRequest extends TeaModel {
-    // The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The ID of the video.
+    /**
+     * <p>The ID of the video.</p>
+     */
     @NameInMap("VideoId")
     public String videoId;
 

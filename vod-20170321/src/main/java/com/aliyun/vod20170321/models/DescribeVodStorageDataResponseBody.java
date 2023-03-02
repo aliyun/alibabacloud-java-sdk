@@ -4,18 +4,24 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodStorageDataResponseBody extends TeaModel {
-    // The time granularity at which the data was queried. Valid values:
-    // 
-    // *   **hour**
-    // *   **day**
+    /**
+     * <p>The time granularity at which the data was queried. Valid values:</p>
+     * <br>
+     * <p>*   **hour**</p>
+     * <p>*   **day**</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The detailed usage of storage-related resources.
+    /**
+     * <p>The detailed usage of storage-related resources.</p>
+     */
     @NameInMap("StorageData")
     public DescribeVodStorageDataResponseBodyStorageData storageData;
 
@@ -49,15 +55,21 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodStorageDataResponseBodyStorageDataStorageDataItem extends TeaModel {
-        // The outbound traffic. Unit: byte. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.
+        /**
+         * <p>The outbound traffic. Unit: byte. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.</p>
+         */
         @NameInMap("NetworkOut")
         public String networkOut;
 
-        // The storage volume. Unit: byte.
+        /**
+         * <p>The storage volume. Unit: byte.</p>
+         */
         @NameInMap("StorageUtilization")
         public String storageUtilization;
 
-        // The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

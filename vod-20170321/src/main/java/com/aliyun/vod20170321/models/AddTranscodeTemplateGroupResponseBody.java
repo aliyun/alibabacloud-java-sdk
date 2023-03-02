@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddTranscodeTemplateGroupResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the transcoding template group.
+    /**
+     * <p>The ID of the transcoding template group.</p>
+     */
     @NameInMap("TranscodeTemplateGroupId")
     public String transcodeTemplateGroupId;
 

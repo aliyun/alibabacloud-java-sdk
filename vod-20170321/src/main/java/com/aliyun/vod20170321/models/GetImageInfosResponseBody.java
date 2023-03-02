@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetImageInfosResponseBody extends TeaModel {
-    // The image information.
+    /**
+     * <p>The image information.</p>
+     */
     @NameInMap("ImageInfo")
     public java.util.List<GetImageInfosResponseBodyImageInfo> imageInfo;
 
-    // The IDs of the images that do not exist.
+    /**
+     * <p>The IDs of the images that do not exist.</p>
+     */
     @NameInMap("NonExistImageIds")
     public java.util.List<String> nonExistImageIds;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,23 +52,33 @@ public class GetImageInfosResponseBody extends TeaModel {
     }
 
     public static class GetImageInfosResponseBodyImageInfoMezzanine extends TeaModel {
-        // The size of the image file. Unit: bytes.
+        /**
+         * <p>The size of the image file. Unit: bytes.</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
-        // The OSS URL of the image file.
+        /**
+         * <p>The OSS URL of the image file.</p>
+         */
         @NameInMap("FileURL")
         public String fileURL;
 
-        // The height of the image. Unit: pixels.
+        /**
+         * <p>The height of the image. Unit: pixels.</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
-        // The name of the source file.
+        /**
+         * <p>The name of the source file.</p>
+         */
         @NameInMap("OriginalFileName")
         public String originalFileName;
 
-        // The width of the image. Unit: pixels.
+        /**
+         * <p>The width of the image. Unit: pixels.</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -114,65 +130,91 @@ public class GetImageInfosResponseBody extends TeaModel {
     }
 
     public static class GetImageInfosResponseBodyImageInfo extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The ID of the category to which the image belongs.
+        /**
+         * <p>The ID of the category to which the image belongs.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
-        // The name of the category.
+        /**
+         * <p>The name of the category.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
-        // The time when the image was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the image was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the image.
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the image file.
+        /**
+         * <p>The ID of the image file.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The type of the image. Valid values:
-        // 
-        // *   **CoverSnapshot**: thumbnail snapshot
-        // *   **NormalSnapshot**: normal snapshot
-        // *   **SpriteSnapshot**: sprite snapshot
-        // *   **SpriteOriginSnapshot**: sprite source snapshot
-        // *   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).
+        /**
+         * <p>The type of the image. Valid values:</p>
+         * <br>
+         * <p>*   **CoverSnapshot**: thumbnail snapshot</p>
+         * <p>*   **NormalSnapshot**: normal snapshot</p>
+         * <p>*   **SpriteSnapshot**: sprite snapshot</p>
+         * <p>*   **SpriteOriginSnapshot**: sprite source snapshot</p>
+         * <p>*   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 
-        // The source information about the image.
+        /**
+         * <p>The source information about the image.</p>
+         */
         @NameInMap("Mezzanine")
         public GetImageInfosResponseBodyImageInfoMezzanine mezzanine;
 
-        // The status of the image file. Valid values:
-        // 
-        // *   **Uploading**: The image is being uploaded. This is the initial status.
-        // *   **Normal**: The image is uploaded.
-        // *   **UploadFail**: The image fails to be uploaded.
+        /**
+         * <p>The status of the image file. Valid values:</p>
+         * <br>
+         * <p>*   **Uploading**: The image is being uploaded. This is the initial status.</p>
+         * <p>*   **Normal**: The image is uploaded.</p>
+         * <p>*   **UploadFail**: The image fails to be uploaded.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The bucket in which the image is stored.
+        /**
+         * <p>The bucket in which the image is stored.</p>
+         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
-        // The tags of the image. Separate multiple tags with commas (,).
+        /**
+         * <p>The tags of the image. Separate multiple tags with commas (,).</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
-        // The title of the image.
+        /**
+         * <p>The title of the image.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The image URL. If a domain name for CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
+        /**
+         * <p>The image URL. If a domain name for CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+         */
         @NameInMap("URL")
         public String URL;
 

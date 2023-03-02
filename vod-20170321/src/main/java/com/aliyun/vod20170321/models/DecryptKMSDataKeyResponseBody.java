@@ -4,15 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DecryptKMSDataKeyResponseBody extends TeaModel {
-    // The ID of the customer master key (CMK) that was used to decrypt the ciphertext.
+    /**
+     * <p>The ID of the customer master key (CMK) that was used to decrypt the ciphertext.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
-    // The plaintext that is generated after decryption.
+    /**
+     * <p>The plaintext that is generated after decryption.</p>
+     */
     @NameInMap("Plaintext")
     public String plaintext;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

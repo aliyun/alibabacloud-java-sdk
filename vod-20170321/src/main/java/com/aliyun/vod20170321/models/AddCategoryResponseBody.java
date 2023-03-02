@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddCategoryResponseBody extends TeaModel {
-    // The information about the video category.
+    /**
+     * <p>The information about the video category.</p>
+     */
     @NameInMap("Category")
     public AddCategoryResponseBodyCategory category;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,29 +38,39 @@ public class AddCategoryResponseBody extends TeaModel {
     }
 
     public static class AddCategoryResponseBodyCategory extends TeaModel {
-        // The ID of the video category.
+        /**
+         * <p>The ID of the video category.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
-        // The name of the category.
-        // 
-        // - The value can be up to 64 bytes in length.
-        // - The string must be encoded in the UTF-8 format.
+        /**
+         * <p>The name of the category.</p>
+         * <br>
+         * <p>- The value can be up to 64 bytes in length.</p>
+         * <p>- The string must be encoded in the UTF-8 format.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
-        // The level of the category. A value of **0** indicates a level 1 category.
+        /**
+         * <p>The level of the category. A value of **0** indicates a level 1 category.</p>
+         */
         @NameInMap("Level")
         public Long level;
 
-        // The ID of the parent category. The parent category ID of a level 1 category is **-1**.
+        /**
+         * <p>The ID of the parent category. The parent category ID of a level 1 category is **-1**.</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
-        // The type of the category. Valid values:
-        // 
-        // - **default** (default): default category
-        // - **material**: material category
+        /**
+         * <p>The type of the category. Valid values:</p>
+         * <br>
+         * <p>- **default** (default): default category</p>
+         * <p>- **material**: material category</p>
+         */
         @NameInMap("Type")
         public String type;
 

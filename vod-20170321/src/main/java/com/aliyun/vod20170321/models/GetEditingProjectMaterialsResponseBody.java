@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetEditingProjectMaterialsResponseBody extends TeaModel {
-    // The materials.
+    /**
+     * <p>The materials.</p>
+     */
     @NameInMap("MaterialList")
     public GetEditingProjectMaterialsResponseBodyMaterialList materialList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -72,80 +76,114 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class GetEditingProjectMaterialsResponseBodyMaterialListMaterial extends TeaModel {
-        // The category ID of the material.
+        /**
+         * <p>The category ID of the material.</p>
+         */
         @NameInMap("CateId")
         public Integer cateId;
 
-        // The category name of the material.
+        /**
+         * <p>The category name of the material.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
-        // The thumbnail URL of the material.
+        /**
+         * <p>The thumbnail URL of the material.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
-        // The time when the material was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the material was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The description of the material.
+        /**
+         * <p>The description of the material.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The duration of the material. The value is rounded to four decimal places. Unit: seconds.
+        /**
+         * <p>The duration of the material. The value is rounded to four decimal places. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
-        // The ID of the material.
+        /**
+         * <p>The ID of the material.</p>
+         */
         @NameInMap("MaterialId")
         public String materialId;
 
-        // The type of the material. Valid values:
-        // 
-        // *   **video**
-        // *   **audio**
-        // *   **image**
+        /**
+         * <p>The type of the material. Valid values:</p>
+         * <br>
+         * <p>*   **video**</p>
+         * <p>*   **audio**</p>
+         * <p>*   **image**</p>
+         */
         @NameInMap("MaterialType")
         public String materialType;
 
-        // The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        // The size of the mezzanine file. Unit: byte.
+        /**
+         * <p>The size of the mezzanine file. Unit: byte.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The URLs of material snapshots. The value is an array.
+        /**
+         * <p>The URLs of material snapshots. The value is an array.</p>
+         */
         @NameInMap("Snapshots")
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots snapshots;
 
-        // The source of the sprite.
+        /**
+         * <p>The source of the sprite.</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The configuration of the sprite.
+        /**
+         * <p>The configuration of the sprite.</p>
+         */
         @NameInMap("SpriteConfig")
         public String spriteConfig;
 
-        // The URLs of material sprites. The value is an array.
+        /**
+         * <p>The URLs of material sprites. The value is an array.</p>
+         */
         @NameInMap("Sprites")
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSprites sprites;
 
-        // The status of the material. Valid values:
-        // 
-        // *   **Normal**: The material is in draft.
-        // *   **Producing**: The material is being produced.
-        // *   **Produced**: The material was produced.
-        // *   **ProduceFailed**: The material failed to be produced.
+        /**
+         * <p>The status of the material. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: The material is in draft.</p>
+         * <p>*   **Producing**: The material is being produced.</p>
+         * <p>*   **Produced**: The material was produced.</p>
+         * <p>*   **ProduceFailed**: The material failed to be produced.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The tag of the material. Multiple tags are separated by commas (,).
+        /**
+         * <p>The tag of the material. Multiple tags are separated by commas (,).</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
-        // The title of the material.
+        /**
+         * <p>The title of the material.</p>
+         */
         @NameInMap("Title")
         public String title;
 

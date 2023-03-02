@@ -4,42 +4,54 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodTranscodeDataRequest extends TeaModel {
-    // The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The time granularity at which the data is queried. Valid values:
-    // 
-    // *   **day**
-    // *   **hour**
+    /**
+     * <p>The time granularity at which the data is queried. Valid values:</p>
+     * <br>
+     * <p>*   **day**</p>
+     * <p>*   **hour**</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region where the transcoded file is stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:
-    // 
-    // *   **cn-shanghai**: China (Shanghai)
-    // *   **cn-beijing**: China (Beijing)
-    // *   **eu-central-1**: Germany (Frankfurt)
-    // *   **ap-southeast-1**: Singapore
+    /**
+     * <p>The region where the transcoded file is stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **cn-shanghai**: China (Shanghai)</p>
+     * <p>*   **cn-beijing**: China (Beijing)</p>
+     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
+     * <p>*   **ap-southeast-1**: Singapore</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The transcoding specification. If you do not set this parameter, the data of all transcoding specifications is returned. You can specify multiple transcoding specifications. Separate them with commas (,). Valid values:
-    // 
-    // *   **Audio**: audio transcoding
-    // *   **Segmentation**: container format conversion
-    // *   H.264 and H.265-related video transcoding specifications, such as **H264.LD**, **H264.SD**, **H264.HD**, **H264.2K**, and **H264.4K**
+    /**
+     * <p>The transcoding specification. If you do not set this parameter, the data of all transcoding specifications is returned. You can specify multiple transcoding specifications. Separate them with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **Audio**: audio transcoding</p>
+     * <p>*   **Segmentation**: container format conversion</p>
+     * <p>*   H.264 and H.265-related video transcoding specifications, such as **H264.LD**, **H264.SD**, **H264.HD**, **H264.2K**, and **H264.4K**</p>
+     */
     @NameInMap("Specification")
     public String specification;
 
-    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The name of the Object Storage Service (OSS) bucket. If you do not set this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas (,).
+    /**
+     * <p>The name of the Object Storage Service (OSS) bucket. If you do not set this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas (,).</p>
+     */
     @NameInMap("Storage")
     public String storage;
 

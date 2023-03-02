@@ -4,40 +4,50 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageRequest extends TeaModel {
-    // The method that is used to delete images. Valid values:
-    // 
-    // *   **ImageURL**: Delete the specified image based on the image URL.
-    // *   **ImageId**: Delete the specified image based on the image ID.
-    // *   **VideoId**: Delete the image that is associated with a video ID.
+    /**
+     * <p>The method that is used to delete images. Valid values:</p>
+     * <br>
+     * <p>*   **ImageURL**: Delete the specified image based on the image URL.</p>
+     * <p>*   **ImageId**: Delete the specified image based on the image ID.</p>
+     * <p>*   **VideoId**: Delete the image that is associated with a video ID.</p>
+     */
     @NameInMap("DeleteImageType")
     public String deleteImageType;
 
-    // The ID of the image.
-    // 
-    // *   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageId**. In this case, you must set this parameter.
-    // *   Separate multiple IDs with commas (,).
+    /**
+     * <p>The ID of the image.</p>
+     * <br>
+     * <p>*   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageId**. In this case, you must set this parameter.</p>
+     * <p>*   Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("ImageIds")
     public String imageIds;
 
-    // The type of the image. This parameter only takes effect when the **DeleteImageType** parameter is set to **VideoId**. In this case, you must set this parameter. Valid values:
-    // 
-    // *   **CoverSnapshot**: thumbnail snapshot.
-    // *   **NormalSnapshot**: normal snapshot.
-    // *   **SpriteSnapshot**: sprite snapshot.
-    // *   **SpriteOriginSnapshot**: sprite source snapshot.
-    // *   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate them with commas (,).
+    /**
+     * <p>The type of the image. This parameter only takes effect when the **DeleteImageType** parameter is set to **VideoId**. In this case, you must set this parameter. Valid values:</p>
+     * <br>
+     * <p>*   **CoverSnapshot**: thumbnail snapshot.</p>
+     * <p>*   **NormalSnapshot**: normal snapshot.</p>
+     * <p>*   **SpriteSnapshot**: sprite snapshot.</p>
+     * <p>*   **SpriteOriginSnapshot**: sprite source snapshot.</p>
+     * <p>*   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate them with commas (,).</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 
-    // The URL of the image.
-    // 
-    // *   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageURL**. In this case, you must set this parameter.
-    // *   Encode multiple image URLs and separate them with commas (,).
-    // *   The use of special characters in image URLs may lead to the failure to delete the images. To prevent such failure, you must encode the image URLs before you concatenate them into a string with commas (,).
+    /**
+     * <p>The URL of the image.</p>
+     * <br>
+     * <p>*   This parameter only takes effect when the **DeleteImageType** parameter is set to **ImageURL**. In this case, you must set this parameter.</p>
+     * <p>*   Encode multiple image URLs and separate them with commas (,).</p>
+     * <p>*   The use of special characters in image URLs may lead to the failure to delete the images. To prevent such failure, you must encode the image URLs before you concatenate them into a string with commas (,).</p>
+     */
     @NameInMap("ImageURLs")
     public String imageURLs;
 
-    // The ID of the video. This parameter only takes effect when the **DeleteImageType** parameter is set to **VideoId**. In this case, you must set this parameter.
+    /**
+     * <p>The ID of the video. This parameter only takes effect when the **DeleteImageType** parameter is set to **VideoId**. In this case, you must set this parameter.</p>
+     */
     @NameInMap("VideoId")
     public String videoId;
 

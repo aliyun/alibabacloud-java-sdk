@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListWatermarkResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The watermarks.
+    /**
+     * <p>Details about the watermarks.</p>
+     */
     @NameInMap("WatermarkInfos")
     public java.util.List<ListWatermarkResponseBodyWatermarkInfos> watermarkInfos;
 
@@ -34,39 +38,57 @@ public class ListWatermarkResponseBody extends TeaModel {
     }
 
     public static class ListWatermarkResponseBodyWatermarkInfos extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The time when the watermark was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the watermark was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The Object Storage Service (OSS) URL or Content Delivery Network (CDN) URL of the watermark file. A text watermark does not have a file URL.
+        /**
+         * <p>The Object Storage Service (OSS) URL or CDN URL of the watermark file. A text watermark does not have a file URL.</p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 
-        // Indicates whether the watermark is the default one. Valid values:
-        // *   **Default**: The watermark is the default one.
-        // *   **NotDefault**: The watermark is not the default one.
+        /**
+         * <p>Indicates whether the default watermark was used. Valid values:</p>
+         * <br>
+         * <p>*   **Default**</p>
+         * <p>*   **NotDefault**</p>
+         */
         @NameInMap("IsDefault")
         public String isDefault;
 
-        // The name of the watermark.
+        /**
+         * <p>The name of the watermark.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The type of the watermark. Valid values:
-        // *   **Image**
-        // *   **Text**
+        /**
+         * <p>The type of the watermark. Valid values:</p>
+         * <br>
+         * <p>*   **Image**</p>
+         * <p>*   **Text**</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
+        /**
+         * <p>The configuration information such as the position and effect about the text watermark or image watermark. The value is a JSON string. For more information about the data structure, see the "WatermarkConfig: specifies the watermark configurations" section of the [Parameters for media processing](~~98618~~) topic.</p>
+         */
         @NameInMap("WatermarkConfig")
         public String watermarkConfig;
 
-        // The ID of the watermark.
+        /**
+         * <p>The ID of the watermark.</p>
+         */
         @NameInMap("WatermarkId")
         public String watermarkId;
 

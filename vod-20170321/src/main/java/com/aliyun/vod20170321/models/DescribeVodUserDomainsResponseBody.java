@@ -4,23 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodUserDomainsResponseBody extends TeaModel {
-    // The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.
+    /**
+     * <p>The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.</p>
+     */
     @NameInMap("Domains")
     public DescribeVodUserDomainsResponseBodyDomains domains;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -70,23 +80,31 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
-        // The address of the origin server.
+        /**
+         * <p>The address of the origin server.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The port number. Valid values: **443** and **80**.
+        /**
+         * <p>The port number. Valid values: **443** and **80**.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
-        // The priority of the origin server.
+        /**
+         * <p>The priority of the origin server.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
-        // The type of the origin server. Valid values:
-        // 
-        // *   **ipaddr**: a server that you can access by using an IP address.
-        // *   **domain**: a server that you can access by using a domain name.
-        // *   **oss**: an Object Storage Service (OSS) bucket.
+        /**
+         * <p>The type of the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **ipaddr**: a server that you can access by using an IP address.</p>
+         * <p>*   **domain**: a server that you can access by using a domain name.</p>
+         * <p>*   **oss**: an Object Storage Service (OSS) bucket.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -149,49 +167,67 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodUserDomainsResponseBodyDomainsPageData extends TeaModel {
-        // The canonical domain name that is assigned to the domain name for CDN.
+        /**
+         * <p>The canonical domain name that is assigned to the domain name for CDN.</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
-        // The remarks.
+        /**
+         * <p>The remarks.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The domain name for CDN.
+        /**
+         * <p>The domain name for CDN.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The status of the domain name for CDN. Valid values:
-        // 
-        // *   **online**: indicates that the domain name is enabled.
-        // *   **offline**: indicates that the domain name is disabled.
-        // *   **configuring**: indicates that the domain name is being configured.
-        // *   **configure_failed**: indicates that the domain name failed to be configured.
-        // *   **checking**: indicates that the domain name is under review.
-        // *   **check_failed**: indicates that the domain name failed the review.
+        /**
+         * <p>The status of the domain name for CDN. Valid values:</p>
+         * <br>
+         * <p>*   **online**: indicates that the domain name is enabled.</p>
+         * <p>*   **offline**: indicates that the domain name is disabled.</p>
+         * <p>*   **configuring**: indicates that the domain name is being configured.</p>
+         * <p>*   **configure_failed**: indicates that the domain name failed to be configured.</p>
+         * <p>*   **checking**: indicates that the domain name is under review.</p>
+         * <p>*   **check_failed**: indicates that the domain name failed the review.</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        // The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
-        // The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+        /**
+         * <p>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // Indicates whether the domain name for CDN is in a sandbox environment.
+        /**
+         * <p>Indicates whether the domain name for CDN is in a sandbox environment.</p>
+         */
         @NameInMap("Sandbox")
         public String sandbox;
 
-        // The information about the origin server.
+        /**
+         * <p>The information about the origin server.</p>
+         */
         @NameInMap("Sources")
         public DescribeVodUserDomainsResponseBodyDomainsPageDataSources sources;
 
-        // Indicates whether HTTPS is enabled.
-        // 
-        // - **on**: indicates that HTTPS is enabled.
-        // - **off**: indicates that HTTPS is disabled.
+        /**
+         * <p>Indicates whether HTTPS is enabled.</p>
+         * <br>
+         * <p>- **on**: indicates that HTTPS is enabled.</p>
+         * <p>- **off**: indicates that HTTPS is disabled.</p>
+         */
         @NameInMap("SslProtocol")
         public String sslProtocol;
 

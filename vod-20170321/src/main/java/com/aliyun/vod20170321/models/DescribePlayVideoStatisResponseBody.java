@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayVideoStatisResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The daily playback statistics on the video.
+    /**
+     * <p>The daily playback statistics on the video.</p>
+     */
     @NameInMap("VideoPlayStatisDetails")
     public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails videoPlayStatisDetails;
 
@@ -34,27 +38,39 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
     }
 
     public static class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail extends TeaModel {
-        // The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.
+        /**
+         * <p>The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.</p>
+         */
         @NameInMap("Date")
         public String date;
 
-        // The playback duration. Unit: milliseconds.
+        /**
+         * <p>The playback duration. Unit: milliseconds.</p>
+         */
         @NameInMap("PlayDuration")
         public String playDuration;
 
-        // The distribution of the playback duration.
+        /**
+         * <p>The distribution of the playback duration.</p>
+         */
         @NameInMap("PlayRange")
         public String playRange;
 
-        // The title of the video.
+        /**
+         * <p>The title of the video.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The number of unique visitors.
+        /**
+         * <p>The number of unique visitors.</p>
+         */
         @NameInMap("UV")
         public String UV;
 
-        // The number of video views.
+        /**
+         * <p>The number of video views.</p>
+         */
         @NameInMap("VV")
         public String VV;
 

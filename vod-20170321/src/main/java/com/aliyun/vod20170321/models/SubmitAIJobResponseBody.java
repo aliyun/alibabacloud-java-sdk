@@ -4,11 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitAIJobResponseBody extends TeaModel {
-    // The information about the AI jobs.
+    /**
+     * <p>The information about the AI jobs.</p>
+     */
     @NameInMap("AIJobList")
     public SubmitAIJobResponseBodyAIJobList AIJobList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,18 +38,24 @@ public class SubmitAIJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAIJobResponseBodyAIJobListAIJob extends TeaModel {
-        // The ID of the AI job.
+        /**
+         * <p>The ID of the AI job.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
-        // The ID of the video.
+        /**
+         * <p>The ID of the video.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
-        // The type of the AI job. Valid values:
-        // 
-        // *   **AIMediaDNA**: The media fingerprinting job.
-        // *   **AIVideoTag**: The smart tagging job.
+        /**
+         * <p>The type of the AI job. Valid values:</p>
+         * <br>
+         * <p>*   **AIMediaDNA**: The media fingerprinting job.</p>
+         * <p>*   **AIVideoTag**: The smart tagging job.</p>
+         */
         @NameInMap("Type")
         public String type;
 
