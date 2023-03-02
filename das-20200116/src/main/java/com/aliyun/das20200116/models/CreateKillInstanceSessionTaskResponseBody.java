@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSqlLogInstancesPagingResponseBody extends TeaModel {
+public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public Long code;
 
@@ -19,12 +19,12 @@ public class DescribeSqlLogInstancesPagingResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static DescribeSqlLogInstancesPagingResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSqlLogInstancesPagingResponseBody self = new DescribeSqlLogInstancesPagingResponseBody();
+    public static CreateKillInstanceSessionTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateKillInstanceSessionTaskResponseBody self = new CreateKillInstanceSessionTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSqlLogInstancesPagingResponseBody setCode(Long code) {
+    public CreateKillInstanceSessionTaskResponseBody setCode(Long code) {
         this.code = code;
         return this;
     }
@@ -32,7 +32,7 @@ public class DescribeSqlLogInstancesPagingResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeSqlLogInstancesPagingResponseBody setData(String data) {
+    public CreateKillInstanceSessionTaskResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -40,7 +40,7 @@ public class DescribeSqlLogInstancesPagingResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DescribeSqlLogInstancesPagingResponseBody setMessage(String message) {
+    public CreateKillInstanceSessionTaskResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class DescribeSqlLogInstancesPagingResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribeSqlLogInstancesPagingResponseBody setRequestId(String requestId) {
+    public CreateKillInstanceSessionTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class DescribeSqlLogInstancesPagingResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSqlLogInstancesPagingResponseBody setSuccess(Boolean success) {
+    public CreateKillInstanceSessionTaskResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
