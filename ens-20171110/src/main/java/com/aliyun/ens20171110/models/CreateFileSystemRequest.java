@@ -36,7 +36,9 @@ public class CreateFileSystemRequest extends TeaModel {
         @NameInMap("NetworkId")
         public String networkId;
 
-        // BUY。
+        /**
+         * <p>BUY。</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 

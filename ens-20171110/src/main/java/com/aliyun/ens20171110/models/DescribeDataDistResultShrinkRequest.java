@@ -3,7 +3,7 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDataDistResultRequest extends TeaModel {
+public class DescribeDataDistResultShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
@@ -14,7 +14,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public String dataVersions;
 
     @NameInMap("EnsRegionIds")
-    public java.util.List<String> ensRegionIds;
+    public String ensRegionIdsShrink;
 
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -31,12 +31,12 @@ public class DescribeDataDistResultRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    public static DescribeDataDistResultRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDataDistResultRequest self = new DescribeDataDistResultRequest();
+    public static DescribeDataDistResultShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDataDistResultShrinkRequest self = new DescribeDataDistResultShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDataDistResultRequest setAppId(String appId) {
+    public DescribeDataDistResultShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -44,7 +44,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
         return this.appId;
     }
 
-    public DescribeDataDistResultRequest setDataNames(String dataNames) {
+    public DescribeDataDistResultShrinkRequest setDataNames(String dataNames) {
         this.dataNames = dataNames;
         return this;
     }
@@ -52,7 +52,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
         return this.dataNames;
     }
 
-    public DescribeDataDistResultRequest setDataVersions(String dataVersions) {
+    public DescribeDataDistResultShrinkRequest setDataVersions(String dataVersions) {
         this.dataVersions = dataVersions;
         return this;
     }
@@ -60,15 +60,15 @@ public class DescribeDataDistResultRequest extends TeaModel {
         return this.dataVersions;
     }
 
-    public DescribeDataDistResultRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
-        this.ensRegionIds = ensRegionIds;
+    public DescribeDataDistResultShrinkRequest setEnsRegionIdsShrink(String ensRegionIdsShrink) {
+        this.ensRegionIdsShrink = ensRegionIdsShrink;
         return this;
     }
-    public java.util.List<String> getEnsRegionIds() {
-        return this.ensRegionIds;
+    public String getEnsRegionIdsShrink() {
+        return this.ensRegionIdsShrink;
     }
 
-    public DescribeDataDistResultRequest setInstanceIds(String instanceIds) {
+    public DescribeDataDistResultShrinkRequest setInstanceIds(String instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
@@ -76,7 +76,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
         return this.instanceIds;
     }
 
-    public DescribeDataDistResultRequest setMaxDate(String maxDate) {
+    public DescribeDataDistResultShrinkRequest setMaxDate(String maxDate) {
         this.maxDate = maxDate;
         return this;
     }
@@ -84,7 +84,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
         return this.maxDate;
     }
 
-    public DescribeDataDistResultRequest setMinDate(String minDate) {
+    public DescribeDataDistResultShrinkRequest setMinDate(String minDate) {
         this.minDate = minDate;
         return this;
     }
@@ -92,7 +92,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
         return this.minDate;
     }
 
-    public DescribeDataDistResultRequest setPageNumber(Integer pageNumber) {
+    public DescribeDataDistResultShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -100,7 +100,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDataDistResultRequest setPageSize(Integer pageSize) {
+    public DescribeDataDistResultShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }

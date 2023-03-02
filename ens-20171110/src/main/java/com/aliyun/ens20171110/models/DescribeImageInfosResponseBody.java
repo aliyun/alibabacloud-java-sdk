@@ -43,6 +43,9 @@ public class DescribeImageInfosResponseBody extends TeaModel {
     }
 
     public static class DescribeImageInfosResponseBodyImagesImage extends TeaModel {
+        @NameInMap("ComputeType")
+        public String computeType;
+
         @NameInMap("Description")
         public String description;
 
@@ -64,6 +67,14 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         public static DescribeImageInfosResponseBodyImagesImage build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageInfosResponseBodyImagesImage self = new DescribeImageInfosResponseBodyImagesImage();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImageInfosResponseBodyImagesImage setComputeType(String computeType) {
+            this.computeType = computeType;
+            return this;
+        }
+        public String getComputeType() {
+            return this.computeType;
         }
 
         public DescribeImageInfosResponseBodyImagesImage setDescription(String description) {

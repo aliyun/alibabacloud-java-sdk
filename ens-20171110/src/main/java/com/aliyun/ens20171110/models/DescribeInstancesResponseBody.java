@@ -100,7 +100,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("storage")
         public Integer storage;
 
-        // UUID。
+        /**
+         * <p>UUID。</p>
+         */
         @NameInMap("uuid")
         public String uuid;
 
@@ -464,7 +466,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("storage")
         public Integer storage;
 
-        // UUID。
+        /**
+         * <p>UUID。</p>
+         */
         @NameInMap("uuid")
         public String uuid;
 
@@ -596,7 +600,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Integer memory;
 
-        // Schema of Response
+        /**
+         * <p>Schema of Response</p>
+         */
         @NameInMap("NetworkAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes networkAttributes;
 
@@ -621,7 +627,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        // Schema of Response
+        /**
+         * <p>Schema of Response</p>
+         */
         @NameInMap("SystemDisk")
         public DescribeInstancesResponseBodyInstancesInstanceSystemDisk systemDisk;
 

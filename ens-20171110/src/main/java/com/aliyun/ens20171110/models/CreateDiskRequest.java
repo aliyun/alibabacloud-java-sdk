@@ -16,6 +16,9 @@ public class CreateDiskRequest extends TeaModel {
     @NameInMap("Size")
     public String size;
 
+    @NameInMap("SnapshotId")
+    public String snapshotId;
+
     public static CreateDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDiskRequest self = new CreateDiskRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateDiskRequest extends TeaModel {
     }
     public String getSize() {
         return this.size;
+    }
+
+    public CreateDiskRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
 }

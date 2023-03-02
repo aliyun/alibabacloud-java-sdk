@@ -7,7 +7,9 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
     @NameInMap("EnsResourceUsage")
     public java.util.List<DescribeEnsResourceUsageResponseBodyEnsResourceUsage> ensResourceUsage;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

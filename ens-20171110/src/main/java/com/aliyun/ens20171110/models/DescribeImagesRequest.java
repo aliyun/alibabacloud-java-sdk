@@ -19,14 +19,11 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("SnapshotId")
+    public String snapshotId;
+
     @NameInMap("Status")
     public String status;
-
-    @NameInMap("Version")
-    public String version;
-
-    @NameInMap("product")
-    public String product;
 
     public static DescribeImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagesRequest self = new DescribeImagesRequest();
@@ -73,28 +70,20 @@ public class DescribeImagesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeImagesRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
     public DescribeImagesRequest setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DescribeImagesRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
-    }
-
-    public DescribeImagesRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
     }
 
 }

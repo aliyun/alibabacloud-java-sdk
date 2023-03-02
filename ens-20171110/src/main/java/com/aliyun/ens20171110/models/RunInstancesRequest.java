@@ -52,6 +52,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("PasswordInherit")
+    public Boolean passwordInherit;
+
     @NameInMap("Period")
     public Long period;
 
@@ -219,6 +222,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public RunInstancesRequest setPasswordInherit(Boolean passwordInherit) {
+        this.passwordInherit = passwordInherit;
+        return this;
+    }
+    public Boolean getPasswordInherit() {
+        return this.passwordInherit;
     }
 
     public RunInstancesRequest setPeriod(Long period) {

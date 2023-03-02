@@ -97,6 +97,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("Platform")
         public String platform;
 
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
         public static DescribeImagesResponseBodyImagesImage build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagesResponseBodyImagesImage self = new DescribeImagesResponseBodyImagesImage();
             return TeaModel.build(map, self);
@@ -156,6 +159,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public String getPlatform() {
             return this.platform;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
     }
