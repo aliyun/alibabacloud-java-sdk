@@ -7,7 +7,9 @@ public class RespondIncidentRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    // 影响程度
+    /**
+     * <p>影响程度</p>
+     */
     @NameInMap("incidentIds")
     public java.util.List<Long> incidentIds;
 

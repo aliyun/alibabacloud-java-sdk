@@ -4,11 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateSubscriptionResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public CreateSubscriptionResponseBodyData data;
 
-    // request id
+    /**
+     * <p>request id</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -4,11 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetProblemPreviewResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public GetProblemPreviewResponseBodyData data;
 
-    // requestId
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -516,7 +520,9 @@ public class GetProblemPreviewResponseBody extends TeaModel {
         @NameInMap("mail")
         public GetProblemPreviewResponseBodyDataMail mail;
 
-        // object
+        /**
+         * <p>object</p>
+         */
         @NameInMap("problem")
         public GetProblemPreviewResponseBodyDataProblem problem;
 
@@ -532,7 +538,9 @@ public class GetProblemPreviewResponseBody extends TeaModel {
         @NameInMap("voice")
         public GetProblemPreviewResponseBodyDataVoice voice;
 
-        // webhook
+        /**
+         * <p>webhook</p>
+         */
         @NameInMap("webhook")
         public GetProblemPreviewResponseBodyDataWebhook webhook;
 

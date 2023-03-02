@@ -4,11 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListEscalationPlanServicesResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public java.util.List<ListEscalationPlanServicesResponseBodyData> data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

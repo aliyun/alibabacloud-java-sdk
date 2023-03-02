@@ -7,7 +7,9 @@ public class ListDataReportForUserResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListDataReportForUserResponseBodyData> data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -56,11 +58,15 @@ public class ListDataReportForUserResponseBody extends TeaModel {
         @NameInMap("finishProportion")
         public String finishProportion;
 
-        // MRRA
+        /**
+         * <p>MRRA</p>
+         */
         @NameInMap("meanTimeToAcknowledge")
         public String meanTimeToAcknowledge;
 
-        // MTTA
+        /**
+         * <p>MTTA</p>
+         */
         @NameInMap("meanTimeToRepair")
         public String meanTimeToRepair;
 

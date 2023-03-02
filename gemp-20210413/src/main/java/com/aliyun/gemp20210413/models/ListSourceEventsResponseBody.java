@@ -7,11 +7,15 @@ public class ListSourceEventsResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListSourceEventsResponseBodyData> data;
 
-    // firstRowKey
+    /**
+     * <p>firstRowKey</p>
+     */
     @NameInMap("firstRowKey")
     public String firstRowKey;
 
-    // lastRowKey
+    /**
+     * <p>lastRowKey</p>
+     */
     @NameInMap("lastRowKey")
     public String lastRowKey;
 

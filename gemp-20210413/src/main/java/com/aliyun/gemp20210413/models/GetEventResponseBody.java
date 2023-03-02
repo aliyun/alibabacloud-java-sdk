@@ -7,7 +7,9 @@ public class GetEventResponseBody extends TeaModel {
     @NameInMap("data")
     public GetEventResponseBodyData data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

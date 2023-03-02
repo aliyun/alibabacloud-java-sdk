@@ -13,7 +13,9 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
     @NameInMap("pageSIze")
     public Long pageSIze;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -78,11 +80,15 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
         @NameInMap("incidentCount")
         public Long incidentCount;
 
-        // MRRA
+        /**
+         * <p>MRRA</p>
+         */
         @NameInMap("meanTimeToAcknowledge")
         public Long meanTimeToAcknowledge;
 
-        // MTTR
+        /**
+         * <p>MTTR</p>
+         */
         @NameInMap("meanTimeToRepair")
         public Long meanTimeToRepair;
 

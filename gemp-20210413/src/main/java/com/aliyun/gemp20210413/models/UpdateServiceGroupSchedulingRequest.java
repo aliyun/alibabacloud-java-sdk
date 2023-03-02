@@ -65,15 +65,29 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
     }
 
     public static class UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers extends TeaModel {
+        @NameInMap("schedulingObjectType")
+        public String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
 
+        @NameInMap("schedulingUserIdList")
+        public java.util.List<Long> schedulingUserIdList;
+
         public static UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers self = new UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers setSchedulingObjectType(String schedulingObjectType) {
+            this.schedulingObjectType = schedulingObjectType;
+            return this;
+        }
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
         }
 
         public UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers setSchedulingOrder(Integer schedulingOrder) {
@@ -90,6 +104,14 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         }
         public Long getSchedulingUserId() {
             return this.schedulingUserId;
+        }
+
+        public UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers setSchedulingUserIdList(java.util.List<Long> schedulingUserIdList) {
+            this.schedulingUserIdList = schedulingUserIdList;
+            return this;
+        }
+        public java.util.List<Long> getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
         }
 
     }
@@ -164,6 +186,9 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
+        @NameInMap("schedulingObjectType")
+        public String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         public Long schedulingOrder;
 
@@ -172,6 +197,9 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
 
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
+
+        @NameInMap("schedulingUserIdList")
+        public java.util.List<Long> schedulingUserIdList;
 
         @NameInMap("shiftName")
         public String shiftName;
@@ -200,6 +228,14 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingEndTime;
         }
 
+        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingObjectType(String schedulingObjectType) {
+            this.schedulingObjectType = schedulingObjectType;
+            return this;
+        }
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
+        }
+
         public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingOrder(Long schedulingOrder) {
             this.schedulingOrder = schedulingOrder;
             return this;
@@ -224,6 +260,14 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingUserId;
         }
 
+        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingUserIdList(java.util.List<Long> schedulingUserIdList) {
+            this.schedulingUserIdList = schedulingUserIdList;
+            return this;
+        }
+        public java.util.List<Long> getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
+        }
+
         public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setShiftName(String shiftName) {
             this.shiftName = shiftName;
             return this;
@@ -246,6 +290,9 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
 
+        @NameInMap("schedulingObjectType")
+        public String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
@@ -254,6 +301,9 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
 
         @NameInMap("schedulingUserId")
         public Long schedulingUserId;
+
+        @NameInMap("schedulingUserIdList")
+        public java.util.List<Long> schedulingUserIdList;
 
         @NameInMap("shiftName")
         public String shiftName;
@@ -272,6 +322,14 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         }
         public String getSchedulingEndTime() {
             return this.schedulingEndTime;
+        }
+
+        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingObjectType(String schedulingObjectType) {
+            this.schedulingObjectType = schedulingObjectType;
+            return this;
+        }
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
         }
 
         public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingOrder(Integer schedulingOrder) {
@@ -296,6 +354,14 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         }
         public Long getSchedulingUserId() {
             return this.schedulingUserId;
+        }
+
+        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingUserIdList(java.util.List<Long> schedulingUserIdList) {
+            this.schedulingUserIdList = schedulingUserIdList;
+            return this;
+        }
+        public java.util.List<Long> getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
         }
 
         public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setShiftName(String shiftName) {

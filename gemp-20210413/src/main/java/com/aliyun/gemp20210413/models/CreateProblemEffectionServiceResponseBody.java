@@ -4,11 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemEffectionServiceResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public CreateProblemEffectionServiceResponseBodyData data;
 
-    // id of the request
+    /**
+     * <p>id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

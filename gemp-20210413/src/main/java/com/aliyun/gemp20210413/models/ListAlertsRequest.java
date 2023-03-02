@@ -13,7 +13,9 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("alertSourceName")
     public String alertSourceName;
 
-    // 2020-09-10 21:00:00
+    /**
+     * <p>2020-09-10 21:00:00</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
@@ -32,7 +34,9 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("ruleName")
     public String ruleName;
 
-    // 2020-09-10 13:00:00
+    /**
+     * <p>2020-09-10 13:00:00</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

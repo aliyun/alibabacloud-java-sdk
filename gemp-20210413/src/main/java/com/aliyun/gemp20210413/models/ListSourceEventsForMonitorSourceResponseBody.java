@@ -7,7 +7,9 @@ public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<ListSourceEventsForMonitorSourceResponseBodyData> data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

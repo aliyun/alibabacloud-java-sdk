@@ -4,11 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GeneratePictureLinkResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public GeneratePictureLinkResponseBodyData data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class GeneratePictureLinkResponseBody extends TeaModel {
     }
 
     public static class GeneratePictureLinkResponseBodyDataLinks extends TeaModel {
-        // oss key
+        /**
+         * <p>oss key</p>
+         */
         @NameInMap("key")
         public String key;
 
-        // url
+        /**
+         * <p>url</p>
+         */
         @NameInMap("link")
         public String link;
 
@@ -66,7 +74,9 @@ public class GeneratePictureLinkResponseBody extends TeaModel {
     }
 
     public static class GeneratePictureLinkResponseBodyData extends TeaModel {
-        // array
+        /**
+         * <p>array</p>
+         */
         @NameInMap("links")
         public java.util.List<GeneratePictureLinkResponseBodyDataLinks> links;
 

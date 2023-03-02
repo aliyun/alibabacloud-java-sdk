@@ -4,7 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DisableIntegrationConfigResponseBody extends TeaModel {
-    // requestId
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

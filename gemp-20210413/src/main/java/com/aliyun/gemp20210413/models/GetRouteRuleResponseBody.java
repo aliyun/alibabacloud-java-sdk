@@ -192,6 +192,12 @@ public class GetRouteRuleResponseBody extends TeaModel {
         @NameInMap("childRuleRelation")
         public String childRuleRelation;
 
+        @NameInMap("convergenceFields")
+        public java.util.List<String> convergenceFields;
+
+        @NameInMap("convergenceType")
+        public Integer convergenceType;
+
         @NameInMap("coverageProblemLevels")
         public java.util.List<String> coverageProblemLevels;
 
@@ -284,6 +290,22 @@ public class GetRouteRuleResponseBody extends TeaModel {
         }
         public String getChildRuleRelation() {
             return this.childRuleRelation;
+        }
+
+        public GetRouteRuleResponseBodyData setConvergenceFields(java.util.List<String> convergenceFields) {
+            this.convergenceFields = convergenceFields;
+            return this;
+        }
+        public java.util.List<String> getConvergenceFields() {
+            return this.convergenceFields;
+        }
+
+        public GetRouteRuleResponseBodyData setConvergenceType(Integer convergenceType) {
+            this.convergenceType = convergenceType;
+            return this;
+        }
+        public Integer getConvergenceType() {
+            return this.convergenceType;
         }
 
         public GetRouteRuleResponseBodyData setCoverageProblemLevels(java.util.List<String> coverageProblemLevels) {

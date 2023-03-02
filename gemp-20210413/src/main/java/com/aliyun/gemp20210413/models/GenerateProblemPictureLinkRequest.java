@@ -4,7 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GenerateProblemPictureLinkRequest extends TeaModel {
-    // oss key
+    /**
+     * <p>oss key</p>
+     */
     @NameInMap("keys")
     public java.util.List<String> keys;
 

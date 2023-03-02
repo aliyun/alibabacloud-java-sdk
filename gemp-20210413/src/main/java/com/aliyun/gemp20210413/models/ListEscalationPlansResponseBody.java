@@ -4,7 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListEscalationPlansResponseBody extends TeaModel {
-    // data
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public java.util.List<ListEscalationPlansResponseBodyData> data;
 
@@ -14,7 +16,9 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

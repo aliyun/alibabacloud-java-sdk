@@ -7,7 +7,9 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
     @NameInMap("data")
     public VerifyRouteRuleResponseBodyData data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

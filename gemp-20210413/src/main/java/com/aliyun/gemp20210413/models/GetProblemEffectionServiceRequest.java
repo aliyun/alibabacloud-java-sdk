@@ -4,7 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetProblemEffectionServiceRequest extends TeaModel {
-    // clientToken
+    /**
+     * <p>clientToken</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 

@@ -7,7 +7,9 @@ public class GetServiceGroupSchedulingPreviewResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.Map<String, ?> data;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
