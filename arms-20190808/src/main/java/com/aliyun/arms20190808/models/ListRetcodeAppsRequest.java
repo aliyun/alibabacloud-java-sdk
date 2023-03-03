@@ -4,13 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListRetcodeAppsRequest extends TeaModel {
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListRetcodeAppsRequestTags> tags;
 
@@ -44,9 +52,15 @@ public class ListRetcodeAppsRequest extends TeaModel {
     }
 
     public static class ListRetcodeAppsRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

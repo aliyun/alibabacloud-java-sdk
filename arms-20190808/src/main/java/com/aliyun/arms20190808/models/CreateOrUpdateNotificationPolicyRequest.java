@@ -4,102 +4,127 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
-    // The ID of the escalation policy.
+    /**
+     * <p>The ID of the escalation policy.</p>
+     */
     @NameInMap("EscalationPolicyId")
     public Long escalationPolicyId;
 
-    // An array of alert event group objects.
-    // 
-    // *   If you do not specify the groupingFields field, all alerts will be sent to contacts based on `alertname`.
-    // 
-    // *   If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.
-    // 
-    //     Sample statement:
-    // 
-    // ```
-    // 
-    // { 
-    // "groupWait":5,    // The waiting time for grouping. 
-    // "groupInterval":30,     // The time interval of grouping. 
-    // "groupingFields":["alertname"]       // The field that is used to group alert events. 
-    // }
-    // ```
+    /**
+     * <p>An array of alert event group objects.</p>
+     * <br>
+     * <p>*   If you do not specify the groupingFields field, all alerts will be sent to contacts based on `alertname`.</p>
+     * <br>
+     * <p>*   If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.</p>
+     * <br>
+     * <p>    Sample statement:</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>{ </p>
+     * <p>"groupWait":5,    // The waiting time for grouping. </p>
+     * <p>"groupInterval":30,     // The time interval of grouping. </p>
+     * <p>"groupingFields":["alertname"]       // The field that is used to group alert events. </p>
+     * <p>}</p>
+     * <p>```</p>
+     */
     @NameInMap("GroupRule")
     public String groupRule;
 
-    // The ID of the notification policy.
-    // 
-    // *   If you do not specify this parameter, a new notification policy is created.
-    // *   If you specify this parameter, the specified notification policy is modified.
+    /**
+     * <p>The ID of the notification policy.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, a new notification policy is created.</p>
+     * <p>*   If you specify this parameter, the specified notification policy is modified.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // The integration ID of the ticket system to which alerts are pushed.
+    /**
+     * <p>The integration ID of the ticket system to which alerts are pushed.</p>
+     */
     @NameInMap("IntegrationId")
     public Long integrationId;
 
-    // The matching rules. Sample statement:
-    // 
-    // ```
-    // 
-    // [
-    //  {
-    //  "matchingConditions": [
-    //  { 
-    //  "value": "test",    // The value of the matching condition. 
-    //  "key": "alertname",     // The key of the matching condition. 
-    //  "operator": "eq"   // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
-    //  }
-    //  ]
-    //  } 
-    //  ]
-    // ```
+    /**
+     * <p>The matching rules. Sample statement:</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>[</p>
+     * <p> {</p>
+     * <p> "matchingConditions": [</p>
+     * <p> { </p>
+     * <p> "value": "test",    // The value of the matching condition. </p>
+     * <p> "key": "alertname",     // The key of the matching condition. </p>
+     * <p> "operator": "eq"   // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   </p>
+     * <p> }</p>
+     * <p> ]</p>
+     * <p> } </p>
+     * <p> ]</p>
+     * <p>```</p>
+     */
     @NameInMap("MatchingRules")
     public String matchingRules;
 
-    // The name of the notification policy.
+    /**
+     * <p>The name of the notification policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // An array of notification rule objects. Sample statement:
-    // 
-    // ```
-    // 
-    // { 
-    //  "notifyStartTime":"00:00",      // The start time of the notification window. 
-    //  "notifyEndTime":"23:59",       // The end time of the notification window. 
-    //  "notifyChannels":["dingTalk", "email", "sms", "tts", "webhook"],       // The notification methods. Valid values: dingTalk, email, sms, tts, and webhook. 
-    //  "notifyObjects":[{       // An array of notification contact objects. 
-    //  "notifyObjectType":"CONTACT",       // The type of the notification contact. Valid values: CONTACT (individual contacts), CONTACT_GROUP (contact groups), DING_ROBOT (the instant message robot), and CONTACT_SCHEDULE (the person on duty based on an established schedule). 
-    //  "notifyObjectId":123,       // The ID of the notification contact. 
-    //  "notifyObjectName":"test"       // The name of the notification contact. 
-    //  }]
-    // ```
+    /**
+     * <p>An array of notification rule objects. Sample statement:</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>{ </p>
+     * <p> "notifyStartTime":"00:00",      // The start time of the notification window. </p>
+     * <p> "notifyEndTime":"23:59",       // The end time of the notification window. </p>
+     * <p> "notifyChannels":["dingTalk", "email", "sms", "tts", "webhook"],       // The notification methods. Valid values: dingTalk, email, sms, tts, and webhook. </p>
+     * <p> "notifyObjects":[{       // An array of notification contact objects. </p>
+     * <p> "notifyObjectType":"CONTACT",       // The type of the notification contact. Valid values: CONTACT (individual contacts), CONTACT_GROUP (contact groups), DING_ROBOT (the instant message robot), and CONTACT_SCHEDULE (the person on duty based on an established schedule). </p>
+     * <p> "notifyObjectId":123,       // The ID of the notification contact. </p>
+     * <p> "notifyObjectName":"test"       // The name of the notification contact. </p>
+     * <p> }]</p>
+     * <p>```</p>
+     */
     @NameInMap("NotifyRule")
     public String notifyRule;
 
-    // The notification template. The default notification template is provided below the table.
+    /**
+     * <p>The notification template. The default notification template is provided below the table.</p>
+     */
     @NameInMap("NotifyTemplate")
     public String notifyTemplate;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // Specifies whether to resend a notification for a long-lasting unresolved alert. Default value: true. Valid values:
-    // 
-    // *   `true`: If you set this parameter to `true`, you must set **RepeatInterval**.
-    // *   `false`: If you set this parameter to `false`, you must set **EscalationPolicyId**.
+    /**
+     * <p>Specifies whether to resend a notification for a long-lasting unresolved alert. Default value: true. Valid values:</p>
+     * <br>
+     * <p>*   `true`: If you set this parameter to `true`, you must set **RepeatInterval**.</p>
+     * <p>*   `false`: If you set this parameter to `false`, you must set **EscalationPolicyId**.</p>
+     */
     @NameInMap("Repeat")
     public Boolean repeat;
 
-    // The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.
+    /**
+     * <p>The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.</p>
+     */
     @NameInMap("RepeatInterval")
     public Long repeatInterval;
 
-    // Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:
-    // 
-    // *   `true`: The system sends a notification.
-    // *   `false`: The system does not send a notification.
+    /**
+     * <p>Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The system sends a notification.</p>
+     * <p>*   `false`: The system does not send a notification.</p>
+     */
     @NameInMap("SendRecoverMessage")
     public Boolean sendRecoverMessage;
 

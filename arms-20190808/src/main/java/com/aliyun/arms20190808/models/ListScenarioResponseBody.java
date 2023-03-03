@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListScenarioResponseBody extends TeaModel {
-    // The detailed information of the business monitoring job.
+    /**
+     * <p>The detailed information of the business monitoring job.</p>
+     */
     @NameInMap("ArmsScenarios")
     public java.util.List<ListScenarioResponseBodyArmsScenarios> armsScenarios;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,39 +38,57 @@ public class ListScenarioResponseBody extends TeaModel {
     }
 
     public static class ListScenarioResponseBodyArmsScenarios extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The time when the business monitoring job was created.
+        /**
+         * <p>The time when the business monitoring job was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The extended information. The value is a JSON string.
+        /**
+         * <p>The extended information. The value is a JSON string.</p>
+         */
         @NameInMap("Extensions")
         public String extensions;
 
-        // The ID of the business monitoring job.
+        /**
+         * <p>The ID of the business monitoring job.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The name of the business monitoring job.
+        /**
+         * <p>The name of the business monitoring job.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The code of the business monitoring job.
+        /**
+         * <p>The code of the business monitoring job.</p>
+         */
         @NameInMap("Sign")
         public String sign;
 
-        // The time when the business monitoring job was updated.
+        /**
+         * <p>The time when the business monitoring job was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

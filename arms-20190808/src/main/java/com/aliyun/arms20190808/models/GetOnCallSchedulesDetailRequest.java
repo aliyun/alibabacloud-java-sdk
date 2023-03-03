@@ -4,12 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetOnCallSchedulesDetailRequest extends TeaModel {
+    /**
+     * <p>The date on which the shift ends. Format: `yyyy-MM-dd`.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the scheduling policy.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The date from which the shift starts. Format: `yyyy-MM-dd`.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

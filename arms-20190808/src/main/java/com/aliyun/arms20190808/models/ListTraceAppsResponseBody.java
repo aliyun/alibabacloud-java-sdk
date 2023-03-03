@@ -4,31 +4,41 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListTraceAppsResponseBody extends TeaModel {
-    // The HTTP status code returned for the request. Valid values:
-    // 
-    // *   `2XX`: The request is successful.
-    // *   `3XX`: A redirection message is returned.
-    // *   `4XX`: The request is invalid.
-    // *   `5XX`: A server error occurs.
+    /**
+     * <p>The HTTP status code returned for the request. Valid values:</p>
+     * <br>
+     * <p>*   `2XX: The request is successful.`</p>
+     * <p>*   `3XX: A redirection message is returned.`</p>
+     * <p>*   `4XX: The request is invalid.`</p>
+     * <p>*   `5XX: A server error occurs.`</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The error message returned when the request parameters are invalid.
+    /**
+     * <p>The error message returned if the request parameters are invalid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the call is successful. Valid values:
-    // 
-    // *   `true`: The call is successful.
-    // *   `false`: The call fails.
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The call was successful.</p>
+     * <p>*   `false`: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
-    // The list of application monitoring tasks.
+    /**
+     * <p>The list of application monitoring tasks.</p>
+     */
     @NameInMap("TraceApps")
     public java.util.List<ListTraceAppsResponseBodyTraceApps> traceApps;
 
@@ -78,9 +88,15 @@ public class ListTraceAppsResponseBody extends TeaModel {
     }
 
     public static class ListTraceAppsResponseBodyTraceAppsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -108,58 +124,87 @@ public class ListTraceAppsResponseBody extends TeaModel {
     }
 
     public static class ListTraceAppsResponseBodyTraceApps extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The timestamp when the application was created. Unit: milliseconds.
+        /**
+         * <p>The time when the monitoring task was created. The value is a timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The tag of the application.
+        /**
+         * <p>The tags of the application.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
-        // The process identifier (PID) of the application.
+        /**
+         * <p>The PID of the application.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
-        // 
-        // *   `true`: The application is displayed in the ARMS console.
-        // *   `false`: The application is not displayed in the ARMS console.
+        /**
+         * <p>Indicates whether the application was displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+         * <br>
+         * <p>*   `true`: yes</p>
+         * <p>*   `false`: no</p>
+         */
         @NameInMap("Show")
         public Boolean show;
 
+        /**
+         * <p>The application source.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTraceAppsResponseBodyTraceAppsTags> tags;
 
-        // The type of the monitoring task. Valid values:
-        // 
-        // *   `TRACE`: application monitoring
-        // *   `RETCODE`: frontend monitoring
+        /**
+         * <p>The type of the monitoring task. Valid values:</p>
+         * <br>
+         * <p>*   `TRACE`: Application Monitoring</p>
+         * <p>*   `RETCODE`: Browser Monitoring</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The timestamp when the task was updated. Unit: milliseconds.
+        /**
+         * <p>The time when the monitoring task was updated. The value is a timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

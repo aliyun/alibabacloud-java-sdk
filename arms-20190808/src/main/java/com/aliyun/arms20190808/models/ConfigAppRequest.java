@@ -4,21 +4,30 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ConfigAppRequest extends TeaModel {
-    // The process identifier (PID) of the application. Separate multiple PIDs with commas (,).
+    /**
+     * <p>The process identifier (PID) of the application. Separate multiple PIDs with commas (,).</p>
+     */
     @NameInMap("AppIds")
     public String appIds;
 
-    // Specifies whether to turns on or off the main switch of the agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the agent is queried.  
-    // 
-    // - `true`: Turn on the switch.
-    // - `false`: Turn off the switch.
+    /**
+     * <p>Specifies whether to turn on or turn off the main switch of the ARMS agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the ARMS agent is queried.</p>
+     * <br>
+     * <p>*   `true`: turns on the switch</p>
+     * <p>*   `false`: turns off the switch</p>
+     */
     @NameInMap("Enable")
     public String enable;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the application. Set the value to **TRACE**.</p>
+     */
     @NameInMap("Type")
     public String type;
 

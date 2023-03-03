@@ -4,19 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetExploreUrlRequest extends TeaModel {
-    // The ID of the cluster.
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The query language corresponding to the data source.
+    /**
+     * <p>The query language corresponding to the data source.</p>
+     */
     @NameInMap("Expression")
     public String expression;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the Grafana data source.
+    /**
+     * <p>The type of the Grafana data source.</p>
+     */
     @NameInMap("Type")
     public String type;
 

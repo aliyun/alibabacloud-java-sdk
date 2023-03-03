@@ -4,13 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UninstallPromClusterResponseBody extends TeaModel {
-    // Indicates whether the call was successful. Valid values:
-    // 
-    // true: The call was successful. false: The call failed.
+    /**
+     * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+     */
+    @NameInMap("Code")
+    public Integer code;
+
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
-    // The ID of the request. You can query logs and troubleshoot issues based on the ID.
+    /**
+     * <p>The message returned.</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -19,12 +33,28 @@ public class UninstallPromClusterResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UninstallPromClusterResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
     public UninstallPromClusterResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
     public Boolean getData() {
         return this.data;
+    }
+
+    public UninstallPromClusterResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public UninstallPromClusterResponseBody setRequestId(String requestId) {

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class OpenVClusterResponseBody extends TeaModel {
-    // The response parameters in the JSON format.
+    /**
+     * <p>The response parameters in the JSON format.</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // The ID of the request. You can query logs and troubleshoot issues based on the ID.
+    /**
+     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

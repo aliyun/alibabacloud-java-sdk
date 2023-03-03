@@ -4,7 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventBridgeIntegrationRequest extends TeaModel {
-    // The ID of the EventBridge integration.
+    /**
+     * <p>The ID of the EventBridge integration.</p>
+     */
     @NameInMap("Id")
     public Long id;
 

@@ -4,7 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteAlertRuleRequest extends TeaModel {
-    // The ID of the alert rule.
+    /**
+     * <p>The ID of the alert rule.</p>
+     */
     @NameInMap("AlertId")
     public Long alertId;
 

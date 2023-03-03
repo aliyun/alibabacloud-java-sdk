@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetStackResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information of the method stack.
+    /**
+     * <p>The information of the method stack.</p>
+     */
     @NameInMap("StackInfo")
     public java.util.List<GetStackResponseBodyStackInfo> stackInfo;
 
@@ -34,11 +38,15 @@ public class GetStackResponseBody extends TeaModel {
     }
 
     public static class GetStackResponseBodyStackInfoExtInfo extends TeaModel {
-        // The content of the custom parameter.
+        /**
+         * <p>The content of the custom parameter.</p>
+         */
         @NameInMap("Info")
         public String info;
 
-        // The type of the custom parameter.
+        /**
+         * <p>The type of the custom parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -66,35 +74,51 @@ public class GetStackResponseBody extends TeaModel {
     }
 
     public static class GetStackResponseBodyStackInfo extends TeaModel {
-        // The name of the operation.
+        /**
+         * <p>The name of the operation.</p>
+         */
         @NameInMap("Api")
         public String api;
 
-        // The duration. Unit: milliseconds.
+        /**
+         * <p>The duration. Unit: milliseconds.</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
-        // The error message.
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Exception")
         public String exception;
 
-        // The extended information.
+        /**
+         * <p>The extended information.</p>
+         */
         @NameInMap("ExtInfo")
         public GetStackResponseBodyStackInfoExtInfo extInfo;
 
-        // The number of rows in the method stack information.
+        /**
+         * <p>The number of rows in the method stack information.</p>
+         */
         @NameInMap("Line")
         public String line;
 
-        // RPC ID。
+        /**
+         * <p>RPC ID。</p>
+         */
         @NameInMap("RpcId")
         public String rpcId;
 
-        // The name of the service.
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // The start time of the call method.
+        /**
+         * <p>The start time of the call method.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

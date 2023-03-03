@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetPrometheusApiTokenResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The token required for integrating ARMS Prometheus Monitoring.
+    /**
+     * <p>The token required for integrating Prometheus Service.</p>
+     */
     @NameInMap("Token")
     public String token;
 

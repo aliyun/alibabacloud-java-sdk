@@ -4,31 +4,45 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAppApiByPageRequest extends TeaModel {
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The end of the time range to query. Unit: milliseconds.
+    /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    // The time interval between the data shards to be queried. Unit: milliseconds. Minimum value: 60000.
+    /**
+     * <p>The time interval between the data shards to be queried. Unit: milliseconds. Minimum value: 60000.</p>
+     */
     @NameInMap("IntervalMills")
     public Integer intervalMills;
 
-    // The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
+    /**
+     * <p>The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).</p>
+     */
     @NameInMap("PId")
     public String PId;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The beginning of the time range to query. Unit: milliseconds.
+    /**
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

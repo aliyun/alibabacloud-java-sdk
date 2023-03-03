@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
-    // The object.
+    /**
+     * <p>The object.</p>
+     */
     @NameInMap("AlertContactGroup")
     public CreateOrUpdateContactGroupResponseBodyAlertContactGroup alertContactGroup;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateContactGroupResponseBodyAlertContactGroup extends TeaModel {
-        // The ID of the alert contact group.
+        /**
+         * <p>The ID of the alert contact group.</p>
+         */
         @NameInMap("ContactGroupId")
         public Float contactGroupId;
 
-        // The name of the alert contact group.
+        /**
+         * <p>The name of the alert contact group.</p>
+         */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
-        // The IDs of the contacts that are included in the alert contact group.
+        /**
+         * <p>The IDs of the contacts that are included in the alert contact group.</p>
+         */
         @NameInMap("ContactIds")
         public String contactIds;
 

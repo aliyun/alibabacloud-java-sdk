@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
-    // The information about EventBridge integrations on each page.
+    /**
+     * <p>The information about EventBridge integrations on each page.</p>
+     */
     @NameInMap("PageBean")
     public ListEventBridgeIntegrationsResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     }
 
     public static class ListEventBridgeIntegrationsResponseBodyPageBeanEventBridgeIntegrations extends TeaModel {
-        // The description of the EventBridge integration.
+        /**
+         * <p>The description of the EventBridge integration.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the EventBridge integration.
+        /**
+         * <p>The ID of the EventBridge integration.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The name of the EventBridge integration.
+        /**
+         * <p>The name of the EventBridge integration.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -78,19 +88,27 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     }
 
     public static class ListEventBridgeIntegrationsResponseBodyPageBean extends TeaModel {
-        // The EventBridge integrations.
+        /**
+         * <p>The EventBridge integrations.</p>
+         */
         @NameInMap("EventBridgeIntegrations")
         public java.util.List<ListEventBridgeIntegrationsResponseBodyPageBeanEventBridgeIntegrations> eventBridgeIntegrations;
 
-        // The number of the page returned.
+        /**
+         * <p>The number of the page returned.</p>
+         */
         @NameInMap("Page")
         public Long page;
 
-        // The number of entries that are returned on each page.
+        /**
+         * <p>The number of entries that are returned on each page.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The total number of EventBridge integrations that are returned.
+        /**
+         * <p>The total number of EventBridge integrations that are returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

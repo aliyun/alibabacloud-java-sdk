@@ -4,50 +4,75 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreatePrometheusAlertRuleRequest extends TeaModel {
-    // The name of the alert rule.
+    /**
+     * <p>The name of the alert rule.</p>
+     */
     @NameInMap("AlertName")
     public String alertName;
 
-    // The annotations that are described in a JSON string. You must specify the name and value of each annotation.
+    /**
+     * <p>The annotations that are described in a JSON string. You must specify the name and value of each annotation.</p>
+     */
     @NameInMap("Annotations")
     public String annotations;
 
-    // The ID of the cluster.
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The ID of the notification policy. This parameter is required if the **NotifyType** parameter is set to `DISPATCH_RULE`.
+    /**
+     * <p>The ID of the notification policy. This parameter is required if the **NotifyType** parameter is set to `DISPATCH_RULE`.</p>
+     */
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
-    // The duration of the alert. Valid values: 1 to 1440. Unit: minutes.
+    /**
+     * <p>The duration of the alert. Valid values: 1 to 1440. Unit: minutes.</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
-    // The alert rule expression that follows the PromQL syntax.
+    /**
+     * <p>The expression of the alert rule. The expression must follow the PromQL syntax.</p>
+     */
     @NameInMap("Expression")
     public String expression;
 
-    // The tags that are described in a JSON string. You must specify the name and value of each tag.
+    /**
+     * <p>The tags that are described in a JSON string. You must specify the name and value of each tag.</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
-    // The message of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.
+    /**
+     * <p>The content of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The method of that is used to send alert notifications. Valid values:
-    // 
-    // *   `ALERT_MANAGER`: Alert notifications are sent by Operation Center. This is the default value.
-    // *   `DISPATCH_RULE`: Alert notifications are sent based on the specified notification policy.
+    /**
+     * <p>The method that is used to send alert notifications. Valid values:</p>
+     * <br>
+     * <p>*   `ALERT_MANAGER`: Alert notifications are sent by Operation Center. This is the default value.</p>
+     * <p>*   `DISPATCH_RULE`: Alert notifications are sent based on the specified notification policy.</p>
+     */
     @NameInMap("NotifyType")
     public String notifyType;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the alert rule.
+    /**
+     * <p>The type of the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   99: custom alert</p>
+     * <p>*   101: Prometheus Service alert</p>
+     */
     @NameInMap("Type")
     public String type;
 

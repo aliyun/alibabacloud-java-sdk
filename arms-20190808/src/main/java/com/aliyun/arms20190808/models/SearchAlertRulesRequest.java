@@ -4,53 +4,83 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertRulesRequest extends TeaModel {
-    // The type of the application that is associated with the alert rule. Valid values:
-    // 
-    // *   `TRACE`: application.
-    // *   `RETCODE`: browser.
+    @NameInMap("AlertRuleId")
+    public String alertRuleId;
+
+    /**
+     * <p>The type of the application that is associated with the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   `TRACE`: application</p>
+     * <p>*   `RETCODE`: browser</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
-    // The page number of the returned page. Default value: `1`.
+    /**
+     * <p>The page number of the page to return. Default value: `1`.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The number of entries returned per page. Default value: `10`.
+    /**
+     * <p>The number of entries to return per page. Default value: `10`.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The process identifier (PID) of the application that is associated with the alert rule. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
+    /**
+     * <p>The process identifier (PID) of the application that is associated with the alert rule. For more information about how to obtain the PID, see [Obtain the PID of an application](https://help.aliyun.com/document_detail/186100.html?spm=a2c4g.11186623.6.792.1b50654cqcDPyk#title-imy-7gj-qhr).</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
-    // The region ID of the alert data. For more information about the mappings between **RegionId** and **SystemRegionId**, see the detailed description below the table.
+    /**
+     * <p>The region ID of the alert data. For more information about the mappings between **RegionId** and **SystemRegionId**, see the detailed description below the table.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The region ID of the alert rule. For more information about the mappings between **RegionId** and **SystemRegionId**, see the detailed description below the table.
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The region ID of the alert rule. For more information about the mappings between **RegionId** and **SystemRegionId**, see the detailed description below the table.</p>
+     */
     @NameInMap("SystemRegionId")
     public String systemRegionId;
 
-    // The alert rule name.
+    /**
+     * <p>The alert rule name.</p>
+     */
     @NameInMap("Title")
     public String title;
 
-    // The alert rule type. Valid values:
-    // 
-    // *   `1`: custom alert rules to monitor drill-down data sets.
-    // *   `3`: custom alert rules to monitor tiled data sets.
-    // *   `4`: alert rules to monitor the browser, including the default frontend alert rules.
-    // *   `5`: alert rules to monitor applications, including the default application alert rules.
-    // *   `6`: the default browser alert rules.
-    // *   `7`: the default application alert rules.
-    // *   `8`: Tracing Analysis alert rules.
-    // *   `101`: Prometheus Service alert rules.
+    /**
+     * <p>The alert rule type. Valid values:</p>
+     * <br>
+     * <p>*   `1`: custom alert rules that are used to monitor drill-down data sets</p>
+     * <p>*   `3`: custom alert rules that are used to monitor tiled data sets</p>
+     * <p>*   `4`: alert rules that are used to monitor the browser, including the default frontend alert rules</p>
+     * <p>*   `5`: alert rules that are used to monitor applications, including the default application alert rules</p>
+     * <p>*   `6`: the default browser alert rules</p>
+     * <p>*   `7`: the default application alert rules</p>
+     * <p>*   `8`: Tracing Analysis alert rules</p>
+     * <p>*   `101`: Prometheus alert rules</p>
+     */
     @NameInMap("Type")
     public String type;
 
     public static SearchAlertRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchAlertRulesRequest self = new SearchAlertRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchAlertRulesRequest setAlertRuleId(String alertRuleId) {
+        this.alertRuleId = alertRuleId;
+        return this;
+    }
+    public String getAlertRuleId() {
+        return this.alertRuleId;
     }
 
     public SearchAlertRulesRequest setAppType(String appType) {
@@ -91,6 +121,14 @@ public class SearchAlertRulesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SearchAlertRulesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public SearchAlertRulesRequest setSystemRegionId(String systemRegionId) {

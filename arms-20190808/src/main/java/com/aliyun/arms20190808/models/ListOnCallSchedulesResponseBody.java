@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListOnCallSchedulesResponseBody extends TeaModel {
+    /**
+     * <p>The objects that were returned.</p>
+     */
     @NameInMap("PageBean")
     public ListOnCallSchedulesResponseBodyPageBean pageBean;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
     }
 
     public static class ListOnCallSchedulesResponseBodyPageBeanOnCallSchedules extends TeaModel {
+        /**
+         * <p>The description of the scheduling policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the scheduling policy.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the scheduling policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -73,15 +88,27 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
     }
 
     public static class ListOnCallSchedulesResponseBodyPageBean extends TeaModel {
+        /**
+         * <p>The information about the scheduling policy.</p>
+         */
         @NameInMap("OnCallSchedules")
         public java.util.List<ListOnCallSchedulesResponseBodyPageBeanOnCallSchedules> onCallSchedules;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("Page")
         public Long page;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

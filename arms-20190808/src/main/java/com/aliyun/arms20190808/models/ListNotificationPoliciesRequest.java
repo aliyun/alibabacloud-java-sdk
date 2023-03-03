@@ -4,28 +4,42 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListNotificationPoliciesRequest extends TeaModel {
+    /**
+     * <p>The ID of the notification policy.</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
-    // Specifies whether to query the details about notification policies. Valid values:
-    // 
-    // *   `true`: Details about notification policies are queried.
-    // *   `false`: Details about notification policies are not queried.
+    /**
+     * <p>Specifies whether to query the details about notification policies. Valid values:</p>
+     * <br>
+     * <p>*   `true`: Details about notification policies are queried.</p>
+     * <p>*   `false`: Details about notification policies are not queried.</p>
+     */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
-    // The name of the notification policy.
+    /**
+     * <p>The name of the notification policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("Size")
     public Long size;
 

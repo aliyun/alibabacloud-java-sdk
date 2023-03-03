@@ -4,27 +4,39 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetStackRequest extends TeaModel {
-    // The end time of the call method.
+    /**
+     * <p>The end time of the call method.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    // The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://help.aliyun.com/document_detail/186100.html?spm=a2c4g.11186623.6.792.1b50654cqcDPyk#title-imy-7gj-qhr).
+    /**
+     * <p>The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://help.aliyun.com/document_detail/186100.html?spm=a2c4g.11186623.6.792.1b50654cqcDPyk#title-imy-7gj-qhr).</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the remote procedure call (RPC) mode. You can obtain the ID by calling the **GetTrace** operation.
+    /**
+     * <p>The ID of the remote procedure call (RPC) mode. You can obtain the ID by calling the **GetTrace** operation.</p>
+     */
     @NameInMap("RpcID")
     public String rpcID;
 
-    // The start time of the call method.
+    /**
+     * <p>The start time of the call method.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
-    // The ID of the trace. You can log on to the Application Real-Time Monitoring Service (ARMS) console and obtain the trace ID on the **Trace Query** page.
+    /**
+     * <p>The ID of the trace. You can log on to the Application Real-Time Monitoring Service (ARMS) console and obtain the trace ID on the **Trace Query** page.</p>
+     */
     @NameInMap("TraceID")
     public String traceID;
 

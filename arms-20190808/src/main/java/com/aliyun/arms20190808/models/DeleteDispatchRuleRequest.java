@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteDispatchRuleRequest extends TeaModel {
-    // The ID of the dispatch policy.
+    /**
+     * <p>The ID of the dispatch policy.</p>
+     */
     @NameInMap("Id")
     public String id;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

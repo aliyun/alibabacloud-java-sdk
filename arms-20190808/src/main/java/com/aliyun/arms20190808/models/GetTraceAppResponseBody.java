@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTraceAppResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The struct returned.
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("TraceApp")
     public GetTraceAppResponseBodyTraceApp traceApp;
 
@@ -34,9 +38,15 @@ public class GetTraceAppResponseBody extends TeaModel {
     }
 
     public static class GetTraceAppResponseBodyTraceAppTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -64,59 +74,87 @@ public class GetTraceAppResponseBody extends TeaModel {
     }
 
     public static class GetTraceAppResponseBodyTraceApp extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The timestamp generated when the monitoring task was created.
+        /**
+         * <p>The timestamp generated when the monitoring task was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The labels of the application.
+        /**
+         * <p>The aliases of the application.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
-        // The PID of the application.
+        /**
+         * <p>The PID of the application.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // Indicates whether the application was displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
-        // 
-        // *   `true`: The application was displayed in the ARMS console.
-        // *   `false`: The application was not displayed in the ARMS console.
+        /**
+         * <p>Indicates whether the application was displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The application was displayed in the ARMS console.</p>
+         * <p>*   `false`: The application was not displayed in the ARMS console.</p>
+         */
         @NameInMap("Show")
         public Boolean show;
 
+        /**
+         * <p>The source of the application.</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The tags of the application.
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetTraceAppResponseBodyTraceAppTags> tags;
 
-        // The type of the monitoring task. Valid values:
-        // 
-        // *   `TRACE`: application monitoring
-        // *   `RETCODE`: browser monitoring
+        /**
+         * <p>The type of the monitoring task. Valid values:</p>
+         * <br>
+         * <p>*   `TRACE`: Application Monitoring</p>
+         * <p>*   `RETCODE`: Browser Monitoring</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The timestamp generated when the monitoring task was updated.
+        /**
+         * <p>The timestamp generated when the monitoring task was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

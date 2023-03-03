@@ -4,14 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateDispatchRuleResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the request was successful.
-    // 
-    // *   `true`: The request was successful.
-    // *   `false`: The request failed.
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

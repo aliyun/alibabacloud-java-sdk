@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The returned WebhookContact object.
+    /**
+     * <p>The returned WebhookContact object.</p>
+     */
     @NameInMap("WebhookContact")
     public CreateOrUpdateWebhookContactResponseBodyWebhookContact webhookContact;
 
@@ -34,30 +38,42 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateWebhookContactResponseBodyWebhookContactWebhook extends TeaModel {
-        // The header of the HTTP request.
+        /**
+         * <p>The header of the HTTP request.</p>
+         */
         @NameInMap("BizHeaders")
         public String bizHeaders;
 
-        // The parameters in the HTTP request.
+        /**
+         * <p>The parameters in the HTTP request.</p>
+         */
         @NameInMap("BizParams")
         public String bizParams;
 
-        // The alert notification template.
+        /**
+         * <p>The alert notification template.</p>
+         */
         @NameInMap("Body")
         public String body;
 
-        // The HTTP request method. Valid values:
-        // 
-        // *   Post
-        // *   Get
+        /**
+         * <p>The HTTP request method. Valid values:</p>
+         * <br>
+         * <p>*   Post</p>
+         * <p>*   Get</p>
+         */
         @NameInMap("Method")
         public String method;
 
-        // The alert recovery template.
+        /**
+         * <p>The alert recovery template.</p>
+         */
         @NameInMap("RecoverBody")
         public String recoverBody;
 
-        // The URL of the request method.
+        /**
+         * <p>The URL of the request method.</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -117,15 +133,21 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateWebhookContactResponseBodyWebhookContact extends TeaModel {
-        // The returned Webhook object.
+        /**
+         * <p>The returned Webhook object.</p>
+         */
         @NameInMap("Webhook")
         public CreateOrUpdateWebhookContactResponseBodyWebhookContactWebhook webhook;
 
-        // The ID of the contact for webhook alerts.
+        /**
+         * <p>The ID of the contact for webhook alerts.</p>
+         */
         @NameInMap("WebhookId")
         public Float webhookId;
 
-        // The name of the webhook alert contact.
+        /**
+         * <p>The name of the webhook alert contact.</p>
+         */
         @NameInMap("WebhookName")
         public String webhookName;
 

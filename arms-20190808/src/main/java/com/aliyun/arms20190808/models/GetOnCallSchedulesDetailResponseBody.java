@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
+    /**
+     * <p>The information about the scheduling policy.</p>
+     */
     @NameInMap("Data")
     public GetOnCallSchedulesDetailResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     }
 
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntriesSimpleContact extends TeaModel {
+        /**
+         * <p>The ID of the user on duty.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the user on duty.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -62,12 +74,21 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     }
 
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntries extends TeaModel {
+        /**
+         * <p>The date on which the user completed shift work.</p>
+         */
         @NameInMap("End")
         public String end;
 
+        /**
+         * <p>The information about the user on duty.</p>
+         */
         @NameInMap("SimpleContact")
         public GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntriesSimpleContact simpleContact;
 
+        /**
+         * <p>The date from which the user started shift work.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -103,9 +124,15 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     }
 
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntriesSimpleContact extends TeaModel {
+        /**
+         * <p>The ID of the scheduled user.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the scheduled user.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -133,12 +160,21 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     }
 
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntries extends TeaModel {
+        /**
+         * <p>The date from which the scheduled user was supposed to start shift work.</p>
+         */
         @NameInMap("Start")
         public String start;
 
+        /**
+         * <p>The date on which the scheduled user was supposed to complete shift work.</p>
+         */
         @NameInMap("End")
         public String end;
 
+        /**
+         * <p>The information about the scheduled user.</p>
+         */
         @NameInMap("SimpleContact")
         public GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntriesSimpleContact simpleContact;
 
@@ -174,9 +210,15 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     }
 
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntriesSimpleContact extends TeaModel {
+        /**
+         * <p>The ID of the substitute.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the substitute.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -204,12 +246,21 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     }
 
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntries extends TeaModel {
+        /**
+         * <p>The date on which the substitute was supposed to complete shift work.</p>
+         */
         @NameInMap("End")
         public String end;
 
+        /**
+         * <p>The information about the substitute.</p>
+         */
         @NameInMap("SimpleContact")
         public GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntriesSimpleContact simpleContact;
 
+        /**
+         * <p>The date from which the substitute was supposed to start shift work.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -245,12 +296,24 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     }
 
     public static class GetOnCallSchedulesDetailResponseBodyDataScheduleLayersRestrictions extends TeaModel {
+        /**
+         * <p>The end time of the shift per day.</p>
+         */
         @NameInMap("EndTimeOfDay")
         public String endTimeOfDay;
 
+        /**
+         * <p>The type of the limit. Valid values:</p>
+         * <br>
+         * <p>*   daily_restriction</p>
+         * <p>*   weekly_restriction</p>
+         */
         @NameInMap("RestrictionType")
         public String restrictionType;
 
+        /**
+         * <p>The start time of the shift per day.</p>
+         */
         @NameInMap("StartTimeOfDay")
         public String startTimeOfDay;
 
@@ -286,18 +349,37 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     }
 
     public static class GetOnCallSchedulesDetailResponseBodyDataScheduleLayers extends TeaModel {
+        /**
+         * <p>The ID list of users on duty.</p>
+         */
         @NameInMap("ContactIds")
         public java.util.List<Long> contactIds;
 
+        /**
+         * <p>The limit on the time of the shift.</p>
+         */
         @NameInMap("Restrictions")
         public java.util.List<GetOnCallSchedulesDetailResponseBodyDataScheduleLayersRestrictions> restrictions;
 
+        /**
+         * <p>The type of the shift. Valid values:</p>
+         * <br>
+         * <p>*   DAY</p>
+         * <p>*   WEEK</p>
+         * <p>*   CUSTOM</p>
+         */
         @NameInMap("RotationType")
         public String rotationType;
 
+        /**
+         * <p>The shift cycle. Unit: hours.</p>
+         */
         @NameInMap("ShiftLength")
         public Long shiftLength;
 
+        /**
+         * <p>The date on which the shift change took effect.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -349,27 +431,51 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     }
 
     public static class GetOnCallSchedulesDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The URL of the DingTalk chatbot, which is used to receive notifications about shift changes.</p>
+         */
         @NameInMap("AlertRobotId")
         public Long alertRobotId;
 
+        /**
+         * <p>The description of the scheduling policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the scheduling policy.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the scheduling policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The information about the final user on duty.</p>
+         */
         @NameInMap("RenderedFinnalEntries")
         public java.util.List<GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntries> renderedFinnalEntries;
 
+        /**
+         * <p>The scheduled users on duty within a time range.</p>
+         */
         @NameInMap("RenderedLayerEntries")
         public java.util.List<java.util.List<GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntries>> renderedLayerEntries;
 
+        /**
+         * <p>The information about the substitutes within a time range.</p>
+         */
         @NameInMap("RenderedSubstitudeEntries")
         public java.util.List<GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntries> renderedSubstitudeEntries;
 
+        /**
+         * <p>The information about the shift.</p>
+         */
         @NameInMap("ScheduleLayers")
         public java.util.List<GetOnCallSchedulesDetailResponseBodyDataScheduleLayers> scheduleLayers;
 

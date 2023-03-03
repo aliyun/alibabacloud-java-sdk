@@ -4,39 +4,57 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListDashboardsByNameRequest extends TeaModel {
-    // The ID of the cluster.
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The type of the cluster.
+    /**
+     * <p>The type of the cluster.</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
-    // The name of the dashboard.
+    /**
+     * <p>The name of the dashboard.</p>
+     */
     @NameInMap("DashBoardName")
     public String dashBoardName;
 
-    // The version of the dashboard.
+    /**
+     * <p>The version of the dashboard.</p>
+     */
     @NameInMap("DashBoardVersion")
     public String dashBoardVersion;
 
-    // The type of the data source.
+    /**
+     * <p>The type of the data source.</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
-    // The name of the dashboard group.
+    /**
+     * <p>The name of the dashboard group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
-    // Specifies whether to display the Grafana dashboard only in the Application Real-Time Monitoring Service (ARMS) console.
+    /**
+     * <p>Specifies whether to display the Grafana dashboard only in the Application Real-Time Monitoring Service (ARMS) console.</p>
+     */
     @NameInMap("OnlyQuery")
     public Boolean onlyQuery;
 
-    // The abbreviation of the Alibaba Cloud service name.
+    /**
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

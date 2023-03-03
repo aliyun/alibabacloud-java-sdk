@@ -4,18 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebhookContactsRequest extends TeaModel {
+    /**
+     * <p>The ID of the contact for webhook alerts.</p>
+     */
     @NameInMap("ContactIds")
     public String contactIds;
 
-    // The number of pages to query.
+    /**
+     * <p>The number of pages to query.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
-    // The number of webhook alert contacts displayed on each page.
+    /**
+     * <p>The number of webhook alert contacts displayed on each page.</p>
+     */
     @NameInMap("Size")
     public Long size;
 
-    // The name of the webhook alert contact.
+    /**
+     * <p>The name of the webhook alert contact.</p>
+     */
     @NameInMap("WebhookName")
     public String webhookName;
 

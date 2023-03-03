@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ApplyScenarioResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The code of the business monitoring job, which is the coloring sign.
+    /**
+     * <p>The code of the business monitoring job, which is the coloring sign.</p>
+     */
     @NameInMap("Result")
     public String result;
 

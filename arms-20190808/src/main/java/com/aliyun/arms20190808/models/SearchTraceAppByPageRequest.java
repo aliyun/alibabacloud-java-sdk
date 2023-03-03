@@ -4,25 +4,39 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTraceAppByPageRequest extends TeaModel {
-    // The number of the page to return. Default value: `1`.
+    /**
+     * <p>The number of the page to return. Default value: `1`.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Default value: `10`.
+    /**
+     * <p>The number of entries to return on each page. Default value: `10`.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<SearchTraceAppByPageRequestTags> tags;
 
-    // The name of the application.
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("TraceAppName")
     public String traceAppName;
 
@@ -80,9 +94,15 @@ public class SearchTraceAppByPageRequest extends TeaModel {
     }
 
     public static class SearchTraceAppByPageRequestTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
-    // Returns an AlertRobot object.
+    /**
+     * <p>Returns an AlertRobot object.</p>
+     */
     @NameInMap("AlertRobot")
     public CreateOrUpdateIMRobotResponseBodyAlertRobot alertRobot;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,42 +38,63 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateIMRobotResponseBodyAlertRobot extends TeaModel {
+        /**
+         * <p>The configurations of the alert card template.</p>
+         */
         @NameInMap("CardTemplate")
         public String cardTemplate;
 
-        // Specifies whether to send daily statistics.
-        // 
-        // *   `false` (default): does not send statistics.
-        // *   `true`: sends statistics.
+        /**
+         * <p>Specifies whether to send daily statistics.</p>
+         * <br>
+         * <p>*   `false` (default): does not send statistics.</p>
+         * <p>*   `true`: sends statistics.</p>
+         */
         @NameInMap("DailyNoc")
         public Boolean dailyNoc;
 
-        // The time when the daily statistics are sent. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.
+        /**
+         * <p>The time when the daily statistics are sent. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.</p>
+         */
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
 
+        /**
+         * <p>Indicates whether the Outgoing feature is enabled.</p>
+         */
         @NameInMap("EnableOutgoing")
         public Boolean enableOutgoing;
 
-        // The webhook address of the IM bot.
+        /**
+         * <p>The webhook address of the IM bot.</p>
+         */
         @NameInMap("RobotAddress")
         public String robotAddress;
 
-        // The ID of the IM bot.
+        /**
+         * <p>The ID of the IM bot.</p>
+         */
         @NameInMap("RobotId")
         public Float robotId;
 
-        // The name of the IM robot.
+        /**
+         * <p>The name of the IM robot.</p>
+         */
         @NameInMap("RobotName")
         public String robotName;
 
+        /**
+         * <p>The token required to enable the Outgoing feature.</p>
+         */
         @NameInMap("Token")
         public String token;
 
-        // IM Robot Type:
-        // 
-        // *   `dingding`: DingTalk robot.
-        // *   `wechat`: Enterprise WeChat Robot.
+        /**
+         * <p>IM Robot Type:</p>
+         * <br>
+         * <p>*   `dingding`: DingTalk robot.</p>
+         * <p>*   `wechat`: Enterprise WeChat Robot.</p>
+         */
         @NameInMap("Type")
         public String type;
 

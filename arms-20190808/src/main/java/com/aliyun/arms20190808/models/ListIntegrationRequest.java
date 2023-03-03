@@ -4,29 +4,39 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationRequest extends TeaModel {
-    // The name of the alert integration.
+    /**
+     * <p>The name of the alert integration.</p>
+     */
     @NameInMap("IntegrationName")
     public String integrationName;
 
-    // The service of the alert integration. Valid values:
-    // 
-    // *   CLOUD_MONITOR: CloudMonitor
-    // *   LOG_SERVICE: Log Service
+    /**
+     * <p>The service of the alert integration. Valid values:</p>
+     * <br>
+     * <p>*   CLOUD_MONITOR: CloudMonitor</p>
+     * <p>*   LOG_SERVICE: Log Service</p>
+     */
     @NameInMap("IntegrationProductType")
     public String integrationProductType;
 
-    // Specifies whether to display the details of each alert integration:
-    // 
-    // *   true
-    // *   false
+    /**
+     * <p>Specifies whether to display the details of each alert integration:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
-    // The number of alert integrations to return on each page.
+    /**
+     * <p>The number of alert integrations to return on each page.</p>
+     */
     @NameInMap("Size")
     public Long size;
 

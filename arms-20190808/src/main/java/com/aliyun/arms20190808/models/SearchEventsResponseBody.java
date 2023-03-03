@@ -4,18 +4,24 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchEventsResponseBody extends TeaModel {
-    // Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:
-    // 
-    // *   `1`: The event is triggered.
-    // *   `0`: The event is not triggered.
+    /**
+     * <p>Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:</p>
+     * <br>
+     * <p>*   `1`: The event is triggered.</p>
+     * <p>*   `0`: The event is not triggered.</p>
+     */
     @NameInMap("IsTrigger")
     public Integer isTrigger;
 
-    // The struct returned.
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("PageBean")
     public SearchEventsResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -49,48 +55,66 @@ public class SearchEventsResponseBody extends TeaModel {
     }
 
     public static class SearchEventsResponseBodyPageBeanEvent extends TeaModel {
-        // The ID of the alert rule that is associated with the event.
+        /**
+         * <p>The ID of the alert rule that is associated with the event.</p>
+         */
         @NameInMap("AlertId")
         public Long alertId;
 
-        // The name of the alert rule that is associated with the event.
+        /**
+         * <p>The name of the alert rule that is associated with the event.</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
-        // The condition of the alert rule.
+        /**
+         * <p>The condition of the alert rule.</p>
+         */
         @NameInMap("AlertRule")
         public String alertRule;
 
-        // The type of the alert rule. This parameter is not returned. Valid values:
-        // 
-        // *   `1`: custom alert rules to monitor drill-down data sets
-        // *   `3`: custom alert rules to monitor tiled data sets
-        // *   `4`: alert rules to monitor the frontend, including the default frontend alert rules
-        // *   `5`: alert rules to monitor applications, including the default application alert rules
-        // *   `6`: the default frontend alert rules
-        // *   `7`: the default application alert rules
-        // *   `8`: Tracing Analysis alert rules
-        // *   `101`: Prometheus alert rules
+        /**
+         * <p>The type of the alert rule. This parameter is not returned. Valid values:</p>
+         * <br>
+         * <p>*   `1`: custom alert rules to monitor drill-down data sets</p>
+         * <p>*   `3`: custom alert rules to monitor tiled data sets</p>
+         * <p>*   `4`: alert rules to monitor the frontend, including the default frontend alert rules</p>
+         * <p>*   `5`: alert rules to monitor applications, including the default application alert rules</p>
+         * <p>*   `6`: the default frontend alert rules</p>
+         * <p>*   `7`: the default application alert rules</p>
+         * <p>*   `8`: Tracing Analysis alert rules</p>
+         * <p>*   `101`: Prometheus alert rules</p>
+         */
         @NameInMap("AlertType")
         public Integer alertType;
 
-        // The severity of the event.
+        /**
+         * <p>The severity of the event.</p>
+         */
         @NameInMap("EventLevel")
         public String eventLevel;
 
-        // The timestamp when the event occurred.
+        /**
+         * <p>The timestamp when the event occurred.</p>
+         */
         @NameInMap("EventTime")
         public Long eventTime;
 
-        // The ID of the event record.
+        /**
+         * <p>The ID of the event record.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The list of event URLs.
+        /**
+         * <p>The list of event URLs.</p>
+         */
         @NameInMap("Links")
         public java.util.List<String> links;
 
-        // The event content. The parameter value is a JSON string. Each key indicates a dimension and each value indicates the alert content in the dimension.
+        /**
+         * <p>The event content. The parameter value is a JSON string. Each key indicates a dimension and each value indicates the alert content in the dimension.</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -174,19 +198,27 @@ public class SearchEventsResponseBody extends TeaModel {
     }
 
     public static class SearchEventsResponseBodyPageBean extends TeaModel {
-        // The information about the alert events.
+        /**
+         * <p>The information about the alert events.</p>
+         */
         @NameInMap("Event")
         public java.util.List<SearchEventsResponseBodyPageBeanEvent> event;
 
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

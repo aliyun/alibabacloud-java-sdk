@@ -4,23 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class InstallCmsExporterRequest extends TeaModel {
-    // The ID of the cluster.
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The cloud services that you want to monitor. The CmsArgs parameter is the startup parameter of the cms-exporter collector. Separate multiple cloud services with number signs (`#`).
+    /**
+     * <p>The cloud services that you want to monitor. The CmsArgs parameter is the startup parameter of the cms-exporter collector. Separate multiple cloud services with number signs (`#`).</p>
+     */
     @NameInMap("CmsArgs")
     public String cmsArgs;
 
-    // The recently monitored cloud services. Separate multiple cloud services with number signs (`#`).
+    /**
+     * <p>The recently monitored cloud services. Separate multiple cloud services with number signs (`#`).</p>
+     */
     @NameInMap("DirectArgs")
     public String directArgs;
 
-    // Specifies whether to collect the aliyun tags attached to each cloud service. Default value: false.
+    /**
+     * <p>Specifies whether to collect the aliyun tags attached to each cloud service. Default value: false.</p>
+     */
     @NameInMap("EnableTag")
     public Boolean enableTag;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

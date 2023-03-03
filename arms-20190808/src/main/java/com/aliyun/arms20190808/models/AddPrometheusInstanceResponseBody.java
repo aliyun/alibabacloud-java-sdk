@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddPrometheusInstanceResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The struct returned. { "RequestId": the ID of the request. "Data": "{ "clusterType": the type of the cluster. "remoteWriteUrl": the public URL for remote write. "internetGrafanaUrl": the internal URL for Grafana. "authToken": specifies whether to enable the token. "internetPushGatewayUrl": the internal URL for Pushgateway. "ClusterId": the ID of the cluster. "internetRemoteReadUrl": the internal URL for remote read. "remoteReadUrl": the internal URL for remote read. "grafanaUrl": the public URL for Grafana. "pushGatewayUrl": the public URL for Pushgateway. "internetRemoteWriteUrl": the internal network for remote write." }</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

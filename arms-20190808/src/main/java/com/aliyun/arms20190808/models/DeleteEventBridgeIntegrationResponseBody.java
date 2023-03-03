@@ -4,14 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventBridgeIntegrationResponseBody extends TeaModel {
-    // Indicates whether the EventBridge integration is deleted.
-    // 
-    // *   `true`: The EventBridge integration is deleted.
-    // *   `false`: The EventBridge integration fails to be deleted.
+    /**
+     * <p>Indicates whether the EventBridge integration is deleted.</p>
+     * <br>
+     * <p>*   `true`: The EventBridge integration is deleted.</p>
+     * <p>*   `false`: The EventBridge integration fails to be deleted.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesByPageResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("PageBean")
     public SearchTracesByPageResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,27 +38,39 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTracesByPageResponseBodyPageBeanTraceInfos extends TeaModel {
-        // The amount of time consumed by the trace. Unit: milliseconds.
+        /**
+         * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
-        // The name of the traced span.
+        /**
+         * <p>The name of the traced span.</p>
+         */
         @NameInMap("OperationName")
         public String operationName;
 
-        // The IP address of the host where the application resides.
+        /**
+         * <p>The IP address of the host where the application resides.</p>
+         */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // The timestamp.
+        /**
+         * <p>The timestamp.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        // The ID of the trace.
+        /**
+         * <p>The ID of the trace.</p>
+         */
         @NameInMap("TraceID")
         public String traceID;
 
@@ -114,19 +130,27 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTracesByPageResponseBodyPageBean extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of returned entries.
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
-        // The details of the returned traces.
+        /**
+         * <p>The details of the returned traces.</p>
+         */
         @NameInMap("TraceInfos")
         public java.util.List<SearchTracesByPageResponseBodyPageBeanTraceInfos> traceInfos;
 

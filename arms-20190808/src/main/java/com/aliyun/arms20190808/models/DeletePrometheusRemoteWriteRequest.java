@@ -4,12 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeletePrometheusRemoteWriteRequest extends TeaModel {
+    /**
+     * <p>The ID of the Prometheus instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of Remote Write configuration items that you want to delete from the Prometheus instance. Separate Remote Write configuration items with commas (,).</p>
+     */
     @NameInMap("RemoteWriteNames")
     public String remoteWriteNames;
 

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SaveTraceAppConfigRequest extends TeaModel {
-    // The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](~~186100~~#title-imy-7gj-qhr).
+    /**
+     * <p>The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
-    // The settings of Application Monitoring.
+    /**
+     * <p>The settings of Application Monitoring.</p>
+     */
     @NameInMap("Settings")
     public java.util.List<SaveTraceAppConfigRequestSettings> settings;
 
@@ -34,31 +38,35 @@ public class SaveTraceAppConfigRequest extends TeaModel {
     }
 
     public static class SaveTraceAppConfigRequestSettings extends TeaModel {
-        // The value of the settings that you want to modify. For more information about the supported settings, see the following sections.
-        // 
-        // *   Trace sampling settings
-        // *   Main switch settings
-        // *   Threshold settings
-        // *   Advanced setting
-        // *   Thread settings
-        // *   Memory snapshot settings
-        // *   URL convergence settings
-        // *   Business log association settings
-        // *   Business monitoring settings
+        /**
+         * <p>The value of the settings that you want to modify. For more information about the supported settings, see the following sections.</p>
+         * <br>
+         * <p>*   Trace sampling settings</p>
+         * <p>*   Main switch settings</p>
+         * <p>*   Threshold settings</p>
+         * <p>*   Advanced Settings</p>
+         * <p>*   Thread settings</p>
+         * <p>*   Memory snapshot settings</p>
+         * <p>*   URL convergence settings</p>
+         * <p>*   Business log association settings</p>
+         * <p>*   Business monitoring settings</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of the settings that you want to modify. For more information about the supported settings, see the following sections.
-        // 
-        // *   Trace sampling settings
-        // *   Main switch settings
-        // *   Threshold settings
-        // *   Advanced setting
-        // *   Thread settings
-        // *   Memory snapshot settings
-        // *   URL convergence settings
-        // *   Business log association settings
-        // *   Business monitoring settings
+        /**
+         * <p>The value of the settings that you want to modify. For more information about the supported settings, see the following sections.</p>
+         * <br>
+         * <p>*   Trace sampling settings</p>
+         * <p>*   Main switch settings</p>
+         * <p>*   Threshold settings</p>
+         * <p>*   Advanced Settings</p>
+         * <p>*   Thread settings</p>
+         * <p>*   Memory snapshot settings</p>
+         * <p>*   URL convergence settings</p>
+         * <p>*   Business log association settings</p>
+         * <p>*   Business monitoring settings</p>
+         */
         @NameInMap("Value")
         public String value;
 

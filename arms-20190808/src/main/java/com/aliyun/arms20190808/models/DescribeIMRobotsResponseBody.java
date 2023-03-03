@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeIMRobotsResponseBody extends TeaModel {
-    // Paging object.
+    /**
+     * <p>Paging object.</p>
+     */
     @NameInMap("PageBean")
     public DescribeIMRobotsResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,43 +37,102 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules extends TeaModel {
+        @NameInMap("id")
+        public Long id;
+
+        @NameInMap("name")
+        public String name;
+
+        public static DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules self = new DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class DescribeIMRobotsResponseBodyPageBeanAlertIMRobots extends TeaModel {
-        // Specifies whether to send daily statistics.
-        // 
-        // *   `false` (default): does not send statistics.
-        // *   `true`: sends statistics.
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <p>Specifies whether to send daily statistics.</p>
+         * <br>
+         * <p>*   `false` (default): does not send statistics.</p>
+         * <p>*   `true`: sends statistics.</p>
+         */
         @NameInMap("DailyNoc")
         public Boolean dailyNoc;
 
-        // The time when the daily statistics are sent. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.
+        /**
+         * <p>The time when the daily statistics are sent. ARMS Alert Management sends the total number of alerts generated today, the number of resolved alerts, and the number of pending alerts at the specified time point.</p>
+         */
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
 
+        /**
+         * <p>The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed with the key. Otherwise, a whitelist is used for authentication by default. The keyword of the whitelist is **Alert**.</p>
+         */
         @NameInMap("DingSignKey")
         public String dingSignKey;
 
-        // The webhook address of the IM bot.
+        @NameInMap("DispatchRules")
+        public java.util.List<DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules> dispatchRules;
+
+        /**
+         * <p>The webhook address of the IM bot.</p>
+         */
         @NameInMap("RobotAddr")
         public String robotAddr;
 
-        // The ID of the IM bot.
+        /**
+         * <p>The ID of the IM bot.</p>
+         */
         @NameInMap("RobotId")
         public Float robotId;
 
-        // The name of the IM robot.
+        /**
+         * <p>The name of the IM robot.</p>
+         */
         @NameInMap("RobotName")
         public String robotName;
 
-        // IM Robot Type:
-        // 
-        // *   `dingding`: DingTalk robot.
-        // *   `wechat`: Enterprise WeChat Robot.
+        /**
+         * <p>IM Robot Type:</p>
+         * <br>
+         * <p>*   `dingding`: DingTalk robot.</p>
+         * <p>*   `wechat`: Enterprise WeChat Robot.</p>
+         */
         @NameInMap("Type")
         public String type;
 
         public static DescribeIMRobotsResponseBodyPageBeanAlertIMRobots build(java.util.Map<String, ?> map) throws Exception {
             DescribeIMRobotsResponseBodyPageBeanAlertIMRobots self = new DescribeIMRobotsResponseBodyPageBeanAlertIMRobots();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeIMRobotsResponseBodyPageBeanAlertIMRobots setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeIMRobotsResponseBodyPageBeanAlertIMRobots setDailyNoc(Boolean dailyNoc) {
@@ -94,6 +157,14 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         }
         public String getDingSignKey() {
             return this.dingSignKey;
+        }
+
+        public DescribeIMRobotsResponseBodyPageBeanAlertIMRobots setDispatchRules(java.util.List<DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules> dispatchRules) {
+            this.dispatchRules = dispatchRules;
+            return this;
+        }
+        public java.util.List<DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules> getDispatchRules() {
+            return this.dispatchRules;
         }
 
         public DescribeIMRobotsResponseBodyPageBeanAlertIMRobots setRobotAddr(String robotAddr) {
@@ -131,19 +202,27 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     }
 
     public static class DescribeIMRobotsResponseBodyPageBean extends TeaModel {
-        // The details of the IM robot.
+        /**
+         * <p>The details of the IM robot.</p>
+         */
         @NameInMap("AlertIMRobots")
         public java.util.List<DescribeIMRobotsResponseBodyPageBeanAlertIMRobots> alertIMRobots;
 
-        // The number of pages to query.
+        /**
+         * <p>The number of pages to query.</p>
+         */
         @NameInMap("Page")
         public Long page;
 
-        // Number of IM robots per page.
+        /**
+         * <p>Number of IM robots per page.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The total number of IM robots queried.
+        /**
+         * <p>The total number of IM robots queried.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

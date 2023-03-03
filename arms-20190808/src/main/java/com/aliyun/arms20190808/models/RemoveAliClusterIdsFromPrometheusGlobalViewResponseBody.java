@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public RemoveAliClusterIdsFromPrometheusGlobalViewResponseBodyData data;
 
-    // The ID of the request. You can use the ID to query logs and troubleshoot issues.
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,18 +38,24 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends Tea
     }
 
     public static class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBodyData extends TeaModel {
-        // The Info-level information.
+        /**
+         * <p>The Info-level information.</p>
+         */
         @NameInMap("Info")
         public String info;
 
-        // The additional information.
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("Msg")
         public String msg;
 
-        // Indicates whether the call was successful. Valid values:
-        // 
-        // *   `true`: The call was successful.
-        // *   `false`: The call failed.
+        /**
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The call was successful.</p>
+         * <p>*   `false`: The call failed.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

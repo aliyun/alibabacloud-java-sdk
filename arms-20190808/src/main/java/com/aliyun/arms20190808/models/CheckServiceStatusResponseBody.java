@@ -4,14 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceStatusResponseBody extends TeaModel {
-    // Indicates whether the request was successful.
-    // 
-    // *   true: The request was successful.
-    // *   false: The request failed.
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // The ID of the request. You can query logs and troubleshoot issues based on the ID.
+    /**
+     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

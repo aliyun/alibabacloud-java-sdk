@@ -4,142 +4,184 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateAlertRuleRequest extends TeaModel {
-    // The alert check type of the Prometheus alert rule.
-    // 
-    // *   STATIC: a static threshold value. If you set the parameter to STATIC, you must specify the **MetricsKey** parameter. For more information, see the **Correspondence between AlertGroup and MetricsKey for Prometheus Service** table.
-    // *   CUSTOM: a custom PromQL statement. If you set the parameter to CUSTOM, you must specify the **PromQL**, **Duration**, and **Message** parameters to create a Prometheus alert rule.
+    /**
+     * <p>The alert check type of the Prometheus alert rule.</p>
+     * <br>
+     * <p>*   STATIC: a static threshold value. If you set the parameter to STATIC, you must specify the **MetricsKey** parameter. For more information, see the **Correspondence between AlertGroup and MetricsKey for Prometheus Service** table.</p>
+     * <p>*   CUSTOM: a custom PromQL statement. If you set the parameter to CUSTOM, you must specify the **PromQL**, **Duration**, and **Message** parameters to create a Prometheus alert rule.</p>
+     */
     @NameInMap("AlertCheckType")
     public String alertCheckType;
 
-    // The alert contact group ID of the Prometheus alert rule.
-    // 
-    // *   \-1: custom PromQL
-    // *   1: Kubernetes load
-    // *   15: Kubernetes node
+    /**
+     * <p>The alert contact group ID of the Prometheus alert rule.</p>
+     * <br>
+     * <p>*   \-1: custom PromQL</p>
+     * <p>*   1: Kubernetes load</p>
+     * <p>*   15: Kubernetes node</p>
+     */
     @NameInMap("AlertGroup")
     public Long alertGroup;
 
-    // The ID of the alert rule.
-    // 
-    // *   If you do not specify this parameter, a new alert rule is created.
-    // *   If you specify this parameter, the specified alert rule is modified.
+    /**
+     * <p>The ID of the alert rule.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, a new alert rule is created.</p>
+     * <p>*   If you specify this parameter, the specified alert rule is modified.</p>
+     */
     @NameInMap("AlertId")
     public Long alertId;
 
-    // The name of the alert rule.
+    /**
+     * <p>The name of the alert rule.</p>
+     */
     @NameInMap("AlertName")
     public String alertName;
 
-    // The content of the Application Monitoring or Browser Monitoring alert rule. The following code provides an example of the **AlertRuleContent** parameter. For more information about the meaning of each field, see the supplementary description.
-    // 
-    // `{ "Condition": "OR", "AlertRuleItems": [ { "Operator": "CURRENT_LTE", "MetricKey": "appstat.jvm.threadcount", "Value": 1000, "Aggregate": "AVG", "N": 1 } ] }`
-    // 
-    // >  The conditional fields vary depending on the values of the **MetricsType** and **AlertRuleItems.MetricKey** parameters. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.
+    /**
+     * <p>The content of the Application Monitoring or Browser Monitoring alert rule. The following code provides an example of the **AlertRuleContent** parameter. For more information about the meaning of each field, see the supplementary description.</p>
+     * <br>
+     * <p>`{ "Condition": "OR", "AlertRuleItems": [ { "Operator": "CURRENT_LTE", "MetricKey": "appstat.jvm.threadcount", "Value": 1000, "Aggregate": "AVG", "N": 1 } ] }`</p>
+     * <br>
+     * <p>>  The conditional fields vary depending on the values of the **MetricsType** and **AlertRuleItems.MetricKey** parameters. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.</p>
+     */
     @NameInMap("AlertRuleContent")
     public String alertRuleContent;
 
-    // The status of the alert rule.
-    // 
-    // *   RUNNING (default)
-    // *   STOPPED
+    /**
+     * <p>The status of the alert rule.</p>
+     * <br>
+     * <p>*   RUNNING (default)</p>
+     * <p>*   STOPPED</p>
+     */
     @NameInMap("AlertStatus")
     public String alertStatus;
 
-    // The type of the alert rule. Valid values:
-    // 
-    // *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
-    // *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
-    // *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service
+    /**
+     * <p>The type of the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
+     * <p>*   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
+     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service</p>
+     */
     @NameInMap("AlertType")
     public String alertType;
 
-    // The annotations of the Prometheus alert rule.
+    /**
+     * <p>The annotations of the Prometheus alert rule.</p>
+     */
     @NameInMap("Annotations")
     public String annotations;
 
-    // Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring.
-    // 
-    // *   `true`: yes
-    // *   `false`: no
+    /**
+     * <p>Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring.</p>
+     * <br>
+     * <p>*   `true`: yes</p>
+     * <p>*   `false`: no</p>
+     */
     @NameInMap("AutoAddNewApplication")
     public Boolean autoAddNewApplication;
 
-    // The cluster ID of the Prometheus alert rule.
+    /**
+     * <p>The cluster ID of the Prometheus alert rule.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The duration of the Prometheus alert rule. Unit: minutes.
+    /**
+     * <p>The duration of the Prometheus alert rule. Unit: minutes.</p>
+     */
     @NameInMap("Duration")
     public Long duration;
 
-    // The filter conditions of the Application Monitoring or Browser Monitoring alert rule.
-    // 
-    // Format:
-    // 
-    // ```
-    // 
-    // "DimFilters": [ 
-    // { 
-    //  "FilterOpt": "ALL",
-    //  "FilterValues": [],         //The value of the filter condition. 
-    //  "FilterKey": "rootIp"     //The Key of the filter condition. 
-    // }
-    // ]
-    //                                 
-    // ```
-    // 
-    // Valid values of **FilterOpt**:
-    // 
-    // *   STATIC: matches the value of the specified dimension.
-    // *   ALL: matches the values of all dimensions.
-    // *   DISABLE: aggregates the values of all dimensions.
+    /**
+     * <p>The filter conditions of the Application Monitoring or Browser Monitoring alert rule.</p>
+     * <br>
+     * <p>Format:</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>"DimFilters": [ </p>
+     * <p>{ </p>
+     * <p> "FilterOpt": "ALL",</p>
+     * <p> "FilterValues": [],         //The value of the filter condition. </p>
+     * <p> "FilterKey": "rootIp"     //The Key of the filter condition. </p>
+     * <p>}</p>
+     * <p>]</p>
+     * <p>                                </p>
+     * <p>```</p>
+     * <br>
+     * <p>Valid values of **FilterOpt**:</p>
+     * <br>
+     * <p>*   STATIC: matches the value of the specified dimension.</p>
+     * <p>*   ALL: matches the values of all dimensions.</p>
+     * <p>*   DISABLE: aggregates the values of all dimensions.</p>
+     */
     @NameInMap("Filters")
     public String filters;
 
-    // The tags of the Prometheus alert rule.
+    /**
+     * <p>The tags of the Prometheus alert rule.</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
-    // The level of the Prometheus alert rule.
-    // 
-    // *   P1: Alert notifications are sent for major issues that affect the availability of core business, have huge impact, and may lead to serious consequences.
-    // *   P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.
-    // *   P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.
-    // *   P4: Alert notifications are sent for low-priority issues that do not affect your business.
-    // *   Default: Alert notifications are sent without distinguishing between alert levels.
+    /**
+     * <p>The level of the Prometheus alert rule.</p>
+     * <br>
+     * <p>*   P1: Alert notifications are sent for major issues that affect the availability of core business, have huge impact, and may lead to serious consequences.</p>
+     * <p>*   P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</p>
+     * <p>*   P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</p>
+     * <p>*   P4: Alert notifications are sent for low-priority issues that do not affect your business.</p>
+     * <p>*   Default: Alert notifications are sent without distinguishing between alert levels.</p>
+     */
     @NameInMap("Level")
     public String level;
 
-    // The alert message of the Prometheus alert rule.
+    /**
+     * <p>The alert message of the Prometheus alert rule.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The alert metrics. If you set the **AlertCheckType** parameter to **STATIC** when you create a Prometheus alert rule, you must specify the **MetricsKey** parameter.
-    // 
-    // >  Alert metrics vary depending on the value of the **AlertGroup** parameter. For more information about the correspondence between **AlertGroup** and **MetricsKey**, see the supplementary description.
+    /**
+     * <p>The alert metrics. If you set the **AlertCheckType** parameter to **STATIC** when you create a Prometheus alert rule, you must specify the **MetricsKey** parameter.</p>
+     * <br>
+     * <p>>  Alert metrics vary depending on the value of the **AlertGroup** parameter. For more information about the correspondence between **AlertGroup** and **MetricsKey**, see the supplementary description.</p>
+     */
     @NameInMap("MetricsKey")
     public String metricsKey;
 
-    // The metric type of the Application Monitoring or Browser Monitoring alert rule. For more information, see the following tables.
+    /**
+     * <p>The metric type of the Application Monitoring or Browser Monitoring alert rule. For more information, see the following tables.</p>
+     */
     @NameInMap("MetricsType")
     public String metricsType;
 
-    // The notification policy.
-    // 
-    // *   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify an alert rule name as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.
-    // *   To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.
+    /**
+     * <p>The notification policy.</p>
+     * <br>
+     * <p>*   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify an alert rule name as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.</p>
+     * <p>*   To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.</p>
+     */
     @NameInMap("NotifyStrategy")
     public String notifyStrategy;
 
-    // The process ID (PID) that is associated with the Application Monitoring or Browser Monitoring alert rule.
+    /**
+     * <p>The process ID (PID) that is associated with the Application Monitoring or Browser Monitoring alert rule.</p>
+     */
     @NameInMap("Pids")
     public String pids;
 
-    // The PromQL statement of the Prometheus alert rule.
+    /**
+     * <p>The PromQL statement of the Prometheus alert rule.</p>
+     */
     @NameInMap("PromQL")
     public String promQL;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertContactGroupResponseBody extends TeaModel {
-    // The information about the alert contact groups.
+    /**
+     * <p>The information about the alert contact groups.</p>
+     */
     @NameInMap("ContactGroups")
     public java.util.List<SearchAlertContactGroupResponseBodyContactGroups> contactGroups;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,42 +38,60 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     }
 
     public static class SearchAlertContactGroupResponseBodyContactGroupsContacts extends TeaModel {
-        // The ID of the alert contact.
+        /**
+         * <p>The ID of the alert contact.</p>
+         */
         @NameInMap("ContactId")
         public Long contactId;
 
-        // The name of the alert contact.
+        /**
+         * <p>The name of the alert contact.</p>
+         */
         @NameInMap("ContactName")
         public String contactName;
 
-        // The timestamp when the alert contact was created.
+        /**
+         * <p>The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The webhook URL of the DingTalk chatbot.
+        /**
+         * <p>The webhook URL of the DingTalk chatbot.</p>
+         */
         @NameInMap("DingRobot")
         public String dingRobot;
 
-        // The email address of the alert contact.
+        /**
+         * <p>The email address of the alert contact.</p>
+         */
         @NameInMap("Email")
         public String email;
 
-        // The mobile number of the alert contact.
+        /**
+         * <p>The mobile number of the alert contact.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
-        // Indicates whether the alert contact receives system notifications. Valid values:
-        // 
-        // *   true: receives system notifications.
-        // *   false: does not receive system notifications.
+        /**
+         * <p>Indicates whether the alert contact receives system notifications. Valid values:</p>
+         * <br>
+         * <p>*   true: receives system notifications.</p>
+         * <p>*   false: does not receive system notifications.</p>
+         */
         @NameInMap("SystemNoc")
         public Boolean systemNoc;
 
-        // The timestamp when the alert contact was updated.
+        /**
+         * <p>The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -153,27 +175,39 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     }
 
     public static class SearchAlertContactGroupResponseBodyContactGroups extends TeaModel {
-        // The ID of the alert contact group.
+        /**
+         * <p>The ID of the alert contact group.</p>
+         */
         @NameInMap("ContactGroupId")
         public Long contactGroupId;
 
-        // The name of the alert contact group.
+        /**
+         * <p>The name of the alert contact group.</p>
+         */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
-        // The information about the alert contacts.
+        /**
+         * <p>The alert contact list.</p>
+         */
         @NameInMap("Contacts")
         public java.util.List<SearchAlertContactGroupResponseBodyContactGroupsContacts> contacts;
 
-        // The timestamp when the alert contact group was created.
+        /**
+         * <p>The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The timestamp when the alert contact group was updated.
+        /**
+         * <p>The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertRulesResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("PageBean")
     public SearchAlertRulesResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,19 +38,27 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext extends TeaModel {
-        // The sub-title of the alert notification content.
+        /**
+         * <p>The sub-title of the alert notification content.</p>
+         */
         @NameInMap("AlarmContentSubTitle")
         public String alarmContentSubTitle;
 
-        // The template of the alert notification.
+        /**
+         * <p>The template of the alert notification.</p>
+         */
         @NameInMap("AlarmContentTemplate")
         public String alarmContentTemplate;
 
-        // The content of the alert notification.
+        /**
+         * <p>The content of the alert notification.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The sub-title of the alert notification.
+        /**
+         * <p>The sub-title of the alert notification.</p>
+         */
         @NameInMap("SubTitle")
         public String subTitle;
 
@@ -90,41 +102,53 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules extends TeaModel {
-        // The aggregation logic of the metric data of the alert rule. Valid values:
-        // 
-        // *   `AVG`: calculates the average value for each minute.
-        // *   `SUM`: calculates the total value for each minute.
-        // *   `MAX`: calculates the maximum value for each minute.
-        // *   `MIN`: calculates the minimum value for each minute.
+        /**
+         * <p>The aggregation logic of the metric data of the alert rule. Valid values:</p>
+         * <br>
+         * <p>*   `AVG`: calculates the average value for each minute</p>
+         * <p>*   `SUM`: calculates the total value for each minute</p>
+         * <p>*   `MAX`: calculates the maximum value for each minute</p>
+         * <p>*   `MIN`: calculates the minimum value for each minute</p>
+         */
         @NameInMap("Aggregates")
         public String aggregates;
 
-        // The displayed description of the alert metric.
+        /**
+         * <p>The displayed description of the alert metric.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
-        // The metric based on which alerts are triggered. For more information, see the "[Alert metrics](https://www.alibabacloud.com/help/zh/doc-detail/175825.htm?spm=a2c63.p38356.b99.373.61d25830rs3HHm#h2-url-4)" section in this topic.
+        /**
+         * <p>The metric based on which alerts are triggered. For more information, see the "[Alert metrics](https://help.aliyun.com/document_detail/175825.html#h2-url-4)" section in this topic.</p>
+         */
         @NameInMap("Measure")
         public String measure;
 
-        // The time range to query. Unit: minutes. For example, a value of 5 indicates that the alert rule applies to the data in the last 5 minutes.
+        /**
+         * <p>The time range when data is requested. Unit: minutes. For example, a value of 5 indicates that the alert rule applies to the data in the last 5 minutes.</p>
+         */
         @NameInMap("NValue")
         public Integer NValue;
 
-        // The operation logic of the condition. Valid values:
-        // 
-        // *   CURRENT_GTE: greater than or equal to.
-        // *   CURRENT_LTE: less than or equal to.
-        // *   PREVIOUS_UP: the minute-to-minute increase percentage.
-        // *   PREVIOUS_DOWN: the minute-to-minute decrease percentage.
-        // *   HOH_UP: the increase percentage compared with the previous hour.
-        // *   HOH_DOWN: the decrease percentage compared with the previous hour.
-        // *   DOD_UP: the increase percentage compared with the last day.
-        // *   DOD_DOWN: the decrease percentage compared with the last day.
+        /**
+         * <p>The operation logic of the condition. Valid values:</p>
+         * <br>
+         * <p>*   CURRENT_GTE: greater than or equal to</p>
+         * <p>*   CURRENT_LTE: less than or equal to</p>
+         * <p>*   PREVIOUS_UP: the increase percentage compared with the last period</p>
+         * <p>*   PREVIOUS_DOWN: the decrease percentage compared with the last period</p>
+         * <p>*   HOH_UP: the increase percentage compared with the last hour</p>
+         * <p>*   HOH_DOWN: the decrease percentage compared with the last hour</p>
+         * <p>*   DOD_UP: the increase percentage compared with the last day</p>
+         * <p>*   DOD_DOWN: the decrease percentage compared with the last day</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
-        // The threshold of the condition.
+        /**
+         * <p>The threshold of the condition.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -184,11 +208,15 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRule extends TeaModel {
-        // The logical operator between conditions. Valid values: `&`: AND. `|`: OR.
+        /**
+         * <p>The logical operator between conditions. Valid values: `&`: AND. `|`: OR.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
-        // The condition of the alert rule.
+        /**
+         * <p>The condition of the alert rule.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRuleRules> rules;
 
@@ -216,24 +244,30 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParamDimensions extends TeaModel {
-        // The key of the dimension. Valid values:
-        // 
-        // - `rpc`: the name of the API.
-        // - `rpcType`: the type of the API call, such as HTTP or DUBBO.
-        // - `endpoint`: the name of the database.
-        // - `rootIp`: the IP address of the host.
+        /**
+         * <p>The key of the dimension. Valid values:</p>
+         * <br>
+         * <p>*   `rpc`: the name of the API</p>
+         * <p>*   `rpcType`: the type of the API call, such as HTTP or DUBBO</p>
+         * <p>*   `endpoint`: the name of the database</p>
+         * <p>*   `rootIp`: the IP address of the host</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The type of the dimension. Valid values:
-        // 
-        // - `STATIC`: checks only the value of this dimension. In this case, you must set the **dimensions.value** parameter.
-        // - `ALL`: checks the values of all dimensions. The metrics of all API calls are checked. If an API call triggers an alert, the name of the API is displayed in the alert notification. In this case, you do not need to set the **dimensions.value** parameter.
-        // - `DISABLE`: aggregates the values of all dimensions. In this case, you do not need to set the **dimensions.value** parameter.
+        /**
+         * <p>The type of the dimension. Valid values:</p>
+         * <br>
+         * <p>*   `STATIC`: checks only the value of this dimension. In this case, you must set the **dimensions.value** parameter.</p>
+         * <p>*   `ALL`: checks the values of all dimensions. The metrics of all API calls are checked. If an API call triggers an alert, the name of the API is displayed in the alert notification. In this case, you do not need to set the **dimensions.value** parameter.</p>
+         * <p>*   `DISABLE`: aggregates the values of all dimensions. In this case, you do not need to set the **dimensions.value** parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The value of the dimension.
+        /**
+         * <p>The value of the dimension.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -269,30 +303,40 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam extends TeaModel {
-        // The ID of the application group that is associated with the alert rule. This parameter is applicable to Enterprise Distributed Application Service (EDAS) applications.
+        /**
+         * <p>The ID of the application group that is associated with the alert rule. This parameter is applicable to Enterprise Distributed Application Service (EDAS) applications.</p>
+         */
         @NameInMap("AppGroupId")
         public String appGroupId;
 
-        // The auto-increment ID of the ARMS application. You can ignore this ID.
+        /**
+         * <p>The auto-increment ID of the ARMS application. You can ignore this ID.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
-        // The dimensions in the condition.
+        /**
+         * <p>The dimensions in the condition.</p>
+         */
         @NameInMap("Dimensions")
         public java.util.List<SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParamDimensions> dimensions;
 
-        // The PID of the application that is associated with the alert rule.
+        /**
+         * <p>The PID of the application that is associated with the alert rule.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
-        // The type of the metric. Valid values: 
-        // 
-        // - `txn`: the number of API calls during application monitoring.
-        // - `txn_type`: the types of API calls during application monitoring.
-        // - `db`: database metrics.
-        // - `jvm`: Java virtual machine (JVM) metrics.
-        // - `host`: host metrics.
-        // - `exception`: API call errors.
+        /**
+         * <p>The type of the metric. Valid values:</p>
+         * <br>
+         * <p>*   `txn`: the number of API calls during application monitoring</p>
+         * <p>*   `txn_type`: the types of API calls during application monitoring</p>
+         * <p>*   `db`: database metrics</p>
+         * <p>*   `jvm`: Java virtual machine (JVM) metrics</p>
+         * <p>*   `host`: host metrics</p>
+         * <p>*   `exception`: API call errors</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -344,19 +388,27 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRulesNotice extends TeaModel {
-        // The end of the time range when the alert rule takes effect within the 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.
+        /**
+         * <p>The end of the time range when the alert rule takes effect within 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
-        // The end of the time range when alert notifications are sent based on the alert rule within the 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.
+        /**
+         * <p>The end of the time range when alert notifications are sent based on the alert rule within 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.</p>
+         */
         @NameInMap("NoticeEndTime")
         public Long noticeEndTime;
 
-        // The beginning of the time range when alert notifications are sent based on the alert rule within the 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.
+        /**
+         * <p>The beginning of the time range when alert notifications are sent based on the alert rule within 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.</p>
+         */
         @NameInMap("NoticeStartTime")
         public Long noticeStartTime;
 
-        // The beginning of the time range when the alert rule takes effect within the 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.
+        /**
+         * <p>The beginning of the time range when the alert rule takes effect within 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -400,118 +452,158 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertRulesResponseBodyPageBeanAlertRules extends TeaModel {
-        // The format of the alert notification.
+        /**
+         * <p>The format of the alert notification.</p>
+         */
         @NameInMap("AlarmContext")
         public SearchAlertRulesResponseBodyPageBeanAlertRulesAlarmContext alarmContext;
 
-        // The severity of the alerts. Only the value `WARN` is supported.
+        /**
+         * <p>The severity of the alerts. Only the value `WARN` is supported.</p>
+         */
         @NameInMap("AlertLevel")
         public String alertLevel;
 
-        // The conditions of the alert rule. Multiple conditions are separated by the AND or OR logical operators.
+        /**
+         * <p>The conditions of the alert rule. Multiple conditions are separated by the AND or OR logical operators.</p>
+         */
         @NameInMap("AlertRule")
         public SearchAlertRulesResponseBodyPageBeanAlertRulesAlertRule alertRule;
 
-        // The name of the alert rule.
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("AlertTitle")
         public String alertTitle;
 
-        // The type of the alert rule. Valid values:
-        // 
-        // *   `1`: custom alert rules to monitor drill-down data sets.
-        // *   `3`: custom alert rules to monitor tiled data sets.
-        // *   `4`: alert rules to monitor the browser, including the default frontend alert rules.
-        // *   `5`: alert rules to monitor applications, including the default application alert rules.
-        // *   `6`: the default browser alert rules.
-        // *   `7`: the default application alert rules.
-        // *   `8`: Tracing Analysis alert rules.
-        // *   `101`: Prometheus alert rules.
+        /**
+         * <p>The type of the alert rule. Valid values:</p>
+         * <br>
+         * <p>*   `1`: custom alert rules that are used to monitor drill-down data sets</p>
+         * <p>*   `3`: custom alert rules that are used to monitor tiled data sets</p>
+         * <p>*   `4`: alert rules that are used to monitor the browser, including the default frontend alert rules</p>
+         * <p>*   `5`: alert rules that are used to monitor applications, including the default application alert rules</p>
+         * <p>*   `6`: the default browser alert rules</p>
+         * <p>*   `7`: the default application alert rules</p>
+         * <p>*   `8`: Tracing Analysis alert rules</p>
+         * <p>*   `101`: Prometheus alert rules</p>
+         */
         @NameInMap("AlertType")
         public Integer alertType;
 
-        // The version of the alert rule. Default value: `1`.
+        /**
+         * <p>The version of the alert rule. Default value: `1`.</p>
+         */
         @NameInMap("AlertVersion")
         public Integer alertVersion;
 
-        // The notification method of the alerts. Valid values:
-        // 
-        // *   `SMS`: text message.
-        // *   `MAIL`: email.
-        // *   `DING_ROBOT`: DingTalk chatbot.
         @NameInMap("AlertWays")
         public java.util.List<String> alertWays;
 
-        // The configuration items of the alert rule. The value is a JSON string.
-        // 
-        // The configuration item **continuous** specifies whether to continuously send alert notifications. Valid values:
-        // 
-        // *   `true`: Alert notifications are sent every minute.
-        // *   `false`: The alert silence feature is enabled.
-        // 
-        // The configuration item **dataRevision** specifies the data revision policy to be used if no data is obtained or the data is null. Default value: 2. Valid values:
-        // 
-        // *   `0`: overwrites the data by using the value 0.
-        // *   `1`: overwrites the data by using the value 1.
-        // *   `2`: overwrites the data by using the value null. This value indicates that no alert is triggered if no data exists.
+        /**
+         * <p>The configuration items of the alert rule. The value is a JSON string.</p>
+         * <br>
+         * <p>The configuration item **continuous** indicates whether alert notifications are continuously sent. Valid values:</p>
+         * <br>
+         * <p>*   `true`: Alert notifications are sent every minute.</p>
+         * <p>*   `false`: The alert silence feature is enabled.</p>
+         * <br>
+         * <p>The configuration item **dataRevision** indicates the data revision policy that is used if no data is obtained or the data is null. Default value: 2. Valid values:</p>
+         * <br>
+         * <p>*   `0`: overwrites the data by using the value 0</p>
+         * <p>*   `1`: overwrites the data by using the value 1</p>
+         * <p>*   `2`: overwrites the data by using the value null. This value indicates that no alert is triggered if no data exists</p>
+         */
         @NameInMap("Config")
         public String config;
 
-        // The ID of the contact group. Multiple IDs are separated by commas (,).
+        /**
+         * <p>The ID of the contact group. Multiple IDs are separated by commas (,).</p>
+         */
         @NameInMap("ContactGroupIdList")
         public String contactGroupIdList;
 
-        // The IDs of the alert contact groups. The value is a JSON array.
+        /**
+         * <p>The IDs of the alert contact groups. The value is a JSON array.</p>
+         */
         @NameInMap("ContactGroupIds")
         public String contactGroupIds;
 
-        // The timestamp showing when the alert rule was created.
+        /**
+         * <p>The timestamp that shows when the alert rule was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // Indicates whether the alert is sent through the alert center. Valid values:
-        // 
-        // *   `true`
-        // *   `false`
+        /**
+         * <p>Indicates whether the alert is sent through the alert center. Valid values:</p>
+         * <br>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
+         */
         @NameInMap("HostByAlertManager")
         public Boolean hostByAlertManager;
 
-        // The ID of the alert rule.
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The information about the application that is associated with the alert rule.
+        /**
+         * <p>The information about the application that is associated with the alert rule.</p>
+         */
         @NameInMap("MetricParam")
         public SearchAlertRulesResponseBodyPageBeanAlertRulesMetricParam metricParam;
 
-        // The time ranges when the alert rule takes effect and when alert notifications are sent.
+        /**
+         * <p>The time ranges when the alert rule takes effect and when alert notifications are sent.</p>
+         */
         @NameInMap("Notice")
         public SearchAlertRulesResponseBodyPageBeanAlertRulesNotice notice;
 
-        // The ID of the region to which the alert rule belongs.
+        /**
+         * <p>The ID of the region to which the alert rule belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The status of the alert rule. `RUNNING`: The alert rule is enabled. `STOPPED`: The alert rule is disabled.
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The status of the alert rule. `RUNNING`: The alert rule is enabled. `STOPPED`: The alert rule is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The ID of the Application Real-Time Monitoring Service (ARMS) task that is associated with the alert rule.
+        /**
+         * <p>The ID of the Application Real-Time Monitoring Service (ARMS) task that is associated with the alert rule.</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
-        // The status of the task. This parameter is hidden from users.
+        /**
+         * <p>The status of the task. This parameter is hidden from users.</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        // The name of the alert.
+        /**
+         * <p>The name of the alert.</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The timestamp showing when the alert rule was updated.
+        /**
+         * <p>The timestamp that shows when the alert rule was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user to which the alert rule belongs.
+        /**
+         * <p>The ID of the user to which the alert rule belongs.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -648,6 +740,14 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public SearchAlertRulesResponseBodyPageBeanAlertRules setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public SearchAlertRulesResponseBodyPageBeanAlertRules setStatus(String status) {
             this.status = status;
             return this;
@@ -699,19 +799,27 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertRulesResponseBodyPageBean extends TeaModel {
-        // The details of the alert rules.
+        /**
+         * <p>The details of the alert rules.</p>
+         */
         @NameInMap("AlertRules")
         public java.util.List<SearchAlertRulesResponseBodyPageBeanAlertRules> alertRules;
 
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of returned entries.
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactsResponseBody extends TeaModel {
-    // The objects that were returned.
+    /**
+     * <p>The objects that were returned.</p>
+     */
     @NameInMap("PageBean")
     public DescribeContactsResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,41 +38,59 @@ public class DescribeContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactsResponseBodyPageBeanAlertContacts extends TeaModel {
+        /**
+         * <p>The ID of the alert contact.</p>
+         */
         @NameInMap("ArmsContactId")
         public Long armsContactId;
 
-        // The ID of the alert contact.
+        /**
+         * <p>The ID of the alert contact.</p>
+         */
         @NameInMap("ContactId")
         public Float contactId;
 
-        // The name of the alert contact.
+        /**
+         * <p>The name of the alert contact.</p>
+         */
         @NameInMap("ContactName")
         public String contactName;
 
-        // The email address of the alert contact.
+        /**
+         * <p>The email address of the alert contact.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>Indicates whether the email address was verified.</p>
+         */
         @NameInMap("IsEmailVerify")
         public Boolean isEmailVerify;
 
-        // Indicates whether the mobile number is verified. Valid values:
-        // 
-        // *   `false`: The mobile number is not verified.
-        // *   `true`: The mobile number is verified.
+        /**
+         * <p>Indicates whether the mobile number was verified. Valid values:</p>
+         * <br>
+         * <p>*   `false`: no</p>
+         * <p>*   `true`: yes</p>
+         */
         @NameInMap("IsVerify")
         public Boolean isVerify;
 
-        // The mobile number of the alert contact.
+        /**
+         * <p>The mobile number of the alert contact.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
-        // The method to resend notifications if phone notifications fail. Valid values:
-        // 
-        // *   0: do not resend notifications
-        // *   1: make a phone call again
-        // *   2: send a text message
-        // *   3 (default value): use the global default value
+        /**
+         * <p>The method to resend notifications if phone notifications fail. Valid values:</p>
+         * <br>
+         * <p>*   0: do not resend notifications</p>
+         * <p>*   1: make a phone call again</p>
+         * <p>*   2: send a text message</p>
+         * <p>*   3 (default value): use the global default value</p>
+         */
         @NameInMap("ReissueSendNotice")
         public Long reissueSendNotice;
 
@@ -144,19 +166,27 @@ public class DescribeContactsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactsResponseBodyPageBean extends TeaModel {
-        // The alert contacts.
+        /**
+         * <p>The alert contacts.</p>
+         */
         @NameInMap("AlertContacts")
         public java.util.List<DescribeContactsResponseBodyPageBeanAlertContacts> alertContacts;
 
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("Page")
         public Long page;
 
-        // The number of alert contacts returned per page.
+        /**
+         * <p>The number of alert contacts returned per page.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The total number of alert contacts.
+        /**
+         * <p>The total number of alert contacts.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

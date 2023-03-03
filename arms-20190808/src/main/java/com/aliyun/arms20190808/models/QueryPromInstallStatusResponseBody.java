@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryPromInstallStatusResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public QueryPromInstallStatusResponseBodyData data;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,9 +38,11 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
     }
 
     public static class QueryPromInstallStatusResponseBodyData extends TeaModel {
-        // Indicates whether the call was successful. Valid values:
-        // 
-        // true: The call was successful. false: The call failed.
+        /**
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <br>
+         * <p>true: The call was successful. false: The call failed.</p>
+         */
         @NameInMap("isControllerInstalled")
         public Boolean isControllerInstalled;
 

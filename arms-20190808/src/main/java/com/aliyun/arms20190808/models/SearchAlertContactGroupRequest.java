@@ -4,27 +4,39 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertContactGroupRequest extends TeaModel {
-    // The ID of the alert contact group. You can query multiple alert contact groups at a time. Separate multiple group IDs with commas (,).
+    /**
+     * <p>The ID of the alert contact group. You can query multiple alert contact groups at a time. Separate multiple group IDs with commas (,).</p>
+     */
     @NameInMap("ContactGroupIds")
     public String contactGroupIds;
 
-    // The name of the alert contact group.
+    /**
+     * <p>The name of the alert contact group.</p>
+     */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
-    // The ID of the alert contact. You can call the SearchAlertContact operation to query the contact IDs. For more information, see [SearchAlertContact](~~130703~~).
+    /**
+     * <p>The ID of the alert contact. You can call the SearchAlertContact operation to query the contact IDs. For more information, see [SearchAlertContact](~~130703~~).</p>
+     */
     @NameInMap("ContactId")
     public Long contactId;
 
-    // The name of the alert contact.
+    /**
+     * <p>The name of the alert contact.</p>
+     */
     @NameInMap("ContactName")
     public String contactName;
 
-    // Specifies whether to return all the alert contacts in the queried alert contact group. Default value: false.
+    /**
+     * <p>Specifies whether to return all alert contacts in the queried alert contact group. By default, not all alert contacts are returned.</p>
+     */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
-    // The ID of the region. Default value: `cn-hangzhou`.
+    /**
+     * <p>The ID of the region. Default value: `cn-hangzhou`.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

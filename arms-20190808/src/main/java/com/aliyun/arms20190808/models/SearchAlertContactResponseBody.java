@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertContactResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("PageBean")
     public SearchAlertContactResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,53 +38,78 @@ public class SearchAlertContactResponseBody extends TeaModel {
     }
 
     public static class SearchAlertContactResponseBodyPageBeanContacts extends TeaModel {
-        // The ID of the alert contact.
+        /**
+         * <p>The ID of the alert contact.</p>
+         */
         @NameInMap("ContactId")
         public Long contactId;
 
-        // The name of the alert contact.
+        /**
+         * <p>The name of the alert contact.</p>
+         */
         @NameInMap("ContactName")
         public String contactName;
 
-        // The contact group to which the contact belongs. If your contacts are added to multiple contact groups, the contact groups are separated by vertical bars (|).
+        /**
+         * <p>The contact group to which the contact belongs. If your contacts are added to multiple contact groups, the contact groups are separated by vertical bars (|).</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The timestamp when the alert contact was created.
+        /**
+         * <p>The timestamp generated when the alert contact was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The webhook URL of the DingTalk chatbot.
+        /**
+         * <p>The webhook URL of the DingTalk chatbot.</p>
+         */
         @NameInMap("DingRobot")
         public String dingRobot;
 
-        // The email address of the alert contact.
+        /**
+         * <p>The email address of the alert contact.</p>
+         */
         @NameInMap("Email")
         public String email;
 
-        // The mobile number of the alert contact.
+        /**
+         * <p>The mobile number of the alert contact.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // Indicates whether the alert contact receives system notifications. Valid values:
-        // 
-        // *   `true`: The alert contact receives system notifications.
-        // *   `false`: The alert contact does not receive system notifications.
+        /**
+         * <p>Indicates whether the alert contact receives system notifications. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The alert contact receives system notifications.</p>
+         * <p>*   `false`: The alert contact does not receive system notifications.</p>
+         */
         @NameInMap("SystemNoc")
         public Boolean systemNoc;
 
-        // The timestamp when the alert contact was updated.
+        /**
+         * <p>The timestamp generated when the alert contact was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
-        // The information about the webhook.
+        /**
+         * <p>The information about the webhook.</p>
+         */
         @NameInMap("Webhook")
         public String webhook;
 
@@ -188,19 +217,27 @@ public class SearchAlertContactResponseBody extends TeaModel {
     }
 
     public static class SearchAlertContactResponseBodyPageBean extends TeaModel {
-        // The information about the alert contacts.
+        /**
+         * <p>The information about the alert contacts.</p>
+         */
         @NameInMap("Contacts")
         public java.util.List<SearchAlertContactResponseBodyPageBeanContacts> contacts;
 
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of returned entries.
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

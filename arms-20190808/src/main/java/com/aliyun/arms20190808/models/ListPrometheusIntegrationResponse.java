@@ -3,7 +3,7 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class TurnOnSecondSwitchResponse extends TeaModel {
+public class ListPrometheusIntegrationResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class TurnOnSecondSwitchResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public TurnOnSecondSwitchResponseBody body;
+    public ListPrometheusIntegrationResponseBody body;
 
-    public static TurnOnSecondSwitchResponse build(java.util.Map<String, ?> map) throws Exception {
-        TurnOnSecondSwitchResponse self = new TurnOnSecondSwitchResponse();
+    public static ListPrometheusIntegrationResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListPrometheusIntegrationResponse self = new ListPrometheusIntegrationResponse();
         return TeaModel.build(map, self);
     }
 
-    public TurnOnSecondSwitchResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListPrometheusIntegrationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class TurnOnSecondSwitchResponse extends TeaModel {
         return this.headers;
     }
 
-    public TurnOnSecondSwitchResponse setStatusCode(Integer statusCode) {
+    public ListPrometheusIntegrationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class TurnOnSecondSwitchResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public TurnOnSecondSwitchResponse setBody(TurnOnSecondSwitchResponseBody body) {
+    public ListPrometheusIntegrationResponse setBody(ListPrometheusIntegrationResponseBody body) {
         this.body = body;
         return this;
     }
-    public TurnOnSecondSwitchResponseBody getBody() {
+    public ListPrometheusIntegrationResponseBody getBody() {
         return this.body;
     }
 

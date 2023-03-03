@@ -4,18 +4,24 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateContactGroupRequest extends TeaModel {
-    // The ID of the alert contact group.
-    // 
-    // *   If you do not specify this parameter, an alert contact group is created.
-    // *   If you specify this parameter, the specified alert contact group is modified.
+    /**
+     * <p>The ID of the alert contact group.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, an alert contact group is created.</p>
+     * <p>*   If you specify this parameter, the specified alert contact group is modified.</p>
+     */
     @NameInMap("ContactGroupId")
     public Long contactGroupId;
 
-    // The name of the alert contact group.
+    /**
+     * <p>The name of the alert contact group.</p>
+     */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
-    // The ID of the contact that you want to add to the contact group. Separate multiple IDs with commas (,).
+    /**
+     * <p>The ID of the contact that you want to add to the contact group. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("ContactIds")
     public String contactIds;
 

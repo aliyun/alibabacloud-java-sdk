@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListClusterFromGrafanaResponseBody extends TeaModel {
-    // The cluster information.
+    /**
+     * <p>The cluster information.</p>
+     */
     @NameInMap("PromClusterList")
     public java.util.List<ListClusterFromGrafanaResponseBodyPromClusterList> promClusterList;
 
-    // The ID of the request. You can query logs and troubleshoot issues based on the ID.
+    /**
+     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,78 +38,114 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
     }
 
     public static class ListClusterFromGrafanaResponseBodyPromClusterList extends TeaModel {
-        // The status of the Prometheus agent on the cluster.
+        /**
+         * <p>The status of the Prometheus agent on the cluster.</p>
+         */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
-        // The ID of cluster.
+        /**
+         * <p>The ID of cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // The name of the cluster.
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        // The type of the instance.
+        /**
+         * <p>The type of the instance.</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
-        // The ID of the controller.
+        /**
+         * <p>The ID of the controller.</p>
+         */
         @NameInMap("ControllerId")
         public String controllerId;
 
-        // The time when the dashboard was created.
+        /**
+         * <p>The time when the dashboard was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The extended fields. This parameter is a JSON string.
+        /**
+         * <p>The extended fields. This parameter is a JSON string.</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
-        // The ID of a database in the cluster.
+        /**
+         * <p>The ID of a database in the cluster.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The timestamp when the Prometheus agent was installed.
+        /**
+         * <p>The timestamp when the Prometheus agent was installed.</p>
+         */
         @NameInMap("InstallTime")
         public Long installTime;
 
-        // Indicates whether the Prometheus agent was installed. Valid values:
-        // 
-        // *   true: The Prometheus agent was installed.
-        // *   false: The Prometheus agent was not installed.
+        /**
+         * <p>Indicates whether the Prometheus agent was installed. Valid values:</p>
+         * <br>
+         * <p>*   true: The Prometheus agent was installed.</p>
+         * <p>*   false: The Prometheus agent was not installed.</p>
+         */
         @NameInMap("IsControllerInstalled")
         public Boolean isControllerInstalled;
 
-        // The time when the last heartbeat was reported.
+        /**
+         * <p>The time when the last heartbeat was reported.</p>
+         */
         @NameInMap("LastHeartBeatTime")
         public Long lastHeartBeatTime;
 
-        // The number of nodes.
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
-        // The custom parameters.
+        /**
+         * <p>The custom parameters.</p>
+         */
         @NameInMap("Options")
         public String options;
 
-        // The list of nodejsonar logs.
+        /**
+         * <p>The list of nodejsonar logs.</p>
+         */
         @NameInMap("PluginsJsonArray")
         public String pluginsJsonArray;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The information about applications deployed in the cluster.
+        /**
+         * <p>The information about applications deployed in the cluster.</p>
+         */
         @NameInMap("StateJson")
         public String stateJson;
 
-        // The time when the dashboard was updated.
+        /**
+         * <p>The time when the dashboard was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the Alibaba Cloud account to which the cluster belongs.
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the cluster belongs.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

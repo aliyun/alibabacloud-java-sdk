@@ -4,18 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeIMRobotsRequest extends TeaModel {
-    // The number of pages to query.
+    /**
+     * <p>The number of pages to query.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <p>The ID of the IM bot.</p>
+     */
     @NameInMap("RobotIds")
     public String robotIds;
 
-    // The name of the IM robot.
+    /**
+     * <p>The name of the IM robot.</p>
+     */
     @NameInMap("RobotName")
     public String robotName;
 
-    // The number of IM robots displayed on each page.
+    /**
+     * <p>The number of IM robots displayed on each page.</p>
+     */
     @NameInMap("Size")
     public Long size;
 
