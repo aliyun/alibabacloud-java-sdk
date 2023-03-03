@@ -38,14 +38,17 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantConnections extends TeaModel {
+        /**
+         * <p>The type of the address.</p>
+         */
         @NameInMap("AddressType")
         public String addressType;
 
         /**
          * <p>The service mode of the connection address. Valid values:  </p>
-         * <p>ReadWrite: provides strong-consistency read and write services.   </p>
-         * <p>ReadOnly: provides the read-only service to ensure ultimate consistency of data.   </p>
-         * <p>Clog: provides transaction log services.</p>
+         * <p>- ReadWrite: provides strong-consistency read and write services.   </p>
+         * <p>- ReadOnly: provides the read-only service to ensure ultimate consistency of data.   </p>
+         * <p>- Clog: provides transaction log services.</p>
          */
         @NameInMap("ConnectionRole")
         public String connectionRole;
@@ -64,7 +67,7 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         /**
          * <p>The status of the Internet address for accessing the tenant. Valid values:   </p>
-         * <p>Closed: The address is disabled.   </p>
+         * <p>- CLOSED: The address is disabled.   </p>
          * <p>- ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   </p>
          * <p>- PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   </p>
          * <p>- ONLINE: The address is in service.</p>
@@ -109,6 +112,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         public Integer intranetPort;
 
+        /**
+         * <p>Indicates whether to enable transaction splitting.</p>
+         */
         @NameInMap("TransactionSplit")
         public Boolean transactionSplit;
 
@@ -480,20 +486,29 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenant extends TeaModel {
+        /**
+         * <p>The list of zones.</p>
+         */
         @NameInMap("AvailableZones")
         public java.util.List<String> availableZones;
 
+        /**
+         * <p>The character set.</p>
+         */
         @NameInMap("Charset")
         public String charset;
 
         /**
-         * <p>The enabling status of the Clog service.  </p>
-         * <p>CLOSED: The Clog service is disabled.   </p>
-         * <p>- ONLINE: The Clog service is running.</p>
+         * <p>The enabling status of the clog service.  </p>
+         * <p>- CLOSED: The clog service is disabled.  </p>
+         * <p>- ONLINE: The clog service is running.</p>
          */
         @NameInMap("ClogServiceStatus")
         public String clogServiceStatus;
 
+        /**
+         * <p>The collation.</p>
+         */
         @NameInMap("Collation")
         public String collation;
 
@@ -529,11 +544,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The type of the disk.</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
-         * <p>Indicates whether the Clog service is available. To enable the Clog service, submit a ticket.</p>
+         * <p>Indicates whether the clog service is available. To enable the clog service, submit a ticket.</p>
          */
         @NameInMap("EnableClogService")
         public Boolean enableClogService;
@@ -544,15 +562,27 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("EnableInternetAddressService")
         public Boolean enableInternetAddressService;
 
+        /**
+         * <p>Indicates whether to enable read/write splitting endpoint.</p>
+         */
         @NameInMap("EnableReadWriteSplit")
         public Boolean enableReadWriteSplit;
 
+        /**
+         * <p>The type of the instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The zone where the primary node is located.</p>
+         */
         @NameInMap("MasterIntranetAddressZone")
         public String masterIntranetAddressZone;
 
+        /**
+         * <p>The type of the payment.</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
@@ -562,9 +592,15 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("PrimaryZone")
         public String primaryZone;
 
+        /**
+         * <p>The deployment type of the primary zone.</p>
+         */
         @NameInMap("PrimaryZoneDeployType")
         public String primaryZoneDeployType;
 
+        /**
+         * <p>The series of the instance.</p>
+         */
         @NameInMap("Series")
         public String series;
 
@@ -584,7 +620,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The connection access information of the tenant.</p>
+         * <p>The connection information of the tenant.</p>
          */
         @NameInMap("TenantConnections")
         public java.util.List<DescribeTenantResponseBodyTenantTenantConnections> tenantConnections;
@@ -597,9 +633,9 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         /**
          * <p>The tenant mode.   </p>
-         * <p>Valid values: </p>
-         * <p>Oracle   </p>
-         * <p>MySQL</p>
+         * <p>Valid values:</p>
+         * <p>- Oracle   </p>
+         * <p>- MySQL</p>
          */
         @NameInMap("TenantMode")
         public String tenantMode;

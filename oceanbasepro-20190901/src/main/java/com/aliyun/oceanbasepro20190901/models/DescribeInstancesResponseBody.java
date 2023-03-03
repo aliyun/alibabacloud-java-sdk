@@ -368,6 +368,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceRole")
         public String instanceRole;
 
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
