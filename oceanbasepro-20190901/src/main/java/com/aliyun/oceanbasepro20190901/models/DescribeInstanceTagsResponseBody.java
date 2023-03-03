@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTagsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<DescribeInstanceTagsResponseBodyTagResources> tagResources;
 
@@ -32,12 +38,21 @@ public class DescribeInstanceTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTagsResponseBodyTagResources extends TeaModel {
+        /**
+         * <p>The resource ID.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tag of the resource.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

@@ -10,6 +10,9 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The availability zone where the primary node is located.</p>
+     */
     @NameInMap("MasterIntranetAddressZone")
     public String masterIntranetAddressZone;
 
@@ -26,6 +29,9 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     @NameInMap("PrimaryZone")
     public String primaryZone;
 
+    /**
+     * <p>The deployment type of the primary zone.</p>
+     */
     @NameInMap("PrimaryZoneDeployType")
     public String primaryZoneDeployType;
 

@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTagsRequest extends TeaModel {
+    /**
+     * <p>The list of cluster IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

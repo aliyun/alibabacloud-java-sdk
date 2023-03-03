@@ -247,7 +247,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyTenants extends TeaModel {
         /**
-         * <p>The primary zone deployment mode.</p>
+         * <p>The deployment type of the primary zone.</p>
          */
         @NameInMap("PrimaryZoneDeployType")
         public String primaryZoneDeployType;

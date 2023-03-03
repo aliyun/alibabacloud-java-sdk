@@ -438,6 +438,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
+        @NameInMap("InstanceRole")
+        public String instanceRole;
+
         /**
          * <p>Indicates whether the OBServer version is the latest.</p>
          */
@@ -455,6 +458,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         @NameInMap("MaintainTime")
         public String maintainTime;
+
+        @NameInMap("NodeNum")
+        public String nodeNum;
 
         /**
          * <p>The detailed information of the OBServer version.</p>
@@ -510,6 +516,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         @NameInMap("Version")
         public String version;
+
+        @NameInMap("Zones")
+        public java.util.List<String> zones;
 
         public static DescribeInstanceResponseBodyInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyInstance self = new DescribeInstanceResponseBodyInstance();
@@ -620,6 +629,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.instanceName;
         }
 
+        public DescribeInstanceResponseBodyInstance setInstanceRole(String instanceRole) {
+            this.instanceRole = instanceRole;
+            return this;
+        }
+        public String getInstanceRole() {
+            return this.instanceRole;
+        }
+
         public DescribeInstanceResponseBodyInstance setIsLatestObVersion(Boolean isLatestObVersion) {
             this.isLatestObVersion = isLatestObVersion;
             return this;
@@ -642,6 +659,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getMaintainTime() {
             return this.maintainTime;
+        }
+
+        public DescribeInstanceResponseBodyInstance setNodeNum(String nodeNum) {
+            this.nodeNum = nodeNum;
+            return this;
+        }
+        public String getNodeNum() {
+            return this.nodeNum;
         }
 
         public DescribeInstanceResponseBodyInstance setObRpmVersion(String obRpmVersion) {
@@ -690,6 +715,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public DescribeInstanceResponseBodyInstance setZones(java.util.List<String> zones) {
+            this.zones = zones;
+            return this;
+        }
+        public java.util.List<String> getZones() {
+            return this.zones;
         }
 
     }
