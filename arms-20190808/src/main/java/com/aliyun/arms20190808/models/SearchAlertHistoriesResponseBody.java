@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertHistoriesResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("PageBean")
     public SearchAlertHistoriesResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,56 +38,78 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertHistoriesResponseBodyPageBeanAlarmHistories extends TeaModel {
-        // The content of the alert notification.
+        /**
+         * <p>The content of the alert notification.</p>
+         */
         @NameInMap("AlarmContent")
         public String alarmContent;
 
-        // The response code returned after the alert notification was sent.
+        /**
+         * <p>The response code returned after the alert notification was sent.</p>
+         */
         @NameInMap("AlarmResponseCode")
         public Integer alarmResponseCode;
 
-        // The webhook URL used for the alert contact, such as that of a DingTalk chatbot.
+        /**
+         * <p>The webhook URL used for the alert contact, such as that of a DingTalk chatbot.</p>
+         */
         @NameInMap("AlarmSources")
         public String alarmSources;
 
-        // The time when the alert notification was sent.
+        /**
+         * <p>The time when the alert notification was sent.</p>
+         */
         @NameInMap("AlarmTime")
         public Long alarmTime;
 
-        // The type of the alert rule. Default value: 4. Valid values:
-        // 
-        // *   `1`: custom alert rules to monitor drill-down data sets
-        // *   `3`: custom alert rules to monitor tiled data sets
-        // *   `4`: alert rules to monitor the frontend, including the default frontend alert rules
-        // *   `5`: alert rules to monitor applications, including the default application alert rules
-        // *   `6`: the default frontend alert rules
-        // *   `7`: the default application alert rules
-        // *   `8`: Tracing Analysis alert rules
-        // *   `101`: Prometheus alert rules
+        /**
+         * <p>The type of the alert rule. Default value: 4. Valid values:</p>
+         * <br>
+         * <p>*   `1`: custom alert rules to monitor drill-down data sets</p>
+         * <p>*   `3`: custom alert rules to monitor tiled data sets</p>
+         * <p>*   `4`: alert rules to monitor the frontend, including the default frontend alert rules</p>
+         * <p>*   `5`: alert rules to monitor applications, including the default application alert rules</p>
+         * <p>*   `6`: the default frontend alert rules</p>
+         * <p>*   `7`: the default application alert rules</p>
+         * <p>*   `8`: Tracing Analysis alert rules</p>
+         * <p>*   `101`: Prometheus alert rules</p>
+         */
         @NameInMap("AlarmType")
         public Integer alarmType;
 
-        // The email address of the alert contact.
+        /**
+         * <p>The email address of the alert contact.</p>
+         */
         @NameInMap("Emails")
         public String emails;
 
-        // The ID of the alert notification.
+        /**
+         * <p>The ID of the alert notification.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The mobile number of the alert contact.
+        /**
+         * <p>The mobile number of the alert contact.</p>
+         */
         @NameInMap("Phones")
         public String phones;
 
-        // An internal parameter.
+        /**
+         * <p>An internal parameter.</p>
+         */
         @NameInMap("StrategyId")
         public String strategyId;
 
-        // An internal parameter.
+        /**
+         * <p>An internal parameter.</p>
+         */
         @NameInMap("Target")
         public String target;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -183,19 +209,27 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
     }
 
     public static class SearchAlertHistoriesResponseBodyPageBean extends TeaModel {
-        // The information about alert records.
+        /**
+         * <p>The information about alert records.</p>
+         */
         @NameInMap("AlarmHistories")
         public java.util.List<SearchAlertHistoriesResponseBodyPageBeanAlarmHistories> alarmHistories;
 
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

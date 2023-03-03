@@ -4,25 +4,36 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactGroupsRequest extends TeaModel {
-    // The name of the alert contact group.
+    /**
+     * <p>The name of the alert contact group.</p>
+     */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
+    /**
+     * <p>The ID of the alert contact group.</p>
+     */
     @NameInMap("GroupIds")
     public String groupIds;
 
-    // Indicates whether all contacts are included in the returned contact group information.
-    // 
-    // *   `fasle` (default): does not return all contacts.
-    // *   `true`: All contacts are returned.
+    /**
+     * <p>Specifies whether to return all the alert contacts in the queried alert contact group. Valid values:</p>
+     * <br>
+     * <p>*   `false`: does not return all alert contacts.</p>
+     * <p>*   `true`: returns all alert contacts.</p>
+     */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
-    // The number of pages to query.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
-    // The number of contact groups displayed on each page.
+    /**
+     * <p>The number of contact groups displayed on each page.</p>
+     */
     @NameInMap("Size")
     public Long size;
 

@@ -4,14 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteNotificationPolicyResponseBody extends TeaModel {
-    // Indicates whether the notification policy was deleted successfully. Valid values:
-    // 
-    // *   `true`: The notification policy was deleted successfully.
-    // *   `false`: The notification policy failed to be deleted.
+    /**
+     * <p>Indicates whether the notification policy was deleted successfully. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The notification policy was deleted successfully.</p>
+     * <p>*   `false`: The notification policy failed to be deleted.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

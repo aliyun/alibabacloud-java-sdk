@@ -4,33 +4,45 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSourceMapInfoRequest extends TeaModel {
-    // The order in which the files are sorted. Valid values:
-    // 
-    // *   true: ascending order
-    // *   false: descending order
+    /**
+     * <p>The order in which the files are sorted. Valid values:</p>
+     * <br>
+     * <p>*   true: ascending order</p>
+     * <p>*   false: descending order</p>
+     */
     @NameInMap("AscendingSequence")
     public Boolean ascendingSequence;
 
-    // The version of the SourceMap file.
+    /**
+     * <p>The version of the SourceMap file.</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
-    // The IDs of the SourceMap files.
+    /**
+     * <p>The IDs of the SourceMap files.</p>
+     */
     @NameInMap("ID")
     public String ID;
 
-    // The keyword in the file name. The files are searched by keyword.
+    /**
+     * <p>The keyword in the file name. The files are searched by keyword.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
-    // The criterion by which the files are sorted. Valid values:
-    // 
-    // *   version: The files are sorted by version.
-    // *   uploadTime: The files are sorted by upload time.
+    /**
+     * <p>The criterion by which the files are sorted. Valid values:</p>
+     * <br>
+     * <p>*   version: The files are sorted by version.</p>
+     * <p>*   uploadTime: The files are sorted by upload time.</p>
+     */
     @NameInMap("OrderField")
     public String orderField;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

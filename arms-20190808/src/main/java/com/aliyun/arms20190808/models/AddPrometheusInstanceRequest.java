@@ -4,15 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddPrometheusInstanceRequest extends TeaModel {
-    // The name of the Prometheus instance for Remote Write.
+    /**
+     * <p>The name of the Prometheus instance for Remote Write.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region in which the instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the Prometheus instance. Only the Prometheus for Remote Write type is supported. Set the value to RW.
+    /**
+     * <p>The type of the Prometheus instance. Only Prometheus instances for Remote Write is supported. Set the value to RW.</p>
+     */
     @NameInMap("Type")
     public String type;
 

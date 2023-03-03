@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListRetcodeAppsResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about monitored applications.
+    /**
+     * <p>The information about monitored applications.</p>
+     */
     @NameInMap("RetcodeApps")
     public java.util.List<ListRetcodeAppsResponseBodyRetcodeApps> retcodeApps;
 
@@ -34,9 +38,15 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
     }
 
     public static class ListRetcodeAppsResponseBodyRetcodeAppsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -64,36 +74,52 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
     }
 
     public static class ListRetcodeAppsResponseBodyRetcodeApps extends TeaModel {
-        // The ID of the application. The parameter is an auto-increment parameter.
+        /**
+         * <p>The ID of the application. The parameter is an auto-increment parameter.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The name of the application that is monitored by Browser Monitoring.
+        /**
+         * <p>The alias of the application.</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
-        // The PID of the application.
+        /**
+         * <p>The PID of the application.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The type of the application. Valid values:
-        // 
-        // *   `web`: web application
-        // *   `weex`: Weex mobile app
-        // *   `mini_dd`: DingTalk mini program
-        // *   `mini_alipay`: Alipay mini program
-        // *   `mini_wx`: WeChat mini program
-        // *   `mini_common`: mini program on other platforms
+        /**
+         * <p>The type of the application. Valid values:</p>
+         * <br>
+         * <p>*   `web`: web application</p>
+         * <p>*   `weex`: Weex mobile app</p>
+         * <p>*   `mini_dd`: DingTalk mini program</p>
+         * <p>*   `mini_alipay`: Alipay mini program</p>
+         * <p>*   `mini_wx`: WeChat mini program</p>
+         * <p>*   `mini_common`: mini program on other platforms</p>
+         */
         @NameInMap("RetcodeAppType")
         public String retcodeAppType;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListRetcodeAppsResponseBodyRetcodeAppsTags> tags;
 

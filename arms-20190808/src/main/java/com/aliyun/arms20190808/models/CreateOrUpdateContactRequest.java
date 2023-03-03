@@ -4,44 +4,63 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateContactRequest extends TeaModel {
-    // The ID of the alert contact.
-    // 
-    // *   If you do not specify this parameter, an alert contact is created.
-    // *   If you specify this parameter, the specified alert contact is modified.
+    /**
+     * <p>The ID of the alert contact.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, a new alert contact is created.</p>
+     * <p>*   If you specify this parameter, the specified alert contact is modified.</p>
+     */
     @NameInMap("ContactId")
     public Long contactId;
 
-    // The name of the alert contact.
+    /**
+     * <p>The name of the alert contact.</p>
+     */
     @NameInMap("ContactName")
     public String contactName;
 
+    /**
+     * <p>The webhook URL of the DingTalk chatbot.</p>
+     */
     @NameInMap("DingRobotUrl")
     public String dingRobotUrl;
 
-    // The email address of the alert contact.
-    // 
-    // > You must specify at least one of the **Phone** and **Email** parameters. Each mobile number or email address can be used for only one alert contact.
+    /**
+     * <p>The email address of the alert contact.</p>
+     * <br>
+     * <p>> You must specify at least one of the **Phone** and **Email** parameters. Each mobile number or email address can be used for only one alert contact.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>Specifies whether the email address is verified.</p>
+     */
     @NameInMap("IsEmailVerify")
     public Boolean isEmailVerify;
 
-    // The mobile number of the alert contact.
-    // 
-    // > You must specify at least one of the **Phone** and **Email** parameters. Each mobile number or email address can be used for only one alert contact.
+    /**
+     * <p>The mobile number of the alert contact.</p>
+     * <br>
+     * <p>> You must specify at least one of the **Phone** and **Email** parameters. Each mobile number or email address can be used for only one alert contact.</p>
+     */
     @NameInMap("Phone")
     public String phone;
 
-    // The method to resend notifications if phone notifications fail. Valid values:
-    // 
-    // *   0: do not resend notifications
-    // *   1: make a phone call again
-    // *   2: send a text message
-    // *   3 (default value): use the global default value
+    /**
+     * <p>The operation that you want to perform if phone calls fail to be answered. Valid values:</p>
+     * <br>
+     * <p>*   0: No operation is performed.</p>
+     * <p>*   1: A phone call is made again.</p>
+     * <p>*   2: A text message is sent.</p>
+     * <p>*   3 (default value): The global default value is used.</p>
+     */
     @NameInMap("ReissueSendNotice")
     public Long reissueSendNotice;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

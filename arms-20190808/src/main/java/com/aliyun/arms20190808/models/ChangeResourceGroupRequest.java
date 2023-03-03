@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the new resource group. You can view the available resource groups in the Resource Management console.</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    /**
+     * <p>The ID of the region in which the resource is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the Application Real-Time Monitoring Service (ARMS) resource that you want to move to a specific resource group.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of the ARMS resource that you want to move to a specific resource group.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

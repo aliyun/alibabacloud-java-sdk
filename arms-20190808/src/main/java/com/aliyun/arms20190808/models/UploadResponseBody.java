@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UploadResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The returned data.
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("UploadResult")
     public UploadResponseBodyUploadResult uploadResult;
 
@@ -34,15 +38,21 @@ public class UploadResponseBody extends TeaModel {
     }
 
     public static class UploadResponseBodyUploadResult extends TeaModel {
-        // The ID of the SourceMap file.
+        /**
+         * <p>The ID of the SourceMap file.</p>
+         */
         @NameInMap("Fid")
         public String fid;
 
-        // The name of the SourceMap file.
+        /**
+         * <p>The name of the SourceMap file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
-        // The time when the file was uploaded.
+        /**
+         * <p>The time when the file was uploaded.</p>
+         */
         @NameInMap("UploadTime")
         public String uploadTime;
 

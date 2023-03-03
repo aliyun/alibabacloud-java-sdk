@@ -4,10 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>Interface status or pop error code.</p>
+     */
+    @NameInMap("Code")
+    public String code;
+
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public ChangeResourceGroupResponseBodyData data;
 
-    // Id of the request
+    /**
+     * <p>The returned message.</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,12 +33,28 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ChangeResourceGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public ChangeResourceGroupResponseBody setData(ChangeResourceGroupResponseBodyData data) {
         this.data = data;
         return this;
     }
     public ChangeResourceGroupResponseBodyData getData() {
         return this.data;
+    }
+
+    public ChangeResourceGroupResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ChangeResourceGroupResponseBody setRequestId(String requestId) {
@@ -33,9 +66,15 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     }
 
     public static class ChangeResourceGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 

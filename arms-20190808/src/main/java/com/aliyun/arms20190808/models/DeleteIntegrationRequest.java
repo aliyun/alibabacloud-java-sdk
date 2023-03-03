@@ -4,15 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteIntegrationRequest extends TeaModel {
-    // The ID of the Container Service for Kubernetes cluster.
+    /**
+     * <p>The ID of the Container Service for Kubernetes cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
+    /**
+     * <p>The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.</p>
+     */
     @NameInMap("Integration")
     public String integration;
 
-    // The region ID of the ARMS instance.
+    /**
+     * <p>The region ID of the ARMS instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

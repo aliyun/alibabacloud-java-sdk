@@ -4,35 +4,50 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateAlertContactRequest extends TeaModel {
-    // The name of the alert contact.
+    /**
+     * <p>The name of the alert contact.</p>
+     */
     @NameInMap("ContactName")
     public String contactName;
 
-    // The webhook URL of the DingTalk chatbot. For more information about how to obtain the URL, see [Configure a DingTalk chatbot to send alert notifications](https://www.alibabacloud.com/help/zh/doc-detail/106247.htm). You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
-    // 
-    // >  Enter `alert` in the custom keyword field of DingTalk chatbot security settings.
+    /**
+     * <p>The webhook URL of the DingTalk chatbot. For more information about how to obtain the URL, see [Configure a DingTalk chatbot to send alert notifications](https://www.alibabacloud.com/help/zh/doc-detail/106247.htm). You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.</p>
+     * <br>
+     * <p>>  Enter `alert` in the custom keyword field of DingTalk chatbot security settings.</p>
+     */
     @NameInMap("DingRobotWebhookUrl")
     public String dingRobotWebhookUrl;
 
-    // The email address of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+    /**
+     * <p>The email address of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.</p>
+     */
     @NameInMap("Email")
     public String email;
 
-    // The mobile number of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.
+    /**
+     * <p>The mobile number of the alert contact. You must specify at least one of the following parameters: PhoneNum, Email, and DingRobotWebhookUrl.</p>
+     */
     @NameInMap("PhoneNum")
     public String phoneNum;
 
-    // The ID of the region. Set the value to `cn-hangzhou`.
+    /**
+     * <p>The ID of the region. Set the value to `cn-hangzhou`.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // Specifies whether the alert contact receives system notifications. Valid values:
-    // 
-    // *   `true`: receives system notifications.
-    // *   `false`: does not receive system notifications.
+    /**
+     * <p>Specifies whether the alert contact receives system notifications. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The alert contact receives system notifications.</p>
+     * <p>*   `false`: The alert contact does not receive system notifications.</p>
+     */
     @NameInMap("SystemNoc")
     public Boolean systemNoc;
 

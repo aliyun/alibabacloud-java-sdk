@@ -7,7 +7,9 @@ public class DeleteCmsExporterResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

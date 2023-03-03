@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesResponseBody extends TeaModel {
-    // The Prometheus instances in the region in the JSON format.
+    /**
+     * <p>The Prometheus instances in the region in the JSON format.</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // The ID of the request. You can use the ID to query logs and troubleshoot issues.
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

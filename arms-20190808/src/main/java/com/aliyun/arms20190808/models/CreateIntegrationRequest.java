@@ -4,29 +4,39 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateIntegrationRequest extends TeaModel {
-    // Specifies whether to automatically clear alert events. Valid values:
-    // 
-    // *   true (default)
-    // *   false
+    /**
+     * <p>Specifies whether to automatically clear alert events. Valid values:</p>
+     * <br>
+     * <p>*   true (default)</p>
+     * <p>*   false</p>
+     */
     @NameInMap("AutoRecover")
     public Boolean autoRecover;
 
-    // The description of the alert integration.
+    /**
+     * <p>The description of the alert integration.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The name of the alert integration.
+    /**
+     * <p>The name of the alert integration.</p>
+     */
     @NameInMap("IntegrationName")
     public String integrationName;
 
-    // The service of the alert integration. Valid values:
-    // 
-    // *   CLOUD_MONITOR: CloudMonitor
-    // *   LOG_SERVICE: Log Service
+    /**
+     * <p>The service of the alert integration. Valid values:</p>
+     * <br>
+     * <p>*   CLOUD_MONITOR: CloudMonitor</p>
+     * <p>*   LOG_SERVICE: Log Service</p>
+     */
     @NameInMap("IntegrationProductType")
     public String integrationProductType;
 
-    // The time when alert events are automatically cleared. Unit: seconds. Default value: 300.
+    /**
+     * <p>The time when alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
+     */
     @NameInMap("RecoverTime")
     public Long recoverTime;
 

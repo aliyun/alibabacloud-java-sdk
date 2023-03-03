@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateRetcodeAppResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information of the browser monitoring task.
+    /**
+     * <p>The information of the browser monitoring task.</p>
+     */
     @NameInMap("RetcodeAppDataBean")
     public CreateRetcodeAppResponseBodyRetcodeAppDataBean retcodeAppDataBean;
 
@@ -34,9 +38,15 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     }
 
     public static class CreateRetcodeAppResponseBodyRetcodeAppDataBeanTagsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -83,17 +93,27 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     }
 
     public static class CreateRetcodeAppResponseBodyRetcodeAppDataBean extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
-        // PID。
+        /**
+         * <p>The process identifier (PID) of the application.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public CreateRetcodeAppResponseBodyRetcodeAppDataBeanTags tags;
 

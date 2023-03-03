@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListEscalationPoliciesResponseBody extends TeaModel {
-    // The objects that were returned.
+    /**
+     * <p>The objects that were returned.</p>
+     */
     @NameInMap("PageBean")
     public ListEscalationPoliciesResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPoliciesResponseBodyPageBeanEscalationPolicies extends TeaModel {
-        // The ID of the escalation policy.
+        /**
+         * <p>The ID of the escalation policy.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The name of the escalation policy.
+        /**
+         * <p>The name of the escalation policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -66,19 +74,27 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListEscalationPoliciesResponseBodyPageBean extends TeaModel {
-        // The list of escalation policies.
+        /**
+         * <p>The list of escalation policies.</p>
+         */
         @NameInMap("EscalationPolicies")
         public java.util.List<ListEscalationPoliciesResponseBodyPageBeanEscalationPolicies> escalationPolicies;
 
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("Page")
         public Long page;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The total number of returned entries.
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

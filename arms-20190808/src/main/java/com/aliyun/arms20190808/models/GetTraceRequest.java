@@ -4,23 +4,31 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTraceRequest extends TeaModel {
-    // The end of the time range to query. Unit: milliseconds.
-    // 
-    // > If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.
+    /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <br>
+     * <p>> If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The beginning of the time range to query. Unit: milliseconds.
-    // 
-    // > If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.
+    /**
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <br>
+     * <p>> If the ID of the trace is 30 characters in length, this parameter is optional. Otherwise, this parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
-    // The ID of the trace. You can log on to the ARMS console and obtain the trace ID on the **Trace Query** page or **Interface Snapshot** tab.
+    /**
+     * <p>The ID of the trace. You can log on to the ARMS console and obtain the trace ID on the **Trace Query** page or **Interface Snapshot** tab.</p>
+     */
     @NameInMap("TraceID")
     public String traceID;
 

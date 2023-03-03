@@ -4,12 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListOnCallSchedulesRequest extends TeaModel {
+    /**
+     * <p>The name of the scheduling policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("Size")
     public Long size;
 

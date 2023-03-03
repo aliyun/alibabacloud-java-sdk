@@ -4,19 +4,30 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UninstallManagedPrometheusRequest extends TeaModel {
-    // The ID of the ASK cluster.
+    /**
+     * <p>The ID of the ASK cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The type of the cluster. You can query the dashboards of a virtual cluster by specifying the cluster type.
+    /**
+     * <p>The type of the cluster. You can query the dashboards of a virtual cluster by specifying the cluster type.</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The VPC of the ASK cluster.
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The VPC of the ASK cluster.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -47,6 +58,14 @@ public class UninstallManagedPrometheusRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UninstallManagedPrometheusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public UninstallManagedPrometheusRequest setVpcId(String vpcId) {

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListSilencePoliciesResponseBody extends TeaModel {
-    // An array of returned objects.
+    /**
+     * <p>An array of returned objects.</p>
+     */
     @NameInMap("PageBean")
     public ListSilencePoliciesResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,22 +38,28 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRulesMatchingConditions extends TeaModel {
-        // The key of the matching condition.
+        /**
+         * <p>The key of the matching condition.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The logical operator of the matching condition. Valid values:
-        // 
-        // *   `eq`: equal to.
-        // *   `neq`: not equal to.
-        // *   `in`: contains.
-        // *   `nin`: does not contain.
-        // *   `re`: regular expression match.
-        // *   `nre`: regular expression mismatch.
+        /**
+         * <p>The logical operator of the matching condition. Valid values:</p>
+         * <br>
+         * <p>*   `eq`: equal to.</p>
+         * <p>*   `neq`: not equal to.</p>
+         * <p>*   `in`: contains.</p>
+         * <p>*   `nin`: does not contain.</p>
+         * <p>*   `re`: regular expression match.</p>
+         * <p>*   `nre`: regular expression mismatch.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
-        // The value of the matching condition.
+        /**
+         * <p>The value of the matching condition.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -85,7 +95,9 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules extends TeaModel {
-        // An array of matching condition objects.
+        /**
+         * <p>An array of matching condition objects.</p>
+         */
         @NameInMap("MatchingConditions")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRulesMatchingConditions> matchingConditions;
 
@@ -105,15 +117,21 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePolicies extends TeaModel {
-        // The ID of the silence policy.
+        /**
+         * <p>The ID of the silence policy.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // An array of matching rule objects.
+        /**
+         * <p>An array of matching rule objects.</p>
+         */
         @NameInMap("MatchingRules")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules> matchingRules;
 
-        // The name of the silence policy.
+        /**
+         * <p>The name of the silence policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -149,19 +167,27 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBean extends TeaModel {
-        // The number of pages that were returned.
+        /**
+         * <p>The number of pages that were returned.</p>
+         */
         @NameInMap("Page")
         public Long page;
 
-        // An array of silence policy objects.
+        /**
+         * <p>An array of silence policy objects.</p>
+         */
         @NameInMap("SilencePolicies")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePolicies> silencePolicies;
 
-        // The number of entries that were returned on each page.
+        /**
+         * <p>The number of entries that were returned on each page.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The number of silence policies that were returned.
+        /**
+         * <p>The number of silence policies that were returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTraceAppByPageResponseBody extends TeaModel {
-    // The returned page information.
+    /**
+     * <p>The returned page information.</p>
+     */
     @NameInMap("PageBean")
     public SearchTraceAppByPageResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,9 +38,15 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTraceAppByPageResponseBodyPageBeanTraceAppsTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -64,54 +74,81 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTraceAppByPageResponseBodyPageBeanTraceApps extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The timestamp generated when the monitoring task was created.
+        /**
+         * <p>The timestamp generated when the monitoring task was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The list of application aliases.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
-        // The PID of the application.
+        /**
+         * <p>The process identifier (PID) of the application.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // Indicates whether the application was displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
-        // 
-        // *   `true`: The application was displayed in the ARMS console.
-        // *   `false`: The application was not displayed in the ARMS console.
+        /**
+         * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The application is displayed in the ARMS console.</p>
+         * <p>*   `false`: The application is not displayed in the ARMS console.</p>
+         */
         @NameInMap("Show")
         public Boolean show;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<SearchTraceAppByPageResponseBodyPageBeanTraceAppsTags> tags;
 
-        // The type of the monitoring task. Valid values:
-        // 
-        // *   `TRACE`: application monitoring
-        // *   `RETCODE`: browser monitoring
+        /**
+         * <p>The type of the monitoring task. Valid values:</p>
+         * <br>
+         * <p>*   `TRACE`: application monitoring</p>
+         * <p>*   `RETCODE`: browser monitoring</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The timestamp generated when the monitoring task was updated.
+        /**
+         * <p>The timestamp generated when the monitoring task was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -219,19 +256,27 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
     }
 
     public static class SearchTraceAppByPageResponseBodyPageBean extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        // The information about the application monitoring task.
+        /**
+         * <p>The information about the task that monitors the application.</p>
+         */
         @NameInMap("TraceApps")
         public java.util.List<SearchTraceAppByPageResponseBodyPageBeanTraceApps> traceApps;
 

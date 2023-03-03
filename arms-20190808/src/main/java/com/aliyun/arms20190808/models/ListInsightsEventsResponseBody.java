@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListInsightsEventsResponseBody extends TeaModel {
-    // The description of the event.
+    /**
+     * <p>The description of the event.</p>
+     */
     @NameInMap("InsightsEvents")
     public java.util.List<ListInsightsEventsResponseBodyInsightsEvents> insightsEvents;
 
-    // The title of the event.
+    /**
+     * <p>The title of the event.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,26 +38,39 @@ public class ListInsightsEventsResponseBody extends TeaModel {
     }
 
     public static class ListInsightsEventsResponseBodyInsightsEvents extends TeaModel {
+        /**
+         * <p>The time at which the event occurred. The value is a timestamp.</p>
+         */
         @NameInMap("Date")
         public Long date;
 
-        // The ID of the application associated with the event.
+        /**
+         * <p>The ID of the application associated with the event.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
-        // Queries the abnormal Insights events within a specified period of time.
+        /**
+         * <p>Queries the abnormal Insights events within a specified period of time.</p>
+         */
         @NameInMap("Level")
         public String level;
 
-        // auditing
+        /**
+         * <p>auditing</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
-        // The overall response time of the \[HTTP] service of the application \[sd] spikes at \[2022-07-27 10:57:00]
+        /**
+         * <p>The overall response time of the \[HTTP] service of the application \[sd] spikes at \[2022-07-27 10:57:00]</p>
+         */
         @NameInMap("Title")
         public String title;
 
-        // The time at which the event occurred. The value is a timestamp.
+        /**
+         * <p>The time at which the event occurred. The value is a timestamp.</p>
+         */
         @NameInMap("Type")
         public String type;
 

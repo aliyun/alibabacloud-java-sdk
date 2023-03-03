@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTraceAppByNameResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about the application monitoring job.
+    /**
+     * <p>The information about the application monitoring task.</p>
+     */
     @NameInMap("TraceApps")
     public java.util.List<SearchTraceAppByNameResponseBodyTraceApps> traceApps;
 
@@ -34,9 +38,15 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
     }
 
     public static class SearchTraceAppByNameResponseBodyTraceAppsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -64,55 +74,81 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
     }
 
     public static class SearchTraceAppByNameResponseBodyTraceApps extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The timestamp when the application was created.
+        /**
+         * <p>The timestamp generated when the monitoring task was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The tag of the application.
+        /**
+         * <p>The list of application aliases.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
-        // The process identifier (PID) of the application.
+        /**
+         * <p>The PID of the application.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:
-        // 
-        // *   `true`: The application is displayed in the ARMS console.
-        // *   `false`: The application is not displayed in the ARMS console.
+        /**
+         * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
+         * <br>
+         * <p>*   `true`: yes</p>
+         * <p>*   `false`: no</p>
+         */
         @NameInMap("Show")
         public Boolean show;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<SearchTraceAppByNameResponseBodyTraceAppsTags> tags;
 
-        // The type of the monitoring job. Valid values:
-        // 
-        // *   `TRACE`: application monitoring
-        // *   `RETCODE`: frontend monitoring
+        /**
+         * <p>The type of the monitoring task. Valid values:</p>
+         * <br>
+         * <p>*   `TRACE`: Application Monitoring</p>
+         * <p>*   `RETCODE`: Browser Monitoring</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The timestamp when the application was updated.
+        /**
+         * <p>The timestamp generated when the monitoring task was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

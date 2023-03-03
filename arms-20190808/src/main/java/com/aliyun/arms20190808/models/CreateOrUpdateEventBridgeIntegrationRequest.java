@@ -4,42 +4,60 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateEventBridgeIntegrationRequest extends TeaModel {
-    // The AccessKey ID that is used to connect to EventBridge.
+    /**
+     * <p>The AccessKey ID that is used to connect to EventBridge.</p>
+     */
     @NameInMap("AccessKey")
     public String accessKey;
 
-    // The AccessKey secret that is used to connect to EventBridge.
+    /**
+     * <p>The AccessKey secret that is used to connect to EventBridge.</p>
+     */
     @NameInMap("AccessSecret")
     public String accessSecret;
 
-    // The description of the EventBridge integration.
+    /**
+     * <p>The description of the EventBridge integration.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The public endpoint of EventBridge.
+    /**
+     * <p>The public endpoint of EventBridge.</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
-    // The name of the event bus.
+    /**
+     * <p>The name of the event bus.</p>
+     */
     @NameInMap("EventBusName")
     public String eventBusName;
 
-    // The region ID of the event bus.
+    /**
+     * <p>The region ID of the event bus.</p>
+     */
     @NameInMap("EventBusRegionId")
     public String eventBusRegionId;
 
-    // The ID of the EventBridge integration.
-    // 
-    // *   If you do not specify this parameter, an EventBridge integration is created.
-    // *   If you specify this parameter, the specified EventBridge integration is modified.
+    /**
+     * <p>The ID of the EventBridge integration.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, an EventBridge integration is created.</p>
+     * <p>*   If you specify this parameter, the specified EventBridge integration is modified.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
-    // The name of the EventBridge integration.
+    /**
+     * <p>The name of the EventBridge integration.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The event source.
+    /**
+     * <p>The event source.</p>
+     */
     @NameInMap("Source")
     public String source;
 

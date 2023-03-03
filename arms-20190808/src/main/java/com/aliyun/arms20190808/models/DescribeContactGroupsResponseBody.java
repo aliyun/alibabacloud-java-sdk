@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactGroupsResponseBody extends TeaModel {
-    // Paging object.
+    /**
+     * <p>The pages returned.</p>
+     */
     @NameInMap("PageBean")
     public DescribeContactGroupsResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,22 +38,33 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts extends TeaModel {
+        /**
+         * <p>The ID of the alert contact.</p>
+         */
         @NameInMap("ArmsContactId")
         public Long armsContactId;
 
-        // The ID of the alert contact.
+        /**
+         * <p>The ID of the alert contact.</p>
+         */
         @NameInMap("ContactId")
         public Float contactId;
 
-        // The name of the contact.
+        /**
+         * <p>The name of the alert contact.</p>
+         */
         @NameInMap("ContactName")
         public String contactName;
 
-        // The email address of the alert contact.
+        /**
+         * <p>The email address of the alert contact.</p>
+         */
         @NameInMap("Email")
         public String email;
 
-        // The mobile number of the alert contact.
+        /**
+         * <p>The mobile number of the alert contact.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
@@ -101,18 +116,27 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupsResponseBodyPageBeanAlertContactGroups extends TeaModel {
+        /**
+         * <p>The ID of the alert contact group.</p>
+         */
         @NameInMap("ArmsContactGroupId")
         public Long armsContactGroupId;
 
-        // The ID of the alert contact group.
+        /**
+         * <p>The ID of the alert contact group.</p>
+         */
         @NameInMap("ContactGroupId")
         public Float contactGroupId;
 
-        // The name of the alert contact group.
+        /**
+         * <p>The name of the alert contact group.</p>
+         */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
-        // The contact information. No **Contacts** is displayed when the **IsDetail** is set to `false`.
+        /**
+         * <p>The contact information. Contact information is not displayed if the **IsDetail** parameter is set to `false`.</p>
+         */
         @NameInMap("Contacts")
         public java.util.List<DescribeContactGroupsResponseBodyPageBeanAlertContactGroupsContacts> contacts;
 
@@ -156,19 +180,27 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContactGroupsResponseBodyPageBean extends TeaModel {
-        // The list of alert contact groups.
+        /**
+         * <p>The list of alert contact groups.</p>
+         */
         @NameInMap("AlertContactGroups")
         public java.util.List<DescribeContactGroupsResponseBodyPageBeanAlertContactGroups> alertContactGroups;
 
-        // The number of pages to query.
+        /**
+         * <p>The number of pages returned.</p>
+         */
         @NameInMap("Page")
         public Long page;
 
-        // The number of contact groups on each page.
+        /**
+         * <p>The number of alert contact groups per page.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
-        // The total number of contact groups queried.
+        /**
+         * <p>The number of alert contact groups returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

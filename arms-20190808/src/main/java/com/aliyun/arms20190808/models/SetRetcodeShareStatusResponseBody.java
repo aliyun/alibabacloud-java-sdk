@@ -4,14 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SetRetcodeShareStatusResponseBody extends TeaModel {
-    // Indicates whether the call was successful. Valid values:
-    // 
-    // *   `true`: The call was successful.
-    // *   `false`: The call failed.
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The call was successful.</p>
+     * <p>*   `false`: The call failed.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,31 +4,41 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAppApiByPageResponseBody extends TeaModel {
-    // The HTTP status code returned for the request. Valid values:
-    // 
-    // *   2XX: The request is successful.
-    // *   3XX: A redirection message is returned.
-    // *   4XX: The request is invalid.
-    // *   5XX: A server error occurs.
+    /**
+     * <p>The HTTP status code returned for the request. Valid values:</p>
+     * <br>
+     * <p>*   2XX: The request is successful.</p>
+     * <p>*   3XX: A redirection message is returned.</p>
+     * <p>*   4XX: The request is invalid.</p>
+     * <p>*   5XX: A server error occurs.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
-    // The struct returned.
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public GetAppApiByPageResponseBodyData data;
 
-    // The message returned.
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Indicates whether the call is successful. Valid values:
-    // 
-    // *   `true`: The call is successful.
-    // *   `false`: The call fails.
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The call is successful.</p>
+     * <p>*   `false`: The call fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -78,19 +88,27 @@ public class GetAppApiByPageResponseBody extends TeaModel {
     }
 
     public static class GetAppApiByPageResponseBodyData extends TeaModel {
-        // The information about the API operation.
+        /**
+         * <p>The information about the API operation.</p>
+         */
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public String total;
 

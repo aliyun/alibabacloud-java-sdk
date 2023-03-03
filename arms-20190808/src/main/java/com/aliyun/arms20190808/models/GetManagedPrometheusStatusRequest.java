@@ -4,19 +4,30 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetManagedPrometheusStatusRequest extends TeaModel {
-    // The ID of the cluster.
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The type of the cluster. Set the value to ask.
+    /**
+     * <p>The type of the cluster. Set the value to ask.</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // ClusterType为“ecs”时，必填。
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>ClusterType为“ecs”时，必填。</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -47,6 +58,14 @@ public class GetManagedPrometheusStatusRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetManagedPrometheusStatusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetManagedPrometheusStatusRequest setVpcId(String vpcId) {

@@ -4,12 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetPrometheusRemoteWriteRequest extends TeaModel {
+    /**
+     * <p>The ID of the Prometheus instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The remote write configuration item that you want to query.</p>
+     */
     @NameInMap("RemoteWriteName")
     public String remoteWriteName;
 

@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("PrometheusAlertRule")
     public DescribePrometheusAlertRuleResponseBodyPrometheusAlertRule prometheusAlertRule;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static class DescribePrometheusAlertRuleResponseBodyPrometheusAlertRuleAnnotations extends TeaModel {
-        // The name of the annotation.
+        /**
+         * <p>The name of the annotation.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The value of the annotation.
+        /**
+         * <p>The value of the annotation.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -66,11 +74,15 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static class DescribePrometheusAlertRuleResponseBodyPrometheusAlertRuleLabels extends TeaModel {
-        // The name of the tag.
+        /**
+         * <p>The name of the tag.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The value of the tag.
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -98,57 +110,81 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static class DescribePrometheusAlertRuleResponseBodyPrometheusAlertRule extends TeaModel {
-        // The ID of the alert rule.
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("AlertId")
         public Long alertId;
 
-        // The name of the alert rule.
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
-        // The annotations of the alert rule.
+        /**
+         * <p>The annotations of the alert rule.</p>
+         */
         @NameInMap("Annotations")
         public java.util.List<DescribePrometheusAlertRuleResponseBodyPrometheusAlertRuleAnnotations> annotations;
 
-        // The ID of the cluster.
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        // The ID of the notification policy. This parameter is returned if the **NotifyType** parameter is set to `DISPATCH_RULE`.
+        /**
+         * <p>The ID of the notification policy. This parameter is returned if the **NotifyType** parameter is set to `DISPATCH_RULE`.</p>
+         */
         @NameInMap("DispatchRuleId")
         public Long dispatchRuleId;
 
-        // The duration of the alert. Valid values: 1 to 1440. Unit: minutes.
+        /**
+         * <p>The duration of the alert. Valid values: 1 to 1440. Unit: minutes.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
-        // The expression of the alert rule.
+        /**
+         * <p>The expression of the alert rule.</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
-        // The tags of the alert rule.
+        /**
+         * <p>The tags of the alert rule.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<DescribePrometheusAlertRuleResponseBodyPrometheusAlertRuleLabels> labels;
 
-        // The message of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.
+        /**
+         * <p>The alert message. Tags can be referenced in the {{$labels.xxx}} format.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // The method of that is used to send alert notifications. Valid values:
-        // 
-        // *   `ALERT_MANAGER`: Alert notifications are sent by Operation Center.
-        // *   `DISPATCH_RULE`: Alert notifications are sent based on the specified notification policy.
+        /**
+         * <p>The method of that is used to send alert notifications. Valid values:</p>
+         * <br>
+         * <p>*   `ALERT_MANAGER`: Alert notifications are sent by Operation Center.</p>
+         * <p>*   `DISPATCH_RULE`: Alert notifications are sent based on the specified notification policy.</p>
+         */
         @NameInMap("NotifyType")
         public String notifyType;
 
-        // Indicates whether the alert rule is enabled. Valid values:
-        // 
-        // *   `1`: The alert rule is enabled.
-        // *   `0`: The alert rule is disabled.
+        /**
+         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+         * <br>
+         * <p>*   `1`: The alert rule is enabled.</p>
+         * <p>*   `0`: The alert rule is disabled.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
-        // The type of the alert rule.
+        /**
+         * <p>The type of the alert rule.</p>
+         */
         @NameInMap("Type")
         public String type;
 

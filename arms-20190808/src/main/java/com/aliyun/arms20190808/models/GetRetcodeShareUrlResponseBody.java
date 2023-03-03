@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetRetcodeShareUrlResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The logon-free URL of the application.
+    /**
+     * <p>The logon-free URL of the application.</p>
+     */
     @NameInMap("Url")
     public String url;
 

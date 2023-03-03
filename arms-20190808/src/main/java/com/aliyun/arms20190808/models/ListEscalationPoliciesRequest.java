@@ -4,15 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListEscalationPoliciesRequest extends TeaModel {
-    // The name of the escalation policy.
+    /**
+     * <p>The name of the escalation policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("Size")
     public Long size;
 

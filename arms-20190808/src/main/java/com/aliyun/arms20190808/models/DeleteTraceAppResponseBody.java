@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteTraceAppResponseBody extends TeaModel {
-    // The response in JSON format, including the HTTP status code, error code, response message, and trace ID.
+    /**
+     * <p>The response in JSON format, including the HTTP status code, error code, response message, and trace ID.</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

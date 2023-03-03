@@ -4,28 +4,38 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListInsightsEventsRequest extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The details of the event.
+    /**
+     * <p>The details of the event.</p>
+     */
     @NameInMap("InsightsTypes")
     public String insightsTypes;
 
-    // The end of the time range to query. The value is a timestamp.
+    /**
+     * <p>The end of the time range to query. The value is a timestamp.</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
-    // The ID of the application.
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The types of the events that you want to query. Separate multiple event types with commas (,). If you do not specify this parameter, all events are queried.
-    // 
-    // *   errorIncrease: API error-rate spike events. Examples: HTTP API error-rate spike events and Dubbo API error-rate spike events.
-    // *   topErrorIncrease: the top five API error-rate spike events with the highest traffic.
-    // *   topRtIncrease: API response-time spike events. Examples: HTTP API response-time spike events and Dubbo API response-time spike events.
-    // *   rtIncrease: the top five API response-time spike events with the highest traffic.
+    /**
+     * <p>The types of the events that you want to query. Separate multiple event types with commas (,). If you do not specify this parameter, all events are queried.</p>
+     * <br>
+     * <p>*   errorIncrease: API error-rate spike events. Examples: HTTP API error-rate spike events and Dubbo API error-rate spike events.</p>
+     * <p>*   topErrorIncrease: the top five API error-rate spike events with the highest traffic.</p>
+     * <p>*   topRtIncrease: API response-time spike events. Examples: HTTP API response-time spike events and Dubbo API response-time spike events.</p>
+     * <p>*   rtIncrease: the top five API response-time spike events with the highest traffic.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

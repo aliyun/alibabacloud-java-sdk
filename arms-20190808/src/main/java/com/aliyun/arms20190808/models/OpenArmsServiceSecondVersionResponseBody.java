@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class OpenArmsServiceSecondVersionResponseBody extends TeaModel {
-    // The service ID returned if the service is activated.
+    /**
+     * <p>The service ID returned if the service is activated.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,28 +4,47 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchRetcodeAppByPageRequest extends TeaModel {
-    // The number of the page to return.
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the application.</p>
+     * <br>
+     * <p>Log on to the **ARMS console**. In the left-side navigation pane, choose **Browser Monitoring** > **Browser Monitoring**. On the Browser Monitoring page, click the name of an application. The URL in the browser address bar contains the pid of this application in the format of `pid=xxx`. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is `xxx%4074xxx`, you must replace **%40** with the at sign (@). The actual PID is `xxx@74xxx`.</p>
+     */
     @NameInMap("RetcodeAppId")
     public String retcodeAppId;
 
-    // The name of the application that is monitored by Browser Monitoring.
+    /**
+     * <p>The name of the application that is monitored by Browser Monitoring.</p>
+     */
     @NameInMap("RetcodeAppName")
     public String retcodeAppName;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<SearchRetcodeAppByPageRequestTags> tags;
 
@@ -91,9 +110,15 @@ public class SearchRetcodeAppByPageRequest extends TeaModel {
     }
 
     public static class SearchRetcodeAppByPageRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

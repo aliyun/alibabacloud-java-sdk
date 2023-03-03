@@ -4,11 +4,19 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTraceAppByNameRequest extends TeaModel {
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The name of the application for which you want to query application monitoring jobs.
+    /**
+     * <p>The name of the application.</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>**Description**If you do not specify this parameter, all application tasks in the specified region are queried.</p>
+     */
     @NameInMap("TraceAppName")
     public String traceAppName;
 

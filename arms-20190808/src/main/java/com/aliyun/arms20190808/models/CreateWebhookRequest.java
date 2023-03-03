@@ -4,38 +4,54 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateWebhookRequest extends TeaModel {
-    // The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
+    /**
+     * <p>The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.</p>
+     */
     @NameInMap("Body")
     public String body;
 
-    // The name of the contact.
+    /**
+     * <p>The name of the contact.</p>
+     */
     @NameInMap("ContactName")
     public String contactName;
 
-    // The HTTP request header.
+    /**
+     * <p>The HTTP request header.</p>
+     */
     @NameInMap("HttpHeaders")
     public String httpHeaders;
 
-    // The parameters in the HTTP request.
+    /**
+     * <p>The parameters in the HTTP request.</p>
+     */
     @NameInMap("HttpParams")
     public String httpParams;
 
-    // The HTTP request method.
-    // 
-    // *   `Get`
-    // *   `Post`
+    /**
+     * <p>The HTTP request method.</p>
+     * <br>
+     * <p>*   `Get`</p>
+     * <p>*   `Post`</p>
+     */
     @NameInMap("Method")
     public String method;
 
-    // The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.
+    /**
+     * <p>The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the $content placeholder to specify the notification content. The content cannot exceed 500 characters in length.</p>
+     */
     @NameInMap("RecoverBody")
     public String recoverBody;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The URL of the request **method**.
+    /**
+     * <p>The URL of the request **method**.</p>
+     */
     @NameInMap("Url")
     public String url;
 

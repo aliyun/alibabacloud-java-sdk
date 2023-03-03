@@ -4,14 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteSilencePolicyResponseBody extends TeaModel {
-    // Indicates whether the silence policy was deleted successfully. Valid values:
-    // 
-    // *   `true`: The silence policy was deleted successfully.
-    // *   `false`: The silence policy failed to be deleted.
+    /**
+     * <p>Indicates whether the silence policy was deleted successfully. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The silence policy was deleted successfully.</p>
+     * <p>*   `false`: The silence policy failed to be deleted.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

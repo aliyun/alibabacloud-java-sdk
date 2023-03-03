@@ -4,14 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteRetcodeAppRequest extends TeaModel {
-    // The ID of the application.
+    /**
+     * <p>The ID of the primary key.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the application that is monitored by Browser Monitoring.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
-    // The ID of the region.
+    /**
+     * <p>The process identifier (PID) of the application.</p>
+     */
+    @NameInMap("Pid")
+    public String pid;
+
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,6 +47,14 @@ public class DeleteRetcodeAppRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public DeleteRetcodeAppRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
     }
 
     public DeleteRetcodeAppRequest setRegionId(String regionId) {

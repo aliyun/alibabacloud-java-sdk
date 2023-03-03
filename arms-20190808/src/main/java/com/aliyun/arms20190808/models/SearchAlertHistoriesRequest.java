@@ -4,40 +4,54 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertHistoriesRequest extends TeaModel {
-    // The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
+    /**
+     * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).</p>
+     */
     @NameInMap("AlertId")
     public Long alertId;
 
-    // The type of the alert rule. Valid values:
-    // 
-    // *   `1`: custom alert rules to monitor drill-down data sets
-    // *   `3`: custom alert rules to monitor tiled data sets
-    // *   `4`: alert rules to monitor the frontend, including the default frontend alert rules
-    // *   `5`: alert rules to monitor applications, including the default application alert rules
-    // *   `6`: the default frontend alert rules
-    // *   `7`: the default application alert rules
-    // *   `8`: Tracing Analysis alert rules
-    // *   `101`: Prometheus alert rules
+    /**
+     * <p>The type of the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   `1`: custom alert rules to monitor drill-down data sets</p>
+     * <p>*   `3`: custom alert rules to monitor tiled data sets</p>
+     * <p>*   `4`: alert rules to monitor the frontend, including the default frontend alert rules</p>
+     * <p>*   `5`: alert rules to monitor applications, including the default application alert rules</p>
+     * <p>*   `6`: the default frontend alert rules</p>
+     * <p>*   `7`: the default application alert rules</p>
+     * <p>*   `8`: Tracing Analysis alert rules</p>
+     * <p>*   `101`: Prometheus alert rules</p>
+     */
     @NameInMap("AlertType")
     public Integer alertType;
 
-    // The number of the page to return. Default value: `1`.
+    /**
+     * <p>The number of the page to return. Default value: `1`.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The end of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is the current time.
+    /**
+     * <p>The end of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is the current time.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    // The number of entries to return on each page. Default value: `10`.
+    /**
+     * <p>The number of entries to return on each page. Default value: `10`.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region. Default value: `cn-hangzhou`.
+    /**
+     * <p>The ID of the region. Default value: `cn-hangzhou`.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.
+    /**
+     * <p>The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

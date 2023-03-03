@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
-    // An array of notification policy objects.
+    /**
+     * <p>An array of notification policy objects.</p>
+     */
     @NameInMap("NotificationPolicy")
     public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy notificationPolicy;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyGroupRule extends TeaModel {
-        // The time interval of grouping. Unit: seconds. Default value: 30.
+        /**
+         * <p>The time interval of grouping. Unit: seconds. Default value: 30.</p>
+         */
         @NameInMap("GroupInterval")
         public Long groupInterval;
 
-        // The waiting time for grouping. Unit: seconds. Default value: 5.
+        /**
+         * <p>The waiting time for grouping. Unit: seconds. Default value: 5.</p>
+         */
         @NameInMap("GroupWait")
         public Long groupWait;
 
-        // The field that is used for grouping.
+        /**
+         * <p>The field that is used for grouping.</p>
+         */
         @NameInMap("GroupingFields")
         public java.util.List<String> groupingFields;
 
@@ -78,22 +88,28 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRulesMatchingConditions extends TeaModel {
-        // The key of the matching condition.
+        /**
+         * <p>The key of the matching condition.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The logical operator of the matching condition. Valid values:
-        // 
-        // *   `eq`: equal to
-        // *   `neq`: not equal to
-        // *   `in`: contains
-        // *   `nin`: does not contain
-        // *   `re`: regular expression match
-        // *   `nre`: regular expression mismatch
+        /**
+         * <p>The logical operator of the matching condition. Valid values:</p>
+         * <br>
+         * <p>*   `eq`: equal to</p>
+         * <p>*   `neq`: not equal to</p>
+         * <p>*   `in`: contains</p>
+         * <p>*   `nin`: does not contain</p>
+         * <p>*   `re`: regular expression match</p>
+         * <p>*   `nre`: regular expression mismatch</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
-        // The value of the matching condition.
+        /**
+         * <p>The value of the matching condition.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -129,7 +145,9 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRules extends TeaModel {
-        // An array of alert event matching condition objects.
+        /**
+         * <p>An array of alert event matching condition objects.</p>
+         */
         @NameInMap("MatchingConditions")
         public java.util.List<CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRulesMatchingConditions> matchingConditions;
 
@@ -149,20 +167,26 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects extends TeaModel {
-        // The ID of the notification contact.
+        /**
+         * <p>The ID of the notification contact.</p>
+         */
         @NameInMap("NotifyObjectId")
         public Long notifyObjectId;
 
-        // The name of the notification contact.
+        /**
+         * <p>The name of the notification contact.</p>
+         */
         @NameInMap("NotifyObjectName")
         public String notifyObjectName;
 
-        // The type of the notification contact. Valid values: 
-        // 
-        // - CONTACT: an individual contact
-        // - CONTACT_GROUP: a contact group
-        // - DING_ROBOT: an instant messaging (IM) robot
-        // - CONTACT_SCHEDULE: a person on duty based on an established schedule
+        /**
+         * <p>The type of the notification contact. Valid values: </p>
+         * <br>
+         * <p>- CONTACT: an individual contact</p>
+         * <p>- CONTACT_GROUP: a contact group</p>
+         * <p>- DING_ROBOT: an instant messaging (IM) robot</p>
+         * <p>- CONTACT_SCHEDULE: a person on duty based on an established schedule</p>
+         */
         @NameInMap("NotifyObjectType")
         public String notifyObjectType;
 
@@ -198,25 +222,33 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRule extends TeaModel {
-        // The notification methods. Valid values: 
-        // 
-        // - `dingTalk`: DingTalk
-        // - `email`: email
-        // - `sms`: text message
-        // - `tts`: phone call
-        // - `webhook`: webhook
+        /**
+         * <p>The notification methods. Valid values: </p>
+         * <br>
+         * <p>- `dingTalk`: DingTalk</p>
+         * <p>- `email`: email</p>
+         * <p>- `sms`: text message</p>
+         * <p>- `tts`: phone call</p>
+         * <p>- `webhook`: webhook</p>
+         */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
-        // The end time of the notification window.
+        /**
+         * <p>The end time of the notification window.</p>
+         */
         @NameInMap("NotifyEndTime")
         public String notifyEndTime;
 
-        // An array of notification contact objects.
+        /**
+         * <p>An array of notification contact objects.</p>
+         */
         @NameInMap("NotifyObjects")
         public java.util.List<CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects> notifyObjects;
 
-        // The start time of the notification window.
+        /**
+         * <p>The start time of the notification window.</p>
+         */
         @NameInMap("NotifyStartTime")
         public String notifyStartTime;
 
@@ -260,39 +292,57 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyTemplate extends TeaModel {
-        // The content of the alert notification sent through email.
+        /**
+         * <p>The content of the alert notification sent through email.</p>
+         */
         @NameInMap("EmailContent")
         public String emailContent;
 
-        // The content of the alert resolution notification sent through email.
+        /**
+         * <p>The content of the alert resolution notification sent through email.</p>
+         */
         @NameInMap("EmailRecoverContent")
         public String emailRecoverContent;
 
-        // The title of the alert resolution notification sent through email.
+        /**
+         * <p>The title of the alert resolution notification sent through email.</p>
+         */
         @NameInMap("EmailRecoverTitle")
         public String emailRecoverTitle;
 
-        // The title of the alert notification sent through email.
+        /**
+         * <p>The title of the alert notification sent through email.</p>
+         */
         @NameInMap("EmailTitle")
         public String emailTitle;
 
-        // The content of the alert notification sent by the IM robot.
+        /**
+         * <p>The content of the alert notification sent by the IM robot.</p>
+         */
         @NameInMap("RobotContent")
         public String robotContent;
 
-        // The content of the alert notification sent through text message.
+        /**
+         * <p>The content of the alert notification sent through text message.</p>
+         */
         @NameInMap("SmsContent")
         public String smsContent;
 
-        // The content of the alert resolution notification sent through text message.
+        /**
+         * <p>The content of the alert resolution notification sent through text message.</p>
+         */
         @NameInMap("SmsRecoverContent")
         public String smsRecoverContent;
 
-        // The content of the alert notification by phone.
+        /**
+         * <p>The content of the alert notification by phone.</p>
+         */
         @NameInMap("TtsContent")
         public String ttsContent;
 
-        // The content of the alert resolution notification by phone.
+        /**
+         * <p>The content of the alert resolution notification by phone.</p>
+         */
         @NameInMap("TtsRecoverContent")
         public String ttsRecoverContent;
 
@@ -376,53 +426,75 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy extends TeaModel {
-        // The ID of the escalation policy.
+        /**
+         * <p>The ID of the escalation policy.</p>
+         */
         @NameInMap("EscalationPolicyId")
         public Long escalationPolicyId;
 
-        // An array of alert event group objects.
+        /**
+         * <p>An array of alert event group objects.</p>
+         */
         @NameInMap("GroupRule")
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyGroupRule groupRule;
 
-        // The ID of the notification policy.
+        /**
+         * <p>The ID of the notification policy.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The integration ID of the ticket system to which alerts are pushed.
+        /**
+         * <p>The integration ID of the ticket system to which alerts are pushed.</p>
+         */
         @NameInMap("IntegrationId")
         public Long integrationId;
 
-        // An array of alert event matching rule objects.
+        /**
+         * <p>An array of alert event matching rule objects.</p>
+         */
         @NameInMap("MatchingRules")
         public java.util.List<CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRules> matchingRules;
 
-        // The name of the notification policy.
+        /**
+         * <p>The name of the notification policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // An array of notification rule objects.
+        /**
+         * <p>An array of notification rule objects.</p>
+         */
         @NameInMap("NotifyRule")
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRule notifyRule;
 
-        // An array of notification template objects.
+        /**
+         * <p>An array of notification template objects.</p>
+         */
         @NameInMap("NotifyTemplate")
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyTemplate notifyTemplate;
 
-        // Indicates whether a notification is resent for a long-lasting unresolved alert. Default value: true. Valid values:  
-        // 
-        // - `true`: The system resends a notification for a long-lasting unresolved alert at a specified time interval.
-        // - `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.
+        /**
+         * <p>Indicates whether a notification is resent for a long-lasting unresolved alert. Default value: true. Valid values:  </p>
+         * <br>
+         * <p>- `true`: The system resends a notification for a long-lasting unresolved alert at a specified time interval.</p>
+         * <p>- `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.</p>
+         */
         @NameInMap("Repeat")
         public Boolean repeat;
 
-        // The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.
+        /**
+         * <p>The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.</p>
+         */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
-        // Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:   
-        // 
-        // - `true`: The system sends a notification.
-        // - `false`: The system does not send a notification.
+        /**
+         * <p>Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:   </p>
+         * <br>
+         * <p>- `true`: The system sends a notification.</p>
+         * <p>- `false`: The system does not send a notification.</p>
+         */
         @NameInMap("SendRecoverMessage")
         public Boolean sendRecoverMessage;
 

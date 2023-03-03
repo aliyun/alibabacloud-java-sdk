@@ -4,39 +4,60 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class InstallManagedPrometheusRequest extends TeaModel {
-    // The ID of the ASK cluster.
+    /**
+     * <p>The ID of the ASK cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // 集群名称。ClusterType为ecs时，必填。
+    /**
+     * <p>集群名称。ClusterType为ecs时，必填。</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
-    // The type of the cluster. Only ASK clusters are supported.
+    /**
+     * <p>The type of the cluster. Only ASK clusters are supported.</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
-    // 集群绑定的托管版Grafana工作区Id。为空或"free"时，绑定到共享版Grafana。
+    /**
+     * <p>集群绑定的托管版Grafana工作区Id。为空或"free"时，绑定到共享版Grafana。</p>
+     */
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
-    // The parameter is not supported.
+    /**
+     * <p>The parameter is not supported.</p>
+     */
     @NameInMap("KubeConfig")
     public String kubeConfig;
 
-    // The region ID.
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The security group to which the ASK cluster belongs.
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The security group to which the ASK cluster belongs.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
-    // The vSwitch of the ASK cluster.
+    /**
+     * <p>The vSwitch of the ASK cluster.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    // The VPC of the ASK cluster.
+    /**
+     * <p>The VPC of the ASK cluster.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -91,6 +112,14 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public InstallManagedPrometheusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public InstallManagedPrometheusRequest setSecurityGroupId(String securityGroupId) {

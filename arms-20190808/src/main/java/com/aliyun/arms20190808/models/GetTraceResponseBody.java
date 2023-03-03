@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTraceResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The details of the trace.
+    /**
+     * <p>The details of the trace.</p>
+     */
     @NameInMap("Spans")
     public java.util.List<GetTraceResponseBodySpans> spans;
 
@@ -34,11 +38,15 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansLogEventListTagEntryList extends TeaModel {
-        // The key of the tag.
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag.
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -66,11 +74,15 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansLogEventList extends TeaModel {
-        // The tags of the trace.
+        /**
+         * <p>The tags of the trace.</p>
+         */
         @NameInMap("TagEntryList")
         public java.util.List<GetTraceResponseBodySpansLogEventListTagEntryList> tagEntryList;
 
-        // The timestamp when the log event was generated.
+        /**
+         * <p>The timestamp when the log event was generated.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -98,11 +110,15 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansTagEntryList extends TeaModel {
-        // The key of the tag.
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag.
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -130,66 +146,96 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpans extends TeaModel {
-        // The child spans of the current span.
+        /**
+         * <p>The child spans of the current span.</p>
+         */
         @NameInMap("Children")
         public java.util.List<java.util.Map<String, ?>> children;
 
-        // The amount of time consumed by the trace. Unit: milliseconds.
+        /**
+         * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
-        // Indicates whether a method stack was provided.
-        // 
-        // - `true`: A method stack was provided.
-        // - `false` : No method stack was provided.
+        /**
+         * <p>Indicates whether a method stack was provided.</p>
+         * <br>
+         * <p>- `true`: A method stack was provided.</p>
+         * <p>- `false` : No method stack was provided.</p>
+         */
         @NameInMap("HaveStack")
         public Boolean haveStack;
 
-        // The log events in the trace.
+        /**
+         * <p>The log events in the trace.</p>
+         */
         @NameInMap("LogEventList")
         public java.util.List<GetTraceResponseBodySpansLogEventList> logEventList;
 
-        // The name of the traced span.
+        /**
+         * <p>The name of the traced span.</p>
+         */
         @NameInMap("OperationName")
         public String operationName;
 
-        // The ID of the parent span.
+        /**
+         * <p>The ID of the parent span.</p>
+         */
         @NameInMap("ParentSpanId")
         public String parentSpanId;
 
-        // The returned code.
+        /**
+         * <p>The returned code.</p>
+         */
         @NameInMap("ResultCode")
         public String resultCode;
 
-        // The ID of the remote procedure call (RPC) mode.
+        /**
+         * <p>The ID of the remote procedure call (RPC) mode.</p>
+         */
         @NameInMap("RpcId")
         public String rpcId;
 
-        // The type of the remote procedure call (RPC) mode.
+        /**
+         * <p>The type of the remote procedure call (RPC) mode.</p>
+         */
         @NameInMap("RpcType")
         public Integer rpcType;
 
-        // The IP address of the host where the application resides.
+        /**
+         * <p>The IP address of the host where the application resides.</p>
+         */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
-        // Span ID。
+        /**
+         * <p>Span ID。</p>
+         */
         @NameInMap("SpanId")
         public String spanId;
 
-        // The tags of the trace.
+        /**
+         * <p>The tags of the trace.</p>
+         */
         @NameInMap("TagEntryList")
         public java.util.List<GetTraceResponseBodySpansTagEntryList> tagEntryList;
 
-        // The timestamp when the span was generated.
+        /**
+         * <p>The timestamp when the span was generated.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        // The ID of the trace.
+        /**
+         * <p>The ID of the trace.</p>
+         */
         @NameInMap("TraceID")
         public String traceID;
 

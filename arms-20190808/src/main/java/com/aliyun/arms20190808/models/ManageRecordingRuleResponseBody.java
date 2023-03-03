@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ManageRecordingRuleResponseBody extends TeaModel {
-    // The result of the operation.
+    /**
+     * <p>The result of the operation.</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // The ID of the request. You can use the ID to troubleshoot issues.
+    /**
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

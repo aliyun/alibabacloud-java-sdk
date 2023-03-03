@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListActivatedAlertsResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Page")
     public ListActivatedAlertsResponseBodyPage page;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     }
 
     public static class ListActivatedAlertsResponseBodyPageAlertsDispatchRules extends TeaModel {
-        // The ID of the notification policy.
+        /**
+         * <p>The ID of the notification policy.</p>
+         */
         @NameInMap("RuleId")
         public Integer ruleId;
 
-        // The name of the notification policy.
+        /**
+         * <p>The name of the notification policy.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -66,81 +74,113 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     }
 
     public static class ListActivatedAlertsResponseBodyPageAlerts extends TeaModel {
-        // The ID of the alert rule.
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("AlertId")
         public String alertId;
 
-        // The name of the alert rule.
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
-        // The type of the alert.
+        /**
+         * <p>The type of the alert.</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
-        // The number of times that the alert event was received.
+        /**
+         * <p>The number of times that the alert event was received.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
-        // The timestamp when the alert rule was created.
+        /**
+         * <p>The timestamp when the alert rule was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The notification policies.
+        /**
+         * <p>The notification policies.</p>
+         */
         @NameInMap("DispatchRules")
         public java.util.List<ListActivatedAlertsResponseBodyPageAlertsDispatchRules> dispatchRules;
 
-        // The timestamp when the alert was ended.
+        /**
+         * <p>The timestamp when the alert was ended.</p>
+         */
         @NameInMap("EndsAt")
         public Long endsAt;
 
-        // The extended fields that indicate the following tags:
-        // 
-        // *   The tags that are carried in the metrics of the alert rule expression.
-        // *   The tags that are created based on the alert rule.
-        // *   The default tags of Application Real-Time Monitoring Service (ARMS).
+        /**
+         * <p>The extended fields that indicate the following tags:</p>
+         * <br>
+         * <p>*   The tags that are carried in the metrics of the alert rule expression.</p>
+         * <p>*   The tags that are created based on the alert rule.</p>
+         * <p>*   The default tags of Application Real-Time Monitoring Service (ARMS).</p>
+         */
         @NameInMap("ExpandFields")
         public java.util.Map<String, ?> expandFields;
 
-        // The name of the object that is associated with the alert.
+        /**
+         * <p>The name of the object that is associated with the alert.</p>
+         */
         @NameInMap("IntegrationName")
         public String integrationName;
 
-        // The type of the service integration that generated the alert.
+        /**
+         * <p>The type of the service integration that generated the alert.</p>
+         */
         @NameInMap("IntegrationType")
         public String integrationType;
 
-        // The type of the object that is associated with the alert.
+        /**
+         * <p>The type of the object that is associated with the alert.</p>
+         */
         @NameInMap("InvolvedObjectKind")
         public String involvedObjectKind;
 
-        // The name of the service integration that generated the alert.
+        /**
+         * <p>The name of the service integration that generated the alert.</p>
+         */
         @NameInMap("InvolvedObjectName")
         public String involvedObjectName;
 
-        // The description of the alert.
+        /**
+         * <p>The description of the alert.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // The level of the alert. Valid values:
-        // 
-        // *   `critical`
-        // *   `error`
-        // *   `warn`
-        // *   `page`
+        /**
+         * <p>The level of the alert. Valid values:</p>
+         * <br>
+         * <p>*   `critical`</p>
+         * <p>*   `error`</p>
+         * <p>*   `warn`</p>
+         * <p>*   `page`</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
-        // The timestamp when the alert was generated.
+        /**
+         * <p>The timestamp when the alert was generated.</p>
+         */
         @NameInMap("StartsAt")
         public Long startsAt;
 
-        // The status of the alert. Valid values:
-        // 
-        // *   `Active`
-        // *   `Inhibited`
-        // *   `Silenced`
-        // *   `Resolved`
+        /**
+         * <p>The status of the alert. Valid values:</p>
+         * <br>
+         * <p>*   `Active`</p>
+         * <p>*   `Inhibited`</p>
+         * <p>*   `Silenced`</p>
+         * <p>*   `Resolved`</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -280,19 +320,27 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     }
 
     public static class ListActivatedAlertsResponseBodyPage extends TeaModel {
-        // The alerts that have been triggered.
+        /**
+         * <p>The alerts that have been triggered.</p>
+         */
         @NameInMap("Alerts")
         public java.util.List<ListActivatedAlertsResponseBodyPageAlerts> alerts;
 
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

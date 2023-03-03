@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListCmsInstancesResponseBody extends TeaModel {
-    // The struct returned.
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public ListCmsInstancesResponseBodyData data;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,46 +38,66 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListCmsInstancesResponseBodyDataProducts extends TeaModel {
-        // The description of the cloud service.
+        /**
+         * <p>The description of the cloud service.</p>
+         */
         @NameInMap("Descr")
         public String descr;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("Id")
         public String id;
 
-        // The name of the instance.
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("Instance")
         public String instance;
 
-        // The name of the cloud service.
+        /**
+         * <p>The name of the cloud service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The code of the cloud service.
+        /**
+         * <p>The code of the cloud service.</p>
+         */
         @NameInMap("Prod")
         public String prod;
 
-        // The event source.
+        /**
+         * <p>The event source.</p>
+         */
         @NameInMap("Source")
         public String source;
 
-        // The status of the integration. Valid values:
-        // 
-        // *   `true`: The integration was enabled.
-        // *   `false`: The integration was disabled.
+        /**
+         * <p>The status of the integration. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The integration was enabled.</p>
+         * <p>*   `false`: The integration was disabled.</p>
+         */
         @NameInMap("State")
         public String state;
 
-        // The timestamp when the Grafana dashboard was created.
+        /**
+         * <p>The timestamp when the Grafana dashboard was created.</p>
+         */
         @NameInMap("Time")
         public String time;
 
-        // The type of the cloud service.
+        /**
+         * <p>The type of the cloud service.</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The complete URL of the Grafana dashboard.
+        /**
+         * <p>The complete URL of the Grafana dashboard.</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -165,11 +189,15 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListCmsInstancesResponseBodyData extends TeaModel {
-        // Indicates whether to collect the aliyun tags attached to each cloud service.
+        /**
+         * <p>Indicates whether to collect the aliyun tags attached to each cloud service.</p>
+         */
         @NameInMap("EnableTag")
         public Boolean enableTag;
 
-        // The struct returned.
+        /**
+         * <p>The struct returned.</p>
+         */
         @NameInMap("Products")
         public java.util.List<ListCmsInstancesResponseBodyDataProducts> products;
 

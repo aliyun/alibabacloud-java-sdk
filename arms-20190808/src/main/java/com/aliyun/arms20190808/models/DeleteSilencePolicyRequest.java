@@ -4,7 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteSilencePolicyRequest extends TeaModel {
-    // The ID of the silence policy.
+    /**
+     * <p>The ID of the silence policy.</p>
+     */
     @NameInMap("Id")
     public Long id;
 

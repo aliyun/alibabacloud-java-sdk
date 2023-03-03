@@ -4,15 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListCmsInstancesRequest extends TeaModel {
-    // The ID of the cluster.
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The filter condition. Format: \[unk]{"key":"value"}\[unk]. You must set the \[unk]key\[unk] and \[unk]value\[unk] fields.
+    /**
+     * <p>The filter condition. Format: \[unk]{"key":"value"}\[unk]. You must set the \[unk]key\[unk] and \[unk]value\[unk] fields.</p>
+     */
     @NameInMap("TypeFilter")
     public String typeFilter;
 

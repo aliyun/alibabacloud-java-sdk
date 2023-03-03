@@ -4,11 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchRetcodeAppByPageResponseBody extends TeaModel {
-    // The returned page information.
+    /**
+     * <p>The returned page information.</p>
+     */
     @NameInMap("PageBean")
     public SearchRetcodeAppByPageResponseBodyPageBean pageBean;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,9 +38,15 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     }
 
     public static class SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -64,59 +74,85 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     }
 
     public static class SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps extends TeaModel {
-        // The ID of the application. The parameter is an auto-increment parameter.
+        /**
+         * <p>The ID of the application. The parameter is an auto-increment parameter.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
-        // The name of the application.
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
-        // The time when the task was created.
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // The alias of the application.
+        /**
+         * <p>The alias of the application.</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
-        // The PID of the application.
+        /**
+         * <p>The PID of the application.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The type of the application. Valid values:
-        // 
-        // *   `web`: web application
-        // *   `weex`: Weex mobile app
-        // *   `mini_dd`: DingTalk mini program
-        // *   `mini_alipay`: Alipay mini program
-        // *   `mini_wx`: WeChat mini program
-        // *   `mini_common`: mini program on other platforms
+        /**
+         * <p>The type of the application. Valid values:</p>
+         * <br>
+         * <p>*   `web`: web application</p>
+         * <p>*   `weex`: Weex mobile app</p>
+         * <p>*   `mini_dd`: DingTalk mini program</p>
+         * <p>*   `mini_alipay`: Alipay mini program</p>
+         * <p>*   `mini_wx`: WeChat mini program</p>
+         * <p>*   `mini_common`: mini program on other platforms</p>
+         */
         @NameInMap("RetcodeAppType")
         public String retcodeAppType;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags> tags;
 
-        // The monitoring type. Valid values:
-        // 
-        // *   `TRACE`: application monitoring
-        // *   `RETCODE`: browser monitoring
+        /**
+         * <p>The type of the monitoring task. Valid values:</p>
+         * <br>
+         * <p>*   `TRACE`: Application Monitoring</p>
+         * <p>*   `RETCODE`: Browser Monitoring</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The time when the task was updated.
+        /**
+         * <p>The time when the task was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // The ID of the user.
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -224,19 +260,27 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     }
 
     public static class SearchRetcodeAppByPageResponseBodyPageBean extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The browser monitoring tasks that are returned.
+        /**
+         * <p>The Browser Monitoring tasks that are returned.</p>
+         */
         @NameInMap("RetcodeApps")
         public java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps> retcodeApps;
 
-        // The total number of returned entries.
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
