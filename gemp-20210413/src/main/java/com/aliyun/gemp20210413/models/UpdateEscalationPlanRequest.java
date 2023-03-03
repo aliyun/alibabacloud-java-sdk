@@ -118,6 +118,9 @@ public class UpdateEscalationPlanRequest extends TeaModel {
         @NameInMap("enableWebhook")
         public Boolean enableWebhook;
 
+        @NameInMap("escalationPlanType")
+        public String escalationPlanType;
+
         @NameInMap("noticeChannels")
         public java.util.List<String> noticeChannels;
 
@@ -141,6 +144,14 @@ public class UpdateEscalationPlanRequest extends TeaModel {
         }
         public Boolean getEnableWebhook() {
             return this.enableWebhook;
+        }
+
+        public UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies setEscalationPlanType(String escalationPlanType) {
+            this.escalationPlanType = escalationPlanType;
+            return this;
+        }
+        public String getEscalationPlanType() {
+            return this.escalationPlanType;
         }
 
         public UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies setNoticeChannels(java.util.List<String> noticeChannels) {
