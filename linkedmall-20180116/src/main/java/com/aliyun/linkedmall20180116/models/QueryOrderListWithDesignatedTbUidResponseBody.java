@@ -19,6 +19,9 @@ public class QueryOrderListWithDesignatedTbUidResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -281,6 +284,9 @@ public class QueryOrderListWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("OrderStatus")
         public Integer orderStatus;
 
+        /**
+         * <p>skuId</p>
+         */
         @NameInMap("SkuId")
         public String skuId;
 

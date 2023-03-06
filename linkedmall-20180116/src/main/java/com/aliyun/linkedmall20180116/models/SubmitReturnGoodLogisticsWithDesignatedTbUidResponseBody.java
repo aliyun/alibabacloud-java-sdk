@@ -19,6 +19,9 @@ public class SubmitReturnGoodLogisticsWithDesignatedTbUidResponseBody extends Te
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
