@@ -250,11 +250,17 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("Caption")
         public String caption;
 
+        @NameInMap("Duration")
+        public Integer duration;
+
         /**
          * <p>The name of the file.</p>
          */
         @NameInMap("FileName")
         public String fileName;
+
+        @NameInMap("FileType")
+        public String fileType;
 
         /**
          * <p>The format of the message.</p>
@@ -272,6 +278,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
          */
         @NameInMap("Text")
         public String text;
+
+        @NameInMap("ThumbUrl")
+        public String thumbUrl;
 
         /**
          * <p>The type of the component. Valid values:</p>
@@ -313,12 +322,28 @@ public class CreateChatappTemplateRequest extends TeaModel {
             return this.caption;
         }
 
+        public CreateChatappTemplateRequestComponents setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
         public CreateChatappTemplateRequestComponents setFileName(String fileName) {
             this.fileName = fileName;
             return this;
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public CreateChatappTemplateRequestComponents setFileType(String fileType) {
+            this.fileType = fileType;
+            return this;
+        }
+        public String getFileType() {
+            return this.fileType;
         }
 
         public CreateChatappTemplateRequestComponents setFormat(String format) {
@@ -335,6 +360,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
         }
         public String getText() {
             return this.text;
+        }
+
+        public CreateChatappTemplateRequestComponents setThumbUrl(String thumbUrl) {
+            this.thumbUrl = thumbUrl;
+            return this;
+        }
+        public String getThumbUrl() {
+            return this.thumbUrl;
         }
 
         public CreateChatappTemplateRequestComponents setType(String type) {

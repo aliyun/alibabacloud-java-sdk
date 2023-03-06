@@ -11,7 +11,7 @@ public class QueryWabaBusinessInfoRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatsApp Business account.</p>
+     * <p>wabaId</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

@@ -3,7 +3,7 @@ package com.aliyun.cams20200606.models;
 
 import com.aliyun.tea.*;
 
-public class ListChatappTemplateResponse extends TeaModel {
+public class SubmitIsvCustomerTermsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListChatappTemplateResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListChatappTemplateResponseBody body;
+    public SubmitIsvCustomerTermsResponseBody body;
 
-    public static ListChatappTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListChatappTemplateResponse self = new ListChatappTemplateResponse();
+    public static SubmitIsvCustomerTermsResponse build(java.util.Map<String, ?> map) throws Exception {
+        SubmitIsvCustomerTermsResponse self = new SubmitIsvCustomerTermsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListChatappTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+    public SubmitIsvCustomerTermsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListChatappTemplateResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListChatappTemplateResponse setStatusCode(Integer statusCode) {
+    public SubmitIsvCustomerTermsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListChatappTemplateResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListChatappTemplateResponse setBody(ListChatappTemplateResponseBody body) {
+    public SubmitIsvCustomerTermsResponse setBody(SubmitIsvCustomerTermsResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListChatappTemplateResponseBody getBody() {
+    public SubmitIsvCustomerTermsResponseBody getBody() {
         return this.body;
     }
 

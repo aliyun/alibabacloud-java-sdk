@@ -17,7 +17,7 @@ public class GetChatappVerifyCodeRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The type of the verification code. Valid values: SMS and VOICE.</p>
+     * <p>The method to obtain the verification code. Valid values: SMS and VOICE.</p>
      */
     @NameInMap("Method")
     public String method;

@@ -76,7 +76,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The description</p>
+         * <p>The description.</p>
          */
         @NameInMap("Description")
         public String description;

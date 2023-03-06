@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ChatappVerifyAndRegisterRequest extends TeaModel {
     /**
-     * <p>The space ID of the ISV user with which the phone number is associated.</p>
+     * <p>The space ID of the user under the ISV account.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The phone number that you want to use to send WhatsApp business messages to your customers.</p>
+     * <p>The phone number.</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
