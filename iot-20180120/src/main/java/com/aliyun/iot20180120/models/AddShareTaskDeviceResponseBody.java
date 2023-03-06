@@ -65,15 +65,40 @@ public class AddShareTaskDeviceResponseBody extends TeaModel {
     }
 
     public static class AddShareTaskDeviceResponseBodyData extends TeaModel {
+        @NameInMap("FailSum")
+        public Integer failSum;
+
+        @NameInMap("FailedResultCsvFile")
+        public String failedResultCsvFile;
+
         @NameInMap("Progress")
         public Integer progress;
 
         @NameInMap("ProgressId")
         public String progressId;
 
+        @NameInMap("SuccessSum")
+        public Integer successSum;
+
         public static AddShareTaskDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             AddShareTaskDeviceResponseBodyData self = new AddShareTaskDeviceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public AddShareTaskDeviceResponseBodyData setFailSum(Integer failSum) {
+            this.failSum = failSum;
+            return this;
+        }
+        public Integer getFailSum() {
+            return this.failSum;
+        }
+
+        public AddShareTaskDeviceResponseBodyData setFailedResultCsvFile(String failedResultCsvFile) {
+            this.failedResultCsvFile = failedResultCsvFile;
+            return this;
+        }
+        public String getFailedResultCsvFile() {
+            return this.failedResultCsvFile;
         }
 
         public AddShareTaskDeviceResponseBodyData setProgress(Integer progress) {
@@ -90,6 +115,14 @@ public class AddShareTaskDeviceResponseBody extends TeaModel {
         }
         public String getProgressId() {
             return this.progressId;
+        }
+
+        public AddShareTaskDeviceResponseBodyData setSuccessSum(Integer successSum) {
+            this.successSum = successSum;
+            return this;
+        }
+        public Integer getSuccessSum() {
+            return this.successSum;
         }
 
     }
