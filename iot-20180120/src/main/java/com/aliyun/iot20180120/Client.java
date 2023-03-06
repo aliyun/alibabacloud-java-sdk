@@ -7085,6 +7085,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSceneRuleWithOptions(request, runtime);
     }
 
+    public GetShareSpeechModelAudioResponse getShareSpeechModelAudioWithOptions(GetShareSpeechModelAudioRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareTaskId)) {
+            body.put("ShareTaskId", request.shareTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speechModelCodeList)) {
+            body.put("SpeechModelCodeList", request.speechModelCodeList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetShareSpeechModelAudio"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetShareSpeechModelAudioResponse());
+    }
+
+    public GetShareSpeechModelAudioResponse getShareSpeechModelAudio(GetShareSpeechModelAudioRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getShareSpeechModelAudioWithOptions(request, runtime);
+    }
+
     public GetShareTaskByDeviceOpenResponse getShareTaskByDeviceOpenWithOptions(GetShareTaskByDeviceOpenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -12842,6 +12879,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QuerySpeechDeviceResponse querySpeechDevice(QuerySpeechDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.querySpeechDeviceWithOptions(request, runtime);
+    }
+
+    public QuerySpeechLicenseAvailableQuotaResponse querySpeechLicenseAvailableQuotaWithOptions(QuerySpeechLicenseAvailableQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            body.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySpeechLicenseAvailableQuota"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySpeechLicenseAvailableQuotaResponse());
+    }
+
+    public QuerySpeechLicenseAvailableQuotaResponse querySpeechLicenseAvailableQuota(QuerySpeechLicenseAvailableQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySpeechLicenseAvailableQuotaWithOptions(request, runtime);
     }
 
     public QuerySpeechLicenseDeviceListResponse querySpeechLicenseDeviceListWithOptions(QuerySpeechLicenseDeviceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
