@@ -17,7 +17,7 @@ public class CreateKillInstanceSessionTaskRequest extends TeaModel {
     public String instanceId;
 
     @NameInMap("KillAllSessions")
-    public String killAllSessions;
+    public Boolean killAllSessions;
 
     @NameInMap("NodeId")
     public String nodeId;
@@ -62,11 +62,11 @@ public class CreateKillInstanceSessionTaskRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateKillInstanceSessionTaskRequest setKillAllSessions(String killAllSessions) {
+    public CreateKillInstanceSessionTaskRequest setKillAllSessions(Boolean killAllSessions) {
         this.killAllSessions = killAllSessions;
         return this;
     }
-    public String getKillAllSessions() {
+    public Boolean getKillAllSessions() {
         return this.killAllSessions;
     }
 
