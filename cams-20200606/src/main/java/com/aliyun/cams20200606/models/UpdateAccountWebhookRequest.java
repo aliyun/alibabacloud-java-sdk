@@ -11,7 +11,7 @@ public class UpdateAccountWebhookRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>Specifies whether to use HTTP callbacks to receive message receipts. Valid values: Y and N. A value of Y indicates that HTTP callbacks are used to receive message receipts. A value of N indicates that HTTP callbacks are not used to receive message receipts.</p>
+     * <p>Specifies whether to use HTTP callbacks to receive receipts. Valid values: Y and N. A value of Y indicates that HTTP callbacks are used to receive receipts. A value of N indicates that HTTP callbacks are not used to receive receipts.</p>
      */
     @NameInMap("HttpFlag")
     public String httpFlag;

@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code returned.</p>
      * <br>
-     * <p>*   If OK is returned, the request is successful.</p>
-     * <p>*   Other codes indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ModifyChatappTemplateResponseBodyData data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -76,7 +76,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         public String templateCode;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The name of the message template.</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

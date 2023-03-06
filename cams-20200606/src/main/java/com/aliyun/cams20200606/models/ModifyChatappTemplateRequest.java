@@ -4,20 +4,23 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateRequest extends TeaModel {
+    @NameInMap("Category")
+    public String category;
+
     /**
-     * <p>The list of components of the message template.</p>
+     * <p>The components of the message template.</p>
      */
     @NameInMap("Components")
     public java.util.List<ModifyChatappTemplateRequestComponents> components;
 
     /**
-     * <p>Isv customer space id</p>
+     * <p>The space ID of the user under the ISV account.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatApp Business account of the ISV customer.</p>
+     * <p>The ID of the WhatsApp Business account under the ISV account.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -30,13 +33,13 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     public java.util.Map<String, String> example;
 
     /**
-     * <p>ISV verification code, which is used to verify whether the sub-account is authorized by ISV.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by ISV.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
-     * <p>The language.</p>
+     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
      */
     @NameInMap("Language")
     public String language;
@@ -47,9 +50,20 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     @NameInMap("TemplateCode")
     public String templateCode;
 
+    @NameInMap("TemplateType")
+    public String templateType;
+
     public static ModifyChatappTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyChatappTemplateRequest self = new ModifyChatappTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyChatappTemplateRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public ModifyChatappTemplateRequest setComponents(java.util.List<ModifyChatappTemplateRequestComponents> components) {
@@ -108,6 +122,14 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         return this.templateCode;
     }
 
+    public ModifyChatappTemplateRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static class ModifyChatappTemplateRequestComponentsButtons extends TeaModel {
         /**
          * <p>The phone number.</p>
@@ -116,7 +138,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>The text of the message to be sent.</p>
+         * <p>The text of the message that is sent.</p>
          */
         @NameInMap("Text")
         public String text;
@@ -132,7 +154,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL to be visited after clicking the button.</p>
+         * <p>The URL to be visited after users click the button.</p>
          */
         @NameInMap("Url")
         public String url;
@@ -208,16 +230,22 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         @NameInMap("Caption")
         public String caption;
 
+        @NameInMap("Duration")
+        public Integer duration;
+
         /**
-         * <p>The name of the file.</p>
+         * <p>The name of the file</p>
          * <br>
          * <p>> : When the Type parameter is set to **HEADER** and the Format parameter is set to **DOCUMENT**, you can specify a name of the file.</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
+        @NameInMap("FileType")
+        public String fileType;
+
         /**
-         * <p>The type of the media resource.</p>
+         * <p>The type of the media resources that are included in the message.</p>
          * <br>
          * <p>*   **TEXT**: text</p>
          * <p>*   **IMAGE**: image</p>
@@ -228,10 +256,13 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The text of the message to be sent.</p>
+         * <p>The text of the message that is sent.</p>
          */
         @NameInMap("Text")
         public String text;
+
+        @NameInMap("ThumbUrl")
+        public String thumbUrl;
 
         /**
          * <p>The type of the component.</p>
@@ -271,12 +302,28 @@ public class ModifyChatappTemplateRequest extends TeaModel {
             return this.caption;
         }
 
+        public ModifyChatappTemplateRequestComponents setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
         public ModifyChatappTemplateRequestComponents setFileName(String fileName) {
             this.fileName = fileName;
             return this;
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public ModifyChatappTemplateRequestComponents setFileType(String fileType) {
+            this.fileType = fileType;
+            return this;
+        }
+        public String getFileType() {
+            return this.fileType;
         }
 
         public ModifyChatappTemplateRequestComponents setFormat(String format) {
@@ -293,6 +340,14 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         }
         public String getText() {
             return this.text;
+        }
+
+        public ModifyChatappTemplateRequestComponents setThumbUrl(String thumbUrl) {
+            this.thumbUrl = thumbUrl;
+            return this;
+        }
+        public String getThumbUrl() {
+            return this.thumbUrl;
         }
 
         public ModifyChatappTemplateRequestComponents setType(String type) {

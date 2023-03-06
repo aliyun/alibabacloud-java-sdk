@@ -4,20 +4,23 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateShrinkRequest extends TeaModel {
+    @NameInMap("Category")
+    public String category;
+
     /**
-     * <p>The list of components of the message template.</p>
+     * <p>The components of the message template.</p>
      */
     @NameInMap("Components")
     public String componentsShrink;
 
     /**
-     * <p>Isv customer space id</p>
+     * <p>The space ID of the user under the ISV account.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The ID of the WhatApp Business account of the ISV customer.</p>
+     * <p>The ID of the WhatsApp Business account under the ISV account.</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -30,13 +33,13 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String exampleShrink;
 
     /**
-     * <p>ISV verification code, which is used to verify whether the sub-account is authorized by ISV.</p>
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by ISV.</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
-     * <p>The language.</p>
+     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
      */
     @NameInMap("Language")
     public String language;
@@ -47,9 +50,20 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     @NameInMap("TemplateCode")
     public String templateCode;
 
+    @NameInMap("TemplateType")
+    public String templateType;
+
     public static ModifyChatappTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyChatappTemplateShrinkRequest self = new ModifyChatappTemplateShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyChatappTemplateShrinkRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public ModifyChatappTemplateShrinkRequest setComponentsShrink(String componentsShrink) {
@@ -106,6 +120,14 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     }
     public String getTemplateCode() {
         return this.templateCode;
+    }
+
+    public ModifyChatappTemplateShrinkRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
 }

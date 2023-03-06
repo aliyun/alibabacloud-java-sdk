@@ -23,7 +23,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
      * <p>*   When you set the **MessageType** parameter to **image**, the **link** parameter is required.</p>
      * <p>*   When you set the **MessageType** parameter to **video**, the **link** parameter is required.</p>
      * <p>*   When you set the **MessageType** parameter to **audio**, the **link** parameter is required and **caption** parameter is invalid.</p>
-     * <p>*   When you set the **MessageType** parameter to**document**, the **link** and **fileName** parameters are required and **caption** parameter is invalid.</p>
+     * <p>*   When you set the **MessageType** parameter to **document**, the **link** and **fileName** parameters are required and **caption** parameter is invalid.</p>
      * <p>*   When you set the **MessageType** parameter to **interactive**, the **type** and **action** parameters are required.</p>
      * <p>*   When you set the **MessageType** parameter to **contacts**, the **name** parameter is required.</p>
      * <p>*   When you set the **MessageType** parameter to **location**, the **longitude** and **latitude** parameters are required.</p>
@@ -144,6 +144,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
      */
     @NameInMap("Tag")
     public String tag;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     /**
      * <p>The code of the message template. This parameter is required only if you set the Type parameter to **template**.</p>
@@ -299,6 +302,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getTag() {
         return this.tag;
+    }
+
+    public SendChatappMessageShrinkRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public SendChatappMessageShrinkRequest setTemplateCode(String templateCode) {

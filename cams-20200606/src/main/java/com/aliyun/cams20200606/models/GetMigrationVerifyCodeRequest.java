@@ -17,7 +17,7 @@ public class GetMigrationVerifyCodeRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The method for sending a verification code. Valid values: sms and voice.</p>
+     * <p>The method to obtain the verification code. Valid values: sms and voice.</p>
      */
     @NameInMap("Method")
     public String method;

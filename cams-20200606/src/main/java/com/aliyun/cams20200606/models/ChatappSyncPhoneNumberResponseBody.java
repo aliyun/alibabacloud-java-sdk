@@ -82,13 +82,13 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String messagingLimitTier;
 
         /**
-         * <p>The review status of the business display name.</p>
+         * <p>The review status of the business name.</p>
          */
         @NameInMap("NameStatus")
         public String nameStatus;
 
         /**
-         * <p>The review status of the new business display name.</p>
+         * <p>The review status of the new business name.</p>
          */
         @NameInMap("NewNameStatus")
         public String newNameStatus;
@@ -136,7 +136,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String upQueue;
 
         /**
-         * <p>The display name of your business.</p>
+         * <p>The name of the business to which the phone number belongs.</p>
          */
         @NameInMap("VerifiedName")
         public String verifiedName;

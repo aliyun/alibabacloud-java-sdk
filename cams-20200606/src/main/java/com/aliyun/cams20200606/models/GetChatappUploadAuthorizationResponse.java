@@ -3,7 +3,7 @@ package com.aliyun.cams20200606.models;
 
 import com.aliyun.tea.*;
 
-public class GetChatappTemplateDetailResponse extends TeaModel {
+public class GetChatappUploadAuthorizationResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetChatappTemplateDetailResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetChatappTemplateDetailResponseBody body;
+    public GetChatappUploadAuthorizationResponseBody body;
 
-    public static GetChatappTemplateDetailResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetChatappTemplateDetailResponse self = new GetChatappTemplateDetailResponse();
+    public static GetChatappUploadAuthorizationResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetChatappUploadAuthorizationResponse self = new GetChatappUploadAuthorizationResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetChatappTemplateDetailResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetChatappUploadAuthorizationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetChatappTemplateDetailResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetChatappTemplateDetailResponse setStatusCode(Integer statusCode) {
+    public GetChatappUploadAuthorizationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetChatappTemplateDetailResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetChatappTemplateDetailResponse setBody(GetChatappTemplateDetailResponseBody body) {
+    public GetChatappUploadAuthorizationResponse setBody(GetChatappUploadAuthorizationResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetChatappTemplateDetailResponseBody getBody() {
+    public GetChatappUploadAuthorizationResponseBody getBody() {
         return this.body;
     }
 
