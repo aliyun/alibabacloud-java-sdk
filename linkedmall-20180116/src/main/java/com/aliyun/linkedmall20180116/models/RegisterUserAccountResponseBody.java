@@ -19,6 +19,9 @@ public class RegisterUserAccountResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

@@ -19,6 +19,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>pageSize</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -219,6 +222,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>id</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -322,6 +328,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("Removed")
         public Boolean removed;
 
+        /**
+         * <p>skuid</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
@@ -676,6 +685,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("SellerNick")
         public String sellerNick;
 
+        /**
+         * <p>skuid</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
@@ -1306,6 +1318,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>id</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -1409,6 +1424,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("Removed")
         public Boolean removed;
 
+        /**
+         * <p>skuid</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
@@ -1547,6 +1565,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("Selected")
         public Boolean selected;
 
+        /**
+         * <p>skuid</p>
+         */
         @NameInMap("SkuIds")
         public java.util.List<Long> skuIds;
 
@@ -1763,6 +1784,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         @NameInMap("SellerNick")
         public String sellerNick;
 
+        /**
+         * <p>skuid</p>
+         */
         @NameInMap("SkuId")
         public Long skuId;
 
