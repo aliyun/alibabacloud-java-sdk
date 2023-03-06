@@ -19,6 +19,9 @@ public class ModifyWhiteIpsRequest extends TeaModel {
     @NameInMap("whiteIpList")
     public java.util.List<String> whiteIpList;
 
+    /**
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 

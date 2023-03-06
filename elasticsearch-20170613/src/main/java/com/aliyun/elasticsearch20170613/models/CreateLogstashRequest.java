@@ -22,9 +22,15 @@ public class CreateLogstashRequest extends TeaModel {
     @NameInMap("paymentType")
     public String paymentType;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("version")
     public String version;
 
+    /**
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -79,6 +85,14 @@ public class CreateLogstashRequest extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public CreateLogstashRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateLogstashRequest setVersion(String version) {

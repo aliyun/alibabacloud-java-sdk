@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseReportResponseBody extends TeaModel {
+    /**
+     * <p>The header of the response.</p>
+     */
     @NameInMap("Headers")
     public ListDiagnoseReportResponseBodyHeaders headers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDiagnoseReportResponseBodyResult> result;
 
@@ -43,6 +52,9 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class ListDiagnoseReportResponseBodyHeaders extends TeaModel {
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
 
@@ -62,18 +74,37 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class ListDiagnoseReportResponseBodyResultDiagnoseItemsDetail extends TeaModel {
+        /**
+         * <p>The description of the diagnostic item.</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <p>The full name of the diagnostic item.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The diagnosis.</p>
+         */
         @NameInMap("result")
         public String result;
 
+        /**
+         * <p>The suggestion for the diagnosis.</p>
+         */
         @NameInMap("suggest")
         public String suggest;
 
+        /**
+         * <p>The type of the diagnostic result. Valid values:</p>
+         * <br>
+         * <p>*   TEXT: text description</p>
+         * <p>*   CONSOLE_API: console-triggered</p>
+         * <p>*   ES_API: API triggered</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -125,12 +156,21 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class ListDiagnoseReportResponseBodyResultDiagnoseItems extends TeaModel {
+        /**
+         * <p>The details of the diagnostic item.</p>
+         */
         @NameInMap("detail")
         public ListDiagnoseReportResponseBodyResultDiagnoseItemsDetail detail;
 
+        /**
+         * <p>The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         */
         @NameInMap("health")
         public String health;
 
+        /**
+         * <p>The name of the item.</p>
+         */
         @NameInMap("item")
         public String item;
 
@@ -166,24 +206,49 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class ListDiagnoseReportResponseBodyResult extends TeaModel {
+        /**
+         * <p>The timestamp when the report was created.</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <p>Reports the list of diagnostic item information.</p>
+         */
         @NameInMap("diagnoseItems")
         public java.util.List<ListDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems;
 
+        /**
+         * <p>The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         */
         @NameInMap("health")
         public String health;
 
+        /**
+         * <p>The ID of the instance for diagnosis.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the report.</p>
+         */
         @NameInMap("reportId")
         public String reportId;
 
+        /**
+         * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The trigger mode of health diagnostics. Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM: The system is automatically triggered.</p>
+         * <p>*   INNER: internal trigger</p>
+         * <p>*   USER: manually triggered by the user</p>
+         */
         @NameInMap("trigger")
         public String trigger;
 

@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetTransferableNodesRequest extends TeaModel {
+    /**
+     * <p>The number of nodes to be migrated.</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The type of nodes.**WORKER**represents a hot node,**WORKER_WARM** represents a warm node.</p>
+     */
     @NameInMap("nodeType")
     public String nodeType;
 

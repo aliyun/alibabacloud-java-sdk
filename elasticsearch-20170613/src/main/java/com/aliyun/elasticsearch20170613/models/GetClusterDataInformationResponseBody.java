@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetClusterDataInformationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public GetClusterDataInformationResponseBodyResult result;
 
@@ -32,18 +38,33 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
     }
 
     public static class GetClusterDataInformationResponseBodyResultMetaInfo extends TeaModel {
+        /**
+         * <p>The fields in the Mapping for the index.</p>
+         */
         @NameInMap("fields")
         public java.util.List<String> fields;
 
+        /**
+         * <p>The index list of the cluster.</p>
+         */
         @NameInMap("indices")
         public java.util.List<String> indices;
 
+        /**
+         * <p>The Mapping configuration of the cluster.</p>
+         */
         @NameInMap("mapping")
         public String mapping;
 
+        /**
+         * <p>The Settings of the cluster.</p>
+         */
         @NameInMap("settings")
         public String settings;
 
+        /**
+         * <p>Specifies the type of the index.</p>
+         */
         @NameInMap("typeName")
         public java.util.List<String> typeName;
 
@@ -95,9 +116,15 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
     }
 
     public static class GetClusterDataInformationResponseBodyResult extends TeaModel {
+        /**
+         * <p>Whether it is connectable.</p>
+         */
         @NameInMap("connectable")
         public Boolean connectable;
 
+        /**
+         * <p>The metadata of the cluster.</p>
+         */
         @NameInMap("metaInfo")
         public GetClusterDataInformationResponseBodyResultMetaInfo metaInfo;
 

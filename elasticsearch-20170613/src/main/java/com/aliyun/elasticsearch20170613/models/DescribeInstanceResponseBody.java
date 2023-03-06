@@ -820,6 +820,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("ikHotDicts")
         public java.util.List<DescribeInstanceResponseBodyResultIkHotDicts> ikHotDicts;
 
+        @NameInMap("instanceCategory")
+        public String instanceCategory;
+
         @NameInMap("instanceId")
         public String instanceId;
 
@@ -1081,6 +1084,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public java.util.List<DescribeInstanceResponseBodyResultIkHotDicts> getIkHotDicts() {
             return this.ikHotDicts;
+        }
+
+        public DescribeInstanceResponseBodyResult setInstanceCategory(String instanceCategory) {
+            this.instanceCategory = instanceCategory;
+            return this;
+        }
+        public String getInstanceCategory() {
+            return this.instanceCategory;
         }
 
         public DescribeInstanceResponseBodyResult setInstanceId(String instanceId) {

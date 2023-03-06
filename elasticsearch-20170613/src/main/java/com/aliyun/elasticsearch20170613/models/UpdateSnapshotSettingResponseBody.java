@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateSnapshotSettingResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public UpdateSnapshotSettingResponseBodyResult result;
 
@@ -32,9 +38,15 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
     }
 
     public static class UpdateSnapshotSettingResponseBodyResult extends TeaModel {
+        /**
+         * <p>Specifies whether to enable automatic backup.</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The start time of automatic backup.</p>
+         */
         @NameInMap("quartzRegex")
         public String quartzRegex;
 

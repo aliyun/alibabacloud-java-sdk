@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DiagnoseInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Result")
     public DiagnoseInstanceResponseBodyResult result;
 
@@ -32,15 +38,27 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
     }
 
     public static class DiagnoseInstanceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The timestamp when the diagnostic report was generated.</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the diagnostic instance.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the report.</p>
+         */
         @NameInMap("reportId")
         public String reportId;
 
+        /**
+         * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
+         */
         @NameInMap("state")
         public String state;
 

@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateAdvancedSettingResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return results:</p>
+     * <br>
+     * <p>*   true: garbage collector configuration changed successfully</p>
+     * <p>*   false: garbage collector configuration changed successfully failed</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

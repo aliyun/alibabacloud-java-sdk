@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CancelTaskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return results:</p>
+     * <br>
+     * <p>*   true: the task was cancelled successfully</p>
+     * <p>*   false: the task was cancelled successfully failed</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

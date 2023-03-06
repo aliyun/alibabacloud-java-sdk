@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListConnectedClustersResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public ListConnectedClustersResponseBodyResult result;
 
@@ -32,9 +38,15 @@ public class ListConnectedClustersResponseBody extends TeaModel {
     }
 
     public static class ListConnectedClustersResponseBodyResultResult extends TeaModel {
+        /**
+         * <p>The ID of the remote instance that is connected to the network of the current instance.</p>
+         */
         @NameInMap("instances")
         public String instances;
 
+        /**
+         * <p>The network type of the instance.</p>
+         */
         @NameInMap("networkType")
         public String networkType;
 

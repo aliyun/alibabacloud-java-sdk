@@ -4,21 +4,39 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListSearchLogRequest extends TeaModel {
+    /**
+     * <p>1531910852074</p>
+     */
     @NameInMap("beginTime")
     public Long beginTime;
 
+    /**
+     * <p>1531910852074</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>host:172.16.\*\*.\*\* AND content:netty</p>
+     */
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>20</p>
+     */
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>INSTANCELOG</p>
+     */
     @NameInMap("type")
     public String type;
 

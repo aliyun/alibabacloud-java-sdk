@@ -4,15 +4,27 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListPluginsRequest extends TeaModel {
+    /**
+     * <p>analysis-ik</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("page")
     public String page;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>SYSTEM</p>
+     */
     @NameInMap("source")
     public String source;
 

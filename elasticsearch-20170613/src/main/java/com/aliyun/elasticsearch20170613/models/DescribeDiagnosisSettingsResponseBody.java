@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public DescribeDiagnosisSettingsResponseBodyResult result;
 
@@ -32,9 +38,15 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisSettingsResponseBodyResult extends TeaModel {
+        /**
+         * <p>Scenarios of intelligent maintenance.</p>
+         */
         @NameInMap("scene")
         public String scene;
 
+        /**
+         * <p>The timestamp of the last update for Intelligent Maintenance scenarios.</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 

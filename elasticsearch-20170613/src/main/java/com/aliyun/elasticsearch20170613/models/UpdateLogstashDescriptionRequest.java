@@ -4,8 +4,8 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateLogstashDescriptionRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
+    @NameInMap("description")
+    public String description;
 
     @NameInMap("clientToken")
     public String clientToken;
@@ -15,12 +15,12 @@ public class UpdateLogstashDescriptionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateLogstashDescriptionRequest setBody(String body) {
-        this.body = body;
+    public UpdateLogstashDescriptionRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getBody() {
-        return this.body;
+    public String getDescription() {
+        return this.description;
     }
 
     public UpdateLogstashDescriptionRequest setClientToken(String clientToken) {

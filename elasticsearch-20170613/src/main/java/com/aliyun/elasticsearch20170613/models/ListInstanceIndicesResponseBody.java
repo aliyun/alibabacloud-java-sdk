@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceIndicesResponseBody extends TeaModel {
+    /**
+     * <p>The header of the response.</p>
+     */
     @NameInMap("Headers")
     public ListInstanceIndicesResponseBodyHeaders headers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the index list.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListInstanceIndicesResponseBodyResult> result;
 
@@ -43,15 +52,27 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
     }
 
     public static class ListInstanceIndicesResponseBodyHeaders extends TeaModel {
+        /**
+         * <p>The total number of indexes in Cloud Hosting.</p>
+         */
         @NameInMap("X-Managed-Count")
         public Integer xManagedCount;
 
+        /**
+         * <p>The total size of the index in Cloud Hosting. Unit: bytes.</p>
+         */
         @NameInMap("X-Managed-StorageSize")
         public Long xManagedStorageSize;
 
+        /**
+         * <p>The total number of indexes in the OpenStore cold phase.</p>
+         */
         @NameInMap("X-OSS-Count")
         public Integer xOSSCount;
 
+        /**
+         * <p>The total size of the OpenStore cold stage index for this instance. Unit: bytes.</p>
+         */
         @NameInMap("X-OSS-StorageSize")
         public Long xOSSStorageSize;
 
@@ -95,27 +116,66 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
     }
 
     public static class ListInstanceIndicesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the index list was queried.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The running status of the index. The following three statuses are supported:</p>
+         * <br>
+         * <p>*   green: healthy.</p>
+         * <p>*   yellow: alerts.</p>
+         * <p>*   red: an exception.</p>
+         */
         @NameInMap("health")
         public String health;
 
+        /**
+         * <p>The full lifecycle status of the current index.</p>
+         */
         @NameInMap("ilmExplain")
         public String ilmExplain;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("isManaged")
         public String isManaged;
 
+        /**
+         * <p>The managed status of the index. The following three statuses are supported:</p>
+         * <br>
+         * <p>*   following: Hosting.</p>
+         * <p>*   closing: The instance is being unhosted.</p>
+         * <p>*   closed: unmanaged.</p>
+         */
         @NameInMap("managedStatus")
         public String managedStatus;
 
+        /**
+         * <p>The name of the Elasticsearch index.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The current storage lifecycle. Value meaning:</p>
+         * <br>
+         * <p>*   warm: warm.</p>
+         * <p>*   cold: the cold phase.</p>
+         * <p>*   hot: hot phase.</p>
+         * <p>*   delete: deletes a stage.</p>
+         * <br>
+         * <p>>  If this parameter is empty, the current index is not managed by the lifecycle.</p>
+         */
         @NameInMap("phase")
         public String phase;
 
+        /**
+         * <p>The total storage space occupied by the current index. Unit: bytes.</p>
+         */
         @NameInMap("size")
         public Long size;
 

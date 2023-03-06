@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetTransferableNodesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<GetTransferableNodesResponseBodyResult> result;
 
@@ -32,9 +38,15 @@ public class GetTransferableNodesResponseBody extends TeaModel {
     }
 
     public static class GetTransferableNodesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <p>The access port of the node.</p>
+         */
         @NameInMap("port")
         public Integer port;
 

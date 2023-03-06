@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribePipelineResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the returned pipeline. For more information, see [logstash.yml](https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html).</p>
+     */
     @NameInMap("Result")
     public DescribePipelineResponseBodyResult result;
 
@@ -32,39 +38,82 @@ public class DescribePipelineResponseBody extends TeaModel {
     }
 
     public static class DescribePipelineResponseBodyResult extends TeaModel {
+        /**
+         * <p>Pipeline batch delay. Unit: milliseconds.</p>
+         */
         @NameInMap("batchDelay")
         public Integer batchDelay;
 
+        /**
+         * <p>The size of the pipeline batch.</p>
+         */
         @NameInMap("batchSize")
         public Integer batchSize;
 
+        /**
+         * <p>The specific configuration of the pipeline.</p>
+         */
         @NameInMap("config")
         public String config;
 
+        /**
+         * <p>The description of the pipeline.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The time when the pipeline was created.</p>
+         */
         @NameInMap("gmtCreatedTime")
         public String gmtCreatedTime;
 
+        /**
+         * <p>The time when the pipeline was updated.</p>
+         */
         @NameInMap("gmtUpdateTime")
         public String gmtUpdateTime;
 
+        /**
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+         */
         @NameInMap("pipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The state of the MPS queue. Valid values:</p>
+         * <br>
+         * <p>*   NOT_DEPLOYED: The node is not deployed.</p>
+         * <p>*   RUNNING</p>
+         * <p>*   DELETED: Deleted. The console does not display this status.</p>
+         */
         @NameInMap("pipelineStatus")
         public String pipelineStatus;
 
+        /**
+         * <p>Number of queue checkpoint writes.</p>
+         */
         @NameInMap("queueCheckPointWrites")
         public Integer queueCheckPointWrites;
 
+        /**
+         * <p>The total capacity of the queue in bytes. Unit: MB.</p>
+         */
         @NameInMap("queueMaxBytes")
         public Integer queueMaxBytes;
 
+        /**
+         * <p>The type of the queue. Valid values:</p>
+         * <br>
+         * <p>*   MEMORY: a traditional memory-based queue.</p>
+         * <p>*   PERSISTED: disk-based ACKed queue (persistent queue).</p>
+         */
         @NameInMap("queueType")
         public String queueType;
 
+        /**
+         * <p>The number of pipeline workers.</p>
+         */
         @NameInMap("workers")
         public Integer workers;
 

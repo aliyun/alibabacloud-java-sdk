@@ -3,19 +3,16 @@ package com.aliyun.elasticsearch20170613.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDiagnoseReportRequest extends TeaModel {
-    /**
-     * <p>en</p>
-     */
+public class ListDiagnosisItemsRequest extends TeaModel {
     @NameInMap("lang")
     public String lang;
 
-    public static DescribeDiagnoseReportRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDiagnoseReportRequest self = new DescribeDiagnoseReportRequest();
+    public static ListDiagnosisItemsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDiagnosisItemsRequest self = new ListDiagnosisItemsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDiagnoseReportRequest setLang(String lang) {
+    public ListDiagnosisItemsRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }

@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineRequest extends TeaModel {
+    /**
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>pipeline_test</p>
+     */
     @NameInMap("pipelineId")
     public String pipelineId;
 
+    /**
+     * <p>15</p>
+     */
     @NameInMap("size")
     public Integer size;
 

@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetOpenStoreUsageResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The current request result.</p>
+     */
     @NameInMap("Result")
     public GetOpenStoreUsageResponseBodyResult result;
 
@@ -32,9 +38,15 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
     }
 
     public static class GetOpenStoreUsageResponseBodyResult extends TeaModel {
+        /**
+         * <p>The current OpenStore storage capacity (estimated value based on actual indexes). Unit: Byte.</p>
+         */
         @NameInMap("currentUsage")
         public Long currentUsage;
 
+        /**
+         * <p>The storage capacity of OpenStore yesterday. Unit: bytes.</p>
+         */
         @NameInMap("lastDayUsage")
         public Long lastDayUsage;
 

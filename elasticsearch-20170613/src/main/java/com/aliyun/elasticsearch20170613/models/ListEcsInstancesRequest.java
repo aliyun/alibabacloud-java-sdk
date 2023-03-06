@@ -4,21 +4,39 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListEcsInstancesRequest extends TeaModel {
+    /**
+     * <p>\["i-bp13y63575oypr9d\*\*\*\*","i-bp1gyhphjaj73jsr\*\*\*\*"]</p>
+     */
     @NameInMap("ecsInstanceIds")
     public String ecsInstanceIds;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("ecsInstanceName")
     public String ecsInstanceName;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>\[{ "tagKey":"a","tagValue":"b"}]</p>
+     */
     @NameInMap("tags")
     public String tags;
 
+    /**
+     * <p>vpc-bp16k1dvzxtmagcva\*\*\*\*</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 

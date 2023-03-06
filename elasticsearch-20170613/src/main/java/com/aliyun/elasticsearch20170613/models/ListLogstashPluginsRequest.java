@@ -4,15 +4,27 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListLogstashPluginsRequest extends TeaModel {
+    /**
+     * <p>logstash-filter-clone</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>3</p>
+     */
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>USER</p>
+     */
     @NameInMap("source")
     public String source;
 

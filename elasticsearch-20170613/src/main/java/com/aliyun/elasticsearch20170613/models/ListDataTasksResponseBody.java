@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDataTasksResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDataTasksResponseBodyResult> result;
 
@@ -32,24 +38,45 @@ public class ListDataTasksResponseBody extends TeaModel {
     }
 
     public static class ListDataTasksResponseBodyResultSinkCluster extends TeaModel {
+        /**
+         * <p>The type of the target cluster. Default value: elasticsearch.</p>
+         */
         @NameInMap("dataSourceType")
         public String dataSourceType;
 
+        /**
+         * <p>The public network access address of the target cluster.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The target index.</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <p>The type of the destination index.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The ID of the VPC to which the cluster belongs.</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
+        /**
+         * <p>The instance ID or Server Load Balancer (SLB) ID of the current cluster.</p>
+         */
         @NameInMap("vpcInstanceId")
         public String vpcInstanceId;
 
+        /**
+         * <p>The access port number of the cluster.</p>
+         */
         @NameInMap("vpcInstancePort")
         public String vpcInstancePort;
 
@@ -117,21 +144,39 @@ public class ListDataTasksResponseBody extends TeaModel {
     }
 
     public static class ListDataTasksResponseBodyResultSourceCluster extends TeaModel {
+        /**
+         * <p>The type of the source cluster. Default value: elasticsearch.</p>
+         */
         @NameInMap("dataSourceType")
         public String dataSourceType;
 
+        /**
+         * <p>The index whose data you want to migrate.</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <p>The Mapping configuration of the cluster.</p>
+         */
         @NameInMap("mapping")
         public String mapping;
 
+        /**
+         * <p>The routing field to index the table. It is set to the primary key by default.</p>
+         */
         @NameInMap("routing")
         public String routing;
 
+        /**
+         * <p>The Settings of the cluster.</p>
+         */
         @NameInMap("settings")
         public String settings;
 
+        /**
+         * <p>The type of the destination index.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -191,18 +236,33 @@ public class ListDataTasksResponseBody extends TeaModel {
     }
 
     public static class ListDataTasksResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the site monitoring task was created.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The information of the target cluster.</p>
+         */
         @NameInMap("sinkCluster")
         public ListDataTasksResponseBodyResultSinkCluster sinkCluster;
 
+        /**
+         * <p>The information about the source cluster.</p>
+         */
         @NameInMap("sourceCluster")
         public ListDataTasksResponseBodyResultSourceCluster sourceCluster;
 
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("taskId")
         public String taskId;
 
