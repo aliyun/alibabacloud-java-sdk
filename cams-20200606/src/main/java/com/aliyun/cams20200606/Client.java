@@ -702,6 +702,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteChatappTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request GetChatappTemplateDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetChatappTemplateDetailResponse
+     */
+    public GetChatappTemplateDetailResponse getChatappTemplateDetailWithOptions(GetChatappTemplateDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
+            query.put("CustSpaceId", request.custSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            query.put("CustWabaId", request.custWabaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            query.put("IsvCode", request.isvCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChatappTemplateDetail"),
+            new TeaPair("version", "2020-06-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatappTemplateDetailResponse());
+    }
+
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request GetChatappTemplateDetailRequest
+      * @return GetChatappTemplateDetailResponse
+     */
+    public GetChatappTemplateDetailResponse getChatappTemplateDetail(GetChatappTemplateDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getChatappTemplateDetailWithOptions(request, runtime);
+    }
+
     public GetChatappUploadAuthorizationResponse getChatappUploadAuthorizationWithOptions(GetChatappUploadAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -925,6 +989,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public IsvGetAppIdResponse isvGetAppId(IsvGetAppIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.isvGetAppIdWithOptions(request, runtime);
+    }
+
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param tmpReq ListChatappTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListChatappTemplateResponse
+     */
+    public ListChatappTemplateResponse listChatappTemplateWithOptions(ListChatappTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListChatappTemplateShrinkRequest request = new ListChatappTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.page)) {
+            request.pageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.page, "Page", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auditStatus)) {
+            query.put("AuditStatus", request.auditStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
+            query.put("CustSpaceId", request.custSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            query.put("CustWabaId", request.custWabaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            query.put("IsvCode", request.isvCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageShrink)) {
+            query.put("Page", request.pageShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListChatappTemplate"),
+            new TeaPair("version", "2020-06-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChatappTemplateResponse());
+    }
+
+    /**
+      * ### QPS limit
+      * You can call this operation up to 5 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request ListChatappTemplateRequest
+      * @return ListChatappTemplateResponse
+     */
+    public ListChatappTemplateResponse listChatappTemplate(ListChatappTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listChatappTemplateWithOptions(request, runtime);
     }
 
     /**
