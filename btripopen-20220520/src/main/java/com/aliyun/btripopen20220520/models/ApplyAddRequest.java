@@ -19,6 +19,9 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("depart_name")
     public String departName;
 
+    @NameInMap("extend_field")
+    public String extendField;
+
     @NameInMap("external_traveler_list")
     public java.util.List<ApplyAddRequestExternalTravelerList> externalTravelerList;
 
@@ -140,6 +143,14 @@ public class ApplyAddRequest extends TeaModel {
     }
     public String getDepartName() {
         return this.departName;
+    }
+
+    public ApplyAddRequest setExtendField(String extendField) {
+        this.extendField = extendField;
+        return this;
+    }
+    public String getExtendField() {
+        return this.extendField;
     }
 
     public ApplyAddRequest setExternalTravelerList(java.util.List<ApplyAddRequestExternalTravelerList> externalTravelerList) {

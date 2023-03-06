@@ -791,6 +791,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         public String departName;
 
+        @NameInMap("extend_field")
+        public String extendField;
+
         @NameInMap("external_traveler_list")
         public java.util.List<ApplyQueryResponseBodyModuleExternalTravelerList> externalTravelerList;
 
@@ -936,6 +939,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public String getDepartName() {
             return this.departName;
+        }
+
+        public ApplyQueryResponseBodyModule setExtendField(String extendField) {
+            this.extendField = extendField;
+            return this;
+        }
+        public String getExtendField() {
+            return this.extendField;
         }
 
         public ApplyQueryResponseBodyModule setExternalTravelerList(java.util.List<ApplyQueryResponseBodyModuleExternalTravelerList> externalTravelerList) {

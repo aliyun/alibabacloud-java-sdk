@@ -19,6 +19,9 @@ public class ApplyAddShrinkRequest extends TeaModel {
     @NameInMap("depart_name")
     public String departName;
 
+    @NameInMap("extend_field")
+    public String extendField;
+
     @NameInMap("external_traveler_list")
     public String externalTravelerListShrink;
 
@@ -140,6 +143,14 @@ public class ApplyAddShrinkRequest extends TeaModel {
     }
     public String getDepartName() {
         return this.departName;
+    }
+
+    public ApplyAddShrinkRequest setExtendField(String extendField) {
+        this.extendField = extendField;
+        return this;
+    }
+    public String getExtendField() {
+        return this.extendField;
     }
 
     public ApplyAddShrinkRequest setExternalTravelerListShrink(String externalTravelerListShrink) {
