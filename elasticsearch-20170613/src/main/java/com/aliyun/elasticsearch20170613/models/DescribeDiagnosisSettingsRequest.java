@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisSettingsRequest extends TeaModel {
+    /**
+     * <p>The language of the returned result. Default value: en.</p>
+     */
     @NameInMap("lang")
     public String lang;
 

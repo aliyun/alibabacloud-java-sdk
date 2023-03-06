@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotRepoResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return results:</p>
+     * <br>
+     * <p>*   true: reference warehouse deleted successfully</p>
+     * <p>*   false: reference warehouse deleted successfully failed</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UninstallPluginResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of plug-ins to be unloaded. If the unloading fails, an exception is returned.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

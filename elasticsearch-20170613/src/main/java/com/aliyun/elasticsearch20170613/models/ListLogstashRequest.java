@@ -4,24 +4,45 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListLogstashRequest extends TeaModel {
+    /**
+     * <p>ls-cn-abc</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>ls-cn-n6w1o5jq\*\*\*\*</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>rg-acfm2h5vbzd\*\*\*\*</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>\[{"tagKey":"key1","tagValue":"value1"}]</p>
+     */
     @NameInMap("tags")
     public String tags;
 
+    /**
+     * <p>5.5.3\_with_X-Pack</p>
+     */
     @NameInMap("version")
     public String version;
 

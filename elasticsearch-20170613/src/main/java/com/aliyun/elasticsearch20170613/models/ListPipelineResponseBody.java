@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineResponseBody extends TeaModel {
+    /**
+     * <p>The header of the response.</p>
+     */
     @NameInMap("Headers")
     public ListPipelineResponseBodyHeaders headers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The response.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListPipelineResponseBodyResult> result;
 
@@ -43,6 +52,9 @@ public class ListPipelineResponseBody extends TeaModel {
     }
 
     public static class ListPipelineResponseBodyHeaders extends TeaModel {
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
 
@@ -62,15 +74,31 @@ public class ListPipelineResponseBody extends TeaModel {
     }
 
     public static class ListPipelineResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the pipeline was created.</p>
+         */
         @NameInMap("gmtCreatedTime")
         public String gmtCreatedTime;
 
+        /**
+         * <p>The time when the pipeline was updated.</p>
+         */
         @NameInMap("gmtUpdateTime")
         public String gmtUpdateTime;
 
+        /**
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+         */
         @NameInMap("pipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The status of the pipeline. Supported:</p>
+         * <br>
+         * <p>*   NOT_DEPLOYED: The node is not deployed.</p>
+         * <p>*   RUNNING</p>
+         * <p>*   DELETED: Deleted. The console does not display this status.</p>
+         */
         @NameInMap("pipelineStatus")
         public String pipelineStatus;
 

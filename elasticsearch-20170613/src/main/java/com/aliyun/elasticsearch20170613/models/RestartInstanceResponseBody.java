@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class RestartInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public RestartInstanceResponseBodyResult result;
 
@@ -32,15 +38,36 @@ public class RestartInstanceResponseBody extends TeaModel {
     }
 
     public static class RestartInstanceResponseBodyResultDictList extends TeaModel {
+        /**
+         * <p>The size of the Dictionary File. Unit: bytes.</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <p>The name of the dictionary file.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The source type. Valid values:</p>
+         * <br>
+         * <p>*   OSS: OSS open storage (need to ensure that OSS storage space is public readable.)</p>
+         * <p>*   ORIGIN: Open source Elasticsearch</p>
+         * <p>*   UPLOAD: Uploaded files</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The type of the dictionary. Valid values:</p>
+         * <br>
+         * <p>*   STOP: The STOP word.</p>
+         * <p>*   MAIN: MAIN Dictionary</p>
+         * <p>*   SYNONYMS: SYNONYMS</p>
+         * <p>*   ALI_WS: an Alibaba Dictionary.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -84,15 +111,27 @@ public class RestartInstanceResponseBody extends TeaModel {
     }
 
     public static class RestartInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
+        /**
+         * <p>The number of performance metrics.</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <p>The size of the node storage space. Unit: GB.</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The storage type of the node.</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <p>The specification of data nodes.</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -136,15 +175,27 @@ public class RestartInstanceResponseBody extends TeaModel {
     }
 
     public static class RestartInstanceResponseBodyResultMasterConfiguration extends TeaModel {
+        /**
+         * <p>The number of nodes in the cluster.</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <p>The size of the node storage space. Unit: GB.</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The storage type of the node. This tool only supports cloud_ssd (cloud SSD) disks.</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <p>The node specifications of the cluster.</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -188,15 +239,27 @@ public class RestartInstanceResponseBody extends TeaModel {
     }
 
     public static class RestartInstanceResponseBodyResultNetworkConfig extends TeaModel {
+        /**
+         * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
+        /**
+         * <p>The zone where the instance is deployed.</p>
+         */
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <p>The ID of the vSwitch associated with the specified VPC.</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -240,12 +303,21 @@ public class RestartInstanceResponseBody extends TeaModel {
     }
 
     public static class RestartInstanceResponseBodyResultNodeSpec extends TeaModel {
+        /**
+         * <p>The storage space size per data node. Unit: GB.</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The storage type of the node. Valid values: cloud_ssd and cloud_efficiency.</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <p>The specification of data nodes.</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -281,15 +353,36 @@ public class RestartInstanceResponseBody extends TeaModel {
     }
 
     public static class RestartInstanceResponseBodyResultSynonymsDicts extends TeaModel {
+        /**
+         * <p>The size of the Dictionary File. Unit: bytes.</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <p>The name of the dictionary file.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The source type. Valid values:</p>
+         * <br>
+         * <p>*   OSS:OSS open storage (the OSS storage space must be publicly readable.)</p>
+         * <p>*   ORIGIN: open-source Elasticsearch</p>
+         * <p>*   UPLOAD</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The type of the dictionary. Valid values:</p>
+         * <br>
+         * <p>*   STOP: The STOP word.</p>
+         * <p>*   MAIN: MAIN Dictionary</p>
+         * <p>*   SYNONYMS: SYNONYMS</p>
+         * <p>*   ALI_WS: an Alibaba Dictionary.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -333,60 +426,121 @@ public class RestartInstanceResponseBody extends TeaModel {
     }
 
     public static class RestartInstanceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The configuration of the IK dictionaries.</p>
+         */
         @NameInMap("dictList")
         public java.util.List<RestartInstanceResponseBodyResultDictList> dictList;
 
+        /**
+         * <p>The intranet access address of the instance.</p>
+         */
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The version of the instance.</p>
+         */
         @NameInMap("esVersion")
         public String esVersion;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The configuration of Kibana nodes.</p>
+         */
         @NameInMap("kibanaConfiguration")
         public RestartInstanceResponseBodyResultKibanaConfiguration kibanaConfiguration;
 
+        /**
+         * <p>The public network access address of Kibana.</p>
+         */
         @NameInMap("kibanaDomain")
         public String kibanaDomain;
 
+        /**
+         * <p>The public port of the Kibana network.</p>
+         */
         @NameInMap("kibanaPort")
         public Integer kibanaPort;
 
+        /**
+         * <p>The configuration of dedicated master nodes.</p>
+         */
         @NameInMap("masterConfiguration")
         public RestartInstanceResponseBodyResultMasterConfiguration masterConfiguration;
 
+        /**
+         * <p>The network configuration.</p>
+         */
         @NameInMap("networkConfig")
         public RestartInstanceResponseBodyResultNetworkConfig networkConfig;
 
+        /**
+         * <p>The number of data nodes.</p>
+         */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
 
+        /**
+         * <p>The configuration of data nodes.</p>
+         */
         @NameInMap("nodeSpec")
         public RestartInstanceResponseBodyResultNodeSpec nodeSpec;
 
+        /**
+         * <p>The billing method of the created ECS instance.</p>
+         * <br>
+         * <p>Valid values: prepaid and postpaid.</p>
+         */
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <p>The public network access address.</p>
+         */
         @NameInMap("publicDomain")
         public String publicDomain;
 
+        /**
+         * <p>The public network port.</p>
+         */
         @NameInMap("publicPort")
         public Integer publicPort;
 
+        /**
+         * <p>The state of the cluster.</p>
+         * <br>
+         * <p>Supported: active (normal), activating (initializing), inactive (blocked), and invalid (expired).</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The configuration of the synonym dictionaries.</p>
+         */
         @NameInMap("synonymsDicts")
         public java.util.List<RestartInstanceResponseBodyResultSynonymsDicts> synonymsDicts;
 
+        /**
+         * <p>The time when the instance was last updated.</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 

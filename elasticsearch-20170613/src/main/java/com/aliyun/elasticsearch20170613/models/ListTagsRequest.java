@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListTagsRequest extends TeaModel {
+    /**
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>INSTANCE</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

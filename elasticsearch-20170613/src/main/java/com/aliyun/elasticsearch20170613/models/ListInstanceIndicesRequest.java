@@ -4,21 +4,39 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceIndicesRequest extends TeaModel {
+    /**
+     * <p>false</p>
+     */
     @NameInMap("all")
     public Boolean all;
 
+    /**
+     * <p>false</p>
+     */
     @NameInMap("isManaged")
     public Boolean isManaged;
 
+    /**
+     * <p>false</p>
+     */
     @NameInMap("isOpenstore")
     public Boolean isOpenstore;
 
+    /**
+     * <p>log-0001</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>15</p>
+     */
     @NameInMap("size")
     public Integer size;
 

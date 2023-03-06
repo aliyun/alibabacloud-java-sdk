@@ -4,15 +4,27 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to delete all parts. Default value: **false** . This parameter is valid only when **TagKeys** is not specified.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The resource list that you want to delete.</p>
+     */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
+    /**
+     * <p>The type of the resource. Fixed to **INSTANCE** .</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The list of tags that you want to delete. The list can contain up to 20 subitems.</p>
+     */
     @NameInMap("TagKeys")
     public String tagKeys;
 

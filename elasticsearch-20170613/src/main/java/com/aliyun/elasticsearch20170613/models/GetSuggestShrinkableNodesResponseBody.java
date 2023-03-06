@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetSuggestShrinkableNodesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<GetSuggestShrinkableNodesResponseBodyResult> result;
 
@@ -32,9 +38,15 @@ public class GetSuggestShrinkableNodesResponseBody extends TeaModel {
     }
 
     public static class GetSuggestShrinkableNodesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <p>The access port number of the node.</p>
+         */
         @NameInMap("port")
         public Integer port;
 

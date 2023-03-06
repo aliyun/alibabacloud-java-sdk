@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateDiagnosisSettingsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return results:</p>
+     * <br>
+     * <p>*   true: update successfully</p>
+     * <p>*   false: update failed</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

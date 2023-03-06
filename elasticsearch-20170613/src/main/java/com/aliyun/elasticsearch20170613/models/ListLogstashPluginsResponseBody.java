@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListLogstashPluginsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListLogstashPluginsResponseBodyResult> result;
 
@@ -32,18 +38,41 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
     }
 
     public static class ListLogstashPluginsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The description of the plug-in.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The name of the plug-in.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The source of the plug-in.</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The address of the documentation for the plug-in.</p>
+         */
         @NameInMap("specificationUrl")
         public String specificationUrl;
 
+        /**
+         * <p>The status of the plug-in. Valid values:</p>
+         * <br>
+         * <p>*   INSTALLED: Installed</p>
+         * <p>*   UNINSTALLED: Not installed</p>
+         * <p>*   INSTALLING: The instance is being installed.</p>
+         * <p>*   UNINSTALLING: The instance is being uninstalled.</p>
+         * <p>*   UPGRADING: The backup gateway is being upgraded.</p>
+         * <p>*   FAILED: Installation failed</p>
+         * <p>*   UNKNOWN: The cluster is lost and cannot be created.</p>
+         */
         @NameInMap("state")
         public String state;
 

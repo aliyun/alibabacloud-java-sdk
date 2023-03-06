@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointRequest extends TeaModel {
+    /**
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\*\*\*</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,6 +16,9 @@ public class CreateVpcEndpointRequest extends TeaModel {
     @NameInMap("zoneId")
     public String zoneId;
 
+    /**
+     * <p>false</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 

@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of returned database shards.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DescribeRegionsResponseBodyResult> result;
 
@@ -32,18 +38,33 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The endpoint of the region that is exposed in the console.</p>
+         */
         @NameInMap("consoleEndpoint")
         public String consoleEndpoint;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("localName")
         public String localName;
 
+        /**
+         * <p>The endpoint of the region.</p>
+         */
         @NameInMap("regionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <p>The region ID of the cluster.</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The available status of the region.</p>
+         */
         @NameInMap("status")
         public String status;
 

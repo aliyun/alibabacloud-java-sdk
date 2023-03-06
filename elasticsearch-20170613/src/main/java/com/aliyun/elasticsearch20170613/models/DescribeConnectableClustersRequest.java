@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeConnectableClustersRequest extends TeaModel {
+    /**
+     * <p>true</p>
+     */
     @NameInMap("alreadySetItems")
     public Boolean alreadySetItems;
 

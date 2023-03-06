@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result details.</p>
+     */
     @NameInMap("Result")
     public CreateVpcEndpointResponseBodyResult result;
 
@@ -32,15 +38,27 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     }
 
     public static class CreateVpcEndpointResponseBodyResult extends TeaModel {
+        /**
+         * <p>The endpoint domain name, which is used to configure the connection.</p>
+         */
         @NameInMap("endpointDomain")
         public String endpointDomain;
 
+        /**
+         * <p>The ID of the endpoint on the service VPC side.</p>
+         */
         @NameInMap("endpointId")
         public String endpointId;
 
+        /**
+         * <p>The name of the service VPC-side endpoint.</p>
+         */
         @NameInMap("endpointName")
         public String endpointName;
 
+        /**
+         * <p>The ID of the user endpoint service associated with the endpoint.</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 

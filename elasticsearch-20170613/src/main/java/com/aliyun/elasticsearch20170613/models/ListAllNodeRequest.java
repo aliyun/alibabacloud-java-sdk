@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListAllNodeRequest extends TeaModel {
+    /**
+     * <p>false</p>
+     */
     @NameInMap("extended")
     public Boolean extended;
 

@@ -4,24 +4,45 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseReportRequest extends TeaModel {
+    /**
+     * <p>true</p>
+     */
     @NameInMap("detail")
     public Boolean detail;
 
+    /**
+     * <p>1595174399999</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>spanish</p>
+     */
     @NameInMap("lang")
     public String lang;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>20</p>
+     */
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>1594569600000</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 
+    /**
+     * <p>SYSTEM</p>
+     */
     @NameInMap("trigger")
     public String trigger;
 

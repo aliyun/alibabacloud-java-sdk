@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListSnapshotReposByInstanceIdResponseBodyResult> result;
 
@@ -32,15 +38,27 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
     }
 
     public static class ListSnapshotReposByInstanceIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>Reference instance ID.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The address of the repository.</p>
+         */
         @NameInMap("repoPath")
         public String repoPath;
 
+        /**
+         * <p>Reference warehouse name.</p>
+         */
         @NameInMap("snapWarehouse")
         public String snapWarehouse;
 
+        /**
+         * <p>Reference warehouse status. available indicates that it is valid. unavailable indicates that it is invalid.</p>
+         */
         @NameInMap("status")
         public String status;
 

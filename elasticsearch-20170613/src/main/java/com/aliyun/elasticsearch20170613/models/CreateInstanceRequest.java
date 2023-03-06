@@ -7,6 +7,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("clientNodeConfiguration")
     public ClientNodeConfiguration clientNodeConfiguration;
 
+    @NameInMap("description")
+    public String description;
+
     @NameInMap("elasticDataNodeConfiguration")
     public ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
@@ -40,6 +43,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("paymentType")
     public String paymentType;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("warmNodeConfiguration")
     public WarmNodeConfiguration warmNodeConfiguration;
 
@@ -60,6 +66,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public ClientNodeConfiguration getClientNodeConfiguration() {
         return this.clientNodeConfiguration;
+    }
+
+    public CreateInstanceRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateInstanceRequest setElasticDataNodeConfiguration(ElasticDataNodeConfiguration elasticDataNodeConfiguration) {
@@ -148,6 +162,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateInstanceRequest setWarmNodeConfiguration(WarmNodeConfiguration warmNodeConfiguration) {

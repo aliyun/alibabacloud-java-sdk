@@ -28,12 +28,18 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("warmNodeConfiguration")
     public WarmNodeConfiguration warmNodeConfiguration;
 
+    /**
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     @NameInMap("force")
     public Boolean force;
 
+    /**
+     * <p>upgrade</p>
+     */
     @NameInMap("orderActionType")
     public String orderActionType;
 

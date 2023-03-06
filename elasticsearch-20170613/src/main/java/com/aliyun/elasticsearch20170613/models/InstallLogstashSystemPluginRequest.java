@@ -7,6 +7,9 @@ public class InstallLogstashSystemPluginRequest extends TeaModel {
     @NameInMap("body")
     public String body;
 
+    /**
+     * <p>ls-cn-oew1qbgl\*\*\*\*</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 

@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return results:</p>
+     * <br>
+     * <p>*   true: deleted</p>
+     * <p>*   false: Failed</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

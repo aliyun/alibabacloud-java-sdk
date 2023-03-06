@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListAlternativeSnapshotReposResponseBodyResult> result;
 
@@ -32,9 +38,15 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
     }
 
     public static class ListAlternativeSnapshotReposResponseBodyResult extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The address of the repository.</p>
+         */
         @NameInMap("repoPath")
         public String repoPath;
 

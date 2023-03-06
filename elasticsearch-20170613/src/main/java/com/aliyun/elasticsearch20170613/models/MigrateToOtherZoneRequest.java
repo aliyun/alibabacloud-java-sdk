@@ -7,6 +7,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     @NameInMap("body")
     public String body;
 
+    /**
+     * <p>Verify whether the zone node can be migrated. true indicates that the data is only verified and the migration task is not executed. false indicates that the migration task is executed after the verification is successful.</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 

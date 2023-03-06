@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class AddSnapshotRepoResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return results:</p>
+     * <br>
+     * <p>*   true: Reference warehouse created successfully</p>
+     * <p>*   false: Reference warehouse created failed</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
