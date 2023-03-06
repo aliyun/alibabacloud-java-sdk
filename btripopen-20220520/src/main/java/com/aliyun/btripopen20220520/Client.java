@@ -256,6 +256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("depart_name", request.departName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extendField)) {
+            body.put("extend_field", request.extendField);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.externalTravelerListShrink)) {
             body.put("external_traveler_list", request.externalTravelerListShrink);
         }
@@ -631,6 +635,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.departName)) {
             body.put("depart_name", request.departName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendField)) {
+            body.put("extend_field", request.extendField);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.externalTravelerListShrink)) {
@@ -2330,6 +2338,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.flightItineraryScanQueryWithOptions(request, headers, runtime);
     }
 
+    public FlightListingSearchResponse flightListingSearchWithOptions(FlightListingSearchRequest request, FlightListingSearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.airlineCode)) {
+            query.put("airline_code", request.airlineCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arrCityCode)) {
+            query.put("arr_city_code", request.arrCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cabinClass)) {
+            query.put("cabin_class", request.cabinClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depCityCode)) {
+            query.put("dep_city_code", request.depCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depDate)) {
+            query.put("dep_date", request.depDate);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightListingSearch"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/flight/action/listing-search"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightListingSearchResponse());
+    }
+
+    public FlightListingSearchResponse flightListingSearch(FlightListingSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightListingSearchHeaders headers = new FlightListingSearchHeaders();
+        return this.flightListingSearchWithOptions(request, headers, runtime);
+    }
+
     public FlightOrderDetailInfoResponse flightOrderDetailInfoWithOptions(FlightOrderDetailInfoRequest request, FlightOrderDetailInfoHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2492,6 +2556,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         FlightOrderQueryHeaders headers = new FlightOrderQueryHeaders();
         return this.flightOrderQueryWithOptions(request, headers, runtime);
+    }
+
+    public FlightOtaSearchResponse flightOtaSearchWithOptions(FlightOtaSearchRequest request, FlightOtaSearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.airlineCode)) {
+            query.put("airline_code", request.airlineCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arrCityCode)) {
+            query.put("arr_city_code", request.arrCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cabinClass)) {
+            query.put("cabin_class", request.cabinClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.carrierFlightNo)) {
+            query.put("carrier_flight_no", request.carrierFlightNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depCityCode)) {
+            query.put("dep_city_code", request.depCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depDate)) {
+            query.put("dep_date", request.depDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flightNo)) {
+            query.put("flight_no", request.flightNo);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FlightOtaSearch"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/flight/action/ota-search"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FlightOtaSearchResponse());
+    }
+
+    public FlightOtaSearchResponse flightOtaSearch(FlightOtaSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FlightOtaSearchHeaders headers = new FlightOtaSearchHeaders();
+        return this.flightOtaSearchWithOptions(request, headers, runtime);
     }
 
     public FlightPayOrderResponse flightPayOrderWithOptions(FlightPayOrderRequest tmpReq, FlightPayOrderHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3388,6 +3516,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         InvoiceSearchHeaders headers = new InvoiceSearchHeaders();
         return this.invoiceSearchWithOptions(request, headers, runtime);
+    }
+
+    public IsvRuleSaveResponse isvRuleSaveWithOptions(IsvRuleSaveRequest request, IsvRuleSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bookType)) {
+            body.put("book_type", request.bookType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripSoCorpToken)) {
+            realHeaders.put("x-acs-btrip-so-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripSoCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "IsvRuleSave"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/user/v1/rule"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new IsvRuleSaveResponse());
+    }
+
+    public IsvRuleSaveResponse isvRuleSave(IsvRuleSaveRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        IsvRuleSaveHeaders headers = new IsvRuleSaveHeaders();
+        return this.isvRuleSaveWithOptions(request, headers, runtime);
     }
 
     public IsvUserSaveResponse isvUserSaveWithOptions(IsvUserSaveRequest tmpReq, IsvUserSaveHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
