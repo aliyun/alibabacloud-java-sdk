@@ -14,7 +14,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
      * <p>The details of the data.</p>
      */
     @NameInMap("Data")
-    public Object data;
+    public CreateOrUpdateSwimmingLaneGroupResponseBodyData data;
 
     /**
      * <p>The dynamic part in the error message.</p>
@@ -67,11 +67,11 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateOrUpdateSwimmingLaneGroupResponseBody setData(Object data) {
+    public CreateOrUpdateSwimmingLaneGroupResponseBody setData(CreateOrUpdateSwimmingLaneGroupResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public Object getData() {
+    public CreateOrUpdateSwimmingLaneGroupResponseBodyData getData() {
         return this.data;
     }
 
@@ -121,6 +121,168 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class CreateOrUpdateSwimmingLaneGroupResponseBodyData extends TeaModel {
+        @NameInMap("AppIds")
+        public String appIds;
+
+        @NameInMap("DbGrayEnable")
+        public String dbGrayEnable;
+
+        @NameInMap("Enable")
+        public String enable;
+
+        @NameInMap("EntryApp")
+        public String entryApp;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("MessageQueueFilterSide")
+        public String messageQueueFilterSide;
+
+        @NameInMap("MessageQueueGrayEnable")
+        public Boolean messageQueueGrayEnable;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("RecordCanaryDetail")
+        public Boolean recordCanaryDetail;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        public static CreateOrUpdateSwimmingLaneGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateSwimmingLaneGroupResponseBodyData self = new CreateOrUpdateSwimmingLaneGroupResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setAppIds(String appIds) {
+            this.appIds = appIds;
+            return this;
+        }
+        public String getAppIds() {
+            return this.appIds;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setDbGrayEnable(String dbGrayEnable) {
+            this.dbGrayEnable = dbGrayEnable;
+            return this;
+        }
+        public String getDbGrayEnable() {
+            return this.dbGrayEnable;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setEnable(String enable) {
+            this.enable = enable;
+            return this;
+        }
+        public String getEnable() {
+            return this.enable;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setEntryApp(String entryApp) {
+            this.entryApp = entryApp;
+            return this;
+        }
+        public String getEntryApp() {
+            return this.entryApp;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setMessageQueueFilterSide(String messageQueueFilterSide) {
+            this.messageQueueFilterSide = messageQueueFilterSide;
+            return this;
+        }
+        public String getMessageQueueFilterSide() {
+            return this.messageQueueFilterSide;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setMessageQueueGrayEnable(Boolean messageQueueGrayEnable) {
+            this.messageQueueGrayEnable = messageQueueGrayEnable;
+            return this;
+        }
+        public Boolean getMessageQueueGrayEnable() {
+            return this.messageQueueGrayEnable;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setRecordCanaryDetail(Boolean recordCanaryDetail) {
+            this.recordCanaryDetail = recordCanaryDetail;
+            return this;
+        }
+        public Boolean getRecordCanaryDetail() {
+            return this.recordCanaryDetail;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
     }
 
 }
