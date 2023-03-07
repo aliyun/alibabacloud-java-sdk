@@ -125,7 +125,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath extends TeaModel {
-        @NameInMap("trafficPathList")
+        @NameInMap("TrafficPathList")
         public java.util.List<String> trafficPathList;
 
         public static DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath build(java.util.Map<String, ?> map) throws Exception {
