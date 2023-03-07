@@ -131,6 +131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Bid", request.bid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bizCode)) {
+            query.put("BizCode", request.bizCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.callerParentId)) {
             query.put("CallerParentId", request.callerParentId);
         }
@@ -169,6 +173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.popAction)) {
             query.put("PopAction", request.popAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalKey)) {
+            query.put("PrincipalKey", request.principalKey);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxyCallerIp)) {
@@ -1361,6 +1369,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Bid", request.bid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bizCode)) {
+            query.put("BizCode", request.bizCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.callerParentId)) {
             query.put("CallerParentId", request.callerParentId);
         }
@@ -1395,6 +1407,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.popAction)) {
             query.put("PopAction", request.popAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalKey)) {
+            query.put("PrincipalKey", request.principalKey);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxyCallerIp)) {

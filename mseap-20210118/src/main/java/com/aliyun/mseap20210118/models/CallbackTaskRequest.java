@@ -28,6 +28,9 @@ public class CallbackTaskRequest extends TeaModel {
     @NameInMap("Bid")
     public String bid;
 
+    @NameInMap("BizCode")
+    public String bizCode;
+
     /**
      * <p>callerParentId</p>
      */
@@ -87,6 +90,9 @@ public class CallbackTaskRequest extends TeaModel {
      */
     @NameInMap("PopAction")
     public String popAction;
+
+    @NameInMap("PrincipalKey")
+    public String principalKey;
 
     /**
      * <p>proxyCallerIp</p>
@@ -236,6 +242,14 @@ public class CallbackTaskRequest extends TeaModel {
         return this.bid;
     }
 
+    public CallbackTaskRequest setBizCode(String bizCode) {
+        this.bizCode = bizCode;
+        return this;
+    }
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
     public CallbackTaskRequest setCallerParentId(Long callerParentId) {
         this.callerParentId = callerParentId;
         return this;
@@ -314,6 +328,14 @@ public class CallbackTaskRequest extends TeaModel {
     }
     public String getPopAction() {
         return this.popAction;
+    }
+
+    public CallbackTaskRequest setPrincipalKey(String principalKey) {
+        this.principalKey = principalKey;
+        return this;
+    }
+    public String getPrincipalKey() {
+        return this.principalKey;
     }
 
     public CallbackTaskRequest setProxyCallerIp(String proxyCallerIp) {

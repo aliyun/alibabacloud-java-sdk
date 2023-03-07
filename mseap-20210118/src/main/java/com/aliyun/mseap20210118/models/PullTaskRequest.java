@@ -28,6 +28,9 @@ public class PullTaskRequest extends TeaModel {
     @NameInMap("Bid")
     public String bid;
 
+    @NameInMap("BizCode")
+    public String bizCode;
+
     /**
      * <p>callerParentId</p>
      */
@@ -78,6 +81,9 @@ public class PullTaskRequest extends TeaModel {
      */
     @NameInMap("PopAction")
     public String popAction;
+
+    @NameInMap("PrincipalKey")
+    public String principalKey;
 
     /**
      * <p>proxyCallerIp</p>
@@ -215,6 +221,14 @@ public class PullTaskRequest extends TeaModel {
         return this.bid;
     }
 
+    public PullTaskRequest setBizCode(String bizCode) {
+        this.bizCode = bizCode;
+        return this;
+    }
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
     public PullTaskRequest setCallerParentId(Long callerParentId) {
         this.callerParentId = callerParentId;
         return this;
@@ -285,6 +299,14 @@ public class PullTaskRequest extends TeaModel {
     }
     public String getPopAction() {
         return this.popAction;
+    }
+
+    public PullTaskRequest setPrincipalKey(String principalKey) {
+        this.principalKey = principalKey;
+        return this;
+    }
+    public String getPrincipalKey() {
+        return this.principalKey;
     }
 
     public PullTaskRequest setProxyCallerIp(String proxyCallerIp) {
