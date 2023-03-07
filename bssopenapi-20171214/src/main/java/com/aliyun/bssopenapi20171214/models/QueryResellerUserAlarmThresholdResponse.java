@@ -3,7 +3,7 @@ package com.aliyun.bssopenapi20171214.models;
 
 import com.aliyun.tea.*;
 
-public class QueryMonthlyBillResponse extends TeaModel {
+public class QueryResellerUserAlarmThresholdResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class QueryMonthlyBillResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public QueryMonthlyBillResponseBody body;
+    public QueryResellerUserAlarmThresholdResponseBody body;
 
-    public static QueryMonthlyBillResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryMonthlyBillResponse self = new QueryMonthlyBillResponse();
+    public static QueryResellerUserAlarmThresholdResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryResellerUserAlarmThresholdResponse self = new QueryResellerUserAlarmThresholdResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryMonthlyBillResponse setHeaders(java.util.Map<String, String> headers) {
+    public QueryResellerUserAlarmThresholdResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class QueryMonthlyBillResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryMonthlyBillResponse setStatusCode(Integer statusCode) {
+    public QueryResellerUserAlarmThresholdResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class QueryMonthlyBillResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryMonthlyBillResponse setBody(QueryMonthlyBillResponseBody body) {
+    public QueryResellerUserAlarmThresholdResponse setBody(QueryResellerUserAlarmThresholdResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryMonthlyBillResponseBody getBody() {
+    public QueryResellerUserAlarmThresholdResponseBody getBody() {
         return this.body;
     }
 

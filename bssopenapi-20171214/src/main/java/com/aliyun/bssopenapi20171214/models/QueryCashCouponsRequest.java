@@ -4,12 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCashCouponsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the voucher takes effect. Valid values:</p>
+     * <br>
+     * <p>*   true: The voucher takes effect.</p>
+     * <p>*   false: The voucher does not take effect.</p>
+     */
     @NameInMap("EffectiveOrNot")
     public Boolean effectiveOrNot;
 
+    /**
+     * <p>The end time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.</p>
+     */
     @NameInMap("ExpiryTimeEnd")
     public String expiryTimeEnd;
 
+    /**
+     * <p>The start time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.</p>
+     */
     @NameInMap("ExpiryTimeStart")
     public String expiryTimeStart;
 

@@ -43,6 +43,9 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("Tag")
     public java.util.List<QuerySavingsPlansInstanceRequestTag> tag;
 
@@ -97,6 +100,14 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public QuerySavingsPlansInstanceRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public QuerySavingsPlansInstanceRequest setTag(java.util.List<QuerySavingsPlansInstanceRequestTag> tag) {

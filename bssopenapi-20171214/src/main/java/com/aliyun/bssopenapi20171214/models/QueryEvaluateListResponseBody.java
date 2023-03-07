@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryEvaluateListResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryEvaluateListResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,66 +80,139 @@ public class QueryEvaluateListResponseBody extends TeaModel {
     }
 
     public static class QueryEvaluateListResponseBodyDataEvaluateListEvaluate extends TeaModel {
+        /**
+         * <p>The billing cycle.</p>
+         */
         @NameInMap("BillCycle")
         public String billCycle;
 
+        /**
+         * <p>The ID of the bill.</p>
+         */
         @NameInMap("BillId")
         public Long billId;
 
+        /**
+         * <p>The time.</p>
+         */
         @NameInMap("BizTime")
         public String bizTime;
 
+        /**
+         * <p>The market type in the invoice. Valid values:</p>
+         * <br>
+         * <p>*   ALIYUN: Alibaba Cloud</p>
+         * <p>*   MARKETPLACE: Alibaba Cloud Marketplace</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The invoiceable amount.</p>
+         */
         @NameInMap("CanInvoiceAmount")
         public Long canInvoiceAmount;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the invoice.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The invoiced amount.</p>
+         */
         @NameInMap("InvoicedAmount")
         public Long invoicedAmount;
 
+        /**
+         * <p>The ID of the item.</p>
+         */
         @NameInMap("ItemId")
         public Long itemId;
 
+        /**
+         * <p>The name of the object to be invoiced.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>If a refund is issued due to an order such as an unsubscription order or a configuration downgrade order, the refund amount is used to offset the amount of the invoice. The value is consistent with the value of the **OffsetCostAmount** parameter.</p>
+         */
         @NameInMap("OffsetAcceptAmount")
         public Long offsetAcceptAmount;
 
+        /**
+         * <p>The refund amount used to offset the amount of the invoice. If a refund is issued due to an order such as an unsubscription order or a configuration downgrade order, the refund amount is used to offset the amount of the invoice. The value is consistent with the value of the **OffsetAcceptAmount** parameter.</p>
+         */
         @NameInMap("OffsetCostAmount")
         public Long offsetCostAmount;
 
+        /**
+         * <p>The ID of the external object.</p>
+         */
         @NameInMap("OpId")
         public String opId;
 
+        /**
+         * <p>The original amount.</p>
+         */
         @NameInMap("OriginalAmount")
         public Long originalAmount;
 
+        /**
+         * <p>The ID of the external order.</p>
+         */
         @NameInMap("OutBizId")
         public String outBizId;
 
+        /**
+         * <p>The balance.</p>
+         */
         @NameInMap("PresentAmount")
         public Long presentAmount;
 
+        /**
+         * <p>The status of the invoiceable amount.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The type of orders that are queried. Valid values:</p>
+         * <br>
+         * <p>*   1: the orders in which the invoiceable amount is negative.</p>
+         * <p>*   2: the orders in which the invoiceable amount is positive.</p>
+         * <p>*   3: the orders in which the invoiceable amount is not 0.</p>
+         * <p>*   4: the orders in which the amount that has been invoiced is greater than 0.</p>
+         * <br>
+         * <p>>  By default, this parameter is left empty. If this parameter is left empty, all orders are queried.</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("UserNick")
         public String userNick;
 
@@ -323,24 +411,45 @@ public class QueryEvaluateListResponseBody extends TeaModel {
     }
 
     public static class QueryEvaluateListResponseBodyData extends TeaModel {
+        /**
+         * <p>The data returned.</p>
+         */
         @NameInMap("EvaluateList")
         public QueryEvaluateListResponseBodyDataEvaluateList evaluateList;
 
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The number of the page returned.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The invoiced amount that meets the query conditions. Unit: Cent.</p>
+         */
         @NameInMap("TotalInvoiceAmount")
         public Long totalInvoiceAmount;
 
+        /**
+         * <p>The invoiceable amount that meets the query conditions. Unit: Cent.</p>
+         */
         @NameInMap("TotalUnAppliedInvoiceAmount")
         public Long totalUnAppliedInvoiceAmount;
 

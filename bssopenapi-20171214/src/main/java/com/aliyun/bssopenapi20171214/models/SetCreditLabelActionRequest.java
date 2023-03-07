@@ -4,54 +4,105 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetCreditLabelActionRequest extends TeaModel {
+    /**
+     * <p>The type of the action. Valid values: SET: adds the pay-as-you-go tag. CANCEL: removes the pay-as-you-go tag.</p>
+     */
     @NameInMap("ActionType")
     public String actionType;
 
+    /**
+     * <p>The cycle in which the account is notified of payment. **You do not need to specify this parameter.</p>
+     */
     @NameInMap("ClearCycle")
     public String clearCycle;
 
+    /**
+     * <p>The credit line of the account.</p>
+     */
     @NameInMap("CreditAmount")
     public String creditAmount;
 
+    /**
+     * <p>The code of currency that is used. Valid values: USD and CNY.</p>
+     */
     @NameInMap("CurrencyCode")
     public String currencyCode;
 
+    /**
+     * <p>The cycle in which payment can be deferred. **You do not need to specify this parameter.</p>
+     */
     @NameInMap("DailyCycle")
     public String dailyCycle;
 
+    /**
+     * <p>The description of the action.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to add the post-settlement tag. **You do not need to specify this parameter.</p>
+     */
     @NameInMap("IsNeedAddSettleLabel")
     public String isNeedAddSettleLabel;
 
+    /**
+     * <p>Specifies whether to synchronize the monthly settlement tag. **You do not need to specify this parameter.</p>
+     */
     @NameInMap("IsNeedAdjustCreditAccount")
     public String isNeedAdjustCreditAccount;
 
+    /**
+     * <p>Specifies whether to save the notification rule. **You do not need to specify this parameter.</p>
+     */
     @NameInMap("IsNeedSaveNotifyRule")
     public String isNeedSaveNotifyRule;
 
+    /**
+     * <p>Specifies whether to set a credit line. **You do not need to specify this parameter.</p>
+     */
     @NameInMap("IsNeedSetCreditAmount")
     public String isNeedSetCreditAmount;
 
+    /**
+     * <p>Specifies whether to notify the account of an identity change. **You do not need to specify this parameter.</p>
+     */
     @NameInMap("NeedNotice")
     public Boolean needNotice;
 
+    /**
+     * <p>Specifies whether to call another operation to create a credit ledger. **You do not need to specify this parameter.</p>
+     */
     @NameInMap("NewCreateMode")
     public Boolean newCreateMode;
 
+    /**
+     * <p>The operator who performs the action.</p>
+     */
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The code of the site. **You do not need to specify this parameter.</p>
+     */
     @NameInMap("SiteCode")
     public String siteCode;
 
+    /**
+     * <p>The source of the action.</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("Uid")
     public String uid;
 

@@ -4,42 +4,87 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryAvailableInstancesRequest extends TeaModel {
+    /**
+     * <p>The end time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
+    /**
+     * <p>The start time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("CreateTimeStart")
     public String createTimeStart;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.</p>
+     */
     @NameInMap("EndTimeEnd")
     public String endTimeEnd;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.</p>
+     */
     @NameInMap("EndTimeStart")
     public String endTimeStart;
 
+    /**
+     * <p>The ID of the instance. Separate multiple IDs with commas (,). You can specify a maximum of 100 IDs.</p>
+     */
     @NameInMap("InstanceIDs")
     public String instanceIDs;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The code of the service. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud services**.</p>
+     * <br>
+     * <p>>This parameter cannot be left empty if the region is specified.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The type of the service.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The ID of the region in which the instance resides.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The renewal status of the specified instance. Valid values:</p>
+     * <br>
+     * <p>*   AutoRenewal: The instance is automatically renewed.</p>
+     * <p>*   ManualRenewal: The instance is manually renewed.</p>
+     * <p>*   NotRenewal: The instance is not renewed.</p>
+     */
     @NameInMap("RenewStatus")
     public String renewStatus;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   Subscription: subscription</p>
+     * <p>*   PayAsYouGo: pay-as-you-go</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 

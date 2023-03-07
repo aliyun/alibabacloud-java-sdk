@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryRedeemResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryRedeemResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +80,74 @@ public class QueryRedeemResponseBody extends TeaModel {
     }
 
     public static class QueryRedeemResponseBodyDataRedeemRedeem extends TeaModel {
+        /**
+         * <p>The services to which the redemption coupon is applicable.</p>
+         */
         @NameInMap("ApplicableProducts")
         public String applicableProducts;
 
+        /**
+         * <p>The balance of the redemption coupon.</p>
+         */
         @NameInMap("Balance")
         public String balance;
 
+        /**
+         * <p>The time when the redemption coupon took effect.</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        /**
+         * <p>The time when the redemption coupon expired.</p>
+         */
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
+        /**
+         * <p>The time when the redemption coupon was issued.</p>
+         */
         @NameInMap("GrantedTime")
         public String grantedTime;
 
+        /**
+         * <p>The nominal value of the redemption coupon.</p>
+         */
         @NameInMap("NominalValue")
         public String nominalValue;
 
+        /**
+         * <p>The ID of the redemption coupon.</p>
+         */
         @NameInMap("RedeemId")
         public String redeemId;
 
+        /**
+         * <p>The number of the redemption coupon.</p>
+         */
         @NameInMap("RedeemNo")
         public String redeemNo;
 
+        /**
+         * <p>The specifications of the redemption coupon.</p>
+         */
         @NameInMap("Specification")
         public String specification;
 
+        /**
+         * <p>The status of the redemption coupon. Valid values:</p>
+         * <br>
+         * <p>*   Generated</p>
+         * <p>*   CallBack</p>
+         * <p>*   RefundPending</p>
+         * <p>*   Canceled</p>
+         * <p>*   Order_Canceled</p>
+         * <p>*   ActivePending</p>
+         * <p>*   ActiveSuccess</p>
+         * <p>*   ExchangePending</p>
+         * <p>*   ExchangeSuccess</p>
+         * <p>*   Expired</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -202,15 +258,27 @@ public class QueryRedeemResponseBody extends TeaModel {
     }
 
     public static class QueryRedeemResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Long pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The details of the redemption coupon.</p>
+         */
         @NameInMap("Redeem")
         public QueryRedeemResponseBodyDataRedeem redeem;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

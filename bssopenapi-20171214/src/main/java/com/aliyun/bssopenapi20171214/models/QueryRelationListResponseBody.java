@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryRelationListResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryRelationListResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +80,63 @@ public class QueryRelationListResponseBody extends TeaModel {
     }
 
     public static class QueryRelationListResponseBodyDataFinancialRelationInfoList extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The display name of the account.</p>
+         */
         @NameInMap("AccountNickName")
         public String accountNickName;
 
+        /**
+         * <p>The type of the account. Valid values: MASTER and MEMBER.</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>The time when the relationship became invalid. If no value is returned, the relationship is still valid.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the relationship.</p>
+         */
         @NameInMap("RelationId")
         public Long relationId;
 
+        /**
+         * <p>The type of the relationship. Valid values: FinancialManagement and FinancialTrusteeship.</p>
+         */
         @NameInMap("RelationType")
         public String relationType;
 
+        /**
+         * <p>The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</p>
+         */
         @NameInMap("SetupTime")
         public String setupTime;
 
+        /**
+         * <p>The time when the relationship became valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The state of the relationship. One of the enumeration members of the RelationshipStatusEnum data type is returned.</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -183,15 +228,27 @@ public class QueryRelationListResponseBody extends TeaModel {
     }
 
     public static class QueryRelationListResponseBodyData extends TeaModel {
+        /**
+         * <p>The relationships.</p>
+         */
         @NameInMap("FinancialRelationInfoList")
         public java.util.List<QueryRelationListResponseBodyDataFinancialRelationInfoList> financialRelationInfoList;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

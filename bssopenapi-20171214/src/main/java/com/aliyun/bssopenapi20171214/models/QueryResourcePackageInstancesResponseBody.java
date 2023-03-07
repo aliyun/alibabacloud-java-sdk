@@ -4,27 +4,51 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryResourcePackageInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryResourcePackageInstancesResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -117,45 +141,90 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     }
 
     public static class QueryResourcePackageInstancesResponseBodyDataInstancesInstance extends TeaModel {
+        /**
+         * <p>The services to which the resource plan is applicable.</p>
+         */
         @NameInMap("ApplicableProducts")
         public QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts applicableProducts;
 
+        /**
+         * <p>The commodity code.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The deduction type. Example: Absolute.</p>
+         */
         @NameInMap("DeductType")
         public String deductType;
 
+        /**
+         * <p>The time when the resource plan took effect.</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        /**
+         * <p>The time when the resource plan expired.</p>
+         */
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The type of the resource plan.</p>
+         */
         @NameInMap("PackageType")
         public String packageType;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The remaining quota.</p>
+         */
         @NameInMap("RemainingAmount")
         public String remainingAmount;
 
+        /**
+         * <p>The unit of the remaining quota.</p>
+         */
         @NameInMap("RemainingAmountUnit")
         public String remainingAmountUnit;
 
+        /**
+         * <p>The remarks on the resource plan. The remarks must be made in Chinese.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The status of the resource plan. Valid values:</p>
+         * <br>
+         * <p>*   Available</p>
+         * <p>*   Expired</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The total quota of the resource plan.</p>
+         */
         @NameInMap("TotalAmount")
         public String totalAmount;
 
+        /**
+         * <p>The unit of the total quota.</p>
+         */
         @NameInMap("TotalAmountUnit")
         public String totalAmountUnit;
 
@@ -298,18 +367,33 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     }
 
     public static class QueryResourcePackageInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The details of the instances.</p>
+         */
         @NameInMap("Instances")
         public QueryResourcePackageInstancesResponseBodyDataInstances instances;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public String pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public String totalCount;
 

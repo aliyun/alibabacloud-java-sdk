@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInvoicingCustomerListResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryInvoicingCustomerListResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,66 +80,138 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
     }
 
     public static class QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice extends TeaModel {
+        /**
+         * <p>The type of invoice that was changed to.</p>
+         */
         @NameInMap("AdjustType")
         public Long adjustType;
 
+        /**
+         * <p>The bank that issues the invoice.</p>
+         */
         @NameInMap("Bank")
         public String bank;
 
+        /**
+         * <p>The bank account number.</p>
+         */
         @NameInMap("BankNo")
         public String bankNo;
 
+        /**
+         * <p>The authentication type of Alipay. Valid values:</p>
+         * <br>
+         * <p>*   1: individual</p>
+         * <p>*   2: company</p>
+         */
         @NameInMap("CustomerType")
         public Long customerType;
 
+        /**
+         * <p>The default note that is attached when the title is specified.</p>
+         */
         @NameInMap("DefaultRemark")
         public String defaultRemark;
 
+        /**
+         * <p>The time when the payment ended.</p>
+         */
         @NameInMap("EndCycle")
         public Long endCycle;
 
+        /**
+         * <p>The time when the invoice was created. The time was in the yyyy-mm-dd hh:mm:ss format.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The ID of the invoice.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The company name in the invoice title.</p>
+         */
         @NameInMap("InvoiceTitle")
         public String invoiceTitle;
 
+        /**
+         * <p>The type of issue.</p>
+         */
         @NameInMap("IssueType")
         public Long issueType;
 
+        /**
+         * <p>The address of the business license.</p>
+         */
         @NameInMap("OperatingLicenseAddress")
         public String operatingLicenseAddress;
 
+        /**
+         * <p>The phone number of the business license.</p>
+         */
         @NameInMap("OperatingLicensePhone")
         public String operatingLicensePhone;
 
+        /**
+         * <p>The tax registration number.</p>
+         */
         @NameInMap("RegisterNo")
         public String registerNo;
 
+        /**
+         * <p>The time when the payment started.</p>
+         */
         @NameInMap("StartCycle")
         public Long startCycle;
 
+        /**
+         * <p>The status of the invoice title.</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The path and file name of the scanned copy of the tax registration certificate.</p>
+         */
         @NameInMap("TaxationLicense")
         public String taxationLicense;
 
+        /**
+         * <p>The type of the taxpayer. Valid values:</p>
+         * <br>
+         * <p>*   1: general taxpayer</p>
+         * <p>*   2: special taxpayer</p>
+         */
         @NameInMap("TaxpayerType")
         public Long taxpayerType;
 
+        /**
+         * <p>The instruction document of the invoice title change.</p>
+         */
         @NameInMap("TitleChangeInstructions")
         public String titleChangeInstructions;
 
+        /**
+         * <p>The type of the invoice. Valid values:</p>
+         * <br>
+         * <p>*   0: plain value-added tax (VAT) invoice</p>
+         * <p>*   1: special VAT invoice</p>
+         */
         @NameInMap("Type")
         public Long type;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("UserNick")
         public String userNick;
 
@@ -323,6 +410,9 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
     }
 
     public static class QueryInvoicingCustomerListResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the invoice.</p>
+         */
         @NameInMap("CustomerInvoiceList")
         public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceList customerInvoiceList;
 

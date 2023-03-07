@@ -4,30 +4,57 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryAccountTransactionDetailsRequest extends TeaModel {
+    /**
+     * <p>The end of the creation time range to query.</p>
+     */
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
+    /**
+     * <p>The beginning of the creation time range to query.</p>
+     */
     @NameInMap("CreateTimeStart")
     public String createTimeStart;
 
+    /**
+     * <p>This parameter is invalid.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for paging.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the order or bill.</p>
+     */
     @NameInMap("RecordID")
     public String recordID;
 
+    /**
+     * <p>The transaction channel.</p>
+     */
     @NameInMap("TransactionChannel")
     public String transactionChannel;
 
+    /**
+     * <p>The serial number of the transaction channel.</p>
+     */
     @NameInMap("TransactionChannelSN")
     public String transactionChannelSN;
 
+    /**
+     * <p>The number of the transaction.</p>
+     */
     @NameInMap("TransactionNumber")
     public String transactionNumber;
 
+    /**
+     * <p>The type of the transaction.</p>
+     */
     @NameInMap("TransactionType")
     public String transactionType;
 

@@ -4,36 +4,81 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryBillRequest extends TeaModel {
+    /**
+     * <p>The ID of the member.</p>
+     */
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
+    /**
+     * <p>The billing cycle, in the YYYY-MM format.</p>
+     */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
+    /**
+     * <p>Specifies whether to display local currency information in bills. The parameter will be discontinued.</p>
+     */
     @NameInMap("IsDisplayLocalCurrency")
     public Boolean isDisplayLocalCurrency;
 
+    /**
+     * <p>Specifies whether to filter out a bill whose pretax gross amount is 0. By default, a bill whose pretax gross amount is 0 is not filtered out. Valid values:</p>
+     * <br>
+     * <p>*   true: filters out a bill whose pretax gross amount is 0.</p>
+     * <p>*   false: does not filter out a bill whose pretax gross amount is 0.</p>
+     */
     @NameInMap("IsHideZeroCharge")
     public Boolean isHideZeroCharge;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The type of the service.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   Subscription</p>
+     * <p>*   PayAsYouGo</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>****This parameter must be used together with the ProductCode parameter.</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
+    /**
+     * <p>The type of the bill. Valid values:</p>
+     * <br>
+     * <p>*   SubscriptionOrder</p>
+     * <p>*   PayAsYouGoBill</p>
+     * <p>*   Refund</p>
+     * <p>*   Adjustment</p>
+     */
     @NameInMap("Type")
     public String type;
 

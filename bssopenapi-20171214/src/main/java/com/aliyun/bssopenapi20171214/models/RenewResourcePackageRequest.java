@@ -4,18 +4,37 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class RenewResourcePackageRequest extends TeaModel {
+    /**
+     * <p>The renewal period of the resource plan.</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("EffectiveDate")
     public String effectiveDate;
 
+    /**
+     * <p>The ID of the resource plan.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The unit of the validity period for the resource plan. Valid values:</p>
+     * <br>
+     * <p>*   Month</p>
+     * <p>*   Year</p>
+     * <br>
+     * <p>Default value: Month.</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 

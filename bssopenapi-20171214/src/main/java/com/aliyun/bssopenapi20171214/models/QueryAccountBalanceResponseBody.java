@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryAccountBalanceResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryAccountBalanceResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +80,37 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
     }
 
     public static class QueryAccountBalanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The available balance of the account.</p>
+         */
         @NameInMap("AvailableAmount")
         public String availableAmount;
 
+        /**
+         * <p>The available balance in cash.</p>
+         */
         @NameInMap("AvailableCashAmount")
         public String availableCashAmount;
 
+        /**
+         * <p>The credit balance of the account.</p>
+         */
         @NameInMap("CreditAmount")
         public String creditAmount;
 
+        /**
+         * <p>The type of the currency. Valid values:</p>
+         * <br>
+         * <p>*   CNY: Chinese Yuan</p>
+         * <p>*   USD: US dollar</p>
+         * <p>*   JPY: Japanese Yen</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The credit line controlled by MYbank.</p>
+         */
         @NameInMap("MybankCreditAmount")
         public String mybankCreditAmount;
 

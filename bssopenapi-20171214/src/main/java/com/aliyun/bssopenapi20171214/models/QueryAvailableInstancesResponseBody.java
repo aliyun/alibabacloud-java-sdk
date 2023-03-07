@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryAvailableInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryAvailableInstancesResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,57 +80,121 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
     }
 
     public static class QueryAvailableInstancesResponseBodyDataInstanceList extends TeaModel {
+        /**
+         * <p>The time when the specified instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the instance was expired.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The time when the specified instance was expected to be released.</p>
+         */
         @NameInMap("ExpectedReleaseTime")
         public String expectedReleaseTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The ID of the instance owner.</p>
+         */
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The type of the service.</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The ID of the region in which the instance resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The time when the instance was released.</p>
+         */
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
+        /**
+         * <p>The renewal status of the specified instance. Valid values:</p>
+         * <br>
+         * <p>*   AutoRenewal: The instance is automatically renewed.</p>
+         * <p>*   ManualRenewal: The instance is manually renewed.</p>
+         * <p>*   NotRenewal: The instance is not renewed.</p>
+         */
         @NameInMap("RenewStatus")
         public String renewStatus;
 
+        /**
+         * <p>The number of auto-renewal cycles.</p>
+         */
         @NameInMap("RenewalDuration")
         public Integer renewalDuration;
 
+        /**
+         * <p>The unit of the auto-renewal cycle. Valid values:</p>
+         * <br>
+         * <p>*   M: month</p>
+         * <p>*   Y: year</p>
+         */
         @NameInMap("RenewalDurationUnit")
         public String renewalDurationUnit;
 
+        /**
+         * <p>The seller.</p>
+         */
         @NameInMap("Seller")
         public String seller;
 
+        /**
+         * <p>The ID of the seller.</p>
+         */
         @NameInMap("SellerId")
         public Long sellerId;
 
+        /**
+         * <p>The status of the instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the specified instance was suspended.</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 
+        /**
+         * <p>The sub-status of the specified instance.</p>
+         */
         @NameInMap("SubStatus")
         public String subStatus;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   Subscription: subscription</p>
+         * <p>*   PayAsYouGo: pay-as-you-go</p>
+         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
@@ -271,15 +350,27 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
     }
 
     public static class QueryAvailableInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The instances returned.</p>
+         */
         @NameInMap("InstanceList")
         public java.util.List<QueryAvailableInstancesResponseBodyDataInstanceList> instanceList;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

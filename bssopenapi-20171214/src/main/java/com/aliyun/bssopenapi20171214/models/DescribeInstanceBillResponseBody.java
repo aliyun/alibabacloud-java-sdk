@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceBillResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeInstanceBillResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,141 +80,291 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceBillResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The amount deducted with credit refund.</p>
+         */
         @NameInMap("AdjustAmount")
         public Float adjustAmount;
 
+        /**
+         * <p>The ID of the account to which the bill belongs.</p>
+         */
         @NameInMap("BillAccountID")
         public String billAccountID;
 
+        /**
+         * <p>The name of the account to which the bill belongs.</p>
+         */
         @NameInMap("BillAccountName")
         public String billAccountName;
 
+        /**
+         * <p>The billing date. This parameter is returned only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+         */
         @NameInMap("BillingDate")
         public String billingDate;
 
+        /**
+         * <p>The billable item. A value is returned only if the IsBillingItem parameter is set to true.</p>
+         */
         @NameInMap("BillingItem")
         public String billingItem;
 
+        /**
+         * <p>The code of the billable item.</p>
+         */
         @NameInMap("BillingItemCode")
         public String billingItemCode;
 
+        /**
+         * <p>The billing method.</p>
+         */
         @NameInMap("BillingType")
         public String billingType;
 
+        /**
+         * <p>The type of business.</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The amount paid in cash. The amount deducted with credit refund is not included.</p>
+         */
         @NameInMap("CashAmount")
         public Float cashAmount;
 
+        /**
+         * <p>The code of the commodity. The code is the same as that in Cost Center.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The cost center.</p>
+         */
         @NameInMap("CostUnit")
         public String costUnit;
 
+        /**
+         * <p>The type of currency. Valid values:</p>
+         * <br>
+         * <p>*   CNY</p>
+         * <p>*   USD</p>
+         * <p>*   JPY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The amount deducted with vouchers.</p>
+         */
         @NameInMap("DeductedByCashCoupons")
         public Float deductedByCashCoupons;
 
+        /**
+         * <p>The amount deducted with coupons.</p>
+         */
         @NameInMap("DeductedByCoupons")
         public Float deductedByCoupons;
 
+        /**
+         * <p>The amount deducted with prepaid cards.</p>
+         */
         @NameInMap("DeductedByPrepaidCard")
         public Float deductedByPrepaidCard;
 
+        /**
+         * <p>The amount deducted with resource plans. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+         */
         @NameInMap("DeductedByResourcePackage")
         public String deductedByResourcePackage;
 
+        /**
+         * <p>The configurations of the instance.</p>
+         */
         @NameInMap("InstanceConfig")
         public String instanceConfig;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the instance.</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("InternetIP")
         public String internetIP;
 
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("IntranetIP")
         public String intranetIP;
 
+        /**
+         * <p>The discount amount.</p>
+         */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
+        /**
+         * <p>The type of the bill.</p>
+         * <br>
+         * <p>*   SubscriptionOrder: the subscription bill.</p>
+         * <p>*   PayAsYouGoBill: the pay-as-you-go bill,</p>
+         * <p>*   Refund: the refund.</p>
+         * <p>*   Adjustment: the adjustment bill.</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>The name of the project.</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <p>The unit price of the service. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+         */
         @NameInMap("ListPrice")
         public String listPrice;
 
+        /**
+         * <p>The unit of the unit price. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+         */
         @NameInMap("ListPriceUnit")
         public String listPriceUnit;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <p>The unsettled amount.</p>
+         */
         @NameInMap("OutstandingAmount")
         public Float outstandingAmount;
 
+        /**
+         * <p>The ID of the account that owns the resource. This parameter is returned in multi-account payment scenario.</p>
+         */
         @NameInMap("OwnerID")
         public String ownerID;
 
+        /**
+         * <p>The amount paid in cash. The amount deducted with credit refund is not included.</p>
+         */
         @NameInMap("PaymentAmount")
         public Float paymentAmount;
 
+        /**
+         * <p>The code of the service. The code is the same as that in Cost Center.</p>
+         */
         @NameInMap("PipCode")
         public String pipCode;
 
+        /**
+         * <p>The pretax amount.</p>
+         */
         @NameInMap("PretaxAmount")
         public Float pretaxAmount;
 
+        /**
+         * <p>The pretax gross amount.</p>
+         */
         @NameInMap("PretaxGrossAmount")
         public Float pretaxGrossAmount;
 
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The details of the service.</p>
+         */
         @NameInMap("ProductDetail")
         public String productDetail;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The type of the service.</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
+        /**
+         * <p>The service duration.</p>
+         */
         @NameInMap("ServicePeriod")
         public String servicePeriod;
 
+        /**
+         * <p>The unit of the service duration.</p>
+         */
         @NameInMap("ServicePeriodUnit")
         public String servicePeriodUnit;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   Subscription: the subscription billing method.</p>
+         * <p>*   PayAsYouGo: the pay-as-you-go billing method.</p>
+         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
+        /**
+         * <p>The tag of the resource.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The usage of the service. This parameter is valid only when the isBillingItem parameter is set to true. The usage is the total usage in all bills in the billing cycle, not the amount that you purchase. For example, if 1 GB of storage is used and bills are generated every hour, the usage is 1 GB per hour. In this case, the usage is 24 GB per day.</p>
+         */
         @NameInMap("Usage")
         public String usage;
 
+        /**
+         * <p>The unit of usage. This parameter is valid only when the isBillingItem parameter is set to true.</p>
+         */
         @NameInMap("UsageUnit")
         public String usageUnit;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 
@@ -579,24 +744,45 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceBillResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the account.</p>
+         */
         @NameInMap("AccountID")
         public String accountID;
 
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The billing cycle in the YYYY-MM format.</p>
+         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
+        /**
+         * <p>The details of the bill.</p>
+         */
         @NameInMap("Items")
         public java.util.List<DescribeInstanceBillResponseBodyDataItems> items;
 
+        /**
+         * <p>The maximum number of entries returned.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The position where the query stopped. If this parameter is left empty, all the results are returned. If you perform another call, you must set the NextToken parameter to the value of this parameter.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

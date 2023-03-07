@@ -4,30 +4,59 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateAgAccountRequest extends TeaModel {
+    /**
+     * <p>The attribute of the account. To view the attribute of the account, use the account to log on to the Alibaba Cloud Management Console, move the pointer over the profile picture in the upper-right corner, and then click **Security Settings**.</p>
+     */
     @NameInMap("AccountAttr")
     public String accountAttr;
 
+    /**
+     * <p>The name of the city.</p>
+     */
     @NameInMap("CityName")
     public String cityName;
 
+    /**
+     * <p>The name of the enterprise.</p>
+     */
     @NameInMap("EnterpriseName")
     public String enterpriseName;
 
+    /**
+     * <p>The first name.</p>
+     */
     @NameInMap("FirstName")
     public String firstName;
 
+    /**
+     * <p>The last name.</p>
+     * <br>
+     * <p>The last name can be up to 64 characters in length.</p>
+     */
     @NameInMap("LastName")
     public String lastName;
 
+    /**
+     * <p>The email address used to log on to the account.</p>
+     */
     @NameInMap("LoginEmail")
     public String loginEmail;
 
+    /**
+     * <p>The country code.</p>
+     */
     @NameInMap("NationCode")
     public String nationCode;
 
+    /**
+     * <p>The zip code.</p>
+     */
     @NameInMap("Postcode")
     public String postcode;
 
+    /**
+     * <p>The name of the province. This parameter is optional.</p>
+     */
     @NameInMap("ProvinceName")
     public String provinceName;
 

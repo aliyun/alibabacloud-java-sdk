@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeProductAmortizedCostByAmortizationPeriodResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,138 +80,279 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
     }
 
     public static class DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The allocation month. Format: YYYYMM.</p>
+         */
         @NameInMap("AmortizationPeriod")
         public String amortizationPeriod;
 
+        /**
+         * <p>The allocation status. Valid values:</p>
+         * <br>
+         * <p>*   amortized: allocated</p>
+         * <p>*   unAmortized: not allocated</p>
+         */
         @NameInMap("AmortizationStatus")
         public String amortizationStatus;
 
+        /**
+         * <p>The ID of the account to which the bill belongs.</p>
+         */
         @NameInMap("BillAccountID")
         public Long billAccountID;
 
+        /**
+         * <p>The name of the account to which the bill belongs.</p>
+         */
         @NameInMap("BillAccountName")
         public String billAccountName;
 
+        /**
+         * <p>The ID of the account to which the resource belongs.</p>
+         */
         @NameInMap("BillOwnerID")
         public Long billOwnerID;
 
+        /**
+         * <p>The name of the account to which the resource belongs.</p>
+         */
         @NameInMap("BillOwnerName")
         public String billOwnerName;
 
+        /**
+         * <p>The business type.</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The billing cycle. Format: YYYYMM.</p>
+         */
         @NameInMap("ConsumePeriod")
         public String consumePeriod;
 
+        /**
+         * <p>The amount deducted by using vouchers and allocated to the current allocation month.</p>
+         */
         @NameInMap("CurrentAmortizationDeductedByCashCoupons")
         public Double currentAmortizationDeductedByCashCoupons;
 
+        /**
+         * <p>The amount deducted by using coupons and allocated to the current allocation month.</p>
+         */
         @NameInMap("CurrentAmortizationDeductedByCoupons")
         public Double currentAmortizationDeductedByCoupons;
 
+        /**
+         * <p>The amount deducted by using prepaid cards and allocated to the current allocation month.</p>
+         */
         @NameInMap("CurrentAmortizationDeductedByPrepaidCard")
         public Double currentAmortizationDeductedByPrepaidCard;
 
+        /**
+         * <p>The expenditure amount allocated to the current allocation month. Invoicing is supported.</p>
+         */
         @NameInMap("CurrentAmortizationExpenditureAmount")
         public Double currentAmortizationExpenditureAmount;
 
+        /**
+         * <p>The discount amount allocated to the current allocation month.</p>
+         */
         @NameInMap("CurrentAmortizationInvoiceDiscount")
         public Double currentAmortizationInvoiceDiscount;
 
+        /**
+         * <p>The pretax amount allocated to the current allocation month.</p>
+         */
         @NameInMap("CurrentAmortizationPretaxAmount")
         public Double currentAmortizationPretaxAmount;
 
+        /**
+         * <p>The pretax gross amount allocated to the current allocation month.</p>
+         */
         @NameInMap("CurrentAmortizationPretaxGrossAmount")
         public Double currentAmortizationPretaxGrossAmount;
 
+        /**
+         * <p>The round-off amount allocated to the current allocation month.</p>
+         */
         @NameInMap("CurrentAmortizationRoundDownDiscount")
         public Double currentAmortizationRoundDownDiscount;
 
+        /**
+         * <p>The amount deducted by using vouchers.</p>
+         */
         @NameInMap("DeductedByCashCoupons")
         public Double deductedByCashCoupons;
 
+        /**
+         * <p>The amount deducted by using coupons.</p>
+         */
         @NameInMap("DeductedByCoupons")
         public Double deductedByCoupons;
 
+        /**
+         * <p>The amount deducted by using prepaid cards.</p>
+         */
         @NameInMap("DeductedByPrepaidCard")
         public Double deductedByPrepaidCard;
 
+        /**
+         * <p>The expenditure amount. Invoicing is supported.</p>
+         */
         @NameInMap("ExpenditureAmount")
         public Double expenditureAmount;
 
+        /**
+         * <p>The discount amount.</p>
+         */
         @NameInMap("InvoiceDiscount")
         public Double invoiceDiscount;
 
+        /**
+         * <p>The pretax amount.</p>
+         */
         @NameInMap("PretaxAmount")
         public Double pretaxAmount;
 
+        /**
+         * <p>The pretax gross amount.</p>
+         */
         @NameInMap("PretaxGrossAmount")
         public Double pretaxGrossAmount;
 
+        /**
+         * <p>The amount deducted by using vouchers and allocated before the current allocation month.</p>
+         */
         @NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
         public Double previouslyAmortizedDeductedByCashCoupons;
 
+        /**
+         * <p>The amount deducted by using coupons and allocated before the current allocation month.</p>
+         */
         @NameInMap("PreviouslyAmortizedDeductedByCoupons")
         public Double previouslyAmortizedDeductedByCoupons;
 
+        /**
+         * <p>The amount deducted by using prepaid cards and allocated before the current allocation month.</p>
+         */
         @NameInMap("PreviouslyAmortizedDeductedByPrepaidCard")
         public Double previouslyAmortizedDeductedByPrepaidCard;
 
+        /**
+         * <p>The expenditure amount allocated before the current allocation month. Invoicing is supported.</p>
+         */
         @NameInMap("PreviouslyAmortizedExpenditureAmount")
         public Double previouslyAmortizedExpenditureAmount;
 
+        /**
+         * <p>The discount amount allocated before the current allocation month.</p>
+         */
         @NameInMap("PreviouslyAmortizedInvoiceDiscount")
         public Double previouslyAmortizedInvoiceDiscount;
 
+        /**
+         * <p>The pretax amount allocated before the current allocation month.</p>
+         */
         @NameInMap("PreviouslyAmortizedPretaxAmount")
         public Double previouslyAmortizedPretaxAmount;
 
+        /**
+         * <p>The pretax gross amount allocated before the current allocation month.</p>
+         */
         @NameInMap("PreviouslyAmortizedPretaxGrossAmount")
         public Double previouslyAmortizedPretaxGrossAmount;
 
+        /**
+         * <p>The round-off amount allocated before the current allocation month.</p>
+         */
         @NameInMap("PreviouslyAmortizedRoundDownDiscount")
         public Double previouslyAmortizedRoundDownDiscount;
 
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The specific service resource.</p>
+         */
         @NameInMap("ProductDetail")
         public String productDetail;
 
+        /**
+         * <p>The code of the specific service resource.</p>
+         */
         @NameInMap("ProductDetailCode")
         public String productDetailCode;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The amount deducted by using vouchers and to be allocated to one or more future allocation months.</p>
+         */
         @NameInMap("RemainingAmortizationDeductedByCashCoupons")
         public Double remainingAmortizationDeductedByCashCoupons;
 
+        /**
+         * <p>The amount deducted by using coupons and to be allocated to one or more future allocation months.</p>
+         */
         @NameInMap("RemainingAmortizationDeductedByCoupons")
         public Double remainingAmortizationDeductedByCoupons;
 
+        /**
+         * <p>The amount deducted by using prepaid cards and to be allocated to one or more future allocation months.</p>
+         */
         @NameInMap("RemainingAmortizationDeductedByPrepaidCard")
         public Double remainingAmortizationDeductedByPrepaidCard;
 
+        /**
+         * <p>The expenditure amount to be allocated to one or more future allocation months. Invoicing is supported.</p>
+         */
         @NameInMap("RemainingAmortizationExpenditureAmount")
         public Double remainingAmortizationExpenditureAmount;
 
+        /**
+         * <p>The discount amount to be allocated to one or more future allocation months.</p>
+         */
         @NameInMap("RemainingAmortizationInvoiceDiscount")
         public Double remainingAmortizationInvoiceDiscount;
 
+        /**
+         * <p>The pretax amount to be allocated to one or more future allocation months.</p>
+         */
         @NameInMap("RemainingAmortizationPretaxAmount")
         public Double remainingAmortizationPretaxAmount;
 
+        /**
+         * <p>The pretax gross amount to be allocated to one or more future allocation months.</p>
+         */
         @NameInMap("RemainingAmortizationPretaxGrossAmount")
         public Double remainingAmortizationPretaxGrossAmount;
 
+        /**
+         * <p>The round-off amount to be allocated to one or more future allocation months.</p>
+         */
         @NameInMap("RemainingAmortizationRoundDownDiscount")
         public Double remainingAmortizationRoundDownDiscount;
 
+        /**
+         * <p>The round-off amount.</p>
+         */
         @NameInMap("RoundDownDiscount")
         public Double roundDownDiscount;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   Subscription: the subscription billing method</p>
+         * <p>*   PayAsYouGo: the pay-as-you-go billing method</p>
+         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
@@ -568,21 +724,39 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
     }
 
     public static class DescribeProductAmortizedCostByAmortizationPeriodResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the account.</p>
+         */
         @NameInMap("AccountID")
         public String accountID;
 
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The data entries returned.</p>
+         */
         @NameInMap("Items")
         public java.util.List<DescribeProductAmortizedCostByAmortizationPeriodResponseBodyDataItems> items;
 
+        /**
+         * <p>The maximum number of entries returned.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The position from which the results started to return. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

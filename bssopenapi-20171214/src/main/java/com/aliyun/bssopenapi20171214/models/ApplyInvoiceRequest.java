@@ -4,33 +4,63 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ApplyInvoiceRequest extends TeaModel {
+    /**
+     * <p>The ID of the address to which the invoice is delivered. This parameter is required if the invoice is a paper invoice. Set the ID to the value of the AddressId parameter returned by calling the QueryCustomerAddressList operation.</p>
+     */
     @NameInMap("AddressId")
     public Long addressId;
 
+    /**
+     * <p>The nickname of the applicant. The system does not verify the nickname.</p>
+     */
     @NameInMap("ApplyUserNick")
     public String applyUserNick;
 
+    /**
+     * <p>The ID of the customer. Set the ID to the value of the CustomerId parameter returned by calling the QueryInvoicingCustomerList operation.</p>
+     */
     @NameInMap("CustomerId")
     public Long customerId;
 
+    /**
+     * <p>The amount of the invoice. Unit: Cent.</p>
+     */
     @NameInMap("InvoiceAmount")
     public Long invoiceAmount;
 
+    /**
+     * <p>Specifies whether to invoice by amount. A value of true indicates that the user applies for the invoice based on the InvoiceAmount parameter. A value of false indicates that the user applies for the invoice based on the total amount of the invoicing items.</p>
+     */
     @NameInMap("InvoiceByAmount")
     public Boolean invoiceByAmount;
 
+    /**
+     * <p>The type of the invoice. Valid values:</p>
+     * <br>
+     * <p>*   0: paper invoice</p>
+     * <p>*   1: electronic invoice</p>
+     */
     @NameInMap("InvoicingType")
     public Integer invoicingType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The channel that is used to process the invoice. A value of 0 indicates that the invoice is processed by Alibaba Cloud. A value of 1 indicates that the invoice is processed by the tax platform. Set the value to 1.</p>
+     */
     @NameInMap("ProcessWay")
     public Integer processWay;
 
+    /**
+     * <p>The IDs of the selected invoicing items. Set the IDs to the IDs returned by calling the QueryEvaluateList operation.</p>
+     */
     @NameInMap("SelectedIds")
     public java.util.List<Long> selectedIds;
 
+    /**
+     * <p>The remarks made by the user.</p>
+     */
     @NameInMap("UserRemark")
     public String userRemark;
 

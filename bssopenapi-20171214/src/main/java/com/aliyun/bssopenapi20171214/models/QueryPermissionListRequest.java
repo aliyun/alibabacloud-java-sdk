@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryPermissionListRequest extends TeaModel {
+    /**
+     * <p>The ID of the relationship. Set this parameter to the value of the RelationId response parameter returned by calling the QueryRelationList operation.</p>
+     */
     @NameInMap("RelationId")
     public Long relationId;
 

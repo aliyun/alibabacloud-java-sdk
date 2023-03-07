@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCustomerAddressListResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryCustomerAddressListResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,42 +80,75 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
     }
 
     public static class QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress extends TeaModel {
+        /**
+         * <p>The addressee.</p>
+         */
         @NameInMap("Addressee")
         public String addressee;
 
+        /**
+         * <p>The business type.</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The city to which the invoice is mailed.</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <p>The name of the district to which the invoice is mailed.</p>
+         */
         @NameInMap("County")
         public String county;
 
+        /**
+         * <p>The detailed address to which the invoice is mailed. This parameter is returned after fields are concatenated.</p>
+         */
         @NameInMap("DeliveryAddress")
         public String deliveryAddress;
 
         /**
-         * <p>ID。</p>
+         * <p>The ID.</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The phone number of the addressee.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The postcode.</p>
+         */
         @NameInMap("PostalCode")
         public String postalCode;
 
+        /**
+         * <p>The province to which the invoice is mailed.</p>
+         */
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <p>The name of the street to which the invoice is mailed.</p>
+         */
         @NameInMap("Street")
         public String street;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("UserNick")
         public String userNick;
 
@@ -227,6 +275,9 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
     }
 
     public static class QueryCustomerAddressListResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of addresses to which invoices are mailed.</p>
+         */
         @NameInMap("CustomerInvoiceAddressList")
         public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressList customerInvoiceAddressList;
 

@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetResourcePackagePriceResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetResourcePackagePriceResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +80,15 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePackagePriceResponseBodyDataPromotionsPromotion extends TeaModel {
+        /**
+         * <p>The ID of the promotion.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The description of the discount.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -114,18 +135,33 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePackagePriceResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the currency.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The discounted amount. Unit: CNY.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The original price. Unit: CNY.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The details of the discount.</p>
+         */
         @NameInMap("Promotions")
         public GetResourcePackagePriceResponseBodyDataPromotions promotions;
 
+        /**
+         * <p>The price at which the transaction is made. Unit: CNY.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 

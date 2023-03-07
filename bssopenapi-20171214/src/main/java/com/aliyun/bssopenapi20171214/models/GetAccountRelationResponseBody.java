@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetAccountRelationResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +16,21 @@ public class GetAccountRelationResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAccountRelationResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,27 +80,51 @@ public class GetAccountRelationResponseBody extends TeaModel {
     }
 
     public static class GetAccountRelationResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used as a member.</p>
+         */
         @NameInMap("ChildUserId")
         public Long childUserId;
 
+        /**
+         * <p>The time when the financial relationship between the management account and the member was terminated.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The time when the financial relationship between the management account and the member was modified.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The ID of the financial relationship.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+         */
         @NameInMap("ParentUserId")
         public Long parentUserId;
 
+        /**
+         * <p>The time when the financial relationship between the management account and the member was established.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the financial relationship between the management account and the member.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the financial relationship.</p>
+         */
         @NameInMap("Type")
         public String type;
 
