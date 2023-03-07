@@ -82,6 +82,9 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("Namespace")
     public String namespace;
 
+    @NameInMap("RecordCanaryDetail")
+    public Boolean recordCanaryDetail;
+
     /**
      * <p>The region ID.</p>
      */
@@ -213,6 +216,14 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public CreateOrUpdateSwimmingLaneGroupRequest setRecordCanaryDetail(Boolean recordCanaryDetail) {
+        this.recordCanaryDetail = recordCanaryDetail;
+        return this;
+    }
+    public Boolean getRecordCanaryDetail() {
+        return this.recordCanaryDetail;
     }
 
     public CreateOrUpdateSwimmingLaneGroupRequest setRegion(String region) {

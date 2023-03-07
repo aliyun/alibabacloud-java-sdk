@@ -14,7 +14,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
      * <p>The details of the data.</p>
      */
     @NameInMap("Data")
-    public Object data;
+    public java.util.List<QueryAllSwimmingLaneGroupResponseBodyData> data;
 
     /**
      * <p>The dynamic part in the error message.</p>
@@ -71,11 +71,11 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryAllSwimmingLaneGroupResponseBody setData(Object data) {
+    public QueryAllSwimmingLaneGroupResponseBody setData(java.util.List<QueryAllSwimmingLaneGroupResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public Object getData() {
+    public java.util.List<QueryAllSwimmingLaneGroupResponseBodyData> getData() {
         return this.data;
     }
 
@@ -125,6 +125,168 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class QueryAllSwimmingLaneGroupResponseBodyData extends TeaModel {
+        @NameInMap("AppIds")
+        public String appIds;
+
+        @NameInMap("DbGrayEnable")
+        public String dbGrayEnable;
+
+        @NameInMap("Enable")
+        public String enable;
+
+        @NameInMap("EntryApp")
+        public String entryApp;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("MessageQueueFilterSide")
+        public String messageQueueFilterSide;
+
+        @NameInMap("MessageQueueGrayEnable")
+        public Boolean messageQueueGrayEnable;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("RecordCanaryDetail")
+        public Boolean recordCanaryDetail;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        public static QueryAllSwimmingLaneGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QueryAllSwimmingLaneGroupResponseBodyData self = new QueryAllSwimmingLaneGroupResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setAppIds(String appIds) {
+            this.appIds = appIds;
+            return this;
+        }
+        public String getAppIds() {
+            return this.appIds;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setDbGrayEnable(String dbGrayEnable) {
+            this.dbGrayEnable = dbGrayEnable;
+            return this;
+        }
+        public String getDbGrayEnable() {
+            return this.dbGrayEnable;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setEnable(String enable) {
+            this.enable = enable;
+            return this;
+        }
+        public String getEnable() {
+            return this.enable;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setEntryApp(String entryApp) {
+            this.entryApp = entryApp;
+            return this;
+        }
+        public String getEntryApp() {
+            return this.entryApp;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setMessageQueueFilterSide(String messageQueueFilterSide) {
+            this.messageQueueFilterSide = messageQueueFilterSide;
+            return this;
+        }
+        public String getMessageQueueFilterSide() {
+            return this.messageQueueFilterSide;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setMessageQueueGrayEnable(Boolean messageQueueGrayEnable) {
+            this.messageQueueGrayEnable = messageQueueGrayEnable;
+            return this;
+        }
+        public Boolean getMessageQueueGrayEnable() {
+            return this.messageQueueGrayEnable;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setRecordCanaryDetail(Boolean recordCanaryDetail) {
+            this.recordCanaryDetail = recordCanaryDetail;
+            return this;
+        }
+        public Boolean getRecordCanaryDetail() {
+            return this.recordCanaryDetail;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public QueryAllSwimmingLaneGroupResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
     }
 
 }

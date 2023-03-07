@@ -1675,6 +1675,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Namespace", request.namespace);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recordCanaryDetail)) {
+            query.put("RecordCanaryDetail", request.recordCanaryDetail);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("Region", request.region);
         }
@@ -2500,6 +2504,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
