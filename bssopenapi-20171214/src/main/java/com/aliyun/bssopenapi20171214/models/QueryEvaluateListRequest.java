@@ -4,45 +4,97 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryEvaluateListRequest extends TeaModel {
+    /**
+     * <p>The billing cycle.</p>
+     */
     @NameInMap("BillCycle")
     public String billCycle;
 
+    /**
+     * <p>The market types in invoices.</p>
+     * <br>
+     * <p>>  By default, this parameter is left empty. If this parameter is left empty, all market types are queried.</p>
+     */
     @NameInMap("BizTypeList")
     public java.util.List<String> bizTypeList;
 
+    /**
+     * <p>The maximum amount to be queried.</p>
+     */
     @NameInMap("EndAmount")
     public Long endAmount;
 
+    /**
+     * <p>The latest time when an order is paid Specify the time in the yyyy-mm-dd hh:mm:ss format.</p>
+     */
     @NameInMap("EndBizTime")
     public String endBizTime;
 
+    /**
+     * <p>The end of the time range to query.</p>
+     */
     @NameInMap("EndSearchTime")
     public String endSearchTime;
 
+    /**
+     * <p>The ID of the external order.</p>
+     */
     @NameInMap("OutBizId")
     public String outBizId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the sort. Valid values:</p>
+     * <br>
+     * <p>*   1: Sort invoices by ID in descending order.</p>
+     * <p>*   2: Sort invoices by invoice type in descending order, and then sort invoices of the same type by ID in descending order.</p>
+     * <p>*   3: Sort invoices by invoice type in ascending order, and then sort invoices of the same type by ID in descending order.</p>
+     */
     @NameInMap("SortType")
     public Integer sortType;
 
+    /**
+     * <p>The minimum amount to be queried.</p>
+     */
     @NameInMap("StartAmount")
     public Long startAmount;
 
+    /**
+     * <p>The earliest time when an order is paid. Specify the time in the yyyy-mm-dd hh:mm:ss format.</p>
+     */
     @NameInMap("StartBizTime")
     public String startBizTime;
 
+    /**
+     * <p>The beginning of the time range to query.</p>
+     */
     @NameInMap("StartSearchTime")
     public String startSearchTime;
 
+    /**
+     * <p>The type of orders to be queried. Valid values:</p>
+     * <br>
+     * <p>*   1: the orders in which the invoiceable amount is negative.</p>
+     * <p>*   2: the orders in which the invoiceable amount is positive.</p>
+     * <p>*   3: the orders in which the invoiceable amount is not 0.</p>
+     * <p>*   4: the orders in which the amount that has been invoiced is greater than 0.</p>
+     * <br>
+     * <p>>  By default, this parameter is left empty. If this parameter is left empty, all orders are queried.</p>
+     */
     @NameInMap("Type")
     public Integer type;
 

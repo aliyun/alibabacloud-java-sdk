@@ -4,18 +4,38 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryRedeemRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the redemption coupon takes effect. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("EffectiveOrNot")
     public Boolean effectiveOrNot;
 
+    /**
+     * <p>The end time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     */
     @NameInMap("ExpiryTimeEnd")
     public String expiryTimeEnd;
 
+    /**
+     * <p>The start time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     */
     @NameInMap("ExpiryTimeStart")
     public String expiryTimeStart;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

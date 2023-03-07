@@ -4,12 +4,21 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceByTagRequest extends TeaModel {
+    /**
+     * <p>The IDs of resources.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Specify the savings plan instance as the type of the resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<QueryInstanceByTagRequestTag> tag;
 
@@ -43,9 +52,15 @@ public class QueryInstanceByTagRequest extends TeaModel {
     }
 
     public static class QueryInstanceByTagRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

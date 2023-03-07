@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryBillToOSSSubscriptionResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +80,45 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     }
 
     public static class QueryBillToOSSSubscriptionResponseBodyDataItemsItem extends TeaModel {
+        /**
+         * <p>The owner ID of the OSS bucket.</p>
+         */
         @NameInMap("BucketOwnerId")
         public Long bucketOwnerId;
 
+        /**
+         * <p>The directory of the OSS bucket.</p>
+         */
         @NameInMap("BucketPath")
         public String bucketPath;
 
+        @NameInMap("RowLimitPerFile")
+        public Integer rowLimitPerFile;
+
+        /**
+         * <p>The ID of the OSS bucket that stores the subscribed bill.</p>
+         */
         @NameInMap("SubscribeBucket")
         public String subscribeBucket;
 
+        /**
+         * <p>The code of the language.</p>
+         */
         @NameInMap("SubscribeLanguage")
         public String subscribeLanguage;
 
+        /**
+         * <p>The time when the subscribed bill was stored in the OSS bucket. The time is displayed in the YYYY-MM-DD hh:mm:ss format.</p>
+         */
         @NameInMap("SubscribeTime")
         public String subscribeTime;
 
+        /**
+         * <p>The type of the subscribed bill. Valid values:</p>
+         * <br>
+         * <p>*   BillingItemDetailForBillingPeriod: bill of a billable item</p>
+         * <p>*   InstanceDetailForBillingPeriod: bill of an instance</p>
+         */
         @NameInMap("SubscribeType")
         public String subscribeType;
 
@@ -102,6 +141,14 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
         public String getBucketPath() {
             return this.bucketPath;
+        }
+
+        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setRowLimitPerFile(Integer rowLimitPerFile) {
+            this.rowLimitPerFile = rowLimitPerFile;
+            return this;
+        }
+        public Integer getRowLimitPerFile() {
+            return this.rowLimitPerFile;
         }
 
         public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeBucket(String subscribeBucket) {
@@ -158,12 +205,21 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     }
 
     public static class QueryBillToOSSSubscriptionResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the account used to perform the query.</p>
+         */
         @NameInMap("AccountID")
         public String accountID;
 
+        /**
+         * <p>The name of the account used to perform the query.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The details of the subscribed bills.</p>
+         */
         @NameInMap("Items")
         public QueryBillToOSSSubscriptionResponseBodyDataItems items;
 

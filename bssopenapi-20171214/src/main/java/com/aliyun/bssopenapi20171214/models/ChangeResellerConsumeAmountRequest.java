@@ -4,27 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ChangeResellerConsumeAmountRequest extends TeaModel {
+    /**
+     * <p>The type of the consumption amount adjustment. Valid values: increase: The consumption amount increases because new consumption occurs. decrease: The consumption amount decreases because funds are added to the account. This parameter is required.</p>
+     */
     @NameInMap("AdjustType")
     public String adjustType;
 
+    /**
+     * <p>The amount to be adjusted. Unit: CNY</p>
+     */
     @NameInMap("Amount")
     public String amount;
 
+    /**
+     * <p>The type of the business.</p>
+     */
     @NameInMap("BusinessType")
     public String businessType;
 
+    /**
+     * <p>The type of the currency.</p>
+     */
     @NameInMap("Currency")
     public String currency;
 
+    /**
+     * <p>The extended field of a message.</p>
+     */
     @NameInMap("ExtendMap")
     public String extendMap;
 
+    /**
+     * <p>The ID of the primary key for external business. The ID is used for idempotence verification.</p>
+     */
     @NameInMap("OutBizId")
     public String outBizId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The source of the request. Specify the system name for the parameter.</p>
+     */
     @NameInMap("Source")
     public String source;
 

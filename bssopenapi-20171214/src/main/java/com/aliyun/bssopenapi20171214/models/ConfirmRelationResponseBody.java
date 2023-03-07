@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ConfirmRelationResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ConfirmRelationResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The unique ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

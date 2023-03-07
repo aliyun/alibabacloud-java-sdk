@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetPayAsYouGoPriceResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetPayAsYouGoPriceResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +80,33 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail extends TeaModel {
+        /**
+         * <p>The discount price.</p>
+         */
         @NameInMap("CostAfterDiscount")
         public Float costAfterDiscount;
 
+        /**
+         * <p>The discount that was applied.</p>
+         */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
+        /**
+         * <p>The code of the pricing module.</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalCost")
         public Float originalCost;
 
+        /**
+         * <p>The unit price.</p>
+         */
         @NameInMap("UnitPrice")
         public Float unitPrice;
 
@@ -147,12 +177,21 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail extends TeaModel {
+        /**
+         * <p>The description of the discount.</p>
+         */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
+        /**
+         * <p>The ID of the discount.</p>
+         */
         @NameInMap("PromotionId")
         public Long promotionId;
 
+        /**
+         * <p>The name of the discount.</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
@@ -207,12 +246,25 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the currency. Valid values:</p>
+         * <br>
+         * <p>*   CNY: Chinese Yuan</p>
+         * <p>*   USD: US dollar</p>
+         * <p>*   JPY: Japanese Yen</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The price details of the pricing module.</p>
+         */
         @NameInMap("ModuleDetails")
         public GetPayAsYouGoPriceResponseBodyDataModuleDetails moduleDetails;
 
+        /**
+         * <p>The details of the discount.</p>
+         */
         @NameInMap("PromotionDetails")
         public GetPayAsYouGoPriceResponseBodyDataPromotionDetails promotionDetails;
 

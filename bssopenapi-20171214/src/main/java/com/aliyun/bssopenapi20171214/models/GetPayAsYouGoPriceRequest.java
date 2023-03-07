@@ -4,21 +4,36 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetPayAsYouGoPriceRequest extends TeaModel {
+    /**
+     * <p>The details of pricing modules.</p>
+     */
     @NameInMap("ModuleList")
     public java.util.List<GetPayAsYouGoPriceRequestModuleList> moduleList;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The type of the service.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The ID of the region in which the instance resides.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The billing method. Set the value to PayAsYouGo.</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
@@ -76,12 +91,32 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceRequestModuleList extends TeaModel {
+        /**
+         * <p>The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.</p>
+         * <br>
+         * <p>>  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The code of the Nth pricing module.</p>
+         * <br>
+         * <p>>  You can call the [DescribePricingModule](~~96469~~) operation to obtain the module code.</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>The price type of the Nth pricing module. Valid values:</p>
+         * <br>
+         * <p>*   Hour: hourly price</p>
+         * <p>*   Usage: usage price</p>
+         * <p>*   Month: monthly price</p>
+         * <p>*   Year: annual price</p>
+         * <br>
+         * <p>>  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.</p>
+         */
         @NameInMap("PriceType")
         public String priceType;
 

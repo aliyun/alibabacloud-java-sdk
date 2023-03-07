@@ -4,33 +4,72 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. The server checks whether a request that uses the same client token has been received. If a request that uses the same client token has been received, the server returns the same request result as the previous request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The logistics address of this order. This parameter is generally valid for physical orders.</p>
+     */
     @NameInMap("Logistics")
     public String logistics;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The details of the modules.</p>
+     */
     @NameInMap("Parameter")
     public java.util.List<CreateInstanceRequestParameter> parameter;
 
+    /**
+     * <p>The subscription duration. Unit: month. The value must be an integral multiple of 12.</p>
+     * <br>
+     * <p>>  This parameter is required if you create a subscription instance.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The code of the service to which the instance belongs. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud Services**.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The type of the service.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The auto-renewal period. Unit: month.</p>
+     * <br>
+     * <p>>  This parameter is required if the **RenewalStatus** parameter is set to **AutoRenewal**.</p>
+     */
     @NameInMap("RenewPeriod")
     public Integer renewPeriod;
 
+    /**
+     * <p>The renewal method. Valid values:</p>
+     * <br>
+     * <p>*   AutoRenewal: The instance is automatically renewed.</p>
+     * <p>*   ManualRenewal: The instance is manually renewed.</p>
+     * <br>
+     * <p>Default value: ManualRenewal.</p>
+     */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   Subscription: the subscription billing method.</p>
+     * <p>*   PayAsYouGo: the pay-as-you-go billing method.</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
@@ -120,9 +159,15 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestParameter extends TeaModel {
+        /**
+         * <p>The code property of the Nth module. Value of N: 1 to 100. If multiple module property parameters are involved, concatenate multiple parameters based on the value of N in sequence.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The value property of the Nth module. Value of N: 1 to 100.</p>
+         */
         @NameInMap("Value")
         public String value;
 

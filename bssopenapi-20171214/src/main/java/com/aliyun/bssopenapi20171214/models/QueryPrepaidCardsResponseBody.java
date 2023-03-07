@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryPrepaidCardsResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryPrepaidCardsResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +80,67 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
     }
 
     public static class QueryPrepaidCardsResponseBodyDataPrepaidCard extends TeaModel {
+        /**
+         * <p>The services to which the prepaid card is applicable.</p>
+         */
         @NameInMap("ApplicableProducts")
         public String applicableProducts;
 
+        /**
+         * <p>The scenario to which the prepaid card is applicable.</p>
+         */
         @NameInMap("ApplicableScenarios")
         public String applicableScenarios;
 
+        /**
+         * <p>The balance of the prepaid card.</p>
+         */
         @NameInMap("Balance")
         public String balance;
 
+        /**
+         * <p>The time when the prepaid card took effect.</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        /**
+         * <p>The time when the prepaid card expired.</p>
+         */
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
+        /**
+         * <p>The time when the prepaid card was issued.</p>
+         */
         @NameInMap("GrantedTime")
         public String grantedTime;
 
+        /**
+         * <p>The nominal value of the prepaid card.</p>
+         */
         @NameInMap("NominalValue")
         public String nominalValue;
 
+        /**
+         * <p>The ID of the prepaid card.</p>
+         */
         @NameInMap("PrepaidCardId")
         public Long prepaidCardId;
 
+        /**
+         * <p>The number of the prepaid card.</p>
+         */
         @NameInMap("PrepaidCardNo")
         public String prepaidCardNo;
 
+        /**
+         * <p>The status of the prepaid card. Valid values:</p>
+         * <br>
+         * <p>*   Available: The prepaid card is valid.</p>
+         * <p>*   Expired: The prepaid card expired.</p>
+         * <p>*   Cancelled: The prepaid card is invalid.</p>
+         */
         @NameInMap("Status")
         public String status;
 

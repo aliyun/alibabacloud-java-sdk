@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryFinancialAccountInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 

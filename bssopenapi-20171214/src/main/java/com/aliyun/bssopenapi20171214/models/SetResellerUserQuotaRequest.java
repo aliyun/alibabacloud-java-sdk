@@ -4,12 +4,21 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetResellerUserQuotaRequest extends TeaModel {
+    /**
+     * <p>The quota of a quota ledger. Unit: CNY.</p>
+     */
     @NameInMap("Amount")
     public String amount;
 
+    /**
+     * <p>You do not need to set the parameter.</p>
+     */
     @NameInMap("Currency")
     public String currency;
 
+    /**
+     * <p>The ID of the business.</p>
+     */
     @NameInMap("OutBizId")
     public String outBizId;
 

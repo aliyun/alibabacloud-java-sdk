@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryBillResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryBillResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,99 +80,212 @@ public class QueryBillResponseBody extends TeaModel {
     }
 
     public static class QueryBillResponseBodyDataItemsItem extends TeaModel {
+        /**
+         * <p>The amount deducted by using credit refunds.</p>
+         */
         @NameInMap("AdjustAmount")
         public Float adjustAmount;
 
+        /**
+         * <p>The amount paid after tax is deducted.</p>
+         */
         @NameInMap("AfterTaxAmount")
         public Float afterTaxAmount;
 
+        /**
+         * <p>The amount paid in cash. The amount that was deducted by using credit refunds is not included.</p>
+         */
         @NameInMap("CashAmount")
         public Float cashAmount;
 
+        /**
+         * <p>The code of the commodity.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The type of the currency.</p>
+         * <br>
+         * <p>*   CNY</p>
+         * <p>*   USD</p>
+         * <p>*   JPY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The amount deducted by using vouchers.</p>
+         */
         @NameInMap("DeductedByCashCoupons")
         public Float deductedByCashCoupons;
 
+        /**
+         * <p>The amount deducted by using coupons.</p>
+         */
         @NameInMap("DeductedByCoupons")
         public Float deductedByCoupons;
 
+        /**
+         * <p>The amount deducted by using prepaid cards.</p>
+         */
         @NameInMap("DeductedByPrepaidCard")
         public Float deductedByPrepaidCard;
 
+        /**
+         * <p>The discount amount.</p>
+         */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
+        /**
+         * <p>The type of the bill.</p>
+         * <br>
+         * <p>*   SubscriptionOrder</p>
+         * <p>*   PayAsYouGoBill</p>
+         * <p>*   Refund</p>
+         * <p>*   Adjustment</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>The unsettled amount of the bill.</p>
+         */
         @NameInMap("OutstandingAmount")
         public Float outstandingAmount;
 
+        /**
+         * <p>The ID of the member. This parameter is returned in a multi-account payment scenario.</p>
+         */
         @NameInMap("OwnerID")
         public String ownerID;
 
+        /**
+         * <p>The amount paid with cash.</p>
+         */
         @NameInMap("PaymentAmount")
         public Float paymentAmount;
 
+        /**
+         * <p>The currency used for payment.</p>
+         */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
+        /**
+         * <p>The time when the order was paid.</p>
+         */
         @NameInMap("PaymentTime")
         public String paymentTime;
 
+        /**
+         * <p>The ID of the transaction.</p>
+         */
         @NameInMap("PaymentTransactionID")
         public String paymentTransactionID;
 
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("PipCode")
         public String pipCode;
 
+        /**
+         * <p>The pretax amount</p>
+         */
         @NameInMap("PretaxAmount")
         public Float pretaxAmount;
 
+        /**
+         * <p>The pretax amount paid in local currency.</p>
+         */
         @NameInMap("PretaxAmountLocal")
         public Float pretaxAmountLocal;
 
+        /**
+         * <p>The pretax gross amount.</p>
+         */
         @NameInMap("PretaxGrossAmount")
         public Float pretaxGrossAmount;
 
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The details of the service.</p>
+         */
         @NameInMap("ProductDetail")
         public String productDetail;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The type of the service.</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The ID of the order or bill.</p>
+         */
         @NameInMap("RecordID")
         public String recordID;
 
+        /**
+         * <p>The round down discount.</p>
+         */
         @NameInMap("RoundDownDiscount")
         public String roundDownDiscount;
 
+        /**
+         * <p>The payment status of the bill. Valid values:</p>
+         * <br>
+         * <p>*   PayFinish: The bill is paid.</p>
+         * <p>*   PayUnclear: The bill is not cleared.</p>
+         * <p>*   PayUnsettle: The bill is not settled.</p>
+         * <p>*   NoSettle: The bill is free of settlement.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the order corresponding to the bill.</p>
+         */
         @NameInMap("SubOrderId")
         public String subOrderId;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   Subscription</p>
+         * <p>*   PayAsYouGo</p>
+         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
+        /**
+         * <p>The tax.</p>
+         */
         @NameInMap("Tax")
         public Float tax;
 
+        /**
+         * <p>The time when the bill ends.</p>
+         */
         @NameInMap("UsageEndTime")
         public String usageEndTime;
 
+        /**
+         * <p>The time when the bill starts.</p>
+         */
         @NameInMap("UsageStartTime")
         public String usageStartTime;
 
@@ -444,24 +572,45 @@ public class QueryBillResponseBody extends TeaModel {
     }
 
     public static class QueryBillResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the account.</p>
+         */
         @NameInMap("AccountID")
         public String accountID;
 
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The billing cycle, in the YYYY-MM format.</p>
+         */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
+        /**
+         * <p>The details of the bills.</p>
+         */
         @NameInMap("Items")
         public QueryBillResponseBodyDataItems items;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

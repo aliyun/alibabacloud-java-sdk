@@ -4,24 +4,42 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryResourcePackageInstancesRequest extends TeaModel {
+    /**
+     * <p>The end of the expiration time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("ExpiryTimeEnd")
     public String expiryTimeEnd;
 
+    /**
+     * <p>The beginning of the expiration time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("ExpiryTimeStart")
     public String expiryTimeStart;
 
+    /**
+     * <p>Specifies whether partners are involved.</p>
+     */
     @NameInMap("IncludePartner")
     public Boolean includePartner;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 

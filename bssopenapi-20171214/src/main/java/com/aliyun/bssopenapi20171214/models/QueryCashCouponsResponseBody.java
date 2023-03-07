@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCashCouponsResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryCashCouponsResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +80,67 @@ public class QueryCashCouponsResponseBody extends TeaModel {
     }
 
     public static class QueryCashCouponsResponseBodyDataCashCoupon extends TeaModel {
+        /**
+         * <p>The service to which the voucher is applicable.</p>
+         */
         @NameInMap("ApplicableProducts")
         public String applicableProducts;
 
+        /**
+         * <p>The scenario to which the voucher is applicable.</p>
+         */
         @NameInMap("ApplicableScenarios")
         public String applicableScenarios;
 
+        /**
+         * <p>The remaining quota of the voucher.</p>
+         */
         @NameInMap("Balance")
         public String balance;
 
+        /**
+         * <p>The ID of the voucher.</p>
+         */
         @NameInMap("CashCouponId")
         public Long cashCouponId;
 
+        /**
+         * <p>The code of the voucher.</p>
+         */
         @NameInMap("CashCouponNo")
         public String cashCouponNo;
 
+        /**
+         * <p>The time when the voucher took effect.</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        /**
+         * <p>The time when the voucher expired.</p>
+         */
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
+        /**
+         * <p>The time when the voucher was released.</p>
+         */
         @NameInMap("GrantedTime")
         public String grantedTime;
 
+        /**
+         * <p>The denomination of the voucher.</p>
+         */
         @NameInMap("NominalValue")
         public String nominalValue;
 
+        /**
+         * <p>The state of the voucher. Valid values:</p>
+         * <br>
+         * <p>*   Available: The voucher is valid.</p>
+         * <p>*   Expired: The voucher has expired.</p>
+         * <p>*   Cancelled: The voucher is canceled.</p>
+         */
         @NameInMap("Status")
         public String status;
 

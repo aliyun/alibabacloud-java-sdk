@@ -4,21 +4,39 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceByTagResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The instances returned.</p>
+     */
     @NameInMap("TagResource")
     public java.util.List<QueryInstanceByTagResponseBodyTagResource> tagResource;
 
@@ -76,9 +94,15 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     }
 
     public static class QueryInstanceByTagResponseBodyTagResourceTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -106,12 +130,21 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     }
 
     public static class QueryInstanceByTagResponseBodyTagResource extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource. The returned resource type indicates a savings plan instance.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tag")
         public java.util.List<QueryInstanceByTagResponseBodyTagResourceTag> tag;
 

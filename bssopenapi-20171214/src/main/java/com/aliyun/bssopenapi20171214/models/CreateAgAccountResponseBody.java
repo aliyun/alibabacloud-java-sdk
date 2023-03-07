@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateAgAccountResponseBody extends TeaModel {
+    /**
+     * <p>The relationship between the account that is used to call the CreateAgAccount operation and the account that is created.</p>
+     */
     @NameInMap("AgRelationDto")
     public CreateAgAccountResponseBodyAgRelationDto agRelationDto;
 
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -66,17 +81,26 @@ public class CreateAgAccountResponseBody extends TeaModel {
 
     public static class CreateAgAccountResponseBodyAgRelationDto extends TeaModel {
         /**
-         * <p>MPK（UID）</p>
+         * <p>The ID of the account that is used to call the CreateAgAccount operation.</p>
          */
         @NameInMap("Mpk")
         public String mpk;
 
+        /**
+         * <p>The ID of the account that is created.</p>
+         */
         @NameInMap("Pk")
         public String pk;
 
+        /**
+         * <p>The role of the account that is created.</p>
+         */
         @NameInMap("RamAdminRoleName")
         public String ramAdminRoleName;
 
+        /**
+         * <p>The type of the relationship.</p>
+         */
         @NameInMap("Type")
         public String type;
 

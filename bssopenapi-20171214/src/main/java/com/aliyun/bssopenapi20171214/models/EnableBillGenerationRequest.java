@@ -7,6 +7,9 @@ public class EnableBillGenerationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The code of the product.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 

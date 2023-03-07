@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryUserOmsDataResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryUserOmsDataResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +80,15 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
     }
 
     public static class QueryUserOmsDataResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>Indicates that the returned usage data starts from the next page. If no value is returned for this parameter or this parameter is not returned, no data can be queried.</p>
+         */
         @NameInMap("Marker")
         public String marker;
 

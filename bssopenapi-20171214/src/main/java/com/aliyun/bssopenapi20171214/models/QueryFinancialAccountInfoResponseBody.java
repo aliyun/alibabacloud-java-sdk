@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryFinancialAccountInfoResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryFinancialAccountInfoResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +80,39 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
     }
 
     public static class QueryFinancialAccountInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the financial account. A value of MASTER indicates that the account is a management account. A value of MEMBER indicates that the account is a member.</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>Indicates whether the account is a financial account. A value of true indicates that the account is a financial account. A value of false indicates that the account is not a financial account.</p>
+         */
         @NameInMap("IsFinancialAccount")
         public Boolean isFinancialAccount;
 
+        /**
+         * <p>The ID of the group to which the member belongs.</p>
+         */
         @NameInMap("MemberGroupId")
         public Long memberGroupId;
 
+        /**
+         * <p>The name of the group to which the member belongs.</p>
+         */
         @NameInMap("MemberGroupName")
         public String memberGroupName;
 
+        /**
+         * <p>The display name of the member.</p>
+         */
         @NameInMap("MemberNickName")
         public String memberNickName;
 
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

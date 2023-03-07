@@ -4,15 +4,27 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryRelationListRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The states of the relationships between the management account and its members. The valid values of this parameter are the enumeration members of the RelationshipStatusEnum data type. If you do not specify this parameter, valid relationship states are queried by default.</p>
+     */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 

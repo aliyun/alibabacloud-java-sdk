@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetSubscriptionPriceResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the service price.</p>
+     */
     @NameInMap("Data")
     public GetSubscriptionPriceResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +80,33 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail extends TeaModel {
+        /**
+         * <p>The discount price.</p>
+         */
         @NameInMap("CostAfterDiscount")
         public Float costAfterDiscount;
 
+        /**
+         * <p>The discount that was applied.</p>
+         */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
+        /**
+         * <p>The identifier of the pricing module.</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>The original price of the service.</p>
+         */
         @NameInMap("OriginalCost")
         public Float originalCost;
 
+        /**
+         * <p>The unit price.</p>
+         */
         @NameInMap("UnitPrice")
         public Float unitPrice;
 
@@ -147,12 +177,21 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail extends TeaModel {
+        /**
+         * <p>The description of the discount.</p>
+         */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
+        /**
+         * <p>The ID of the discount.</p>
+         */
         @NameInMap("PromotionId")
         public Long promotionId;
 
+        /**
+         * <p>The name of the discount.</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
@@ -207,24 +246,49 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionPriceResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of currency. Valid values:</p>
+         * <br>
+         * <p>*   CNY: Chinese Yuan</p>
+         * <p>*   USD: US dollar</p>
+         * <p>*   JPY: Japanese Yen</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The discount that was applied.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The price details of the pricing module.</p>
+         */
         @NameInMap("ModuleDetails")
         public GetSubscriptionPriceResponseBodyDataModuleDetails moduleDetails;
 
+        /**
+         * <p>The original price of the service.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The details of the discount.</p>
+         */
         @NameInMap("PromotionDetails")
         public GetSubscriptionPriceResponseBodyDataPromotionDetails promotionDetails;
 
+        /**
+         * <p>The quantity.</p>
+         */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <p>The discount price.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 

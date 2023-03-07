@@ -4,27 +4,51 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SaveUserCreditRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable service suspension protection for pay-as-you-go services.</p>
+     */
     @NameInMap("AvoidExpiration")
     public Boolean avoidExpiration;
 
+    /**
+     * <p>Specifies whether to allow the use of pay-as-you-go services without the need to send notifications.</p>
+     */
     @NameInMap("AvoidNotification")
     public Boolean avoidNotification;
 
+    /**
+     * <p>Specifies whether to enable service suspension protection for subscription services.</p>
+     */
     @NameInMap("AvoidPrepaidExpiration")
     public Boolean avoidPrepaidExpiration;
 
+    /**
+     * <p>Specifies whether to allow the use of subscription services without the need to send notifications.</p>
+     */
     @NameInMap("AvoidPrepaidNotification")
     public Boolean avoidPrepaidNotification;
 
+    /**
+     * <p>The type of the credit.</p>
+     */
     @NameInMap("CreditType")
     public String creditType;
 
+    /**
+     * <p>The value of the credit.</p>
+     */
     @NameInMap("CreditValue")
     public String creditValue;
 
+    /**
+     * <p>Description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The operator who performs the action.</p>
+     */
     @NameInMap("Operator")
     public String operator;
 

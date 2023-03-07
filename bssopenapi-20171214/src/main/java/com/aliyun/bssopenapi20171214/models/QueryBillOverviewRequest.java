@@ -4,18 +4,36 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryBillOverviewRequest extends TeaModel {
+    /**
+     * <p>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</p>
+     */
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
+    /**
+     * <p>The billing cycle, in the YYYY-MM format.</p>
+     */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
+    /**
+     * <p>The code of the service.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The type of the service.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   Subscription: the subscription billing method</p>
+     * <p>*   PayAsYouGo: the pay-as-you-go billing method</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
