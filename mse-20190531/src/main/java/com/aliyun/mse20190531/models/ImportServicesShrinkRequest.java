@@ -13,6 +13,12 @@ public class ImportServicesShrinkRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("FcServiceName")
+    public String fcServiceName;
+
+    @NameInMap("FcVersion")
+    public String fcVersion;
+
     /**
      * <p>The unique ID of the gateway.</p>
      */
@@ -59,6 +65,22 @@ public class ImportServicesShrinkRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public ImportServicesShrinkRequest setFcServiceName(String fcServiceName) {
+        this.fcServiceName = fcServiceName;
+        return this;
+    }
+    public String getFcServiceName() {
+        return this.fcServiceName;
+    }
+
+    public ImportServicesShrinkRequest setFcVersion(String fcVersion) {
+        this.fcVersion = fcVersion;
+        return this;
+    }
+    public String getFcVersion() {
+        return this.fcVersion;
     }
 
     public ImportServicesShrinkRequest setGatewayUniqueId(String gatewayUniqueId) {
