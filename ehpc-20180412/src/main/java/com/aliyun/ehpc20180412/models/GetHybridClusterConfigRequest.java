@@ -4,9 +4,17 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetHybridClusterConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the on-premises compute node. You can call this operation to query the configurations of the on-premises compute node.</p>
+     * <br>
+     * <p>By default, the operation queries the configurations of a cluster.</p>
+     */
     @NameInMap("Node")
     public String node;
 

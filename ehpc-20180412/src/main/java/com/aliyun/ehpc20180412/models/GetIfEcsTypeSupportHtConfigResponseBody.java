@@ -4,15 +4,36 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetIfEcsTypeSupportHtConfigResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether Hyper-Threading is enabled by default. Valid values:</p>
+     * <br>
+     * <p>*   true: Hyper-Threading is enabled by default.</p>
+     * <br>
+     * <p>*   false: Hyper-Threading is disabled by default</p>
+     * <br>
+     * <p>> By default, Hyper-Threading is not enabled for the SCC specification family, while Hyper-Threading is enabled for other specification families by default.</p>
+     */
     @NameInMap("DefaultHtEnabled")
     public Boolean defaultHtEnabled;
 
+    /**
+     * <p>The instance type of the ECS instance.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether hyper-threading is supported. Valid values:</p>
+     * <br>
+     * <p>*   true: Hyper-Threading is supported.</p>
+     * <p>*   false: Hyper-Threading is not supported.</p>
+     */
     @NameInMap("SupportHtConfig")
     public Boolean supportHtConfig;
 

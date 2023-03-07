@@ -7,18 +7,37 @@ public class CreateJobFileRequest extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The content of the job file. The content is encoded in Base64.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The user to which the job belongs.</p>
+     * <br>
+     * <p>You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.</p>
+     */
     @NameInMap("RunasUser")
     public String runasUser;
 
+    /**
+     * <p>The password of the user.</p>
+     */
     @NameInMap("RunasUserPassword")
     public String runasUserPassword;
 
+    /**
+     * <p>The name of the job file.</p>
+     */
     @NameInMap("TargetFile")
     public String targetFile;
 

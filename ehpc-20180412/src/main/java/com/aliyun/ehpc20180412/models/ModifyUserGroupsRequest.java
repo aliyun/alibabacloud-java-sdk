@@ -7,6 +7,11 @@ public class ModifyUserGroupsRequest extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -43,9 +48,20 @@ public class ModifyUserGroupsRequest extends TeaModel {
     }
 
     public static class ModifyUserGroupsRequestUser extends TeaModel {
+        /**
+         * <p>The new permission group of the user. Valid values:</p>
+         * <br>
+         * <p>*   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.</p>
+         * <p>*   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The name of the user whose permissions you want to modify. Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.</p>
+         */
         @NameInMap("Name")
         public String name;
 

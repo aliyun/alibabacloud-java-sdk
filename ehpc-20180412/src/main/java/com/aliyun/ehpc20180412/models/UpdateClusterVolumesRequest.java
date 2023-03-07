@@ -7,6 +7,9 @@ public class UpdateClusterVolumesRequest extends TeaModel {
     @NameInMap("AdditionalVolumes")
     public java.util.List<UpdateClusterVolumesRequestAdditionalVolumes> additionalVolumes;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -32,6 +35,13 @@ public class UpdateClusterVolumesRequest extends TeaModel {
     }
 
     public static class UpdateClusterVolumesRequestAdditionalVolumesRoles extends TeaModel {
+        /**
+         * <p>The node type on which the nth additional mounted file system is mounted. Valid values:</p>
+         * <br>
+         * <p>*   Manager: management node</p>
+         * <p>*   Login: logon node</p>
+         * <p>*   Compute: compute node</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -51,30 +61,62 @@ public class UpdateClusterVolumesRequest extends TeaModel {
     }
 
     public static class UpdateClusterVolumesRequestAdditionalVolumes extends TeaModel {
+        /**
+         * <p>The queue name of the nth attached mounted filesystem.</p>
+         */
         @NameInMap("JobQueue")
         public String jobQueue;
 
+        /**
+         * <p>The on-premises mount directory for the nth additional mounted file system.</p>
+         */
         @NameInMap("LocalDirectory")
         public String localDirectory;
 
+        /**
+         * <p>The storage location of the nth attached mounted file system. Valid values:</p>
+         * <br>
+         * <p>*   OnPremise: hybrid cloud cluster</p>
+         * <p>*   PublicCloud: public cloud cluster</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The remote directory to be mounted by the nth additional mounted file system.</p>
+         */
         @NameInMap("RemoteDirectory")
         public String remoteDirectory;
 
         @NameInMap("Roles")
         public java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> roles;
 
+        /**
+         * <p>The ID of the nth additional mounted file system.</p>
+         */
         @NameInMap("VolumeId")
         public String volumeId;
 
+        /**
+         * <p>The domain name of the mount target for the nth additional mounted file system.</p>
+         */
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
+        /**
+         * <p>The protocol type of the nth additional mounted file system. Valid values:</p>
+         * <br>
+         * <p>*   NFS</p>
+         * <p>*   SMB</p>
+         */
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
 
+        /**
+         * <p>The type of the nth additional mounted file system. Currently, only NAS is supported.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 10.</p>
+         */
         @NameInMap("VolumeType")
         public String volumeType;
 

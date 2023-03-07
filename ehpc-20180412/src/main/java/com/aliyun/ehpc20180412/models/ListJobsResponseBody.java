@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of jobs.</p>
+     */
     @NameInMap("Jobs")
     public ListJobsResponseBodyJobs jobs;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobsJobInfoResources extends TeaModel {
+        /**
+         * <p>The number of CPUs that were used to run the job.</p>
+         */
         @NameInMap("Cores")
         public Integer cores;
 
+        /**
+         * <p>The number of nodes that were used to run the job.</p>
+         */
         @NameInMap("Nodes")
         public Integer nodes;
 
@@ -95,48 +116,99 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobsJobInfo extends TeaModel {
+        /**
+         * <p>The job array. If the job is not in a queue, the output is empty.</p>
+         * <br>
+         * <p>Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.</p>
+         */
         @NameInMap("ArrayRequest")
         public String arrayRequest;
 
+        /**
+         * <p>The description of the job.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The ID of the job.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The time when the job was last modified.</p>
+         */
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
+        /**
+         * <p>The name of the job.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of compute nodes that were used to run the job.</p>
+         */
         @NameInMap("NodeList")
         public String nodeList;
 
+        /**
+         * <p>The name of the user that runs the job.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The resources that were used to run the job.</p>
+         */
         @NameInMap("Resources")
         public ListJobsResponseBodyJobsJobInfoResources resources;
 
+        /**
+         * <p>The path that was used to run the job.</p>
+         */
         @NameInMap("ShellPath")
         public String shellPath;
 
+        /**
+         * <p>The time when the job started to run.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the job. Valid values: Valid values:</p>
+         * <br>
+         * <p>*   FINISHED: The job is completed</p>
+         * <p>*   RUNNING: The job is running.</p>
+         * <p>*   QUEUED: The job is pending in a queue.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The output file path of stderr.</p>
+         */
         @NameInMap("Stderr")
         public String stderr;
 
+        /**
+         * <p>The output file path of stdout.</p>
+         */
         @NameInMap("Stdout")
         public String stdout;
 
+        /**
+         * <p>The time when the job was submitted.</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 

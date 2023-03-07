@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of task information.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ListTasksResponseBodyTasks> tasks;
 
+    /**
+     * <p>The total number of entries of the task.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +80,77 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The current step of the task.</p>
+         */
         @NameInMap("CurrentStep")
         public Integer currentStep;
 
+        /**
+         * <p>The list of error messages returned for the task.</p>
+         * <br>
+         * <p>For information about error messages and their solutions, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/EHPC).</p>
+         */
         @NameInMap("Errors")
         public String errors;
 
+        /**
+         * <p>The request parameters of the task. The value is a JSON string.</p>
+         */
         @NameInMap("Request")
         public String request;
 
+        /**
+         * <p>The result of the task. Valid values:</p>
+         * <br>
+         * <p>*   If TaskType is set to CreateCluster and AddComputes, the value is in the `{\"Instances\":[]}` format, which indicates the information of the nodes added to the cluster.</p>
+         * <p>*   If TaskType is set to a value other than CreateCluster and AddComputes, the value is in the `{}` format.</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   Processing: The task is running.</p>
+         * <p>*   Success: The task is completed.</p>
+         * <p>*   Fail: The task failed.</p>
+         * <p>*   PartialFail: The task partially failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>*   CreateCluster: creates a cluster by calling the [CreateCluster](~~87100~~) operation.</p>
+         * <p>*   StartCluster: starts a cluster by calling the [StartCluster](~~200345~~) operation.</p>
+         * <p>*   StopCluster: stops a cluster by calling the [StopCluster](~~200346~~) operation.</p>
+         * <p>*   DeleteCluster: releases a cluster by calling the [DeleteCluster](~~87110~~) operation.</p>
+         * <p>*   AddComputes: adds nodes to a cluster by calling the [AddNodes](~~87147~~) operation.</p>
+         * <p>*   StartComputes: starts nodes by calling the [StartNodes](~~87159~~) operation.</p>
+         * <p>*   ResetCompute: resets nodes by calling the [ResetNodes](~~87158~~) operation.</p>
+         * <p>*   StopComputes: stops nodes by calling the [StopNodes](~~87160~~) operation.</p>
+         * <p>*   DeleteComputes: deletes nodes by calling the [DeleteNodes](~~87155~~) operation.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The total number of steps of the task.</p>
+         */
         @NameInMap("TotalSteps")
         public Integer totalSteps;
 

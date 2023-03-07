@@ -4,45 +4,106 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListJobsWithFiltersRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable asynchronous query.</p>
+     */
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The latest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
+    /**
+     * <p>The earliest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("CreateTimeStart")
     public String createTimeStart;
 
+    /**
+     * <p>The order in which jobs are sorted based on the execution time. Valid values:</p>
+     * <br>
+     * <p>*   asc: ascending order</p>
+     * <p>*   desc: descending order</p>
+     */
     @NameInMap("ExecuteOrder")
     public String executeOrder;
 
+    /**
+     * <p>The name of the job. Fuzzy match is supported.</p>
+     */
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>The status of the job. Valid values:</p>
+     * <br>
+     * <p>*   all</p>
+     * <p>*   finished</p>
+     * <p>*   notfinish</p>
+     * <br>
+     * <p>Default value: all</p>
+     */
     @NameInMap("JobStatus")
     public String jobStatus;
 
     @NameInMap("Nodes")
     public java.util.List<String> nodes;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The order in which jobs are sorted based on the time when they queue. Valid values:</p>
+     * <br>
+     * <p>*   asc: ascending order</p>
+     * <p>*   desc: descending order</p>
+     */
     @NameInMap("PendOrder")
     public String pendOrder;
 
     @NameInMap("Queues")
     public java.util.List<String> queues;
 
+    /**
+     * <p>The ID of the region.</p>
+     * <br>
+     * <p>You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The order in which jobs are sorted based on the time when they are submitted. Valid values:</p>
+     * <br>
+     * <p>*   asc: ascending order</p>
+     * <p>*   desc: descending order</p>
+     */
     @NameInMap("SubmitOrder")
     public String submitOrder;
 

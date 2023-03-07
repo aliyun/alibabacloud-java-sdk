@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned job information.</p>
+     */
     @NameInMap("Message")
     public DescribeJobResponseBodyMessage message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyMessage extends TeaModel {
+        /**
+         * <p>The details of the job.</p>
+         */
         @NameInMap("JobInfo")
         public String jobInfo;
 

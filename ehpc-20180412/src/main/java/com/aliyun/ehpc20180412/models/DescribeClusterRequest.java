@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster. You can call the [ListClusters](~~87116~~) operation to query the list of clusters in a region.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

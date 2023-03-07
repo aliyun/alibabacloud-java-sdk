@@ -4,9 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ModifyVisualServicePasswdResponseBody extends TeaModel {
+    /**
+     * <p>The status of the VNC Remote visualization service. Valid values:</p>
+     * <br>
+     * <p>*   Service started.: started</p>
+     * <p>*   Service stopped.: stopped</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

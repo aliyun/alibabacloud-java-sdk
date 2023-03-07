@@ -4,9 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DeleteNodesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the task.</p>
+     * <br>
+     * <p>*   If you set the Sync parameter to true, the DeleteNodes operation is synchronous. Valid value: Not Available.</p>
+     * <p>*   If you set the Sync parameter to false, the DeleteNodes operation is asynchronous. You can call the [ListTasks](~~268225~~) operation to query the result of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

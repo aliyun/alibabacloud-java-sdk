@@ -4,12 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddLocalNodesRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The information of the local node. A JSON string that contains the HostName, IpAddress, CpuCores, and Memory (Unit: MB) of the local node.</p>
+     */
     @NameInMap("Nodes")
     public String nodes;
 
+    /**
+     * <p>The queue to which to add the local node.</p>
+     */
     @NameInMap("Queue")
     public String queue;
 

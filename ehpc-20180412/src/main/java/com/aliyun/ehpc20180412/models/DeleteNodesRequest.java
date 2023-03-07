@@ -4,15 +4,31 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DeleteNodesRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("Instance")
     public java.util.List<DeleteNodesRequestInstance> instance;
 
+    /**
+     * <p>Specifies whether to release the instances that are created by using E-HPC.</p>
+     * <br>
+     * <p>Default value: true</p>
+     */
     @NameInMap("ReleaseInstance")
     public Boolean releaseInstance;
 
+    /**
+     * <p>Specifies whether to directly delete the node. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Sync")
     public Boolean sync;
 
@@ -54,6 +70,11 @@ public class DeleteNodesRequest extends TeaModel {
     }
 
     public static class DeleteNodesRequestInstance extends TeaModel {
+        /**
+         * <p>The ID of the compute node that you want to delete. Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>You can call the [DescribeCluster](~~87126~~) operation to query the IDs of the nodes in the cluster.</p>
+         */
         @NameInMap("Id")
         public String id;
 

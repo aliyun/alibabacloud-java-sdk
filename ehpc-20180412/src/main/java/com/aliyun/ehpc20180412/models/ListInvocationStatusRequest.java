@@ -4,9 +4,19 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListInvocationStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the command.</p>
+     * <br>
+     * <p>You can call the [ListCommands](~~87388~~) operation to query the command ID.</p>
+     */
     @NameInMap("CommandId")
     public String commandId;
 

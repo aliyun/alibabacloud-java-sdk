@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListClustersMetaResponseBody extends TeaModel {
+    /**
+     * <p>The list of clusters.</p>
+     */
     @NameInMap("Clusters")
     public ListClustersMetaResponseBodyClusters clusters;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Valid values: 1 to 50.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,42 +80,112 @@ public class ListClustersMetaResponseBody extends TeaModel {
     }
 
     public static class ListClustersMetaResponseBodyClustersClusterInfoSimple extends TeaModel {
+        /**
+         * <p>The server type of the account. Valid values:</p>
+         * <br>
+         * <p>*   nis</p>
+         * <p>*   ldap</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>The version of the client.</p>
+         */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        /**
+         * <p>The mode in which the cluster is deployed. Valid values:</p>
+         * <br>
+         * <p>*   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</p>
+         * <p>*   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</p>
+         * <p>*   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</p>
+         * <p>*   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</p>
+         */
         @NameInMap("DeployMode")
         public String deployMode;
 
+        /**
+         * <p>The description of the cluster.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the cluster uses a plug-in. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>Default value: false</p>
+         */
         @NameInMap("HasPlugin")
         public Boolean hasPlugin;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Indicates whether a scaling group is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: A scaling group is enabled.</p>
+         * <p>*   false: No scaling group is enabled.</p>
+         */
         @NameInMap("IsComputeEss")
         public Boolean isComputeEss;
 
+        /**
+         * <p>The location where the cluster is deployed. Valid values:</p>
+         * <br>
+         * <p>*   OnPremise: The cluster is deployed on a hybrid cloud.</p>
+         * <p>*   PublicCloud: The cluster is deployed on a public cloud.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The image tag of the operating system.</p>
+         */
         @NameInMap("OsTag")
         public String osTag;
 
+        /**
+         * <p>The type of the scheduler. Valid values:</p>
+         * <br>
+         * <p>*   pbs</p>
+         * <p>*   slurm</p>
+         * <p>*   opengridscheduler</p>
+         * <p>*   deadline</p>
+         */
         @NameInMap("SchedulerType")
         public String schedulerType;
 
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   uninit: The cluster is not initialized.</p>
+         * <p>*   creating: The cluster is being created.</p>
+         * <p>*   init: The cluster is being initialized.</p>
+         * <p>*   running: The cluster is running.</p>
+         * <p>*   exception: The cluster encounters an exception.</p>
+         * <p>*   releasing: The cluster is being released.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

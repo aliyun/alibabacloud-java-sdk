@@ -4,12 +4,22 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class SetQueueRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("Node")
     public java.util.List<SetQueueRequestNode> node;
 
+    /**
+     * <p>The name of the destination queue.</p>
+     * <br>
+     * <p>You can call the [ListQueues](~~92176~~) operation to query the queue name.</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 
@@ -43,6 +53,11 @@ public class SetQueueRequest extends TeaModel {
     }
 
     public static class SetQueueRequestNode extends TeaModel {
+        /**
+         * <p>The name of the compute node that you want to move. Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>You can call the [ListNodes](~~87161~~) operation to query the names of the compute nodes.</p>
+         */
         @NameInMap("Name")
         public String name;
 

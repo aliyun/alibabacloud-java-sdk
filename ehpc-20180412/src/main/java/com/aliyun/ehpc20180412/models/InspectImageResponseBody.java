@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class InspectImageResponseBody extends TeaModel {
+    /**
+     * <p>The status of the image.</p>
+     */
     @NameInMap("ImageStatus")
     public InspectImageResponseBodyImageStatus imageStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class InspectImageResponseBody extends TeaModel {
     }
 
     public static class InspectImageResponseBodyImageStatusImageInspectInfo extends TeaModel {
+        /**
+         * <p>The version of the bootstrapper used by the container image.</p>
+         */
         @NameInMap("BootStrap")
         public String bootStrap;
 
+        /**
+         * <p>The architecture used to build the image.</p>
+         */
         @NameInMap("BuildArch")
         public String buildArch;
 
+        /**
+         * <p>The date on which the image was built.</p>
+         */
         @NameInMap("BuildDate")
         public String buildDate;
 
+        /**
+         * <p>The container version of the image.</p>
+         */
         @NameInMap("ContainerVersion")
         public String containerVersion;
 
+        /**
+         * <p>The mode in which the image was built.</p>
+         */
         @NameInMap("DefFrom")
         public String defFrom;
 
+        /**
+         * <p>The singularity version and kernel version of the image.</p>
+         */
         @NameInMap("SchemaVersion")
         public String schemaVersion;
 
@@ -106,6 +130,9 @@ public class InspectImageResponseBody extends TeaModel {
     }
 
     public static class InspectImageResponseBodyImageStatus extends TeaModel {
+        /**
+         * <p>The list of Inspect information about the image.</p>
+         */
         @NameInMap("ImageInspectInfo")
         public InspectImageResponseBodyImageStatusImageInspectInfo imageInspectInfo;
 

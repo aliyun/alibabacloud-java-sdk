@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeEstackImageResponseBody extends TeaModel {
+    /**
+     * <p>The array of base images.</p>
+     */
     @NameInMap("ImageList")
     public DescribeEstackImageResponseBodyImageList imageList;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of images.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,33 @@ public class DescribeEstackImageResponseBody extends TeaModel {
     }
 
     public static class DescribeEstackImageResponseBodyImageListImageListInfo extends TeaModel {
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The size of the image.</p>
+         */
         @NameInMap("ImageSize")
         public Integer imageSize;
 
+        /**
+         * <p>The type of the image.</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 
+        /**
+         * <p>The download URL of the image.</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <p>The time when the image was last modified.</p>
+         */
         @NameInMap("RecentUpdateTime")
         public String recentUpdateTime;
 

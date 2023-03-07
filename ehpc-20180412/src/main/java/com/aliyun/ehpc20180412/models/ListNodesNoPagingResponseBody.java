@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListNodesNoPagingResponseBody extends TeaModel {
+    /**
+     * <p>The information about nodes.</p>
+     */
     @NameInMap("Nodes")
     public ListNodesNoPagingResponseBodyNodes nodes;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,41 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
     }
 
     public static class ListNodesNoPagingResponseBodyNodesNodeInfo extends TeaModel {
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The instance type of the node.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The status of the node. Valid values:</p>
+         * <br>
+         * <p>*   uninit: The node is being installed.</p>
+         * <p>*   exception: An exception has occurred on the node.</p>
+         * <p>*   running: The node is running.</p>
+         * <p>*   initing: The node is being initialized.</p>
+         * <p>*   releasing: The node is being released.</p>
+         * <p>*   untracking: The node is not added to the cluster.</p>
+         * <p>*   stopped: The node is stopped.</p>
+         */
         @NameInMap("Status")
         public String status;
 

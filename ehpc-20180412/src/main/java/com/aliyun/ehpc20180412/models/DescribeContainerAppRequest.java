@@ -4,6 +4,11 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerAppRequest extends TeaModel {
+    /**
+     * <p>The ID of the containerized application.</p>
+     * <br>
+     * <p>You can call the [ListContainerApps](~~87333~~) operation to query the ID of the containerized application.</p>
+     */
     @NameInMap("ContainerId")
     public String containerId;
 

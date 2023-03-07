@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddLocalNodesResponseBody extends TeaModel {
+    /**
+     * <p>The local nodes in the cluster.</p>
+     */
     @NameInMap("InstanceIds")
     public AddLocalNodesResponseBodyInstanceIds instanceIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

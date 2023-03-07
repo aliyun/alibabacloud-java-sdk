@@ -7,6 +7,9 @@ public class ListQueuesResponseBody extends TeaModel {
     @NameInMap("Queues")
     public ListQueuesResponseBodyQueues queues;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,9 +54,15 @@ public class ListQueuesResponseBody extends TeaModel {
     }
 
     public static class ListQueuesResponseBodyQueuesQueueInfoSpotInstanceTypesInstance extends TeaModel {
+        /**
+         * <p>The specifications of the ECS instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The maximum hourly price of the preemptible instance. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+         */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
@@ -100,33 +109,74 @@ public class ListQueuesResponseBody extends TeaModel {
     }
 
     public static class ListQueuesResponseBodyQueuesQueueInfo extends TeaModel {
+        /**
+         * <p>The instance type of the compute nodes.</p>
+         */
         @NameInMap("ComputeInstanceType")
         public ListQueuesResponseBodyQueuesQueueInfoComputeInstanceType computeInstanceType;
 
+        /**
+         * <p>Indicates whether the queue enabled auto scale-out. Valid values:</p>
+         * <br>
+         * <p>true: The queue enabled auto scale-out.</p>
+         * <br>
+         * <p>false: The queue disabled auto scale-out.</p>
+         */
         @NameInMap("EnableAutoGrow")
         public Boolean enableAutoGrow;
 
+        /**
+         * <p>The prefix of the host name.</p>
+         */
         @NameInMap("HostNamePrefix")
         public String hostNamePrefix;
 
+        /**
+         * <p>The suffix of the host name.</p>
+         */
         @NameInMap("HostNameSuffix")
         public String hostNameSuffix;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the queue.</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <p>The ID of the resource group to which the queue belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         @NameInMap("SpotInstanceTypes")
         public ListQueuesResponseBodyQueuesQueueInfoSpotInstanceTypes spotInstanceTypes;
 
+        /**
+         * <p>The preemption policy of the compute nodes. Valid values:</p>
+         * <br>
+         * <p>NoSpot: The instances of the compute node are pay-as-you-go instances.</p>
+         * <br>
+         * <p>SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</p>
+         * <br>
+         * <p>SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.</p>
+         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
+        /**
+         * <p>The type of the queue. Valid values:</p>
+         * <br>
+         * <p>Execution: Queues in which jobs can be executed.</p>
+         * <br>
+         * <p>Router: Queues in which jobs cannot be executed but are forwarded to the bounded Execution queue for processing.</p>
+         */
         @NameInMap("Type")
         public String type;
 

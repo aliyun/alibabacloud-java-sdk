@@ -4,12 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class StartVisualServiceRequest extends TeaModel {
+    /**
+     * <p>A public IP address of logon nodes in the cluster.</p>
+     */
     @NameInMap("CidrIp")
     public String cidrIp;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The fixed port. Set the value to 12016</p>
+     */
     @NameInMap("Port")
     public Integer port;
 

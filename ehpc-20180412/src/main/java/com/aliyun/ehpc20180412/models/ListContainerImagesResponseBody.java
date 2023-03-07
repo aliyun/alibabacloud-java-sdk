@@ -4,21 +4,39 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListContainerImagesResponseBody extends TeaModel {
+    /**
+     * <p>The information of the database.</p>
+     */
     @NameInMap("DBInfo")
     public String DBInfo;
 
+    /**
+     * <p>The array of local images.</p>
+     */
     @NameInMap("Images")
     public ListContainerImagesResponseBodyImages images;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,24 +94,45 @@ public class ListContainerImagesResponseBody extends TeaModel {
     }
 
     public static class ListContainerImagesResponseBodyImagesImages extends TeaModel {
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the repository.</p>
+         */
         @NameInMap("Repository")
         public String repository;
 
+        /**
+         * <p>The status of the image.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The container system of the image.</p>
+         */
         @NameInMap("System")
         public String system;
 
+        /**
+         * <p>The tags of the image.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The type of the container. Set the value to singularity.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The time when the image was updated.</p>
+         */
         @NameInMap("UpdateDateTime")
         public String updateDateTime;
 

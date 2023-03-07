@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetIfEcsTypeSupportHtConfigRequest extends TeaModel {
+    /**
+     * <p>The instance type of the ECS instance.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 

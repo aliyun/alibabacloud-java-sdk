@@ -4,18 +4,38 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterAttributesRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster that you want to modify.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The new cluster description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The new image type of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   system: public image</p>
+     * <p>*   self: custom image</p>
+     * <p>*   others: shared image</p>
+     * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
+     */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
+    /**
+     * <p>The new cluster name.</p>
+     */
     @NameInMap("Name")
     public String name;
 

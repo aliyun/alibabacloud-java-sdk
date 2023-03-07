@@ -4,15 +4,27 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster that you want to manage.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The type of the container. Set the value to singularity.</p>
+     */
     @NameInMap("ContainerType")
     public String containerType;
 
+    /**
+     * <p>The tag of the image. Default value: latest.</p>
+     */
     @NameInMap("ImageTag")
     public String imageTag;
 
+    /**
+     * <p>The name of the repository.</p>
+     */
     @NameInMap("Repository")
     public String repository;
 

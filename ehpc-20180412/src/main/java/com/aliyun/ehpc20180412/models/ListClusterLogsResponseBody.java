@@ -4,21 +4,39 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListClusterLogsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The details about operations logs.</p>
+     */
     @NameInMap("Logs")
     public ListClusterLogsResponseBodyLogs logs;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries that are returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,15 +94,27 @@ public class ListClusterLogsResponseBody extends TeaModel {
     }
 
     public static class ListClusterLogsResponseBodyLogsLogInfo extends TeaModel {
+        /**
+         * <p>The time when the log was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The severity level of the log entry.</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The content of the log entry.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the operation.</p>
+         */
         @NameInMap("Operation")
         public String operation;
 

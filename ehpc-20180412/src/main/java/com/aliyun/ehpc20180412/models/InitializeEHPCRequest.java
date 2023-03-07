@@ -4,6 +4,11 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class InitializeEHPCRequest extends TeaModel {
+    /**
+     * <p>The ID of the region where the service-linked role is created.</p>
+     * <br>
+     * <p>You can call the [ListRegions](~~188593~~) operation to obtain the IDs of regions supported by E-HPC.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

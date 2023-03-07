@@ -4,12 +4,26 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class StopNodesRequest extends TeaModel {
+    /**
+     * <p>The ID of the E-HPC cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("Instance")
     public java.util.List<StopNodesRequestInstance> instance;
 
+    /**
+     * <p>The role of the node. Valid values:</p>
+     * <br>
+     * <p>*   Manager: management node</p>
+     * <p>*   Login: logon node</p>
+     * <p>*   Compute: compute node</p>
+     * <br>
+     * <p>Default value: Compute</p>
+     */
     @NameInMap("Role")
     public String role;
 
@@ -43,6 +57,11 @@ public class StopNodesRequest extends TeaModel {
     }
 
     public static class StopNodesRequestInstance extends TeaModel {
+        /**
+         * <p>The ID of the Nth node that you want to stop. Valid values of N: 1 to 100</p>
+         * <br>
+         * <p>You can call the [ListNodes](~~87161~~) operation to query the IDs of the compute nodes.</p>
+         */
         @NameInMap("Id")
         public String id;
 

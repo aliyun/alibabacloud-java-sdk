@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListNodesByQueueResponseBody extends TeaModel {
+    /**
+     * <p>The list of nodes.</p>
+     */
     @NameInMap("Nodes")
     public ListNodesByQueueResponseBodyNodes nodes;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,21 @@ public class ListNodesByQueueResponseBody extends TeaModel {
     }
 
     public static class ListNodesByQueueResponseBodyNodesNodeInfoTotalResources extends TeaModel {
+        /**
+         * <p>The number of CPU cores. Unit: cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The total number of GPU cards. Unit: cards.</p>
+         */
         @NameInMap("Gpu")
         public Integer gpu;
 
+        /**
+         * <p>The memory capacity. Unit: GB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
@@ -106,12 +130,21 @@ public class ListNodesByQueueResponseBody extends TeaModel {
     }
 
     public static class ListNodesByQueueResponseBodyNodesNodeInfoUsedResources extends TeaModel {
+        /**
+         * <p>The number of CPU cores. Unit: cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The total number of GPU cards. Unit: cards.</p>
+         */
         @NameInMap("Gpu")
         public Integer gpu;
 
+        /**
+         * <p>The memory capacity. Unit: GB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
@@ -147,75 +180,176 @@ public class ListNodesByQueueResponseBody extends TeaModel {
     }
 
     public static class ListNodesByQueueResponseBodyNodesNodeInfo extends TeaModel {
+        /**
+         * <p>The time when the node was added to the cluster.</p>
+         */
         @NameInMap("AddTime")
         public String addTime;
 
+        /**
+         * <p>The mode in which the node was added. Valid values:</p>
+         * <br>
+         * <p>*   manual: The node was manually added.</p>
+         * <p>*   autoscale: The node is automatically added.</p>
+         */
         @NameInMap("CreateMode")
         public String createMode;
 
+        /**
+         * <p>Indicates whether the node was created by using E-HPC.</p>
+         */
         @NameInMap("CreatedByEhpc")
         public Boolean createdByEhpc;
 
+        /**
+         * <p>Indicates whether the subscription node has expired. If the node is a pay-as-you-go node, false is returned.</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <p>The time when the subscription instance expires. If the node is a pay-as-you-go node, a null value is returned.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>Indicates whether Hyper-Threading (HT) is enabled.</p>
+         */
         @NameInMap("HtEnabled")
         public Boolean htEnabled;
 
+        /**
+         * <p>The ID of the ECS instance.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The type of the image. Valid values:</p>
+         * <br>
+         * <p>*   system: public image</p>
+         * <p>*   self: custom image</p>
+         * <p>*   others: shared image</p>
+         * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
+         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
+        /**
+         * <p>The private IP address of the node.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The location where the node is deployed. Valid values:</p>
+         * <br>
+         * <p>*   OnPremise: The node is deployed on a hybrid cloud.</p>
+         * <p>*   PublicCloud: The node is deployed on a public cloud.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The reason why the node is locked. Valid values:</p>
+         * <br>
+         * <p>*   financial: The node is locked due to overdue payments.</p>
+         * <p>*   security: The node is locked due to security reasons.</p>
+         * <p>*   recycling: The preemptible node is locked and pending release.</p>
+         * <p>*   dedicatedhostfinancial: The node is locked due to the overdue payments of the dedicated host.</p>
+         * <br>
+         * <p>By default, an empty string is returned.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <p>The public IP address of the node.</p>
+         */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The preemption policy for the Elastic Compute Service (ECS) instance. Valid values:</p>
+         * <br>
+         * <p>*   NoSpot: applies to regular pay-as-you-go instances.</p>
+         * <p>*   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.</p>
+         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
+        /**
+         * <p>The status of the node displayed on the scheduler. The status varies with the scheduler.</p>
+         */
         @NameInMap("StateInSched")
         public String stateInSched;
 
+        /**
+         * <p>The status of the node. Valid values:</p>
+         * <br>
+         * <p>*   uninit: The node is not initialized.</p>
+         * <p>*   init: The node is being initialized.</p>
+         * <p>*   ready: The node is ready.</p>
+         * <p>*   running: The node is running.</p>
+         * <p>*   exception: An exception has occurred on the node.</p>
+         * <p>*   untracking: The node is not added to the cluster.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The number of all resources in the cluster.</p>
+         */
         @NameInMap("TotalResources")
         public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources totalResources;
 
+        /**
+         * <p>The usage of the compute nodes in the cluster. For other types of nodes, an empty value is returned.</p>
+         */
         @NameInMap("UsedResources")
         public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources usedResources;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The version of the E-HPC client.</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

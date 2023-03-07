@@ -4,12 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListPreferredEcsTypesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes of the E-HPC cluster.</p>
+     */
     @NameInMap("Series")
     public ListPreferredEcsTypesResponseBodySeries series;
 
+    /**
+     * <p>Indicates whether spot instances are supported.</p>
+     */
     @NameInMap("SupportSpotInstance")
     public Boolean supportSpotInstance;
 
@@ -100,12 +109,21 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
     }
 
     public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles extends TeaModel {
+        /**
+         * <p>The list of recommended ECS instance types for compute nodes.</p>
+         */
         @NameInMap("Compute")
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute compute;
 
+        /**
+         * <p>The list of recommended ECS instance types for logon nodes.</p>
+         */
         @NameInMap("Login")
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin login;
 
+        /**
+         * <p>The list of recommended ECS instance types for management nodes.</p>
+         */
         @NameInMap("Manager")
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager manager;
 
@@ -141,12 +159,31 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
     }
 
     public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfo extends TeaModel {
+        /**
+         * <p>The recommended ECS instance types for various nodes of the E-HPC cluster.</p>
+         */
         @NameInMap("Roles")
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles roles;
 
+        /**
+         * <p>The ID of the ECS instance series. Valid values:</p>
+         * <br>
+         * <p>*   HighCompute: high computing</p>
+         * <p>*   HighMem: high storage</p>
+         * <p>*   GPU</p>
+         * <p>*   All: all options.</p>
+         */
         @NameInMap("SeriesId")
         public String seriesId;
 
+        /**
+         * <p>The name of the instance series. Valid values:</p>
+         * <br>
+         * <p>*   SeriesHighCompute</p>
+         * <p>*   SeriesHighMem</p>
+         * <p>*   SeriesGPU</p>
+         * <p>*   SeriesAll</p>
+         */
         @NameInMap("SeriesName")
         public String seriesName;
 

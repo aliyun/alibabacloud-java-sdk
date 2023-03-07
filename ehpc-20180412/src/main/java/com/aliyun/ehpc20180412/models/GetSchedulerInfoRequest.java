@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetSchedulerInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,6 +49,17 @@ public class GetSchedulerInfoRequest extends TeaModel {
     }
 
     public static class GetSchedulerInfoRequestScheduler extends TeaModel {
+        /**
+         * <p>The name of the scheduler. Valid values:</p>
+         * <br>
+         * <p>*   pbs</p>
+         * <p>*   pbs19</p>
+         * <p>*   slurm</p>
+         * <p>*   slurm19</p>
+         * <p>*   slurm20</p>
+         * <br>
+         * <p>Valid values of N: 0 to 100</p>
+         */
         @NameInMap("SchedName")
         public String schedName;
 

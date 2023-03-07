@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListSoftwaresResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of the information about the software installed in the cluster.</p>
+     */
     @NameInMap("Softwares")
     public ListSoftwaresResponseBodySoftwares softwares;
 
@@ -32,15 +38,30 @@ public class ListSoftwaresResponseBody extends TeaModel {
     }
 
     public static class ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo extends TeaModel {
+        /**
+         * <p>The name of the software.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the software is required. Valid values:</p>
+         * <br>
+         * <p>*   false: optional</p>
+         * <p>*   true: required</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 
+        /**
+         * <p>The tag of the software.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The version of the software.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -103,24 +124,59 @@ public class ListSoftwaresResponseBody extends TeaModel {
     }
 
     public static class ListSoftwaresResponseBodySoftwaresSoftwareInfo extends TeaModel {
+        /**
+         * <p>The service type of the domain account. Valid values:</p>
+         * <br>
+         * <p>*   nis</p>
+         * <p>*   ldap</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>The version of the domain account service.</p>
+         */
         @NameInMap("AccountVersion")
         public String accountVersion;
 
+        /**
+         * <p>The list of the software in the cluster.</p>
+         */
         @NameInMap("Applications")
         public ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications applications;
 
+        /**
+         * <p>The version of the E-HPC client.</p>
+         */
         @NameInMap("EhpcVersion")
         public String ehpcVersion;
 
+        /**
+         * <p>The image tag of the cluster.</p>
+         */
         @NameInMap("OsTag")
         public String osTag;
 
+        /**
+         * <p>The type of the scheduler. Valid values:</p>
+         * <br>
+         * <p>*   pbs</p>
+         * <p>*   pbs19</p>
+         * <p>*   slurm</p>
+         * <p>*   slurm19</p>
+         * <p>*   slurm20</p>
+         * <p>*   opengridscheduler</p>
+         * <p>*   deadline</p>
+         * <p>*   gridengine</p>
+         * <p>*   cube</p>
+         * <p>*   custom</p>
+         */
         @NameInMap("SchedulerType")
         public String schedulerType;
 
+        /**
+         * <p>The version of the scheduler.</p>
+         */
         @NameInMap("SchedulerVersion")
         public String schedulerVersion;
 

@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetCloudMetricProfilingResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of profiling results.</p>
+     */
     @NameInMap("SvgUrls")
     public GetCloudMetricProfilingResponseBodySvgUrls svgUrls;
 
@@ -32,15 +38,27 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
     }
 
     public static class GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo extends TeaModel {
+        /**
+         * <p>The name of the SVG file that contains the profiling results.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The size of the SVG file. Unit: bytes.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The type of the SVG file.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The URL of the Object Storage Service (OSS) bucket where the scalable vector graphics (SVG) file is stored.</p>
+         */
         @NameInMap("Url")
         public String url;
 
