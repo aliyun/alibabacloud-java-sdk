@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListInstalledSoftwareResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of installed software.</p>
+     */
     @NameInMap("SoftwareList")
     public ListInstalledSoftwareResponseBodySoftwareList softwareList;
 
@@ -32,15 +38,30 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
     }
 
     public static class ListInstalledSoftwareResponseBodySoftwareListSoftwareList extends TeaModel {
+        /**
+         * <p>The ID of the software.</p>
+         */
         @NameInMap("SoftwareId")
         public String softwareId;
 
+        /**
+         * <p>The name of the software.</p>
+         */
         @NameInMap("SoftwareName")
         public String softwareName;
 
+        /**
+         * <p>The status of the software. Valid values:</p>
+         * <br>
+         * <p>*   Installing: The software is being installed.</p>
+         * <p>*   Installed: The software is installed.</p>
+         */
         @NameInMap("SoftwareStatus")
         public String softwareStatus;
 
+        /**
+         * <p>The version of the software.</p>
+         */
         @NameInMap("SoftwareVersion")
         public String softwareVersion;
 

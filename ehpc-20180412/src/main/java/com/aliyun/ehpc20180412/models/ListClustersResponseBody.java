@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
+    /**
+     * <p>The list of clusters.</p>
+     */
     @NameInMap("Clusters")
     public ListClustersResponseBodyClusters clusters;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,33 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyClustersClusterInfoSimpleComputes extends TeaModel {
+        /**
+         * <p>The number of abnormal nodes.</p>
+         */
         @NameInMap("ExceptionCount")
         public Integer exceptionCount;
 
+        /**
+         * <p>The number of normal nodes.</p>
+         */
         @NameInMap("NormalCount")
         public Integer normalCount;
 
+        /**
+         * <p>The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.</p>
+         */
         @NameInMap("OperatingCount")
         public Integer operatingCount;
 
+        /**
+         * <p>The number of stopped nodes.</p>
+         */
         @NameInMap("StoppedCount")
         public Integer stoppedCount;
 
+        /**
+         * <p>The total number of nodes.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -128,18 +158,33 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyClustersClusterInfoSimpleManagers extends TeaModel {
+        /**
+         * <p>The number of abnormal nodes.</p>
+         */
         @NameInMap("ExceptionCount")
         public Integer exceptionCount;
 
+        /**
+         * <p>The number of normal nodes.</p>
+         */
         @NameInMap("NormalCount")
         public Integer normalCount;
 
+        /**
+         * <p>The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.</p>
+         */
         @NameInMap("OperatingCount")
         public Integer operatingCount;
 
+        /**
+         * <p>The number of stopped nodes.</p>
+         */
         @NameInMap("StoppedCount")
         public Integer stoppedCount;
 
+        /**
+         * <p>The total number of management nodes.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -191,12 +236,21 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyClustersClusterInfoSimpleTotalResources extends TeaModel {
+        /**
+         * <p>The number of CPU cores. Unit: cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The number of GPU cards. Unit: cards.</p>
+         */
         @NameInMap("Gpu")
         public Integer gpu;
 
+        /**
+         * <p>The memory size. Unit: MiB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
@@ -232,12 +286,21 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyClustersClusterInfoSimpleUsedResources extends TeaModel {
+        /**
+         * <p>The number of CPU cores. Unit: cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The number of GPU cards. Unit: cards.</p>
+         */
         @NameInMap("Gpu")
         public Integer gpu;
 
+        /**
+         * <p>The memory size. Unit: MiB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
@@ -273,102 +336,244 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyClustersClusterInfoSimple extends TeaModel {
+        /**
+         * <p>The server type of the account. Valid values:</p>
+         * <br>
+         * <p>*   nis</p>
+         * <p>*   ldap</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>The operating system tag of the base image. The tag was used only by the management node.</p>
+         */
         @NameInMap("BaseOsTag")
         public String baseOsTag;
 
+        /**
+         * <p>The version of the client.</p>
+         */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        /**
+         * <p>The maximum hourly price for the ECS instance under the compute node. The return value can be accurate to three decimal places.</p>
+         */
         @NameInMap("ComputeSpotPriceLimit")
         public Float computeSpotPriceLimit;
 
+        /**
+         * <p>The bidding method of the compute nodes. Valid values:</p>
+         * <br>
+         * <p>*   NoSpot: The instances of the compute node are pay-as-you-go instances.</p>
+         * <p>*   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.</p>
+         */
         @NameInMap("ComputeSpotStrategy")
         public String computeSpotStrategy;
 
+        /**
+         * <p>The information about compute nodes.</p>
+         */
         @NameInMap("Computes")
         public ListClustersResponseBodyClustersClusterInfoSimpleComputes computes;
 
+        /**
+         * <p>The number of compute nodes in the cluster.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The mode in which the cluster was deployed. Valid values:</p>
+         * <br>
+         * <p>*   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</p>
+         * <p>*   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</p>
+         * <p>*   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</p>
+         * <p>*   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</p>
+         */
         @NameInMap("DeployMode")
         public String deployMode;
 
+        /**
+         * <p>The description of the cluster.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The version of E-HPC.</p>
+         */
         @NameInMap("EhpcVersion")
         public String ehpcVersion;
 
+        /**
+         * <p>Indicates whether plug-ins were used in the cluster. Valid values:</p>
+         * <br>
+         * <p>*   true: Plug-ins are used.</p>
+         * <p>*   false: Plug-ins are not used.</p>
+         * <br>
+         * <p>Default value: false</p>
+         */
         @NameInMap("HasPlugin")
         public Boolean hasPlugin;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The type of the image. Valid values:</p>
+         * <br>
+         * <p>*   system: public image</p>
+         * <p>*   self: custom image</p>
+         * <p>*   others: shared image</p>
+         * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
+         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
+        /**
+         * <p>The billing method of the nodes in the cluster. Valid values:</p>
+         * <br>
+         * <p>*   PostPaid: pay-as-you-go</p>
+         * <p>*   PrePaid: subscription</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>The instance type of the compute nodes.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>Indicates whether a scaling group was enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: A scaling group is enabled.</p>
+         * <p>*   false: No scaling group is enabled.</p>
+         */
         @NameInMap("IsComputeEss")
         public Boolean isComputeEss;
 
+        /**
+         * <p>The location where the cluster was deployed. Valid values:</p>
+         * <br>
+         * <p>*   OnPremise: The cluster is deployed on a hybrid cloud.</p>
+         * <p>*   PublicCloud: The cluster is deployed on a public cloud.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The list of logon nodes.</p>
+         */
         @NameInMap("LoginNodes")
         public String loginNodes;
 
+        /**
+         * <p>The list of management nodes.</p>
+         */
         @NameInMap("Managers")
         public ListClustersResponseBodyClustersClusterInfoSimpleManagers managers;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The prefix of the node.</p>
+         */
         @NameInMap("NodePrefix")
         public String nodePrefix;
 
+        /**
+         * <p>The suffix of the node.</p>
+         */
         @NameInMap("NodeSuffix")
         public String nodeSuffix;
 
+        /**
+         * <p>The operating system tag of the image.</p>
+         */
         @NameInMap("OsTag")
         public String osTag;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The type of the scheduler. Valid values:</p>
+         * <br>
+         * <p>*   pbs</p>
+         * <p>*   slurm</p>
+         * <p>*   opengridscheduler</p>
+         * <p>*   deadline</p>
+         */
         @NameInMap("SchedulerType")
         public String schedulerType;
 
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   uninit: The cluster is not initialized.</p>
+         * <p>*   creating: The cluster is being created.</p>
+         * <p>*   init: The cluster is being initialized.</p>
+         * <p>*   running: The cluster is running.</p>
+         * <p>*   exception: The cluster encounters an exception.</p>
+         * <p>*   releasing: The cluster is being released.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The statistics of all resources in the cluster.</p>
+         */
         @NameInMap("TotalResources")
         public ListClustersResponseBodyClustersClusterInfoSimpleTotalResources totalResources;
 
+        /**
+         * <p>The number of consumed resources in the cluster.</p>
+         */
         @NameInMap("UsedResources")
         public ListClustersResponseBodyClustersClusterInfoSimpleUsedResources usedResources;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

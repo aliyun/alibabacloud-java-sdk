@@ -4,9 +4,19 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>Specifies whether to release Elastic Compute Service (ECS) instances that are created by using Elastic High Performance Computing (E-HPC).</p>
+     * <br>
+     * <p>Default value: true</p>
+     */
     @NameInMap("ReleaseInstance")
     public String releaseInstance;
 

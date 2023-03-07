@@ -88,6 +88,9 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

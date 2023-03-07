@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetCloudMetricLogsResponseBody extends TeaModel {
+    /**
+     * <p>The list of the performance data.</p>
+     */
     @NameInMap("MetricLogs")
     public GetCloudMetricLogsResponseBodyMetricLogs metricLogs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
     }
 
     public static class GetCloudMetricLogsResponseBodyMetricLogsMetricLog extends TeaModel {
+        /**
+         * <p>The name of the disk.</p>
+         */
         @NameInMap("DiskDevice")
         public String diskDevice;
 
+        /**
+         * <p>The hostname of the node.</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>A JSON-serialized string that contains values for multiple performance metrics.</p>
+         */
         @NameInMap("MetricData")
         public String metricData;
 
+        /**
+         * <p>The name of the network interface.</p>
+         */
         @NameInMap("NetworkInterface")
         public String networkInterface;
 
+        /**
+         * <p>The timestamp of the log. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Time")
         public Integer time;
 

@@ -4,18 +4,34 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class InvokeShellCommandRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The content of the command. The value must be 2 to 2,048 characters in length.</p>
+     */
     @NameInMap("Command")
     public String command;
 
     @NameInMap("Instance")
     public java.util.List<InvokeShellCommandRequestInstance> instance;
 
+    /**
+     * <p>The timeout period. If a command times out, the command process is terminated. Unit: seconds.</p>
+     * <br>
+     * <p>Default value: 60</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 
+    /**
+     * <p>The working directory of the command. Default value: /root.</p>
+     */
     @NameInMap("WorkingDir")
     public String workingDir;
 
@@ -65,6 +81,11 @@ public class InvokeShellCommandRequest extends TeaModel {
     }
 
     public static class InvokeShellCommandRequestInstance extends TeaModel {
+        /**
+         * <p>The ID of the node on which the command is run.</p>
+         * <br>
+         * <p>>  The Instance.N.Id parameter specifies the node on which the command is run. If it is not specified, the command is run on all nodes of the cluster.</p>
+         */
         @NameInMap("Id")
         public String id;
 

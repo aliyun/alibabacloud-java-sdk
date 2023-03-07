@@ -4,21 +4,39 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetUserImageRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The type of the image. Set the value to singularity.</p>
+     */
     @NameInMap("ContainerType")
     public String containerType;
 
+    /**
+     * <p>The name of the image.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>The path where the image is stored in the OSS bucket.</p>
+     */
     @NameInMap("ImagePath")
     public String imagePath;
 
+    /**
+     * <p>The OSS bucket.</p>
+     */
     @NameInMap("OSSBucket")
     public String OSSBucket;
 
+    /**
+     * <p>The endpoint of OSS.</p>
+     */
     @NameInMap("OSSEndPoint")
     public String OSSEndPoint;
 

@@ -7,15 +7,29 @@ public class ListNodesByQueueRequest extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the queue.</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 

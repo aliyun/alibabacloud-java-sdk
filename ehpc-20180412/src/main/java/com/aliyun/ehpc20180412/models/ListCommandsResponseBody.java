@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListCommandsResponseBody extends TeaModel {
+    /**
+     * <p>The list of commands.</p>
+     */
     @NameInMap("Commands")
     public ListCommandsResponseBodyCommands commands;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +80,27 @@ public class ListCommandsResponseBody extends TeaModel {
     }
 
     public static class ListCommandsResponseBodyCommandsCommand extends TeaModel {
+        /**
+         * <p>The content of the command.</p>
+         */
         @NameInMap("CommandContent")
         public String commandContent;
 
+        /**
+         * <p>The ID of the command.</p>
+         */
         @NameInMap("CommandId")
         public String commandId;
 
+        /**
+         * <p>The timeout period. Unit: seconds.</p>
+         */
         @NameInMap("Timeout")
         public String timeout;
 
+        /**
+         * <p>The working directory of the command.</p>
+         */
         @NameInMap("WorkingDir")
         public String workingDir;
 

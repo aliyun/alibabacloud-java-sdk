@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of users.</p>
+     */
     @NameInMap("Users")
     public ListUsersResponseBodyUsers users;
 
@@ -65,12 +80,24 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersUserInfo extends TeaModel {
+        /**
+         * <p>The time when the user was created.</p>
+         */
         @NameInMap("AddTime")
         public String addTime;
 
+        /**
+         * <p>The name of the permission group. Valid values:</p>
+         * <br>
+         * <p>*   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.</p>
+         * <p>*   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("Name")
         public String name;
 

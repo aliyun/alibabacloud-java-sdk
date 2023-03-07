@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListContainerAppsResponseBody extends TeaModel {
+    /**
+     * <p>The array of containerized applications.</p>
+     */
     @NameInMap("ContainerApps")
     public ListContainerAppsResponseBodyContainerApps containerApps;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of containerized applications.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,45 @@ public class ListContainerAppsResponseBody extends TeaModel {
     }
 
     public static class ListContainerAppsResponseBodyContainerAppsContainerApps extends TeaModel {
+        /**
+         * <p>The time when the containerized application was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the containerized application.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the containerized application.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The tags of the image.</p>
+         */
         @NameInMap("ImageTag")
         public String imageTag;
 
+        /**
+         * <p>The name of the containerized application.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The name of the repository.</p>
+         */
         @NameInMap("Repository")
         public String repository;
 
+        /**
+         * <p>The type of the container. Set the value to singularity.</p>
+         */
         @NameInMap("Type")
         public String type;
 

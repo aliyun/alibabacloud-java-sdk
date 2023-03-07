@@ -4,15 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class UpdateQueueConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The instance type of the node.</p>
+     * <br>
+     * <p>You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.</p>
+     */
     @NameInMap("ComputeInstanceType")
     public String computeInstanceType;
 
+    /**
+     * <p>The name of the queue.</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

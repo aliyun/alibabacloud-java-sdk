@@ -4,12 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetClusterVolumesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of the file system mounted to the E-HPC cluster.</p>
+     */
     @NameInMap("Volumes")
     public GetClusterVolumesResponseBodyVolumes volumes;
 
@@ -43,6 +52,13 @@ public class GetClusterVolumesResponseBody extends TeaModel {
     }
 
     public static class GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo extends TeaModel {
+        /**
+         * <p>The type of the node on which the file system is mounted. Valid values:</p>
+         * <br>
+         * <p>*   Compute: compute node</p>
+         * <p>*   Manager: management node</p>
+         * <p>*   Login: logon node</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -81,33 +97,71 @@ public class GetClusterVolumesResponseBody extends TeaModel {
     }
 
     public static class GetClusterVolumesResponseBodyVolumesVolumeInfo extends TeaModel {
+        /**
+         * <p>The queue of the job.</p>
+         */
         @NameInMap("JobQueue")
         public String jobQueue;
 
+        /**
+         * <p>The local mount directory.</p>
+         */
         @NameInMap("LocalDirectory")
         public String localDirectory;
 
+        /**
+         * <p>The type of cluster. Valid values:</p>
+         * <br>
+         * <p>*   OnPremise: The cluster is deployed on a hybrid cloud.</p>
+         * <p>*   PublicCloud: The cluster is deployed on a public cloud.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>Indicates whether the resource can be unmounted.</p>
+         */
         @NameInMap("MustKeep")
         public Boolean mustKeep;
 
+        /**
+         * <p>The remote mount directory.</p>
+         */
         @NameInMap("RemoteDirectory")
         public String remoteDirectory;
 
+        /**
+         * <p>The array of the node on which the file system is mounted.</p>
+         */
         @NameInMap("Roles")
         public GetClusterVolumesResponseBodyVolumesVolumeInfoRoles roles;
 
+        /**
+         * <p>The ID of the file system.</p>
+         */
         @NameInMap("VolumeId")
         public String volumeId;
 
+        /**
+         * <p>The address of the mount target.</p>
+         */
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
+        /**
+         * <p>The storage protocol type of the file system. Valid values:</p>
+         * <br>
+         * <p>*   NFS</p>
+         * <p>*   SMB</p>
+         */
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
 
+        /**
+         * <p>The type of the file system. Valid values:</p>
+         * <br>
+         * <p>*   NAS</p>
+         */
         @NameInMap("VolumeType")
         public String volumeType;
 

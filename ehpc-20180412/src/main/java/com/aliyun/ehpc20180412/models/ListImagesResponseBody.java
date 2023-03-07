@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
+    /**
+     * <p>The list of images that are supported by E-HPC.</p>
+     */
     @NameInMap("OsTags")
     public ListImagesResponseBodyOsTags osTags;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,51 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyOsTagsOsInfo extends TeaModel {
+        /**
+         * <p>The architecture of the operating system. Valid values:</p>
+         * <br>
+         * <p>*   i386</p>
+         * <p>*   x86\_64</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <p>The image tag of the operating system. The tag is used only for management nodes.</p>
+         */
         @NameInMap("BaseOsTag")
         public String baseOsTag;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        @NameInMap("OSName")
+        public String OSName;
+
+        @NameInMap("OSNameEn")
+        public String OSNameEn;
+
+        /**
+         * <p>The image tag of the cluster.</p>
+         */
         @NameInMap("OsTag")
         public String osTag;
 
+        /**
+         * <p>The operating system. Valid values:</p>
+         * <br>
+         * <p>*   CentOS</p>
+         * <p>*   windows</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The version of the operating system.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -77,6 +113,22 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public ListImagesResponseBodyOsTagsOsInfo setOSName(String OSName) {
+            this.OSName = OSName;
+            return this;
+        }
+        public String getOSName() {
+            return this.OSName;
+        }
+
+        public ListImagesResponseBodyOsTagsOsInfo setOSNameEn(String OSNameEn) {
+            this.OSNameEn = OSNameEn;
+            return this;
+        }
+        public String getOSNameEn() {
+            return this.OSNameEn;
         }
 
         public ListImagesResponseBodyOsTagsOsInfo setOsTag(String osTag) {

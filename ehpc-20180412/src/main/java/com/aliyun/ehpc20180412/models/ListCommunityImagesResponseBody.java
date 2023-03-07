@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListCommunityImagesResponseBody extends TeaModel {
+    /**
+     * <p>The list of community images, including custom images and shared images.</p>
+     */
     @NameInMap("Images")
     public ListCommunityImagesResponseBodyImages images;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,43 @@ public class ListCommunityImagesResponseBody extends TeaModel {
     }
 
     public static class ListCommunityImagesResponseBodyImagesImageInfoBaseOsTag extends TeaModel {
+        /**
+         * <p>The architecture of the operating system. Valid values:</p>
+         * <br>
+         * <p>*   i386</p>
+         * <p>*   x86\_64</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <p>The tag of the OS image.</p>
+         */
         @NameInMap("OsTag")
         public String osTag;
 
+        /**
+         * <p>The distribution of the operating system. Valid values:</p>
+         * <br>
+         * <p>*   CentOS</p>
+         * <p>*   Ubuntu</p>
+         * <p>*   SUSE</p>
+         * <p>*   OpenSUSE</p>
+         * <p>*   Debian</p>
+         * <p>*   CoreOS</p>
+         * <p>*   Aliyun</p>
+         * <p>*   Windows Server 2003</p>
+         * <p>*   Windows Server 2008</p>
+         * <p>*   Windows Server 2012</p>
+         * <p>*   Others Linux</p>
+         * <p>*   Customized Linux</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The version of the operating system.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -84,18 +118,36 @@ public class ListCommunityImagesResponseBody extends TeaModel {
     }
 
     public static class ListCommunityImagesResponseBodyImagesImageInfoOsTag extends TeaModel {
+        /**
+         * <p>The architecture of the operating system. Valid values:</p>
+         * <br>
+         * <p>*   i386</p>
+         * <p>*   x86\_64</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <p>The tag of the BOS image.</p>
+         */
         @NameInMap("BaseOsTag")
         public String baseOsTag;
 
+        /**
+         * <p>The tag of the OS image.</p>
+         */
         @NameInMap("OsTag")
         public String osTag;
 
+        /**
+         * <p>The operating system.</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The version of the operating system.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -147,42 +199,96 @@ public class ListCommunityImagesResponseBody extends TeaModel {
     }
 
     public static class ListCommunityImagesResponseBodyImagesImageInfo extends TeaModel {
+        /**
+         * <p>The tag of the BOS image.</p>
+         */
         @NameInMap("BaseOsTag")
         public ListCommunityImagesResponseBodyImagesImageInfoBaseOsTag baseOsTag;
 
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The type of the image. Valid values:</p>
+         * <br>
+         * <p>*   self: custom image</p>
+         * <p>*   others: shared image</p>
+         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
+        /**
+         * <p>An array of OS images that are supported by E-HPC.</p>
+         */
         @NameInMap("OsTag")
         public ListCommunityImagesResponseBodyImagesImageInfoOsTag osTag;
 
+        /**
+         * <p>The script that is run after the image is installed.</p>
+         */
         @NameInMap("PostInstallScript")
         public String postInstallScript;
 
+        /**
+         * <p>The billing unit of the image. Valid values:</p>
+         * <br>
+         * <p>*   Hour</p>
+         * <p>*   Month</p>
+         * <p>*   Year</p>
+         */
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
+        /**
+         * <p>The Alibaba Cloud Marketplace product code of the image.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The size of the image. Unit: GiB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The stock keeping unit (SKU) of the image. Valid values:</p>
+         * <br>
+         * <p>*   ECS: pay-as-you-go</p>
+         * <p>*   package: subscription</p>
+         */
         @NameInMap("SkuCode")
         public String skuCode;
 
+        /**
+         * <p>The status of the image. Valid values:</p>
+         * <br>
+         * <p>*   UnAvailable: The image is unavailable.</p>
+         * <p>*   Available: The image is available.</p>
+         * <p>*   Creating: The image is being created.</p>
+         * <p>*   CreateFailed: The image failed to be created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The owner of the image.</p>
+         */
         @NameInMap("Uid")
         public String uid;
 

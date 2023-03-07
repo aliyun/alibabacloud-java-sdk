@@ -7,6 +7,11 @@ public class AddUsersRequest extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -43,12 +48,37 @@ public class AddUsersRequest extends TeaModel {
     }
 
     public static class AddUsersRequestUser extends TeaModel {
+        /**
+         * <p>The permission group to which the user belongs. Valid values:</p>
+         * <br>
+         * <p>*   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.</p>
+         * <p>*   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The name of the user that you want to add. The name must be 6 to 30 characters in length and can contain letters, digits, and periods (.). It must start with a letter.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The password of the user. The password must be 8 to 30 characters in length and contain three of the following items:</p>
+         * <br>
+         * <p>*   Uppercase letter</p>
+         * <p>*   Lowercase letter</p>
+         * <p>*   Digit</p>
+         * <p>*   Special character: `()~!@#$%^&*-_+=|{}[]:;\"/<>,.?/`</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100</p>
+         * <br>
+         * <p>>  We recommend that you use HTTPS to call the AddUsers operation to ensure that the password remains confidential.</p>
+         */
         @NameInMap("Password")
         public String password;
 

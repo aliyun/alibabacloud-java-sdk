@@ -7,6 +7,11 @@ public class DeleteUsersRequest extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -43,6 +48,11 @@ public class DeleteUsersRequest extends TeaModel {
     }
 
     public static class DeleteUsersRequestUser extends TeaModel {
+        /**
+         * <p>The name of the user that you want to delete. Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.</p>
+         */
         @NameInMap("Name")
         public String name;
 

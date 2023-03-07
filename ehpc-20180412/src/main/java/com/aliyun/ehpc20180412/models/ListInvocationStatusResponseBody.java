@@ -4,15 +4,32 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListInvocationStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the command.</p>
+     */
     @NameInMap("CommandId")
     public String commandId;
 
+    /**
+     * <p>The list of statuses. A list is returned for each node.</p>
+     */
     @NameInMap("InvokeInstances")
     public ListInvocationStatusResponseBodyInvokeInstances invokeInstances;
 
+    /**
+     * <p>The overall status of all nodes in the cluster. Valid values:</p>
+     * <br>
+     * <p>- Finished</p>
+     * <p>- Running</p>
+     * <p>- Failed</p>
+     * <p>- Stopped</p>
+     */
     @NameInMap("InvokeStatus")
     public String invokeStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +71,20 @@ public class ListInvocationStatusResponseBody extends TeaModel {
     }
 
     public static class ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance extends TeaModel {
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The status of the node. Valid values:</p>
+         * <br>
+         * <p>*   Finished</p>
+         * <p>*   Running</p>
+         * <p>*   Failed</p>
+         * <p>*   Stopped</p>
+         */
         @NameInMap("InstanceInvokeStatus")
         public String instanceInvokeStatus;
 

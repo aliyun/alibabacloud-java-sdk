@@ -7,9 +7,19 @@ public class DescribeJobRequest extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the job.</p>
+     * <br>
+     * <p>You can call the [ListJobs](~~87251~~) operation to query the job ID.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

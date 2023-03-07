@@ -4,21 +4,51 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListInvocationResultsRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the command.</p>
+     * <br>
+     * <p>You can call the [ListCommands](~~87388~~) operation to query the command ID.</p>
+     */
     @NameInMap("CommandId")
     public String commandId;
 
     @NameInMap("Instance")
     public java.util.List<ListInvocationResultsRequestInstance> instance;
 
+    /**
+     * <p>The status of the command that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   Finished</p>
+     * <p>*   Running</p>
+     * <p>*   Failed</p>
+     * <p>*   Stopped</p>
+     */
     @NameInMap("InvokeRecordStatus")
     public String invokeRecordStatus;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Page numbers start from 1.</p>
+     * <br>
+     * <p>Default value: 1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -76,6 +106,11 @@ public class ListInvocationResultsRequest extends TeaModel {
     }
 
     public static class ListInvocationResultsRequestInstance extends TeaModel {
+        /**
+         * <p>The ID of the node on which the command is run.</p>
+         * <br>
+         * <p>>  The Instance.N.Id parameter specifies the node on which the command is run. If it is not specified, the command is run on all nodes of the cluster.</p>
+         */
         @NameInMap("Id")
         public String id;
 

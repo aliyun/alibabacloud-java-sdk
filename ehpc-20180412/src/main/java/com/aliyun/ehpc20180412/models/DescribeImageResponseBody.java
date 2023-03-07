@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageResponseBody extends TeaModel {
+    /**
+     * <p>The information of the image.</p>
+     */
     @NameInMap("ImageInfo")
     public DescribeImageResponseBodyImageInfo imageInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,48 @@ public class DescribeImageResponseBody extends TeaModel {
     }
 
     public static class DescribeImageResponseBodyImageInfo extends TeaModel {
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the repository.</p>
+         */
         @NameInMap("Repository")
         public String repository;
 
+        /**
+         * <p>The status of the image.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The container system.</p>
+         */
         @NameInMap("System")
         public String system;
 
+        /**
+         * <p>The tag of the image.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The type of the image. Valid values:</p>
+         * <br>
+         * <p>*   shifter</p>
+         * <p>*   docker</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The time when the image was last updated.</p>
+         */
         @NameInMap("UpdateDateTime")
         public String updateDateTime;
 

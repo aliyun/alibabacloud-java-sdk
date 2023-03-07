@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The list of file systems.</p>
+     */
     @NameInMap("FileSystemList")
     public ListFileSystemWithMountTargetsResponseBodyFileSystemList fileSystemList;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,21 +80,47 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
     }
 
     public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets extends TeaModel {
+        /**
+         * <p>The name of the permission group that applied to the mount target.</p>
+         */
         @NameInMap("AccessGroup")
         public String accessGroup;
 
+        /**
+         * <p>The domain name of the mount target.</p>
+         */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
+        /**
+         * <p>The network type of the mount target. Valid values:</p>
+         * <br>
+         * <p>*   Vpc: virtual private cloud (VPC)</p>
+         * <p>*   Classic: the classic network</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The status of the mount target. Valid values:</p>
+         * <br>
+         * <p>*   Active: The mount target is available.</p>
+         * <p>*   Inactive: The mount target is inactive.</p>
+         * <p>*   Pending: The mount target is being created or modified.</p>
+         * <p>*   Deleting: The mount target is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VswId")
         public String vswId;
 
@@ -158,6 +199,9 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
     }
 
     public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsPackageListPackages extends TeaModel {
+        /**
+         * <p>The ID of the storage plan.</p>
+         */
         @NameInMap("PackageId")
         public String packageId;
 
@@ -196,45 +240,106 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
     }
 
     public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems extends TeaModel {
+        /**
+         * <p>The bandwidth of the file system. Unit: MB/s.</p>
+         */
         @NameInMap("BandWidth")
         public Integer bandWidth;
 
+        /**
+         * <p>The capacity of the file system. Unit: GiB.</p>
+         */
         @NameInMap("Capacity")
         public Integer capacity;
 
+        /**
+         * <p>The time when the file system was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the file system.</p>
+         */
         @NameInMap("Destription")
         public String destription;
 
+        /**
+         * <p>Indicates whether the file system is encrypted. Valid values:</p>
+         * <br>
+         * <p>*   0: The file system is not encrypted.</p>
+         * <p>*   1: The file system is encrypted.</p>
+         */
         @NameInMap("EncryptType")
         public Integer encryptType;
 
+        /**
+         * <p>The ID of the file system.</p>
+         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        /**
+         * <p>The type of the file system. Valid values:</p>
+         * <br>
+         * <p>*   standard: General-purpose NAS file system</p>
+         * <p>*   extreme: Extreme NAS file system</p>
+         */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
+        /**
+         * <p>The used capacity of the file system. Unit: bytes.</p>
+         */
         @NameInMap("MeteredSize")
         public Integer meteredSize;
 
+        /**
+         * <p>The list of mount targets.</p>
+         */
         @NameInMap("MountTargetList")
         public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList mountTargetList;
 
+        /**
+         * <p>The list of storage plans.</p>
+         */
         @NameInMap("PackageList")
         public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsPackageList packageList;
 
+        /**
+         * <p>The protocol type of the file system. Valid values:</p>
+         * <br>
+         * <p>- NFS</p>
+         * <p>- SMB</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the file system. Valid values:</p>
+         * <br>
+         * <p>- Pending: The file system is being created or modified.</p>
+         * <p>- Running: The file system is available.</p>
+         * <p>- Stopped: The file system is stopped.</p>
+         * <p>- Extending: The file system is being scaled out.</p>
+         * <p>- Stopping: The file system is being stopped.</p>
+         * <p>- Deleting: The file system is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The storage type of the file system. </p>
+         * <br>
+         * <p>- If FileSystemType is set to standard, the StorageType parameter has the following valid values: Capacity and Performance.</p>
+         * <p>- If FileSystemType is set to extreme, the StorageType parameter has the following valid values: standard and advance.</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 

@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetPostScriptsResponseBody extends TeaModel {
+    /**
+     * <p>The post-installation scripts.</p>
+     */
     @NameInMap("PostInstallScripts")
     public java.util.List<GetPostScriptsResponseBodyPostInstallScripts> postInstallScripts;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class GetPostScriptsResponseBody extends TeaModel {
     }
 
     public static class GetPostScriptsResponseBodyPostInstallScripts extends TeaModel {
+        /**
+         * <p>The parameter that is used to run the Nth post-installation script. Valid values of N: 1 to 16.</p>
+         */
         @NameInMap("Args")
         public String args;
 
+        /**
+         * <p>The URL that is used to download the Nth post-installation script. Valid values of N: 1 to 16.</p>
+         */
         @NameInMap("Url")
         public String url;
 

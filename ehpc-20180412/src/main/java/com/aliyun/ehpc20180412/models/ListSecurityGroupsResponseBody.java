@@ -4,12 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the security group.</p>
+     */
     @NameInMap("SecurityGroups")
     public ListSecurityGroupsResponseBodySecurityGroups securityGroups;
 
+    /**
+     * <p>The number of security groups.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

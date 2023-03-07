@@ -4,24 +4,45 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetAccountingReportResponseBody extends TeaModel {
+    /**
+     * <p>The list serialized in the JSON format. The list contains multiple records.</p>
+     */
     @NameInMap("Data")
     public GetAccountingReportResponseBodyData data;
 
+    /**
+     * <p>The list serialized in the JSON format. The list contains the column names of each record in the Data.</p>
+     */
     @NameInMap("Metrics")
     public String metrics;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of CPU cores in the queried cluster.</p>
+     */
     @NameInMap("TotalCoreTime")
     public Integer totalCoreTime;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetSchedulerInfoResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The settings of the scheduler.</p>
+     */
     @NameInMap("SchedInfo")
     public java.util.List<GetSchedulerInfoResponseBodySchedInfo> schedInfo;
 
@@ -32,9 +38,15 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
     }
 
     public static class GetSchedulerInfoResponseBodySchedInfo extends TeaModel {
+        /**
+         * <p>The detailed settings of the scheduler.</p>
+         */
         @NameInMap("Configuration")
         public String configuration;
 
+        /**
+         * <p>The type of the scheduler.</p>
+         */
         @NameInMap("SchedName")
         public String schedName;
 

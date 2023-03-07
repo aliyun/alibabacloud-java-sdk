@@ -4,9 +4,19 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DeleteQueueRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the queue that you want to delete.</p>
+     * <br>
+     * <p>You can call the [ListQueues](~~92176~~) operation to query the name of the queue.</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 

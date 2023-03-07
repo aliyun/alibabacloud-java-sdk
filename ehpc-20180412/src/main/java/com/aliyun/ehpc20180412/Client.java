@@ -26,6 +26,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+      *
+      * @param request AddContainerAppRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddContainerAppResponse
+     */
     public AddContainerAppResponse addContainerAppWithOptions(AddContainerAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -46,11 +53,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddContainerAppResponse());
     }
 
+    /**
+      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+      *
+      * @param request AddContainerAppRequest
+      * @return AddContainerAppResponse
+     */
     public AddContainerAppResponse addContainerApp(AddContainerAppRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addContainerAppWithOptions(request, runtime);
     }
 
+    /**
+      * *   The compute nodes to be added are in the Stopped state.
+      * *   After the compute nodes are added to the cluster, the operating systems of the nodes are replaced with the operating system specified by the ImageId parameter.
+      * *   The hosts of the compute nodes must be different from those of the existing compute nodes in the cluster. Otherwise, the add operation fails.
+      *
+      * @param request AddExistedNodesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddExistedNodesResponse
+     */
     public AddExistedNodesResponse addExistedNodesWithOptions(AddExistedNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -71,6 +93,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddExistedNodesResponse());
     }
 
+    /**
+      * *   The compute nodes to be added are in the Stopped state.
+      * *   After the compute nodes are added to the cluster, the operating systems of the nodes are replaced with the operating system specified by the ImageId parameter.
+      * *   The hosts of the compute nodes must be different from those of the existing compute nodes in the cluster. Otherwise, the add operation fails.
+      *
+      * @param request AddExistedNodesRequest
+      * @return AddExistedNodesResponse
+     */
     public AddExistedNodesResponse addExistedNodes(AddExistedNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addExistedNodesWithOptions(request, runtime);
@@ -201,6 +231,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addUsersWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
+      *
+      * @param request ApplyNodesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ApplyNodesResponse
+     */
     public ApplyNodesResponse applyNodesWithOptions(ApplyNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -221,11 +258,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyNodesResponse());
     }
 
+    /**
+      * You can call the ApplyNodes operation to specify the number of compute nodes, the number of vCPUs, and the memory size when you add nodes to a cluster.
+      *
+      * @param request ApplyNodesRequest
+      * @return ApplyNodesResponse
+     */
     public ApplyNodesResponse applyNodes(ApplyNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.applyNodesWithOptions(request, runtime);
     }
 
+    /**
+      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+      *
+      * @param request CreateClusterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateClusterResponse
+     */
     public CreateClusterResponse createClusterWithOptions(CreateClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -246,6 +296,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClusterResponse());
     }
 
+    /**
+      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+      *
+      * @param request CreateClusterRequest
+      * @return CreateClusterResponse
+     */
     public CreateClusterResponse createCluster(CreateClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createClusterWithOptions(request, runtime);
@@ -401,6 +457,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createJobTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that have expired are automatically released. The subscription nodes that have not expired are retained. If you need to release the subscription nodes that have not expired, change their billing method to pay-as-you-go. Before you release a cluster, make sure that you will no longer use the cluster.
+      *
+      * @param request DeleteClusterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteClusterResponse
+     */
     public DeleteClusterResponse deleteClusterWithOptions(DeleteClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -421,6 +484,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClusterResponse());
     }
 
+    /**
+      * After a cluster is released, the pay-as-you-go nodes and the subscription nodes that have expired are automatically released. The subscription nodes that have not expired are retained. If you need to release the subscription nodes that have not expired, change their billing method to pay-as-you-go. Before you release a cluster, make sure that you will no longer use the cluster.
+      *
+      * @param request DeleteClusterRequest
+      * @return DeleteClusterResponse
+     */
     public DeleteClusterResponse deleteCluster(DeleteClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteClusterWithOptions(request, runtime);
@@ -601,6 +670,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteLocalImageWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
+      *
+      * @param request DeleteNodesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteNodesResponse
+     */
     public DeleteNodesResponse deleteNodesWithOptions(DeleteNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -621,6 +697,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNodesResponse());
     }
 
+    /**
+      * Before you delete a compute node, we recommend that you export all job data from the node to prevent data loss.
+      *
+      * @param request DeleteNodesRequest
+      * @return DeleteNodesResponse
+     */
     public DeleteNodesResponse deleteNodes(DeleteNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNodesWithOptions(request, runtime);
@@ -676,6 +758,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteSecurityGroupWithOptions(request, runtime);
     }
 
+    /**
+      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+      *
+      * @param request DeleteUsersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteUsersResponse
+     */
     public DeleteUsersResponse deleteUsersWithOptions(DeleteUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -696,6 +785,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUsersResponse());
     }
 
+    /**
+      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+      *
+      * @param request DeleteUsersRequest
+      * @return DeleteUsersResponse
+     */
     public DeleteUsersResponse deleteUsers(DeleteUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteUsersWithOptions(request, runtime);
@@ -2288,6 +2383,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * If you succeed in calling an asynchronous API operation, a response is generated before a resulting task is completed. Therefore, to query the result of the task, you can use the TaskId parameter returned by the API operation.
+      *
+      * @param request ListTasksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTasksResponse
+     */
     public ListTasksResponse listTasksWithOptions(ListTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2308,6 +2410,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTasksResponse());
     }
 
+    /**
+      * If you succeed in calling an asynchronous API operation, a response is generated before a resulting task is completed. Therefore, to query the result of the task, you can use the TaskId parameter returned by the API operation.
+      *
+      * @param request ListTasksRequest
+      * @return ListTasksResponse
+     */
     public ListTasksResponse listTasks(ListTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTasksWithOptions(request, runtime);
@@ -2413,6 +2521,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listVolumesWithOptions(request, runtime);
     }
 
+    /**
+      * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+      *
+      * @param request ModifyClusterAttributesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyClusterAttributesResponse
+     */
     public ModifyClusterAttributesResponse modifyClusterAttributesWithOptions(ModifyClusterAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2433,6 +2548,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyClusterAttributesResponse());
     }
 
+    /**
+      * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+      *
+      * @param request ModifyClusterAttributesRequest
+      * @return ModifyClusterAttributesResponse
+     */
     public ModifyClusterAttributesResponse modifyClusterAttributes(ModifyClusterAttributesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyClusterAttributesWithOptions(request, runtime);
@@ -2634,6 +2755,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryServicePackAndPriceWithOptions(runtime);
     }
 
+    /**
+      * You can call the operation to reset and restore a cluster only when the cluster is in the Exception state. You can call the [ListClusters](~~87116~~) operation to query the ID and status of a cluster.
+      * We recommend that you export all job data before you restore a cluster. When you reset and restore a cluster, take note of the following impacts:
+      * *   The system disks of all nodes are changed. By default, new system disks are configured based on the settings that you specified when the cluster was created.
+      * *   The data on the system disks and data disks of all cluster nodes is lost. The data includes user information, job information, scheduler queue information, and configuration data of auto-scaling queues. However, the data on Apsara File Storage NAS file systems is retained.
+      * *   The self-managed queues in the cluster are deleted. All nodes are retained and migrated to the default queue of the cluster.
+      *
+      * @param request RecoverClusterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RecoverClusterResponse
+     */
     public RecoverClusterResponse recoverClusterWithOptions(RecoverClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2654,6 +2786,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RecoverClusterResponse());
     }
 
+    /**
+      * You can call the operation to reset and restore a cluster only when the cluster is in the Exception state. You can call the [ListClusters](~~87116~~) operation to query the ID and status of a cluster.
+      * We recommend that you export all job data before you restore a cluster. When you reset and restore a cluster, take note of the following impacts:
+      * *   The system disks of all nodes are changed. By default, new system disks are configured based on the settings that you specified when the cluster was created.
+      * *   The data on the system disks and data disks of all cluster nodes is lost. The data includes user information, job information, scheduler queue information, and configuration data of auto-scaling queues. However, the data on Apsara File Storage NAS file systems is retained.
+      * *   The self-managed queues in the cluster are deleted. All nodes are retained and migrated to the default queue of the cluster.
+      *
+      * @param request RecoverClusterRequest
+      * @return RecoverClusterResponse
+     */
     public RecoverClusterResponse recoverCluster(RecoverClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.recoverClusterWithOptions(request, runtime);
@@ -2684,6 +2826,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.rerunJobsWithOptions(request, runtime);
     }
 
+    /**
+      * After a node is reset, the operating system and software return to their initial states. To ensure that jobs run as expected, we recommend that you do not reset running nodes unless you need to perform crash recovery.
+      *
+      * @param request ResetNodesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ResetNodesResponse
+     */
     public ResetNodesResponse resetNodesWithOptions(ResetNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2704,6 +2853,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResetNodesResponse());
     }
 
+    /**
+      * After a node is reset, the operating system and software return to their initial states. To ensure that jobs run as expected, we recommend that you do not reset running nodes unless you need to perform crash recovery.
+      *
+      * @param request ResetNodesRequest
+      * @return ResetNodesResponse
+     */
     public ResetNodesResponse resetNodes(ResetNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetNodesWithOptions(request, runtime);
@@ -2734,6 +2889,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.runCloudMetricProfilingWithOptions(request, runtime);
     }
 
+    /**
+      * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+      *
+      * @param request SetAutoScaleConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetAutoScaleConfigResponse
+     */
     public SetAutoScaleConfigResponse setAutoScaleConfigWithOptions(SetAutoScaleConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2754,6 +2916,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetAutoScaleConfigResponse());
     }
 
+    /**
+      * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+      *
+      * @param request SetAutoScaleConfigRequest
+      * @return SetAutoScaleConfigResponse
+     */
     public SetAutoScaleConfigResponse setAutoScaleConfig(SetAutoScaleConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setAutoScaleConfigWithOptions(request, runtime);
@@ -3037,6 +3205,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startVisualServiceWithOptions(request, runtime);
     }
 
+    /**
+      * If you stop a subscription compute node, its billing is not affected. If you stop a pay-as-you-go compute node for which you have enabled the *economical mode*, you are no longer charged for its computing resources. For more information, see [Economical mode](~~63353~~).
+      *
+      * @param request StopClusterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopClusterResponse
+     */
     public StopClusterResponse stopClusterWithOptions(StopClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3057,6 +3232,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopClusterResponse());
     }
 
+    /**
+      * If you stop a subscription compute node, its billing is not affected. If you stop a pay-as-you-go compute node for which you have enabled the *economical mode*, you are no longer charged for its computing resources. For more information, see [Economical mode](~~63353~~).
+      *
+      * @param request StopClusterRequest
+      * @return StopClusterResponse
+     */
     public StopClusterResponse stopCluster(StopClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopClusterWithOptions(request, runtime);
@@ -3162,6 +3343,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.stopVisualServiceWithOptions(request, runtime);
     }
 
+    /**
+      * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
+      *
+      * @param request SubmitJobRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SubmitJobResponse
+     */
     public SubmitJobResponse submitJobWithOptions(SubmitJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3182,6 +3370,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitJobResponse());
     }
 
+    /**
+      * Before you submit a job in a cluster, you must upload a job file to the cluster, for example, job.sh. For more information, see [CreateJobFile](~~159049~~).
+      *
+      * @param request SubmitJobRequest
+      * @return SubmitJobResponse
+     */
     public SubmitJobResponse submitJob(SubmitJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitJobWithOptions(request, runtime);
@@ -3398,6 +3592,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateClusterVolumesWithOptions(request, runtime);
     }
 
+    /**
+      * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+      *
+      * @param request UpdateQueueConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateQueueConfigResponse
+     */
     public UpdateQueueConfigResponse updateQueueConfigWithOptions(UpdateQueueConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3418,6 +3619,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateQueueConfigResponse());
     }
 
+    /**
+      * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+      *
+      * @param request UpdateQueueConfigRequest
+      * @return UpdateQueueConfigResponse
+     */
     public UpdateQueueConfigResponse updateQueueConfig(UpdateQueueConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateQueueConfigWithOptions(request, runtime);

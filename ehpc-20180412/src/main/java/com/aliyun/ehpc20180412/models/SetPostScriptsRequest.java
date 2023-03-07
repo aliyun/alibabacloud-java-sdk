@@ -4,12 +4,20 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class SetPostScriptsRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("PostInstallScripts")
     public java.util.List<SetPostScriptsRequestPostInstallScripts> postInstallScripts;
 
+    /**
+     * <p>The ID of the region where the cluster resides. You can call the [ListRegions](~~188593~~) operation to query the latest region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,9 +51,15 @@ public class SetPostScriptsRequest extends TeaModel {
     }
 
     public static class SetPostScriptsRequestPostInstallScripts extends TeaModel {
+        /**
+         * <p>The parameter that is used to run the Nth post-installation script. Valid values of N: 1 to 16.</p>
+         */
         @NameInMap("Args")
         public String args;
 
+        /**
+         * <p>The URL that is used to download the Nth post-installation script. Valid values of N: 1 to 16.</p>
+         */
         @NameInMap("Url")
         public String url;
 

@@ -4,21 +4,47 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class RunCloudMetricProfilingRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The duration of the profiling process. Unit: seconds.</p>
+     * <br>
+     * <p>Value values: 10 to 300</p>
+     * <br>
+     * <p>Default value: 30</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>The sampling frequency. Unit: Hz</p>
+     * <br>
+     * <p>Valid values: 1 to 2000</p>
+     * <br>
+     * <p>Default value: 2000</p>
+     */
     @NameInMap("Freq")
     public Integer freq;
 
+    /**
+     * <p>The name of the host.</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>The ID of the profiling process.</p>
+     */
     @NameInMap("ProcessId")
     public Integer processId;
 
+    /**
+     * <p>The ID of the region where the cluster resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,12 +4,26 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class StartNodesRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("Instance")
     public java.util.List<StartNodesRequestInstance> instance;
 
+    /**
+     * <p>The role of the node. Valid values:</p>
+     * <br>
+     * <p>*   Manager: management node</p>
+     * <p>*   Login: logon node</p>
+     * <p>*   Compute: compute node</p>
+     * <br>
+     * <p>Default value: Compute</p>
+     */
     @NameInMap("Role")
     public String role;
 
@@ -43,6 +57,11 @@ public class StartNodesRequest extends TeaModel {
     }
 
     public static class StartNodesRequestInstance extends TeaModel {
+        /**
+         * <p>The ID of the Nth node. Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>Make sure that the node is in the Stopped state. You can call the [ListNodes](~~87161~~) operation to query the status of the node.</p>
+         */
         @NameInMap("Id")
         public String id;
 

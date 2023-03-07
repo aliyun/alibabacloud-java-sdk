@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListCurrentClientVersionResponseBody extends TeaModel {
+    /**
+     * <p>The latest version number of the E-HPC client.</p>
+     */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

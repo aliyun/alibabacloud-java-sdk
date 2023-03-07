@@ -4,15 +4,29 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class UnTagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the resource. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The ID of the region to which the resource belongs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Set the value to cluster, which indicates E-HPC clusters.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

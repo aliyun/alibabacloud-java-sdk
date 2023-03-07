@@ -4,9 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
+    /**
+     * <p>The image tag of the operating system. The tag is used only for management nodes.</p>
+     */
     @NameInMap("BaseOsTag")
     public String baseOsTag;
 
+    /**
+     * <p>The instance type of the node.</p>
+     * <br>
+     * <p>*   If a value is passed to the parameter, the list of images that are supported by the specified instance type is queried.</p>
+     * <p>*   If no value is passed to the parameter, the list of images that are supported by all instance types is queried.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 

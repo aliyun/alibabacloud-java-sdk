@@ -4,21 +4,39 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePriceResponseBody extends TeaModel {
+    /**
+     * <p>The number of images that you want to purchase.</p>
+     */
     @NameInMap("Amount")
     public Integer amount;
 
+    /**
+     * <p>The discount that is applied.</p>
+     */
     @NameInMap("DiscountPrice")
     public Float discountPrice;
 
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The original price of the image.</p>
+     */
     @NameInMap("OriginalPrice")
     public Float originalPrice;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The final price of the image.</p>
+     */
     @NameInMap("TradePrice")
     public Float tradePrice;
 
