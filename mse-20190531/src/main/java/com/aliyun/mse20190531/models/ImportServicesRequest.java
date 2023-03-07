@@ -13,6 +13,12 @@ public class ImportServicesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("FcServiceName")
+    public String fcServiceName;
+
+    @NameInMap("FcVersion")
+    public String fcVersion;
+
     /**
      * <p>The unique ID of the gateway.</p>
      */
@@ -59,6 +65,22 @@ public class ImportServicesRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public ImportServicesRequest setFcServiceName(String fcServiceName) {
+        this.fcServiceName = fcServiceName;
+        return this;
+    }
+    public String getFcServiceName() {
+        return this.fcServiceName;
+    }
+
+    public ImportServicesRequest setFcVersion(String fcVersion) {
+        this.fcVersion = fcVersion;
+        return this;
+    }
+    public String getFcVersion() {
+        return this.fcVersion;
     }
 
     public ImportServicesRequest setGatewayUniqueId(String gatewayUniqueId) {

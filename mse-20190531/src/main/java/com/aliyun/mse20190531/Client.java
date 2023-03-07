@@ -3919,6 +3919,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.fcServiceName)) {
+            query.put("FcServiceName", request.fcServiceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fcVersion)) {
+            query.put("FcVersion", request.fcVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
             query.put("GatewayUniqueId", request.gatewayUniqueId);
         }
