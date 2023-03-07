@@ -17,7 +17,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The details about the VPC firewalls.</p>
+     * <p>An array that consists of the details about the VPC firewalls.</p>
      */
     @NameInMap("VpcFirewalls")
     public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewalls> vpcFirewalls;
@@ -148,7 +148,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList extends TeaModel {
         /**
-         * <p>The route entries of the local VPC.</p>
+         * <p>An array that consists of the route entries of the local VPC.</p>
          */
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList> routeEntryList;
@@ -202,7 +202,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The CIDR blocks of the local VPC.</p>
+         * <p>An array that consists of the CIDR blocks of the local VPC.</p>
          */
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> vpcCidrTableList;
@@ -312,7 +312,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList extends TeaModel {
         /**
-         * <p>The route entries of the peer VPC.</p>
+         * <p>An array that consists of the route entries of the peer VPC.</p>
          */
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableListRouteEntryList> routeEntryList;
@@ -366,7 +366,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The CIDR blocks of the peer VPC.</p>
+         * <p>An array that consists of the CIDR blocks of the peer VPC.</p>
          */
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList> vpcCidrTableList;
@@ -465,7 +465,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
          * <br>
          * <p>*   **opened**: The VPC firewall is enabled.</p>
          * <p>*   **closed**: The VPC firewall is disabled.</p>
-         * <p>*   **notconfigured**: The VPC firewall is not created.</p>
+         * <p>*   **notconfigured**: The VPC firewall is not configured.</p>
          */
         @NameInMap("FirewallSwitchStatus")
         public String firewallSwitchStatus;

@@ -52,7 +52,7 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the VPC belongs.</p>
      * <br>
-     * <p>>  For more information about the regions, see [Supported regions](~~195657~~).</p>
+     * <p>> For more information about the regions, see [Supported regions](~~195657~~).</p>
      */
     @NameInMap("VpcRegion")
     public String vpcRegion;

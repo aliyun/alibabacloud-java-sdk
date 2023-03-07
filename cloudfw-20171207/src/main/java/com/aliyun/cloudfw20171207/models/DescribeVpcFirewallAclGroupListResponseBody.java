@@ -53,25 +53,26 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallAclGroupListResponseBodyAclGroupList extends TeaModel {
         /**
-         * <p>The ID of the policy group. </p>
+         * <p>The ID of the policy group.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>- If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.  </p>
+         * <p>*   If the VPC firewall is used to protect a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance.</p>
          * <br>
-         * <p>Example: cen-ervw0g12b5jbw****</p>
-         * <p>- If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.  </p>
+         * <p>    Example: cen-ervw0g12b5jbw\*\*\*\*</p>
          * <br>
-         * <p>Example: vfw-a42bbb7b887148c9****</p>
+         * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.</p>
+         * <br>
+         * <p>    Example: vfw-a42bbb7b887148c9\*\*\*\*</p>
          */
         @NameInMap("AclGroupId")
         public String aclGroupId;
 
         /**
-         * <p>The name of the policy group. Valid values: </p>
+         * <p>The name of the policy group. Valid values:</p>
          * <br>
-         * <p>- If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.</p>
-         * <p>- If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the name of the VPC firewall instance.</p>
+         * <p>*   If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.</p>
+         * <p>*   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the name of the VPC firewall instance.</p>
          */
         @NameInMap("AclGroupName")
         public String aclGroupName;

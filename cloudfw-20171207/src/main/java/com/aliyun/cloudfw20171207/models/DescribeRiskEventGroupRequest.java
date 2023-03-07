@@ -62,7 +62,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
      * <p>*   **in**: inbound</p>
      * <p>*   **out**: outbound</p>
      * <br>
-     * <p>> If you do not specify this parameter, the intrusion events in both inbound and outbound directions are queried.</p>
+     * <p>> If you do not specify this parameter, the intrusion events that are recorded for both inbound and outbound traffic are queried.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -115,7 +115,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String noLocation;
 
     /**
-     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <p>The order in which you want to sort the results. Valid values:</p>
      * <br>
      * <p>*   **asc**: the ascending order.</p>
      * <p>*   **desc**: the descending order. This is the default value.</p>
@@ -137,7 +137,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
      * <p>*   **1**: alerting</p>
      * <p>*   **2**: blocking</p>
      * <br>
-     * <p>> If you do not specify this parameter, the intrusion events that are detected by firewalls in both states are queried.</p>
+     * <p>> If you do not specify this parameter, all intrusion events that are detected by the firewall are queried, regardless of the firewall status.</p>
      */
     @NameInMap("RuleResult")
     public String ruleResult;
@@ -149,13 +149,13 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
      * <p>*   **2**: virtual patching</p>
      * <p>*   **4**: threat intelligence</p>
      * <br>
-     * <p>> If you do not specify this parameter, the intrusion events that are detected by using all rules are queried.</p>
+     * <p>> If you do not specify this parameter, the intrusion events that are detected by all rules are queried.</p>
      */
     @NameInMap("RuleSource")
     public String ruleSource;
 
     /**
-     * <p>The field based on which the results are sorted. Valid values:</p>
+     * <p>The field based on which you want to sort the results. Valid values:</p>
      * <br>
      * <p>*   **VulLevel**: The results are sorted based on the risk level field. This is the default value.</p>
      * <p>*   **LastTime**: The results are sorted based on the most recent occurrence time.</p>
