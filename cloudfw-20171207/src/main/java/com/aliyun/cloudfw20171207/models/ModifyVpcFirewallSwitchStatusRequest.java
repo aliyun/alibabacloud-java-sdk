@@ -7,14 +7,14 @@ public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the VPC firewall. Valid values:</p>
      * <br>
-     * <p>*   **open**: enables the VPC firewall.</p>
-     * <p>*   **close**: disables the VPC firewall.</p>
+     * <p>*   **open**: yes</p>
+     * <p>*   **close**: no</p>
      */
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
 
     /**
-     * <p>The natural language of the request and response. Valid values:</p>
+     * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
      * <p>*   **zh**: Chinese (default)</p>
      * <p>*   **en**: English</p>
@@ -31,7 +31,7 @@ public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall.</p>
      * <br>
-     * <p>>  You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.</p>
+     * <p>> You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

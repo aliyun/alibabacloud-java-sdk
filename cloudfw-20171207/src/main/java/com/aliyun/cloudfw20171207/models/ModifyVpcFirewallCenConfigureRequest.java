@@ -22,7 +22,7 @@ public class ModifyVpcFirewallCenConfigureRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall.</p>
      * <br>
-     * <p>>  You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.</p>
+     * <p>> You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the instance IDs of VPC firewalls.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

@@ -23,10 +23,10 @@ public class DescribeVpcFirewallCenListRequest extends TeaModel {
      * <br>
      * <p>*   **opened**: The VPC firewall is enabled.</p>
      * <p>*   **closed**: The VPC firewall is disabled.</p>
-     * <p>*   **notconfigured**: The VPC firewall is not created.</p>
-     * <p>*   **configured**: The VPC firewall is created but is not enabled.</p>
+     * <p>*   **notconfigured**: The VPC firewall is not configured.</p>
+     * <p>*   **configured**: The VPC firewall is configured but is not enabled.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * <p>> If you do not specify this parameter, VPC firewalls in all states are queried.</p>
      */
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
@@ -41,7 +41,7 @@ public class DescribeVpcFirewallCenListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member that is manged by your Alibaba Cloud account. The member is also an Alibaba Cloud account.</p>
+     * <p>The UID of the member that is managed by your Alibaba Cloud account. The member is also an Alibaba Cloud account.</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
@@ -66,7 +66,7 @@ public class DescribeVpcFirewallCenListRequest extends TeaModel {
     /**
      * <p>The region ID of the VPC.</p>
      * <br>
-     * <p>>  For more information about the regions, see [Supported regions](~~195657~~).</p>
+     * <p>> For more information about the regions, see [Supported regions](~~195657~~).</p>
      */
     @NameInMap("RegionNo")
     public String regionNo;
@@ -77,7 +77,7 @@ public class DescribeVpcFirewallCenListRequest extends TeaModel {
      * <p>*   **auto**: automatic mode</p>
      * <p>*   **manual**: manual mode</p>
      * <br>
-     * <p>>  If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
+     * <p>> If you do not specify this parameter, VPC firewalls in all routing modes are queried.</p>
      */
     @NameInMap("RouteMode")
     public String routeMode;

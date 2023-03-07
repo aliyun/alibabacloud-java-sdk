@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallConfigureRequest extends TeaModel {
     /**
-     * <p>The natural language of the request and response. Valid values:</p>
+     * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
      * <p>*   **zh**: Chinese (default)</p>
      * <p>*   **en**: English</p>
@@ -19,7 +19,7 @@ public class ModifyVpcFirewallConfigureRequest extends TeaModel {
      * <p>*   **RouteTableId**: the ID of the route table for the local VPC.</p>
      * <p>*   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the local VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the local VPC.</p>
      * <br>
-     * <p>>  You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of local VPCs for VPC firewalls.</p>
+     * <p>> You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of local VPCs for VPC firewalls.</p>
      */
     @NameInMap("LocalVpcCidrTableList")
     public String localVpcCidrTableList;
@@ -36,7 +36,7 @@ public class ModifyVpcFirewallConfigureRequest extends TeaModel {
      * <p>*   **RouteTableId**: the ID of the route table for the peer VPC.</p>
      * <p>*   **RouteEntryList**: The value is a JSON string that contains the DestinationCidr and NextHopInstanceId parameters. The DestinationCidr parameter indicates the destination CIDR block of the peer VPC. The NextHopInstanceId parameter indicates the instance ID of the next hop for the peer VPC.</p>
      * <br>
-     * <p>>  You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of peer VPCs for VPC firewalls.</p>
+     * <p>> You can call the [DescribeVpcFirewallDetail](~~342892~~) operation to query the CIDR blocks of peer VPCs for VPC firewalls.</p>
      */
     @NameInMap("PeerVpcCidrTableList")
     public String peerVpcCidrTableList;
@@ -44,7 +44,7 @@ public class ModifyVpcFirewallConfigureRequest extends TeaModel {
     /**
      * <p>The instance ID of the VPC firewall.</p>
      * <br>
-     * <p>>  You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.</p>
+     * <p>> You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.</p>
      */
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;

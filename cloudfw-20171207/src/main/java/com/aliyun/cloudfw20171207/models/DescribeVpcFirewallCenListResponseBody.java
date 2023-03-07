@@ -17,7 +17,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The details about the VPC firewall.</p>
+     * <p>An array that consists of the details about the VPC firewall.</p>
      */
     @NameInMap("VpcFirewalls")
     public java.util.List<DescribeVpcFirewallCenListResponseBodyVpcFirewalls> vpcFirewalls;
@@ -55,8 +55,8 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether basic protection is enabled. Valid values:</p>
          * <br>
-         * <p>- **1**: yes</p>
-         * <p>- **0**: no</p>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
          */
         @NameInMap("BasicRules")
         public Integer basicRules;
@@ -64,8 +64,8 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether virtual patching is enabled. Valid values:</p>
          * <br>
-         * <p>- **1**: yes</p>
-         * <p>- **0**: no</p>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
          */
         @NameInMap("EnableAllPatch")
         public Integer enableAllPatch;
@@ -73,8 +73,8 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         /**
          * <p>The mode of the IPS. Valid values:</p>
          * <br>
-         * <p>- **1**: block mode</p>
-         * <p>- **0**: monitor mode</p>
+         * <p>*   **1**: block mode</p>
+         * <p>*   **0**: monitor mode</p>
          */
         @NameInMap("RunMode")
         public Integer runMode;
@@ -118,7 +118,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         public String destinationCidr;
 
         /**
-         * <p>The instance ID for the next hop of the VPC.</p>
+         * <p>The instance ID of the next hop for the VPC.</p>
          */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
@@ -148,7 +148,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList extends TeaModel {
         /**
-         * <p>The route entries for the VPC.</p>
+         * <p>An array that consists of the route entries for the VPC.</p>
          */
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList> routeEntryList;
@@ -190,7 +190,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         public String authorizationStatus;
 
         /**
-         * <p>The CIDR blocks that are protected by the VPC firewall.</p>
+         * <p>An array consisting of the CIDR blocks that are protected by the VPC firewall.</p>
          */
         @NameInMap("DefendCidrList")
         public java.util.List<String> defendCidrList;
@@ -254,7 +254,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         public String supportManualMode;
 
         /**
-         * <p>The type of the CEN transit router. Valid values:</p>
+         * <p>The edition of the CEN transit router. Valid values:</p>
          * <br>
          * <p>*   **Basic**: Basic Edition transit router</p>
          * <p>*   **Enterprise**: Enterprise Edition transit router</p>
@@ -263,7 +263,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         public String transitRouterType;
 
         /**
-         * <p>The CIDR block of the VPC.</p>
+         * <p>An array that consists of the CIDR blocks of the VPC.</p>
          */
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallCenListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> vpcCidrTableList;
@@ -423,7 +423,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
          * <br>
          * <p>*   **opened**: The VPC firewall is enabled.</p>
          * <p>*   **closed**: The VPC firewall is disabled.</p>
-         * <p>*   **notconfigured**: The VPC firewall is not created.</p>
+         * <p>*   **notconfigured**: The VPC firewall is not configured.</p>
          */
         @NameInMap("FirewallSwitchStatus")
         public String firewallSwitchStatus;
@@ -447,17 +447,17 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         public String memberUid;
 
         /**
-         * <p>Indicates whether the VPC firewall can be automatically enabled to protect VPC traffic based on route learning. Valid values: </p>
+         * <p>Indicates whether the VPC firewall can be automatically enabled to protect VPC traffic based on route learning. Valid values:</p>
          * <br>
-         * <p>- **passed**: The VPC firewall can be automatically enabled.</p>
-         * <p>- **failed**: The VPC firewall cannot be automatically enabled.</p>
-         * <p>- **unknown**: The VPC firewall is in an unknown state.</p>
+         * <p>*   **passed**: The VPC firewall can be automatically enabled.</p>
+         * <p>*   **failed**: The VPC firewall cannot be automatically enabled.</p>
+         * <p>*   **unknown**: The VPC firewall is in an unknown state.</p>
          */
         @NameInMap("PrecheckStatus")
         public String precheckStatus;
 
         /**
-         * <p>Indicates whether you can create a VPC firewall in a region. Valid values:</p>
+         * <p>Indicates whether you can create a VPC firewall in a specified region. Valid values:</p>
          * <br>
          * <p>*   **enable**: yes</p>
          * <p>*   **disable**: no</p>
@@ -469,7 +469,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
          * <p>The result code of the operation that creates the VPC firewall. Valid values:</p>
          * <br>
          * <p>*   **Unauthorized**: Cloud Firewall is not authorized to access the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.</p>
-         * <p>*   **RegionDisable**: .VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.</p>
+         * <p>*   **RegionDisable**: VPC Firewall is not supported in the region of the VPC for which the VPC firewall is created, and the VPC firewall cannot be created.</p>
          * <p>*   **OpsDisable**: You are not allowed to create the VPC firewall.</p>
          * <p>*   **VbrNotSupport**: The VPC firewall cannot be created for a VBR that is attached to the CEN instance.</p>
          * <p>*   Empty string: You can create a VPC firewall for the network instance.</p>

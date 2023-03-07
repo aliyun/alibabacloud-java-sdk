@@ -171,13 +171,13 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableList extends TeaModel {
         /**
-         * <p>The route entries of the VPC.</p>
+         * <p>An array that consists of the route entries for the VPC.</p>
          */
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableListRouteEntryList> routeEntryList;
 
         /**
-         * <p>The ID of the route table for the VPC.</p>
+         * <p>The route table ID of the VPC.</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
@@ -219,19 +219,19 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String attachmentName;
 
         /**
-         * <p>The CIDR blocks that are protected by the VPC firewall.</p>
+         * <p>An array consisting of the CIDR blocks that are protected by the VPC firewall.</p>
          */
         @NameInMap("DefendCidrList")
         public java.util.List<String> defendCidrList;
 
         /**
-         * <p>The Elastic Network Interfaces (ENIs).</p>
+         * <p>An array that consists of the elastic network interfaces (ENIs).</p>
          */
         @NameInMap("EniList")
         public java.util.List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList> eniList;
 
         /**
-         * <p>The ID of the vSwitch. The value of this parameter is returned only when the RouteMode parameter is set to manual.</p>
+         * <p>The ID of the specified vSwitch when the routing mode is manual.</p>
          */
         @NameInMap("ManualVSwitchId")
         public String manualVSwitchId;
@@ -269,14 +269,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         /**
          * <p>The routing mode. Valid values:</p>
          * <br>
-         * <p>*   auto</p>
-         * <p>*   manual</p>
+         * <p>*   auto: automatic mode</p>
+         * <p>*   manual: manual mode</p>
          */
         @NameInMap("RouteMode")
         public String routeMode;
 
         /**
-         * <p>Indicates whether the routing mode can be set to manual. Valid values:</p>
+         * <p>Indicates whether the manual routing mode is supported. Valid values:</p>
          * <br>
          * <p>*   **1**: yes</p>
          * <p>*   **0**: no</p>
@@ -300,7 +300,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String transitRouterType;
 
         /**
-         * <p>The CIDR blocks of the VPC.</p>
+         * <p>An array that consists of the CIDR blocks of the VPC.</p>
          */
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableList> vpcCidrTableList;

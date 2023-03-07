@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVpcFirewallConfigureRequest extends TeaModel {
     /**
-     * <p>The natural language of the request and response. Valid values:</p>
+     * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
      * <p>*   **zh**: Chinese (default)</p>
      * <p>*   **en**: English</p>
@@ -20,7 +20,7 @@ public class DeleteVpcFirewallConfigureRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The list of the VPC firewall IDs.</p>
+     * <p>The instance IDs of VPC firewalls.</p>
      */
     @NameInMap("VpcFirewallIdList")
     public java.util.List<String> vpcFirewallIdList;
