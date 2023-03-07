@@ -147,11 +147,17 @@ public class PullTaskResponseBody extends TeaModel {
     }
 
     public static class PullTaskResponseBodyModule extends TeaModel {
+        @NameInMap("BizCode")
+        public String bizCode;
+
         @NameInMap("OrderId")
         public String orderId;
 
         @NameInMap("OutTaskId")
         public String outTaskId;
+
+        @NameInMap("PrincipalKey")
+        public String principalKey;
 
         @NameInMap("TaskData")
         public String taskData;
@@ -165,6 +171,14 @@ public class PullTaskResponseBody extends TeaModel {
         public static PullTaskResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             PullTaskResponseBodyModule self = new PullTaskResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public PullTaskResponseBodyModule setBizCode(String bizCode) {
+            this.bizCode = bizCode;
+            return this;
+        }
+        public String getBizCode() {
+            return this.bizCode;
         }
 
         public PullTaskResponseBodyModule setOrderId(String orderId) {
@@ -181,6 +195,14 @@ public class PullTaskResponseBody extends TeaModel {
         }
         public String getOutTaskId() {
             return this.outTaskId;
+        }
+
+        public PullTaskResponseBodyModule setPrincipalKey(String principalKey) {
+            this.principalKey = principalKey;
+            return this;
+        }
+        public String getPrincipalKey() {
+            return this.principalKey;
         }
 
         public PullTaskResponseBodyModule setTaskData(String taskData) {
