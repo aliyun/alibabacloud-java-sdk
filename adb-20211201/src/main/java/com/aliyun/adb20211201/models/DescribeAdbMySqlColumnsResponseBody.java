@@ -4,6 +4,9 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
+    @NameInMap("ColumnCount")
+    public Integer columnCount;
+
     @NameInMap("Columns")
     public java.util.List<DescribeAdbMySqlColumnsResponseBodyColumns> columns;
 
@@ -25,6 +28,14 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
     public static DescribeAdbMySqlColumnsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAdbMySqlColumnsResponseBody self = new DescribeAdbMySqlColumnsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAdbMySqlColumnsResponseBody setColumnCount(Integer columnCount) {
+        this.columnCount = columnCount;
+        return this;
+    }
+    public Integer getColumnCount() {
+        return this.columnCount;
     }
 
     public DescribeAdbMySqlColumnsResponseBody setColumns(java.util.List<DescribeAdbMySqlColumnsResponseBodyColumns> columns) {
