@@ -10,6 +10,9 @@ public class DeleteQualityFollowerRequest extends TeaModel {
     @NameInMap("FollowerId")
     public Long followerId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the compute engine or data source for which the partition filter expression is configured. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Monitoring Rules page of Data Quality to obtain the name.</p>
      */
@@ -27,6 +30,14 @@ public class DeleteQualityFollowerRequest extends TeaModel {
     }
     public Long getFollowerId() {
         return this.followerId;
+    }
+
+    public DeleteQualityFollowerRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public DeleteQualityFollowerRequest setProjectName(String projectName) {

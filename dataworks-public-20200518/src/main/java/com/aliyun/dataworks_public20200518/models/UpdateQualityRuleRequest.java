@@ -82,6 +82,9 @@ public class UpdateQualityRuleRequest extends TeaModel {
     @NameInMap("PredictType")
     public Integer predictType;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the compute engine instance or data source. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the name.</p>
      */
@@ -235,6 +238,14 @@ public class UpdateQualityRuleRequest extends TeaModel {
     }
     public Integer getPredictType() {
         return this.predictType;
+    }
+
+    public UpdateQualityRuleRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public UpdateQualityRuleRequest setProjectName(String projectName) {

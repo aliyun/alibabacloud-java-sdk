@@ -7,6 +7,9 @@ public class GetQualityFollowerRequest extends TeaModel {
     @NameInMap("EntityId")
     public Long entityId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -21,6 +24,14 @@ public class GetQualityFollowerRequest extends TeaModel {
     }
     public Long getEntityId() {
         return this.entityId;
+    }
+
+    public GetQualityFollowerRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public GetQualityFollowerRequest setProjectName(String projectName) {

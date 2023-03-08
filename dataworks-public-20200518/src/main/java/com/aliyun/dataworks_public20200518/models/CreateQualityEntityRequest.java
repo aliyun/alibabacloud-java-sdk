@@ -22,6 +22,9 @@ public class CreateQualityEntityRequest extends TeaModel {
     @NameInMap("MatchExpression")
     public String matchExpression;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the maxcompute project or data source.</p>
      */
@@ -61,6 +64,14 @@ public class CreateQualityEntityRequest extends TeaModel {
     }
     public String getMatchExpression() {
         return this.matchExpression;
+    }
+
+    public CreateQualityEntityRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public CreateQualityEntityRequest setProjectName(String projectName) {

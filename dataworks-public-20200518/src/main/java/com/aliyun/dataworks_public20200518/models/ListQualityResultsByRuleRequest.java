@@ -24,6 +24,9 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the compute engine instance or data source for which data quality is monitored.</p>
      */
@@ -71,6 +74,14 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListQualityResultsByRuleRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListQualityResultsByRuleRequest setProjectName(String projectName) {
