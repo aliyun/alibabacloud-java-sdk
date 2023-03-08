@@ -31,40 +31,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         return this.resourceTypes;
     }
 
-    public static class ListResourceTypesResponseBodyResourceTypesCodeMapping extends TeaModel {
-        @NameInMap("ResourceGroup")
-        public String resourceGroup;
-
-        @NameInMap("Tag")
-        public String tag;
-
-        public static ListResourceTypesResponseBodyResourceTypesCodeMapping build(java.util.Map<String, ?> map) throws Exception {
-            ListResourceTypesResponseBodyResourceTypesCodeMapping self = new ListResourceTypesResponseBodyResourceTypesCodeMapping();
-            return TeaModel.build(map, self);
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesCodeMapping setResourceGroup(String resourceGroup) {
-            this.resourceGroup = resourceGroup;
-            return this;
-        }
-        public String getResourceGroup() {
-            return this.resourceGroup;
-        }
-
-        public ListResourceTypesResponseBodyResourceTypesCodeMapping setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-    }
-
     public static class ListResourceTypesResponseBodyResourceTypes extends TeaModel {
-        @NameInMap("CodeMapping")
-        public ListResourceTypesResponseBodyResourceTypesCodeMapping codeMapping;
-
         @NameInMap("FilterKeys")
         public java.util.List<String> filterKeys;
 
@@ -80,14 +47,6 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public static ListResourceTypesResponseBodyResourceTypes build(java.util.Map<String, ?> map) throws Exception {
             ListResourceTypesResponseBodyResourceTypes self = new ListResourceTypesResponseBodyResourceTypes();
             return TeaModel.build(map, self);
-        }
-
-        public ListResourceTypesResponseBodyResourceTypes setCodeMapping(ListResourceTypesResponseBodyResourceTypesCodeMapping codeMapping) {
-            this.codeMapping = codeMapping;
-            return this;
-        }
-        public ListResourceTypesResponseBodyResourceTypesCodeMapping getCodeMapping() {
-            return this.codeMapping;
         }
 
         public ListResourceTypesResponseBodyResourceTypes setFilterKeys(java.util.List<String> filterKeys) {
