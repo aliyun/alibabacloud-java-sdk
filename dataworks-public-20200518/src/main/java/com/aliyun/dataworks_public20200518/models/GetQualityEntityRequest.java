@@ -16,6 +16,9 @@ public class GetQualityEntityRequest extends TeaModel {
     @NameInMap("MatchExpression")
     public String matchExpression;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
      */
@@ -47,6 +50,14 @@ public class GetQualityEntityRequest extends TeaModel {
     }
     public String getMatchExpression() {
         return this.matchExpression;
+    }
+
+    public GetQualityEntityRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public GetQualityEntityRequest setProjectName(String projectName) {

@@ -1758,6 +1758,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MatchExpression", request.matchExpression);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
         }
@@ -1801,6 +1805,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.follower)) {
             body.put("Follower", request.follower);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
@@ -1923,6 +1931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.predictType)) {
             body.put("PredictType", request.predictType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
@@ -2830,6 +2842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EnvType", request.envType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
         }
@@ -2868,6 +2884,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.followerId)) {
             body.put("FollowerId", request.followerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
@@ -2962,6 +2982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteQualityRuleResponse deleteQualityRuleWithOptions(DeleteQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
         }
@@ -5816,6 +5840,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MatchExpression", request.matchExpression);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
         }
@@ -5853,6 +5881,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EntityId", request.entityId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
         }
@@ -5882,6 +5914,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetQualityRuleResponse getQualityRuleWithOptions(GetQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
         }
@@ -8279,6 +8315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
         }
@@ -8330,6 +8370,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
         }
@@ -8377,6 +8421,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
@@ -10389,13 +10437,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateConnectionWithOptions(request, runtime);
     }
 
-    /**
-      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
-      *
-      * @param request UpdateDIProjectConfigRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateDIProjectConfigResponse
-     */
     public UpdateDIProjectConfigResponse updateDIProjectConfigWithOptions(UpdateDIProjectConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10432,12 +10473,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDIProjectConfigResponse());
     }
 
-    /**
-      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization nodes in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
-      *
-      * @param request UpdateDIProjectConfigRequest
-      * @return UpdateDIProjectConfigResponse
-     */
     public UpdateDIProjectConfigResponse updateDIProjectConfig(UpdateDIProjectConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDIProjectConfigWithOptions(request, runtime);
@@ -11132,6 +11167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FollowerId", request.followerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("ProjectName", request.projectName);
         }
@@ -11203,6 +11242,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.predictType)) {
             body.put("PredictType", request.predictType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {

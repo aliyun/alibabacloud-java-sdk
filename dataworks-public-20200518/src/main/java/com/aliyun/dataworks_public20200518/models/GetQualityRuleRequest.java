@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetQualityRuleRequest extends TeaModel {
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the compute engine instance or data source.</p>
      */
@@ -19,6 +22,14 @@ public class GetQualityRuleRequest extends TeaModel {
     public static GetQualityRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         GetQualityRuleRequest self = new GetQualityRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetQualityRuleRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public GetQualityRuleRequest setProjectName(String projectName) {

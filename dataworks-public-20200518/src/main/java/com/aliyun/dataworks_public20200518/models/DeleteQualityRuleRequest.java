@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteQualityRuleRequest extends TeaModel {
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the database engine or data source.</p>
      */
@@ -19,6 +22,14 @@ public class DeleteQualityRuleRequest extends TeaModel {
     public static DeleteQualityRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteQualityRuleRequest self = new DeleteQualityRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteQualityRuleRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public DeleteQualityRuleRequest setProjectName(String projectName) {

@@ -28,6 +28,9 @@ public class ListQualityResultsByEntityRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
      */
@@ -75,6 +78,14 @@ public class ListQualityResultsByEntityRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListQualityResultsByEntityRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public ListQualityResultsByEntityRequest setProjectName(String projectName) {

@@ -58,6 +58,9 @@ public class CreateQualityRuleRequest extends TeaModel {
     @NameInMap("PredictType")
     public Integer predictType;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the compute engine instance or data source.</p>
      */
@@ -191,6 +194,14 @@ public class CreateQualityRuleRequest extends TeaModel {
     }
     public Integer getPredictType() {
         return this.predictType;
+    }
+
+    public CreateQualityRuleRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public CreateQualityRuleRequest setProjectName(String projectName) {

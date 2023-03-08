@@ -16,6 +16,9 @@ public class DeleteQualityEntityRequest extends TeaModel {
     @NameInMap("EnvType")
     public String envType;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the compute engine instance or data source.</p>
      */
@@ -41,6 +44,14 @@ public class DeleteQualityEntityRequest extends TeaModel {
     }
     public String getEnvType() {
         return this.envType;
+    }
+
+    public DeleteQualityEntityRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public DeleteQualityEntityRequest setProjectName(String projectName) {

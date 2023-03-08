@@ -22,6 +22,9 @@ public class CreateQualityFollowerRequest extends TeaModel {
     @NameInMap("Follower")
     public String follower;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     /**
      * <p>The name of the computing engine instance or data source.</p>
      */
@@ -55,6 +58,14 @@ public class CreateQualityFollowerRequest extends TeaModel {
     }
     public String getFollower() {
         return this.follower;
+    }
+
+    public CreateQualityFollowerRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public CreateQualityFollowerRequest setProjectName(String projectName) {
