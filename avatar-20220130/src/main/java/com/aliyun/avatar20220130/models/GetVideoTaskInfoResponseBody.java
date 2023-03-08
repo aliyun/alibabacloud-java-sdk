@@ -77,6 +77,9 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         @NameInMap("VideoUrl")
         public String videoUrl;
 
+        @NameInMap("WordSubtitlesUrl")
+        public String wordSubtitlesUrl;
+
         public static GetVideoTaskInfoResponseBodyDataTaskResult build(java.util.Map<String, ?> map) throws Exception {
             GetVideoTaskInfoResponseBodyDataTaskResult self = new GetVideoTaskInfoResponseBodyDataTaskResult();
             return TeaModel.build(map, self);
@@ -112,6 +115,14 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         }
         public String getVideoUrl() {
             return this.videoUrl;
+        }
+
+        public GetVideoTaskInfoResponseBodyDataTaskResult setWordSubtitlesUrl(String wordSubtitlesUrl) {
+            this.wordSubtitlesUrl = wordSubtitlesUrl;
+            return this;
+        }
+        public String getWordSubtitlesUrl() {
+            return this.wordSubtitlesUrl;
         }
 
     }
