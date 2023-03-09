@@ -13,6 +13,9 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    @NameInMap("NodeInstanceType")
+    public String nodeInstanceType;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -55,6 +58,14 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     }
     public String getAppInstanceGroupName() {
         return this.appInstanceGroupName;
+    }
+
+    public ListAppInstanceGroupRequest setNodeInstanceType(String nodeInstanceType) {
+        this.nodeInstanceType = nodeInstanceType;
+        return this;
+    }
+    public String getNodeInstanceType() {
+        return this.nodeInstanceType;
     }
 
     public ListAppInstanceGroupRequest setPageNumber(Integer pageNumber) {
