@@ -65,15 +65,32 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps extends TeaModel {
+        @NameInMap("AppIcon")
+        public String appIcon;
+
         @NameInMap("AppId")
         public String appId;
 
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("AppVersion")
+        public String appVersion;
+
+        @NameInMap("AppVersionName")
+        public String appVersionName;
+
         public static ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps build(java.util.Map<String, ?> map) throws Exception {
             ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps self = new ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps();
             return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps setAppIcon(String appIcon) {
+            this.appIcon = appIcon;
+            return this;
+        }
+        public String getAppIcon() {
+            return this.appIcon;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps setAppId(String appId) {
@@ -90,6 +107,22 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps setAppVersionName(String appVersionName) {
+            this.appVersionName = appVersionName;
+            return this;
+        }
+        public String getAppVersionName() {
+            return this.appVersionName;
         }
 
     }
@@ -195,6 +228,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("NodePoolId")
         public String nodePoolId;
 
+        @NameInMap("NodeTypeName")
+        public String nodeTypeName;
+
         @NameInMap("NodeUsed")
         public Integer nodeUsed;
 
@@ -279,6 +315,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getNodePoolId() {
             return this.nodePoolId;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool setNodeTypeName(String nodeTypeName) {
+            this.nodeTypeName = nodeTypeName;
+            return this;
+        }
+        public String getNodeTypeName() {
+            return this.nodeTypeName;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool setNodeUsed(Integer nodeUsed) {
@@ -428,8 +472,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppInstanceType")
         public String appInstanceType;
 
+        @NameInMap("AppPolicyId")
+        public String appPolicyId;
+
         @NameInMap("Apps")
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
+
+        @NameInMap("ChargeResourceMode")
+        public String chargeResourceMode;
 
         @NameInMap("ChargeType")
         public String chargeType;
@@ -512,12 +562,28 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             return this.appInstanceType;
         }
 
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setAppPolicyId(String appPolicyId) {
+            this.appPolicyId = appPolicyId;
+            return this;
+        }
+        public String getAppPolicyId() {
+            return this.appPolicyId;
+        }
+
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setApps(java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps) {
             this.apps = apps;
             return this;
         }
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> getApps() {
             return this.apps;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setChargeResourceMode(String chargeResourceMode) {
+            this.chargeResourceMode = chargeResourceMode;
+            return this;
+        }
+        public String getChargeResourceMode() {
+            return this.chargeResourceMode;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setChargeType(String chargeType) {
