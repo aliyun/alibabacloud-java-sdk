@@ -7,6 +7,9 @@ public class CreateVideoLabelClassificationTaskRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -33,6 +36,14 @@ public class CreateVideoLabelClassificationTaskRequest extends TeaModel {
     }
     public CredentialConfig getCredentialConfig() {
         return this.credentialConfig;
+    }
+
+    public CreateVideoLabelClassificationTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateVideoLabelClassificationTaskRequest setNotifyTopicName(String notifyTopicName) {

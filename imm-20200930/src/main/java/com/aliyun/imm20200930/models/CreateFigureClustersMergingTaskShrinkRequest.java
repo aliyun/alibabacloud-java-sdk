@@ -10,6 +10,12 @@ public class CreateFigureClustersMergingTaskShrinkRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    @NameInMap("Froms")
+    public String fromsShrink;
+
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -44,6 +50,22 @@ public class CreateFigureClustersMergingTaskShrinkRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public CreateFigureClustersMergingTaskShrinkRequest setFromsShrink(String fromsShrink) {
+        this.fromsShrink = fromsShrink;
+        return this;
+    }
+    public String getFromsShrink() {
+        return this.fromsShrink;
+    }
+
+    public CreateFigureClustersMergingTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateFigureClustersMergingTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

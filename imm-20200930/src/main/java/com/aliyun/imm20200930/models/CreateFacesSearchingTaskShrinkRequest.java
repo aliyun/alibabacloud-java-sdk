@@ -10,6 +10,9 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     @NameInMap("MaxResult")
     public String maxResult;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -44,6 +47,14 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     }
     public String getMaxResult() {
         return this.maxResult;
+    }
+
+    public CreateFacesSearchingTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateFacesSearchingTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

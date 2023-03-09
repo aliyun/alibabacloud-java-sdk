@@ -7,6 +7,9 @@ public class CreateVideoLabelClassificationTaskShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -33,6 +36,14 @@ public class CreateVideoLabelClassificationTaskShrinkRequest extends TeaModel {
     }
     public String getCredentialConfigShrink() {
         return this.credentialConfigShrink;
+    }
+
+    public CreateVideoLabelClassificationTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateVideoLabelClassificationTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

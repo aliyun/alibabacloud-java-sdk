@@ -13,6 +13,9 @@ public class CreateImageModerationTaskRequest extends TeaModel {
     @NameInMap("MaxFrames")
     public Long maxFrames;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -61,6 +64,14 @@ public class CreateImageModerationTaskRequest extends TeaModel {
     }
     public Long getMaxFrames() {
         return this.maxFrames;
+    }
+
+    public CreateImageModerationTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateImageModerationTaskRequest setNotifyTopicName(String notifyTopicName) {

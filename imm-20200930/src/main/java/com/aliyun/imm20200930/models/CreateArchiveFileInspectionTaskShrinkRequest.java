@@ -7,6 +7,9 @@ public class CreateArchiveFileInspectionTaskShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -36,6 +39,14 @@ public class CreateArchiveFileInspectionTaskShrinkRequest extends TeaModel {
     }
     public String getCredentialConfigShrink() {
         return this.credentialConfigShrink;
+    }
+
+    public CreateArchiveFileInspectionTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateArchiveFileInspectionTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

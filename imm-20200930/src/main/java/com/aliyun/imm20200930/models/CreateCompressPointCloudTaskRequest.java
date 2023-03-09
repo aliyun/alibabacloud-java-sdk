@@ -13,6 +13,9 @@ public class CreateCompressPointCloudTaskRequest extends TeaModel {
     @NameInMap("KdtreeOption")
     public KdtreeOption kdtreeOption;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -67,6 +70,14 @@ public class CreateCompressPointCloudTaskRequest extends TeaModel {
     }
     public KdtreeOption getKdtreeOption() {
         return this.kdtreeOption;
+    }
+
+    public CreateCompressPointCloudTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateCompressPointCloudTaskRequest setNotifyTopicName(String notifyTopicName) {

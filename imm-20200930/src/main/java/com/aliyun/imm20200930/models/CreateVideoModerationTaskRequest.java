@@ -13,6 +13,9 @@ public class CreateVideoModerationTaskRequest extends TeaModel {
     @NameInMap("MaxFrames")
     public Long maxFrames;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -61,6 +64,14 @@ public class CreateVideoModerationTaskRequest extends TeaModel {
     }
     public Long getMaxFrames() {
         return this.maxFrames;
+    }
+
+    public CreateVideoModerationTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateVideoModerationTaskRequest setNotifyTopicName(String notifyTopicName) {

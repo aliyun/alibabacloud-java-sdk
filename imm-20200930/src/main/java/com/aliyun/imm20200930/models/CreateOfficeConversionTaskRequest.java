@@ -37,6 +37,9 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     @NameInMap("MaxSheetRow")
     public Long maxSheetRow;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -188,6 +191,14 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     }
     public Long getMaxSheetRow() {
         return this.maxSheetRow;
+    }
+
+    public CreateOfficeConversionTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateOfficeConversionTaskRequest setNotifyTopicName(String notifyTopicName) {

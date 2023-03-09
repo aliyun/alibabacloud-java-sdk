@@ -10,6 +10,9 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
     @NameInMap("MaxResult")
     public String maxResult;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -44,6 +47,14 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
     }
     public String getMaxResult() {
         return this.maxResult;
+    }
+
+    public CreateFacesSearchingTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateFacesSearchingTaskRequest setNotifyTopicName(String notifyTopicName) {

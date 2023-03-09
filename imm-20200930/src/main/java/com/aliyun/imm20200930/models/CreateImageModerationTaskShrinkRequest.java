@@ -13,6 +13,9 @@ public class CreateImageModerationTaskShrinkRequest extends TeaModel {
     @NameInMap("MaxFrames")
     public Long maxFrames;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -61,6 +64,14 @@ public class CreateImageModerationTaskShrinkRequest extends TeaModel {
     }
     public Long getMaxFrames() {
         return this.maxFrames;
+    }
+
+    public CreateImageModerationTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateImageModerationTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
