@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeComputeResourceRequest extends TeaModel {
+    @NameInMap("DBClusterVersion")
+    public String DBClusterVersion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -19,9 +22,20 @@ public class DescribeComputeResourceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ZoneId")
+    public String zoneId;
+
     public static DescribeComputeResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeComputeResourceRequest self = new DescribeComputeResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeComputeResourceRequest setDBClusterVersion(String DBClusterVersion) {
+        this.DBClusterVersion = DBClusterVersion;
+        return this;
+    }
+    public String getDBClusterVersion() {
+        return this.DBClusterVersion;
     }
 
     public DescribeComputeResourceRequest setOwnerAccount(String ownerAccount) {
@@ -62,6 +76,14 @@ public class DescribeComputeResourceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeComputeResourceRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

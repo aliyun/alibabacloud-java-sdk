@@ -38,6 +38,9 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         @NameInMap("EIURange")
         public java.util.List<Long> EIURange;
 
+        @NameInMap("StorageResourceRange")
+        public java.util.List<String> storageResourceRange;
+
         public static DescribeEIURangeResponseBodyEIUInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeEIURangeResponseBodyEIUInfo self = new DescribeEIURangeResponseBodyEIUInfo();
             return TeaModel.build(map, self);
@@ -57,6 +60,14 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         }
         public java.util.List<Long> getEIURange() {
             return this.EIURange;
+        }
+
+        public DescribeEIURangeResponseBodyEIUInfo setStorageResourceRange(java.util.List<String> storageResourceRange) {
+            this.storageResourceRange = storageResourceRange;
+            return this;
+        }
+        public java.util.List<String> getStorageResourceRange() {
+            return this.storageResourceRange;
         }
 
     }

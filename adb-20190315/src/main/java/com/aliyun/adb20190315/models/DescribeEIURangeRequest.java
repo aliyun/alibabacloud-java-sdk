@@ -10,6 +10,9 @@ public class DescribeEIURangeRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("DBClusterVersion")
+    public String DBClusterVersion;
+
     @NameInMap("Operation")
     public String operation;
 
@@ -27,6 +30,9 @@ public class DescribeEIURangeRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static DescribeEIURangeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEIURangeRequest self = new DescribeEIURangeRequest();
@@ -47,6 +53,14 @@ public class DescribeEIURangeRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeEIURangeRequest setDBClusterVersion(String DBClusterVersion) {
+        this.DBClusterVersion = DBClusterVersion;
+        return this;
+    }
+    public String getDBClusterVersion() {
+        return this.DBClusterVersion;
     }
 
     public DescribeEIURangeRequest setOperation(String operation) {
@@ -95,6 +109,14 @@ public class DescribeEIURangeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeEIURangeRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

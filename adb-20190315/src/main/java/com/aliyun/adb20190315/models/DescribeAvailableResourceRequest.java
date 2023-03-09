@@ -10,6 +10,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("DBClusterVersion")
+    public String DBClusterVersion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -47,6 +50,14 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public DescribeAvailableResourceRequest setDBClusterVersion(String DBClusterVersion) {
+        this.DBClusterVersion = DBClusterVersion;
+        return this;
+    }
+    public String getDBClusterVersion() {
+        return this.DBClusterVersion;
     }
 
     public DescribeAvailableResourceRequest setOwnerAccount(String ownerAccount) {
