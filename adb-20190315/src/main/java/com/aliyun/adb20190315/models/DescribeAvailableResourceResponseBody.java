@@ -390,8 +390,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneList extends TeaModel {
+        @NameInMap("SupportedComputeResource")
+        public java.util.List<String> supportedComputeResource;
+
         @NameInMap("SupportedMode")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode> supportedMode;
+
+        @NameInMap("SupportedStorageResource")
+        public java.util.List<String> supportedStorageResource;
 
         @NameInMap("ZoneId")
         public String zoneId;
@@ -401,12 +407,28 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAvailableResourceResponseBodyAvailableZoneList setSupportedComputeResource(java.util.List<String> supportedComputeResource) {
+            this.supportedComputeResource = supportedComputeResource;
+            return this;
+        }
+        public java.util.List<String> getSupportedComputeResource() {
+            return this.supportedComputeResource;
+        }
+
         public DescribeAvailableResourceResponseBodyAvailableZoneList setSupportedMode(java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode> supportedMode) {
             this.supportedMode = supportedMode;
             return this;
         }
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode> getSupportedMode() {
             return this.supportedMode;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableZoneList setSupportedStorageResource(java.util.List<String> supportedStorageResource) {
+            this.supportedStorageResource = supportedStorageResource;
+            return this;
+        }
+        public java.util.List<String> getSupportedStorageResource() {
+            return this.supportedStorageResource;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZoneList setZoneId(String zoneId) {
