@@ -68,9 +68,6 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         @NameInMap("commodityInstanceId")
         public String commodityInstanceId;
 
-        @NameInMap("custinsId")
-        public Long custinsId;
-
         @NameInMap("engine")
         public String engine;
 
@@ -113,9 +110,6 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         @NameInMap("userId")
         public String userId;
 
-        @NameInMap("uuid")
-        public String uuid;
-
         @NameInMap("vpcId")
         public String vpcId;
 
@@ -130,14 +124,6 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         }
         public String getCommodityInstanceId() {
             return this.commodityInstanceId;
-        }
-
-        public GetDasProServiceUsageResponseBodyData setCustinsId(Long custinsId) {
-            this.custinsId = custinsId;
-            return this;
-        }
-        public Long getCustinsId() {
-            return this.custinsId;
         }
 
         public GetDasProServiceUsageResponseBodyData setEngine(String engine) {
@@ -250,14 +236,6 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public GetDasProServiceUsageResponseBodyData setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
         public GetDasProServiceUsageResponseBodyData setVpcId(String vpcId) {

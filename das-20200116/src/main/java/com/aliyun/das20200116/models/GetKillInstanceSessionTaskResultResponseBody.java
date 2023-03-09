@@ -206,6 +206,9 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         @NameInMap("KillSuccessCount")
         public Long killSuccessCount;
 
+        @NameInMap("NodeId")
+        public String nodeId;
+
         @NameInMap("Result")
         public java.util.List<GetKillInstanceSessionTaskResultResponseBodyDataResult> result;
 
@@ -256,6 +259,14 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         }
         public Long getKillSuccessCount() {
             return this.killSuccessCount;
+        }
+
+        public GetKillInstanceSessionTaskResultResponseBodyData setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         public GetKillInstanceSessionTaskResultResponseBodyData setResult(java.util.List<GetKillInstanceSessionTaskResultResponseBodyDataResult> result) {
