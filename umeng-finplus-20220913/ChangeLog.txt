@@ -1,3 +1,6 @@
+2023-03-09 Version: 1.0.4
+- V4. support encrypted invoking
+
 2023-01-11 Version: 1.0.3
 - V3. upgrade function, add new apis to support behalf-submit feature
 
