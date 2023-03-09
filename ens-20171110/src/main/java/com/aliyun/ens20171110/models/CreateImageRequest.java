@@ -13,8 +13,8 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("product")
-    public String product;
+    @NameInMap("SnapshotId")
+    public String snapshotId;
 
     public static CreateImageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageRequest self = new CreateImageRequest();
@@ -45,12 +45,12 @@ public class CreateImageRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateImageRequest setProduct(String product) {
-        this.product = product;
+    public CreateImageRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
         return this;
     }
-    public String getProduct() {
-        return this.product;
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
 }
