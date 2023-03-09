@@ -22,6 +22,9 @@ public class CreateStoryRequest extends TeaModel {
     @NameInMap("MinFileCount")
     public Long minFileCount;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -103,6 +106,14 @@ public class CreateStoryRequest extends TeaModel {
     }
     public Long getMinFileCount() {
         return this.minFileCount;
+    }
+
+    public CreateStoryRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateStoryRequest setNotifyTopicName(String notifyTopicName) {

@@ -7,6 +7,9 @@ public class CreateFileUncompressionTaskRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -39,6 +42,14 @@ public class CreateFileUncompressionTaskRequest extends TeaModel {
     }
     public CredentialConfig getCredentialConfig() {
         return this.credentialConfig;
+    }
+
+    public CreateFileUncompressionTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateFileUncompressionTaskRequest setNotifyTopicName(String notifyTopicName) {

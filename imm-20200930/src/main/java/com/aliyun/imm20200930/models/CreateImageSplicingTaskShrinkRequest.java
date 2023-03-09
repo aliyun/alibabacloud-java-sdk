@@ -22,6 +22,9 @@ public class CreateImageSplicingTaskShrinkRequest extends TeaModel {
     @NameInMap("Margin")
     public Long margin;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -100,6 +103,14 @@ public class CreateImageSplicingTaskShrinkRequest extends TeaModel {
     }
     public Long getMargin() {
         return this.margin;
+    }
+
+    public CreateImageSplicingTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateImageSplicingTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

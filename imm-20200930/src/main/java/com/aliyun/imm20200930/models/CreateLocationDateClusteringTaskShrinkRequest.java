@@ -13,6 +13,9 @@ public class CreateLocationDateClusteringTaskShrinkRequest extends TeaModel {
     @NameInMap("LocationOptions")
     public String locationOptionsShrink;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -52,6 +55,14 @@ public class CreateLocationDateClusteringTaskShrinkRequest extends TeaModel {
     }
     public String getLocationOptionsShrink() {
         return this.locationOptionsShrink;
+    }
+
+    public CreateLocationDateClusteringTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateLocationDateClusteringTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

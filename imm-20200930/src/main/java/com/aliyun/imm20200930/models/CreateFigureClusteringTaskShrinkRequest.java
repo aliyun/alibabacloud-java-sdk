@@ -7,6 +7,9 @@ public class CreateFigureClusteringTaskShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -30,6 +33,14 @@ public class CreateFigureClusteringTaskShrinkRequest extends TeaModel {
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public CreateFigureClusteringTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateFigureClusteringTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

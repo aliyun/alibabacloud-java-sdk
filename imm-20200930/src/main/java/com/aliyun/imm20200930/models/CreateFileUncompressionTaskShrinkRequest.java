@@ -7,6 +7,9 @@ public class CreateFileUncompressionTaskShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -39,6 +42,14 @@ public class CreateFileUncompressionTaskShrinkRequest extends TeaModel {
     }
     public String getCredentialConfigShrink() {
         return this.credentialConfigShrink;
+    }
+
+    public CreateFileUncompressionTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateFileUncompressionTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

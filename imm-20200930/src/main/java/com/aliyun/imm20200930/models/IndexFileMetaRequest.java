@@ -8,7 +8,10 @@ public class IndexFileMetaRequest extends TeaModel {
     public String datasetName;
 
     @NameInMap("File")
-    public FileForReq file;
+    public InputFile file;
+
+    @NameInMap("Notification")
+    public Notification notification;
 
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
@@ -29,12 +32,20 @@ public class IndexFileMetaRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public IndexFileMetaRequest setFile(FileForReq file) {
+    public IndexFileMetaRequest setFile(InputFile file) {
         this.file = file;
         return this;
     }
-    public FileForReq getFile() {
+    public InputFile getFile() {
         return this.file;
+    }
+
+    public IndexFileMetaRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public IndexFileMetaRequest setNotifyTopicName(String notifyTopicName) {

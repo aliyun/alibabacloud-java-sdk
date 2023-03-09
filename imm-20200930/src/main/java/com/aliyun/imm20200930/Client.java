@@ -266,6 +266,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.filesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.files, "Files", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("DatasetName", request.datasetName);
@@ -273,6 +277,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.filesShrink)) {
             query.put("Files", request.filesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -403,9 +411,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
             query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -570,6 +586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.kdtreeOptionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.kdtreeOption, "KdtreeOption", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.octreeOption)) {
             request.octreeOptionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.octreeOption, "OctreeOption", "json");
         }
@@ -593,6 +613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.kdtreeOptionShrink)) {
             query.put("KdtreeOption", request.kdtreeOptionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -789,6 +813,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateFacesSearchingTaskShrinkRequest request = new CreateFacesSearchingTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
             request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
         }
@@ -800,6 +828,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResult)) {
             query.put("MaxResult", request.maxResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -848,6 +880,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateFigureClusteringTaskShrinkRequest request = new CreateFigureClusteringTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
@@ -855,6 +891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("DatasetName", request.datasetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -899,6 +939,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateFigureClustersMergingTaskShrinkRequest request = new CreateFigureClustersMergingTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.froms)) {
+            request.fromsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.froms, "Froms", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
@@ -910,6 +958,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             query.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromsShrink)) {
+            query.put("Froms", request.fromsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -962,6 +1018,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
             request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
         }
@@ -973,6 +1033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
             query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -1033,6 +1097,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.selectedFiles)) {
             request.selectedFilesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.selectedFiles, "SelectedFiles", "json");
         }
@@ -1044,6 +1112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
             query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -1104,6 +1176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.scenes)) {
             request.scenesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scenes, "Scenes", "json");
         }
@@ -1123,6 +1199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxFrames)) {
             query.put("MaxFrames", request.maxFrames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -1183,6 +1263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
             request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
         }
@@ -1214,6 +1298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.margin)) {
             query.put("Margin", request.margin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -1282,6 +1370,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
             request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
         }
@@ -1293,6 +1385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
             query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -1353,6 +1449,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.locationOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.locationOptions, "LocationOptions", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
@@ -1368,6 +1468,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.locationOptionsShrink)) {
             query.put("LocationOptions", request.locationOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -1416,6 +1520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
             request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
         }
@@ -1431,6 +1539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
             query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -1487,6 +1599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
@@ -1538,6 +1654,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxSheetRow)) {
             query.put("MaxSheetRow", request.maxSheetRow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -1719,11 +1839,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.customLabelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customLabels, "CustomLabels", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
             query.put("Tags", request.tagsShrink);
         }
@@ -1887,6 +2015,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
@@ -1894,6 +2026,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.credentialConfigShrink)) {
             query.put("CredentialConfig", request.credentialConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -1946,6 +2082,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.scenes)) {
             request.scenesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scenes, "Scenes", "json");
         }
@@ -1965,6 +2105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxFrames)) {
             query.put("MaxFrames", request.maxFrames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -2735,6 +2879,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.credentialConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.credentialConfig, "CredentialConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.permission)) {
             request.permissionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.permission, "Permission", "json");
         }
@@ -2766,6 +2914,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hidecmb)) {
             query.put("Hidecmb", request.hidecmb);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {
@@ -3225,6 +3377,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.fileShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.file, "File", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notification)) {
+            request.notificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notification, "Notification", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("DatasetName", request.datasetName);
@@ -3232,6 +3388,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileShrink)) {
             query.put("File", request.fileShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationShrink)) {
+            query.put("Notification", request.notificationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyTopicName)) {

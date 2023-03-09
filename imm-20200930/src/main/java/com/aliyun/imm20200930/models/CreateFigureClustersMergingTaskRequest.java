@@ -10,6 +10,12 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    @NameInMap("Froms")
+    public java.util.List<String> froms;
+
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -44,6 +50,22 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public CreateFigureClustersMergingTaskRequest setFroms(java.util.List<String> froms) {
+        this.froms = froms;
+        return this;
+    }
+    public java.util.List<String> getFroms() {
+        return this.froms;
+    }
+
+    public CreateFigureClustersMergingTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateFigureClustersMergingTaskRequest setNotifyTopicName(String notifyTopicName) {

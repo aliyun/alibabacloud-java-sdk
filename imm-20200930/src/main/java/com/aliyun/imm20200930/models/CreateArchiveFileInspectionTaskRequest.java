@@ -7,6 +7,9 @@ public class CreateArchiveFileInspectionTaskRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -36,6 +39,14 @@ public class CreateArchiveFileInspectionTaskRequest extends TeaModel {
     }
     public CredentialConfig getCredentialConfig() {
         return this.credentialConfig;
+    }
+
+    public CreateArchiveFileInspectionTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateArchiveFileInspectionTaskRequest setNotifyTopicName(String notifyTopicName) {

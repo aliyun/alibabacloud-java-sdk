@@ -13,6 +13,9 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     @NameInMap("LocationOptions")
     public CreateLocationDateClusteringTaskRequestLocationOptions locationOptions;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -52,6 +55,14 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     }
     public CreateLocationDateClusteringTaskRequestLocationOptions getLocationOptions() {
         return this.locationOptions;
+    }
+
+    public CreateLocationDateClusteringTaskRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public CreateLocationDateClusteringTaskRequest setNotifyTopicName(String notifyTopicName) {

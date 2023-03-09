@@ -37,6 +37,9 @@ public class CreateOfficeConversionTaskShrinkRequest extends TeaModel {
     @NameInMap("MaxSheetRow")
     public Long maxSheetRow;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -188,6 +191,14 @@ public class CreateOfficeConversionTaskShrinkRequest extends TeaModel {
     }
     public Long getMaxSheetRow() {
         return this.maxSheetRow;
+    }
+
+    public CreateOfficeConversionTaskShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public CreateOfficeConversionTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {

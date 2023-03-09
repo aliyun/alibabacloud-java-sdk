@@ -19,6 +19,9 @@ public class GenerateWebofficeTokenRequest extends TeaModel {
     @NameInMap("Hidecmb")
     public Boolean hidecmb;
 
+    @NameInMap("Notification")
+    public Notification notification;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -92,6 +95,14 @@ public class GenerateWebofficeTokenRequest extends TeaModel {
     }
     public Boolean getHidecmb() {
         return this.hidecmb;
+    }
+
+    public GenerateWebofficeTokenRequest setNotification(Notification notification) {
+        this.notification = notification;
+        return this;
+    }
+    public Notification getNotification() {
+        return this.notification;
     }
 
     public GenerateWebofficeTokenRequest setNotifyTopicName(String notifyTopicName) {

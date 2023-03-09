@@ -10,6 +10,9 @@ public class BatchIndexFileMetaShrinkRequest extends TeaModel {
     @NameInMap("Files")
     public String filesShrink;
 
+    @NameInMap("Notification")
+    public String notificationShrink;
+
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
@@ -35,6 +38,14 @@ public class BatchIndexFileMetaShrinkRequest extends TeaModel {
     }
     public String getFilesShrink() {
         return this.filesShrink;
+    }
+
+    public BatchIndexFileMetaShrinkRequest setNotificationShrink(String notificationShrink) {
+        this.notificationShrink = notificationShrink;
+        return this;
+    }
+    public String getNotificationShrink() {
+        return this.notificationShrink;
     }
 
     public BatchIndexFileMetaShrinkRequest setNotifyTopicName(String notifyTopicName) {
