@@ -4,12 +4,28 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebPreciseAccessSwitchRequest extends TeaModel {
+    /**
+     * <p>The configuration of the Accurate Access Control policy. This parameter is a JSON string. The string contains the following fields:</p>
+     * <br>
+     * <p>*   **PreciseRuleEnable**: the status of the Accurate Access Control policy. This field is required and must be of the INTEGER type. Valid values:</p>
+     * <br>
+     * <p>    *   **0**: disables the policy.</p>
+     * <p>    *   **1**: enables the policy.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The domain name of the website.</p>
+     * <br>
+     * <p>> A forwarding rule must be configured for a domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

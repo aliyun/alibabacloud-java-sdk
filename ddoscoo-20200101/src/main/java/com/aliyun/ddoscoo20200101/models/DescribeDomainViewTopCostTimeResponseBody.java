@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The URLs which require the longest time to respond to requests.</p>
+     */
     @NameInMap("UrlList")
     public java.util.List<DescribeDomainViewTopCostTimeResponseBodyUrlList> urlList;
 
@@ -32,12 +38,21 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainViewTopCostTimeResponseBodyUrlList extends TeaModel {
+        /**
+         * <p>The response duration. Unit: milliseconds.</p>
+         */
         @NameInMap("CostTime")
         public Float costTime;
 
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The URL that is Base64-encoded.</p>
+         */
         @NameInMap("Url")
         public String url;
 

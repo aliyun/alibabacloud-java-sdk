@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkRulesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details of a port forwarding rule.</p>
+     */
     @NameInMap("NetworkRules")
     public java.util.List<DescribeNetworkRulesResponseBodyNetworkRules> networkRules;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned port forwarding rules.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,21 +52,45 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRulesResponseBodyNetworkRules extends TeaModel {
+        /**
+         * <p>The port of the origin server.</p>
+         */
         @NameInMap("BackendPort")
         public Integer backendPort;
 
+        /**
+         * <p>The forwarding port.</p>
+         */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Indicates whether the port forwarding rule is automatically created. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("IsAutoCreate")
         public Boolean isAutoCreate;
 
+        /**
+         * <p>The forwarding protocol. Valid values:</p>
+         * <br>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>An array that consists of IP addresses of origin servers.</p>
+         */
         @NameInMap("RealServers")
         public java.util.List<String> realServers;
 

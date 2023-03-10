@@ -4,18 +4,42 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDosAllEventListRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. The DDoS attack events occur before **EndTime** are queried. This value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The type of the DDoS attack events you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **web-cc**: resource exhaustion attacks</p>
+     * <p>*   **cc**: connection flood attacks</p>
+     * <p>*   **defense**: DDoS attacks that trigger traffic scrubbing</p>
+     * <p>*   **blackhole**: DDoS attacks that trigger blackhole filtering</p>
+     * <br>
+     * <p>If you want to query multiple types of DDoS attack events, separate them with commas (,).</p>
+     * <br>
+     * <p>If you do not configure this parameter, DDoS attack events of all types are queried.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The beginning of the time range to query. The DDoS attack events occur after **StartTime** are queried. This value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

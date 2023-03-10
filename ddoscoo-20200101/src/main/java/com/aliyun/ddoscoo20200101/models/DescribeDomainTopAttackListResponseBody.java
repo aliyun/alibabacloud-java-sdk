@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopAttackListResponseBody extends TeaModel {
+    /**
+     * <p>The peak QPS of the website.</p>
+     */
     @NameInMap("AttackList")
     public java.util.List<DescribeDomainTopAttackListResponseBodyAttackList> attackList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopAttackListResponseBodyAttackList extends TeaModel {
+        /**
+         * <p>The attack QPS. Unit: QPS</p>
+         */
         @NameInMap("Attack")
         public Long attack;
 
+        /**
+         * <p>The number of all QPS, which includes normal and attack QPS. Unit: QPS.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 

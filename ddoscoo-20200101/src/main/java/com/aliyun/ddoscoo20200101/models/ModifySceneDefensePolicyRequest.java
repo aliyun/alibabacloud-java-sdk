@@ -4,18 +4,38 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifySceneDefensePolicyRequest extends TeaModel {
+    /**
+     * <p>The end time of the policy. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the policy that you want to modify.</p>
+     * <br>
+     * <p>> You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The start time of the policy. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The template of the policy. Valid values:</p>
+     * <br>
+     * <p>*   **promotion**: important activity</p>
+     * <p>*   **bypass**: all traffic forwarded</p>
+     */
     @NameInMap("Template")
     public String template;
 

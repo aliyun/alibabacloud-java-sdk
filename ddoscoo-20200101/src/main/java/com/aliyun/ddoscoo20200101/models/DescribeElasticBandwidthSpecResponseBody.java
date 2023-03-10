@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the available burstable protection bandwidths. Unit: Gbit/s.</p>
+     */
     @NameInMap("ElasticBandwidthSpec")
     public java.util.List<String> elasticBandwidthSpec;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

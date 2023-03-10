@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array consisting of the details of the administrative region in China from which the requests are sent.</p>
+     */
     @NameInMap("SourceProvinces")
     public java.util.List<DescribeDomainViewSourceProvincesResponseBodySourceProvinces> sourceProvinces;
 
@@ -32,9 +38,15 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainViewSourceProvincesResponseBodySourceProvinces extends TeaModel {
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The ID of the region inside China. For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.</p>
+         */
         @NameInMap("ProvinceId")
         public String provinceId;
 

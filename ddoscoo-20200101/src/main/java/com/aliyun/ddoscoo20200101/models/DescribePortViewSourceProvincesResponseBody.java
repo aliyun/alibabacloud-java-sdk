@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about the administrative region in China from which the requests are sent.</p>
+     */
     @NameInMap("SourceProvinces")
     public java.util.List<DescribePortViewSourceProvincesResponseBodySourceProvinces> sourceProvinces;
 
@@ -32,9 +38,19 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
     }
 
     public static class DescribePortViewSourceProvincesResponseBodySourceProvinces extends TeaModel {
+        /**
+         * <p>The total number of requests that are sent from the ISP.</p>
+         * <br>
+         * <p>> This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different administrative regions in China.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The ID of the administrative region in China from which the requests are sent. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.</p>
+         * <br>
+         * <p>> For more information, see [Location parameters](~~167926~~).</p>
+         */
         @NameInMap("ProvinceId")
         public String provinceId;
 

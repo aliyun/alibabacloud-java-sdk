@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the log analysis feature is enabled for domain names.</p>
+     */
     @NameInMap("SlsConfigStatus")
     public java.util.List<DescribeWebAccessLogDispatchStatusResponseBodySlsConfigStatus> slsConfigStatus;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,9 +52,18 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeWebAccessLogDispatchStatusResponseBodySlsConfigStatus extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Indicates whether the log analysis feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 

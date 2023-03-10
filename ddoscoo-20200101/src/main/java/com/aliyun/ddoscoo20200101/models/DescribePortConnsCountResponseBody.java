@@ -4,18 +4,33 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortConnsCountResponseBody extends TeaModel {
+    /**
+     * <p>The number of active connections.</p>
+     */
     @NameInMap("ActConns")
     public Long actConns;
 
+    /**
+     * <p>The number of concurrent connections.</p>
+     */
     @NameInMap("Conns")
     public Long conns;
 
+    /**
+     * <p>The number of new connections.</p>
+     */
     @NameInMap("Cps")
     public Long cps;
 
+    /**
+     * <p>The number of inactive connections.</p>
+     */
     @NameInMap("InActConns")
     public Long inActConns;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

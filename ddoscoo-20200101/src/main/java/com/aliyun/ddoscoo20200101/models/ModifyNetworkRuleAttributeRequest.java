@@ -4,15 +4,34 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkRuleAttributeRequest extends TeaModel {
+    /**
+     * <p>The session persistence settings of the port forwarding rule. This parameter is a JSON string. The string contains the following fields:</p>
+     * <br>
+     * <p>*   **PersistenceTimeout**: The timeout period of session persistence. This field is required and must be of the integer type. Valid values: **30** to **3600**. Unit: seconds. Default value: **0**. A value of 0 indicates that session persistence is disabled.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The forwarding protocol. Valid values:</p>
+     * <br>
+     * <p>*   **tcp**</p>
+     * <p>*   **udp**</p>
+     */
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
+    /**
+     * <p>The forwarding port.</p>
+     */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

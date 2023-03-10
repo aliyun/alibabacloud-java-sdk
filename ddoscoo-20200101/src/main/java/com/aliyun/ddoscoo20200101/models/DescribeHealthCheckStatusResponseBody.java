@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHealthCheckStatusResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details of the health status of the origin server.</p>
+     */
     @NameInMap("HealthCheckStatus")
     public java.util.List<DescribeHealthCheckStatusResponseBodyHealthCheckStatus> healthCheckStatus;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,18 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthCheckStatusResponseBodyHealthCheckStatusRealServerStatusList extends TeaModel {
+        /**
+         * <p>The IP address of the origin server.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The health state of the IP address. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: healthy</p>
+         * <p>*   **abnormal**: unhealthy</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -62,18 +77,39 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthCheckStatusResponseBodyHealthCheckStatus extends TeaModel {
+        /**
+         * <p>The forwarding port.</p>
+         */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The forwarding protocol. Valid values:</p>
+         * <br>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>An array that consists of the health states of the IP addresses of the origin server.</p>
+         */
         @NameInMap("RealServerStatusList")
         public java.util.List<DescribeHealthCheckStatusResponseBodyHealthCheckStatusRealServerStatusList> realServerStatusList;
 
+        /**
+         * <p>The health status of the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: healthy</p>
+         * <p>*   **abnormal**: unhealthy</p>
+         */
         @NameInMap("Status")
         public String status;
 

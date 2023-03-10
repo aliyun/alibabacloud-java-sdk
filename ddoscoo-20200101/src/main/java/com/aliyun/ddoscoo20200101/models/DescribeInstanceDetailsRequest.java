@@ -4,6 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceDetailsRequest extends TeaModel {
+    /**
+     * <p>An array that consists of the IDs of instances to query.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 

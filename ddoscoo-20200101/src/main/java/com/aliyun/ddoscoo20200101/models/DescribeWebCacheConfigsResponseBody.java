@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCacheConfigsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of Static Page Caching configurations.</p>
+     */
     @NameInMap("DomainCacheConfigs")
     public java.util.List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigs> domainCacheConfigs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,31 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCacheConfigsResponseBodyDomainCacheConfigsCustomRules extends TeaModel {
+        /**
+         * <p>The expiration time of the page cache. Unit: seconds.</p>
+         */
         @NameInMap("CacheTtl")
         public Long cacheTtl;
 
+        /**
+         * <p>The cache mode. Valid values:</p>
+         * <br>
+         * <p>*   **standard**: The standard cache mode is used.</p>
+         * <p>*   **aggressive**: The enhanced cache mode is used.</p>
+         * <p>*   **bypass**: No data is cached.</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The path to the cached page.</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -84,15 +106,34 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCacheConfigsResponseBodyDomainCacheConfigs extends TeaModel {
+        /**
+         * <p>An array that consists of custom caching rules.</p>
+         */
         @NameInMap("CustomRules")
         public java.util.List<DescribeWebCacheConfigsResponseBodyDomainCacheConfigsCustomRules> customRules;
 
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The status of the Static Page Caching policy. Valid values:</p>
+         * <br>
+         * <p>*   **1**: enabled</p>
+         * <p>*   **0**: disabled</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <p>The cache mode. Valid values:</p>
+         * <br>
+         * <p>*   **standard**: The standard cache mode is used.</p>
+         * <p>*   **aggressive**: The enhanced cache mode is used.</p>
+         * <p>*   **bypass**: No data is cached.</p>
+         */
         @NameInMap("Mode")
         public String mode;
 

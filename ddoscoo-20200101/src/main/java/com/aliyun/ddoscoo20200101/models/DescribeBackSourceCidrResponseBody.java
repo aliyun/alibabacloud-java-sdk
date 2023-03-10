@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackSourceCidrResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the back-to-origin CIDR blocks of the instance.</p>
+     */
     @NameInMap("Cidrs")
     public java.util.List<String> cidrs;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,20 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUdpReflectRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance to query.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou**: Chinese mainland, which indicates an Anti-DDoS Pro instance. This is the default value.</p>
+     * <p>*   **ap-southeast-1**: outside the Chinese mainland, which indicates an Anti-DDoS Premium instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

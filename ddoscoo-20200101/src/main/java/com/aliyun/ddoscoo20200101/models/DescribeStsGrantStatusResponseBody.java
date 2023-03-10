@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeStsGrantStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The authorization status of Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     */
     @NameInMap("StsGrant")
     public DescribeStsGrantStatusResponseBodyStsGrant stsGrant;
 
@@ -32,6 +38,12 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeStsGrantStatusResponseBodyStsGrant extends TeaModel {
+        /**
+         * <p>The authorization status. Valid values:</p>
+         * <br>
+         * <p>*   **0**: Anti-DDoS Pro or Anti-DDoS Premium is not authorized to access other cloud services.</p>
+         * <p>*   **1**: Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

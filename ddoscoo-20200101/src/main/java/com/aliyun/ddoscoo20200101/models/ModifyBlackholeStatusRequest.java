@@ -4,9 +4,17 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBlackholeStatusRequest extends TeaModel {
+    /**
+     * <p>The action that you want to perform on the instance. Set the value to **undo**, which indicates that you want to deactivate blackhole filtering.</p>
+     */
     @NameInMap("BlackholeStatus")
     public String blackholeStatus;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortConnsListResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the connections established over the port.</p>
+     */
     @NameInMap("ConnsList")
     public java.util.List<DescribePortConnsListResponseBodyConnsList> connsList;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribePortConnsListResponseBody extends TeaModel {
     }
 
     public static class DescribePortConnsListResponseBodyConnsList extends TeaModel {
+        /**
+         * <p>The number of active connections.</p>
+         */
         @NameInMap("ActConns")
         public Long actConns;
 
+        /**
+         * <p>The number of concurrent connections.</p>
+         */
         @NameInMap("Conns")
         public Long conns;
 
+        /**
+         * <p>The new connection creation rate.</p>
+         */
         @NameInMap("Cps")
         public Long cps;
 
+        /**
+         * <p>The number of inactive connections.</p>
+         */
         @NameInMap("InActConns")
         public Long inActConns;
 
+        /**
+         * <p>The index number of the returned data.</p>
+         */
         @NameInMap("Index")
         public Long index;
 

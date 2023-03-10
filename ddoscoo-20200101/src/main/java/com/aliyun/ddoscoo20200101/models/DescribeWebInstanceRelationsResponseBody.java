@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the instances to which a website service is added.</p>
+     */
     @NameInMap("WebInstanceRelations")
     public java.util.List<DescribeWebInstanceRelationsResponseBodyWebInstanceRelations> webInstanceRelations;
 
@@ -32,12 +38,24 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebInstanceRelationsResponseBodyWebInstanceRelationsInstanceDetails extends TeaModel {
+        /**
+         * <p>The IP addresses of the instance.</p>
+         */
         @NameInMap("EipList")
         public java.util.List<String> eipList;
 
+        /**
+         * <p>The function plan of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **default**: Standard function plan</p>
+         * <p>*   **enhance**: Enhanced function plan</p>
+         */
         @NameInMap("FunctionVersion")
         public String functionVersion;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -73,9 +91,15 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebInstanceRelationsResponseBodyWebInstanceRelations extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The information about the instance to which a website service is added.</p>
+         */
         @NameInMap("InstanceDetails")
         public java.util.List<DescribeWebInstanceRelationsResponseBodyWebInstanceRelationsInstanceDetails> instanceDetails;
 

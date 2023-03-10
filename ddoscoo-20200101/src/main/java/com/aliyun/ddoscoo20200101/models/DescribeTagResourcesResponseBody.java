@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The query token that is returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array consisting of the details of the tags that are added to the Anti-DDoS Pro instance.</p>
+     */
     @NameInMap("TagResources")
     public DescribeTagResourcesResponseBodyTagResources tagResources;
 
@@ -43,15 +52,27 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        /**
+         * <p>The ID of the Anti-DDoS Pro instance.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource. The value is fixed as **INSTANCE**, which indicates an Anti-DDoS Pro instance.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The key of the tag that is added to the Anti-DDoS Pro instance.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag that is added to the Anti-DDoS Pro instance.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

@@ -4,21 +4,43 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemLogRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. The bills of the burstable clean bandwidth that are issued before this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The IP address of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceDetails](~~91490~~) operation to query the IP addresses of all instances.</p>
+     */
     @NameInMap("EntityObject")
     public String entityObject;
 
+    /**
+     * <p>The type of the system log. Set the value to **20**, which indicates the billing logs for the burstable clean bandwidth.</p>
+     * <br>
+     * <p>> You must specify this parameter. Otherwise, the call fails.</p>
+     */
     @NameInMap("EntityType")
     public Integer entityType;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The beginning of the time range to query. The bills of the burstable clean bandwidth that are issued after this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

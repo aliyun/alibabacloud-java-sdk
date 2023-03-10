@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCustomPortsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array consisting of information about supported custom ports that are used by a website.</p>
+     */
     @NameInMap("WebCustomPorts")
     public java.util.List<DescribeWebCustomPortsResponseBodyWebCustomPorts> webCustomPorts;
 
@@ -32,9 +38,18 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCustomPortsResponseBodyWebCustomPorts extends TeaModel {
+        /**
+         * <p>An array that consists of supported custom ports.</p>
+         */
         @NameInMap("ProxyPorts")
         public java.util.List<String> proxyPorts;
 
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <br>
+         * <p>*   **http**</p>
+         * <p>*   **https**</p>
+         */
         @NameInMap("ProxyType")
         public String proxyType;
 

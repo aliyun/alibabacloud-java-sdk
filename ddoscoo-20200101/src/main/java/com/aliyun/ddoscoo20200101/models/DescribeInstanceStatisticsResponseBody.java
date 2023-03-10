@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The statistics on the instances.</p>
+     */
     @NameInMap("InstanceStatistics")
     public java.util.List<DescribeInstanceStatisticsResponseBodyInstanceStatistics> instanceStatistics;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,35 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceStatisticsResponseBodyInstanceStatistics extends TeaModel {
+        /**
+         * <p>The number of advanced mitigation sessions that are used in this month.</p>
+         * <br>
+         * <p>> This parameter is returned only if Anti-DDoS Premium instances are queried.</p>
+         */
         @NameInMap("DefenseCountUsage")
         public Integer defenseCountUsage;
 
+        /**
+         * <p>The number of domain names that are protected by the instance.</p>
+         */
         @NameInMap("DomainUsage")
         public Integer domainUsage;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The number of ports that are protected by the instance.</p>
+         */
         @NameInMap("PortUsage")
         public Integer portUsage;
 
+        /**
+         * <p>The number of websites that are protected by the instance.</p>
+         */
         @NameInMap("SiteUsage")
         public Integer siteUsage;
 

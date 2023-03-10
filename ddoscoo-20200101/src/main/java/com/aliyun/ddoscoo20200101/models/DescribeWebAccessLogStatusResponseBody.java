@@ -4,15 +4,30 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The Logstore of the instance.</p>
+     */
     @NameInMap("SlsLogstore")
     public String slsLogstore;
 
+    /**
+     * <p>The Log Service project of the instance.</p>
+     */
     @NameInMap("SlsProject")
     public String slsProject;
 
+    /**
+     * <p>Indicates whether the Log Analysis feature is enabled for the website. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enabled</p>
+     * <p>*   **false**: disabled</p>
+     */
     @NameInMap("SlsStatus")
     public Boolean slsStatus;
 

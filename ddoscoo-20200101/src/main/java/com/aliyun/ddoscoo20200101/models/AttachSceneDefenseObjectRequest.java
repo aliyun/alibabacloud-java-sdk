@@ -4,12 +4,23 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class AttachSceneDefenseObjectRequest extends TeaModel {
+    /**
+     * <p>The type of the object. Set the value to **Domain**, which indicates a domain name.</p>
+     */
     @NameInMap("ObjectType")
     public String objectType;
 
+    /**
+     * <p>The object that you want to add to the policy. Separate multiple objects with commas (,).</p>
+     */
     @NameInMap("Objects")
     public String objects;
 
+    /**
+     * <p>The ID of the policy.</p>
+     * <br>
+     * <p>> You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 

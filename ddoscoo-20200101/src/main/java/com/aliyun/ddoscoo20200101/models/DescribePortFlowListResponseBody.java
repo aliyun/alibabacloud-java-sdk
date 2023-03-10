@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortFlowListResponseBody extends TeaModel {
+    /**
+     * <p>The returned traffic data.</p>
+     */
     @NameInMap("PortFlowList")
     public java.util.List<DescribePortFlowListResponseBodyPortFlowList> portFlowList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,66 @@ public class DescribePortFlowListResponseBody extends TeaModel {
     }
 
     public static class DescribePortFlowListResponseBodyPortFlowList extends TeaModel {
+        /**
+         * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+         */
         @NameInMap("AttackBps")
         public Long attackBps;
 
+        /**
+         * <p>The packet forwarding rate of attack traffic. Unit: pps.</p>
+         */
         @NameInMap("AttackPps")
         public Long attackPps;
 
+        /**
+         * <p>The inbound bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("InBps")
         public Long inBps;
 
+        /**
+         * <p>The packet forwarding rate of inbound traffic. Unit: packets per second.</p>
+         */
         @NameInMap("InPps")
         public Long inPps;
 
+        /**
+         * <p>The index number of the returned data.</p>
+         */
         @NameInMap("Index")
         public Long index;
 
+        /**
+         * <p>The outbound bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("OutBps")
         public Long outBps;
 
+        /**
+         * <p>The packet forwarding rate of outbound traffic. Unit: packets per second (pps).</p>
+         */
         @NameInMap("OutPps")
         public Long outPps;
 
+        /**
+         * <p>The source region of the traffic. Valid values:</p>
+         * <br>
+         * <p>*   **cn**: mainland China</p>
+         * <p>*   **alb-ap-northeast-1-gf-x**: Japan (Tokyo)</p>
+         * <p>*   **alb-ap-southeast-gf-x**: Singapore</p>
+         * <p>*   **alb-cn-hongkong-gf-x**: Hong Kong (China)</p>
+         * <p>*   **alb-eu-central-1-gf-x**: Germany (Frankfurt)</p>
+         * <p>*   **alb-us-west-1-gf-x**: US (Silicon Valley)</p>
+         * <br>
+         * <p>> The values except **cn** are returned only when **RegionId** is set to **ap-southeast-1**.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("Time")
         public Long time;
 

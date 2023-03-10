@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The IP address and ISP line information about the instance.</p>
+     */
     @NameInMap("InstanceDetails")
     public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetails> instanceDetails;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,36 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos extends TeaModel {
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("Eip")
         public String eip;
 
+        /**
+         * <p>The IP address-based forwarding mode of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **fnat**: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</p>
+         * <p>*   **v6tov4**: All requests are forwarded to origin servers that use IPv4 addresses.</p>
+         */
         @NameInMap("IpMode")
         public String ipMode;
 
+        /**
+         * <p>The IP version of the protocol. Valid values:</p>
+         * <br>
+         * <p>*   **Ipv4**: IPv4</p>
+         * <p>*   **Ipv6**: IPv6</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        /**
+         * <p>The status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **normal**</p>
+         * <p>*   **expired**</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -84,12 +111,21 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceDetailsResponseBodyInstanceDetails extends TeaModel {
+        /**
+         * <p>The information about the IP address of the instance.</p>
+         */
         @NameInMap("EipInfos")
         public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos> eipInfos;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The protection line of the instance.</p>
+         */
         @NameInMap("Line")
         public String line;
 

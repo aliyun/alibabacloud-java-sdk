@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array consisting of the URLs that receive the most requests.</p>
+     */
     @NameInMap("UrlList")
     public java.util.List<DescribeDomainViewTopUrlResponseBodyUrlList> urlList;
 
@@ -32,12 +38,21 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainViewTopUrlResponseBodyUrlList extends TeaModel {
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The URL that is Base64-encoded.</p>
+         */
         @NameInMap("Url")
         public String url;
 

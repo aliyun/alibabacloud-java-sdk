@@ -4,12 +4,25 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteWebCacheCustomRuleRequest extends TeaModel {
+    /**
+     * <p>The domain name for which you want to delete the custom rules of the Static Page Caching policy.</p>
+     * <br>
+     * <p>> You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>An array consisting of the names of the rules that you want to delete.</p>
+     */
     @NameInMap("RuleNames")
     public java.util.List<String> ruleNames;
 

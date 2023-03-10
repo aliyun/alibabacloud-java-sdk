@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array consisting of countries or areas from which the requests are sent.</p>
+     */
     @NameInMap("SourceCountrys")
     public java.util.List<DescribePortViewSourceCountriesResponseBodySourceCountrys> sourceCountrys;
 
@@ -32,9 +38,17 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
     }
 
     public static class DescribePortViewSourceCountriesResponseBodySourceCountrys extends TeaModel {
+        /**
+         * <p>The number of requests.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The abbreviation of the country or area. For example, **cn** indicates China and **us** indicates the United States.</p>
+         * <br>
+         * <p>> For more information, see [Location parameters](~~167926~~).</p>
+         */
         @NameInMap("CountryId")
         public String countryId;
 

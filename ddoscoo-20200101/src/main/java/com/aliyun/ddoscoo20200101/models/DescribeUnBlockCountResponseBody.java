@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUnBlockCountResponseBody extends TeaModel {
+    /**
+     * <p>The remaining quota that you can use the Diversion from Origin Server policy.</p>
+     */
     @NameInMap("RemainCount")
     public Integer remainCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total quota that you can use the Diversion from Origin Server policy.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

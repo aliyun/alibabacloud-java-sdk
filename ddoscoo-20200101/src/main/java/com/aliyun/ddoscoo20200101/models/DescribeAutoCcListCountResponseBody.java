@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoCcListCountResponseBody extends TeaModel {
+    /**
+     * <p>The total number of IP addresses in the blacklist.</p>
+     */
     @NameInMap("BlackCount")
     public Integer blackCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of IP addresses in the whitelist.</p>
+     */
     @NameInMap("WhiteCount")
     public Integer whiteCount;
 

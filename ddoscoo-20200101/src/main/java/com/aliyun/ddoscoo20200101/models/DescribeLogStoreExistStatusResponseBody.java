@@ -4,9 +4,18 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogStoreExistStatusResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("ExistStatus")
     public Boolean existStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

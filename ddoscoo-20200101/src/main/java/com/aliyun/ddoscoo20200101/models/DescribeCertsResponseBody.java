@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertsResponseBody extends TeaModel {
+    /**
+     * <p>The certificate information about the website.</p>
+     */
     @NameInMap("Certs")
     public java.util.List<DescribeCertsResponseBodyCerts> certs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,48 @@ public class DescribeCertsResponseBody extends TeaModel {
     }
 
     public static class DescribeCertsResponseBodyCerts extends TeaModel {
+        /**
+         * <p>The domain name that is associated with the certificate.</p>
+         */
         @NameInMap("Common")
         public String common;
 
+        /**
+         * <p>Indicates whether the certificate is associated with the domain name. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The certificate is associated with the domain name.</p>
+         * <p>*   **false**: The certificate is not associated with the domain name.</p>
+         */
         @NameInMap("DomainRelated")
         public Boolean domainRelated;
 
+        /**
+         * <p>The expiration date of the certificate. string</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The issuance date of the certificate. string</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 

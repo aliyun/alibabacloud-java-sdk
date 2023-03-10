@@ -4,12 +4,24 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the protected assets.</p>
+     */
     @NameInMap("Objects")
     public java.util.List<DescribeSceneDefenseObjectsResponseBodyObjects> objects;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +55,21 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeSceneDefenseObjectsResponseBodyObjects extends TeaModel {
+        /**
+         * <p>The domain name that is protected by the policy.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance that is protected by the policy.</p>
+         */
         @NameInMap("Vip")
         public String vip;
 

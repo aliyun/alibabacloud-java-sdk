@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array consisting of the country or area from which the requests are sent.</p>
+     */
     @NameInMap("SourceCountrys")
     public java.util.List<DescribeDomainViewSourceCountriesResponseBodySourceCountrys> sourceCountrys;
 
@@ -32,9 +38,15 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainViewSourceCountriesResponseBodySourceCountrys extends TeaModel {
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The abbreviation of the country or area. For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic. For example, **cn** indicates China, and **us** indicates the United States.</p>
+         */
         @NameInMap("CountryId")
         public String countryId;
 

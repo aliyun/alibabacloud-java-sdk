@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The statistics on the number of advanced mitigation sessions.</p>
+     */
     @NameInMap("DefenseCountStatistics")
     public DescribeDefenseCountStatisticsResponseBodyDefenseCountStatistics defenseCountStatistics;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseCountStatisticsResponseBodyDefenseCountStatistics extends TeaModel {
+        /**
+         * <p>The number of advanced mitigation sessions that are used within the current calendar month.</p>
+         */
         @NameInMap("DefenseCountTotalUsageOfCurrentMonth")
         public Integer defenseCountTotalUsageOfCurrentMonth;
 
+        /**
+         * <p>The number of available global advanced mitigation sessions for the Insurance mitigation plan.</p>
+         */
         @NameInMap("FlowPackCountRemain")
         public Integer flowPackCountRemain;
 
+        /**
+         * <p>The maximum number of advanced mitigation sessions available for the current calendar month. The advanced mitigation sessions include the advanced mitigation sessions that are provided free of charge and the global advanced mitigation sessions that you purchase.</p>
+         */
         @NameInMap("MaxUsableDefenseCountCurrentMonth")
         public Integer maxUsableDefenseCountCurrentMonth;
 
+        /**
+         * <p>The number of available global advanced mitigation sessions for the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan.</p>
+         */
         @NameInMap("SecHighSpeedCountRemain")
         public Integer secHighSpeedCountRemain;
 

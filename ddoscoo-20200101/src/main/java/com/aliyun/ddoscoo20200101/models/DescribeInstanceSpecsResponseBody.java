@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the specifications of instances.</p>
+     */
     @NameInMap("InstanceSpecs")
     public java.util.List<DescribeInstanceSpecsResponseBodyInstanceSpecs> instanceSpecs;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,45 +38,98 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSpecsResponseBodyInstanceSpecs extends TeaModel {
+        /**
+         * <p>The clean bandwidth of normal services. Unit: Mbit/s.</p>
+         */
         @NameInMap("BandwidthMbps")
         public Integer bandwidthMbps;
 
+        /**
+         * <p>The basic protection bandwidth. Unit: Gbit/s.</p>
+         */
         @NameInMap("BaseBandwidth")
         public Integer baseBandwidth;
 
+        /**
+         * <p>The specification of concurrent connections of the instance.</p>
+         */
         @NameInMap("ConnLimit")
         public Long connLimit;
 
+        /**
+         * <p>The specification of new connections of the instance.</p>
+         */
         @NameInMap("CpsLimit")
         public Long cpsLimit;
 
+        /**
+         * <p>The number of available advanced mitigation sessions for this month. If **-1** is returned, advanced mitigation capabilities are unlimited.</p>
+         * <br>
+         * <p>> This parameter is returned only when **RegionId** is set to **ap-southeast-1**. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Premium instances are queried.</p>
+         */
         @NameInMap("DefenseCount")
         public Integer defenseCount;
 
+        /**
+         * <p>The number of domain names that can be protected by the instance.</p>
+         */
         @NameInMap("DomainLimit")
         public Integer domainLimit;
 
+        /**
+         * <p>The burstable protection bandwidth. Unit: Gbit/s.</p>
+         */
         @NameInMap("ElasticBandwidth")
         public Integer elasticBandwidth;
 
+        /**
+         * <p>The burstable clean bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("ElasticBw")
         public Integer elasticBw;
 
+        /**
+         * <p>The metering method of the burstable clean bandwidth. Valid values:</p>
+         * <br>
+         * <p>*   **day**: the metering method of daily 95th percentile</p>
+         * <p>*   **month**: the metering method of monthly 95th percentile</p>
+         */
         @NameInMap("ElasticBwModel")
         public String elasticBwModel;
 
+        /**
+         * <p>The function plan of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **default**: Standard</p>
+         * <p>*   **enhance**: Enhanced</p>
+         * <p>*   **cnhk**: Chinese Mainland Acceleration (CMA)</p>
+         * <p>*   **cnhk_default**: Secure Chinese Mainland Acceleration (Sec-CMA) standard function plan</p>
+         * <p>*   **cnhk_enhance**: Sec-CMA enhanced function plan</p>
+         */
         @NameInMap("FunctionVersion")
         public String functionVersion;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The number of ports that can be protected by the instance.</p>
+         */
         @NameInMap("PortLimit")
         public Integer portLimit;
 
+        /**
+         * <p>The clean queries per second (QPS) of normal services.</p>
+         */
         @NameInMap("QpsLimit")
         public Integer qpsLimit;
 
+        /**
+         * <p>The number of sites that can be protected by the instance.</p>
+         */
         @NameInMap("SiteLimit")
         public Integer siteLimit;
 
