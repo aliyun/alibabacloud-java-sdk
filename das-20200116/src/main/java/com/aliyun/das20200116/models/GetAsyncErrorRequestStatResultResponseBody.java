@@ -75,7 +75,7 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         public Boolean isFinish;
 
         @NameInMap("result")
-        public java.util.Map<String, DataResultValue> result;
+        public java.util.List<java.util.Map<String, DataResultValue>> result;
 
         @NameInMap("resultId")
         public String resultId;
@@ -115,11 +115,11 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             return this.isFinish;
         }
 
-        public GetAsyncErrorRequestStatResultResponseBodyData setResult(java.util.Map<String, DataResultValue> result) {
+        public GetAsyncErrorRequestStatResultResponseBodyData setResult(java.util.List<java.util.Map<String, DataResultValue>> result) {
             this.result = result;
             return this;
         }
-        public java.util.Map<String, DataResultValue> getResult() {
+        public java.util.List<java.util.Map<String, DataResultValue>> getResult() {
             return this.result;
         }
 
