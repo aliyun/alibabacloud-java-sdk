@@ -63,6 +63,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addAutoCcBlacklistWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
+      * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](~~157505~~) operation to remove the IP addresses from the whitelist.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request AddAutoCcWhitelistRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddAutoCcWhitelistResponse
+     */
     public AddAutoCcWhitelistResponse addAutoCcWhitelistWithOptions(AddAutoCcWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -95,6 +105,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddAutoCcWhitelistResponse());
     }
 
+    /**
+      * You can call the AddAutoCcWhitelist operation to add IP addresses to the whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance. This way, the Anti-DDoS Pro or Anti-DDoS Premium instance allows traffic from the IP addresses.
+      * By default, the traffic from the IP addresses that you add to the whitelist is always allowed. If you no longer use the whitelist, you can call the [EmptyAutoCcWhitelist](~~157505~~) operation to remove the IP addresses from the whitelist.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request AddAutoCcWhitelistRequest
+      * @return AddAutoCcWhitelistResponse
+     */
     public AddAutoCcWhitelistResponse addAutoCcWhitelist(AddAutoCcWhitelistRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addAutoCcWhitelistWithOptions(request, runtime);
@@ -186,6 +205,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachSceneDefenseObjectWithOptions(request, runtime);
     }
 
+    /**
+      * If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
+      *
+      * @param request ConfigL7RsPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ConfigL7RsPolicyResponse
+     */
     public ConfigL7RsPolicyResponse configL7RsPolicyWithOptions(ConfigL7RsPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -218,6 +244,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigL7RsPolicyResponse());
     }
 
+    /**
+      * If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
+      *
+      * @param request ConfigL7RsPolicyRequest
+      * @return ConfigL7RsPolicyResponse
+     */
     public ConfigL7RsPolicyResponse configL7RsPolicy(ConfigL7RsPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configL7RsPolicyWithOptions(request, runtime);
@@ -376,6 +408,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.configNetworkRulesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request ConfigUdpReflectRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ConfigUdpReflectResponse
+     */
     public ConfigUdpReflectResponse configUdpReflectWithOptions(ConfigUdpReflectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -408,6 +449,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigUdpReflectResponse());
     }
 
+    /**
+      * You can call this operation to configure filtering policies to filter out UDP traffic from specific ports. This helps defend against UDP reflection attacks.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request ConfigUdpReflectRequest
+      * @return ConfigUdpReflectResponse
+     */
     public ConfigUdpReflectResponse configUdpReflect(ConfigUdpReflectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configUdpReflectWithOptions(request, runtime);
@@ -606,6 +655,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createNetworkRulesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      *
+      * @param request CreatePortRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreatePortResponse
+     */
     public CreatePortResponse createPortWithOptions(CreatePortRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -646,6 +702,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePortResponse());
     }
 
+    /**
+      * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      *
+      * @param request CreatePortRequest
+      * @return CreatePortResponse
+     */
     public CreatePortResponse createPort(CreatePortRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPortWithOptions(request, runtime);
@@ -737,6 +799,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSchedulerRuleWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
+      * > Anti-DDoS Premium does not support the tag feature.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request CreateTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateTagResourcesResponse
+     */
     public CreateTagResourcesResponse createTagResourcesWithOptions(CreateTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -777,6 +849,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTagResourcesResponse());
     }
 
+    /**
+      * You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
+      * > Anti-DDoS Premium does not support the tag feature.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request CreateTagResourcesRequest
+      * @return CreateTagResourcesResponse
+     */
     public CreateTagResourcesResponse createTagResources(CreateTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTagResourcesWithOptions(request, runtime);
@@ -1053,6 +1134,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteNetworkRuleWithOptions(request, runtime);
     }
 
+    /**
+      * After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
+      * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      *
+      * @param request DeletePortRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeletePortResponse
+     */
     public DeletePortResponse deletePortWithOptions(DeletePortRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1093,6 +1182,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePortResponse());
     }
 
+    /**
+      * After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.
+      * > You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      *
+      * @param request DeletePortRequest
+      * @return DeletePortResponse
+     */
     public DeletePortResponse deletePort(DeletePortRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePortWithOptions(request, runtime);
@@ -1160,6 +1256,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteSchedulerRuleWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
+      * > Only Anti-DDoS Pro supports tags.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DeleteTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTagResourcesResponse
+     */
     public DeleteTagResourcesResponse deleteTagResourcesWithOptions(DeleteTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1204,6 +1310,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTagResourcesResponse());
     }
 
+    /**
+      * You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
+      * > Only Anti-DDoS Pro supports tags.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DeleteTagResourcesRequest
+      * @return DeleteTagResourcesResponse
+     */
     public DeleteTagResourcesResponse deleteTagResources(DeleteTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTagResourcesWithOptions(request, runtime);
@@ -1246,6 +1361,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteWebCCRuleWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DeleteWebCacheCustomRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteWebCacheCustomRuleResponse
+     */
     public DeleteWebCacheCustomRuleResponse deleteWebCacheCustomRuleWithOptions(DeleteWebCacheCustomRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1278,6 +1402,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWebCacheCustomRuleResponse());
     }
 
+    /**
+      * You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DeleteWebCacheCustomRuleRequest
+      * @return DeleteWebCacheCustomRuleResponse
+     */
     public DeleteWebCacheCustomRuleResponse deleteWebCacheCustomRule(DeleteWebCacheCustomRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteWebCacheCustomRuleWithOptions(request, runtime);
@@ -1353,6 +1485,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteWebRuleWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeAsyncTasksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeAsyncTasksResponse
+     */
     public DescribeAsyncTasksResponse describeAsyncTasksWithOptions(DescribeAsyncTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1385,6 +1526,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAsyncTasksResponse());
     }
 
+    /**
+      * You can call the DescribeAsyncTasks operation to query the details of asynchronous export tasks, such as the IDs, start time, end time, status, parameters, and results.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeAsyncTasksRequest
+      * @return DescribeAsyncTasksResponse
+     */
     public DescribeAsyncTasksResponse describeAsyncTasks(DescribeAsyncTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAsyncTasksWithOptions(request, runtime);
@@ -1604,6 +1753,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeBlackholeStatusWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+      * > This operation is suitable only for Anti-DDoS Pro.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeBlockStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeBlockStatusResponse
+     */
     public DescribeBlockStatusResponse describeBlockStatusWithOptions(DescribeBlockStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1632,6 +1791,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBlockStatusResponse());
     }
 
+    /**
+      * This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
+      * > This operation is suitable only for Anti-DDoS Pro.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeBlockStatusRequest
+      * @return DescribeBlockStatusResponse
+     */
     public DescribeBlockStatusResponse describeBlockStatus(DescribeBlockStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBlockStatusWithOptions(request, runtime);
@@ -1670,6 +1838,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeCertsWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Premium.
+      *
+      * @param request DescribeCnameReusesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeCnameReusesResponse
+     */
     public DescribeCnameReusesResponse describeCnameReusesWithOptions(DescribeCnameReusesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1698,6 +1873,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCnameReusesResponse());
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Premium.
+      *
+      * @param request DescribeCnameReusesRequest
+      * @return DescribeCnameReusesResponse
+     */
     public DescribeCnameReusesResponse describeCnameReuses(DescribeCnameReusesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCnameReusesWithOptions(request, runtime);
@@ -1752,6 +1933,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDDoSEventsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeDDosAllEventListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDDosAllEventListResponse
+     */
     public DescribeDDosAllEventListResponse describeDDosAllEventListWithOptions(DescribeDDosAllEventListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1792,11 +1982,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDDosAllEventListResponse());
     }
 
+    /**
+      * You can call the DescribeDDosAllEventList operation to query DDoS attack events within a specific time range by page. The information about a DDoS attack event includes the start time and end time of the attack, attack event type, attacked object, peak bandwidth of attack traffic, and peak packet forwarding rate.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeDDosAllEventListRequest
+      * @return DescribeDDosAllEventListResponse
+     */
     public DescribeDDosAllEventListResponse describeDDosAllEventList(DescribeDDosAllEventListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDDosAllEventListWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for volumetric attacks.
+      *
+      * @param request DescribeDDosEventAreaRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDDosEventAreaResponse
+     */
     public DescribeDDosEventAreaResponse describeDDosEventAreaWithOptions(DescribeDDosEventAreaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1829,11 +2034,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDDosEventAreaResponse());
     }
 
+    /**
+      * > This operation is suitable only for volumetric attacks.
+      *
+      * @param request DescribeDDosEventAreaRequest
+      * @return DescribeDDosEventAreaResponse
+     */
     public DescribeDDosEventAreaResponse describeDDosEventArea(DescribeDDosEventAreaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDDosEventAreaWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for volumetric attacks.
+      *
+      * @param request DescribeDDosEventAttackTypeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDDosEventAttackTypeResponse
+     */
     public DescribeDDosEventAttackTypeResponse describeDDosEventAttackTypeWithOptions(DescribeDDosEventAttackTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1866,11 +2084,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDDosEventAttackTypeResponse());
     }
 
+    /**
+      * > This operation is suitable only for volumetric attacks.
+      *
+      * @param request DescribeDDosEventAttackTypeRequest
+      * @return DescribeDDosEventAttackTypeResponse
+     */
     public DescribeDDosEventAttackTypeResponse describeDDosEventAttackType(DescribeDDosEventAttackTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDDosEventAttackTypeWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for volumetric attacks.
+      *
+      * @param request DescribeDDosEventIspRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDDosEventIspResponse
+     */
     public DescribeDDosEventIspResponse describeDDosEventIspWithOptions(DescribeDDosEventIspRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1903,6 +2134,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDDosEventIspResponse());
     }
 
+    /**
+      * > This operation is suitable only for volumetric attacks.
+      *
+      * @param request DescribeDDosEventIspRequest
+      * @return DescribeDDosEventIspResponse
+     */
     public DescribeDDosEventIspResponse describeDDosEventIsp(DescribeDDosEventIspRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDDosEventIspWithOptions(request, runtime);
@@ -1941,6 +2178,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDDosEventMaxWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for volumetric attacks.
+      *
+      * @param request DescribeDDosEventSrcIpRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDDosEventSrcIpResponse
+     */
     public DescribeDDosEventSrcIpResponse describeDDosEventSrcIpWithOptions(DescribeDDosEventSrcIpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1977,11 +2221,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDDosEventSrcIpResponse());
     }
 
+    /**
+      * > This operation is suitable only for volumetric attacks.
+      *
+      * @param request DescribeDDosEventSrcIpRequest
+      * @return DescribeDDosEventSrcIpResponse
+     */
     public DescribeDDosEventSrcIpResponse describeDDosEventSrcIp(DescribeDDosEventSrcIpRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDDosEventSrcIpWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
+      * > This operation is suitable only for Anti-DDoS Premium.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeDefenseCountStatisticsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDefenseCountStatisticsResponse
+     */
     public DescribeDefenseCountStatisticsResponse describeDefenseCountStatisticsWithOptions(DescribeDefenseCountStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2006,11 +2266,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDefenseCountStatisticsResponse());
     }
 
+    /**
+      * You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
+      * > This operation is suitable only for Anti-DDoS Premium.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeDefenseCountStatisticsRequest
+      * @return DescribeDefenseCountStatisticsResponse
+     */
     public DescribeDefenseCountStatisticsResponse describeDefenseCountStatistics(DescribeDefenseCountStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDefenseCountStatisticsWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Premium.
+      *
+      * @param request DescribeDefenseRecordsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDefenseRecordsResponse
+     */
     public DescribeDefenseRecordsResponse describeDefenseRecordsWithOptions(DescribeDefenseRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2055,6 +2331,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDefenseRecordsResponse());
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Premium.
+      *
+      * @param request DescribeDefenseRecordsRequest
+      * @return DescribeDefenseRecordsResponse
+     */
     public DescribeDefenseRecordsResponse describeDefenseRecords(DescribeDefenseRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDefenseRecordsWithOptions(request, runtime);
@@ -2236,6 +2518,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainQpsWithCacheWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
+      * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      * ### Limits
+      * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeDomainResourceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainResourceResponse
+     */
     public DescribeDomainResourceResponse describeDomainResourceWithOptions(DescribeDomainResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2276,6 +2568,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainResourceResponse());
     }
 
+    /**
+      * You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
+      * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      * ### Limits
+      * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeDomainResourceRequest
+      * @return DescribeDomainResourceResponse
+     */
     public DescribeDomainResourceResponse describeDomainResource(DescribeDomainResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainResourceWithOptions(request, runtime);
@@ -2613,6 +2914,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainsWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request DescribeElasticBandwidthSpecRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeElasticBandwidthSpecResponse
+     */
     public DescribeElasticBandwidthSpecResponse describeElasticBandwidthSpecWithOptions(DescribeElasticBandwidthSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2637,9 +2945,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeElasticBandwidthSpecResponse());
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request DescribeElasticBandwidthSpecRequest
+      * @return DescribeElasticBandwidthSpecResponse
+     */
     public DescribeElasticBandwidthSpecResponse describeElasticBandwidthSpec(DescribeElasticBandwidthSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeElasticBandwidthSpecWithOptions(request, runtime);
+    }
+
+    public DescribeHeadersResponse describeHeadersWithOptions(DescribeHeadersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHeaders"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHeadersResponse());
+    }
+
+    public DescribeHeadersResponse describeHeaders(DescribeHeadersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHeadersWithOptions(request, runtime);
     }
 
     public DescribeHealthCheckListResponse describeHealthCheckListWithOptions(DescribeHealthCheckListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2700,6 +3047,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeHealthCheckStatusWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeInstanceDetailsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstanceDetailsResponse
+     */
     public DescribeInstanceDetailsResponse describeInstanceDetailsWithOptions(DescribeInstanceDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2724,11 +3080,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceDetailsResponse());
     }
 
+    /**
+      * You can call the DescribeInstanceDetails operation to query the information about the IP addresses and ISP lines of the instances. The information includes the IP address, status, and protection line.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeInstanceDetailsRequest
+      * @return DescribeInstanceDetailsResponse
+     */
     public DescribeInstanceDetailsResponse describeInstanceDetails(DescribeInstanceDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceDetailsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query the information about all Anti-DDoS Pro or Anti-DDoS Premium instances, such as the ID, version, description, and IP address type.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeInstanceIdsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstanceIdsResponse
+     */
     public DescribeInstanceIdsResponse describeInstanceIdsWithOptions(DescribeInstanceIdsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2761,11 +3134,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceIdsResponse());
     }
 
+    /**
+      * You can call this operation to query the information about all Anti-DDoS Pro or Anti-DDoS Premium instances, such as the ID, version, description, and IP address type.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeInstanceIdsRequest
+      * @return DescribeInstanceIdsResponse
+     */
     public DescribeInstanceIdsResponse describeInstanceIds(DescribeInstanceIdsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceIdsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeInstanceSpecsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstanceSpecsResponse
+     */
     public DescribeInstanceSpecsResponse describeInstanceSpecsWithOptions(DescribeInstanceSpecsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2790,6 +3180,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceSpecsResponse());
     }
 
+    /**
+      * You can call the DescribeInstanceSpecs operation to query the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances at a time. The specifications include the clean bandwidth, protection bandwidth, function plan, and the numbers of domain names and ports that can be protected.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeInstanceSpecsRequest
+      * @return DescribeInstanceSpecsResponse
+     */
     public DescribeInstanceSpecsResponse describeInstanceSpecs(DescribeInstanceSpecsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceSpecsWithOptions(request, runtime);
@@ -2857,6 +3255,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceStatusWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstancesResponse
+     */
     public DescribeInstancesResponse describeInstancesWithOptions(DescribeInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2925,6 +3332,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstancesResponse());
     }
 
+    /**
+      * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeInstancesRequest
+      * @return DescribeInstancesResponse
+     */
     public DescribeInstancesResponse describeInstances(DescribeInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstancesWithOptions(request, runtime);
@@ -3128,6 +3543,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeNetworkRulesWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
+      *
+      * @param request DescribeOpEntitiesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeOpEntitiesResponse
+     */
     public DescribeOpEntitiesResponse describeOpEntitiesWithOptions(DescribeOpEntitiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3176,11 +3599,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOpEntitiesResponse());
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.
+      *
+      * @param request DescribeOpEntitiesRequest
+      * @return DescribeOpEntitiesResponse
+     */
     public DescribeOpEntitiesResponse describeOpEntities(DescribeOpEntitiesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeOpEntitiesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      *
+      * @param request DescribePortRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribePortResponse
+     */
     public DescribePortResponse describePortWithOptions(DescribePortRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3221,11 +3658,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePortResponse());
     }
 
+    /**
+      * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      *
+      * @param request DescribePortRequest
+      * @return DescribePortResponse
+     */
     public DescribePortResponse describePort(DescribePortRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePortWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribePortAttackMaxFlowRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribePortAttackMaxFlowResponse
+     */
     public DescribePortAttackMaxFlowResponse describePortAttackMaxFlowWithOptions(DescribePortAttackMaxFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3262,6 +3714,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePortAttackMaxFlowResponse());
     }
 
+    /**
+      * You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribePortAttackMaxFlowRequest
+      * @return DescribePortAttackMaxFlowResponse
+     */
     public DescribePortAttackMaxFlowResponse describePortAttackMaxFlow(DescribePortAttackMaxFlowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePortAttackMaxFlowWithOptions(request, runtime);
@@ -3517,6 +3977,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describePortViewSourceCountriesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+      * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribePortViewSourceIspsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribePortViewSourceIspsResponse
+     */
     public DescribePortViewSourceIspsResponse describePortViewSourceIspsWithOptions(DescribePortViewSourceIspsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3553,6 +4023,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePortViewSourceIspsResponse());
     }
 
+    /**
+      * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+      * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribePortViewSourceIspsRequest
+      * @return DescribePortViewSourceIspsResponse
+     */
     public DescribePortViewSourceIspsResponse describePortViewSourceIsps(DescribePortViewSourceIspsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePortViewSourceIspsWithOptions(request, runtime);
@@ -3599,6 +4078,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describePortViewSourceProvincesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+      * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](~~159779~~) operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeSceneDefenseObjectsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSceneDefenseObjectsResponse
+     */
     public DescribeSceneDefenseObjectsResponse describeSceneDefenseObjectsWithOptions(DescribeSceneDefenseObjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3627,11 +4116,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSceneDefenseObjectsResponse());
     }
 
+    /**
+      * You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+      * Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the [CreateSceneDefensePolicy](~~159779~~) operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeSceneDefenseObjectsRequest
+      * @return DescribeSceneDefenseObjectsResponse
+     */
     public DescribeSceneDefenseObjectsResponse describeSceneDefenseObjects(DescribeSceneDefenseObjectsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSceneDefenseObjectsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeSceneDefensePoliciesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSceneDefensePoliciesResponse
+     */
     public DescribeSceneDefensePoliciesResponse describeSceneDefensePoliciesWithOptions(DescribeSceneDefensePoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3664,6 +4171,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSceneDefensePoliciesResponse());
     }
 
+    /**
+      * You can call the DescribeSceneDefensePolicies operation to query the configurations of a scenario-specific custom policy that is created. For example, you can query the status, protected objects, and protection rules of the policy.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeSceneDefensePoliciesRequest
+      * @return DescribeSceneDefensePoliciesResponse
+     */
     public DescribeSceneDefensePoliciesResponse describeSceneDefensePolicies(DescribeSceneDefensePoliciesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSceneDefensePoliciesWithOptions(request, runtime);
@@ -3797,6 +4312,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSlsOpenStatusWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeStsGrantStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeStsGrantStatusResponse
+     */
     public DescribeStsGrantStatusResponse describeStsGrantStatusWithOptions(DescribeStsGrantStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3825,11 +4349,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeStsGrantStatusResponse());
     }
 
+    /**
+      * You can call the DescribeStsGrantStatus operation to query whether Anti-DDoS Pro or Anti-DDoS Premium of the current Alibaba Cloud account is authorized to access other cloud services.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeStsGrantStatusRequest
+      * @return DescribeStsGrantStatusResponse
+     */
     public DescribeStsGrantStatusResponse describeStsGrantStatus(DescribeStsGrantStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeStsGrantStatusWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
+      * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeSystemLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSystemLogResponse
+     */
     public DescribeSystemLogResponse describeSystemLogWithOptions(DescribeSystemLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3874,11 +4416,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSystemLogResponse());
     }
 
+    /**
+      * You can call the DescribeSystemLog operation to query the system logs of Anti-DDoS Pro or Anti-DDoS Premium. The system logs contain only billing logs for the burstable clean bandwidth.
+      * If you have enabled the burstable clean bandwidth feature, you can call this operation to query the details of the bills of the burstable clean bandwidth.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeSystemLogRequest
+      * @return DescribeSystemLogResponse
+     */
     public DescribeSystemLogResponse describeSystemLog(DescribeSystemLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSystemLogWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
+      * > The tag feature is suitable only for Anti-DDoS Pro.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeTagKeysRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeTagKeysResponse
+     */
     public DescribeTagKeysResponse describeTagKeysWithOptions(DescribeTagKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3919,11 +4480,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTagKeysResponse());
     }
 
+    /**
+      * You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
+      * > The tag feature is suitable only for Anti-DDoS Pro.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeTagKeysRequest
+      * @return DescribeTagKeysResponse
+     */
     public DescribeTagKeysResponse describeTagKeys(DescribeTagKeysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTagKeysWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
+      * > Only Anti-DDoS Pro supports tags.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeTagResourcesResponse
+     */
     public DescribeTagResourcesResponse describeTagResourcesWithOptions(DescribeTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3968,6 +4548,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTagResourcesResponse());
     }
 
+    /**
+      * You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
+      * > Only Anti-DDoS Pro supports tags.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeTagResourcesRequest
+      * @return DescribeTagResourcesResponse
+     */
     public DescribeTagResourcesResponse describeTagResources(DescribeTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTagResourcesWithOptions(request, runtime);
@@ -4035,6 +4624,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeUnBlackholeCountWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request DescribeUnBlockCountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeUnBlockCountResponse
+     */
     public DescribeUnBlockCountResponse describeUnBlockCountWithOptions(DescribeUnBlockCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4059,11 +4655,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUnBlockCountResponse());
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request DescribeUnBlockCountRequest
+      * @return DescribeUnBlockCountResponse
+     */
     public DescribeUnBlockCountResponse describeUnBlockCount(DescribeUnBlockCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUnBlockCountWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeWebAccessLogDispatchStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeWebAccessLogDispatchStatusResponse
+     */
     public DescribeWebAccessLogDispatchStatusResponse describeWebAccessLogDispatchStatusWithOptions(DescribeWebAccessLogDispatchStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4096,6 +4707,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebAccessLogDispatchStatusResponse());
     }
 
+    /**
+      * You can call the DescribeWebAccessLogDispatchStatus operation to check whether the log analysis feature is enabled for all domain names that are added to your Anti-DDoS Pro or Anti-DDoS Premium instance.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeWebAccessLogDispatchStatusRequest
+      * @return DescribeWebAccessLogDispatchStatusResponse
+     */
     public DescribeWebAccessLogDispatchStatusResponse describeWebAccessLogDispatchStatus(DescribeWebAccessLogDispatchStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeWebAccessLogDispatchStatusWithOptions(request, runtime);
@@ -4266,6 +4885,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeWebCCRulesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeWebCacheConfigsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeWebCacheConfigsResponse
+     */
     public DescribeWebCacheConfigsResponse describeWebCacheConfigsWithOptions(DescribeWebCacheConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4294,6 +4922,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebCacheConfigsResponse());
     }
 
+    /**
+      * You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeWebCacheConfigsRequest
+      * @return DescribeWebCacheConfigsResponse
+     */
     public DescribeWebCacheConfigsResponse describeWebCacheConfigs(DescribeWebCacheConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeWebCacheConfigsWithOptions(request, runtime);
@@ -4427,6 +5063,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeWebPreciseAccessRuleWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeWebRules operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the protocol type, origin server address, HTTPS configuration, and IP address blacklist.
+      * Before you call this operation, you must have created forwarding rules by calling the [CreateWebRule](~~157463~~) operation.
+      * ### Limits
+      * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeWebRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeWebRulesResponse
+     */
     public DescribeWebRulesResponse describeWebRulesWithOptions(DescribeWebRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4475,6 +5121,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebRulesResponse());
     }
 
+    /**
+      * You can call the DescribeWebRules operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the protocol type, origin server address, HTTPS configuration, and IP address blacklist.
+      * Before you call this operation, you must have created forwarding rules by calling the [CreateWebRule](~~157463~~) operation.
+      * ### Limits
+      * You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DescribeWebRulesRequest
+      * @return DescribeWebRulesResponse
+     */
     public DescribeWebRulesResponse describeWebRules(DescribeWebRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeWebRulesWithOptions(request, runtime);
@@ -4860,6 +5515,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableWebCCRuleWithOptions(request, runtime);
     }
 
+    public ModifyBizBandWidthModeResponse modifyBizBandWidthModeWithOptions(ModifyBizBandWidthModeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyBizBandWidthMode"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBizBandWidthModeResponse());
+    }
+
+    public ModifyBizBandWidthModeResponse modifyBizBandWidthMode(ModifyBizBandWidthModeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyBizBandWidthModeWithOptions(request, runtime);
+    }
+
     public ModifyBlackholeStatusResponse modifyBlackholeStatusWithOptions(ModifyBlackholeStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4893,6 +5581,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyBlackholeStatusWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request ModifyBlockStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyBlockStatusResponse
+     */
     public ModifyBlockStatusResponse modifyBlockStatusWithOptions(ModifyBlockStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4929,11 +5624,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBlockStatusResponse());
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request ModifyBlockStatusRequest
+      * @return ModifyBlockStatusResponse
+     */
     public ModifyBlockStatusResponse modifyBlockStatus(ModifyBlockStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBlockStatusWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Premium.
+      *
+      * @param request ModifyCnameReuseRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyCnameReuseResponse
+     */
     public ModifyCnameReuseResponse modifyCnameReuseWithOptions(ModifyCnameReuseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4970,6 +5678,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCnameReuseResponse());
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Premium.
+      *
+      * @param request ModifyCnameReuseRequest
+      * @return ModifyCnameReuseResponse
+     */
     public ModifyCnameReuseResponse modifyCnameReuse(ModifyCnameReuseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyCnameReuseWithOptions(request, runtime);
@@ -5024,6 +5738,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDomainResourceWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request ModifyElasticBandWidthRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyElasticBandWidthResponse
+     */
     public ModifyElasticBandWidthResponse modifyElasticBandWidthWithOptions(ModifyElasticBandWidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5052,9 +5773,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyElasticBandWidthResponse());
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request ModifyElasticBandWidthRequest
+      * @return ModifyElasticBandWidthResponse
+     */
     public ModifyElasticBandWidthResponse modifyElasticBandWidth(ModifyElasticBandWidthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyElasticBandWidthWithOptions(request, runtime);
+    }
+
+    public ModifyElasticBizBandWidthResponse modifyElasticBizBandWidthWithOptions(ModifyElasticBizBandWidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticBizBandwidth)) {
+            query.put("ElasticBizBandwidth", request.elasticBizBandwidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyElasticBizBandWidth"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyElasticBizBandWidthResponse());
+    }
+
+    public ModifyElasticBizBandWidthResponse modifyElasticBizBandWidth(ModifyElasticBizBandWidthRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyElasticBizBandWidthWithOptions(request, runtime);
     }
 
     public ModifyFullLogTtlResponse modifyFullLogTtlWithOptions(ModifyFullLogTtlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5088,6 +5852,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyFullLogTtlResponse modifyFullLogTtl(ModifyFullLogTtlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyFullLogTtlWithOptions(request, runtime);
+    }
+
+    public ModifyHeadersResponse modifyHeadersWithOptions(ModifyHeadersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customHeaders)) {
+            query.put("CustomHeaders", request.customHeaders);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyHeaders"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHeadersResponse());
+    }
+
+    public ModifyHeadersResponse modifyHeaders(ModifyHeadersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyHeadersWithOptions(request, runtime);
     }
 
     public ModifyHealthCheckConfigResponse modifyHealthCheckConfigWithOptions(ModifyHealthCheckConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5131,6 +5932,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyHealthCheckConfigWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request ModifyHttp2EnableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyHttp2EnableResponse
+     */
     public ModifyHttp2EnableResponse modifyHttp2EnableWithOptions(ModifyHttp2EnableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5163,6 +5971,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHttp2EnableResponse());
     }
 
+    /**
+      * > This operation is suitable only for Anti-DDoS Pro.
+      *
+      * @param request ModifyHttp2EnableRequest
+      * @return ModifyHttp2EnableResponse
+     */
     public ModifyHttp2EnableResponse modifyHttp2Enable(ModifyHttp2EnableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyHttp2EnableWithOptions(request, runtime);
@@ -5242,6 +6056,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyNetworkRuleAttributeWithOptions(request, runtime);
     }
 
+    public ModifyOcspStatusResponse modifyOcspStatusWithOptions(ModifyOcspStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyOcspStatus"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyOcspStatusResponse());
+    }
+
+    public ModifyOcspStatusResponse modifyOcspStatus(ModifyOcspStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyOcspStatusWithOptions(request, runtime);
+    }
+
+    /**
+      * You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      *
+      * @param request ModifyPortRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyPortResponse
+     */
     public ModifyPortResponse modifyPortWithOptions(ModifyPortRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5282,6 +6136,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPortResponse());
     }
 
+    /**
+      * You can call the ModifyPort operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
+      *
+      * @param request ModifyPortRequest
+      * @return ModifyPortResponse
+     */
     public ModifyPortResponse modifyPort(ModifyPortRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPortWithOptions(request, runtime);
@@ -5595,6 +6455,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyWebAreaBlockWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request ModifyWebAreaBlockSwitchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyWebAreaBlockSwitchResponse
+     */
     public ModifyWebAreaBlockSwitchResponse modifyWebAreaBlockSwitchWithOptions(ModifyWebAreaBlockSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5627,6 +6496,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyWebAreaBlockSwitchResponse());
     }
 
+    /**
+      * You can call the ModifyWebAreaBlockSwitch operation to enable or disable the Location Blacklist (Domain Names) policy for a domain name.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request ModifyWebAreaBlockSwitchRequest
+      * @return ModifyWebAreaBlockSwitchResponse
+     */
     public ModifyWebAreaBlockSwitchResponse modifyWebAreaBlockSwitch(ModifyWebAreaBlockSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyWebAreaBlockSwitchWithOptions(request, runtime);
@@ -5767,6 +6644,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyWebCacheModeWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request ModifyWebCacheSwitchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyWebCacheSwitchResponse
+     */
     public ModifyWebCacheSwitchResponse modifyWebCacheSwitchWithOptions(ModifyWebCacheSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5799,6 +6685,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyWebCacheSwitchResponse());
     }
 
+    /**
+      * You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request ModifyWebCacheSwitchRequest
+      * @return ModifyWebCacheSwitchResponse
+     */
     public ModifyWebCacheSwitchResponse modifyWebCacheSwitch(ModifyWebCacheSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyWebCacheSwitchWithOptions(request, runtime);
@@ -5972,6 +6866,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyWebRuleWithOptions(request, runtime);
     }
 
+    /**
+      * If an Anti-DDoS Pro or Anti-DDoS Premium instance expires, DDoS mitigation stops. The instance stops forwarding service traffic seven days after it expires.
+      * *   We recommend that you renew your instance before it expires. This eliminates the impacts on service protection and traffic forwarding. You can call the [DescribeInstances](~~91478~~) operation to query the expiration time of all instances. If you want to renew your instance, log on to the [Anti-DDoS Pro](https://yundun.console.aliyun.com/?p=ddoscoo) console.
+      * *   If you do not plan to renew your instance, switch the service traffic back to the origin sever before your instance expires. To switch the traffic back, change the service IP address to the IP address of the origin server or modify the CNAME to stop forwarding service traffic to Anti-DDoS Pro or Anti-DDoS Premium. This prevents service interruptions caused by the expiration.
+      * You can call this operation to release an instance after the instance expires.
+      * > Before you release an instance, make sure that the service traffic is switched to the origin server.
+      *
+      * @param request ReleaseInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReleaseInstanceResponse
+     */
     public ReleaseInstanceResponse releaseInstanceWithOptions(ReleaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5996,11 +6901,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseInstanceResponse());
     }
 
+    /**
+      * If an Anti-DDoS Pro or Anti-DDoS Premium instance expires, DDoS mitigation stops. The instance stops forwarding service traffic seven days after it expires.
+      * *   We recommend that you renew your instance before it expires. This eliminates the impacts on service protection and traffic forwarding. You can call the [DescribeInstances](~~91478~~) operation to query the expiration time of all instances. If you want to renew your instance, log on to the [Anti-DDoS Pro](https://yundun.console.aliyun.com/?p=ddoscoo) console.
+      * *   If you do not plan to renew your instance, switch the service traffic back to the origin sever before your instance expires. To switch the traffic back, change the service IP address to the IP address of the origin server or modify the CNAME to stop forwarding service traffic to Anti-DDoS Pro or Anti-DDoS Premium. This prevents service interruptions caused by the expiration.
+      * You can call this operation to release an instance after the instance expires.
+      * > Before you release an instance, make sure that the service traffic is switched to the origin server.
+      *
+      * @param request ReleaseInstanceRequest
+      * @return ReleaseInstanceResponse
+     */
     public ReleaseInstanceResponse releaseInstance(ReleaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+      * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](~~157479~~) operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request SwitchSchedulerRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SwitchSchedulerRuleResponse
+     */
     public SwitchSchedulerRuleResponse switchSchedulerRuleWithOptions(SwitchSchedulerRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6033,6 +6958,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchSchedulerRuleResponse());
     }
 
+    /**
+      * You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+      * Before you call this operation, you must have created a scheduling rule by calling the [CreateSchedulerRule](~~157479~~) operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request SwitchSchedulerRuleRequest
+      * @return SwitchSchedulerRuleResponse
+     */
     public SwitchSchedulerRuleResponse switchSchedulerRule(SwitchSchedulerRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.switchSchedulerRuleWithOptions(request, runtime);

@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortAutoCcStatusResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the configurations of the Intelligent Protection policy.</p>
+     */
     @NameInMap("PortAutoCcStatus")
     public java.util.List<DescribePortAutoCcStatusResponseBodyPortAutoCcStatus> portAutoCcStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,41 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
     }
 
     public static class DescribePortAutoCcStatusResponseBodyPortAutoCcStatus extends TeaModel {
+        /**
+         * <p>The mode of the Intelligent Protection policy. Valid values:</p>
+         * <br>
+         * <p>*   **normal**</p>
+         * <p>*   **loose**</p>
+         * <p>*   **strict**</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The status of the Intelligent Protection policy. Valid values:</p>
+         * <br>
+         * <p>*   **on**: enabled</p>
+         * <p>*   **off**: disabled</p>
+         */
         @NameInMap("Switch")
         public String _switch;
 
+        /**
+         * <p>The protection mode for ports 80 and 443. Valid values:</p>
+         * <br>
+         * <p>*   **normal**</p>
+         * <p>*   **loose**</p>
+         * <p>*   **strict**</p>
+         */
         @NameInMap("WebMode")
         public String webMode;
 
+        /**
+         * <p>The status of the Intelligent Protection policy for ports 80 and 443. Valid values:</p>
+         * <br>
+         * <p>*   **on**: enabled</p>
+         * <p>*   **off**: disabled</p>
+         */
         @NameInMap("WebSwitch")
         public String webSwitch;
 

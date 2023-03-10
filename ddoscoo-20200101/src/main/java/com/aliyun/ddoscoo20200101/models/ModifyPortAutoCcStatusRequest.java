@@ -4,12 +4,30 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyPortAutoCcStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The mode of the Intelligent Protection policy. Valid values:</p>
+     * <br>
+     * <p>*   **normal**</p>
+     * <p>*   **loose**</p>
+     * <p>*   **strict**</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>Specifies the status of the Intelligent Protection policy. Valid values:</p>
+     * <br>
+     * <p>*   **on**: enables the policy.</p>
+     * <p>*   **off**: disables the policy.</p>
+     */
     @NameInMap("Switch")
     public String _switch;
 

@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
+    /**
+     * <p>The status of each protection policy for a website.</p>
+     */
     @NameInMap("ProtectSwitchList")
     public java.util.List<DescribeWebCcProtectSwitchResponseBodyProtectSwitchList> protectSwitchList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,93 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCcProtectSwitchResponseBodyProtectSwitchList extends TeaModel {
+        /**
+         * <p>The mode of the Intelligent Protection policy. Valid values:</p>
+         * <br>
+         * <p>*   **watch**: the Warning mode</p>
+         * <p>*   **defense**: the Defense mode</p>
+         */
         @NameInMap("AiMode")
         public String aiMode;
 
+        /**
+         * <p>The status of the Intelligent Protection policy. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("AiRuleEnable")
         public Integer aiRuleEnable;
 
+        /**
+         * <p>The level of the Intelligent Protection policy. Valid values:</p>
+         * <br>
+         * <p>*   **level30**: the Low level</p>
+         * <p>*   **level60**: the Normal level</p>
+         * <p>*   **level90**: the Strict level</p>
+         */
         @NameInMap("AiTemplate")
         public String aiTemplate;
 
+        /**
+         * <p>The status of the Black Lists and White Lists (Domain Names) policy. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("BlackWhiteListEnable")
         public Integer blackWhiteListEnable;
 
+        /**
+         * <p>The status of the Custom Rule switch for the Frequency Control policy. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("CcCustomRuleEnable")
         public Integer ccCustomRuleEnable;
 
+        /**
+         * <p>The status of the Frequency Control policy. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("CcEnable")
         public Integer ccEnable;
 
+        /**
+         * <p>The mode of the Frequency Control policy. Valid values:</p>
+         * <br>
+         * <p>*   **default**: Normal</p>
+         * <p>*   **gf_under_attack**: Emergency</p>
+         * <p>*   **gf_sos_verify**: Strict</p>
+         * <p>*   **gf_sos_enhance**: Super Strict</p>
+         */
         @NameInMap("CcTemplate")
         public String ccTemplate;
 
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The status of the Accurate Access Control policy. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("PreciseRuleEnable")
         public Integer preciseRuleEnable;
 
+        /**
+         * <p>The status of the Location Blacklist (Domain Names) policy. Valid values:</p>
+         * <br>
+         * <p>*   **0**: disabled</p>
+         * <p>*   **1**: enabled</p>
+         */
         @NameInMap("RegionBlockEnable")
         public Integer regionBlockEnable;
 

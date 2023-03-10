@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortMaxConnsResponseBody extends TeaModel {
+    /**
+     * <p>An array consisting of the details of the maximum number of connections that are established over a port of the instance.</p>
+     */
     @NameInMap("PortMaxConns")
     public java.util.List<DescribePortMaxConnsResponseBodyPortMaxConns> portMaxConns;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
     }
 
     public static class DescribePortMaxConnsResponseBodyPortMaxConns extends TeaModel {
+        /**
+         * <p>The maximum number of connections per second (CPS).</p>
+         */
         @NameInMap("Cps")
         public Long cps;
 
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The port of the instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 

@@ -4,9 +4,20 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance to query.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the instance to query. Valid values:</p>
+     * <br>
+     * <p>*   **1**: an Anti-DDoS Pro instance</p>
+     * <p>*   **2**: an Anti-DDoS Premium instance</p>
+     */
     @NameInMap("ProductType")
     public Integer productType;
 

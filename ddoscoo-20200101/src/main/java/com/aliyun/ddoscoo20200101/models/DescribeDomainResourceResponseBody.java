@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainResourceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of forwarding rules.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>An array that consists of the configurations of the forwarding rule.</p>
+     */
     @NameInMap("WebRules")
     public java.util.List<DescribeDomainResourceResponseBodyWebRules> webRules;
 
@@ -43,9 +52,20 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainResourceResponseBodyWebRulesProxyTypes extends TeaModel {
+        /**
+         * <p>An array that consists of the port numbers.</p>
+         */
         @NameInMap("ProxyPorts")
         public java.util.List<String> proxyPorts;
 
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <br>
+         * <p>*   **http**</p>
+         * <p>*   **https**</p>
+         * <p>*   **websocket**</p>
+         * <p>*   **websockets**</p>
+         */
         @NameInMap("ProxyType")
         public String proxyType;
 
@@ -73,75 +93,200 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainResourceResponseBodyWebRules extends TeaModel {
+        /**
+         * <p>An array consisting of the IP addresses that are included in the blacklist of the domain name.</p>
+         */
         @NameInMap("BlackList")
         public java.util.List<String> blackList;
 
+        /**
+         * <p>Indicates whether the Frequency Control policy is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("CcEnabled")
         public Boolean ccEnabled;
 
+        /**
+         * <p>Indicates whether the Custom Rule switch of the Frequency Control policy is turned on. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("CcRuleEnabled")
         public Boolean ccRuleEnabled;
 
+        /**
+         * <p>The mode of the Frequency Control policy. Valid values:</p>
+         * <br>
+         * <p>*   **default**: the Normal mode</p>
+         * <p>*   **gf_under_attack**: the Emergency mode</p>
+         * <p>*   **gf_sos_verify**: the Strict mode</p>
+         * <p>*   **gf_sos_verify**: the Super Strict mode</p>
+         */
         @NameInMap("CcTemplate")
         public String ccTemplate;
 
+        /**
+         * <p>The name of the SSL certificate used by the domain name.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The CNAME provided by the instance to which the domain name is added.</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>An array that consists of custom cipher suites.</p>
+         */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
 
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Indicates whether Enable HTTP/2 is turned on. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Http2Enable")
         public Boolean http2Enable;
 
+        /**
+         * <p>Indicates whether Enforce HTTPS Routing is turned on. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Http2HttpsEnable")
         public Boolean http2HttpsEnable;
 
+        /**
+         * <p>Indicates whether Enable HTTP is turned on. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Https2HttpEnable")
         public Boolean https2HttpEnable;
 
+        /**
+         * <p>The advanced HTTPS settings. This parameter takes effect only when the value of the **ProxyType** parameter includes **https**. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <br>
+         * <p>*   **Http2https**: indicates whether the feature of redirecting HTTP requests to HTTPS requests is enabled. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</p>
+         * <p>*   **Https2http**: indicates whether the feature of redirecting HTTPS requests to HTTP requests is enabled. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</p>
+         * <p>*   **Http2**: indicates whether HTTP/2 is supported. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that HTTP/2 is not supported. The value 1 indicates that HTTP/2 is supported.</p>
+         */
         @NameInMap("HttpsExt")
         public String httpsExt;
 
+        /**
+         * <p>An array consisting of the IDs of the instances to which the domain name is added.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
+        /**
+         * <p>The scheduling algorithm for back-to-origin traffic. Valid values:</p>
+         * <br>
+         * <p>*   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</p>
+         * <p>*   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</p>
+         * <p>*   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</p>
+         */
         @NameInMap("PolicyMode")
         public String policyMode;
 
+        /**
+         * <p>Indicates whether the instance forwards the traffic that is destined for the website. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("ProxyEnabled")
         public Boolean proxyEnabled;
 
+        /**
+         * <p>An array that consists of the details of the protocol type and port number.</p>
+         */
         @NameInMap("ProxyTypes")
         public java.util.List<DescribeDomainResourceResponseBodyWebRulesProxyTypes> proxyTypes;
 
+        /**
+         * <p>The reason why the domain name is invalid. Valid values:</p>
+         * <br>
+         * <p>*   **1**: No ICP filing is completed for the domain name.</p>
+         * <p>*   **2**: The business for which you registered the domain name does not meet regulatory requirements.</p>
+         * <br>
+         * <p>If the two reasons are both involved, the value **2** is returned.</p>
+         */
         @NameInMap("PunishReason")
         public Integer punishReason;
 
+        /**
+         * <p>Indicates whether the domain name is invalid. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The domain name is invalid. You can view the specific reasons from the **PunishReason** parameter.</p>
+         * <p>*   **false**: The domain name is valid.</p>
+         */
         @NameInMap("PunishStatus")
         public Boolean punishStatus;
 
+        /**
+         * <p>An array that consists of the addresses of the origin servers.</p>
+         */
         @NameInMap("RealServers")
         public java.util.List<String> realServers;
 
+        /**
+         * <p>The address type of the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **0**: IP address</p>
+         * <p>*   **1**: domain name</p>
+         */
         @NameInMap("RsType")
         public Integer rsType;
 
+        /**
+         * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Ssl13Enabled")
         public Boolean ssl13Enabled;
 
+        /**
+         * <p>The type of the cipher suite. Valid values:</p>
+         * <br>
+         * <p>*   **default**: custom cipher suite</p>
+         * <p>*   **all**: all cipher suites</p>
+         * <p>*   **strong**: strong cipher suites</p>
+         */
         @NameInMap("SslCiphers")
         public String sslCiphers;
 
+        /**
+         * <p>The version of the TLS protocol. Valid values:</p>
+         * <br>
+         * <p>*   **tls1.0**: TLS 1.0 or later</p>
+         * <p>*   **tls1.1**: TLS 1.1 or later</p>
+         * <p>*   **tls1.2**: TLS 1.2 or later</p>
+         */
         @NameInMap("SslProtocols")
         public String sslProtocols;
 
+        /**
+         * <p>An array consisting of the IP addresses that are included in the whitelist of the domain name.</p>
+         */
         @NameInMap("WhiteList")
         public java.util.List<String> whiteList;
 

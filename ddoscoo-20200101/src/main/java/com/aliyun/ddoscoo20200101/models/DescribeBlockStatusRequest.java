@@ -4,9 +4,19 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBlockStatusRequest extends TeaModel {
+    /**
+     * <p>An array consisting of information about the IDs of the instances that you want to query.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

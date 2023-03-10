@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDosEventAreaResponseBody extends TeaModel {
+    /**
+     * <p>The information about the source region from which the volumetric attack was initiated.</p>
+     */
     @NameInMap("Areas")
     public java.util.List<DescribeDDosEventAreaResponseBodyAreas> areas;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
     }
 
     public static class DescribeDDosEventAreaResponseBodyAreas extends TeaModel {
+        /**
+         * <p>The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](~~167926~~). For example, **110000** indicates Beijing, China, and **us** indicates the United States.</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The number of request packets that were sent from the source region.</p>
+         */
         @NameInMap("InPkts")
         public Long inPkts;
 

@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsResponseBody extends TeaModel {
+    /**
+     * <p>An array consisting of details of the domain name for which the forwarding rules are configured.</p>
+     */
     @NameInMap("Domains")
     public java.util.List<String> domains;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

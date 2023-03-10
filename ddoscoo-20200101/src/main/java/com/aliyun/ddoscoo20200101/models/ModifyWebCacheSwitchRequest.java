@@ -4,12 +4,28 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebCacheSwitchRequest extends TeaModel {
+    /**
+     * <p>The domain name for which you want to configure the Static Page Caching policy.</p>
+     * <br>
+     * <p>> You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>Specifies whether to enable or disable the Static Page Caching policy for a website. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enables the policy.</p>
+     * <p>*   **0**: disables the policy.</p>
+     */
     @NameInMap("Enable")
     public Integer enable;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

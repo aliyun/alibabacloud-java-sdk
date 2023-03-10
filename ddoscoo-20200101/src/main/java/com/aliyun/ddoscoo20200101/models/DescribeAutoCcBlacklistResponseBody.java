@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details of the IP addresses in the blacklist of the instance.</p>
+     */
     @NameInMap("AutoCcBlacklist")
     public java.util.List<DescribeAutoCcBlacklistResponseBodyAutoCcBlacklist> autoCcBlacklist;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned IP addresses in the blacklist.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,15 +52,30 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoCcBlacklistResponseBodyAutoCcBlacklist extends TeaModel {
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("DestIp")
         public String destIp;
 
+        /**
+         * <p>The validity period of the IP address in the blacklist. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The IP address in the blacklist.</p>
+         */
         @NameInMap("SourceIp")
         public String sourceIp;
 
+        /**
+         * <p>The mode of how the IP address is added to the blacklist. Valid values:</p>
+         * <br>
+         * <p>*   **manual**: manually added</p>
+         * <p>*   **auto**: automatically added</p>
+         */
         @NameInMap("Type")
         public String type;
 

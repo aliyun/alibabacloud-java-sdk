@@ -4,9 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebAccessModeRequest extends TeaModel {
+    /**
+     * <p>The mode in which a website service is added to Anti-DDoS Pro or Anti-DDoS Premium. Valid values:</p>
+     * <br>
+     * <p>*   **0**: A record mode</p>
+     * <p>*   **1**: anti-DDoS mode</p>
+     * <p>*   **2**: origin redundancy mode</p>
+     */
     @NameInMap("AccessMode")
     public Integer accessMode;
 
+    /**
+     * <p>The domain name of the website.</p>
+     * <br>
+     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 

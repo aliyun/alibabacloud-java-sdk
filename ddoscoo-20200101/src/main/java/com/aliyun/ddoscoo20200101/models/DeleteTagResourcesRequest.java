@@ -4,21 +4,44 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes.</p>
+     * <p>*   **false** no. This is the default value.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>An array consisting of the IDs of instances from which you want to remove tags.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
+    /**
+     * <p>The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>An array consisting of the keys of the tags that you want to remove.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

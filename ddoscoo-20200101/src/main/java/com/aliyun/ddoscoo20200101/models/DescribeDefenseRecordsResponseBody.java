@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefenseRecordsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of details of the log of an advanced mitigation session.</p>
+     */
     @NameInMap("DefenseRecords")
     public java.util.List<DescribeDefenseRecordsResponseBodyDefenseRecords> defenseRecords;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of advanced mitigation sessions.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,21 +52,42 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseRecordsResponseBodyDefenseRecords extends TeaModel {
+        /**
+         * <p>The peak attack traffic. Unit: bit/s.</p>
+         */
         @NameInMap("AttackPeak")
         public Long attackPeak;
 
+        /**
+         * <p>The end time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The number of attacks.</p>
+         */
         @NameInMap("EventCount")
         public Integer eventCount;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The start time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the advanced mitigation session. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The advanced mitigation session is being used.</p>
+         * <p>*   **1**: The advanced mitigation session is used.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

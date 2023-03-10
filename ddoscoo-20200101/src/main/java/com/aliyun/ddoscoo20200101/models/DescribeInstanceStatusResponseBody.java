@@ -4,12 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The status of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **1**: normal</p>
+     * <p>*   **2**: expired</p>
+     * <p>*   **3**: overdue</p>
+     * <p>*   **4**: released</p>
+     */
     @NameInMap("InstanceStatus")
     public Integer instanceStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

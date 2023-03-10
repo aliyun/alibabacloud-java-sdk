@@ -4,6 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteDomainResourceRequest extends TeaModel {
+    /**
+     * <p>The domain name for which the forwarding rule is configured.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 

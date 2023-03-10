@@ -4,18 +4,38 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkRulesRequest extends TeaModel {
+    /**
+     * <p>The forwarding protocol. Valid values:</p>
+     * <br>
+     * <p>*   **tcp**</p>
+     * <p>*   **udp**</p>
+     */
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
+    /**
+     * <p>The forwarding port.</p>
+     */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

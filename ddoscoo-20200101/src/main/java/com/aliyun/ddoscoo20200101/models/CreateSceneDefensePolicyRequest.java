@@ -4,15 +4,30 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateSceneDefensePolicyRequest extends TeaModel {
+    /**
+     * <p>The end time of the policy. This value is a UNIX timestamp. Units: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The start time of the policy. This value is a UNIX timestamp. Units: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The template of the policy. Valid values:</p>
+     * <br>
+     * <p>*   **promotion**: important activity</p>
+     * <p>*   **bypass**: all traffic forwarded</p>
+     */
     @NameInMap("Template")
     public String template;
 

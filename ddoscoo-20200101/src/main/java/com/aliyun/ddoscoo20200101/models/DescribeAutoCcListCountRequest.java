@@ -4,9 +4,20 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoCcListCountRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> You can call the **DescribeInstanceIds** operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The mode of how an IP address is added to the whitelist or blacklist. Valid values:</p>
+     * <br>
+     * <p>*   **manual**: manually added</p>
+     * <p>*   **auto**: automatically added</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 

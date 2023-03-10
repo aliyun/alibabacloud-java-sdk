@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
+    /**
+     * <p>The peak queries per second (QPS) of DDoS attacks. Units: QPS.</p>
+     */
     @NameInMap("Qps")
     public Long qps;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

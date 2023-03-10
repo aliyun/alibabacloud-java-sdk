@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainOverviewResponseBody extends TeaModel {
+    /**
+     * <p>The peak queries per second (QPS) during HTTP traffic scrubbing. Unit: QPS.</p>
+     */
     @NameInMap("MaxHttp")
     public Long maxHttp;
 
+    /**
+     * <p>The peak QPS during HTTPS traffic scrubbing. Unit: QPS.</p>
+     */
     @NameInMap("MaxHttps")
     public Long maxHttps;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

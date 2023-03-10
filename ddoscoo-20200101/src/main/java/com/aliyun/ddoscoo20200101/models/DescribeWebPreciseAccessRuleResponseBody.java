@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
+    /**
+     * <p>An array consisting of the configuration of the accurate access control rule that is created for the website.</p>
+     */
     @NameInMap("PreciseAccessConfigList")
     public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigList> preciseAccessConfigList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,29 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList extends TeaModel {
+        /**
+         * <p>The match content.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The match field.</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <p>The custom HTTP header.</p>
+         * <br>
+         * <p>> This parameter takes effect only when **Field** is set to **header**.</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 
+        /**
+         * <p>The logical operator.</p>
+         */
         @NameInMap("MatchMethod")
         public String matchMethod;
 
@@ -84,18 +104,40 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList extends TeaModel {
+        /**
+         * <p>The action triggered if the rule is matched. Valid values:</p>
+         * <br>
+         * <p>*   **accept**: allows the requests that match the rule.</p>
+         * <p>*   **block**: blocks the requests that match the rule.</p>
+         * <p>*   **challenge**: implements Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The match conditions.</p>
+         */
         @NameInMap("ConditionList")
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList;
 
+        /**
+         * <p>The validity period of the rule. Unit: seconds. This parameter takes effect only when **action** of a rule is **block**. Access requests that match the rule are blocked within the specified validity period of the rule. **0** indicates that the rule takes effect all the time.</p>
+         */
         @NameInMap("Expires")
         public Long expires;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The source of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **manual**: manually created. This is the default value.</p>
+         * <p>*   **auto**: automatically generated.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
@@ -147,9 +189,15 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigList extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>An array that consists of the rules.</p>
+         */
         @NameInMap("RuleList")
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList> ruleList;
 

@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainAttackEventsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details of the DDoS attack event.</p>
+     */
     @NameInMap("DomainAttackEvents")
     public java.util.List<DescribeDomainAttackEventsResponseBodyDomainAttackEvents> domainAttackEvents;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned DDoS attack events.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,15 +52,27 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainAttackEventsResponseBodyDomainAttackEvents extends TeaModel {
+        /**
+         * <p>The attacked domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The time when the DDoS attack stopped. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The peak attack QPS.</p>
+         */
         @NameInMap("MaxQps")
         public Long maxQps;
 
+        /**
+         * <p>The time when the DDoS attack started. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

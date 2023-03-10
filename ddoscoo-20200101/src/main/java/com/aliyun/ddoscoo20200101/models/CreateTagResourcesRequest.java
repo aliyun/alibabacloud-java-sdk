@@ -4,18 +4,35 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>An array consisting of the IDs of the Anti-DDoS Pro instances to which you want to add the tag.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
+    /**
+     * <p>The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>An array that consists of the tags to add.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateTagResourcesRequestTags> tags;
 
@@ -65,9 +82,15 @@ public class CreateTagResourcesRequest extends TeaModel {
     }
 
     public static class CreateTagResourcesRequestTags extends TeaModel {
+        /**
+         * <p>The key of the tag to add.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag to add.</p>
+         */
         @NameInMap("Value")
         public String value;
 

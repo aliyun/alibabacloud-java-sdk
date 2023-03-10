@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBlackholeStatusResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the blackhole filtering status of the instance.</p>
+     */
     @NameInMap("BlackholeStatus")
     public java.util.List<DescribeBlackholeStatusResponseBodyBlackholeStatus> blackholeStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,30 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeBlackholeStatusResponseBodyBlackholeStatus extends TeaModel {
+        /**
+         * <p>Indicates whether blackhole filtering is triggered for the instance. Valid values:</p>
+         * <br>
+         * <p>*   **blackhole**: yes</p>
+         * <p>*   **normal**: no</p>
+         */
         @NameInMap("BlackStatus")
         public String blackStatus;
 
+        /**
+         * <p>The end time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The start time of blackhole filtering. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

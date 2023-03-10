@@ -4,6 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteSceneDefensePolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the policy that you want to delete.</p>
+     * <br>
+     * <p>> You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 

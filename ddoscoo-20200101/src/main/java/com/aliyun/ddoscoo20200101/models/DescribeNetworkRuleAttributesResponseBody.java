@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.</p>
+     */
     @NameInMap("NetworkRuleAttributes")
     public java.util.List<DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes> networkRuleAttributes;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,32 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack extends TeaModel {
+        /**
+         * <p>The threshold that the number of connections initiated from a source IP address can exceed the limit. Set the value to **5**. If the number of connections initiated from a source IP address exceeds the limit five times during the check, the source IP address is added to the blacklist.</p>
+         */
         @NameInMap("Cnt")
         public Integer cnt;
 
+        /**
+         * <p>The interval at which checks are performed. Set the value to **60**. Unit: seconds.</p>
+         */
         @NameInMap("During")
         public Integer during;
 
+        /**
+         * <p>The validity period of the IP address in the blacklist. Valid values: **60** to **604800**. Unit: seconds.</p>
+         */
         @NameInMap("Expires")
         public Integer expires;
 
+        /**
+         * <p>The type of the limit that causes a source IP address to be added to the blacklist. Valid values:</p>
+         * <br>
+         * <p>*   **1**: Source New Connection Rate Limit</p>
+         * <p>*   **2**: Source Concurrent Connection Rate Limit</p>
+         * <p>*   **3**: PPS Limit for Source</p>
+         * <p>*   **4**: Bandwidth Limit for Source</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -84,6 +107,9 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCc extends TeaModel {
+        /**
+         * <p>The protection policy that a source IP address is added to the blacklist when the number of connections initiated from the IP address frequently exceeds the limit.</p>
+         */
         @NameInMap("Sblack")
         public java.util.List<DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCcSblack> sblack;
 
@@ -103,9 +129,15 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigPayloadLen extends TeaModel {
+        /**
+         * <p>The maximum length of a packet. Valid values: **0** to **6000**. Unit: bytes.</p>
+         */
         @NameInMap("Max")
         public Integer max;
 
+        /**
+         * <p>The minimum length of a packet. Valid values: **0** to **6000**. Unit: bytes.</p>
+         */
         @NameInMap("Min")
         public Integer min;
 
@@ -133,15 +165,33 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla extends TeaModel {
+        /**
+         * <p>The maximum number of new connections per second that can be established over the port of the destination instance. Valid values: **100** to **100000**.</p>
+         */
         @NameInMap("Cps")
         public Integer cps;
 
+        /**
+         * <p>The status of the Destination New Connection Rate Limit switch. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The switch is turned off.</p>
+         * <p>*   **1**: The switch is turned on.</p>
+         */
         @NameInMap("CpsEnable")
         public Integer cpsEnable;
 
+        /**
+         * <p>The maximum number of concurrent connections that can be established over the port of the destination instance. Valid values: **1000** to **1000000**.</p>
+         */
         @NameInMap("Maxconn")
         public Integer maxconn;
 
+        /**
+         * <p>The status of the Destination Concurrent Connection Rate Limit switch. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The switch is turned off.</p>
+         * <p>*   **1**: The switch is turned on.</p>
+         */
         @NameInMap("MaxconnEnable")
         public Integer maxconnEnable;
 
@@ -185,24 +235,54 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit extends TeaModel {
+        /**
+         * <p>The bandwidth limit for a source IP address. Valid values: **1024** to **268435456**. Unit: bytes/s. Default value: **0**, which indicates that the bandwidth for a source IP address is unlimited.</p>
+         */
         @NameInMap("Bps")
         public Long bps;
 
+        /**
+         * <p>The maximum number of new connections per second that can be initiated from a source IP address. Valid values: **1** to **500000**.</p>
+         */
         @NameInMap("Cps")
         public Integer cps;
 
+        /**
+         * <p>The status of the Source New Connection Rate Limit switch. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The switch is turned off.</p>
+         * <p>*   **1**: The switch is turned on.</p>
+         */
         @NameInMap("CpsEnable")
         public Integer cpsEnable;
 
+        /**
+         * <p>The mode of the Source New Connection Rate Limit switch. Valid values:</p>
+         * <br>
+         * <p>*   **1**: the manual mode</p>
+         * <p>*   **2**: the automatic mode</p>
+         */
         @NameInMap("CpsMode")
         public Integer cpsMode;
 
+        /**
+         * <p>The maximum number of concurrent connections initiated from a source IP address. Valid values: **1** to **500000**.</p>
+         */
         @NameInMap("Maxconn")
         public Integer maxconn;
 
+        /**
+         * <p>The status of the Source Concurrent Connection Rate Limit switch. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The switch is turned off.</p>
+         * <p>*   **1**: The switch is turned on.</p>
+         */
         @NameInMap("MaxconnEnable")
         public Integer maxconnEnable;
 
+        /**
+         * <p>The packets per second (pps) limit for a source IP address. Valid values: **1** to **100000**. Unit: packets/s. Default value: **0**, which indicates that the pps for a source IP address is unlimited.</p>
+         */
         @NameInMap("Pps")
         public Long pps;
 
@@ -270,24 +350,51 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig extends TeaModel {
+        /**
+         * <p>The protection policy applied when the number of connections initiated from a source IP address frequently exceeds the limit.</p>
+         */
         @NameInMap("Cc")
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigCc cc;
 
+        /**
+         * <p>The status of the Empty Connection switch. Valid values:</p>
+         * <br>
+         * <p>*   **on**: The switch is turned on.</p>
+         * <p>*   **off**: The switch is turned off.</p>
+         */
         @NameInMap("NodataConn")
         public String nodataConn;
 
+        /**
+         * <p>The settings of the Packet Length Limit policy.</p>
+         */
         @NameInMap("PayloadLen")
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigPayloadLen payloadLen;
 
+        /**
+         * <p>The timeout period of session persistence. Valid values: **30** to **3600**. Unit: seconds. Default value: **0**, which indicates that session persistence is disabled.</p>
+         */
         @NameInMap("PersistenceTimeout")
         public Integer persistenceTimeout;
 
+        /**
+         * <p>The settings of the Speed Limit for Destination policy.</p>
+         */
         @NameInMap("Sla")
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSla sla;
 
+        /**
+         * <p>The settings of the Speed Limit for Source policy.</p>
+         */
         @NameInMap("Slimit")
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfigSlimit slimit;
 
+        /**
+         * <p>The status of the False Source switch. Valid values:</p>
+         * <br>
+         * <p>*   **on**: The switch is turned on.</p>
+         * <p>*   **off**: The switch is turned off.</p>
+         */
         @NameInMap("Synproxy")
         public String synproxy;
 
@@ -355,15 +462,30 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributes extends TeaModel {
+        /**
+         * <p>The mitigation settings of the port forwarding rule.</p>
+         */
         @NameInMap("Config")
         public DescribeNetworkRuleAttributesResponseBodyNetworkRuleAttributesConfig config;
 
+        /**
+         * <p>The forwarding port.</p>
+         */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The forwarding protocol. Valid values:</p>
+         * <br>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 

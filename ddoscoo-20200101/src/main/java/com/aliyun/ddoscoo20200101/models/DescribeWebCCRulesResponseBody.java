@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCCRulesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned custom frequency control rules.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>An array that consists of the details of the custom frequency control rule.</p>
+     */
     @NameInMap("WebCCRules")
     public java.util.List<DescribeWebCCRulesResponseBodyWebCCRules> webCCRules;
 
@@ -43,24 +52,51 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesResponseBodyWebCCRules extends TeaModel {
+        /**
+         * <p>The blocking type. Valid values:</p>
+         * <br>
+         * <p>*   **close**: blocks requests.</p>
+         * <p>*   **captcha**: enables Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification.</p>
+         */
         @NameInMap("Act")
         public String act;
 
+        /**
+         * <p>The number of requests that are allowed from an individual IP address. Valid values: **2** to **2000**.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The check intervals. Valid values: **5** to **10800**. Unit: seconds.</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>The match mode. Valid values:</p>
+         * <br>
+         * <p>*   **prefix**: prefix match</p>
+         * <p>*   **match**: exact match</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The blocking duration. Valid values: **1** to **1440**. Unit: minutes.</p>
+         */
         @NameInMap("Ttl")
         public Integer ttl;
 
+        /**
+         * <p>The check path.</p>
+         */
         @NameInMap("Uri")
         public String uri;
 

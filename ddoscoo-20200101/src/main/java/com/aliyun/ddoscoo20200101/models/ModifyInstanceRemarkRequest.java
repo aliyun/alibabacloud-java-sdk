@@ -4,9 +4,19 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceRemarkRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The description of the instance.</p>
+     * <br>
+     * <p>The value can contain letters, digits, and some special characters, such as`, . + - * / _` The value can be up to 500 characters in length.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

@@ -4,12 +4,25 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeL7RsPolicyRequest extends TeaModel {
+    /**
+     * <p>The domain name of the website to query.</p>
+     * <br>
+     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query the domain names for which forwarding rules are configured.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>An array that consists of N addresses of origin servers to query. The maximum value of N is 200. You can specify up to 200 addresses.</p>
+     */
     @NameInMap("RealServers")
     public java.util.List<String> realServers;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     * <br>
+     * <p>For more information about resource groups, see [Create a resource group](~~94485~~).</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -4,6 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefenseCountStatisticsRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of details of the IP address in the whitelist of the instance.</p>
+     */
     @NameInMap("AutoCcWhitelist")
     public java.util.List<DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist> autoCcWhitelist;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned IP addresses in the whitelist.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,15 +52,30 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoCcWhitelistResponseBodyAutoCcWhitelist extends TeaModel {
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("DestIp")
         public String destIp;
 
+        /**
+         * <p>The validity period of the IP address in the whitelist. Unit: seconds. **0** indicates that the IP address in the whitelist never expires.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The IP addresses that is contained in the IP address whitelist.</p>
+         */
         @NameInMap("SourceIp")
         public String sourceIp;
 
+        /**
+         * <p>The mode of how an IP address is added to the whitelist. Valid values:</p>
+         * <br>
+         * <p>*   **manual**: manually added</p>
+         * <p>*   **auto**: automatically added</p>
+         */
         @NameInMap("Type")
         public String type;
 

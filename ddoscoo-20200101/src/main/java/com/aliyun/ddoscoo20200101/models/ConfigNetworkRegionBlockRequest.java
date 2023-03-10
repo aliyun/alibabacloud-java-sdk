@@ -4,9 +4,38 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigNetworkRegionBlockRequest extends TeaModel {
+    /**
+     * <p>The details of the configurations of blocked locations. This parameter is a JSON string. The value consists of the following fields:</p>
+     * <br>
+     * <p>*   **RegionBlockSwitch**: the status of the Location Blacklist policy. This field is required and must be of the string type. Valid values:</p>
+     * <br>
+     * <p>    *   **on**: enables the policy.</p>
+     * <p>    *   **off**: disables the policy.</p>
+     * <br>
+     * <p>*   **Countries**: the codes of the countries or areas from which you want to block requests. This field is optional and must be of the array type.</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note**For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic.</p>
+     * <br>
+     * <p>    For example, `[1,2]` specifies China and Australia.</p>
+     * <br>
+     * <p>*   **Provinces**: the codes of the administrative regions in China from which you want to block requests. This field is optional and must be of the array type.</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note**For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic.</p>
+     * <br>
+     * <p>    For example, `[11,12]` specifies Beijing and Tianjin.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

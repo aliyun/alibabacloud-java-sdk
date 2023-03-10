@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the configurations of the Location Blacklist (Domain Names) policy.</p>
+     */
     @NameInMap("AreaBlockConfigs")
     public java.util.List<DescribeWebAreaBlockConfigsResponseBodyAreaBlockConfigs> areaBlockConfigs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,18 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebAreaBlockConfigsResponseBodyAreaBlockConfigsRegionList extends TeaModel {
+        /**
+         * <p>Indicates whether the location is blocked. Valid values:</p>
+         * <br>
+         * <p>*   **0**: yes</p>
+         * <p>*   **1**: no</p>
+         */
         @NameInMap("Block")
         public Integer block;
 
+        /**
+         * <p>The name of the location.</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -62,9 +77,15 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebAreaBlockConfigsResponseBodyAreaBlockConfigs extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The configuration of the blocked locations.</p>
+         */
         @NameInMap("RegionList")
         public java.util.List<DescribeWebAreaBlockConfigsResponseBodyAreaBlockConfigsRegionList> regionList;
 

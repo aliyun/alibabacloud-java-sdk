@@ -4,18 +4,38 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeletePortRequest extends TeaModel {
+    /**
+     * <p>The port of the origin server. Valid values: **0** to **65535**.</p>
+     */
     @NameInMap("BackendPort")
     public String backendPort;
 
+    /**
+     * <p>The forwarding port. Valid values: **0** to **65535**.</p>
+     */
     @NameInMap("FrontendPort")
     public String frontendPort;
 
+    /**
+     * <p>The type of the protocol. Valid values:</p>
+     * <br>
+     * <p>*   **tcp**</p>
+     * <p>*   **udp**</p>
+     */
     @NameInMap("FrontendProtocol")
     public String frontendProtocol;
 
+    /**
+     * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>An array that consists of the IP addresses of origin servers.</p>
+     */
     @NameInMap("RealServers")
     public java.util.List<String> realServers;
 

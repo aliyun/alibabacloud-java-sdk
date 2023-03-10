@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebAccessLogEmptyCountResponseBody extends TeaModel {
+    /**
+     * <p>The remaining quota that you can clear the Logstore.</p>
+     */
     @NameInMap("AvailableCount")
     public Integer availableCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

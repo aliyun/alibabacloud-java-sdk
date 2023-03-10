@@ -4,12 +4,26 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyHttp2EnableRequest extends TeaModel {
+    /**
+     * <p>The domain name of the website.</p>
+     * <br>
+     * <p>> A forwarding rule must be configured for the domain name, and the domain name must be associated with an instance that uses the Enhanced function plan. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>Specifies whether to enable HTTP/2. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disables HTTP/2.</p>
+     * <p>*   **1**: enables HTTP/2.</p>
+     */
     @NameInMap("Enable")
     public Integer enable;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

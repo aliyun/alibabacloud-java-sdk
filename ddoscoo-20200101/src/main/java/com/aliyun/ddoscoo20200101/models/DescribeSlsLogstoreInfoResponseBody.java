@@ -4,21 +4,41 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
+    /**
+     * <p>The Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     */
     @NameInMap("LogStore")
     public String logStore;
 
+    /**
+     * <p>The Logstore project of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     */
     @NameInMap("Project")
     public String project;
 
+    /**
+     * <p>The available log storage capacity. Unit: bytes.</p>
+     */
     @NameInMap("Quota")
     public Long quota;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The log storage duration. Unit: days.</p>
+     */
     @NameInMap("Ttl")
     public Integer ttl;
 
+    /**
+     * <p>The used log storage capacity. Unit: bytes.</p>
+     * <br>
+     * <p>> The statistics on Log Service are delayed for about two hours.</p>
+     */
     @NameInMap("Used")
     public Long used;
 
