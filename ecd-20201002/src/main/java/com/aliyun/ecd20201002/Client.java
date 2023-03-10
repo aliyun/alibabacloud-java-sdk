@@ -133,63 +133,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.changePasswordWithOptions(request, runtime);
     }
 
-    public CreateOrUpdateInternetPolicyResponse createOrUpdateInternetPolicyWithOptions(CreateOrUpdateInternetPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
-            query.put("ClientId", request.clientId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.domainList)) {
-            query.put("DomainList", request.domainList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
-            query.put("LoginToken", request.loginToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
-            query.put("PolicyName", request.policyName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
-            query.put("SessionId", request.sessionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateOrUpdateInternetPolicy"),
-            new TeaPair("version", "2020-10-02"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOrUpdateInternetPolicyResponse());
-    }
-
-    public CreateOrUpdateInternetPolicyResponse createOrUpdateInternetPolicy(CreateOrUpdateInternetPolicyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createOrUpdateInternetPolicyWithOptions(request, runtime);
-    }
-
     public DeleteFingerPrintTemplateResponse deleteFingerPrintTemplateWithOptions(DeleteFingerPrintTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -276,55 +219,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDirectoriesWithOptions(request, runtime);
     }
 
-    public DescribeDirectoryInternetPolicyResponse describeDirectoryInternetPolicyWithOptions(DescribeDirectoryInternetPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
-            query.put("ClientId", request.clientId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
-            query.put("LoginToken", request.loginToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
-            query.put("PolicyName", request.policyName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
-            query.put("SessionId", request.sessionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDirectoryInternetPolicy"),
-            new TeaPair("version", "2020-10-02"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDirectoryInternetPolicyResponse());
-    }
-
-    public DescribeDirectoryInternetPolicyResponse describeDirectoryInternetPolicy(DescribeDirectoryInternetPolicyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDirectoryInternetPolicyWithOptions(request, runtime);
-    }
-
     public DescribeFingerPrintTemplatesResponse describeFingerPrintTemplatesWithOptions(DescribeFingerPrintTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -393,6 +287,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DirectoryId", request.directoryId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
             query.put("LoginToken", request.loginToken);
         }
@@ -457,51 +355,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeGlobalDesktopsResponse describeGlobalDesktops(DescribeGlobalDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeGlobalDesktopsWithOptions(request, runtime);
-    }
-
-    public DescribeOfficeSiteInternetStatusResponse describeOfficeSiteInternetStatusWithOptions(DescribeOfficeSiteInternetStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
-            query.put("ClientId", request.clientId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
-            query.put("LoginToken", request.loginToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
-            query.put("SessionId", request.sessionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeOfficeSiteInternetStatus"),
-            new TeaPair("version", "2020-10-02"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOfficeSiteInternetStatusResponse());
-    }
-
-    public DescribeOfficeSiteInternetStatusResponse describeOfficeSiteInternetStatus(DescribeOfficeSiteInternetStatusRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeOfficeSiteInternetStatusWithOptions(request, runtime);
     }
 
     public DescribeOfficeSitesResponse describeOfficeSitesWithOptions(DescribeOfficeSitesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1306,104 +1159,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetFingerPrintTemplateDescriptionResponse setFingerPrintTemplateDescription(SetFingerPrintTemplateDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setFingerPrintTemplateDescriptionWithOptions(request, runtime);
-    }
-
-    public SetOfficeSiteInternetStatusResponse setOfficeSiteInternetStatusWithOptions(SetOfficeSiteInternetStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
-            query.put("ClientId", request.clientId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
-            query.put("LoginToken", request.loginToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.networkStatus)) {
-            query.put("NetworkStatus", request.networkStatus);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
-            query.put("SessionId", request.sessionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SetOfficeSiteInternetStatus"),
-            new TeaPair("version", "2020-10-02"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetOfficeSiteInternetStatusResponse());
-    }
-
-    public SetOfficeSiteInternetStatusResponse setOfficeSiteInternetStatus(SetOfficeSiteInternetStatusRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.setOfficeSiteInternetStatusWithOptions(request, runtime);
-    }
-
-    public SetStudentsDesktopGroupPolicyResponse setStudentsDesktopGroupPolicyWithOptions(SetStudentsDesktopGroupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
-            query.put("ClientId", request.clientId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
-            query.put("LoginToken", request.loginToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
-            query.put("PolicyName", request.policyName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
-            query.put("SessionId", request.sessionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SetStudentsDesktopGroupPolicy"),
-            new TeaPair("version", "2020-10-02"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "Anonymous"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetStudentsDesktopGroupPolicyResponse());
-    }
-
-    public SetStudentsDesktopGroupPolicyResponse setStudentsDesktopGroupPolicy(SetStudentsDesktopGroupPolicyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.setStudentsDesktopGroupPolicyWithOptions(request, runtime);
     }
 
     /**

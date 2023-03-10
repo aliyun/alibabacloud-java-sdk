@@ -1,3 +1,6 @@
+2023-03-10 Version: 2.0.7
+- Add recordContent from webclient.
+
 2023-02-07 Version: 2.0.6
 - Add recordContent from webclient.
 

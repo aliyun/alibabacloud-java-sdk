@@ -22,6 +22,9 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    @NameInMap("Keyword")
+    public String keyword;
+
     @NameInMap("LoginToken")
     public String loginToken;
 
@@ -106,6 +109,14 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     }
     public String getDirectoryId() {
         return this.directoryId;
+    }
+
+    public DescribeGlobalDesktopsRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
     }
 
     public DescribeGlobalDesktopsRequest setLoginToken(String loginToken) {
