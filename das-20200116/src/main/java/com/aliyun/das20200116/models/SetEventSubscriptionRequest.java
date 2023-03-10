@@ -16,9 +16,6 @@ public class SetEventSubscriptionRequest extends TeaModel {
     @NameInMap("ContactName")
     public String contactName;
 
-    @NameInMap("DispatchRule")
-    public String dispatchRule;
-
     @NameInMap("EventContext")
     public String eventContext;
 
@@ -33,9 +30,6 @@ public class SetEventSubscriptionRequest extends TeaModel {
 
     @NameInMap("MinInterval")
     public String minInterval;
-
-    @NameInMap("Severity")
-    public String severity;
 
     public static SetEventSubscriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         SetEventSubscriptionRequest self = new SetEventSubscriptionRequest();
@@ -72,14 +66,6 @@ public class SetEventSubscriptionRequest extends TeaModel {
     }
     public String getContactName() {
         return this.contactName;
-    }
-
-    public SetEventSubscriptionRequest setDispatchRule(String dispatchRule) {
-        this.dispatchRule = dispatchRule;
-        return this;
-    }
-    public String getDispatchRule() {
-        return this.dispatchRule;
     }
 
     public SetEventSubscriptionRequest setEventContext(String eventContext) {
@@ -120,14 +106,6 @@ public class SetEventSubscriptionRequest extends TeaModel {
     }
     public String getMinInterval() {
         return this.minInterval;
-    }
-
-    public SetEventSubscriptionRequest setSeverity(String severity) {
-        this.severity = severity;
-        return this;
-    }
-    public String getSeverity() {
-        return this.severity;
     }
 
 }
