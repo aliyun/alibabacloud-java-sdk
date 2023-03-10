@@ -42,6 +42,99 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeGlobalDesktopsResponseBodyDesktopsClients extends TeaModel {
+        @NameInMap("ClientType")
+        public String clientType;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeGlobalDesktopsResponseBodyDesktopsClients build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGlobalDesktopsResponseBodyDesktopsClients self = new DescribeGlobalDesktopsResponseBodyDesktopsClients();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsClients setClientType(String clientType) {
+            this.clientType = clientType;
+            return this;
+        }
+        public String getClientType() {
+            return this.clientType;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsClients setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers extends TeaModel {
+        @NameInMap("CronExpression")
+        public String cronExpression;
+
+        @NameInMap("Enforce")
+        public Boolean enforce;
+
+        @NameInMap("Interval")
+        public Integer interval;
+
+        @NameInMap("ResetType")
+        public String resetType;
+
+        @NameInMap("TimerType")
+        public String timerType;
+
+        public static DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers self = new DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setEnforce(Boolean enforce) {
+            this.enforce = enforce;
+            return this;
+        }
+        public Boolean getEnforce() {
+            return this.enforce;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setResetType(String resetType) {
+            this.resetType = resetType;
+            return this;
+        }
+        public String getResetType() {
+            return this.resetType;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers setTimerType(String timerType) {
+            this.timerType = timerType;
+            return this;
+        }
+        public String getTimerType() {
+            return this.timerType;
+        }
+
+    }
+
     public static class DescribeGlobalDesktopsResponseBodyDesktopsDisks extends TeaModel {
         @NameInMap("DiskId")
         public String diskId;
@@ -202,6 +295,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("Clients")
+        public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsClients> clients;
+
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
@@ -222,6 +318,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
         @NameInMap("DesktopStatus")
         public String desktopStatus;
+
+        @NameInMap("DesktopTimers")
+        public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers> desktopTimers;
 
         @NameInMap("DesktopType")
         public String desktopType;
@@ -305,6 +404,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             return this.chargeType;
         }
 
+        public DescribeGlobalDesktopsResponseBodyDesktops setClients(java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsClients> clients) {
+            this.clients = clients;
+            return this;
+        }
+        public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsClients> getClients() {
+            return this.clients;
+        }
+
         public DescribeGlobalDesktopsResponseBodyDesktops setConnectionStatus(String connectionStatus) {
             this.connectionStatus = connectionStatus;
             return this;
@@ -359,6 +466,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
         public String getDesktopStatus() {
             return this.desktopStatus;
+        }
+
+        public DescribeGlobalDesktopsResponseBodyDesktops setDesktopTimers(java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers> desktopTimers) {
+            this.desktopTimers = desktopTimers;
+            return this;
+        }
+        public java.util.List<DescribeGlobalDesktopsResponseBodyDesktopsDesktopTimers> getDesktopTimers() {
+            return this.desktopTimers;
         }
 
         public DescribeGlobalDesktopsResponseBodyDesktops setDesktopType(String desktopType) {
