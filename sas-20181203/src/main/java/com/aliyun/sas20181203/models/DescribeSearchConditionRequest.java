@@ -4,12 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSearchConditionRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and the response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The type of the asset. Valid values:</p>
+     * <br>
+     * <p>*   **ecs**: Elastic Compute Service (ECS) instance</p>
+     * <p>*   **cloud_product**: cloud service except ECS</p>
+     */
     @NameInMap("Type")
     public String type;
 

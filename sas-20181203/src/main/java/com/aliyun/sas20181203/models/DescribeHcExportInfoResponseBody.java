@@ -4,30 +4,60 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeHcExportInfoResponseBody extends TeaModel {
+    /**
+     * <p>The number of exported entries.</p>
+     */
     @NameInMap("CurrentCount")
     public Integer currentCount;
 
+    /**
+     * <p>The name of the exported file.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>The time when the export task was created.</p>
+     */
     @NameInMap("GmtCreate")
     public Long gmtCreate;
 
+    /**
+     * <p>The ID of the export task.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The download URL for the exported file.</p>
+     */
     @NameInMap("Link")
     public String link;
 
+    /**
+     * <p>The progress percentage of the export task.</p>
+     */
     @NameInMap("Progress")
     public Integer progress;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the export task. Valid values:</p>
+     * <br>
+     * <p>*   **exporting**: The task is in progress.</p>
+     * <p>*   **success**: The task is complete.</p>
+     */
     @NameInMap("ResultStatus")
     public String resultStatus;
 
+    /**
+     * <p>The total number of exported entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

@@ -11,7 +11,7 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The statistics of alerts events by risk level.</p>
+     * <p>The statistics of alerts by risk level.</p>
      */
     @NameInMap("EventLevels")
     public DescribeEventLevelCountResponseBodyEventLevels eventLevels;

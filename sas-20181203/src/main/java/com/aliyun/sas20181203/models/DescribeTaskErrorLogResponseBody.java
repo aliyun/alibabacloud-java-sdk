@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskErrorLogResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the error logs.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<DescribeTaskErrorLogResponseBodyLogs> logs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskErrorLogResponseBodyLogs extends TeaModel {
+        /**
+         * <p>The text content of the log.</p>
+         */
         @NameInMap("Text")
         public String text;
 

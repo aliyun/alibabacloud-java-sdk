@@ -4,21 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetOnceTaskResultInfoResponseBody extends TeaModel {
+    /**
+     * <p>The execution time of the task.</p>
+     */
     @NameInMap("CollectTime")
     public Long collectTime;
 
+    /**
+     * <p>The number of tasks that were completed.</p>
+     */
     @NameInMap("FinishCount")
     public Integer finishCount;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the scan task.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 
+    /**
+     * <p>The information about the task.</p>
+     */
     @NameInMap("TaskInfo")
     public GetOnceTaskResultInfoResponseBodyTaskInfo taskInfo;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,6 +94,14 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
     }
 
     public static class GetOnceTaskResultInfoResponseBodyTaskInfo extends TeaModel {
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The task is not started.</p>
+         * <p>*   **START**: The task is started.</p>
+         * <p>*   **SUCCESS**: The task is complete.</p>
+         * <p>*   **TIMEOUT**: The task times out.</p>
+         */
         @NameInMap("Status")
         public String status;
 

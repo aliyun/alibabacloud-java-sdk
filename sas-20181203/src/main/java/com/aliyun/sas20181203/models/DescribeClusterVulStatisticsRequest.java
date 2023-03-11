@@ -4,9 +4,19 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterVulStatisticsRequest extends TeaModel {
+    /**
+     * <p>The ID of the container cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The type of the vulnerabilities. Valid values:</p>
+     * <br>
+     * <p>*   **cve**: Linux software vulnerabilities</p>
+     * <p>*   **app**: application vulnerabilities</p>
+     * <p>*   **sca**: vulnerabilities that are detected based on software component analysis</p>
+     */
     @NameInMap("Types")
     public String types;
 

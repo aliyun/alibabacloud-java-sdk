@@ -51,7 +51,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         public String ossKey;
 
         /**
-         * <p>The policy that poses limits on file upload. For example, the policy limits the size of the file.</p>
+         * <p>The policy that poses limits on file upload. For example, the policy can limit the size of the file.</p>
          */
         @NameInMap("Policy")
         public String policy;

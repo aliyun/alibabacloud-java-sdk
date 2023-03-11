@@ -10,6 +10,9 @@ public class CreateHoneypotPresetRequest extends TeaModel {
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
 
+    @NameInMap("Lang")
+    public String lang;
+
     /**
      * <p>The custom configurations of the honeypot template. The value is a JSON string that contains the following fields:</p>
      * <br>
@@ -45,6 +48,14 @@ public class CreateHoneypotPresetRequest extends TeaModel {
     }
     public String getHoneypotImageName() {
         return this.honeypotImageName;
+    }
+
+    public CreateHoneypotPresetRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public CreateHoneypotPresetRequest setMeta(String meta) {

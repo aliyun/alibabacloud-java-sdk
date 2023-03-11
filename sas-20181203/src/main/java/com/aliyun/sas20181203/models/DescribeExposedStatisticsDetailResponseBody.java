@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeExposedStatisticsDetailResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array consisting of the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet and are returned.</p>
+     */
     @NameInMap("StatisticsDetails")
     public java.util.List<DescribeExposedStatisticsDetailResponseBodyStatisticsDetails> statisticsDetails;
 
@@ -43,15 +52,27 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeExposedStatisticsDetailResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,27 +116,61 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeExposedStatisticsDetailResponseBodyStatisticsDetails extends TeaModel {
+        /**
+         * <p>The total number of system vulnerabilities that are detected on your server and are exposed on the Internet.</p>
+         */
         @NameInMap("ExposedCount")
         public Integer exposedCount;
 
+        /**
+         * <p>The system component that is exposed on the Internet.</p>
+         */
         @NameInMap("ExposureComponent")
         public String exposureComponent;
 
+        /**
+         * <p>The public IP address that is exposed on the Internet.</p>
+         */
         @NameInMap("ExposureIp")
         public String exposureIp;
 
+        /**
+         * <p>The port that is exposed on the Internet.</p>
+         */
         @NameInMap("ExposurePort")
         public String exposurePort;
 
+        /**
+         * <p>The resource from which the asset is exposed. Valid values:</p>
+         * <br>
+         * <p>*   **INTERNET_IP**: the IP address of the Elastic Compute Service (ECS) instance</p>
+         * <p>*   **SLB**: the public IP address of the SLB instance</p>
+         * <p>*   **EIP**: the elastic IP address (EIP)</p>
+         * <p>*   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature</p>
+         */
         @NameInMap("ExposureType")
         public String exposureType;
 
+        /**
+         * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</p>
+         * <br>
+         * <p>*   If the value of the **ExposureType** parameter is **INTERNET_IP**, the value of this parameter is an empty string.</p>
+         * <p>*   If the value of the **ExposureType** parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.</p>
+         * <p>*   If the value of the **ExposureType** parameter is **EIP**, the value of this parameter is the ID of the EIP.</p>
+         * <p>*   If the value of the **ExposureType** parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.</p>
+         */
         @NameInMap("ExposureTypeId")
         public String exposureTypeId;
 
+        /**
+         * <p>The name of the gateway asset that is exposed on the Internet.</p>
+         */
         @NameInMap("ExposureTypeInstanceName")
         public String exposureTypeInstanceName;
 
+        /**
+         * <p>The region ID of the asset.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

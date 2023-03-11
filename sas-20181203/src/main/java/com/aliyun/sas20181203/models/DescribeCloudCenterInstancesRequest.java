@@ -4,30 +4,75 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesRequest extends TeaModel {
+    /**
+     * <p>The search conditions that are used to filter assets. The value of this parameter is in the JSON format and is case-sensitive.</p>
+     * <br>
+     * <p>> A search condition can be an instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.</p>
+     */
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The importance level of the asset. Valid values:</p>
+     * <br>
+     * <p>*   **2**: an important asset</p>
+     * <p>*   **1**: a common asset</p>
+     * <p>*   **0**: a test asset</p>
+     */
     @NameInMap("Importance")
     public Integer importance;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The logical operator that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:</p>
+     * <br>
+     * <p>*   **OR**: The search conditions are evaluated by using a logical **OR**.</p>
+     * <p>*   **AND**: The search conditions are evaluated by using a logical **AND**.</p>
+     */
     @NameInMap("LogicalExp")
     public String logicalExp;
 
+    /**
+     * <p>The type of the assets that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **ecs**: servers</p>
+     * <p>*   **cloud_product**: Alibaba Cloud services</p>
+     */
     @NameInMap("MachineTypes")
     public String machineTypes;
 
+    /**
+     * <p>Specifies whether to internationalize the name of the **default** group. Default value: **false**. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The system returns the Chinese name of the default group for the **GroupTrace** response parameter.********</p>
+     * <p>*   **false**: The system returns default for the **GroupTrace** response parameter.</p>
+     */
     @NameInMap("NoGroupTrace")
     public Boolean noGroupTrace;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region in which the asset resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

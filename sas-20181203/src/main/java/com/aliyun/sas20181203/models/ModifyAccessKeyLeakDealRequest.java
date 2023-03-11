@@ -4,15 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccessKeyLeakDealRequest extends TeaModel {
+    /**
+     * <p>The ID of the AccessKey pair leak.</p>
+     * <br>
+     * <p>> You can call the [DescribeAccesskeyLeakList](~~DescribeAccesskeyLeakList~~) operation to query the ID. You must specify at least one of the Id and **IdList** parameters.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The IDs of AccessKey pair leaks.</p>
+     */
     @NameInMap("IdList")
     public java.util.List<Long> idList;
 
+    /**
+     * <p>The remarks that are added.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The method to handle the AccessKey pair leak. Valid values:</p>
+     * <br>
+     * <p>*   **manual**: manually handle</p>
+     * <p>*   **disable**: disable</p>
+     * <p>*   **add-whitelist**: add to the whitelist</p>
+     */
     @NameInMap("Type")
     public String type;
 

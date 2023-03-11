@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotNodeResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>An array that consists of the information about the management nodes.</p>
+     */
     @NameInMap("HoneypotNodeList")
     public java.util.List<ListHoneypotNodeResponseBodyHoneypotNodeList> honeypotNodeList;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListHoneypotNodeResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,45 +111,98 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotNodeResponseBodyHoneypotNodeList extends TeaModel {
+        /**
+         * <p>Indicates whether the honeypot is allowed to access the Internet.</p>
+         * <br>
+         * <p>*   **true**: The honeypot is allowed to access the Internet.</p>
+         * <p>*   **false**: The honeypot is not allowed to access the Internet.</p>
+         */
         @NameInMap("AllowHoneypotAccessInternet")
         public Boolean allowHoneypotAccessInternet;
 
+        /**
+         * <p>The time when the management node was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The type of the management node. Default value: **false**. Valid values:</p>
+         * <br>
+         * <p>*   **false**: non-default type</p>
+         * <p>*   **true**: default type</p>
+         */
         @NameInMap("DefaultNode")
         public Boolean defaultNode;
 
+        /**
+         * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
+         */
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
+        /**
+         * <p>The maximum number of honeypots that can be deployed on the management node.</p>
+         */
         @NameInMap("HoneypotTotalCount")
         public Integer honeypotTotalCount;
 
+        /**
+         * <p>The number of honeypots that are deployed on the management node.</p>
+         */
         @NameInMap("HoneypotUsedCount")
         public Integer honeypotUsedCount;
 
+        /**
+         * <p>The ID of the management node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The IP address of the management node.</p>
+         */
         @NameInMap("NodeIp")
         public String nodeIp;
 
+        /**
+         * <p>The name of the management node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The maximum number of probes that can be used.</p>
+         */
         @NameInMap("ProbeTotalCount")
         public Integer probeTotalCount;
 
+        /**
+         * <p>The number of probes that are used.</p>
+         */
         @NameInMap("ProbeUsedCount")
         public Integer probeUsedCount;
 
+        /**
+         * <p>An array that consists of the allowed CIDR blocks.</p>
+         */
         @NameInMap("SecurityGroupProbeIpList")
         public java.util.List<String> securityGroupProbeIpList;
 
+        /**
+         * <p>The status of the management node. Valid values:</p>
+         * <br>
+         * <p>*   **1**: normal</p>
+         * <p>*   **2**: abnormal</p>
+         */
         @NameInMap("TotalStatus")
         public Integer totalStatus;
 
+        /**
+         * <p>Whether the node is upgradable. Valid values:</p>
+         * <p>*   **false**: non-default type</p>
+         * <p>*   **true**: default type</p>
+         */
         @NameInMap("UpgradeAvailable")
         public Boolean upgradeAvailable;
 
@@ -249,15 +326,27 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotNodeResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

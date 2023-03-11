@@ -59,19 +59,19 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         public Long blockExpireDate;
 
         /**
-         * <p>The IP address that is blocked.</p>
+         * <p>The blocked IP address.</p>
          */
         @NameInMap("BlockIp")
         public String blockIp;
 
         /**
-         * <p>The error code returned when the defense rule fails to block an IP address.</p>
+         * <p>The error code returned when the defense rule fails to block the IP address.</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The primary key ID of the database.</p>
+         * <p>The ID of the primary key in the table of records on the blocked IP address.</p>
          */
         @NameInMap("Id")
         public Long id;

@@ -4,15 +4,37 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulDetailsRequest extends TeaModel {
+    /**
+     * <p>The name in the **vulnerability introduction**.</p>
+     */
     @NameInMap("AliasName")
     public String aliasName;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The name of the vulnerability.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   **cve**: Linux software vulnerability</p>
+     * <p>*   **sys**: Windows system vulnerability</p>
+     * <p>*   **cms**: Web-CMS vulnerability</p>
+     * <p>*   **app**: application vulnerabilitiy</p>
+     * <p>*   **emg**: urgent vulnerability</p>
+     * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
+     */
     @NameInMap("Type")
     public String type;
 

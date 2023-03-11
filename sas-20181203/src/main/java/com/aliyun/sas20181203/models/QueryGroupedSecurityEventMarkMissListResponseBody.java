@@ -4,21 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. The status code **200** indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>An array that consists of the whitelist rules.</p>
+     */
     @NameInMap("List")
     public java.util.List<QueryGroupedSecurityEventMarkMissListResponseBodyList> list;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public QueryGroupedSecurityEventMarkMissListResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,36 +97,78 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     }
 
     public static class QueryGroupedSecurityEventMarkMissListResponseBodyList extends TeaModel {
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <p>The handling method. Valid values:</p>
+         * <br>
+         * <p>*   **auto\_add_white**: Automatically Added to Whitelist</p>
+         * <p>*   **defense\_not_notification**: Defense Without Notification</p>
+         */
         @NameInMap("DisposalWay")
         public String disposalWay;
 
+        /**
+         * <p>The name of the alert event. The value indicates a subtype.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The name of the alert event. The value indicates a type.</p>
+         */
         @NameInMap("EventNameOriginal")
         public String eventNameOriginal;
 
+        /**
+         * <p>The subtype of the alert event.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The type of the alert event.</p>
+         */
         @NameInMap("EventTypeOriginal")
         public String eventTypeOriginal;
 
+        /**
+         * <p>The field that is used in the whitelist rule.</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <p>The value of the field.</p>
+         */
         @NameInMap("FieldValue")
         public String fieldValue;
 
+        /**
+         * <p>The alias of the field.</p>
+         */
         @NameInMap("FiledAliasName")
         public String filedAliasName;
 
+        /**
+         * <p>The operator. Valid values:</p>
+         * <br>
+         * <p>*   **contains**: contains</p>
+         * <p>*   **notContains**: does not contain</p>
+         * <p>*   **strEqual**: equals</p>
+         * <p>*   **strNotEqual**: does not equal</p>
+         * <p>*   **regex**: regular expression</p>
+         */
         @NameInMap("Operate")
         public String operate;
 
+        /**
+         * <p>The UUIDs of assets. Multiple UUIDs are separated by commas (,).</p>
+         */
         @NameInMap("Uuids")
         public String uuids;
 
@@ -205,15 +268,27 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
     }
 
     public static class QueryGroupedSecurityEventMarkMissListResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: **20**.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

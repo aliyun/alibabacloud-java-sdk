@@ -4,9 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DisableCustomBlockRecordRequest extends TeaModel {
+    /**
+     * <p>The IP address that is specified in the policy.</p>
+     * <br>
+     * <p>> You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the IP address.</p>
+     */
     @NameInMap("BlockIp")
     public String blockIp;
 
+    /**
+     * <p>The traffic direction that is specified in the policy. Valid values:</p>
+     * <br>
+     * <p>*   **in**: inbound</p>
+     * <p>*   **out**: outbound</p>
+     */
     @NameInMap("Bound")
     public String bound;
 

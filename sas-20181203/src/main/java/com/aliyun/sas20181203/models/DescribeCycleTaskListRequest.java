@@ -11,7 +11,7 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -19,9 +19,9 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     /**
      * <p>The name of the task. Valid values:</p>
      * <br>
-     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
+     * <p>*   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task</p>
      * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     * <p>*   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -29,9 +29,9 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     /**
      * <p>The type of the task. Valid values:</p>
      * <br>
-     * <p>*   **VIRUS_VUL_SCHEDULE_SCAN**: virus scan task</p>
+     * <p>*   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task</p>
      * <p>*   **IMAGE_SCAN**: image scan task</p>
-     * <p>*   **EMG_VUL_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
+     * <p>*   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task</p>
      */
     @NameInMap("TaskType")
     public String taskType;

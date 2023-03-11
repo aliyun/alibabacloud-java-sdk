@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class VerifyCheckResultRequest extends TeaModel {
+    /**
+     * <p>An array that consists of the IDs of risk items.</p>
+     */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 

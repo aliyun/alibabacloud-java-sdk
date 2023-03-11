@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of risk information about containers.</p>
+     */
     @NameInMap("Assets")
     public java.util.List<DescribeAssetsSecurityEventSummaryResponseBodyAssets> assets;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,29 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetsSecurityEventSummaryResponseBodyAssets extends TeaModel {
+        /**
+         * <p>The type of the asset. Valid values:</p>
+         * <br>
+         * <p>*   **namespace**: namespace</p>
+         * <p>*   **clusters**: cluster</p>
+         * <p>*   **applications**: application</p>
+         * <p>*   **pods**: container group</p>
+         * <p>*   **containers**: container</p>
+         * <p>*   **images**: image</p>
+         * <p>*   **hosts**: node</p>
+         */
         @NameInMap("AssetType")
         public String assetType;
 
+        /**
+         * <p>The number of assets that are at risk.</p>
+         */
         @NameInMap("RiskCount")
         public Long riskCount;
 
+        /**
+         * <p>The total number of assets.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

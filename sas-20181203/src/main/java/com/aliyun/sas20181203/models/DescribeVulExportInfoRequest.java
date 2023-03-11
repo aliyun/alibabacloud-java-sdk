@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulExportInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("ExportId")
     public Long exportId;
 

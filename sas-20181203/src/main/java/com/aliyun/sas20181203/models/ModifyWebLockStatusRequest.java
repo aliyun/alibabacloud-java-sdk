@@ -4,15 +4,35 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebLockStatusRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>Specifies whether to enable or disable web tamper proofing for the specified server. Valid values:</p>
+     * <br>
+     * <p>*   **on**: enables web tamper proofing</p>
+     * <p>*   **off**: disables web tamper proofing</p>
+     * <br>
+     * <p>> After you disable web tamper proofing for the specified server, one quota is released.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The UUID of the server for which you want to enable or disable web tamper proofing. You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

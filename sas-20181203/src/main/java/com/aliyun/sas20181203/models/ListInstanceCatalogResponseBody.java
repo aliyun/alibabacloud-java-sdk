@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceCatalogResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the asset types by service provider.</p>
+     */
     @NameInMap("Vendors")
     public java.util.List<ListInstanceCatalogResponseBodyVendors> vendors;
 
@@ -32,6 +38,9 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
     }
 
     public static class ListInstanceCatalogResponseBodyVendorsInstanceTypesInstanceSubTypes extends TeaModel {
+        /**
+         * <p>The name of the asset subtype.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -51,9 +60,15 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
     }
 
     public static class ListInstanceCatalogResponseBodyVendorsInstanceTypes extends TeaModel {
+        /**
+         * <p>An array that consists of asset subtypes.</p>
+         */
         @NameInMap("InstanceSubTypes")
         public java.util.List<ListInstanceCatalogResponseBodyVendorsInstanceTypesInstanceSubTypes> instanceSubTypes;
 
+        /**
+         * <p>The name of the asset type.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -81,9 +96,15 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
     }
 
     public static class ListInstanceCatalogResponseBodyVendors extends TeaModel {
+        /**
+         * <p>An array that consists of asset types.</p>
+         */
         @NameInMap("InstanceTypes")
         public java.util.List<ListInstanceCatalogResponseBodyVendorsInstanceTypes> instanceTypes;
 
+        /**
+         * <p>The name of the service provider.</p>
+         */
         @NameInMap("Name")
         public String name;
 

@@ -4,18 +4,34 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomBlockRecordsRequest extends TeaModel {
+    /**
+     * <p>The IP address that you want to block by using the defense rule.</p>
+     */
     @NameInMap("BlockIp")
     public String blockIp;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the defense rule. Valid values:</p>
+     * <br>
+     * <p>*   **0**: invalid</p>
+     * <p>*   **1**: enabled</p>
+     * <p>*   **2**: failed</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

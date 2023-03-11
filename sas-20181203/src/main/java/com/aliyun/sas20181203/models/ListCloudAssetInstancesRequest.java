@@ -4,21 +4,53 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCloudAssetInstancesRequest extends TeaModel {
+    /**
+     * <p>The cloud service assets.</p>
+     */
     @NameInMap("CloudAssetTypes")
     public java.util.List<ListCloudAssetInstancesRequestCloudAssetTypes> cloudAssetTypes;
 
+    /**
+     * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <br>
+     * <p>*   **name**: the name of the search condition.</p>
+     * <br>
+     * <p>*   **value**: the value of the search condition.</p>
+     * <br>
+     * <p>*   **logicalExp**: the logical relation for multiple search conditions. Valid values:</p>
+     * <br>
+     * <p>    *   **OR**: The search conditions use a logical **OR**.</p>
+     * <p>    *   **AND**: The search conditions use a logical **AND**.</p>
+     * <br>
+     * <p>> You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query supported search conditions.</p>
+     */
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The logical relation for multiple search conditions. Valid values:</p>
+     * <br>
+     * <p>*   **OR**: The search conditions use a logical **OR**.</p>
+     * <p>*   **AND**: The search conditions use a logical **AND**.</p>
+     */
     @NameInMap("LogicalExp")
     public String logicalExp;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -76,9 +108,19 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
     }
 
     public static class ListCloudAssetInstancesRequestCloudAssetTypes extends TeaModel {
+        /**
+         * <p>The subtype of the cloud asset.</p>
+         * <br>
+         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtypes of cloud assets from the AssetSubType response parameter.</p>
+         */
         @NameInMap("AssetSubType")
         public Integer assetSubType;
 
+        /**
+         * <p>The type of the cloud asset.</p>
+         * <br>
+         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the types of cloud assets from the AssetType response parameter.</p>
+         */
         @NameInMap("AssetType")
         public Integer assetType;
 

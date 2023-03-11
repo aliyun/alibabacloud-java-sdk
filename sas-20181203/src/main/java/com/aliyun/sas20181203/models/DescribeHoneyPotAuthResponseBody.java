@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeHoneyPotAuthResponseBody extends TeaModel {
+    /**
+     * <p>The total quota.</p>
+     */
     @NameInMap("HoneyPotAuthCount")
     public Long honeyPotAuthCount;
 
+    /**
+     * <p>The quota that is consumed.</p>
+     */
     @NameInMap("HoneyPotCount")
     public Integer honeyPotCount;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

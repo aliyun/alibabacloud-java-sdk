@@ -4,15 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeStrategyRequest extends TeaModel {
+    /**
+     * <p>The type of the baseline check policy that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **common**: standard baseline check policy</p>
+     * <p>*   **custom**: custom baseline check policy</p>
+     */
     @NameInMap("CustomType")
     public String customType;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The ID of the baseline check policy that you want to query. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("StrategyIds")
     public String strategyIds;
 

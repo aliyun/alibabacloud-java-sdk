@@ -4,9 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddTagWithUuidRequest extends TeaModel {
+    /**
+     * <p>The name of the tag.</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 
+    /**
+     * <p>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</p>
+     * <br>
+     * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("UuidList")
     public String uuidList;
 

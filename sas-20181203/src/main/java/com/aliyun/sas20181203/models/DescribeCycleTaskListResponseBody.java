@@ -68,7 +68,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         public Integer enable;
 
         /**
-         * <p>The time when the task first run.</p>
+         * <p>The first time when the task starts.</p>
          */
         @NameInMap("FirstDateStr")
         public Long firstDateStr;
@@ -80,7 +80,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         public Integer intervalPeriod;
 
         /**
-         * <p>The ID of the task when the task last run.</p>
+         * <p>The ID of the task when the task last runs.</p>
          */
         @NameInMap("LastTaskId")
         public String lastTaskId;
@@ -113,7 +113,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         public Integer targetEndTime;
 
         /**
-         * <p>The period of time before the next task starts. Unit: hours.</p>
+         * <p>The period of time before the task starts for the next time. Unit: hours.</p>
          */
         @NameInMap("TargetStartTime")
         public Integer targetStartTime;

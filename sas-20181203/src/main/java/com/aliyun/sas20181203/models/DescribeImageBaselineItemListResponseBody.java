@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageBaselineItemListResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of baseline check items.</p>
+     */
     @NameInMap("BaselineItemInfos")
     public java.util.List<DescribeImageBaselineItemListResponseBodyBaselineItemInfos> baselineItemInfos;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeImageBaselineItemListResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,27 +52,59 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBaselineItemListResponseBodyBaselineItemInfos extends TeaModel {
+        /**
+         * <p>The alias of the baseline type.</p>
+         */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
+        /**
+         * <p>The key of the baseline type.</p>
+         */
         @NameInMap("BaselineClassKey")
         public String baselineClassKey;
 
+        /**
+         * <p>The alias of the baseline check item.</p>
+         */
         @NameInMap("BaselineItemAlias")
         public String baselineItemAlias;
 
+        /**
+         * <p>The key of the baseline check item.</p>
+         */
         @NameInMap("BaselineItemKey")
         public String baselineItemKey;
 
+        /**
+         * <p>The alias of the baseline.</p>
+         */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
+        /**
+         * <p>The key of the baseline name.</p>
+         */
         @NameInMap("BaselineNameKey")
         public String baselineNameKey;
 
+        /**
+         * <p>The status of the baseline risk item. Valid values:</p>
+         * <br>
+         * <p>*   **0**: unfixed</p>
+         * <p>*   **1**: fixed</p>
+         * <p>*   **2**: pending verification</p>
+         * <p>*   **3**: fixing failed</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Indicates whether the baseline check item is added to the whitelist. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("WhiteList")
         public Integer whiteList;
 
@@ -139,15 +180,27 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBaselineItemListResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

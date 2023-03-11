@@ -4,15 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyProcItemRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Specifies whether to forcefully refresh the data that you want to query.</p>
+     */
     @NameInMap("ForceFlush")
     public Boolean forceFlush;
 
+    /**
+     * <p>The name of the process.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

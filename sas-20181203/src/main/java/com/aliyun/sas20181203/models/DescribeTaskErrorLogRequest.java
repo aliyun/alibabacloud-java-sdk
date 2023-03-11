@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskErrorLogRequest extends TeaModel {
+    /**
+     * <p>The ID of the task.</p>
+     * <br>
+     * <p>>  You can call the DescribeImageFixTask operation to query the IDs of tasks.</p>
+     */
     @NameInMap("BuildTaskId")
     public String buildTaskId;
 

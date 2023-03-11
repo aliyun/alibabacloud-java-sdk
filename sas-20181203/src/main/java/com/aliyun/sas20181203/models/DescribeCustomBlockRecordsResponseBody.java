@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeCustomBlockRecordsResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>An array that consists of the defense rules.</p>
+     */
     @NameInMap("RecordList")
     public java.util.List<DescribeCustomBlockRecordsResponseBodyRecordList> recordList;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,27 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomBlockRecordsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,9 +116,17 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomBlockRecordsResponseBodyRecordListTargetList extends TeaModel {
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>The type of the query condition. Valid values:</p>
+         * <br>
+         * <p>*   **uuid**: the ID of an asset</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -125,30 +154,64 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomBlockRecordsResponseBodyRecordList extends TeaModel {
+        /**
+         * <p>The timestamp when the defense rule expires.</p>
+         */
         @NameInMap("BlockExpireDate")
         public Long blockExpireDate;
 
+        /**
+         * <p>The blocked IP address.</p>
+         */
         @NameInMap("BlockIp")
         public String blockIp;
 
+        /**
+         * <p>The direction of the traffic that is sent by the blocked IP address. Valid values:</p>
+         * <br>
+         * <p>*   **in**: inbound</p>
+         * <p>*   **out**: outbound</p>
+         */
         @NameInMap("Bound")
         public String bound;
 
+        /**
+         * <p>The number of servers to which the defense rule is applied.</p>
+         */
         @NameInMap("EnableCount")
         public Integer enableCount;
 
+        /**
+         * <p>The ID of the defense rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The total number of servers on which the IP address is blocked.</p>
+         */
         @NameInMap("ServerCount")
         public Integer serverCount;
 
+        /**
+         * <p>The source of the defense rule. Valid values:</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status of the defense rule. Valid values:</p>
+         * <br>
+         * <p>*   **0**: invalid</p>
+         * <p>*   **1**: enabled</p>
+         * <p>*   **2**: failed</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>An array consisting of the servers to which the defense rule is applied.</p>
+         */
         @NameInMap("TargetList")
         public java.util.List<DescribeCustomBlockRecordsResponseBodyRecordListTargetList> targetList;
 

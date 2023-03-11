@@ -7,7 +7,7 @@ public class CheckSecurityEventIdResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the alert events are generated on the server. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
+     * <p>*   **true**</p>
      * <p>*   **false**: no</p>
      */
     @NameInMap("Data")

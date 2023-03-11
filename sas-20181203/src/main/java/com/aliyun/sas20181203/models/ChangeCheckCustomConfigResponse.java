@@ -3,7 +3,7 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class ListInterceptionImageResponse extends TeaModel {
+public class ChangeCheckCustomConfigResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListInterceptionImageResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListInterceptionImageResponseBody body;
+    public ChangeCheckCustomConfigResponseBody body;
 
-    public static ListInterceptionImageResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListInterceptionImageResponse self = new ListInterceptionImageResponse();
+    public static ChangeCheckCustomConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        ChangeCheckCustomConfigResponse self = new ChangeCheckCustomConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListInterceptionImageResponse setHeaders(java.util.Map<String, String> headers) {
+    public ChangeCheckCustomConfigResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListInterceptionImageResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListInterceptionImageResponse setStatusCode(Integer statusCode) {
+    public ChangeCheckCustomConfigResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListInterceptionImageResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListInterceptionImageResponse setBody(ListInterceptionImageResponseBody body) {
+    public ChangeCheckCustomConfigResponse setBody(ChangeCheckCustomConfigResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListInterceptionImageResponseBody getBody() {
+    public ChangeCheckCustomConfigResponseBody getBody() {
         return this.body;
     }
 

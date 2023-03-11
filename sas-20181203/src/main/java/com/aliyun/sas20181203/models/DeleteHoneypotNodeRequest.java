@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteHoneypotNodeRequest extends TeaModel {
+    @NameInMap("Lang")
+    public String lang;
+
     /**
      * <p>The ID of the management node.</p>
      * <br>
@@ -15,6 +18,14 @@ public class DeleteHoneypotNodeRequest extends TeaModel {
     public static DeleteHoneypotNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteHoneypotNodeRequest self = new DeleteHoneypotNodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteHoneypotNodeRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DeleteHoneypotNodeRequest setNodeId(String nodeId) {

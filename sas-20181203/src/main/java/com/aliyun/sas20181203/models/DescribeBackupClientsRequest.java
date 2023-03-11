@@ -4,6 +4,10 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupClientsRequest extends TeaModel {
+    /**
+     * <p>The region in which the anti-ransomware feature is supported.</p>
+     * <p>> You can call the [DescribeSupportRegion](~~DescribeSupportRegion~~) operation to query the regions in which the anti-ransomware feature is supported.</p>
+     */
     @NameInMap("SupportRegionId")
     public String supportRegionId;
 

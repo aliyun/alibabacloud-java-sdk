@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddCheckResultWhiteListRequest extends TeaModel {
+    /**
+     * <p>The IDs of the check items.</p>
+     */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 

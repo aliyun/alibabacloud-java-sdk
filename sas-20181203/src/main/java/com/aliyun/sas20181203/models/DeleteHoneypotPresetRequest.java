@@ -12,6 +12,9 @@ public class DeleteHoneypotPresetRequest extends TeaModel {
     @NameInMap("HoneypotPresetId")
     public String honeypotPresetId;
 
+    @NameInMap("Lang")
+    public String lang;
+
     public static DeleteHoneypotPresetRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteHoneypotPresetRequest self = new DeleteHoneypotPresetRequest();
         return TeaModel.build(map, self);
@@ -23,6 +26,14 @@ public class DeleteHoneypotPresetRequest extends TeaModel {
     }
     public String getHoneypotPresetId() {
         return this.honeypotPresetId;
+    }
+
+    public DeleteHoneypotPresetRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
 }

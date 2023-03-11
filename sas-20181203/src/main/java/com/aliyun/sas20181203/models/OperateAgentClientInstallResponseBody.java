@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperateAgentClientInstallResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the returned results.</p>
+     */
     @NameInMap("AegisCelintInstallResposeList")
     public java.util.List<OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList> aegisCelintInstallResposeList;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
     }
 
     public static class OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList extends TeaModel {
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the installation task.</p>
+         */
         @NameInMap("RecordId")
         public Long recordId;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
