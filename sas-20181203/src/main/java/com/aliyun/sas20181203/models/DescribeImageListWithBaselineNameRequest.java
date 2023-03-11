@@ -4,54 +4,113 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageListWithBaselineNameRequest extends TeaModel {
+    /**
+     * <p>The name of the image baseline.</p>
+     */
     @NameInMap("BaselineNameKey")
     public String baselineNameKey;
 
+    /**
+     * <p>The ID of the container cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The ID of the container.</p>
+     */
     @NameInMap("ContainerId")
     public String containerId;
 
+    /**
+     * <p>The search condition for the image baseline.</p>
+     */
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <p>The type of the search condition. Valid values:</p>
+     * <br>
+     * <p>*   **BaselineNameAlias**: baseline name</p>
+     * <p>*   **BaselineClassAlias**: baseline category</p>
+     */
     @NameInMap("CriteriaType")
     public String criteriaType;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The name of the image to which the container belongs.</p>
+     */
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>The SHA-256 value of the image digest.</p>
+     */
     @NameInMap("ImageDigest")
     public String imageDigest;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The pod.</p>
+     */
     @NameInMap("Pod")
     public String pod;
 
+    /**
+     * <p>The instance ID of the image repository.</p>
+     */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
+    /**
+     * <p>The name of the image repository.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The namespace to which the image repository belongs.</p>
+     */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
+    /**
+     * <p>The types of the assets that you want to scan.</p>
+     */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 

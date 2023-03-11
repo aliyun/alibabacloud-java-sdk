@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCloudAssetDetailResponseBody extends TeaModel {
+    /**
+     * <p>The number of instances in the list of cloud assets returned.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>An array that consists of the details of the cloud assets.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<GetCloudAssetDetailResponseBodyInstances> instances;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,45 +52,127 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
     }
 
     public static class GetCloudAssetDetailResponseBodyInstances extends TeaModel {
+        /**
+         * <p>Indicates whether alerts are generated for the current cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
+        /**
+         * <p>The subtype of the cloud asset.</p>
+         */
         @NameInMap("AssetSubType")
         public Integer assetSubType;
 
+        /**
+         * <p>The subtype name of the cloud asset.</p>
+         */
         @NameInMap("AssetSubTypeName")
         public String assetSubTypeName;
 
+        /**
+         * <p>The type of the cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **0**: ECS</p>
+         * <p>*   **1**: SLB</p>
+         * <p>*   **3**: ApsaraDB RDS</p>
+         * <p>*   **4**: MongoDB</p>
+         * <p>*   **5**: Redis</p>
+         * <p>*   **6**: Container Registry</p>
+         * <p>*   **8**: ACK</p>
+         * <p>*   **9**: VPC</p>
+         * <p>*   **11**: ActionTrail</p>
+         * <p>*   **12**: CDN</p>
+         * <p>*   **13**: Certificate Management Service (formerly SSL Certificates Service)</p>
+         * <p>*   **14**: Apsara Devops</p>
+         * <p>*   **15**: RAM</p>
+         * <p>*   **16**: Anti-DDoS</p>
+         * <p>*   **17**: WAF</p>
+         * <p>*   **18**: OSS</p>
+         * <p>*   **19**: PolarDB</p>
+         * <p>*   **20**: ApsaraDB RDS for PostgreSQL</p>
+         * <p>*   **21**: MSE</p>
+         * <p>*   **22**: NAS</p>
+         * <p>*   **23**: DSC</p>
+         * <p>*   **24**: EIP</p>
+         * <p>*   **25**: IDaaS EIAM</p>
+         * <p>*   **26**: PolarDB-X</p>
+         * <p>*   **27**: Elasticsearch</p>
+         */
         @NameInMap("AssetType")
         public Integer assetType;
 
+        /**
+         * <p>The type name of the cloud asset.</p>
+         */
         @NameInMap("AssetTypeName")
         public String assetTypeName;
 
+        /**
+         * <p>The time when the instance was created. The value is a timestamp.</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The detailed address of the cloud asset.</p>
+         */
         @NameInMap("DetailLink")
         public String detailLink;
 
+        /**
+         * <p>The instance ID of the cloud asset.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name of the cloud asset.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the instance.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The region where the cloud asset resides.</p>
+         * <br>
+         * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Indicates whether risks are detected on the current cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        /**
+         * <p>The security information about the cloud asset.</p>
+         */
         @NameInMap("SecurityInfo")
         public String securityInfo;
 
+        /**
+         * <p>The service provider of the cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The asset is provided by Alibaba Cloud.</p>
+         * <p>*   **1**: The asset is not provided by Alibaba Cloud.</p>
+         * <p>*   **2**: The asset resides in a data center.</p>
+         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset.</p>
+         * <p>*   **8**: The asset is a simple application server.</p>
+         */
         @NameInMap("Vendor")
         public Integer vendor;
 

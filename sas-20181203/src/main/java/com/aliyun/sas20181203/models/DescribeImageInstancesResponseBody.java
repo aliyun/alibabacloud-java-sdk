@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageInstancesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information about the image.</p>
+     */
     @NameInMap("ImageInstanceList")
     public java.util.List<DescribeImageInstancesResponseBodyImageInstanceList> imageInstanceList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeImageInstancesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,84 +52,209 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeImageInstancesResponseBodyImageInstanceList extends TeaModel {
+        /**
+         * <p>The number of alerts that are generated on the image.</p>
+         */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
+        /**
+         * <p>Indicates whether alerts are generated for the image. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
+        /**
+         * <p>Indicates whether the image was deployed. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The image was not deployed.</p>
+         * <p>*   **1**: The image was deployed.</p>
+         */
         @NameInMap("Deployed")
         public Integer deployed;
 
+        /**
+         * <p>The digest value of the image.</p>
+         */
         @NameInMap("Digest")
         public String digest;
 
+        /**
+         * <p>The address of the image.</p>
+         */
         @NameInMap("Endpoints")
         public String endpoints;
 
+        /**
+         * <p>The number of baseline risks.</p>
+         */
         @NameInMap("HcCount")
         public Integer hcCount;
 
+        /**
+         * <p>Indicates whether the image baseline risks exist. Valid values:</p>
+         * <br>
+         * <p>*   **NO**</p>
+         * <p>*   **YES**</p>
+         */
         @NameInMap("HcStatus")
         public String hcStatus;
 
+        /**
+         * <p>The timestamp when the image was created. Unit: milliseconds.</p>
+         */
         @NameInMap("ImageCreate")
         public String imageCreate;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The size of the image. Unit: MB.</p>
+         */
         @NameInMap("ImageSize")
         public String imageSize;
 
+        /**
+         * <p>The timestamp when the image was updated. Unit: milliseconds.</p>
+         */
         @NameInMap("ImageUpdate")
         public String imageUpdate;
 
+        /**
+         * <p>The ID of the image instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The region ID of the image.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The type of the image. Valid values:</p>
+         * <br>
+         * <p>*   **acr**</p>
+         * <p>*   **harbor**</p>
+         * <p>*   **quay**</p>
+         * <p>*   **CI/CD**</p>
+         */
         @NameInMap("RegistryType")
         public String registryType;
 
+        /**
+         * <p>The ID of the image repository.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The namespace to which the image repository belongs.</p>
+         */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
+        /**
+         * <p>The type of the repository. Valid values:</p>
+         * <br>
+         * <p>*   **private**</p>
+         * <p>*   **public**</p>
+         */
         @NameInMap("RepoType")
         public String repoType;
 
+        /**
+         * <p>Indicates whether risks exist. Valid values:</p>
+         * <br>
+         * <p>*   **NO**: No risks exist.</p>
+         * <p>*   **YES**: Risks exist.</p>
+         */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        /**
+         * <p>The scan progress of the image. Valid values: 0 to 100.</p>
+         */
         @NameInMap("ScaProgress")
         public Integer scaProgress;
 
+        /**
+         * <p>The error code of the image scan result. Valid values:</p>
+         * <br>
+         * <p>*   **TASK_NOT_EXISTS**: The image scan task does not exist.</p>
+         * <p>*   **TASK_NOT_SUPPORT_REGION**: The image scan task cannot be performed in the current region.</p>
+         * <p>*   **forbid_create_repeat_task**: The image scan task already exists.</p>
+         */
         @NameInMap("ScaResult")
         public String scaResult;
 
+        /**
+         * <p>The scan status of the image. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The image scan task is to be started.</p>
+         * <p>*   **START**: The image scan task is started.</p>
+         * <p>*   **MESSAGE_SEND**: The message about the image scan task is sent.</p>
+         * <p>*   **START_RUN**: The image scan task is started.</p>
+         * <p>*   **DOWNLOAD**: The image scan result is downloaded.</p>
+         * <p>*   **PRE_ANALYZER**: The image scan task is being processed.</p>
+         * <p>*   **WEB_SHELL_ANALYZER**: The WebShell analysis is complete.</p>
+         * <p>*   **CVE_ANALYZER**: The CVE analysis is complete.</p>
+         * <p>*   **BIN_ANALYZER**: The binary analysis of the image is complete.</p>
+         * <p>*   **OTHER_ANALYZER**: The extended analysis of the image is complete.</p>
+         * <p>*   **SUCCESS**: The image scan task is complete.</p>
+         * <p>*   **PRE_ANALYZER_SUCCESS**: The image scan task is processed.</p>
+         * <p>*   **FAIL**: The image scan task fails.</p>
+         * <p>*   **TIMEOUT**: The image scan task times out.</p>
+         */
         @NameInMap("ScaStatus")
         public String scaStatus;
 
+        /**
+         * <p>The status of the image. Valid values:</p>
+         * <br>
+         * <p>*   **NORMAL**: The image is normal.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag of the image.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>The number of vulnerabilities in the image.</p>
+         */
         @NameInMap("VulCount")
         public Integer vulCount;
 
+        /**
+         * <p>Indicates whether vulnerabilities exist in the image. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
         @NameInMap("VulStatus")
         public String vulStatus;
 
@@ -348,15 +482,27 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeImageInstancesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of images returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

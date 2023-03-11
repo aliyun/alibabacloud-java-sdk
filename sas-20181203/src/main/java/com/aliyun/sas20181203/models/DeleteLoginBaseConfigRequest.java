@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLoginBaseConfigRequest extends TeaModel {
     /**
-     * <p>The configuration item that you want to delete. The items vary based on the type of logon configurations. Valid values:</p>
+     * <p>The content of the logon security settings to delete. The content varies based on the type of the logon security settings. Valid values:</p>
      * <br>
      * <p>*   **login\_common_ip**: approved logon IP addresses</p>
      * <br>
@@ -27,7 +27,7 @@ public class DeleteLoginBaseConfigRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The UUID of the server whose logon configurations you want to delete.</p>
+     * <p>The UUID of the server whose logon security settings you want to delete.</p>
      * <br>
      * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
      */
@@ -35,7 +35,7 @@ public class DeleteLoginBaseConfigRequest extends TeaModel {
     public String target;
 
     /**
-     * <p>The type of logon configurations to delete. Valid values:</p>
+     * <p>The type of the logon security settings to delete. Valid values:</p>
      * <br>
      * <p>*   **login\_common_ip**: approved logon IP addresses</p>
      * <p>*   **login\_common_time**: approved logon time ranges</p>

@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the information about the baseline check policy.</p>
+     */
     @NameInMap("Strategy")
     public DescribeImageBaselineStrategyResponseBodyStrategy strategy;
 
@@ -32,12 +38,21 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList extends TeaModel {
+        /**
+         * <p>The key of the baseline type.</p>
+         */
         @NameInMap("ClassKey")
         public String classKey;
 
+        /**
+         * <p>The key of the baseline check item.</p>
+         */
         @NameInMap("ItemKey")
         public String itemKey;
 
+        /**
+         * <p>The key of the name for the baseline.</p>
+         */
         @NameInMap("NameKey")
         public String nameKey;
 
@@ -73,21 +88,43 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBaselineStrategyResponseBodyStrategy extends TeaModel {
+        /**
+         * <p>An array that contains the baselines.</p>
+         */
         @NameInMap("BaselineItemList")
         public java.util.List<DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList> baselineItemList;
 
+        /**
+         * <p>The number of selected baseline check items.</p>
+         */
         @NameInMap("SelectedItemCount")
         public Integer selectedItemCount;
 
+        /**
+         * <p>The ID of the baseline check policy.</p>
+         */
         @NameInMap("StrategyId")
         public Long strategyId;
 
+        /**
+         * <p>The name of the baseline check policy.</p>
+         */
         @NameInMap("StrategyName")
         public String strategyName;
 
+        /**
+         * <p>The total number of baseline check items.</p>
+         */
         @NameInMap("TotalItemCount")
         public Integer totalItemCount;
 
+        /**
+         * <p>The type of the baseline check policy. Valid values:</p>
+         * <br>
+         * <p>*   **default**: the default policy</p>
+         * <p>*   **full**: a policy that uses all baselines</p>
+         * <p>*   **normal**: a policy that uses general baselines</p>
+         */
         @NameInMap("Type")
         public String type;
 

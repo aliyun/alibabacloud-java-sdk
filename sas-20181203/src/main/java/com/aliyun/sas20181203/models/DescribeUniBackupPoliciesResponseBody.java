@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeUniBackupPoliciesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the anti-ransomware policies.</p>
+     */
     @NameInMap("UniBackupPolicies")
     public java.util.List<DescribeUniBackupPoliciesResponseBodyUniBackupPolicies> uniBackupPolicies;
 
@@ -43,15 +52,27 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
     }
 
     public static class DescribeUniBackupPoliciesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,54 +116,129 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
     }
 
     public static class DescribeUniBackupPoliciesResponseBodyUniBackupPolicies extends TeaModel {
+        /**
+         * <p>The error message for the anti-ransomware agent.</p>
+         */
         @NameInMap("AgentErrorMessage")
         public String agentErrorMessage;
 
+        /**
+         * <p>The status of the agent. Valid values:</p>
+         * <br>
+         * <p>*   **UNKNOWN**: unknown</p>
+         * <p>*   **INSTALLED**: installed</p>
+         * <p>*   **INSTALL_FAILED**: installation failed</p>
+         * <p>*   **UNINSTALL_FAILED**: uninstallation failed</p>
+         */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The type of the database. Valid values:</p>
+         * <br>
+         * <p>*   **MYSQL**</p>
+         * <p>*   **MSSQL**</p>
+         * <p>*   **Oracle**</p>
+         */
         @NameInMap("DatabaseType")
         public String databaseType;
 
+        /**
+         * <p>The error code returned when the backup task fails.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message for the anti-ransomware policy.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The status of the Elastic Compute Service (ECS) instance. Valid values:</p>
+         * <br>
+         * <p>*   **Stopped**</p>
+         * <p>*   **Running**</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <p>The UUID of the agent that is used to back up the data of the database.</p>
+         */
         @NameInMap("InstanceUuid")
         public String instanceUuid;
 
+        /**
+         * <p>The execution result of the last backup task.</p>
+         */
         @NameInMap("LatestBackResult")
         public String latestBackResult;
 
+        /**
+         * <p>The time when the last backup task was executed.</p>
+         */
         @NameInMap("LatestBackupTime")
         public String latestBackupTime;
 
+        /**
+         * <p>The status of the backup task. Valid values:</p>
+         * <br>
+         * <p>*   **init**: initializing</p>
+         * <p>*   **running**: running</p>
+         * <p>*   **completed**: complete</p>
+         * <p>*   **restoring**: restoring</p>
+         * <p>*   **creating**: creating</p>
+         * <p>*   **created**: created</p>
+         */
         @NameInMap("PlanStatus")
         public String planStatus;
 
+        /**
+         * <p>The ID of the anti-ransomware policy.</p>
+         */
         @NameInMap("PolicyId")
         public Long policyId;
 
+        /**
+         * <p>The name of the anti-ransomware policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The status of the anti-ransomware policy. Valid values:</p>
+         * <br>
+         * <p>*   **initiating**: initializing</p>
+         * <p>*   **opening**: enabled</p>
+         * <p>*   **closing**: disabled</p>
+         * <p>*   **deleting**: deleting</p>
+         */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
+        /**
+         * <p>The region ID of the server that hosts the database.</p>
+         */
         @NameInMap("UniRegionId")
         public String uniRegionId;
 

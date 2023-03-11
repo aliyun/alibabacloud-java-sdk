@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBruteForceRecordsRequest extends TeaModel {
     /**
-     * <p>The IP address that is blocked by the defense rule.</p>
+     * <p>The IP address that is blocked.</p>
      */
     @NameInMap("BlockIp")
     public String blockIp;

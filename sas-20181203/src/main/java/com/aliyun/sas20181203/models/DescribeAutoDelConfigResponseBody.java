@@ -11,7 +11,7 @@ public class DescribeAutoDelConfigResponseBody extends TeaModel {
     public Integer days;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

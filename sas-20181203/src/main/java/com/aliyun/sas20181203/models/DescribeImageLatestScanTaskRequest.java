@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageLatestScanTaskRequest extends TeaModel {
+    /**
+     * <p>The digest value of the image.</p>
+     */
     @NameInMap("Digest")
     public String digest;
 

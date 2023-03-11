@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageScanAuthCountResponseBody extends TeaModel {
+    /**
+     * <p>The details about the quota for container image scan.</p>
+     */
     @NameInMap("ImageScan")
     public DescribeImageScanAuthCountResponseBodyImageScan imageScan;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
     }
 
     public static class DescribeImageScanAuthCountResponseBodyImageScan extends TeaModel {
+        /**
+         * <p>The quota for container image scan.</p>
+         */
         @NameInMap("ImageScanCapacity")
         public Long imageScanCapacity;
 
+        /**
+         * <p>The instance ID of Security Center.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The consumed quota for container image scan.</p>
+         */
         @NameInMap("ScanCount")
         public Long scanCount;
 

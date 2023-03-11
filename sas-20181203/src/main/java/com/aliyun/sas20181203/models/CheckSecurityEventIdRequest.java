@@ -7,7 +7,7 @@ public class CheckSecurityEventIdRequest extends TeaModel {
     /**
      * <p>The IDs of alert events. You can specify up to 100 IDs. If you do not specify this parameter, the value of the response parameter **Data** is **false**. The value false indicates that no alert events are generated on the server.</p>
      * <br>
-     * <p>>  You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the IDs of alert events.</p>
+     * <p>> You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the IDs of alert events.</p>
      */
     @NameInMap("SecurityEventIds")
     public java.util.List<String> securityEventIds;
@@ -15,7 +15,7 @@ public class CheckSecurityEventIdRequest extends TeaModel {
     /**
      * <p>The UUID of the server.</p>
      * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

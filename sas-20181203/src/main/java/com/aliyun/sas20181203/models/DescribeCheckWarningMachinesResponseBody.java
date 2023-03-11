@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
     /**
-     * <p>The number of the servers.</p>
+     * <p>The number of the servers on which the same risk item is detected.</p>
      */
     @NameInMap("Count")
     public Integer count;

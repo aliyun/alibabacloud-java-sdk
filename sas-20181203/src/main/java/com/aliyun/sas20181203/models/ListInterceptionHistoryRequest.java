@@ -19,6 +19,9 @@ public class ListInterceptionHistoryRequest extends TeaModel {
     @NameInMap("InterceptionTypes")
     public java.util.List<Integer> interceptionTypes;
 
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -68,6 +71,14 @@ public class ListInterceptionHistoryRequest extends TeaModel {
     }
     public java.util.List<Integer> getInterceptionTypes() {
         return this.interceptionTypes;
+    }
+
+    public ListInterceptionHistoryRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ListInterceptionHistoryRequest setPageSize(Integer pageSize) {

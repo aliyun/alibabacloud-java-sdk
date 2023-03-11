@@ -4,30 +4,61 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class PublicCreateImageScanTaskRequest extends TeaModel {
+    /**
+     * <p>The SHA-256 value of the image digest. Separate multiple SHA-256 values with commas (,).</p>
+     */
     @NameInMap("Digests")
     public String digests;
 
+    /**
+     * <p>The ID of the Container Registry instance in which the image repository is created. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <p>The region ID of the image. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("RegionIds")
     public String regionIds;
 
+    /**
+     * <p>The type of the image repository. Separate multiple types with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **acr**</p>
+     * <p>*   **harbor**</p>
+     * <p>*   **quay**</p>
+     */
     @NameInMap("RegistryTypes")
     public String registryTypes;
 
+    /**
+     * <p>The ID of the image repository. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("RepoIds")
     public String repoIds;
 
+    /**
+     * <p>The name of the image repository. Separate multiple names with commas (,).</p>
+     */
     @NameInMap("RepoNames")
     public String repoNames;
 
+    /**
+     * <p>The namespace to which the image repository belongs. Separate multiple namespaces with commas (,).</p>
+     */
     @NameInMap("RepoNamespaces")
     public String repoNamespaces;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The tag that is added to the image. Separate multiple tags with commas (,).</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

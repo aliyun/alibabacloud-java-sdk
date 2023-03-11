@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteHoneypotProbeRequest extends TeaModel {
+    @NameInMap("Lang")
+    public String lang;
+
     /**
      * <p>The ID of the probe.</p>
      * <br>
@@ -15,6 +18,14 @@ public class DeleteHoneypotProbeRequest extends TeaModel {
     public static DeleteHoneypotProbeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteHoneypotProbeRequest self = new DeleteHoneypotProbeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteHoneypotProbeRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DeleteHoneypotProbeRequest setProbeId(String probeId) {

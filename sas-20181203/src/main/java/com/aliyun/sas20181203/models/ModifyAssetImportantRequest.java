@@ -4,9 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyAssetImportantRequest extends TeaModel {
+    /**
+     * <p>The importance of the asset. Valid values:</p>
+     * <br>
+     * <p>*   **0**: test</p>
+     * <p>*   **1**: normal</p>
+     * <p>*   **2**: important</p>
+     */
     @NameInMap("ImportantCode")
     public Integer importantCode;
 
+    /**
+     * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
+     * <br>
+     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("UuidList")
     public String uuidList;
 

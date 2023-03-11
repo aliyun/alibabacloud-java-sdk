@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeSimilarSecurityEventsResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array consisting of the alert events that are triggered by the same rule or of the same alert type.</p>
+     */
     @NameInMap("SecurityEventsResponse")
     public java.util.List<DescribeSimilarSecurityEventsResponseBodySecurityEventsResponse> securityEventsResponse;
 
@@ -43,15 +52,27 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSimilarSecurityEventsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: **20**.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,21 +116,65 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSimilarSecurityEventsResponseBodySecurityEventsResponse extends TeaModel {
+        /**
+         * <p>The name of the alert event.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The alert type of the alert event. Valid values:</p>
+         * <br>
+         * <p>*   Suspicious process</p>
+         * <p>*   Webshell</p>
+         * <p>*   Unusual logon</p>
+         * <p>*   Exception</p>
+         * <p>*   Sensitive file tampering</p>
+         * <p>*   Malicious process (cloud threat detection)</p>
+         * <p>*   Suspicious network connection</p>
+         * <p>*   Other</p>
+         * <p>*   Abnormal account</p>
+         * <p>*   Application intrusion event</p>
+         * <p>*   Cloud threat detection</p>
+         * <p>*   Precise defense</p>
+         * <p>*   Application whitelist</p>
+         * <p>*   Persistent webshell</p>
+         * <p>*   Web application threat detection</p>
+         * <p>*   Malicious script</p>
+         * <p>*   Threat intelligence</p>
+         * <p>*   Malicious network activity</p>
+         * <p>*   Cluster exception</p>
+         * <p>*   Webshell (on-premises threat detection)</p>
+         * <p>*   Vulnerability exploitation</p>
+         * <p>*   Malicious process (on-premises threat detection)</p>
+         * <p>*   Trusted exception</p>
+         * <br>
+         * <p>For more information about alert types, see [Alerts](https://www.alibabacloud.com/help/en/security-center/latest/events-overview).</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The timestamp when the alert event was last detected. Unit: milliseconds.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The timestamp when the alert event was first detected. Unit: milliseconds.</p>
+         */
         @NameInMap("OccurrenceTime")
         public Long occurrenceTime;
 
+        /**
+         * <p>The ID of the alert event.</p>
+         */
         @NameInMap("SecurityEventId")
         public Long securityEventId;
 
+        /**
+         * <p>The UUID of the server that is affected by the alert event.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

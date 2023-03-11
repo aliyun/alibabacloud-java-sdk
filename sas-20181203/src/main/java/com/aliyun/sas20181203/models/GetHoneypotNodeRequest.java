@@ -4,12 +4,28 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetHoneypotNodeRequest extends TeaModel {
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
+     * <p>The ID of the management node.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
     public static GetHoneypotNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHoneypotNodeRequest self = new GetHoneypotNodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetHoneypotNodeRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public GetHoneypotNodeRequest setNodeId(String nodeId) {

@@ -4,18 +4,38 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckConfigResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of days in a week on which an automatic check is performed.</p>
+     */
     @NameInMap("CycleDays")
     public java.util.List<Integer> cycleDays;
 
+    /**
+     * <p>The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:</p>
+     * <br>
+     * <p>*   **00:00 to 06:00:** The StartTime parameter is set to 0 and the EndTime parameter is set to 6.</p>
+     * <p>*   **06:00 to 12:00**: The StartTime parameter is set to 6 and the EndTime parameter is set to 12.</p>
+     * <p>*   **12:00 to 18:00**: The StartTime parameter is set to 12 and the EndTime parameter is set to 18.</p>
+     * <p>*   **18:00 to 24:00:** The StartTime parameter is set to 18 and the EndTime parameter is set to 24.</p>
+     */
     @NameInMap("EndTime")
     public Integer endTime;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the information about the check items.</p>
+     */
     @NameInMap("Standards")
     public java.util.List<GetCheckConfigResponseBodyStandards> standards;
 
+    /**
+     * <p>The start time of the check. The value indicates a point in time.</p>
+     */
     @NameInMap("StartTime")
     public Integer startTime;
 
@@ -65,15 +85,34 @@ public class GetCheckConfigResponseBody extends TeaModel {
     }
 
     public static class GetCheckConfigResponseBodyStandards extends TeaModel {
+        /**
+         * <p>The ID of the check item.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the check item.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <p>The status of the check item. Valid values:</p>
+         * <br>
+         * <p>*   **ON**: enabled</p>
+         * <p>*   **OFF**: disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the check item. Valid values:</p>
+         * <br>
+         * <p>*   **RISK**: cloud service configuration management</p>
+         * <p>*   **IDENTITY_PERMISSION**: identity and permission management</p>
+         * <p>*   **COMPLIANCE**: compliance</p>
+         */
         @NameInMap("Type")
         public String type;
 

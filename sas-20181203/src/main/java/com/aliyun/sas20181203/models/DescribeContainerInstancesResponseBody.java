@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerInstancesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information about containers.</p>
+     */
     @NameInMap("ContainerInstanceList")
     public java.util.List<DescribeContainerInstancesResponseBodyContainerInstanceList> containerInstanceList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeContainerInstancesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,90 +52,189 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeContainerInstancesResponseBodyContainerInstanceList extends TeaModel {
+        /**
+         * <p>The number of alerts.</p>
+         */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
+        /**
+         * <p>Indicates whether alerts are generated for the container. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The ID of cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The ID of the container.</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
+        /**
+         * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The number of baseline risks.</p>
+         */
         @NameInMap("HcCount")
         public Integer hcCount;
 
+        /**
+         * <p>Indicates whether baseline risks are detected. Valid values:</p>
+         * <br>
+         * <p>*   **NO**</p>
+         * <p>*   **YES**</p>
+         */
         @NameInMap("HcStatus")
         public String hcStatus;
 
+        /**
+         * <p>The IP address of the server.</p>
+         */
         @NameInMap("HostIp")
         public String hostIp;
 
+        /**
+         * <p>The image of the container.</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The digest value of the image.</p>
+         */
         @NameInMap("ImageDigest")
         public String imageDigest;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("ImageRepoName")
         public String imageRepoName;
 
+        /**
+         * <p>The namespace to which the image repository belongs.</p>
+         */
         @NameInMap("ImageRepoNamespace")
         public String imageRepoNamespace;
 
+        /**
+         * <p>The tag that is added to the image.</p>
+         */
         @NameInMap("ImageRepoTag")
         public String imageRepoTag;
 
+        /**
+         * <p>The UUID of the image.</p>
+         */
         @NameInMap("ImageUuid")
         public String imageUuid;
 
+        /**
+         * <p>The instance ID of the asset.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The node information.</p>
+         */
         @NameInMap("NodeInfo")
         public String nodeInfo;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The pod.</p>
+         */
         @NameInMap("Pod")
         public String pod;
 
+        /**
+         * <p>The IP address of the pod.</p>
+         */
         @NameInMap("PodIp")
         public String podIp;
 
+        /**
+         * <p>The region ID of the container.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of risks.</p>
+         */
         @NameInMap("RiskCount")
         public String riskCount;
 
+        /**
+         * <p>Indicates whether risks exist. Valid values:</p>
+         * <br>
+         * <p>*   **NO**</p>
+         * <p>*   **YES**</p>
+         */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        /**
+         * <p>The update identifier of the container.</p>
+         */
         @NameInMap("UpdateMark")
         public String updateMark;
 
+        /**
+         * <p>The number of vulnerabilities that are detected in the container cluster.</p>
+         */
         @NameInMap("VulCount")
         public Integer vulCount;
 
+        /**
+         * <p>Indicates whether vulnerabilities are detected in the container. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
         @NameInMap("VulStatus")
         public String vulStatus;
 
@@ -370,15 +478,27 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeContainerInstancesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

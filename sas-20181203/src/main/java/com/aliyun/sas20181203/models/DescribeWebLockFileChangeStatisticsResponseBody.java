@@ -4,18 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>An array consisting of the files that are changed.</p>
+     */
     @NameInMap("List")
     public java.util.List<DescribeWebLockFileChangeStatisticsResponseBodyList> list;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of files that are attempted to change.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class DescribeWebLockFileChangeStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeWebLockFileChangeStatisticsResponseBodyList extends TeaModel {
+        /**
+         * <p>The number of attempts.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The file path.</p>
+         */
         @NameInMap("File")
         public String file;
 

@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class FixCheckWarningsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the baseline risk item that has been fixed by using the Batch Repair feature.</p>
+     */
     @NameInMap("BatchId")
     public Long batchId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

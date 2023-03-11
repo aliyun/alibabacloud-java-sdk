@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeletePrivateRegistryRequest extends TeaModel {
+    /**
+     * <p>The ID of the image repository.</p>
+     * <br>
+     * <p>> You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.</p>
+     */
     @NameInMap("RegistryId")
     public Long registryId;
 

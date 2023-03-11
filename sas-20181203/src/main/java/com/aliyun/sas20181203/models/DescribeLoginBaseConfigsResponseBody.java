@@ -4,18 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information about the configurations.</p>
+     */
     @NameInMap("BaseConfigs")
     public java.util.List<DescribeLoginBaseConfigsResponseBodyBaseConfigs> baseConfigs;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries returned per page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,19 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeLoginBaseConfigsResponseBodyBaseConfigsTargetList extends TeaModel {
+        /**
+         * <p>The UUID or group ID of the server.</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>The type of the server to which the configuration is applied. Valid values:</p>
+         * <br>
+         * <p>*   **uuid**: a server</p>
+         * <p>*   **groupId**: a server group</p>
+         * <p>*   **global**: all servers</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -95,27 +120,51 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeLoginBaseConfigsResponseBodyBaseConfigs extends TeaModel {
+        /**
+         * <p>The common logon account.</p>
+         */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <p>The end time of the common logon time range.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The common logon IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The common logon location.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The start time of the common logon time range.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The details of the servers to which the configuration is applied.</p>
+         */
         @NameInMap("TargetList")
         public java.util.List<DescribeLoginBaseConfigsResponseBodyBaseConfigsTargetList> targetList;
 
+        /**
+         * <p>The total number of servers.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The number of servers to which the configuration is applied.</p>
+         */
         @NameInMap("UuidCount")
         public Integer uuidCount;
 

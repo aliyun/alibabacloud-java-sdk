@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The statistics on risk items by risk level.</p>
+     */
     @NameInMap("Data")
     public GetClusterCheckItemWarningStatisticsResponseBodyData data;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetClusterCheckItemWarningStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of high-risk items.</p>
+         */
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
+        /**
+         * <p>The number of low-risk items.</p>
+         */
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
+        /**
+         * <p>The number of medium-risk items.</p>
+         */
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
 

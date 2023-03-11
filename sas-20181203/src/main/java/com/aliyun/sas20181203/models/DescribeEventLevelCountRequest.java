@@ -53,7 +53,7 @@ public class DescribeEventLevelCountRequest extends TeaModel {
      * <p>The type of the query condition. Valid values:</p>
      * <br>
      * <p>*   **containerId**: the ID of the container</p>
-     * <p>*   **uuid**: the ID of the asset</p>
+     * <p>*   **uuid**: the UUID of the asset</p>
      */
     @NameInMap("TargetType")
     public String targetType;

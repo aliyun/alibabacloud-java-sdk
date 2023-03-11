@@ -4,30 +4,105 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebLockStartRequest extends TeaModel {
+    /**
+     * <p>The prevention mode. Valid values:</p>
+     * <br>
+     * <p>*   **block**: Interception Mode</p>
+     * <p>*   **audit**: Alert Mode</p>
+     */
     @NameInMap("DefenceMode")
     public String defenceMode;
 
+    /**
+     * <p>The directory for which you want to enable web tamper proofing. Separate multiple directories with commas (,).</p>
+     */
     @NameInMap("Dir")
     public String dir;
 
+    /**
+     * <p>The directory for which you want to disable web tamper proofing.</p>
+     * <br>
+     * <p>> If you set **Mode** to **blacklist**, you must specify this parameter.</p>
+     */
     @NameInMap("ExclusiveDir")
     public String exclusiveDir;
 
+    /**
+     * <p>The file for which you want to disable web tamper proofing.</p>
+     * <br>
+     * <p>> If you set **Mode** to **blacklist**, you must specify this parameter.</p>
+     */
     @NameInMap("ExclusiveFile")
     public String exclusiveFile;
 
+    /**
+     * <p>The type of the file for which you want to disable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</p>
+     * <br>
+     * <p>*   php</p>
+     * <p>*   jsp</p>
+     * <p>*   asp</p>
+     * <p>*   aspx</p>
+     * <p>*   js</p>
+     * <p>*   cgi</p>
+     * <p>*   html</p>
+     * <p>*   htm</p>
+     * <p>*   xml</p>
+     * <p>*   shtml</p>
+     * <p>*   shtm</p>
+     * <p>*   jpg</p>
+     * <p>*   gif</p>
+     * <p>*   png</p>
+     * <br>
+     * <p>> If you set **Mode** to **blacklist**, you must specify this parameter.</p>
+     */
     @NameInMap("ExclusiveFileType")
     public String exclusiveFileType;
 
+    /**
+     * <p>The type of the file for which you want to enable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</p>
+     * <br>
+     * <p>*   php</p>
+     * <p>*   jsp</p>
+     * <p>*   asp</p>
+     * <p>*   aspx</p>
+     * <p>*   js</p>
+     * <p>*   cgi</p>
+     * <p>*   html</p>
+     * <p>*   htm</p>
+     * <p>*   xml</p>
+     * <p>*   shtml</p>
+     * <p>*   shtm</p>
+     * <p>*   jpg</p>
+     * <p>*   gif</p>
+     * <p>*   png</p>
+     * <br>
+     * <p>> If you set **Mode** to **whitelist**, you must specify this parameter.</p>
+     */
     @NameInMap("InclusiveFileType")
     public String inclusiveFileType;
 
+    /**
+     * <p>The local path to the backup files of the protected directory.\</p>
+     * <p>The directory format of a Linux server is different from that of a Windows server. You must enter the directory in the required format based on your operating system. Examples:</p>
+     * <br>
+     * <p>*   Linux server: /usr/local/aegis/bak</p>
+     * <p>*   Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak</p>
+     */
     @NameInMap("LocalBackupDir")
     public String localBackupDir;
 
+    /**
+     * <p>The protection mode of web tamper proofing. Valid values:</p>
+     * <br>
+     * <p>*   **whitelist**: In this mode, web tamper proofing is enabled for the specified directories and file types.</p>
+     * <p>*   **blacklist**: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>The UUID of the server for which you want to enable web tamper proofing.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

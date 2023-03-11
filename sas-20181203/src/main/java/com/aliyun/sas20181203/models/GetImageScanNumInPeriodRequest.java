@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetImageScanNumInPeriodRequest extends TeaModel {
+    /**
+     * <p>The number of days.</p>
+     */
     @NameInMap("PastDay")
     public String pastDay;
 

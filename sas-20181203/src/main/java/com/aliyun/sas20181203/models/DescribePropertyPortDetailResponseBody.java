@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyPortDetailResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribePropertyPortDetailResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>An array that consists of the fingerprints of the ports.</p>
+     */
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyPortDetailResponseBodyPropertys> propertys;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,27 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyPortDetailResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: **10**.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -95,39 +116,75 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyPortDetailResponseBodyPropertys extends TeaModel {
+        /**
+         * <p>The IP address that is bound to the listening port.</p>
+         */
         @NameInMap("BindIp")
         public String bindIp;
 
+        /**
+         * <p>The timestamp of the last fingerprint collection. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The IP address of the network interface controller (NIC) that is bound to the listening port.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The ID of the server process that listens on the port.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>The listening port.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The name of the server process.</p>
+         */
         @NameInMap("ProcName")
         public String procName;
 
+        /**
+         * <p>The network protocol that is used by the listening port.</p>
+         */
         @NameInMap("Proto")
         public String proto;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

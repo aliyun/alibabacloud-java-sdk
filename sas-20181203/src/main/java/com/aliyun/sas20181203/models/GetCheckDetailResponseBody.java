@@ -4,15 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckDetailResponseBody extends TeaModel {
+    /**
+     * <p>The help information about the check item.</p>
+     */
     @NameInMap("AssistInfo")
     public GetCheckDetailResponseBodyAssistInfo assistInfo;
 
+    @NameInMap("CustomConfigs")
+    public java.util.List<GetCheckDetailResponseBodyCustomConfigs> customConfigs;
+
+    /**
+     * <p>The description of the check item.</p>
+     */
     @NameInMap("Description")
     public GetCheckDetailResponseBodyDescription description;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The solution to handle the risk item.</p>
+     */
     @NameInMap("Solution")
     public GetCheckDetailResponseBodySolution solution;
 
@@ -27,6 +42,14 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
     public GetCheckDetailResponseBodyAssistInfo getAssistInfo() {
         return this.assistInfo;
+    }
+
+    public GetCheckDetailResponseBody setCustomConfigs(java.util.List<GetCheckDetailResponseBodyCustomConfigs> customConfigs) {
+        this.customConfigs = customConfigs;
+        return this;
+    }
+    public java.util.List<GetCheckDetailResponseBodyCustomConfigs> getCustomConfigs() {
+        return this.customConfigs;
     }
 
     public GetCheckDetailResponseBody setDescription(GetCheckDetailResponseBodyDescription description) {
@@ -54,12 +77,24 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodyAssistInfo extends TeaModel {
+        /**
+         * <p>The link to the help information about the risk item when the Type parameter is set to link.</p>
+         */
         @NameInMap("Link")
         public String link;
 
+        /**
+         * <p>The type of the help information about the risk item. Valid values:</p>
+         * <br>
+         * <p>*   **text**</p>
+         * <p>*   **link**</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The content in the help information about the risk item when the Type parameter is set to text.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -94,13 +129,85 @@ public class GetCheckDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetCheckDetailResponseBodyCustomConfigs extends TeaModel {
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ShowName")
+        public String showName;
+
+        @NameInMap("TypeDefine")
+        public String typeDefine;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetCheckDetailResponseBodyCustomConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckDetailResponseBodyCustomConfigs self = new GetCheckDetailResponseBodyCustomConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckDetailResponseBodyCustomConfigs setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public GetCheckDetailResponseBodyCustomConfigs setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetCheckDetailResponseBodyCustomConfigs setShowName(String showName) {
+            this.showName = showName;
+            return this;
+        }
+        public String getShowName() {
+            return this.showName;
+        }
+
+        public GetCheckDetailResponseBodyCustomConfigs setTypeDefine(String typeDefine) {
+            this.typeDefine = typeDefine;
+            return this;
+        }
+        public String getTypeDefine() {
+            return this.typeDefine;
+        }
+
+        public GetCheckDetailResponseBodyCustomConfigs setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetCheckDetailResponseBodyDescription extends TeaModel {
+        /**
+         * <p>The link to the description of the check item.</p>
+         */
         @NameInMap("Link")
         public String link;
 
+        /**
+         * <p>The type of the description of the check item. The value is fixed as text.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The content in the description of the check item.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -136,12 +243,24 @@ public class GetCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetCheckDetailResponseBodySolution extends TeaModel {
+        /**
+         * <p>The link to the solution to handle the risk item when the Type parameter is set to link.</p>
+         */
         @NameInMap("Link")
         public String link;
 
+        /**
+         * <p>The type of the solution to handle to the risk item. Valid values:</p>
+         * <br>
+         * <p>*   **text**</p>
+         * <p>*   **link**</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The content of the solution to handle the risk item when the Type parameter is set to text.</p>
+         */
         @NameInMap("Value")
         public String value;
 

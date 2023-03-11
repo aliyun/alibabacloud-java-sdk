@@ -4,33 +4,66 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckInstanceResultRequest extends TeaModel {
+    /**
+     * <p>The ID of the check item.</p>
+     */
     @NameInMap("CheckId")
     public Long checkId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceIdKey")
     public String instanceIdKey;
 
+    /**
+     * <p>The instance IDs of cloud services.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("InstanceNameKey")
     public String instanceNameKey;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionIdKey")
     public String regionIdKey;
 
+    /**
+     * <p>The sort type of the instances.</p>
+     */
     @NameInMap("SortTypes")
     public java.util.List<String> sortTypes;
 
+    /**
+     * <p>The statuses of check items.</p>
+     */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 

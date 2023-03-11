@@ -4,27 +4,61 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListSystemClientRulesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the aggregation types for rules.</p>
+     */
     @NameInMap("AggregationIds")
     public java.util.List<Integer> aggregationIds;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Specifies whether to query only container images. Valid values:</p>
+     * <br>
+     * <p>*   **0**: no</p>
+     * <p>*   **1**: yes</p>
+     */
     @NameInMap("IsContainer")
     public Integer isContainer;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the system defense rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The types of the system defense rules.</p>
+     */
     @NameInMap("RuleTypes")
     public java.util.List<Integer> ruleTypes;
 
+    /**
+     * <p>The type of the operating system. Valid values:</p>
+     * <br>
+     * <p>*   **2**: Windows</p>
+     * <p>*   **1**: Linux</p>
+     * <p>*   **0**: all types</p>
+     */
     @NameInMap("SystemType")
     public Integer systemType;
 

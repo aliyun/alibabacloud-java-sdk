@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListSystemClientRulesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListSystemClientRulesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the rules.</p>
+     */
     @NameInMap("RuleList")
     public java.util.List<ListSystemClientRulesResponseBodyRuleList> ruleList;
 
@@ -43,12 +52,21 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     }
 
     public static class ListSystemClientRulesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -84,9 +102,15 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     }
 
     public static class ListSystemClientRulesResponseBodyRuleListPolicies extends TeaModel {
+        /**
+         * <p>The policy key.</p>
+         */
         @NameInMap("PolicyKey")
         public String policyKey;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
@@ -114,30 +138,69 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     }
 
     public static class ListSystemClientRulesResponseBodyRuleList extends TeaModel {
+        /**
+         * <p>The name of the aggregation type for the rule.</p>
+         */
         @NameInMap("AggregationName")
         public String aggregationName;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The type of the operating system. Valid values:</p>
+         * <br>
+         * <p>*   **windows**: Windows</p>
+         * <p>*   **linux**: Linux</p>
+         * <p>*   **all**: all types</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>An array that consists of the policies.</p>
+         */
         @NameInMap("Policies")
         public java.util.List<ListSystemClientRulesResponseBodyRuleListPolicies> policies;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: alihips</p>
+         * <p>*   **2**: alinet</p>
+         * <p>*   **3**: alidetect</p>
+         * <p>*   **4**: alisecguard</p>
+         */
         @NameInMap("RuleType")
         public Integer ruleType;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **online**: enabled</p>
+         * <p>*   **offline**: disabled</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The switch ID of the rule.</p>
+         */
         @NameInMap("SwitchId")
         public String switchId;
 

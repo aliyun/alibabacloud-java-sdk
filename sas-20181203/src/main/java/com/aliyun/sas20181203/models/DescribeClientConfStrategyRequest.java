@@ -4,9 +4,19 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientConfStrategyRequest extends TeaModel {
+    /**
+     * <p>The tag that is added to the server.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
+    /**
+     * <p>The value of the tag. Valid values:</p>
+     * <br>
+     * <p>*   major</p>
+     * <p>*   advanced</p>
+     * <p>*   basic</p>
+     */
     @NameInMap("TagValue")
     public String tagValue;
 

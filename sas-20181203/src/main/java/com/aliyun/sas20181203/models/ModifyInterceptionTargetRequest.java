@@ -4,24 +4,57 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyInterceptionTargetRequest extends TeaModel {
+    /**
+     * <p>The name of the application.</p>
+     * <br>
+     * <p>> You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>An array that consists of images.</p>
+     * <br>
+     * <p>> You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.</p>
+     */
     @NameInMap("ImageList")
     public java.util.List<String> imageList;
 
+    /**
+     * <p>The namespace.</p>
+     * <br>
+     * <p>> You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>An array that consists of tags.</p>
+     * <br>
+     * <p>> You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.</p>
+     */
     @NameInMap("TagList")
     public java.util.List<String> tagList;
 
+    /**
+     * <p>The ID of the network object.</p>
+     * <br>
+     * <p>> You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to obtain the value of this parameter.</p>
+     */
     @NameInMap("TargetId")
     public Long targetId;
 
+    /**
+     * <p>The name.</p>
+     */
     @NameInMap("TargetName")
     public String targetName;
 
+    /**
+     * <p>The object type. Valid values:</p>
+     * <br>
+     * <p>*   **IMAGE**</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 

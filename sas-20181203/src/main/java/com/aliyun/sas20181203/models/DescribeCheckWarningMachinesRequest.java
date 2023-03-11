@@ -7,7 +7,7 @@ public class DescribeCheckWarningMachinesRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <br>
-     * <p>> You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.</p>
+     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of check items.</p>
      */
     @NameInMap("CheckId")
     public Long checkId;
@@ -24,19 +24,15 @@ public class DescribeCheckWarningMachinesRequest extends TeaModel {
     /**
      * <p>The ID of the baseline.</p>
      * <br>
-     * <p>> You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.</p>
+     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of baselines.</p>
      */
     @NameInMap("RiskId")
     public Long riskId;
 
     /**
-     * <p>The status of the check item.</p>
-     * <br>
-     * <p>> This parameter indicates the status of the check item. Valid values:</p>
-     * <br>
-     * <p>*   1: failed</p>
-     * <br>
-     * <p>*   3: passed</p>
+     * <p>Specifies whether the check item passed the baseline check. Valid values:</p>
+     * <p>*   **1**: no</p>
+     * <p>*   **3**: yes</p>
      */
     @NameInMap("Status")
     public Integer status;

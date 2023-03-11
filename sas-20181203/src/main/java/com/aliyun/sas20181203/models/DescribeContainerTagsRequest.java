@@ -4,24 +4,52 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerTagsRequest extends TeaModel {
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The ID of the cluster to which the container belongs.</p>
+     * <br>
+     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The name of the attribute that is used for the query. Valid values:</p>
+     * <br>
+     * <p>*   **namespace**: the namespace</p>
+     * <p>*   **appName**: the application name</p>
+     * <p>*   **image**: the image</p>
+     * <p>*   **tag**: the tag</p>
+     */
     @NameInMap("FieldName")
     public String fieldName;
 
+    /**
+     * <p>The value of the attribute that is used for the query.</p>
+     */
     @NameInMap("FieldValue")
     public String fieldValue;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 200.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
