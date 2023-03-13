@@ -7,15 +7,27 @@ public class GetCatalogSettingsResponseBody extends TeaModel {
     @NameInMap("CatalogSettings")
     public CatalogSettings catalogSettings;
 
+    /**
+     * <p>Code</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Message</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>RequestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Success</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

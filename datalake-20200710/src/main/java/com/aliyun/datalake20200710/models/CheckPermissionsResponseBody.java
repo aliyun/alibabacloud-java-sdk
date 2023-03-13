@@ -4,15 +4,27 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CheckPermissionsResponseBody extends TeaModel {
+    /**
+     * <p>Response Code</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Message Code</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>RequestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Success</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

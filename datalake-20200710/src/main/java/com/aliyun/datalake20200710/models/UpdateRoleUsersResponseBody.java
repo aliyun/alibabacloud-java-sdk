@@ -4,15 +4,27 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdateRoleUsersResponseBody extends TeaModel {
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>message</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>success</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

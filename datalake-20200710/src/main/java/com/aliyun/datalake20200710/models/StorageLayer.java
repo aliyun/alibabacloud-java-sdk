@@ -16,6 +16,9 @@ public class StorageLayer extends TeaModel {
     @NameInMap("Standard")
     public Long standard;
 
+    @NameInMap("Unknown")
+    public Long unknown;
+
     public static StorageLayer build(java.util.Map<String, ?> map) throws Exception {
         StorageLayer self = new StorageLayer();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class StorageLayer extends TeaModel {
     }
     public Long getStandard() {
         return this.standard;
+    }
+
+    public StorageLayer setUnknown(Long unknown) {
+        this.unknown = unknown;
+        return this;
+    }
+    public Long getUnknown() {
+        return this.unknown;
     }
 
 }

@@ -4,15 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListRoleUsersRequest extends TeaModel {
+    /**
+     * <p>NextPageToken</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>PageSize</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RoleName")
     public String roleName;
 
+    /**
+     * <p>use name pattern filter</p>
+     */
     @NameInMap("UserNamePattern")
     public String userNamePattern;
 

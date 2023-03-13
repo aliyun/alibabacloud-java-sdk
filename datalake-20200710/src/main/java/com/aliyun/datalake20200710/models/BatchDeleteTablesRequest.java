@@ -10,6 +10,9 @@ public class BatchDeleteTablesRequest extends TeaModel {
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>IfExists</p>
+     */
     @NameInMap("IfExists")
     public Boolean ifExists;
 

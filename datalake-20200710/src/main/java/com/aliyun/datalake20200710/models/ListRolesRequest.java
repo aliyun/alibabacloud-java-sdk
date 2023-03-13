@@ -4,6 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListRolesRequest extends TeaModel {
+    /**
+     * <p>Next PageToken</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 

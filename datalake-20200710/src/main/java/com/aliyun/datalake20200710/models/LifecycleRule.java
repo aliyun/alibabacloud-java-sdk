@@ -13,6 +13,9 @@ public class LifecycleRule extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("CatalogId")
+    public String catalogId;
+
     @NameInMap("ColdArchiveDays")
     public Integer coldArchiveDays;
 
@@ -79,6 +82,14 @@ public class LifecycleRule extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public LifecycleRule setCatalogId(String catalogId) {
+        this.catalogId = catalogId;
+        return this;
+    }
+    public String getCatalogId() {
+        return this.catalogId;
     }
 
     public LifecycleRule setColdArchiveDays(Integer coldArchiveDays) {

@@ -43,6 +43,9 @@ public class DeregisterLocationResponseBody extends TeaModel {
     }
 
     public static class DeregisterLocationResponseBodyData extends TeaModel {
+        /**
+         * <p>Location ID</p>
+         */
         @NameInMap("LocationId")
         public String locationId;
 

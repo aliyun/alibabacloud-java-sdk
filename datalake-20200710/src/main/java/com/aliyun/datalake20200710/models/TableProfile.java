@@ -28,8 +28,14 @@ public class TableProfile extends TeaModel {
     @NameInMap("IsPartitioned")
     public Boolean isPartitioned;
 
+    @NameInMap("LastAccessTime")
+    public String lastAccessTime;
+
     @NameInMap("LastModifyTime")
     public String lastModifyTime;
+
+    @NameInMap("LatestDate")
+    public String latestDate;
 
     @NameInMap("Location")
     public String location;
@@ -112,12 +118,28 @@ public class TableProfile extends TeaModel {
         return this.isPartitioned;
     }
 
+    public TableProfile setLastAccessTime(String lastAccessTime) {
+        this.lastAccessTime = lastAccessTime;
+        return this;
+    }
+    public String getLastAccessTime() {
+        return this.lastAccessTime;
+    }
+
     public TableProfile setLastModifyTime(String lastModifyTime) {
         this.lastModifyTime = lastModifyTime;
         return this;
     }
     public String getLastModifyTime() {
         return this.lastModifyTime;
+    }
+
+    public TableProfile setLatestDate(String latestDate) {
+        this.latestDate = latestDate;
+        return this;
+    }
+    public String getLatestDate() {
+        return this.latestDate;
     }
 
     public TableProfile setLocation(String location) {

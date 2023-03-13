@@ -4,21 +4,39 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListRolesResponseBody extends TeaModel {
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>message</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>data</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>role list data</p>
+     */
     @NameInMap("Roles")
     public java.util.List<Role> roles;
 
+    /**
+     * <p>success</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
