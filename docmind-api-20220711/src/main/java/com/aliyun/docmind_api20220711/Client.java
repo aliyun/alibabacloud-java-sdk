@@ -385,6 +385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FileUrl", request.fileUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.forceExportInnerImage)) {
+            query.put("ForceExportInnerImage", request.forceExportInnerImage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.forceMergeExcel)) {
             query.put("ForceMergeExcel", request.forceMergeExcel);
         }
@@ -601,6 +605,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
             query.put("FileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceExportInnerImage)) {
+            query.put("ForceExportInnerImage", request.forceExportInnerImage);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
