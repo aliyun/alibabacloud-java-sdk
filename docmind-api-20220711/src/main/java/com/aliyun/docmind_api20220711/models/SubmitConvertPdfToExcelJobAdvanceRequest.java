@@ -10,6 +10,9 @@ public class SubmitConvertPdfToExcelJobAdvanceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("ForceExportInnerImage")
+    public Boolean forceExportInnerImage;
+
     @NameInMap("ForceMergeExcel")
     public Boolean forceMergeExcel;
 
@@ -32,6 +35,14 @@ public class SubmitConvertPdfToExcelJobAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getFileUrlObject() {
         return this.fileUrlObject;
+    }
+
+    public SubmitConvertPdfToExcelJobAdvanceRequest setForceExportInnerImage(Boolean forceExportInnerImage) {
+        this.forceExportInnerImage = forceExportInnerImage;
+        return this;
+    }
+    public Boolean getForceExportInnerImage() {
+        return this.forceExportInnerImage;
     }
 
     public SubmitConvertPdfToExcelJobAdvanceRequest setForceMergeExcel(Boolean forceMergeExcel) {

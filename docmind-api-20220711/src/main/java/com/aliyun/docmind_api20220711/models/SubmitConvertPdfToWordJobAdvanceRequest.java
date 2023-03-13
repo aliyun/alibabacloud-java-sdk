@@ -10,6 +10,9 @@ public class SubmitConvertPdfToWordJobAdvanceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("ForceExportInnerImage")
+    public Boolean forceExportInnerImage;
+
     public static SubmitConvertPdfToWordJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitConvertPdfToWordJobAdvanceRequest self = new SubmitConvertPdfToWordJobAdvanceRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class SubmitConvertPdfToWordJobAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getFileUrlObject() {
         return this.fileUrlObject;
+    }
+
+    public SubmitConvertPdfToWordJobAdvanceRequest setForceExportInnerImage(Boolean forceExportInnerImage) {
+        this.forceExportInnerImage = forceExportInnerImage;
+        return this;
+    }
+    public Boolean getForceExportInnerImage() {
+        return this.forceExportInnerImage;
     }
 
 }
