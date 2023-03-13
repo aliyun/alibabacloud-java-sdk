@@ -13,8 +13,8 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
      * <br>
-     * <p>- If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
-     * <p>- If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <p>*   If **NextToken** is empty, it indicates that no subsequent query is to be sent.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,7 +26,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -104,11 +104,11 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         public String resourceType;
 
         /**
-         * <p>The status of the associated resource. Valid values: </p>
+         * <p>The association status. Valid values:</p>
          * <br>
-         * <p>- **Associated**: The resource is associated with the multicast domain.</p>
-         * <p>- **Associating**: The resource is being associated with the multicast domain.</p>
-         * <p>- **Dissociating**: The resource is being disassociated from the multicast domain.</p>
+         * <p>*   **Associated**: The resource is associated with the multicast domain.</p>
+         * <p>*   **Associating**: The resource is being associated with the multicast domain.</p>
+         * <p>*   **Dissociating**: The resource is being disassociated from the multicast domain.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -126,7 +126,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         public String transitRouterMulticastDomainId;
 
         /**
-         * <p>The IDs of the vSwitches.</p>
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

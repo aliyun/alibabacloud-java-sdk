@@ -11,7 +11,10 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public Integer maxResults;
 
     /**
-     * <p>The token for returning the next page when the data is returned in more than one page.</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -29,7 +32,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     public Integer totalCount;
 
     /**
-     * <p>The list of associated forwarding correlations.</p>
+     * <p>A list of associated forwarding correlations.</p>
      */
     @NameInMap("TransitRouterAssociations")
     public java.util.List<ListTransitRouterRouteTableAssociationsResponseBodyTransitRouterAssociations> transitRouterAssociations;
@@ -89,21 +92,21 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         /**
          * <p>The type of next hop. Valid values:</p>
          * <br>
-         * <p>*   **VPC**: a virtual private cloud (VPC)</p>
-         * <p>*   **CCN**: a Cloud Connect Network (CCN) instance</p>
-         * <p>*   **VBR**: a virtual border router (VBR)</p>
-         * <p>*   **TR**: a transit router</p>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **VBR**: VBR</p>
+         * <p>*   **TR**: transit router</p>
+         * <p>*   **VPN** :VPN attachment</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The state of the associated forwarding correlation. Valid values:</p>
+         * <p>The status of the associated forwarding correlation. Valid values:</p>
          * <br>
-         * <p>*   **Active**: The route table is associated with the network instance connection.</p>
-         * <p>*   **Associating**: The route table is being associated with the network instance connection.</p>
-         * <p>*   **Dissociating**: The route table is being disassociated from the network instance connection.</p>
-         * <p>*   **Deleted**: The route table is disassociated from the network instance connection.</p>
+         * <p>*   **Active**: The associated forwarding correlation is available.</p>
+         * <p>*   **Associating**: The associated forwarding correlation is being created.</p>
+         * <p>*   **Dissociating**: The associated forwarding correlation is being deleted.</p>
+         * <p>*   **Deleted**: The associated forwarding correlation is deleted.</p>
          */
         @NameInMap("Status")
         public String status;

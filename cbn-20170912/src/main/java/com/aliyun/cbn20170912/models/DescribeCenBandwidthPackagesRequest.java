@@ -46,11 +46,17 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeCenBandwidthPackagesRequestTag> tag;
 
     public static DescribeCenBandwidthPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenBandwidthPackagesRequest self = new DescribeCenBandwidthPackagesRequest();
@@ -113,6 +119,14 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeCenBandwidthPackagesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeCenBandwidthPackagesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -127,6 +141,14 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeCenBandwidthPackagesRequest setTag(java.util.List<DescribeCenBandwidthPackagesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeCenBandwidthPackagesRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class DescribeCenBandwidthPackagesRequestFilter extends TeaModel {
@@ -175,6 +197,36 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
             return this;
         }
         public java.util.List<String> getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeCenBandwidthPackagesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCenBandwidthPackagesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenBandwidthPackagesRequestTag self = new DescribeCenBandwidthPackagesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenBandwidthPackagesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCenBandwidthPackagesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
             return this.value;
         }
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenGeographicSpanRemainingBandwidthResponseBody extends TeaModel {
     /**
-     * <p>The unused bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
+     * <p>The remaining bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
      */
     @NameInMap("RemainingBandwidth")
     public Long remainingBandwidth;

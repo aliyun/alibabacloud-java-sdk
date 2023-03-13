@@ -31,7 +31,7 @@ public class DisableCenVbrHealthCheckRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
      * <br>
-     * <p>>  The parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
+     * <p>> This parameter is required if the VBR and the CEN instance belong to different Alibaba Cloud accounts.</p>
      */
     @NameInMap("VbrInstanceOwnerId")
     public Long vbrInstanceOwnerId;

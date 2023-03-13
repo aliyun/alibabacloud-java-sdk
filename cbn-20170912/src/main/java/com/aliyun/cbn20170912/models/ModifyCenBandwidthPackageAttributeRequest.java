@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the bandwidth plan</p>
+     * <p>The ID of the bandwidth plan.</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
@@ -13,7 +13,7 @@ public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     /**
      * <p>The new description of the bandwidth plan.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter or Chinese character but cannot start with ` http://  `or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -21,7 +21,7 @@ public class ModifyCenBandwidthPackageAttributeRequest extends TeaModel {
     /**
      * <p>The new name of the bandwidth plan.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter or Chinese character but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;

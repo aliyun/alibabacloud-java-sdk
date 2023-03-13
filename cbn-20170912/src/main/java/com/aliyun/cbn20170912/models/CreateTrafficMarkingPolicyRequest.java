@@ -7,18 +7,18 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   **true**: checks the request but does not create the traffic marking policy. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the check, the traffic marking policy is created.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -38,9 +38,9 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The priority of the traffic marking policy. Valid values: **1** to **100**.</p>
+     * <p>The priority value of the traffic marking policy. Valid values: **1** to **100**.</p>
      * <br>
-     * <p>The priority value of each traffic marking policy on a transit router must be unique. A smaller value indicates a higher priority.</p>
+     * <p>The priority value of each traffic marking policy on a transit router must be unique. A smaller value specifies a higher priority.</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -68,7 +68,11 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
     public String trafficMarkingPolicyName;
 
     /**
-     * <p>The rules that were used to match packets.</p>
+     * <p>The traffic classification rules in the traffic marking policy.</p>
+     * <br>
+     * <p>Packets that match the traffic classification rules are assigned the DSCP value of the traffic marking policy.</p>
+     * <br>
+     * <p>You can specify at most 50 traffic classification rules.</p>
      */
     @NameInMap("TrafficMatchRules")
     public java.util.List<CreateTrafficMarkingPolicyRequestTrafficMatchRules> trafficMatchRules;
@@ -184,9 +188,9 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The destination CIDR block that is used to match packets.</p>
          * <br>
-         * <p>The traffic classification rule matches the packets whose destination IP addresses fall within the specified destination CIDR block. If you do not set this parameter, packets are considered a match regardless of the DSCP value.</p>
+         * <p>The traffic classification rule matches the packets whose destination IP addresses fall within the specified destination CIDR block. If you do not set this parameter, packets with all destination IP addresses are matched.</p>
          * <br>
-         * <p>You can create up to 50 traffic classification rules at a time. You can specify a destination CIDR block for each traffic classification rule.</p>
+         * <p>You can create up to 50 traffic classification rules in each call. You can specify a destination CIDR block for each traffic classification rule.</p>
          */
         @NameInMap("DstCidr")
         public String dstCidr;
@@ -194,13 +198,15 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The destination port range that is used to match packets. Valid values: **-1** and **1** to **65535**.</p>
          * <br>
-         * <p>The traffic classification rule matches the packets whose destination ports fall within the destination port range. If you do not set this parameter, packets are considered a match regardless of the destination port.</p>
+         * <p>The traffic classification rule matches the packets whose destination ports fall within the destination port range. If you do not set this parameter, packets with all destination ports are matched.</p>
          * <br>
          * <p>You can specify at most two ports. Take note of the following rules:</p>
          * <br>
-         * <p>*   If you enter only one port number such as 1, the system matches the packets whose destination port is 1.</p>
-         * <p>*   If you enter two port numbers such as 1 and 200, the system matches the packets whose destination ports fall within 1 to 200.</p>
-         * <p>*   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the destination port.</p>
+         * <p>*   If you enter only one port number such as 1, the system matches the packets whose destination port is port 1.</p>
+         * <p>*   If you enter two port numbers such as 1 and 200, the system matches the packets whose destination ports fall between 1 and 200.</p>
+         * <p>*   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets with all destination ports are matched.</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules in each call. You can specify a destination port range for each traffic classification rule.</p>
          */
         @NameInMap("DstPortRange")
         public java.util.List<Integer> dstPortRange;
@@ -212,7 +218,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
          * <br>
          * <p>>  The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
          * <br>
-         * <p>You can create up to 50 traffic classification rules at a time. You can specify a DSCP value for each traffic classification rule.</p>
+         * <p>You can create up to 50 traffic classification rules in each call. You can specify a DSCP value for each traffic classification rule.</p>
          */
         @NameInMap("MatchDscp")
         public Integer matchDscp;
@@ -220,9 +226,9 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The protocol that is used to match packets.</p>
          * <br>
-         * <p>Valid values: **HTTP**, **HTTPS**, **TCP**, **UDP**, **SSH**, and **Telnet**. For more information, log on to the [CEN console](https://cen.console.aliyun.com/cen/list).</p>
+         * <p>Valid values: **HTTP**, **HTTPS**, **TCP**, **UDP**, **SSH**, and **Telnet**. For more information, log on to the [Cloud Enterprise Network (CEN) console](https://cen.console.aliyun.com/cen/list).</p>
          * <br>
-         * <p>You can create up to 50 traffic classification rules at a time. You can specify a protocol for each traffic classification rule.</p>
+         * <p>You can create up to 50 traffic classification rules in each call. You can specify a protocol for each traffic classification rule.</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -230,9 +236,9 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The source CIDR block that is used to match packets.</p>
          * <br>
-         * <p>The traffic classification rule matches the packets whose source IP addresses fall within the specified source CIDR block. If you do not set this parameter, packets are considered a match regardless of the source IP address.</p>
+         * <p>The traffic classification rule matches the packets whose source IP addresses fall within the specified source CIDR block. If you do not set this parameter, packets with all source IP addresses are matched.</p>
          * <br>
-         * <p>You can create up to 50 traffic classification rules at a time. You can specify a source CIDR block for each traffic classification rule.</p>
+         * <p>You can create up to 50 traffic classification rules in each call. You can specify a source CIDR block for each traffic classification rule.</p>
          */
         @NameInMap("SrcCidr")
         public String srcCidr;
@@ -240,13 +246,15 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The source port range that is used to match packets. Valid values: **-1** and **1** to **65535**.</p>
          * <br>
-         * <p>The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not set this parameter, packets are considered a match regardless of the source port.</p>
+         * <p>The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not set this parameter, packets with all source ports are matched.</p>
          * <br>
          * <p>You can specify at most two ports. Take note of the following rules:</p>
          * <br>
          * <p>*   If you enter only one port number such as 1, the system matches the packets whose source port is 1.</p>
-         * <p>*   If you enter two port numbers such as 1 and 200, the system matches the packets whose source ports fall within 1 to 200.</p>
-         * <p>*   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the source port.</p>
+         * <p>*   If you enter two port numbers such as 1 and 200, the system matches the packets whose source ports fall between 1 and 200.</p>
+         * <p>*   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets with all source ports are matched.</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules in each call. You can specify a source port range for each traffic classification rule.</p>
          */
         @NameInMap("SrcPortRange")
         public java.util.List<Integer> srcPortRange;
@@ -254,7 +262,7 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The description of the traffic classification rule.</p>
          * <br>
-         * <p>You can create up to 50 traffic classification rules at a time. You can specify a description for each traffic classification rule.</p>
+         * <p>You can create up to 50 traffic classification rules in each call. You can specify a description for each traffic classification rule.</p>
          * <br>
          * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.</p>
          */
@@ -264,9 +272,9 @@ public class CreateTrafficMarkingPolicyRequest extends TeaModel {
         /**
          * <p>The name of the traffic classification rule.</p>
          * <br>
-         * <p>You can create up to 50 traffic classification rules at a time. You can specify a name for each traffic classification rule.</p>
+         * <p>You can create up to 50 traffic classification rules in each call. You can specify a name for each traffic classification rule.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
          */
         @NameInMap("TrafficMatchRuleName")
         public String trafficMatchRuleName;

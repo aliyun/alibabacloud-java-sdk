@@ -11,7 +11,7 @@ public class DescribeChildInstanceRegionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The network instance type. Valid values:</p>
+     * <p>The type of the network instance. Valid values:</p>
      * <br>
      * <p>*   **VPC**: virtual private cloud (VPC)</p>
      * <p>*   **VBR**: virtual border router (VBR)</p>

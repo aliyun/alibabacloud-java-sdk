@@ -7,7 +7,7 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -21,27 +21,31 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     public String groupIpAddress;
 
     /**
-     * <p>Whether to query multicast members.</p>
+     * <p>Specified whether to query the multicast members. Valid values:</p>
      * <br>
-     * <p>- **false**: No.</p>
-     * <p>- **true**: Yes.</p>
+     * <p>*   **false**: no</p>
+     * <p>*   **true**: yes</p>
      * <br>
-     * <p>> Used in conjunction with IsGroupMember.</p>
-     * <p>> - If neither is configured, the multicast source and members will be queried by default.</p>
-     * <p>> - If only one or both are configured, the configuration parameters shall prevail.</p>
+     * <p>> This parameter can be set together with the IsGroupMember parameter.</p>
+     * <br>
+     * <p>*   If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</p>
+     * <br>
+     * <p>*   If you set only one of them or both of them, the specified values prevail.</p>
      */
     @NameInMap("IsGroupMember")
     public Boolean isGroupMember;
 
     /**
-     * <p>Whether to query the multicast source.</p>
+     * <p>Specifies whether to query the multicast sources. Valid values:</p>
      * <br>
-     * <p>- **false**: No.</p>
-     * <p>- **true**: Yes.</p>
+     * <p>*   **false**: no</p>
+     * <p>*   **true**: yes</p>
      * <br>
-     * <p>> Used in conjunction with IsGroupMember.</p>
-     * <p>> - If neither is configured, the multicast source and members will be queried by default.</p>
-     * <p>> - If only one or both are configured, the configuration parameters shall prevail.</p>
+     * <p>> This parameter can be set together with the IsGroupMember parameter.</p>
+     * <br>
+     * <p>*   If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.</p>
+     * <br>
+     * <p>*   If you set only one of them or both of them, the specified values prevail.</p>
      */
     @NameInMap("IsGroupSource")
     public Boolean isGroupSource;
@@ -53,20 +57,16 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The IDs of the ENIs.</p>
-     * <br>
-     * <p>You can create only one multicast source in a multicast group.</p>
-     * <br>
-     * <p>>  This parameter is required.</p>
+     * <p>The IDs of ENIs.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -78,9 +78,7 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IDs of the inter-region multicast domains.</p>
-     * <br>
-     * <p>You can specify at most 20 inter-region multicast domain IDs.</p>
+     * <p>The ID of the inter-region multicast domain.</p>
      */
     @NameInMap("PeerTransitRouterMulticastDomains")
     public java.util.List<String> peerTransitRouterMulticastDomains;
@@ -119,9 +117,7 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
     public String transitRouterMulticastDomainId;
 
     /**
-     * <p>The IDs of the vSwitches.</p>
-     * <br>
-     * <p>You can specify at most 20 IDs.</p>
+     * <p>The vSwitch IDs.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;

@@ -29,7 +29,7 @@ public class DetachCenChildInstanceRequest extends TeaModel {
     public Long childInstanceOwnerId;
 
     /**
-     * <p>The region ID of the network instance.</p>
+     * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

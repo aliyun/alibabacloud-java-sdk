@@ -24,6 +24,9 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    @NameInMap("ChildInstanceRouteTableId")
+    public String childInstanceRouteTableId;
+
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <br>
@@ -97,6 +100,14 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     }
     public String getChildInstanceRegionId() {
         return this.childInstanceRegionId;
+    }
+
+    public DescribeCenChildInstanceRouteEntriesRequest setChildInstanceRouteTableId(String childInstanceRouteTableId) {
+        this.childInstanceRouteTableId = childInstanceRouteTableId;
+        return this;
+    }
+    public String getChildInstanceRouteTableId() {
+        return this.childInstanceRouteTableId;
     }
 
     public DescribeCenChildInstanceRouteEntriesRequest setChildInstanceType(String childInstanceType) {

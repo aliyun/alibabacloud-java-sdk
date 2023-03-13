@@ -19,13 +19,13 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
      * <br>
-     * <p>>  This parameter is required if you want to attach a network instance that belongs to another Alibaba Cloud account.</p>
+     * <p>> If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
      */
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
     /**
-     * <p>The region ID of the network instance.</p>
+     * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -35,8 +35,8 @@ public class AttachCenChildInstanceRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**: VPC</p>
-     * <p>*   **VBR**: VBR</p>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VBR**: virtual border router (VBR)</p>
      * <p>*   **CCN**: CCN instance</p>
      */
     @NameInMap("ChildInstanceType")

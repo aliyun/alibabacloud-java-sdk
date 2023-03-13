@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token that determines the start point of the next query. Valid values:</p>
      * <br>
-     * <p>*   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
      * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
@@ -83,6 +83,12 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions extends TeaModel {
+        /**
+         * <p>Indicates whether ECMP routing is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **disable**: disabled If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit route with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
+         * <p>*   **enable**: enables ECMP routing. If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
+         */
         @NameInMap("MultiRegionECMP")
         public String multiRegionECMP;
 
@@ -103,13 +109,13 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
     public static class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -146,17 +152,26 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the region where the Enterprise Edition transit router is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The features of the route table.</p>
+         */
         @NameInMap("RouteTableOptions")
         public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions routeTableOptions;
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> tags;
+
+        @NameInMap("TransitRouterId")
+        public String transitRouterId;
 
         /**
          * <p>The description of the route table.</p>
@@ -177,7 +192,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public String transitRouterRouteTableName;
 
         /**
-         * <p>The status of the route table.</p>
+         * <p>The status of the route table. Valid values:</p>
          * <br>
          * <p>*   **Creating**: being created</p>
          * <p>*   **Deleting**: being deleted</p>
@@ -187,10 +202,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         public String transitRouterRouteTableStatus;
 
         /**
-         * <p>The type of the route table.</p>
+         * <p>The type of the route table. Valid value:</p>
          * <br>
          * <p>*   **Custom**: a custom route table</p>
-         * <p>*   **System**: the default route table</p>
+         * <p>*   **System**: the default system route table</p>
          */
         @NameInMap("TransitRouterRouteTableType")
         public String transitRouterRouteTableType;
@@ -230,6 +245,14 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         }
         public java.util.List<ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesTags> getTags() {
             return this.tags;
+        }
+
+        public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables setTransitRouterId(String transitRouterId) {
+            this.transitRouterId = transitRouterId;
+            return this;
+        }
+        public String getTransitRouterId() {
+            return this.transitRouterId;
         }
 
         public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables setTransitRouterRouteTableDescription(String transitRouterRouteTableDescription) {

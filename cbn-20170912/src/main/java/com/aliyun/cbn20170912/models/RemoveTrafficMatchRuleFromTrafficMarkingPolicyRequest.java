@@ -7,18 +7,18 @@ public class RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest extends TeaMo
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request but does not delete traffic classification rules. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request and deletes the specified traffic classification rules after the request passes the precheck.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -36,11 +36,9 @@ public class RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest extends TeaMo
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the traffic classification rules.</p>
+     * <p>The ID of the traffic classification rule.</p>
      * <br>
      * <p>You can specify at most 20 traffic classification rules.</p>
-     * <br>
-     * <p>You can call the [ListTrafficMarkingPolicies](~~419013~~) operation to query the IDs of traffic classification rules in a specified traffic marking policy.</p>
      */
     @NameInMap("TrafficMarkRuleIds")
     public java.util.List<String> trafficMarkRuleIds;

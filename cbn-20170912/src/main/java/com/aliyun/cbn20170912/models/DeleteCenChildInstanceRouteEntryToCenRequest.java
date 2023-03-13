@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -13,7 +13,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
      * <br>
-     * <p>>  If the network instance belongs to another Alibaba Cloud account, this parameter is required.</p>
+     * <p>> If the network instance belongs to another Alibaba Cloud account, this parameter is required.</p>
      */
     @NameInMap("ChildInstanceAliUid")
     public Long childInstanceAliUid;
@@ -33,7 +33,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The type of the attached network instance. Valid values:</p>
+     * <p>The type of the network instance. Valid values:</p>
      * <br>
      * <p>*   **VPC**: a virtual private cloud (VPC)</p>
      * <p>*   **VBR**: a virtual border router (VBR)</p>
@@ -62,7 +62,7 @@ public class DeleteCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table of the network instance.</p>
+     * <p>The ID of the route table configured on the network instance.</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;

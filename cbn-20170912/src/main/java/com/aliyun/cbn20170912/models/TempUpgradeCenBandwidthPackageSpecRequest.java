@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TempUpgradeCenBandwidthPackageSpecRequest extends TeaModel {
     /**
-     * <p>The bandwidth limit after the bandwidth plan is upgraded. Unit: Mbit/s.</p>
+     * <p>The maximum bandwidth value to which you want to upgrade the bandwidth plan. Unit: Mbit/s.</p>
      * <br>
      * <p>Valid values: **2** to **10000**.</p>
      */

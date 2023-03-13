@@ -102,6 +102,9 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         @NameInMap("OperationalMode")
         public Boolean operationalMode;
 
+        @NameInMap("PrefixListId")
+        public String prefixListId;
+
         /**
          * <p>The tag of the route. </p>
          * <br>
@@ -148,6 +151,12 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         @NameInMap("TransitRouterRouteEntryNextHopId")
         public String transitRouterRouteEntryNextHopId;
 
+        @NameInMap("TransitRouterRouteEntryNextHopResourceId")
+        public String transitRouterRouteEntryNextHopResourceId;
+
+        @NameInMap("TransitRouterRouteEntryNextHopResourceType")
+        public String transitRouterRouteEntryNextHopResourceType;
+
         /**
          * <p>The type of next hop. Valid values:</p>
          * <br>
@@ -156,6 +165,12 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
          */
         @NameInMap("TransitRouterRouteEntryNextHopType")
         public String transitRouterRouteEntryNextHopType;
+
+        @NameInMap("TransitRouterRouteEntryOriginResourceId")
+        public String transitRouterRouteEntryOriginResourceId;
+
+        @NameInMap("TransitRouterRouteEntryOriginResourceType")
+        public String transitRouterRouteEntryOriginResourceType;
 
         /**
          * <p>The status of the route. Valid values: </p>
@@ -195,6 +210,14 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
         public Boolean getOperationalMode() {
             return this.operationalMode;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setPrefixListId(String prefixListId) {
+            this.prefixListId = prefixListId;
+            return this;
+        }
+        public String getPrefixListId() {
+            return this.prefixListId;
         }
 
         public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setTag(String tag) {
@@ -245,12 +268,44 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             return this.transitRouterRouteEntryNextHopId;
         }
 
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setTransitRouterRouteEntryNextHopResourceId(String transitRouterRouteEntryNextHopResourceId) {
+            this.transitRouterRouteEntryNextHopResourceId = transitRouterRouteEntryNextHopResourceId;
+            return this;
+        }
+        public String getTransitRouterRouteEntryNextHopResourceId() {
+            return this.transitRouterRouteEntryNextHopResourceId;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setTransitRouterRouteEntryNextHopResourceType(String transitRouterRouteEntryNextHopResourceType) {
+            this.transitRouterRouteEntryNextHopResourceType = transitRouterRouteEntryNextHopResourceType;
+            return this;
+        }
+        public String getTransitRouterRouteEntryNextHopResourceType() {
+            return this.transitRouterRouteEntryNextHopResourceType;
+        }
+
         public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setTransitRouterRouteEntryNextHopType(String transitRouterRouteEntryNextHopType) {
             this.transitRouterRouteEntryNextHopType = transitRouterRouteEntryNextHopType;
             return this;
         }
         public String getTransitRouterRouteEntryNextHopType() {
             return this.transitRouterRouteEntryNextHopType;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setTransitRouterRouteEntryOriginResourceId(String transitRouterRouteEntryOriginResourceId) {
+            this.transitRouterRouteEntryOriginResourceId = transitRouterRouteEntryOriginResourceId;
+            return this;
+        }
+        public String getTransitRouterRouteEntryOriginResourceId() {
+            return this.transitRouterRouteEntryOriginResourceId;
+        }
+
+        public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setTransitRouterRouteEntryOriginResourceType(String transitRouterRouteEntryOriginResourceType) {
+            this.transitRouterRouteEntryOriginResourceType = transitRouterRouteEntryOriginResourceType;
+            return this;
+        }
+        public String getTransitRouterRouteEntryOriginResourceType() {
+            return this.transitRouterRouteEntryOriginResourceType;
         }
 
         public ListTransitRouterRouteEntriesResponseBodyTransitRouterRouteEntries setTransitRouterRouteEntryStatus(String transitRouterRouteEntryStatus) {

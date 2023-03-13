@@ -7,15 +7,15 @@ public class DisassociateTransitRouterMulticastDomainRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to check the request. Valid values:</p>
+     * <p>Specifies whether only to precheck the API request. Valid values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request but does not disassociate the vSwitch from the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **true**: prechecks the request but does not disassociate the vSwitch from the multicast domain. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
      * <p>*   **false** (default): sends the request. The vSwitch is disassociated from the multicast domain after the request passes the precheck.</p>
      */
     @NameInMap("DryRun")
@@ -48,9 +48,7 @@ public class DisassociateTransitRouterMulticastDomainRequest extends TeaModel {
     public String transitRouterMulticastDomainId;
 
     /**
-     * <p>The IDs of the vSwitches.</p>
-     * <br>
-     * <p>You can specify at most five vSwitch IDs in each call.</p>
+     * <p>A list of vSwitch IDs.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;

@@ -29,7 +29,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of vSwitches.</p>
+     * <p>A list of vSwitches.</p>
      */
     @NameInMap("VSwitches")
     public java.util.List<ListGrantVSwitchesToCenResponseBodyVSwitches> vSwitches;
@@ -86,6 +86,9 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("VSwitchName")
+        public String vSwitchName;
+
         /**
          * <p>The ID of the VPC to which the vSwitch belongs.</p>
          */
@@ -93,7 +96,7 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>The ID of the zone where the vSwitch is deployed.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -109,6 +112,14 @@ public class ListGrantVSwitchesToCenResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public ListGrantVSwitchesToCenResponseBodyVSwitches setVSwitchName(String vSwitchName) {
+            this.vSwitchName = vSwitchName;
+            return this;
+        }
+        public String getVSwitchName() {
+            return this.vSwitchName;
         }
 
         public ListGrantVSwitchesToCenResponseBodyVSwitches setVpcId(String vpcId) {

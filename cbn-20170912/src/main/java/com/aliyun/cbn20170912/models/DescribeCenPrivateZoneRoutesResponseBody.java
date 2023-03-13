@@ -29,7 +29,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     public String privateZoneDnsServers;
 
     /**
-     * <p>The detailed configuration of PrivateZone.</p>
+     * <p>The configuration details of PrivateZone.</p>
      */
     @NameInMap("PrivateZoneInfos")
     public DescribeCenPrivateZoneRoutesResponseBodyPrivateZoneInfos privateZoneInfos;
@@ -129,9 +129,9 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         /**
          * <p>The status of PrivateZone. Valid values:</p>
          * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Active**</p>
-         * <p>*   **Deleting**</p>
+         * <p>*   **Creating**: being created</p>
+         * <p>*   **Active**: available</p>
+         * <p>*   **Deleting**: being deleted</p>
          */
         @NameInMap("Status")
         public String status;

@@ -13,7 +13,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     /**
      * <p>The time when the network instance was attached to the CEN instance.</p>
      * <br>
-     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+     * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("ChildInstanceAttachTime")
     public String childInstanceAttachTime;
@@ -37,7 +37,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public Long childInstanceOwnerId;
 
     /**
-     * <p>The region ID of the network instance.</p>
+     * <p>The ID of the region where the network instance is deployed.</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
@@ -59,11 +59,11 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     public String requestId;
 
     /**
-     * <p>Indicates whether the network instance is attached to the CEN instance.</p>
+     * <p>Indicates whether the network instance is attached to the CEN instance. Valid values:</p>
      * <br>
-     * <p>*   **Attaching**: The network instance is being attached to the CEN instance.</p>
-     * <p>*   **Attached**: The network instance is attached to the CEN instance.</p>
-     * <p>*   **Detaching**: The network instance is being detached from the CEN instance.</p>
+     * <p>*   **Attaching**: being attached to the CEN instance.</p>
+     * <p>*   **Attached**: attached to the CEN instance.</p>
+     * <p>*   **Detaching**: being detached from the CEN instance.</p>
      */
     @NameInMap("Status")
     public String status;

@@ -11,7 +11,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
     public DescribeCenAttachedChildInstancesResponseBodyChildInstances childInstances;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -89,7 +89,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         /**
          * <p>The time when the network instance was attached to the CEN instance.</p>
          * <br>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("ChildInstanceAttachTime")
         public String childInstanceAttachTime;
@@ -107,7 +107,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         public Long childInstanceOwnerId;
 
         /**
-         * <p>The region ID of the network instance.</p>
+         * <p>The ID of the region where the network instance is deployed.</p>
          */
         @NameInMap("ChildInstanceRegionId")
         public String childInstanceRegionId;
@@ -125,9 +125,9 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         /**
          * <p>The status of the network instance. Valid values:</p>
          * <br>
-         * <p>*   **Attaching**: The network instance is being attached to the CEN instance.</p>
-         * <p>*   **Attached**: The network instance is attached to the CEN instance.</p>
-         * <p>*   **Detaching**: The network instance is being detached from the CEN instance.</p>
+         * <p>*   **Attaching**: The network instance is being created on the transit router.</p>
+         * <p>*   **Attached**: The network instance has been created on the transit router.</p>
+         * <p>*   **Detaching**: The network instance is being deleted from the transit router.</p>
          */
         @NameInMap("Status")
         public String status;

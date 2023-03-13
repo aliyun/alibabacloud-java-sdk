@@ -11,13 +11,13 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The array of routes.</p>
+     * <p>A list of routes.</p>
      */
     @NameInMap("PublishedRouteEntries")
     public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries publishedRouteEntries;
@@ -93,25 +93,25 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of the peer network instance on which conflicting routes are found. Valid values:</p>
+         * <p>The type of the peer network instance on which the conflicting routes are found. Valid values:</p>
          * <br>
-         * <p>*   **VPC**</p>
-         * <p>*   **VBR**</p>
-         * <p>*   **CCN**</p>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **VBR**: VBR</p>
+         * <p>*   **CCN**: CCN instance</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The region ID of the peer network instance on which conflicting routes are found is deployed.</p>
+         * <p>The ID of the region where the peer network instance on which the conflicting routes are found is deployed.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The cause of the route error. Valid values:</p>
+         * <p>The cause of the route confliction. Valid values:</p>
          * <br>
-         * <p>*   **conflict**: Routes have the same destination CIDR block.</p>
+         * <p>*   **conflict**: The routes have the same destination CIDR block.</p>
          * <p>*   **overflow**: The number of routes in the route table configured on another network instance has reached the upper limit.</p>
          */
         @NameInMap("Status")
@@ -191,7 +191,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         public String childInstanceRouteTableId;
 
         /**
-         * <p>The array of conflicting routes.</p>
+         * <p>A list of conflicting routes.</p>
          */
         @NameInMap("Conflicts")
         public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts conflicts;
@@ -212,26 +212,26 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
          * <p>The type of the instance specified as the next hop in the route.</p>
          * <br>
          * <p>*   **Instance**: ECS instance</p>
-         * <p>*   **HaVip**: HAVIP</p>
-         * <p>*   **RouterInterface**: router interface</p>
-         * <p>*   **NetworkInterface**: ENI</p>
-         * <p>*   **VpnGateway**: VPN gateway</p>
-         * <p>*   **IPv6Gateway**: IPv6 gateway</p>
-         * <p>*   **NatGateway**: NAT gateway</p>
+         * <p>*   **HaVip**: high-availability virtual IP address (HAVIP).</p>
+         * <p>*   **RouterInterface**: router interface.</p>
+         * <p>*   **NetworkInterface**: elastic network interface (ENI).</p>
+         * <p>*   **VpnGateway**: VPN gateway.</p>
+         * <p>*   **IPv6Gateway**: IPv6 gateway.</p>
+         * <p>*   **NatGateway**: NAT gateway.</p>
          * <p>*   **Attachment**: network instance connection</p>
          * <p>*   **service**: cloud service</p>
-         * <p>*   **VBR**: virtual border router</p>
+         * <p>*   **VBR**: VBR</p>
          * <p>*   **CCN**: CCN instance</p>
-         * <p>*   **VPC**: virtual private cloud</p>
+         * <p>*   **VPC**: VPC</p>
          * <p>*   **local**: system route. No next hop is specified.</p>
          * <p>*   **TR**: transit router</p>
-         * <p>*   **BlackHole**: blackhole route. No next hop is specified.</p>
-         * <p>*   **EcRouterInterface**: router interface for Express Connect</p>
+         * <p>*   \*\*BlackHole\*\*: blackhole route. No next hop is specified.</p>
+         * <p>*   \*\*EcRouterInterface\*\*: router interface for Express Connect</p>
          * <p>*   **HealthCheck**: health check</p>
          * <p>*   **AS**: access gateway for CCN</p>
-         * <p>*   **classic**: classic network-type instance</p>
+         * <p>*   **classicLink**: classic network-type instance</p>
          * <p>*   **GatewayEndpoint**: gateway endpoint</p>
-         * <p>*   **CPE**: data center connected by VBRs</p>
+         * <p>*   **CPE**: data center connected to the VBR</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;

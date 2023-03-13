@@ -11,9 +11,9 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel
     public String cenId;
 
     /**
-     * <p>The ID of one of the connected areas of the bandwidth plan. Valid values:</p>
+     * <p>The ID of one of the areas connected by the bandwidth plan. Valid values:</p>
      * <br>
-     * <p>*   **China**: the Chinese mainland</p>
+     * <p>*   **China**: Chinese mainland</p>
      * <p>*   **North-America**: North America</p>
      * <p>*   **Asia-Pacific**: Asia Pacific</p>
      * <p>*   **Europe**: Europe</p>
@@ -23,9 +23,9 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel
     public String geographicRegionAId;
 
     /**
-     * <p>The ID of the other connected area of the bandwidth plan. Valid values:</p>
+     * <p>The ID of the other area connected by the bandwidth plan. Valid values:</p>
      * <br>
-     * <p>*   **China**: the Chinese mainland</p>
+     * <p>*   **China**: Chinese mainland</p>
      * <p>*   **North-America**: North America</p>
      * <p>*   **Asia-Pacific**: Asia Pacific</p>
      * <p>*   **Europe**: Europe</p>
@@ -47,7 +47,7 @@ public class DescribeCenGeographicSpanRemainingBandwidthRequest extends TeaModel
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

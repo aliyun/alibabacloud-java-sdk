@@ -7,8 +7,8 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): no.</p>
-     * <p>*   **true**: yes.</p>
+     * <p>*   **false** (default): no</p>
+     * <p>*   **true**: yes</p>
      */
     @NameInMap("AutoPublishRouteEnabled")
     public Boolean autoPublishRouteEnabled;
@@ -25,9 +25,8 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The bandwidth allocation method. Valid values:</p>
      * <br>
-     * <p>**BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
-     * <br>
-     * <p>**DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.</p>
+     * <p>*   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.</p>
+     * <p>*   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.</p>
      */
     @NameInMap("BandwidthType")
     public String bandwidthType;
@@ -35,7 +34,9 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.</p>
      * <br>
-     * <p>>  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.</p>
+     * <p>**</p>
+     * <br>
+     * <p>If you set **BandwidthType** to DataTransfer, you do not need to set this parameter.</p>
      */
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
@@ -43,7 +44,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
@@ -51,10 +52,10 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): checks the request. If the request passes the check, the inter-region connection is modified.</p>
-     * <p>*   **true**: prechecks the request but does not perform the operation. The cross-region connection is not modified after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -72,7 +73,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     public Long resourceOwnerId;
 
     /**
-     * <p>The new description of the cross-region connection.</p>
+     * <p>The new description of the inter-region connection.</p>
      * <br>
      * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
      */

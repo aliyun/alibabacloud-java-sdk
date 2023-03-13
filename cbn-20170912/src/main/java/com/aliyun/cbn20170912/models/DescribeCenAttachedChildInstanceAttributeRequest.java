@@ -17,7 +17,7 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The region ID of the network instance.</p>
+     * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -27,9 +27,9 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **VBR**: virtual border router (VBR)</p>
-     * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
+     * <p>*   **VPC**: VPC</p>
+     * <p>*   **VBR**: VBR</p>
+     * <p>*   **CCN**: CCN instance</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;

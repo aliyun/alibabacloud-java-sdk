@@ -7,14 +7,14 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **true** (default): yes.</p>
-     * <p>*   **false**: no.</p>
+     * <p>*   **true** (default): yes</p>
+     * <p>*   **false**: no</p>
      */
     @NameInMap("AutoPublishRouteEnabled")
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -22,7 +22,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>The billing method.</p>
      * <br>
-     * <p>Valid value: **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.</p>
+     * <p>Set the value to **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -30,7 +30,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The ClientToken value contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
@@ -38,10 +38,10 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the API request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request but does not connect the transit router to the IPsec-VPN connection. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the transit router is connected to the IPsec-VPN connection.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -67,7 +67,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The information about the tags.</p>
      * <br>
      * <p>You can specify at most 20 tags in each call.</p>
      */
@@ -75,7 +75,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     public java.util.List<CreateTransitRouterVpnAttachmentRequestTag> tag;
 
     /**
-     * <p>The description of the connection between the transit router and the IPsec-VPN connection.</p>
+     * <p>The description of the VPN attachment.</p>
      * <br>
      * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
      */
@@ -83,7 +83,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     public String transitRouterAttachmentDescription;
 
     /**
-     * <p>The name of the connection between the transit router and the IPsec-VPN connection.</p>
+     * <p>The name of the VPN attachment.</p>
      * <br>
      * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
      */
@@ -264,7 +264,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <br>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */

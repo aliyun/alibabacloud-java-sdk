@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. </p>
+     * <p>The token that determines the start point of the query.</p>
      * <br>
-     * <p>- If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
-     * <p>- If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <p>*   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -32,7 +32,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The information about the traffic marking policy.</p>
+     * <p>The list of traffic marking policies.</p>
      */
     @NameInMap("TrafficMarkingPolicies")
     public java.util.List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPolicies> trafficMarkingPolicies;
@@ -91,14 +91,6 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The destination port range used to match data packets.</p>
-         * <br>
-         * <p>Two destination port numbers are returned.</p>
-         * <br>
-         * <p>*   If the destination ports are the same, for example, port 80, the traffic classification rule matches data packets that are sent to port 80.</p>
-         * <br>
-         * <p>    If the destination ports are both -1, the traffic classification rule matches all data packets.</p>
-         * <br>
-         * <p>*   If the destination ports are different, for example, port 1 and port 200, the traffic classification rule matches data packets whose destination port ranges from port 1 to port 200.</p>
          */
         @NameInMap("DstPortRange")
         public java.util.List<Integer> dstPortRange;
@@ -112,7 +104,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         /**
          * <p>The protocol used to match data packets.</p>
          * <br>
-         * <p>>  Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</p>
+         * <p>> Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -125,14 +117,6 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The source port range used to match data packets.</p>
-         * <br>
-         * <p>Two source port numbers are returned.</p>
-         * <br>
-         * <p>*   If the source ports are the same, for example, port 80, the traffic classification rule matches data packets that are sent from port 80.</p>
-         * <br>
-         * <p>    If the source ports are both -1, the traffic classification rule matches all data packets.</p>
-         * <br>
-         * <p>*   If the source ports are different, for example, port 1 and port 200, the traffic classification rule matches data packets whose source port ranges from port 1 to port 200.</p>
          */
         @NameInMap("SrcPortRange")
         public java.util.List<Integer> srcPortRange;
@@ -291,7 +275,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
          * <br>
          * <p>*   **Creating**: The policy is being created.</p>
          * <p>*   **Active**: The policy is available.</p>
-         * <p>*   **Modifying**: The policy is being modified.</p>
+         * <p>*   **Modifying**: The policy is being modified</p>
          * <p>*   **Deleting**: The policy is being deleted.</p>
          * <p>*   **Deleted**: The policy is deleted.</p>
          */
@@ -299,7 +283,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         public String trafficMarkingPolicyStatus;
 
         /**
-         * <p>The information about the traffic classification rule.</p>
+         * <p>The list of traffic classification rules.</p>
          */
         @NameInMap("TrafficMatchRules")
         public java.util.List<ListTrafficMarkingPoliciesResponseBodyTrafficMarkingPoliciesTrafficMatchRules> trafficMatchRules;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenGeographicSpansResponseBody extends TeaModel {
     /**
-     * <p>The information about area combinations.</p>
+     * <p>A list of areas.</p>
      */
     @NameInMap("GeographicSpanModels")
     public DescribeCenGeographicSpansResponseBodyGeographicSpanModels geographicSpanModels;
@@ -81,7 +81,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
 
     public static class DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel extends TeaModel {
         /**
-         * <p>The ID of the area combination.</p>
+         * <p>The ID of the pair of connected areas.</p>
          */
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;

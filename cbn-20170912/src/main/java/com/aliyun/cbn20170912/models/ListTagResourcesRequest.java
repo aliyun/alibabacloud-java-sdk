@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,7 +26,9 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the region where the resource is deployed.</p>
+     * <br>
+     * <p>You can ignore this parameter if ResourceType is set to Cen or BandwidthPackage.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -46,15 +48,35 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **cen**, which specifies CEN instances.</p>
+     * <p>The type of the resource to which you want to add the tag. Valid values:</p>
+     * <br>
+     * <p>**Cen**: CEN instance</p>
+     * <br>
+     * <p>**BandwidthPackage**: bandwidth plan</p>
+     * <br>
+     * <p>**TransitRouter**: transit router</p>
+     * <br>
+     * <p>**TransitRouterVpcAttachment**: virtual private cloud (VPC) connection</p>
+     * <br>
+     * <p>**TransitRouterVbrAttachment**: virtual border router (VBR) connection</p>
+     * <br>
+     * <p>**TransitRouterPeerAttachment**: inter-region connection</p>
+     * <br>
+     * <p>**TransitRouterVpnAttachment**: VPN connection</p>
+     * <br>
+     * <p>**TransitRouterRouteTable**: route table</p>
+     * <br>
+     * <p>**Flowlog**: flow log</p>
+     * <br>
+     * <p>**TransitRouterMulticastDomain**: multicast domain</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The information about the tags that are added to the CEN instance.</p>
      * <br>
-     * <p>You can specify at most 20 tags.</p>
+     * <p>You can query at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -146,9 +168,9 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -158,7 +180,7 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <br>
-         * <p>The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag values.</p>
          */

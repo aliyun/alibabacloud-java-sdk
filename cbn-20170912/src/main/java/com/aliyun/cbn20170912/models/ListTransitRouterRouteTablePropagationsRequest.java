@@ -11,7 +11,7 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for returning the next page when the data is returned in more than one page.</p>
+     * <p>The token that determines the start point of the query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -28,6 +28,13 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the route learning correlation. Valid values:</p>
+     * <br>
+     * <p>*   **Active**: available</p>
+     * <p>*   **Enabling**: being enabled</p>
+     * <p>*   **Disabling**: being disabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -37,9 +44,20 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The ID of the next hop.</p>
+     */
     @NameInMap("TransitRouterAttachmentResourceId")
     public String transitRouterAttachmentResourceId;
 
+    /**
+     * <p>The type of next hop. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VBR**: virtual border router (VBR)</p>
+     * <p>*   **TR**: transit router</p>
+     * <p>*   **VPN**: VPN connection</p>
+     */
     @NameInMap("TransitRouterAttachmentResourceType")
     public String transitRouterAttachmentResourceType;
 

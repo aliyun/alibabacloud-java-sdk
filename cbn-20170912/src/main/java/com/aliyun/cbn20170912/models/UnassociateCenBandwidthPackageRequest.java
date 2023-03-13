@@ -11,7 +11,7 @@ public class UnassociateCenBandwidthPackageRequest extends TeaModel {
     public String cenBandwidthPackageId;
 
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;

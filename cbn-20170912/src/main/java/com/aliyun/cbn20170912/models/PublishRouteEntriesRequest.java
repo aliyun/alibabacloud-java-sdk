@@ -11,31 +11,36 @@ public class PublishRouteEntriesRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the associated network (VPC or VBR).</p>
+     * <p>The ID of the network instance.</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
     /**
-     * <p>The ID of the region to which the associated VBR or VPC belongs.</p>
+     * <p>The ID of the region where the network instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
-     * <p>The route table ID of the associated VBR or VPC.</p>
+     * <p>The ID of the route table configured on the network instance.</p>
      */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
     /**
-     * <p>The type of the associated network. Valid values: **VPC | VBR**</p>
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: VPC</p>
+     * <p>*   **VBR**: VBR</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
     /**
-     * <p>The destination CIDR block of the route entry to publish.</p>
+     * <p>The destination CIDR block of the route that you want to advertise.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCenGeographicSpansRequest extends TeaModel {
     /**
-     * <p>The ID of the area combination.</p>
+     * <p>The ID of the areas that are connected by the CEN instance.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system queries the information about all area combinations supported by CEN.</p>
+     * <p>> If you do not set this parameter, the system queries the information about all areas supported by CEN.</p>
      */
     @NameInMap("GeographicSpanId")
     public String geographicSpanId;
@@ -25,7 +25,7 @@ public class DescribeCenGeographicSpansRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

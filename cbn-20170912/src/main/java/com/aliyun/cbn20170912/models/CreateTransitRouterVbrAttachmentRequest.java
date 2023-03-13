@@ -7,8 +7,8 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): no.</p>
-     * <p>*   **true**: yes.</p>
+     * <p>*   **false** (default): no</p>
+     * <p>*   **true**: yes</p>
      */
     @NameInMap("AutoPublishRouteEnabled")
     public Boolean autoPublishRouteEnabled;
@@ -22,18 +22,18 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** of each API request may be different.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Default values:</p>
      * <br>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the VBR connection is created.</p>
-     * <p>*   **true**: sends a precheck request. No VBR connection is created after the request passes the precheck. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -45,9 +45,9 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the VBR is deployed.</p>
+     * <p>The region ID of the VBR.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -59,7 +59,9 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the resources.</p>
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterVbrAttachmentRequestTag> tag;
@@ -95,7 +97,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account to which the VBR belongs. The default value is the ID of the current Alibaba Cloud account.</p>
      * <br>
-     * <p>>  If you want to connect to a network instance that belongs to another account, this parameter is required.</p>
+     * <p>> If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
      */
     @NameInMap("VbrOwnerId")
     public Long vbrOwnerId;
@@ -227,9 +229,9 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterVbrAttachmentRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources. </p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -237,11 +239,11 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources. </p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

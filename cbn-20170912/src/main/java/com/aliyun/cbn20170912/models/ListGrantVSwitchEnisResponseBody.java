@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     /**
-     * <p>The information about the ENI.</p>
+     * <p>The list of ENIs.</p>
      */
     @NameInMap("GrantVSwitchEnis")
     public java.util.List<ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis> grantVSwitchEnis;
