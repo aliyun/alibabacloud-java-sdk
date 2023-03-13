@@ -11,7 +11,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The billing method. Default value: **POSTPAY**, which specifies the pay-as-you-go billing method.</p>
+     * <p>The billing method. The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -19,7 +19,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
      */
@@ -27,10 +27,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Default values:</p>
      * <br>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the VPC connection is created.</p>
-     * <p>*   **true**: sends a precheck request but does not create the VPC connection. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -56,7 +56,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterVpcAttachmentRequestTag> tag;
@@ -92,13 +94,15 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account to which the VPC belongs. The default value is the ID of the current Alibaba Cloud account.</p>
      * <br>
-     * <p>>  If you want to connect to a network instance that belongs to another account, this parameter is required.</p>
+     * <p>> If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
      */
     @NameInMap("VpcOwnerId")
     public Long vpcOwnerId;
 
     /**
-     * <p>The mappings of zones.</p>
+     * <p>A zone that supports Enterprise Edition transit routers.</p>
+     * <br>
+     * <p>You can specify at most 10 zones.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> zoneMappings;
@@ -238,9 +242,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterVpcAttachmentRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources. </p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -248,11 +252,11 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources. </p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -282,7 +286,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterVpcAttachmentRequestZoneMappings extends TeaModel {
         /**
-         * <p>Select a vSwitch that is deployed in a zone supported by Enterprise Edition transit routers.</p>
+         * <p>A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.</p>
          * <br>
          * <p>You can specify vSwitches for at most 10 zones in each call.</p>
          */
@@ -290,9 +294,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone supported by Enterprise Edition transit routers.</p>
+         * <p>The ID of the zone that supports Enterprise Edition transit routers.</p>
          * <br>
-         * <p>You can call the [DescribeZones](~~36064~~) operation to query zone IDs.</p>
+         * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
          * <br>
          * <p>You can specify at most 10 zones in each call.</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
     /**
-     * <p>The list of regions.</p>
+     * <p>A list of regions.</p>
      */
     @NameInMap("Regions")
     public DescribeChildInstanceRegionsResponseBodyRegions regions;

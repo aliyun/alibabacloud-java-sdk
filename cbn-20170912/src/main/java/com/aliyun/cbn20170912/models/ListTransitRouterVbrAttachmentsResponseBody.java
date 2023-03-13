@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token for returning the next page when the data is returned in more than one page.</p>
+     * <p>The token that determines the start point of the query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -29,7 +29,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of VBR connections.</p>
+     * <p>A list of VBR connections.</p>
      */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
@@ -81,13 +81,13 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachmentsTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -125,10 +125,13 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
+        @NameInMap("CenId")
+        public String cenId;
+
         /**
          * <p>The time when the VBR connection was established.</p>
          * <br>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -136,10 +139,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The type of resource to which the transit router is connected. Valid values:</p>
          * <br>
-         * <p>*   **VPC**: a virtual private cloud (VPC)</p>
-         * <p>*   **CCN**: a Cloud Connect Network (CCN) instance</p>
-         * <p>*   **VBR**: a virtual border router (VBR)</p>
-         * <p>*   **TR**: a transit router</p>
+         * <p>*   **VPC**: virtual private cloud (VPC)</p>
+         * <p>*   **CCN**: CCN instance</p>
+         * <p>*   **VBR**: VBR</p>
+         * <p>*   **TR**: transit router</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -147,10 +150,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The status of the VBR connection. Valid values:</p>
          * <br>
-         * <p>*   **Attached**: The transit router is connected to the VBR.</p>
-         * <p>*   **Attaching**: The transit router is connecting to the VBR.</p>
-         * <p>*   **Detaching**: The transit router is disconnecting from the VBR.</p>
-         * <p>*   **Detached**: The transit router is disconnected from the VBR.</p>
+         * <p>*   **Attached**: The VBR connection is created on the transit router.</p>
+         * <p>*   **Attaching**: The VBR connection is being created on the transit router.</p>
+         * <p>*   **Detaching**: The VBR connection is being deleted from the transit router.</p>
+         * <p>*   **Detached**: The VBR connection is deleted from the transit router.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -198,7 +201,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         public Long vbrOwnerId;
 
         /**
-         * <p>The region ID of the VBR.</p>
+         * <p>The ID of the region where the VBR is deployed.</p>
          */
         @NameInMap("VbrRegionId")
         public String vbrRegionId;
@@ -214,6 +217,14 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
         public Boolean getAutoPublishRouteEnabled() {
             return this.autoPublishRouteEnabled;
+        }
+
+        public ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
         }
 
         public ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments setCreationTime(String creationTime) {

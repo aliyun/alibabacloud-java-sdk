@@ -10,6 +10,9 @@ public class ListTransitRoutersRequest extends TeaModel {
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The field that is used to enable or disable a feature of the transit router.</p>
+     */
     @NameInMap("FeatureFilter")
     public java.util.List<ListTransitRoutersRequestFeatureFilter> featureFilter;
 
@@ -20,7 +23,7 @@ public class ListTransitRoutersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -45,11 +48,22 @@ public class ListTransitRoutersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the transit router. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**: The transit router is being created.</p>
+     * <p>*   **Active**: The transit router is available.</p>
+     * <p>*   **Modifying**: The transit router is being modified</p>
+     * <p>*   **Deleting**: The transit router is being deleted.</p>
+     * <p>*   **Upgrading**: The transit router is being upgraded.</p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRoutersRequestTag> tag;
@@ -60,9 +74,20 @@ public class ListTransitRoutersRequest extends TeaModel {
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <p>The name of the Enterprise Edition transit router.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("TransitRouterName")
     public String transitRouterName;
 
+    /**
+     * <p>The edition of the transit router. Valid values:</p>
+     * <br>
+     * <p>*   **Enterprise**: Enhance Edition</p>
+     * <p>*   **Basic**: Basic Edition</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -184,9 +209,20 @@ public class ListTransitRoutersRequest extends TeaModel {
     }
 
     public static class ListTransitRoutersRequestFeatureFilter extends TeaModel {
+        /**
+         * <p>The value of the field that is used to enable or disable a feature of the transit router. Supported fields:</p>
+         * <br>
+         * <p>*   **Multicast**: the multicast feature.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The fields that are used to enable or disable the features of the transit router. The **Multicast** field supports only one value. Valid values:</p>
+         * <br>
+         * <p>*   **Enabled**: enables multicast.</p>
+         * <p>*   **Disabled**: disables multicast.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
@@ -215,9 +251,9 @@ public class ListTransitRoutersRequest extends TeaModel {
 
     public static class ListTransitRoutersRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources. </p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -225,11 +261,11 @@ public class ListTransitRoutersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources. </p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

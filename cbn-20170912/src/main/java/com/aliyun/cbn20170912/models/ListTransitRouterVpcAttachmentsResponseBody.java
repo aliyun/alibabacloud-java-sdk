@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -32,7 +32,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The information about the VPC connection.</p>
+     * <p>A list of VPC connections.</p>
      */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
@@ -84,13 +84,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsTags extends TeaModel {
         /**
-         * <p>The key of tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -132,7 +132,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The ID of the zone in which the instance is located.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -169,10 +169,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
+        @NameInMap("CenId")
+        public String cenId;
+
         /**
          * <p>The billing method of the VPC connection.</p>
          * <br>
-         * <p>Valid value: **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.</p>
+         * <p>The value is **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
@@ -185,6 +188,12 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The entity that pays the fees of the network instance. Valid values:</p>
+         * <br>
+         * <p>*   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.</p>
+         * <p>*   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 
@@ -197,18 +206,18 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The status of the VPC connection.</p>
+         * <p>The status of the VPC connection. Valid values:</p>
          * <br>
-         * <p>*   **Attached**: The VPC connection is created on the transit router.</p>
-         * <p>*   **Attaching**: The VPC connection is being created on the transit router.</p>
-         * <p>*   **Detaching**: The VPC connection is being deleted from the transit router.</p>
-         * <p>*   **Detached**: The VPC connection is deleted from the transit router.</p>
+         * <p>*   **Attached**: attached to the transit router.</p>
+         * <p>*   **Attaching**: being attached to the transit router.</p>
+         * <p>*   **Detaching**: being detached from the transit router.</p>
+         * <p>*   **Detached**: detached from the transit router.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsTags> tags;
@@ -250,7 +259,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public Long vpcOwnerId;
 
         /**
-         * <p>The region ID of the VPC.</p>
+         * <p>The ID of the region where the VPC is deployed.</p>
          */
         @NameInMap("VpcRegionId")
         public String vpcRegionId;
@@ -264,6 +273,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public static ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments build(java.util.Map<String, ?> map) throws Exception {
             ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments self = new ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments();
             return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
         }
 
         public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments setChargeType(String chargeType) {

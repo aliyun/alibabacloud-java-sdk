@@ -12,6 +12,9 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     @NameInMap("NextHop")
     public String nextHop;
 
+    @NameInMap("NextHopInstanceId")
+    public String nextHopInstanceId;
+
     /**
      * <p>The type of the next hop. Valid values:</p>
      * <br>
@@ -67,6 +70,9 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Status")
+    public String status;
+
     /**
      * <p>The ID of the transit router.</p>
      */
@@ -90,6 +96,14 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     }
     public String getNextHop() {
         return this.nextHop;
+    }
+
+    public ListTransitRouterPrefixListAssociationRequest setNextHopInstanceId(String nextHopInstanceId) {
+        this.nextHopInstanceId = nextHopInstanceId;
+        return this;
+    }
+    public String getNextHopInstanceId() {
+        return this.nextHopInstanceId;
     }
 
     public ListTransitRouterPrefixListAssociationRequest setNextHopType(String nextHopType) {
@@ -170,6 +184,14 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ListTransitRouterPrefixListAssociationRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListTransitRouterPrefixListAssociationRequest setTransitRouterId(String transitRouterId) {

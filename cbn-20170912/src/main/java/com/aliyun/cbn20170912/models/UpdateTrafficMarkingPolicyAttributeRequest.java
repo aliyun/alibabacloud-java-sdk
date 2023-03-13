@@ -4,25 +4,31 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
+    /**
+     * <p>The traffic classification rules to be added to the traffic marking policy.</p>
+     */
     @NameInMap("AddTrafficMatchRules")
     public java.util.List<UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules> addTrafficMatchRules;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The traffic classification rules to be deleted from the traffic marking policy.</p>
+     */
     @NameInMap("DeleteTrafficMatchRules")
     public java.util.List<UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules> deleteTrafficMatchRules;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   **true**: checks the request but does not modify the name and description of the traffic marking policy. The system checks whether the required parameters are set, whether the formats of the values are valid, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): checks the request. If the request passes the check, the name and description of the traffic marking policy are modified.</p>
+     * <p>*   **true**: preforms a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -56,7 +62,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
     /**
      * <p>The new name of the traffic marking policy.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("TrafficMarkingPolicyName")
     public String trafficMarkingPolicyName;
@@ -155,27 +161,97 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
     }
 
     public static class UpdateTrafficMarkingPolicyAttributeRequestAddTrafficMatchRules extends TeaModel {
+        /**
+         * <p>The destination CIDR block that is used to match packets.</p>
+         * <br>
+         * <p>The traffic classification rule matches the packets whose destination IP addresses fall within the specified destination CIDR block. If you do not set this parameter, packets are considered a match regardless of the destination IP address.</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules at a time. You can specify a destination CIDR block for each traffic classification rule.</p>
+         */
         @NameInMap("DstCidr")
         public String dstCidr;
 
+        /**
+         * <p>The destination port range that is used to match packets. Valid values: **-1** and **1** to **65535**.</p>
+         * <br>
+         * <p>The traffic classification rule matches the packets whose destination ports fall within the destination port range. If you do not set this parameter, packets are considered a match regardless of the destination port.</p>
+         * <br>
+         * <p>You can specify at most two ports. Take note of the following rules:</p>
+         * <br>
+         * <p>*   If you enter only one port number such as 1, the system matches the packets whose destination port is port 1.</p>
+         * <p>*   If you enter two port numbers such as 1 and 200, the system matches the packets whose destination ports fall between 1 and 200.</p>
+         * <p>*   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the destination port.</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules at a time. You can specify a destination port range for each traffic classification rule.</p>
+         */
         @NameInMap("DstPortRange")
         public java.util.List<Integer> dstPortRange;
 
+        /**
+         * <p>The differentiated services code point (DSCP) value that is used to match packets. Valid values: **0** to **63**.</p>
+         * <br>
+         * <p>The traffic classification rule matches the packets that contain the specified DSCP value. If you do not set this parameter, packets are considered a match regardless of the DSCP value.</p>
+         * <br>
+         * <p>>  The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules at a time. You can specify a DSCP value for each traffic classification rule.</p>
+         */
         @NameInMap("MatchDscp")
         public Integer matchDscp;
 
+        /**
+         * <p>The protocol that is used to match packets.</p>
+         * <br>
+         * <p>Valid values: **HTTP**, **HTTPS**, **TCP**, **UDP**, **SSH**, and **Telnet**. For more information, log on to the [Cloud Enterprise Network (CEN) console](https://cen.console.aliyun.com/cen/list).</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules at a time. You can specify a protocol for each traffic classification rule.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The source CIDR block that is used to match packets.</p>
+         * <br>
+         * <p>The traffic classification rule matches the packets whose source IP addresses fall within the specified source CIDR block. If you do not set this parameter, packets are considered a match regardless of the source IP address.</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules at a time. You can specify a source CIDR block for each traffic classification rule.</p>
+         */
         @NameInMap("SrcCidr")
         public String srcCidr;
 
+        /**
+         * <p>The source port range that is used to match packets. Valid values: **-1** and **1** to **65535**.</p>
+         * <br>
+         * <p>The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not set this parameter, packets are considered a match regardless of the source port.</p>
+         * <br>
+         * <p>You can specify at most two ports. Take note of the following rules:</p>
+         * <br>
+         * <p>*   If you enter only one port number such as 1, the system matches the packets whose source port is 1.</p>
+         * <p>*   If you enter two port numbers such as 1 and 200, the system matches the packets whose source ports fall between 1 and 200.</p>
+         * <p>*   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the source port.</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules at a time. You can specify a source port range for each traffic classification rule.</p>
+         */
         @NameInMap("SrcPortRange")
         public java.util.List<Integer> srcPortRange;
 
+        /**
+         * <p>The description of the traffic classification rule.</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules at a time. You can specify a description for each traffic classification rule.</p>
+         * <br>
+         * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.</p>
+         */
         @NameInMap("TrafficMatchRuleDescription")
         public String trafficMatchRuleDescription;
 
+        /**
+         * <p>The name of the traffic classification rule.</p>
+         * <br>
+         * <p>You can create up to 50 traffic classification rules at a time. You can specify a name for each traffic classification rule.</p>
+         * <br>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+         */
         @NameInMap("TrafficMatchRuleName")
         public String trafficMatchRuleName;
 
@@ -251,27 +327,53 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends TeaModel {
     }
 
     public static class UpdateTrafficMarkingPolicyAttributeRequestDeleteTrafficMatchRules extends TeaModel {
+        /**
+         * <p>The destination CIDR block that is used to match data packets.</p>
+         */
         @NameInMap("DstCidr")
         public String dstCidr;
 
+        /**
+         * <p>The destination port range that is used to match packets. Valid values: **-1** and **1** to **65535**.</p>
+         */
         @NameInMap("DstPortRange")
         public java.util.List<Integer> dstPortRange;
 
+        /**
+         * <p>The DSCP value that is used to match packets.</p>
+         */
         @NameInMap("MatchDscp")
         public Integer matchDscp;
 
+        /**
+         * <p>The protocol that is used to match packets.</p>
+         * <br>
+         * <p>Valid values: **HTTP**, **HTTPS**, **TCP**, **UDP**, **SSH**, and **Telnet**. For more information, log on to the [Cloud Enterprise Network (CEN) console](https://cen.console.aliyun.com/cen/list).</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The source CIDR block that is used to match packets.</p>
+         */
         @NameInMap("SrcCidr")
         public String srcCidr;
 
+        /**
+         * <p>The source port range that is used to match packets. Valid values: **-1** and **1** to **65535**.</p>
+         */
         @NameInMap("SrcPortRange")
         public java.util.List<Integer> srcPortRange;
 
+        /**
+         * <p>The description of the traffic classification rule.</p>
+         */
         @NameInMap("TrafficMatchRuleDescription")
         public String trafficMatchRuleDescription;
 
+        /**
+         * <p>The name of the traffic classification rule.</p>
+         */
         @NameInMap("TrafficMatchRuleName")
         public String trafficMatchRuleName;
 

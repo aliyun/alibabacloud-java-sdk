@@ -153,6 +153,9 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         @NameInMap("CenBandwidthPackageId")
         public String cenBandwidthPackageId;
 
+        @NameInMap("CenId")
+        public String cenId;
+
         /**
          * <p>The time when the cross-region connection was created.</p>
          * <br>
@@ -278,6 +281,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
         public String getCenBandwidthPackageId() {
             return this.cenBandwidthPackageId;
+        }
+
+        public ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
         }
 
         public ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments setCreationTime(String creationTime) {

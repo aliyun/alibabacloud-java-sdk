@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. </p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -21,8 +21,8 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
      * <br>
-     * <p>- If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>- If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -66,7 +66,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends TeaMode
     public String transitRouterMulticastDomainId;
 
     /**
-     * <p>The IDs of the vSwitches.</p>
+     * <p>The vSwitch IDs.</p>
      * <br>
      * <p>You can specify at most 20 IDs.</p>
      */

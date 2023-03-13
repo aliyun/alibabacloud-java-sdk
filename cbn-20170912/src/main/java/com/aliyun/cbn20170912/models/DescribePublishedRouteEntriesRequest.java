@@ -11,7 +11,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the network instance attached to the CEN instance.</p>
+     * <p>The ID of the network instance.</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
@@ -25,7 +25,7 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     public String childInstanceRegionId;
 
     /**
-     * <p>The ID of the route table configured on the network instance.</p>
+     * <p>The ID of the route table of the network instance.</p>
      */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
@@ -33,9 +33,9 @@ public class DescribePublishedRouteEntriesRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **VBR**</p>
-     * <p>*   **CCN**</p>
+     * <p>*   **VPC**: VPC</p>
+     * <p>*   **VBR**: VBR</p>
+     * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;

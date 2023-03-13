@@ -11,7 +11,7 @@ public class DescribeCenAttachedChildInstancesRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The region ID of the network instance.</p>
+     * <p>The ID of the region where the network instance is deployed.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -41,7 +41,7 @@ public class DescribeCenAttachedChildInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

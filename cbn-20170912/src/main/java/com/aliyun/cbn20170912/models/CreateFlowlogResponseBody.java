@@ -17,7 +17,7 @@ public class CreateFlowlogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <br>
      * <p>*   **true**: yes</p>
      * <p>*   **false**: no</p>

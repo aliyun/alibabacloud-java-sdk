@@ -11,7 +11,10 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for returning the next page when the data is returned in more than one page.</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -28,6 +31,13 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the associated forwarding correlation. Valid values:</p>
+     * <br>
+     * <p>*   **Active**: The associated forwarding correlation is available.</p>
+     * <p>*   **Associating**: The associated forwarding correlation is being created.</p>
+     * <p>*   **Dissociating**: The associated forwarding correlation is being deleted.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -37,9 +47,20 @@ public class ListTransitRouterRouteTableAssociationsRequest extends TeaModel {
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The ID of the next hop.</p>
+     */
     @NameInMap("TransitRouterAttachmentResourceId")
     public String transitRouterAttachmentResourceId;
 
+    /**
+     * <p>The type of next hop. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VBR**: virtual border router (VBR)</p>
+     * <p>*   **TR**: transit router</p>
+     * <p>*   **VPN**: VPN attachment</p>
+     */
     @NameInMap("TransitRouterAttachmentResourceType")
     public String transitRouterAttachmentResourceType;
 

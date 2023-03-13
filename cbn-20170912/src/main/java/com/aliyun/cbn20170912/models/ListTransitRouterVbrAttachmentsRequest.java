@@ -11,13 +11,13 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The number of entries to return per page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token for returning the next page when the data is returned in more than one page.</p>
+     * <p>The token that determines the start point of the query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -43,9 +43,9 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The information about the tags.</p>
      * <br>
-     * <p>You can specify at most 20 tags.</p>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterVbrAttachmentsRequestTag> tag;
@@ -157,9 +157,9 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
 
     public static class ListTransitRouterVbrAttachmentsRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources. </p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -167,11 +167,11 @@ public class ListTransitRouterVbrAttachmentsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources. </p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

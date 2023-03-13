@@ -135,16 +135,15 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether to allow the system to automatically add the CIDR block to the route table of the transit router.  </p>
+         * <p>Indicates whether the system is allowed to automatically add a route to the route table of the transit router. Valid values:</p>
          * <br>
-         * <p>- **true**: yes  </p>
+         * <p>*   **true**: yes</p>
          * <br>
-         * <p>A value of **true** indicates that after you create a private VPN connection and enable route learning for the VPN connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. </p>
+         * <p>        A value of **true** indicates that after you create a private VPN connection and create a route learning correlation for the private VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning correlation with the private VPN connection:</p>
+         * <p>          A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. </p>
+         * <p>          The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. </p>
          * <br>
-         * <p>The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.  </p>
-         * <br>
-         * <p>The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.</p>
-         * <p>- **false**: no</p>
+         * <p>*   **false**: no</p>
          */
         @NameInMap("PublishCidrRoute")
         public Boolean publishCidrRoute;
@@ -218,7 +217,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         /**
          * <p>The time when the transit router was created.</p>
          * <br>
-         * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -257,7 +256,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTags> tags;
 
         /**
-         * <p>The information about the CIDR block of the transit router.</p>
+         * <p>The CIDR blocks of the transit router.</p>
          */
         @NameInMap("TransitRouterCidrList")
         public java.util.List<ListTransitRoutersResponseBodyTransitRoutersTransitRouterCidrList> transitRouterCidrList;

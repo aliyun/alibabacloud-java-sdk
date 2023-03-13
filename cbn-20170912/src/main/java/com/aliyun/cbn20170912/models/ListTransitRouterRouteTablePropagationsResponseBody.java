@@ -11,7 +11,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     public Integer maxResults;
 
     /**
-     * <p>The token for returning the next page when the data is returned in more than one page.</p>
+     * <p>The token that determines the start point of the query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -29,7 +29,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     public Integer totalCount;
 
     /**
-     * <p>The list of route learning correlations.</p>
+     * <p>A list of route learning correlations.</p>
      */
     @NameInMap("TransitRouterPropagations")
     public java.util.List<ListTransitRouterRouteTablePropagationsResponseBodyTransitRouterPropagations> transitRouterPropagations;
@@ -89,21 +89,21 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         /**
          * <p>The type of next hop. Valid values:</p>
          * <br>
-         * <p>*   **VPC**: a virtual private cloud (VPC)</p>
-         * <p>*   **CCN**: a Cloud Connect Network (CCN) instance</p>
-         * <p>*   **VBR**: a VBR</p>
-         * <p>*   **TR**: a transit router</p>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **VBR**: VBR</p>
+         * <p>*   **TR**: transit router</p>
+         * <p>*   **VPN**: VPN connection</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The state of the route learning correlation. Valid values:</p>
+         * <p>The status of the route learning correlation. Valid values:</p>
          * <br>
-         * <p>*   **Enabling**</p>
-         * <p>*   **Disabling**</p>
-         * <p>*   **Active**</p>
-         * <p>*   **Deleted**</p>
+         * <p>*   **Enabling**: being enabled</p>
+         * <p>*   **Disabling**: being disabled</p>
+         * <p>*   **Active**: available</p>
+         * <p>*   **Deleted**: deleted</p>
          */
         @NameInMap("Status")
         public String status;

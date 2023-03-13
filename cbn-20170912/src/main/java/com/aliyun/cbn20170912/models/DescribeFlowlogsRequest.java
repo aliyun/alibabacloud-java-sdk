@@ -13,9 +13,9 @@ public class DescribeFlowlogsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -37,7 +37,7 @@ public class DescribeFlowlogsRequest extends TeaModel {
     /**
      * <p>The name of the flow log.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("FlowLogName")
     public String flowLogName;
@@ -100,7 +100,9 @@ public class DescribeFlowlogsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeFlowlogsRequestTag> tag;
@@ -254,9 +256,9 @@ public class DescribeFlowlogsRequest extends TeaModel {
 
     public static class DescribeFlowlogsRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources.</p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -264,11 +266,11 @@ public class DescribeFlowlogsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources.</p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

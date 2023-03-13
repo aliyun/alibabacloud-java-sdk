@@ -17,7 +17,7 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -29,7 +29,7 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the VPC.</p>
+     * <p>The ID of the region where the VPC is deployed.</p>
      * <br>
      * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
@@ -49,7 +49,7 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The ID of the zone where the instance resides.</p>
      * <br>
      * <p>*   If you specify a zone ID, the system queries the information about the vSwitches in the specified zone.</p>
      * <p>*   If you do not specify a zone ID, the system queries the information about the vSwitches in all zones.</p>

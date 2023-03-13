@@ -11,10 +11,10 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
      * <br>
-     * <p>*   If the value returned of **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,13 +26,13 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The information about the multicast group.</p>
+     * <p>A list of multicast groups.</p>
      */
     @NameInMap("TransitRouterMulticastGroups")
     public java.util.List<ListTransitRouterMulticastGroupsResponseBodyTransitRouterMulticastGroups> transitRouterMulticastGroups;

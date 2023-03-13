@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -13,18 +13,18 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** of each API request may be different.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, an Enterprise Edition transit router is created.</p>
-     * <p>*   **true**: prechecks the request but does not create the Enterprise Edition transit router. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -52,28 +52,34 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the multicast feature for the Enterprise Edition transit router. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): disables multicast</p>
+     * <p>*   **true**: enables multicast</p>
      * <br>
-     * <p>The multicast feature is supported only in specific regions. You can call [ListTransitRouterAvailableResource](~~261356~~) to query the regions that support multicast.</p>
+     * <p>The multicast feature is supported only in specific regions. You can call the [ListTransitRouterAvailableResource](~~261356~~) operation to query the regions that support multicast.</p>
      */
     @NameInMap("SupportMulticast")
     public Boolean supportMulticast;
 
     /**
-     * <p>The tags.</p>
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTransitRouterShrinkRequestTag> tag;
 
     /**
-     * <p>The CIDR block list of the transit router.</p>
+     * <p>The CIDR blocks of the transit router.</p>
+     * <br>
+     * <p>You can add up to five CIDR blocks in each call. For more information about CIDR blocks of transit routers, see [CIDR blocks of transit routers](~~462635~~).</p>
+     * <br>
+     * <p>> Only Enterprise Edition transit routers support CIDR blocks.</p>
      */
     @NameInMap("TransitRouterCidrList")
     public String transitRouterCidrListShrink;
 
     /**
-     * <p>The description of the Enterprise Edition transit router instance.</p>
+     * <p>The description of the Enterprise Edition transit router.</p>
      * <br>
      * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
      */
@@ -199,9 +205,9 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
 
     public static class CreateTransitRouterShrinkRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources. </p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -209,11 +215,11 @@ public class CreateTransitRouterShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources. </p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

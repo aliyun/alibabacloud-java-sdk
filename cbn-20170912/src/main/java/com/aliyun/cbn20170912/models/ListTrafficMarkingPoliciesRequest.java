@@ -13,8 +13,8 @@ public class ListTrafficMarkingPoliciesRequest extends TeaModel {
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
      * <br>
-     * <p>- If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>- If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.</p>
+     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowlogsResponseBody extends TeaModel {
     /**
-     * <p>The information about the flow log.</p>
+     * <p>A list of flow logs.</p>
      */
     @NameInMap("FlowLogs")
     public DescribeFlowlogsResponseBodyFlowLogs flowLogs;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -29,7 +29,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <br>
      * <p>*   **true**: yes</p>
      * <p>*   **false**: no</p>
@@ -38,7 +38,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -98,13 +98,13 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
 
     public static class DescribeFlowlogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -184,6 +184,9 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         @NameInMap("FlowLogName")
         public String flowLogName;
 
+        /**
+         * <p>The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.</p>
+         */
         @NameInMap("Interval")
         public Long interval;
 
@@ -206,7 +209,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the flow log.</p>
+         * <p>The status of the flow log. Valid values:</p>
          * <br>
          * <p>*   **Active**: The flow log is enabled.</p>
          * <p>*   **Inactive**: The flow log is disabled.</p>
@@ -215,11 +218,14 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("Tags")
         public DescribeFlowlogsResponseBodyFlowLogsFlowLogTags tags;
 
+        /**
+         * <p>The ID of the network instance connection.</p>
+         */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
 

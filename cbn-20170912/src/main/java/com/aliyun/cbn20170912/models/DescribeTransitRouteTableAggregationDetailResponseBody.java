@@ -4,15 +4,27 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The configuration of the aggregate route.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeTransitRouteTableAggregationDetailResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -54,12 +66,27 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
     }
 
     public static class DescribeTransitRouteTableAggregationDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The error message returned if the configuration of the aggregate route fails.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) for which the aggregate route is configured.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The status of the aggregate route. Valid values:</p>
+         * <br>
+         * <p>*   **Configured**: The aggregate route is advertised to the VPC.</p>
+         * <p>*   **Configuring**: The aggregate route is being advertised.</p>
+         * <p>*   **ConfigFailed**: The aggregate route failed to be advertised.</p>
+         * <p>*   **PartialConfigured**: Some content of the aggregate route failed to be advertised.</p>
+         * <p>*   **Deleting**: The aggregate route is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 

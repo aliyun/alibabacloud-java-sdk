@@ -152,6 +152,9 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
+        @NameInMap("CenId")
+        public String cenId;
+
         /**
          * <p>The billing method of the VPC connection.</p>
          * <br>
@@ -254,6 +257,14 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         }
         public Boolean getAutoPublishRouteEnabled() {
             return this.autoPublishRouteEnabled;
+        }
+
+        public ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
         }
 
         public ListTransitRouterVpnAttachmentsResponseBodyTransitRouterAttachments setChargeType(String chargeType) {

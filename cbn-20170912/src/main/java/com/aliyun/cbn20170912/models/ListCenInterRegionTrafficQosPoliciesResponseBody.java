@@ -11,10 +11,10 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. </p>
+     * <p>The token that determines the start point of the query.</p>
      * <br>
-     * <p>- If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
-     * <p>- If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <p>*   If **NextToken** was not returned in the previous query, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,7 +26,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -180,13 +180,13 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         public String trafficQosPolicyName;
 
         /**
-         * <p>The status of the QoS policy. </p>
+         * <p>The status of the QoS policy. Valid values:</p>
          * <br>
-         * <p>- **Creating**: The QoS policy is being created.</p>
-         * <p>- **Active**: The QoS policy is available.</p>
-         * <p>- **Modifying**: The QoS policy is being modified</p>
-         * <p>- **Deleting**: The QoS policy is being deleted.</p>
-         * <p>- **Deleted**: The QoS policy is deleted.</p>
+         * <p>*   **Creating**: The QoS policy is being created.</p>
+         * <p>*   **Active**: The QoS policy is available.</p>
+         * <p>*   **Modifying**: The QoS policy is being modified</p>
+         * <p>*   **Deleting**: The QoS policy is being deleted.</p>
+         * <p>*   **Deleted**: The QoS policy is deleted.</p>
          */
         @NameInMap("TrafficQosPolicyStatus")
         public String trafficQosPolicyStatus;

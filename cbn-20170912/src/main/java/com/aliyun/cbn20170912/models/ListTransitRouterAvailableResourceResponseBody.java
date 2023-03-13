@@ -30,6 +30,9 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     @NameInMap("SlaveZones")
     public java.util.List<String> slaveZones;
 
+    @NameInMap("SupportMulticast")
+    public Boolean supportMulticast;
+
     public static ListTransitRouterAvailableResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTransitRouterAvailableResourceResponseBody self = new ListTransitRouterAvailableResourceResponseBody();
         return TeaModel.build(map, self);
@@ -65,6 +68,14 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     }
     public java.util.List<String> getSlaveZones() {
         return this.slaveZones;
+    }
+
+    public ListTransitRouterAvailableResourceResponseBody setSupportMulticast(Boolean supportMulticast) {
+        this.supportMulticast = supportMulticast;
+        return this;
+    }
+    public Boolean getSupportMulticast() {
+        return this.supportMulticast;
     }
 
 }

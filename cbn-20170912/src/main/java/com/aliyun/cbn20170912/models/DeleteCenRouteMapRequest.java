@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteCenRouteMapRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The ID of the region where the routing policy is applied.</p>
+     * <p>The ID of the region in which the routing policy is applied.</p>
      * <br>
      * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */

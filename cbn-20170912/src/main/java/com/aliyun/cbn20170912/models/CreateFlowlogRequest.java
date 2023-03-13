@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFlowlogRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -13,7 +13,7 @@ public class CreateFlowlogRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
      */
@@ -31,7 +31,7 @@ public class CreateFlowlogRequest extends TeaModel {
     /**
      * <p>The name of the flow log.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("FlowLogName")
     public String flowLogName;
@@ -47,9 +47,7 @@ public class CreateFlowlogRequest extends TeaModel {
      * <br>
      * <p>*   If a Logstore is already created in the selected region, enter the name of the Logstore.</p>
      * <br>
-     * <p>*   If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore.</p>
-     * <br>
-     * <p>    The name of the Logstore. The naming conventions are:</p>
+     * <p>*   If no Logstores are created in the selected region, enter a name and the system automatically creates a Logstore. The name of the Logstore. The name must meet the following requirements:</p>
      * <br>
      * <p>    *   The name must be unique in a project.</p>
      * <p>    *   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).</p>
@@ -97,7 +95,9 @@ public class CreateFlowlogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the resource. You can enter most at 20 tags for the resource.</p>
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateFlowlogRequestTag> tag;
@@ -105,7 +105,7 @@ public class CreateFlowlogRequest extends TeaModel {
     /**
      * <p>The ID of the inter-region connection or the VBR connection.</p>
      * <br>
-     * <p>>  This parameter is required.</p>
+     * <p>> This parameter is required.</p>
      */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
@@ -231,7 +231,9 @@ public class CreateFlowlogRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -239,7 +241,9 @@ public class CreateFlowlogRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <br>
-         * <p>The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
      * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the next query.</p>
+     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -20,7 +20,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resources and tags.</p>
+     * <p>A list of resources and tags.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -62,9 +62,27 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The type of the resource. Valid values:</p>
          * <br>
-         * <p>The value is **cen**, which specifies CEN instances.</p>
+         * <p>**Cen**: CEN instance</p>
+         * <br>
+         * <p>**BandwidthPackage**: bandwidth plan</p>
+         * <br>
+         * <p>**TransitRouter**: transit router</p>
+         * <br>
+         * <p>**TransitRouterVpcAttachment**: virtual private cloud (VPC) connection</p>
+         * <br>
+         * <p>**TransitRouterVbrAttachment**: virtual border router (VBR) connection</p>
+         * <br>
+         * <p>**TransitRouterPeerAttachment**: inter-region connection</p>
+         * <br>
+         * <p>**TransitRouterVpnAttachment**: VPN connection</p>
+         * <br>
+         * <p>**TransitRouterRouteTable**: route table</p>
+         * <br>
+         * <p>**Flowlog**: flow log</p>
+         * <br>
+         * <p>**TransitRouterMulticastDomain**: multicast domain</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

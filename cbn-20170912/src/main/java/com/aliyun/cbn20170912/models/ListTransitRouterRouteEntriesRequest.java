@@ -25,16 +25,23 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PrefixListId")
+    public String prefixListId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RouteFilter")
+    public java.util.List<ListTransitRouterRouteEntriesRequestRouteFilter> routeFilter;
+
     /**
      * <p>The destination CIDR block of the route.</p>
      */
     @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
+    @Deprecated
     public String transitRouterRouteEntryDestinationCidrBlock;
 
     /**
@@ -59,6 +66,24 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     @NameInMap("TransitRouterRouteEntryNames")
     public java.util.List<String> transitRouterRouteEntryNames;
 
+    @NameInMap("TransitRouterRouteEntryNextHopId")
+    public String transitRouterRouteEntryNextHopId;
+
+    @NameInMap("TransitRouterRouteEntryNextHopResourceId")
+    public String transitRouterRouteEntryNextHopResourceId;
+
+    @NameInMap("TransitRouterRouteEntryNextHopResourceType")
+    public String transitRouterRouteEntryNextHopResourceType;
+
+    @NameInMap("TransitRouterRouteEntryNextHopType")
+    public String transitRouterRouteEntryNextHopType;
+
+    @NameInMap("TransitRouterRouteEntryOriginResourceId")
+    public String transitRouterRouteEntryOriginResourceId;
+
+    @NameInMap("TransitRouterRouteEntryOriginResourceType")
+    public String transitRouterRouteEntryOriginResourceType;
+
     /**
      * <p>The status of the route. Valid values: Valid values:</p>
      * <br>
@@ -68,6 +93,9 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
      */
     @NameInMap("TransitRouterRouteEntryStatus")
     public String transitRouterRouteEntryStatus;
+
+    @NameInMap("TransitRouterRouteEntryType")
+    public String transitRouterRouteEntryType;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
@@ -112,6 +140,14 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ListTransitRouterRouteEntriesRequest setPrefixListId(String prefixListId) {
+        this.prefixListId = prefixListId;
+        return this;
+    }
+    public String getPrefixListId() {
+        return this.prefixListId;
+    }
+
     public ListTransitRouterRouteEntriesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -126,6 +162,14 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ListTransitRouterRouteEntriesRequest setRouteFilter(java.util.List<ListTransitRouterRouteEntriesRequestRouteFilter> routeFilter) {
+        this.routeFilter = routeFilter;
+        return this;
+    }
+    public java.util.List<ListTransitRouterRouteEntriesRequestRouteFilter> getRouteFilter() {
+        return this.routeFilter;
     }
 
     public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryDestinationCidrBlock(String transitRouterRouteEntryDestinationCidrBlock) {
@@ -152,6 +196,54 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
         return this.transitRouterRouteEntryNames;
     }
 
+    public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryNextHopId(String transitRouterRouteEntryNextHopId) {
+        this.transitRouterRouteEntryNextHopId = transitRouterRouteEntryNextHopId;
+        return this;
+    }
+    public String getTransitRouterRouteEntryNextHopId() {
+        return this.transitRouterRouteEntryNextHopId;
+    }
+
+    public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryNextHopResourceId(String transitRouterRouteEntryNextHopResourceId) {
+        this.transitRouterRouteEntryNextHopResourceId = transitRouterRouteEntryNextHopResourceId;
+        return this;
+    }
+    public String getTransitRouterRouteEntryNextHopResourceId() {
+        return this.transitRouterRouteEntryNextHopResourceId;
+    }
+
+    public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryNextHopResourceType(String transitRouterRouteEntryNextHopResourceType) {
+        this.transitRouterRouteEntryNextHopResourceType = transitRouterRouteEntryNextHopResourceType;
+        return this;
+    }
+    public String getTransitRouterRouteEntryNextHopResourceType() {
+        return this.transitRouterRouteEntryNextHopResourceType;
+    }
+
+    public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryNextHopType(String transitRouterRouteEntryNextHopType) {
+        this.transitRouterRouteEntryNextHopType = transitRouterRouteEntryNextHopType;
+        return this;
+    }
+    public String getTransitRouterRouteEntryNextHopType() {
+        return this.transitRouterRouteEntryNextHopType;
+    }
+
+    public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryOriginResourceId(String transitRouterRouteEntryOriginResourceId) {
+        this.transitRouterRouteEntryOriginResourceId = transitRouterRouteEntryOriginResourceId;
+        return this;
+    }
+    public String getTransitRouterRouteEntryOriginResourceId() {
+        return this.transitRouterRouteEntryOriginResourceId;
+    }
+
+    public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryOriginResourceType(String transitRouterRouteEntryOriginResourceType) {
+        this.transitRouterRouteEntryOriginResourceType = transitRouterRouteEntryOriginResourceType;
+        return this;
+    }
+    public String getTransitRouterRouteEntryOriginResourceType() {
+        return this.transitRouterRouteEntryOriginResourceType;
+    }
+
     public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryStatus(String transitRouterRouteEntryStatus) {
         this.transitRouterRouteEntryStatus = transitRouterRouteEntryStatus;
         return this;
@@ -160,12 +252,50 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
         return this.transitRouterRouteEntryStatus;
     }
 
+    public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryType(String transitRouterRouteEntryType) {
+        this.transitRouterRouteEntryType = transitRouterRouteEntryType;
+        return this;
+    }
+    public String getTransitRouterRouteEntryType() {
+        return this.transitRouterRouteEntryType;
+    }
+
     public ListTransitRouterRouteEntriesRequest setTransitRouterRouteTableId(String transitRouterRouteTableId) {
         this.transitRouterRouteTableId = transitRouterRouteTableId;
         return this;
     }
     public String getTransitRouterRouteTableId() {
         return this.transitRouterRouteTableId;
+    }
+
+    public static class ListTransitRouterRouteEntriesRequestRouteFilter extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public java.util.List<String> value;
+
+        public static ListTransitRouterRouteEntriesRequestRouteFilter build(java.util.Map<String, ?> map) throws Exception {
+            ListTransitRouterRouteEntriesRequestRouteFilter self = new ListTransitRouterRouteEntriesRequestRouteFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTransitRouterRouteEntriesRequestRouteFilter setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTransitRouterRouteEntriesRequestRouteFilter setValue(java.util.List<String> value) {
+            this.value = value;
+            return this;
+        }
+        public java.util.List<String> getValue() {
+            return this.value;
+        }
+
     }
 
 }

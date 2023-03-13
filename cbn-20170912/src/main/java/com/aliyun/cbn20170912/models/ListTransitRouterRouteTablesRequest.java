@@ -11,7 +11,7 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token that determines the start point of the next query. Valid values:</p>
      * <br>
      * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
      * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
@@ -31,13 +31,16 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The features of the route table.</p>
+     */
     @NameInMap("RouteTableOptions")
     public ListTransitRouterRouteTablesRequestRouteTableOptions routeTableOptions;
 
     /**
-     * <p>The tags.</p>
+     * <p>The information about the tags.</p>
      * <br>
-     * <p>You can specify at most 20 tags.</p>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterRouteTablesRequestTag> tag;
@@ -49,19 +52,19 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The IDs of the route tables.</p>
+     * <p>The ID of the route table.</p>
      * <br>
-     * <p>You can query at most 20 route tables in each call.</p>
+     * <p>You can query multiple route tables in each call. Maximum value of **N**: **20**.</p>
      */
     @NameInMap("TransitRouterRouteTableIds")
     public java.util.List<String> transitRouterRouteTableIds;
 
     /**
-     * <p>The names of the route tables.</p>
+     * <p>The name of the route table.</p>
      * <br>
      * <p>You can query multiple route tables in each call. Maximum value of **N**: **20**.</p>
      * <br>
-     * <p>>  If you specify set both **TransitRouterRouteTableNames.N** and **TransitRouterRouteTableIds.N**, make sure that the specified name and ID belong to the same route table.</p>
+     * <p>> If you set both **TransitRouterRouteTableNames.N** and **TransitRouterRouteTableIds.N**, make sure that the specified name and ID belong to the same route table.</p>
      */
     @NameInMap("TransitRouterRouteTableNames")
     public java.util.List<String> transitRouterRouteTableNames;
@@ -80,7 +83,7 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
      * <p>The type of the route table. Valid values:</p>
      * <br>
      * <p>*   **Custom**: a custom route table</p>
-     * <p>*   **System**: the default route table</p>
+     * <p>*   **System**: the default system route table</p>
      */
     @NameInMap("TransitRouterRouteTableType")
     public String transitRouterRouteTableType;
@@ -195,6 +198,12 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
     }
 
     public static class ListTransitRouterRouteTablesRequestRouteTableOptions extends TeaModel {
+        /**
+         * <p>Specifies whether to enable equal-cost multi-path (ECMP) routing. Valid values:</p>
+         * <br>
+         * <p>*   **disable**: no If you disable ECMP routing, routes that are learned from different regions but have the same prefix and attributes select the transit route with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
+         * <p>*   **enable**: yes If you enable ECMP routing, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.</p>
+         */
         @NameInMap("MultiRegionECMP")
         public String multiRegionECMP;
 
@@ -215,9 +224,9 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
 
     public static class ListTransitRouterRouteTablesRequestTag extends TeaModel {
         /**
-         * <p>The tag keys of the resources. </p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.  </p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -225,11 +234,11 @@ public class ListTransitRouterRouteTablesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values of the resources.</p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;
