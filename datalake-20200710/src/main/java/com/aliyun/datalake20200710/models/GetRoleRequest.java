@@ -4,6 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetRoleRequest extends TeaModel {
+    /**
+     * <p>roleName</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 

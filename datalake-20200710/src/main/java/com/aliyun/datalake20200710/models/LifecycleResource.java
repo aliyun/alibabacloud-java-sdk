@@ -7,6 +7,9 @@ public class LifecycleResource extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("CatalogId")
+    public String catalogId;
+
     @NameInMap("Database")
     public LifecycleResourceDatabase database;
 
@@ -45,6 +48,14 @@ public class LifecycleResource extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public LifecycleResource setCatalogId(String catalogId) {
+        this.catalogId = catalogId;
+        return this;
+    }
+    public String getCatalogId() {
+        return this.catalogId;
     }
 
     public LifecycleResource setDatabase(LifecycleResourceDatabase database) {

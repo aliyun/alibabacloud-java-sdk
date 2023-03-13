@@ -4,6 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CreateCatalogRequest extends TeaModel {
+    /**
+     * <p>cataloginput</p>
+     */
     @NameInMap("CatalogInput")
     public CatalogInput catalogInput;
 

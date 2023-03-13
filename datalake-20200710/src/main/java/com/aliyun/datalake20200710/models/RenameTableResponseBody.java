@@ -16,6 +16,9 @@ public class RenameTableResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Async task Id</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

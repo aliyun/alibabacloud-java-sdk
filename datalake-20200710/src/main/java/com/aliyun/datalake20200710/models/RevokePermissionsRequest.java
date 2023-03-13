@@ -7,6 +7,9 @@ public class RevokePermissionsRequest extends TeaModel {
     @NameInMap("Accesses")
     public java.util.List<String> accesses;
 
+    /**
+     * <p>CatalogId</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 

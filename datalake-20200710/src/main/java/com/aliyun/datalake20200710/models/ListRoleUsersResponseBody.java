@@ -10,15 +10,24 @@ public class ListRoleUsersResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>NextPageToken</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>RequestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>user roles</p>
+     */
     @NameInMap("UserRoles")
     public java.util.List<UserRole> userRoles;
 

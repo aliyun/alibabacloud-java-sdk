@@ -13,8 +13,14 @@ public class PartitionProfile extends TeaModel {
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    @NameInMap("DmlTime")
-    public String dmlTime;
+    @NameInMap("LastAccessTime")
+    public String lastAccessTime;
+
+    @NameInMap("LastModifedTime")
+    public String lastModifedTime;
+
+    @NameInMap("LatestDate")
+    public String latestDate;
 
     @NameInMap("Location")
     public String location;
@@ -54,12 +60,28 @@ public class PartitionProfile extends TeaModel {
         return this.databaseName;
     }
 
-    public PartitionProfile setDmlTime(String dmlTime) {
-        this.dmlTime = dmlTime;
+    public PartitionProfile setLastAccessTime(String lastAccessTime) {
+        this.lastAccessTime = lastAccessTime;
         return this;
     }
-    public String getDmlTime() {
-        return this.dmlTime;
+    public String getLastAccessTime() {
+        return this.lastAccessTime;
+    }
+
+    public PartitionProfile setLastModifedTime(String lastModifedTime) {
+        this.lastModifedTime = lastModifedTime;
+        return this;
+    }
+    public String getLastModifedTime() {
+        return this.lastModifedTime;
+    }
+
+    public PartitionProfile setLatestDate(String latestDate) {
+        this.latestDate = latestDate;
+        return this;
+    }
+    public String getLatestDate() {
+        return this.latestDate;
     }
 
     public PartitionProfile setLocation(String location) {

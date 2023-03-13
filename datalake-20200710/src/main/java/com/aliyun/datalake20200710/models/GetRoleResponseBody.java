@@ -4,18 +4,33 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetRoleResponseBody extends TeaModel {
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>message</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>requestId</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>role</p>
+     */
     @NameInMap("Role")
     public Role role;
 
+    /**
+     * <p>success</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

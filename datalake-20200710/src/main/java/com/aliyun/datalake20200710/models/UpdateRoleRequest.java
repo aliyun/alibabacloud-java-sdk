@@ -7,6 +7,9 @@ public class UpdateRoleRequest extends TeaModel {
     @NameInMap("RoleInput")
     public RoleInput roleInput;
 
+    /**
+     * <p>RoleName</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 

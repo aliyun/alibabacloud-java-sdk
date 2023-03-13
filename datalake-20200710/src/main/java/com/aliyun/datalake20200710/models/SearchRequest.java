@@ -4,6 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SearchRequest extends TeaModel {
+    /**
+     * <p>catalogid</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 

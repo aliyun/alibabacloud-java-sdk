@@ -13,6 +13,9 @@ public class ListPartitionsResponseBody extends TeaModel {
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <p>PartitionSpecs</p>
+     */
     @NameInMap("PartitionSpecs")
     public java.util.List<PartitionSpec> partitionSpecs;
 
