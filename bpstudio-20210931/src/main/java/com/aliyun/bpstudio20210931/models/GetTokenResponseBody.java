@@ -54,27 +54,21 @@ public class GetTokenResponseBody extends TeaModel {
     }
 
     public static class GetTokenResponseBodyData extends TeaModel {
-        // oss访问access key id
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
-        // oss访问access key secret id
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
-        // oss文件保存bucket位置
         @NameInMap("Bucket")
         public String bucket;
 
-        // oss的endpoint
         @NameInMap("Endpoint")
         public String endpoint;
 
-        // oss访问token
         @NameInMap("SecurityToken")
         public String securityToken;
 
-        // oss快照保存bucket位置
         @NameInMap("SnapshotBucket")
         public String snapshotBucket;
 

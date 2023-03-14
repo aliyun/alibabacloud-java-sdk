@@ -4,30 +4,24 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationShrinkRequest extends TeaModel {
-    // 区域ID
     @NameInMap("AreaId")
     public String areaId;
 
-    // 幂等标记
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("Configuration")
     public String configurationShrink;
 
-    // 待替换实例列表
     @NameInMap("Instances")
     public String instancesShrink;
 
-    // 新建应用名
     @NameInMap("Name")
     public String name;
 
-    // 应用所属资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 模板ID
     @NameInMap("TemplateId")
     public String templateId;
 

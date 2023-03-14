@@ -76,35 +76,27 @@ public class ListTemplateResponseBody extends TeaModel {
     }
 
     public static class ListTemplateResponseBodyData extends TeaModel {
-        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 模板的图片链接
         @NameInMap("ImageURL")
         public String imageURL;
 
-        // 模板的名称
         @NameInMap("Name")
         public String name;
 
-        // 资源组ID
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // 模板的标签的ID
         @NameInMap("TagId")
         public Integer tagId;
 
-        // 模板标签的名称
         @NameInMap("TagName")
         public String tagName;
 
-        // 模板的ID
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 模板的拓扑图
         @NameInMap("TopoURL")
         public String topoURL;
 

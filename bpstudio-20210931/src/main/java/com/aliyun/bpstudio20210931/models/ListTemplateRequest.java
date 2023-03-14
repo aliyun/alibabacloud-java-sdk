@@ -4,7 +4,6 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateRequest extends TeaModel {
-    // 搜索关键字
     @NameInMap("Keyword")
     public String keyword;
 
@@ -14,18 +13,15 @@ public class ListTemplateRequest extends TeaModel {
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // 排序字段
     @NameInMap("OrderType")
     public Long orderType;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 模板的标签
     @NameInMap("TagList")
     public Integer tagList;
 
-    // 类型
     @NameInMap("Type")
     public String type;
 

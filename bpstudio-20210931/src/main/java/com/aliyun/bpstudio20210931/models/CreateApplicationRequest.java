@@ -4,35 +4,29 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
-    // 区域ID
     @NameInMap("AreaId")
     public String areaId;
 
-    // 幂等标记
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("Configuration")
-    public java.util.Map<String, ?> configuration;
+    public java.util.Map<String, String> configuration;
 
-    // 待替换实例列表
     @NameInMap("Instances")
     public java.util.List<CreateApplicationRequestInstances> instances;
 
-    // 新建应用名
     @NameInMap("Name")
     public String name;
 
-    // 应用所属资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 模板ID
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("Variables")
-    public java.util.Map<String, ?> variables;
+    public java.util.Map<String, String> variables;
 
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
@@ -55,11 +49,11 @@ public class CreateApplicationRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateApplicationRequest setConfiguration(java.util.Map<String, ?> configuration) {
+    public CreateApplicationRequest setConfiguration(java.util.Map<String, String> configuration) {
         this.configuration = configuration;
         return this;
     }
-    public java.util.Map<String, ?> getConfiguration() {
+    public java.util.Map<String, String> getConfiguration() {
         return this.configuration;
     }
 
@@ -95,24 +89,21 @@ public class CreateApplicationRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateApplicationRequest setVariables(java.util.Map<String, ?> variables) {
+    public CreateApplicationRequest setVariables(java.util.Map<String, String> variables) {
         this.variables = variables;
         return this;
     }
-    public java.util.Map<String, ?> getVariables() {
+    public java.util.Map<String, String> getVariables() {
         return this.variables;
     }
 
     public static class CreateApplicationRequestInstances extends TeaModel {
-        // 实例ID
         @NameInMap("Id")
         public String id;
 
-        // 图上实例名
         @NameInMap("NodeName")
         public String nodeName;
 
-        // 实例类型
         @NameInMap("NodeType")
         public String nodeType;
 

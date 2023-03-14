@@ -4,11 +4,9 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ValuateApplicationRequest extends TeaModel {
-    // 应用ID
     @NameInMap("ApplicationId")
     public String applicationId;
 
-    // 资源组ID
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

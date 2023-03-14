@@ -3,9 +3,9 @@ package com.aliyun.bpstudio20210931.models;
 
 import com.aliyun.tea.*;
 
-public class CreateApplicationResponseBody extends TeaModel {
+public class ChangeResourceGroupResponseBody extends TeaModel {
     @NameInMap("Code")
-    public Integer code;
+    public Long code;
 
     @NameInMap("Data")
     public String data;
@@ -13,23 +13,26 @@ public class CreateApplicationResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateApplicationResponseBody self = new CreateApplicationResponseBody();
+    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateApplicationResponseBody setCode(Integer code) {
+    public ChangeResourceGroupResponseBody setCode(Long code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public Long getCode() {
         return this.code;
     }
 
-    public CreateApplicationResponseBody setData(String data) {
+    public ChangeResourceGroupResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -37,7 +40,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         return this.data;
     }
 
-    public CreateApplicationResponseBody setMessage(String message) {
+    public ChangeResourceGroupResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -45,7 +48,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateApplicationResponseBody setRequestId(String requestId) {
+    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

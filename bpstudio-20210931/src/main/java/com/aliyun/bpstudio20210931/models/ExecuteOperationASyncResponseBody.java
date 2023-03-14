@@ -3,12 +3,12 @@ package com.aliyun.bpstudio20210931.models;
 
 import com.aliyun.tea.*;
 
-public class CreateApplicationResponseBody extends TeaModel {
+public class ExecuteOperationASyncResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
-    public String data;
+    public java.util.Map<String, String> data;
 
     @NameInMap("Message")
     public String message;
@@ -16,12 +16,12 @@ public class CreateApplicationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateApplicationResponseBody self = new CreateApplicationResponseBody();
+    public static ExecuteOperationASyncResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ExecuteOperationASyncResponseBody self = new ExecuteOperationASyncResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateApplicationResponseBody setCode(Integer code) {
+    public ExecuteOperationASyncResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -29,15 +29,15 @@ public class CreateApplicationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateApplicationResponseBody setData(String data) {
+    public ExecuteOperationASyncResponseBody setData(java.util.Map<String, String> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.Map<String, String> getData() {
         return this.data;
     }
 
-    public CreateApplicationResponseBody setMessage(String message) {
+    public ExecuteOperationASyncResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -45,7 +45,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateApplicationResponseBody setRequestId(String requestId) {
+    public ExecuteOperationASyncResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -10,11 +10,9 @@ public class GetApplicationResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetApplicationResponseBodyData data;
 
-    // 请求失败原因
     @NameInMap("Message")
     public String message;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
@@ -56,31 +54,24 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataChecklist extends TeaModel {
-        // 资源标记
         @NameInMap("Lifecycle")
         public String lifecycle;
 
-        // 区域
         @NameInMap("Region")
         public String region;
 
-        // 失败原因
         @NameInMap("Remark")
         public String remark;
 
-        // 产品code
         @NameInMap("ResourceCode")
         public String resourceCode;
 
-        // 实例名
         @NameInMap("ResourceName")
         public String resourceName;
 
-        // 校验结果
         @NameInMap("Result")
         public String result;
 
-        // 规格
         @NameInMap("Specification")
         public String specification;
 
@@ -148,54 +139,42 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataPriceList extends TeaModel {
-        // 支付类型
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // 数量
         @NameInMap("Count")
         public Long count;
 
-        // 实例名
         @NameInMap("InstanceName")
         public String instanceName;
 
-        // 资源标记
         @NameInMap("Lifecycle")
         public String lifecycle;
 
-        // 单价
         @NameInMap("OnePrice")
         public Float onePrice;
 
-        // 原价
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        // 时长
         @NameInMap("Period")
         public Float period;
 
-        // 总价
         @NameInMap("Price")
         public Float price;
 
-        // 单位
         @NameInMap("PriceUnit")
         public String priceUnit;
 
-        // 区域
         @NameInMap("Region")
         public String region;
 
         @NameInMap("Remark")
         public String remark;
 
-        // 产品code
         @NameInMap("ResourceCode")
         public String resourceCode;
 
-        // 规格
         @NameInMap("Specification")
         public String specification;
 
@@ -311,35 +290,27 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataResourceList extends TeaModel {
-        // 支付类型
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // 资源标记
         @NameInMap("Lifecycle")
         public String lifecycle;
 
-        // 部署结果
         @NameInMap("Remark")
         public String remark;
 
-        // 产品code
         @NameInMap("ResourceCode")
         public String resourceCode;
 
-        // 实例ID
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 实例名称
         @NameInMap("ResourceName")
         public String resourceName;
 
-        // 资源类型
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 资源部署结果
         @NameInMap("Status")
         public String status;
 
@@ -415,55 +386,42 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyData extends TeaModel {
-        // 应用ID
         @NameInMap("ApplicationId")
         public String applicationId;
 
-        // 校验结果列表
         @NameInMap("Checklist")
         public java.util.List<GetApplicationResponseBodyDataChecklist> checklist;
 
-        // 应用创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 应用描述
         @NameInMap("Description")
         public String description;
 
-        // 失败原因
         @NameInMap("Error")
         public String error;
 
-        // 数据库中图片地址
         @NameInMap("ImageURL")
         public String imageURL;
 
-        // 应用名
         @NameInMap("Name")
         public String name;
 
-        // 计费结果列表
         @NameInMap("PriceList")
         public java.util.List<GetApplicationResponseBodyDataPriceList> priceList;
 
-        // 应用所属资源组ID
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // 资源列表
         @NameInMap("ResourceList")
         public java.util.List<GetApplicationResponseBodyDataResourceList> resourceList;
 
-        // 应用状态
         @NameInMap("Status")
         public String status;
 
-        // 应用关联模板ID
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 应用topo地址
         @NameInMap("TopoURL")
         public String topoURL;
 
