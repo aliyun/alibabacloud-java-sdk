@@ -488,6 +488,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SplitVideoPartsResponse splitVideoPartsWithOptions(SplitVideoPartsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxTime)) {
+            body.put("MaxTime", request.maxTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minTime)) {
+            body.put("MinTime", request.minTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.template)) {
             body.put("Template", request.template);
         }

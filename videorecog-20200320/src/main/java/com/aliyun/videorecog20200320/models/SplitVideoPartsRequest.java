@@ -4,6 +4,12 @@ package com.aliyun.videorecog20200320.models;
 import com.aliyun.tea.*;
 
 public class SplitVideoPartsRequest extends TeaModel {
+    @NameInMap("MaxTime")
+    public Integer maxTime;
+
+    @NameInMap("MinTime")
+    public Integer minTime;
+
     @NameInMap("Template")
     public String template;
 
@@ -13,6 +19,22 @@ public class SplitVideoPartsRequest extends TeaModel {
     public static SplitVideoPartsRequest build(java.util.Map<String, ?> map) throws Exception {
         SplitVideoPartsRequest self = new SplitVideoPartsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SplitVideoPartsRequest setMaxTime(Integer maxTime) {
+        this.maxTime = maxTime;
+        return this;
+    }
+    public Integer getMaxTime() {
+        return this.maxTime;
+    }
+
+    public SplitVideoPartsRequest setMinTime(Integer minTime) {
+        this.minTime = minTime;
+        return this;
+    }
+    public Integer getMinTime() {
+        return this.minTime;
     }
 
     public SplitVideoPartsRequest setTemplate(String template) {
