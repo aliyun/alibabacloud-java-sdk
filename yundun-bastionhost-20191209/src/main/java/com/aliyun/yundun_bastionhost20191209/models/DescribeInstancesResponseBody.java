@@ -4,12 +4,21 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the queried bastion hosts.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<DescribeInstancesResponseBodyInstances> instances;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of bastion hosts that are queried.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,51 +52,116 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <p>The description of the bastion host.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The timestamp when the bastion host expires. Unit: milliseconds.</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The image version of the bastion host.</p>
+         */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
+        /**
+         * <p>The ID of the bastion host.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The state of the bastion host. Valid values:</p>
+         * <br>
+         * <p>*   **PENDING**: The bastion host is not initialized.</p>
+         * <p>*   **CREATING**: The bastion host is being created.</p>
+         * <p>*   **RUNNING**: The bastion host is running.</p>
+         * <p>*   **EXPIRED**: The bastion host expired.</p>
+         * <p>*   **CREATE_FAILED**: The bastion host fails to be created.</p>
+         * <p>*   **UPGRADING**: The configurations of the bastion host are being changed.</p>
+         * <p>*   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <p>The public O\&M address of the bastion host.</p>
+         */
         @NameInMap("InternetEndpoint")
         public String internetEndpoint;
 
+        /**
+         * <p>The private O\&M address of the bastion host.</p>
+         */
         @NameInMap("IntranetEndpoint")
         public String intranetEndpoint;
 
+        /**
+         * <p>Indicates whether the bastion host runs an earlier version. Valid values:</p>
+         * <br>
+         * <p>*   **true**: indicates that the bastion host runs V2 or V3.1.</p>
+         * <p>*   **false**:indicates that the bastion host runs V3.2.</p>
+         */
         @NameInMap("Legacy")
         public Boolean legacy;
 
+        /**
+         * <p>The license code of the bastion host.</p>
+         */
         @NameInMap("LicenseCode")
         public String licenseCode;
 
+        /**
+         * <p>The edition of the bastion host. Valid values:</p>
+         * <br>
+         * <p>*   **cloudbastion**: Basic</p>
+         * <p>*   **cloudbastion_ha**: Enterprise</p>
+         */
         @NameInMap("PlanCode")
         public String planCode;
 
+        /**
+         * <p>Indicates whether the bastion host can be accessed from the Internet. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The bastion host can be accessed from the Internet.</p>
+         * <p>*   **false**: The bastion host cannot be accessed from the Internet.</p>
+         */
         @NameInMap("PublicNetworkAccess")
         public Boolean publicNetworkAccess;
 
+        /**
+         * <p>The region ID of the bastion host.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the bastion host belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the bastion host belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the vSwitch to which the bastion host belongs.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 

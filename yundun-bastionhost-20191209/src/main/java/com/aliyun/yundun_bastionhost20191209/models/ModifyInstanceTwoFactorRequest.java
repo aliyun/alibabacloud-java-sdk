@@ -4,38 +4,50 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceTwoFactorRequest extends TeaModel {
-    @NameInMap("DingTalkConfig")
-    public String dingTalkConfig;
-
+    /**
+     * <p>Specifies whether to enable two-factor authentication. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables two-factor authentication.</p>
+     * <p>*   **false**: disables two-factor authentication.</p>
+     */
     @NameInMap("EnableTwoFactor")
     public String enableTwoFactor;
 
+    /**
+     * <p>The ID of the bastion host.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("MessageLanguage")
-    public String messageLanguage;
-
+    /**
+     * <p>The region ID of the bastion host.</p>
+     * <br>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: 0 to 168. Unit: hours. If you set this parameter to 0, the local user must pass two-factor authentication every time the local user logs on to the bastion host.</p>
+     */
     @NameInMap("SkipTwoFactorTime")
     public String skipTwoFactorTime;
 
+    /**
+     * <p>One or more methods that are used to send a verification code if two-factor authentication is enabled. If you set the EnableTwoFactor parameter to true, you must specify at least one method. Valid values:</p>
+     * <br>
+     * <p>*   **sms**: text message</p>
+     * <p>*   **email**: email</p>
+     * <p>*   **dingtalk**: Notice in DingTalk</p>
+     */
     @NameInMap("TwoFactorMethods")
     public String twoFactorMethods;
 
     public static ModifyInstanceTwoFactorRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceTwoFactorRequest self = new ModifyInstanceTwoFactorRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyInstanceTwoFactorRequest setDingTalkConfig(String dingTalkConfig) {
-        this.dingTalkConfig = dingTalkConfig;
-        return this;
-    }
-    public String getDingTalkConfig() {
-        return this.dingTalkConfig;
     }
 
     public ModifyInstanceTwoFactorRequest setEnableTwoFactor(String enableTwoFactor) {
@@ -52,14 +64,6 @@ public class ModifyInstanceTwoFactorRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ModifyInstanceTwoFactorRequest setMessageLanguage(String messageLanguage) {
-        this.messageLanguage = messageLanguage;
-        return this;
-    }
-    public String getMessageLanguage() {
-        return this.messageLanguage;
     }
 
     public ModifyInstanceTwoFactorRequest setRegionId(String regionId) {

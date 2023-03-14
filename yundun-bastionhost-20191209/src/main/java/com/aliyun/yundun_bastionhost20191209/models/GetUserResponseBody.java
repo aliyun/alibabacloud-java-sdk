@@ -4,9 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the user that was queried.</p>
+     */
     @NameInMap("User")
     public GetUserResponseBodyUser user;
 
@@ -32,33 +38,103 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUser extends TeaModel {
+        /**
+         * <p>The description of the user.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The display name of the user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        @NameInMap("EffectiveEndTime")
+        public Long effectiveEndTime;
+
+        @NameInMap("EffectiveStartTime")
+        public Long effectiveStartTime;
+
+        /**
+         * <p>The email address of the user.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The mobile number of the user.</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>The country where the mobile number of the user is registered. Valid values:</p>
+         * <br>
+         * <p>*   **CN**: the Chinese mainland, whose country calling code is +86</p>
+         * <p>*   **HK**: Hong Kong (China), whose country calling code is +852</p>
+         * <p>*   **MO**: Macau (China), whose country calling code is +853</p>
+         * <p>*   **TW**: Taiwan (China), whose country calling code is +886</p>
+         * <p>*   **RU**: Russia, whose country calling code is +7</p>
+         * <p>*   **SG**: Singapore, whose country calling code is +65</p>
+         * <p>*   **MY**: Malaysia, whose country calling code is +60</p>
+         * <p>*   **ID**: Indonesia, whose country calling code is +62</p>
+         * <p>*   **DE**: Germany, whose country calling code is +49</p>
+         * <p>*   **AU**: Australia, whose country calling code is +61</p>
+         * <p>*   **US**: United States, whose country calling code is +1</p>
+         * <p>*   **AE**: United Arab Emirates, whose country calling code is +971</p>
+         * <p>*   **JP**: Japan, whose country calling code is +81</p>
+         * <p>*   **GB**: United Kingdom, whose country calling code is +44</p>
+         * <p>*   **IN**: India, whose country calling code is +91</p>
+         * <p>*   **KR**: South Korea, whose country calling code is +82</p>
+         * <p>*   **PH**: Philippines, whose country calling code is +63</p>
+         * <p>*   **CH**: Switzerland, whose country calling code is +41</p>
+         * <p>*   **SE**: Sweden, whose country calling code is +46</p>
+         */
         @NameInMap("MobileCountryCode")
         public String mobileCountryCode;
 
+        @NameInMap("NeedResetPassword")
+        public Boolean needResetPassword;
+
+        /**
+         * <p>The source of the user. Valid values:</p>
+         * <br>
+         * <p>*   **Local**: a local user</p>
+         * <p>*   **Ram**: a RAM user</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The unique ID of the user.</p>
+         * <br>
+         * <p>>  This parameter uniquely identifies a RAM user of the Bastionhost instance. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.</p>
+         */
         @NameInMap("SourceUserId")
         public String sourceUserId;
 
+        @NameInMap("TwoFactorMethods")
+        public java.util.List<String> twoFactorMethods;
+
+        @NameInMap("TwoFactorStatus")
+        public String twoFactorStatus;
+
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The logon name of the user.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The statuses of the user.</p>
+         */
         @NameInMap("UserState")
         public java.util.List<String> userState;
 
@@ -81,6 +157,22 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public GetUserResponseBodyUser setEffectiveEndTime(Long effectiveEndTime) {
+            this.effectiveEndTime = effectiveEndTime;
+            return this;
+        }
+        public Long getEffectiveEndTime() {
+            return this.effectiveEndTime;
+        }
+
+        public GetUserResponseBodyUser setEffectiveStartTime(Long effectiveStartTime) {
+            this.effectiveStartTime = effectiveStartTime;
+            return this;
+        }
+        public Long getEffectiveStartTime() {
+            return this.effectiveStartTime;
         }
 
         public GetUserResponseBodyUser setEmail(String email) {
@@ -107,6 +199,14 @@ public class GetUserResponseBody extends TeaModel {
             return this.mobileCountryCode;
         }
 
+        public GetUserResponseBodyUser setNeedResetPassword(Boolean needResetPassword) {
+            this.needResetPassword = needResetPassword;
+            return this;
+        }
+        public Boolean getNeedResetPassword() {
+            return this.needResetPassword;
+        }
+
         public GetUserResponseBodyUser setSource(String source) {
             this.source = source;
             return this;
@@ -121,6 +221,22 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getSourceUserId() {
             return this.sourceUserId;
+        }
+
+        public GetUserResponseBodyUser setTwoFactorMethods(java.util.List<String> twoFactorMethods) {
+            this.twoFactorMethods = twoFactorMethods;
+            return this;
+        }
+        public java.util.List<String> getTwoFactorMethods() {
+            return this.twoFactorMethods;
+        }
+
+        public GetUserResponseBodyUser setTwoFactorStatus(String twoFactorStatus) {
+            this.twoFactorStatus = twoFactorStatus;
+            return this;
+        }
+        public String getTwoFactorStatus() {
+            return this.twoFactorStatus;
         }
 
         public GetUserResponseBodyUser setUserId(String userId) {

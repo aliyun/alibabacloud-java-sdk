@@ -4,12 +4,21 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostsForUserGroupResponseBody extends TeaModel {
+    /**
+     * <p>The hosts returned.</p>
+     */
     @NameInMap("Hosts")
     public java.util.List<ListHostsForUserGroupResponseBodyHosts> hosts;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of hosts returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,24 +52,51 @@ public class ListHostsForUserGroupResponseBody extends TeaModel {
     }
 
     public static class ListHostsForUserGroupResponseBodyHosts extends TeaModel {
+        /**
+         * <p>The endpoint type of the host. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: a public endpoint</p>
+         * <p>*   **Private**: an internal endpoint</p>
+         */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
+        /**
+         * <p>The description of the host.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The name of the host.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
+         */
         @NameInMap("HostPrivateAddress")
         public String hostPrivateAddress;
 
+        /**
+         * <p>The public endpoint of the host. The value is a domain name or an IP address.</p>
+         */
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
 
+        /**
+         * <p>The operating system of the host. Valid values:</p>
+         * <br>
+         * <p>*   **Linux**</p>
+         * <p>*   **Windows**</p>
+         */
         @NameInMap("OSType")
         public String OSType;
 

@@ -4,24 +4,58 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostGroupsForUserGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the host group that you want to query. Only exact match is supported.</p>
+     */
     @NameInMap("HostGroupName")
     public String hostGroupName;
 
+    /**
+     * <p>The ID of the Bastionhost instance where you want to query the host groups that the user group is authorized or not authorized to manage.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The category of the host group that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **Authorized**: Query the host groups that the user group is authorized to manage. This is the default value.</p>
+     * <p>*   **Unauthorized**: Query the host groups that the user group is not authorized to manage.</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.</p>
+     * <br>
+     * <p>>  We recommend that you do not leave the PageSize parameter empty.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The region ID of the Bastionhost instance where you want to query the host groups that the user group is authorized or not authorized to manage.</p>
+     * <br>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the user group.</p>
+     * <br>
+     * <p>>  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 

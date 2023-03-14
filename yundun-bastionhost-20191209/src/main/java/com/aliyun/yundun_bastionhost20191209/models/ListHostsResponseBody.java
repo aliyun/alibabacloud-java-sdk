@@ -4,12 +4,21 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostsResponseBody extends TeaModel {
+    /**
+     * <p>The hosts that were queried.</p>
+     */
     @NameInMap("Hosts")
     public java.util.List<ListHostsResponseBodyHosts> hosts;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of hosts that were queried.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,36 +52,85 @@ public class ListHostsResponseBody extends TeaModel {
     }
 
     public static class ListHostsResponseBodyHosts extends TeaModel {
+        /**
+         * <p>The endpoint type of the host. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: a public endpoint</p>
+         * <p>*   **Private**: an internal endpoint</p>
+         */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
+        /**
+         * <p>The description of the host.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The number of host accounts of the host.</p>
+         */
         @NameInMap("HostAccountCount")
         public Integer hostAccountCount;
 
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The name of the host.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The internal endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
+         */
         @NameInMap("HostPrivateAddress")
         public String hostPrivateAddress;
 
+        /**
+         * <p>The public endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
+         */
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
 
+        /**
+         * <p>The operating system of the host. Valid values:</p>
+         * <br>
+         * <p>*   **Linux**</p>
+         * <p>*   **Windows**</p>
+         */
         @NameInMap("OSType")
         public String OSType;
 
+        /**
+         * <p>The source of the host. Valid values:</p>
+         * <br>
+         * <p>*   **Local**: an on-premises host</p>
+         * <p>*   **Ecs**: an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **Rds**: a host in a dedicated cluster</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The ID of the ECS instance or dedicated cluster host that was queried.</p>
+         * <br>
+         * <p>>  No value is returned for this parameter if the **Source** parameter is set to **Local**.</p>
+         */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
+        /**
+         * <p>The status of the host. Valid values:</p>
+         * <br>
+         * <p>- **Normal**: The host is normal.</p>
+         * <br>
+         * <p>- **Release**: The host is released.</p>
+         */
         @NameInMap("SourceInstanceState")
         public String sourceInstanceState;
 

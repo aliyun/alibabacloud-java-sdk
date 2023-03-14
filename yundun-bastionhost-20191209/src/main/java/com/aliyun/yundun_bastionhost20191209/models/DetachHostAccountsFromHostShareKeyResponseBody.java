@@ -4,10 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
-    // Id of the request
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the call.</p>
+     */
     @NameInMap("Results")
     public java.util.List<DetachHostAccountsFromHostShareKeyResponseBodyResults> results;
 
@@ -33,15 +38,27 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
     }
 
     public static class DetachHostAccountsFromHostShareKeyResponseBodyResults extends TeaModel {
+        /**
+         * <p>The error code. If **OK** is returned, the disassociation was successful. If a different error code is returned, the disassociation failed.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The ID of the host account.</p>
+         */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
+        /**
+         * <p>The ID of the shared key.</p>
+         */
         @NameInMap("HostShareKeyId")
         public String hostShareKeyId;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Message")
         public String message;
 

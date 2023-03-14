@@ -4,36 +4,91 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class CreateHostRequest extends TeaModel {
+    /**
+     * <p>The endpoint type of the host that you want to create. Valid values:</p>
+     * <br>
+     * <p>*   **Public**: a public endpoint</p>
+     * <p>*   **Private**: an internal endpoint</p>
+     */
     @NameInMap("ActiveAddressType")
     public String activeAddressType;
 
+    /**
+     * <p>The description of the host that you want to create. The value can be up to 500 characters.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The name of the host that you want to create. The name can be up to 128 characters in length.</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>The internal endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</p>
+     * <br>
+     * <p>>  This parameter is required if the **ActiveAddressType** parameter is set to **Private**.</p>
+     */
     @NameInMap("HostPrivateAddress")
     public String hostPrivateAddress;
 
+    /**
+     * <p>The public endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</p>
+     * <br>
+     * <p>>  This parameter is required if the **ActiveAddressType** parameter is set to **Public**.</p>
+     */
     @NameInMap("HostPublicAddress")
     public String hostPublicAddress;
 
+    /**
+     * <p>The ID of the Bastionhost instance where you want to create the host.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the region where the ECS instance or dedicated cluster host that you want to create resides.</p>
+     * <br>
+     * <p>>  This parameter is required if the **Source** parameter is set to **Ecs** or **Rds**.</p>
+     */
     @NameInMap("InstanceRegionId")
     public String instanceRegionId;
 
+    /**
+     * <p>The operating system of the host that you want to create. Valid values:</p>
+     * <br>
+     * <p>*   **Linux**</p>
+     * <p>*   **Windows**</p>
+     */
     @NameInMap("OSType")
     public String OSType;
 
+    /**
+     * <p>The region ID of the Bastionhost instance where you want to create the host.</p>
+     * <br>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The source of the host that you want to create. Valid values:</p>
+     * <br>
+     * <p>*   **Local**: an on-premises host</p>
+     * <p>*   **Ecs**: an Elastic Compute Service (ECS) instance</p>
+     * <p>*   **Rds**: a host in a dedicated cluster</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The ID of the ECS instance or dedicated cluster host that you want to create.</p>
+     * <br>
+     * <p>>  This parameter is required if the **Source** parameter is set to **Ecs** or **Rds**.</p>
+     */
     @NameInMap("SourceInstanceId")
     public String sourceInstanceId;
 

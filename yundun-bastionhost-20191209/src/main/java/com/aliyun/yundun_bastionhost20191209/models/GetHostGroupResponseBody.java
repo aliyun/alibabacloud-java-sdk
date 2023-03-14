@@ -4,9 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetHostGroupResponseBody extends TeaModel {
+    /**
+     * <p>The details of the host group returned.</p>
+     */
     @NameInMap("HostGroup")
     public GetHostGroupResponseBodyHostGroup hostGroup;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class GetHostGroupResponseBody extends TeaModel {
     }
 
     public static class GetHostGroupResponseBodyHostGroup extends TeaModel {
+        /**
+         * <p>The description of the host group.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The ID of the host group.</p>
+         */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
+        /**
+         * <p>The name of the host group.</p>
+         */
         @NameInMap("HostGroupName")
         public String hostGroupName;
 

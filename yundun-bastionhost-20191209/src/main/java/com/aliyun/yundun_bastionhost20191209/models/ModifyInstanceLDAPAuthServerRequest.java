@@ -4,45 +4,90 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceLDAPAuthServerRequest extends TeaModel {
+    /**
+     * <p>The username of the account that is used for the LDAP server.</p>
+     */
     @NameInMap("Account")
     public String account;
 
+    /**
+     * <p>The Base distinguished name (DN).</p>
+     */
     @NameInMap("BaseDN")
     public String baseDN;
 
+    /**
+     * <p>The field that is used to indicate the email address of a user on the LDAP server.</p>
+     */
     @NameInMap("EmailMapping")
     public String emailMapping;
 
+    /**
+     * <p>The condition that is used to filter users.</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to support SSL. Valid values:</p>
+     * <br>
+     * <p>*   **true**: supports SSL.</p>
+     * <p>*   **false**: does not support SSL.</p>
+     */
     @NameInMap("IsSSL")
     public String isSSL;
 
+    /**
+     * <p>The field that is used to indicate the logon name of a user on the LDAP server.</p>
+     */
     @NameInMap("LoginNameMapping")
     public String loginNameMapping;
 
+    /**
+     * <p>The field that is used to indicate the mobile phone number of a user on the LDAP server.</p>
+     */
     @NameInMap("MobileMapping")
     public String mobileMapping;
 
+    /**
+     * <p>The field that is used to indicate the name of a user on the LDAP server.</p>
+     */
     @NameInMap("NameMapping")
     public String nameMapping;
 
+    /**
+     * <p>The password of the account that is used for the LDAP server.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The port that is used to access the LDAP server.</p>
+     */
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <p>The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The address of the LDAP server.</p>
+     */
     @NameInMap("Server")
     public String server;
 
+    /**
+     * <p>The address of the secondary LDAP server.</p>
+     */
     @NameInMap("StandbyServer")
     public String standbyServer;
 

@@ -4,15 +4,29 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the bastion host that you want to enable.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to obtain the ID of the bastion host.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the bastion host.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the security groups.</p>
+     */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    /**
+     * <p>The ID of the vSwitch to which the bastion host belongs.</p>
+     */
     @NameInMap("VswitchId")
     public String vswitchId;
 

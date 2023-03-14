@@ -4,15 +4,29 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the Bastionhost instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the resource.</p>
+     * <br>
+     * <p>Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

@@ -4,10 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetHostShareKeyResponseBody extends TeaModel {
+    /**
+     * <p>The details of the shared key.</p>
+     */
     @NameInMap("HostShareKey")
     public GetHostShareKeyResponseBodyHostShareKey hostShareKey;
 
-    // Id of the request
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,15 +38,27 @@ public class GetHostShareKeyResponseBody extends TeaModel {
     }
 
     public static class GetHostShareKeyResponseBodyHostShareKey extends TeaModel {
+        /**
+         * <p>The ID of the shared key.</p>
+         */
         @NameInMap("HostShareKeyId")
         public String hostShareKeyId;
 
+        /**
+         * <p>The name of the shared key.</p>
+         */
         @NameInMap("HostShareKeyName")
         public String hostShareKeyName;
 
+        /**
+         * <p>The time when the information about the shared key was last modified.</p>
+         */
         @NameInMap("LastModifyKeyAt")
         public Long lastModifyKeyAt;
 
+        /**
+         * <p>The fingerprint of the private key.</p>
+         */
         @NameInMap("PrivateKeyFingerPrint")
         public String privateKeyFingerPrint;
 

@@ -4,24 +4,53 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the bastion hosts.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    /**
+     * <p>The state of the bastion host. Valid values:</p>
+     * <br>
+     * <p>*   **PENDING**: The bastion host is not initialized.</p>
+     * <p>*   **CREATING**: The bastion host is being created.</p>
+     * <p>*   **RUNNING**: The bastion host is running.</p>
+     * <p>*   **EXPIRED**: The bastion host expired.</p>
+     * <p>*   **CREATE_FAILED**: The bastion host fails to be created.</p>
+     * <p>*   **UPGRADING**: The configurations of the bastion host are being changed.</p>
+     * <p>*   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.</p>
+     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the bastion host.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the bastion host belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
@@ -87,9 +116,15 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the bastion host.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the bastion host.</p>
+         */
         @NameInMap("Value")
         public String value;
 
