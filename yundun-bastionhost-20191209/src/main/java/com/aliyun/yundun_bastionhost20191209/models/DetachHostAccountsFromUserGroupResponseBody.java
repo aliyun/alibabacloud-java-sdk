@@ -4,9 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the call.</p>
+     */
     @NameInMap("Results")
     public java.util.List<DetachHostAccountsFromUserGroupResponseBodyResults> results;
 
@@ -32,12 +38,27 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
     }
 
     public static class DetachHostAccountsFromUserGroupResponseBodyResultsHostAccounts extends TeaModel {
+        /**
+         * <p>The return code that indicates whether permissions on the specified host account were revoked from the user group. Valid values:</p>
+         * <br>
+         * <p>*   **OK**: The call was successful.</p>
+         * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
+         * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
+         * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
+         * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The ID of the host account.</p>
+         */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -73,18 +94,39 @@ public class DetachHostAccountsFromUserGroupResponseBody extends TeaModel {
     }
 
     public static class DetachHostAccountsFromUserGroupResponseBodyResults extends TeaModel {
+        /**
+         * <p>The return code that indicates whether the call was successful. Valid values:</p>
+         * <br>
+         * <p>*   **OK**: The call was successful.</p>
+         * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
+         * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
+         * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
+         * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The result of revoking permissions on the specified host accounts from the user group.</p>
+         */
         @NameInMap("HostAccounts")
         public java.util.List<DetachHostAccountsFromUserGroupResponseBodyResultsHostAccounts> hostAccounts;
 
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 

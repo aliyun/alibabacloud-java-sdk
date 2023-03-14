@@ -4,9 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class CreateHostAccountResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the host account.</p>
+     */
     @NameInMap("HostAccountId")
     public String hostAccountId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

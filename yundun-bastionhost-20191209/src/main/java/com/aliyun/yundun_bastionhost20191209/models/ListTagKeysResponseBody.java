@@ -4,18 +4,33 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of tags.</p>
+     */
     @NameInMap("TagKeys")
     public java.util.List<ListTagKeysResponseBodyTagKeys> tagKeys;
 
+    /**
+     * <p>The total number of tags returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListTagKeysResponseBody extends TeaModel {
     }
 
     public static class ListTagKeysResponseBodyTagKeys extends TeaModel {
+        /**
+         * <p>The number of times the tag key was used.</p>
+         */
         @NameInMap("TagCount")
         public Integer tagCount;
 
+        /**
+         * <p>The name of the tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 

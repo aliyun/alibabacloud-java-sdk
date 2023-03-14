@@ -4,12 +4,27 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetHostAccountRequest extends TeaModel {
+    /**
+     * <p>The ID of the host account that you want to query.</p>
+     * <br>
+     * <p>>  You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.</p>
+     */
     @NameInMap("HostAccountId")
     public String hostAccountId;
 
+    /**
+     * <p>The ID of the Bastionhost instance where you want to query the details of the host account.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the Bastionhost instance where you want to query the details of the host account.</p>
+     * <br>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

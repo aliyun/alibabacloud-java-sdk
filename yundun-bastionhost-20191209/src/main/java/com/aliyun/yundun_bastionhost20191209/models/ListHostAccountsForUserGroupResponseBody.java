@@ -4,12 +4,21 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
+    /**
+     * <p>The host accounts returned.</p>
+     */
     @NameInMap("HostAccounts")
     public java.util.List<ListHostAccountsForUserGroupResponseBodyHostAccounts> hostAccounts;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of host accounts returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,18 +52,39 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
     }
 
     public static class ListHostAccountsForUserGroupResponseBodyHostAccounts extends TeaModel {
+        /**
+         * <p>The ID of the host account.</p>
+         */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
+        /**
+         * <p>The name of the host account.</p>
+         */
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
+        /**
+         * <p>The ID of the host for which the host accounts were queried.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>Indicates whether the user group is authorized to manage the host account. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The user group is authorized to manage the host account.</p>
+         * <p>*   **false**: The user group is not authorized to manage the host account.</p>
+         */
         @NameInMap("IsAuthorized")
         public Boolean isAuthorized;
 
+        /**
+         * <p>The protocol that is used by the host account. Valid values:</p>
+         * <br>
+         * <p>*   **SSH**</p>
+         * <p>*   **RDP**</p>
+         */
         @NameInMap("ProtocolName")
         public String protocolName;
 

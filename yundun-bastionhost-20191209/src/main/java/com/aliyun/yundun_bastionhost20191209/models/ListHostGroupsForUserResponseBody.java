@@ -4,12 +4,21 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostGroupsForUserResponseBody extends TeaModel {
+    /**
+     * <p>The host groups returned.</p>
+     */
     @NameInMap("HostGroups")
     public java.util.List<ListHostGroupsForUserResponseBodyHostGroups> hostGroups;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of host groups returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,12 +52,21 @@ public class ListHostGroupsForUserResponseBody extends TeaModel {
     }
 
     public static class ListHostGroupsForUserResponseBodyHostGroups extends TeaModel {
+        /**
+         * <p>The description of the host group.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The ID of the host group.</p>
+         */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
+        /**
+         * <p>The name of the host group.</p>
+         */
         @NameInMap("HostGroupName")
         public String hostGroupName;
 

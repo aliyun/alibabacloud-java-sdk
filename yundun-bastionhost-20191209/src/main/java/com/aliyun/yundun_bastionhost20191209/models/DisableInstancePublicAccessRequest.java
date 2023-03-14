@@ -4,9 +4,17 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DisableInstancePublicAccessRequest extends TeaModel {
+    /**
+     * <p>The ID of the bastion host whose Internet access you want to disable.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to obtain the ID of the bastion host.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the bastion host.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

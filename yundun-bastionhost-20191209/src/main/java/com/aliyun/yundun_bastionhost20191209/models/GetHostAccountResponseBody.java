@@ -4,9 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetHostAccountResponseBody extends TeaModel {
+    /**
+     * <p>The details of the host account that were queried.</p>
+     */
     @NameInMap("HostAccount")
     public GetHostAccountResponseBodyHostAccount hostAccount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,57 @@ public class GetHostAccountResponseBody extends TeaModel {
     }
 
     public static class GetHostAccountResponseBodyHostAccount extends TeaModel {
+        /**
+         * <p>Indicates whether a password is set for the host account. Valid values:</p>
+         * <br>
+         * <p>*   **true**: indicates that a password is set for the host account.</p>
+         * <p>*   **false**: indicates that no password is set for the host account.</p>
+         */
         @NameInMap("HasPassword")
         public Boolean hasPassword;
 
+        /**
+         * <p>The ID of the host account.</p>
+         */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
+        /**
+         * <p>The name of the host account.</p>
+         */
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
+        /**
+         * <p>The ID of the host to which the host account belongs.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The ID of the shared key.</p>
+         */
         @NameInMap("HostShareKeyId")
         public String hostShareKeyId;
 
+        /**
+         * <p>The name of the shared key.</p>
+         */
         @NameInMap("HostShareKeyName")
         public String hostShareKeyName;
 
+        /**
+         * <p>The fingerprint of the private key.</p>
+         */
         @NameInMap("PrivateKeyFingerprint")
         public String privateKeyFingerprint;
 
+        /**
+         * <p>The protocol used by the host account. Valid values:</p>
+         * <br>
+         * <p>*   **SSH**</p>
+         * <p>*   **RDP**</p>
+         */
         @NameInMap("ProtocolName")
         public String protocolName;
 

@@ -4,10 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceTwoFactorResponseBody extends TeaModel {
+    /**
+     * <p>The settings of two-factor authentication.</p>
+     */
     @NameInMap("Config")
     public GetInstanceTwoFactorResponseBodyConfig config;
 
-    // Id of the request
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,60 +37,27 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetInstanceTwoFactorResponseBodyConfigDingTalkConfig extends TeaModel {
-        @NameInMap("AgentId")
-        public String agentId;
-
-        @NameInMap("AppKey")
-        public String appKey;
-
-        @NameInMap("HasAppSecret")
-        public Boolean hasAppSecret;
-
-        public static GetInstanceTwoFactorResponseBodyConfigDingTalkConfig build(java.util.Map<String, ?> map) throws Exception {
-            GetInstanceTwoFactorResponseBodyConfigDingTalkConfig self = new GetInstanceTwoFactorResponseBodyConfigDingTalkConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public GetInstanceTwoFactorResponseBodyConfigDingTalkConfig setAgentId(String agentId) {
-            this.agentId = agentId;
-            return this;
-        }
-        public String getAgentId() {
-            return this.agentId;
-        }
-
-        public GetInstanceTwoFactorResponseBodyConfigDingTalkConfig setAppKey(String appKey) {
-            this.appKey = appKey;
-            return this;
-        }
-        public String getAppKey() {
-            return this.appKey;
-        }
-
-        public GetInstanceTwoFactorResponseBodyConfigDingTalkConfig setHasAppSecret(Boolean hasAppSecret) {
-            this.hasAppSecret = hasAppSecret;
-            return this;
-        }
-        public Boolean getHasAppSecret() {
-            return this.hasAppSecret;
-        }
-
-    }
-
     public static class GetInstanceTwoFactorResponseBodyConfig extends TeaModel {
-        @NameInMap("DingTalkConfig")
-        public GetInstanceTwoFactorResponseBodyConfigDingTalkConfig dingTalkConfig;
-
+        /**
+         * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: enabled</p>
+         * <p>*   **false**: disabled</p>
+         */
         @NameInMap("EnableTwoFactor")
         public Boolean enableTwoFactor;
 
-        @NameInMap("MessageLanguage")
-        public String messageLanguage;
-
+        /**
+         * <p>The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.</p>
+         * <br>
+         * <p>>  If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.</p>
+         */
         @NameInMap("SkipTwoFactorTime")
         public Long skipTwoFactorTime;
 
+        /**
+         * <p>Indicates one or more methods that are used to send verification codes if two-factor authentication is enabled.</p>
+         */
         @NameInMap("TwoFactorMethods")
         public java.util.List<String> twoFactorMethods;
 
@@ -94,28 +66,12 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetInstanceTwoFactorResponseBodyConfig setDingTalkConfig(GetInstanceTwoFactorResponseBodyConfigDingTalkConfig dingTalkConfig) {
-            this.dingTalkConfig = dingTalkConfig;
-            return this;
-        }
-        public GetInstanceTwoFactorResponseBodyConfigDingTalkConfig getDingTalkConfig() {
-            return this.dingTalkConfig;
-        }
-
         public GetInstanceTwoFactorResponseBodyConfig setEnableTwoFactor(Boolean enableTwoFactor) {
             this.enableTwoFactor = enableTwoFactor;
             return this;
         }
         public Boolean getEnableTwoFactor() {
             return this.enableTwoFactor;
-        }
-
-        public GetInstanceTwoFactorResponseBodyConfig setMessageLanguage(String messageLanguage) {
-            this.messageLanguage = messageLanguage;
-            return this;
-        }
-        public String getMessageLanguage() {
-            return this.messageLanguage;
         }
 
         public GetInstanceTwoFactorResponseBodyConfig setSkipTwoFactorTime(Long skipTwoFactorTime) {

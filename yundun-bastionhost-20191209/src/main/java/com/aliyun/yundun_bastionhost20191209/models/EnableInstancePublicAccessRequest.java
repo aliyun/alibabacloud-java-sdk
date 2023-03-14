@@ -4,9 +4,17 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class EnableInstancePublicAccessRequest extends TeaModel {
+    /**
+     * <p>The ID of the bastion host.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the bastion host.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

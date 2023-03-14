@@ -4,30 +4,73 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostsForUserGroupRequest extends TeaModel {
+    /**
+     * <p>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+     */
     @NameInMap("HostAddress")
     public String hostAddress;
 
+    /**
+     * <p>The name of the host that you want to query. Only exact match is supported.</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>The ID of the Bastionhost instance where you want to query the hosts that the user group is authorized or not authorized to manage.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The category of the host that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **Authorized**: Query the hosts that the user group is authorized to manage. This is the default value.</p>
+     * <p>*   **Unauthorized**: Query the hosts that the user group is not authorized to manage.</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>The operating system of the host that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **Linux**</p>
+     * <p>*   **Windows**</p>
+     */
     @NameInMap("OSType")
     public String OSType;
 
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.</p>
+     * <br>
+     * <p>>  We recommend that you do not leave the PageSize parameter empty.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The region ID of the Bastionhost instance where you want to query the hosts that the user group is authorized or not authorized to manage.</p>
+     * <br>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the user group for which you want to query hosts.</p>
+     * <br>
+     * <p>>  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 

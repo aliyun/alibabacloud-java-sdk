@@ -4,13 +4,21 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the host accounts that are associated with the shared key.</p>
+     */
     @NameInMap("HostAccounts")
     public java.util.List<ListHostAccountsForHostShareKeyResponseBodyHostAccounts> hostAccounts;
 
-    // Id of the request
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of the host accounts that are associated with the shared key.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -44,15 +52,27 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
     }
 
     public static class ListHostAccountsForHostShareKeyResponseBodyHostAccounts extends TeaModel {
+        /**
+         * <p>The name of the host account.</p>
+         */
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
+        /**
+         * <p>The ID of the host.</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <p>The ID of the host account.</p>
+         */
         @NameInMap("HostsAccountId")
         public String hostsAccountId;
 
+        /**
+         * <p>The O&M protocol.</p>
+         */
         @NameInMap("ProtocolName")
         public String protocolName;
 

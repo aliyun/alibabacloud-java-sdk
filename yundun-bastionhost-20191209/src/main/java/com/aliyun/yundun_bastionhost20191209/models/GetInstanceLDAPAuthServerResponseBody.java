@@ -4,10 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
+    /**
+     * <p>The settings of LDAP authentication.</p>
+     */
     @NameInMap("LDAP")
     public GetInstanceLDAPAuthServerResponseBodyLDAP LDAP;
 
-    // Id of the request
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,39 +38,81 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
     }
 
     public static class GetInstanceLDAPAuthServerResponseBodyLDAP extends TeaModel {
+        /**
+         * <p>The account of the LDAP server.</p>
+         */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <p>The Base distinguished name (DN).</p>
+         */
         @NameInMap("BaseDN")
         public String baseDN;
 
+        /**
+         * <p>The field that is used to indicate the email address of a user on the LDAP server.</p>
+         */
         @NameInMap("EmailMapping")
         public String emailMapping;
 
+        /**
+         * <p>The condition that is used to filter users.</p>
+         */
         @NameInMap("Filter")
         public String filter;
 
+        /**
+         * <p>Indicates whether passwords are required. Valid values:</p>
+         * <br>
+         * <p>*   **true**: required</p>
+         * <p>*   **false**: not required</p>
+         */
         @NameInMap("HasPassword")
         public String hasPassword;
 
+        /**
+         * <p>Indicates whether SSL is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**: supported</p>
+         * <p>*   **false**: not supported</p>
+         */
         @NameInMap("IsSSL")
         public Boolean isSSL;
 
+        /**
+         * <p>The field that is used to indicate the logon name of a user on the LDAP server.</p>
+         */
         @NameInMap("LoginNameMapping")
         public String loginNameMapping;
 
+        /**
+         * <p>The field that is used to indicate the mobile phone number of a user on the LDAP server.</p>
+         */
         @NameInMap("MobileMapping")
         public String mobileMapping;
 
+        /**
+         * <p>The field that is used to indicate the name of a user on the LDAP server.</p>
+         */
         @NameInMap("NameMapping")
         public String nameMapping;
 
+        /**
+         * <p>The port that is used to access the LDAP server.</p>
+         */
         @NameInMap("Port")
         public Long port;
 
+        /**
+         * <p>The address of the LDAP server.</p>
+         */
         @NameInMap("Server")
         public String server;
 
+        /**
+         * <p>The address of the secondary LDAP server.</p>
+         */
         @NameInMap("StandbyServer")
         public String standbyServer;
 

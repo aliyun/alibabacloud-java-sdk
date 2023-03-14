@@ -4,10 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class CreateHostShareKeyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the shared key.</p>
+     */
     @NameInMap("HostShareKeyId")
     public Long hostShareKeyId;
 
-    // Id of the request
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
