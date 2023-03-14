@@ -4,27 +4,14 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpTrafficRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("StartTime")
-    @Validation(required = true)
-    public Long startTime;
-
-    @NameInMap("Interval")
-    @Validation(required = true)
-    public Integer interval;
+    @NameInMap("Eip")
+    public String eip;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
-    @NameInMap("Eip")
-    @Validation(required = true)
-    public String eip;
+    @NameInMap("Interval")
+    public Integer interval;
 
     @NameInMap("Port")
     public Integer port;
@@ -32,41 +19,26 @@ public class DescribeIpTrafficRequest extends TeaModel {
     @NameInMap("QueryProtocol")
     public String queryProtocol;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("StartTime")
+    public Long startTime;
+
     public static DescribeIpTrafficRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpTrafficRequest self = new DescribeIpTrafficRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeIpTrafficRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeIpTrafficRequest setEip(String eip) {
+        this.eip = eip;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeIpTrafficRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeIpTrafficRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeIpTrafficRequest setInterval(Integer interval) {
-        this.interval = interval;
-        return this;
-    }
-    public Integer getInterval() {
-        return this.interval;
+    public String getEip() {
+        return this.eip;
     }
 
     public DescribeIpTrafficRequest setEndTime(Long endTime) {
@@ -77,12 +49,12 @@ public class DescribeIpTrafficRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeIpTrafficRequest setEip(String eip) {
-        this.eip = eip;
+    public DescribeIpTrafficRequest setInterval(Integer interval) {
+        this.interval = interval;
         return this;
     }
-    public String getEip() {
-        return this.eip;
+    public Integer getInterval() {
+        return this.interval;
     }
 
     public DescribeIpTrafficRequest setPort(Integer port) {
@@ -99,6 +71,30 @@ public class DescribeIpTrafficRequest extends TeaModel {
     }
     public String getQueryProtocol() {
         return this.queryProtocol;
+    }
+
+    public DescribeIpTrafficRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeIpTrafficRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public DescribeIpTrafficRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

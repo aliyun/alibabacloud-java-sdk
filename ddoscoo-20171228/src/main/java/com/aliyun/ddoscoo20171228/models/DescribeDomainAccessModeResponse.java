@@ -4,65 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainAccessModeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DomainModeList")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public java.util.List<DescribeDomainAccessModeResponseDomainModeList> domainModeList;
+    public Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeDomainAccessModeResponseBody body;
 
     public static DescribeDomainAccessModeResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainAccessModeResponse self = new DescribeDomainAccessModeResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainAccessModeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDomainAccessModeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDomainAccessModeResponse setDomainModeList(java.util.List<DescribeDomainAccessModeResponseDomainModeList> domainModeList) {
-        this.domainModeList = domainModeList;
+    public DescribeDomainAccessModeResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public java.util.List<DescribeDomainAccessModeResponseDomainModeList> getDomainModeList() {
-        return this.domainModeList;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public static class DescribeDomainAccessModeResponseDomainModeList extends TeaModel {
-        @NameInMap("Domain")
-        @Validation(required = true)
-        public String domain;
-
-        @NameInMap("AccessMode")
-        @Validation(required = true)
-        public Integer accessMode;
-
-        public static DescribeDomainAccessModeResponseDomainModeList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainAccessModeResponseDomainModeList self = new DescribeDomainAccessModeResponseDomainModeList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainAccessModeResponseDomainModeList setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public DescribeDomainAccessModeResponseDomainModeList setAccessMode(Integer accessMode) {
-            this.accessMode = accessMode;
-            return this;
-        }
-        public Integer getAccessMode() {
-            return this.accessMode;
-        }
-
+    public DescribeDomainAccessModeResponse setBody(DescribeDomainAccessModeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeDomainAccessModeResponseBody getBody() {
+        return this.body;
     }
 
 }

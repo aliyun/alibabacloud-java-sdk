@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ConfigLayer4RuleRequest extends TeaModel {
     @NameInMap("Listeners")
-    @Validation(required = true)
     public String listeners;
 
     public static ConfigLayer4RuleRequest build(java.util.Map<String, ?> map) throws Exception {

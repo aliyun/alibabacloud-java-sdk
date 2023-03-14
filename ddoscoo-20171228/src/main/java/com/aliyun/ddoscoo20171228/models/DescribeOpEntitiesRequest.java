@@ -4,61 +4,44 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeOpEntitiesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("EntityType")
-    public Integer entityType;
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("EntityObject")
     public String entityObject;
 
-    @NameInMap("StartTime")
-    @Validation(required = true)
-    public Long startTime;
+    @NameInMap("EntityType")
+    public Integer entityType;
 
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    public Long endTime;
+    @NameInMap("OpAction")
+    public Integer opAction;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static DescribeOpEntitiesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOpEntitiesRequest self = new DescribeOpEntitiesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeOpEntitiesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeOpEntitiesRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeOpEntitiesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeOpEntitiesRequest setEntityType(Integer entityType) {
-        this.entityType = entityType;
-        return this;
-    }
-    public Integer getEntityType() {
-        return this.entityType;
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public DescribeOpEntitiesRequest setEntityObject(String entityObject) {
@@ -69,20 +52,20 @@ public class DescribeOpEntitiesRequest extends TeaModel {
         return this.entityObject;
     }
 
-    public DescribeOpEntitiesRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
+    public DescribeOpEntitiesRequest setEntityType(Integer entityType) {
+        this.entityType = entityType;
         return this;
     }
-    public Long getStartTime() {
-        return this.startTime;
+    public Integer getEntityType() {
+        return this.entityType;
     }
 
-    public DescribeOpEntitiesRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
+    public DescribeOpEntitiesRequest setOpAction(Integer opAction) {
+        this.opAction = opAction;
         return this;
     }
-    public Long getEndTime() {
-        return this.endTime;
+    public Integer getOpAction() {
+        return this.opAction;
     }
 
     public DescribeOpEntitiesRequest setPageNo(Integer pageNo) {
@@ -99,6 +82,30 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeOpEntitiesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeOpEntitiesRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public DescribeOpEntitiesRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

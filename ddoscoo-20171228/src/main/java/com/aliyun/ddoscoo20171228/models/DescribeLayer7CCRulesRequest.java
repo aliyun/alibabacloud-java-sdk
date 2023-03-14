@@ -4,43 +4,24 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeLayer7CCRulesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Domain")
+    public String domain;
+
+    @NameInMap("Offset")
+    public Integer offset;
+
+    @NameInMap("PageSize")
+    public String pageSize;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("Domain")
-    @Validation(required = true)
-    public String domain;
-
-    @NameInMap("Offset")
-    @Validation(required = true)
-    public Integer offset;
-
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public String pageSize;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeLayer7CCRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLayer7CCRulesRequest self = new DescribeLayer7CCRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLayer7CCRulesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeLayer7CCRulesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DescribeLayer7CCRulesRequest setDomain(String domain) {
@@ -65,6 +46,22 @@ public class DescribeLayer7CCRulesRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeLayer7CCRulesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeLayer7CCRulesRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

@@ -4,8 +4,8 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSlsStatusRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("Lang")
     public String lang;
@@ -13,21 +13,20 @@ public class DescribeDomainSlsStatusRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("Domain")
-    @Validation(required = true)
-    public String domain;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeDomainSlsStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainSlsStatusRequest self = new DescribeDomainSlsStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainSlsStatusRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeDomainSlsStatusRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getDomain() {
+        return this.domain;
     }
 
     public DescribeDomainSlsStatusRequest setLang(String lang) {
@@ -46,12 +45,12 @@ public class DescribeDomainSlsStatusRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeDomainSlsStatusRequest setDomain(String domain) {
-        this.domain = domain;
+    public DescribeDomainSlsStatusRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getDomain() {
-        return this.domain;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

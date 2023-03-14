@@ -4,68 +4,36 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class AddLayer7CCRuleRequest extends TeaModel {
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("Domain")
-    @Validation(required = true)
-    public String domain;
-
-    @NameInMap("Name")
-    @Validation(required = true)
-    public String name;
-
     @NameInMap("Act")
-    @Validation(required = true)
     public String act;
 
     @NameInMap("Count")
-    @Validation(required = true)
     public Integer count;
 
+    @NameInMap("Domain")
+    public String domain;
+
     @NameInMap("Interval")
-    @Validation(required = true)
     public Integer interval;
 
     @NameInMap("Mode")
-    @Validation(required = true)
     public String mode;
 
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Ttl")
-    @Validation(required = true)
     public Integer ttl;
 
     @NameInMap("Uri")
-    @Validation(required = true)
     public String uri;
 
     public static AddLayer7CCRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLayer7CCRuleRequest self = new AddLayer7CCRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddLayer7CCRuleRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public AddLayer7CCRuleRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
-    }
-
-    public AddLayer7CCRuleRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public AddLayer7CCRuleRequest setAct(String act) {
@@ -84,6 +52,14 @@ public class AddLayer7CCRuleRequest extends TeaModel {
         return this.count;
     }
 
+    public AddLayer7CCRuleRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
+    }
+
     public AddLayer7CCRuleRequest setInterval(Integer interval) {
         this.interval = interval;
         return this;
@@ -98,6 +74,22 @@ public class AddLayer7CCRuleRequest extends TeaModel {
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public AddLayer7CCRuleRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public AddLayer7CCRuleRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public AddLayer7CCRuleRequest setTtl(Integer ttl) {

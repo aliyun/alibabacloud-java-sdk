@@ -4,33 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlsAuthStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SlsAuthStatus")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean slsAuthStatus;
+    public Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeSlsAuthStatusResponseBody body;
 
     public static DescribeSlsAuthStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlsAuthStatusResponse self = new DescribeSlsAuthStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSlsAuthStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeSlsAuthStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeSlsAuthStatusResponse setSlsAuthStatus(Boolean slsAuthStatus) {
-        this.slsAuthStatus = slsAuthStatus;
+    public DescribeSlsAuthStatusResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getSlsAuthStatus() {
-        return this.slsAuthStatus;
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public DescribeSlsAuthStatusResponse setBody(DescribeSlsAuthStatusResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeSlsAuthStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

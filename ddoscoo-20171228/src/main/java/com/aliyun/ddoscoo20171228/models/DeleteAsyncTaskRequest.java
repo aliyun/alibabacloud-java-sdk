@@ -8,7 +8,6 @@ public class DeleteAsyncTaskRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public Integer taskId;
 
     public static DeleteAsyncTaskRequest build(java.util.Map<String, ?> map) throws Exception {

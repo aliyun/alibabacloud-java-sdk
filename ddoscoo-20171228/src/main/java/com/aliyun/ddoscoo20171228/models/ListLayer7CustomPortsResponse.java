@@ -4,65 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ListLayer7CustomPortsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Layer7CustomPorts")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public java.util.List<ListLayer7CustomPortsResponseLayer7CustomPorts> layer7CustomPorts;
+    public Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ListLayer7CustomPortsResponseBody body;
 
     public static ListLayer7CustomPortsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListLayer7CustomPortsResponse self = new ListLayer7CustomPortsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListLayer7CustomPortsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListLayer7CustomPortsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ListLayer7CustomPortsResponse setLayer7CustomPorts(java.util.List<ListLayer7CustomPortsResponseLayer7CustomPorts> layer7CustomPorts) {
-        this.layer7CustomPorts = layer7CustomPorts;
+    public ListLayer7CustomPortsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public java.util.List<ListLayer7CustomPortsResponseLayer7CustomPorts> getLayer7CustomPorts() {
-        return this.layer7CustomPorts;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public static class ListLayer7CustomPortsResponseLayer7CustomPorts extends TeaModel {
-        @NameInMap("ProxyType")
-        @Validation(required = true)
-        public String proxyType;
-
-        @NameInMap("ProxyPorts")
-        @Validation(required = true)
-        public java.util.List<String> proxyPorts;
-
-        public static ListLayer7CustomPortsResponseLayer7CustomPorts build(java.util.Map<String, ?> map) throws Exception {
-            ListLayer7CustomPortsResponseLayer7CustomPorts self = new ListLayer7CustomPortsResponseLayer7CustomPorts();
-            return TeaModel.build(map, self);
-        }
-
-        public ListLayer7CustomPortsResponseLayer7CustomPorts setProxyType(String proxyType) {
-            this.proxyType = proxyType;
-            return this;
-        }
-        public String getProxyType() {
-            return this.proxyType;
-        }
-
-        public ListLayer7CustomPortsResponseLayer7CustomPorts setProxyPorts(java.util.List<String> proxyPorts) {
-            this.proxyPorts = proxyPorts;
-            return this;
-        }
-        public java.util.List<String> getProxyPorts() {
-            return this.proxyPorts;
-        }
-
+    public ListLayer7CustomPortsResponse setBody(ListLayer7CustomPortsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListLayer7CustomPortsResponseBody getBody() {
+        return this.body;
     }
 
 }

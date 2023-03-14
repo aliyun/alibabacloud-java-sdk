@@ -4,14 +4,8 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchSlsDispatchStatusRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -19,17 +13,15 @@ public class DescribeBatchSlsDispatchStatusRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static DescribeBatchSlsDispatchStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBatchSlsDispatchStatusRequest self = new DescribeBatchSlsDispatchStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBatchSlsDispatchStatusRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeBatchSlsDispatchStatusRequest setLang(String lang) {
@@ -38,14 +30,6 @@ public class DescribeBatchSlsDispatchStatusRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeBatchSlsDispatchStatusRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DescribeBatchSlsDispatchStatusRequest setPageNo(Integer pageNo) {
@@ -62,6 +46,22 @@ public class DescribeBatchSlsDispatchStatusRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeBatchSlsDispatchStatusRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeBatchSlsDispatchStatusRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

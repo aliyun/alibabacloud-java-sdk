@@ -4,101 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDoSTrafficResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DefenseInBytes")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Long defenseInBytes;
+    public Integer statusCode;
 
-    @NameInMap("SourceInBytes")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long sourceInBytes;
-
-    @NameInMap("DDoSTrafficPoints")
-    @Validation(required = true)
-    public java.util.List<DescribeDDoSTrafficResponseDDoSTrafficPoints> DDoSTrafficPoints;
+    public DescribeDDoSTrafficResponseBody body;
 
     public static DescribeDDoSTrafficResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDDoSTrafficResponse self = new DescribeDDoSTrafficResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDDoSTrafficResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDDoSTrafficResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDDoSTrafficResponse setDefenseInBytes(Long defenseInBytes) {
-        this.defenseInBytes = defenseInBytes;
+    public DescribeDDoSTrafficResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Long getDefenseInBytes() {
-        return this.defenseInBytes;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public DescribeDDoSTrafficResponse setSourceInBytes(Long sourceInBytes) {
-        this.sourceInBytes = sourceInBytes;
+    public DescribeDDoSTrafficResponse setBody(DescribeDDoSTrafficResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getSourceInBytes() {
-        return this.sourceInBytes;
-    }
-
-    public DescribeDDoSTrafficResponse setDDoSTrafficPoints(java.util.List<DescribeDDoSTrafficResponseDDoSTrafficPoints> DDoSTrafficPoints) {
-        this.DDoSTrafficPoints = DDoSTrafficPoints;
-        return this;
-    }
-    public java.util.List<DescribeDDoSTrafficResponseDDoSTrafficPoints> getDDoSTrafficPoints() {
-        return this.DDoSTrafficPoints;
-    }
-
-    public static class DescribeDDoSTrafficResponseDDoSTrafficPoints extends TeaModel {
-        @NameInMap("Time")
-        @Validation(required = true)
-        public Long time;
-
-        @NameInMap("DefenseMaxInBps")
-        @Validation(required = true)
-        public Long defenseMaxInBps;
-
-        @NameInMap("SourceMaxInBps")
-        @Validation(required = true)
-        public Long sourceMaxInBps;
-
-        public static DescribeDDoSTrafficResponseDDoSTrafficPoints build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDDoSTrafficResponseDDoSTrafficPoints self = new DescribeDDoSTrafficResponseDDoSTrafficPoints();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDDoSTrafficResponseDDoSTrafficPoints setTime(Long time) {
-            this.time = time;
-            return this;
-        }
-        public Long getTime() {
-            return this.time;
-        }
-
-        public DescribeDDoSTrafficResponseDDoSTrafficPoints setDefenseMaxInBps(Long defenseMaxInBps) {
-            this.defenseMaxInBps = defenseMaxInBps;
-            return this;
-        }
-        public Long getDefenseMaxInBps() {
-            return this.defenseMaxInBps;
-        }
-
-        public DescribeDDoSTrafficResponseDDoSTrafficPoints setSourceMaxInBps(Long sourceMaxInBps) {
-            this.sourceMaxInBps = sourceMaxInBps;
-            return this;
-        }
-        public Long getSourceMaxInBps() {
-            return this.sourceMaxInBps;
-        }
-
+    public DescribeDDoSTrafficResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,33 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackSourceCidrResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CidrList")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public java.util.List<String> cidrList;
+    public Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeBackSourceCidrResponseBody body;
 
     public static DescribeBackSourceCidrResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackSourceCidrResponse self = new DescribeBackSourceCidrResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackSourceCidrResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeBackSourceCidrResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeBackSourceCidrResponse setCidrList(java.util.List<String> cidrList) {
-        this.cidrList = cidrList;
+    public DescribeBackSourceCidrResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public java.util.List<String> getCidrList() {
-        return this.cidrList;
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public DescribeBackSourceCidrResponse setBody(DescribeBackSourceCidrResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeBackSourceCidrResponseBody getBody() {
+        return this.body;
     }
 
 }

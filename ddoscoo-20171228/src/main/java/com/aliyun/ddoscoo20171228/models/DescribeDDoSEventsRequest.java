@@ -4,67 +4,30 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeDDoSEventsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Eip")
+    public String eip;
+
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    @NameInMap("Offset")
+    public Integer offset;
+
+    @NameInMap("PageSize")
+    public String pageSize;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Long startTime;
-
-    @NameInMap("EndTime")
-    @Validation(required = true)
-    public Long endTime;
-
-    @NameInMap("Eip")
-    @Validation(required = true)
-    public String eip;
-
-    @NameInMap("Offset")
-    @Validation(required = true)
-    public Integer offset;
-
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public String pageSize;
 
     public static DescribeDDoSEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDDoSEventsRequest self = new DescribeDDoSEventsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDDoSEventsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeDDoSEventsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeDDoSEventsRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDDoSEventsRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
     }
 
     public DescribeDDoSEventsRequest setEip(String eip) {
@@ -73,6 +36,14 @@ public class DescribeDDoSEventsRequest extends TeaModel {
     }
     public String getEip() {
         return this.eip;
+    }
+
+    public DescribeDDoSEventsRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public DescribeDDoSEventsRequest setOffset(Integer offset) {
@@ -89,6 +60,30 @@ public class DescribeDDoSEventsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDDoSEventsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeDDoSEventsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public DescribeDDoSEventsRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

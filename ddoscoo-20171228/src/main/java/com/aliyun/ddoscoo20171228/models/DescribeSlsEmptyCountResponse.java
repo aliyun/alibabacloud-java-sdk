@@ -4,33 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlsEmptyCountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AvailableCount")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Integer availableCount;
+    public Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeSlsEmptyCountResponseBody body;
 
     public static DescribeSlsEmptyCountResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlsEmptyCountResponse self = new DescribeSlsEmptyCountResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSlsEmptyCountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeSlsEmptyCountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeSlsEmptyCountResponse setAvailableCount(Integer availableCount) {
-        this.availableCount = availableCount;
+    public DescribeSlsEmptyCountResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Integer getAvailableCount() {
-        return this.availableCount;
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public DescribeSlsEmptyCountResponse setBody(DescribeSlsEmptyCountResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeSlsEmptyCountResponseBody getBody() {
+        return this.body;
     }
 
 }

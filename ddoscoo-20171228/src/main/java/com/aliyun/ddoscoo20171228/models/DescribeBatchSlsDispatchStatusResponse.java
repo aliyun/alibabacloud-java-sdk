@@ -4,77 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchSlsDispatchStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TotalCount")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Integer totalCount;
+    public Integer statusCode;
 
-    @NameInMap("SlsConfigStatusList")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeBatchSlsDispatchStatusResponseSlsConfigStatusList> slsConfigStatusList;
+    public DescribeBatchSlsDispatchStatusResponseBody body;
 
     public static DescribeBatchSlsDispatchStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeBatchSlsDispatchStatusResponse self = new DescribeBatchSlsDispatchStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBatchSlsDispatchStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeBatchSlsDispatchStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeBatchSlsDispatchStatusResponse setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeBatchSlsDispatchStatusResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public DescribeBatchSlsDispatchStatusResponse setSlsConfigStatusList(java.util.List<DescribeBatchSlsDispatchStatusResponseSlsConfigStatusList> slsConfigStatusList) {
-        this.slsConfigStatusList = slsConfigStatusList;
+    public DescribeBatchSlsDispatchStatusResponse setBody(DescribeBatchSlsDispatchStatusResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeBatchSlsDispatchStatusResponseSlsConfigStatusList> getSlsConfigStatusList() {
-        return this.slsConfigStatusList;
-    }
-
-    public static class DescribeBatchSlsDispatchStatusResponseSlsConfigStatusList extends TeaModel {
-        @NameInMap("Enable")
-        @Validation(required = true)
-        public Boolean enable;
-
-        @NameInMap("Domain")
-        @Validation(required = true)
-        public String domain;
-
-        public static DescribeBatchSlsDispatchStatusResponseSlsConfigStatusList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeBatchSlsDispatchStatusResponseSlsConfigStatusList self = new DescribeBatchSlsDispatchStatusResponseSlsConfigStatusList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeBatchSlsDispatchStatusResponseSlsConfigStatusList setEnable(Boolean enable) {
-            this.enable = enable;
-            return this;
-        }
-        public Boolean getEnable() {
-            return this.enable;
-        }
-
-        public DescribeBatchSlsDispatchStatusResponseSlsConfigStatusList setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
+    public DescribeBatchSlsDispatchStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

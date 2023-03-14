@@ -4,26 +4,26 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribleCertListRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("Domain")
-    public String domain;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribleCertListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribleCertListRequest self = new DescribleCertListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribleCertListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribleCertListRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getDomain() {
+        return this.domain;
     }
 
     public DescribleCertListRequest setResourceGroupId(String resourceGroupId) {
@@ -34,12 +34,12 @@ public class DescribleCertListRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribleCertListRequest setDomain(String domain) {
-        this.domain = domain;
+    public DescribleCertListRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getDomain() {
-        return this.domain;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

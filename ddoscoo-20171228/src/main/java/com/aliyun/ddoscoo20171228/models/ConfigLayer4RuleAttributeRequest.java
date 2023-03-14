@@ -4,33 +4,29 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigLayer4RuleAttributeRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public String instanceId;
+    @NameInMap("Config")
+    public String config;
 
     @NameInMap("ForwardProtocol")
-    @Validation(required = true)
     public String forwardProtocol;
 
     @NameInMap("FrontendPort")
-    @Validation(required = true)
     public Integer frontendPort;
 
-    @NameInMap("Config")
-    @Validation(required = true)
-    public String config;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     public static ConfigLayer4RuleAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigLayer4RuleAttributeRequest self = new ConfigLayer4RuleAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ConfigLayer4RuleAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ConfigLayer4RuleAttributeRequest setConfig(String config) {
+        this.config = config;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getConfig() {
+        return this.config;
     }
 
     public ConfigLayer4RuleAttributeRequest setForwardProtocol(String forwardProtocol) {
@@ -49,12 +45,12 @@ public class ConfigLayer4RuleAttributeRequest extends TeaModel {
         return this.frontendPort;
     }
 
-    public ConfigLayer4RuleAttributeRequest setConfig(String config) {
-        this.config = config;
+    public ConfigLayer4RuleAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getConfig() {
-        return this.config;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

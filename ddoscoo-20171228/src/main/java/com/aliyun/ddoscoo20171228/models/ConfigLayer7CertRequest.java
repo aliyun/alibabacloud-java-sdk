@@ -4,12 +4,8 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigLayer7CertRequest extends TeaModel {
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("Domain")
-    @Validation(required = true)
-    public String domain;
+    @NameInMap("Cert")
+    public String cert;
 
     @NameInMap("CertId")
     public Integer certId;
@@ -17,31 +13,26 @@ public class ConfigLayer7CertRequest extends TeaModel {
     @NameInMap("CertName")
     public String certName;
 
-    @NameInMap("Cert")
-    public String cert;
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("Key")
     public String key;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static ConfigLayer7CertRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigLayer7CertRequest self = new ConfigLayer7CertRequest();
         return TeaModel.build(map, self);
     }
 
-    public ConfigLayer7CertRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public ConfigLayer7CertRequest setCert(String cert) {
+        this.cert = cert;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public ConfigLayer7CertRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
+    public String getCert() {
+        return this.cert;
     }
 
     public ConfigLayer7CertRequest setCertId(Integer certId) {
@@ -60,12 +51,12 @@ public class ConfigLayer7CertRequest extends TeaModel {
         return this.certName;
     }
 
-    public ConfigLayer7CertRequest setCert(String cert) {
-        this.cert = cert;
+    public ConfigLayer7CertRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public String getCert() {
-        return this.cert;
+    public String getDomain() {
+        return this.domain;
     }
 
     public ConfigLayer7CertRequest setKey(String key) {
@@ -74,6 +65,14 @@ public class ConfigLayer7CertRequest extends TeaModel {
     }
     public String getKey() {
         return this.key;
+    }
+
+    public ConfigLayer7CertRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
