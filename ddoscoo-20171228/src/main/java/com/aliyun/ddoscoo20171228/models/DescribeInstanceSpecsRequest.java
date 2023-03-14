@@ -4,24 +4,15 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsRequest extends TeaModel {
+    @NameInMap("InstanceIds")
+    public String instanceIds;
+
     @NameInMap("SourceIp")
     public String sourceIp;
-
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
-    public String instanceIds;
 
     public static DescribeInstanceSpecsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceSpecsRequest self = new DescribeInstanceSpecsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceSpecsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeInstanceSpecsRequest setInstanceIds(String instanceIds) {
@@ -30,6 +21,14 @@ public class DescribeInstanceSpecsRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public DescribeInstanceSpecsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

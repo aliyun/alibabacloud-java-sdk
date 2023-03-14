@@ -4,33 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogStoreExistStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ExistStatus")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Boolean existStatus;
+    public Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeLogStoreExistStatusResponseBody body;
 
     public static DescribeLogStoreExistStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogStoreExistStatusResponse self = new DescribeLogStoreExistStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLogStoreExistStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLogStoreExistStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLogStoreExistStatusResponse setExistStatus(Boolean existStatus) {
-        this.existStatus = existStatus;
+    public DescribeLogStoreExistStatusResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Boolean getExistStatus() {
-        return this.existStatus;
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public DescribeLogStoreExistStatusResponse setBody(DescribeLogStoreExistStatusResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeLogStoreExistStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

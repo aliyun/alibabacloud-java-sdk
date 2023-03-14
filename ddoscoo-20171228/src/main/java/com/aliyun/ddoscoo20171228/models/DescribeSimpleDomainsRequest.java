@@ -4,8 +4,8 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeSimpleDomainsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
 
     @NameInMap("Lang")
     public String lang;
@@ -13,20 +13,20 @@ public class DescribeSimpleDomainsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("InstanceIds")
-    public java.util.List<String> instanceIds;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeSimpleDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSimpleDomainsRequest self = new DescribeSimpleDomainsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSimpleDomainsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeSimpleDomainsRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public DescribeSimpleDomainsRequest setLang(String lang) {
@@ -45,12 +45,12 @@ public class DescribeSimpleDomainsRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeSimpleDomainsRequest setInstanceIds(java.util.List<String> instanceIds) {
-        this.instanceIds = instanceIds;
+    public DescribeSimpleDomainsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public java.util.List<String> getInstanceIds() {
-        return this.instanceIds;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

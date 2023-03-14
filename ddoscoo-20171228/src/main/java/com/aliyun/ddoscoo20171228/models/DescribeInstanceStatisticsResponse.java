@@ -4,101 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatisticsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("InstanceStatistics")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public java.util.List<DescribeInstanceStatisticsResponseInstanceStatistics> instanceStatistics;
+    public Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeInstanceStatisticsResponseBody body;
 
     public static DescribeInstanceStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStatisticsResponse self = new DescribeInstanceStatisticsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceStatisticsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstanceStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeInstanceStatisticsResponse setInstanceStatistics(java.util.List<DescribeInstanceStatisticsResponseInstanceStatistics> instanceStatistics) {
-        this.instanceStatistics = instanceStatistics;
+    public DescribeInstanceStatisticsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public java.util.List<DescribeInstanceStatisticsResponseInstanceStatistics> getInstanceStatistics() {
-        return this.instanceStatistics;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public static class DescribeInstanceStatisticsResponseInstanceStatistics extends TeaModel {
-        @NameInMap("InstanceId")
-        @Validation(required = true)
-        public String instanceId;
-
-        @NameInMap("PortUsage")
-        @Validation(required = true)
-        public Integer portUsage;
-
-        @NameInMap("DomainUsage")
-        @Validation(required = true)
-        public Integer domainUsage;
-
-        @NameInMap("SiteUsage")
-        @Validation(required = true)
-        public Integer siteUsage;
-
-        @NameInMap("DefenseCountUsage")
-        @Validation(required = true)
-        public Integer defenseCountUsage;
-
-        public static DescribeInstanceStatisticsResponseInstanceStatistics build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceStatisticsResponseInstanceStatistics self = new DescribeInstanceStatisticsResponseInstanceStatistics();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceStatisticsResponseInstanceStatistics setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeInstanceStatisticsResponseInstanceStatistics setPortUsage(Integer portUsage) {
-            this.portUsage = portUsage;
-            return this;
-        }
-        public Integer getPortUsage() {
-            return this.portUsage;
-        }
-
-        public DescribeInstanceStatisticsResponseInstanceStatistics setDomainUsage(Integer domainUsage) {
-            this.domainUsage = domainUsage;
-            return this;
-        }
-        public Integer getDomainUsage() {
-            return this.domainUsage;
-        }
-
-        public DescribeInstanceStatisticsResponseInstanceStatistics setSiteUsage(Integer siteUsage) {
-            this.siteUsage = siteUsage;
-            return this;
-        }
-        public Integer getSiteUsage() {
-            return this.siteUsage;
-        }
-
-        public DescribeInstanceStatisticsResponseInstanceStatistics setDefenseCountUsage(Integer defenseCountUsage) {
-            this.defenseCountUsage = defenseCountUsage;
-            return this;
-        }
-        public Integer getDefenseCountUsage() {
-            return this.defenseCountUsage;
-        }
-
+    public DescribeInstanceStatisticsResponse setBody(DescribeInstanceStatisticsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeInstanceStatisticsResponseBody getBody() {
+        return this.body;
     }
 
 }

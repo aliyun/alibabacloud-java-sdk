@@ -4,48 +4,30 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("Domain")
     public String domain;
-
-    @NameInMap("QueryDomainPattern")
-    public String queryDomainPattern;
-
-    @NameInMap("Offset")
-    @Validation(required = true)
-    public Integer offset;
-
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public String pageSize;
 
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    @NameInMap("Offset")
+    public Integer offset;
+
+    @NameInMap("PageSize")
+    public String pageSize;
+
+    @NameInMap("QueryDomainPattern")
+    public String queryDomainPattern;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static DescribeDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainsRequest self = new DescribeDomainsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeDomainsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DescribeDomainsRequest setDomain(String domain) {
@@ -56,12 +38,12 @@ public class DescribeDomainsRequest extends TeaModel {
         return this.domain;
     }
 
-    public DescribeDomainsRequest setQueryDomainPattern(String queryDomainPattern) {
-        this.queryDomainPattern = queryDomainPattern;
+    public DescribeDomainsRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
         return this;
     }
-    public String getQueryDomainPattern() {
-        return this.queryDomainPattern;
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public DescribeDomainsRequest setOffset(Integer offset) {
@@ -80,12 +62,28 @@ public class DescribeDomainsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDomainsRequest setInstanceIds(java.util.List<String> instanceIds) {
-        this.instanceIds = instanceIds;
+    public DescribeDomainsRequest setQueryDomainPattern(String queryDomainPattern) {
+        this.queryDomainPattern = queryDomainPattern;
         return this;
     }
-    public java.util.List<String> getInstanceIds() {
-        return this.instanceIds;
+    public String getQueryDomainPattern() {
+        return this.queryDomainPattern;
+    }
+
+    public DescribeDomainsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeDomainsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

@@ -4,46 +4,27 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeLayer4RulesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public String instanceId;
-
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
     @NameInMap("FrontendPort")
     public Integer frontendPort;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("Offset")
-    @Validation(required = true)
     public Integer offset;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public String pageSize;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeLayer4RulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLayer4RulesRequest self = new DescribeLayer4RulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLayer4RulesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeLayer4RulesRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public DescribeLayer4RulesRequest setForwardProtocol(String forwardProtocol) {
@@ -62,6 +43,14 @@ public class DescribeLayer4RulesRequest extends TeaModel {
         return this.frontendPort;
     }
 
+    public DescribeLayer4RulesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public DescribeLayer4RulesRequest setOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -76,6 +65,14 @@ public class DescribeLayer4RulesRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeLayer4RulesRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

@@ -4,125 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeOpEntitiesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Total")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Long total;
+    public Integer statusCode;
 
-    @NameInMap("OpEntities")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeOpEntitiesResponseOpEntities> opEntities;
+    public DescribeOpEntitiesResponseBody body;
 
     public static DescribeOpEntitiesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeOpEntitiesResponse self = new DescribeOpEntitiesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeOpEntitiesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeOpEntitiesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeOpEntitiesResponse setTotal(Long total) {
-        this.total = total;
+    public DescribeOpEntitiesResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Long getTotal() {
-        return this.total;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public DescribeOpEntitiesResponse setOpEntities(java.util.List<DescribeOpEntitiesResponseOpEntities> opEntities) {
-        this.opEntities = opEntities;
+    public DescribeOpEntitiesResponse setBody(DescribeOpEntitiesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeOpEntitiesResponseOpEntities> getOpEntities() {
-        return this.opEntities;
-    }
-
-    public static class DescribeOpEntitiesResponseOpEntities extends TeaModel {
-        @NameInMap("GmtCreate")
-        @Validation(required = true)
-        public Long gmtCreate;
-
-        @NameInMap("EntityType")
-        @Validation(required = true)
-        public Integer entityType;
-
-        @NameInMap("EntityObject")
-        @Validation(required = true)
-        public String entityObject;
-
-        @NameInMap("OpAction")
-        @Validation(required = true)
-        public Integer opAction;
-
-        @NameInMap("OpAccount")
-        @Validation(required = true)
-        public String opAccount;
-
-        @NameInMap("OpDesc")
-        @Validation(required = true)
-        public String opDesc;
-
-        public static DescribeOpEntitiesResponseOpEntities build(java.util.Map<String, ?> map) throws Exception {
-            DescribeOpEntitiesResponseOpEntities self = new DescribeOpEntitiesResponseOpEntities();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeOpEntitiesResponseOpEntities setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public DescribeOpEntitiesResponseOpEntities setEntityType(Integer entityType) {
-            this.entityType = entityType;
-            return this;
-        }
-        public Integer getEntityType() {
-            return this.entityType;
-        }
-
-        public DescribeOpEntitiesResponseOpEntities setEntityObject(String entityObject) {
-            this.entityObject = entityObject;
-            return this;
-        }
-        public String getEntityObject() {
-            return this.entityObject;
-        }
-
-        public DescribeOpEntitiesResponseOpEntities setOpAction(Integer opAction) {
-            this.opAction = opAction;
-            return this;
-        }
-        public Integer getOpAction() {
-            return this.opAction;
-        }
-
-        public DescribeOpEntitiesResponseOpEntities setOpAccount(String opAccount) {
-            this.opAccount = opAccount;
-            return this;
-        }
-        public String getOpAccount() {
-            return this.opAccount;
-        }
-
-        public DescribeOpEntitiesResponseOpEntities setOpDesc(String opDesc) {
-            this.opDesc = opDesc;
-            return this;
-        }
-        public String getOpDesc() {
-            return this.opDesc;
-        }
-
+    public DescribeOpEntitiesResponseBody getBody() {
+        return this.body;
     }
 
 }

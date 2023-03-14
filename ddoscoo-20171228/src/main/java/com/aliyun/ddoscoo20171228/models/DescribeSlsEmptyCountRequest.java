@@ -4,26 +4,18 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlsEmptyCountRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static DescribeSlsEmptyCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlsEmptyCountRequest self = new DescribeSlsEmptyCountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSlsEmptyCountRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeSlsEmptyCountRequest setLang(String lang) {
@@ -40,6 +32,14 @@ public class DescribeSlsEmptyCountRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeSlsEmptyCountRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

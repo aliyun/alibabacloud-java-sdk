@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteLayer4RuleRequest extends TeaModel {
     @NameInMap("Listeners")
-    @Validation(required = true)
     public String listeners;
 
     public static DeleteLayer4RuleRequest build(java.util.Map<String, ?> map) throws Exception {

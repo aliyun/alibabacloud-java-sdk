@@ -4,34 +4,24 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ListAsyncTaskRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("PageNo")
-    @Validation(required = true)
-    public Integer pageNo;
-
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static ListAsyncTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAsyncTaskRequest self = new ListAsyncTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAsyncTaskRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ListAsyncTaskRequest setLang(String lang) {
@@ -40,14 +30,6 @@ public class ListAsyncTaskRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public ListAsyncTaskRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public ListAsyncTaskRequest setPageNo(Integer pageNo) {
@@ -64,6 +46,22 @@ public class ListAsyncTaskRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAsyncTaskRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ListAsyncTaskRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

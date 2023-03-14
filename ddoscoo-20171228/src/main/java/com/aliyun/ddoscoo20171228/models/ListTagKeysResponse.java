@@ -4,101 +4,45 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CurrentPage")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public Integer currentPage;
+    public Integer statusCode;
 
-    @NameInMap("PageSize")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer pageSize;
-
-    @NameInMap("TotalCount")
-    @Validation(required = true)
-    public Integer totalCount;
-
-    @NameInMap("TagKeys")
-    @Validation(required = true)
-    public java.util.List<ListTagKeysResponseTagKeys> tagKeys;
+    public ListTagKeysResponseBody body;
 
     public static ListTagKeysResponse build(java.util.Map<String, ?> map) throws Exception {
         ListTagKeysResponse self = new ListTagKeysResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListTagKeysResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListTagKeysResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ListTagKeysResponse setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public ListTagKeysResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public ListTagKeysResponse setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListTagKeysResponse setBody(ListTagKeysResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListTagKeysResponse setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListTagKeysResponse setTagKeys(java.util.List<ListTagKeysResponseTagKeys> tagKeys) {
-        this.tagKeys = tagKeys;
-        return this;
-    }
-    public java.util.List<ListTagKeysResponseTagKeys> getTagKeys() {
-        return this.tagKeys;
-    }
-
-    public static class ListTagKeysResponseTagKeys extends TeaModel {
-        @NameInMap("TagKey")
-        @Validation(required = true)
-        public String tagKey;
-
-        @NameInMap("TagCount")
-        @Validation(required = true)
-        public Integer tagCount;
-
-        public static ListTagKeysResponseTagKeys build(java.util.Map<String, ?> map) throws Exception {
-            ListTagKeysResponseTagKeys self = new ListTagKeysResponseTagKeys();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagKeysResponseTagKeys setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public ListTagKeysResponseTagKeys setTagCount(Integer tagCount) {
-            this.tagCount = tagCount;
-            return this;
-        }
-        public Integer getTagCount() {
-            return this.tagCount;
-        }
-
+    public ListTagKeysResponseBody getBody() {
+        return this.body;
     }
 
 }

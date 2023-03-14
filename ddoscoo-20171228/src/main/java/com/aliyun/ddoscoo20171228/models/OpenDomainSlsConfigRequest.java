@@ -4,8 +4,8 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class OpenDomainSlsConfigRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("Lang")
     public String lang;
@@ -13,21 +13,20 @@ public class OpenDomainSlsConfigRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("Domain")
-    @Validation(required = true)
-    public String domain;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static OpenDomainSlsConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         OpenDomainSlsConfigRequest self = new OpenDomainSlsConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public OpenDomainSlsConfigRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public OpenDomainSlsConfigRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getDomain() {
+        return this.domain;
     }
 
     public OpenDomainSlsConfigRequest setLang(String lang) {
@@ -46,12 +45,12 @@ public class OpenDomainSlsConfigRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public OpenDomainSlsConfigRequest setDomain(String domain) {
-        this.domain = domain;
+    public OpenDomainSlsConfigRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getDomain() {
-        return this.domain;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }
