@@ -3,7 +3,7 @@ package com.aliyun.linkcard20210520.models;
 
 import com.aliyun.tea.*;
 
-public class CardStatisticsResponse extends TeaModel {
+public class AddTagsToCardResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CardStatisticsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CardStatisticsResponseBody body;
+    public AddTagsToCardResponseBody body;
 
-    public static CardStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
-        CardStatisticsResponse self = new CardStatisticsResponse();
+    public static AddTagsToCardResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddTagsToCardResponse self = new AddTagsToCardResponse();
         return TeaModel.build(map, self);
     }
 
-    public CardStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
+    public AddTagsToCardResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CardStatisticsResponse extends TeaModel {
         return this.headers;
     }
 
-    public CardStatisticsResponse setStatusCode(Integer statusCode) {
+    public AddTagsToCardResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CardStatisticsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CardStatisticsResponse setBody(CardStatisticsResponseBody body) {
+    public AddTagsToCardResponse setBody(AddTagsToCardResponseBody body) {
         this.body = body;
         return this;
     }
-    public CardStatisticsResponseBody getBody() {
+    public AddTagsToCardResponseBody getBody() {
         return this.body;
     }
 
