@@ -539,6 +539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateId", request.templateId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.timeline)) {
             query.put("Timeline", request.timeline);
         }

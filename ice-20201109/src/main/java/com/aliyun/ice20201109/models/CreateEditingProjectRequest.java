@@ -25,6 +25,9 @@ public class CreateEditingProjectRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    @NameInMap("TemplateType")
+    public String templateType;
+
     @NameInMap("Timeline")
     public String timeline;
 
@@ -90,6 +93,14 @@ public class CreateEditingProjectRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public CreateEditingProjectRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
     public CreateEditingProjectRequest setTimeline(String timeline) {
