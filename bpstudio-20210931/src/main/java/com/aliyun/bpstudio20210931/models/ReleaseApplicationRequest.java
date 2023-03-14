@@ -4,7 +4,6 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ReleaseApplicationRequest extends TeaModel {
-    // 应用ID
     @NameInMap("ApplicationId")
     public String applicationId;
 

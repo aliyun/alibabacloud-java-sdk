@@ -13,14 +13,12 @@ public class ListApplicationRequest extends TeaModel {
     @NameInMap("NextToken")
     public Integer nextToken;
 
-    // 排序字段
     @NameInMap("OrderType")
     public Long orderType;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 应用的状态
     @NameInMap("Status")
     public String status;
 

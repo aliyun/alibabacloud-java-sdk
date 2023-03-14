@@ -76,31 +76,24 @@ public class ListApplicationResponseBody extends TeaModel {
     }
 
     public static class ListApplicationResponseBodyData extends TeaModel {
-        // 应用ID
         @NameInMap("ApplicationId")
         public String applicationId;
 
-        // 应用创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 应用的图片链接
         @NameInMap("ImageURL")
         public String imageURL;
 
-        // 应用的名称
         @NameInMap("Name")
         public String name;
 
-        // 应用的资源组
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // 应用的状态
         @NameInMap("Status")
-        public Integer status;
+        public String status;
 
-        // 应用的拓扑图链接
         @NameInMap("TopoURL")
         public String topoURL;
 
@@ -149,11 +142,11 @@ public class ListApplicationResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public ListApplicationResponseBodyData setStatus(Integer status) {
+        public ListApplicationResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
         }
-        public Integer getStatus() {
+        public String getStatus() {
             return this.status;
         }
 
