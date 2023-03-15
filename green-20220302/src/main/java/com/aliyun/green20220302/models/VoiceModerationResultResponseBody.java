@@ -60,6 +60,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
+        @NameInMap("EndTimestamp")
+        public Long endTimestamp;
+
         @NameInMap("Extend")
         public String extend;
 
@@ -81,6 +84,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public Long startTime;
 
+        @NameInMap("StartTimestamp")
+        public Long startTimestamp;
+
         @NameInMap("Text")
         public String text;
 
@@ -98,6 +104,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetails setEndTimestamp(Long endTimestamp) {
+            this.endTimestamp = endTimestamp;
+            return this;
+        }
+        public Long getEndTimestamp() {
+            return this.endTimestamp;
         }
 
         public VoiceModerationResultResponseBodyDataSliceDetails setExtend(String extend) {
@@ -154,6 +168,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public VoiceModerationResultResponseBodyDataSliceDetails setStartTimestamp(Long startTimestamp) {
+            this.startTimestamp = startTimestamp;
+            return this;
+        }
+        public Long getStartTimestamp() {
+            return this.startTimestamp;
         }
 
         public VoiceModerationResultResponseBodyDataSliceDetails setText(String text) {
