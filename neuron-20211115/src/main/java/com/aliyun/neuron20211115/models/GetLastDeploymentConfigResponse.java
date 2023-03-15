@@ -14,7 +14,7 @@ public class GetLastDeploymentConfigResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetLastDeploymentConfigResponseBody body;
+    public DeployConfigInfo body;
 
     public static GetLastDeploymentConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         GetLastDeploymentConfigResponse self = new GetLastDeploymentConfigResponse();
@@ -37,11 +37,11 @@ public class GetLastDeploymentConfigResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetLastDeploymentConfigResponse setBody(GetLastDeploymentConfigResponseBody body) {
+    public GetLastDeploymentConfigResponse setBody(DeployConfigInfo body) {
         this.body = body;
         return this;
     }
-    public GetLastDeploymentConfigResponseBody getBody() {
+    public DeployConfigInfo getBody() {
         return this.body;
     }
 

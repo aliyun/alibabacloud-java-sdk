@@ -14,7 +14,7 @@ public class ListRepoForksResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListRepoForksResponseBody body;
+    public PbcRepoForkListResult body;
 
     public static ListRepoForksResponse build(java.util.Map<String, ?> map) throws Exception {
         ListRepoForksResponse self = new ListRepoForksResponse();
@@ -37,11 +37,11 @@ public class ListRepoForksResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListRepoForksResponse setBody(ListRepoForksResponseBody body) {
+    public ListRepoForksResponse setBody(PbcRepoForkListResult body) {
         this.body = body;
         return this;
     }
-    public ListRepoForksResponseBody getBody() {
+    public PbcRepoForkListResult getBody() {
         return this.body;
     }
 

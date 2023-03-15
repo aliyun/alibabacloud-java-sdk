@@ -4,21 +4,54 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListPbcVersionBuildRequest extends TeaModel {
-    @NameInMap("order_by")
+    @NameInMap("accountId")
+    public String accountId;
+
+    @NameInMap("companyId")
+    public Long companyId;
+
+    @NameInMap("marketId")
+    public Long marketId;
+
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
     public static ListPbcVersionBuildRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPbcVersionBuildRequest self = new ListPbcVersionBuildRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPbcVersionBuildRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    public ListPbcVersionBuildRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
+    }
+
+    public ListPbcVersionBuildRequest setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
     }
 
     public ListPbcVersionBuildRequest setOrderBy(String orderBy) {

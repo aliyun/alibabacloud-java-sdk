@@ -14,7 +14,7 @@ public class TriggerDeploymentResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public TriggerDeploymentResponseBody body;
+    public PdpServiceDeployment body;
 
     public static TriggerDeploymentResponse build(java.util.Map<String, ?> map) throws Exception {
         TriggerDeploymentResponse self = new TriggerDeploymentResponse();
@@ -37,11 +37,11 @@ public class TriggerDeploymentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public TriggerDeploymentResponse setBody(TriggerDeploymentResponseBody body) {
+    public TriggerDeploymentResponse setBody(PdpServiceDeployment body) {
         this.body = body;
         return this;
     }
-    public TriggerDeploymentResponseBody getBody() {
+    public PdpServiceDeployment getBody() {
         return this.body;
     }
 

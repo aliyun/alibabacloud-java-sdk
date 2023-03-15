@@ -14,7 +14,7 @@ public class CompleteRegisterLibraryResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CompleteRegisterLibraryResponseBody body;
+    public CatalogCommonResult body;
 
     public static CompleteRegisterLibraryResponse build(java.util.Map<String, ?> map) throws Exception {
         CompleteRegisterLibraryResponse self = new CompleteRegisterLibraryResponse();
@@ -37,11 +37,11 @@ public class CompleteRegisterLibraryResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CompleteRegisterLibraryResponse setBody(CompleteRegisterLibraryResponseBody body) {
+    public CompleteRegisterLibraryResponse setBody(CatalogCommonResult body) {
         this.body = body;
         return this;
     }
-    public CompleteRegisterLibraryResponseBody getBody() {
+    public CatalogCommonResult getBody() {
         return this.body;
     }
 

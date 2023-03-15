@@ -14,7 +14,7 @@ public class SearchAssetsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public SearchAssetsResponseBody body;
+    public java.util.List<DTO> body;
 
     public static SearchAssetsResponse build(java.util.Map<String, ?> map) throws Exception {
         SearchAssetsResponse self = new SearchAssetsResponse();
@@ -37,11 +37,11 @@ public class SearchAssetsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SearchAssetsResponse setBody(SearchAssetsResponseBody body) {
+    public SearchAssetsResponse setBody(java.util.List<DTO> body) {
         this.body = body;
         return this;
     }
-    public SearchAssetsResponseBody getBody() {
+    public java.util.List<DTO> getBody() {
         return this.body;
     }
 

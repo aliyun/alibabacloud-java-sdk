@@ -22,6 +22,9 @@ public class Role extends TeaModel {
     @NameInMap("platform")
     public String platform;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("type")
     public String type;
 
@@ -76,6 +79,14 @@ public class Role extends TeaModel {
     }
     public String getPlatform() {
         return this.platform;
+    }
+
+    public Role setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public Role setType(String type) {

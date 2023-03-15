@@ -7,13 +7,13 @@ public class ListPermissionResourcePopRequest extends TeaModel {
     @NameInMap("action")
     public String action;
 
-    @NameInMap("operator_id")
+    @NameInMap("operatorId")
     public String operatorId;
 
-    @NameInMap("operator_type")
+    @NameInMap("operatorType")
     public String operatorType;
 
-    @NameInMap("resource_prefix")
+    @NameInMap("resourcePrefix")
     public String resourcePrefix;
 
     public static ListPermissionResourcePopRequest build(java.util.Map<String, ?> map) throws Exception {

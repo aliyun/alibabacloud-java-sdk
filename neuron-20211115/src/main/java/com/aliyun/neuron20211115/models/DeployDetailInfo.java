@@ -67,8 +67,14 @@ public class DeployDetailInfo extends TeaModel {
     @NameInMap("pbcName")
     public String pbcName;
 
+    @NameInMap("pipelineId")
+    public String pipelineId;
+
     @NameInMap("pipelineInfos")
     public java.util.List<DeployPipelineInfo> pipelineInfos;
+
+    @NameInMap("pipelineRunId")
+    public String pipelineRunId;
 
     @NameInMap("repositoryId")
     public String repositoryId;
@@ -264,12 +270,28 @@ public class DeployDetailInfo extends TeaModel {
         return this.pbcName;
     }
 
+    public DeployDetailInfo setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
+    }
+
     public DeployDetailInfo setPipelineInfos(java.util.List<DeployPipelineInfo> pipelineInfos) {
         this.pipelineInfos = pipelineInfos;
         return this;
     }
     public java.util.List<DeployPipelineInfo> getPipelineInfos() {
         return this.pipelineInfos;
+    }
+
+    public DeployDetailInfo setPipelineRunId(String pipelineRunId) {
+        this.pipelineRunId = pipelineRunId;
+        return this;
+    }
+    public String getPipelineRunId() {
+        return this.pipelineRunId;
     }
 
     public DeployDetailInfo setRepositoryId(String repositoryId) {

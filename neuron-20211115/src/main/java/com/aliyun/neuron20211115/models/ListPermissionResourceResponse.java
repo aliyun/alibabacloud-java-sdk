@@ -14,7 +14,7 @@ public class ListPermissionResourceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListPermissionResourceResponseBody body;
+    public PermissionAllowResource body;
 
     public static ListPermissionResourceResponse build(java.util.Map<String, ?> map) throws Exception {
         ListPermissionResourceResponse self = new ListPermissionResourceResponse();
@@ -37,11 +37,11 @@ public class ListPermissionResourceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListPermissionResourceResponse setBody(ListPermissionResourceResponseBody body) {
+    public ListPermissionResourceResponse setBody(PermissionAllowResource body) {
         this.body = body;
         return this;
     }
-    public ListPermissionResourceResponseBody getBody() {
+    public PermissionAllowResource getBody() {
         return this.body;
     }
 

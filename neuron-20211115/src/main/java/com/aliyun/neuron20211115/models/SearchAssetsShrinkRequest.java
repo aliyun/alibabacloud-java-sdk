@@ -4,25 +4,31 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class SearchAssetsShrinkRequest extends TeaModel {
-    @NameInMap("asset_industrys")
+    @NameInMap("assetIndustrys")
     public String assetIndustrysShrink;
 
-    @NameInMap("asset_name")
+    @NameInMap("assetName")
     public String assetName;
 
-    @NameInMap("asset_types")
+    @NameInMap("assetTypes")
     public String assetTypesShrink;
 
-    @NameInMap("order_by")
+    @NameInMap("companyId")
+    public Long companyId;
+
+    @NameInMap("marketId")
+    public Long marketId;
+
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
     public static SearchAssetsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -52,6 +58,22 @@ public class SearchAssetsShrinkRequest extends TeaModel {
     }
     public String getAssetTypesShrink() {
         return this.assetTypesShrink;
+    }
+
+    public SearchAssetsShrinkRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
+    }
+
+    public SearchAssetsShrinkRequest setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
     }
 
     public SearchAssetsShrinkRequest setOrderBy(String orderBy) {

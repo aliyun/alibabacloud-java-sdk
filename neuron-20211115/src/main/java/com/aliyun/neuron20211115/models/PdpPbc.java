@@ -34,6 +34,9 @@ public class PdpPbc extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("type")
     public String type;
 
@@ -120,6 +123,14 @@ public class PdpPbc extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public PdpPbc setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PdpPbc setType(String type) {

@@ -7,11 +7,11 @@ public class PbcSchema extends TeaModel {
     @NameInMap("id")
     public Long id;
 
-    @NameInMap("pbcName")
-    public String pbcName;
+    @NameInMap("pbcVersionId")
+    public Long pbcVersionId;
 
-    @NameInMap("pbcVersion")
-    public String pbcVersion;
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("schema")
     public String schema;
@@ -29,20 +29,20 @@ public class PbcSchema extends TeaModel {
         return this.id;
     }
 
-    public PbcSchema setPbcName(String pbcName) {
-        this.pbcName = pbcName;
+    public PbcSchema setPbcVersionId(Long pbcVersionId) {
+        this.pbcVersionId = pbcVersionId;
         return this;
     }
-    public String getPbcName() {
-        return this.pbcName;
+    public Long getPbcVersionId() {
+        return this.pbcVersionId;
     }
 
-    public PbcSchema setPbcVersion(String pbcVersion) {
-        this.pbcVersion = pbcVersion;
+    public PbcSchema setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getPbcVersion() {
-        return this.pbcVersion;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PbcSchema setSchema(String schema) {

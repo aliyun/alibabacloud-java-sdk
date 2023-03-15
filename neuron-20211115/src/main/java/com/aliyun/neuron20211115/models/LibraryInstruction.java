@@ -4,21 +4,35 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class LibraryInstruction extends TeaModel {
+    @NameInMap("companyId")
+    public Long companyId;
+
     @NameInMap("document")
     public String document;
 
     @NameInMap("id")
     public Long id;
 
-    @NameInMap("libraryName")
-    public String libraryName;
+    @NameInMap("libraryId")
+    public String libraryId;
 
-    @NameInMap("libraryVersion")
-    public String libraryVersion;
+    @NameInMap("marketId")
+    public Long marketId;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     public static LibraryInstruction build(java.util.Map<String, ?> map) throws Exception {
         LibraryInstruction self = new LibraryInstruction();
         return TeaModel.build(map, self);
+    }
+
+    public LibraryInstruction setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
     }
 
     public LibraryInstruction setDocument(String document) {
@@ -37,20 +51,28 @@ public class LibraryInstruction extends TeaModel {
         return this.id;
     }
 
-    public LibraryInstruction setLibraryName(String libraryName) {
-        this.libraryName = libraryName;
+    public LibraryInstruction setLibraryId(String libraryId) {
+        this.libraryId = libraryId;
         return this;
     }
-    public String getLibraryName() {
-        return this.libraryName;
+    public String getLibraryId() {
+        return this.libraryId;
     }
 
-    public LibraryInstruction setLibraryVersion(String libraryVersion) {
-        this.libraryVersion = libraryVersion;
+    public LibraryInstruction setMarketId(Long marketId) {
+        this.marketId = marketId;
         return this;
     }
-    public String getLibraryVersion() {
-        return this.libraryVersion;
+    public Long getMarketId() {
+        return this.marketId;
+    }
+
+    public LibraryInstruction setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

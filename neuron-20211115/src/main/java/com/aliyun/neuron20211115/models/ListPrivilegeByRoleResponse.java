@@ -14,7 +14,7 @@ public class ListPrivilegeByRoleResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListPrivilegeByRoleResponseBody body;
+    public PrivilegePageResult body;
 
     public static ListPrivilegeByRoleResponse build(java.util.Map<String, ?> map) throws Exception {
         ListPrivilegeByRoleResponse self = new ListPrivilegeByRoleResponse();
@@ -37,11 +37,11 @@ public class ListPrivilegeByRoleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListPrivilegeByRoleResponse setBody(ListPrivilegeByRoleResponseBody body) {
+    public ListPrivilegeByRoleResponse setBody(PrivilegePageResult body) {
         this.body = body;
         return this;
     }
-    public ListPrivilegeByRoleResponseBody getBody() {
+    public PrivilegePageResult getBody() {
         return this.body;
     }
 

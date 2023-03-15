@@ -11,7 +11,7 @@ public class FeedbackLibraryReviewRequest extends TeaModel {
     public String feedback;
 
     @NameInMap("reviewId")
-    public String reviewId;
+    public Long reviewId;
 
     public static FeedbackLibraryReviewRequest build(java.util.Map<String, ?> map) throws Exception {
         FeedbackLibraryReviewRequest self = new FeedbackLibraryReviewRequest();
@@ -34,11 +34,11 @@ public class FeedbackLibraryReviewRequest extends TeaModel {
         return this.feedback;
     }
 
-    public FeedbackLibraryReviewRequest setReviewId(String reviewId) {
+    public FeedbackLibraryReviewRequest setReviewId(Long reviewId) {
         this.reviewId = reviewId;
         return this;
     }
-    public String getReviewId() {
+    public Long getReviewId() {
         return this.reviewId;
     }
 

@@ -14,7 +14,7 @@ public class GetForkReviewResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetForkReviewResponseBody body;
+    public ForkReview body;
 
     public static GetForkReviewResponse build(java.util.Map<String, ?> map) throws Exception {
         GetForkReviewResponse self = new GetForkReviewResponse();
@@ -37,11 +37,11 @@ public class GetForkReviewResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetForkReviewResponse setBody(GetForkReviewResponseBody body) {
+    public GetForkReviewResponse setBody(ForkReview body) {
         this.body = body;
         return this;
     }
-    public GetForkReviewResponseBody getBody() {
+    public ForkReview getBody() {
         return this.body;
     }
 

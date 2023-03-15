@@ -14,7 +14,7 @@ public class GetPbcDeveloperRepoMetricsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetPbcDeveloperRepoMetricsResponseBody body;
+    public PbcDeveloperRepoMetricResult body;
 
     public static GetPbcDeveloperRepoMetricsResponse build(java.util.Map<String, ?> map) throws Exception {
         GetPbcDeveloperRepoMetricsResponse self = new GetPbcDeveloperRepoMetricsResponse();
@@ -37,11 +37,11 @@ public class GetPbcDeveloperRepoMetricsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetPbcDeveloperRepoMetricsResponse setBody(GetPbcDeveloperRepoMetricsResponseBody body) {
+    public GetPbcDeveloperRepoMetricsResponse setBody(PbcDeveloperRepoMetricResult body) {
         this.body = body;
         return this;
     }
-    public GetPbcDeveloperRepoMetricsResponseBody getBody() {
+    public PbcDeveloperRepoMetricResult getBody() {
         return this.body;
     }
 

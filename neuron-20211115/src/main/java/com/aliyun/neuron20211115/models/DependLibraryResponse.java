@@ -14,7 +14,7 @@ public class DependLibraryResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DependLibraryResponseBody body;
+    public CatalogCommonResult body;
 
     public static DependLibraryResponse build(java.util.Map<String, ?> map) throws Exception {
         DependLibraryResponse self = new DependLibraryResponse();
@@ -37,11 +37,11 @@ public class DependLibraryResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DependLibraryResponse setBody(DependLibraryResponseBody body) {
+    public DependLibraryResponse setBody(CatalogCommonResult body) {
         this.body = body;
         return this;
     }
-    public DependLibraryResponseBody getBody() {
+    public CatalogCommonResult getBody() {
         return this.body;
     }
 

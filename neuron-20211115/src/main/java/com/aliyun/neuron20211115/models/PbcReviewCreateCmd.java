@@ -7,14 +7,11 @@ public class PbcReviewCreateCmd extends TeaModel {
     @NameInMap("marketId")
     public Long marketId;
 
-    @NameInMap("pbcName")
-    public String pbcName;
-
     @NameInMap("pbcUrl")
     public String pbcUrl;
 
-    @NameInMap("pbcVersion")
-    public String pbcVersion;
+    @NameInMap("pbcVersionId")
+    public Long pbcVersionId;
 
     @NameInMap("reviewerId")
     public Long reviewerId;
@@ -32,14 +29,6 @@ public class PbcReviewCreateCmd extends TeaModel {
         return this.marketId;
     }
 
-    public PbcReviewCreateCmd setPbcName(String pbcName) {
-        this.pbcName = pbcName;
-        return this;
-    }
-    public String getPbcName() {
-        return this.pbcName;
-    }
-
     public PbcReviewCreateCmd setPbcUrl(String pbcUrl) {
         this.pbcUrl = pbcUrl;
         return this;
@@ -48,12 +37,12 @@ public class PbcReviewCreateCmd extends TeaModel {
         return this.pbcUrl;
     }
 
-    public PbcReviewCreateCmd setPbcVersion(String pbcVersion) {
-        this.pbcVersion = pbcVersion;
+    public PbcReviewCreateCmd setPbcVersionId(Long pbcVersionId) {
+        this.pbcVersionId = pbcVersionId;
         return this;
     }
-    public String getPbcVersion() {
-        return this.pbcVersion;
+    public Long getPbcVersionId() {
+        return this.pbcVersionId;
     }
 
     public PbcReviewCreateCmd setReviewerId(Long reviewerId) {

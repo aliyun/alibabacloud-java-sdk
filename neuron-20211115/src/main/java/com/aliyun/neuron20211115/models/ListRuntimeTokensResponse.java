@@ -14,7 +14,7 @@ public class ListRuntimeTokensResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListRuntimeTokensResponseBody body;
+    public PdpListTokenResult body;
 
     public static ListRuntimeTokensResponse build(java.util.Map<String, ?> map) throws Exception {
         ListRuntimeTokensResponse self = new ListRuntimeTokensResponse();
@@ -37,11 +37,11 @@ public class ListRuntimeTokensResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListRuntimeTokensResponse setBody(ListRuntimeTokensResponseBody body) {
+    public ListRuntimeTokensResponse setBody(PdpListTokenResult body) {
         this.body = body;
         return this;
     }
-    public ListRuntimeTokensResponseBody getBody() {
+    public PdpListTokenResult getBody() {
         return this.body;
     }
 

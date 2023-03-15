@@ -25,8 +25,14 @@ public class DeployConfigInfo extends TeaModel {
     @NameInMap("memory")
     public Integer memory;
 
+    @NameInMap("pipelineId")
+    public String pipelineId;
+
     @NameInMap("serviceId")
     public Long serviceId;
+
+    @NameInMap("timeout")
+    public Integer timeout;
 
     @NameInMap("times")
     public Integer times;
@@ -92,12 +98,28 @@ public class DeployConfigInfo extends TeaModel {
         return this.memory;
     }
 
+    public DeployConfigInfo setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
+    }
+
     public DeployConfigInfo setServiceId(Long serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     public Long getServiceId() {
         return this.serviceId;
+    }
+
+    public DeployConfigInfo setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
     public DeployConfigInfo setTimes(Integer times) {

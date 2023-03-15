@@ -14,7 +14,7 @@ public class CreatePbcApiSchemaResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreatePbcApiSchemaResponseBody body;
+    public PbcApiSchema body;
 
     public static CreatePbcApiSchemaResponse build(java.util.Map<String, ?> map) throws Exception {
         CreatePbcApiSchemaResponse self = new CreatePbcApiSchemaResponse();
@@ -37,11 +37,11 @@ public class CreatePbcApiSchemaResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreatePbcApiSchemaResponse setBody(CreatePbcApiSchemaResponseBody body) {
+    public CreatePbcApiSchemaResponse setBody(PbcApiSchema body) {
         this.body = body;
         return this;
     }
-    public CreatePbcApiSchemaResponseBody getBody() {
+    public PbcApiSchema getBody() {
         return this.body;
     }
 

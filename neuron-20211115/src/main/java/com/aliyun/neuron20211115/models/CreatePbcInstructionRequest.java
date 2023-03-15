@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreatePbcInstructionRequest extends TeaModel {
     @NameInMap("body")
-    public PbcInstruction body;
+    public PbcInstructionCreateCmd body;
 
     public static CreatePbcInstructionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePbcInstructionRequest self = new CreatePbcInstructionRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreatePbcInstructionRequest setBody(PbcInstruction body) {
+    public CreatePbcInstructionRequest setBody(PbcInstructionCreateCmd body) {
         this.body = body;
         return this;
     }
-    public PbcInstruction getBody() {
+    public PbcInstructionCreateCmd getBody() {
         return this.body;
     }
 

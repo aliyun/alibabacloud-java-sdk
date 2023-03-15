@@ -14,7 +14,7 @@ public class ListPbcVersionNumbersResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListPbcVersionNumbersResponseBody body;
+    public PbcVersionListResult body;
 
     public static ListPbcVersionNumbersResponse build(java.util.Map<String, ?> map) throws Exception {
         ListPbcVersionNumbersResponse self = new ListPbcVersionNumbersResponse();
@@ -37,11 +37,11 @@ public class ListPbcVersionNumbersResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListPbcVersionNumbersResponse setBody(ListPbcVersionNumbersResponseBody body) {
+    public ListPbcVersionNumbersResponse setBody(PbcVersionListResult body) {
         this.body = body;
         return this;
     }
-    public ListPbcVersionNumbersResponseBody getBody() {
+    public PbcVersionListResult getBody() {
         return this.body;
     }
 

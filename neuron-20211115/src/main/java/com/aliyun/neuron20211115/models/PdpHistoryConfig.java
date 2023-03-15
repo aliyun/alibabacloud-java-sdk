@@ -37,6 +37,9 @@ public class PdpHistoryConfig extends TeaModel {
     @NameInMap("pbcId")
     public Long pbcId;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("serviceId")
     public Long serviceId;
 
@@ -134,6 +137,14 @@ public class PdpHistoryConfig extends TeaModel {
     }
     public Long getPbcId() {
         return this.pbcId;
+    }
+
+    public PdpHistoryConfig setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PdpHistoryConfig setServiceId(Long serviceId) {

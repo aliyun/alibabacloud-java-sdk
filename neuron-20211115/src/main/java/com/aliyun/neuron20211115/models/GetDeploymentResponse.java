@@ -14,7 +14,7 @@ public class GetDeploymentResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetDeploymentResponseBody body;
+    public DeployDetailInfo body;
 
     public static GetDeploymentResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDeploymentResponse self = new GetDeploymentResponse();
@@ -37,11 +37,11 @@ public class GetDeploymentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDeploymentResponse setBody(GetDeploymentResponseBody body) {
+    public GetDeploymentResponse setBody(DeployDetailInfo body) {
         this.body = body;
         return this;
     }
-    public GetDeploymentResponseBody getBody() {
+    public DeployDetailInfo getBody() {
         return this.body;
     }
 

@@ -10,11 +10,11 @@ public class PbcApiSchema extends TeaModel {
     @NameInMap("id")
     public Long id;
 
-    @NameInMap("pbcName")
-    public String pbcName;
+    @NameInMap("pbcVersionId")
+    public Long pbcVersionId;
 
-    @NameInMap("pbcVersion")
-    public String pbcVersion;
+    @NameInMap("requestId")
+    public String requestId;
 
     public static PbcApiSchema build(java.util.Map<String, ?> map) throws Exception {
         PbcApiSchema self = new PbcApiSchema();
@@ -37,20 +37,20 @@ public class PbcApiSchema extends TeaModel {
         return this.id;
     }
 
-    public PbcApiSchema setPbcName(String pbcName) {
-        this.pbcName = pbcName;
+    public PbcApiSchema setPbcVersionId(Long pbcVersionId) {
+        this.pbcVersionId = pbcVersionId;
         return this;
     }
-    public String getPbcName() {
-        return this.pbcName;
+    public Long getPbcVersionId() {
+        return this.pbcVersionId;
     }
 
-    public PbcApiSchema setPbcVersion(String pbcVersion) {
-        this.pbcVersion = pbcVersion;
+    public PbcApiSchema setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getPbcVersion() {
-        return this.pbcVersion;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

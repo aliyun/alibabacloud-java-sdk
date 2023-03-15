@@ -14,7 +14,7 @@ public class UpShelfLibraryResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpShelfLibraryResponseBody body;
+    public CatalogCommonResult body;
 
     public static UpShelfLibraryResponse build(java.util.Map<String, ?> map) throws Exception {
         UpShelfLibraryResponse self = new UpShelfLibraryResponse();
@@ -37,11 +37,11 @@ public class UpShelfLibraryResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpShelfLibraryResponse setBody(UpShelfLibraryResponseBody body) {
+    public UpShelfLibraryResponse setBody(CatalogCommonResult body) {
         this.body = body;
         return this;
     }
-    public UpShelfLibraryResponseBody getBody() {
+    public CatalogCommonResult getBody() {
         return this.body;
     }
 

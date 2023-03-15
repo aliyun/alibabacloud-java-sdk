@@ -14,7 +14,7 @@ public class RemoveAssetWatchResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public RemoveAssetWatchResponseBody body;
+    public CatalogCommonResult body;
 
     public static RemoveAssetWatchResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveAssetWatchResponse self = new RemoveAssetWatchResponse();
@@ -37,11 +37,11 @@ public class RemoveAssetWatchResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RemoveAssetWatchResponse setBody(RemoveAssetWatchResponseBody body) {
+    public RemoveAssetWatchResponse setBody(CatalogCommonResult body) {
         this.body = body;
         return this;
     }
-    public RemoveAssetWatchResponseBody getBody() {
+    public CatalogCommonResult getBody() {
         return this.body;
     }
 

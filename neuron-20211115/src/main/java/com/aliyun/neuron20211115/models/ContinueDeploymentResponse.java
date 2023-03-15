@@ -14,7 +14,7 @@ public class ContinueDeploymentResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ContinueDeploymentResponseBody body;
+    public PdpServiceDeployment body;
 
     public static ContinueDeploymentResponse build(java.util.Map<String, ?> map) throws Exception {
         ContinueDeploymentResponse self = new ContinueDeploymentResponse();
@@ -37,11 +37,11 @@ public class ContinueDeploymentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ContinueDeploymentResponse setBody(ContinueDeploymentResponseBody body) {
+    public ContinueDeploymentResponse setBody(PdpServiceDeployment body) {
         this.body = body;
         return this;
     }
-    public ContinueDeploymentResponseBody getBody() {
+    public PdpServiceDeployment getBody() {
         return this.body;
     }
 

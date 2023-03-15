@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdatePbcVersionRequest extends TeaModel {
     @NameInMap("body")
-    public PbcVersion body;
+    public PbcVersionCmd body;
 
     public static UpdatePbcVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePbcVersionRequest self = new UpdatePbcVersionRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePbcVersionRequest setBody(PbcVersion body) {
+    public UpdatePbcVersionRequest setBody(PbcVersionCmd body) {
         this.body = body;
         return this;
     }
-    public PbcVersion getBody() {
+    public PbcVersionCmd getBody() {
         return this.body;
     }
 

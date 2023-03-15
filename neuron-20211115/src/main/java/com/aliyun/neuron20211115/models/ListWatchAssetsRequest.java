@@ -4,26 +4,32 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListWatchAssetsRequest extends TeaModel {
-    @NameInMap("account_id")
+    @NameInMap("accountId")
     public String accountId;
 
-    @NameInMap("asset_name")
-    public String assetName;
-
-    @NameInMap("asset_type")
+    @NameInMap("assetType")
     public String assetType;
 
-    @NameInMap("order_by")
+    @NameInMap("companyId")
+    public Long companyId;
+
+    @NameInMap("marketId")
+    public Long marketId;
+
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
+
+    @NameInMap("upshelfAssetId")
+    public Long upshelfAssetId;
 
     public static ListWatchAssetsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWatchAssetsRequest self = new ListWatchAssetsRequest();
@@ -38,20 +44,28 @@ public class ListWatchAssetsRequest extends TeaModel {
         return this.accountId;
     }
 
-    public ListWatchAssetsRequest setAssetName(String assetName) {
-        this.assetName = assetName;
-        return this;
-    }
-    public String getAssetName() {
-        return this.assetName;
-    }
-
     public ListWatchAssetsRequest setAssetType(String assetType) {
         this.assetType = assetType;
         return this;
     }
     public String getAssetType() {
         return this.assetType;
+    }
+
+    public ListWatchAssetsRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
+    }
+
+    public ListWatchAssetsRequest setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
     }
 
     public ListWatchAssetsRequest setOrderBy(String orderBy) {
@@ -84,6 +98,14 @@ public class ListWatchAssetsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListWatchAssetsRequest setUpshelfAssetId(Long upshelfAssetId) {
+        this.upshelfAssetId = upshelfAssetId;
+        return this;
+    }
+    public Long getUpshelfAssetId() {
+        return this.upshelfAssetId;
     }
 
 }

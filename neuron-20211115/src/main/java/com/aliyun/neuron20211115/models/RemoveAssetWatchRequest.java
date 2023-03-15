@@ -4,8 +4,11 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class RemoveAssetWatchRequest extends TeaModel {
-    @NameInMap("asset_type")
+    @NameInMap("assetType")
     public String assetType;
+
+    @NameInMap("companyId")
+    public Long companyId;
 
     public static RemoveAssetWatchRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveAssetWatchRequest self = new RemoveAssetWatchRequest();
@@ -18,6 +21,14 @@ public class RemoveAssetWatchRequest extends TeaModel {
     }
     public String getAssetType() {
         return this.assetType;
+    }
+
+    public RemoveAssetWatchRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
     }
 
 }

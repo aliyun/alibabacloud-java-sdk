@@ -4,11 +4,17 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ForkReviewCreateCmd extends TeaModel {
+    @NameInMap("companyId")
+    public Long companyId;
+
     @NameInMap("gitGroup")
     public String gitGroup;
 
-    @NameInMap("pbcName")
-    public String pbcName;
+    @NameInMap("marketId")
+    public Long marketId;
+
+    @NameInMap("pbcId")
+    public Long pbcId;
 
     @NameInMap("usage")
     public String usage;
@@ -16,6 +22,14 @@ public class ForkReviewCreateCmd extends TeaModel {
     public static ForkReviewCreateCmd build(java.util.Map<String, ?> map) throws Exception {
         ForkReviewCreateCmd self = new ForkReviewCreateCmd();
         return TeaModel.build(map, self);
+    }
+
+    public ForkReviewCreateCmd setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
     }
 
     public ForkReviewCreateCmd setGitGroup(String gitGroup) {
@@ -26,12 +40,20 @@ public class ForkReviewCreateCmd extends TeaModel {
         return this.gitGroup;
     }
 
-    public ForkReviewCreateCmd setPbcName(String pbcName) {
-        this.pbcName = pbcName;
+    public ForkReviewCreateCmd setMarketId(Long marketId) {
+        this.marketId = marketId;
         return this;
     }
-    public String getPbcName() {
-        return this.pbcName;
+    public Long getMarketId() {
+        return this.marketId;
+    }
+
+    public ForkReviewCreateCmd setPbcId(Long pbcId) {
+        this.pbcId = pbcId;
+        return this;
+    }
+    public Long getPbcId() {
+        return this.pbcId;
     }
 
     public ForkReviewCreateCmd setUsage(String usage) {

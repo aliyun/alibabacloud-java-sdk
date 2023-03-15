@@ -14,7 +14,7 @@ public class DeletePbcInvokeResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeletePbcInvokeResponseBody body;
+    public CatalogCommonResult body;
 
     public static DeletePbcInvokeResponse build(java.util.Map<String, ?> map) throws Exception {
         DeletePbcInvokeResponse self = new DeletePbcInvokeResponse();
@@ -37,11 +37,11 @@ public class DeletePbcInvokeResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeletePbcInvokeResponse setBody(DeletePbcInvokeResponseBody body) {
+    public DeletePbcInvokeResponse setBody(CatalogCommonResult body) {
         this.body = body;
         return this;
     }
-    public DeletePbcInvokeResponseBody getBody() {
+    public CatalogCommonResult getBody() {
         return this.body;
     }
 

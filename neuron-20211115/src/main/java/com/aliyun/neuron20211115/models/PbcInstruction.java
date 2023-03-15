@@ -10,11 +10,11 @@ public class PbcInstruction extends TeaModel {
     @NameInMap("id")
     public Long id;
 
-    @NameInMap("pbcName")
-    public String pbcName;
+    @NameInMap("pbcVersionId")
+    public Long pbcVersionId;
 
-    @NameInMap("pbcVersion")
-    public String pbcVersion;
+    @NameInMap("requestId")
+    public String requestId;
 
     public static PbcInstruction build(java.util.Map<String, ?> map) throws Exception {
         PbcInstruction self = new PbcInstruction();
@@ -37,20 +37,20 @@ public class PbcInstruction extends TeaModel {
         return this.id;
     }
 
-    public PbcInstruction setPbcName(String pbcName) {
-        this.pbcName = pbcName;
+    public PbcInstruction setPbcVersionId(Long pbcVersionId) {
+        this.pbcVersionId = pbcVersionId;
         return this;
     }
-    public String getPbcName() {
-        return this.pbcName;
+    public Long getPbcVersionId() {
+        return this.pbcVersionId;
     }
 
-    public PbcInstruction setPbcVersion(String pbcVersion) {
-        this.pbcVersion = pbcVersion;
+    public PbcInstruction setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getPbcVersion() {
-        return this.pbcVersion;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

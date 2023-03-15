@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreatePbcRequest extends TeaModel {
     @NameInMap("body")
-    public Pbc body;
+    public PbcCreateCmd body;
 
     public static CreatePbcRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePbcRequest self = new CreatePbcRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreatePbcRequest setBody(Pbc body) {
+    public CreatePbcRequest setBody(PbcCreateCmd body) {
         this.body = body;
         return this;
     }
-    public Pbc getBody() {
+    public PbcCreateCmd getBody() {
         return this.body;
     }
 

@@ -7,16 +7,22 @@ public class ListForkReviewsRequest extends TeaModel {
     @NameInMap("applicant")
     public String applicant;
 
-    @NameInMap("order_by")
+    @NameInMap("companyId")
+    public Long companyId;
+
+    @NameInMap("marketId")
+    public Long marketId;
+
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("reviewer")
@@ -33,6 +39,22 @@ public class ListForkReviewsRequest extends TeaModel {
     }
     public String getApplicant() {
         return this.applicant;
+    }
+
+    public ListForkReviewsRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
+    }
+
+    public ListForkReviewsRequest setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
     }
 
     public ListForkReviewsRequest setOrderBy(String orderBy) {

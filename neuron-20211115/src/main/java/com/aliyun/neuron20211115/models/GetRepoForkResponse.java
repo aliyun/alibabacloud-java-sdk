@@ -14,7 +14,7 @@ public class GetRepoForkResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetRepoForkResponseBody body;
+    public ReposFork body;
 
     public static GetRepoForkResponse build(java.util.Map<String, ?> map) throws Exception {
         GetRepoForkResponse self = new GetRepoForkResponse();
@@ -37,11 +37,11 @@ public class GetRepoForkResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetRepoForkResponse setBody(GetRepoForkResponseBody body) {
+    public GetRepoForkResponse setBody(ReposFork body) {
         this.body = body;
         return this;
     }
-    public GetRepoForkResponseBody getBody() {
+    public ReposFork getBody() {
         return this.body;
     }
 

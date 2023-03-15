@@ -14,7 +14,7 @@ public class ListGrantedRolesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListGrantedRolesResponseBody body;
+    public RolePageResult body;
 
     public static ListGrantedRolesResponse build(java.util.Map<String, ?> map) throws Exception {
         ListGrantedRolesResponse self = new ListGrantedRolesResponse();
@@ -37,11 +37,11 @@ public class ListGrantedRolesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListGrantedRolesResponse setBody(ListGrantedRolesResponseBody body) {
+    public ListGrantedRolesResponse setBody(RolePageResult body) {
         this.body = body;
         return this;
     }
-    public ListGrantedRolesResponseBody getBody() {
+    public RolePageResult getBody() {
         return this.body;
     }
 

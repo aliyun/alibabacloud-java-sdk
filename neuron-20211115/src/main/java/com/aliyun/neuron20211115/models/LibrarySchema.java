@@ -7,6 +7,9 @@ public class LibrarySchema extends TeaModel {
     @NameInMap("artifactId")
     public String artifactId;
 
+    @NameInMap("companyId")
+    public Long companyId;
+
     @NameInMap("description")
     public String description;
 
@@ -22,14 +25,20 @@ public class LibrarySchema extends TeaModel {
     @NameInMap("industry")
     public String industry;
 
+    @NameInMap("libraryId")
+    public Long libraryId;
+
+    @NameInMap("marketId")
+    public Long marketId;
+
     @NameInMap("name")
     public String name;
 
     @NameInMap("provider")
     public Provider provider;
 
-    @NameInMap("version")
-    public String version;
+    @NameInMap("requestId")
+    public String requestId;
 
     public static LibrarySchema build(java.util.Map<String, ?> map) throws Exception {
         LibrarySchema self = new LibrarySchema();
@@ -42,6 +51,14 @@ public class LibrarySchema extends TeaModel {
     }
     public String getArtifactId() {
         return this.artifactId;
+    }
+
+    public LibrarySchema setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
     }
 
     public LibrarySchema setDescription(String description) {
@@ -84,6 +101,22 @@ public class LibrarySchema extends TeaModel {
         return this.industry;
     }
 
+    public LibrarySchema setLibraryId(Long libraryId) {
+        this.libraryId = libraryId;
+        return this;
+    }
+    public Long getLibraryId() {
+        return this.libraryId;
+    }
+
+    public LibrarySchema setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
+    }
+
     public LibrarySchema setName(String name) {
         this.name = name;
         return this;
@@ -100,12 +133,12 @@ public class LibrarySchema extends TeaModel {
         return this.provider;
     }
 
-    public LibrarySchema setVersion(String version) {
-        this.version = version;
+    public LibrarySchema setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

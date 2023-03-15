@@ -14,7 +14,7 @@ public class ListUpstreamPbcResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListUpstreamPbcResponseBody body;
+    public PbcUpDownstreamResult body;
 
     public static ListUpstreamPbcResponse build(java.util.Map<String, ?> map) throws Exception {
         ListUpstreamPbcResponse self = new ListUpstreamPbcResponse();
@@ -37,11 +37,11 @@ public class ListUpstreamPbcResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListUpstreamPbcResponse setBody(ListUpstreamPbcResponseBody body) {
+    public ListUpstreamPbcResponse setBody(PbcUpDownstreamResult body) {
         this.body = body;
         return this;
     }
-    public ListUpstreamPbcResponseBody getBody() {
+    public PbcUpDownstreamResult getBody() {
         return this.body;
     }
 

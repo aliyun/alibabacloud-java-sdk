@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreatePbcApiSchemaRequest extends TeaModel {
     @NameInMap("body")
-    public PbcApiSchema body;
+    public PbcApiSchemaCreateCmd body;
 
     public static CreatePbcApiSchemaRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePbcApiSchemaRequest self = new CreatePbcApiSchemaRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreatePbcApiSchemaRequest setBody(PbcApiSchema body) {
+    public CreatePbcApiSchemaRequest setBody(PbcApiSchemaCreateCmd body) {
         this.body = body;
         return this;
     }
-    public PbcApiSchema getBody() {
+    public PbcApiSchemaCreateCmd getBody() {
         return this.body;
     }
 

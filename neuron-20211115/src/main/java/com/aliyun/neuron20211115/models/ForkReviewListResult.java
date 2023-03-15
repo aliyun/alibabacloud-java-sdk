@@ -7,6 +7,9 @@ public class ForkReviewListResult extends TeaModel {
     @NameInMap("forkReviews")
     public java.util.List<ForkReview> forkReviews;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("total")
     public Integer total;
 
@@ -21,6 +24,14 @@ public class ForkReviewListResult extends TeaModel {
     }
     public java.util.List<ForkReview> getForkReviews() {
         return this.forkReviews;
+    }
+
+    public ForkReviewListResult setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ForkReviewListResult setTotal(Integer total) {

@@ -7,7 +7,7 @@ public class GetLastDeploymentConfigRequest extends TeaModel {
     @NameInMap("env")
     public String env;
 
-    @NameInMap("service_id")
+    @NameInMap("serviceId")
     public Long serviceId;
 
     public static GetLastDeploymentConfigRequest build(java.util.Map<String, ?> map) throws Exception {

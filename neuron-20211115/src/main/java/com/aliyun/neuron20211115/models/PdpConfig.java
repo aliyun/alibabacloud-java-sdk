@@ -37,6 +37,9 @@ public class PdpConfig extends TeaModel {
     @NameInMap("pbcId")
     public Long pbcId;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("serviceId")
     public Long serviceId;
 
@@ -134,6 +137,14 @@ public class PdpConfig extends TeaModel {
     }
     public Long getPbcId() {
         return this.pbcId;
+    }
+
+    public PdpConfig setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PdpConfig setServiceId(Long serviceId) {

@@ -7,6 +7,9 @@ public class PbcReview extends TeaModel {
     @NameInMap("developerId")
     public Long developerId;
 
+    @NameInMap("developerName")
+    public String developerName;
+
     @NameInMap("feedbackPbcApi")
     public String feedbackPbcApi;
 
@@ -28,6 +31,9 @@ public class PbcReview extends TeaModel {
     @NameInMap("marketId")
     public Long marketId;
 
+    @NameInMap("marketName")
+    public String marketName;
+
     @NameInMap("pbcName")
     public String pbcName;
 
@@ -39,6 +45,9 @@ public class PbcReview extends TeaModel {
 
     @NameInMap("remainTime")
     public String remainTime;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("reviewerId")
     public Long reviewerId;
@@ -57,6 +66,14 @@ public class PbcReview extends TeaModel {
     }
     public Long getDeveloperId() {
         return this.developerId;
+    }
+
+    public PbcReview setDeveloperName(String developerName) {
+        this.developerName = developerName;
+        return this;
+    }
+    public String getDeveloperName() {
+        return this.developerName;
     }
 
     public PbcReview setFeedbackPbcApi(String feedbackPbcApi) {
@@ -115,6 +132,14 @@ public class PbcReview extends TeaModel {
         return this.marketId;
     }
 
+    public PbcReview setMarketName(String marketName) {
+        this.marketName = marketName;
+        return this;
+    }
+    public String getMarketName() {
+        return this.marketName;
+    }
+
     public PbcReview setPbcName(String pbcName) {
         this.pbcName = pbcName;
         return this;
@@ -145,6 +170,14 @@ public class PbcReview extends TeaModel {
     }
     public String getRemainTime() {
         return this.remainTime;
+    }
+
+    public PbcReview setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PbcReview setReviewerId(Long reviewerId) {

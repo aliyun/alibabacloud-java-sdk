@@ -7,17 +7,17 @@ public class ListPbcInvokeReviewsRequest extends TeaModel {
     @NameInMap("applicant")
     public String applicant;
 
-    @NameInMap("order_by")
-    public String orderBy;
+    @NameInMap("companyId")
+    public Long companyId;
 
-    @NameInMap("order_direction")
-    public String orderDirection;
+    @NameInMap("marketId")
+    public Long marketId;
 
-    @NameInMap("page_number")
-    public Integer pageNumber;
+    @NameInMap("orderDirection")
+    public Integer orderDirection;
 
-    @NameInMap("page_size")
-    public Integer pageSize;
+    @NameInMap("orderby")
+    public Integer orderby;
 
     @NameInMap("reviewer")
     public String reviewer;
@@ -35,36 +35,36 @@ public class ListPbcInvokeReviewsRequest extends TeaModel {
         return this.applicant;
     }
 
-    public ListPbcInvokeReviewsRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
+    public ListPbcInvokeReviewsRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
         return this;
     }
-    public String getOrderBy() {
-        return this.orderBy;
+    public Long getCompanyId() {
+        return this.companyId;
     }
 
-    public ListPbcInvokeReviewsRequest setOrderDirection(String orderDirection) {
+    public ListPbcInvokeReviewsRequest setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
+    }
+
+    public ListPbcInvokeReviewsRequest setOrderDirection(Integer orderDirection) {
         this.orderDirection = orderDirection;
         return this;
     }
-    public String getOrderDirection() {
+    public Integer getOrderDirection() {
         return this.orderDirection;
     }
 
-    public ListPbcInvokeReviewsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListPbcInvokeReviewsRequest setOrderby(Integer orderby) {
+        this.orderby = orderby;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListPbcInvokeReviewsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Integer getOrderby() {
+        return this.orderby;
     }
 
     public ListPbcInvokeReviewsRequest setReviewer(String reviewer) {

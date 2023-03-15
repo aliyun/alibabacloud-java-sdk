@@ -16,6 +16,9 @@ public class Privilege extends TeaModel {
     @NameInMap("id")
     public Long id;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("resource")
     public String resource;
 
@@ -57,6 +60,14 @@ public class Privilege extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public Privilege setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public Privilege setResource(String resource) {

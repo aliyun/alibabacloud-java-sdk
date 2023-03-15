@@ -14,7 +14,7 @@ public class ListPbcsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListPbcsResponseBody body;
+    public PbcListResult body;
 
     public static ListPbcsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListPbcsResponse self = new ListPbcsResponse();
@@ -37,11 +37,11 @@ public class ListPbcsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListPbcsResponse setBody(ListPbcsResponseBody body) {
+    public ListPbcsResponse setBody(PbcListResult body) {
         this.body = body;
         return this;
     }
-    public ListPbcsResponseBody getBody() {
+    public PbcListResult getBody() {
         return this.body;
     }
 

@@ -4,22 +4,25 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListPdpPbcsRequest extends TeaModel {
-    @NameInMap("developer_id")
+    @NameInMap("companyId")
+    public Long companyId;
+
+    @NameInMap("developerId")
     public String developerId;
 
     @NameInMap("keyword")
     public String keyword;
 
-    @NameInMap("order_by")
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("pbcIds")
@@ -28,6 +31,14 @@ public class ListPdpPbcsRequest extends TeaModel {
     public static ListPdpPbcsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPdpPbcsRequest self = new ListPdpPbcsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPdpPbcsRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
     }
 
     public ListPdpPbcsRequest setDeveloperId(String developerId) {

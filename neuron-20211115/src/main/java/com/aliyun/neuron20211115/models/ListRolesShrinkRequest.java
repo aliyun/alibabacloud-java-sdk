@@ -4,37 +4,37 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListRolesShrinkRequest extends TeaModel {
-    @NameInMap("authorizer_id")
+    @NameInMap("authorizerId")
     public String authorizerId;
 
-    @NameInMap("authorizer_type")
+    @NameInMap("authorizerType")
     public String authorizerType;
 
-    @NameInMap("enterprise_id")
+    @NameInMap("enterpriseId")
     public Long enterpriseId;
 
     @NameInMap("name")
     public String name;
 
-    @NameInMap("order_by")
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("platform")
     public String platform;
 
-    @NameInMap("role_ids")
+    @NameInMap("roleIds")
     public String roleIdsShrink;
 
-    @NameInMap("role_type")
+    @NameInMap("roleType")
     public String roleType;
 
     public static ListRolesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {

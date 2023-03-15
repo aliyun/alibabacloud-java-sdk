@@ -22,6 +22,9 @@ public class ForkReview extends TeaModel {
     @NameInMap("repoUrls")
     public java.util.List<String> repoUrls;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("reviewer")
     public String reviewer;
 
@@ -85,6 +88,14 @@ public class ForkReview extends TeaModel {
     }
     public java.util.List<String> getRepoUrls() {
         return this.repoUrls;
+    }
+
+    public ForkReview setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ForkReview setReviewer(String reviewer) {

@@ -14,7 +14,7 @@ public class UpdateEnterpriseResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateEnterpriseResponseBody body;
+    public Enterprise body;
 
     public static UpdateEnterpriseResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateEnterpriseResponse self = new UpdateEnterpriseResponse();
@@ -37,11 +37,11 @@ public class UpdateEnterpriseResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateEnterpriseResponse setBody(UpdateEnterpriseResponseBody body) {
+    public UpdateEnterpriseResponse setBody(Enterprise body) {
         this.body = body;
         return this;
     }
-    public UpdateEnterpriseResponseBody getBody() {
+    public Enterprise getBody() {
         return this.body;
     }
 

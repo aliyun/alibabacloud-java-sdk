@@ -10,6 +10,9 @@ public class LibraryReview extends TeaModel {
     @NameInMap("artificatId")
     public String artificatId;
 
+    @NameInMap("developerName")
+    public String developerName;
+
     @NameInMap("feedbackLibraryInstruction")
     public String feedbackLibraryInstruction;
 
@@ -34,8 +37,14 @@ public class LibraryReview extends TeaModel {
     @NameInMap("marketId")
     public String marketId;
 
+    @NameInMap("marketName")
+    public String marketName;
+
     @NameInMap("remainTime")
     public String remainTime;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("reviewerId")
     public String reviewerId;
@@ -62,6 +71,14 @@ public class LibraryReview extends TeaModel {
     }
     public String getArtificatId() {
         return this.artificatId;
+    }
+
+    public LibraryReview setDeveloperName(String developerName) {
+        this.developerName = developerName;
+        return this;
+    }
+    public String getDeveloperName() {
+        return this.developerName;
     }
 
     public LibraryReview setFeedbackLibraryInstruction(String feedbackLibraryInstruction) {
@@ -128,12 +145,28 @@ public class LibraryReview extends TeaModel {
         return this.marketId;
     }
 
+    public LibraryReview setMarketName(String marketName) {
+        this.marketName = marketName;
+        return this;
+    }
+    public String getMarketName() {
+        return this.marketName;
+    }
+
     public LibraryReview setRemainTime(String remainTime) {
         this.remainTime = remainTime;
         return this;
     }
     public String getRemainTime() {
         return this.remainTime;
+    }
+
+    public LibraryReview setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public LibraryReview setReviewerId(String reviewerId) {
