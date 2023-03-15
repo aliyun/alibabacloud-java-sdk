@@ -14,7 +14,7 @@ public class CheckDeveloperRoleResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CheckDeveloperRoleResponseBody body;
+    public PermissionResult body;
 
     public static CheckDeveloperRoleResponse build(java.util.Map<String, ?> map) throws Exception {
         CheckDeveloperRoleResponse self = new CheckDeveloperRoleResponse();
@@ -37,11 +37,11 @@ public class CheckDeveloperRoleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CheckDeveloperRoleResponse setBody(CheckDeveloperRoleResponseBody body) {
+    public CheckDeveloperRoleResponse setBody(PermissionResult body) {
         this.body = body;
         return this;
     }
-    public CheckDeveloperRoleResponseBody getBody() {
+    public PermissionResult getBody() {
         return this.body;
     }
 

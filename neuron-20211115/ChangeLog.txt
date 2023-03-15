@@ -1,3 +1,6 @@
+2023-03-15 Version: 1.1.0
+- Support token.
+
 2022-09-29 Version: 1.0.6
 - Change aone code version.
 

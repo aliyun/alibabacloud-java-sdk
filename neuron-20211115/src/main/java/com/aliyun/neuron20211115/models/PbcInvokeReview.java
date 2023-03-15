@@ -16,11 +16,20 @@ public class PbcInvokeReview extends TeaModel {
     @NameInMap("invokeId")
     public Long invokeId;
 
+    @NameInMap("invokePbcId")
+    public Long invokePbcId;
+
     @NameInMap("invokePbcName")
     public String invokePbcName;
 
+    @NameInMap("pbcId")
+    public Long pbcId;
+
     @NameInMap("pbcName")
     public String pbcName;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("reviewer")
     public String reviewer;
@@ -71,6 +80,14 @@ public class PbcInvokeReview extends TeaModel {
         return this.invokeId;
     }
 
+    public PbcInvokeReview setInvokePbcId(Long invokePbcId) {
+        this.invokePbcId = invokePbcId;
+        return this;
+    }
+    public Long getInvokePbcId() {
+        return this.invokePbcId;
+    }
+
     public PbcInvokeReview setInvokePbcName(String invokePbcName) {
         this.invokePbcName = invokePbcName;
         return this;
@@ -79,12 +96,28 @@ public class PbcInvokeReview extends TeaModel {
         return this.invokePbcName;
     }
 
+    public PbcInvokeReview setPbcId(Long pbcId) {
+        this.pbcId = pbcId;
+        return this;
+    }
+    public Long getPbcId() {
+        return this.pbcId;
+    }
+
     public PbcInvokeReview setPbcName(String pbcName) {
         this.pbcName = pbcName;
         return this;
     }
     public String getPbcName() {
         return this.pbcName;
+    }
+
+    public PbcInvokeReview setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PbcInvokeReview setReviewer(String reviewer) {

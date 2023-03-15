@@ -16,6 +16,9 @@ public class Enterprise extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("type")
     public String type;
 
@@ -54,6 +57,14 @@ public class Enterprise extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public Enterprise setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public Enterprise setType(String type) {

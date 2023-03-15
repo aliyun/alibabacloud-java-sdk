@@ -22,6 +22,9 @@ public class Developer extends TeaModel {
     @NameInMap("phone")
     public String phone;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     public static Developer build(java.util.Map<String, ?> map) throws Exception {
         Developer self = new Developer();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class Developer extends TeaModel {
     }
     public String getPhone() {
         return this.phone;
+    }
+
+    public Developer setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

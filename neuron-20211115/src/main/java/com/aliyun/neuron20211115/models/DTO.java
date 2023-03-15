@@ -7,6 +7,9 @@ public class DTO extends TeaModel {
     @NameInMap("id")
     public Long id;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     public static DTO build(java.util.Map<String, ?> map) throws Exception {
         DTO self = new DTO();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DTO extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public DTO setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

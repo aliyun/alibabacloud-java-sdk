@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdatePbcApiSchemaRequest extends TeaModel {
     @NameInMap("body")
-    public PbcApiSchema body;
+    public PbcApiSchemaUpdateCmd body;
 
     public static UpdatePbcApiSchemaRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePbcApiSchemaRequest self = new UpdatePbcApiSchemaRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePbcApiSchemaRequest setBody(PbcApiSchema body) {
+    public UpdatePbcApiSchemaRequest setBody(PbcApiSchemaUpdateCmd body) {
         this.body = body;
         return this;
     }
-    public PbcApiSchema getBody() {
+    public PbcApiSchemaUpdateCmd getBody() {
         return this.body;
     }
 

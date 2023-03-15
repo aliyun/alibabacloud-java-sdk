@@ -7,6 +7,9 @@ public class PbcReviewListResult extends TeaModel {
     @NameInMap("data")
     public java.util.List<PbcReview> data;
 
+    /**
+     * <p>总数量</p>
+     */
     @NameInMap("total")
     public Integer total;
 

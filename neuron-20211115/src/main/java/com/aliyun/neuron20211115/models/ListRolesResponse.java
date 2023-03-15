@@ -14,7 +14,7 @@ public class ListRolesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListRolesResponseBody body;
+    public RolePageResult body;
 
     public static ListRolesResponse build(java.util.Map<String, ?> map) throws Exception {
         ListRolesResponse self = new ListRolesResponse();
@@ -37,11 +37,11 @@ public class ListRolesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListRolesResponse setBody(ListRolesResponseBody body) {
+    public ListRolesResponse setBody(RolePageResult body) {
         this.body = body;
         return this;
     }
-    public ListRolesResponseBody getBody() {
+    public RolePageResult getBody() {
         return this.body;
     }
 

@@ -4,22 +4,25 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListLibrarysRequest extends TeaModel {
-    @NameInMap("company_id")
+    @NameInMap("companyId")
     public Long companyId;
+
+    @NameInMap("marketId")
+    public Long marketId;
 
     @NameInMap("name")
     public String name;
 
-    @NameInMap("order_by")
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("provider")
@@ -36,6 +39,14 @@ public class ListLibrarysRequest extends TeaModel {
     }
     public Long getCompanyId() {
         return this.companyId;
+    }
+
+    public ListLibrarysRequest setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
     }
 
     public ListLibrarysRequest setName(String name) {

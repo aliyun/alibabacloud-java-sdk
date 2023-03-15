@@ -14,7 +14,7 @@ public class UpShelfPbcVersionResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpShelfPbcVersionResponseBody body;
+    public CatalogCommonResult body;
 
     public static UpShelfPbcVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         UpShelfPbcVersionResponse self = new UpShelfPbcVersionResponse();
@@ -37,11 +37,11 @@ public class UpShelfPbcVersionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpShelfPbcVersionResponse setBody(UpShelfPbcVersionResponseBody body) {
+    public UpShelfPbcVersionResponse setBody(CatalogCommonResult body) {
         this.body = body;
         return this;
     }
-    public UpShelfPbcVersionResponseBody getBody() {
+    public CatalogCommonResult getBody() {
         return this.body;
     }
 

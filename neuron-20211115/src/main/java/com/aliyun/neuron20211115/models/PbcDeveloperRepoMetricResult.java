@@ -7,6 +7,9 @@ public class PbcDeveloperRepoMetricResult extends TeaModel {
     @NameInMap("developerRepoMetrics")
     public java.util.List<ReposDeveloperGroupMetric> developerRepoMetrics;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     public static PbcDeveloperRepoMetricResult build(java.util.Map<String, ?> map) throws Exception {
         PbcDeveloperRepoMetricResult self = new PbcDeveloperRepoMetricResult();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class PbcDeveloperRepoMetricResult extends TeaModel {
     }
     public java.util.List<ReposDeveloperGroupMetric> getDeveloperRepoMetrics() {
         return this.developerRepoMetrics;
+    }
+
+    public PbcDeveloperRepoMetricResult setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

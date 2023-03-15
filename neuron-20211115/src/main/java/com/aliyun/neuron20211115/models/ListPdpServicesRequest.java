@@ -10,22 +10,22 @@ public class ListPdpServicesRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
-    @NameInMap("order_by")
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("pbc_id")
+    @NameInMap("pbcId")
     public Long pbcId;
 
-    @NameInMap("pdp_service_ids")
+    @NameInMap("pdpServiceIds")
     public java.util.List<Long> pdpServiceIds;
 
     public static ListPdpServicesRequest build(java.util.Map<String, ?> map) throws Exception {

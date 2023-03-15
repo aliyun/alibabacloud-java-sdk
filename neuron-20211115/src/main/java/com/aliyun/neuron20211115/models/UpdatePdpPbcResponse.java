@@ -14,7 +14,7 @@ public class UpdatePdpPbcResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdatePdpPbcResponseBody body;
+    public PdpPbc body;
 
     public static UpdatePdpPbcResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdatePdpPbcResponse self = new UpdatePdpPbcResponse();
@@ -37,11 +37,11 @@ public class UpdatePdpPbcResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdatePdpPbcResponse setBody(UpdatePdpPbcResponseBody body) {
+    public UpdatePdpPbcResponse setBody(PdpPbc body) {
         this.body = body;
         return this;
     }
-    public UpdatePdpPbcResponseBody getBody() {
+    public PdpPbc getBody() {
         return this.body;
     }
 

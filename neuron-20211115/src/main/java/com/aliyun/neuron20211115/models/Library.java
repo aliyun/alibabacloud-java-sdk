@@ -46,6 +46,12 @@ public class Library extends TeaModel {
     @NameInMap("repoUrl")
     public String repoUrl;
 
+    @NameInMap("requestId")
+    public String requestId;
+
+    @NameInMap("reviewId")
+    public Long reviewId;
+
     @NameInMap("status")
     public String status;
 
@@ -170,6 +176,22 @@ public class Library extends TeaModel {
     }
     public String getRepoUrl() {
         return this.repoUrl;
+    }
+
+    public Library setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public Library setReviewId(Long reviewId) {
+        this.reviewId = reviewId;
+        return this;
+    }
+    public Long getReviewId() {
+        return this.reviewId;
     }
 
     public Library setStatus(String status) {

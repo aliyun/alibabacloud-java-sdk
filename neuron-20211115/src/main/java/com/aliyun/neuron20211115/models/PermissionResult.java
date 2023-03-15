@@ -7,6 +7,9 @@ public class PermissionResult extends TeaModel {
     @NameInMap("allow")
     public Boolean allow;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     public static PermissionResult build(java.util.Map<String, ?> map) throws Exception {
         PermissionResult self = new PermissionResult();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class PermissionResult extends TeaModel {
     }
     public Boolean getAllow() {
         return this.allow;
+    }
+
+    public PermissionResult setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

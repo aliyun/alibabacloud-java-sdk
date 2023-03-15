@@ -14,7 +14,7 @@ public class RemoveDependLibraryResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public RemoveDependLibraryResponseBody body;
+    public CatalogCommonResult body;
 
     public static RemoveDependLibraryResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveDependLibraryResponse self = new RemoveDependLibraryResponse();
@@ -37,11 +37,11 @@ public class RemoveDependLibraryResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RemoveDependLibraryResponse setBody(RemoveDependLibraryResponseBody body) {
+    public RemoveDependLibraryResponse setBody(CatalogCommonResult body) {
         this.body = body;
         return this;
     }
-    public RemoveDependLibraryResponseBody getBody() {
+    public CatalogCommonResult getBody() {
         return this.body;
     }
 

@@ -4,20 +4,20 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class CreatePbcInvokeReviewRequest extends TeaModel {
-    @NameInMap("pbcName")
-    public String pbcName;
+    @NameInMap("body")
+    public PbcInvokeReviewCreateCmd body;
 
     public static CreatePbcInvokeReviewRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePbcInvokeReviewRequest self = new CreatePbcInvokeReviewRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreatePbcInvokeReviewRequest setPbcName(String pbcName) {
-        this.pbcName = pbcName;
+    public CreatePbcInvokeReviewRequest setBody(PbcInvokeReviewCreateCmd body) {
+        this.body = body;
         return this;
     }
-    public String getPbcName() {
-        return this.pbcName;
+    public PbcInvokeReviewCreateCmd getBody() {
+        return this.body;
     }
 
 }

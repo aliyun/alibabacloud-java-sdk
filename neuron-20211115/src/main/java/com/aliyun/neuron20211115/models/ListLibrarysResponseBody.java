@@ -8,7 +8,7 @@ public class ListLibrarysResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("result")
-    public java.util.List<Library> result;
+    public LibraryListResult result;
 
     public static ListLibrarysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListLibrarysResponseBody self = new ListLibrarysResponseBody();
@@ -23,11 +23,11 @@ public class ListLibrarysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListLibrarysResponseBody setResult(java.util.List<Library> result) {
+    public ListLibrarysResponseBody setResult(LibraryListResult result) {
         this.result = result;
         return this;
     }
-    public java.util.List<Library> getResult() {
+    public LibraryListResult getResult() {
         return this.result;
     }
 

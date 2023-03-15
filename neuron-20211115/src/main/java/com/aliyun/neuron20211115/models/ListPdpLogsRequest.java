@@ -25,6 +25,9 @@ public class ListPdpLogsRequest extends TeaModel {
     @NameInMap("service_id")
     public Long serviceId;
 
+    @NameInMap("source_type")
+    public String sourceType;
+
     @NameInMap("to")
     public Long to;
 
@@ -87,6 +90,14 @@ public class ListPdpLogsRequest extends TeaModel {
     }
     public Long getServiceId() {
         return this.serviceId;
+    }
+
+    public ListPdpLogsRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public ListPdpLogsRequest setTo(Long to) {

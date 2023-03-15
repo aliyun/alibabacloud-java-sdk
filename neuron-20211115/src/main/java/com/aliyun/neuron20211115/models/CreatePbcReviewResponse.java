@@ -14,7 +14,7 @@ public class CreatePbcReviewResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreatePbcReviewResponseBody body;
+    public PbcReview body;
 
     public static CreatePbcReviewResponse build(java.util.Map<String, ?> map) throws Exception {
         CreatePbcReviewResponse self = new CreatePbcReviewResponse();
@@ -37,11 +37,11 @@ public class CreatePbcReviewResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreatePbcReviewResponse setBody(CreatePbcReviewResponseBody body) {
+    public CreatePbcReviewResponse setBody(PbcReview body) {
         this.body = body;
         return this;
     }
-    public CreatePbcReviewResponseBody getBody() {
+    public PbcReview getBody() {
         return this.body;
     }
 

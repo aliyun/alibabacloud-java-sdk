@@ -7,13 +7,16 @@ public class ListPermissionResourceRequest extends TeaModel {
     @NameInMap("action")
     public String action;
 
-    @NameInMap("operator_id")
+    @NameInMap("enterpriseId")
+    public Long enterpriseId;
+
+    @NameInMap("operatorId")
     public String operatorId;
 
-    @NameInMap("operator_type")
+    @NameInMap("operatorType")
     public String operatorType;
 
-    @NameInMap("resource_prefix")
+    @NameInMap("resourcePrefix")
     public String resourcePrefix;
 
     public static ListPermissionResourceRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -27,6 +30,14 @@ public class ListPermissionResourceRequest extends TeaModel {
     }
     public String getAction() {
         return this.action;
+    }
+
+    public ListPermissionResourceRequest setEnterpriseId(Long enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+    }
+    public Long getEnterpriseId() {
+        return this.enterpriseId;
     }
 
     public ListPermissionResourceRequest setOperatorId(String operatorId) {

@@ -7,6 +7,9 @@ public class CreatePbcInvokeReviewResult extends TeaModel {
     @NameInMap("pbcInvokeReviewId")
     public Long pbcInvokeReviewId;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     public static CreatePbcInvokeReviewResult build(java.util.Map<String, ?> map) throws Exception {
         CreatePbcInvokeReviewResult self = new CreatePbcInvokeReviewResult();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class CreatePbcInvokeReviewResult extends TeaModel {
     }
     public Long getPbcInvokeReviewId() {
         return this.pbcInvokeReviewId;
+    }
+
+    public CreatePbcInvokeReviewResult setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

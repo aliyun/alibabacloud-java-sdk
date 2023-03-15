@@ -7,6 +7,12 @@ public class CheckDeveloperRoleRequest extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    @NameInMap("companyId")
+    public Long companyId;
+
+    @NameInMap("platform")
+    public String platform;
+
     @NameInMap("roleName")
     public String roleName;
 
@@ -21,6 +27,22 @@ public class CheckDeveloperRoleRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public CheckDeveloperRoleRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
+    }
+
+    public CheckDeveloperRoleRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
     public CheckDeveloperRoleRequest setRoleName(String roleName) {

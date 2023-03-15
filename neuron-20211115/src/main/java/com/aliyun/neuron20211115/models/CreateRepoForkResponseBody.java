@@ -8,7 +8,7 @@ public class CreateRepoForkResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("result")
-    public String result;
+    public Long result;
 
     public static CreateRepoForkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRepoForkResponseBody self = new CreateRepoForkResponseBody();
@@ -23,11 +23,11 @@ public class CreateRepoForkResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateRepoForkResponseBody setResult(String result) {
+    public CreateRepoForkResponseBody setResult(Long result) {
         this.result = result;
         return this;
     }
-    public String getResult() {
+    public Long getResult() {
         return this.result;
     }
 

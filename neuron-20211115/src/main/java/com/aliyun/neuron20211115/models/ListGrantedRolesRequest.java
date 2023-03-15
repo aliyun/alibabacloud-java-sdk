@@ -4,11 +4,14 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class ListGrantedRolesRequest extends TeaModel {
-    @NameInMap("authorizer_id")
+    @NameInMap("authorizerId")
     public String authorizerId;
 
-    @NameInMap("authorizer_type")
+    @NameInMap("authorizerType")
     public String authorizerType;
+
+    @NameInMap("enterpriseId")
+    public Long enterpriseId;
 
     @NameInMap("name")
     public String name;
@@ -32,6 +35,14 @@ public class ListGrantedRolesRequest extends TeaModel {
     }
     public String getAuthorizerType() {
         return this.authorizerType;
+    }
+
+    public ListGrantedRolesRequest setEnterpriseId(Long enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+    }
+    public Long getEnterpriseId() {
+        return this.enterpriseId;
     }
 
     public ListGrantedRolesRequest setName(String name) {

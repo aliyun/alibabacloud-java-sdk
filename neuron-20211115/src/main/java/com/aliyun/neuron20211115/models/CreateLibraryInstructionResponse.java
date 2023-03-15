@@ -14,7 +14,7 @@ public class CreateLibraryInstructionResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateLibraryInstructionResponseBody body;
+    public LibraryInstruction body;
 
     public static CreateLibraryInstructionResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateLibraryInstructionResponse self = new CreateLibraryInstructionResponse();
@@ -37,11 +37,11 @@ public class CreateLibraryInstructionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateLibraryInstructionResponse setBody(CreateLibraryInstructionResponseBody body) {
+    public CreateLibraryInstructionResponse setBody(LibraryInstruction body) {
         this.body = body;
         return this;
     }
-    public CreateLibraryInstructionResponseBody getBody() {
+    public LibraryInstruction getBody() {
         return this.body;
     }
 

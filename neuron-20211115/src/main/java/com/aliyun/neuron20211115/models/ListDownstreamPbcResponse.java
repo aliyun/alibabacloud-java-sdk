@@ -14,7 +14,7 @@ public class ListDownstreamPbcResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListDownstreamPbcResponseBody body;
+    public PbcUpDownstreamResult body;
 
     public static ListDownstreamPbcResponse build(java.util.Map<String, ?> map) throws Exception {
         ListDownstreamPbcResponse self = new ListDownstreamPbcResponse();
@@ -37,11 +37,11 @@ public class ListDownstreamPbcResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListDownstreamPbcResponse setBody(ListDownstreamPbcResponseBody body) {
+    public ListDownstreamPbcResponse setBody(PbcUpDownstreamResult body) {
         this.body = body;
         return this;
     }
-    public ListDownstreamPbcResponseBody getBody() {
+    public PbcUpDownstreamResult getBody() {
         return this.body;
     }
 

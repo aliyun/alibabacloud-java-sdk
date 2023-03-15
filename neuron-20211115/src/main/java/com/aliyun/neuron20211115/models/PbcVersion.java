@@ -16,8 +16,17 @@ public class PbcVersion extends TeaModel {
     @NameInMap("id")
     public Long id;
 
+    @NameInMap("isWatched")
+    public Boolean isWatched;
+
     @NameInMap("name")
     public String name;
+
+    @NameInMap("pbcId")
+    public Long pbcId;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("reviewId")
     public Long reviewId;
@@ -71,12 +80,36 @@ public class PbcVersion extends TeaModel {
         return this.id;
     }
 
+    public PbcVersion setIsWatched(Boolean isWatched) {
+        this.isWatched = isWatched;
+        return this;
+    }
+    public Boolean getIsWatched() {
+        return this.isWatched;
+    }
+
     public PbcVersion setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public PbcVersion setPbcId(Long pbcId) {
+        this.pbcId = pbcId;
+        return this;
+    }
+    public Long getPbcId() {
+        return this.pbcId;
+    }
+
+    public PbcVersion setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PbcVersion setReviewId(Long reviewId) {

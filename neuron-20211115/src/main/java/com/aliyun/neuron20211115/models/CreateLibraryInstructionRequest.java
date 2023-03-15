@@ -4,21 +4,32 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class CreateLibraryInstructionRequest extends TeaModel {
+    @NameInMap("companyId")
+    public Long companyId;
+
     @NameInMap("document")
     public String document;
 
     @NameInMap("id")
     public Integer id;
 
-    @NameInMap("libraryName")
-    public String libraryName;
+    @NameInMap("libraryId")
+    public String libraryId;
 
-    @NameInMap("libraryVersion")
-    public String libraryVersion;
+    @NameInMap("marketId")
+    public Long marketId;
 
     public static CreateLibraryInstructionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLibraryInstructionRequest self = new CreateLibraryInstructionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLibraryInstructionRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
     }
 
     public CreateLibraryInstructionRequest setDocument(String document) {
@@ -37,20 +48,20 @@ public class CreateLibraryInstructionRequest extends TeaModel {
         return this.id;
     }
 
-    public CreateLibraryInstructionRequest setLibraryName(String libraryName) {
-        this.libraryName = libraryName;
+    public CreateLibraryInstructionRequest setLibraryId(String libraryId) {
+        this.libraryId = libraryId;
         return this;
     }
-    public String getLibraryName() {
-        return this.libraryName;
+    public String getLibraryId() {
+        return this.libraryId;
     }
 
-    public CreateLibraryInstructionRequest setLibraryVersion(String libraryVersion) {
-        this.libraryVersion = libraryVersion;
+    public CreateLibraryInstructionRequest setMarketId(Long marketId) {
+        this.marketId = marketId;
         return this;
     }
-    public String getLibraryVersion() {
-        return this.libraryVersion;
+    public Long getMarketId() {
+        return this.marketId;
     }
 
 }

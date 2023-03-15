@@ -14,7 +14,7 @@ public class ListPdpHistoryConfigsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListPdpHistoryConfigsResponseBody body;
+    public PdpHistoryConfigPageResult body;
 
     public static ListPdpHistoryConfigsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListPdpHistoryConfigsResponse self = new ListPdpHistoryConfigsResponse();
@@ -37,11 +37,11 @@ public class ListPdpHistoryConfigsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListPdpHistoryConfigsResponse setBody(ListPdpHistoryConfigsResponseBody body) {
+    public ListPdpHistoryConfigsResponse setBody(PdpHistoryConfigPageResult body) {
         this.body = body;
         return this;
     }
-    public ListPdpHistoryConfigsResponseBody getBody() {
+    public PdpHistoryConfigPageResult getBody() {
         return this.body;
     }
 

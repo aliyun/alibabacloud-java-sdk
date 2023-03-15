@@ -14,7 +14,7 @@ public class GetHistoryDeveloperResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetHistoryDeveloperResponseBody body;
+    public Developer body;
 
     public static GetHistoryDeveloperResponse build(java.util.Map<String, ?> map) throws Exception {
         GetHistoryDeveloperResponse self = new GetHistoryDeveloperResponse();
@@ -37,11 +37,11 @@ public class GetHistoryDeveloperResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetHistoryDeveloperResponse setBody(GetHistoryDeveloperResponseBody body) {
+    public GetHistoryDeveloperResponse setBody(Developer body) {
         this.body = body;
         return this;
     }
-    public GetHistoryDeveloperResponseBody getBody() {
+    public Developer getBody() {
         return this.body;
     }
 

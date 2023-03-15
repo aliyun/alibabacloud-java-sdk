@@ -10,6 +10,9 @@ public class Market extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("type")
+    public String type;
+
     public static Market build(java.util.Map<String, ?> map) throws Exception {
         Market self = new Market();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class Market extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public Market setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -7,16 +7,19 @@ public class ListDependLibrarysRequest extends TeaModel {
     @NameInMap("applicant")
     public String applicant;
 
-    @NameInMap("order_by")
+    @NameInMap("marketId")
+    public Long marketId;
+
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
     public static ListDependLibrarysRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -30,6 +33,14 @@ public class ListDependLibrarysRequest extends TeaModel {
     }
     public String getApplicant() {
         return this.applicant;
+    }
+
+    public ListDependLibrarysRequest setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
     }
 
     public ListDependLibrarysRequest setOrderBy(String orderBy) {

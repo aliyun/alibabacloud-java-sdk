@@ -4,7 +4,7 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class GetHistoryDeveloperRequest extends TeaModel {
-    @NameInMap("enterprise_id")
+    @NameInMap("enterpriseId")
     public Long enterpriseId;
 
     public static GetHistoryDeveloperRequest build(java.util.Map<String, ?> map) throws Exception {

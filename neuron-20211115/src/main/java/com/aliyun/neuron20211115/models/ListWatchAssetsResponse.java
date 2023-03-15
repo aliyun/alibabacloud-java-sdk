@@ -14,7 +14,7 @@ public class ListWatchAssetsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListWatchAssetsResponseBody body;
+    public java.util.List<DTO> body;
 
     public static ListWatchAssetsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListWatchAssetsResponse self = new ListWatchAssetsResponse();
@@ -37,11 +37,11 @@ public class ListWatchAssetsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListWatchAssetsResponse setBody(ListWatchAssetsResponseBody body) {
+    public ListWatchAssetsResponse setBody(java.util.List<DTO> body) {
         this.body = body;
         return this;
     }
-    public ListWatchAssetsResponseBody getBody() {
+    public java.util.List<DTO> getBody() {
         return this.body;
     }
 

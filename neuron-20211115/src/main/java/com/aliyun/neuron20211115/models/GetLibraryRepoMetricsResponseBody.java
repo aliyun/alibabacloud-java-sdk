@@ -8,7 +8,7 @@ public class GetLibraryRepoMetricsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("result")
-    public java.util.List<RepoMetric> result;
+    public LibraryRepoMetricResult result;
 
     public static GetLibraryRepoMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLibraryRepoMetricsResponseBody self = new GetLibraryRepoMetricsResponseBody();
@@ -23,11 +23,11 @@ public class GetLibraryRepoMetricsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetLibraryRepoMetricsResponseBody setResult(java.util.List<RepoMetric> result) {
+    public GetLibraryRepoMetricsResponseBody setResult(LibraryRepoMetricResult result) {
         this.result = result;
         return this;
     }
-    public java.util.List<RepoMetric> getResult() {
+    public LibraryRepoMetricResult getResult() {
         return this.result;
     }
 

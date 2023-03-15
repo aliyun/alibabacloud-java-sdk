@@ -14,7 +14,7 @@ public class ListPdpServicesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListPdpServicesResponseBody body;
+    public PdpServicePageResult body;
 
     public static ListPdpServicesResponse build(java.util.Map<String, ?> map) throws Exception {
         ListPdpServicesResponse self = new ListPdpServicesResponse();
@@ -37,11 +37,11 @@ public class ListPdpServicesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListPdpServicesResponse setBody(ListPdpServicesResponseBody body) {
+    public ListPdpServicesResponse setBody(PdpServicePageResult body) {
         this.body = body;
         return this;
     }
-    public ListPdpServicesResponseBody getBody() {
+    public PdpServicePageResult getBody() {
         return this.body;
     }
 

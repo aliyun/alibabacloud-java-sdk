@@ -19,6 +19,9 @@ public class ReposFork extends TeaModel {
     @NameInMap("pbcRepoItems")
     public java.util.List<RepoItem> pbcRepoItems;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("usage")
     public String usage;
 
@@ -65,6 +68,14 @@ public class ReposFork extends TeaModel {
     }
     public java.util.List<RepoItem> getPbcRepoItems() {
         return this.pbcRepoItems;
+    }
+
+    public ReposFork setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ReposFork setUsage(String usage) {

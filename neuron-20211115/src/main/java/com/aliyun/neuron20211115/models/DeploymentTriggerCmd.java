@@ -28,6 +28,9 @@ public class DeploymentTriggerCmd extends TeaModel {
     @NameInMap("serviceId")
     public Long serviceId;
 
+    @NameInMap("timeout")
+    public Integer timeout;
+
     @NameInMap("times")
     public Integer times;
 
@@ -101,6 +104,14 @@ public class DeploymentTriggerCmd extends TeaModel {
     }
     public Long getServiceId() {
         return this.serviceId;
+    }
+
+    public DeploymentTriggerCmd setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
     public DeploymentTriggerCmd setTimes(Integer times) {

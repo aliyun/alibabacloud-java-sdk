@@ -14,7 +14,7 @@ public class ListDevelopersResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListDevelopersResponseBody body;
+    public DeveloperPageResult body;
 
     public static ListDevelopersResponse build(java.util.Map<String, ?> map) throws Exception {
         ListDevelopersResponse self = new ListDevelopersResponse();
@@ -37,11 +37,11 @@ public class ListDevelopersResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListDevelopersResponse setBody(ListDevelopersResponseBody body) {
+    public ListDevelopersResponse setBody(DeveloperPageResult body) {
         this.body = body;
         return this;
     }
-    public ListDevelopersResponseBody getBody() {
+    public DeveloperPageResult getBody() {
         return this.body;
     }
 

@@ -14,7 +14,7 @@ public class CreateDeveloperResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateDeveloperResponseBody body;
+    public Developer body;
 
     public static CreateDeveloperResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDeveloperResponse self = new CreateDeveloperResponse();
@@ -37,11 +37,11 @@ public class CreateDeveloperResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateDeveloperResponse setBody(CreateDeveloperResponseBody body) {
+    public CreateDeveloperResponse setBody(Developer body) {
         this.body = body;
         return this;
     }
-    public CreateDeveloperResponseBody getBody() {
+    public Developer getBody() {
         return this.body;
     }
 

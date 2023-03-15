@@ -7,6 +7,9 @@ public class Pbc extends TeaModel {
     @NameInMap("alias")
     public String alias;
 
+    @NameInMap("assetType")
+    public String assetType;
+
     @NameInMap("company")
     public String company;
 
@@ -19,6 +22,9 @@ public class Pbc extends TeaModel {
     @NameInMap("developerId")
     public String developerId;
 
+    @NameInMap("developerName")
+    public String developerName;
+
     @NameInMap("forkCount")
     public Integer forkCount;
 
@@ -28,14 +34,29 @@ public class Pbc extends TeaModel {
     @NameInMap("industry")
     public String industry;
 
+    @NameInMap("invorkCount")
+    public Long invorkCount;
+
+    @NameInMap("isWatched")
+    public Boolean isWatched;
+
+    @NameInMap("latestVersionId")
+    public Long latestVersionId;
+
+    @NameInMap("marketId")
+    public Long marketId;
+
     @NameInMap("name")
     public String name;
 
-    @NameInMap("quoteCount")
-    public Integer quoteCount;
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("type")
     public String type;
+
+    @NameInMap("watchCount")
+    public Long watchCount;
 
     public static Pbc build(java.util.Map<String, ?> map) throws Exception {
         Pbc self = new Pbc();
@@ -48,6 +69,14 @@ public class Pbc extends TeaModel {
     }
     public String getAlias() {
         return this.alias;
+    }
+
+    public Pbc setAssetType(String assetType) {
+        this.assetType = assetType;
+        return this;
+    }
+    public String getAssetType() {
+        return this.assetType;
     }
 
     public Pbc setCompany(String company) {
@@ -82,6 +111,14 @@ public class Pbc extends TeaModel {
         return this.developerId;
     }
 
+    public Pbc setDeveloperName(String developerName) {
+        this.developerName = developerName;
+        return this;
+    }
+    public String getDeveloperName() {
+        return this.developerName;
+    }
+
     public Pbc setForkCount(Integer forkCount) {
         this.forkCount = forkCount;
         return this;
@@ -106,6 +143,38 @@ public class Pbc extends TeaModel {
         return this.industry;
     }
 
+    public Pbc setInvorkCount(Long invorkCount) {
+        this.invorkCount = invorkCount;
+        return this;
+    }
+    public Long getInvorkCount() {
+        return this.invorkCount;
+    }
+
+    public Pbc setIsWatched(Boolean isWatched) {
+        this.isWatched = isWatched;
+        return this;
+    }
+    public Boolean getIsWatched() {
+        return this.isWatched;
+    }
+
+    public Pbc setLatestVersionId(Long latestVersionId) {
+        this.latestVersionId = latestVersionId;
+        return this;
+    }
+    public Long getLatestVersionId() {
+        return this.latestVersionId;
+    }
+
+    public Pbc setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
+    }
+
     public Pbc setName(String name) {
         this.name = name;
         return this;
@@ -114,12 +183,12 @@ public class Pbc extends TeaModel {
         return this.name;
     }
 
-    public Pbc setQuoteCount(Integer quoteCount) {
-        this.quoteCount = quoteCount;
+    public Pbc setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getQuoteCount() {
-        return this.quoteCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public Pbc setType(String type) {
@@ -128,6 +197,14 @@ public class Pbc extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public Pbc setWatchCount(Long watchCount) {
+        this.watchCount = watchCount;
+        return this;
+    }
+    public Long getWatchCount() {
+        return this.watchCount;
     }
 
 }

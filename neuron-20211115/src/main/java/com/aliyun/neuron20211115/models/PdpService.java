@@ -46,6 +46,9 @@ public class PdpService extends TeaModel {
     @NameInMap("pbcId")
     public Long pbcId;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("status")
     public String status;
 
@@ -167,6 +170,14 @@ public class PdpService extends TeaModel {
     }
     public Long getPbcId() {
         return this.pbcId;
+    }
+
+    public PdpService setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PdpService setStatus(String status) {

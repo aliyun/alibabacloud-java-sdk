@@ -14,7 +14,7 @@ public class GetLibraryReviewResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetLibraryReviewResponseBody body;
+    public LibraryReview body;
 
     public static GetLibraryReviewResponse build(java.util.Map<String, ?> map) throws Exception {
         GetLibraryReviewResponse self = new GetLibraryReviewResponse();
@@ -37,11 +37,11 @@ public class GetLibraryReviewResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetLibraryReviewResponse setBody(GetLibraryReviewResponseBody body) {
+    public GetLibraryReviewResponse setBody(LibraryReview body) {
         this.body = body;
         return this;
     }
-    public GetLibraryReviewResponseBody getBody() {
+    public LibraryReview getBody() {
         return this.body;
     }
 

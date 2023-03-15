@@ -14,7 +14,7 @@ public class CompleteRegistrationPbcVersionResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CompleteRegistrationPbcVersionResponseBody body;
+    public CatalogCommonResult body;
 
     public static CompleteRegistrationPbcVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         CompleteRegistrationPbcVersionResponse self = new CompleteRegistrationPbcVersionResponse();
@@ -37,11 +37,11 @@ public class CompleteRegistrationPbcVersionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CompleteRegistrationPbcVersionResponse setBody(CompleteRegistrationPbcVersionResponseBody body) {
+    public CompleteRegistrationPbcVersionResponse setBody(CatalogCommonResult body) {
         this.body = body;
         return this;
     }
-    public CompleteRegistrationPbcVersionResponseBody getBody() {
+    public CatalogCommonResult getBody() {
         return this.body;
     }
 

@@ -10,6 +10,9 @@ public class DeveloperInfoUpdateCmd extends TeaModel {
     @NameInMap("email")
     public String email;
 
+    @NameInMap("enterpriseId")
+    public Long enterpriseId;
+
     @NameInMap("name")
     public String name;
 
@@ -35,6 +38,14 @@ public class DeveloperInfoUpdateCmd extends TeaModel {
     }
     public String getEmail() {
         return this.email;
+    }
+
+    public DeveloperInfoUpdateCmd setEnterpriseId(Long enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+    }
+    public Long getEnterpriseId() {
+        return this.enterpriseId;
     }
 
     public DeveloperInfoUpdateCmd setName(String name) {

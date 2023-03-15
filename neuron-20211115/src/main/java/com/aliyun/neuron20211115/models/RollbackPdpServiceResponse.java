@@ -14,7 +14,7 @@ public class RollbackPdpServiceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public RollbackPdpServiceResponseBody body;
+    public PdpServiceDeployment body;
 
     public static RollbackPdpServiceResponse build(java.util.Map<String, ?> map) throws Exception {
         RollbackPdpServiceResponse self = new RollbackPdpServiceResponse();
@@ -37,11 +37,11 @@ public class RollbackPdpServiceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RollbackPdpServiceResponse setBody(RollbackPdpServiceResponseBody body) {
+    public RollbackPdpServiceResponse setBody(PdpServiceDeployment body) {
         this.body = body;
         return this;
     }
-    public RollbackPdpServiceResponseBody getBody() {
+    public PdpServiceDeployment getBody() {
         return this.body;
     }
 

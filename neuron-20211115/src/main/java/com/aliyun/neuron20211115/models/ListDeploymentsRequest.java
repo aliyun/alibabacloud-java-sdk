@@ -7,22 +7,22 @@ public class ListDeploymentsRequest extends TeaModel {
     @NameInMap("env")
     public String env;
 
-    @NameInMap("exclude_status")
+    @NameInMap("excludeStatus")
     public java.util.List<String> excludeStatus;
 
-    @NameInMap("order_by")
+    @NameInMap("orderBy")
     public String orderBy;
 
-    @NameInMap("order_direction")
+    @NameInMap("orderDirection")
     public String orderDirection;
 
-    @NameInMap("page_number")
+    @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    @NameInMap("page_size")
+    @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("service_id")
+    @NameInMap("serviceId")
     public Long serviceId;
 
     @NameInMap("status")

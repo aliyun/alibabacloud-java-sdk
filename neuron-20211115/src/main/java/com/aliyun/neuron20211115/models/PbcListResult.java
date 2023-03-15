@@ -7,6 +7,9 @@ public class PbcListResult extends TeaModel {
     @NameInMap("data")
     public java.util.List<Pbc> data;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("total")
     public Integer total;
 
@@ -21,6 +24,14 @@ public class PbcListResult extends TeaModel {
     }
     public java.util.List<Pbc> getData() {
         return this.data;
+    }
+
+    public PbcListResult setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PbcListResult setTotal(Integer total) {

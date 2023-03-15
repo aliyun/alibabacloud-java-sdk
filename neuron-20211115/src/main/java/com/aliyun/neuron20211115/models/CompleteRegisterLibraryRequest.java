@@ -7,6 +7,9 @@ public class CompleteRegisterLibraryRequest extends TeaModel {
     @NameInMap("dependIntegral")
     public Integer dependIntegral;
 
+    @NameInMap("marketId")
+    public Long marketId;
+
     public static CompleteRegisterLibraryRequest build(java.util.Map<String, ?> map) throws Exception {
         CompleteRegisterLibraryRequest self = new CompleteRegisterLibraryRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class CompleteRegisterLibraryRequest extends TeaModel {
     }
     public Integer getDependIntegral() {
         return this.dependIntegral;
+    }
+
+    public CompleteRegisterLibraryRequest setMarketId(Long marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    public Long getMarketId() {
+        return this.marketId;
     }
 
 }

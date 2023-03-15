@@ -4,15 +4,23 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class DeletePdpPbcResponseBody extends TeaModel {
+    @NameInMap("data")
+    public Boolean data;
+
     @NameInMap("requestId")
     public String requestId;
-
-    @NameInMap("result")
-    public Boolean result;
 
     public static DeletePdpPbcResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeletePdpPbcResponseBody self = new DeletePdpPbcResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeletePdpPbcResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
     public DeletePdpPbcResponseBody setRequestId(String requestId) {
@@ -21,14 +29,6 @@ public class DeletePdpPbcResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeletePdpPbcResponseBody setResult(Boolean result) {
-        this.result = result;
-        return this;
-    }
-    public Boolean getResult() {
-        return this.result;
     }
 
 }

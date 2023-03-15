@@ -64,8 +64,14 @@ public class PdpServiceDeployment extends TeaModel {
     @NameInMap("pbcName")
     public String pbcName;
 
+    @NameInMap("pipelineTimes")
+    public Integer pipelineTimes;
+
     @NameInMap("repositoryId")
     public String repositoryId;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("rollbackStatus")
     public String rollbackStatus;
@@ -78,6 +84,9 @@ public class PdpServiceDeployment extends TeaModel {
 
     @NameInMap("status")
     public String status;
+
+    @NameInMap("timeout")
+    public Integer timeout;
 
     @NameInMap("times")
     public Integer times;
@@ -250,12 +259,28 @@ public class PdpServiceDeployment extends TeaModel {
         return this.pbcName;
     }
 
+    public PdpServiceDeployment setPipelineTimes(Integer pipelineTimes) {
+        this.pipelineTimes = pipelineTimes;
+        return this;
+    }
+    public Integer getPipelineTimes() {
+        return this.pipelineTimes;
+    }
+
     public PdpServiceDeployment setRepositoryId(String repositoryId) {
         this.repositoryId = repositoryId;
         return this;
     }
     public String getRepositoryId() {
         return this.repositoryId;
+    }
+
+    public PdpServiceDeployment setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PdpServiceDeployment setRollbackStatus(String rollbackStatus) {
@@ -288,6 +313,14 @@ public class PdpServiceDeployment extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public PdpServiceDeployment setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
     }
 
     public PdpServiceDeployment setTimes(Integer times) {
