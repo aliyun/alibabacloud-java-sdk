@@ -31,6 +31,9 @@ public class EnrollAccountRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellAccountType")
+    public String resellAccountType;
+
     public static EnrollAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         EnrollAccountRequest self = new EnrollAccountRequest();
         return TeaModel.build(map, self);
@@ -98,6 +101,14 @@ public class EnrollAccountRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public EnrollAccountRequest setResellAccountType(String resellAccountType) {
+        this.resellAccountType = resellAccountType;
+        return this;
+    }
+    public String getResellAccountType() {
+        return this.resellAccountType;
     }
 
     public static class EnrollAccountRequestBaselineItems extends TeaModel {
