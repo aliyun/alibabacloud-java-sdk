@@ -4,12 +4,21 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
+    /**
+     * <p>The list of tag keys. Separate multiple tag keys with commas (,).</p>
+     */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

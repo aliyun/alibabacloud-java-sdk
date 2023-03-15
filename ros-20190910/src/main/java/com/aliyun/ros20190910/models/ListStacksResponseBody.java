@@ -4,18 +4,37 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStacksResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of stacks.</p>
+     */
     @NameInMap("Stacks")
     public java.util.List<ListStacksResponseBodyStacks> stacks;
 
+    /**
+     * <p>The total number of stacks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,21 +84,39 @@ public class ListStacksResponseBody extends TeaModel {
     }
 
     public static class ListStacksResponseBodyStacksOperationInfo extends TeaModel {
+        /**
+         * <p>The name of the API operation that belongs to another Alibaba Cloud service.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The logical ID of the resource on which an operation fails to be performed.</p>
+         */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the request that is initiated to call the API operation of another Alibaba Cloud service.</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>The type of the resource on which an operation fails to be performed.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -139,9 +176,15 @@ public class ListStacksResponseBody extends TeaModel {
     }
 
     public static class ListStacksResponseBodyStacksTags extends TeaModel {
+        /**
+         * <p>The tag key of the stack.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the stack.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -169,57 +212,126 @@ public class ListStacksResponseBody extends TeaModel {
     }
 
     public static class ListStacksResponseBodyStacks extends TeaModel {
+        /**
+         * <p>The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Indicates whether rollback is disabled when the stack fails to be created. Default value: false. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("DisableRollback")
         public Boolean disableRollback;
 
+        /**
+         * <p>The time when the last successful drift detection was performed on the stack.</p>
+         */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
+        /**
+         * <p>The supplementary information that is returned when an operation fails to be performed on the stack.</p>
+         * <br>
+         * <p>>  This parameter is returned if an operation fails to be performed on the stack. The system returns at least one sub-property. Example: An error occurred when the API operation of another Alibaba Cloud service was called.</p>
+         */
         @NameInMap("OperationInfo")
         public ListStacksResponseBodyStacksOperationInfo operationInfo;
 
+        /**
+         * <p>The ID of the parent stack.</p>
+         */
         @NameInMap("ParentStackId")
         public String parentStackId;
 
+        /**
+         * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Indicates whether the stack is a managed stack. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
+        /**
+         * <p>The name of the service to which the managed stack belongs.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The state of the stack on which the last successful drift detection was performed. Valid values:</p>
+         * <br>
+         * <p>*   DRIFTED: Drift detection is being performed on the stack.</p>
+         * <p>*   NOT_CHECKED: No successful drift detection is performed on the stack.</p>
+         * <p>*   IN_SYNC: The stack is being synchronized.</p>
+         */
         @NameInMap("StackDriftStatus")
         public String stackDriftStatus;
 
+        /**
+         * <p>The ID of the stack.</p>
+         */
         @NameInMap("StackId")
         public String stackId;
 
+        /**
+         * <p>The name of the stack.</p>
+         */
         @NameInMap("StackName")
         public String stackName;
 
+        /**
+         * <p>The type of the stack. Valid values:</p>
+         * <br>
+         * <p>*   ROS: ROS stack. The stack is created by using a Resource Orchestration Service (ROS) template.</p>
+         * <p>*   Terraform: Terraform stack. The stack is created by using a Terraform template.</p>
+         */
         @NameInMap("StackType")
         public String stackType;
 
+        /**
+         * <p>The state of the stack.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The reason why the stack is in its current state.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 
+        /**
+         * <p>The tags of the stack.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListStacksResponseBodyStacksTags> tags;
 
+        /**
+         * <p>The timeout period that is allowed to create the stack. Unit: minutes.</p>
+         */
         @NameInMap("TimeoutInMinutes")
         public Integer timeoutInMinutes;
 
+        /**
+         * <p>The time when the stack was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

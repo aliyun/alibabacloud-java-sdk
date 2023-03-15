@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DetectStackDriftResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the drift detection.</p>
+     */
     @NameInMap("DriftDetectionId")
     public String driftDetectionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

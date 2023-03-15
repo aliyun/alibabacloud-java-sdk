@@ -4,33 +4,76 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateScratchRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among the different requests. The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <br>
+     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the scenario.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The execution mode. Default value: Async. Valid values:</p>
+     * <br>
+     * <p>*   Async: asynchronous mode</p>
+     * <p>*   Sync: synchronous mode</p>
+     * <br>
+     * <p>>  If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you set ClientToken to prevent the execution from timing out.</p>
+     */
     @NameInMap("ExecutionMode")
     public String executionMode;
 
+    /**
+     * <p>The generation policy of the logical ID. Default value: LongTypePrefixAndIndexSuffix. Valid values:</p>
+     * <br>
+     * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
+     * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
+     * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
+     */
     @NameInMap("LogicalIdStrategy")
     public String logicalIdStrategy;
 
+    /**
+     * <p>The parameters that are configured in the scenario.</p>
+     */
     @NameInMap("PreferenceParameters")
     public java.util.List<UpdateTemplateScratchRequestPreferenceParameters> preferenceParameters;
 
+    /**
+     * <p>The ID of the region in which the scenario is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The source resource group.</p>
+     */
     @NameInMap("SourceResourceGroup")
     public UpdateTemplateScratchRequestSourceResourceGroup sourceResourceGroup;
 
+    /**
+     * <p>The source resource.</p>
+     */
     @NameInMap("SourceResources")
     public java.util.List<UpdateTemplateScratchRequestSourceResources> sourceResources;
 
+    /**
+     * <p>The source tag.</p>
+     */
     @NameInMap("SourceTag")
     public UpdateTemplateScratchRequestSourceTag sourceTag;
 
+    /**
+     * <p>The ID of the scenario.</p>
+     */
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
 
@@ -120,9 +163,25 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     }
 
     public static class UpdateTemplateScratchRequestPreferenceParameters extends TeaModel {
+        /**
+         * <p>The name of a request parameter.</p>
+         * <br>
+         * <p>For more information about ParameterKey, see **Additional description of request parameters**.</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   PreferenceParameters is optional. If you set PreferenceParameters, you must specify both ParameterKey and ParameterValue.</p>
+         * <p>*   If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.</p>
+         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <p>The value of a request parameter. The value of ParameterValue varies based on the value of ParameterKey.</p>
+         * <br>
+         * <p>For more information about ParameterValue, see **Additional description of request parameters**.</p>
+         * <br>
+         * <p>>  PreferenceParameters is optional. If you set PreferenceParameters, you must specify both ParameterKey and ParameterValue.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -150,9 +209,17 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     }
 
     public static class UpdateTemplateScratchRequestSourceResourceGroup extends TeaModel {
+        /**
+         * <p>The ID of the source resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The filter for resource types. If you specify this parameter, only the resources of the specified types and in the specified resource groups are scanned. If you do not specify this parameter, all the resources in the specified resource groups are scanned.</p>
+         * <br>
+         * <p>You can specify up to 20 resource types.</p>
+         */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
 
@@ -180,9 +247,15 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     }
 
     public static class UpdateTemplateScratchRequestSourceResources extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -210,9 +283,21 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     }
 
     public static class UpdateTemplateScratchRequestSourceTag extends TeaModel {
+        /**
+         * <p>The source tags that consist of key-value pairs.</p>
+         * <br>
+         * <p>If you want to specify only the tag key, you must set the tag value to an empty string. Example: {"TagKey": ""}.</p>
+         * <br>
+         * <p>You can configure up to 10 source tags.</p>
+         */
         @NameInMap("ResourceTags")
         public java.util.Map<String, ?> resourceTags;
 
+        /**
+         * <p>The filter for resource types. If you specify this parameter, only the resources of the specified types and have the specified tags are scanned. If you do not specify this parameter, all resources that have the specified tags are scanned.</p>
+         * <br>
+         * <p>You can specify up to 20 resource types.</p>
+         */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
 

@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DeleteChangeSetRequest extends TeaModel {
+    /**
+     * <p>The ID of the change set.</p>
+     */
     @NameInMap("ChangeSetId")
     public String changeSetId;
 
+    /**
+     * <p>The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

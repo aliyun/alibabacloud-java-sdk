@@ -4,6 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The language in which the returned results are displayed.</p>
+     * <br>
+     * <p>Default value: zh-CN. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN: Chinese</p>
+     * <p>*   en-US: English</p>
+     * <p>*   ja: Japanese</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<ListStackResourcesResponseBodyResources> resources;
 
@@ -32,36 +38,93 @@ public class ListStackResourcesResponseBody extends TeaModel {
     }
 
     public static class ListStackResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <p>The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The most recent point in time when a successful drift detection operation was performed.</p>
+         */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
+        /**
+         * <p>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</p>
+         */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        /**
+         * <p>The physical ID of the resource.</p>
+         */
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
 
+        /**
+         * <p>The drift status of the resource in the most recent successful drift detection. Valid values:</p>
+         * <br>
+         * <p>*   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</p>
+         * <p>*   MODIFIED: The actual configuration of the resource differs from its expected template configuration.</p>
+         * <p>*   NOT_CHECKED: ROS did not check whether the actual configuration of the resource differs from its expected template configuration.</p>
+         * <p>*   IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
+         */
         @NameInMap("ResourceDriftStatus")
         public String resourceDriftStatus;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The ID of the stack.</p>
+         */
         @NameInMap("StackId")
         public String stackId;
 
+        /**
+         * <p>The name of the stack.</p>
+         * <br>
+         * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
+         */
         @NameInMap("StackName")
         public String stackName;
 
+        /**
+         * <p>The status of the resource. Valid values:</p>
+         * <br>
+         * <p>*   INIT_COMPLETE: The resource is in the pending creation state.</p>
+         * <p>*   CREATE_COMPLETE: The resource is created.</p>
+         * <p>*   CREATE_FAILED: The resource fails to be created.</p>
+         * <p>*   CREATE_IN_PROGRESS: The resource is being created.</p>
+         * <p>*   UPDATE_IN_PROGRESS: The resource is being updated.</p>
+         * <p>*   UPDATE_FAILED: The resource fails to be updated.</p>
+         * <p>*   UPDATE_COMPLETE: The resource is updated.</p>
+         * <p>*   DELETE_IN_PROGRESS: The resource is being deleted.</p>
+         * <p>*   DELETE_FAILED: The resource fails to be deleted.</p>
+         * <p>*   DELETE_COMPLETE: The resource is deleted.</p>
+         * <p>*   CHECK_IN_PROGRESS: The resource is being validated.</p>
+         * <p>*   CHECK_FAILED: The resource fails to be validated.</p>
+         * <p>*   CHECK_COMPLETE: The resource is validated.</p>
+         * <p>*   IMPORT_IN_PROGRESS: The resource is being imported.</p>
+         * <p>*   IMPORT_FAILED: The resource fails to be imported.</p>
+         * <p>*   IMPORT_COMPLETE: The resource is imported.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The reason why the resource is in a specific state.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 
+        /**
+         * <p>The time when the resource was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

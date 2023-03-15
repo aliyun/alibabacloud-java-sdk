@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateScratchResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The scenario.</p>
+     */
     @NameInMap("TemplateScratch")
     public GetTemplateScratchResponseBodyTemplateScratch templateScratch;
 
@@ -32,9 +38,15 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     }
 
     public static class GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters extends TeaModel {
+        /**
+         * <p>The parameter name.</p>
+         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <p>The parameter value.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -62,9 +74,15 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     }
 
     public static class GetTemplateScratchResponseBodyTemplateScratchSourceResourceGroup extends TeaModel {
+        /**
+         * <p>The ID of the source resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The filter for resource types.</p>
+         */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
 
@@ -92,9 +110,15 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     }
 
     public static class GetTemplateScratchResponseBodyTemplateScratchSourceResources extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -122,9 +146,15 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     }
 
     public static class GetTemplateScratchResponseBodyTemplateScratchSourceTag extends TeaModel {
+        /**
+         * <p>The resource tags.</p>
+         */
         @NameInMap("ResourceTags")
         public java.util.Map<String, ?> resourceTags;
 
+        /**
+         * <p>The filter for resource types.</p>
+         */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
 
@@ -152,9 +182,21 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     }
 
     public static class GetTemplateScratchResponseBodyTemplateScratchStackProvision extends TeaModel {
+        /**
+         * <p>Indicates whether the resource is replicated by calling the [CreateStack](~~132086~~) operation. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Creatable")
         public Boolean creatable;
 
+        /**
+         * <p>Indicates whether the resource is managed by calling the [CreateChangeSet](~~131051~~) operation. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Importable")
         public Boolean importable;
 
@@ -182,12 +224,24 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     }
 
     public static class GetTemplateScratchResponseBodyTemplateScratchStacks extends TeaModel {
+        /**
+         * <p>The ID of the region to which the stack belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the stack.</p>
+         */
         @NameInMap("StackId")
         public String stackId;
 
+        /**
+         * <p>The purpose of the stack. Valid values:</p>
+         * <br>
+         * <p>*   ResourceImport: resource management</p>
+         * <p>*   ArchitectureReplication: resource replication</p>
+         */
         @NameInMap("UsageType")
         public String usageType;
 
@@ -223,51 +277,118 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     }
 
     public static class GetTemplateScratchResponseBodyTemplateScratch extends TeaModel {
+        /**
+         * <p>The time at which the scenario was created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the scenario.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The status code of the scenario that fails to be created.</p>
+         * <br>
+         * <p>>  This parameter is returned only if you set the Status parameter to GENERATE_FAILED.</p>
+         */
         @NameInMap("FailedCode")
         public String failedCode;
 
+        /**
+         * <p>The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:</p>
+         * <br>
+         * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
+         * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
+         * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
+         */
         @NameInMap("LogicalIdStrategy")
         public String logicalIdStrategy;
 
+        /**
+         * <p>The parameters that are configured for the scenario.</p>
+         */
         @NameInMap("PreferenceParameters")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters> preferenceParameters;
 
+        /**
+         * <p>The source resource group.</p>
+         */
         @NameInMap("SourceResourceGroup")
         public GetTemplateScratchResponseBodyTemplateScratchSourceResourceGroup sourceResourceGroup;
 
+        /**
+         * <p>The source resource.</p>
+         */
         @NameInMap("SourceResources")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchSourceResources> sourceResources;
 
+        /**
+         * <p>The source tag.</p>
+         */
         @NameInMap("SourceTag")
         public GetTemplateScratchResponseBodyTemplateScratchSourceTag sourceTag;
 
+        /**
+         * <p>The preset information about the stack.</p>
+         */
         @NameInMap("StackProvision")
         public GetTemplateScratchResponseBodyTemplateScratchStackProvision stackProvision;
 
+        /**
+         * <p>The list of stacks that are associated with the scenario.</p>
+         */
         @NameInMap("Stacks")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchStacks> stacks;
 
+        /**
+         * <p>The status of the scenario. Valid values:</p>
+         * <br>
+         * <p>*   GENERATE_IN_PROGRESS: The scenario is being created.</p>
+         * <p>*   GENERATE_COMPLETE: The scenario is created.</p>
+         * <p>*   GENERATE_FAILED: The scenario fails to be created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The reason why the scenario fails to be created.</p>
+         * <br>
+         * <p>>  This parameter is returned only if you set the Status parameter to GENERATE_FAILED.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 
+        /**
+         * <p>The scenario data.</p>
+         */
         @NameInMap("TemplateScratchData")
         public java.util.Map<String, ?> templateScratchData;
 
+        /**
+         * <p>The ID of the scenario.</p>
+         */
         @NameInMap("TemplateScratchId")
         public String templateScratchId;
 
+        /**
+         * <p>The type of the scenario. Valid values:</p>
+         * <br>
+         * <p>*   ResourceImport: resource management</p>
+         * <p>*   ArchitectureReplication: resource replication</p>
+         */
         @NameInMap("TemplateScratchType")
         public String templateScratchType;
 
+        /**
+         * <p>The time at which the scenario was updated.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

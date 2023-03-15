@@ -4,12 +4,24 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetChangeSetRequest extends TeaModel {
+    /**
+     * <p>The ID of the change set.</p>
+     */
     @NameInMap("ChangeSetId")
     public String changeSetId;
 
+    /**
+     * <p>The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to show the template. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   true: shows the template.</p>
+     * <p>*   false: does not show the template.</p>
+     */
     @NameInMap("ShowTemplate")
     public Boolean showTemplate;
 

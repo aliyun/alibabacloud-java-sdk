@@ -4,15 +4,37 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackGroupOperationResultsRequest extends TeaModel {
+    /**
+     * <p>The ID of the operation.</p>
+     * <br>
+     * <p>You can call the [ListStackGroupOperations](~~151342~~) operation to query the operation ID.</p>
+     */
     @NameInMap("OperationId")
     public String operationId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>*   Pages start from page 1.</p>
+     * <p>*   Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Valid values: 1 to 50.</p>
+     * <p>*   Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region ID of the stack group.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,18 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackGroupOperationsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of stack group operations.</p>
+     */
     @NameInMap("StackGroupOperations")
     public java.util.List<ListStackGroupOperationsResponseBodyStackGroupOperations> stackGroupOperations;
 
+    /**
+     * <p>The total number of stack group operations.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,66 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
     }
 
     public static class ListStackGroupOperationsResponseBodyStackGroupOperations extends TeaModel {
+        /**
+         * <p>The operation that was performed.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   CREATE</p>
+         * <p>*   UPDATE</p>
+         * <p>*   DELETE</p>
+         * <p>*   DETECT_DRIFT</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The time when the operation was initiated.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the operation ended.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The description of the operation.</p>
+         */
         @NameInMap("OperationDescription")
         public String operationDescription;
 
+        /**
+         * <p>The ID of the operation.</p>
+         */
         @NameInMap("OperationId")
         public String operationId;
 
+        /**
+         * <p>The ID of the stack group.</p>
+         */
         @NameInMap("StackGroupId")
         public String stackGroupId;
 
+        /**
+         * <p>The name of the stack group.</p>
+         */
         @NameInMap("StackGroupName")
         public String stackGroupName;
 
+        /**
+         * <p>The status of the operation.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   RUNNING</p>
+         * <p>*   SUCCEEDED</p>
+         * <p>*   FAILED</p>
+         * <p>*   STOPPING</p>
+         * <p>*   STOPPED</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,6 +4,13 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypesRequest extends TeaModel {
+    /**
+     * <p>The entity type. Valid values:</p>
+     * <br>
+     * <p>*   All: all resource types.</p>
+     * <p>*   Resource: resources other than DataSource resources. For more information, see [Resources](~~28863~~).</p>
+     * <p>*   DataSource: DataSource resources.</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 

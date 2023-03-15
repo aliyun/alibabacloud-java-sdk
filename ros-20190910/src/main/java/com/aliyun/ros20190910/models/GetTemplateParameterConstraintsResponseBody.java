@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
+    /**
+     * <p>The constraints of the parameters.</p>
+     */
     @NameInMap("ParameterConstraints")
     public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraints> parameterConstraints;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -103,33 +109,67 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     }
 
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraints extends TeaModel {
+        /**
+         * <p>The values of the parameter.</p>
+         */
         @NameInMap("AllowedValues")
         public java.util.List<String> allowedValues;
 
+        /**
+         * <p>The names of the associated parameters.</p>
+         */
         @NameInMap("AssociationParameterNames")
         public java.util.List<String> associationParameterNames;
 
+        /**
+         * <p>The behavior of the parameter. Valid values:</p>
+         * <br>
+         * <p>*   NoLimit: No limit is imposed on the value of this parameter.</p>
+         * <p>*   NotSupport: The value of this parameter cannot be queried.</p>
+         * <p>*   QueryError: This parameter failed to be queried.</p>
+         * <br>
+         * <p>>  If the AllowedValues parameter is not returned, the Behavior and BehaviorReason parameters are returned.</p>
+         */
         @NameInMap("Behavior")
         public String behavior;
 
+        /**
+         * <p>The reason why the behavior of the parameter is returned.</p>
+         */
         @NameInMap("BehaviorReason")
         public String behaviorReason;
 
+        /**
+         * <p>The values that do not conform to the parameter constraints.</p>
+         * <br>
+         * <p>>  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.</p>
+         */
         @NameInMap("IllegalValueByParameterConstraints")
         public java.util.List<?> illegalValueByParameterConstraints;
 
+        /**
+         * <p>The values that do not match the rules in the template.</p>
+         * <br>
+         * <p>>  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.</p>
+         */
         @NameInMap("IllegalValueByRules")
         public java.util.List<?> illegalValueByRules;
 
         @NameInMap("NotSupportResources")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> notSupportResources;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         @NameInMap("QueryErrors")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> queryErrors;
 
+        /**
+         * <p>The type of the parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 

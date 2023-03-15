@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GenerateTemplatePolicyResponseBody extends TeaModel {
+    /**
+     * <p>The information about the policy.</p>
+     */
     @NameInMap("Policy")
     public GenerateTemplatePolicyResponseBodyPolicy policy;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,24 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     }
 
     public static class GenerateTemplatePolicyResponseBodyPolicyStatement extends TeaModel {
+        /**
+         * <p>The operations that are performed on the specified resource.</p>
+         */
         @NameInMap("Action")
         public java.util.List<String> action;
 
+        /**
+         * <p>The effect of the statement. Valid values:</p>
+         * <br>
+         * <p>*   Allow</p>
+         * <p>*   Deny</p>
+         */
         @NameInMap("Effect")
         public String effect;
 
+        /**
+         * <p>The object that the statement covers. An asterisk (\*) indicates all resources.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
@@ -73,9 +91,15 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     }
 
     public static class GenerateTemplatePolicyResponseBodyPolicy extends TeaModel {
+        /**
+         * <p>The statements that are contained in the policy.</p>
+         */
         @NameInMap("Statement")
         public java.util.List<GenerateTemplatePolicyResponseBodyPolicyStatement> statement;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("Version")
         public String version;
 

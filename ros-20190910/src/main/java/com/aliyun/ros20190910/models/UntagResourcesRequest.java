@@ -4,15 +4,32 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the resources. This parameter takes effect when the TagKey.N parameter is not specified in the request. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   true: removes all tags from the resources.</p>
+     * <p>*   false: removes the specified tags from the resources.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The region ID of the tag. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   stack: stack</p>
+     * <p>*   stackgroup: stack group</p>
+     * <p>*   template: template</p>
+     * <p>*   templatescratch: scenario</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

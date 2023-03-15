@@ -4,6 +4,11 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTypeRequest extends TeaModel {
+    /**
+     * <p>The type of the resource.</p>
+     * <br>
+     * <p>For more information about resource types supported by Resource Orchestration Service (ROS), see [List of resource types by service](~~127039~~).</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

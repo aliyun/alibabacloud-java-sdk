@@ -4,18 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateScratchesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of scenarios.</p>
+     */
     @NameInMap("TemplateScratches")
     public java.util.List<ListTemplateScratchesResponseBodyTemplateScratches> templateScratches;
 
+    /**
+     * <p>The total number of scenarios.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     }
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -95,9 +116,15 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     }
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesSourceResourceGroup extends TeaModel {
+        /**
+         * <p>The ID of the source resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The filter for resource types.</p>
+         */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
 
@@ -125,9 +152,15 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     }
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesSourceResources extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -155,9 +188,15 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     }
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesSourceTag extends TeaModel {
+        /**
+         * <p>The source tags.</p>
+         */
         @NameInMap("ResourceTags")
         public java.util.Map<String, ?> resourceTags;
 
+        /**
+         * <p>The filter for resource types.</p>
+         */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
 
@@ -185,9 +224,15 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     }
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesTags extends TeaModel {
+        /**
+         * <p>The tag key of the scenario.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the scenario.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -215,45 +260,102 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     }
 
     public static class ListTemplateScratchesResponseBodyTemplateScratches extends TeaModel {
+        /**
+         * <p>The time at which the scenario was created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the scenario.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The status code of the scenario that fails to be created.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the Status parameter is set to GENERATE_FAILED.</p>
+         */
         @NameInMap("FailedCode")
         public String failedCode;
 
+        /**
+         * <p>The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:</p>
+         * <br>
+         * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
+         * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
+         * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
+         */
         @NameInMap("LogicalIdStrategy")
         public String logicalIdStrategy;
 
+        /**
+         * <p>The parameters that are configured for the scenario.</p>
+         */
         @NameInMap("PreferenceParameters")
         public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters> preferenceParameters;
 
+        /**
+         * <p>The source resource group.</p>
+         */
         @NameInMap("SourceResourceGroup")
         public ListTemplateScratchesResponseBodyTemplateScratchesSourceResourceGroup sourceResourceGroup;
 
+        /**
+         * <p>The source resources.</p>
+         */
         @NameInMap("SourceResources")
         public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesSourceResources> sourceResources;
 
+        /**
+         * <p>The source tag.</p>
+         */
         @NameInMap("SourceTag")
         public ListTemplateScratchesResponseBodyTemplateScratchesSourceTag sourceTag;
 
+        /**
+         * <p>The state of the scenario.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The reason why the scenario fails to be created.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the Status parameter is set to GENERATE_FAILED.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 
+        /**
+         * <p>The tags of the scenario.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesTags> tags;
 
+        /**
+         * <p>The ID of the scenario.</p>
+         */
         @NameInMap("TemplateScratchId")
         public String templateScratchId;
 
+        /**
+         * <p>The type of the scenario. Valid values:</p>
+         * <br>
+         * <p>*   ResourceImport: resource management</p>
+         * <p>*   ArchitectureReplication: resource replication</p>
+         */
         @NameInMap("TemplateScratchType")
         public String templateScratchType;
 
+        /**
+         * <p>The time at which the scenario was updated.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

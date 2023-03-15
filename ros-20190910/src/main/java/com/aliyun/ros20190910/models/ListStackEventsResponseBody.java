@@ -4,18 +4,41 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackEventsResponseBody extends TeaModel {
+    /**
+     * <p>The list of events.</p>
+     */
     @NameInMap("Events")
     public java.util.List<ListStackEventsResponseBodyEvents> events;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned events.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +88,57 @@ public class ListStackEventsResponseBody extends TeaModel {
     }
 
     public static class ListStackEventsResponseBodyEvents extends TeaModel {
+        /**
+         * <p>The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the event.</p>
+         */
         @NameInMap("EventId")
         public String eventId;
 
+        /**
+         * <p>The logical ID of the resource that is defined in the template.</p>
+         */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        /**
+         * <p>The physical ID of the resource.</p>
+         */
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The ID of the stack.</p>
+         */
         @NameInMap("StackId")
         public String stackId;
 
+        /**
+         * <p>The name of the stack.</p>
+         */
         @NameInMap("StackName")
         public String stackName;
 
+        /**
+         * <p>The state of the resource.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The reason why the resource is in its current state.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 

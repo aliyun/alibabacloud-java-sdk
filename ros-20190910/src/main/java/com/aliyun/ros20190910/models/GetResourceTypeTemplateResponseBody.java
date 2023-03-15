@@ -4,9 +4,19 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTypeTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The structure that contains the template body.</p>
+     * <br>
+     * <p>The template body must be 1 to 51,200 bytes in length.</p>
+     * <br>
+     * <p>For more information, see [Template syntax](~~28857~~).</p>
+     */
     @NameInMap("TemplateBody")
     public java.util.Map<String, ?> templateBody;
 

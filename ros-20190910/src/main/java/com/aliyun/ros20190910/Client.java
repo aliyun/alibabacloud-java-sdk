@@ -104,6 +104,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelUpdateStackWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to continue to create a stack that failed to be created. In this example, the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` failed to be created in the China (Hangzhou) region.
+      *
+      * @param request ContinueCreateStackRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ContinueCreateStackResponse
+     */
     public ContinueCreateStackResponse continueCreateStackWithOptions(ContinueCreateStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -176,11 +183,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ContinueCreateStackResponse());
     }
 
+    /**
+      * This topic provides an example on how to continue to create a stack that failed to be created. In this example, the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` failed to be created in the China (Hangzhou) region.
+      *
+      * @param request ContinueCreateStackRequest
+      * @return ContinueCreateStackResponse
+     */
     public ContinueCreateStackResponse continueCreateStack(ContinueCreateStackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.continueCreateStackWithOptions(request, runtime);
     }
 
+    /**
+      * You can create and execute change sets to update running stacks. For more information about change sets, see [Overview](~~156038~~).
+      * ## Limits
+      * - A stack can contain up to 20 change sets.
+      * - Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
+      * - You cannot use change sets to check the following items: whether the upper limit of your account is reached, whether to update resources that cannot be updated, and whether your account is not granted the required permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) attempts to roll back the resources to the original status.
+      * This topic provides an example on how to create a change set. In this example, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. The change set is used to change the template body of a stack to `{"ROSTemplateFormatVersion":"2015-09-01"}`. The ID of the stack is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`.
+      *
+      * @param request CreateChangeSetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateChangeSetResponse
+     */
     public CreateChangeSetResponse createChangeSetWithOptions(CreateChangeSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -301,11 +326,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChangeSetResponse());
     }
 
+    /**
+      * You can create and execute change sets to update running stacks. For more information about change sets, see [Overview](~~156038~~).
+      * ## Limits
+      * - A stack can contain up to 20 change sets.
+      * - Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
+      * - You cannot use change sets to check the following items: whether the upper limit of your account is reached, whether to update resources that cannot be updated, and whether your account is not granted the required permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) attempts to roll back the resources to the original status.
+      * This topic provides an example on how to create a change set. In this example, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. The change set is used to change the template body of a stack to `{"ROSTemplateFormatVersion":"2015-09-01"}`. The ID of the stack is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`.
+      *
+      * @param request CreateChangeSetRequest
+      * @return CreateChangeSetResponse
+     */
     public CreateChangeSetResponse createChangeSet(CreateChangeSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createChangeSetWithOptions(request, runtime);
     }
 
+    /**
+      * A stack is a collection of Resource Orchestration Service (ROS) resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).
+      * When you call this operation, you must take note of the following limits:
+      * *   You can create up to 200 stacks within an Alibaba Cloud account.
+      * *   You can create up to 200 resources in a stack.
+      * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region. The template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+      *
+      * @param request CreateStackRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateStackResponse
+     */
     public CreateStackResponse createStackWithOptions(CreateStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -410,11 +457,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStackResponse());
     }
 
+    /**
+      * A stack is a collection of Resource Orchestration Service (ROS) resources that you can manage as a single unit. To create a collection of resources, you can create a stack. For more information about stacks, see [Overview](~~172973~~).
+      * When you call this operation, you must take note of the following limits:
+      * *   You can create up to 200 stacks within an Alibaba Cloud account.
+      * *   You can create up to 200 resources in a stack.
+      * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region. The template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+      *
+      * @param request CreateStackRequest
+      * @return CreateStackResponse
+     */
     public CreateStackResponse createStack(CreateStackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createStackWithOptions(request, runtime);
     }
 
+    /**
+      * A stack group is a collection of Resource Orchestration Service (ROS) stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts in multiple regions.
+      * You can create a stack group that is granted self-managed or service-managed permissions:
+      * *   If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.
+      * *   If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member of the resource directory.
+      * For more information about stack groups, see [Overview](~~154578~~).
+      * This topic provides an example on how to create a self-managed stack group named `MyStackGroup` by using a template. In this example, the template ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`. The region ID of the stack group is `cn-hangzhou`.
+      *
+      * @param tmpReq CreateStackGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateStackGroupResponse
+     */
     public CreateStackGroupResponse createStackGroupWithOptions(CreateStackGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateStackGroupShrinkRequest request = new CreateStackGroupShrinkRequest();
@@ -501,11 +570,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStackGroupResponse());
     }
 
+    /**
+      * A stack group is a collection of Resource Orchestration Service (ROS) stacks that you can manage as a unit. You can use an ROS template of a stack group to create stacks within Alibaba Cloud accounts in multiple regions.
+      * You can create a stack group that is granted self-managed or service-managed permissions:
+      * *   If you use an Alibaba Cloud account to create a self-managed stack group, the administrator account and the execution account are Alibaba Cloud accounts.
+      * *   If you enable a resource directory and use the management account or a delegated administrator account of the resource directory to create a service-managed stack group, the administrator account is the management account or delegated administrator account, and the execution account is a member of the resource directory.
+      * For more information about stack groups, see [Overview](~~154578~~).
+      * This topic provides an example on how to create a self-managed stack group named `MyStackGroup` by using a template. In this example, the template ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`. The region ID of the stack group is `cn-hangzhou`.
+      *
+      * @param request CreateStackGroupRequest
+      * @return CreateStackGroupResponse
+     */
     public CreateStackGroupResponse createStackGroup(CreateStackGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createStackGroupWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that a stack group is created. For more information, see [CreateStackGroup](~~151333~~).
+      * This topic provides an example on how to create stacks in a stack group. In this example, stacks are created in a stack group named `MyStackGroup`. The stacks are created within the `151266687691****` and `141261387191****` Alibaba Cloud accounts in the China (Hangzhou) and China (Beijing) regions. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      *
+      * @param tmpReq CreateStackInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateStackInstancesResponse
+     */
     public CreateStackInstancesResponse createStackInstancesWithOptions(CreateStackInstancesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateStackInstancesShrinkRequest request = new CreateStackInstancesShrinkRequest();
@@ -588,11 +676,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStackInstancesResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that a stack group is created. For more information, see [CreateStackGroup](~~151333~~).
+      * This topic provides an example on how to create stacks in a stack group. In this example, stacks are created in a stack group named `MyStackGroup`. The stacks are created within the `151266687691****` and `141261387191****` Alibaba Cloud accounts in the China (Hangzhou) and China (Beijing) regions. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      *
+      * @param request CreateStackInstancesRequest
+      * @return CreateStackInstancesResponse
+     */
     public CreateStackInstancesResponse createStackInstances(CreateStackInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createStackInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to create a template. In this example, a template named `MyTemplate` is created in the `China (Hangzhou)` region. The `TemplateBody` parameter is set to `{"ROSTemplateFormatVersion": "2015-09-01"}`.
+      *
+      * @param request CreateTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateTemplateResponse
+     */
     public CreateTemplateResponse createTemplateWithOptions(CreateTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -637,11 +739,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTemplateResponse());
     }
 
+    /**
+      * This topic provides an example on how to create a template. In this example, a template named `MyTemplate` is created in the `China (Hangzhou)` region. The `TemplateBody` parameter is set to `{"ROSTemplateFormatVersion": "2015-09-01"}`.
+      *
+      * @param request CreateTemplateRequest
+      * @return CreateTemplateResponse
+     */
     public CreateTemplateResponse createTemplate(CreateTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to create a scenario that allows you to specify a resource scope on a visualized interface and easily replicate and manage the resources that you specify. For more information about scenarios, see [Overview](~~352074~~).
+      * This topic provides an example on how to create a scenario of the resource replication type in the China (Hangzhou) region. In this example, a virtual private cloud (VPC) named `vpc-bp1m6fww66xbntjyc****` is replicated by using the scenario.
+      *
+      * @param tmpReq CreateTemplateScratchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateTemplateScratchResponse
+     */
     public CreateTemplateScratchResponse createTemplateScratchWithOptions(CreateTemplateScratchRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateTemplateScratchShrinkRequest request = new CreateTemplateScratchShrinkRequest();
@@ -724,11 +840,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTemplateScratchResponse());
     }
 
+    /**
+      * You can call this operation to create a scenario that allows you to specify a resource scope on a visualized interface and easily replicate and manage the resources that you specify. For more information about scenarios, see [Overview](~~352074~~).
+      * This topic provides an example on how to create a scenario of the resource replication type in the China (Hangzhou) region. In this example, a virtual private cloud (VPC) named `vpc-bp1m6fww66xbntjyc****` is replicated by using the scenario.
+      *
+      * @param request CreateTemplateScratchRequest
+      * @return CreateTemplateScratchResponse
+     */
     public CreateTemplateScratchResponse createTemplateScratch(CreateTemplateScratchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTemplateScratchWithOptions(request, runtime);
     }
 
+    /**
+      * Limits:
+      * *   Before you call this operation, make sure that the following requirements are met:
+      *     *   The status of the change set is CREATE_COMPLETE, CREATE_FAILED, or DELETE_FAILED.
+      *     *   The execution status is UNAVAILABLE or AVAILABLE.
+      * *   After a change set is executed, other change sets associated with the same stack as this change set are deleted.
+      * *   After a stack is deleted, change sets associated with the stack are deleted.
+      * *   If a change set of the CREATE type is deleted, you must delete stacks associated with the change set.
+      * In this example, a change set in the China (Hangzhou) region whose ID is `1f6521a4-05af-4975-afe9-bc4b45ad****` is deleted.
+      *
+      * @param request DeleteChangeSetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteChangeSetResponse
+     */
     public DeleteChangeSetResponse deleteChangeSetWithOptions(DeleteChangeSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -757,6 +894,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChangeSetResponse());
     }
 
+    /**
+      * Limits:
+      * *   Before you call this operation, make sure that the following requirements are met:
+      *     *   The status of the change set is CREATE_COMPLETE, CREATE_FAILED, or DELETE_FAILED.
+      *     *   The execution status is UNAVAILABLE or AVAILABLE.
+      * *   After a change set is executed, other change sets associated with the same stack as this change set are deleted.
+      * *   After a stack is deleted, change sets associated with the stack are deleted.
+      * *   If a change set of the CREATE type is deleted, you must delete stacks associated with the change set.
+      * In this example, a change set in the China (Hangzhou) region whose ID is `1f6521a4-05af-4975-afe9-bc4b45ad****` is deleted.
+      *
+      * @param request DeleteChangeSetRequest
+      * @return DeleteChangeSetResponse
+     */
     public DeleteChangeSetResponse deleteChangeSet(DeleteChangeSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteChangeSetWithOptions(request, runtime);
@@ -807,6 +957,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteStackWithOptions(request, runtime);
     }
 
+    /**
+      * A stack group can be deleted only when the stack group does not contain stacks. You can call the [DeleteStackInstances](~~151715~~) operation to delete stacks.
+      * This topic provides an example on how to delete a stack group. In this example, a stack group named `MyStackGroup` in the China (Hangzhou) region is deleted.
+      *
+      * @param request DeleteStackGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteStackGroupResponse
+     */
     public DeleteStackGroupResponse deleteStackGroupWithOptions(DeleteStackGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -835,11 +993,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteStackGroupResponse());
     }
 
+    /**
+      * A stack group can be deleted only when the stack group does not contain stacks. You can call the [DeleteStackInstances](~~151715~~) operation to delete stacks.
+      * This topic provides an example on how to delete a stack group. In this example, a stack group named `MyStackGroup` in the China (Hangzhou) region is deleted.
+      *
+      * @param request DeleteStackGroupRequest
+      * @return DeleteStackGroupResponse
+     */
     public DeleteStackGroupResponse deleteStackGroup(DeleteStackGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteStackGroupWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to delete stacks from a stack group. In this example, the stacks that are deployed within the `151266687691****` Alibaba Cloud account in the China (Beijing) region are deleted from a stack group named `MyStackGroup`. The stack group is deployed in the China (Hangzhou) region and granted self-managed permissions.
+      *
+      * @param tmpReq DeleteStackInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteStackInstancesResponse
+     */
     public DeleteStackInstancesResponse deleteStackInstancesWithOptions(DeleteStackInstancesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteStackInstancesShrinkRequest request = new DeleteStackInstancesShrinkRequest();
@@ -914,11 +1086,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteStackInstancesResponse());
     }
 
+    /**
+      * This topic provides an example on how to delete stacks from a stack group. In this example, the stacks that are deployed within the `151266687691****` Alibaba Cloud account in the China (Beijing) region are deleted from a stack group named `MyStackGroup`. The stack group is deployed in the China (Hangzhou) region and granted self-managed permissions.
+      *
+      * @param request DeleteStackInstancesRequest
+      * @return DeleteStackInstancesResponse
+     */
     public DeleteStackInstancesResponse deleteStackInstances(DeleteStackInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteStackInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * If the template is shared with other Alibaba Cloud accounts, you must unshare the template before you delete it.
+      *
+      * @param request DeleteTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTemplateResponse
+     */
     public DeleteTemplateResponse deleteTemplateWithOptions(DeleteTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -943,11 +1128,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTemplateResponse());
     }
 
+    /**
+      * If the template is shared with other Alibaba Cloud accounts, you must unshare the template before you delete it.
+      *
+      * @param request DeleteTemplateRequest
+      * @return DeleteTemplateResponse
+     */
     public DeleteTemplateResponse deleteTemplate(DeleteTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * This topic describes how to delete a scenario. In this topic, the `ts-4f83704400994409****` scenario in the China (Hangzhou) region is deleted.
+      *
+      * @param request DeleteTemplateScratchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTemplateScratchResponse
+     */
     public DeleteTemplateScratchResponse deleteTemplateScratchWithOptions(DeleteTemplateScratchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -976,6 +1174,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTemplateScratchResponse());
     }
 
+    /**
+      * This topic describes how to delete a scenario. In this topic, the `ts-4f83704400994409****` scenario in the China (Hangzhou) region is deleted.
+      *
+      * @param request DeleteTemplateScratchRequest
+      * @return DeleteTemplateScratchResponse
+     */
     public DeleteTemplateScratchResponse deleteTemplateScratch(DeleteTemplateScratchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTemplateScratchWithOptions(request, runtime);
@@ -1139,6 +1343,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detectStackResourceDriftWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, a change set in the `China (Hangzhou)` region whose ID is `1f6521a4-05af-4975-afe9-bc4b45ad****` is executed.
+      *
+      * @param request ExecuteChangeSetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExecuteChangeSetResponse
+     */
     public ExecuteChangeSetResponse executeChangeSetWithOptions(ExecuteChangeSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1171,11 +1382,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteChangeSetResponse());
     }
 
+    /**
+      * In this example, a change set in the `China (Hangzhou)` region whose ID is `1f6521a4-05af-4975-afe9-bc4b45ad****` is executed.
+      *
+      * @param request ExecuteChangeSetRequest
+      * @return ExecuteChangeSetResponse
+     */
     public ExecuteChangeSetResponse executeChangeSet(ExecuteChangeSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeChangeSetWithOptions(request, runtime);
     }
 
+    /**
+      * This topic describes how to create a template for a scenario. In this topic, the `ts-aa9c62feab844a6b****` scenario of the Resource Management type in the China (Hangzhou) region is used.
+      *
+      * @param request GenerateTemplateByScratchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GenerateTemplateByScratchResponse
+     */
     public GenerateTemplateByScratchResponse generateTemplateByScratchWithOptions(GenerateTemplateByScratchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1208,11 +1432,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateTemplateByScratchResponse());
     }
 
+    /**
+      * This topic describes how to create a template for a scenario. In this topic, the `ts-aa9c62feab844a6b****` scenario of the Resource Management type in the China (Hangzhou) region is used.
+      *
+      * @param request GenerateTemplateByScratchRequest
+      * @return GenerateTemplateByScratchResponse
+     */
     public GenerateTemplateByScratchResponse generateTemplateByScratch(GenerateTemplateByScratchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateTemplateByScratchWithOptions(request, runtime);
     }
 
+    /**
+      * If the policy information is related to Enterprise Distributed Application Service (EDAS), you must log on to your Alibaba Cloud account and grant the required permissions to the relevant RAM users.
+      * In this example, a policy is generated for a template whose ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`.
+      *
+      * @param request GenerateTemplatePolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GenerateTemplatePolicyResponse
+     */
     public GenerateTemplatePolicyResponse generateTemplatePolicyWithOptions(GenerateTemplatePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1253,11 +1491,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateTemplatePolicyResponse());
     }
 
+    /**
+      * If the policy information is related to Enterprise Distributed Application Service (EDAS), you must log on to your Alibaba Cloud account and grant the required permissions to the relevant RAM users.
+      * In this example, a policy is generated for a template whose ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****`.
+      *
+      * @param request GenerateTemplatePolicyRequest
+      * @return GenerateTemplatePolicyResponse
+     */
     public GenerateTemplatePolicyResponse generateTemplatePolicy(GenerateTemplatePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateTemplatePolicyWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the information of the change set whose ID is `4c11658d-bd47-4dd0-ba64-727edc62****` is queried.
+      *
+      * @param request GetChangeSetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetChangeSetResponse
+     */
     public GetChangeSetResponse getChangeSetWithOptions(GetChangeSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1290,11 +1542,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetChangeSetResponse());
     }
 
+    /**
+      * In this example, the information of the change set whose ID is `4c11658d-bd47-4dd0-ba64-727edc62****` is queried.
+      *
+      * @param request GetChangeSetRequest
+      * @return GetChangeSetResponse
+     */
     public GetChangeSetResponse getChangeSet(GetChangeSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getChangeSetWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
+      * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
+      * >  In the Examples section, only part of the sample code is provided.
+      *
+      * @param request GetFeatureDetailsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetFeatureDetailsResponse
+     */
     public GetFeatureDetailsResponse getFeatureDetailsWithOptions(GetFeatureDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1323,11 +1590,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFeatureDetailsResponse());
     }
 
+    /**
+      * You can call this operation to query the Terraform hosting, resource cleaner, and scenario features.
+      * This topic provides an example on how to query the details of features supported by ROS in the China (Hangzhou) region. The details include Terraform versions, provider versions, and supported resource types.
+      * >  In the Examples section, only part of the sample code is provided.
+      *
+      * @param request GetFeatureDetailsRequest
+      * @return GetFeatureDetailsResponse
+     */
     public GetFeatureDetailsResponse getFeatureDetails(GetFeatureDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getFeatureDetailsWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the details of `ALIYUN::ROS::WaitConditionHandle`.
+      *
+      * @param request GetResourceTypeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetResourceTypeResponse
+     */
     public GetResourceTypeResponse getResourceTypeWithOptions(GetResourceTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1352,6 +1634,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceTypeResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the details of `ALIYUN::ROS::WaitConditionHandle`.
+      *
+      * @param request GetResourceTypeRequest
+      * @return GetResourceTypeResponse
+     */
     public GetResourceTypeResponse getResourceType(GetResourceTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getResourceTypeWithOptions(request, runtime);
@@ -1386,6 +1674,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getResourceTypeTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * This topic describes how to query the activation status and the RAM roles of an Alibaba Cloud service. In this example, the Elastic High Performance Computing (E-HPC) service that is deployed in the China (Hangzhou) region is queried.
+      * >  Make sure that you have obtained the permissions on the [GetRole](~~28711~~) operation.
+      *
+      * @param request GetServiceProvisionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetServiceProvisionsResponse
+     */
     public GetServiceProvisionsResponse getServiceProvisionsWithOptions(GetServiceProvisionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1434,11 +1730,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceProvisionsResponse());
     }
 
+    /**
+      * This topic describes how to query the activation status and the RAM roles of an Alibaba Cloud service. In this example, the Elastic High Performance Computing (E-HPC) service that is deployed in the China (Hangzhou) region is queried.
+      * >  Make sure that you have obtained the permissions on the [GetRole](~~28711~~) operation.
+      *
+      * @param request GetServiceProvisionsRequest
+      * @return GetServiceProvisionsResponse
+     */
     public GetServiceProvisionsResponse getServiceProvisions(GetServiceProvisionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getServiceProvisionsWithOptions(request, runtime);
     }
 
+    /**
+      * In this topic, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` is queried. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetStackResponse
+     */
     public GetStackResponse getStackWithOptions(GetStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1483,11 +1793,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetStackResponse());
     }
 
+    /**
+      * In this topic, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` is queried. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackRequest
+      * @return GetStackResponse
+     */
     public GetStackResponse getStack(GetStackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getStackWithOptions(request, runtime);
     }
 
+    /**
+      * In this topic, the status of a drift detection operation whose ID is `a7044f0d-6f2e-4128-a307-4524ef88****` is queried. The operation is performed in the China (Hangzhou) region.
+      *
+      * @param request GetStackDriftDetectionStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetStackDriftDetectionStatusResponse
+     */
     public GetStackDriftDetectionStatusResponse getStackDriftDetectionStatusWithOptions(GetStackDriftDetectionStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1516,11 +1839,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetStackDriftDetectionStatusResponse());
     }
 
+    /**
+      * In this topic, the status of a drift detection operation whose ID is `a7044f0d-6f2e-4128-a307-4524ef88****` is queried. The operation is performed in the China (Hangzhou) region.
+      *
+      * @param request GetStackDriftDetectionStatusRequest
+      * @return GetStackDriftDetectionStatusResponse
+     */
     public GetStackDriftDetectionStatusResponse getStackDriftDetectionStatus(GetStackDriftDetectionStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getStackDriftDetectionStatusWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the information about a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      *
+      * @param request GetStackGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetStackGroupResponse
+     */
     public GetStackGroupResponse getStackGroupWithOptions(GetStackGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1553,11 +1889,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetStackGroupResponse());
     }
 
+    /**
+      * In this example, the information about a stack group named `MyStackGroup` is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      *
+      * @param request GetStackGroupRequest
+      * @return GetStackGroupResponse
+     */
     public GetStackGroupResponse getStackGroup(GetStackGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getStackGroupWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the operation ID `6da106ca-1784-4a6f-a7e1-e723863d∗∗∗∗` is set to query the details of an operation that you perform on a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackGroupOperationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetStackGroupOperationResponse
+     */
     public GetStackGroupOperationResponse getStackGroupOperationWithOptions(GetStackGroupOperationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1586,11 +1935,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetStackGroupOperationResponse());
     }
 
+    /**
+      * In this example, the operation ID `6da106ca-1784-4a6f-a7e1-e723863d∗∗∗∗` is set to query the details of an operation that you perform on a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackGroupOperationRequest
+      * @return GetStackGroupOperationResponse
+     */
     public GetStackGroupOperationResponse getStackGroupOperation(GetStackGroupOperationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getStackGroupOperationWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the details of a stack that is deployed in the China (Beijing) region within the `151266687691****` Alibaba Cloud account are queried. The stack is deployed in a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetStackInstanceResponse
+     */
     public GetStackInstanceResponse getStackInstanceWithOptions(GetStackInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1627,11 +1989,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetStackInstanceResponse());
     }
 
+    /**
+      * In this example, the details of a stack that is deployed in the China (Beijing) region within the `151266687691****` Alibaba Cloud account are queried. The stack is deployed in a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackInstanceRequest
+      * @return GetStackInstanceResponse
+     */
     public GetStackInstanceResponse getStackInstance(GetStackInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getStackInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the stack policy of a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetStackPolicyResponse
+     */
     public GetStackPolicyResponse getStackPolicyWithOptions(GetStackPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1660,11 +2035,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetStackPolicyResponse());
     }
 
+    /**
+      * In this example, the stack policy of a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackPolicyRequest
+      * @return GetStackPolicyResponse
+     */
     public GetStackPolicyResponse getStackPolicy(GetStackPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getStackPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * In this topic, a resource named `WebServer` in a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackResourceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetStackResourceResponse
+     */
     public GetStackResourceResponse getStackResourceWithOptions(GetStackResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1709,11 +2097,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetStackResourceResponse());
     }
 
+    /**
+      * In this topic, a resource named `WebServer` in a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is queried. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request GetStackResourceRequest
+      * @return GetStackResourceResponse
+     */
     public GetStackResourceResponse getStackResource(GetStackResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getStackResourceWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the details of a template whose ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****` and region ID is `cn-hangzhou` are queried.
+      *
+      * @param request GetTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetTemplateResponse
+     */
     public GetTemplateResponse getTemplateWithOptions(GetTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1770,11 +2171,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTemplateResponse());
     }
 
+    /**
+      * In this example, the details of a template whose ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****` and region ID is `cn-hangzhou` are queried.
+      *
+      * @param request GetTemplateRequest
+      * @return GetTemplateResponse
+     */
     public GetTemplateResponse getTemplate(GetTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the **Resource types that support price inquiry** section of the [Estimate resource prices](~~203165~~) topic.
+      * *   For more information about the resources that support price inquiry in Terraform templates, see the "ROS resources supported by Terraform" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.****
+      * This topic provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create by using a template. In this example, the template body is `{"ROSTemplateFormatVersion": "2015-09-01", "Parameters": {"Isp": {"Type": "String"}, "Name": {"Type": "String"},"Netmode": {"Type": "String"}, "Bandwidth": {"Type": "Number", "Default": 5}}, "Resources": {"NewEip": {"Type": "ALIYUN::VPC::EIP","Properties": {"InstanceChargeType": "Prepaid", "PricingCycle": "Month", "Isp": {"Ref": "Isp"}, "Period": 1, "DeletionProtection": false, "AutoPay": false, "Name": {"Ref": "Name"}, "InternetChargeType": "PayByTraffic", "Netmode": { "Ref": "Netmode"},"Bandwidth": 5}}}}`.
+      *
+      * @param request GetTemplateEstimateCostRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetTemplateEstimateCostResponse
+     */
     public GetTemplateEstimateCostResponse getTemplateEstimateCostWithOptions(GetTemplateEstimateCostRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1831,11 +2247,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTemplateEstimateCostResponse());
     }
 
+    /**
+      * *   For more information about the resources that support price inquiry in Resource Orchestration Service (ROS) templates, see the **Resource types that support price inquiry** section of the [Estimate resource prices](~~203165~~) topic.
+      * *   For more information about the resources that support price inquiry in Terraform templates, see the "ROS resources supported by Terraform" section of the [ROS features and resources supported by Terraform](~~184389~~) topic.****
+      * This topic provides an example on how to query the estimated price of an elastic IP address (EIP) that you want to create by using a template. In this example, the template body is `{"ROSTemplateFormatVersion": "2015-09-01", "Parameters": {"Isp": {"Type": "String"}, "Name": {"Type": "String"},"Netmode": {"Type": "String"}, "Bandwidth": {"Type": "Number", "Default": 5}}, "Resources": {"NewEip": {"Type": "ALIYUN::VPC::EIP","Properties": {"InstanceChargeType": "Prepaid", "PricingCycle": "Month", "Isp": {"Ref": "Isp"}, "Period": 1, "DeletionProtection": false, "AutoPay": false, "Name": {"Ref": "Name"}, "InternetChargeType": "PayByTraffic", "Netmode": { "Ref": "Netmode"},"Bandwidth": 5}}}}`.
+      *
+      * @param request GetTemplateEstimateCostRequest
+      * @return GetTemplateEstimateCostResponse
+     */
     public GetTemplateEstimateCostResponse getTemplateEstimateCost(GetTemplateEstimateCostRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTemplateEstimateCostWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the values of a parameter. In this example, the values of the `ZoneInfo` parameter in a template that is created in the China (Hangzhou) region are queried. The template body is `{"Parameters":{"ZoneInfo":{"Type": "String"},"InstanceType": {"Type": "String"}},"ROSTemplateFormatVersion": "2015-09-01","Resources":{"ECS":{"Properties":{"ZoneId":{"Ref": "ZoneInfo"},"InstanceType": {"Ref": "InstanceType"}},"Type": "ALIYUN::ECS::Instance"}}}`.
+      * For more information about the template parameters whose values you can query by calling this operation and the sample code of the template, see [Query the constraints of parameters](~~432820~~).
+      *
+      * @param tmpReq GetTemplateParameterConstraintsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetTemplateParameterConstraintsResponse
+     */
     public GetTemplateParameterConstraintsResponse getTemplateParameterConstraintsWithOptions(GetTemplateParameterConstraintsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetTemplateParameterConstraintsShrinkRequest request = new GetTemplateParameterConstraintsShrinkRequest();
@@ -1906,11 +2338,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTemplateParameterConstraintsResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the values of a parameter. In this example, the values of the `ZoneInfo` parameter in a template that is created in the China (Hangzhou) region are queried. The template body is `{"Parameters":{"ZoneInfo":{"Type": "String"},"InstanceType": {"Type": "String"}},"ROSTemplateFormatVersion": "2015-09-01","Resources":{"ECS":{"Properties":{"ZoneId":{"Ref": "ZoneInfo"},"InstanceType": {"Ref": "InstanceType"}},"Type": "ALIYUN::ECS::Instance"}}}`.
+      * For more information about the template parameters whose values you can query by calling this operation and the sample code of the template, see [Query the constraints of parameters](~~432820~~).
+      *
+      * @param request GetTemplateParameterConstraintsRequest
+      * @return GetTemplateParameterConstraintsResponse
+     */
     public GetTemplateParameterConstraintsResponse getTemplateParameterConstraints(GetTemplateParameterConstraintsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTemplateParameterConstraintsWithOptions(request, runtime);
     }
 
+    public GetTemplateRecommendParametersResponse getTemplateRecommendParametersWithOptions(GetTemplateRecommendParametersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
+            query.put("TemplateBody", request.templateBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateURL)) {
+            query.put("TemplateURL", request.templateURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateVersion)) {
+            query.put("TemplateVersion", request.templateVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTemplateRecommendParameters"),
+            new TeaPair("version", "2019-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTemplateRecommendParametersResponse());
+    }
+
+    public GetTemplateRecommendParametersResponse getTemplateRecommendParameters(GetTemplateRecommendParametersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTemplateRecommendParametersWithOptions(request, runtime);
+    }
+
+    /**
+      * In this topic, the details about the `ts-7f7a704cf71c49a6****` scenario in the China (Hangzhou) region are queried. The source node data is displayed.
+      *
+      * @param request GetTemplateScratchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetTemplateScratchResponse
+     */
     public GetTemplateScratchResponse getTemplateScratchWithOptions(GetTemplateScratchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1943,6 +2442,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTemplateScratchResponse());
     }
 
+    /**
+      * In this topic, the details about the `ts-7f7a704cf71c49a6****` scenario in the China (Hangzhou) region are queried. The source node data is displayed.
+      *
+      * @param request GetTemplateScratchRequest
+      * @return GetTemplateScratchResponse
+     */
     public GetTemplateScratchResponse getTemplateScratch(GetTemplateScratchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTemplateScratchWithOptions(request, runtime);
@@ -2070,6 +2575,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listChangeSetsWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).
+      *
+      * @param request ListResourceTypesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListResourceTypesResponse
+     */
     public ListResourceTypesResponse listResourceTypesWithOptions(ListResourceTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2094,6 +2606,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceTypesResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the list of resource types supported by Resource Orchestration Service (ROS).
+      *
+      * @param request ListResourceTypesRequest
+      * @return ListResourceTypesResponse
+     */
     public ListResourceTypesResponse listResourceTypes(ListResourceTypesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listResourceTypesWithOptions(request, runtime);
@@ -2152,6 +2670,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listStackEventsWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the operation ID `6da106ca-1784-4a6f-a7e1-e723863d∗∗∗∗` is set to query the results of an operation on a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      *
+      * @param request ListStackGroupOperationResultsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListStackGroupOperationResultsResponse
+     */
     public ListStackGroupOperationResultsResponse listStackGroupOperationResultsWithOptions(ListStackGroupOperationResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2188,6 +2713,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStackGroupOperationResultsResponse());
     }
 
+    /**
+      * In this example, the operation ID `6da106ca-1784-4a6f-a7e1-e723863d∗∗∗∗` is set to query the results of an operation on a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      *
+      * @param request ListStackGroupOperationResultsRequest
+      * @return ListStackGroupOperationResultsResponse
+     */
     public ListStackGroupOperationResultsResponse listStackGroupOperationResults(ListStackGroupOperationResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listStackGroupOperationResultsWithOptions(request, runtime);
@@ -2234,6 +2765,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listStackGroupOperationsWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the list of stack groups. In this example, the stack groups that are in the active state and deployed in the China (Hangzhou) region are queried.
+      *
+      * @param request ListStackGroupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListStackGroupsResponse
+     */
     public ListStackGroupsResponse listStackGroupsWithOptions(ListStackGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2278,11 +2816,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStackGroupsResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the list of stack groups. In this example, the stack groups that are in the active state and deployed in the China (Hangzhou) region are queried.
+      *
+      * @param request ListStackGroupsRequest
+      * @return ListStackGroupsResponse
+     */
     public ListStackGroupsResponse listStackGroups(ListStackGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listStackGroupsWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the stacks that are deployed in a stack group named `MyStackGroup` are queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param request ListStackInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListStackInstancesResponse
+     */
     public ListStackInstancesResponse listStackInstancesWithOptions(ListStackInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2327,11 +2878,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStackInstancesResponse());
     }
 
+    /**
+      * In this example, the stacks that are deployed in a stack group named `MyStackGroup` are queried. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param request ListStackInstancesRequest
+      * @return ListStackInstancesResponse
+     */
     public ListStackInstancesResponse listStackInstances(ListStackInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listStackInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * The ListStackOperationRisks operation is suitable for the following scenarios:
+      * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the reason for each risk in a resource.
+      * *   You want to detect risks of creation failure that may arise when you create a stack. In this case, Resource Orchestration Service (ROS) allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
+      *
+      * @param request ListStackOperationRisksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListStackOperationRisksResponse
+     */
     public ListStackOperationRisksResponse listStackOperationRisksWithOptions(ListStackOperationRisksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2396,6 +2962,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStackOperationRisksResponse());
     }
 
+    /**
+      * The ListStackOperationRisks operation is suitable for the following scenarios:
+      * *   You want to detect high risks that may arise in resources when you delete a stack that contains the resources, and query the reason for each risk in a resource.
+      * *   You want to detect risks of creation failure that may arise when you create a stack. In this case, Resource Orchestration Service (ROS) allows you to detect only the required permissions that are not granted to the Alibaba Cloud account of the caller.
+      *
+      * @param request ListStackOperationRisksRequest
+      * @return ListStackOperationRisksResponse
+     */
     public ListStackOperationRisksResponse listStackOperationRisks(ListStackOperationRisksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listStackOperationRisksWithOptions(request, runtime);
@@ -2446,6 +3020,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listStackResourceDriftsWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Hangzhou) region are queried.
+      *
+      * @param request ListStackResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListStackResourcesResponse
+     */
     public ListStackResourcesResponse listStackResourcesWithOptions(ListStackResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2474,11 +3055,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStackResourcesResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Hangzhou) region are queried.
+      *
+      * @param request ListStackResourcesRequest
+      * @return ListStackResourcesResponse
+     */
     public ListStackResourcesResponse listStackResources(ListStackResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listStackResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
+      *
+      * @param request ListStacksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListStacksResponse
+     */
     public ListStacksResponse listStacksWithOptions(ListStacksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2543,11 +3137,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListStacksResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
+      *
+      * @param request ListStacksRequest
+      * @return ListStacksResponse
+     */
     public ListStacksResponse listStacks(ListStacksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listStacksWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the tag keys that are added to a stack in the China (Hangzhou) region are queried.
+      *
+      * @param request ListTagKeysRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagKeysResponse
+     */
     public ListTagKeysResponse listTagKeysWithOptions(ListTagKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2580,11 +3187,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
     }
 
+    /**
+      * In this example, the tag keys that are added to a stack in the China (Hangzhou) region are queried.
+      *
+      * @param request ListTagKeysRequest
+      * @return ListTagKeysResponse
+     */
     public ListTagKeysResponse listTagKeys(ListTagKeysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagKeysWithOptions(request, runtime);
     }
 
+    /**
+      * *   To specify the query object, you must specify the ResourceId.N or Tag.N parameter in the request. Tag.N consists of Tag.N.Key and Tag.N.Value.
+      * *   If you specify the Tag.N and ResourceId.N parameters, ROS resources that match both the parameters are returned.
+      * This topic provides an example on how to query the tags that are added to a resource in a stack. In this example, the resource ID is `6bc589b5-9c02-4944-8fc3-f3624234****`. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request ListTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2625,11 +3247,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+      * *   To specify the query object, you must specify the ResourceId.N or Tag.N parameter in the request. Tag.N consists of Tag.N.Key and Tag.N.Value.
+      * *   If you specify the Tag.N and ResourceId.N parameters, ROS resources that match both the parameters are returned.
+      * This topic provides an example on how to query the tags that are added to a resource in a stack. In this example, the resource ID is `6bc589b5-9c02-4944-8fc3-f3624234****`. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request ListTagResourcesRequest
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the tag values of `TagKey1` that is added to a stack in the China (Hangzhou) region are queried.
+      *
+      * @param request ListTagValuesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagValuesResponse
+     */
     public ListTagValuesResponse listTagValuesWithOptions(ListTagValuesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2666,11 +3303,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
     }
 
+    /**
+      * In this example, the tag values of `TagKey1` that is added to a stack in the China (Hangzhou) region are queried.
+      *
+      * @param request ListTagValuesRequest
+      * @return ListTagValuesResponse
+     */
     public ListTagValuesResponse listTagValues(ListTagValuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagValuesWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the list of scenarios. In this example, the scenarios that are created in the China (Hangzhou) region are queried. The following scenarios are returned: resource management and resource replication scenarios.
+      *
+      * @param request ListTemplateScratchesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTemplateScratchesResponse
+     */
     public ListTemplateScratchesResponse listTemplateScratchesWithOptions(ListTemplateScratchesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2719,6 +3369,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTemplateScratchesResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the list of scenarios. In this example, the scenarios that are created in the China (Hangzhou) region are queried. The following scenarios are returned: resource management and resource replication scenarios.
+      *
+      * @param request ListTemplateScratchesRequest
+      * @return ListTemplateScratchesResponse
+     */
     public ListTemplateScratchesResponse listTemplateScratches(ListTemplateScratchesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTemplateScratchesWithOptions(request, runtime);
@@ -2814,6 +3470,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTemplatesWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, a stack deployed in the `China (Hangzhou)` region is moved to a specific resource group. The ID of the stack is `4e8611cb-251e-42b7-b9cb-3496362c****` and the ID of the resource group is `rg-acfm3peow3k****`.
+      *
+      * @param request MoveResourceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return MoveResourceGroupResponse
+     */
     public MoveResourceGroupResponse moveResourceGroupWithOptions(MoveResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2850,11 +3513,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new MoveResourceGroupResponse());
     }
 
+    /**
+      * In this example, a stack deployed in the `China (Hangzhou)` region is moved to a specific resource group. The ID of the stack is `4e8611cb-251e-42b7-b9cb-3496362c****` and the ID of the resource group is `rg-acfm3peow3k****`.
+      *
+      * @param request MoveResourceGroupRequest
+      * @return MoveResourceGroupResponse
+     */
     public MoveResourceGroupResponse moveResourceGroup(MoveResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.moveResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region and preview the information about the stack. In this example, the template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+      *
+      * @param request PreviewStackRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PreviewStackResponse
+     */
     public PreviewStackResponse previewStackWithOptions(PreviewStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2943,6 +3619,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PreviewStackResponse());
     }
 
+    /**
+      * This topic provides an example on how to create a stack named `MyStack` in the China (Hangzhou) region and preview the information about the stack. In this example, the template body of the stack is `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+      *
+      * @param request PreviewStackRequest
+      * @return PreviewStackResponse
+     */
     public PreviewStackResponse previewStack(PreviewStackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.previewStackWithOptions(request, runtime);
@@ -2985,6 +3667,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setDeletionProtectionWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, a stack policy is configured for a stack deployed in the `China (Hangzhou)` region whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`. The URL to the stack policy body is `oss://ros/stack-policy/demo`.
+      *
+      * @param request SetStackPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetStackPolicyResponse
+     */
     public SetStackPolicyResponse setStackPolicyWithOptions(SetStackPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3021,11 +3710,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetStackPolicyResponse());
     }
 
+    /**
+      * In this example, a stack policy is configured for a stack deployed in the `China (Hangzhou)` region whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`. The URL to the stack policy body is `oss://ros/stack-policy/demo`.
+      *
+      * @param request SetStackPolicyRequest
+      * @return SetStackPolicyResponse
+     */
     public SetStackPolicyResponse setStackPolicy(SetStackPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setStackPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, a template whose ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****` is shared with an Alibaba Cloud account whose ID is `151266687691****`.
+      * >  The account can authorize an RAM user to use the shared template.``
+      *
+      * @param request SetTemplatePermissionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetTemplatePermissionResponse
+     */
     public SetTemplatePermissionResponse setTemplatePermissionWithOptions(SetTemplatePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3066,6 +3769,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetTemplatePermissionResponse());
     }
 
+    /**
+      * In this example, a template whose ID is `5ecd1e10-b0e9-4389-a565-e4c15efc****` is shared with an Alibaba Cloud account whose ID is `151266687691****`.
+      * >  The account can authorize an RAM user to use the shared template.``
+      *
+      * @param request SetTemplatePermissionRequest
+      * @return SetTemplatePermissionResponse
+     */
     public SetTemplatePermissionResponse setTemplatePermission(SetTemplatePermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setTemplatePermissionWithOptions(request, runtime);
@@ -3120,6 +3830,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.signalResourceWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to stop a stack group operation whose ID is `6da106ca-1784-4a6f-a7e1-e723863****` in the China (Hangzhou) region.
+      *
+      * @param request StopStackGroupOperationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopStackGroupOperationResponse
+     */
     public StopStackGroupOperationResponse stopStackGroupOperationWithOptions(StopStackGroupOperationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3148,11 +3865,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopStackGroupOperationResponse());
     }
 
+    /**
+      * This topic provides an example on how to stop a stack group operation whose ID is `6da106ca-1784-4a6f-a7e1-e723863****` in the China (Hangzhou) region.
+      *
+      * @param request StopStackGroupOperationRequest
+      * @return StopStackGroupOperationResponse
+     */
     public StopStackGroupOperationResponse stopStackGroupOperation(StopStackGroupOperationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopStackGroupOperationWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to create a tag and add the tag to a resource in a stack. In this example, the resource ID is `7fee80e1-8c48-4c2f-8300-0f6dc40b****`, the tag key is `FinanceDept`, and the tag value is `FinanceJoshua`.
+      *
+      * @param request TagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3189,11 +3919,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
+    /**
+      * This topic provides an example on how to create a tag and add the tag to a resource in a stack. In this example, the resource ID is `7fee80e1-8c48-4c2f-8300-0f6dc40b****`, the tag key is `FinanceDept`, and the tag value is `FinanceJoshua`.
+      *
+      * @param request TagResourcesRequest
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to remove all tags from a stack that is deployed in the China (Hangzhou) region. In this example, the ID of the stack is `46ec7b78-9d5e-4b21-aefd-448c90aa****`.
+      *
+      * @param request UntagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3234,11 +3977,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
+    /**
+      * This topic provides an example on how to remove all tags from a stack that is deployed in the China (Hangzhou) region. In this example, the ID of the stack is `46ec7b78-9d5e-4b21-aefd-448c90aa****`.
+      *
+      * @param request UntagResourcesRequest
+      * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * The values of parameters in the Parameters section vary based on the value that you specify for the UsePreviousParameters parameter in the request. If you do not add the parameters that are defined in the template to the Parameters section, take note of the following items:
+      * *   UsePreviousParameters is set to false: If the template parameters have default values, the default values are used. Otherwise, you must specify values for the template parameters in the Parameters section.
+      * *   UsePreviousParameters is set to true: If you specify values for the template parameters when you create a stack, the values are used. If you leave the template parameters empty when you create a stack but the template parameters have default values, the default values are used.
+      * This topic describes how to update a stack. In this example, the template body of a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Beijing) region is updated to `{"ROSTemplateFormatVersion": "2015-09-01"}`.
+      *
+      * @param request UpdateStackRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateStackResponse
+     */
     public UpdateStackResponse updateStackWithOptions(UpdateStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3343,11 +4102,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateStackResponse());
     }
 
+    /**
+      * The values of parameters in the Parameters section vary based on the value that you specify for the UsePreviousParameters parameter in the request. If you do not add the parameters that are defined in the template to the Parameters section, take note of the following items:
+      * *   UsePreviousParameters is set to false: If the template parameters have default values, the default values are used. Otherwise, you must specify values for the template parameters in the Parameters section.
+      * *   UsePreviousParameters is set to true: If you specify values for the template parameters when you create a stack, the values are used. If you leave the template parameters empty when you create a stack but the template parameters have default values, the default values are used.
+      * This topic describes how to update a stack. In this example, the template body of a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` in the China (Beijing) region is updated to `{"ROSTemplateFormatVersion": "2015-09-01"}`.
+      *
+      * @param request UpdateStackRequest
+      * @return UpdateStackResponse
+     */
     public UpdateStackResponse updateStack(UpdateStackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateStackWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the template content `{"ROSTemplateFormatVersion": "2015-09-01"}` is specified to update a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param tmpReq UpdateStackGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateStackGroupResponse
+     */
     public UpdateStackGroupResponse updateStackGroupWithOptions(UpdateStackGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateStackGroupShrinkRequest request = new UpdateStackGroupShrinkRequest();
@@ -3462,11 +4237,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateStackGroupResponse());
     }
 
+    /**
+      * In this example, the template content `{"ROSTemplateFormatVersion": "2015-09-01"}` is specified to update a stack group named `MyStackGroup`. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param request UpdateStackGroupRequest
+      * @return UpdateStackGroupResponse
+     */
     public UpdateStackGroupResponse updateStackGroup(UpdateStackGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateStackGroupWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to update stacks in a stack group. In this example, the stacks that are deployed in a stack group named `MyStackGroup` are updated. The stacks are deployed within the `151266687691****` and `141261387191****` Alibaba Cloud accounts in the China (Hangzhou) and China (Beijing) regions. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param tmpReq UpdateStackInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateStackInstancesResponse
+     */
     public UpdateStackInstancesResponse updateStackInstancesWithOptions(UpdateStackInstancesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateStackInstancesShrinkRequest request = new UpdateStackInstancesShrinkRequest();
@@ -3545,11 +4333,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateStackInstancesResponse());
     }
 
+    /**
+      * This topic provides an example on how to update stacks in a stack group. In this example, the stacks that are deployed in a stack group named `MyStackGroup` are updated. The stacks are deployed within the `151266687691****` and `141261387191****` Alibaba Cloud accounts in the China (Hangzhou) and China (Beijing) regions. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      *
+      * @param request UpdateStackInstancesRequest
+      * @return UpdateStackInstancesResponse
+     */
     public UpdateStackInstancesResponse updateStackInstances(UpdateStackInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateStackInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * Limits: You can eliminate only drift on stacks that have drifted. You must call the [DetectStackDrift](~~155094~~) operation to perform drift detection on a stack, call the [GetStackDriftDetectionStatus](~~155097~~) operation to query the drift status of the stack to make sure that the stack has drifted, and then call the UpdateStackTemplateByResources operation to eliminate drift.
+      * In this topic, drift is eliminated for a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request UpdateStackTemplateByResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateStackTemplateByResourcesResponse
+     */
     public UpdateStackTemplateByResourcesResponse updateStackTemplateByResourcesWithOptions(UpdateStackTemplateByResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3594,11 +4396,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateStackTemplateByResourcesResponse());
     }
 
+    /**
+      * Limits: You can eliminate only drift on stacks that have drifted. You must call the [DetectStackDrift](~~155094~~) operation to perform drift detection on a stack, call the [GetStackDriftDetectionStatus](~~155097~~) operation to query the drift status of the stack to make sure that the stack has drifted, and then call the UpdateStackTemplateByResources operation to eliminate drift.
+      * In this topic, drift is eliminated for a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****`. The stack is deployed in the China (Hangzhou) region.
+      *
+      * @param request UpdateStackTemplateByResourcesRequest
+      * @return UpdateStackTemplateByResourcesResponse
+     */
     public UpdateStackTemplateByResourcesResponse updateStackTemplateByResources(UpdateStackTemplateByResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateStackTemplateByResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * Take note of the following items:
+      * *   If you specify the TemplateBody or TemplateURL parameter, the existing version number is automatically incremented by 1 after the template is updated. For example, the version is changed from v1 to V2.
+      * *   If you do not specify the TemplateBody or TemplateURL parameter, the version number remains unchanged.
+      * *   A template can have up to 100 versions. If the number of templates reaches the upper limit, the template fails to be updated. You must create another template.
+      *
+      * @param request UpdateTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTemplateResponse
+     */
     public UpdateTemplateResponse updateTemplateWithOptions(UpdateTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3639,11 +4458,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTemplateResponse());
     }
 
+    /**
+      * Take note of the following items:
+      * *   If you specify the TemplateBody or TemplateURL parameter, the existing version number is automatically incremented by 1 after the template is updated. For example, the version is changed from v1 to V2.
+      * *   If you do not specify the TemplateBody or TemplateURL parameter, the version number remains unchanged.
+      * *   A template can have up to 100 versions. If the number of templates reaches the upper limit, the template fails to be updated. You must create another template.
+      *
+      * @param request UpdateTemplateRequest
+      * @return UpdateTemplateResponse
+     */
     public UpdateTemplateResponse updateTemplate(UpdateTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * In this topic, the `ts-7f7a704cf71c49a6****` scenario that is created in the China (Hangzhou) region is updated. In this scenario, the ID of the virtual private cloud (VPC) is updated to `ts-7f7a704cf71c49a6****`.
+      *
+      * @param tmpReq UpdateTemplateScratchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTemplateScratchResponse
+     */
     public UpdateTemplateScratchResponse updateTemplateScratchWithOptions(UpdateTemplateScratchRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateTemplateScratchShrinkRequest request = new UpdateTemplateScratchShrinkRequest();
@@ -3722,11 +4557,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTemplateScratchResponse());
     }
 
+    /**
+      * In this topic, the `ts-7f7a704cf71c49a6****` scenario that is created in the China (Hangzhou) region is updated. In this scenario, the ID of the virtual private cloud (VPC) is updated to `ts-7f7a704cf71c49a6****`.
+      *
+      * @param request UpdateTemplateScratchRequest
+      * @return UpdateTemplateScratchResponse
+     */
     public UpdateTemplateScratchResponse updateTemplateScratch(UpdateTemplateScratchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTemplateScratchWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to validate a template that you want to use to create a stack. In this example, the `TemplateURL` parameter is set to `oss://ros/template/demo`.
+      *
+      * @param request ValidateTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ValidateTemplateResponse
+     */
     public ValidateTemplateResponse validateTemplateWithOptions(ValidateTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3767,6 +4615,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateTemplateResponse());
     }
 
+    /**
+      * This topic provides an example on how to validate a template that you want to use to create a stack. In this example, the `TemplateURL` parameter is set to `oss://ros/template/demo`.
+      *
+      * @param request ValidateTemplateRequest
+      * @return ValidateTemplateResponse
+     */
     public ValidateTemplateResponse validateTemplate(ValidateTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.validateTemplateWithOptions(request, runtime);
