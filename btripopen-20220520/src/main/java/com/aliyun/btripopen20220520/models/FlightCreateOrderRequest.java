@@ -278,6 +278,12 @@ public class FlightCreateOrderRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("nationality")
+        public String nationality;
+
+        @NameInMap("nationality_code")
+        public String nationalityCode;
+
         @NameInMap("out_user_id")
         public String outUserId;
 
@@ -341,6 +347,22 @@ public class FlightCreateOrderRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public FlightCreateOrderRequestTravelerInfoList setNationality(String nationality) {
+            this.nationality = nationality;
+            return this;
+        }
+        public String getNationality() {
+            return this.nationality;
+        }
+
+        public FlightCreateOrderRequestTravelerInfoList setNationalityCode(String nationalityCode) {
+            this.nationalityCode = nationalityCode;
+            return this;
+        }
+        public String getNationalityCode() {
+            return this.nationalityCode;
         }
 
         public FlightCreateOrderRequestTravelerInfoList setOutUserId(String outUserId) {
