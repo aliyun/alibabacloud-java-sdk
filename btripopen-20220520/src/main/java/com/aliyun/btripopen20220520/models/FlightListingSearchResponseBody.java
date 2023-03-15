@@ -10,6 +10,9 @@ public class FlightListingSearchResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>module</p>
+     */
     @NameInMap("module")
     public FlightListingSearchResponseBodyModule module;
 
@@ -430,6 +433,9 @@ public class FlightListingSearchResponseBody extends TeaModel {
         @NameInMap("is_struct")
         public Boolean isStruct;
 
+        /**
+         * <p>PTC</p>
+         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -774,9 +780,15 @@ public class FlightListingSearchResponseBody extends TeaModel {
     }
 
     public static class FlightListingSearchResponseBodyModuleFlightListFlightRuleListChangeRuleItemRefundSubItems extends TeaModel {
+        /**
+         * <p>isStruct : true</p>
+         */
         @NameInMap("is_struct")
         public Boolean isStruct;
 
+        /**
+         * <p>PTC</p>
+         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -1089,6 +1101,9 @@ public class FlightListingSearchResponseBody extends TeaModel {
         @NameInMap("is_struct")
         public Boolean isStruct;
 
+        /**
+         * <p>PTC</p>
+         */
         @NameInMap("ptc")
         public String ptc;
 

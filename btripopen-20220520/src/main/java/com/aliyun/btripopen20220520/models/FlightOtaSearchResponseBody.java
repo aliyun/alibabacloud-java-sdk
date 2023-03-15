@@ -367,6 +367,9 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         @NameInMap("is_struct")
         public Boolean isStruct;
 
+        /**
+         * <p>PTC</p>
+         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -714,6 +717,9 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         @NameInMap("is_struct")
         public Boolean isStruct;
 
+        /**
+         * <p>PTC</p>
+         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -1026,6 +1032,9 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         @NameInMap("is_struct")
         public Boolean isStruct;
 
+        /**
+         * <p>PTC</p>
+         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -2008,6 +2017,9 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         @NameInMap("is_struct")
         public Boolean isStruct;
 
+        /**
+         * <p>PTC</p>
+         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -2352,9 +2364,15 @@ public class FlightOtaSearchResponseBody extends TeaModel {
     }
 
     public static class FlightOtaSearchResponseBodyModuleFlightListFlightRuleListChangeRuleItemRefundSubItems extends TeaModel {
+        /**
+         * <p>isStruct : true</p>
+         */
         @NameInMap("is_struct")
         public Boolean isStruct;
 
+        /**
+         * <p>PTC</p>
+         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -2667,6 +2685,9 @@ public class FlightOtaSearchResponseBody extends TeaModel {
         @NameInMap("is_struct")
         public Boolean isStruct;
 
+        /**
+         * <p>PTC</p>
+         */
         @NameInMap("ptc")
         public String ptc;
 
