@@ -47,6 +47,12 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("AndroidExtParameters")
         public String androidExtParameters;
 
+        @NameInMap("AndroidHuaweiReceiptId")
+        public String androidHuaweiReceiptId;
+
+        @NameInMap("AndroidHuaweiTargetUserType")
+        public Integer androidHuaweiTargetUserType;
+
         @NameInMap("AndroidImageUrl")
         public String androidImageUrl;
 
@@ -58,6 +64,9 @@ public class MassPushRequest extends TeaModel {
 
         @NameInMap("AndroidMessageHuaweiUrgency")
         public String androidMessageHuaweiUrgency;
+
+        @NameInMap("AndroidMessageVivoCategory")
+        public String androidMessageVivoCategory;
 
         @NameInMap("AndroidMusic")
         public String androidMusic;
@@ -117,12 +126,15 @@ public class MassPushRequest extends TeaModel {
         public Integer androidVivoPushMode;
 
         @NameInMap("AndroidXiaoMiActivity")
+        @Deprecated
         public String androidXiaoMiActivity;
 
         @NameInMap("AndroidXiaoMiNotifyBody")
+        @Deprecated
         public String androidXiaoMiNotifyBody;
 
         @NameInMap("AndroidXiaoMiNotifyTitle")
+        @Deprecated
         public String androidXiaoMiNotifyTitle;
 
         @NameInMap("AndroidXiaomiBigPictureUrl")
@@ -153,6 +165,7 @@ public class MassPushRequest extends TeaModel {
         public String sendChannels;
 
         @NameInMap("SendSpeed")
+        @Deprecated
         public Integer sendSpeed;
 
         @NameInMap("StoreOffline")
@@ -260,6 +273,22 @@ public class MassPushRequest extends TeaModel {
             return this.androidExtParameters;
         }
 
+        public MassPushRequestPushTask setAndroidHuaweiReceiptId(String androidHuaweiReceiptId) {
+            this.androidHuaweiReceiptId = androidHuaweiReceiptId;
+            return this;
+        }
+        public String getAndroidHuaweiReceiptId() {
+            return this.androidHuaweiReceiptId;
+        }
+
+        public MassPushRequestPushTask setAndroidHuaweiTargetUserType(Integer androidHuaweiTargetUserType) {
+            this.androidHuaweiTargetUserType = androidHuaweiTargetUserType;
+            return this;
+        }
+        public Integer getAndroidHuaweiTargetUserType() {
+            return this.androidHuaweiTargetUserType;
+        }
+
         public MassPushRequestPushTask setAndroidImageUrl(String androidImageUrl) {
             this.androidImageUrl = androidImageUrl;
             return this;
@@ -290,6 +319,14 @@ public class MassPushRequest extends TeaModel {
         }
         public String getAndroidMessageHuaweiUrgency() {
             return this.androidMessageHuaweiUrgency;
+        }
+
+        public MassPushRequestPushTask setAndroidMessageVivoCategory(String androidMessageVivoCategory) {
+            this.androidMessageVivoCategory = androidMessageVivoCategory;
+            return this;
+        }
+        public String getAndroidMessageVivoCategory() {
+            return this.androidMessageVivoCategory;
         }
 
         public MassPushRequestPushTask setAndroidMusic(String androidMusic) {

@@ -259,6 +259,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request CheckDeviceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CheckDeviceResponse
+     */
+    // Deprecated
     public CheckDeviceResponse checkDeviceWithOptions(CheckDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -287,6 +295,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckDeviceResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request CheckDeviceRequest
+      * @return CheckDeviceResponse
+     */
+    // Deprecated
     public CheckDeviceResponse checkDevice(CheckDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkDeviceWithOptions(request, runtime);
@@ -399,6 +414,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.continuouslyPushWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request ListSummaryAppsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListSummaryAppsResponse
+     */
+    // Deprecated
     public ListSummaryAppsResponse listSummaryAppsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -415,6 +438,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSummaryAppsResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @return ListSummaryAppsResponse
+     */
+    // Deprecated
     public ListSummaryAppsResponse listSummaryApps() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSummaryAppsWithOptions(runtime);
@@ -507,6 +536,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidExtParameters", request.androidExtParameters);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.androidHuaweiReceiptId)) {
+            query.put("AndroidHuaweiReceiptId", request.androidHuaweiReceiptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidHuaweiTargetUserType)) {
+            query.put("AndroidHuaweiTargetUserType", request.androidHuaweiTargetUserType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.androidImageUrl)) {
             query.put("AndroidImageUrl", request.androidImageUrl);
         }
@@ -521,6 +558,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidMessageHuaweiUrgency)) {
             query.put("AndroidMessageHuaweiUrgency", request.androidMessageHuaweiUrgency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidMessageVivoCategory)) {
+            query.put("AndroidMessageVivoCategory", request.androidMessageVivoCategory);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidMusic)) {

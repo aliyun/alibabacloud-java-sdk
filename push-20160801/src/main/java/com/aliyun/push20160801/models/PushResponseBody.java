@@ -31,23 +31,4 @@ public class PushResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class MassPushResponseBodyMessageIds extends TeaModel {
-        @NameInMap("MessageId")
-        public java.util.List<String> messageId;
-
-        public static MassPushResponseBodyMessageIds build(java.util.Map<String, ?> map) throws Exception {
-            MassPushResponseBodyMessageIds self = new MassPushResponseBodyMessageIds();
-            return TeaModel.build(map, self);
-        }
-
-        public MassPushResponseBodyMessageIds setMessageId(java.util.List<String> messageId) {
-            this.messageId = messageId;
-            return this;
-        }
-        public java.util.List<String> getMessageId() {
-            return this.messageId;
-        }
-
-    }
-
 }
