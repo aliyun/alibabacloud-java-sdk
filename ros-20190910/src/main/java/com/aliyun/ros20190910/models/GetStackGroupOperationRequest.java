@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetStackGroupOperationRequest extends TeaModel {
+    /**
+     * <p>The ID of the operation that you want to query. You can call the [ListStackGroupOperations](~~151342~~) operation to query the operation.</p>
+     */
     @NameInMap("OperationId")
     public String operationId;
 
+    /**
+     * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

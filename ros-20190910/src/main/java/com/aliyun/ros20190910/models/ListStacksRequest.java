@@ -4,24 +4,61 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStacksRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the parent stack.</p>
+     */
     @NameInMap("ParentStackId")
     public String parentStackId;
 
+    /**
+     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Specifies whether to return nested stacks. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>> If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.</p>
+     */
     @NameInMap("ShowNestedStack")
     public Boolean showNestedStack;
 
+    /**
+     * <p>The ID of the stack. If you want to query the basic information about the stack, you can use this parameter and do not need to call the GetStack operation.</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 
@@ -131,9 +168,19 @@ public class ListStacksRequest extends TeaModel {
     }
 
     public static class ListStacksRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N of the stack.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N of the stack.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

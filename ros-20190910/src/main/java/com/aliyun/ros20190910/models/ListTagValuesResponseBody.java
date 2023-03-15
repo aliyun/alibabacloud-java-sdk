@@ -4,12 +4,21 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTagValuesResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag values.</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

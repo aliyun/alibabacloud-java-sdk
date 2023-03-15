@@ -4,18 +4,35 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of templates.</p>
+     */
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
 
+    /**
+     * <p>The total number of templates.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +82,15 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplatesTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,36 +118,74 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
+        /**
+         * <p>The time when the template was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the template.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the template belongs.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The sharing type of the template.</p>
+         * <br>
+         * <p>Default value: Private. Valid values:</p>
+         * <br>
+         * <p>*   Private: The template belongs to the template owner.</p>
+         * <p>*   Shared: The template is shared with other users.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The tags of the template.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTemplatesResponseBodyTemplatesTags> tags;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the template.</p>
+         */
         @NameInMap("TemplateARN")
         public String templateARN;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>The latest version of the template.</p>
+         */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
+        /**
+         * <p>The time when the template was last updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

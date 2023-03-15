@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class PreviewStackResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the stack that is previewed.</p>
+     */
     @NameInMap("Stack")
     public PreviewStackResponseBodyStack stack;
 
@@ -32,12 +38,31 @@ public class PreviewStackResponseBody extends TeaModel {
     }
 
     public static class PreviewStackResponseBodyStackLogTerraformLogs extends TeaModel {
+        /**
+         * <p>The name of the Terraform command. Valid values:</p>
+         * <br>
+         * <p>*   apply</p>
+         * <p>*   plan</p>
+         * <p>*   destroy</p>
+         * <p>*   version</p>
+         * <br>
+         * <p>For more information about Terraform commands, see [Basic CLI Features](https://www.terraform.io/cli/commands).</p>
+         */
         @NameInMap("Command")
         public String command;
 
+        /**
+         * <p>The content of the output stream that is returned after the command is run.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The output stream. Valid values:</p>
+         * <br>
+         * <p>*   stdout: standard output stream</p>
+         * <p>*   stderr: standard error stream</p>
+         */
         @NameInMap("Stream")
         public String stream;
 
@@ -73,6 +98,11 @@ public class PreviewStackResponseBody extends TeaModel {
     }
 
     public static class PreviewStackResponseBodyStackLog extends TeaModel {
+        /**
+         * <p>The log that is generated when a Terraform stack is run. This parameter is returned only if the stack is a Terraform stack.</p>
+         * <br>
+         * <p>>  You can use this parameter to preview the logs of a Terraform stack.</p>
+         */
         @NameInMap("TerraformLogs")
         public java.util.List<PreviewStackResponseBodyStackLogTerraformLogs> terraformLogs;
 
@@ -92,9 +122,15 @@ public class PreviewStackResponseBody extends TeaModel {
     }
 
     public static class PreviewStackResponseBodyStackParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -122,33 +158,76 @@ public class PreviewStackResponseBody extends TeaModel {
     }
 
     public static class PreviewStackResponseBodyStackResources extends TeaModel {
+        /**
+         * <p>The type of the resource that belongs to an Alibaba Cloud service.</p>
+         */
         @NameInMap("AcsResourceType")
         public String acsResourceType;
 
+        /**
+         * <p>The action that is performed on resources. Valid values:</p>
+         * <br>
+         * <p>*   Add</p>
+         * <p>*   Modify</p>
+         * <p>*   Remove</p>
+         * <p>*   None</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The description of the resource.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The logical ID of the resource.</p>
+         */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        /**
+         * <p>The physical ID of the resource.</p>
+         * <br>
+         * <p>This parameter is returned only if the Action parameter is set to Modify or Remove.</p>
+         */
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
 
+        /**
+         * <p>The properties of the resource.</p>
+         */
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
+        /**
+         * <p>Indicates whether a replacement update is performed on the template. Valid values:</p>
+         * <br>
+         * <p>*   True: A replacement update is performed on the template.</p>
+         * <p>*   False: A change is made on the template.</p>
+         * <p>*   Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the Action parameter is set to Modify.</p>
+         */
         @NameInMap("Replacement")
         public String replacement;
 
+        /**
+         * <p>The resources on which the stack depends.</p>
+         */
         @NameInMap("RequiredBy")
         public java.util.List<String> requiredBy;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The information about the nested stack. The data structure of the value is the same as the data structure of the entire response.</p>
+         */
         @NameInMap("Stack")
         public java.util.Map<String, ?> stack;
 
@@ -240,33 +319,65 @@ public class PreviewStackResponseBody extends TeaModel {
     }
 
     public static class PreviewStackResponseBodyStack extends TeaModel {
+        /**
+         * <p>The description of the stack.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether rollback is disabled for the resources when the stack fails to be created.</p>
+         */
         @NameInMap("DisableRollback")
         public Boolean disableRollback;
 
+        /**
+         * <p>The log that is generated when the stack is run.</p>
+         */
         @NameInMap("Log")
         public PreviewStackResponseBodyStackLog log;
 
+        /**
+         * <p>The parameters of the stack.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<PreviewStackResponseBodyStackParameters> parameters;
 
+        /**
+         * <p>The region ID of the stack.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resources in the stack.</p>
+         */
         @NameInMap("Resources")
         public java.util.List<PreviewStackResponseBodyStackResources> resources;
 
+        /**
+         * <p>The name of the stack.</p>
+         */
         @NameInMap("StackName")
         public String stackName;
 
+        /**
+         * <p>The structure that contains the stack policy body.</p>
+         */
         @NameInMap("StackPolicyBody")
         public java.util.Map<String, ?> stackPolicyBody;
 
+        /**
+         * <p>The description of the template.</p>
+         */
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
+        /**
+         * <p>The timeout period that is allowed to create the stack.</p>
+         * <br>
+         * <p>Unit: minutes.</p>
+         */
         @NameInMap("TimeoutInMinutes")
         public Integer timeoutInMinutes;
 

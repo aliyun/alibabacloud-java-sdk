@@ -4,12 +4,25 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GenerateTemplateByScratchRequest extends TeaModel {
+    /**
+     * <p>The ID of the region to which the new node belongs.</p>
+     */
     @NameInMap("ProvisionRegionId")
     public String provisionRegionId;
 
+    /**
+     * <p>The ID of the region in which the scenario is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the scenario.</p>
+     * <br>
+     * <p>For more information about how to query the IDs of scenarios, see [ListTemplateScratches](~~363050~~).</p>
+     */
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
 

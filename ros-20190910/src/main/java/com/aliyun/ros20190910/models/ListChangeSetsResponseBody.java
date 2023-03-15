@@ -4,18 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListChangeSetsResponseBody extends TeaModel {
+    /**
+     * <p>The list of change sets.</p>
+     */
     @NameInMap("ChangeSets")
     public java.util.List<ListChangeSetsResponseBodyChangeSets> changeSets;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of queried entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,36 +80,69 @@ public class ListChangeSetsResponseBody extends TeaModel {
     }
 
     public static class ListChangeSetsResponseBodyChangeSets extends TeaModel {
+        /**
+         * <p>The ID of the change set.</p>
+         */
         @NameInMap("ChangeSetId")
         public String changeSetId;
 
+        /**
+         * <p>The name of the change set.</p>
+         */
         @NameInMap("ChangeSetName")
         public String changeSetName;
 
+        /**
+         * <p>The type of the change set.</p>
+         */
         @NameInMap("ChangeSetType")
         public String changeSetType;
 
+        /**
+         * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the change set.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The execution status of the change set.</p>
+         */
         @NameInMap("ExecutionStatus")
         public String executionStatus;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the stack with which the change set is associated.</p>
+         */
         @NameInMap("StackId")
         public String stackId;
 
+        /**
+         * <p>The name of the stack with which the change set is associated.</p>
+         */
         @NameInMap("StackName")
         public String stackName;
 
+        /**
+         * <p>The status of the change set.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The reason why the change set is in its current status.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 

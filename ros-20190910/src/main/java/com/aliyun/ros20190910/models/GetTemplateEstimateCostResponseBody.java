@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateEstimateCostResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the resource.</p>
+     */
     @NameInMap("Resources")
     public java.util.Map<String, ?> resources;
 

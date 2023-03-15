@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListChangeSetsRequest extends TeaModel {
+    /**
+     * <p>The ID of the change set. If detailed information about the change set is not required, you can use this parameter to replace the GetChangeSet operation.</p>
+     */
     @NameInMap("ChangeSetId")
     public String changeSetId;
 
@@ -13,15 +16,35 @@ public class ListChangeSetsRequest extends TeaModel {
     @NameInMap("ExecutionStatus")
     public java.util.List<String> executionStatus;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the stack.</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 

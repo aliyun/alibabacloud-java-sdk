@@ -4,12 +4,21 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackResourceDriftsResponseBody extends TeaModel {
+    /**
+     * <p>The query token value returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of resource drifts.</p>
+     */
     @NameInMap("ResourceDrifts")
     public java.util.List<ListStackResourceDriftsResponseBodyResourceDrifts> resourceDrifts;
 
@@ -43,15 +52,31 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
     }
 
     public static class ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences extends TeaModel {
+        /**
+         * <p>The actual value of the resource property.</p>
+         */
         @NameInMap("ActualValue")
         public String actualValue;
 
+        /**
+         * <p>The drift type of the resource property. Valid values:</p>
+         * <br>
+         * <p>*   ADD: The value has been added to a resource property whose data type was Array or List.</p>
+         * <p>*   REMOVE: The property has been deleted from the current resource configuration.</p>
+         * <p>*   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.</p>
+         */
         @NameInMap("DifferenceType")
         public String differenceType;
 
+        /**
+         * <p>The expected value of the resource property as defined in the template.</p>
+         */
         @NameInMap("ExpectedValue")
         public String expectedValue;
 
+        /**
+         * <p>The path of the resource property.</p>
+         */
         @NameInMap("PropertyPath")
         public String propertyPath;
 
@@ -95,30 +120,62 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
     }
 
     public static class ListStackResourceDriftsResponseBodyResourceDrifts extends TeaModel {
+        /**
+         * <p>The actual resource properties in JSON format.</p>
+         */
         @NameInMap("ActualProperties")
         public String actualProperties;
 
+        /**
+         * <p>The time when the resource drift detection operation was initiated.</p>
+         */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
+        /**
+         * <p>The resource properties as defined in the template, in JSON format.</p>
+         */
         @NameInMap("ExpectedProperties")
         public String expectedProperties;
 
+        /**
+         * <p>The logical ID of the resource as defined in the template.</p>
+         */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        /**
+         * <p>The physical ID of the resource.</p>
+         */
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
 
+        /**
+         * <p>The property differences of the resource.</p>
+         */
         @NameInMap("PropertyDifferences")
         public java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> propertyDifferences;
 
+        /**
+         * <p>The drift status of the resource. Valid values:</p>
+         * <br>
+         * <p>*   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource had been deleted.</p>
+         * <p>*   MODIFIED: The actual configuration of the resource differs from its expected template configuration.</p>
+         * <p>*   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.</p>
+         * <p>*   IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
+         */
         @NameInMap("ResourceDriftStatus")
         public String resourceDriftStatus;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The ID of the stack.</p>
+         */
         @NameInMap("StackId")
         public String stackId;
 

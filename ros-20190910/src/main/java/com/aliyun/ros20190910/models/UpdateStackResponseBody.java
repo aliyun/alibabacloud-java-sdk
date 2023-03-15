@@ -4,12 +4,21 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class UpdateStackResponseBody extends TeaModel {
+    /**
+     * <p>The validation result. This parameter is returned only if the DryRun parameter is set to true.</p>
+     */
     @NameInMap("DryRunResult")
     public UpdateStackResponseBodyDryRunResult dryRunResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the stack.</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 
@@ -43,24 +52,57 @@ public class UpdateStackResponseBody extends TeaModel {
     }
 
     public static class UpdateStackResponseBodyDryRunResult extends TeaModel {
+        /**
+         * <p>The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.</p>
+         */
         @NameInMap("ParametersAllowedToBeModified")
         public java.util.List<String> parametersAllowedToBeModified;
 
+        /**
+         * <p>The parameters whose changes cause service interruptions. If you change only values of the parameters in a stack template and use the template to update the stack, service interruptions are caused.</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   This parameter is supported only for a small number of resource types.</p>
+         * <p>*   This parameter is valid only for changes that are made on ROS stacks.</p>
+         */
         @NameInMap("ParametersCauseInterruptionIfModified")
         public java.util.List<String> parametersCauseInterruptionIfModified;
 
+        /**
+         * <p>The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.</p>
+         */
         @NameInMap("ParametersConditionallyAllowedToBeModified")
         public java.util.List<String> parametersConditionallyAllowedToBeModified;
 
+        /**
+         * <p>The parameters whose changes cause service interruptions under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values and the update type determine whether service interruptions are caused.</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   This parameter is supported only for a small number of resource types.</p>
+         * <p>*   This parameter is valid only for changes that are made on ROS stacks.</p>
+         */
         @NameInMap("ParametersConditionallyCauseInterruptionIfModified")
         public java.util.List<String> parametersConditionallyCauseInterruptionIfModified;
 
+        /**
+         * <p>The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.</p>
+         */
         @NameInMap("ParametersNotAllowedToBeModified")
         public java.util.List<String> parametersNotAllowedToBeModified;
 
+        /**
+         * <p>The parameters that can be modified under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether validation errors are caused.</p>
+         */
         @NameInMap("ParametersUncertainlyAllowedToBeModified")
         public java.util.List<String> parametersUncertainlyAllowedToBeModified;
 
+        /**
+         * <p>The parameters whose changes cause service interruptions under uncertain conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the actual running environment determines whether service interruptions are caused.</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   This parameter is supported only for a small number of resource types.</p>
+         * <p>*   This parameter is valid only for changes that are made on ROS stacks.</p>
+         */
         @NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
         public java.util.List<String> parametersUncertainlyCauseInterruptionIfModified;
 

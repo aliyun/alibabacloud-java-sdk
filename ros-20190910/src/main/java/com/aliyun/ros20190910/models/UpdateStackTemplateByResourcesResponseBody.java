@@ -4,12 +4,21 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The template content after correction.</p>
+     */
     @NameInMap("NewTemplateBody")
     public String newTemplateBody;
 
+    /**
+     * <p>The template content before correction.</p>
+     */
     @NameInMap("OldTemplateBody")
     public String oldTemplateBody;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

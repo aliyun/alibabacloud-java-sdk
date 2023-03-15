@@ -4,12 +4,24 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class CancelUpdateStackRequest extends TeaModel {
+    /**
+     * <p>The method to cancel the update operation. Valid values:</p>
+     * <br>
+     * <p>*   Quick: cancels the update of a stack as soon as possible.</p>
+     * <p>*   Safe: cancels the update of a stack as safely as possible.</p>
+     */
     @NameInMap("CancelType")
     public String cancelType;
 
+    /**
+     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the stack.</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 

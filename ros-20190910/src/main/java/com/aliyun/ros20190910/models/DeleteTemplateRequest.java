@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplateRequest extends TeaModel {
+    /**
+     * <p>The ID of the template. This parameter applies to only private templates.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

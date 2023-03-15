@@ -4,18 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the stacks.</p>
+     */
     @NameInMap("StackInstances")
     public java.util.List<ListStackInstancesResponseBodyStackInstances> stackInstances;
 
+    /**
+     * <p>The total number of stacks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,33 +80,89 @@ public class ListStackInstancesResponseBody extends TeaModel {
     }
 
     public static class ListStackInstancesResponseBodyStackInstances extends TeaModel {
+        /**
+         * <p>The ID of the account to which the stack belongs.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The time when the last successful drift detection was performed on the stack.</p>
+         * <br>
+         * <p>>  This parameter is returned only if drift detection is performed on the stack group.</p>
+         */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
+        /**
+         * <p>The ID of the folder in the resource directory.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the stack group is granted service-managed permissions.</p>
+         */
         @NameInMap("RdFolderId")
         public String rdFolderId;
 
+        /**
+         * <p>The ID of the region to which the stack belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The state of the stack when the last successful drift detection was performed on the stack group.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   DRIFTED: The stack has drifted.</p>
+         * <p>*   NOT_CHECKED: No successful drift detection is performed on the stack.</p>
+         * <p>*   IN_SYNC: The stack is being synchronized.</p>
+         * <br>
+         * <p>>  This parameter is returned only if drift detection is performed on the stack group.</p>
+         */
         @NameInMap("StackDriftStatus")
         public String stackDriftStatus;
 
+        /**
+         * <p>The ID of the stack group.</p>
+         */
         @NameInMap("StackGroupId")
         public String stackGroupId;
 
+        /**
+         * <p>The name of the stack group.</p>
+         */
         @NameInMap("StackGroupName")
         public String stackGroupName;
 
+        /**
+         * <p>The ID of the stack.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the stack is in the CURRENT state.</p>
+         */
         @NameInMap("StackId")
         public String stackId;
 
+        /**
+         * <p>The state of the stack.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   CURRENT: The stack is up to date with the stack group.</p>
+         * <br>
+         * <p>*   OUTDATED: The stack is not up to date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:</p>
+         * <br>
+         * <p>    *   When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.</p>
+         * <p>    *   When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.</p>
+         * <p>    *   The creation or update operation is not completed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The reason why the stack is in the OUTDATED state.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the stack is in the OUTDATED state.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 
