@@ -10,6 +10,12 @@ public class ListSnapshotLinksRequest extends TeaModel {
     @NameInMap("FilterValue")
     public String filterValue;
 
+    @NameInMap("FsIds")
+    public String fsIds;
+
+    @NameInMap("LinkIds")
+    public String linkIds;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -38,6 +44,22 @@ public class ListSnapshotLinksRequest extends TeaModel {
     }
     public String getFilterValue() {
         return this.filterValue;
+    }
+
+    public ListSnapshotLinksRequest setFsIds(String fsIds) {
+        this.fsIds = fsIds;
+        return this;
+    }
+    public String getFsIds() {
+        return this.fsIds;
+    }
+
+    public ListSnapshotLinksRequest setLinkIds(String linkIds) {
+        this.linkIds = linkIds;
+        return this;
+    }
+    public String getLinkIds() {
+        return this.linkIds;
     }
 
     public ListSnapshotLinksRequest setPageNumber(Integer pageNumber) {

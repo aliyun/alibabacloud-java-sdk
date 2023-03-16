@@ -1192,6 +1192,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FilterValue", request.filterValue);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.fsIds)) {
+            query.put("FsIds", request.fsIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.linkIds)) {
+            query.put("LinkIds", request.linkIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }

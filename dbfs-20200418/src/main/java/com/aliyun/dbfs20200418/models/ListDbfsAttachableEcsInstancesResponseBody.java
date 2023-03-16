@@ -43,6 +43,9 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo extends TeaModel {
+        @NameInMap("ImageId")
+        public String imageId;
+
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
@@ -64,6 +67,14 @@ public class ListDbfsAttachableEcsInstancesResponseBody extends TeaModel {
         public static ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo build(java.util.Map<String, ?> map) throws Exception {
             ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo self = new ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo();
             return TeaModel.build(map, self);
+        }
+
+        public ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
         }
 
         public ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo setInstanceTypeFamily(String instanceTypeFamily) {
