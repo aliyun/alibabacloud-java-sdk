@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cloudfw20171207</artifactId>
-  <version>1.8.25</version>
+  <version>1.8.26</version>
   <packaging>jar</packaging>
   <name>cloudfw20171207</name>
   <description>Alibaba Cloud Cloudfw (20171207) SDK for Java
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
   </dependencies>
   <build>
