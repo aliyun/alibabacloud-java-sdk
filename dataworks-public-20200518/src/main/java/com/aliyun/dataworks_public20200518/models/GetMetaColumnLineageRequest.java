@@ -4,30 +4,57 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaColumnLineageRequest extends TeaModel {
+    /**
+     * <p>The ID of the E-MapReduce (EMR) cluster. Configure this parameter only when you query data in an EMR compute engine instance.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The GUID of the field.</p>
+     */
     @NameInMap("ColumnGuid")
     public String columnGuid;
 
+    /**
+     * <p>The name of the field.</p>
+     */
     @NameInMap("ColumnName")
     public String columnName;
 
+    /**
+     * <p>The type of the data source. Valid values: odps and emr.</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>Specifies whether to query the ancestor or descendant lineage of the field. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the metatable.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

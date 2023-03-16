@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetaCategoryRequest extends TeaModel {
+    /**
+     * <p>The ID of the category.</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <p>The remarks of the category.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The name of the category.</p>
+     */
     @NameInMap("Name")
     public String name;
 

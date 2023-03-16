@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteFromMetaCategoryRequest extends TeaModel {
+    /**
+     * <p>The ID of the category.</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <p>The GUID of the metatable.</p>
+     */
     @NameInMap("TableGuid")
     public String tableGuid;
 
