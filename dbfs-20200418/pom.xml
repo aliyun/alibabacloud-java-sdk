@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dbfs20200418</artifactId>
-  <version>3.2.1</version>
+  <version>3.2.2</version>
   <packaging>jar</packaging>
   <name>dbfs20200418</name>
   <description>Alibaba Cloud DBFS (20200418) SDK for Java
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
   </dependencies>
   <build>
