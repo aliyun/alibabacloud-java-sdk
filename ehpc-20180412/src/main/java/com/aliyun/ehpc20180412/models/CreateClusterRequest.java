@@ -1026,15 +1026,12 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestEcsOrder extends TeaModel {
         @NameInMap("Compute")
-        @Validation(required = true)
         public CreateClusterRequestEcsOrderCompute compute;
 
         @NameInMap("Login")
-        @Validation(required = true)
         public CreateClusterRequestEcsOrderLogin login;
 
         @NameInMap("Manager")
-        @Validation(required = true)
         public CreateClusterRequestEcsOrderManager manager;
 
         public static CreateClusterRequestEcsOrder build(java.util.Map<String, ?> map) throws Exception {

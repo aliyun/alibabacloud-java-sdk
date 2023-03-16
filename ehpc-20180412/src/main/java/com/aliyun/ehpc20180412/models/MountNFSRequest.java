@@ -4,18 +4,36 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class MountNFSRequest extends TeaModel {
+    /**
+     * <p>The ID of the visualization instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The local mount directory.</p>
+     */
     @NameInMap("MountDir")
     public String mountDir;
 
+    /**
+     * <p>The address of the mount target.</p>
+     */
     @NameInMap("NfsDir")
     public String nfsDir;
 
+    /**
+     * <p>The type of the protocol. Valid values:</p>
+     * <br>
+     * <p>*   nfs</p>
+     * <p>*   smb</p>
+     */
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    /**
+     * <p>The remote mount address.</p>
+     */
     @NameInMap("RemoteDir")
     public String remoteDir;
 

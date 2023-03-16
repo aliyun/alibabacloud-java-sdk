@@ -4,12 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class SetGWSInstanceUserRequest extends TeaModel {
+    /**
+     * <p>The ID of the visualization instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>The ID of the user.</p>
+     */
     @NameInMap("UserUid")
     public String userUid;
 

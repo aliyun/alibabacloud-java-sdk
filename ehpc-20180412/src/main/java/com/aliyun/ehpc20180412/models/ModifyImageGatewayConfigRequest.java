@@ -4,30 +4,57 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageGatewayConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The password that is used to log on to the database instance.</p>
+     */
     @NameInMap("DBPassword")
     public String DBPassword;
 
+    /**
+     * <p>The URI of the database.</p>
+     */
     @NameInMap("DBServerInfo")
     public String DBServerInfo;
 
+    /**
+     * <p>The type of the database. Set the value to mongodb.</p>
+     */
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The username of the account that is used to log on to the database.</p>
+     */
     @NameInMap("DBUsername")
     public String DBUsername;
 
+    /**
+     * <p>The default repository service. Set the value to registry-1.docker.io.</p>
+     */
     @NameInMap("DefaultRepoLocation")
     public String defaultRepoLocation;
 
+    /**
+     * <p>The timeout period for deleting images.</p>
+     */
     @NameInMap("ImageExpirationTimeout")
     public String imageExpirationTimeout;
 
+    /**
+     * <p>The timeout period for pulling images.</p>
+     */
     @NameInMap("PullUpdateTimeout")
     public Integer pullUpdateTimeout;
 
+    /**
+     * <p>The information about the repository.</p>
+     */
     @NameInMap("Repo")
     public java.util.List<ModifyImageGatewayConfigRequestRepo> repo;
 
@@ -109,12 +136,26 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
     }
 
     public static class ModifyImageGatewayConfigRequestRepo extends TeaModel {
+        /**
+         * <p>The authentication method of the repository. Valid values:</p>
+         * <br>
+         * <p>*   http</p>
+         * <p>*   https</p>
+         * <br>
+         * <p>Default value: http.</p>
+         */
         @NameInMap("Auth")
         public String auth;
 
+        /**
+         * <p>The address of the repository N.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The URL of the repository. The URL is required to add a repository address.</p>
+         */
         @NameInMap("URL")
         public String URL;
 

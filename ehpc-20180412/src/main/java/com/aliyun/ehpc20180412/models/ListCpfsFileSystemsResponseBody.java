@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListCpfsFileSystemsResponseBody extends TeaModel {
+    /**
+     * <p>The list of file systems.</p>
+     */
     @NameInMap("FileSystemList")
     public ListCpfsFileSystemsResponseBodyFileSystemList fileSystemList;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,38 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
     }
 
     public static class ListCpfsFileSystemsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets extends TeaModel {
+        /**
+         * <p>The domain where the mount target resides.</p>
+         */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
+        /**
+         * <p>The network type.</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The status of the mount target. Valid values:</p>
+         * <br>
+         * <p>*   Active: The mount target is available.</p>
+         * <p>*   Inactive: The mount target is unavailable.</p>
+         * <p>*   Pending: The mount target is being mounted.</p>
+         * <p>*   Deleting: The mount target is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The vSwitch ID of the instance.</p>
+         */
         @NameInMap("VswId")
         public String vswId;
 
@@ -147,27 +182,54 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
     }
 
     public static class ListCpfsFileSystemsResponseBodyFileSystemListFileSystems extends TeaModel {
+        /**
+         * <p>The capacity of the file system. Unit: GiB.</p>
+         */
         @NameInMap("Capacity")
         public String capacity;
 
+        /**
+         * <p>The time when the file system was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the file system.</p>
+         */
         @NameInMap("Destription")
         public String destription;
 
+        /**
+         * <p>The ID of the file system.</p>
+         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        /**
+         * <p>The mount targets.</p>
+         */
         @NameInMap("MountTargetList")
         public ListCpfsFileSystemsResponseBodyFileSystemListFileSystemsMountTargetList mountTargetList;
 
+        /**
+         * <p>The protocol type that is applied to the mounted file system. Valid values:</p>
+         * <br>
+         * <p>*   NFS</p>
+         * <p>*   SMB</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The zone ID.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

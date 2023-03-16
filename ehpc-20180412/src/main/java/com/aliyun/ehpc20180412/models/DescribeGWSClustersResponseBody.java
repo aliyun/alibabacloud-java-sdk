@@ -4,21 +4,42 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeGWSClustersResponseBody extends TeaModel {
+    /**
+     * <p>The type of the account. Valid values:</p>
+     * <br>
+     * <p>*   sub: a RAM user.</p>
+     * <p>*   parent: an Alibaba Cloud account.</p>
+     */
     @NameInMap("CallerType")
     public String callerType;
 
+    /**
+     * <p>The information of the visualization services.</p>
+     */
     @NameInMap("Clusters")
     public DescribeGWSClustersResponseBodyClusters clusters;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,20 +97,37 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeGWSClustersResponseBodyClustersClusterInfo extends TeaModel {
+        /**
+         * <p>The ID of the visualization service.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The time when the visualization service was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The number of visualization instances.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        /**
+         * <p>The status of the visualization services. Valid values:</p>
+         * <br>
+         * <p>*   creating: The service is being created.</p>
+         * <p>*   starting: The service is being started.</p>
+         * <p>*   running: The service is running.</p>
+         * <p>*   deleted: The service is deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

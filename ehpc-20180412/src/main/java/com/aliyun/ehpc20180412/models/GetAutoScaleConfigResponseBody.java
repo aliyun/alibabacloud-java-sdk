@@ -21,6 +21,9 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
     @NameInMap("ClusterType")
     public String clusterType;
 
+    @NameInMap("ComputeEnableHt")
+    public Boolean computeEnableHt;
+
     /**
      * <p>Indicates whether the cluster enabled auto scale-out. Valid values:</p>
      * <br>
@@ -158,6 +161,14 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public GetAutoScaleConfigResponseBody setComputeEnableHt(Boolean computeEnableHt) {
+        this.computeEnableHt = computeEnableHt;
+        return this;
+    }
+    public Boolean getComputeEnableHt() {
+        return this.computeEnableHt;
     }
 
     public GetAutoScaleConfigResponseBody setEnableAutoGrow(Boolean enableAutoGrow) {

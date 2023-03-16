@@ -4,12 +4,25 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeNFSClientStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Result")
     public DescribeNFSClientStatusResponseBodyResult result;
 
+    /**
+     * <p>The deployment status of the NFS client. Valid values:</p>
+     * <br>
+     * <p>*   NotInstalled: The client is not installed.</p>
+     * <p>*   Running: The client is being installed.</p>
+     * <p>*   Finished: The client is installed on the instance.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -43,12 +56,21 @@ public class DescribeNFSClientStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeNFSClientStatusResponseBodyResult extends TeaModel {
+        /**
+         * <p>The Base64-decoded Output parameter value. A True in the last line indicates successful installation. Otherwise, the installation fails.</p>
+         */
         @NameInMap("ExitCode")
         public Integer exitCode;
 
+        /**
+         * <p>The status of the invocation record, which is the same as the value of the Status parameter.</p>
+         */
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
+        /**
+         * <p>The execution result of the command.</p>
+         */
         @NameInMap("Output")
         public String output;
 

@@ -10,6 +10,9 @@ public class SetAutoScaleConfigRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ComputeEnableHt")
+    public Boolean computeEnableHt;
+
     /**
      * <p>Specifies whether to enable auto scale-out. Valid values:</p>
      * <br>
@@ -157,6 +160,14 @@ public class SetAutoScaleConfigRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public SetAutoScaleConfigRequest setComputeEnableHt(Boolean computeEnableHt) {
+        this.computeEnableHt = computeEnableHt;
+        return this;
+    }
+    public Boolean getComputeEnableHt() {
+        return this.computeEnableHt;
     }
 
     public SetAutoScaleConfigRequest setEnableAutoGrow(Boolean enableAutoGrow) {

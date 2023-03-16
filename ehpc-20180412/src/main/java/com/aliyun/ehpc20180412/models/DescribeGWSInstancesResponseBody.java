@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeGWSInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of visualization instances.</p>
+     */
     @NameInMap("Instances")
     public DescribeGWSInstancesResponseBodyInstances instances;
 
+    /**
+     * <p>The page number of the current page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,9 +83,15 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         @NameInMap("AppArgs")
         public String appArgs;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The execution directory of the application.</p>
+         */
         @NameInMap("AppPath")
         public String appPath;
 
@@ -125,33 +146,81 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGWSInstancesResponseBodyInstancesInstanceInfo extends TeaModel {
+        /**
+         * <p>The list of application information.</p>
+         * <br>
+         * <p>>  If the WorkMode parameter is set to Desktop, an empty value is returned in this parameter.</p>
+         */
         @NameInMap("AppList")
         public DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList appList;
 
+        /**
+         * <p>The ID of the visualizatio service.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The time when the visualization instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the visualization instance expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The ID of the visualization instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The type of the visualization instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The name of the visualization instance.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the visualization instance. Valid values:</p>
+         * <br>
+         * <p>*   Creating: The instance is being created.</p>
+         * <p>*   Starting: The instance is being started.</p>
+         * <p>*   Stopping: The instance is being stopped.</p>
+         * <p>*   Stopped: The instance is stopped.</p>
+         * <p>*   Initializing: The instance is being initialized.</p>
+         * <p>*   Unregistered: The instance is not registered.</p>
+         * <p>*   Registered: The instance is registered.</p>
+         * <p>*   InUse: The instance is in use.</p>
+         * <p>*   Missing: The instance cannot be found.</p>
+         * <p>*   Cloning: An image is being generated based on the instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The username of the entity to which the visualization instance is assigned.</p>
+         * <br>
+         * <p>>  If the instance is not assigned to a specified user, this parameter is empty.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The working mode of the visualization instance. Valid values:</p>
+         * <br>
+         * <p>*   Desktop</p>
+         * <p>*   Application</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 
