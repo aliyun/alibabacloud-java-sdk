@@ -445,11 +445,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachClusterFromHubWithOptions(request, runtime);
     }
 
-    public GrantUserPermissionsResponse grantUserPermissionsWithOptions(GrantUserPermissionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GrantUserPermissionsResponse grantUserPermissionsWithOptions(GrantUserPermissionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GrantUserPermissionsShrinkRequest request = new GrantUserPermissionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.permissions)) {
+            request.permissionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.permissions, "Permissions", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.permissions)) {
-            query.put("Permissions", request.permissions);
+        if (!com.aliyun.teautil.Common.isUnset(request.permissionsShrink)) {
+            query.put("Permissions", request.permissionsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {

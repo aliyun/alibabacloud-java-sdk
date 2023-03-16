@@ -32,12 +32,6 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserPermissionsResponseBodyPermissions extends TeaModel {
-        @NameInMap("OwnerId")
-        public String ownerId;
-
-        @NameInMap("ParentId")
-        public String parentId;
-
         @NameInMap("ResourceId")
         public String resourceId;
 
@@ -53,22 +47,6 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         public static DescribeUserPermissionsResponseBodyPermissions build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserPermissionsResponseBodyPermissions self = new DescribeUserPermissionsResponseBodyPermissions();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUserPermissionsResponseBodyPermissions setOwnerId(String ownerId) {
-            this.ownerId = ownerId;
-            return this;
-        }
-        public String getOwnerId() {
-            return this.ownerId;
-        }
-
-        public DescribeUserPermissionsResponseBodyPermissions setParentId(String parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public String getParentId() {
-            return this.parentId;
         }
 
         public DescribeUserPermissionsResponseBodyPermissions setResourceId(String resourceId) {
