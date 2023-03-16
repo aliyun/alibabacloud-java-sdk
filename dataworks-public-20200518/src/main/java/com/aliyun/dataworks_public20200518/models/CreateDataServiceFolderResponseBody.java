@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDataServiceFolderResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the created folder.</p>
+     */
     @NameInMap("FolderId")
     public Long folderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

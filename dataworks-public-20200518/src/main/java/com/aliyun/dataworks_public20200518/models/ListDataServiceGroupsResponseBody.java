@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The paging result for the business processes.</p>
+     */
     @NameInMap("GroupPagingResult")
     public ListDataServiceGroupsResponseBodyGroupPagingResult groupPagingResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,57 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceGroupsResponseBodyGroupPagingResultGroups extends TeaModel {
+        /**
+         * <p>The ID of the API group that is associated with the business process in the API Gateway console.</p>
+         */
         @NameInMap("ApiGatewayGroupId")
         public String apiGatewayGroupId;
 
+        /**
+         * <p>The time when the business process was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The description of the business process.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the business process.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the business process.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The time when the business process was modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 
@@ -139,15 +172,27 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceGroupsResponseBodyGroupPagingResult extends TeaModel {
+        /**
+         * <p>The business processes.</p>
+         */
         @NameInMap("Groups")
         public java.util.List<ListDataServiceGroupsResponseBodyGroupPagingResultGroups> groups;
 
+        /**
+         * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

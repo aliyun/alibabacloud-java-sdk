@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
+    /**
+     * <p>The APIs on which other users are granted the access permissions.</p>
+     */
     @NameInMap("Data")
     public ListDataServiceApiAuthoritiesResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +94,27 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords extends TeaModel {
+        /**
+         * <p>The time when the access permissions on the API were granted to other users.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the user who granted other users the access permissions on the API.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The end time of the validity period of the authorization.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the workspace to which the access permissions on the API are granted.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
@@ -128,36 +158,69 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList extends TeaModel {
+        /**
+         * <p>The ID of the API.</p>
+         */
         @NameInMap("ApiId")
         public Long apiId;
 
+        /**
+         * <p>The name of the API.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The path of the API.</p>
+         */
         @NameInMap("ApiPath")
         public String apiPath;
 
+        /**
+         * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+         */
         @NameInMap("ApiStatus")
         public Integer apiStatus;
 
+        /**
+         * <p>The authorization records.</p>
+         */
         @NameInMap("AuthorizationRecords")
         public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords> authorizationRecords;
 
+        /**
+         * <p>The time when the API was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The time when the API was last updated.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 
@@ -257,15 +320,27 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApiAuthoritiesResponseBodyData extends TeaModel {
+        /**
+         * <p>The APIs on which other users are granted the access permissions and the authorization records.</p>
+         */
         @NameInMap("ApiAuthorizationList")
         public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> apiAuthorizationList;
 
+        /**
+         * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

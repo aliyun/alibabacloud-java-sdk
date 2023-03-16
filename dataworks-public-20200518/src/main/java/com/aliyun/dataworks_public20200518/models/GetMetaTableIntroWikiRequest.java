@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableIntroWikiRequest extends TeaModel {
+    /**
+     * <p>The GUID of the metatable.</p>
+     */
     @NameInMap("TableGuid")
     public String tableGuid;
 
+    /**
+     * <p>The version of the instructions.</p>
+     */
     @NameInMap("WikiVersion")
     public Long wikiVersion;
 

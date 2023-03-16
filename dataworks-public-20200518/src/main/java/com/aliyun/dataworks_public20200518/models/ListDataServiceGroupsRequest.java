@@ -4,18 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceGroupsRequest extends TeaModel {
+    /**
+     * <p>The keyword of a business process name. The keyword is used to search for business processes whose names contain this keyword.</p>
+     */
     @NameInMap("GroupNameKeyword")
     public String groupNameKeyword;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 

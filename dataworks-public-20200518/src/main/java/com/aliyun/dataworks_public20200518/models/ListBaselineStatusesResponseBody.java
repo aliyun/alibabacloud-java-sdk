@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListBaselineStatusesResponseBody extends TeaModel {
+    /**
+     * <p>The list of baseline instances returned.</p>
+     */
     @NameInMap("Data")
     public ListBaselineStatusesResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,45 +94,87 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
     }
 
     public static class ListBaselineStatusesResponseBodyDataBaselineStatuses extends TeaModel {
+        /**
+         * <p>The ID of the baseline.</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The name of the baseline.</p>
+         */
         @NameInMap("BaselineName")
         public String baselineName;
 
+        /**
+         * <p>The data timestamp of the baseline instance.</p>
+         */
         @NameInMap("Bizdate")
         public Long bizdate;
 
+        /**
+         * <p>The margin of the baseline instance. Unit: seconds.</p>
+         */
         @NameInMap("Buffer")
         public Long buffer;
 
+        /**
+         * <p>The predicted time when the baseline instance finished running.</p>
+         */
         @NameInMap("EndCast")
         public Long endCast;
 
+        /**
+         * <p>The alerting time of the baseline instance.</p>
+         */
         @NameInMap("ExpTime")
         public Long expTime;
 
+        /**
+         * <p>The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running.</p>
+         */
         @NameInMap("FinishStatus")
         public String finishStatus;
 
+        /**
+         * <p>The timestamp of the actual time when the baseline instance finished running. This parameter is returned if the value of the FinishStatus parameter is FINISH.</p>
+         */
         @NameInMap("FinishTime")
         public Long finishTime;
 
+        /**
+         * <p>The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.</p>
+         */
         @NameInMap("InGroupId")
         public Integer inGroupId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The ID of the workspace to which the baseline belongs.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The actual time when the baseline instance finished running.</p>
+         */
         @NameInMap("SlaTime")
         public Long slaTime;
 
+        /**
+         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -238,15 +298,27 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
     }
 
     public static class ListBaselineStatusesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of baseline instances.</p>
+         */
         @NameInMap("BaselineStatuses")
         public java.util.List<ListBaselineStatusesResponseBodyDataBaselineStatuses> baselineStatuses;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of baseline instances.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

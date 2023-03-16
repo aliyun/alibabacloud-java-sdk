@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetaCategoryRequest extends TeaModel {
+    /**
+     * <p>The ID of the category.</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 

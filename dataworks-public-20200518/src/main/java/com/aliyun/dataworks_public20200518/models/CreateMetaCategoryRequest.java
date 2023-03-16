@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateMetaCategoryRequest extends TeaModel {
+    /**
+     * <p>The remarks of the category.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The name of the category.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the parent category.</p>
+     */
     @NameInMap("ParentId")
     public Long parentId;
 

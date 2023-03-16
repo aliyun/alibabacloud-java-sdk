@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetaTableIntroWikiRequest extends TeaModel {
+    /**
+     * <p>The details of the instructions on how to use the metatable.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The GUID of the metatable. Specify the GUID in the format of odps.{projectName}.{tableName}.</p>
+     */
     @NameInMap("TableGuid")
     public String tableGuid;
 

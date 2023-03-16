@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateMetaCategoryResponseBody extends TeaModel {
+    /**
+     * <p>The information about the category.</p>
+     */
     @NameInMap("Data")
     public CreateMetaCategoryResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +94,9 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
     }
 
     public static class CreateMetaCategoryResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the category.</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
