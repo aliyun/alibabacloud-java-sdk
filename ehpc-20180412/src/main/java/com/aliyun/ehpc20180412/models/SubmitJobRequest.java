@@ -18,7 +18,7 @@ public class SubmitJobRequest extends TeaModel {
     /**
      * <p>Specifies whether to use an asynchronous link to submit the job.</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("Async")
     public Boolean async;
@@ -36,7 +36,7 @@ public class SubmitJobRequest extends TeaModel {
     public String clockTime;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
      */
@@ -72,7 +72,7 @@ public class SubmitJobRequest extends TeaModel {
     public Integer gpu;
 
     /**
-     * <p>The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.</p>
+     * <p>The URL of the job file that is uploaded to an Object Storage Service (OSS) bucket.</p>
      */
     @NameInMap("InputFileUrl")
     public String inputFileUrl;
@@ -100,7 +100,7 @@ public class SubmitJobRequest extends TeaModel {
     /**
      * <p>The number of compute nodes required to run the job.</p>
      * <br>
-     * <p>>  If the parameter is not specified, the Task, Thread, Mem, and Gpu parameters become invalid.</p>
+     * <p>> If the parameter is not specified, the Cpu, Task, Thread, Mem, and Gpu parameters become invalid.</p>
      */
     @NameInMap("Node")
     public Integer node;
@@ -118,9 +118,9 @@ public class SubmitJobRequest extends TeaModel {
     public String postCmdLine;
 
     /**
-     * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.</p>
+     * <p>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
      * <br>
-     * <p>Default value: 0</p>
+     * <p>Default value: 0.</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -143,7 +143,7 @@ public class SubmitJobRequest extends TeaModel {
     public String runasUser;
 
     /**
-     * <p>The user password.</p>
+     * <p>The password that corresponds to the username.</p>
      */
     @NameInMap("RunasUserPassword")
     public String runasUserPassword;

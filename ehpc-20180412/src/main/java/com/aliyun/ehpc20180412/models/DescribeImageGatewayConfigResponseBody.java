@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageGatewayConfigResponseBody extends TeaModel {
+    /**
+     * <p>The information about the image gateway configuration file.</p>
+     */
     @NameInMap("Imagegw")
     public DescribeImageGatewayConfigResponseBodyImagegw imagegw;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,30 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo extends TeaModel {
+        /**
+         * <p>The authentication method of the image repository. Valid values:</p>
+         * <br>
+         * <p>*   http</p>
+         * <p>*   https</p>
+         */
         @NameInMap("Authentication")
         public String authentication;
 
+        /**
+         * <p>The source address of the image repository.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The type of the image repository.</p>
+         */
         @NameInMap("RemoteType")
         public String remoteType;
 
+        /**
+         * <p>The URL of the image repository.</p>
+         */
         @NameInMap("URL")
         public String URL;
 
@@ -103,21 +124,39 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeImageGatewayConfigResponseBodyImagegw extends TeaModel {
+        /**
+         * <p>The default address of the image repository.</p>
+         */
         @NameInMap("DefaultImageLocation")
         public String defaultImageLocation;
 
+        /**
+         * <p>The time when the image expires.</p>
+         */
         @NameInMap("ImageExpirationTimeout")
         public String imageExpirationTimeout;
 
+        /**
+         * <p>An array of the image repository addresses.</p>
+         */
         @NameInMap("Locations")
         public DescribeImageGatewayConfigResponseBodyImagegwLocations locations;
 
+        /**
+         * <p>The information about the image gateway database.</p>
+         */
         @NameInMap("MongoDBURI")
         public String mongoDBURI;
 
+        /**
+         * <p>The timeout period for pulling images.</p>
+         */
         @NameInMap("PullUpdateTimeout")
         public Long pullUpdateTimeout;
 
+        /**
+         * <p>The time when the file was updated.</p>
+         */
         @NameInMap("UpdateDateTime")
         public String updateDateTime;
 

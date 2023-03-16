@@ -97,6 +97,9 @@ public class UpdateClusterVolumesRequest extends TeaModel {
         @NameInMap("VolumeId")
         public String volumeId;
 
+        @NameInMap("VolumeMountOption")
+        public String volumeMountOption;
+
         /**
          * <p>The domain name of the mount target for the nth additional mounted file system.</p>
          */
@@ -171,6 +174,14 @@ public class UpdateClusterVolumesRequest extends TeaModel {
         }
         public String getVolumeId() {
             return this.volumeId;
+        }
+
+        public UpdateClusterVolumesRequestAdditionalVolumes setVolumeMountOption(String volumeMountOption) {
+            this.volumeMountOption = volumeMountOption;
+            return this;
+        }
+        public String getVolumeMountOption() {
+            return this.volumeMountOption;
         }
 
         public UpdateClusterVolumesRequestAdditionalVolumes setVolumeMountpoint(String volumeMountpoint) {

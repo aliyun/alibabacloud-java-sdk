@@ -616,11 +616,9 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     public static class CreateHybridClusterRequestEcsOrder extends TeaModel {
         @NameInMap("Compute")
-        @Validation(required = true)
         public CreateHybridClusterRequestEcsOrderCompute compute;
 
         @NameInMap("Manager")
-        @Validation(required = true)
         public CreateHybridClusterRequestEcsOrderManager manager;
 
         public static CreateHybridClusterRequestEcsOrder build(java.util.Map<String, ?> map) throws Exception {

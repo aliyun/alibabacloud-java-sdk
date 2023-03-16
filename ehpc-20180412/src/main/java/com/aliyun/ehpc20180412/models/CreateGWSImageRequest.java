@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class CreateGWSImageRequest extends TeaModel {
+    /**
+     * <p>The ID of the visualization instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The image name of the visualization instance.</p>
+     */
     @NameInMap("Name")
     public String name;
 

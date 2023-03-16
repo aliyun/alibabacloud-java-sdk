@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DeleteGWSClusterRequest extends TeaModel {
+    /**
+     * <p>The ID of the visualization service.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

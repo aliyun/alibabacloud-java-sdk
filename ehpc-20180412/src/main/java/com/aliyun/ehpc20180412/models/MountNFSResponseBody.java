@@ -4,9 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class MountNFSResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the execution.</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeNFSClientStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the visualization instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
