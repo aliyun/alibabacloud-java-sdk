@@ -87,6 +87,9 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("EventName")
+    public String eventName;
+
     /**
      * <p>The type of the firewall. Valid values:</p>
      * <br>
@@ -270,6 +273,14 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeRiskEventGroupRequest setEventName(String eventName) {
+        this.eventName = eventName;
+        return this;
+    }
+    public String getEventName() {
+        return this.eventName;
     }
 
     public DescribeRiskEventGroupRequest setFirewallType(String firewallType) {

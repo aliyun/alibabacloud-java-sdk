@@ -1691,6 +1691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {
+            query.put("EventName", request.eventName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.firewallType)) {
             query.put("FirewallType", request.firewallType);
         }
