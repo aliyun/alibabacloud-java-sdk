@@ -7,7 +7,7 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     /**
      * <p>The ID of the next hop.</p>
      * <br>
-     * <p>>  Enter **BlackHole** if you want to query the prefix list that generates blackhole routes.</p>
+     * <p>> Set the value to **BlackHole** if you want to query the prefix list that generates blackhole routes.</p>
      */
     @NameInMap("NextHop")
     public String nextHop;

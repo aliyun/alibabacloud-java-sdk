@@ -7,14 +7,14 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow the transit router to automatically advertise routes to the IPsec-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **true** (default): yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true** (default): yes.</p>
+     * <p>*   **false**: no.</p>
      */
     @NameInMap("AutoPublishRouteEnabled")
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -30,7 +30,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The ClientToken value contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
@@ -67,7 +67,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The information about the tags.</p>
+     * <p>A list of tags.</p>
      * <br>
      * <p>You can specify at most 20 tags in each call.</p>
      */
@@ -112,7 +112,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
     public Long vpnOwnerId;
 
     /**
-     * <p>The ID of the zone in the current region.</p>
+     * <p>The ID of a zone in the current region.</p>
      * <br>
      * <p>Resources are deployed in the specified zone.</p>
      */
@@ -264,7 +264,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <br>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can specify at most 20 tag keys.</p>
          */
@@ -306,7 +306,7 @@ public class CreateTransitRouterVpnAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterVpnAttachmentRequestZone extends TeaModel {
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The ID of the zone in which you want to create the instance.</p>
          * <br>
          * <p>You can call the [ListTransitRouterAvailableResource](~~261356~~) operation to query the most recent zone list.</p>
          */
