@@ -210,7 +210,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxIOPS;
 
         /**
-         * <p>The instance type of the Mongos node.</p>
+         * <p>The instance type of the mongos node.</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
@@ -240,7 +240,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The VPC ID of the instance.</p>
+         * <p>The VPC ID of the node.</p>
          * <br>
          * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
@@ -248,7 +248,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String VPCId;
 
         /**
-         * <p>The vSwitch ID of the instance.</p>
+         * <p>The vSwitch ID of the node.</p>
          * <br>
          * <p>> This parameter is returned if the network type of the instance is VPC.</p>
          */
@@ -681,13 +681,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -771,7 +771,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String currentKernelVersion;
 
         /**
-         * <p>The edition of the instance.</p>
+         * <p>The instance type.</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
@@ -788,13 +788,25 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The status of the orders generated for the instance. Valid values:</p>
+         * <br>
+         * <p>*   **all_completed**: All orders are being produced or complete.</p>
+         * <p>*   **order_unpaid**: The instance has unpaid orders.</p>
+         * <p>*   **order_wait_for_produce**: The order is being delivered for production.</p>
+         * <br>
+         * <p>>  The order production process includes placing an order, paying for an order, delivering an order for production, producing an order, and complete.</p>
+         * <br>
+         * <p>*   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.</p>
+         * <p>*   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.</p>
+         */
         @NameInMap("DBInstanceOrderStatus")
         public String DBInstanceOrderStatus;
 
         /**
          * <p>Indicates whether release protection is enabled for the instance. Valid values:</p>
          * <br>
-         * <p>*   **true**: Release protection is enabled.</p>
+         * <p>*   **true**: enabled</p>
          * <p>*   **false**: disabled</p>
          */
         @NameInMap("DBInstanceReleaseProtection")
@@ -817,25 +829,24 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <br>
          * <p>*   **replicate**: replica set instance</p>
          * <p>*   **sharding**: sharded cluster instance</p>
-         * <p>*   **serverless**: serverless instance</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
         /**
-         * <p>实例数据销毁时间，格式为yyyy-MM-ddTHH:mm:ssZ（UTC时间）。</p>
+         * <p>The time when the instance data was destroyed. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("DestroyTime")
         public String destroyTime;
 
         /**
-         * <p>The engine of the instance.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The engine version of the instance.</p>
+         * <p>The database engine version of the instance.</p>
          * <br>
          * <p>*   **6.0**</p>
          * <p>*   **5.0**</p>
@@ -1067,7 +1078,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The storage type of the instance. Valid values:</p>
          * <br>
-         * <p>**cloud_essd1** :ESSD PL1. **cloud_essd2**: ESSD of PL2. **cloud_essd3**: ESSD of PL3. **local_ssd**: local SSD.</p>
+         * <p>**cloud_essd1** :ESSD PL1 **cloud_essd2**: ESSD of PL2. **cloud_essd3**: ESSD of PL3. **local_ssd**: local SSD.</p>
          */
         @NameInMap("StorageType")
         public String storageType;

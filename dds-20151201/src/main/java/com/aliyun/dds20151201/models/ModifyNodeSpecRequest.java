@@ -8,7 +8,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <br>
      * <p>*   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.</p>
-     * <p>*   **false**: disables automatic payment. In this case, you must manually pay for the instance.</p>
+     * <p>*   **false**: disables automatic payment.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -20,7 +20,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -40,7 +40,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
     /**
      * <p>The time when the changed configurations take effect. Default value: Immediately. Valid values:</p>
      * <br>
-     * <p>*   **Immediately**: The new configurations immediately take effect</p>
+     * <p>*   **Immediately**: The new configurations immediately take effect.</p>
      * <p>*   **MaintainTime**: The new configurations take effect during the maintenance window of the instance.</p>
      */
     @NameInMap("EffectiveTime")
@@ -56,7 +56,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String fromApp;
 
     /**
-     * <p>The instance type of the shard or mongos node. For more information, see [Instance types](~~57141~~).</p>
+     * <p>The specifications of the shard or mongos node. For more information, see [Instance types](~~57141~~).</p>
      */
     @NameInMap("NodeClass")
     public String nodeClass;
@@ -64,7 +64,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
     /**
      * <p>The ID of the shard or mongos node in the sharded cluster instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the node ID.</p>
      * <br>
-     * <p>>  If you set this parameter to the ID of a shard node, you must also specify the **NodeStorage** parameter.</p>
+     * <p>> If you set this parameter to the ID of the shard node, you must also specify the **NodeStorage** parameter.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -75,7 +75,7 @@ public class ModifyNodeSpecRequest extends TeaModel {
      * <p>*   Valid values are **10** to **2000** if the instance uses local SSDs.</p>
      * <p>*   Valid values are **20** to **16000** if the instance uses enhanced SSDs (ESSDs) at PL1.</p>
      * <br>
-     * <p>>  The value must be a multiple of 10.</p>
+     * <p>> The value must be a multiple of 10.</p>
      */
     @NameInMap("NodeStorage")
     public Integer nodeStorage;

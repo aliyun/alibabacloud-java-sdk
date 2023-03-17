@@ -9,7 +9,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
      * <p>*   These special characters include ! # $ % ^ & \* ( ) \_ + - =</p>
-     * <p>*   The password must be 8 to 32 characters in length.</p>
+     * <p>*   The password is 8 to 32 characters in length.</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
@@ -42,10 +42,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>*   **PostPaid:** pay-as-you-go</p>
-     * <p>*   **PrePaid:** subscription</p>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <p>*   **PrePaid**: subscription</p>
      * <br>
-     * <p>> If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.</p>
+     * <p>> If you specify this parameter to **PrePaid**, you must also specify the **Period** parameter.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -79,7 +79,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>*   The name must start with a letter.</p>
      * <p>*   The name can contain digits, letters, underscores (\_), and hyphens (-).</p>
-     * <p>*   It must be 2 to 256 characters in length.</p>
+     * <p>*   The name must be 2 to 256 characters in length.</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -87,7 +87,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage capacity of the instance. Unit: GB.</p>
      * <br>
-     * <p>The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](~~311410~~).</p>
+     * <p>The values that can be specified for this parameter are subject to the instance types. For more information, see [Replica set instance types](~~311410~~).</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
@@ -107,7 +107,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The version of the database engine. Valid values:</p>
+     * <p>The database engine version of the instance.</p>
      * <br>
      * <p>*   **6.0**</p>
      * <p>*   **5.0**</p>
@@ -144,7 +144,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.</p>
+     * <p>*   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.</p>
      * <br>
      * <p>*   The value of this parameter cannot be the same as the value of the **ZoneId** or **SecondaryZoneId** parameter.</p>
      */
@@ -243,7 +243,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   This parameter is available and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.</p>
+     * <p>*   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.</p>
      * <br>
      * <p>*   The value of this parameter cannot be the same as the value of the **ZoneId** or **HiddenZoneId** parameter.</p>
      */
@@ -272,7 +272,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the source instance.</p>
      * <br>
-     * <p>> This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter. If you call this operation to restore an instance from the recycle bin, this parameter is required. The **BackupId** and **RestoreTime** parameters are not required.</p>
+     * <p>> This parameter can only be specified when this operation is called to clone instances. You must also specify the **BackupId** parameter or **RestoreTime** parameter. If you call this operation to restore an instance from the recycle bin, only this parameter is required. The **BackupId** and **RestoreTime** parameters are not required.</p>
      */
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
@@ -292,9 +292,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **cloud_essd1** :ESSD PL1</p>
-     * <p>*   **cloud_essd2**: ESSD PL2</p>
-     * <p>*   **cloud_essd3**: ESSD PL3</p>
+     * <p>*   **cloud_essd1** :ESSD PL1.</p>
+     * <p>*   **cloud_essd2**: ESSD PL2.</p>
+     * <p>*   **cloud_essd3**: ESSD PL3.</p>
      * <p>*   **local_ssd**: local SSD</p>
      */
     @NameInMap("StorageType")
@@ -307,7 +307,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID of the instance.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

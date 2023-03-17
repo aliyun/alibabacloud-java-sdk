@@ -21,6 +21,9 @@ public class DescribeParametersRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("ExtraParam")
+    public String extraParam;
+
     /**
      * <p>The ID of the mongos or shard in the specified sharded cluster instance.</p>
      * <br>
@@ -63,6 +66,14 @@ public class DescribeParametersRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeParametersRequest setExtraParam(String extraParam) {
+        this.extraParam = extraParam;
+        return this;
+    }
+    public String getExtraParam() {
+        return this.extraParam;
     }
 
     public DescribeParametersRequest setNodeId(String nodeId) {
