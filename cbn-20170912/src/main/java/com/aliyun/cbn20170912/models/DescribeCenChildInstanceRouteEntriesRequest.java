@@ -24,15 +24,18 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    /**
+     * <p>The ID of the route table of the network instance.</p>
+     */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **VBR**</p>
-     * <p>*   **CCN**</p>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VBR**: virtual border router (VBR)</p>
+     * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
@@ -62,13 +65,13 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the routes that you want to query. Valid values:</p>
+     * <p>The status of the route. Valid values:</p>
      * <br>
-     * <p>*   **Active**: active routes</p>
-     * <p>*   **Candidate**: standby routes</p>
-     * <p>*   **Rejected**: rejected routes</p>
-     * <p>*   **Prohibited**: prohibited routes</p>
-     * <p>*   **All** (default value): all routes</p>
+     * <p>*   **Active**: available</p>
+     * <p>*   **Candidate**: standby</p>
+     * <p>*   **Rejected**: rejected</p>
+     * <p>*   **Prohibited**: prohibited</p>
+     * <p>*   **All** (default): all routes</p>
      */
     @NameInMap("Status")
     public String status;

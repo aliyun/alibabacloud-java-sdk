@@ -11,7 +11,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The billing method. The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.</p>
+     * <p>The billing method. Valid values: The default value is **POSTPAY**, which specifies the pay-as-you-go billing method.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -19,7 +19,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
      */
@@ -27,7 +27,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default values:</p>
+     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
      * <br>
      * <p>*   **false** (default): performs a dry run and sends the request.</p>
      * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
@@ -74,7 +74,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     /**
      * <p>The name of the VPC connection.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;
@@ -100,9 +100,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public Long vpcOwnerId;
 
     /**
-     * <p>A zone that supports Enterprise Edition transit routers.</p>
+     * <p>A vSwitch in a zone of the Enterprise Edition transit router.</p>
      * <br>
-     * <p>You can specify at most 10 zones.</p>
+     * <p>You can specify at most 10 vSwitches in each call.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<CreateTransitRouterVpcAttachmentRequestZoneMappings> zoneMappings;
@@ -286,7 +286,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
 
     public static class CreateTransitRouterVpcAttachmentRequestZoneMappings extends TeaModel {
         /**
-         * <p>A vSwitch that is deployed in the zone that supports Enterprise Edition transit routers.</p>
+         * <p>A vSwitch in a zone of the Enterprise Edition transit router.</p>
          * <br>
          * <p>You can specify vSwitches for at most 10 zones in each call.</p>
          */
@@ -294,7 +294,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone that supports Enterprise Edition transit routers.</p>
+         * <p>The ID of the zone supported by Enterprise Edition transit routers.</p>
          * <br>
          * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
          * <br>

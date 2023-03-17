@@ -22,7 +22,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
@@ -30,7 +30,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default values:</p>
+     * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Valid values:</p>
      * <br>
      * <p>*   **false** (default): performs a dry run and sends the request.</p>
      * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
@@ -45,9 +45,9 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the VBR.</p>
+     * <p>The ID of the region where the VBR is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,7 +97,7 @@ public class CreateTransitRouterVbrAttachmentRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account to which the VBR belongs. The default value is the ID of the current Alibaba Cloud account.</p>
      * <br>
-     * <p>> If the network instance and the CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
+     * <p>> If the network instance and CEN instance belong to different Alibaba Cloud accounts, this parameter is required.</p>
      */
     @NameInMap("VbrOwnerId")
     public Long vbrOwnerId;

@@ -1536,7 +1536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * After you add an aggregate route to a route table of an Enterprise Edition transit router, the Enterprise Edition transit router advertises its routes only to route tables of virtual private clouds (VPCs) that are associated with a route table of the Enterprise Edition transit router and have route synchronization enabled.
       * Perform the following operations before you create an aggregate route. Otherwise, the Enterprise Edition transit router does not advertise routes to VPC route tables:
       * *   Associated forwarding is enabled between the VPCs and the Enterprise Edition transit router. For more information, see [AssociateTransitRouterAttachmentWithRouteTable](~~261242~~).
-      * *   The VPCs have route synchronization enabled. For more information, see [CreateTransitRouterVpcAttachment](~~261358~~).
+      * *   Route synchronization is enabled for the VPCs. For more information, see [CreateTransitRouterVpcAttachment](~~261358~~).
       *
       * @param request CreateTransitRouteTableAggregationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1581,8 +1581,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TransitRouteTableAggregationName", request.transitRouteTableAggregationName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.transitRouteTableAggregationScop)) {
-            query.put("TransitRouteTableAggregationScop", request.transitRouteTableAggregationScop);
+        if (!com.aliyun.teautil.Common.isUnset(request.transitRouteTableAggregationScope)) {
+            query.put("TransitRouteTableAggregationScope", request.transitRouteTableAggregationScope);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.transitRouteTableId)) {
@@ -1611,7 +1611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * After you add an aggregate route to a route table of an Enterprise Edition transit router, the Enterprise Edition transit router advertises its routes only to route tables of virtual private clouds (VPCs) that are associated with a route table of the Enterprise Edition transit router and have route synchronization enabled.
       * Perform the following operations before you create an aggregate route. Otherwise, the Enterprise Edition transit router does not advertise routes to VPC route tables:
       * *   Associated forwarding is enabled between the VPCs and the Enterprise Edition transit router. For more information, see [AssociateTransitRouterAttachmentWithRouteTable](~~261242~~).
-      * *   The VPCs have route synchronization enabled. For more information, see [CreateTransitRouterVpcAttachment](~~261358~~).
+      * *   Route synchronization is enabled for the VPCs. For more information, see [CreateTransitRouterVpcAttachment](~~261358~~).
       *
       * @param request CreateTransitRouteTableAggregationRequest
       * @return CreateTransitRouteTableAggregationResponse
@@ -1831,7 +1831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, read the following rules:
-      * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your sales manager or [submit a ticket](https://selfservice.console.aliyun.com/ticket/category/cbn/today) to apply for multicast resources.
+      * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your sales manager or [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to apply for multicast resources.
       * *   Make sure that an Enterprise Edition transit router is deployed in the region where you want to create the multicast domain, and the multicast feature is enabled for the Enterprise Edition transit router. For more information, see [CreateTransitRouter](~~261169~~).
       *     If an Enterprise Edition transit router was created before you apply for multicast resources, the transit router does not support multicast. You can delete the transit router and create a new one. For more information about how to delete an Enterprise Edition transit router, see [DeleteTransitRouter](~~261218~~).
       * *   When you call **CreateTransitRouterMulticastDomain**, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
@@ -1910,7 +1910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, read the following rules:
-      * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your sales manager or [submit a ticket](https://selfservice.console.aliyun.com/ticket/category/cbn/today) to apply for multicast resources.
+      * *   Only Enterprise Edition transit routers in the Australia (Sydney) and UK (London) regions support the multicast feature. Multicast is unavailable by default. If you want to enable multicast, contact your sales manager or [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to apply for multicast resources.
       * *   Make sure that an Enterprise Edition transit router is deployed in the region where you want to create the multicast domain, and the multicast feature is enabled for the Enterprise Edition transit router. For more information, see [CreateTransitRouter](~~261169~~).
       *     If an Enterprise Edition transit router was created before you apply for multicast resources, the transit router does not support multicast. You can delete the transit router and create a new one. For more information about how to delete an Enterprise Edition transit router, see [DeleteTransitRouter](~~261218~~).
       * *   When you call **CreateTransitRouterMulticastDomain**, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
@@ -2335,7 +2335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *     *   If an Enterprise Edition transit router is already created in the region where you want to create a VBR connection, set the **VbrId** and **TransitRouterId** parameters.
       *     *   If no Enterprise Edition transit router is created in the region where you want to create a VBR connection, set the **VbrId**, **CenId**, and **RegionId** parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.
       * *   **CreateTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the system returns a VBR connection ID and runs the task in the background. You can call the **ListTransitRouterVbrAttachments** operation to query the status of a VBR connection.
-      *     *   If a VBR is in the **Attaching** state, the VBR connection is being created. You can query the VBR connection but cannot perform other operations.
+      *     *   If a VBR connection is in the **Attaching** state, the VBR connection is being created. You can query the VBR connection but cannot perform other operations.
       *     *   If a VBR connection is in the **Attached** state, the VBR connection is created.
       *
       * @param request CreateTransitRouterVbrAttachmentRequest
@@ -2428,7 +2428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *     *   If an Enterprise Edition transit router is already created in the region where you want to create a VBR connection, set the **VbrId** and **TransitRouterId** parameters.
       *     *   If no Enterprise Edition transit router is created in the region where you want to create a VBR connection, set the **VbrId**, **CenId**, and **RegionId** parameters. Then, the system automatically creates an Enterprise Edition transit router in the specified region.
       * *   **CreateTransitRouterVbrAttachment** is an asynchronous operation. After you send a request, the system returns a VBR connection ID and runs the task in the background. You can call the **ListTransitRouterVbrAttachments** operation to query the status of a VBR connection.
-      *     *   If a VBR is in the **Attaching** state, the VBR connection is being created. You can query the VBR connection but cannot perform other operations.
+      *     *   If a VBR connection is in the **Attaching** state, the VBR connection is being created. You can query the VBR connection but cannot perform other operations.
       *     *   If a VBR connection is in the **Attached** state, the VBR connection is created.
       *
       * @param request CreateTransitRouterVbrAttachmentRequest
@@ -2444,7 +2444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, and **TransitRouterId**.
       *     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, **CenId**, and **RegionId**. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.
       * *   **CreateTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the system returns a VPC connection ID and runs the task in the background. You can call the [ListTransitRouterVpcAttachments](~~261222~~) operation to query the status of a VPC connection.
-      *     *   If a VPC is in the **Attaching** state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.
+      *     *   If a VPC connection is in the **Attaching** state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.
       *     *   If a VPC connection is in the **Attached** state, the VPC connection is created.
       * *   By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.
       * ## Prerequisites
@@ -2546,7 +2546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *     *   If an Enterprise Edition transit router is already created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, and **TransitRouterId**.
       *     *   If no Enterprise Edition transit router is created in the region where you want to create a VPC connection, set **VpcId**, **ZoneMappings.N.VSwitchId**, **ZoneMappings.N.ZoneId**, **CenId**, and **RegionId**. When you create a VPC connection, the system automatically creates an Enterprise Edition transit router in the specified region.
       * *   **CreateTransitRouterVpcAttachment** is an asynchronous operation. After you send a request, the system returns a VPC connection ID and runs the task in the background. You can call the [ListTransitRouterVpcAttachments](~~261222~~) operation to query the status of a VPC connection.
-      *     *   If a VPC is in the **Attaching** state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.
+      *     *   If a VPC connection is in the **Attaching** state, the VPC connection is being created. You can query the VPC connection but cannot perform other operations.
       *     *   If a VPC connection is in the **Attached** state, the VPC connection is created.
       * *   By default, route learning and associated forwarding are disabled between transit router route tables and VPC connections.
       * ## Prerequisites
@@ -2564,7 +2564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   By default, route learning and associated forwarding are disabled between transit router route tables and VPN attachments.
+      * *   By default, route learning and associated forwarding are disabled between transit router route tables and IPsec-VPN attachments.
       * *   When you call `CreateTransitRouterVpnAttachment`, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId** and **RegionId**, you do not need to set **CenId**.
       * ## Prerequisites
       * *   Before you attach an IPsec-VPN connection to a transit router, make sure that at least one IPsec-VPN connection is created in the region where the transit router is deployed. Make sure the IPsec-VPN connection is not associated with a resource. For more information, see [CreateVpnAttachment](~~442455~~).
@@ -2663,7 +2663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   By default, route learning and associated forwarding are disabled between transit router route tables and VPN attachments.
+      * *   By default, route learning and associated forwarding are disabled between transit router route tables and IPsec-VPN attachments.
       * *   When you call `CreateTransitRouterVpnAttachment`, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId** and **RegionId**, you do not need to set **CenId**.
       * ## Prerequisites
       * *   Before you attach an IPsec-VPN connection to a transit router, make sure that at least one IPsec-VPN connection is created in the region where the transit router is deployed. Make sure the IPsec-VPN connection is not associated with a resource. For more information, see [CreateVpnAttachment](~~442455~~).

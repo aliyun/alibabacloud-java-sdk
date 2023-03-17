@@ -74,8 +74,8 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         @NameInMap("RouteType")
         public String routeType;
 
-        @NameInMap("Scop")
-        public String scop;
+        @NameInMap("Scope")
+        public String scope;
 
         @NameInMap("Status")
         public String status;
@@ -115,12 +115,12 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
             return this.routeType;
         }
 
-        public DescribeTransitRouteTableAggregationResponseBodyData setScop(String scop) {
-            this.scop = scop;
+        public DescribeTransitRouteTableAggregationResponseBodyData setScope(String scope) {
+            this.scope = scope;
             return this;
         }
-        public String getScop() {
-            return this.scop;
+        public String getScope() {
+            return this.scope;
         }
 
         public DescribeTransitRouteTableAggregationResponseBodyData setStatus(String status) {

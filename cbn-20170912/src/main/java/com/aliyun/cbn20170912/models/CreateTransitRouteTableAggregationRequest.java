@@ -7,18 +7,18 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may different for each request.</p>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the aggregate route is added.</p>
-     * <p>*   **true**: prechecks the request but does not create the aggregate route. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -57,18 +57,13 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The name of the aggregate route.</p>
      * <br>
-     * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.</p>
+     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.</p>
      */
     @NameInMap("TransitRouteTableAggregationName")
     public String transitRouteTableAggregationName;
 
-    /**
-     * <p>The scope of networks that you want to advertise the aggregate route.</p>
-     * <br>
-     * <p>Set the value to **VPC**, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.</p>
-     */
-    @NameInMap("TransitRouteTableAggregationScop")
-    public String transitRouteTableAggregationScop;
+    @NameInMap("TransitRouteTableAggregationScope")
+    public String transitRouteTableAggregationScope;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
@@ -153,12 +148,12 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationName;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationScop(String transitRouteTableAggregationScop) {
-        this.transitRouteTableAggregationScop = transitRouteTableAggregationScop;
+    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationScope(String transitRouteTableAggregationScope) {
+        this.transitRouteTableAggregationScope = transitRouteTableAggregationScope;
         return this;
     }
-    public String getTransitRouteTableAggregationScop() {
-        return this.transitRouteTableAggregationScop;
+    public String getTransitRouteTableAggregationScope() {
+        return this.transitRouteTableAggregationScope;
     }
 
     public CreateTransitRouteTableAggregationRequest setTransitRouteTableId(String transitRouteTableId) {
