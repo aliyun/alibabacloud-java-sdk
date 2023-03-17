@@ -23,7 +23,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource IDs.</p>
+     * <p>The list of resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -41,7 +41,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags that you want to associate with the resources. You can specify up to 20 tags.</p>
+     * <p>The tags that are attached to the resources.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -127,9 +127,10 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The key of tag.</p>
          * <br>
-         * <p>* The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
-         * <p>* It can be up to 64 characters in length.</p>
-         * <p>* The key cannot be an empty string.</p>
+         * <p>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</p>
+         * <br>
+         * <p>- **Tag.1.Key** specifies the key of the first tag.</p>
+         * <p>- **Tag.2.Key** specifies the key of the second tag.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -137,9 +138,10 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The value of tag.</p>
          * <br>
-         * <p>- The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
-         * <p>- It can be up to 128 characters in length.</p>
-         * <p>- The value can be an empty string.</p>
+         * <p>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals: </p>
+         * <br>
+         * <p>- **Tag.1.Value** specifies the value of the first tag.</p>
+         * <p>- **Tag.2.Value** specifies the value of the second tag.</p>
          */
         @NameInMap("Value")
         public String value;
