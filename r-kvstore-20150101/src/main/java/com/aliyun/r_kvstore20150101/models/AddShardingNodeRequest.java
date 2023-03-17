@@ -4,15 +4,32 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class AddShardingNodeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.</p>
+     * <p>*   **false**: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see [Renewal](~~26352~~).</p>
+     * <br>
+     * <p>> The default value is **true**.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The business information. This is an additional parameter.</p>
+     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
+    /**
+     * <p>The ID of the coupon.</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -31,9 +48,17 @@ public class AddShardingNodeRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The number of data shards that you want to add. Default value: **1**.</p>
+     * <br>
+     * <p>>   A cluster instance must contain 2 to 256 data shards. You can add a maximum of 64 data shards at a time.</p>
+     */
     @NameInMap("ShardCount")
     public Integer shardCount;
 
+    /**
+     * <p>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
+     */
     @NameInMap("SourceBiz")
     public String sourceBiz;
 

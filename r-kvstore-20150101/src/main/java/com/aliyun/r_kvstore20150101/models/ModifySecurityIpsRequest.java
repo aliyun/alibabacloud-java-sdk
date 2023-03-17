@@ -4,9 +4,19 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityIpsRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance whose IP whitelist is modified.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The method of modification. Valid values:</p>
+     * <br>
+     * <p>*   **Cover**: overwrites the whitelist.</p>
+     * <p>*   **Append**: appends data to the whitelist.</p>
+     * <p>*   **Delete**: deletes the whitelist.</p>
+     */
     @NameInMap("ModifyMode")
     public String modifyMode;
 
@@ -22,12 +32,21 @@ public class ModifySecurityIpsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Default value: null. The attribute of the whitelist group. The ApsaraDB for Redis console does not display the whitelist group whose value of this parameter is **hidden**.</p>
+     */
     @NameInMap("SecurityIpGroupAttribute")
     public String securityIpGroupAttribute;
 
+    /**
+     * <p>The name of the IP address whitelist.</p>
+     */
     @NameInMap("SecurityIpGroupName")
     public String securityIpGroupName;
 
+    /**
+     * <p>The IP addresses in the whitelist group. Up to 1,000 IP addresses can be specified in each whitelist. Separate multiple IP addresses with a comma (,). You can add 0.0.0.0/0, IP addresses such as 10.23.12.24, and Classless Inter-Domain Routing (CIDR) blocks such as 10.23.12.24/24 to the whitelist group. In CIDR block 10.23.12.24/24, /24 specifies the length of the prefix in the IP addresses. The prefix length ranges from 1 to 32.</p>
+     */
     @NameInMap("SecurityIps")
     public String securityIps;
 

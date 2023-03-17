@@ -4,12 +4,27 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class TransformInstanceChargeTypeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Automatic payment is enabled.</p>
+     * <p>*   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. In the left-side navigation pane of the Billing Management console, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The new billing method. Valid values:</p>
+     * <br>
+     * <p>*   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.</p>
+     * <p>*   **PostPaid**: pay-as-you-go.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,6 +34,11 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The subscription duration. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, **36**.</p>
+     * <br>
+     * <p>>  This parameter is valid and required only if you set the **ChargeType** parameter to **PrePaid**.</p>
+     */
     @NameInMap("Period")
     public Long period;
 

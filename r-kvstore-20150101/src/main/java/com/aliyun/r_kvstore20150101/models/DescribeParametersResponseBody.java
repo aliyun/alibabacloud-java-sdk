@@ -4,18 +4,33 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
+    /**
+     * <p>Details about the configuration parameters.</p>
+     */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
+    /**
+     * <p>The database engine of the instance.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The database engine version of the instance.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about the operational parameters.</p>
+     */
     @NameInMap("RunningParameters")
     public DescribeParametersResponseBodyRunningParameters runningParameters;
 
@@ -65,21 +80,45 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyConfigParametersParameter extends TeaModel {
+        /**
+         * <p>The check code that indicates the valid values of the parameter.</p>
+         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        /**
+         * <p>Indicates whether the instance must be restarted for the modifications to take effect. Valid values:</p>
+         * <br>
+         * <p>*   **True**: The instance must be restarted for the modifications to take effect.</p>
+         * <p>*   **False**: The instance does not need to be restarted for the modifications to take effect. Modifications immediately take effect.</p>
+         */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
+        /**
+         * <p>Indicates whether the parameter can be reconfigured. Valid values:</p>
+         * <br>
+         * <p>*   **False**: The parameter cannot be reconfigured.</p>
+         * <p>*   **True**: The parameter can be reconfigured.</p>
+         */
         @NameInMap("ModifiableStatus")
         public Boolean modifiableStatus;
 
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -158,21 +197,45 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyRunningParametersParameter extends TeaModel {
+        /**
+         * <p>The check code that indicates the valid values of the parameter.</p>
+         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        /**
+         * <p>Indicates whether the instance must be restarted for the modifications to take effect. Valid values: </p>
+         * <br>
+         * <p>- **True**: The instance must be restarted for the modifications to take effect.</p>
+         * <p>- **False**: The instance does not need to be restarted for the modifications to take effect. Modifications immediately take effect.</p>
+         */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
+        /**
+         * <p>Indicates whether the parameter can be reconfigured. Valid values:</p>
+         * <br>
+         * <p>- **False**: The parameter cannot be reconfigured.</p>
+         * <p>- **True**: The parameter can be reconfigured.</p>
+         */
         @NameInMap("ModifiableStatus")
         public String modifiableStatus;
 
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

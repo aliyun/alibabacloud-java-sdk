@@ -4,12 +4,21 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class TransformToPrePaidResponseBody extends TeaModel {
+    /**
+     * <p>The time when the instance expires after the billing method of the instance is changed from pay-as-you-go to subscription.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

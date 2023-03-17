@@ -4,15 +4,29 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountPasswordRequest extends TeaModel {
+    /**
+     * <p>The name of the account for which you want to change the password. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The new password to be set for the account. The password must be 8 to 32 characters in length. It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `!@ # $ % ^ & * ( ) _ + - =`</p>
+     */
     @NameInMap("NewAccountPassword")
     public String newAccountPassword;
 
+    /**
+     * <p>The current password of the account.</p>
+     * <br>
+     * <p>>  If you forget your password, you can call the [ResetAccountPassword](~~95941~~) operation to reset your password.</p>
+     */
     @NameInMap("OldAccountPassword")
     public String oldAccountPassword;
 

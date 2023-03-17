@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotency of requests. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,9 +22,18 @@ public class ModifyResourceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the instance is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>> * You can call the [ListResourceGroups](~~158855~~) operation or log on to the console to query the IDs of the resource groups. For more information, see [View basic information about resource groups](~~151181~~).</p>
+     * <p>> * Before you modify the resource group to which an instance belongs, you can call the [ListResources](~~158866~~) operation to view the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

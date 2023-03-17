@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class SyncDtsStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,9 @@ public class SyncDtsStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +31,20 @@ public class SyncDtsStatusRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>Disables configuration change for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **0**: no</p>
+     * <p>*   **1**: yes. If you attempt to modify the configurations of the instance, the system sends a prompt about the restriction.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the DTS instance. You can view the ID in the [DTS console](https://dts.console.aliyun.com/).</p>
+     * <br>
+     * <p>> An ApsaraDB for Redis instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

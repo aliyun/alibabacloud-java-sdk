@@ -4,9 +4,18 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable or disable incremental data backup. Default value: 0. Valid values:</p>
+     * <br>
+     * <p>*   **1**: yes</p>
+     * <p>*   **0**: no</p>
+     */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,9 +25,27 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The days of the week to back up data. Valid values:</p>
+     * <br>
+     * <p>*   **Monday**: every Monday</p>
+     * <p>*   **Tuesday**: every Tuesday</p>
+     * <p>*   **Wednesday**: every Wednesday</p>
+     * <p>*   **Thursday**: every Thursday</p>
+     * <p>*   **Friday**: every Friday</p>
+     * <p>*   **Saturday**: every Saturday</p>
+     * <p>*   **Sunday**: every Sunday</p>
+     * <br>
+     * <p>>  Separate multiple options with commas (,).</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <p>The time range to back up data. Specify the time in the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The beginning and end of the time range must be on the hour. The duration must be an hour.</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 

@@ -4,12 +4,21 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNetExpireTimeRequest extends TeaModel {
+    /**
+     * <p>The retention period of the endpoint of the classic network. Valid values: **14**, **30**, **60**, and **120**. Unit: days.</p>
+     */
     @NameInMap("ClassicExpiredDays")
     public Integer classicExpiredDays;
 
+    /**
+     * <p>The endpoint of the classic network.</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

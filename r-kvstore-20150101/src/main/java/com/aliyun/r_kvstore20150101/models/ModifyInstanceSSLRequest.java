@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceSSLRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,6 +22,13 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Modifies SSL encryption configurations. Valid values:</p>
+     * <br>
+     * <p>*   **Disable**: The SSL encryption is disabled.</p>
+     * <p>*   **Enable**: The SSL encryption is enabled.</p>
+     * <p>*   **Update**: The SSL certificate is updated.</p>
+     */
     @NameInMap("SSLEnabled")
     public String SSLEnabled;
 

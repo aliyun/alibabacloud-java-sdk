@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The value of the **RegionIds** parameter is an array. Each element in the array contains the **RegionId** and **ZoneIds** parameters.</p>
+     */
     @NameInMap("RegionIds")
     public DescribeRegionsResponseBodyRegionIds regionIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,18 +57,33 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionIdsKVStoreRegion extends TeaModel {
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The endpoint of the region.</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The IDs of the zones in the region. The zone IDs are separated by commas (,).</p>
+         */
         @NameInMap("ZoneIdList")
         public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList zoneIdList;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneIds")
         public String zoneIds;
 

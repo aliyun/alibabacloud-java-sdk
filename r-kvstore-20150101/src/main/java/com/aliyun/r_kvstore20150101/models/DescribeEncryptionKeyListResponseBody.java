@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEncryptionKeyListResponseBody extends TeaModel {
+    /**
+     * <p>The custom keys that can be used in the region.</p>
+     */
     @NameInMap("KeyIds")
     public DescribeEncryptionKeyListResponseBodyKeyIds keyIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
+    /**
+     * <p>The language used for the returned value. Valid values:</p>
+     * <br>
+     * <p>*   **zh-CN**: Chinese.</p>
+     * <p>*   **en-US**: English.</p>
+     * <br>
+     * <p>>  Default value: **zh-CN**.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -13,6 +21,9 @@ public class DescribeZonesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

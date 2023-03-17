@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
+    /**
+     * <p>Details of available resources within zones.</p>
+     */
     @NameInMap("AvailableZones")
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class AvailableResource extends TeaModel {
+        /**
+         * <p>The memory size of the instance. Unit: MB.</p>
+         */
         @NameInMap("Capacity")
         public Long capacity;
 
+        /**
+         * <p>The code of the instance type. If you want to view the code of an instance type, you can search for the code of the instance typein Document Center.</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>The description of the instance type.</p>
+         */
         @NameInMap("InstanceClassRemark")
         public String instanceClassRemark;
 
@@ -92,9 +107,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class SupportedNodeType extends TeaModel {
+        /**
+         * <p>The available instance types.</p>
+         */
         @NameInMap("AvailableResources")
         public AvailableResources availableResources;
 
+        /**
+         * <p>The node type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **single**: single-replica</p>
+         * <p>*   **double**: a master node and a replica node</p>
+         */
         @NameInMap("SupportedNodeType")
         public String supportedNodeType;
 
@@ -141,9 +165,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class SupportedShardNumber extends TeaModel {
+        /**
+         * <p>The number of shards in the instance.</p>
+         */
         @NameInMap("ShardNumber")
         public String shardNumber;
 
+        /**
+         * <p>The available node types.</p>
+         */
         @NameInMap("SupportedNodeTypes")
         public SupportedNodeTypes supportedNodeTypes;
 
@@ -190,9 +220,19 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class SupportedArchitectureType extends TeaModel {
+        /**
+         * <p>The architecture of the instance. Valid values:</p>
+         * <br>
+         * <p>* **standard**: standard architecture</p>
+         * <p>* **cluster**: cluster architecture</p>
+         * <p>* **rwsplit**: read/write splitting architecture</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <p>The numbers of shards that are allowed.</p>
+         */
         @NameInMap("SupportedShardNumbers")
         public SupportedShardNumbers supportedShardNumbers;
 
@@ -239,9 +279,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class SupportedEngineVersion extends TeaModel {
+        /**
+         * <p>The available instance architectures.</p>
+         */
         @NameInMap("SupportedArchitectureTypes")
         public SupportedArchitectureTypes supportedArchitectureTypes;
 
+        /**
+         * <p>The engine version of the instance.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -288,9 +334,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesType extends TeaModel {
+        /**
+         * <p>The series of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **enhanced_performance_type**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instances</p>
+         * <p>*   **hybrid_storage**: hybrid-storage instances</p>
+         */
         @NameInMap("SeriesType")
         public String seriesType;
 
+        /**
+         * <p>The available engine versions.</p>
+         */
         @NameInMap("SupportedEngineVersions")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersions supportedEngineVersions;
 
@@ -337,9 +392,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionType extends TeaModel {
+        /**
+         * <p>The edition of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Community**: Community Edition</p>
+         * <p>*   **Enterprise**: Enhance Edition (Tair)</p>
+         */
         @NameInMap("EditionType")
         public String editionType;
 
+        /**
+         * <p>The available instance series.</p>
+         */
         @NameInMap("SupportedSeriesTypes")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypes supportedSeriesTypes;
 
@@ -386,9 +450,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine extends TeaModel {
+        /**
+         * <p>The database engine of the instance.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The available instance editions.</p>
+         */
         @NameInMap("SupportedEditionTypes")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypes supportedEditionTypes;
 
@@ -435,15 +505,27 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The available database engines.</p>
+         */
         @NameInMap("SupportedEngines")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines supportedEngines;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>The name of the zone.</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 

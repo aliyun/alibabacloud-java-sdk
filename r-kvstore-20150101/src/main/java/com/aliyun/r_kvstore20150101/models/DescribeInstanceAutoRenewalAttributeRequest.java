@@ -4,9 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotency of requests. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  By default, the system checks whether auto-renewal is enabled for all instances.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -16,12 +24,23 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer greater than **0**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**.</p>
+     * <br>
+     * <p>>  Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the instance is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

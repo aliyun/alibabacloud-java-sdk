@@ -4,15 +4,32 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
+    /**
+     * <p>The current endpoint of the instance.</p>
+     */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The network type of the endpoint. Valid values:</p>
+     * <br>
+     * <p>*   **Private**: internal network</p>
+     * <p>*   **Public**: Internet</p>
+     */
     @NameInMap("IPType")
     public String IPType;
 
+    /**
+     * <p>The prefix of the new endpoint. Specify the endpoint in the `<prefix>.redis.rds.aliyuncs.com` format. The prefix can contain lowercase letters and digits, and must start with a lowercase letter. The prefix can be 8 to 40 characters in length.</p>
+     * <br>
+     * <p>> You must specify one of the **NewConnectionString** and **Port** parameters.</p>
+     */
     @NameInMap("NewConnectionString")
     public String newConnectionString;
 
@@ -22,6 +39,11 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The port number that is used to connect to the instance. Valid values: **1024** to **65535**.</p>
+     * <br>
+     * <p>> You must specify one of the **NewConnectionString** and **Port** parameters.</p>
+     */
     @NameInMap("Port")
     public String port;
 

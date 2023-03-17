@@ -4,12 +4,21 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class AddShardingNodeResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the added data shards.</p>
+     */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

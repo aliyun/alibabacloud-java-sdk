@@ -4,12 +4,21 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The details of the retention period of the endpoint in the classic network.</p>
+     */
     @NameInMap("NetInfoItems")
     public ModifyInstanceNetExpireTimeResponseBodyNetInfoItems netInfoItems;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +52,33 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
     }
 
     public static class ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem extends TeaModel {
+        /**
+         * <p>The endpoint of the classic network.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The network type. The returned value is **Classic**.</p>
+         */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
+        /**
+         * <p>The expiration time of the endpoint of the classic network.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The IP address of the instance in the classic network.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The service port of the instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 

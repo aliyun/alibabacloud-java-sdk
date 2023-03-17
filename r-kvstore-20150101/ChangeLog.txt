@@ -1,3 +1,6 @@
+2023-03-17 Version: 2.20.8
+- DescribeIntranetAttribute add HasPrePaidBandWidthOrderRunning return.
+
 2022-11-18 Version: 2.20.7
 - Update python sdk.
 

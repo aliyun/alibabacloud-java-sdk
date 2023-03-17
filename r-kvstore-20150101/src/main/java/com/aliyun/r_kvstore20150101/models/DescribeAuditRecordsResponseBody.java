@@ -4,27 +4,51 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The end of the time range that is specified to query the audit log.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The name of the ApsaraDB for Redis instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The collection of returned audit log entries.</p>
+     */
     @NameInMap("Items")
     public DescribeAuditRecordsResponseBodyItems items;
 
+    /**
+     * <p>The page number of the page returned.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The maximum number of log entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start of the time range that is specified to query the audit log.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The total number of log entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -98,30 +122,59 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeAuditRecordsResponseBodyItemsSQL extends TeaModel {
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The time when the command was run.</p>
+         */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
+        /**
+         * <p>The client IP address.</p>
+         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The ID of the node.</p>
+         * <br>
+         * <p>>  A specific node ID is returned only if a cluster or read/write splitting instance is used.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The command that was run.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The type of command.</p>
+         */
         @NameInMap("SQLType")
         public String SQLType;
 
+        /**
+         * <p>The amount of time that is consumed to run the command.</p>
+         */
         @NameInMap("TotalExecutionTimes")
         public String totalExecutionTimes;
 

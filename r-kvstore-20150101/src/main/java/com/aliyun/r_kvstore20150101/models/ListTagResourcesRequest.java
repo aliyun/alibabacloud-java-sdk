@@ -4,6 +4,11 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The token used to start the next query to retrieve more results.</p>
+     * <br>
+     * <p>> This parameter is not required in the first query. If not all results are returned in one query, you can specify the **NextToken** value returned for the query to perform the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,9 +18,17 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the instances.</p>
+     * <br>
+     * <p>> *   You must specify this parameter or the **Tag** parameter.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,9 +38,15 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags of the instance. You must specify this parameter or the **ResourceId** parameter.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -109,9 +128,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The keys of the tags associated with the instances you want to query.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of the tags associated with the instances you want to query.</p>
+         */
         @NameInMap("Value")
         public String value;
 
