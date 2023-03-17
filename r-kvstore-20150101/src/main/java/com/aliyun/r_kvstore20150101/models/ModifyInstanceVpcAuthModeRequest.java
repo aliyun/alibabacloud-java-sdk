@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,6 +25,14 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>Specifies whether to enable password authentication for access in the VPC. Valid values:</p>
+     * <br>
+     * <p>*   **Open**: enables password authentication.</p>
+     * <p>*   **Close**: disables password authentication.</p>
+     * <br>
+     * <p>>  Default value: **Open**.</p>
+     */
     @NameInMap("VpcAuthMode")
     public String vpcAuthMode;
 

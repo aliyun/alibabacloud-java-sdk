@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstancePublicConnectionRequest extends TeaModel {
+    /**
+     * <p>The public endpoint to be released.</p>
+     */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
+    /**
+     * <p>The ID of the instance for which you want to release a public endpoint.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

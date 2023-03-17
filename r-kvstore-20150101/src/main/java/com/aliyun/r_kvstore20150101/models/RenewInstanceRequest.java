@@ -4,27 +4,57 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic payment for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables automatic payment. This is the default value.</p>
+     * <p>*   **false**: disables automatic payment.</p>
+     * <br>
+     * <p>If you select false, you must choose **Expenses** > **Renewal Management** in the top navigation bar. In the left-side navigation pane, click **Orders**. Find the specified order and pay for it.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The ID of the event or the business information.</p>
+     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
+    /**
+     * <p>The storage capacity of the instance. Unit: MB. You can set this parameter to change specifications of an instance when you renew the instance.</p>
+     * <br>
+     * <p>>  To change the specifications when you renew the instance, you must set at least one of the following parameters: `Capacity` and `InstanceClass`.</p>
+     */
     @NameInMap("Capacity")
     public String capacity;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>Specifies the request source. The default value is **OpenAPI** and cannot be changed.</p>
+     */
     @NameInMap("FromApp")
     public String fromApp;
 
+    /**
+     * <p>The instance type code. For more information, see [Instance specifications overview](~~26350~~). You can set this parameter to change specifications of an instance when you renew the instance.</p>
+     * <br>
+     * <p>>  To change the specifications when you renew the instance, you must set at least one of the following parameters: `Capacity` and `InstanceClass`.</p>
+     */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -34,6 +64,9 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The renewal period of the instance. Unit: months. Valid values: **1**, **2**, **3**, **4**, **5**, **6**, **7**, **8**, **9**, **12**, **24**, and **36**.</p>
+     */
     @NameInMap("Period")
     public Long period;
 

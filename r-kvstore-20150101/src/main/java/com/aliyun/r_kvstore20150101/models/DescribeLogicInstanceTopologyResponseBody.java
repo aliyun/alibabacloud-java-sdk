@@ -4,15 +4,27 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The detailed proxy information, including information about proxy nodes.</p>
+     */
     @NameInMap("RedisProxyList")
     public DescribeLogicInstanceTopologyResponseBodyRedisProxyList redisProxyList;
 
+    /**
+     * <p>The detailed shard information, including node information such as NodeInfo.</p>
+     */
     @NameInMap("RedisShardList")
     public DescribeLogicInstanceTopologyResponseBodyRedisShardList redisShardList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,36 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo extends TeaModel {
+        /**
+         * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
+         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
+        /**
+         * <p>The storage capacity of the node. Unit: MB.</p>
+         */
         @NameInMap("Capacity")
         public String capacity;
 
+        /**
+         * <p>The maximum number of connections.</p>
+         */
         @NameInMap("Connection")
         public String connection;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The node type. Valid values:</p>
+         * <br>
+         * <p>*   **proxy**: proxy node</p>
+         * <p>*   **db**: data node</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
@@ -136,18 +166,36 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo extends TeaModel {
+        /**
+         * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
+         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
+        /**
+         * <p>The storage capacity of the node. Unit: MB.</p>
+         */
         @NameInMap("Capacity")
         public String capacity;
 
+        /**
+         * <p>The maximum number of connections.</p>
+         */
         @NameInMap("Connection")
         public String connection;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The node type. Valid values:</p>
+         * <br>
+         * <p>- **proxy**: proxy node</p>
+         * <p>- **db**: data node</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 

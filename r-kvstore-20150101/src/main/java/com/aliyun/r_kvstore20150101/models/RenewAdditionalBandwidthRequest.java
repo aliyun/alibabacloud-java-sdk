@@ -4,15 +4,30 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class RenewAdditionalBandwidthRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Automatic payment is enabled. This is the default value.</p>
+     * <p>*   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders******. On the page that appears, find the order and complete the payment.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The ID of the coupon that you want to use.</p>
+     */
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the IDs of instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The validity period of the bandwidth that you purchase. Unit: days. Valid values: **1**, **2**, **3**, **7**, **14**, **30**, **60**, **90**, **180**, **365**, **730**, **1095**, and **1825**.</p>
+     */
     @NameInMap("OrderTimeLength")
     public String orderTimeLength;
 
@@ -31,6 +46,9 @@ public class RenewAdditionalBandwidthRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
+     */
     @NameInMap("SourceBiz")
     public String sourceBiz;
 

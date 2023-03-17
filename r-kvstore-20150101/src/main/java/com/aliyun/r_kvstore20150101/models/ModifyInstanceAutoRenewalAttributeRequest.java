@@ -4,12 +4,30 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables auto-renewal.</p>
+     * <p>*   **false**: disables auto-renewal.</p>
+     * <br>
+     * <p>> The default value is **false**.</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <p>The ID of the instance Separate multiple instance IDs with commas (,).</p>
+     * <br>
+     * <p>> You can specify up to 30 instance IDs.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The auto-renewal period. Valid values: **1** to **12**. Unit: months. When the instance is about to expire, the instance is automatically renewed based on the number of months specified by this parameter.</p>
+     * <br>
+     * <p>> This parameter is available and required only if the **AutoRenew** parameter is set to **true**.</p>
+     */
     @NameInMap("Duration")
     public String duration;
 

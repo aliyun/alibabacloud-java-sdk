@@ -4,9 +4,18 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTDEStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether TDE is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **Enabled**: TDE is enabled.</p>
+     * <p>*   **Disable**: TDE is disabled.</p>
+     */
     @NameInMap("TDEStatus")
     public String TDEStatus;
 

@@ -4,12 +4,24 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
+    /**
+     * <p>The network type. Valid values:</p>
+     * <br>
+     * <p>*   **CLASSIC**: The instance runs in a classic network.</p>
+     * <p>*   **VPC**: The instance runs in a virtual private cloud (VPC).</p>
+     */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    /**
+     * <p>The list of network information about the instance.</p>
+     */
     @NameInMap("NetInfoItems")
     public DescribeDBInstanceNetInfoResponseBodyNetInfoItems netInfoItems;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,36 +55,82 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoResponseBodyNetInfoItemsInstanceNetInfo extends TeaModel {
+        /**
+         * <p>The endpoint of the instance.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **0**: the Internet.</p>
+         * <p>*   **1**: classic network.</p>
+         * <p>*   **2**: VPC.</p>
+         */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
+        /**
+         * <p>Indicates whether the address is a private endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no.</p>
+         * <p>*   **1**: yes.</p>
+         */
         @NameInMap("DirectConnection")
         public Integer directConnection;
 
+        /**
+         * <p>The expiration time of the classic network address of an ApsaraDB for Redis instance. Unit: seconds.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The network type of the IP address. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: Internet.</p>
+         * <p>*   **Inner**: classic network.</p>
+         * <p>*   **Private**: VPC.</p>
+         */
         @NameInMap("IPType")
         public String IPType;
 
+        /**
+         * <p>The service port of the ApsaraDB for Redis instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The remaining validity period of the endpoint of the classic network. Unit: seconds.</p>
+         * <br>
+         * <p>>  A value of **0** indicates that the endpoint never expires.</p>
+         */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
+        /**
+         * <p>The ID of the VPC where the instance is deployed.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("VPCInstanceId")
         public String VPCInstanceId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance that was queried.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

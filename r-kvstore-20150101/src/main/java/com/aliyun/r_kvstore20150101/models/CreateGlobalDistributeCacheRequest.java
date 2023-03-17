@@ -19,6 +19,9 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the existing instance.</p>
+     */
     @NameInMap("SeedSubInstanceId")
     public String seedSubInstanceId;
 

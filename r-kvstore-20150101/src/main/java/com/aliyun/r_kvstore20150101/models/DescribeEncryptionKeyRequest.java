@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEncryptionKeyRequest extends TeaModel {
+    /**
+     * <p>The ID of the custom key. You can call the [DescribeEncryptionKeyList](~~302339~~) operation to query the ID of the key.</p>
+     */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    /**
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -4,21 +4,51 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The end of the time range to query. The end time must be later than the beginning time. The time range cannot exceed one day. We recommend that you set the time range to one hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the node on the instance. You can set this parameter to query the slow logs of a specified node.</p>
+     * <br>
+     * <p>>  This parameter is available only for read/write splitting instances or cluster instances of ApsaraDB for Redis.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The dimension by which the results to return are sorted. Valid values:</p>
+     * <br>
+     * <p>*   **execution_time**: specifies that the results to return are sorted by the start time of queries.</p>
+     * <p>*   **latency**: specifies that the results to return are sorted by the execution time of queries.</p>
+     * <br>
+     * <p>>  Default value: **execution_time**.</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>The sorting method of the results to return. Valid values:</p>
+     * <br>
+     * <p>*   **ASC**: ascending order.</p>
+     * <p>*   **DESC**: descending order.</p>
+     * <br>
+     * <p>>  Default value: **DESC**.</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
@@ -28,12 +58,21 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The keyword based on which slow logs are queried. You can set this parameter to a value of the string type.</p>
+     */
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
@@ -46,9 +85,20 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The type of slow log. Valid values:</p>
+     * <br>
+     * <p>*   **proxy**: slow logs of the proxy nodes.</p>
+     * <p>*   **db**: slow logs of data nodes.</p>
+     * <br>
+     * <p>>  Default value: **db**.</p>
+     */
     @NameInMap("SlowLogRecordType")
     public String slowLogRecordType;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

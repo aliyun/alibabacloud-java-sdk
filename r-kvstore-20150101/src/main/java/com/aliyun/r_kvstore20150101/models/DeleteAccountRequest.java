@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
+    /**
+     * <p>The username of the account. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

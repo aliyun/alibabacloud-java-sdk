@@ -4,10 +4,19 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DeleteShardingNodeRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the data shard that you want to remove. You can specify multiple IDs at a time. Separate multiple IDs with commas (,).</p>
+     * <br>
+     * <p>> If you specify both the NodeId and ShardCount parameters, the system prioritizes the NodeId parameter.</p>
+     */
     @NameInMap("NodeId")
+    @Deprecated
     public String nodeId;
 
     @NameInMap("OwnerAccount")
@@ -25,6 +34,11 @@ public class DeleteShardingNodeRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The number of data shards that you want to remove. Shard removal starts from the end of the shard list.</p>
+     * <br>
+     * <p>> For example, the instance has the following data shards: db-0, db-1, db-2, db-3, and db-4. In this case, if you set this parameter to 2, db-3 and db-4 are removed.</p>
+     */
     @NameInMap("ShardCount")
     public Integer shardCount;
 

@@ -4,18 +4,36 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLResponseBody extends TeaModel {
+    /**
+     * <p>The common name of the SSL certificate, which is the domain name for which you want to apply for the SSL certificate. The default value is the internal endpoint of the instance.</p>
+     */
     @NameInMap("CertCommonName")
     public String certCommonName;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **Enable**: SSL encryption is enabled.</p>
+     * <p>*   **Disable** : SSL encryption is disabled.</p>
+     */
     @NameInMap("SSLEnabled")
     public String SSLEnabled;
 
+    /**
+     * <p>The expiration time of the SSL certificate.</p>
+     */
     @NameInMap("SSLExpiredTime")
     public String SSLExpiredTime;
 

@@ -4,42 +4,92 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEngineVersionResponseBody extends TeaModel {
+    /**
+     * <p>The release notes for the minor version of the instance, including the release date, minor version number, release type such as new feature, and description.</p>
+     */
     @NameInMap("DBVersionRelease")
     public String DBVersionRelease;
 
+    /**
+     * <p>Indicates whether the major version can be upgraded for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The major version can be upgraded.</p>
+     * <p>*   **false**: The major version is the latest version and cannot be upgraded.</p>
+     * <br>
+     * <p>>  To upgrade the major version, call the [ModifyInstanceMajorVersion](~~95259~~) operation.</p>
+     */
     @NameInMap("EnableUpgradeMajorVersion")
     public Boolean enableUpgradeMajorVersion;
 
+    /**
+     * <p>Indicates whether the minor version can be updated for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The minor version can be updated.</p>
+     * <p>*   **false**: The minor version is the latest version and cannot be updated.</p>
+     * <br>
+     * <p>>  To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.</p>
+     */
     @NameInMap("EnableUpgradeMinorVersion")
     public Boolean enableUpgradeMinorVersion;
 
+    /**
+     * <p>The database engine of the instance. Valid values: **redis** and **memcache**.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>Indicates whether the instance minor version is the latest version. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The instance minor version is the latest version.</p>
+     * <p>*   **false**: The instance minor version is not the latest version.</p>
+     */
     @NameInMap("IsLatestVersion")
     public Boolean isLatestVersion;
 
     @NameInMap("IsNewSSLMode")
     public String isNewSSLMode;
 
+    /**
+     * <p>Indicates whether the instance supports the new SSL encryption feature.</p>
+     */
     @NameInMap("IsRedisCompatibleVersion")
     public String isRedisCompatibleVersion;
 
     @NameInMap("IsSSLEnable")
     public String isSSLEnable;
 
+    /**
+     * <p>The major version of the instance.</p>
+     */
     @NameInMap("MajorVersion")
     public String majorVersion;
 
+    /**
+     * <p>The minor version of the instance.</p>
+     */
     @NameInMap("MinorVersion")
     public String minorVersion;
 
+    /**
+     * <p>The minor version of proxy nodes.</p>
+     * <br>
+     * <p>>  This parameter is returned only for cluster and read/write splitting instances.</p>
+     */
     @NameInMap("ProxyMinorVersion")
     public String proxyMinorVersion;
 
+    /**
+     * <p>The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.</p>
+     * <br>
+     * <p>>  This parameter is returned only for cluster and read/write splitting instances.</p>
+     */
     @NameInMap("ProxyVersionRelease")
     public String proxyVersionRelease;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

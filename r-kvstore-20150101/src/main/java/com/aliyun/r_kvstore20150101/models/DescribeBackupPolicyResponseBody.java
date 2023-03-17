@@ -4,21 +4,50 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The retention period for backups. Unit: days.</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
+    /**
+     * <p>Specifies whether incremental backup is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enabled.</p>
+     * <p>*   **0**: disabled.</p>
+     */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
+    /**
+     * <p>The backup cycle. Valid values:</p>
+     * <br>
+     * <p>*   **Monday**</p>
+     * <p>*   **Tuesday**</p>
+     * <p>*   **Wednesday**</p>
+     * <p>*   **Thursday**</p>
+     * <p>*   **Friday**</p>
+     * <p>*   **Saturday**</p>
+     * <p>*   **Sunday**</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <p>The time when the data was backed up. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
+    /**
+     * <p>The next backup time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     */
     @NameInMap("PreferredNextBackupTime")
     public String preferredNextBackupTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

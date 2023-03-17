@@ -4,9 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The ID of the node.</p>
+     * <br>
+     * <p>>  You can set this parameter to query the parameter configurations of the specified node in a cluster instance.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -16,6 +24,9 @@ public class DescribeParametersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

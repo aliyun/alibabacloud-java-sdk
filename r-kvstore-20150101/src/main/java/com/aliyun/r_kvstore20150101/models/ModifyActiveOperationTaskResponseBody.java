@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTaskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the O&M task. Multiple IDs are separated with commas (,).</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

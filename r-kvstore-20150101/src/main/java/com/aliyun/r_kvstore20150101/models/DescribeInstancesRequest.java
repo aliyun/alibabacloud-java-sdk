@@ -4,36 +4,112 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    /**
+     * <p>The architecture of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **cluster**: cluster architecture</p>
+     * <p>*   **standard**: standard architecture</p>
+     * <p>*   **rwsplit**: read/write splitting architecture</p>
+     */
     @NameInMap("ArchitectureType")
     public String architectureType;
 
+    /**
+     * <p>The billing method of the instance. Default value: PostPaid. Valid values:</p>
+     * <br>
+     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid**: pay-as-you-go</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The edition of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Community**: Community Edition</p>
+     * <p>*   **Enterprise**: Enhance Edition (Tair)</p>
+     */
     @NameInMap("EditionType")
     public String editionType;
 
+    /**
+     * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>Specifies whether the instance has expired. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The cluster has expired.</p>
+     * <p>*   **false**: The cluster has not expired.</p>
+     */
     @NameInMap("Expired")
     public String expired;
 
+    /**
+     * <p>Specifies whether to return the child instances of distributed instances. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Only child instances are returned.</p>
+     * <p>*   **false**: Child instances are not returned.</p>
+     */
     @NameInMap("GlobalInstance")
     public Boolean globalInstance;
 
+    /**
+     * <p>The instance type. For more information, see [Instance types](~~107984~~).</p>
+     */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <p>The state of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: The instance is normal.</p>
+     * <p>*   **Creating**: The instance is being created.</p>
+     * <p>*   **Changing**: The configurations of the instance are being changed.</p>
+     * <p>*   **Inactive**: The instance is disabled.</p>
+     * <p>*   **Flushing**: The instance is being released.</p>
+     * <p>*   **Released**: The instance is released.</p>
+     * <p>*   **Transforming**: The billing method of the instance is changing.</p>
+     * <p>*   **Unavailable**: The instance is suspended.</p>
+     * <p>*   **Error**: The instance failed to be created.</p>
+     * <p>*   **Migrating**: The instance is being migrated.</p>
+     * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
+     * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
+     * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
+     * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
+     * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains available during the upgrade.</p>
+     * <br>
+     * <p>>  For more information about instance states, see [Instance states and impacts](~~200740~~).</p>
+     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    /**
+     * <p>The database engine of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Tair**</p>
+     * <p>*   **Redis**</p>
+     * <p>*   **Memcache**</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The network type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **CLASSIC**: classic network</p>
+     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -43,18 +119,37 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The private IP address of the instance.</p>
+     */
     @NameInMap("PrivateIp")
     public String privateIp;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>>  This parameter is required if you specify the **Tag.N.Key** and **Tag.N.Value** parameters when you call the operation.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <br>
+     * <p>>  You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -64,6 +159,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The keyword used for fuzzy search. The keyword can be based on an instance name or an instance ID.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
@@ -73,12 +171,21 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
+    /**
+     * <p>The ID of the vSwitch to which the instance is connected.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The zone ID of the instance.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -296,9 +403,17 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N of the instance. A tag is a key-value pair.</p>
+         * <br>
+         * <p>>  Valid values of N: 1 to 5.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N of the instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 

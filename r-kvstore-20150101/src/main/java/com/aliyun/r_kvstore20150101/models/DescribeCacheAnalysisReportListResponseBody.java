@@ -4,12 +4,21 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
+    /**
+     * <p>Details about the offline key analysis tasks.</p>
+     */
     @NameInMap("DailyTasks")
     public DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,30 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask extends TeaModel {
+        /**
+         * <p>The ID of the child node in the cluster instance.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The start time of the offline key analysis task.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The state of the offline key analysis task. Valid values:</p>
+         * <br>
+         * <p>*   **success**: The task is successful.</p>
+         * <p>*   **running**: The task is running.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -114,9 +138,15 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask extends TeaModel {
+        /**
+         * <p>The date when the offline key analysis task was performed.</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>Details about the offline key analysis tasks.</p>
+         */
         @NameInMap("Tasks")
         public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks tasks;
 

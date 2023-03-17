@@ -4,12 +4,26 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditLogConfigResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the audit log feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The audit log feature is enabled.</p>
+     * <p>*   **false**: The audit log feature is disabled.</p>
+     * <br>
+     * <p>>  You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.</p>
+     */
     @NameInMap("DbAudit")
     public String dbAudit;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The retention period of audit logs. Unit: day.</p>
+     */
     @NameInMap("Retention")
     public String retention;
 

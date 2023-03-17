@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -19,6 +22,9 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the security group that you want to manage. You can specify up to 10 security groups. Separate multiple security group IDs with commas (,).</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

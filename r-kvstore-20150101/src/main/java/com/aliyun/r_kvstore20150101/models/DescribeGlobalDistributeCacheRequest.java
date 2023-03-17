@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDistributeCacheRequest extends TeaModel {
+    /**
+     * <p>The ID of the distributed instance.</p>
+     */
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
 
@@ -13,9 +16,15 @@ public class DescribeGlobalDistributeCacheRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries to return each page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -28,6 +37,9 @@ public class DescribeGlobalDistributeCacheRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the child instance that is attached to the distributed instance.</p>
+     */
     @NameInMap("SubInstanceId")
     public String subInstanceId;
 

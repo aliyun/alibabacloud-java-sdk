@@ -4,18 +4,33 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
+    /**
+     * <p>Details of the instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstances> instances;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,58 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList extends TeaModel {
+        /**
+         * <p>The ID of the host in the dedicated cluster.</p>
+         */
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("NodeId")
         public Integer nodeId;
 
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("NodeIp")
         public String nodeIp;
 
+        /**
+         * <p>The node type. Valid values:</p>
+         * <br>
+         * <p>*   **db**: data node.</p>
+         * <p>*   **proxy**: proxy node.</p>
+         * <p>*   **normal**: regular node. This value is returned when the instance runs in the standard architecture.</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <p>The port number that is used to connect to the node.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The role of the node. Valid values:</p>
+         * <br>
+         * <p>*   **master**: master node</p>
+         * <p>*   **slave**: replica node</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The zone ID of the node.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -161,75 +207,171 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedClusterInstanceListResponseBodyInstances extends TeaModel {
+        /**
+         * <p>The default bandwidth of the instance. Unit: Mbit/s.</p>
+         */
         @NameInMap("BandWidth")
         public Long bandWidth;
 
+        /**
+         * <p>The architecture of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **logic**: cluster</p>
+         * <p>*   **normal**: standard</p>
+         */
         @NameInMap("CharacterType")
         public String characterType;
 
+        /**
+         * <p>The ID of the dedicated cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the dedicated cluster to which the instance belongs.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The private endpoint of the instance.</p>
+         */
         @NameInMap("ConnectionDomain")
         public String connectionDomain;
 
+        /**
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The current bandwidth of the instance, which consists of the default bandwidth and the additional bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("CurrentBandWidth")
         public Long currentBandWidth;
 
+        /**
+         * <p>The custom ID that is used for instance internal maintenance.</p>
+         */
         @NameInMap("CustomId")
         public String customId;
 
+        /**
+         * <p>The database engine of the instance. The return value is **Redis**.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The database engine version of the instance. The return value is **5.0**.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The instance type of the instance.</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>Details about the nodes.</p>
+         */
         @NameInMap("InstanceNodeList")
         public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> instanceNodeList;
 
+        /**
+         * <p>The state of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: The instance is normal.</p>
+         * <p>*   **Creating**: The instance is being created.</p>
+         * <p>*   **Changing**: The configurations of the instance are being changed.</p>
+         * <p>*   **Inactive**: The instance is disabled.</p>
+         * <p>*   **Flushing**: The instance is being released.</p>
+         * <p>*   **Released**: The instance is released.</p>
+         * <p>*   **Transforming**: The billing method of the instance is being changed.</p>
+         * <p>*   **Unavailable**: The instance is suspended.</p>
+         * <p>*   **Error**: The instance failed to be created.</p>
+         * <p>*   **Migrating**: The instance is being migrated.</p>
+         * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
+         * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
+         * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
+         * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
+         * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <p>The end time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
+        /**
+         * <p>The start time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
+        /**
+         * <p>The number of proxy nodes.</p>
+         * <br>
+         * <p>> *   If the return value is **0**, the proxy mode is disabled. If the return value is an integer that is greater than **0**, the proxy mode is enabled. This integer indicates the number of proxy nodes in the instance. For example, a value of **1** indicates that the instance has one proxy node.</p>
+         * <p>> *   This parameter is returned only when the instance is a [cluster instance](~~52228~~).</p>
+         */
         @NameInMap("ProxyCount")
         public Integer proxyCount;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of shards.</p>
+         * <br>
+         * <p>> This parameter is returned only when the ApsaraDB for Redis instance is a [cluster instance](~~52228~~).</p>
+         */
         @NameInMap("ShardCount")
         public Integer shardCount;
 
+        /**
+         * <p>The storage type of the instance. The return value is LOCAL_SSD, which indicates [enhanced SSDs (ESSDs)](~~122389~~).</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <p>The zone ID of the instance.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

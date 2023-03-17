@@ -4,48 +4,95 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class CreateTairInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The maximum bandwidth of the instance. Unit: MB/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
+    /**
+     * <p>The billing method of the instance. The return value is **PrePaid**, which indicates subscription.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The detailed configurations of the instance. The value is a JSON string. For more information about parameter description, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The internal endpoint of the instance.</p>
+     */
     @NameInMap("ConnectionDomain")
     public String connectionDomain;
 
+    /**
+     * <p>The maximum number of connections supported by the instance.</p>
+     */
     @NameInMap("Connections")
     public Long connections;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the instance.</p>
+     * <br>
+     * <p>> This parameter is returned only if the **InstanceName** parameter is specified in the request.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The state of the instance. The return value is **Creating**.</p>
+     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The port number of the instance.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The maximum number of read and write operations that can be processed by the instance per second. The value is a theoretical value.</p>
+     */
     @NameInMap("QPS")
     public Long QPS;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The zone ID of the instance.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
