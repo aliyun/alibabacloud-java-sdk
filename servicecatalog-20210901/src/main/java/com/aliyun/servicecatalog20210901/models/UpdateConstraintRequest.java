@@ -4,15 +4,25 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdateConstraintRequest extends TeaModel {
-    // 约束配置
+    /**
+     * <p>The configuration of the constraint.</p>
+     * <br>
+     * <p>Format: { "LocalRoleName": "\<role_name>" }.</p>
+     */
     @NameInMap("Config")
     public String config;
 
-    // 约束ID
+    /**
+     * <p>The ID of the constraint.</p>
+     */
     @NameInMap("ConstraintId")
     public String constraintId;
 
-    // 约束描述
+    /**
+     * <p>The description of the constraint.</p>
+     * <br>
+     * <p>The value must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 

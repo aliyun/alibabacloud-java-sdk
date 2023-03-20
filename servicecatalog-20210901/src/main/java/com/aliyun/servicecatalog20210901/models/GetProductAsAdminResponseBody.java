@@ -4,11 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class GetProductAsAdminResponseBody extends TeaModel {
-    // 产品详情
+    /**
+     * <p>The information about the product.</p>
+     */
     @NameInMap("ProductDetail")
     public GetProductAsAdminResponseBodyProductDetail productDetail;
 
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,31 +38,49 @@ public class GetProductAsAdminResponseBody extends TeaModel {
     }
 
     public static class GetProductAsAdminResponseBodyProductDetail extends TeaModel {
-        // 创建时间
+        /**
+         * <p>The time when the product is created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 产品描述
+        /**
+         * <p>The description of the product.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // 产品ARN
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the product.</p>
+         */
         @NameInMap("ProductArn")
         public String productArn;
 
-        // 产品ID
+        /**
+         * <p>The ID of the product.</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
-        // 产品名称
+        /**
+         * <p>The name of the product.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
-        // 产品类型
+        /**
+         * <p>The type of the product.</p>
+         * <br>
+         * <p>The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
-        // 提供者名称
+        /**
+         * <p>The provider of the product.</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 

@@ -4,7 +4,9 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListPrincipalsRequest extends TeaModel {
-    // 产品组合ID
+    /**
+     * <p>The ID of the product portfolio.</p>
+     */
     @NameInMap("PortfolioId")
     public String portfolioId;
 

@@ -4,21 +4,33 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListProvisionedProductsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 实例列表
+    /**
+     * <p>An array that consists of product instances.</p>
+     */
     @NameInMap("ProvisionedProductDetails")
     public java.util.List<ListProvisionedProductsResponseBodyProvisionedProductDetails> provisionedProductDetails;
 
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,78 +80,142 @@ public class ListProvisionedProductsResponseBody extends TeaModel {
     }
 
     public static class ListProvisionedProductsResponseBodyProvisionedProductDetails extends TeaModel {
-        // 创建时间
+        /**
+         * <p>The time when the product instance is created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 上一次执行的实例操作任务ID
+        /**
+         * <p>The ID of the task that is last run on the product instance.</p>
+         * <br>
+         * <p>The task can be one of the following types:</p>
+         * <br>
+         * <p>*   LaunchProduct: launches the product.</p>
+         * <p>*   UpdateProvisionedProduct: updates the information about the product instance.</p>
+         * <p>*   TerminateProvisionedProduct: terminates the product instance.</p>
+         */
         @NameInMap("LastProvisioningTaskId")
         public String lastProvisioningTaskId;
 
-        // 上一次成功执行的实例操作任务ID
+        /**
+         * <p>The ID of the last task successfully run on the product instance.</p>
+         * <br>
+         * <p>The task can be one of the following types:</p>
+         * <br>
+         * <p>*   LaunchProduct: launches the product.</p>
+         * <p>*   UpdateProvisionedProduct: updates the information about the product instance.</p>
+         * <p>*   TerminateProvisionedProduct: terminates the product instance.</p>
+         */
         @NameInMap("LastSuccessfulProvisioningTaskId")
         public String lastSuccessfulProvisioningTaskId;
 
-        // 上一次执行的任务ID
+        /**
+         * <p>The ID of the task that is last run.</p>
+         */
         @NameInMap("LastTaskId")
         public String lastTaskId;
 
-        // 归属人的RAM实体ID
+        /**
+         * <p>The ID of the RAM entity to which the product instance belongs.</p>
+         */
         @NameInMap("OwnerPrincipalId")
         public String ownerPrincipalId;
 
-        // 归属人的RAM实体类型
+        /**
+         * <p>The type of the Resource Access Management (RAM) entity to which the product instance belongs. Valid values:</p>
+         * <br>
+         * <p>*   RamUser: a RAM user</p>
+         * <p>*   RamRole: a RAM role</p>
+         */
         @NameInMap("OwnerPrincipalType")
         public String ownerPrincipalType;
 
-        // 产品组合ID
+        /**
+         * <p>The ID of the product portfolio.</p>
+         */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
-        // 产品ID
+        /**
+         * <p>The ID of the product.</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
-        // 产品名称
+        /**
+         * <p>The name of the product.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
-        // 产品版本ID
+        /**
+         * <p>The ID of the product version.</p>
+         */
         @NameInMap("ProductVersionId")
         public String productVersionId;
 
-        // 产品版本名称
+        /**
+         * <p>The name of the product version.</p>
+         */
         @NameInMap("ProductVersionName")
         public String productVersionName;
 
-        // 实例ARN
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the product instance.</p>
+         */
         @NameInMap("ProvisionedProductArn")
         public String provisionedProductArn;
 
-        // 实例ID
+        /**
+         * <p>The ID of the product instance.</p>
+         */
         @NameInMap("ProvisionedProductId")
         public String provisionedProductId;
 
-        // 实例名称
+        /**
+         * <p>The name of the product instance.</p>
+         */
         @NameInMap("ProvisionedProductName")
         public String provisionedProductName;
 
+        /**
+         * <p>The type of the product instance.</p>
+         * <br>
+         * <p>The value is fixed as RosStack, which indicates a ROS stack.</p>
+         */
         @NameInMap("ProvisionedProductType")
         public String provisionedProductType;
 
-        // ROS资源栈的ID
+        /**
+         * <p>The ID of the Resource Orchestration Service (ROS) stack.</p>
+         */
         @NameInMap("StackId")
         public String stackId;
 
-        // ROS资源栈所属的地域ID
+        /**
+         * <p>The ID of the region to which the ROS stack belongs.</p>
+         */
         @NameInMap("StackRegionId")
         public String stackRegionId;
 
-        // 实例状态
+        /**
+         * <p>The state of the product instance. Valid values:</p>
+         * <br>
+         * <p>*   Available: The product instance is available.</p>
+         * <p>*   UnderChange: The information about the product instance is being changed.</p>
+         * <p>*   Error: An exception occurred on the product instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // 实例状态说明
+        /**
+         * <p>The description of the state.</p>
+         * <br>
+         * <p>>  This parameter is returned only when Error is returned for the Status parameter.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 

@@ -4,7 +4,9 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class TerminateProvisionedProductRequest extends TeaModel {
-    // 实例ID
+    /**
+     * <p>The ID of the product instance.</p>
+     */
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;
 

@@ -4,23 +4,45 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdateProductVersionRequest extends TeaModel {
-    // 是否启用
+    /**
+     * <p>Specifies whether the product version is visible to end users. Valid values:</p>
+     * <br>
+     * <p>*   true: The product version is visible to end users. This is the default value.</p>
+     * <p>*   false: The product version is invisible to end users.</p>
+     */
     @NameInMap("Active")
     public Boolean active;
 
-    // 产品版本描述
+    /**
+     * <p>The description of the product version.</p>
+     * <br>
+     * <p>The value must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // 推荐信息
+    /**
+     * <p>The recommendation information. Valid values:</p>
+     * <br>
+     * <p>*   Default: No recommendation information is provided. This is the default value.</p>
+     * <p>*   Recommended: the recommendation version.</p>
+     * <p>*   Latest: the latest version.</p>
+     * <p>*   Deprecated: the version that is about to be deprecated.</p>
+     */
     @NameInMap("Guidance")
     public String guidance;
 
-    // 产品版本ID
+    /**
+     * <p>The ID of the product version.</p>
+     */
     @NameInMap("ProductVersionId")
     public String productVersionId;
 
-    // 产品版本名称
+    /**
+     * <p>The name of the product version.</p>
+     * <br>
+     * <p>The value must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("ProductVersionName")
     public String productVersionName;
 

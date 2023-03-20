@@ -4,7 +4,9 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListProductVersionsRequest extends TeaModel {
-    // 产品版本所属的产品ID
+    /**
+     * <p>The ID of the product to which the product version belongs.</p>
+     */
     @NameInMap("ProductId")
     public String productId;
 

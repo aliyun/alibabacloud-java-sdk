@@ -4,11 +4,17 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // 模板内容
+    /**
+     * <p>The content of the template.</p>
+     * <br>
+     * <p>For more information about the template syntax, see [Structure of Terraform templates](~~184397~~).</p>
+     */
     @NameInMap("TemplateBody")
     public String templateBody;
 

@@ -4,11 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListPrincipalsResponseBody extends TeaModel {
-    // RAM实体列表
+    /**
+     * <p>An array that consists of RAM entities.</p>
+     */
     @NameInMap("Principals")
     public java.util.List<ListPrincipalsResponseBodyPrincipals> principals;
 
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,18 @@ public class ListPrincipalsResponseBody extends TeaModel {
     }
 
     public static class ListPrincipalsResponseBodyPrincipals extends TeaModel {
-        // RAM实体ID
+        /**
+         * <p>The ID of the RAM entity.</p>
+         */
         @NameInMap("PrincipalId")
         public String principalId;
 
-        // RAM实体类型
+        /**
+         * <p>The type of the RAM entity. Valid values:</p>
+         * <br>
+         * <p>*   RamUser: a RAM user</p>
+         * <p>*   RamRole: a RAM role</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 

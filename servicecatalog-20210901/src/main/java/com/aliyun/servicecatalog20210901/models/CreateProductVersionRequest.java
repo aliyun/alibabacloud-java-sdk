@@ -4,31 +4,61 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateProductVersionRequest extends TeaModel {
-    // 是否启用
+    /**
+     * <p>Specifies whether the product version is visible to end users. Valid values:</p>
+     * <br>
+     * <p>*   true: The product version is visible to end users. This is the default value.</p>
+     * <p>*   false: The product version is invisible to end users.</p>
+     */
     @NameInMap("Active")
     public Boolean active;
 
-    // 产品版本描述
+    /**
+     * <p>The description of the product version.</p>
+     * <br>
+     * <p>The value must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // 推荐信息
+    /**
+     * <p>The recommendation information. Valid values:</p>
+     * <br>
+     * <p>*   Default: No recommendation information is provided. This is the default value.</p>
+     * <p>*   Recommended: the recommendation version.</p>
+     * <p>*   Latest: the latest version.</p>
+     * <p>*   Deprecated: the version that is about to be deprecated.</p>
+     */
     @NameInMap("Guidance")
     public String guidance;
 
-    // 产品版本所属的产品ID
+    /**
+     * <p>The ID of the product to which the product version belongs.</p>
+     */
     @NameInMap("ProductId")
     public String productId;
 
-    // 产品版本名称
+    /**
+     * <p>The name of the product version.</p>
+     * <br>
+     * <p>The value must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("ProductVersionName")
     public String productVersionName;
 
-    // 模板类型
+    /**
+     * <p>The type of the template.</p>
+     * <br>
+     * <p>The value is fixed as RosTerraformTemplate, which specifies that the Terraform template is supported by Resource Orchestration Service (ROS).</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 
-    // 模板的OSS地址
+    /**
+     * <p>The URL of the template.</p>
+     * <br>
+     * <p>For more information about how to obtain the URL of a template, see [CreateTemplate](~~CreateTemplate~~).</p>
+     */
     @NameInMap("TemplateUrl")
     public String templateUrl;
 

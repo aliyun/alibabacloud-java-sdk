@@ -4,14 +4,21 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateProductResponseBody extends TeaModel {
-    // 产品ID
+    /**
+     * <p>The ID of the product.</p>
+     */
     @NameInMap("ProductId")
     public String productId;
 
+    /**
+     * <p>The ID of the product version.</p>
+     */
     @NameInMap("ProductVersionId")
     public String productVersionId;
 
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

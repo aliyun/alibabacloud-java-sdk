@@ -4,21 +4,42 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 实例ID
+    /**
+     * <p>The ID of the product instance.</p>
+     */
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;
 
-    // 排序字段
+    /**
+     * <p>The field that is used to sort the queried data.</p>
+     * <br>
+     * <p>The value is fixed as CreateTime, which specifies the creation time of tasks.</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 排序方式
+    /**
+     * <p>The order in which you want to sort the queried data. Valid values:</p>
+     * <br>
+     * <p>*   Asc: the ascending order</p>
+     * <p>*   Desc: the descending order</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 

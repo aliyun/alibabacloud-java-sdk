@@ -4,23 +4,41 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateProductShrinkRequest extends TeaModel {
-    // 产品描述
+    /**
+     * <p>The description of the product.</p>
+     * <br>
+     * <p>The value must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // 产品名称
+    /**
+     * <p>The name of the product.</p>
+     * <br>
+     * <p>The value must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("ProductName")
     public String productName;
 
-    // 产品类型
+    /**
+     * <p>The type of the product.</p>
+     * <br>
+     * <p>The value is fixed as Ros, which specifies Resource Orchestration Service (ROS).</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
-    // 产品版本相关的参数
+    /**
+     * <p>The information about the product version.</p>
+     */
     @NameInMap("ProductVersionParameters")
     public String productVersionParametersShrink;
 
-    // 提供者名称
+    /**
+     * <p>The provider of the product.</p>
+     * <br>
+     * <p>The value must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("ProviderName")
     public String providerName;
 

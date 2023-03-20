@@ -4,11 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class GetConstraintResponseBody extends TeaModel {
-    // 约束详情
+    /**
+     * <p>The details of the constraint.</p>
+     */
     @NameInMap("ConstraintDetail")
     public GetConstraintResponseBodyConstraintDetail constraintDetail;
 
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,34 +38,57 @@ public class GetConstraintResponseBody extends TeaModel {
     }
 
     public static class GetConstraintResponseBodyConstraintDetail extends TeaModel {
-        // 约束配置
+        /**
+         * <p>The configuration of the constraint.</p>
+         * <br>
+         * <p>Format: { "LocalRoleName": "\<role_name>" }.</p>
+         */
         @NameInMap("Config")
         public String config;
 
-        // 约束ID
+        /**
+         * <p>The ID of the constraint.</p>
+         */
         @NameInMap("ConstraintId")
         public String constraintId;
 
-        // 约束类型
+        /**
+         * <p>The type of the constraint.</p>
+         * <br>
+         * <p>The value is fixed as Launch, which indicates the launch constraint.</p>
+         */
         @NameInMap("ConstraintType")
         public String constraintType;
 
-        // 创建时间
+        /**
+         * <p>The time when the constraint was created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 描述
+        /**
+         * <p>The description of the constraint.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // 约束所属的产品组合ID
+        /**
+         * <p>The ID of the product portfolio to which the constraint belongs.</p>
+         */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
-        // 约束的产品ID
+        /**
+         * <p>The ID of the product for which the constraint is created.</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
+        /**
+         * <p>The name of the product.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
