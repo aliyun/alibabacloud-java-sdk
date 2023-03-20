@@ -4,6 +4,9 @@ package com.aliyun.neuron20211115.models;
 import com.aliyun.tea.*;
 
 public class NeuronBizUserTokenCreateCmd extends TeaModel {
+    @NameInMap("accountId")
+    public Long accountId;
+
     @NameInMap("bizId")
     public String bizId;
 
@@ -13,6 +16,14 @@ public class NeuronBizUserTokenCreateCmd extends TeaModel {
     public static NeuronBizUserTokenCreateCmd build(java.util.Map<String, ?> map) throws Exception {
         NeuronBizUserTokenCreateCmd self = new NeuronBizUserTokenCreateCmd();
         return TeaModel.build(map, self);
+    }
+
+    public NeuronBizUserTokenCreateCmd setAccountId(Long accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public Long getAccountId() {
+        return this.accountId;
     }
 
     public NeuronBizUserTokenCreateCmd setBizId(String bizId) {
