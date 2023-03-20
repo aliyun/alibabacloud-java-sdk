@@ -4,11 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdateConstraintResponseBody extends TeaModel {
-    // 约束ID
+    /**
+     * <p>The ID of the constraint.</p>
+     */
     @NameInMap("ConstraintId")
     public String constraintId;
 
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

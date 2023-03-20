@@ -4,21 +4,33 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListProductsAsAdminResponseBody extends TeaModel {
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 产品列表
+    /**
+     * <p>An array that consists of products.</p>
+     */
     @NameInMap("ProductDetails")
     public java.util.List<ListProductsAsAdminResponseBodyProductDetails> productDetails;
 
-    // Id of the request
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // 总记录数
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,31 +80,49 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
     }
 
     public static class ListProductsAsAdminResponseBodyProductDetails extends TeaModel {
-        // 产品创建时间
+        /**
+         * <p>The time when the product was created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 产品描述
+        /**
+         * <p>The description of the product.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // 产品ARN
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the product.</p>
+         */
         @NameInMap("ProductArn")
         public String productArn;
 
-        // 产品ID
+        /**
+         * <p>The ID of the product.</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
-        // 产品名字
+        /**
+         * <p>The name of the product.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
-        // 产品类型
+        /**
+         * <p>The type of the product.</p>
+         * <br>
+         * <p>The value is fixed as Ros, which specifies Resource Orchestration Service (ROS).</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
-        // 产品提供方
+        /**
+         * <p>The provider of the product.</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 

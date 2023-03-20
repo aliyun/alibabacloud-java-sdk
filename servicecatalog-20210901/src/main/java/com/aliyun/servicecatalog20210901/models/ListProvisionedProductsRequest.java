@@ -4,25 +4,51 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListProvisionedProductsRequest extends TeaModel {
-    // 访问过滤器
+    /**
+     * <p>The access filter. Valid values:</p>
+     * <br>
+     * <p>*   User: queries the product instances that are created by the current requester. This is the default value.</p>
+     * <p>*   Account: queries the product instances that belong to the current Alibaba Cloud account.</p>
+     */
     @NameInMap("AccessLevelFilter")
     public String accessLevelFilter;
 
-    // 过滤条件
+    /**
+     * <p>The filter condition.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<ListProvisionedProductsRequestFilters> filters;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 排序字段
+    /**
+     * <p>The field that is used to sort the queried data.</p>
+     * <br>
+     * <p>The value is fixed as CreateTime, which specifies the creation time of product instances.</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 排序方式
+    /**
+     * <p>The order in which you want to sort the queried data. Valid values:</p>
+     * <br>
+     * <p>*   Asc: the ascending order</p>
+     * <p>*   Desc: the descending order</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
@@ -80,11 +106,18 @@ public class ListProvisionedProductsRequest extends TeaModel {
     }
 
     public static class ListProvisionedProductsRequestFilters extends TeaModel {
-        // 过滤条件的名称
+        /**
+         * <p>The name of the filter condition. Valid values:</p>
+         * <br>
+         * <p>*   ProvisionedProductName: performs exact matches by product instance name. Product instance names are not case-sensitive.</p>
+         * <p>*   FullTextSearch: performs full-text searches by product instance name. Fuzzy match is supported.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // 过滤条件的值
+        /**
+         * <p>The value of the filter condition.</p>
+         */
         @NameInMap("Value")
         public String value;
 

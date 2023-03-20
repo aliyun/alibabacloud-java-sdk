@@ -4,11 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class AssociateProductWithPortfolioRequest extends TeaModel {
-    // 产品组合ID
+    /**
+     * <p>The ID of the product portfolio.</p>
+     */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
-    // 产品ID
+    /**
+     * <p>The ID of the product.</p>
+     */
     @NameInMap("ProductId")
     public String productId;
 

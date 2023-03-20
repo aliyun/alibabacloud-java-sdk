@@ -4,21 +4,42 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListProductsAsEndUserRequest extends TeaModel {
-    // 过滤条件
+    /**
+     * <p>An array that consists of filter conditions.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<ListProductsAsEndUserRequestFilters> filters;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 排序字段
+    /**
+     * <p>The field that is used to sort the queried data.</p>
+     * <br>
+     * <p>The value is fixed as CreateTime, which specifies the creation time of products.</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 排序方式
+    /**
+     * <p>The order in which you want to sort the queried data. Valid values:</p>
+     * <br>
+     * <p>*   Asc: the ascending order</p>
+     * <p>*   Desc: the descending order</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
@@ -68,11 +89,18 @@ public class ListProductsAsEndUserRequest extends TeaModel {
     }
 
     public static class ListProductsAsEndUserRequestFilters extends TeaModel {
-        // 过滤条件的名称
+        /**
+         * <p>The name of the filter condition. Valid values:</p>
+         * <br>
+         * <p>*   ProductName: performs exact matches by product name. Product names are not case-sensitive.</p>
+         * <p>*   FullTextSearch: performs full-text searches by product name, product provider, or product description. Fuzzy match is supported.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // 过滤条件的值
+        /**
+         * <p>The value of the filter condition.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,11 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // 模板的OSS地址
+    /**
+     * <p>The URL of the template.</p>
+     */
     @NameInMap("TemplateUrl")
     public String templateUrl;
 

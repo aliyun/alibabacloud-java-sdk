@@ -3,7 +3,7 @@ package com.aliyun.servicecatalog20210901.models;
 
 import com.aliyun.tea.*;
 
-public class ListLaunchOptionsResponse extends TeaModel {
+public class CancelProvisionedProductPlanResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListLaunchOptionsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListLaunchOptionsResponseBody body;
+    public CancelProvisionedProductPlanResponseBody body;
 
-    public static ListLaunchOptionsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListLaunchOptionsResponse self = new ListLaunchOptionsResponse();
+    public static CancelProvisionedProductPlanResponse build(java.util.Map<String, ?> map) throws Exception {
+        CancelProvisionedProductPlanResponse self = new CancelProvisionedProductPlanResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListLaunchOptionsResponse setHeaders(java.util.Map<String, String> headers) {
+    public CancelProvisionedProductPlanResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListLaunchOptionsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListLaunchOptionsResponse setStatusCode(Integer statusCode) {
+    public CancelProvisionedProductPlanResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListLaunchOptionsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListLaunchOptionsResponse setBody(ListLaunchOptionsResponseBody body) {
+    public CancelProvisionedProductPlanResponse setBody(CancelProvisionedProductPlanResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListLaunchOptionsResponseBody getBody() {
+    public CancelProvisionedProductPlanResponseBody getBody() {
         return this.body;
     }
 

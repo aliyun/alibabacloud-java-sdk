@@ -4,11 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class GetPortfolioResponseBody extends TeaModel {
-    // 产品组合详情
+    /**
+     * <p>The details of the product portfolio.</p>
+     */
     @NameInMap("PortfolioDetail")
     public GetPortfolioResponseBodyPortfolioDetail portfolioDetail;
 
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,27 +38,41 @@ public class GetPortfolioResponseBody extends TeaModel {
     }
 
     public static class GetPortfolioResponseBodyPortfolioDetail extends TeaModel {
-        // 产品组合创建时间
+        /**
+         * <p>The time when the product portfolio is created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 产品组合描述
+        /**
+         * <p>The description of the product portfolio.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // 产品组合ARN
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the product portfolio.</p>
+         */
         @NameInMap("PortfolioArn")
         public String portfolioArn;
 
-        // 产品组合ID
+        /**
+         * <p>The ID of the product portfolio.</p>
+         */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
-        // 产品组合名称
+        /**
+         * <p>The name of the product portfolio.</p>
+         */
         @NameInMap("PortfolioName")
         public String portfolioName;
 
-        // 提供者名称
+        /**
+         * <p>The provider of the product portfolio.</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 

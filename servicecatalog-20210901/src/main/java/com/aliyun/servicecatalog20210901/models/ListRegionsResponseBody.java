@@ -4,11 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
-    // 地域列表
+    /**
+     * <p>An array that consists of regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<ListRegionsResponseBodyRegions> regions;
 
-    // 请求ID
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static class ListRegionsResponseBodyRegions extends TeaModel {
-        // 地域名称
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
-        // 地域接入地址
+        /**
+         * <p>The endpoint of the region.</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
-        // 地域ID
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
