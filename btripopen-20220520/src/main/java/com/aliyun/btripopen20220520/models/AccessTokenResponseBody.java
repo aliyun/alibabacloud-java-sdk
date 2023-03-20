@@ -19,6 +19,9 @@ public class AccessTokenResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("success")
+    public Boolean success;
+
     /**
      * <p>traceId</p>
      */
@@ -68,6 +71,14 @@ public class AccessTokenResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AccessTokenResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public AccessTokenResponseBody setTraceId(String traceId) {
