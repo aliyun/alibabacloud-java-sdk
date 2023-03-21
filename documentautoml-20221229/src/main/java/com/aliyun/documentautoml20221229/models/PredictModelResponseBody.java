@@ -8,7 +8,7 @@ public class PredictModelResponseBody extends TeaModel {
     public Integer code;
 
     @NameInMap("Data")
-    public String data;
+    public java.util.Map<String, ?> data;
 
     @NameInMap("Message")
     public String message;
@@ -32,11 +32,11 @@ public class PredictModelResponseBody extends TeaModel {
         return this.code;
     }
 
-    public PredictModelResponseBody setData(String data) {
+    public PredictModelResponseBody setData(java.util.Map<String, ?> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
