@@ -46,6 +46,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("RuntimePolicy")
+    public CreateAppInstanceGroupRequestRuntimePolicy runtimePolicy;
+
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 
@@ -170,6 +173,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public CreateAppInstanceGroupRequest setRuntimePolicy(CreateAppInstanceGroupRequestRuntimePolicy runtimePolicy) {
+        this.runtimePolicy = runtimePolicy;
+        return this;
+    }
+    public CreateAppInstanceGroupRequestRuntimePolicy getRuntimePolicy() {
+        return this.runtimePolicy;
     }
 
     public CreateAppInstanceGroupRequest setSessionTimeout(Integer sessionTimeout) {
@@ -474,6 +485,25 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         }
         public Boolean getWarmUp() {
             return this.warmUp;
+        }
+
+    }
+
+    public static class CreateAppInstanceGroupRequestRuntimePolicy extends TeaModel {
+        @NameInMap("SessionType")
+        public String sessionType;
+
+        public static CreateAppInstanceGroupRequestRuntimePolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestRuntimePolicy self = new CreateAppInstanceGroupRequestRuntimePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestRuntimePolicy setSessionType(String sessionType) {
+            this.sessionType = sessionType;
+            return this;
+        }
+        public String getSessionType() {
+            return this.sessionType;
         }
 
     }

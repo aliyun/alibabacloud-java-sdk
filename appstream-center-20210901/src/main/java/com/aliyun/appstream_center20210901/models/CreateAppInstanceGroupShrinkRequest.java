@@ -46,6 +46,9 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("RuntimePolicy")
+    public String runtimePolicyShrink;
+
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 
@@ -170,6 +173,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setRuntimePolicyShrink(String runtimePolicyShrink) {
+        this.runtimePolicyShrink = runtimePolicyShrink;
+        return this;
+    }
+    public String getRuntimePolicyShrink() {
+        return this.runtimePolicyShrink;
     }
 
     public CreateAppInstanceGroupShrinkRequest setSessionTimeout(Integer sessionTimeout) {
