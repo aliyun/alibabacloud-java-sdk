@@ -4,39 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainDetailResponseBody extends TeaModel {
-    /**
-     * <p>The total number of alerts in your website assets.</p>
-     */
     @NameInMap("AlarmCount")
     public Integer alarmCount;
 
-    /**
-     * <p>The domain name.</p>
-     */
     @NameInMap("Domain")
     public String domain;
 
-    /**
-     * <p>An array that consists of the details about the domain asset.</p>
-     */
     @NameInMap("DomainDetailItems")
     public java.util.List<DescribeDomainDetailResponseBodyDomainDetailItems> domainDetailItems;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The name of the root domain that corresponds to the domain.</p>
-     */
     @NameInMap("RootDomain")
     public String rootDomain;
 
-    /**
-     * <p>The total number of vulnerabilities in your website assets.</p>
-     */
     @NameInMap("VulCount")
     public Integer vulCount;
 
@@ -94,45 +76,21 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainDetailResponseBodyDomainDetailItems extends TeaModel {
-        /**
-         * <p>The type of the domain asset. Valid values:</p>
-         * <br>
-         * <p>*   **0**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **1**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **2**: a Network Address Translation (NAT) gateway</p>
-         * <p>*   **3**: an ApsaraDB RDS instance</p>
-         * <p>*   **4**: an ApsaraDB for MongoDB instance</p>
-         */
         @NameInMap("AssetType")
         public String assetType;
 
-        /**
-         * <p>The instance ID of the asset.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the asset.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The public IP address of the asset.</p>
-         */
         @NameInMap("InternetIp")
         public String internetIp;
 
-        /**
-         * <p>The private IP address of the asset.</p>
-         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        /**
-         * <p>The instance UUID of the domain asset.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 

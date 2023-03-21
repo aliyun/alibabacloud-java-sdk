@@ -4,11 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UnbindAegisRequest extends TeaModel {
-    /**
-     * <p>The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
-     */
     @NameInMap("Uuids")
     public String uuids;
 

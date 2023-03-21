@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddPrivateRegistryResponseBody extends TeaModel {
-    /**
-     * <p>The handling result.</p>
-     */
     @NameInMap("Data")
     public AddPrivateRegistryResponseBodyData data;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,100 +32,45 @@ public class AddPrivateRegistryResponseBody extends TeaModel {
     }
 
     public static class AddPrivateRegistryResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the user.</p>
-         */
         @NameInMap("AliUid")
         public Long aliUid;
 
-        /**
-         * <p>The domain name of the image repository.</p>
-         */
         @NameInMap("DomainName")
         public String domainName;
 
-        /**
-         * <p>The ID of the image repository.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: Internet</p>
-         * <p>*   **2**: VPC</p>
-         */
         @NameInMap("NetType")
         public Long netType;
 
-        /**
-         * <p>The password.</p>
-         */
         @NameInMap("Password")
         public String password;
 
-        /**
-         * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **1**: HTTP</p>
-         * <p>*   **2**: HTTPS</p>
-         */
         @NameInMap("ProtocolType")
         public Long protocolType;
 
-        /**
-         * <p>The region ID of the image repository.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The IP address of the image repository.</p>
-         */
         @NameInMap("RegistryHostIp")
         public String registryHostIp;
 
-        /**
-         * <p>The type of the image repository. Valid values:</p>
-         * <br>
-         * <p>*   **harbor**</p>
-         * <p>*   **quay**</p>
-         */
         @NameInMap("RegistryType")
         public String registryType;
 
-        /**
-         * <p>The version of the image repository. Default value: -. Valid values:</p>
-         * <br>
-         * <p>*   **-**: the default version</p>
-         * <p>*   **V1**</p>
-         * <p>*   **V2**</p>
-         */
         @NameInMap("RegistryVersion")
         public String registryVersion;
 
-        /**
-         * <p>The value of the token.</p>
-         */
         @NameInMap("Token")
         public String token;
 
-        /**
-         * <p>The number of scan tasks that are performed per hour.</p>
-         */
         @NameInMap("TransPerHour")
         public Integer transPerHour;
 
-        /**
-         * <p>The username.</p>
-         */
         @NameInMap("UserName")
         public String userName;
 
-        /**
-         * <p>The ID of the VPC.</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 

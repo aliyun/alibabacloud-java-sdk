@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecureSuggestionResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the unhandled security risks.</p>
-     */
     @NameInMap("Suggestions")
     public java.util.List<DescribeSecureSuggestionResponseBodySuggestions> suggestions;
 
-    /**
-     * <p>The total number of unhandled security risks.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -52,21 +43,12 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     }
 
     public static class DescribeSecureSuggestionResponseBodySuggestionsDetail extends TeaModel {
-        /**
-         * <p>The description of the suggestion.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The subtype of the unhandled security risk.</p>
-         */
         @NameInMap("SubType")
         public String subType;
 
-        /**
-         * <p>The name of the unhandled risk.</p>
-         */
         @NameInMap("Title")
         public String title;
 
@@ -102,29 +84,12 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     }
 
     public static class DescribeSecureSuggestionResponseBodySuggestions extends TeaModel {
-        /**
-         * <p>An array that consists of the details about the suggestion.</p>
-         */
         @NameInMap("Detail")
         public java.util.List<DescribeSecureSuggestionResponseBodySuggestionsDetail> detail;
 
-        /**
-         * <p>The penalty point of an item.</p>
-         */
         @NameInMap("Points")
         public Integer points;
 
-        /**
-         * <p>The type of the unhandled security risk. Valid values:</p>
-         * <br>
-         * <p>*   **SS_REINFORCE**: missing configuration of key features, such as the antivirus feature</p>
-         * <p>*   **SS_ALARM**: unhandled alerts</p>
-         * <p>*   **SS_VUL**: unfixed vulnerabilities</p>
-         * <p>*   **SS_HC**: baseline risks</p>
-         * <p>*   **SS_AK**: AccessKey pair leaks</p>
-         * <p>*   **SS_CLOUD_HC**: configuration risks of cloud services</p>
-         * <p>*   **OTHER**: others</p>
-         */
         @NameInMap("SuggestType")
         public String suggestType;
 

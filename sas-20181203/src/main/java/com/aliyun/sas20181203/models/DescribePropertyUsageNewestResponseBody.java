@@ -4,27 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyUsageNewestResponseBody extends TeaModel {
-    /**
-     * <p>The number of accounts.</p>
-     */
     @NameInMap("ItemCount")
     public Integer itemCount;
 
-    /**
-     * <p>An array that consists of the accounts.</p>
-     */
     @NameInMap("NewestStatisticItems")
     public java.util.List<DescribePropertyUsageNewestResponseBodyNewestStatisticItems> newestStatisticItems;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The type of the accounts that are created on the server. The value is fixed as user, which indicates user accounts.</p>
-     */
     @NameInMap("Type")
     public String type;
 
@@ -66,15 +54,9 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
     }
 
     public static class DescribePropertyUsageNewestResponseBodyNewestStatisticItems extends TeaModel {
-        /**
-         * <p>The time when the account was created.</p>
-         */
         @NameInMap("Create")
         public Long create;
 
-        /**
-         * <p>The username of the account.</p>
-         */
         @NameInMap("Name")
         public String name;
 

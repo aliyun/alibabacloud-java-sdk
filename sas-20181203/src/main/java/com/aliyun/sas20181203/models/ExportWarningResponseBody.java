@@ -4,23 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ExportWarningResponseBody extends TeaModel {
-    /**
-     * <p>The name of the file that contains exported baseline check results.</p>
-     */
     @NameInMap("FileName")
     public String fileName;
 
-    /**
-     * <p>The ID of the task to export baseline check results.</p>
-     * <br>
-     * <p>> You can call use the value of this parameter to call the [DescribeHcExportInfo](~~DescribeHcExportInfo~~) operation to query the export progress.</p>
-     */
     @NameInMap("Id")
     public Long id;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

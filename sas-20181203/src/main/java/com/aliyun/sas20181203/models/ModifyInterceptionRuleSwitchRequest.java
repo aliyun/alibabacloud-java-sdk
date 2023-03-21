@@ -4,28 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyInterceptionRuleSwitchRequest extends TeaModel {
-    /**
-     * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The IDs of the rules whose status you want to change. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [ListInterceptionRulePage](~~182997~~) operation to query the IDs of rules.</p>
-     */
     @NameInMap("RuleIds")
     public String ruleIds;
 
-    /**
-     * <p>Specifies whether the rule is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **1**: enabled</p>
-     * <p>*   **0**: disabled</p>
-     */
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;
 

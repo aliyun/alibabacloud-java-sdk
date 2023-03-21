@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class StartPreCheckDatabaseResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the database precheck task.</p>
-     */
     @NameInMap("CreateMark")
     public String createMark;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientConfSetupResponseBody extends TeaModel {
-    /**
-     * <p>The configurations of the Security Center agent.</p>
-     */
     @NameInMap("ClientConf")
     public DescribeClientConfSetupResponseBodyClientConf clientConf;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,27 +32,12 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
     }
 
     public static class DescribeClientConfSetupResponseBodyClientConf extends TeaModel {
-        /**
-         * <p>The configurations of the usage for the Security Center agent.</p>
-         */
         @NameInMap("Config")
         public String config;
 
-        /**
-         * <p>The tag that is added to the configuration.</p>
-         */
         @NameInMap("StrategyTag")
         public String strategyTag;
 
-        /**
-         * <p>The value of the tag:</p>
-         * <br>
-         * <p>- advanced</p>
-         * <br>
-         * <p>- basic</p>
-         * <br>
-         * <p>- major</p>
-         */
         @NameInMap("StrategyTagValue")
         public String strategyTagValue;
 

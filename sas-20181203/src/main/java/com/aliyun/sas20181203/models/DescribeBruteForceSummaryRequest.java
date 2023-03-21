@@ -7,9 +7,6 @@ public class DescribeBruteForceSummaryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The source IP address of the request.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

@@ -4,42 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The HTTP status code.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The error message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The handling result of an exception. Valid values:</p>
-     * <br>
-     * <p>*   **true**: successful</p>
-     * <p>*   **false**: failed</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The time consumed for the request. Unit: seconds.</p>
-     */
     @NameInMap("TimeCost")
     public Long timeCost;
 

@@ -4,11 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UninstallUniBackupAgentRequest extends TeaModel {
-    /**
-     * <p>The ID of the anti-ransomware policy.</p>
-     * <br>
-     * <p>> You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
-     */
     @NameInMap("PolicyId")
     public Long policyId;
 

@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListInterceptionTargetPageResponseBody extends TeaModel {
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public ListInterceptionTargetPageResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the network objects.</p>
-     */
     @NameInMap("RuleTargetList")
     public java.util.List<ListInterceptionTargetPageResponseBodyRuleTargetList> ruleTargetList;
 
@@ -52,21 +43,12 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
     }
 
     public static class ListInterceptionTargetPageResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -102,69 +84,33 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
     }
 
     public static class ListInterceptionTargetPageResponseBodyRuleTargetList extends TeaModel {
-        /**
-         * <p>The name of the application to which the network object belongs.</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The ID of the container cluster.</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The name of the container cluster.</p>
-         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        /**
-         * <p>An array that consists of the images of the network object.</p>
-         */
         @NameInMap("ImageList")
         public java.util.List<String> imageList;
 
-        /**
-         * <p>The namespace to which the network object belongs.</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The rule type. Valid values:</p>
-         * <br>
-         * <p>*   customize: custom rule</p>
-         */
         @NameInMap("RuleType")
         public String ruleType;
 
-        /**
-         * <p>An array that consists of the labels specified for the network object.</p>
-         */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
 
-        /**
-         * <p>The ID of the network object.</p>
-         * <br>
-         * <p>> You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.</p>
-         */
         @NameInMap("TargetId")
         public Long targetId;
 
-        /**
-         * <p>The name of the network object.</p>
-         */
         @NameInMap("TargetName")
         public String targetName;
 
-        /**
-         * <p>The type of the network object. Valid values:</p>
-         * <br>
-         * <p>*   IMAGE</p>
-         */
         @NameInMap("TargetType")
         public String targetType;
 

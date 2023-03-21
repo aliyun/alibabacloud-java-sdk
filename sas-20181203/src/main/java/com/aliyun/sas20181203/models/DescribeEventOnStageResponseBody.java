@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventOnStageResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The platforms that are supported by the feature of container threat detection.</p>
-     */
     @NameInMap("SecurityEventStageResponse")
     public DescribeEventOnStageResponseBodySecurityEventStageResponse securityEventStageResponse;
 
@@ -38,13 +32,6 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
     }
 
     public static class DescribeEventOnStageResponseBodySecurityEventStageResponse extends TeaModel {
-        /**
-         * <p>The platform that is supported by the feature of container threat detection. Valid values:</p>
-         * <br>
-         * <p>*   **container**</p>
-         * <p>*   **linux**</p>
-         * <p>*   **windows**</p>
-         */
         @NameInMap("SecurityEventOnStag")
         public java.util.Map<String, ?> securityEventOnStag;
 

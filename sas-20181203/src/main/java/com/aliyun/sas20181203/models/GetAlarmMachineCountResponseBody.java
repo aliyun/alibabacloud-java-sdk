@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetAlarmMachineCountResponseBody extends TeaModel {
-    /**
-     * <p>The data returned.</p>
-     */
     @NameInMap("Data")
     public GetAlarmMachineCountResponseBodyData data;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,9 +32,6 @@ public class GetAlarmMachineCountResponseBody extends TeaModel {
     }
 
     public static class GetAlarmMachineCountResponseBodyData extends TeaModel {
-        /**
-         * <p>The number of servers on which alerts are generated.</p>
-         */
         @NameInMap("MachineCount")
         public Integer machineCount;
 

@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListPodRiskResponseBody extends TeaModel {
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public ListPodRiskResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>An array that consists of the risks.</p>
-     */
     @NameInMap("PodRiskList")
     public java.util.List<ListPodRiskResponseBodyPodRiskList> podRiskList;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,27 +43,15 @@ public class ListPodRiskResponseBody extends TeaModel {
     }
 
     public static class ListPodRiskResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -116,69 +95,36 @@ public class ListPodRiskResponseBody extends TeaModel {
     }
 
     public static class ListPodRiskResponseBodyPodRiskList extends TeaModel {
-        /**
-         * <p>The number of alerts that are generated for the pod.</p>
-         */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
-        /**
-         * <p>The ID of the container cluster.</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The name of the cluster.</p>
-         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        /**
-         * <p>The timestamp when the pod was created. Unit: milliseconds.</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The number of baseline risk items that are detected in the pod.</p>
-         */
         @NameInMap("HcCount")
         public Integer hcCount;
 
-        /**
-         * <p>The ID of the node.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The namespace of the Kubernetes cluster.</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The name of the node.</p>
-         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        /**
-         * <p>The name of the pod.</p>
-         */
         @NameInMap("Pod")
         public String pod;
 
-        /**
-         * <p>The IP address of the pod.</p>
-         */
         @NameInMap("PodIp")
         public String podIp;
 
-        /**
-         * <p>The number of vulnerabilities that are detected in the pod.</p>
-         */
         @NameInMap("VulCount")
         public Integer vulCount;
 

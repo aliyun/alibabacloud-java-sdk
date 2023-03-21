@@ -4,33 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the configurations of the vulnerability scan feature.</p>
-     */
     @NameInMap("TargetStats")
     public java.util.List<DescribeVulTargetStatisticsResponseBodyTargetStats> targetStats;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,27 +65,12 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulTargetStatisticsResponseBodyTargetStatsTargets extends TeaModel {
-        /**
-         * <p>Indicates whether the configurations are applied to the server. Valid values:</p>
-         * <br>
-         * <p>*   **add**: yes</p>
-         * <p>*   **del**: no</p>
-         */
         @NameInMap("Flag")
         public String flag;
 
-        /**
-         * <p>The group ID or UUID of the server to which the configurations are applied.</p>
-         */
         @NameInMap("Target")
         public String target;
 
-        /**
-         * <p>The condition by which the configurations are applied to the server. Valid values:</p>
-         * <br>
-         * <p>*   **uuid**: the UUID of the server</p>
-         * <p>*   **groupId**: the ID of the server group</p>
-         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -136,32 +106,15 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulTargetStatisticsResponseBodyTargetStats extends TeaModel {
-        /**
-         * <p>An array that consists of available servers.</p>
-         */
         @NameInMap("Targets")
         public java.util.List<DescribeVulTargetStatisticsResponseBodyTargetStatsTargets> targets;
 
-        /**
-         * <p>The total number of servers.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        /**
-         * <p>The number of servers to which the configurations are applied.</p>
-         */
         @NameInMap("UuidCount")
         public Integer uuidCount;
 
-        /**
-         * <p>The type of the vulnerabilities. Valid values:</p>
-         * <br>
-         * <p>*   cve: Linux software vulnerabilities</p>
-         * <p>*   sys: Windows system vulnerabilities</p>
-         * <p>*   cms: Web-CMS vulnerabilities</p>
-         * <p>*   emg: urgent vulnerabilities</p>
-         */
         @NameInMap("VulType")
         public String vulType;
 

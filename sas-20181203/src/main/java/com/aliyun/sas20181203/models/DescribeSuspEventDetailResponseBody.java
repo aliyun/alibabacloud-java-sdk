@@ -4,130 +4,57 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventDetailResponseBody extends TeaModel {
-    /**
-     * <p>Indicates whether the online processing of exceptions is supported, such as blocking an exception, adding an exception to the whitelist, and ignoring an exception. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The online processing of exceptions is supported.</p>
-     * <p>*   **false**: The online processing of exceptions is not supported.</p>
-     */
     @NameInMap("CanBeDealOnLine")
     public Boolean canBeDealOnLine;
 
-    /**
-     * <p>The data source of the exception.</p>
-     */
     @NameInMap("DataSource")
     public String dataSource;
 
-    /**
-     * <p>An array that consists of the details of the exception.</p>
-     */
     @NameInMap("Details")
     public java.util.List<DescribeSuspEventDetailResponseBodyDetails> details;
 
-    /**
-     * <p>The description of the exception.</p>
-     */
     @NameInMap("EventDesc")
     public String eventDesc;
 
-    /**
-     * <p>The name of the exception.</p>
-     */
     @NameInMap("EventName")
     public String eventName;
 
-    /**
-     * <p>The status of the exception. Valid values:</p>
-     * <br>
-     * <p>*   **1**: pending handling</p>
-     * <p>*   **2**: ignored</p>
-     * <p>*   **4**: confirmed</p>
-     * <p>*   **8**: marked as a false positive</p>
-     * <p>*   **16**: handling</p>
-     * <p>*   **32**: handled</p>
-     * <p>*   **64**: expired</p>
-     */
     @NameInMap("EventStatus")
     public String eventStatus;
 
-    /**
-     * <p>The type of the exception.</p>
-     */
     @NameInMap("EventTypeDesc")
     public String eventTypeDesc;
 
-    /**
-     * <p>The ID of the exception.</p>
-     */
     @NameInMap("Id")
     public Integer id;
 
-    /**
-     * <p>The name of the server on which the exception was detected.</p>
-     */
     @NameInMap("InstanceName")
     public String instanceName;
 
-    /**
-     * <p>The public IP address of the server on which the exception was detected.</p>
-     */
     @NameInMap("InternetIp")
     public String internetIp;
 
-    /**
-     * <p>The private IP address of the server on which the exception was detected.</p>
-     */
     @NameInMap("IntranetIp")
     public String intranetIp;
 
-    /**
-     * <p>The time when the exception was last detected.</p>
-     */
     @NameInMap("LastTime")
     public String lastTime;
 
-    /**
-     * <p>The risk level of the exception. Valid values:</p>
-     * <br>
-     * <p>*   **serious**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **remind**</p>
-     */
     @NameInMap("Level")
     public String level;
 
-    /**
-     * <p>The code that indicates the handling result of the exception.</p>
-     */
     @NameInMap("OperateErrorCode")
     public String operateErrorCode;
 
-    /**
-     * <p>The message that indicates the handling result of the exception.</p>
-     */
     @NameInMap("OperateMsg")
     public String operateMsg;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The edition of Security Center in which the exception can be detected. Valid values:</p>
-     * <br>
-     * <p>*   **0**: Basic edition</p>
-     * <p>*   **1**: Advanced edition</p>
-     * <p>*   **2**: Enterprise edition</p>
-     */
     @NameInMap("SaleVersion")
     public String saleVersion;
 
-    /**
-     * <p>The UUID of the server on which the exception was detected.</p>
-     */
     @NameInMap("Uuid")
     public String uuid;
 
@@ -281,26 +208,12 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventDetailResponseBodyDetails extends TeaModel {
-        /**
-         * <p>The display name of the alert event.</p>
-         */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
-        /**
-         * <p>The format in which the details of the exception are displayed.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   **text**</p>
-         * <p>*   **html**</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The attribute information about the exception. For example, if the exception is associated with an alert that is triggered by an unusual logon, the information can include the time when the logon is initiated and the location from which the logon is initiated. If the exception is associated with an alert that is triggered by a webshell file, the information can include the path of the trojan file and the type of the trojan.</p>
-         */
         @NameInMap("Value")
         public String value;
 

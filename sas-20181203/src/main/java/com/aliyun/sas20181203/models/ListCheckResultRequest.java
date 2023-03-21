@@ -4,122 +4,45 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckResultRequest extends TeaModel {
-    /**
-     * <p>The key that you want to use to search for check items in fuzzy match mode.</p>
-     */
     @NameInMap("CheckKey")
     public String checkKey;
 
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).</p>
-     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
-    /**
-     * <p>The asset types of cloud services. Valid values:</p>
-     * <br>
-     * <p>*   **ECS**: Elastic Compute Service (ECS)</p>
-     * <p>*   **SLB**: Server Load Balancer (SLB)</p>
-     * <p>*   **RDS**: ApsaraDB RDS</p>
-     * <p>*   **MONGODB**: ApsaraDB for MongoDB (MongoDB)</p>
-     * <p>*   **KVSTORE**: ApsaraDB for Redis (Redis)</p>
-     * <p>*   **ACR**: Container Registry</p>
-     * <p>*   **CSK**: Container Service for Kubernetes (ACK)</p>
-     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
-     * <p>*   **ACTIONTRAIL**: ActionTrail</p>
-     * <p>*   **CDN**: Alibaba Cloud CDN (CDN)</p>
-     * <p>*   **CAS**: Certificate Management Service (formerly SSL Certificates Service)</p>
-     * <p>*   **RDC**: Apsara Devops</p>
-     * <p>*   **RAM**: Resource Access Management (RAM)</p>
-     * <p>*   **DDOS**: Anti-DDoS</p>
-     * <p>*   **WAF**: Web Application Firewall (WAF)</p>
-     * <p>*   **OSS**: Object Storage Service (OSS)</p>
-     * <p>*   **POLARDB**: PolarDB</p>
-     * <p>*   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL</p>
-     * <p>*   **MSE**: Microservices Engine (MSE)</p>
-     * <p>*   **NAS**: Apsara File Storage NAS (NAS)</p>
-     * <p>*   **SDDP**: Sensitive Data Discovery and Protection (SDDP)</p>
-     * <p>*   **EIP**: Elastic IP Address (EIP)</p>
-     */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
-    /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The IDs of requirement items.</p>
-     */
     @NameInMap("RequirementIds")
     public java.util.List<Long> requirementIds;
 
-    /**
-     * <p>The risk levels of check items. Separate multiple risk levels with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **HIGH**</p>
-     * <p>*   **MEDIUM**</p>
-     * <p>*   **LOW**</p>
-     */
     @NameInMap("RiskLevels")
     public java.util.List<String> riskLevels;
 
-    /**
-     * <p>The types of the conditions based on which check items are sorted. Valid values:</p>
-     * <br>
-     * <p>*   **RISK_LEVEL**: risk level</p>
-     * <p>*   **STATUS**: status</p>
-     */
     @NameInMap("SortTypes")
     public java.util.List<String> sortTypes;
 
-    /**
-     * <p>The IDs of standards.</p>
-     */
     @NameInMap("StandardIds")
     public java.util.List<Long> standardIds;
 
-    /**
-     * <p>The status of check items. Separate multiple status with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **PASS**</p>
-     * <p>*   **NOT_PASS**</p>
-     * <p>*   **CHECKING**</p>
-     * <p>*   **NOT_CHECK**</p>
-     * <p>*   **WHITELIST**</p>
-     */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
     @NameInMap("Types")
     public java.util.List<String> types;
 
-    /**
-     * <p>The cloud service providers. Valid values:</p>
-     * <br>
-     * <p>*   **ALIYUN**: Alibaba Cloud</p>
-     */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
 

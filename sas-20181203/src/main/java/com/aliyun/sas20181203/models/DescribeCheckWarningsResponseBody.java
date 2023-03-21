@@ -4,39 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningsResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the details about the check item.</p>
-     */
     @NameInMap("CheckWarnings")
     public java.util.List<DescribeCheckWarningsResponseBodyCheckWarnings> checkWarnings;
 
-    /**
-     * <p>The number of entries returned on the current page.</p>
-     */
     @NameInMap("Count")
     public Integer count;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The number of entries returned per page. Default value: **20**.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -94,76 +76,33 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckWarningsResponseBodyCheckWarnings extends TeaModel {
-        /**
-         * <p>The ID of the check item.</p>
-         */
         @NameInMap("CheckId")
         public Long checkId;
 
-        /**
-         * <p>The ID of the alert that is triggered by the check item.</p>
-         */
         @NameInMap("CheckWarningId")
         public Long checkWarningId;
 
-        /**
-         * <p>The error message in check result.</p>
-         */
         @NameInMap("ExecErrorMessage")
         public String execErrorMessage;
 
-        /**
-         * <p>The fixing status of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
-         */
         @NameInMap("FixStatus")
         public Integer fixStatus;
 
-        /**
-         * <p>The name of the check item.</p>
-         */
         @NameInMap("Item")
         public String item;
 
-        /**
-         * <p>The risk level of the risk item. Valid values:</p>
-         * <br>
-         * <p>*   **high**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **low**</p>
-         */
         @NameInMap("Level")
         public String level;
 
-        /**
-         * <p>The description of the check item.</p>
-         */
         @NameInMap("Reason")
         public String reason;
 
-        /**
-         * <p>The status of the check item. Valid values:</p>
-         * <br>
-         * <p>*   **1**: failed</p>
-         * <p>*   **2**: verifying</p>
-         * <p>*   **3**: passed</p>
-         * <p>*   **5**: expired</p>
-         * <p>*   **6**: ignored</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The type of the check item.</p>
-         */
         @NameInMap("Type")
         public String type;
 
-        /**
-         * <p>The UUID of the server on which the baseline check is performed.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 

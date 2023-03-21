@@ -4,47 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The HTTP status code.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>An array that consists of the information about the images.</p>
-     */
     @NameInMap("ImageInfos")
     public java.util.List<DescribeImageListBySensitiveFileResponseBodyImageInfos> imageInfos;
 
-    /**
-     * <p>The error message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public DescribeImageListBySensitiveFileResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -110,66 +87,33 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     }
 
     public static class DescribeImageListBySensitiveFileResponseBodyImageInfos extends TeaModel {
-        /**
-         * <p>The image digest.</p>
-         */
         @NameInMap("Digest")
         public String digest;
 
-        /**
-         * <p>The UNIX timestamp of when the first scan was performed. Unit: milliseconds.</p>
-         */
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
 
-        /**
-         * <p>The ID of the image instance.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The UNIX timestamp of when the last scan was performed. Unit: milliseconds.</p>
-         */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
-        /**
-         * <p>The region ID of the image instance.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the image repository.</p>
-         */
         @NameInMap("RepoName")
         public String repoName;
 
-        /**
-         * <p>The namespace to which the image repository belongs.</p>
-         */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
-        /**
-         * <p>The risk level. Valid values:</p>
-         * <p>- **high**</p>
-         * <p>- **medium**</p>
-         * <p>- **low**</p>
-         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
-        /**
-         * <p>The tag that is added to the image.</p>
-         */
         @NameInMap("Tag")
         public String tag;
 
-        /**
-         * <p>The UUID of the image.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -261,33 +205,18 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     }
 
     public static class DescribeImageListBySensitiveFileResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The key of the last data entry.</p>
-         */
         @NameInMap("LastRowKey")
         public String lastRowKey;
 
-        /**
-         * <p>The number of entries returned per page. Default value: 20.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

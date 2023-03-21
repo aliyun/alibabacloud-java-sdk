@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListClusterInterceptionConfigResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the configurations of the cluster.</p>
-     */
     @NameInMap("ClusterConfigList")
     public java.util.List<ListClusterInterceptionConfigResponseBodyClusterConfigList> clusterConfigList;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public ListClusterInterceptionConfigResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,65 +43,27 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
     }
 
     public static class ListClusterInterceptionConfigResponseBodyClusterConfigList extends TeaModel {
-        /**
-         * <p>The status of the container firewall feature. Valid values:</p>
-         * <br>
-         * <p>*   **-1**: unknown</p>
-         * <p>*   **0**: abnormal</p>
-         * <p>*   **1**: normal</p>
-         * <p>*   **2**: normal to be confirmed</p>
-         */
         @NameInMap("ClusterCNNFStatus")
         public Integer clusterCNNFStatus;
 
-        /**
-         * <p>The ID of the cluster.</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The name of the cluster.</p>
-         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        /**
-         * <p>The type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **ManagedKubernetes**: managed Kubernetes cluster</p>
-         * <p>*   **NotManagedKubernetes**: non-managed Kubernetes cluster</p>
-         * <p>*   **PrivateKubernetes**: private cluster</p>
-         * <p>*   **kubernetes**: dedicated Kubernetes cluster</p>
-         * <p>*   **ask**: dedicated serverless Kubernetes (ASK) cluster</p>
-         */
         @NameInMap("ClusterType")
         public String clusterType;
 
-        /**
-         * <p>The status of the defense rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
-         */
         @NameInMap("InterceptionSwitch")
         public Integer interceptionSwitch;
 
-        /**
-         * <p>The number of defense rules that are in effect.</p>
-         */
         @NameInMap("OpenRuleCount")
         public Long openRuleCount;
 
-        /**
-         * <p>Indicates whether the container firewall feature is supported.</p>
-         */
         @NameInMap("SupportCNNF")
         public Boolean supportCNNF;
 
-        /**
-         * <p>The total number of defense rules.</p>
-         */
         @NameInMap("TotalRuleCount")
         public Long totalRuleCount;
 
@@ -186,27 +139,15 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
     }
 
     public static class ListClusterInterceptionConfigResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrrentPage")
         public Integer currrentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

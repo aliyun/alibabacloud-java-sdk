@@ -4,45 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUniRecoverableListResponseBody extends TeaModel {
-    /**
-     * <p>The number of entries returned on the current page.</p>
-     */
     @NameInMap("Count")
     public Integer count;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The name of the database.</p>
-     */
     @NameInMap("Database")
     public String database;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>An array that consists of the backup snapshots.</p>
-     */
     @NameInMap("RecoverableInfoList")
     public java.util.List<DescribeUniRecoverableListResponseBodyRecoverableInfoList> recoverableInfoList;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -108,36 +87,18 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
     }
 
     public static class DescribeUniRecoverableListResponseBodyRecoverableInfoList extends TeaModel {
-        /**
-         * <p>The timestamp of the first backup. Unit: milliseconds.</p>
-         */
         @NameInMap("FirstTime")
         public Long firstTime;
 
-        /**
-         * <p>The timestamp of the last backup. Unit: milliseconds.</p>
-         */
         @NameInMap("LastTime")
         public Long lastTime;
 
-        /**
-         * <p>The identifier of the point in time for restoration in the backup version that is used. The database is an Oracle database.</p>
-         */
         @NameInMap("ResetScn")
         public String resetScn;
 
-        /**
-         * <p>The point in time for restoration in the backup version that is used. The database is an Oracle database.</p>
-         */
         @NameInMap("ResetTime")
         public Long resetTime;
 
-        /**
-         * <p>The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:</p>
-         * <br>
-         * <p>*   **name**: the name of the database</p>
-         * <p>*   **files**: the path to the database files</p>
-         */
         @NameInMap("RestoreInfo")
         public String restoreInfo;
 

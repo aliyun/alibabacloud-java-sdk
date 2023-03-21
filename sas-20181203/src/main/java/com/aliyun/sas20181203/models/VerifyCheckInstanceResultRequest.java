@@ -4,17 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class VerifyCheckInstanceResultRequest extends TeaModel {
-    /**
-     * <p>The ID of the check item.</p>
-     * <br>
-     * <p>> You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the IDs of check items.</p>
-     */
     @NameInMap("CheckId")
     public Long checkId;
 
-    /**
-     * <p>The instance IDs of the assets on which risks are detected based on the check item.</p>
-     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 

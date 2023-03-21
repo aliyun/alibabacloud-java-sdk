@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the alert events.</p>
-     */
     @NameInMap("HoneypotAlarmEvents")
     public java.util.List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents> honeypotAlarmEvents;
 
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public ListHoneypotAlarmEventsResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,27 +43,15 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList extends TeaModel {
-        /**
-         * <p>The extended value that corresponds to the field key.</p>
-         */
         @NameInMap("FieldExtInfo")
         public String fieldExtInfo;
 
-        /**
-         * <p>The key of the field.</p>
-         */
         @NameInMap("FieldKey")
         public String fieldKey;
 
-        /**
-         * <p>The type of the field.</p>
-         */
         @NameInMap("FieldType")
         public String fieldType;
 
-        /**
-         * <p>The value of the field key.</p>
-         */
         @NameInMap("FieldValue")
         public String fieldValue;
 
@@ -116,71 +95,33 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents extends TeaModel {
-        /**
-         * <p>The ID of the alert event.</p>
-         */
         @NameInMap("AlarmEventId")
         public Long alarmEventId;
 
-        /**
-         * <p>The name of the alert event.</p>
-         */
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
-        /**
-         * <p>The type of the alert event.</p>
-         */
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
-        /**
-         * <p>The unique identifier of the alert event.</p>
-         */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
-        /**
-         * <p>The total number of times that the alert event was generated.</p>
-         */
         @NameInMap("EventCount")
         public Integer eventCount;
 
-        /**
-         * <p>The timestamp when the alert event was first generated.</p>
-         */
         @NameInMap("FirstTime")
         public Long firstTime;
 
-        /**
-         * <p>The timestamp when the alert event was last generated.</p>
-         */
         @NameInMap("LastTime")
         public Long lastTime;
 
-        /**
-         * <p>An array that consists of risk information.</p>
-         */
         @NameInMap("MergeFieldList")
         public java.util.List<ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEventsMergeFieldList> mergeFieldList;
 
-        /**
-         * <p>The handling status of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   **1**: pending</p>
-         * <p>*   **2**: ignored</p>
-         * <p>*   **4**: confirmed</p>
-         */
         @NameInMap("OperateStatus")
         public Integer operateStatus;
 
-        /**
-         * <p>The risk level of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   **2**: low</p>
-         * <p>*   **3**: medium</p>
-         * <p>*   **4**: high</p>
-         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
@@ -272,27 +213,15 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAlarmEventsResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page. Default value: 20.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

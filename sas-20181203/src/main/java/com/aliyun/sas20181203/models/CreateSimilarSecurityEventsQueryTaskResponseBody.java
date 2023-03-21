@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
-    /**
-     * <p>The information about the task that queries alert events of the same alert type.</p>
-     */
     @NameInMap("CreateSimilarSecurityEventsQueryTaskResponse")
     public CreateSimilarSecurityEventsQueryTaskResponseBodyCreateSimilarSecurityEventsQueryTaskResponse createSimilarSecurityEventsQueryTaskResponse;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,23 +32,9 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
     }
 
     public static class CreateSimilarSecurityEventsQueryTaskResponseBodyCreateSimilarSecurityEventsQueryTaskResponse extends TeaModel {
-        /**
-         * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **New**: The task is created.</p>
-         * <p>*   **RetrievingData**: Data is being retrieved.</p>
-         * <p>*   **DataRetrieved**: Data is retrieved.</p>
-         * <p>*   **Processing**: The task is running.</p>
-         * <p>*   **Success**: The task is successful.</p>
-         * <p>*   **Failed**: The task failed.</p>
-         * <p>*   **PartialFailed**: The task partially failed.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the task.</p>
-         */
         @NameInMap("TaskId")
         public Long taskId;
 

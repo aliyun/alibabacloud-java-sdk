@@ -4,35 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GenerateOnceTaskRequest extends TeaModel {
-    /**
-     * <p>The additional information.</p>
-     */
     @NameInMap("Param")
     public String param;
 
-    /**
-     * <p>The source of the scan task.</p>
-     */
     @NameInMap("Source")
     public String source;
 
-    /**
-     * <p>The name of the scan task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task</p>
-     * <p>*   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant</p>
-     * <p>*   **ASSET\_SECURITY_CHECK**: a task of asset information collection</p>
-     */
     @NameInMap("TaskName")
     public String taskName;
 
-    /**
-     * <p>The type of the scan task. Valid values:</p>
-     * <br>
-     * <p>*   **CLIENT\_PROBLEM_CHECK**: a client diagnosis task</p>
-     * <p>*   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant</p>
-     * <p>*   **ASSET\_SECURITY_CHECK**: a task of asset information collection</p>
-     */
     @NameInMap("TaskType")
     public String taskType;
 

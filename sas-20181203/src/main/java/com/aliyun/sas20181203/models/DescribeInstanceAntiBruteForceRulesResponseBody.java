@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageInfo")
     public DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo pageInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array consisting of the servers to which a defense rule is applied.</p>
-     */
     @NameInMap("Rules")
     public java.util.List<DescribeInstanceAntiBruteForceRulesResponseBodyRules> rules;
 
@@ -52,27 +43,15 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo extends TeaModel {
-        /**
-         * <p>The number of servers returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of servers returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -116,21 +95,12 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyRules extends TeaModel {
-        /**
-         * <p>The ID of the defense rule.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The name of the defense rule.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The UUID of the server to which the defense rule is applied.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 

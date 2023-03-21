@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListRuleTargetAllResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the network objects.</p>
-     */
     @NameInMap("RuleTargetList")
     public java.util.List<ListRuleTargetAllResponseBodyRuleTargetList> ruleTargetList;
 
@@ -38,23 +32,12 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
     }
 
     public static class ListRuleTargetAllResponseBodyRuleTargetList extends TeaModel {
-        /**
-         * <p>The ID of the network object.</p>
-         */
         @NameInMap("TargetId")
         public Long targetId;
 
-        /**
-         * <p>The name of the network object.</p>
-         */
         @NameInMap("TargetName")
         public String targetName;
 
-        /**
-         * <p>The type of the network object. Valid values:</p>
-         * <br>
-         * <p>*   IMAGE</p>
-         */
         @NameInMap("TargetType")
         public String targetType;
 

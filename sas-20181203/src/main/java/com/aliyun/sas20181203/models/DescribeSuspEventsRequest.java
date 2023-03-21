@@ -4,266 +4,96 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventsRequest extends TeaModel {
-    /**
-     * <p>The ID of the alert event.</p>
-     * <br>
-     * <p>>  To query the details about the exceptions of an alert event, you must specify the ID of the alert event. You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the IDs of alert events.</p>
-     */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;
 
-    /**
-     * <p>The types of assets.</p>
-     */
     @NameInMap("AssetsTypeList")
     public java.util.List<String> assetsTypeList;
 
-    /**
-     * <p>The ID of the cluster of whose alert events you want to query.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The key of the condition that is used to query alert events on containers. Valid values:</p>
-     * <br>
-     * <p>*   **instanceId**: the ID of the asset</p>
-     * <p>*   **appName**: the name of the application</p>
-     * <p>*   **clusterId**: the ID of the cluster</p>
-     * <p>*   **regionId**: the ID of the region</p>
-     * <p>*   **nodeName**: the name of the node</p>
-     * <p>*   **namespace**: the namespace</p>
-     * <p>*   **clusterName**: the name of the cluster</p>
-     * <p>*   **image**: the name of the image</p>
-     * <p>*   **imageRepoName**: the name of the image repository</p>
-     * <p>*   **imageRepoNamespace**: the namespace to which the image repository belongs</p>
-     * <p>*   **imageRepoTag**: the tag that is added to the image</p>
-     * <p>*   **imageDigest**: the digest of the image</p>
-     */
     @NameInMap("ContainerFieldName")
     public String containerFieldName;
 
-    /**
-     * <p>The value of the condition that is used to query alert events on containers.</p>
-     */
     @NameInMap("ContainerFieldValue")
     public String containerFieldValue;
 
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    /**
-     * <p>Specifies whether the alert event is handled. Valid values:</p>
-     * <br>
-     * <p>*   **N**: unhandled</p>
-     * <p>*   **Y**: handled</p>
-     */
     @NameInMap("Dealed")
     public String dealed;
 
-    /**
-     * <p>The subtype of the alert event. Separate multiple subtypes with commas (,).</p>
-     */
     @NameInMap("EventNames")
     public String eventNames;
 
-    /**
-     * <p>The data source of the alert event. Set the value to sas.</p>
-     */
     @NameInMap("From")
     public String from;
 
-    /**
-     * <p>The ID of the asset group to which the affected asset belongs.</p>
-     */
     @NameInMap("GroupId")
     public Long groupId;
 
-    /**
-     * <p>The ID of the alert event.</p>
-     */
     @NameInMap("Id")
     public Long id;
 
-    /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The severity of the alert event. Separate multiple severities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **serious**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **remind**</p>
-     */
     @NameInMap("Levels")
     public String levels;
 
-    /**
-     * <p>The name of the asset that is affected by the alert event.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>An array that consists of the handling result codes of alert events.</p>
-     */
     @NameInMap("OperateErrorCodeList")
     public java.util.List<String> operateErrorCodeList;
 
-    /**
-     * <p>The timestamp when the handling operation ends.</p>
-     */
     @NameInMap("OperateTimeEnd")
     public String operateTimeEnd;
 
-    /**
-     * <p>The timestamp when the handling operation starts.</p>
-     */
     @NameInMap("OperateTimeStart")
     public String operateTimeStart;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
-     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    /**
-     * <p>The alert type of the alert event. Valid values:</p>
-     * <br>
-     * <p>*   **Suspicious process**</p>
-     * <p>*   **Webshell**</p>
-     * <p>*   **Unusual logon**</p>
-     * <p>*   **Exception**</p>
-     * <p>*   **Sensitive file tampering**</p>
-     * <p>*   **Malicious process (cloud threat detection)**</p>
-     * <p>*   **Suspicious network connection**</p>
-     * <p>*   **Suspicious account**</p>
-     * <p>*   **Application intrusion event**</p>
-     * <p>*   **Cloud threat detection**</p>
-     * <p>*   **Precise defense**</p>
-     * <p>*   **Application whitelist**</p>
-     * <p>*   **Persistent webshell**</p>
-     * <p>*   **Web application threat detection**</p>
-     * <p>*   **Malicious script**</p>
-     * <p>*   **Threat intelligence**</p>
-     * <p>*   **Malicious network activity**</p>
-     * <p>*   **Cluster exception**</p>
-     * <p>*   **Webshell (on-premises threat detection)**</p>
-     * <p>*   **Vulnerability exploitation**</p>
-     * <p>*   **Malicious process (on-premises threat detection)**</p>
-     * <p>*   **Trusted exception**</p>
-     * <p>*   **Operations to manage other resources**</p>
-     */
     @NameInMap("ParentEventTypes")
     public String parentEventTypes;
 
-    /**
-     * <p>The name of the alert or the information about the asset.</p>
-     * <br>
-     * <p>>  Fuzzy search is supported. The asset information includes the name, public IP address, and private IP address of an asset.</p>
-     */
     @NameInMap("Remark")
     public String remark;
 
-    /**
-     * <p>The custom sorting field. Default value: **operateTime**. Valid values:</p>
-     * <br>
-     * <p>*   **lastTime**: the latest occurrence time.</p>
-     * <p>*   **operateTime**: the handling time.</p>
-     * <br>
-     * <p>>  This parameter takes effect if you set the **Dealed** parameter to Y.</p>
-     */
     @NameInMap("SortColumn")
     public String sortColumn;
 
-    /**
-     * <p>The custom sorting order. Default value: **desc**. Valid values:</p>
-     * <br>
-     * <p>*   **asc**: the ascending order</p>
-     * <p>*   **desc**: the descending order</p>
-     * <br>
-     * <p>>  This parameter takes effect if you set the **Dealed** parameter to Y.</p>
-     */
     @NameInMap("SortType")
     public String sortType;
 
-    /**
-     * <p>The source of the alert.</p>
-     */
     @NameInMap("Source")
     public String source;
 
-    /**
-     * <p>The source IP address of the request.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    /**
-     * <p>The status of the alert event. Valid values:</p>
-     * <br>
-     * <p>*   **0**: all</p>
-     * <p>*   **1**: pending handling</p>
-     * <p>*   **2**: ignored</p>
-     * <p>*   **4**: confirmed</p>
-     * <p>*   **8**: marked as a false positive</p>
-     * <p>*   **16**: being handled</p>
-     * <p>*   **32**: handled</p>
-     * <p>*   **64**: expired</p>
-     * <p>*   **128**: deleted</p>
-     * <p>*   **512**: being automatically blocked</p>
-     * <p>*   **513**: automatically blocked</p>
-     */
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The tactic ID of ATT\&CK.</p>
-     */
     @NameInMap("TacticId")
     public String tacticId;
 
-    /**
-     * <p>The item that is used to search for the container. Valid values:</p>
-     * <br>
-     * <p>*   **containerId**: the ID of the container</p>
-     * <p>*   **uuid**: the UUID of the server</p>
-     * <p>*   **imageUuid**: the UUID of the image</p>
-     */
     @NameInMap("TargetType")
     public String targetType;
 
-    /**
-     * <p>The end time when the alert event was last detected.</p>
-     */
     @NameInMap("TimeEnd")
     public String timeEnd;
 
-    /**
-     * <p>The start time when the alert event was last detected.</p>
-     */
     @NameInMap("TimeStart")
     public String timeStart;
 
-    /**
-     * <p>The unique key of the alert.</p>
-     */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 
-    /**
-     * <p>The UUID of the server on which the alert is detected. Separate multiple UUIDs with commas (,).</p>
-     */
     @NameInMap("Uuids")
     public String uuids;
 

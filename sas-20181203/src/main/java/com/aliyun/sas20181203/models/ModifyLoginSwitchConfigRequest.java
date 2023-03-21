@@ -4,22 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyLoginSwitchConfigRequest extends TeaModel {
-    /**
-     * <p>The type of the logon security settings that you want to enable or disable. Valid values:</p>
-     * <br>
-     * <p>*   **login\_common_ip**: unapproved logon IP addresses</p>
-     * <p>*   **login\_common_time**: unapproved logon time ranges</p>
-     * <p>*   **login\_common_account**: unapproved logon accounts</p>
-     */
     @NameInMap("Item")
     public String item;
 
-    /**
-     * <p>Specifies whether to enable the logon security settings. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
-     */
     @NameInMap("Status")
     public Integer status;
 

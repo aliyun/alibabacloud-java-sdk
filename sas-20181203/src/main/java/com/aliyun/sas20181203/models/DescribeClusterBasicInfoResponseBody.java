@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterBasicInfoResponseBody extends TeaModel {
-    /**
-     * <p>The detailed information about the cluster.</p>
-     */
     @NameInMap("ClusterInfo")
     public DescribeClusterBasicInfoResponseBodyClusterInfo clusterInfo;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,71 +32,30 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterBasicInfoResponseBodyClusterInfo extends TeaModel {
-        /**
-         * <p>The ID of cluster.</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The name of the cluster.</p>
-         */
         @NameInMap("ClusterName")
         public String clusterName;
 
-        /**
-         * <p>The type of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **ManagedKubernetes**: managed Kubernetes cluster</p>
-         * <p>*   **NotManagedKubernetes**: non-managed Kubernetes cluster</p>
-         * <p>*   **PrivateKubernetes**: private cluster</p>
-         * <p>*   **kubernetes**: dedicated Kubernetes cluster</p>
-         * <p>*   **ask**: dedicated ASK cluster</p>
-         */
         @NameInMap("ClusterType")
         public String clusterType;
 
-        /**
-         * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The version of the cluster.</p>
-         */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
-        /**
-         * <p>The number of instances in the cluster.</p>
-         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
-        /**
-         * <p>The ID of the region in which the cluster is deployed.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **unavailable**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Creating**</p>
-         * <p>*   **CreateFailed**</p>
-         */
         @NameInMap("State")
         public String state;
 
-        /**
-         * <p>Indicates whether the cluster is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The cluster is enabled.</p>
-         * <p>*   **false**: The cluster is disabled.</p>
-         */
         @NameInMap("TargetResult")
         public Boolean targetResult;
 

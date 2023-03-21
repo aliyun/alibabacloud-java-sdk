@@ -4,33 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeEmgVulItemResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page. Pages start from page **1**. Default value: **1**.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>An array that consists of the urgent vulnerabilities returned.</p>
-     */
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeEmgVulItemResponseBodyGroupedVulItems> groupedVulItems;
 
-    /**
-     * <p>The number of entries returned per page. Default value: **10**.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of the urgent vulnerabilities returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,66 +65,30 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
     }
 
     public static class DescribeEmgVulItemResponseBodyGroupedVulItems extends TeaModel {
-        /**
-         * <p>The name of the urgent vulnerability.</p>
-         */
         @NameInMap("AliasName")
         public String aliasName;
 
-        /**
-         * <p>The check method.</p>
-         */
         @NameInMap("CheckType")
         public Integer checkType;
 
-        /**
-         * <p>The timestamp when the urgent vulnerability was last detected. Unit: milliseconds.</p>
-         */
         @NameInMap("GmtLastCheck")
         public Long gmtLastCheck;
 
-        /**
-         * <p>The timestamp when the vulnerability was disclosed. Unit: milliseconds.</p>
-         */
         @NameInMap("GmtPublish")
         public Long gmtPublish;
 
-        /**
-         * <p>The name of the detection rule.</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The number of unhandled urgent vulnerabilities.</p>
-         */
         @NameInMap("PendingCount")
         public Integer pendingCount;
 
-        /**
-         * <p>The progress of the urgent vulnerability detection task. Valid values: 0 to 100.</p>
-         * <br>
-         * <p>> This parameter is returned only when an urgent vulnerability is being detected.</p>
-         */
         @NameInMap("Progress")
         public Integer progress;
 
-        /**
-         * <p>The detection status of the urgent vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **10**: The urgent vulnerability is not detected.</p>
-         * <p>*   **20**: The urgent vulnerability is being detected.</p>
-         * <p>*   **30**: The urgent vulnerability detection is complete.</p>
-         */
         @NameInMap("Status")
         public Integer status;
 
-        /**
-         * <p>The method that is used to detect the urgent vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   **python**: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.</p>
-         * <p>*   **scan**: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.</p>
-         */
         @NameInMap("Type")
         public String type;
 

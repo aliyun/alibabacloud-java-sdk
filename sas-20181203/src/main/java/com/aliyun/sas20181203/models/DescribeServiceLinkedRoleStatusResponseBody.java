@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The status information about the service-linked role.</p>
-     */
     @NameInMap("RoleStatus")
     public DescribeServiceLinkedRoleStatusResponseBodyRoleStatus roleStatus;
 
@@ -38,12 +32,6 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceLinkedRoleStatusResponseBodyRoleStatus extends TeaModel {
-        /**
-         * <p>Indicates whether the service-linked role is created. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
         @NameInMap("Status")
         public Boolean status;
 

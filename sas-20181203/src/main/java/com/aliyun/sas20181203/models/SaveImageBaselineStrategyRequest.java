@@ -4,34 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SaveImageBaselineStrategyRequest extends TeaModel {
-    /**
-     * <p>The baseline check items.</p>
-     * <br>
-     * <p>> You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query baseline check items.</p>
-     */
     @NameInMap("BaselineItemList")
     public String baselineItemList;
 
-    /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The ID of the baseline check policy.</p>
-     * <br>
-     * <p>> You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query the IDs of baseline check policies.</p>
-     */
     @NameInMap("StrategyId")
     public Long strategyId;
 
-    /**
-     * <p>The name of the baseline check policy.</p>
-     */
     @NameInMap("StrategyName")
     public String strategyName;
 

@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogMetaResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the configurations of the log analysis feature.</p>
-     */
     @NameInMap("LogMetaList")
     public java.util.List<DescribeLogMetaResponseBodyLogMetaList> logMetaList;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -52,78 +43,36 @@ public class DescribeLogMetaResponseBody extends TeaModel {
     }
 
     public static class DescribeLogMetaResponseBodyLogMetaList extends TeaModel {
-        /**
-         * <p>The category of logs. Valid values:</p>
-         * <br>
-         * <p>*   **host**: host logs</p>
-         * <p>*   **network**: network logs</p>
-         * <p>*   **security**: security logs</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The time period after which logs in hot storage are moved to cold storage. Unit: days.</p>
-         * <br>
-         * <p>>  If the value is **-1**, logs that are stored in hot storage are not moved to cold storage.</p>
-         */
         @NameInMap("HotTtl")
         public Integer hotTtl;
 
-        /**
-         * <p>The name of the log type.</p>
-         */
         @NameInMap("LogDesc")
         public String logDesc;
 
-        /**
-         * <p>The name of the dedicated Logstore in which logs are stored.</p>
-         */
         @NameInMap("LogStore")
         public String logStore;
 
-        /**
-         * <p>The name of the project.</p>
-         */
         @NameInMap("Project")
         public String project;
 
-        /**
-         * <p>The status of the log analysis feature. Valid values:</p>
-         * <br>
-         * <p>*   **disabled**</p>
-         * <p>*   **enabled**</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The topic of logs that are delivered.</p>
-         */
         @NameInMap("Topic")
         public String topic;
 
-        /**
-         * <p>The number of days during which logs can be retained.</p>
-         */
         @NameInMap("Ttl")
         public Integer ttl;
 
-        /**
-         * <p>The name of the dedicated Logstore in which user logs are stored.</p>
-         */
         @NameInMap("UserLogStore")
         public String userLogStore;
 
-        /**
-         * <p>The name of the dedicated project in which logs are stored.</p>
-         */
         @NameInMap("UserProject")
         public String userProject;
 
-        /**
-         * <p>The ID of the region.</p>
-         */
         @NameInMap("UserRegion")
         public String userRegion;
 

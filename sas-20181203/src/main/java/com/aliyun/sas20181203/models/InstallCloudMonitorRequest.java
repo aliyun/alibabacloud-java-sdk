@@ -4,37 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class InstallCloudMonitorRequest extends TeaModel {
-    /**
-     * <p>The AccessKey ID that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey ID.</p>
-     * <br>
-     * <p>> This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
-     */
     @NameInMap("AgentAccessKey")
     public String agentAccessKey;
 
-    /**
-     * <p>The AccessKey secret that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey secret.</p>
-     * <br>
-     * <p>> This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
-     */
     @NameInMap("AgentSecretKey")
     public String agentSecretKey;
 
-    /**
-     * <p>The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see [Overview](~~183431~~).</p>
-     */
     @NameInMap("ArgusVersion")
     public String argusVersion;
 
-    /**
-     * <p>The IDs of the servers on which you want to install the CloudMonitor agent. Separate multiple IDs with commas (,).</p>
-     */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
-    /**
-     * <p>The UUIDs of the servers on which you want to install the CloudMonitor agent. Separate multiple UUIDs with commas (,).</p>
-     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

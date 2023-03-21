@@ -4,52 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListSystemAggregationRulesRequest extends TeaModel {
-    /**
-     * <p>The IDs of the aggregation types.</p>
-     */
     @NameInMap("AggregationIds")
     public java.util.List<Integer> aggregationIds;
 
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The name of the rule.</p>
-     */
     @NameInMap("RuleName")
     public String ruleName;
 
-    /**
-     * <p>The types of the rules.</p>
-     */
     @NameInMap("RuleTypes")
     public java.util.List<Integer> ruleTypes;
 
-    /**
-     * <p>The type of the operating system. Valid values:</p>
-     * <br>
-     * <p>*   **2**: Windows</p>
-     * <p>*   **1**: Linux</p>
-     * <p>*   **0**: all</p>
-     */
     @NameInMap("SystemType")
     public Integer systemType;
 
