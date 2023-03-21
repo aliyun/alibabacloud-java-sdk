@@ -4,49 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class FindContainerNetworkConnectRequest extends TeaModel {
-    /**
-     * <p>The type of the information that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **EDGE**: connection information</p>
-     */
     @NameInMap("CriteriaType")
     public String criteriaType;
 
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
-    /**
-     * <p>The information about the destination node.</p>
-     */
     @NameInMap("DstNode")
     public FindContainerNetworkConnectRequestDstNode dstNode;
 
-    /**
-     * <p>The end time of the network connection.</p>
-     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
-     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <p>The information about the source node.</p>
-     */
     @NameInMap("SrcNode")
     public FindContainerNetworkConnectRequestSrcNode srcNode;
 
-    /**
-     * <p>The start time of the network connection.</p>
-     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -112,43 +87,21 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
     }
 
     public static class FindContainerNetworkConnectRequestDstNode extends TeaModel {
-        /**
-         * <p>The name of the container application.</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The ID of the container cluster.</p>
-         * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The namespace of the cluster.</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The list of node IDs.</p>
-         */
         @NameInMap("NodeIds")
         public java.util.List<String> nodeIds;
 
-        /**
-         * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **app**: application, which indicates that the node type is application.</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        /**
-         * <p>The name of the pod.</p>
-         */
         @NameInMap("PodName")
         public String podName;
 
@@ -208,43 +161,21 @@ public class FindContainerNetworkConnectRequest extends TeaModel {
     }
 
     public static class FindContainerNetworkConnectRequestSrcNode extends TeaModel {
-        /**
-         * <p>The name of the container application.</p>
-         */
         @NameInMap("AppName")
         public String appName;
 
-        /**
-         * <p>The ID of the container cluster.</p>
-         * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
-         */
         @NameInMap("ClusterId")
         public String clusterId;
 
-        /**
-         * <p>The namespace of the cluster.</p>
-         */
         @NameInMap("Namespace")
         public String namespace;
 
-        /**
-         * <p>The list of node IDs.</p>
-         */
         @NameInMap("NodeIds")
         public java.util.List<String> nodeIds;
 
-        /**
-         * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **app**: application, which indicates that the node type is application.</p>
-         */
         @NameInMap("NodeType")
         public String nodeType;
 
-        /**
-         * <p>The name of the pod.</p>
-         */
         @NameInMap("PodName")
         public String podName;
 

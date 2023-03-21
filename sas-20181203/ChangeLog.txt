@@ -1,3 +1,6 @@
+2023-03-21 Version: 2.0.3
+- Change DescribeLogstoreStorage Response.
+
 2023-03-11 Version: 2.0.2
 - Automatically generate sdk tasks.
 

@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUniSupportRegionResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array consisting of the region that is supported by anti-ransomware for databases.</p>
-     */
     @NameInMap("UniSupportRegion")
     public java.util.List<String> uniSupportRegion;
 

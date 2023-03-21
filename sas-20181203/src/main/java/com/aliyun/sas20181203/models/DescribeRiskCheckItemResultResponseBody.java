@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
-    /**
-     * <p>The pagination information.</p>
-     */
     @NameInMap("PageContentResource")
     public DescribeRiskCheckItemResultResponseBodyPageContentResource pageContentResource;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,39 +32,21 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskCheckItemResultResponseBodyPageContentResource extends TeaModel {
-        /**
-         * <p>The data of the affected assets on each page in a dynamic table.</p>
-         */
         @NameInMap("ContentResource")
         public java.util.Map<String, ?> contentResource;
 
-        /**
-         * <p>The number of entries returned on the current page.</p>
-         */
         @NameInMap("Count")
         public Integer count;
 
-        /**
-         * <p>The page number of the returned page.</p>
-         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        /**
-         * <p>The total number of pages returned.</p>
-         */
         @NameInMap("PageCount")
         public Integer pageCount;
 
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        /**
-         * <p>The total number of entries returned.</p>
-         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

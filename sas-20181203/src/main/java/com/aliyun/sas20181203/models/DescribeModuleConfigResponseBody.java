@@ -4,36 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeModuleConfigResponseBody extends TeaModel {
-    /**
-     * <p>The number of configurations for the module.</p>
-     */
     @NameInMap("Count")
     public Integer count;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>An array that consists of the configurations.</p>
-     */
     @NameInMap("ModuleConfigList")
     public java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> moduleConfigList;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -83,39 +65,21 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeModuleConfigResponseBodyModuleConfigListItems extends TeaModel {
-        /**
-         * <p>The ID of the server group to which the server belongs.</p>
-         */
         @NameInMap("GroupId")
         public Integer groupId;
 
-        /**
-         * <p>The ID of the server.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the server.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The IP address of the server.</p>
-         */
         @NameInMap("Ip")
         public String ip;
 
-        /**
-         * <p>The region in which the server resides.</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>The UUID of the server.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -175,21 +139,12 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeModuleConfigResponseBodyModuleConfigList extends TeaModel {
-        /**
-         * <p>The name of the configuration.</p>
-         */
         @NameInMap("ConfigName")
         public String configName;
 
-        /**
-         * <p>An array that consists of the configuration items.</p>
-         */
         @NameInMap("Items")
         public java.util.List<DescribeModuleConfigResponseBodyModuleConfigListItems> items;
 
-        /**
-         * <p>The name of the module.</p>
-         */
         @NameInMap("ModuleName")
         public String moduleName;
 

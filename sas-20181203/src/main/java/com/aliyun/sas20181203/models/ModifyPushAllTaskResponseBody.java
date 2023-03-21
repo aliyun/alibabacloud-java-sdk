@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyPushAllTaskResponseBody extends TeaModel {
-    /**
-     * <p>The results of security check tasks.</p>
-     */
     @NameInMap("PushTaskRsp")
     public ModifyPushAllTaskResponseBodyPushTaskRsp pushTaskRsp;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,71 +32,33 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
     }
 
     public static class ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList extends TeaModel {
-        /**
-         * <p>The ID of the server group to which the server belongs.</p>
-         */
         @NameInMap("GroupId")
         public Long groupId;
 
-        /**
-         * <p>The ID of the server.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the server.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The IP address of the server.</p>
-         */
         @NameInMap("Ip")
         public String ip;
 
-        /**
-         * <p>The message that describes the security check failure.</p>
-         */
         @NameInMap("Message")
         public String message;
 
-        /**
-         * <p>Indicates whether the Security Center agent is online. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         * <br>
-         * <p>>  If the Security Center agent of the server is offline, Security Center does not protect the server.</p>
-         */
         @NameInMap("Online")
         public Boolean online;
 
-        /**
-         * <p>The operating system version of the server.</p>
-         */
         @NameInMap("OsVersion")
         public String osVersion;
 
-        /**
-         * <p>The region in which the server resides.</p>
-         */
         @NameInMap("Region")
         public String region;
 
-        /**
-         * <p>Indicates whether the security check task is successful. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
         @NameInMap("Success")
         public Boolean success;
 
-        /**
-         * <p>The UUID of the server.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -194,9 +150,6 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
     }
 
     public static class ModifyPushAllTaskResponseBodyPushTaskRsp extends TeaModel {
-        /**
-         * <p>An array consisting of the servers on which security check tasks failed.</p>
-         */
         @NameInMap("PushTaskResultList")
         public java.util.List<ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList> pushTaskResultList;
 

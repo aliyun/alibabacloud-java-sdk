@@ -4,41 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListPodRiskRequest extends TeaModel {
-    /**
-     * <p>The name of the application.</p>
-     */
     @NameInMap("AppName")
     public String appName;
 
-    /**
-     * <p>The ID of the container cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
-    /**
-     * <p>The namespace of the Kubernetes cluster.</p>
-     */
     @NameInMap("Namespace")
     public String namespace;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: 20.</p>
-     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <p>The name of the pod.</p>
-     */
     @NameInMap("PodName")
     public String podName;
 

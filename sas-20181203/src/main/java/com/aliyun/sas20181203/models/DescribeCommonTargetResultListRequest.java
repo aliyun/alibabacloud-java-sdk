@@ -4,20 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCommonTargetResultListRequest extends TeaModel {
-    /**
-     * <p>The source IP address of the request.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    /**
-     * <p>The type of the configuration item. Valid values:</p>
-     * <br>
-     * <p>*   **webshell_timescan**: webshell detection and removal</p>
-     * <p>*   **aliscriptengine**: in-depth detection engine</p>
-     * <p>*   **alidetect**: installation scope of local file detection</p>
-     * <p>*   **alidetect-scan-enable**: detection scope of local file detection</p>
-     */
     @NameInMap("Type")
     public String type;
 

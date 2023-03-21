@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientConfStrategyResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of the configurations.</p>
-     */
     @NameInMap("TargetList")
     public java.util.List<DescribeClientConfStrategyResponseBodyTargetList> targetList;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -52,9 +43,6 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeClientConfStrategyResponseBodyTargetList extends TeaModel {
-        /**
-         * <p>The UUID of the Security Center agent.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 

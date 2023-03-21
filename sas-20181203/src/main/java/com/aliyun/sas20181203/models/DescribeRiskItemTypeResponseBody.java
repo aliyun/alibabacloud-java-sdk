@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskItemTypeResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of information about the type of the check item.</p>
-     */
     @NameInMap("List")
     public java.util.List<DescribeRiskItemTypeResponseBodyList> list;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,15 +32,9 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskItemTypeResponseBodyList extends TeaModel {
-        /**
-         * <p>The ID of the check item.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The name of the check type.</p>
-         */
         @NameInMap("Title")
         public String title;
 

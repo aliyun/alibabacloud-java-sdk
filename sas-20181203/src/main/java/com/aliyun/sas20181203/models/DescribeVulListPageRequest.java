@@ -4,27 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulListPageRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
-     */
     @NameInMap("CveId")
     public String cveId;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The name of the vulnerability.</p>
-     */
     @NameInMap("VulNameLike")
     public String vulNameLike;
 

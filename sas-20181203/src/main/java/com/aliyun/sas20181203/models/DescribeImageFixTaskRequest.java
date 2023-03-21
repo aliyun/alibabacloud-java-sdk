@@ -4,37 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageFixTaskRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The timestamp when the task ends. Unit: milliseconds.</p>
-     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The timestamp when the task starts. Unit: milliseconds.</p>
-     */
     @NameInMap("StartTime")
     public Long startTime;
 
-    /**
-     * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   **1**: The task is running.</p>
-     * <p>*   **2**: The task is successful.</p>
-     * <p>*   **3**: The task failed.</p>
-     */
     @NameInMap("Status")
     public String status;
 

@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulCheckTaskStatusDetailRequest extends TeaModel {
-    /**
-     * <p>The IDs of tasks.</p>
-     */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
-    /**
-     * <p>The types of the vulnerabilities that are detected by the tasks.</p>
-     */
     @NameInMap("Types")
     public java.util.List<String> types;
 
-    /**
-     * <p>The UUID of the server.</p>
-     */
     @NameInMap("Uuid")
     public String uuid;
 

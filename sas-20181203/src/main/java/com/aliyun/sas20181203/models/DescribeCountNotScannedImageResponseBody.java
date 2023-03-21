@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCountNotScannedImageResponseBody extends TeaModel {
-    /**
-     * <p>The number of images that are not scanned.</p>
-     */
     @NameInMap("NotScannedCnt")
     public Integer notScannedCnt;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

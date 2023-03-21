@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeTargetResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The information about the server.</p>
-     */
     @NameInMap("Targets")
     public java.util.List<DescribeTargetResponseBodyTargets> targets;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -52,24 +43,12 @@ public class DescribeTargetResponseBody extends TeaModel {
     }
 
     public static class DescribeTargetResponseBodyTargets extends TeaModel {
-        /**
-         * <p>The flag that is added to the server. This parameter can be empty.</p>
-         */
         @NameInMap("Flag")
         public String flag;
 
-        /**
-         * <p>The UUID of the server or the ID of the server group.</p>
-         */
         @NameInMap("Target")
         public String target;
 
-        /**
-         * <p>The type of the object. Valid values:</p>
-         * <br>
-         * <p>*   **uuid**: a server</p>
-         * <p>*   **groupId**: a server group</p>
-         */
         @NameInMap("TargetType")
         public String targetType;
 

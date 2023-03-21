@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class VerifyCheckResultResponseBody extends TeaModel {
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("Data")
     public VerifyCheckResultResponseBodyData data;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,12 +32,6 @@ public class VerifyCheckResultResponseBody extends TeaModel {
     }
 
     public static class VerifyCheckResultResponseBodyData extends TeaModel {
-        /**
-         * <p>The operation code of the cloud service configuration task. Valid values:</p>
-         * <br>
-         * <p>*   **Throttling**: frequency limit</p>
-         * <p>*   **ActionTrialUnauthorized**: an error that is related to unauthorized operations</p>
-         */
         @NameInMap("OperateCode")
         public String operateCode;
 

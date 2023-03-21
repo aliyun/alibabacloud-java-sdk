@@ -4,14 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulTargetStatisticsRequest extends TeaModel {
-    /**
-     * <p>The type of the vulnerabilities. Valid values:</p>
-     * <br>
-     * <p>*   **cve**: Linux software vulnerabilities</p>
-     * <p>*   **sys**: Windows system vulnerabilities</p>
-     * <p>*   **cms**: Web-CMS vulnerabilities</p>
-     * <p>*   **emg**: urgent vulnerabilities</p>
-     */
     @NameInMap("Type")
     public String type;
 

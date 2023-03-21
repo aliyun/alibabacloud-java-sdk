@@ -4,63 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExposedStatisticsResponseBody extends TeaModel {
-    /**
-     * <p>The total number of high-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
-     */
     @NameInMap("ExposedAsapVulCount")
     public Integer exposedAsapVulCount;
 
-    /**
-     * <p>The total number of system components that are exposed on the Internet. The components include OpenSSL and OpenSSH.</p>
-     */
     @NameInMap("ExposedComponentCount")
     public Integer exposedComponentCount;
 
-    /**
-     * <p>The total number of servers that are exposed on the Internet.</p>
-     */
     @NameInMap("ExposedInstanceCount")
     public Integer exposedInstanceCount;
 
-    /**
-     * <p>The total number of IP addresses that are exposed on the Internet.</p>
-     */
     @NameInMap("ExposedIpCount")
     public Integer exposedIpCount;
 
-    /**
-     * <p>The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
-     */
     @NameInMap("ExposedLaterVulCount")
     public Integer exposedLaterVulCount;
 
-    /**
-     * <p>The total number of low-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
-     */
     @NameInMap("ExposedNntfVulCount")
     public Integer exposedNntfVulCount;
 
-    /**
-     * <p>The total number of ports that are exposed on the Internet.</p>
-     */
     @NameInMap("ExposedPortCount")
     public Integer exposedPortCount;
 
-    /**
-     * <p>The total number of system keys that are detected on your servers and are exposed on the Internet.</p>
-     */
     @NameInMap("ExposedWeekPasswordMachineCount")
     public Integer exposedWeekPasswordMachineCount;
 
-    /**
-     * <p>The total number of gateway assets that are exposed on the Internet. The gateway assets include NAT gateways and Server Load Balancer (SLB) instances.</p>
-     */
     @NameInMap("GatewayAssetCount")
     public Integer gatewayAssetCount;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

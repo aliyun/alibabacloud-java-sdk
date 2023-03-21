@@ -4,36 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningMachinesRequest extends TeaModel {
-    /**
-     * <p>The ID of the check item.</p>
-     * <br>
-     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of check items.</p>
-     */
     @NameInMap("CheckId")
     public Long checkId;
 
-    /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The ID of the baseline.</p>
-     * <br>
-     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of baselines.</p>
-     */
     @NameInMap("RiskId")
     public Long riskId;
 
-    /**
-     * <p>Specifies whether the check item passed the baseline check. Valid values:</p>
-     * <p>*   **1**: no</p>
-     * <p>*   **3**: yes</p>
-     */
     @NameInMap("Status")
     public Integer status;
 

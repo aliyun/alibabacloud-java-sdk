@@ -4,28 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateHoneypotRequest extends TeaModel {
-    /**
-     * <p>The ID of the honeypot.</p>
-     * <br>
-     * <p>> You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.</p>
-     */
     @NameInMap("HoneypotId")
     public String honeypotId;
 
-    /**
-     * <p>The custom name of the honeypot.</p>
-     */
     @NameInMap("HoneypotName")
     public String honeypotName;
 
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The custom configuration of the honeypot.</p>
-     * <br>
-     * <p>> You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the configurations of honeypots from the **Template** response parameter.</p>
-     */
     @NameInMap("Meta")
     public String meta;
 

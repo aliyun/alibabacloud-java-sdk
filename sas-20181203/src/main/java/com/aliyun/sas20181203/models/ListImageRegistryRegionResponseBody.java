@@ -4,15 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListImageRegistryRegionResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of regions.</p>
-     */
     @NameInMap("Regions")
     public java.util.List<ListImageRegistryRegionResponseBodyRegions> regions;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,15 +32,9 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
     }
 
     public static class ListImageRegistryRegionResponseBodyRegions extends TeaModel {
-        /**
-         * <p>The region ID of the image.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The name of the region.</p>
-         */
         @NameInMap("RegionName")
         public String regionName;
 

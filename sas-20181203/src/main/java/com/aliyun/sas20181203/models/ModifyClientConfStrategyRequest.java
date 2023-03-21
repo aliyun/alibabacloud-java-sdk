@@ -4,37 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyClientConfStrategyRequest extends TeaModel {
-    /**
-     * <p>The key of the tag that is added to the agent configuration policy.</p>
-     */
     @NameInMap("Tag")
     public String tag;
 
-    /**
-     * <p>The extended tag of the agent configuration policy.</p>
-     */
     @NameInMap("TagExt")
     public String tagExt;
 
-    /**
-     * <p>The value of the tag that is added to the agent configuration policy.</p>
-     * <br>
-     * <p>*   major</p>
-     * <p>*   advanced</p>
-     * <p>*   basic</p>
-     */
     @NameInMap("TagValue")
     public String tagValue;
 
-    /**
-     * <p>The UUID of the server that you want to query.</p>
-     */
     @NameInMap("Uuid")
     public String uuid;
 
-    /**
-     * <p>The UUID of the asset. You can specify a maximum of 500 UUIDs at a time.</p>
-     */
     @NameInMap("Uuids")
     public java.util.List<String> uuids;
 

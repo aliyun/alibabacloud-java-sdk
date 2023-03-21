@@ -4,42 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetHoneypotNodeResponseBody extends TeaModel {
-    /**
-     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The details of the management node.</p>
-     */
     @NameInMap("HoneypotNode")
     public GetHoneypotNodeResponseBodyHoneypotNode honeypotNode;
 
-    /**
-     * <p>The HTTP status code of the request.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The message returned.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -97,93 +76,42 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
     }
 
     public static class GetHoneypotNodeResponseBodyHoneypotNode extends TeaModel {
-        /**
-         * <p>Indicates whether the honeypot is allowed to access the Internet. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The honeypot is allowed to access the Internet.</p>
-         * <p>*   **false**: The honeypot is not allowed to access the Internet.</p>
-         */
         @NameInMap("AllowHoneypotAccessInternet")
         public Boolean allowHoneypotAccessInternet;
 
-        /**
-         * <p>The time when the management node is created.</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The ID of the instance.</p>
-         */
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
-        /**
-         * <p>The maximum number of honeypots that can be deployed to the management node.</p>
-         */
         @NameInMap("HoneypotTotalCount")
         public Integer honeypotTotalCount;
 
-        /**
-         * <p>The number of honeypots that are deployed on the management node.</p>
-         */
         @NameInMap("HoneypotUsedCount")
         public Integer honeypotUsedCount;
 
-        /**
-         * <p>The ID of the management node.</p>
-         */
         @NameInMap("NodeId")
         public String nodeId;
 
-        /**
-         * <p>The IP address of the management node.</p>
-         */
         @NameInMap("NodeIp")
         public String nodeIp;
 
-        /**
-         * <p>The name of the management node.</p>
-         */
         @NameInMap("NodeName")
         public String nodeName;
 
-        /**
-         * <p>The maximum number of probes that can be deployed for the management node.</p>
-         */
         @NameInMap("ProbeTotalCount")
         public Integer probeTotalCount;
 
-        /**
-         * <p>The number of probes that are deployed for the management node.</p>
-         */
         @NameInMap("ProbeUsedCount")
         public Integer probeUsedCount;
 
-        /**
-         * <p>An array that consists of the allowed CIDR blocks.</p>
-         */
         @NameInMap("SecurityGroupProbeIpList")
         public java.util.List<String> securityGroupProbeIpList;
 
-        /**
-         * <p>The status of the management node. Valid values:</p>
-         * <br>
-         * <p>*   **0**: preparing</p>
-         * <p>*   **1**: normally running</p>
-         * <p>*   **2**: abnormal</p>
-         * <p>*   **4**: starting</p>
-         * <p>*   **5**: upgrading</p>
-         */
         @NameInMap("TotalStatus")
         public Integer totalStatus;
 
-        /**
-         * <p>Indicates whether the management node can be upgraded. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         */
         @NameInMap("UpgradeAvailable")
         public Boolean upgradeAvailable;
 

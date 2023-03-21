@@ -4,36 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainListRequest extends TeaModel {
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>The type of the domain name that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **root**: root domain name</p>
-     * <p>*   **sub**: subdomain name</p>
-     */
     @NameInMap("DomainType")
     public String domainType;
 
-    /**
-     * <p>The keyword that is used to query domain names. Fuzzy match is supported.</p>
-     */
     @NameInMap("FuzzyDomain")
     public String fuzzyDomain;
 
-    /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The source IP address of the request.</p>
-     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

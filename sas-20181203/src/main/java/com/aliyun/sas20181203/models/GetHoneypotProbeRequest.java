@@ -7,9 +7,6 @@ public class GetHoneypotProbeRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The ID of the probe.</p>
-     */
     @NameInMap("ProbeId")
     public String probeId;
 

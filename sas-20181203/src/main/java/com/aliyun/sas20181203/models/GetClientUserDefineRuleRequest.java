@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetClientUserDefineRuleRequest extends TeaModel {
-    /**
-     * <p>The ID of the custom defense rule.</p>
-     */
     @NameInMap("Id")
     public Long id;
 

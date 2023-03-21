@@ -4,33 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeOfflineMachinesResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    /**
-     * <p>An array that consists of the information about servers.</p>
-     */
     @NameInMap("MachineList")
     public java.util.List<DescribeOfflineMachinesResponseBodyMachineList> machineList;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,84 +65,33 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeOfflineMachinesResponseBodyMachineList extends TeaModel {
-        /**
-         * <p>The ID of the server.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The name of the server.</p>
-         */
         @NameInMap("InstanceName")
         public String instanceName;
 
-        /**
-         * <p>The public IP address of the server.</p>
-         */
         @NameInMap("InternetIp")
         public String internetIp;
 
-        /**
-         * <p>The private IP address of the server.</p>
-         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        /**
-         * <p>The region in which the server resides.</p>
-         */
         @NameInMap("MachineRegion")
         public String machineRegion;
 
-        /**
-         * <p>The operating system of the server. Valid values:</p>
-         * <br>
-         * <p>*   **linux**</p>
-         * <p>*   **windows**</p>
-         * <p>*   **windows-2003**</p>
-         */
         @NameInMap("Os")
         public String os;
 
-        /**
-         * <p>The ID of the region in which the server resides.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The UUID of the server.</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
-        /**
-         * <p>The source of the server. Valid values:</p>
-         * <br>
-         * <p>*   **0**: an asset provided by Alibaba Cloud.</p>
-         * <p>*   **1**: a third-party cloud server</p>
-         * <p>*   **2**: a server in a data center</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
-         * <p>*   **8**: a lightweight asset</p>
-         */
         @NameInMap("Vendor")
         public Integer vendor;
 
-        /**
-         * <p>The name of the service provider (SP) for the server.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   **ALIYUN**: Alibaba Cloud</p>
-         * <p>*   **OUT**: a third-party service provider</p>
-         * <p>*   **IDC**: a data center</p>
-         * <p>*   **TENCENT**: Tencent Cloud</p>
-         * <p>*   **HUAWEICLOUD**: Huawei Cloud</p>
-         * <p>*   **Microsoft**: Microsoft</p>
-         * <p>*   **AWS**: Amazon Web Services (AWS)</p>
-         * <p>*   **TRIPARTITE**: a lightweight server</p>
-         */
         @NameInMap("VendorName")
         public String vendorName;
 

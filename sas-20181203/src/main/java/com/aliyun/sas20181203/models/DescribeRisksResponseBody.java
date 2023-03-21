@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRisksResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>An array that consists of baselines.</p>
-     */
     @NameInMap("Risks")
     public java.util.List<DescribeRisksResponseBodyRisks> risks;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -52,45 +43,24 @@ public class DescribeRisksResponseBody extends TeaModel {
     }
 
     public static class DescribeRisksResponseBodyRisks extends TeaModel {
-        /**
-         * <p>The description of the baseline.</p>
-         */
         @NameInMap("RiskDetail")
         public String riskDetail;
 
-        /**
-         * <p>The ID of the baseline.</p>
-         */
         @NameInMap("RiskId")
         public Long riskId;
 
-        /**
-         * <p>The name of the baseline.</p>
-         */
         @NameInMap("RiskName")
         public String riskName;
 
-        /**
-         * <p>The name of the baseline type.</p>
-         */
         @NameInMap("RiskType")
         public String riskType;
 
-        /**
-         * <p>The name of the baseline subtype.</p>
-         */
         @NameInMap("SubRiskType")
         public String subRiskType;
 
-        /**
-         * <p>The display name of the baseline subtype.</p>
-         */
         @NameInMap("SubTypeAlias")
         public String subTypeAlias;
 
-        /**
-         * <p>The display name of the baseline type.</p>
-         */
         @NameInMap("TypeAlias")
         public String typeAlias;
 

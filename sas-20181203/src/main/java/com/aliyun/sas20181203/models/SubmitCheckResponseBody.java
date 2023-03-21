@@ -4,21 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SubmitCheckResponseBody extends TeaModel {
-    /**
-     * <p>The data returned if the call is successful.</p>
-     */
     @NameInMap("Data")
     public SubmitCheckResponseBodyData data;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the configuration assessment task.</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 
@@ -52,11 +43,6 @@ public class SubmitCheckResponseBody extends TeaModel {
     }
 
     public static class SubmitCheckResponseBodyData extends TeaModel {
-        /**
-         * <p>The operation code of the configuration assessment task.</p>
-         * <br>
-         * <p>*   **Throttling**: frequency limit</p>
-         */
         @NameInMap("OperateCode")
         public String operateCode;
 
