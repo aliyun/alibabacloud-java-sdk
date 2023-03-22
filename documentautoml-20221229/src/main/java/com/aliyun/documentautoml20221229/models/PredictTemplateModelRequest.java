@@ -4,6 +4,9 @@ package com.aliyun.documentautoml20221229.models;
 import com.aliyun.tea.*;
 
 public class PredictTemplateModelRequest extends TeaModel {
+    @NameInMap("BinaryToText")
+    public Boolean binaryToText;
+
     @NameInMap("Content")
     public String content;
 
@@ -13,6 +16,14 @@ public class PredictTemplateModelRequest extends TeaModel {
     public static PredictTemplateModelRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictTemplateModelRequest self = new PredictTemplateModelRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PredictTemplateModelRequest setBinaryToText(Boolean binaryToText) {
+        this.binaryToText = binaryToText;
+        return this;
+    }
+    public Boolean getBinaryToText() {
+        return this.binaryToText;
     }
 
     public PredictTemplateModelRequest setContent(String content) {
