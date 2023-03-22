@@ -153,6 +153,9 @@ public class CreateRuleRequest extends TeaModel {
         @NameInMap("Endpoint")
         public String endpoint;
 
+        @NameInMap("ErrorsTolerance")
+        public String errorsTolerance;
+
         @NameInMap("Id")
         public String id;
 
@@ -184,6 +187,14 @@ public class CreateRuleRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public CreateRuleRequestEventTargets setErrorsTolerance(String errorsTolerance) {
+            this.errorsTolerance = errorsTolerance;
+            return this;
+        }
+        public String getErrorsTolerance() {
+            return this.errorsTolerance;
         }
 
         public CreateRuleRequestEventTargets setId(String id) {
