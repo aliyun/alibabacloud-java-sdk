@@ -4,6 +4,9 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeTableOcrRequest extends TeaModel {
+    @NameInMap("IsHandWriting")
+    public String isHandWriting;
+
     @NameInMap("LineLess")
     public Boolean lineLess;
 
@@ -22,6 +25,14 @@ public class RecognizeTableOcrRequest extends TeaModel {
     public static RecognizeTableOcrRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeTableOcrRequest self = new RecognizeTableOcrRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeTableOcrRequest setIsHandWriting(String isHandWriting) {
+        this.isHandWriting = isHandWriting;
+        return this;
+    }
+    public String getIsHandWriting() {
+        return this.isHandWriting;
     }
 
     public RecognizeTableOcrRequest setLineLess(Boolean lineLess) {
