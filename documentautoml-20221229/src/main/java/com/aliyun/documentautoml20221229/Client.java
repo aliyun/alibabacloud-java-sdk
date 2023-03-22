@@ -107,6 +107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PredictTemplateModelResponse predictTemplateModelWithOptions(PredictTemplateModelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.binaryToText)) {
+            query.put("BinaryToText", request.binaryToText);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             query.put("Content", request.content);
         }
