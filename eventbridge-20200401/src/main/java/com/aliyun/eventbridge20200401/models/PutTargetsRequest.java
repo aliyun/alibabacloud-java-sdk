@@ -3,7 +3,7 @@ package com.aliyun.eventbridge20200401.models;
 
 import com.aliyun.tea.*;
 
-public class CreateTargetsRequest extends TeaModel {
+public class PutTargetsRequest extends TeaModel {
     @NameInMap("EventBusName")
     public String eventBusName;
 
@@ -11,14 +11,14 @@ public class CreateTargetsRequest extends TeaModel {
     public String ruleName;
 
     @NameInMap("Targets")
-    public java.util.List<CreateTargetsRequestTargets> targets;
+    public java.util.List<PutTargetsRequestTargets> targets;
 
-    public static CreateTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateTargetsRequest self = new CreateTargetsRequest();
+    public static PutTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
+        PutTargetsRequest self = new PutTargetsRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateTargetsRequest setEventBusName(String eventBusName) {
+    public PutTargetsRequest setEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateTargetsRequest extends TeaModel {
         return this.eventBusName;
     }
 
-    public CreateTargetsRequest setRuleName(String ruleName) {
+    public PutTargetsRequest setRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
     }
@@ -34,24 +34,24 @@ public class CreateTargetsRequest extends TeaModel {
         return this.ruleName;
     }
 
-    public CreateTargetsRequest setTargets(java.util.List<CreateTargetsRequestTargets> targets) {
+    public PutTargetsRequest setTargets(java.util.List<PutTargetsRequestTargets> targets) {
         this.targets = targets;
         return this;
     }
-    public java.util.List<CreateTargetsRequestTargets> getTargets() {
+    public java.util.List<PutTargetsRequestTargets> getTargets() {
         return this.targets;
     }
 
-    public static class CreateTargetsRequestTargetsDeadLetterQueue extends TeaModel {
+    public static class PutTargetsRequestTargetsDeadLetterQueue extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
-        public static CreateTargetsRequestTargetsDeadLetterQueue build(java.util.Map<String, ?> map) throws Exception {
-            CreateTargetsRequestTargetsDeadLetterQueue self = new CreateTargetsRequestTargetsDeadLetterQueue();
+        public static PutTargetsRequestTargetsDeadLetterQueue build(java.util.Map<String, ?> map) throws Exception {
+            PutTargetsRequestTargetsDeadLetterQueue self = new PutTargetsRequestTargetsDeadLetterQueue();
             return TeaModel.build(map, self);
         }
 
-        public CreateTargetsRequestTargetsDeadLetterQueue setArn(String arn) {
+        public PutTargetsRequestTargetsDeadLetterQueue setArn(String arn) {
             this.arn = arn;
             return this;
         }
@@ -61,7 +61,7 @@ public class CreateTargetsRequest extends TeaModel {
 
     }
 
-    public static class CreateTargetsRequestTargetsParamList extends TeaModel {
+    public static class PutTargetsRequestTargetsParamList extends TeaModel {
         @NameInMap("Form")
         public String form;
 
@@ -74,12 +74,12 @@ public class CreateTargetsRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateTargetsRequestTargetsParamList build(java.util.Map<String, ?> map) throws Exception {
-            CreateTargetsRequestTargetsParamList self = new CreateTargetsRequestTargetsParamList();
+        public static PutTargetsRequestTargetsParamList build(java.util.Map<String, ?> map) throws Exception {
+            PutTargetsRequestTargetsParamList self = new PutTargetsRequestTargetsParamList();
             return TeaModel.build(map, self);
         }
 
-        public CreateTargetsRequestTargetsParamList setForm(String form) {
+        public PutTargetsRequestTargetsParamList setForm(String form) {
             this.form = form;
             return this;
         }
@@ -87,7 +87,7 @@ public class CreateTargetsRequest extends TeaModel {
             return this.form;
         }
 
-        public CreateTargetsRequestTargetsParamList setResourceKey(String resourceKey) {
+        public PutTargetsRequestTargetsParamList setResourceKey(String resourceKey) {
             this.resourceKey = resourceKey;
             return this;
         }
@@ -95,7 +95,7 @@ public class CreateTargetsRequest extends TeaModel {
             return this.resourceKey;
         }
 
-        public CreateTargetsRequestTargetsParamList setTemplate(String template) {
+        public PutTargetsRequestTargetsParamList setTemplate(String template) {
             this.template = template;
             return this;
         }
@@ -103,7 +103,7 @@ public class CreateTargetsRequest extends TeaModel {
             return this.template;
         }
 
-        public CreateTargetsRequestTargetsParamList setValue(String value) {
+        public PutTargetsRequestTargetsParamList setValue(String value) {
             this.value = value;
             return this;
         }
@@ -113,9 +113,9 @@ public class CreateTargetsRequest extends TeaModel {
 
     }
 
-    public static class CreateTargetsRequestTargets extends TeaModel {
+    public static class PutTargetsRequestTargets extends TeaModel {
         @NameInMap("DeadLetterQueue")
-        public CreateTargetsRequestTargetsDeadLetterQueue deadLetterQueue;
+        public PutTargetsRequestTargetsDeadLetterQueue deadLetterQueue;
 
         @NameInMap("Endpoint")
         public String endpoint;
@@ -127,7 +127,7 @@ public class CreateTargetsRequest extends TeaModel {
         public String id;
 
         @NameInMap("ParamList")
-        public java.util.List<CreateTargetsRequestTargetsParamList> paramList;
+        public java.util.List<PutTargetsRequestTargetsParamList> paramList;
 
         @NameInMap("PushRetryStrategy")
         public String pushRetryStrategy;
@@ -135,20 +135,20 @@ public class CreateTargetsRequest extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static CreateTargetsRequestTargets build(java.util.Map<String, ?> map) throws Exception {
-            CreateTargetsRequestTargets self = new CreateTargetsRequestTargets();
+        public static PutTargetsRequestTargets build(java.util.Map<String, ?> map) throws Exception {
+            PutTargetsRequestTargets self = new PutTargetsRequestTargets();
             return TeaModel.build(map, self);
         }
 
-        public CreateTargetsRequestTargets setDeadLetterQueue(CreateTargetsRequestTargetsDeadLetterQueue deadLetterQueue) {
+        public PutTargetsRequestTargets setDeadLetterQueue(PutTargetsRequestTargetsDeadLetterQueue deadLetterQueue) {
             this.deadLetterQueue = deadLetterQueue;
             return this;
         }
-        public CreateTargetsRequestTargetsDeadLetterQueue getDeadLetterQueue() {
+        public PutTargetsRequestTargetsDeadLetterQueue getDeadLetterQueue() {
             return this.deadLetterQueue;
         }
 
-        public CreateTargetsRequestTargets setEndpoint(String endpoint) {
+        public PutTargetsRequestTargets setEndpoint(String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
@@ -156,7 +156,7 @@ public class CreateTargetsRequest extends TeaModel {
             return this.endpoint;
         }
 
-        public CreateTargetsRequestTargets setErrorsTolerance(String errorsTolerance) {
+        public PutTargetsRequestTargets setErrorsTolerance(String errorsTolerance) {
             this.errorsTolerance = errorsTolerance;
             return this;
         }
@@ -164,7 +164,7 @@ public class CreateTargetsRequest extends TeaModel {
             return this.errorsTolerance;
         }
 
-        public CreateTargetsRequestTargets setId(String id) {
+        public PutTargetsRequestTargets setId(String id) {
             this.id = id;
             return this;
         }
@@ -172,15 +172,15 @@ public class CreateTargetsRequest extends TeaModel {
             return this.id;
         }
 
-        public CreateTargetsRequestTargets setParamList(java.util.List<CreateTargetsRequestTargetsParamList> paramList) {
+        public PutTargetsRequestTargets setParamList(java.util.List<PutTargetsRequestTargetsParamList> paramList) {
             this.paramList = paramList;
             return this;
         }
-        public java.util.List<CreateTargetsRequestTargetsParamList> getParamList() {
+        public java.util.List<PutTargetsRequestTargetsParamList> getParamList() {
             return this.paramList;
         }
 
-        public CreateTargetsRequestTargets setPushRetryStrategy(String pushRetryStrategy) {
+        public PutTargetsRequestTargets setPushRetryStrategy(String pushRetryStrategy) {
             this.pushRetryStrategy = pushRetryStrategy;
             return this;
         }
@@ -188,7 +188,7 @@ public class CreateTargetsRequest extends TeaModel {
             return this.pushRetryStrategy;
         }
 
-        public CreateTargetsRequestTargets setType(String type) {
+        public PutTargetsRequestTargets setType(String type) {
             this.type = type;
             return this;
         }
