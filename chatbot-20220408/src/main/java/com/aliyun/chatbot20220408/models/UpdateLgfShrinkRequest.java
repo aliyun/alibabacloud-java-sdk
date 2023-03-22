@@ -13,7 +13,9 @@ public class UpdateLgfShrinkRequest extends TeaModel {
     @NameInMap("LgfDefinition")
     public String lgfDefinitionShrink;
 
-    // LGF ID
+    /**
+     * <p>LGF ID</p>
+     */
     @NameInMap("LgfId")
     public Long lgfId;
 

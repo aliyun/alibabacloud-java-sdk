@@ -13,7 +13,9 @@ public class ListAgentResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // Id of the request
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -75,6 +77,9 @@ public class ListAgentResponseBody extends TeaModel {
         @NameInMap("AgentName")
         public String agentName;
 
+        @NameInMap("InstanceInfos")
+        public java.util.Map<String, ?> instanceInfos;
+
         public static ListAgentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAgentResponseBodyData self = new ListAgentResponseBodyData();
             return TeaModel.build(map, self);
@@ -102,6 +107,14 @@ public class ListAgentResponseBody extends TeaModel {
         }
         public String getAgentName() {
             return this.agentName;
+        }
+
+        public ListAgentResponseBodyData setInstanceInfos(java.util.Map<String, ?> instanceInfos) {
+            this.instanceInfos = instanceInfos;
+            return this;
+        }
+        public java.util.Map<String, ?> getInstanceInfos() {
+            return this.instanceInfos;
         }
 
     }

@@ -1824,6 +1824,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAgentResponse listAgentWithOptions(ListAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            query.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.goodsCodes)) {
+            query.put("GoodsCodes", request.goodsCodes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }

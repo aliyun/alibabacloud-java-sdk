@@ -13,7 +13,9 @@ public class DeleteLgfRequest extends TeaModel {
     @NameInMap("IntentId")
     public Long intentId;
 
-    // lgf Id
+    /**
+     * <p>lgf Id</p>
+     */
     @NameInMap("LgfId")
     public Long lgfId;
 
