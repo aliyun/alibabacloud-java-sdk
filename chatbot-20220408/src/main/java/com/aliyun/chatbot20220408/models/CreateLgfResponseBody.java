@@ -4,7 +4,9 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class CreateLgfResponseBody extends TeaModel {
-    // LGF ID
+    /**
+     * <p>LGF ID</p>
+     */
     @NameInMap("LgfId")
     public Long lgfId;
 

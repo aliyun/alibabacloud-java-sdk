@@ -13,7 +13,9 @@ public class UpdateLgfRequest extends TeaModel {
     @NameInMap("LgfDefinition")
     public UpdateLgfRequestLgfDefinition lgfDefinition;
 
-    // LGF ID
+    /**
+     * <p>LGF ID</p>
+     */
     @NameInMap("LgfId")
     public Long lgfId;
 

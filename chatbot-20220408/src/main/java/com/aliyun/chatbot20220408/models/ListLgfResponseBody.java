@@ -71,7 +71,9 @@ public class ListLgfResponseBody extends TeaModel {
         @NameInMap("IntentId")
         public Long intentId;
 
-        // LGF ID
+        /**
+         * <p>LGF ID</p>
+         */
         @NameInMap("LgfId")
         public Long lgfId;
 
