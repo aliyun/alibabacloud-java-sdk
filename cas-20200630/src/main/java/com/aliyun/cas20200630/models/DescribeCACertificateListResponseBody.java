@@ -230,7 +230,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
          * <p>*   **OU**: the name of the department or branch in the organization</p>
          * <p>*   **L**: the name of the city in which the organization is located</p>
          * <br>
-         * <p>\<props="china">- **ST**: the name of the province, municipality, or autonomous region in which the organization is located \<props="intl">- **ST**: the name of the province or state in which the organization is located</p>
+         * <p><props="china">- **ST**: the name of the province, municipality, or autonomous region in which the organization is located</props> <props="intl">- **ST**: the name of the province or state in which the organization is located</props></p>
          * <br>
          * <p>*   **CN**: the common name or abbreviation of the organization</p>
          */
