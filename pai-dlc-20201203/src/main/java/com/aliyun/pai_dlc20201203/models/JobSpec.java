@@ -13,6 +13,9 @@ public class JobSpec extends TeaModel {
     @NameInMap("Image")
     public String image;
 
+    @NameInMap("ImageConfig")
+    public ImageConfig imageConfig;
+
     @NameInMap("PodCount")
     public Long podCount;
 
@@ -52,6 +55,14 @@ public class JobSpec extends TeaModel {
     }
     public String getImage() {
         return this.image;
+    }
+
+    public JobSpec setImageConfig(ImageConfig imageConfig) {
+        this.imageConfig = imageConfig;
+        return this;
+    }
+    public ImageConfig getImageConfig() {
+        return this.imageConfig;
     }
 
     public JobSpec setPodCount(Long podCount) {

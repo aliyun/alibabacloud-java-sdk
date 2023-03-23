@@ -79,11 +79,17 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("ResourceLevel")
     public String resourceLevel;
 
+    @NameInMap("RestartTimes")
+    public String restartTimes;
+
     @NameInMap("Settings")
     public JobSettings settings;
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("SubStatus")
+    public String subStatus;
 
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
@@ -308,6 +314,14 @@ public class GetJobResponseBody extends TeaModel {
         return this.resourceLevel;
     }
 
+    public GetJobResponseBody setRestartTimes(String restartTimes) {
+        this.restartTimes = restartTimes;
+        return this;
+    }
+    public String getRestartTimes() {
+        return this.restartTimes;
+    }
+
     public GetJobResponseBody setSettings(JobSettings settings) {
         this.settings = settings;
         return this;
@@ -322,6 +336,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetJobResponseBody setSubStatus(String subStatus) {
+        this.subStatus = subStatus;
+        return this;
+    }
+    public String getSubStatus() {
+        return this.subStatus;
     }
 
     public GetJobResponseBody setThirdpartyLibDir(String thirdpartyLibDir) {
@@ -464,20 +486,32 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("GmtStartTime")
         public String gmtStartTime;
 
-        // Pod Ip
+        /**
+         * <p>Pod Ip</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
-        // Pod Id
+        /**
+         * <p>Pod Id</p>
+         */
         @NameInMap("PodId")
         public String podId;
 
-        // Pod UId
+        /**
+         * <p>Pod UId</p>
+         */
         @NameInMap("PodUid")
         public String podUid;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("SubStatus")
+        public String subStatus;
 
         @NameInMap("Type")
         public String type;
@@ -535,12 +569,28 @@ public class GetJobResponseBody extends TeaModel {
             return this.podUid;
         }
 
+        public GetJobResponseBodyPodsHistoryPods setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
         public GetJobResponseBodyPodsHistoryPods setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetJobResponseBodyPodsHistoryPods setSubStatus(String subStatus) {
+            this.subStatus = subStatus;
+            return this;
+        }
+        public String getSubStatus() {
+            return this.subStatus;
         }
 
         public GetJobResponseBodyPodsHistoryPods setType(String type) {
@@ -572,12 +622,20 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("PodId")
         public String podId;
 
-        // Pod UId
+        /**
+         * <p>Pod UId</p>
+         */
         @NameInMap("PodUid")
         public String podUid;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("SubStatus")
+        public String subStatus;
 
         @NameInMap("Type")
         public String type;
@@ -643,12 +701,28 @@ public class GetJobResponseBody extends TeaModel {
             return this.podUid;
         }
 
+        public GetJobResponseBodyPods setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
         public GetJobResponseBodyPods setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetJobResponseBodyPods setSubStatus(String subStatus) {
+            this.subStatus = subStatus;
+            return this;
+        }
+        public String getSubStatus() {
+            return this.subStatus;
         }
 
         public GetJobResponseBodyPods setType(String type) {

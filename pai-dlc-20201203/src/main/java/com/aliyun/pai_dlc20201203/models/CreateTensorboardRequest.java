@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CreateTensorboardRequest extends TeaModel {
+    @NameInMap("Cpu")
+    public Long cpu;
+
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
@@ -21,6 +24,9 @@ public class CreateTensorboardRequest extends TeaModel {
 
     @NameInMap("MaxRunningTimeMinutes")
     public Long maxRunningTimeMinutes;
+
+    @NameInMap("Memory")
+    public Long memory;
 
     @NameInMap("Options")
     public String options;
@@ -46,6 +52,14 @@ public class CreateTensorboardRequest extends TeaModel {
     public static CreateTensorboardRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTensorboardRequest self = new CreateTensorboardRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTensorboardRequest setCpu(Long cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public Long getCpu() {
+        return this.cpu;
     }
 
     public CreateTensorboardRequest setDataSourceId(String dataSourceId) {
@@ -94,6 +108,14 @@ public class CreateTensorboardRequest extends TeaModel {
     }
     public Long getMaxRunningTimeMinutes() {
         return this.maxRunningTimeMinutes;
+    }
+
+    public CreateTensorboardRequest setMemory(Long memory) {
+        this.memory = memory;
+        return this;
+    }
+    public Long getMemory() {
+        return this.memory;
     }
 
     public CreateTensorboardRequest setOptions(String options) {

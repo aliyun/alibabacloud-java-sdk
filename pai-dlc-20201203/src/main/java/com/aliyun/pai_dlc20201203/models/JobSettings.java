@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobSettings extends TeaModel {
+    @NameInMap("AdvancedSettings")
+    public java.util.Map<String, ?> advancedSettings;
+
     @NameInMap("BusinessUserId")
     public String businessUserId;
 
@@ -25,6 +28,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("ErrorMonitoringArgs")
     public String errorMonitoringArgs;
 
+    @NameInMap("OversoldType")
+    public String oversoldType;
+
     @NameInMap("PipelineId")
     public String pipelineId;
 
@@ -34,6 +40,14 @@ public class JobSettings extends TeaModel {
     public static JobSettings build(java.util.Map<String, ?> map) throws Exception {
         JobSettings self = new JobSettings();
         return TeaModel.build(map, self);
+    }
+
+    public JobSettings setAdvancedSettings(java.util.Map<String, ?> advancedSettings) {
+        this.advancedSettings = advancedSettings;
+        return this;
+    }
+    public java.util.Map<String, ?> getAdvancedSettings() {
+        return this.advancedSettings;
     }
 
     public JobSettings setBusinessUserId(String businessUserId) {
@@ -90,6 +104,14 @@ public class JobSettings extends TeaModel {
     }
     public String getErrorMonitoringArgs() {
         return this.errorMonitoringArgs;
+    }
+
+    public JobSettings setOversoldType(String oversoldType) {
+        this.oversoldType = oversoldType;
+        return this;
+    }
+    public String getOversoldType() {
+        return this.oversoldType;
     }
 
     public JobSettings setPipelineId(String pipelineId) {

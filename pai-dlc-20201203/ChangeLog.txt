@@ -1,3 +1,6 @@
+2023-03-23 Version: 1.2.4
+- Change the type of RequestId to string in GetJobEvents API.
+
 2022-12-13 Version: 1.2.3
 - CreateJob supports params SuccessPolicy.
 

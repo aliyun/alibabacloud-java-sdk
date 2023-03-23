@@ -11,7 +11,7 @@ public class GetJobEventsResponseBody extends TeaModel {
     public String jobId;
 
     @NameInMap("RequestId")
-    public Integer requestId;
+    public String requestId;
 
     public static GetJobEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetJobEventsResponseBody self = new GetJobEventsResponseBody();
@@ -34,11 +34,11 @@ public class GetJobEventsResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public GetJobEventsResponseBody setRequestId(Integer requestId) {
+    public GetJobEventsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
-    public Integer getRequestId() {
+    public String getRequestId() {
         return this.requestId;
     }
 

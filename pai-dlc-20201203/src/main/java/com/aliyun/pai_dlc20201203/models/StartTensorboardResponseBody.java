@@ -7,7 +7,9 @@ public class StartTensorboardResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // Tensorboad Id
+    /**
+     * <p>Tensorboad Id</p>
+     */
     @NameInMap("TensorboardId")
     public String tensorboardId;
 
