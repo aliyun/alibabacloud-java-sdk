@@ -7,6 +7,9 @@ public class ListUserRasterDatasRequest extends TeaModel {
     @NameInMap("AcquisitionDate")
     public String acquisitionDate;
 
+    @NameInMap("DataId")
+    public String dataId;
+
     @NameInMap("FromType")
     public String fromType;
 
@@ -36,6 +39,14 @@ public class ListUserRasterDatasRequest extends TeaModel {
     }
     public String getAcquisitionDate() {
         return this.acquisitionDate;
+    }
+
+    public ListUserRasterDatasRequest setDataId(String dataId) {
+        this.dataId = dataId;
+        return this;
+    }
+    public String getDataId() {
+        return this.dataId;
     }
 
     public ListUserRasterDatasRequest setFromType(String fromType) {

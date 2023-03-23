@@ -126,6 +126,12 @@ public class CreateAIJobRequest extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("ZoomLevel")
+        public Integer zoomLevel;
+
         public static CreateAIJobRequestInputsDes build(java.util.Map<String, ?> map) throws Exception {
             CreateAIJobRequestInputsDes self = new CreateAIJobRequestInputsDes();
             return TeaModel.build(map, self);
@@ -147,6 +153,22 @@ public class CreateAIJobRequest extends TeaModel {
             return this.dataId;
         }
 
+        public CreateAIJobRequestInputsDes setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateAIJobRequestInputsDes setZoomLevel(Integer zoomLevel) {
+            this.zoomLevel = zoomLevel;
+            return this;
+        }
+        public Integer getZoomLevel() {
+            return this.zoomLevel;
+        }
+
     }
 
     public static class CreateAIJobRequestInputsSrc extends TeaModel {
@@ -155,6 +177,12 @@ public class CreateAIJobRequest extends TeaModel {
 
         @NameInMap("DataId")
         public String dataId;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("ZoomLevel")
+        public Integer zoomLevel;
 
         public static CreateAIJobRequestInputsSrc build(java.util.Map<String, ?> map) throws Exception {
             CreateAIJobRequestInputsSrc self = new CreateAIJobRequestInputsSrc();
@@ -175,6 +203,22 @@ public class CreateAIJobRequest extends TeaModel {
         }
         public String getDataId() {
             return this.dataId;
+        }
+
+        public CreateAIJobRequestInputsSrc setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateAIJobRequestInputsSrc setZoomLevel(Integer zoomLevel) {
+            this.zoomLevel = zoomLevel;
+            return this;
+        }
+        public Integer getZoomLevel() {
+            return this.zoomLevel;
         }
 
     }

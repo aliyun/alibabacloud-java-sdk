@@ -41,6 +41,9 @@ public class GetJobsResponseBody extends TeaModel {
         @NameInMap("JobName")
         public String jobName;
 
+        @NameInMap("JobOutDataId")
+        public String jobOutDataId;
+
         @NameInMap("JobType")
         public Integer jobType;
 
@@ -92,6 +95,14 @@ public class GetJobsResponseBody extends TeaModel {
         }
         public String getJobName() {
             return this.jobName;
+        }
+
+        public GetJobsResponseBodyList setJobOutDataId(String jobOutDataId) {
+            this.jobOutDataId = jobOutDataId;
+            return this;
+        }
+        public String getJobOutDataId() {
+            return this.jobOutDataId;
         }
 
         public GetJobsResponseBodyList setJobType(Integer jobType) {
