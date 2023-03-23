@@ -17,7 +17,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The returned plug-in information. It is an array consisting of PluginAttribute data.</p>
+     * <p>The plug-in information. The information is an array that consists of PluginAttribute data.</p>
      */
     @NameInMap("Plugins")
     public DescribePluginsByApiResponseBodyPlugins plugins;
@@ -81,19 +81,19 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
 
     public static class DescribePluginsByApiResponseBodyPluginsPluginAttribute extends TeaModel {
         /**
-         * <p>The creation time (UTC) of the plug-in.</p>
+         * <p>The time when the plug-in was created. The time is displayed in UTC.</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>The plug-in description.</p>
+         * <p>The description of the plug-in.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The last modification time (UTC) of the plug-in.</p>
+         * <p>The time when the plug-in was last modified. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -123,7 +123,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
         public String pluginType;
 
         /**
-         * <p>The region where the plug-in is located.</p>
+         * <p>The region where the plug-in resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

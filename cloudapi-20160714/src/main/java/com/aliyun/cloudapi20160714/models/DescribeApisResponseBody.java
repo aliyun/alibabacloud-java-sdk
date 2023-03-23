@@ -139,6 +139,55 @@ public class DescribeApisResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApisResponseBodyApiSummarysApiSummaryTagListTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeApisResponseBodyApiSummarysApiSummaryTagListTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApisResponseBodyApiSummarysApiSummaryTagListTag self = new DescribeApisResponseBodyApiSummarysApiSummaryTagListTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummaryTagListTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummaryTagListTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeApisResponseBodyApiSummarysApiSummaryTagList extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeApisResponseBodyApiSummarysApiSummaryTagListTag> tag;
+
+        public static DescribeApisResponseBodyApiSummarysApiSummaryTagList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApisResponseBodyApiSummarysApiSummaryTagList self = new DescribeApisResponseBodyApiSummarysApiSummaryTagList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummaryTagList setTag(java.util.List<DescribeApisResponseBodyApiSummarysApiSummaryTagListTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeApisResponseBodyApiSummarysApiSummaryTagListTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeApisResponseBodyApiSummarysApiSummary extends TeaModel {
         /**
          * <p>The ID of the API.</p>
@@ -196,6 +245,9 @@ public class DescribeApisResponseBody extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("TagList")
+        public DescribeApisResponseBodyApiSummarysApiSummaryTagList tagList;
 
         /**
          * <p>Indicates whether the API is public. Valid values:</p>
@@ -297,6 +349,14 @@ public class DescribeApisResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeApisResponseBodyApiSummarysApiSummary setTagList(DescribeApisResponseBodyApiSummarysApiSummaryTagList tagList) {
+            this.tagList = tagList;
+            return this;
+        }
+        public DescribeApisResponseBodyApiSummarysApiSummaryTagList getTagList() {
+            return this.tagList;
         }
 
         public DescribeApisResponseBodyApiSummarysApiSummary setVisibility(String visibility) {

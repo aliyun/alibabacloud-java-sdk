@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApiConfigurationRequest extends TeaModel {
     /**
-     * <p>If **AuthType** is set to **APP**, this value must be passed to specify the signature algorithm. If you do not specify a value, HmacSHA256 is used by default. Valid values:</p>
+     * <p>If the **AuthType** parameter is set to **APP**, you must include this parameter to specify the signature algorithm. If you do not specify a value, HmacSHA256 is used by default. Valid values:</p>
      * <br>
      * <p>*   HmacSHA256</p>
      * <p>*   HmacSHA1,HmacSHA256</p>
@@ -26,12 +26,12 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>If **AuthType** is set to **APP**, the valid values are:</p>
+     * <p>If the **AuthType** parameter is set to **APP**, the valid values are:</p>
      * <br>
-     * <p>*   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.</p>
+     * <p>*   **DEFAULT**: The default value that is used if no other values are passed. This value indicates that the settings of the group are used.</p>
      * <p>*   **DISABLE**: The authentication is disabled.</p>
-     * <p>*   **HEADER: AppCode can be placed in the Header parameter for authentication.**</p>
-     * <p>*   **HEADER_QUERY: AppCode can be placed in the Header or Query parameter for authentication.</p>
+     * <p>*   **HEADER**: AppCode can be placed in the Header parameter for authentication.</p>
+     * <p>*   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.</p>
      */
     @NameInMap("AppCodeAuthType")
     public String appCodeAuthType;
@@ -48,15 +48,15 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     public String authType;
 
     /**
-     * <p>The name of the backend service. This parameter takes effect only when UseBackendService is set to TRUE.</p>
+     * <p>The name of the backend service. This parameter takes effect only when the UseBackendService parameter is set to TRUE.</p>
      */
     @NameInMap("BackendName")
     public String backendName;
 
     /**
-     * <p>This parameter takes effect only when the RequestMode parameter is set to MAPPING.********</p>
+     * <p>This parameter takes effect only when the **RequestMode** parameter is set to **MAPPING**.</p>
      * <br>
-     * <p>The server data transmission method used for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data in key-value pairs is transmitted as forms. STREAM indicates that data is transmitted as byte streams.</p>
+     * <p>The format in which data is transmitted to the server for POST and PUT requests. Valid values: **FORM** and **STREAM**. FORM indicates that data is transmitted in the key-value pair format. STREAM indicates that data is transmitted as byte streams.</p>
      */
     @NameInMap("BodyFormat")
     public String bodyFormat;
@@ -89,8 +89,8 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>*   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.</p>
-     * <p>*   If you set **DisableInternet** to **false**, the limit if lifted.</p>
+     * <p>*   Specifies whether to call the API only in an internal network. If the **DisableInternet** parameter is set to **true**, the API can be called only in an internal network.</p>
+     * <p>*   If the **DisableInternet** parameter is set to **false**, the API can be called over the Internet and in an internal network.</p>
      */
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
@@ -110,8 +110,8 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     public String failResultSample;
 
     /**
-     * <p>*   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
-     * <p>*   If you set **ForceNonceCheck** to **false**, the check is not performed. If you do not set this parameter, the original value is used.</p>
+     * <p>*   Specifies whether to forcibly check X-Ca-Nonce. If the **ForceNonceCheck** parameter is set to **true**, X-Ca-Nonce is forcibly checked. X-Ca-Nonce is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
+     * <p>*   If the **ForceNonceCheck** parameter is set to **false**, X-Ca-Nonce is not checked. If you do not modify this parameter when you modify an API, the original value is used.</p>
      */
     @NameInMap("ForceNonceCheck")
     public Boolean forceNonceCheck;
@@ -177,7 +177,7 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     public String requestParameters;
 
     /**
-     * <p>The API request path. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the API request path is ` /object/add  `.</p>
+     * <p>The path of the API request. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the path of the API request is `/object/add`.</p>
      */
     @NameInMap("RequestPath")
     public String requestPath;
@@ -220,10 +220,10 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     public String serviceParametersMap;
 
     /**
-     * <p>The protocols that are used to access backend services. Valid values:</p>
+     * <p>The protocol that is used to access backend services. Valid values:</p>
      * <br>
-     * <p>*   HTTP: for backend services that use HTTP or HTTPS</p>
-     * <p>*   VPC: for backend services that use VPC</p>
+     * <p>*   Http: for backend services that use HTTP or HTTPS</p>
+     * <p>*   Vpc: for backend services that use VPC</p>
      * <p>*   FC: for Function Compute</p>
      * <p>*   OSS: for Object Storage Service</p>
      * <p>*   Mock: for backend services that use the Mock mode</p>
@@ -235,16 +235,16 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     public String serviceProtocol;
 
     /**
-     * <p>The timeout period of the backend service, in millisecond.</p>
+     * <p>The timeout period of the backend service. Unit: milliseconds.</p>
      */
     @NameInMap("ServiceTimeout")
     public Integer serviceTimeout;
 
     /**
-     * <p>Specifies whether to use the created backend service. Valid values:</p>
+     * <p>Specifies whether to use the information about the created backend service. Valid values:</p>
      * <br>
-     * <p>*   TRUE: The created backend service is used.</p>
-     * <p>*   FALSE: The custom backend service information is used.</p>
+     * <p>*   TRUE: uses the information about the created backend service.</p>
+     * <p>*   FALSE: uses the information about the custom backend service.</p>
      */
     @NameInMap("UseBackendService")
     public Boolean useBackendService;
@@ -252,8 +252,8 @@ public class ModifyApiConfigurationRequest extends TeaModel {
     /**
      * <p>Specifies whether to make the API public. Valid values:</p>
      * <br>
-     * <p>*   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**</p>
-     * <p>*   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
+     * <p>*   **PUBLIC:** The API is public. If this parameter is set to PUBLIC, the API is displayed on the APIs page for all users after the API is published to the production environment.</p>
+     * <p>*   **PRIVATE:** The API is private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
      */
     @NameInMap("Visibility")
     public String visibility;

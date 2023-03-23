@@ -31,6 +31,12 @@ public class DescribeDomainResponseBody extends TeaModel {
     @NameInMap("CertificatePrivateKey")
     public String certificatePrivateKey;
 
+    @NameInMap("CertificateValidEnd")
+    public Long certificateValidEnd;
+
+    @NameInMap("CertificateValidStart")
+    public Long certificateValidStart;
+
     /**
      * <p>Remarks about the domain name, such as the cause of an exception.</p>
      */
@@ -126,6 +132,22 @@ public class DescribeDomainResponseBody extends TeaModel {
     }
     public String getCertificatePrivateKey() {
         return this.certificatePrivateKey;
+    }
+
+    public DescribeDomainResponseBody setCertificateValidEnd(Long certificateValidEnd) {
+        this.certificateValidEnd = certificateValidEnd;
+        return this;
+    }
+    public Long getCertificateValidEnd() {
+        return this.certificateValidEnd;
+    }
+
+    public DescribeDomainResponseBody setCertificateValidStart(Long certificateValidStart) {
+        this.certificateValidStart = certificateValidStart;
+        return this;
+    }
+    public Long getCertificateValidStart() {
+        return this.certificateValidStart;
     }
 
     public DescribeDomainResponseBody setDomainBindingStatus(String domainBindingStatus) {

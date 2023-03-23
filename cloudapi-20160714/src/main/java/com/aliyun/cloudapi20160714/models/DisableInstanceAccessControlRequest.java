@@ -10,6 +10,9 @@ public class DisableInstanceAccessControlRequest extends TeaModel {
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 

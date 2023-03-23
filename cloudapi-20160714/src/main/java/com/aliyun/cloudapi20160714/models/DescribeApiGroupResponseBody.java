@@ -67,6 +67,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("CustomerConfigs")
     public String customerConfigs;
 
+    @NameInMap("DedicatedInstanceType")
+    public String dedicatedInstanceType;
+
     /**
      * <p>The default domain name.</p>
      */
@@ -292,6 +295,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     }
     public String getCustomerConfigs() {
         return this.customerConfigs;
+    }
+
+    public DescribeApiGroupResponseBody setDedicatedInstanceType(String dedicatedInstanceType) {
+        this.dedicatedInstanceType = dedicatedInstanceType;
+        return this;
+    }
+    public String getDedicatedInstanceType() {
+        return this.dedicatedInstanceType;
     }
 
     public DescribeApiGroupResponseBody setDefaultDomain(String defaultDomain) {

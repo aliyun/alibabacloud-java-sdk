@@ -20,7 +20,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The name of the API operation.</p>
+     * <p>The name of the API.</p>
      */
     @NameInMap("ApiName")
     public String apiName;
@@ -28,11 +28,11 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
     /**
      * <p>The authentication method of the API. Valid values:</p>
      * <br>
-     * <p>*   **APP: Only authorized applications can call the API.**</p>
+     * <p>*   **APP:** Only authorized apps are allowed to call the API.</p>
      * <br>
-     * <p>*   **ANONYMOUS: Anonymous users can call the API. Take note of the following rules:**</p>
+     * <p>*   **ANONYMOUS**: The API can be anonymously called. In this mode, you must take note of the following rules:</p>
      * <br>
-     * <p>    *   All users who have obtained the API service information can call this API. API Gateway neither authenticates callers nor sets user-specific throttling policies. If this API is a public one, set throttling policies for it.</p>
+     * <p>    *   All users who have obtained the API service information can call this API. API Gateway does not authenticate callers and cannot set user-specific throttling policies. If the API is made public, set API-specific throttling policies.</p>
      */
     @NameInMap("AuthType")
     public String authType;
@@ -56,16 +56,16 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
     public String deployedTime;
 
     /**
-     * <p>Description</p>
+     * <p>The description of the parameter.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>*   If the value of DisableInternet is set to **true**, API calls are limited within the VPC.</p>
-     * <p>*   If the value of DisableInternet is set to **false**, the limit is lifted.</p>
+     * <p>*   Indicates whether to call the API only in an internal network. If this parameter is set to **true**, the API can be called only in an internal network.</p>
+     * <p>*   If this parameter is set to **false**, the API can be called over the Internet and in an internal network.</p>
      * <br>
-     * <p>>  If you do not configure this parameter when you modify the API, the original value is used.</p>
+     * <p>> If you do not configure this parameter when you modify the API, the original value is used.</p>
      */
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
@@ -85,8 +85,8 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
     public String failResultSample;
 
     /**
-     * <p>*   If the value of **ForceNonceCheck** is set to **true**, X-Ca-Nonce must be checked during the request. This is the unique identifier of the request and is identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
-     * <p>*   If the value of **ForceNonceCheck** is set to **false**, the X-Ca-Nonce is not checked. The default value is false when you create an API.</p>
+     * <p>*   Indicates whether to forcibly check X-Ca-Nonce. If the **ForceNonceCheck** parameter is set to **true**, X-Ca-Nonce is forcibly checked. X-Ca-Nonce is the unique identifier of a request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
+     * <p>*   If the **ForceNonceCheck** parameter is set to **false**, the X-Ca-Nonce is not checked. Default value: false.</p>
      */
     @NameInMap("ForceNonceCheck")
     public Boolean forceNonceCheck;
@@ -110,7 +110,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
     public DescribeDeployedApiResponseBodyOpenIdConnectConfig openIdConnectConfig;
 
     /**
-     * <p>The region to which the API group belongs.</p>
+     * <p>The region in which the API group resides.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -144,7 +144,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
     public String resultBodyModel;
 
     /**
-     * <p>The return descriptions of the API.</p>
+     * <p>The returned description of the API.</p>
      */
     @NameInMap("ResultDescriptions")
     public DescribeDeployedApiResponseBodyResultDescriptions resultDescriptions;
@@ -186,11 +186,11 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
     public DescribeDeployedApiResponseBodyServiceParametersMap serviceParametersMap;
 
     /**
-     * <p>The name of the runtime environment. Valid values:</p>
+     * <p>The environment in which the API runs. Valid values:</p>
      * <br>
-     * <p>*   **RELEASE**</p>
+     * <p>*   **RELEASE**: the production environment</p>
      * <p>*   **PRE**: the pre-release environment</p>
-     * <p>*   **TEST**</p>
+     * <p>*   **TEST**: the test environment</p>
      */
     @NameInMap("StageName")
     public String stageName;
@@ -204,8 +204,8 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the API is public. Valid values:</p>
      * <br>
-     * <p>*   **PUBLIC: The API is public. Public APIs are displayed on the APIs page for all users after the APIs are published to the production environment.**</p>
-     * <p>*   **PRIVATE: The API is private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
+     * <p>*   **PUBLIC:** The API is public. If this parameter is set to PUBLIC, the API is displayed on the APIs page for all users after the API is published to the production environment.</p>
+     * <p>*   **PRIVATE:** The API is private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
      */
     @NameInMap("Visibility")
     public String visibility;
@@ -455,7 +455,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public String constantValue;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the parameter.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -532,13 +532,13 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
 
     public static class DescribeDeployedApiResponseBodyCustomSystemParametersCustomSystemParameter extends TeaModel {
         /**
-         * <p>The example value.</p>
+         * <p>The sample value.</p>
          */
         @NameInMap("DemoValue")
         public String demoValue;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the parameter.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -629,19 +629,19 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
 
     public static class DescribeDeployedApiResponseBodyErrorCodeSamplesErrorCodeSample extends TeaModel {
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned if the request failed.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the error.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned if the request failed.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -706,8 +706,8 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         /**
          * <p>The OpenID Connect mode. Valid values:</p>
          * <br>
-         * <p>*   **IDTOKEN: OpenID Connect calls the authentication API to issue tokens. If this value is specified, the PublicKeyId parameter and the PublicKey parameter are required.**</p>
-         * <p>*   **BUSINESS: OpenID Connect calls the business API to verify identities by using existing tokens. If this value is specified, the IdTokenParamName parameter is required.</p>
+         * <p>*   **IDTOKEN:** OpenID Connect calls the authentication API to issue tokens. If the value is specified, the PublicKeyId parameter and the PublicKey parameter are required.</p>
+         * <p>*   **BUSINESS:** OpenID Connect calls the business API to verify identities by using existing tokens. If this value is specified, the IdTokenParamName parameter is required.</p>
          */
         @NameInMap("OpenIdApiType")
         public String openIdApiType;
@@ -765,9 +765,9 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
 
     public static class DescribeDeployedApiResponseBodyRequestConfig extends TeaModel {
         /**
-         * <p>This parameter takes effect only when the RequestMode parameter is set to MAPPING.********</p>
+         * <p>This parameter takes effect only when the **RequestMode** parameter is set to **MAPPING**.</p>
          * <br>
-         * <p>The format in which data is transmitted to the server for POST and PUT requests. Valid values: FORM and STREAM. FORM indicates that data is transmitted in the key-value pair format. STREAM indicates that data is transmitted as byte streams.</p>
+         * <p>The format in which data is transmitted to the server for POST and PUT requests. Valid values: **FORM** and **STREAM**. FORM indicates that data is transmitted in the key-value pair format. STREAM indicates that data is transmitted as byte streams.</p>
          */
         @NameInMap("BodyFormat")
         public String bodyFormat;
@@ -785,7 +785,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public String postBodyDescription;
 
         /**
-         * <p>The HTTP method that was used to make the request. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.</p>
+         * <p>The HTTP method that is used to make the request. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.</p>
          */
         @NameInMap("RequestHttpMethod")
         public String requestHttpMethod;
@@ -801,13 +801,13 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public String requestMode;
 
         /**
-         * <p>The API request path. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the API request path is ` /object/add  `.</p>
+         * <p>The path of the API request. If the complete API URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, The path of the API request is ` /object/add  `.</p>
          */
         @NameInMap("RequestPath")
         public String requestPath;
 
         /**
-         * <p>The protocol type supported by the API. Valid values: HTTP, HTTPS, and WebSocket. Separate multiple values with commas (,), such as "HTTP,HTTPS".</p>
+         * <p>The protocol type supported by the API. Valid values: HTTP, HTTPS, and WebSocket. Separate multiple values with commas (,). Example: "HTTP,HTTPS".</p>
          */
         @NameInMap("RequestProtocol")
         public String requestProtocol;
@@ -895,7 +895,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>The example value.</p>
+         * <p>The sample value.</p>
          */
         @NameInMap("DemoValue")
         public String demoValue;
@@ -913,13 +913,13 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public Integer docOrder;
 
         /**
-         * <p>Indicates whether the document is public. Valid values: PUBLIC and PRIVATE.</p>
+         * <p>Indicates whether the document is public. Valid values: **PUBLIC** and **PRIVATE**.</p>
          */
         @NameInMap("DocShow")
         public String docShow;
 
         /**
-         * <p>The hash values that can be entered when ParameterType is set to Int, Long, Float, Double, or String. Different values are separated with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.</p>
+         * <p>The hash values that can be entered when **ParameterType** is set to Int, Long, Float, Double, or String. Separate different values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
          */
         @NameInMap("EnumValue")
         public String enumValue;
@@ -937,43 +937,43 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The maximum parameter length when ParameterType is set to String.</p>
+         * <p>The maximum length of the **ParameterType** parameter when the parameter is set to String.</p>
          */
         @NameInMap("MaxLength")
         public Long maxLength;
 
         /**
-         * <p>The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.</p>
+         * <p>The maximum value of the **ParameterType** parameter when the parameter is set to Int, Long, Float, or Double.</p>
          */
         @NameInMap("MaxValue")
         public Long maxValue;
 
         /**
-         * <p>The minimum parameter length when ParameterType is set to String.</p>
+         * <p>The minimum length of the **ParameterType** parameter when the parameter is set to String.</p>
          */
         @NameInMap("MinLength")
         public Long minLength;
 
         /**
-         * <p>The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.</p>
+         * <p>The minimum value of the **ParameterType** parameter when the parameter is set to Int, Long, Float, or Double.</p>
          */
         @NameInMap("MinValue")
         public Long minValue;
 
         /**
-         * <p>The data type of the parameter. Valid values: String, Int, Long, Float, Double, and Boolean.</p>
+         * <p>The type of the parameter. Valid values: String, Int, Long, Float, Double, and Boolean.</p>
          */
         @NameInMap("ParameterType")
         public String parameterType;
 
         /**
-         * <p>The regular expression used for parameter validation when ParameterType is set to String.</p>
+         * <p>The regular expression used for parameter validation when **ParameterType** is set to String.</p>
          */
         @NameInMap("RegularExpression")
         public String regularExpression;
 
         /**
-         * <p>Indicates whether the parameter is required. Valid values: REQUIRED and OPTIONAL.</p>
+         * <p>Indicates whether the parameter is required. Valid values: **REQUIRED** and **OPTIONAL**.</p>
          */
         @NameInMap("Required")
         public String required;
@@ -1142,7 +1142,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
 
     public static class DescribeDeployedApiResponseBodyResultDescriptionsResultDescription extends TeaModel {
         /**
-         * <p>The description.</p>
+         * <p>The description of the parameter.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -1263,11 +1263,11 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
 
     public static class DescribeDeployedApiResponseBodyServiceConfigFunctionComputeConfig extends TeaModel {
         /**
-         * <p>The ContentType header type used when you call the backend service over HTTP. Valid values:</p>
+         * <p>The ContentType header used when a backend HTTP service is called. Valid values:</p>
          * <br>
-         * <p>*   **DEFAULT: the default header in API Gateway**</p>
-         * <p>*   **CUSTOM: a custom header**</p>
-         * <p>*   **CLIENT: the ContentType header specified by the client**</p>
+         * <p>*   **DEFAULT:** the default header in API Gateway</p>
+         * <p>*   **CUSTOM:** a custom header</p>
+         * <p>*   **CLIENT:** the ContentType header specified by the client</p>
          */
         @NameInMap("ContentTypeCatagory")
         public String contentTypeCatagory;
@@ -1303,7 +1303,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>Indicates whether the backend only receives the service path.</p>
+         * <p>Indicates whether the backend receives only the service path.</p>
          */
         @NameInMap("OnlyBusinessPath")
         public Boolean onlyBusinessPath;
@@ -1321,7 +1321,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public String qualifier;
 
         /**
-         * <p>The region where the API is located.</p>
+         * <p>The region in which the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -1498,7 +1498,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
 
     public static class DescribeDeployedApiResponseBodyServiceConfigVpcConfig extends TeaModel {
         /**
-         * <p>The ID of the ECS or SLB instance in the VPC.</p>
+         * <p>The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -1570,8 +1570,8 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Mock mode is enabled. Valid values:</p>
          * <br>
-         * <p>*   **TRUE: The Mock mode is enabled.**</p>
-         * <p>*   **FALSE: The Mock mode is not enabled.</p>
+         * <p>*   **TRUE:** The Mock mode is enabled.</p>
+         * <p>*   **FALSE:** The Mock mode is not enabled.</p>
          */
         @NameInMap("Mock")
         public String mock;
@@ -1589,31 +1589,31 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public String mockResult;
 
         /**
-         * <p>The status code returned for service mocking.</p>
+         * <p>The status code returned for service mock.</p>
          */
         @NameInMap("MockStatusCode")
         public Integer mockStatusCode;
 
         /**
-         * <p>The URL used to call the back-end service. If the complete back-end service URL is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the value of **ServiceAddress** is `http://api.a.com:8080`.</p>
+         * <p>The URL that is used to call the backend service. If the complete URL of a backend service is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the value of ServiceAddress is **http://api.a.com:8080**.``</p>
          */
         @NameInMap("ServiceAddress")
         public String serviceAddress;
 
         /**
-         * <p>The HTTP method used to call a backend service. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.</p>
+         * <p>The HTTP method that is used to call a backend service. Valid values: GET, POST, DELETE, PUT, HEADER, TRACE, PATCH, CONNECT, and OPTIONS.</p>
          */
         @NameInMap("ServiceHttpMethod")
         public String serviceHttpMethod;
 
         /**
-         * <p>The path used to call the back-end service. If the complete back-end service path is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, **ServicePath** is `/object/add`.</p>
+         * <p>The path that is used to call the backend service. If the complete URL of a backend service is `http://api.a.com:8080/object/add?key1=value1&key2=value2`, the value of the **ServicePath** parameter is `/object/add`.</p>
          */
         @NameInMap("ServicePath")
         public String servicePath;
 
         /**
-         * <p>The backend service protocol. Currently, only HTTP, HTTPS, and FunctionCompute are supported.</p>
+         * <p>The backend service protocol. Only HTTP, HTTPS, and Function Compute are supported.</p>
          */
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
@@ -1625,9 +1625,9 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public Integer serviceTimeout;
 
         /**
-         * <p>Indicates whether the VPC channel is enabled. Valid values:</p>
+         * <p>Indicates whether to enable the VPC channel. Valid values:</p>
          * <br>
-         * <p>*   **TRUE**: The VPC channel is enabled. You must create the corresponding VPC access authorization before you can enable a VPC channel.</p>
+         * <p>*   **TRUE**: The VPC channel is enabled. You can enable a VPC channel only after you create the corresponding access authorization for the VPC.</p>
          * <p>*   **FALSE**: The VPC channel is not enabled.</p>
          */
         @NameInMap("ServiceVpcEnable")
@@ -1764,7 +1764,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The data type of the back-end service parameter. Valid values: STRING, NUMBER, BOOLEAN.</p>
+         * <p>The data type of the backend service parameter. Valid values: STRING, NUMBER, and BOOLEAN.</p>
          */
         @NameInMap("ParameterType")
         public String parameterType;
@@ -1827,7 +1827,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
 
     public static class DescribeDeployedApiResponseBodyServiceParametersMapServiceParameterMap extends TeaModel {
         /**
-         * <p>The name of the front-end input parameter.</p>
+         * <p>The name of the frontend input parameter.</p>
          */
         @NameInMap("RequestParameterName")
         public String requestParameterName;
@@ -1882,13 +1882,13 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
 
     public static class DescribeDeployedApiResponseBodySystemParametersSystemParameter extends TeaModel {
         /**
-         * <p>The example value.</p>
+         * <p>The example.</p>
          */
         @NameInMap("DemoValue")
         public String demoValue;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the parameter.</p>
          */
         @NameInMap("Description")
         public String description;

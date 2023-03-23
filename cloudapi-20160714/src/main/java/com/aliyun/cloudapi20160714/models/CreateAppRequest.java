@@ -38,12 +38,6 @@ public class CreateAppRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The creation mode. An app can be created by using the console or calling the API operation.</p>
-     */
-    @NameInMap("Source")
-    public String source;
-
-    /**
      * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
      */
     @NameInMap("Tag")
@@ -100,14 +94,6 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public CreateAppRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
     }
 
     public CreateAppRequest setTag(java.util.List<CreateAppRequestTag> tag) {

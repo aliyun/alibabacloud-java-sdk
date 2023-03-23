@@ -134,6 +134,88 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute extends TeaModel {
+        @NameInMap("CidrBlock")
+        public String cidrBlock;
+
+        @NameInMap("NetworkInterfaceId")
+        public String networkInterfaceId;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute self = new DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute setCidrBlock(String cidrBlock) {
+            this.cidrBlock = cidrBlock;
+            return this;
+        }
+        public String getCidrBlock() {
+            return this.cidrBlock;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute setNetworkInterfaceId(String networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes extends TeaModel {
+        @NameInMap("NetworkInterfaceAttribute")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute> networkInterfaceAttribute;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes self = new DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes setNetworkInterfaceAttribute(java.util.List<DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute> networkInterfaceAttribute) {
+            this.networkInterfaceAttribute = networkInterfaceAttribute;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute> getNetworkInterfaceAttribute() {
+            return this.networkInterfaceAttribute;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstanceAttribute extends TeaModel {
         /**
          * <p>The ID of the access control policy.</p>
@@ -171,11 +253,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ClassicEgressAddress")
         public String classicEgressAddress;
 
+        @NameInMap("ConnectVpcId")
+        public String connectVpcId;
+
         /**
          * <p>The time when the instance was created.</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
+
+        @NameInMap("DedicatedInstanceType")
+        public String dedicatedInstanceType;
 
         /**
          * <p>Indicates whether outbound IPv6 is supported.</p>
@@ -215,6 +303,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
+
+        @NameInMap("InstanceCidrBlock")
+        public String instanceCidrBlock;
 
         /**
          * <p>The ID of the instance.</p>
@@ -263,6 +354,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("IntranetSegments")
         public String intranetSegments;
+
+        @NameInMap("NetworkInterfaceAttributes")
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes networkInterfaceAttributes;
 
         /**
          * <p>The region where the instance is located.</p>
@@ -378,12 +472,28 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.classicEgressAddress;
         }
 
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setConnectVpcId(String connectVpcId) {
+            this.connectVpcId = connectVpcId;
+            return this;
+        }
+        public String getConnectVpcId() {
+            return this.connectVpcId;
+        }
+
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setCreatedTime(String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
         public String getCreatedTime() {
             return this.createdTime;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setDedicatedInstanceType(String dedicatedInstanceType) {
+            this.dedicatedInstanceType = dedicatedInstanceType;
+            return this;
+        }
+        public String getDedicatedInstanceType() {
+            return this.dedicatedInstanceType;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setEgressIpv6Enable(Boolean egressIpv6Enable) {
@@ -450,6 +560,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.instanceChargeType;
         }
 
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setInstanceCidrBlock(String instanceCidrBlock) {
+            this.instanceCidrBlock = instanceCidrBlock;
+            return this;
+        }
+        public String getInstanceCidrBlock() {
+            return this.instanceCidrBlock;
+        }
+
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -512,6 +630,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getIntranetSegments() {
             return this.intranetSegments;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceAttribute setNetworkInterfaceAttributes(DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes networkInterfaceAttributes) {
+            this.networkInterfaceAttributes = networkInterfaceAttributes;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes getNetworkInterfaceAttributes() {
+            return this.networkInterfaceAttributes;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setRegionId(String regionId) {
