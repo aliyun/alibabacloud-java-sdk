@@ -4,24 +4,56 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeIngressResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeIngressResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the configurations of the routing rule were queried successfully. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the query was successful.</p>
+     * <p>*   **false**: indicates that the query failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,15 +119,24 @@ public class DescribeIngressResponseBody extends TeaModel {
     }
 
     public static class DescribeIngressResponseBodyDataDefaultRule extends TeaModel {
+        /**
+         * <p>The ID of the application specified in the default rule.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application specified in the default rule.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
         @NameInMap("BackendProtocol")
         public String backendProtocol;
 
+        /**
+         * <p>The container port of the application specified in the default rule.</p>
+         */
         @NameInMap("ContainerPort")
         public Integer containerPort;
 
@@ -139,21 +180,36 @@ public class DescribeIngressResponseBody extends TeaModel {
     }
 
     public static class DescribeIngressResponseBodyDataRules extends TeaModel {
+        /**
+         * <p>The ID of the application specified in the forwarding rule.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application specified in the forwarding rule.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
         @NameInMap("BackendProtocol")
         public String backendProtocol;
 
+        /**
+         * <p>The container port of the application specified in the forwarding rule.</p>
+         */
         @NameInMap("ContainerPort")
         public Integer containerPort;
 
+        /**
+         * <p>The domain name of the application.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The path of the URL.</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -213,45 +269,87 @@ public class DescribeIngressResponseBody extends TeaModel {
     }
 
     public static class DescribeIngressResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertId")
         public String certId;
 
         @NameInMap("CertIds")
         public String certIds;
 
+        /**
+         * <p>The default rule.</p>
+         */
         @NameInMap("DefaultRule")
         public DescribeIngressResponseBodyDataDefaultRule defaultRule;
 
+        /**
+         * <p>The name of the routing rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the routing rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The port specified for the SLB listener.</p>
+         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
+        /**
+         * <p>The protocol used to forward requests. Valid values:</p>
+         * <br>
+         * <p>*   **HTTP**: used when the application needs to identify the transmitted data.</p>
+         * <p>*   **HTTPS**: used when the application requires encrypted data transmission.</p>
+         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
+        /**
+         * <p>The type of the SLB instance based on the processing capabilities. Valid values:</p>
+         * <br>
+         * <p>*   **clb**: the Classic Load Balancer (CLB) instance.</p>
+         * <p>*   **alb**: the Application Load Balancer (ALB) instance.</p>
+         */
         @NameInMap("LoadBalanceType")
         public String loadBalanceType;
 
+        /**
+         * <p>The name of the routing rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The forwarding rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeIngressResponseBodyDataRules> rules;
 
         /**
-         * <p>SLB ID。</p>
+         * <p>The ID of the SLB instance.</p>
          */
         @NameInMap("SlbId")
         public String slbId;
 
+        /**
+         * <p>The type of the SLB instance based on the IP address. Valid values:</p>
+         * <br>
+         * <p>*   **internet**: the Internet-facing SLB instance.</p>
+         * <p>*   **intranet**: the internal-facing SLB instance.</p>
+         */
         @NameInMap("SlbType")
         public String slbType;
 

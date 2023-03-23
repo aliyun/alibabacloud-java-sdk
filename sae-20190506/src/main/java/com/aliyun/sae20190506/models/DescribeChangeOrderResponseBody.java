@@ -4,24 +4,56 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeChangeOrderResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the change order.</p>
+     */
     @NameInMap("Data")
     public DescribeChangeOrderResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the information of a change order was obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The information was obtained.</p>
+     * <p>*   **false**: The information could not be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,24 +119,56 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
     }
 
     public static class DescribeChangeOrderResponseBodyDataPipelines extends TeaModel {
+        /**
+         * <p>The batch type.</p>
+         */
         @NameInMap("BatchType")
         public Integer batchType;
 
+        /**
+         * <p>The number of parallel tasks in a batch.</p>
+         */
         @NameInMap("ParallelCount")
         public Integer parallelCount;
 
+        /**
+         * <p>The ID of the batch.</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The name of the batch.</p>
+         */
         @NameInMap("PipelineName")
         public String pipelineName;
 
+        /**
+         * <p>The time when the batch processing starts.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the batch. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The batch is being prepared.</p>
+         * <p>*   **1**: The batch is being processed.</p>
+         * <p>*   **2**: The batch was processed.</p>
+         * <p>*   **3**: The batch could not be processed.</p>
+         * <p>*   **6**: The batch processing was terminated.</p>
+         * <p>*   **8**: The execution process is pending. You must manually determine the release batch.</p>
+         * <p>*   **9**: The execution process is pending. SAE will automatically determine the release batch.</p>
+         * <p>*   **10**: The batch could not be processed due to a system exception.</p>
+         * <p>*   **11**: The change order is pending approval.</p>
+         * <p>*   **12**: The change order is approved and is pending execution.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The time when the batch information is last modified.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -172,57 +236,155 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
     }
 
     public static class DescribeChangeOrderResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The approval ID of the change order.</p>
+         */
         @NameInMap("ApprovalId")
         public String approvalId;
 
+        /**
+         * <p>Indicates whether SAE automatically determines the release batches. Valid values:</p>
+         * <br>
+         * <p>*   **true**: SAE automatically determines the release batches.</p>
+         * <p>*   **false**: SAE does not automatically determine the release batches.</p>
+         */
         @NameInMap("Auto")
         public Boolean auto;
 
+        /**
+         * <p>The number of release batches.</p>
+         */
         @NameInMap("BatchCount")
         public Integer batchCount;
 
+        /**
+         * <p>The mode in which the release batches are determined. Valid values:</p>
+         * <br>
+         * <p>*   **auto**: SAE automatically determines the release batches.</p>
+         * <p>*   **Manual**: You must manually determine the release batches.</p>
+         */
         @NameInMap("BatchType")
         public String batchType;
 
+        /**
+         * <p>The interval between batches when SAE automatically determines the release batches in a phased release. Unit: minutes.</p>
+         */
         @NameInMap("BatchWaitTime")
         public Integer batchWaitTime;
 
+        /**
+         * <p>The ID of the change order.</p>
+         */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
+        /**
+         * <p>The description about the change type, which corresponds to the **CoTypeCode** parameter.</p>
+         */
         @NameInMap("CoType")
         public String coType;
 
+        /**
+         * <p>The code of the change type. Valid values:</p>
+         * <br>
+         * <p>*   **CoBindSlb**: associates the Server Load Balancer (SLB) instance with the application.</p>
+         * <p>*   **CoUnbindSlb**: disassociates the SLB instance from the application.</p>
+         * <p>*   **CoCreateApp**: creates the application.</p>
+         * <p>*   **CoDeleteApp**: deletes the application.</p>
+         * <p>*   **CoDeploy**: deploys the application.</p>
+         * <p>*   **CoRestartApplication**: restarts the application.</p>
+         * <p>*   **CoRollback**: rolls back the application.</p>
+         * <p>*   **CoScaleIn**: scales in the application.</p>
+         * <p>*   **CoScaleOut**: scales out the application.</p>
+         * <p>*   **CoStart**: starts the application.</p>
+         * <p>*   **CoStop**: stops the application.</p>
+         * <p>*   **CoRescaleApplicationVertically**: modifies the instance specifications.</p>
+         * <p>*   **CoDeployHistroy**: rolls back the application to a historical version.</p>
+         * <p>*   **CoBindNas**: associates a network-attached storage (NAS) file system with the application.</p>
+         * <p>*   **CoUnbindNas**: disassociates the NAS file system from the application.</p>
+         * <p>*   **CoBatchStartApplication**: starts multiple applications concurrently.</p>
+         * <p>*   **CoBatchStopApplication**: stops multiple applications concurrently.</p>
+         * <p>*   **CoRestartInstances**: restarts the instances.</p>
+         * <p>*   **CoDeleteInstances**: deletes the instances.</p>
+         * <p>*   **CoScaleInAppWithInstances**: reduces the number of specified application instances.</p>
+         */
         @NameInMap("CoTypeCode")
         public String coTypeCode;
 
+        /**
+         * <p>The time when the change order was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the current batch.</p>
+         */
         @NameInMap("CurrentPipelineId")
         public String currentPipelineId;
 
+        /**
+         * <p>The description of the change order.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The batch information.</p>
+         */
         @NameInMap("Pipelines")
         public java.util.List<DescribeChangeOrderResponseBodyDataPipelines> pipelines;
 
+        /**
+         * <p>The status of the change order. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The change order is being prepared.</p>
+         * <p>*   **1**: The change order is being executed.</p>
+         * <p>*   **2**: The change order was executed.</p>
+         * <p>*   **3**: The change order could not be executed.</p>
+         * <p>*   **6**: The change order was terminated.</p>
+         * <p>*   **8**: The execution process is pending. You must manually determine the release batch.</p>
+         * <p>*   **9**: The execution process is pending. SAE will automatically determine the release batches.</p>
+         * <p>*   **10**: The execution failed due to a system exception.</p>
+         * <p>*   **11**: The change order is pending approval.</p>
+         * <p>*   **12**: The change order is approved and is pending execution.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:</p>
+         * <br>
+         * <p>*   **0**: No exception occurred.</p>
+         * <p>*   **1**: An exception occurred. For example, when an error occurred during a phased release, you must manually roll back the application. In this case, the change order cannot be completed, so the Status parameter is still displayed as "1", which indicates that the change order is being executed. You can check the value of this parameter to determine whether an exception occurs.</p>
+         */
         @NameInMap("SubStatus")
         public Integer subStatus;
 
+        /**
+         * <p>Indicates whether the application can be rolled back. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The application can be rolled back.</p>
+         * <p>*   **false**: The application cannot be rolled back.</p>
+         */
         @NameInMap("SupportRollback")
         public Boolean supportRollback;
 

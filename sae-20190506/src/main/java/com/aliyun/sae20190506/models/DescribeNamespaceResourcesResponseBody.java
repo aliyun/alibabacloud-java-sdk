@@ -4,24 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespaceResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request failed.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeNamespaceResourcesResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>*   **success** is returned when the request succeeds.</p>
+     * <p>*   An error code is returned when the request fails.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the information about resources in the namespace was queried successfully. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the query was successful.</p>
+     * <p>*   **false**: indicates that the query failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,66 +122,131 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceResourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of applications.</p>
+         */
         @NameInMap("AppCount")
         public Long appCount;
 
+        /**
+         * <p>The region to which the namespace belongs.</p>
+         */
         @NameInMap("BelongRegion")
         public String belongRegion;
 
+        /**
+         * <p>The description of the namespace.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the jump server application.</p>
+         */
         @NameInMap("JumpServerAppId")
         public String jumpServerAppId;
 
+        /**
+         * <p>The IP address of the jump server.</p>
+         */
         @NameInMap("JumpServerIp")
         public String jumpServerIp;
 
+        /**
+         * <p>The ID of the change order.</p>
+         */
         @NameInMap("LastChangeOrderId")
         public String lastChangeOrderId;
 
+        /**
+         * <p>Indicates whether a change order is being executed in the namespace. Valid values:</p>
+         * <br>
+         * <p>*   **true**: indicates that a change order is being executed in the namespace.</p>
+         * <p>*   **false**: indicates that no change orders are being executed in the namespace.</p>
+         */
         @NameInMap("LastChangeOrderRunning")
         public Boolean lastChangeOrderRunning;
 
+        /**
+         * <p>The status of the latest change order. Valid values:</p>
+         * <br>
+         * <p>*   **READY**: The change order is ready.</p>
+         * <p>*   **RUNNING**: The change order is being executed.</p>
+         * <p>*   **SUCCESS**: The change order was executed.</p>
+         * <p>*   **FAIL**: The change order could not be executed.</p>
+         * <p>*   **ABORT**: The change order was terminated.</p>
+         * <p>*   **WAIT_BATCH_CONFIRM**: The change order is pending execution. You must manually confirm the release batch.</p>
+         * <p>*   **AUTO_BATCH_WAIT**: The change order is pending execution. SAE will automatically confirm the release batch.</p>
+         * <p>*   **SYSTEM_FAIL**: A system exception occurred.</p>
+         * <p>*   **WAIT_APPROVAL**: The change order is pending approval.</p>
+         * <p>*   **APPROVED**: The change order is approved and is pending execution.</p>
+         */
         @NameInMap("LastChangeOrderStatus")
         public String lastChangeOrderStatus;
 
         @NameInMap("NameSpaceShortId")
         public String nameSpaceShortId;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
+        /**
+         * <p>Indicates whether the notification of a change order is expired. Valid values:</p>
+         * <br>
+         * <p>*   **true**: indicates that the notification is expired.</p>
+         * <p>*   **false**: indicates that the notification is not expired.</p>
+         */
         @NameInMap("NotificationExpired")
         public Boolean notificationExpired;
 
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The ID of the tenant in the SAE namespace.</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>vSwitch ID。</p>
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The name of the vSwitch.</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The name of the VPC.</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 

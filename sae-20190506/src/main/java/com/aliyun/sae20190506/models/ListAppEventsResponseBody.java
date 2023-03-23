@@ -4,21 +4,50 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListAppEventsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of events.</p>
+     */
     @NameInMap("Data")
     public ListAppEventsResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the events that occurred in an application were obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the events were obtained.</p>
+     * <p>*   **false**: indicates that the events could not be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,24 +105,45 @@ public class ListAppEventsResponseBody extends TeaModel {
     }
 
     public static class ListAppEventsResponseBodyDataAppEventEntity extends TeaModel {
+        /**
+         * <p>The type of the event.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The timestamp of the first occurrence of an event.</p>
+         */
         @NameInMap("FirstTimestamp")
         public String firstTimestamp;
 
+        /**
+         * <p>The timestamp of the last occurrence of an event.</p>
+         */
         @NameInMap("LastTimestamp")
         public String lastTimestamp;
 
+        /**
+         * <p>The description of the event.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The type of the object.</p>
+         */
         @NameInMap("ObjectKind")
         public String objectKind;
 
+        /**
+         * <p>The name of the object.</p>
+         */
         @NameInMap("ObjectName")
         public String objectName;
 
+        /**
+         * <p>The reason why the event occurred.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
@@ -161,15 +211,27 @@ public class ListAppEventsResponseBody extends TeaModel {
     }
 
     public static class ListAppEventsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of events.</p>
+         */
         @NameInMap("AppEventEntity")
         public java.util.List<ListAppEventsResponseBodyDataAppEventEntity> appEventEntity;
 
+        /**
+         * <p>The number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of events that occurred in the application.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

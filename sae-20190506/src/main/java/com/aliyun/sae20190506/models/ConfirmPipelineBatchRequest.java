@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ConfirmPipelineBatchRequest extends TeaModel {
+    /**
+     * <p>true</p>
+     */
     @NameInMap("Confirm")
     public Boolean confirm;
 
+    /**
+     * <p>e2e-vds-feh-\*\*\*</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 

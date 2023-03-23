@@ -4,24 +4,56 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppServiceDetailResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>- **2xx**: indicates that the call was successful.</p>
+     * <p>- **3xx**: indicates that the call was redirected.</p>
+     * <p>- **4xx**: indicates that the call failed.</p>
+     * <p>- **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeAppServiceDetailResponseBodyData data;
 
+    /**
+     * <p>The returned error code. Valid values:</p>
+     * <br>
+     * <p>- If the call is successful, the **ErrorCode** parameter is not returned.</p>
+     * <p>- If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned information.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the meta data was obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The metadata was obtained.</p>
+     * <p>*   **false**: The metadata failed to be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,12 +119,21 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeAppServiceDetailResponseBodyDataMethodsParameterDefinitions extends TeaModel {
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -128,33 +169,68 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeAppServiceDetailResponseBodyDataMethods extends TeaModel {
+        /**
+         * <p>The class to which the method belongs.</p>
+         */
         @NameInMap("MethodController")
         public String methodController;
 
+        /**
+         * <p>The name of the method.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The details of the method.</p>
+         */
         @NameInMap("NameDetail")
         public String nameDetail;
 
+        /**
+         * <p>The definition of the parameter.</p>
+         */
         @NameInMap("ParameterDefinitions")
         public java.util.List<DescribeAppServiceDetailResponseBodyDataMethodsParameterDefinitions> parameterDefinitions;
 
+        /**
+         * <p>The details of the parameters.</p>
+         */
         @NameInMap("ParameterDetails")
         public java.util.List<String> parameterDetails;
 
+        /**
+         * <p>The types of the parameters.</p>
+         */
         @NameInMap("ParameterTypes")
         public java.util.List<String> parameterTypes;
 
+        /**
+         * <p>The request paths. Format:</p>
+         * <br>
+         * <p>`/path`</p>
+         */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
+        /**
+         * <p>The request methods. Valid values:</p>
+         * <br>
+         * <p>*   **GET**</p>
+         * <p>*   **ALL**</p>
+         */
         @NameInMap("RequestMethods")
         public java.util.List<String> requestMethods;
 
+        /**
+         * <p>The details of the response.</p>
+         */
         @NameInMap("ReturnDetails")
         public String returnDetails;
 
+        /**
+         * <p>The data format of the response.</p>
+         */
         @NameInMap("ReturnType")
         public String returnType;
 
@@ -246,30 +322,60 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeAppServiceDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the Dubbo application.</p>
+         */
         @NameInMap("DubboApplicationName")
         public String dubboApplicationName;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
+        /**
+         * <p>The group to which the service belongs. You can create a custom group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The metadata. Example: `{side: "provider", port: "18081", preserved: {register: {source: "SPRING_CLOUD"}},…}`.</p>
+         */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
+        /**
+         * <p>The methods.</p>
+         */
         @NameInMap("Methods")
         public java.util.List<DescribeAppServiceDetailResponseBodyDataMethods> methods;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The type of the service. Valid values:</p>
+         * <br>
+         * <p>*   **dubbo**</p>
+         * <p>*   **springCloud**</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
+        /**
+         * <p>The name of the Spring Cloud application.</p>
+         */
         @NameInMap("SpringApplicationName")
         public String springApplicationName;
 
+        /**
+         * <p>The version of the service. You can create a custom version.</p>
+         */
         @NameInMap("Version")
         public String version;
 

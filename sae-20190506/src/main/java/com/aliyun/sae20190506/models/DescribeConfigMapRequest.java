@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigMapRequest extends TeaModel {
+    /**
+     * <p>1</p>
+     */
     @NameInMap("ConfigMapId")
     public Long configMapId;
 

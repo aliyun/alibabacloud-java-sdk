@@ -4,27 +4,51 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListAppEventsRequest extends TeaModel {
+    /**
+     * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe\*\*\*\*</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Warning</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>Pod</p>
+     */
     @NameInMap("ObjectKind")
     public String objectKind;
 
+    /**
+     * <p>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-x\*\*\*\*</p>
+     */
     @NameInMap("ObjectName")
     public String objectName;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Started</p>
+     */
     @NameInMap("Reason")
     public String reason;
 

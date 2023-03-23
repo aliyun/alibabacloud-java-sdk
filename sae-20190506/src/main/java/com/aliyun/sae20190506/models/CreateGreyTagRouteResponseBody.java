@@ -4,24 +4,56 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateGreyTagRouteResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the canary release rule.</p>
+     */
     @NameInMap("Data")
     public CreateGreyTagRouteResponseBodyData data;
 
+    /**
+     * <p>The returned error code. Valid values:</p>
+     * <br>
+     * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
+     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned information.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the information of the change order was queried. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The information was queried.</p>
+     * <p>*   **false**: The information failed to be queried.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The trace ID that is used to query the details of the request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,6 +119,9 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
     }
 
     public static class CreateGreyTagRouteResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the canary release rule. The ID is globally unique.</p>
+         */
         @NameInMap("GreyTagRouteId")
         public Long greyTagRouteId;
 

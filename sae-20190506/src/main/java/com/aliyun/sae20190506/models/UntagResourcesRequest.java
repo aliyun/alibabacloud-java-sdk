@@ -4,18 +4,33 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>false</p>
+     */
     @NameInMap("DeleteAll")
     public Boolean deleteAll;
 
+    /**
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>\["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]</p>
+     */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
+    /**
+     * <p>application</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>\["k1","k2"]</p>
+     */
     @NameInMap("TagKeys")
     public String tagKeys;
 

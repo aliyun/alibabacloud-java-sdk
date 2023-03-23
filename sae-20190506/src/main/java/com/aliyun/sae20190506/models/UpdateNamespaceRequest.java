@@ -4,21 +4,41 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateNamespaceRequest extends TeaModel {
+    @NameInMap("EnableMicroRegistration")
+    public Boolean enableMicroRegistration;
+
     @NameInMap("NameSpaceShortId")
     public String nameSpaceShortId;
 
+    /**
+     * <p>desc</p>
+     */
     @NameInMap("NamespaceDescription")
     public String namespaceDescription;
 
+    /**
+     * <p>cn-beijing:test</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>name</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
     public static UpdateNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNamespaceRequest self = new UpdateNamespaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateNamespaceRequest setEnableMicroRegistration(Boolean enableMicroRegistration) {
+        this.enableMicroRegistration = enableMicroRegistration;
+        return this;
+    }
+    public Boolean getEnableMicroRegistration() {
+        return this.enableMicroRegistration;
     }
 
     public UpdateNamespaceRequest setNameSpaceShortId(String nameSpaceShortId) {

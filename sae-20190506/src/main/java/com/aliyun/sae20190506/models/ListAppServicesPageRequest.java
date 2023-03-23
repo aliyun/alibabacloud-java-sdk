@@ -4,15 +4,27 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListAppServicesPageRequest extends TeaModel {
+    /**
+     * <p>6dcc8c9e-d3da-478a-a066-86dcf820\*\*\*\*</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>9999</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>springCloud</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 

@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribePipelineRequest extends TeaModel {
+    /**
+     * <p>917660ba-5092-44ca-b8e0-80012c96\*\*\*\*</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 

@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteIngressRequest extends TeaModel {
+    /**
+     * <p>87</p>
+     */
     @NameInMap("IngressId")
     public Long ingressId;
 

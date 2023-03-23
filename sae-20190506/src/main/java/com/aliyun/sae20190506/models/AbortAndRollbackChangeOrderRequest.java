@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class AbortAndRollbackChangeOrderRequest extends TeaModel {
+    /**
+     * <p>ba386059-69b1-4e65-b1e5-0682d9fa\*\*\*\*</p>
+     */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 

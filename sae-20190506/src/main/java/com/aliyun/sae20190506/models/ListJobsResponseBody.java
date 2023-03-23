@@ -154,6 +154,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("CompletionTime")
         public Long completionTime;
 
+        @NameInMap("Cpu")
+        public Integer cpu;
+
         @NameInMap("Failed")
         public Long failed;
 
@@ -165,6 +168,9 @@ public class ListJobsResponseBody extends TeaModel {
 
         @NameInMap("LastStartTime")
         public Long lastStartTime;
+
+        @NameInMap("Mem")
+        public Integer mem;
 
         @NameInMap("NamespaceId")
         public String namespaceId;
@@ -229,6 +235,14 @@ public class ListJobsResponseBody extends TeaModel {
             return this.completionTime;
         }
 
+        public ListJobsResponseBodyDataApplications setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
         public ListJobsResponseBodyDataApplications setFailed(Long failed) {
             this.failed = failed;
             return this;
@@ -259,6 +273,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public Long getLastStartTime() {
             return this.lastStartTime;
+        }
+
+        public ListJobsResponseBodyDataApplications setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
         }
 
         public ListJobsResponseBodyDataApplications setNamespaceId(String namespaceId) {

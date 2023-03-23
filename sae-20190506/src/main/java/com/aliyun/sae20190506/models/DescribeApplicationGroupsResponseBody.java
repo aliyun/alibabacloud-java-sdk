@@ -4,24 +4,56 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the instance groups of the application.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeApplicationGroupsResponseBodyData> data;
 
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the information about instance groups of an application was obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the information was obtained.</p>
+     * <p>*   **false**: indicates that the information could not be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,39 +119,95 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationGroupsResponseBodyData extends TeaModel {
+        /**
+         * <p>The version of the container, such as Ali-Tomcat, in which a High-speed Service Framework (HSF) application runs.</p>
+         */
         @NameInMap("EdasContainerVersion")
         public String edasContainerVersion;
 
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the group.</p>
+         */
         @NameInMap("GroupType")
         public Integer groupType;
 
+        /**
+         * <p>The address of the image. This parameter is required when the **PackageType** parameter is set to **Image**.</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <p>The version of the Java development kit (JDK) on which the deployment package of the application depends. This parameter is invalid when the **PackageType** parameter is set to **Image**.</p>
+         */
         @NameInMap("Jdk")
         public String jdk;
 
+        /**
+         * <p>The type of the application deployment package. Valid values:</p>
+         * <br>
+         * <p>*   When you use a Java package, set this value to **FatJar**, **War**, or **Image**.</p>
+         * <br>
+         * <p>*   When you use a PHP package, the following values are valid:</p>
+         * <br>
+         * <p>    *   **PhpZip**</p>
+         * <p>    *   **IMAGE_PHP\_5\_4**</p>
+         * <p>    *   **IMAGE_PHP\_5\_4\_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP\_5\_5**</p>
+         * <p>    *   **IMAGE_PHP\_5\_5\_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP\_5\_6**</p>
+         * <p>    *   **IMAGE_PHP\_5\_6\_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP\_7\_0**</p>
+         * <p>    *   **IMAGE_PHP\_7\_0\_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP\_7\_1**</p>
+         * <p>    *   **IMAGE_PHP\_7\_1\_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP\_7\_2**</p>
+         * <p>    *   **IMAGE_PHP\_7\_2\_ALPINE**</p>
+         * <p>    *   **IMAGE_PHP\_7\_3**</p>
+         * <p>    *   **IMAGE_PHP\_7\_3\_ALPINE**</p>
+         */
         @NameInMap("PackageType")
         public String packageType;
 
+        /**
+         * <p>The address of the deployment package. This parameter is required when the **PackageType** parameter is set to **FatJar**, **War**, or **PhpZip**.</p>
+         */
         @NameInMap("PackageUrl")
         public String packageUrl;
 
+        /**
+         * <p>The version of the deployment package. This parameter is required when the **PackageType** parameter is set to **FatJar**, **War**, or **PhpZip**. The parameter value will be automatically generated when you use an image to deploy the application and specify the **ImageUrl** parameter.</p>
+         */
         @NameInMap("PackageVersion")
         public String packageVersion;
 
+        /**
+         * <p>The total number of instances.</p>
+         */
         @NameInMap("Replicas")
         public Integer replicas;
 
+        /**
+         * <p>The number of running instances.</p>
+         */
         @NameInMap("RunningInstances")
         public Integer runningInstances;
 
+        /**
+         * <p>The version of the Apache Tomcat container on which the deployment package of the application depends. This parameter is invalid when the **PackageType** parameter is set to **Image**.</p>
+         */
         @NameInMap("WebContainer")
         public String webContainer;
 

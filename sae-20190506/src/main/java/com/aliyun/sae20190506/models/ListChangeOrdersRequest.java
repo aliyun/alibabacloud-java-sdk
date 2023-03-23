@@ -4,21 +4,39 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListChangeOrdersRequest extends TeaModel {
+    /**
+     * <p>145341c-9708-4967-b3ec-24933767\*\*\*\*</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>2</p>
+     */
     @NameInMap("CoStatus")
     public String coStatus;
 
+    /**
+     * <p>CoCreateApp</p>
+     */
     @NameInMap("CoType")
     public String coType;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

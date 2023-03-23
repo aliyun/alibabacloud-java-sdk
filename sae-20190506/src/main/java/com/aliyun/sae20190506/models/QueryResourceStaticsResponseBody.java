@@ -4,24 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class QueryResourceStaticsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The resource usage.</p>
+     */
     @NameInMap("Data")
     public QueryResourceStaticsResponseBodyData data;
 
+    /**
+     * <p>The error code. </p>
+     * <br>
+     * <p>- The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>- The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>*   **success** is returned when the request succeeds.</p>
+     * <p>*   An error code is returned when the request fails.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the resource usage of an application was obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the resource usage was obtained.</p>
+     * <p>*   **false**: indicates that the resource usage could not be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,9 +122,15 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     }
 
     public static class QueryResourceStaticsResponseBodyDataRealTimeRes extends TeaModel {
+        /**
+         * <p>The CPU usage. Unit: core per minute.</p>
+         */
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <p>The memory usage. Unit: GiB per minute.</p>
+         */
         @NameInMap("Memory")
         public Float memory;
 
@@ -117,9 +158,15 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     }
 
     public static class QueryResourceStaticsResponseBodyDataSummary extends TeaModel {
+        /**
+         * <p>The CPU usage. Unit: core per minute.</p>
+         */
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <p>The memory usage. Unit: GiB per minute.</p>
+         */
         @NameInMap("Memory")
         public Float memory;
 
@@ -147,9 +194,15 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     }
 
     public static class QueryResourceStaticsResponseBodyData extends TeaModel {
+        /**
+         * <p>The real-time resource usage.</p>
+         */
         @NameInMap("RealTimeRes")
         public QueryResourceStaticsResponseBodyDataRealTimeRes realTimeRes;
 
+        /**
+         * <p>The resource usage of the current month.</p>
+         */
         @NameInMap("Summary")
         public QueryResourceStaticsResponseBodyDataSummary summary;
 

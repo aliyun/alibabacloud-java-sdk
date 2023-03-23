@@ -4,30 +4,57 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsRequest extends TeaModel {
+    /**
+     * <p>demo-app</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>appName</p>
+     */
     @NameInMap("FieldType")
     public String fieldType;
 
+    /**
+     * <p>demo-app</p>
+     */
     @NameInMap("FieldValue")
     public String fieldValue;
 
+    /**
+     * <p>cn-beijing:demo</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>runnings</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>true</p>
+     */
     @NameInMap("Reverse")
     public Boolean reverse;
 
+    /**
+     * <p>\[{"key":"key","value":"value"}]</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

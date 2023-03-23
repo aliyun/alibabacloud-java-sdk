@@ -10,9 +10,15 @@ public class CreateConfigMapRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 

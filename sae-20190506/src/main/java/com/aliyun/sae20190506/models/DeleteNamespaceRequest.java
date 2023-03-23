@@ -7,6 +7,9 @@ public class DeleteNamespaceRequest extends TeaModel {
     @NameInMap("NameSpaceShortId")
     public String nameSpaceShortId;
 
+    /**
+     * <p>cn-beijing:test</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 

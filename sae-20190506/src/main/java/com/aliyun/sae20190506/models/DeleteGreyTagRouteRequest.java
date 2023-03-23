@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteGreyTagRouteRequest extends TeaModel {
+    /**
+     * <p>1</p>
+     */
     @NameInMap("GreyTagRouteId")
     public Long greyTagRouteId;
 

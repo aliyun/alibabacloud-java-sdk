@@ -4,24 +4,56 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListAppServicesPageResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the call was successful.</p>
+     * <p>*   **3xx**: indicates that the call was redirected.</p>
+     * <p>*   **4xx**: indicates that the call failed.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of microservices.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAppServicesPageResponseBodyData> data;
 
+    /**
+     * <p>The returned error code. Valid values:</p>
+     * <br>
+     * <p>- If the call is successful, the **ErrorCode** parameter is not returned.</p>
+     * <p>- If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned information.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the microservice list was obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The list was obtained.</p>
+     * <p>*   **false**: The list failed to be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,21 +119,39 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     }
 
     public static class ListAppServicesPageResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("EdasAppId")
         public String edasAppId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
+        /**
+         * <p>The group to which the service belongs. You can create a custom group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The total number of instances.</p>
+         */
         @NameInMap("InstanceNum")
         public Long instanceNum;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The version of the service. You can create a custom version.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -161,18 +211,33 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     }
 
     public static class ListAppServicesPageResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the current page.</p>
+         */
         @NameInMap("CurrentPage")
         public String currentPage;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public String pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Valid values: 0 to 9999.</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <p>The returned result.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListAppServicesPageResponseBodyDataResult> result;
 
+        /**
+         * <p>The total number of pages returned.</p>
+         */
         @NameInMap("TotalSize")
         public String totalSize;
 

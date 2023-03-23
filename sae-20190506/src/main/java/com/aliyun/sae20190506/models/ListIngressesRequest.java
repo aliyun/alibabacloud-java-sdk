@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListIngressesRequest extends TeaModel {
+    /**
+     * <p>bbf3a590-6d13-46fe-8ca9-c947a20b\*\*\*\*</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>cn-beijing</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
