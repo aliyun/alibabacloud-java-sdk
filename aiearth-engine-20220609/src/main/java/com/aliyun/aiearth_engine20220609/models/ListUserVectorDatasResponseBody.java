@@ -71,6 +71,12 @@ public class ListUserVectorDatasResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("PublishMsg")
+        public String publishMsg;
+
+        @NameInMap("PublishStatus")
+        public String publishStatus;
+
         @NameInMap("StacId")
         public String stacId;
 
@@ -93,6 +99,22 @@ public class ListUserVectorDatasResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListUserVectorDatasResponseBodyListVector setPublishMsg(String publishMsg) {
+            this.publishMsg = publishMsg;
+            return this;
+        }
+        public String getPublishMsg() {
+            return this.publishMsg;
+        }
+
+        public ListUserVectorDatasResponseBodyListVector setPublishStatus(String publishStatus) {
+            this.publishStatus = publishStatus;
+            return this;
+        }
+        public String getPublishStatus() {
+            return this.publishStatus;
         }
 
         public ListUserVectorDatasResponseBodyListVector setStacId(String stacId) {

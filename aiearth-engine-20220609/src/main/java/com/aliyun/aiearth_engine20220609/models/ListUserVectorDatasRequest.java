@@ -4,6 +4,9 @@ package com.aliyun.aiearth_engine20220609.models;
 import com.aliyun.tea.*;
 
 public class ListUserVectorDatasRequest extends TeaModel {
+    @NameInMap("DataId")
+    public String dataId;
+
     @NameInMap("FromType")
     public String fromType;
 
@@ -22,6 +25,14 @@ public class ListUserVectorDatasRequest extends TeaModel {
     public static ListUserVectorDatasRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUserVectorDatasRequest self = new ListUserVectorDatasRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListUserVectorDatasRequest setDataId(String dataId) {
+        this.dataId = dataId;
+        return this;
+    }
+    public String getDataId() {
+        return this.dataId;
     }
 
     public ListUserVectorDatasRequest setFromType(String fromType) {

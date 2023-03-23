@@ -135,6 +135,12 @@ public class ListUserRasterDatasResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("PublishMsg")
+        public String publishMsg;
+
+        @NameInMap("PublishStatus")
+        public String publishStatus;
+
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -192,6 +198,22 @@ public class ListUserRasterDatasResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListUserRasterDatasResponseBodyListRaster setPublishMsg(String publishMsg) {
+            this.publishMsg = publishMsg;
+            return this;
+        }
+        public String getPublishMsg() {
+            return this.publishMsg;
+        }
+
+        public ListUserRasterDatasResponseBodyListRaster setPublishStatus(String publishStatus) {
+            this.publishStatus = publishStatus;
+            return this;
+        }
+        public String getPublishStatus() {
+            return this.publishStatus;
         }
 
         public ListUserRasterDatasResponseBodyListRaster setSourceType(String sourceType) {

@@ -263,11 +263,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDatasWithOptions(request, runtime);
     }
 
+    public ListUserMapServiceDatasResponse listUserMapServiceDatasWithOptions(ListUserMapServiceDatasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createDay)) {
+            body.put("CreateDay", request.createDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            body.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserMapServiceDatas"),
+            new TeaPair("version", "2022-06-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserMapServiceDatasResponse());
+    }
+
+    public ListUserMapServiceDatasResponse listUserMapServiceDatas(ListUserMapServiceDatasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserMapServiceDatasWithOptions(request, runtime);
+    }
+
     public ListUserRasterDatasResponse listUserRasterDatasWithOptions(ListUserRasterDatasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acquisitionDate)) {
             body.put("AcquisitionDate", request.acquisitionDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            body.put("DataId", request.dataId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fromType)) {
@@ -319,6 +368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUserVectorDatasResponse listUserVectorDatasWithOptions(ListUserVectorDatasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            body.put("DataId", request.dataId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fromType)) {
             body.put("FromType", request.fromType);
         }
@@ -359,5 +412,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUserVectorDatasResponse listUserVectorDatas(ListUserVectorDatasRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserVectorDatasWithOptions(request, runtime);
+    }
+
+    public PublishMapserviceResponse publishMapserviceWithOptions(PublishMapserviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            body.put("Address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectionType)) {
+            body.put("ProjectionType", request.projectionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoomLevelMax)) {
+            body.put("ZoomLevelMax", request.zoomLevelMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoomLevelMin)) {
+            body.put("ZoomLevelMin", request.zoomLevelMin);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishMapservice"),
+            new TeaPair("version", "2022-06-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishMapserviceResponse());
+    }
+
+    public PublishMapserviceResponse publishMapservice(PublishMapserviceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.publishMapserviceWithOptions(request, runtime);
+    }
+
+    public PublishRasterResponse publishRasterWithOptions(PublishRasterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acquisitionDate)) {
+            body.put("AcquisitionDate", request.acquisitionDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attachDownloadUrl)) {
+            body.put("AttachDownloadUrl", request.attachDownloadUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attachFileType)) {
+            body.put("AttachFileType", request.attachFileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadUrl)) {
+            body.put("DownloadUrl", request.downloadUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            body.put("FileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishRaster"),
+            new TeaPair("version", "2022-06-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishRasterResponse());
+    }
+
+    public PublishRasterResponse publishRaster(PublishRasterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.publishRasterWithOptions(request, runtime);
+    }
+
+    public PublishVectorResponse publishVectorWithOptions(PublishVectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.downloadUrl)) {
+            body.put("DownloadUrl", request.downloadUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishVector"),
+            new TeaPair("version", "2022-06-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishVectorResponse());
+    }
+
+    public PublishVectorResponse publishVector(PublishVectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.publishVectorWithOptions(request, runtime);
     }
 }
