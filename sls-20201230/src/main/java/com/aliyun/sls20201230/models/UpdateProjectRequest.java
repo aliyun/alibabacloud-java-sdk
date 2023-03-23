@@ -7,9 +7,6 @@ public class UpdateProjectRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    @NameInMap("project")
-    public String project;
-
     public static UpdateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectRequest self = new UpdateProjectRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class UpdateProjectRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public UpdateProjectRequest setProject(String project) {
-        this.project = project;
-        return this;
-    }
-    public String getProject() {
-        return this.project;
     }
 
 }

@@ -25,6 +25,9 @@ public class Project extends TeaModel {
     @NameInMap("region")
     public String region;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     public static Project build(java.util.Map<String, ?> map) throws Exception {
         Project self = new Project();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class Project extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public Project setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
