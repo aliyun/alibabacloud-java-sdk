@@ -4,7 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetTensorboardRequest extends TeaModel {
-    // JodId
+    /**
+     * <p>JodId</p>
+     */
     @NameInMap("JodId")
     public String jodId;
 

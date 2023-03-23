@@ -4,11 +4,20 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobElasticSpec extends TeaModel {
+    @NameInMap("AIMasterDockerImage")
+    public String AIMasterDockerImage;
+
     @NameInMap("AIMasterType")
     public String AIMasterType;
 
+    @NameInMap("EnableAIMaster")
+    public Boolean enableAIMaster;
+
     @NameInMap("EnableElasticTraining")
     public Boolean enableElasticTraining;
+
+    @NameInMap("EnablePsJobElasticWorker")
+    public Boolean enablePsJobElasticWorker;
 
     @NameInMap("MaxParallelism")
     public Integer maxParallelism;
@@ -21,6 +30,14 @@ public class JobElasticSpec extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public JobElasticSpec setAIMasterDockerImage(String AIMasterDockerImage) {
+        this.AIMasterDockerImage = AIMasterDockerImage;
+        return this;
+    }
+    public String getAIMasterDockerImage() {
+        return this.AIMasterDockerImage;
+    }
+
     public JobElasticSpec setAIMasterType(String AIMasterType) {
         this.AIMasterType = AIMasterType;
         return this;
@@ -29,12 +46,28 @@ public class JobElasticSpec extends TeaModel {
         return this.AIMasterType;
     }
 
+    public JobElasticSpec setEnableAIMaster(Boolean enableAIMaster) {
+        this.enableAIMaster = enableAIMaster;
+        return this;
+    }
+    public Boolean getEnableAIMaster() {
+        return this.enableAIMaster;
+    }
+
     public JobElasticSpec setEnableElasticTraining(Boolean enableElasticTraining) {
         this.enableElasticTraining = enableElasticTraining;
         return this;
     }
     public Boolean getEnableElasticTraining() {
         return this.enableElasticTraining;
+    }
+
+    public JobElasticSpec setEnablePsJobElasticWorker(Boolean enablePsJobElasticWorker) {
+        this.enablePsJobElasticWorker = enablePsJobElasticWorker;
+        return this;
+    }
+    public Boolean getEnablePsJobElasticWorker() {
+        return this.enablePsJobElasticWorker;
     }
 
     public JobElasticSpec setMaxParallelism(Integer maxParallelism) {

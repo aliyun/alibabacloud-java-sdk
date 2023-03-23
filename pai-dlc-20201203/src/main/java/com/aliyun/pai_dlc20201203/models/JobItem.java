@@ -76,6 +76,9 @@ public class JobItem extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("SubStatus")
+    public String subStatus;
+
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
 
@@ -289,6 +292,14 @@ public class JobItem extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public JobItem setSubStatus(String subStatus) {
+        this.subStatus = subStatus;
+        return this;
+    }
+    public String getSubStatus() {
+        return this.subStatus;
     }
 
     public JobItem setThirdpartyLibDir(String thirdpartyLibDir) {
