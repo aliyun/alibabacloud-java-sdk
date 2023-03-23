@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppSecurityGroupRequest extends TeaModel {
+    /**
+     * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1\*\*\*\*</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>sg-wz969ngg2e49q5i4\*\*\*\*</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 

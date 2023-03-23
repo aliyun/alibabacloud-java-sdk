@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespaceListRequest extends TeaModel {
+    /**
+     * <p>true</p>
+     */
     @NameInMap("ContainCustom")
     public Boolean containCustom;
 
+    /**
+     * <p>true</p>
+     */
     @NameInMap("HybridCloudExclude")
     public Boolean hybridCloudExclude;
 

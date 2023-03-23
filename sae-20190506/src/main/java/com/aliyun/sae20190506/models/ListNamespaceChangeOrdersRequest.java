@@ -4,21 +4,39 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListNamespaceChangeOrdersRequest extends TeaModel {
+    /**
+     * <p>2</p>
+     */
     @NameInMap("CoStatus")
     public String coStatus;
 
+    /**
+     * <p>CoBatchStartApplication</p>
+     */
     @NameInMap("CoType")
     public String coType;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>test</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>cn-shanghai:test</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

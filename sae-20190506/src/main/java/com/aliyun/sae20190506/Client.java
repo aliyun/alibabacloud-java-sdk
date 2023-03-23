@@ -485,6 +485,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createApplicationWithOptions(request, headers, runtime);
     }
 
+    /**
+      * *   You can create up to five auto scaling policies for one application.
+      * *   You can create up to 20 points in time when the scheduled auto scaling policy is triggered within one day.
+      * *   You cannot manually manage application lifecycles when auto scaling policies are in effect. For example, you cannot deploy, scale, stop, or restart applications, or change the application specifications. The application deployment can be a single-batch release, phased release, or canary release. You must disable auto scaling policies before you manage application lifecycles.
+      * *   You cannot manage the lifecycle of an application and create or enable an auto scaling policy for the application at the same time.
+      * *   If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the allowlist.
+      *
+      * @param request CreateApplicationScalingRuleRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateApplicationScalingRuleResponse
+     */
     public CreateApplicationScalingRuleResponse createApplicationScalingRuleWithOptions(CreateApplicationScalingRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -538,6 +550,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateApplicationScalingRuleResponse());
     }
 
+    /**
+      * *   You can create up to five auto scaling policies for one application.
+      * *   You can create up to 20 points in time when the scheduled auto scaling policy is triggered within one day.
+      * *   You cannot manually manage application lifecycles when auto scaling policies are in effect. For example, you cannot deploy, scale, stop, or restart applications, or change the application specifications. The application deployment can be a single-batch release, phased release, or canary release. You must disable auto scaling policies before you manage application lifecycles.
+      * *   You cannot manage the lifecycle of an application and create or enable an auto scaling policy for the application at the same time.
+      * *   If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the allowlist.
+      *
+      * @param request CreateApplicationScalingRuleRequest
+      * @return CreateApplicationScalingRuleResponse
+     */
     public CreateApplicationScalingRuleResponse createApplicationScalingRule(CreateApplicationScalingRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -589,6 +611,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createConfigMapWithOptions(request, headers, runtime);
     }
 
+    /**
+      * >  You can configure only one canary release rule for each application.
+      *
+      * @param request CreateGreyTagRouteRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateGreyTagRouteResponse
+     */
     public CreateGreyTagRouteResponse createGreyTagRouteWithOptions(CreateGreyTagRouteRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -634,6 +664,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGreyTagRouteResponse());
     }
 
+    /**
+      * >  You can configure only one canary release rule for each application.
+      *
+      * @param request CreateGreyTagRouteRequest
+      * @return CreateGreyTagRouteResponse
+     */
     public CreateGreyTagRouteResponse createGreyTagRoute(CreateGreyTagRouteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -957,6 +993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNamespaceResponse createNamespaceWithOptions(CreateNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableMicroRegistration)) {
+            query.put("EnableMicroRegistration", request.enableMicroRegistration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nameSpaceShortId)) {
             query.put("NameSpaceShortId", request.nameSpaceShortId);
         }
@@ -2662,9 +2702,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.execJobWithOptions(request, headers, runtime);
     }
 
-    public GetArmsTopNMetricResponse getArmsTopNMetricWithOptions(String RegionId, String OrderBy, String Limit, String StartTime, String EndTime, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetArmsTopNMetricResponse getArmsTopNMetricWithOptions(GetArmsTopNMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetArmsTopNMetric"),
@@ -2680,15 +2743,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetArmsTopNMetricResponse());
     }
 
-    public GetArmsTopNMetricResponse getArmsTopNMetric(String RegionId, String OrderBy, String Limit, String StartTime, String EndTime) throws Exception {
+    public GetArmsTopNMetricResponse getArmsTopNMetric(GetArmsTopNMetricRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getArmsTopNMetricWithOptions(RegionId, OrderBy, Limit, StartTime, EndTime, headers, runtime);
+        return this.getArmsTopNMetricWithOptions(request, headers, runtime);
     }
 
-    public GetAvailabilityMetricResponse getAvailabilityMetricWithOptions(String RegionId, String Limit, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetAvailabilityMetricResponse getAvailabilityMetricWithOptions(GetAvailabilityMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetAvailabilityMetric"),
@@ -2704,15 +2778,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAvailabilityMetricResponse());
     }
 
-    public GetAvailabilityMetricResponse getAvailabilityMetric(String RegionId, String Limit) throws Exception {
+    public GetAvailabilityMetricResponse getAvailabilityMetric(GetAvailabilityMetricRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getAvailabilityMetricWithOptions(RegionId, Limit, headers, runtime);
+        return this.getAvailabilityMetricWithOptions(request, headers, runtime);
     }
 
-    public GetChangeOrderMetricResponse getChangeOrderMetricWithOptions(String RegionId, String CreateTime, String OrderBy, String Limit, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetChangeOrderMetricResponse getChangeOrderMetricWithOptions(GetChangeOrderMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createTime)) {
+            query.put("CreateTime", request.createTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetChangeOrderMetric"),
@@ -2728,15 +2821,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetChangeOrderMetricResponse());
     }
 
-    public GetChangeOrderMetricResponse getChangeOrderMetric(String RegionId, String CreateTime, String OrderBy, String Limit) throws Exception {
+    public GetChangeOrderMetricResponse getChangeOrderMetric(GetChangeOrderMetricRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getChangeOrderMetricWithOptions(RegionId, CreateTime, OrderBy, Limit, headers, runtime);
+        return this.getChangeOrderMetricWithOptions(request, headers, runtime);
     }
 
-    public GetScaleAppMetricResponse getScaleAppMetricWithOptions(String RegionId, String Limit, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetScaleAppMetricResponse getScaleAppMetricWithOptions(GetScaleAppMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetScaleAppMetric"),
@@ -2752,15 +2856,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetScaleAppMetricResponse());
     }
 
-    public GetScaleAppMetricResponse getScaleAppMetric(String RegionId, String Limit) throws Exception {
+    public GetScaleAppMetricResponse getScaleAppMetric(GetScaleAppMetricRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getScaleAppMetricWithOptions(RegionId, Limit, headers, runtime);
+        return this.getScaleAppMetricWithOptions(request, headers, runtime);
     }
 
-    public GetWarningEventMetricResponse getWarningEventMetricWithOptions(String RegionId, String StartTime, String EndTime, String Limit, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetWarningEventMetricResponse getWarningEventMetricWithOptions(GetWarningEventMetricRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetWarningEventMetric"),
@@ -2776,10 +2899,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetWarningEventMetricResponse());
     }
 
-    public GetWarningEventMetricResponse getWarningEventMetric(String RegionId, String StartTime, String EndTime, String Limit) throws Exception {
+    public GetWarningEventMetricResponse getWarningEventMetric(GetWarningEventMetricRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getWarningEventMetricWithOptions(RegionId, StartTime, EndTime, Limit, headers, runtime);
+        return this.getWarningEventMetricWithOptions(request, headers, runtime);
     }
 
     public ListAppEventsResponse listAppEventsWithOptions(ListAppEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3060,6 +3183,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listConsumedServicesWithOptions(request, headers, runtime);
     }
 
+    /**
+      * >  You can configure only one canary release rule for each application.
+      *
+      * @param request ListGreyTagRouteRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListGreyTagRouteResponse
+     */
     public ListGreyTagRouteResponse listGreyTagRouteWithOptions(ListGreyTagRouteRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3085,6 +3216,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListGreyTagRouteResponse());
     }
 
+    /**
+      * >  You can configure only one canary release rule for each application.
+      *
+      * @param request ListGreyTagRouteRequest
+      * @return ListGreyTagRouteResponse
+     */
     public ListGreyTagRouteResponse listGreyTagRoute(ListGreyTagRouteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3423,6 +3560,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTagResourcesWithOptions(request, headers, runtime);
     }
 
+    /**
+      * >  Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return OpenSaeServiceResponse
+     */
     public OpenSaeServiceResponse openSaeServiceWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3441,6 +3585,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenSaeServiceResponse());
     }
 
+    /**
+      * >  Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
+      *
+      * @return OpenSaeServiceResponse
+     */
     public OpenSaeServiceResponse openSaeService() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4024,6 +4173,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateApplicationDescriptionWithOptions(request, headers, runtime);
     }
 
+    /**
+      * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the allowlist.
+      *
+      * @param request UpdateApplicationScalingRuleRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateApplicationScalingRuleResponse
+     */
     public UpdateApplicationScalingRuleResponse updateApplicationScalingRuleWithOptions(UpdateApplicationScalingRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4069,6 +4226,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateApplicationScalingRuleResponse());
     }
 
+    /**
+      * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the allowlist.
+      *
+      * @param request UpdateApplicationScalingRuleRequest
+      * @return UpdateApplicationScalingRuleResponse
+     */
     public UpdateApplicationScalingRuleResponse updateApplicationScalingRule(UpdateApplicationScalingRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4475,6 +4638,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateNamespaceResponse updateNamespaceWithOptions(UpdateNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableMicroRegistration)) {
+            query.put("EnableMicroRegistration", request.enableMicroRegistration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nameSpaceShortId)) {
             query.put("NameSpaceShortId", request.nameSpaceShortId);
         }

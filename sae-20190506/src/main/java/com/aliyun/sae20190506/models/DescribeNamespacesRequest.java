@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespacesRequest extends TeaModel {
+    /**
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

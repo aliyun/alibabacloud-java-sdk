@@ -4,24 +4,56 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeGreyTagRouteResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>- **2xx**: The call was successful.</p>
+     * <p>- **3xx**: The call was redirected.</p>
+     * <p>- **4xx**: The call failed.</p>
+     * <p>- **5xx**: A server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the canary release rule.</p>
+     */
     @NameInMap("Data")
     public DescribeGreyTagRouteResponseBodyData data;
 
+    /**
+     * <p>The returned error code. Valid values:</p>
+     * <br>
+     * <p>- If the call is successful, the **ErrorCode** parameter is not returned.</p>
+     * <p>- If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned information.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the information of the change order was queried. Valid values:</p>
+     * <br>
+     * <p>- **true**: The information was queried.</p>
+     * <p>- **false**: The information failed to be queried.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The trace ID that is used to query the details of the request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -224,24 +256,57 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
     }
 
     public static class DescribeGreyTagRouteResponseBodyDataDubboRulesItems extends TeaModel {
+        /**
+         * <p>The comparison operator. Valid values: **>**, **<**, **>=**, **<=**, **==**, and **! =**.</p>
+         */
         @NameInMap("cond")
         public String cond;
 
+        /**
+         * <p>The expression that is used to obtain the value of the parameter. Valid values:</p>
+         * <br>
+         * <p>- **Empty**: obtains the value of the parameter.</p>
+         * <p>- **.name**: obtains the name property of the parameter. This expression works the same way as args0.getName().</p>
+         * <p>- **.isEnabled()**: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().</p>
+         * <p>- **[0]**: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0[0]. This expression does not start with a period (.).</p>
+         * <p>- **.get(0)**: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).</p>
+         * <p>- **.get("key")**: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get("key").</p>
+         */
         @NameInMap("expr")
         public String expr;
 
+        /**
+         * <p>The index of the parameter. The value 0 indicates the first parameter.</p>
+         */
         @NameInMap("index")
         public Integer index;
 
+        /**
+         * <p>This parameter is not returned for Dubbo services.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The operator. Valid values:</p>
+         * <br>
+         * <p>- **rawvalue**: direct comparison.</p>
+         * <p>- **list**: whitelist.</p>
+         * <p>- **mod**: mods 100.</p>
+         * <p>- **deterministic_proportional_steaming_division**: percentage.</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>This parameter is not returned for Dubbo services.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The value of the parameter. This value is compared with the value that is obtained based on the **expr** and **index** parameters.</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -309,21 +374,42 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
     }
 
     public static class DescribeGreyTagRouteResponseBodyDataDubboRules extends TeaModel {
+        /**
+         * <p>The relationship between the conditions in the canary release rule. Valid values:</p>
+         * <br>
+         * <p>- **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.</p>
+         * <p>- **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.</p>
+         */
         @NameInMap("condition")
         public String condition;
 
+        /**
+         * <p>The group of the Dubbo service that corresponds to the canary release rule.</p>
+         */
         @NameInMap("group")
         public String group;
 
+        /**
+         * <p>The conditions.</p>
+         */
         @NameInMap("items")
         public java.util.List<DescribeGreyTagRouteResponseBodyDataDubboRulesItems> items;
 
+        /**
+         * <p>The method name of the Dubbo service.</p>
+         */
         @NameInMap("methodName")
         public String methodName;
 
+        /**
+         * <p>The name of the Dubbo service.</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 
+        /**
+         * <p>The version of the Dubbo service.</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -383,24 +469,54 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
     }
 
     public static class DescribeGreyTagRouteResponseBodyDataScRulesItems extends TeaModel {
+        /**
+         * <p>The comparison operator. Valid values: **>**, **<**, **>=**, **<=**, **==**, and **! =**.</p>
+         */
         @NameInMap("cond")
         public String cond;
 
+        /**
+         * <p>This parameter is not returned for Spring Cloud applications.</p>
+         */
         @NameInMap("expr")
         public String expr;
 
+        /**
+         * <p>This parameter is not returned for Spring Cloud applications.</p>
+         */
         @NameInMap("index")
         public Integer index;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The operator. Valid values:</p>
+         * <br>
+         * <p>*   **rawvalue**: direct comparison.</p>
+         * <p>*   **list**: whitelist.</p>
+         * <p>*   **mod**: mods 100.</p>
+         * <p>*   **deterministic_proportional_steaming_division**: percentage.</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>The type of the comparison. Valid values:</p>
+         * <br>
+         * <p>*   **param**: parameter</p>
+         * <p>*   **cookie**: cookie</p>
+         * <p>*   **header**: header</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The value of the parameter. This value is compared with the value that is obtained based on the **type** and **name** parameters.</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -468,12 +584,24 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
     }
 
     public static class DescribeGreyTagRouteResponseBodyDataScRules extends TeaModel {
+        /**
+         * <p>The relationship between the conditions in the canary release rule. Valid values:</p>
+         * <br>
+         * <p>*   **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.</p>
+         * <p>*   **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.</p>
+         */
         @NameInMap("condition")
         public String condition;
 
+        /**
+         * <p>The conditions.</p>
+         */
         @NameInMap("items")
         public java.util.List<DescribeGreyTagRouteResponseBodyDataScRulesItems> items;
 
+        /**
+         * <p>The path of the canary release rule of the Spring Cloud application.</p>
+         */
         @NameInMap("path")
         public String path;
 
@@ -512,27 +640,51 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         @NameInMap("AlbRules")
         public java.util.List<DescribeGreyTagRouteResponseBodyDataAlbRules> albRules;
 
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The timestamp when the canary release rule was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description of the canary release rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The canary release rule of the Dubbo service.</p>
+         */
         @NameInMap("DubboRules")
         public java.util.List<DescribeGreyTagRouteResponseBodyDataDubboRules> dubboRules;
 
+        /**
+         * <p>The ID of the canary release rule. The ID is globally unique.</p>
+         */
         @NameInMap("GreyTagRouteId")
         public Long greyTagRouteId;
 
+        /**
+         * <p>The name of the canary release rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The canary release rule of the Spring Cloud application.</p>
+         */
         @NameInMap("ScRules")
         public java.util.List<DescribeGreyTagRouteResponseBodyDataScRules> scRules;
 
+        /**
+         * <p>The timestamp when the canary release rule was updated. Unit: milliseconds.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

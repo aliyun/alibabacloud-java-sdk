@@ -4,24 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListIngressesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListIngressesResponseBodyData data;
 
+    /**
+     * <p>The error code. </p>
+     * <br>
+     * <p>- The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>- The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>*   **success** is returned when the request succeeds.</p>
+     * <p>*   An error code is returned when the request fails.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the list of routing rules was obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the list was obtained.</p>
+     * <p>*   **false**: indicates that the list could not be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,39 +122,75 @@ public class ListIngressesResponseBody extends TeaModel {
     }
 
     public static class ListIngressesResponseBodyDataIngressList extends TeaModel {
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertId")
         public String certId;
 
         @NameInMap("CertIds")
         public String certIds;
 
+        /**
+         * <p>The name of the routing rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the routing rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The port specified for the SLB listener.</p>
+         */
         @NameInMap("ListenerPort")
         public String listenerPort;
 
+        /**
+         * <p>The protocol used to forward requests. Valid values:</p>
+         * <br>
+         * <p>*   **HTTP**: used when the application needs to identify the transmitted data.</p>
+         * <p>*   **HTTPS**: used when the application requires encrypted data transmission.</p>
+         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
+        /**
+         * <p>The type of the SLB instance based on the processing capabilities. Valid values:</p>
+         * <br>
+         * <p>*   **clb**: the Classic Load Balancer (CLB) instance.</p>
+         * <p>*   **alb**: the Application Load Balancer (ALB) instance.</p>
+         */
         @NameInMap("LoadBalanceType")
         public String loadBalanceType;
 
+        /**
+         * <p>The name of the routing rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
-         * <p>SLB ID。</p>
+         * <p>The ID of the SLB instance.</p>
          */
         @NameInMap("SlbId")
         public String slbId;
 
+        /**
+         * <p>The type of the SLB instance based on the IP address. Valid values:</p>
+         * <br>
+         * <p>*   **internet**: the Internet-facing SLB instance.</p>
+         * <p>*   **intranet**: the internal-facing SLB instance.</p>
+         */
         @NameInMap("SlbType")
         public String slbType;
 
@@ -219,6 +290,9 @@ public class ListIngressesResponseBody extends TeaModel {
     }
 
     public static class ListIngressesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of routing rules.</p>
+         */
         @NameInMap("IngressList")
         public java.util.List<ListIngressesResponseBodyDataIngressList> ingressList;
 

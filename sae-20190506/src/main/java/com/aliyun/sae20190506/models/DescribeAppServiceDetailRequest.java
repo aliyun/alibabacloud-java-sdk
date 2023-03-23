@@ -4,18 +4,33 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppServiceDetailRequest extends TeaModel {
+    /**
+     * <p>6dcc8c9e-d3da-478a-a066-86dcf820\*\*\*\*</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>springCloud</p>
+     */
     @NameInMap("ServiceGroup")
     public String serviceGroup;
 
+    /**
+     * <p>edas.service.provider</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>springCloud</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <p>1.0.0</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 

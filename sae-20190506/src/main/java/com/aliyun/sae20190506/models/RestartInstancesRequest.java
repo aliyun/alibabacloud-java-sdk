@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class RestartInstancesRequest extends TeaModel {
+    /**
+     * <p>1daa7236-3844-4f36-b39a-605b0cc0\*\*\*\*</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>mysae-1daa7236-3844-4f36-b39a-605b0cc0caa6-\*\*\*\*\*</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 

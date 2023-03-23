@@ -4,24 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationSlbsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeApplicationSlbsResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>*   **success** is returned when the request succeeds.</p>
+     * <p>*   An error code is returned when the request fails.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the information about the SLB instances that are associated with an application was obtained successfully. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the information was obtained successfully.</p>
+     * <p>*   **false**: indicates that the information failed to be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,15 +122,27 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataInternet extends TeaModel {
+        /**
+         * <p>The ID of the SSL certificate issued by Alibaba Cloud.</p>
+         */
         @NameInMap("HttpsCertId")
         public String httpsCertId;
 
+        /**
+         * <p>The port specified for the SLB listener.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The supported protocol.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The container port.</p>
+         */
         @NameInMap("TargetPort")
         public Integer targetPort;
 
@@ -139,15 +186,27 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataIntranet extends TeaModel {
+        /**
+         * <p>The ID of the SSL certificate issued by Alibaba Cloud.</p>
+         */
         @NameInMap("HttpsCertId")
         public String httpsCertId;
 
+        /**
+         * <p>The port specified for the SLB listener.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The supported protocol.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The container port.</p>
+         */
         @NameInMap("TargetPort")
         public Integer targetPort;
 
@@ -191,27 +250,45 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyData extends TeaModel {
+        /**
+         * <p>Configurations of Internet-facing SLB instances.</p>
+         */
         @NameInMap("Internet")
         public java.util.List<DescribeApplicationSlbsResponseBodyDataInternet> internet;
 
+        /**
+         * <p>The IP address of the Internet-facing SLB instance.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
         @NameInMap("InternetSlbExpired")
         public Boolean internetSlbExpired;
 
+        /**
+         * <p>The ID of the Internet-facing SLB instance.</p>
+         */
         @NameInMap("InternetSlbId")
         public String internetSlbId;
 
+        /**
+         * <p>Configurations of internal-facing SLB instances.</p>
+         */
         @NameInMap("Intranet")
         public java.util.List<DescribeApplicationSlbsResponseBodyDataIntranet> intranet;
 
+        /**
+         * <p>The IP address of the internal-facing SLB instance.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         @NameInMap("IntranetSlbExpired")
         public Boolean intranetSlbExpired;
 
+        /**
+         * <p>The ID of the internal-facing SLB instance.</p>
+         */
         @NameInMap("IntranetSlbId")
         public String intranetSlbId;
 

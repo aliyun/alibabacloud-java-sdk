@@ -4,24 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespaceListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of namespaces.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeNamespaceListResponseBodyData> data;
 
+    /**
+     * <p>The returned error code. Valid values:</p>
+     * <br>
+     * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
+     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned information. Valid values:</p>
+     * <br>
+     * <p>*   success: If the call is successful, **success** is returned.</p>
+     * <p>*   An error code: If the call fails, an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the namespaces were obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The namespaces were obtained.</p>
+     * <p>*   **false**: The namespaces failed to be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The trace ID that is used to query the details of the request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,41 +122,71 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespaceListResponseBodyData extends TeaModel {
+        /**
+         * <p>The command that was run to install the agent.</p>
+         */
         @NameInMap("AgentInstall")
         public String agentInstall;
 
+        /**
+         * <p>This parameter is no longer valid.</p>
+         */
         @NameInMap("Current")
         public Boolean current;
 
+        /**
+         * <p>Indicates whether custom namespaces are returned. Valid values:</p>
+         * <br>
+         * <p>*   **true**: Custom namespaces are returned.</p>
+         * <p>*   **false**: Custom namespaces are not returned.</p>
+         */
         @NameInMap("Custom")
         public Boolean custom;
 
+        /**
+         * <p>Specifies whether hybrid cloud namespaces are excluded. Valid values:</p>
+         * <br>
+         * <p>*   **true**: Hybrid cloud namespaces are excluded.</p>
+         * <p>*   **false**: Hybrid cloud namespaces are included.</p>
+         */
         @NameInMap("HybridCloudEnable")
         public Boolean hybridCloudEnable;
 
         @NameInMap("NameSpaceShortId")
         public String nameSpaceShortId;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
+        /**
+         * <p>The region to which the namespace belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>vSwitch ID。</p>
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

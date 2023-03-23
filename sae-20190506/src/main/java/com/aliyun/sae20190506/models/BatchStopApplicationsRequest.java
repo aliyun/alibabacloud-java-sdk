@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class BatchStopApplicationsRequest extends TeaModel {
+    /**
+     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a\*\*\*\*,ebf491f0-c1a5-45e2-b2c4-71025e2a\*\*\*\*</p>
+     */
     @NameInMap("AppIds")
     public String appIds;
 
+    /**
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 

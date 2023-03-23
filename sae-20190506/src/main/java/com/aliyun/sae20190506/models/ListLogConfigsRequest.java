@@ -4,12 +4,21 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListLogConfigsRequest extends TeaModel {
+    /**
+     * <p>56f77b65-788d-442a-9885-7f20d91f\*\*\*\*</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

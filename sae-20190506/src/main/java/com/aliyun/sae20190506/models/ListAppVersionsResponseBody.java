@@ -4,21 +4,50 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListAppVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the versions.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAppVersionsResponseBodyData> data;
 
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the historical versions of the application were obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the historical versions of the application were obtained.</p>
+     * <p>*   **false**: indicates that the historical versions of the application could not be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +105,38 @@ public class ListAppVersionsResponseBody extends TeaModel {
     }
 
     public static class ListAppVersionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The download link of the WAR or JAR package. This parameter is returned when the **Type** parameter is set to **url**.</p>
+         */
         @NameInMap("BuildPackageUrl")
         public String buildPackageUrl;
 
+        /**
+         * <p>The time when the application was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the version.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The deployment method of the application. Valid values:</p>
+         * <br>
+         * <p>*   **image**: indicates that the application was deployed by using an image.</p>
+         * <p>*   **upload**: indicates that the application was deployed by uploading a WAR or JAR package.</p>
+         * <p>*   **url**: indicates that the application was deployed by specifying the URL of a WAR or JAR package.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>*   The address of the image. This parameter is returned when the **Type** parameter is set to **image**.</p>
+         * <p>*   The download link of the WAR or JAR package. This parameter is returned when the **Type** parameter is set to **upload**.</p>
+         */
         @NameInMap("WarUrl")
         public String warUrl;
 

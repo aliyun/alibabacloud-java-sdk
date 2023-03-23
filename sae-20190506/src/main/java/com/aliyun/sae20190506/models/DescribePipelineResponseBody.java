@@ -4,24 +4,56 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribePipelineResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The batch information.</p>
+     */
     @NameInMap("Data")
     public DescribePipelineResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the batch information was obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the information was obtained.</p>
+     * <p>*   **false**: indicates that the information could not be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,30 +119,70 @@ public class DescribePipelineResponseBody extends TeaModel {
     }
 
     public static class DescribePipelineResponseBodyDataStageListTaskList extends TeaModel {
+        /**
+         * <p>The error code returned when the task could not be executed. If the task is successfully executed, this parameter is not returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether to execute the subsequent tasks when the task failed. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The subsequent tasks cannot be executed.</p>
+         * <p>*   **1**: The subsequent tasks can be executed.</p>
+         */
         @NameInMap("ErrorIgnore")
         public Integer errorIgnore;
 
+        /**
+         * <p>The error message returned when the task could not be executed. If the task is successfully executed, this parameter is not returned.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The returned message indicating the task execution result.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether a running task can be manually skipped. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The running task can be skipped.</p>
+         * <p>*   **false**: The running task cannot be skipped.</p>
+         */
         @NameInMap("ShowManualIgnore")
         public Boolean showManualIgnore;
 
+        /**
+         * <p>The ID of the stage.</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The task is prepared for execution.</p>
+         * <p>*   **1**: The task is being executed.</p>
+         * <p>*   **2**: The task was executed.</p>
+         * <p>*   **3**: The task could not be executed.</p>
+         * <p>*   **5**: The task is pending retry.</p>
+         * <p>*   **6**: The task was terminated.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
@@ -194,18 +266,42 @@ public class DescribePipelineResponseBody extends TeaModel {
     }
 
     public static class DescribePipelineResponseBodyDataStageList extends TeaModel {
+        /**
+         * <p>The execution type of the stage. Valid values:</p>
+         * <br>
+         * <p>*   **0**: in sequence.</p>
+         * <p>*   **1**: in parallel.</p>
+         */
         @NameInMap("ExecutorType")
         public Integer executorType;
 
+        /**
+         * <p>The ID of the stage.</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>The name of the stage.</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <p>The status of the batch processing stage. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The batch is prepared for this processing stage.</p>
+         * <p>*   **1**: The processing stage is in progress.</p>
+         * <p>*   **2**: The processing stage was complete.</p>
+         * <p>*   **3**: The processing failed in this stage.</p>
+         * <p>*   **6**: The processing stage was terminated.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The list of task statuses.</p>
+         */
         @NameInMap("TaskList")
         public java.util.List<DescribePipelineResponseBodyDataStageListTaskList> taskList;
 
@@ -257,27 +353,61 @@ public class DescribePipelineResponseBody extends TeaModel {
     }
 
     public static class DescribePipelineResponseBodyData extends TeaModel {
+        /**
+         * <p>The status of the change order for the batch.</p>
+         */
         @NameInMap("CoStatus")
         public String coStatus;
 
+        /**
+         * <p>The ID of the batch processing stage.</p>
+         */
         @NameInMap("CurrentStageId")
         public String currentStageId;
 
+        /**
+         * <p>The ID of the next batch.</p>
+         */
         @NameInMap("NextPipelineId")
         public String nextPipelineId;
 
+        /**
+         * <p>The ID of the batch.</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The name of the batch.</p>
+         */
         @NameInMap("PipelineName")
         public String pipelineName;
 
+        /**
+         * <p>The batch status. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The batch is prepared for processing.</p>
+         * <p>*   **1**: The batch is being processed.</p>
+         * <p>*   **2**: The batch was processed.</p>
+         * <p>*   **3**: The batch could not be processed.</p>
+         * <p>*   **6**: The batch processing was terminated.</p>
+         * <p>*   **10**: The batch could not be processed due to a system exception.</p>
+         */
         @NameInMap("PipelineStatus")
         public Integer pipelineStatus;
 
+        /**
+         * <p>Indicates whether to start processing the next batch. Valid values:</p>
+         * <br>
+         * <p>*   **false**: indicates that the next batch cannot be processed yet.</p>
+         * <p>*   **true**: indicates that the next batch can be processed now.</p>
+         */
         @NameInMap("ShowBatch")
         public Boolean showBatch;
 
+        /**
+         * <p>The list of batch processing stages.</p>
+         */
         @NameInMap("StageList")
         public java.util.List<DescribePipelineResponseBodyDataStageList> stageList;
 

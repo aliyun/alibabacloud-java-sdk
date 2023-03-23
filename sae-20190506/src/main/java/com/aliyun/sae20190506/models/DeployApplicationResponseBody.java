@@ -4,24 +4,56 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeployApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeployApplicationResponseBodyData data;
 
+    /**
+     * <p>The error code returned when the method fails to be called.</p>
+     * <br>
+     * <p>*   If the request is successful, this parameter is not returned.****</p>
+     * <p>*   This parameter is returned only if the request failed.**** For more information, see the "**Error codes**" section in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the application deployment is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,12 +119,24 @@ public class DeployApplicationResponseBody extends TeaModel {
     }
 
     public static class DeployApplicationResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The ID of the change order. It can be used to query the task status.</p>
+         */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
+        /**
+         * <p>Specifies whether approval is required when a RAM user performs release. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsNeedApproval")
         public Boolean isNeedApproval;
 

@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListNamespacedConfigMapsRequest extends TeaModel {
+    /**
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 

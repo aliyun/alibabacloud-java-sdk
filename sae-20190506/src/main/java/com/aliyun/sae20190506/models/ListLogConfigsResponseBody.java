@@ -4,24 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListLogConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The logging configurations.</p>
+     */
     @NameInMap("Data")
     public ListLogConfigsResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>*   **success** is returned when the request succeeds.</p>
+     * <p>*   An error code is returned when the request fails.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the logging configurations of an application were obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: indicates that the configurations were obtained.</p>
+     * <p>*   **false**: indicates that the configurations could not be obtained.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,27 +122,51 @@ public class ListLogConfigsResponseBody extends TeaModel {
     }
 
     public static class ListLogConfigsResponseBodyDataLogConfigs extends TeaModel {
+        /**
+         * <p>The name of the Log Service configuration.</p>
+         */
         @NameInMap("ConfigName")
         public String configName;
 
+        /**
+         * <p>The time when the configuration was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The path of logs.</p>
+         */
         @NameInMap("LogDir")
         public String logDir;
 
+        /**
+         * <p>The type of the log. Set this value to **file_log**.</p>
+         */
         @NameInMap("LogType")
         public String logType;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the Logstore in Log Service.</p>
+         */
         @NameInMap("SlsLogStore")
         public String slsLogStore;
 
+        /**
+         * <p>The ID of the Log Service project.</p>
+         */
         @NameInMap("SlsProject")
         public String slsProject;
 
+        /**
+         * <p>The storage type of logs.</p>
+         */
         @NameInMap("StoreType")
         public String storeType;
 
@@ -183,15 +242,27 @@ public class ListLogConfigsResponseBody extends TeaModel {
     }
 
     public static class ListLogConfigsResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The details of logging configurations.</p>
+         */
         @NameInMap("LogConfigs")
         public java.util.List<ListLogConfigsResponseBodyDataLogConfigs> logConfigs;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

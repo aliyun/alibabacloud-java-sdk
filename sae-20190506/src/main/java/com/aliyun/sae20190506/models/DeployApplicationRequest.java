@@ -4,126 +4,231 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeployApplicationRequest extends TeaModel {
+    /**
+     * <p>acs:ram::123456789012\*\*\*\*:role/adminrole</p>
+     */
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
 
+    /**
+     * <p>cri-xxxxxx</p>
+     */
     @NameInMap("AcrInstanceId")
     public String acrInstanceId;
 
+    /**
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\*\*\*\*</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>true</p>
+     */
     @NameInMap("AssociateEip")
     public Boolean associateEip;
 
+    /**
+     * <p>true</p>
+     */
     @NameInMap("AutoEnableApplicationScalingRule")
     public Boolean autoEnableApplicationScalingRule;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("BatchWaitTime")
     public Integer batchWaitTime;
 
+    /**
+     * <p>Start Applications</p>
+     */
     @NameInMap("ChangeOrderDesc")
     public String changeOrderDesc;
 
+    /**
+     * <p>sleep</p>
+     */
     @NameInMap("Command")
     public String command;
 
+    /**
+     * <p>1d</p>
+     */
     @NameInMap("CommandArgs")
     public String commandArgs;
 
+    /**
+     * <p>\[{"configMapId":16,"key":"test","mountPath":"/tmp"}]</p>
+     */
     @NameInMap("ConfigMapMountDesc")
     public String configMapMountDesc;
 
+    /**
+     * <p>\[{"hostName":"samplehost","ip":"127.0.0.1"}]</p>
+     */
     @NameInMap("CustomHostAlias")
     public String customHostAlias;
 
     @NameInMap("Deploy")
     public String deploy;
 
+    /**
+     * <p>3.5.3</p>
+     */
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
 
+    /**
+     * <p>false</p>
+     */
     @NameInMap("EnableAhas")
     public String enableAhas;
 
+    /**
+     * <p>false</p>
+     */
     @NameInMap("EnableGreyTagRoute")
     public Boolean enableGreyTagRoute;
 
+    /**
+     * <p>\[{"name":"envtmp","value":"0"}]</p>
+     */
     @NameInMap("Envs")
     public String envs;
 
     @NameInMap("ImagePullSecrets")
     public String imagePullSecrets;
 
+    /**
+     * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>\-Xms4G -Xmx4G</p>
+     */
     @NameInMap("JarStartArgs")
     public String jarStartArgs;
 
+    /**
+     * <p>custom-option</p>
+     */
     @NameInMap("JarStartOptions")
     public String jarStartOptions;
 
+    /**
+     * <p>Open JDK 8</p>
+     */
     @NameInMap("Jdk")
     public String jdk;
 
     @NameInMap("KafkaConfigs")
     public String kafkaConfigs;
 
+    /**
+     * <p>{"exec":{"command":\["sleep","5s"]},"initialDelaySeconds":10,"timeoutSeconds":11}</p>
+     */
     @NameInMap("Liveness")
     public String liveness;
 
     @NameInMap("MicroRegistration")
     public String microRegistration;
 
+    /**
+     * <p>\-1</p>
+     */
     @NameInMap("MinReadyInstanceRatio")
     public Integer minReadyInstanceRatio;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("MinReadyInstances")
     public Integer minReadyInstances;
 
+    /**
+     * <p>\[{mountPath: "/tmp", nasPath: "/"}]</p>
+     */
     @NameInMap("MountDesc")
     public String mountDesc;
 
+    /**
+     * <p>10d3b4bc9\*\*\*\*.com</p>
+     */
     @NameInMap("MountHost")
     public String mountHost;
 
     @NameInMap("NasConfigs")
     public String nasConfigs;
 
+    /**
+     * <p>10d3b4\*\*\*\*</p>
+     */
     @NameInMap("NasId")
     public String nasId;
 
+    /**
+     * <p>xxxxxx</p>
+     */
     @NameInMap("OssAkId")
     public String ossAkId;
 
+    /**
+     * <p>xxxxxx</p>
+     */
     @NameInMap("OssAkSecret")
     public String ossAkSecret;
 
+    /**
+     * <p>\[{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]</p>
+     */
     @NameInMap("OssMountDescs")
     public String ossMountDescs;
 
     @NameInMap("PackageType")
     public String packageType;
 
+    /**
+     * <p>http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/\*\*\*\*.jar</p>
+     */
     @NameInMap("PackageUrl")
     public String packageUrl;
 
+    /**
+     * <p>1.0.1</p>
+     */
     @NameInMap("PackageVersion")
     public String packageVersion;
 
+    /**
+     * <p>/usr/local/etc/php/conf.d/arms.ini</p>
+     */
     @NameInMap("PhpArmsConfigLocation")
     public String phpArmsConfigLocation;
 
+    /**
+     * <p>k1=v1</p>
+     */
     @NameInMap("PhpConfig")
     public String phpConfig;
 
+    /**
+     * <p>/usr/local/etc/php/php.ini</p>
+     */
     @NameInMap("PhpConfigLocation")
     public String phpConfigLocation;
 
+    /**
+     * <p>{"exec":{"command":\["sh","-c","echo hello"]}}</p>
+     */
     @NameInMap("PostStart")
     public String postStart;
 
+    /**
+     * <p>{"exec":{"command":\["sh","-c","echo hello"]}}</p>
+     */
     @NameInMap("PreStop")
     public String preStop;
 
@@ -136,27 +241,51 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("PythonModules")
     public String pythonModules;
 
+    /**
+     * <p>{"exec":{"command":\["sleep","6s"]},"initialDelaySeconds":15,"timeoutSeconds":12}</p>
+     */
     @NameInMap("Readiness")
     public String readiness;
 
+    /**
+     * <p>\[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]</p>
+     */
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    /**
+     * <p>10</p>
+     */
     @NameInMap("TerminationGracePeriodSeconds")
     public Integer terminationGracePeriodSeconds;
 
+    /**
+     * <p>Asia/Shanghai</p>
+     */
     @NameInMap("Timezone")
     public String timezone;
 
+    /**
+     * <p>{"port":8080,"contextPath":"/","maxThreads":400,"uriEncoding":"ISO-8859-1","useBodyEncodingForUri":true}</p>
+     */
     @NameInMap("TomcatConfig")
     public String tomcatConfig;
 
+    /**
+     * <p>{"type":"GrayBatchUpdate","batchUpdate":{"batch":2,"releaseType":"auto","batchWaitTime":1},"grayUpdate":{"gray":1}}</p>
+     */
     @NameInMap("UpdateStrategy")
     public String updateStrategy;
 
+    /**
+     * <p>CATALINA_OPTS=\\"$CATALINA_OPTS $Options\\" catalina.sh run</p>
+     */
     @NameInMap("WarStartOptions")
     public String warStartOptions;
 
+    /**
+     * <p>apache-tomcat-7.0.91</p>
+     */
     @NameInMap("WebContainer")
     public String webContainer;
 

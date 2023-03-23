@@ -7,15 +7,27 @@ public class UpdateGreyTagRouteRequest extends TeaModel {
     @NameInMap("AlbRules")
     public String albRules;
 
+    /**
+     * <p>Canary Release - Regions</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>\[{"condition":"OR","group":"DUBBO","items":\[{"cond":"==","expr":".key1","index":0,"operator":"rawvalue","value":"value1"},{"cond":"==","expr":".key2","index":0,"operator":"rawvalue","value":"value2"}],"methodName":"echo","serviceName":"com.alibaba.edas.boot.EchoService","version":"1.0.0"}]</p>
+     */
     @NameInMap("DubboRules")
     public String dubboRules;
 
+    /**
+     * <p>1</p>
+     */
     @NameInMap("GreyTagRouteId")
     public Long greyTagRouteId;
 
+    /**
+     * <p>\[{"condition":"OR","items":\[{"cond":"==","name":"grey","operator":"rawvalue","type":"param","value":"true"},{"cond":"==","name":"grey","operator":"rawvalue","type":"cookie","value":"true"},{"cond":"==","name":"grey","operator":"rawvalue","type":"header","value":"true"}],"path":"/post-echo/hi"}]</p>
+     */
     @NameInMap("ScRules")
     public String scRules;
 

@@ -4,15 +4,27 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    /**
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>\["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]</p>
+     */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
+    /**
+     * <p>application</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>\[{"key":"k1","value":"v1"}]</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
