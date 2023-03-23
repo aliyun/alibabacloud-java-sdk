@@ -34,6 +34,9 @@ public class CreateSubCACertificateRequest extends TeaModel {
     @NameInMap("CountryCode")
     public String countryCode;
 
+    @NameInMap("ExtendedKeyUsages")
+    public java.util.List<String> extendedKeyUsages;
+
     /**
      * <p>The name of the city in which the organization is located. The value can contain letters.</p>
      */
@@ -59,6 +62,9 @@ public class CreateSubCACertificateRequest extends TeaModel {
      */
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
+
+    @NameInMap("PathLenConstraint")
+    public Integer pathLenConstraint;
 
     /**
      * <p>The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.</p>
@@ -105,6 +111,14 @@ public class CreateSubCACertificateRequest extends TeaModel {
         return this.countryCode;
     }
 
+    public CreateSubCACertificateRequest setExtendedKeyUsages(java.util.List<String> extendedKeyUsages) {
+        this.extendedKeyUsages = extendedKeyUsages;
+        return this;
+    }
+    public java.util.List<String> getExtendedKeyUsages() {
+        return this.extendedKeyUsages;
+    }
+
     public CreateSubCACertificateRequest setLocality(String locality) {
         this.locality = locality;
         return this;
@@ -135,6 +149,14 @@ public class CreateSubCACertificateRequest extends TeaModel {
     }
     public String getParentIdentifier() {
         return this.parentIdentifier;
+    }
+
+    public CreateSubCACertificateRequest setPathLenConstraint(Integer pathLenConstraint) {
+        this.pathLenConstraint = pathLenConstraint;
+        return this;
+    }
+    public Integer getPathLenConstraint() {
+        return this.pathLenConstraint;
     }
 
     public CreateSubCACertificateRequest setState(String state) {

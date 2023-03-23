@@ -22,6 +22,9 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The serial number of the server certificate.</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
