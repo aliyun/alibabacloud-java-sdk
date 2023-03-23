@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLogsRequest extends TeaModel {
     @NameInMap("from")
-    public Long from;
+    public Integer from;
 
     @NameInMap("line")
     public Long line;
@@ -23,7 +23,7 @@ public class GetLogsRequest extends TeaModel {
     public Boolean reverse;
 
     @NameInMap("to")
-    public Long to;
+    public Integer to;
 
     @NameInMap("topic")
     public String topic;
@@ -33,11 +33,11 @@ public class GetLogsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetLogsRequest setFrom(Long from) {
+    public GetLogsRequest setFrom(Integer from) {
         this.from = from;
         return this;
     }
-    public Long getFrom() {
+    public Integer getFrom() {
         return this.from;
     }
 
@@ -81,11 +81,11 @@ public class GetLogsRequest extends TeaModel {
         return this.reverse;
     }
 
-    public GetLogsRequest setTo(Long to) {
+    public GetLogsRequest setTo(Integer to) {
         this.to = to;
         return this;
     }
-    public Long getTo() {
+    public Integer getTo() {
         return this.to;
     }
 
