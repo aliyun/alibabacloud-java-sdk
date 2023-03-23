@@ -19,8 +19,8 @@ public class DescribeIpControlsRequest extends TeaModel {
     /**
      * <p>The type of the ACL. Valid values:</p>
      * <br>
-     * <p>*   **ALLOW**: an IP address whitelist</p>
-     * <p>*   **REFUSE**: an IP address blacklist</p>
+     * <p>*   **ALLOW**: a whitelist</p>
+     * <p>*   **REFUSE**: a blacklist</p>
      */
     @NameInMap("IpControlType")
     public String ipControlType;

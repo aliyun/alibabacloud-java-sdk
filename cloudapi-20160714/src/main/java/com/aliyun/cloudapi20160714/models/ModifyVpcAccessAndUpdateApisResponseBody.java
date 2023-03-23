@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcAccessAndUpdateApisResponseBody extends TeaModel {
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the asynchronous task.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the associated API is updated, you can use the task ID in the **DescribeUpdateVpcInfoTask** operation to query the update result.</p>
      */
     @NameInMap("OperationId")
     public String operationId;

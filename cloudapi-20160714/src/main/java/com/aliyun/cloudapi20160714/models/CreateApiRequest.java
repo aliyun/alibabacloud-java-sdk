@@ -193,8 +193,6 @@ public class CreateApiRequest extends TeaModel {
      * <p>*   **REGISTER**: registered APIs</p>
      * <p>*   **UNREGISTER**: unregistered APIs</p>
      * <p>*   **NOTIFY**: downstream notification APIs</p>
-     * <br>
-     * <p>For more information, see [Two-way communication](~~66031~~).</p>
      */
     @NameInMap("WebSocketApiType")
     public String webSocketApiType;

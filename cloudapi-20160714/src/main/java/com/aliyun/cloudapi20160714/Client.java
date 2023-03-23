@@ -775,10 +775,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityToken", request.securityToken);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
-            query.put("Source", request.source);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -1011,12 +1007,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("HttpsPolicy", request.httpsPolicy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceCidr)) {
+            query.put("InstanceCidr", request.instanceCidr);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             query.put("InstanceName", request.instanceName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceSpec)) {
             query.put("InstanceSpec", request.instanceSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pricingCycle)) {
@@ -1031,8 +1035,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Token", request.token);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userVpcId)) {
+            query.put("UserVpcId", request.userVpcId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneVSwitchSecurityGroup)) {
+            query.put("ZoneVSwitchSecurityGroup", request.zoneVSwitchSecurityGroup);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2920,8 +2932,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   API Gateway records the time and definition of an API every time the API is published. You can use the version number obtained from other operations to query definition details at a certain publication.
+      * You can call this operation to query the definition of a specified published version of an API.
+      * *   This operation is intended for API providers.
+      * *   Each time an API is published, API Gateway records the publishing details, such as the time and the API definition. You can use the version number obtained from other API operations to query the details of an API definition that is published on a specific occasion.
       *
       * @param request DescribeApiHistoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2968,8 +2981,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This API is intended for API providers.
-      * *   API Gateway records the time and definition of an API every time the API is published. You can use the version number obtained from other operations to query definition details at a certain publication.
+      * You can call this operation to query the definition of a specified published version of an API.
+      * *   This operation is intended for API providers.
+      * *   Each time an API is published, API Gateway records the publishing details, such as the time and the API definition. You can use the version number obtained from other API operations to query the details of an API definition that is published on a specific occasion.
       *
       * @param request DescribeApiHistoryRequest
       * @return DescribeApiHistoryResponse
@@ -5165,9 +5179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   This operation is intended for API providers.
-      * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+      * *   This operation is used to query the ACLs in a region. Region is a system parameter.
       * *   You can filter the query results by ACL ID, name, or type.
-      * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the [DescribeIpControlPolicyItems](https://help.aliyun.com/document_detail/65532.html?spm=a2c4g.11186623.2.14.615b13acrFZFaH) operation.
+      * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~65532~~) operation.
       *
       * @param request DescribeIpControlsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5219,9 +5233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   This operation is intended for API providers.
-      * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+      * *   This operation is used to query the ACLs in a region. Region is a system parameter.
       * *   You can filter the query results by ACL ID, name, or type.
-      * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the [DescribeIpControlPolicyItems](https://help.aliyun.com/document_detail/65532.html?spm=a2c4g.11186623.2.14.615b13acrFZFaH) operation.
+      * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~65532~~) operation.
       *
       * @param request DescribeIpControlsRequest
       * @return DescribeIpControlsResponse
@@ -5563,7 +5577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This API is intended for API providers.
+      * *   This operation is intended for API callers.
       * *   This operation supports pagination.
       *
       * @param request DescribePluginsByApiRequest
@@ -5579,6 +5593,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
@@ -5607,7 +5629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This API is intended for API providers.
+      * *   This operation is intended for API callers.
       * *   This operation supports pagination.
       *
       * @param request DescribePluginsByApiRequest
@@ -8440,6 +8462,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.removeVpcAccessAndAbolishApisWithOptions(request, runtime);
     }
 
+    /**
+      * The new AppCode takes effect about 2 seconds after you call this operation.
+      *
+      * @param request ResetAppCodeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ResetAppCodeResponse
+     */
     public ResetAppCodeResponse resetAppCodeWithOptions(ResetAppCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8472,6 +8501,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResetAppCodeResponse());
     }
 
+    /**
+      * The new AppCode takes effect about 2 seconds after you call this operation.
+      *
+      * @param request ResetAppCodeRequest
+      * @return ResetAppCodeResponse
+     */
     public ResetAppCodeResponse resetAppCode(ResetAppCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetAppCodeWithOptions(request, runtime);

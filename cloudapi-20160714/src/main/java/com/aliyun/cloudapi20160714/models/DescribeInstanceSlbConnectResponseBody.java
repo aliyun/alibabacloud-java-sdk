@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
+    /**
+     * <p>The list of concurrent connections in the instance.</p>
+     */
     @NameInMap("InstanceSlbConnect")
     public DescribeInstanceSlbConnectResponseBodyInstanceSlbConnect instanceSlbConnect;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,25 @@ public class DescribeInstanceSlbConnectResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSlbConnectResponseBodyInstanceSlbConnectMonitorItem extends TeaModel {
+        /**
+         * <p>The metric. Valid values:</p>
+         * <br>
+         * <p>*   InstanceMaxConnection: the maximum number of connections</p>
+         * <p>*   InstanceInactiveConnection: the number of inactive connections</p>
+         * <p>*   InstanceActiveConnection: the number of active connections</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         */
         @NameInMap("ItemTime")
         public String itemTime;
 
+        /**
+         * <p>The number of concurrent connections in the instance.</p>
+         */
         @NameInMap("ItemValue")
         public String itemValue;
 

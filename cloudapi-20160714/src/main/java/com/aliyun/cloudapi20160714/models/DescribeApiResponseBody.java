@@ -214,8 +214,6 @@ public class DescribeApiResponseBody extends TeaModel {
      * <p>*   **REGISTER**: registered APIs</p>
      * <p>*   **UNREGISTER**: unregistered APIs</p>
      * <p>*   **NOTIFY**: downstream notification</p>
-     * <br>
-     * <p>For more information, see [Two-way communication](~~66031~~).</p>
      */
     @NameInMap("ResultType")
     public String resultType;

@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceLatencyResponseBody extends TeaModel {
+    /**
+     * <p>The list of average latencies in the instance.</p>
+     */
     @NameInMap("InstanceLatency")
     public DescribeInstanceLatencyResponseBodyInstanceLatency instanceLatency;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,24 @@ public class DescribeInstanceLatencyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceLatencyResponseBodyInstanceLatencyMonitorItem extends TeaModel {
+        /**
+         * <p>The metric. Valid values:</p>
+         * <br>
+         * <p>*   gatewayLatency API: the processing latency of API Gateway</p>
+         * <p>*   latency: the processing latency of the backend service.</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         */
         @NameInMap("ItemTime")
         public String itemTime;
 
+        /**
+         * <p>The value of the average latency.</p>
+         */
         @NameInMap("ItemValue")
         public String itemValue;
 

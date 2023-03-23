@@ -11,25 +11,39 @@ public class ModifyVpcAccessAndUpdateApisRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The unique custom name for the authorization.</p>
+     * <p>The name of the VPC authorization.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   The name of a VPC authorization cannot be changed. You cannot use this parameter to change the name of a VPC authorization.</p>
+     * <br>
+     * <p>*   You must set this parameter to the name of the current VPC authorization.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>Specifies whether to update the associated API.</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>**Warning:** If you want to update the VPC authorization of a published API, you must set this parameter to true. Otherwise, the update will not be synchronized to the backend service of the API.</p>
      */
     @NameInMap("NeedBatchWork")
     public Boolean needBatchWork;
 
     /**
-     * <p>The port number to be modified.</p>
+     * <p>The new port number.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
-     * <p>Specifies whether to refresh the VPC authorization.</p>
+     * <p>Specifies whether to update the VPC authorization.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the ID of the instance in your VPC is changed but the IP address of the instance remains unchanged, you can set this parameter to true to update the VPC authorization.</p>
      */
     @NameInMap("Refresh")
     public Boolean refresh;
@@ -38,7 +52,7 @@ public class ModifyVpcAccessAndUpdateApisRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The password.</p>
+     * <p>The token of the request.</p>
      */
     @NameInMap("Token")
     public String token;
@@ -50,7 +64,7 @@ public class ModifyVpcAccessAndUpdateApisRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The authorized backend host.</p>
+     * <p>The hostname of the backend service.</p>
      */
     @NameInMap("VpcTargetHostName")
     public String vpcTargetHostName;

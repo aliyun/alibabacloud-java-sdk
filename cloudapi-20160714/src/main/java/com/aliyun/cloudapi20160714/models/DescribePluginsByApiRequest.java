@@ -11,20 +11,26 @@ public class DescribePluginsByApiRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The ID of the group to which the API to be queried belongs.</p>
+     * <p>The ID of the group to which the API belongs.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
     /**
-     * <p>The runtime environment of the API. Valid values:</p>
+     * <p>The environment in which the API is running. Valid values:</p>
      * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE: the pre-release environment**</p>
-     * <p>*   **TEST**</p>
+     * <p>*   **RELEASE**: production</p>
+     * <p>*   **PRE**: staging</p>
+     * <p>*   **TEST**: test</p>
      */
     @NameInMap("StageName")
     public String stageName;
@@ -48,6 +54,22 @@ public class DescribePluginsByApiRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribePluginsByApiRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribePluginsByApiRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribePluginsByApiRequest setSecurityToken(String securityToken) {

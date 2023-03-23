@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIpControlsResponseBody extends TeaModel {
     /**
-     * <p>The information about the ACL. The information is an array of IpControlInfo data. The information does not include specific policies.</p>
+     * <p>The information about the ACL. The information is an array that consists of IpControlInfo data. The information does not include specific policies.</p>
      */
     @NameInMap("IpControlInfos")
     public DescribeIpControlsResponseBodyIpControlInfos ipControlInfos;
@@ -87,7 +87,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Description</p>
+         * <p>The description of the ACL.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -117,7 +117,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The region in which the API is located.</p>
+         * <p>The ID of the region in which the ACL is deployed.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

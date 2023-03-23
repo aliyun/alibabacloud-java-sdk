@@ -11,7 +11,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about request logs returned.</p>
+     * <p>The list of request logs.</p>
      */
     @NameInMap("RequestLogs")
     public QueryRequestLogsResponseBodyRequestLogs requestLogs;
@@ -45,13 +45,28 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String apiId;
 
         /**
-         * <p>The name of the API.</p>
+         * <p>The name of the API</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
+        @NameInMap("AppName")
+        public String appName;
+
+        @NameInMap("BackendRequestEnd")
+        public Long backendRequestEnd;
+
+        @NameInMap("BackendRequestStart")
+        public Long backendRequestStart;
+
+        @NameInMap("BackendResponseEnd")
+        public Long backendResponseEnd;
+
+        @NameInMap("BackendResponseStart")
+        public Long backendResponseStart;
+
         /**
-         * <p>The IP address of the client that sent the request.</p>
+         * <p>The IP address of the client that sends the request.</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
@@ -81,13 +96,13 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String customTraceId;
 
         /**
-         * <p>The requested domain name.</p>
+         * <p>The domain name of the request.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned if the request failed.</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -99,19 +114,31 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The specific error message that was returned by the backend service.</p>
+         * <p>The specific error message returned by the backend service.</p>
          */
         @NameInMap("Exception")
         public String exception;
 
+        @NameInMap("FrontRequestEnd")
+        public Long frontRequestEnd;
+
+        @NameInMap("FrontRequestStart")
+        public Long frontRequestStart;
+
+        @NameInMap("FrontResponseEnd")
+        public Long frontResponseEnd;
+
+        @NameInMap("FrontResponseStart")
+        public Long frontResponseStart;
+
         /**
-         * <p>The ID of the group to which the API belongs.</p>
+         * <p>The ID of the API group to which the API belongs.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The name of the API group.</p>
+         * <p>The name of the API group to which the API belongs.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -129,13 +156,13 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String httpPath;
 
         /**
-         * <p>The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, initialRequestId in the log of API-2 represents the ID of the request from API-1.</p>
+         * <p>The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, the initialRequestId parameter in the log of API-2 indicates the ID of the request from API-1.</p>
          */
         @NameInMap("InitialRequestId")
         public String initialRequestId;
 
         /**
-         * <p>The ID of the gateway instance to which the API belongs.</p>
+         * <p>The ID of the API Gateway instance to which the API belongs.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -153,7 +180,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The request body. The maximum size of the request body is 1,024 bytes.</p>
+         * <p>The request body. A request body cannot exceed 1,024 bytes in size.</p>
          */
         @NameInMap("RequestBody")
         public String requestBody;
@@ -189,19 +216,19 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String requestSize;
 
         /**
-         * <p>The request time. The time is displayed in UTC.</p>
+         * <p>The request time, in UTC.</p>
          */
         @NameInMap("RequestTime")
         public String requestTime;
 
         /**
-         * <p>The response body. The maximum size of the response body is 1,024 bytes.</p>
+         * <p>The response body. A response body cannot exceed 1,024 bytes in size.</p>
          */
         @NameInMap("ResponseBody")
         public String responseBody;
 
         /**
-         * <p>The response headers.</p>
+         * <p>The headers in the API response.</p>
          */
         @NameInMap("ResponseHeaders")
         public String responseHeaders;
@@ -213,7 +240,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String responseSize;
 
         /**
-         * <p>The total time that was consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.</p>
+         * <p>The total time consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.</p>
          */
         @NameInMap("ServiceLatency")
         public String serviceLatency;
@@ -237,7 +264,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String statusCode;
 
         /**
-         * <p>The total period of time that the request consumed. Unit: milliseconds.</p>
+         * <p>The total time consumed by the request. Unit: milliseconds.</p>
          */
         @NameInMap("TotalLatency")
         public String totalLatency;
@@ -267,6 +294,46 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         }
         public String getApiName() {
             return this.apiName;
+        }
+
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setBackendRequestEnd(Long backendRequestEnd) {
+            this.backendRequestEnd = backendRequestEnd;
+            return this;
+        }
+        public Long getBackendRequestEnd() {
+            return this.backendRequestEnd;
+        }
+
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setBackendRequestStart(Long backendRequestStart) {
+            this.backendRequestStart = backendRequestStart;
+            return this;
+        }
+        public Long getBackendRequestStart() {
+            return this.backendRequestStart;
+        }
+
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setBackendResponseEnd(Long backendResponseEnd) {
+            this.backendResponseEnd = backendResponseEnd;
+            return this;
+        }
+        public Long getBackendResponseEnd() {
+            return this.backendResponseEnd;
+        }
+
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setBackendResponseStart(Long backendResponseStart) {
+            this.backendResponseStart = backendResponseStart;
+            return this;
+        }
+        public Long getBackendResponseStart() {
+            return this.backendResponseStart;
         }
 
         public QueryRequestLogsResponseBodyRequestLogsRequestLog setClientIp(String clientIp) {
@@ -339,6 +406,38 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         }
         public String getException() {
             return this.exception;
+        }
+
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setFrontRequestEnd(Long frontRequestEnd) {
+            this.frontRequestEnd = frontRequestEnd;
+            return this;
+        }
+        public Long getFrontRequestEnd() {
+            return this.frontRequestEnd;
+        }
+
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setFrontRequestStart(Long frontRequestStart) {
+            this.frontRequestStart = frontRequestStart;
+            return this;
+        }
+        public Long getFrontRequestStart() {
+            return this.frontRequestStart;
+        }
+
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setFrontResponseEnd(Long frontResponseEnd) {
+            this.frontResponseEnd = frontResponseEnd;
+            return this;
+        }
+        public Long getFrontResponseEnd() {
+            return this.frontResponseEnd;
+        }
+
+        public QueryRequestLogsResponseBodyRequestLogsRequestLog setFrontResponseStart(Long frontResponseStart) {
+            this.frontResponseStart = frontResponseStart;
+            return this;
+        }
+        public Long getFrontResponseStart() {
+            return this.frontResponseStart;
         }
 
         public QueryRequestLogsResponseBodyRequestLogsRequestLog setGroupId(String groupId) {
