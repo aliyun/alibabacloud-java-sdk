@@ -19,6 +19,9 @@ public class SparkAppInfo extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Priority")
+    public String priority;
+
     @NameInMap("State")
     public String state;
 
@@ -65,6 +68,14 @@ public class SparkAppInfo extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public SparkAppInfo setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+    public String getPriority() {
+        return this.priority;
     }
 
     public SparkAppInfo setState(String state) {

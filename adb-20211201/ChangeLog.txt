@@ -1,3 +1,14 @@
+2023-03-24 Version: 1.0.16
+- Supported privilege management for Lakehouse Edition.
+- Make api public.
+- Change Error Code.
+- Update GetSparkAppState and SubmitSparkApp QPS limits to 100.
+- Add Priority Field.
+- Support RAM Meta.
+- Add CreateDBCluster ResopnseLog.
+- Support error code for MDS OpenAPI.
+- Change regionId required.
+
 2023-03-08 Version: 1.0.15
 - Modify Output Field.
 
