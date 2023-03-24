@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessKeyResponseBody extends TeaModel {
+    /**
+     * <p>The information of the AccessKey pair.</p>
+     */
     @NameInMap("AccessKey")
     public CreateAccessKeyResponseBodyAccessKey accessKey;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,30 @@ public class CreateAccessKeyResponseBody extends TeaModel {
     }
 
     public static class CreateAccessKeyResponseBodyAccessKey extends TeaModel {
+        /**
+         * <p>The AccessKey ID provided to you by Alibaba Cloud.</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <p>The AccessKey secret provided to you by Alibaba Cloud.</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <p>The time when the AccessKey pair was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The status of the AccessKey pair. Valid values:</p>
+         * <br>
+         * <p>*   Active</p>
+         * <p>*   Inactive</p>
+         */
         @NameInMap("Status")
         public String status;
 

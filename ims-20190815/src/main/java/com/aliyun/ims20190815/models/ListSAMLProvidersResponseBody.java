@@ -4,15 +4,30 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListSAMLProvidersResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the IdP.</p>
+     */
     @NameInMap("SAMLProviders")
     public ListSAMLProvidersResponseBodySAMLProviders SAMLProviders;
 
@@ -54,18 +69,33 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
     }
 
     public static class ListSAMLProvidersResponseBodySAMLProvidersSAMLProvider extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the IdP.</p>
+         */
         @NameInMap("SAMLProviderName")
         public String SAMLProviderName;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

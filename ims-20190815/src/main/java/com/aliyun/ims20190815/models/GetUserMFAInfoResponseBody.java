@@ -4,12 +4,24 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetUserMFAInfoResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the MFA device is enabled. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("IsMFAEnable")
     public Boolean isMFAEnable;
 
+    /**
+     * <p>The information about the MFA device.</p>
+     */
     @NameInMap("MFADevice")
     public GetUserMFAInfoResponseBodyMFADevice MFADevice;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +55,18 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
     }
 
     public static class GetUserMFAInfoResponseBodyMFADevice extends TeaModel {
+        /**
+         * <p>The serial number of the MFA device.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
+        /**
+         * <p>The type of the MFA device. Valid values:</p>
+         * <br>
+         * <p>*   VMFA: virtual MFA device</p>
+         * <p>*   U2F: Universal 2nd Factor (U2F) security key</p>
+         */
         @NameInMap("Type")
         public String type;
 

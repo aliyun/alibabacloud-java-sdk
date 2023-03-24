@@ -4,12 +4,23 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetCredentialReportResponseBody extends TeaModel {
+    /**
+     * <p>The content of the user credential report.</p>
+     * <br>
+     * <p>The report is Base64-encoded. After you decode the report, the credential report is in the CSV format.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The time when the user credential report was generated.</p>
+     */
     @NameInMap("GeneratedTime")
     public String generatedTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

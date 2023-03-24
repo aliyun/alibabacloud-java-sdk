@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetSecurityPreferenceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of security preferences.</p>
+     */
     @NameInMap("SecurityPreference")
     public GetSecurityPreferenceResponseBodySecurityPreference securityPreference;
 
@@ -32,6 +38,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference extends TeaModel {
+        /**
+         * <p>Specifies whether RAM users can manage their AccessKey pairs. Valid values:</p>
+         * <br>
+         * <p>*   true: yes</p>
+         * <p>*   false: no</p>
+         */
         @NameInMap("AllowUserToManageAccessKeys")
         public Boolean allowUserToManageAccessKeys;
 
@@ -51,21 +63,52 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
+        /**
+         * <p>Specifies whether RAM users can change their passwords. Valid values:</p>
+         * <br>
+         * <p>*   true: yes</p>
+         * <p>*   false: no</p>
+         */
         @NameInMap("AllowUserToChangePassword")
         public Boolean allowUserToChangePassword;
 
+        /**
+         * <p>Specifies whether to remember the multi-factor authentication (MFA) devices for seven days. Valid values:</p>
+         * <br>
+         * <p>*   true: yes</p>
+         * <p>*   false: no</p>
+         */
         @NameInMap("EnableSaveMFATicket")
         public Boolean enableSaveMFATicket;
 
+        /**
+         * <p>The subnet mask.</p>
+         */
         @NameInMap("LoginNetworkMasks")
         public String loginNetworkMasks;
 
+        /**
+         * <p>The validity period of the logon session of RAM users. Unit: hours.</p>
+         */
         @NameInMap("LoginSessionDuration")
         public Integer loginSessionDuration;
 
+        /**
+         * <p>Specifies whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. This parameter is used to replace the EnforceMFAForLogin parameter. The EnforceMFAForLogin parameter is still valid. However, we recommend that you use the MFAOperationForLogin parameter. Valid values:</p>
+         * <br>
+         * <p>*   mandatory: MFA is required for all RAM users. If you use the EnforceMFAForLogin parameter, set the value to true.</p>
+         * <p>*   independent: User-specific settings are applied. This is the default value. If you use the EnforceMFAForLogin parameter, set the value to false.</p>
+         * <p>*   adaptive: MFA is required only for RAM users who initiated unusual logons.</p>
+         */
         @NameInMap("MFAOperationForLogin")
         public String MFAOperationForLogin;
 
+        /**
+         * <p>Specifies whether to enable MFA for RAM users who initiated unusual logons. Valid values:</p>
+         * <br>
+         * <p>*   autonomous: yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA. This is the default value.</p>
+         * <p>*   enforceVerify: no.</p>
+         */
         @NameInMap("OperationForRiskLogin")
         public String operationForRiskLogin;
 
@@ -125,6 +168,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
+         * <br>
+         * <p>*   true: yes</p>
+         * <p>*   false: no</p>
+         */
         @NameInMap("AllowUserToManageMFADevices")
         public Boolean allowUserToManageMFADevices;
 
@@ -144,6 +193,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference extends TeaModel {
+        /**
+         * <p>Specifies whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:</p>
+         * <br>
+         * <p>*   true: yes</p>
+         * <p>*   false: no</p>
+         */
         @NameInMap("AllowUserToManagePersonalDingTalk")
         public Boolean allowUserToManagePersonalDingTalk;
 
@@ -162,18 +217,52 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     }
 
+    public static class GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference extends TeaModel {
+        @NameInMap("VerificationTypes")
+        public java.util.List<String> verificationTypes;
+
+        public static GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference build(java.util.Map<String, ?> map) throws Exception {
+            GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference self = new GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference setVerificationTypes(java.util.List<String> verificationTypes) {
+            this.verificationTypes = verificationTypes;
+            return this;
+        }
+        public java.util.List<String> getVerificationTypes() {
+            return this.verificationTypes;
+        }
+
+    }
+
     public static class GetSecurityPreferenceResponseBodySecurityPreference extends TeaModel {
+        /**
+         * <p>The AccessKey pair preference.</p>
+         */
         @NameInMap("AccessKeyPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference accessKeyPreference;
 
+        /**
+         * <p>The logon preference.</p>
+         */
         @NameInMap("LoginProfilePreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference loginProfilePreference;
 
+        /**
+         * <p>The MFA preference.</p>
+         */
         @NameInMap("MFAPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
+        /**
+         * <p>The personal information preference.</p>
+         */
         @NameInMap("PersonalInfoPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference personalInfoPreference;
+
+        @NameInMap("VerificationPreference")
+        public GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference verificationPreference;
 
         public static GetSecurityPreferenceResponseBodySecurityPreference build(java.util.Map<String, ?> map) throws Exception {
             GetSecurityPreferenceResponseBodySecurityPreference self = new GetSecurityPreferenceResponseBodySecurityPreference();
@@ -210,6 +299,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         }
         public GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference getPersonalInfoPreference() {
             return this.personalInfoPreference;
+        }
+
+        public GetSecurityPreferenceResponseBodySecurityPreference setVerificationPreference(GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference verificationPreference) {
+            this.verificationPreference = verificationPreference;
+            return this;
+        }
+        public GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference getVerificationPreference() {
+            return this.verificationPreference;
         }
 
     }

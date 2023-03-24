@@ -4,9 +4,19 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class AddFingerprintToOIDCProviderRequest extends TeaModel {
+    /**
+     * <p>The fingerprint of the HTTPS certificate.</p>
+     * <br>
+     * <p>The fingerprint can contain letters and digits.</p>
+     * <br>
+     * <p>The fingerprint can be up to 40 characters in length.</p>
+     */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
+    /**
+     * <p>The name of the OIDC IdP.</p>
+     */
     @NameInMap("OIDCProviderName")
     public String OIDCProviderName;
 

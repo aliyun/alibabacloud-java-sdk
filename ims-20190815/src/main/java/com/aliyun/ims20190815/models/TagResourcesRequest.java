@@ -10,6 +10,11 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourcePrincipalName")
     public java.util.List<String> resourcePrincipalName;
 
+    /**
+     * <p>The type of the resource. Valid value:</p>
+     * <br>
+     * <p>*   user: a RAM user</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -54,9 +59,19 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

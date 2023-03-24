@@ -4,6 +4,14 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the resources. Valid values:</p>
+     * <br>
+     * <p>*   true: remove all tags from the resources.</p>
+     * <p>*   false: does not remove all tags from the resources. This is the default value.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when the TagKey.N parameter is not specified in the request.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -13,6 +21,11 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourcePrincipalName")
     public java.util.List<String> resourcePrincipalName;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   user: a RAM user</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

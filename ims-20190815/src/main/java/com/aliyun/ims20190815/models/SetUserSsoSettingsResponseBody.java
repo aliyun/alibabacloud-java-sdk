@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class SetUserSsoSettingsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The configurations of user-based SSO.</p>
+     */
     @NameInMap("UserSsoSettings")
     public SetUserSsoSettingsResponseBodyUserSsoSettings userSsoSettings;
 
@@ -32,12 +38,21 @@ public class SetUserSsoSettingsResponseBody extends TeaModel {
     }
 
     public static class SetUserSsoSettingsResponseBodyUserSsoSettings extends TeaModel {
+        /**
+         * <p>The auxiliary domain name.</p>
+         */
         @NameInMap("AuxiliaryDomain")
         public String auxiliaryDomain;
 
+        /**
+         * <p>The metadata file, which is Base64-encoded.</p>
+         */
         @NameInMap("MetadataDocument")
         public String metadataDocument;
 
+        /**
+         * <p>Indicates whether user-based SSO is enabled.</p>
+         */
         @NameInMap("SsoEnabled")
         public Boolean ssoEnabled;
 

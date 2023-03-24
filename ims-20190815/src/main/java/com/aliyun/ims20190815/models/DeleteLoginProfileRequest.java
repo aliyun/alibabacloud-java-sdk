@@ -4,6 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DeleteLoginProfileRequest extends TeaModel {
+    /**
+     * <p>The logon name of the RAM user.</p>
+     */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 

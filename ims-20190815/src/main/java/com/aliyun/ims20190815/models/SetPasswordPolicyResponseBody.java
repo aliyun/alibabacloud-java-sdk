@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class SetPasswordPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The details of the password policy.</p>
+     */
     @NameInMap("PasswordPolicy")
     public SetPasswordPolicyResponseBodyPasswordPolicy passwordPolicy;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +38,69 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
     }
 
     public static class SetPasswordPolicyResponseBodyPasswordPolicy extends TeaModel {
+        /**
+         * <p>Indicates whether to disable logon after the password expires.</p>
+         */
         @NameInMap("HardExpire")
         public Boolean hardExpire;
 
+        /**
+         * <p>The maximum number of password retries.</p>
+         */
         @NameInMap("MaxLoginAttemps")
         public Integer maxLoginAttemps;
 
+        /**
+         * <p>The validity period of the password.</p>
+         */
         @NameInMap("MaxPasswordAge")
         public Integer maxPasswordAge;
 
+        /**
+         * <p>The minimum number of unique characters in the password.</p>
+         */
         @NameInMap("MinimumPasswordDifferentCharacter")
         public Integer minimumPasswordDifferentCharacter;
 
+        /**
+         * <p>The minimum number of characters in the password.</p>
+         */
         @NameInMap("MinimumPasswordLength")
         public Integer minimumPasswordLength;
 
+        /**
+         * <p>Indicates whether to exclude the username from the password.</p>
+         */
         @NameInMap("PasswordNotContainUserName")
         public Boolean passwordNotContainUserName;
 
+        /**
+         * <p>The policy for password history check.</p>
+         */
         @NameInMap("PasswordReusePrevention")
         public Integer passwordReusePrevention;
 
+        /**
+         * <p>Indicates whether the password must contain lowercase letters.</p>
+         */
         @NameInMap("RequireLowercaseCharacters")
         public Boolean requireLowercaseCharacters;
 
+        /**
+         * <p>Indicates whether the password must contain digits.</p>
+         */
         @NameInMap("RequireNumbers")
         public Boolean requireNumbers;
 
+        /**
+         * <p>Indicates whether the password must contain special characters.</p>
+         */
         @NameInMap("RequireSymbols")
         public Boolean requireSymbols;
 
+        /**
+         * <p>Indicates whether the password must contain uppercase letters.</p>
+         */
         @NameInMap("RequireUppercaseCharacters")
         public Boolean requireUppercaseCharacters;
 

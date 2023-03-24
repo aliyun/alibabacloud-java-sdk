@@ -4,9 +4,17 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
+    /**
+     * <p>The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.</p>
+     * <br>
+     * <p>Valid values: 1 to 1000. Default value: 1000.</p>
+     */
     @NameInMap("MaxItems")
     public Integer maxItems;
 
@@ -43,9 +51,19 @@ public class ListUsersRequest extends TeaModel {
     }
 
     public static class ListUsersRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+         */
         @NameInMap("Value")
         public String value;
 

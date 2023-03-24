@@ -4,18 +4,51 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateOIDCProviderRequest extends TeaModel {
+    /**
+     * <p>The ID of the client, which is provided by the external IdP Okta. If you want to specify multiple client IDs, separate the client IDs with commas (,).</p>
+     * <br>
+     * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are `periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)`.``</p>
+     * <br>
+     * <p>The client ID can be up to 64 characters in length.</p>
+     */
     @NameInMap("ClientIds")
     public String clientIds;
 
+    /**
+     * <p>The description of the OIDC IdP.</p>
+     * <br>
+     * <p>The description can be up to 256 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The fingerprint of the HTTPS certificate, which is provided by the external IdP Okta. If you want to specify multiple fingerprints, separate the fingerprints with commas (,).</p>
+     * <br>
+     * <p>The fingerprint can contain letters and digits.</p>
+     * <br>
+     * <p>The fingerprint can be up to 40 characters in length.</p>
+     */
     @NameInMap("Fingerprints")
     public String fingerprints;
 
+    /**
+     * <p>The URL of the issuer, which is provided by the external IdP Okta. The URL of the issuer must be unique within an Alibaba Cloud account.</p>
+     * <br>
+     * <p>The URL of the issuer must start with `https` and be in the valid URL format. The URL cannot contain query parameters that follow a question mark (`?`) or logon information that is identified by at signs (`@`). The URL cannot be a fragment URL that contains number signs (`#`).</p>
+     * <br>
+     * <p>The URL can be up to 255 characters in length.</p>
+     */
     @NameInMap("IssuerUrl")
     public String issuerUrl;
 
+    /**
+     * <p>The name of the OIDC IdP.</p>
+     * <br>
+     * <p>The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are `periods, (.), hyphens (-), and underscores (_)`.</p>
+     * <br>
+     * <p>The name can be up to 128 characters in length.</p>
+     */
     @NameInMap("OIDCProviderName")
     public String OIDCProviderName;
 

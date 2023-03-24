@@ -4,15 +4,30 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListUserBasicInfosResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the information about the RAM user.</p>
+     */
     @NameInMap("UserBasicInfos")
     public ListUserBasicInfosResponseBodyUserBasicInfos userBasicInfos;
 
@@ -53,65 +68,22 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         return this.userBasicInfos;
     }
 
-    public static class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag extends TeaModel {
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        public static ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag build(java.util.Map<String, ?> map) throws Exception {
-            ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag self = new ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-    }
-
-    public static class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags extends TeaModel {
-        @NameInMap("Tag")
-        public java.util.List<ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag> tag;
-
-        public static ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags build(java.util.Map<String, ?> map) throws Exception {
-            ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags self = new ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags setTag(java.util.List<ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTagsTag> getTag() {
-            return this.tag;
-        }
-
-    }
-
     public static class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo extends TeaModel {
+        /**
+         * <p>The display name of the RAM user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        @NameInMap("Tags")
-        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags tags;
-
+        /**
+         * <p>The ID of the RAM user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The logon name of the RAM user.</p>
+         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 
@@ -126,14 +98,6 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
-        }
-
-        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo setTags(ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfoTags getTags() {
-            return this.tags;
         }
 
         public ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo setUserId(String userId) {

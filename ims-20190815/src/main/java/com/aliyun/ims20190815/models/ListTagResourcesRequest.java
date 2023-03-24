@@ -4,9 +4,17 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of entries to return. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,6 +24,11 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourcePrincipalName")
     public java.util.List<String> resourcePrincipalName;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   user: a RAM user</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -76,9 +89,19 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+         */
         @NameInMap("Value")
         public String value;
 

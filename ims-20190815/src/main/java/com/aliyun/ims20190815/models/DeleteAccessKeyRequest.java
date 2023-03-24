@@ -4,9 +4,17 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccessKeyRequest extends TeaModel {
+    /**
+     * <p>The ID of the AccessKey pair that you want to delete.</p>
+     */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
+    /**
+     * <p>The logon name of the RAM user.</p>
+     * <br>
+     * <p>If this parameter is empty, the AccessKey pair of the current user is deleted.</p>
+     */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 

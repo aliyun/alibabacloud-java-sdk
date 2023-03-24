@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetLoginProfileResponseBody extends TeaModel {
+    /**
+     * <p>The logon information.</p>
+     */
     @NameInMap("LoginProfile")
     public GetLoginProfileResponseBodyLoginProfile loginProfile;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class GetLoginProfileResponseBody extends TeaModel {
     }
 
     public static class GetLoginProfileResponseBodyLoginProfile extends TeaModel {
+        /**
+         * <p>The last time when the RAM user logged on to the console.</p>
+         */
         @NameInMap("LastLoginTime")
         public String lastLoginTime;
 
+        /**
+         * <p>Indicates whether multi-factor authentication (MFA) must be enabled.</p>
+         */
         @NameInMap("MFABindRequired")
         public Boolean MFABindRequired;
 
+        /**
+         * <p>Indicates whether the RAM user must reset the password at the next logon.</p>
+         */
         @NameInMap("PasswordResetRequired")
         public Boolean passwordResetRequired;
 
+        /**
+         * <p>The status of password-based logon.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
+        /**
+         * <p>The logon name of the RAM user.</p>
+         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

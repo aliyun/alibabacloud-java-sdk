@@ -26,6 +26,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request AddClientIdToOIDCProviderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddClientIdToOIDCProviderResponse
+     */
     public AddClientIdToOIDCProviderResponse addClientIdToOIDCProviderWithOptions(AddClientIdToOIDCProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -54,11 +61,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddClientIdToOIDCProviderResponse());
     }
 
+    /**
+      * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request AddClientIdToOIDCProviderRequest
+      * @return AddClientIdToOIDCProviderResponse
+     */
     public AddClientIdToOIDCProviderResponse addClientIdToOIDCProvider(AddClientIdToOIDCProviderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addClientIdToOIDCProviderWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request AddFingerprintToOIDCProviderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddFingerprintToOIDCProviderResponse
+     */
     public AddFingerprintToOIDCProviderResponse addFingerprintToOIDCProviderWithOptions(AddFingerprintToOIDCProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -87,6 +107,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddFingerprintToOIDCProviderResponse());
     }
 
+    /**
+      * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request AddFingerprintToOIDCProviderRequest
+      * @return AddFingerprintToOIDCProviderResponse
+     */
     public AddFingerprintToOIDCProviderResponse addFingerprintToOIDCProvider(AddFingerprintToOIDCProviderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addFingerprintToOIDCProviderWithOptions(request, runtime);
@@ -166,6 +192,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.bindMFADeviceWithOptions(request, runtime);
     }
 
+    /**
+      * >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](~~43765~~) is set to `True`. The value True indicates that RAM users can change their passwords.
+      *
+      * @param request ChangePasswordRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ChangePasswordResponse
+     */
     public ChangePasswordResponse changePasswordWithOptions(ChangePasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -194,6 +227,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangePasswordResponse());
     }
 
+    /**
+      * >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](~~43765~~) is set to `True`. The value True indicates that RAM users can change their passwords.
+      *
+      * @param request ChangePasswordRequest
+      * @return ChangePasswordResponse
+     */
     public ChangePasswordResponse changePassword(ChangePasswordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changePasswordWithOptions(request, runtime);
@@ -400,6 +439,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLoginProfileWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
+      * ## Prerequisites
+      * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
+      * ## Limits
+      * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+      * - You can add a maximum of 20 client IDs to an OIDC IdP.
+      * - You can add a maximum of five fingerprints to an OIDC IdP.
+      *
+      * @param request CreateOIDCProviderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOIDCProviderResponse
+     */
     public CreateOIDCProviderResponse createOIDCProviderWithOptions(CreateOIDCProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -440,6 +492,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOIDCProviderResponse());
     }
 
+    /**
+      * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
+      * ## Prerequisites
+      * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
+      * ## Limits
+      * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+      * - You can add a maximum of 20 client IDs to an OIDC IdP.
+      * - You can add a maximum of five fingerprints to an OIDC IdP.
+      *
+      * @param request CreateOIDCProviderRequest
+      * @return CreateOIDCProviderResponse
+     */
     public CreateOIDCProviderResponse createOIDCProvider(CreateOIDCProviderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOIDCProviderWithOptions(request, runtime);
@@ -482,6 +546,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSAMLProviderWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to create a RAM user named `test`.
+      *
+      * @param request CreateUserRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateUserResponse
+     */
     public CreateUserResponse createUserWithOptions(CreateUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -526,6 +597,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUserResponse());
     }
 
+    /**
+      * This topic provides an example on how to create a RAM user named `test`.
+      *
+      * @param request CreateUserRequest
+      * @return CreateUserResponse
+     */
     public CreateUserResponse createUser(CreateUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createUserWithOptions(request, runtime);
@@ -655,6 +732,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteApplicationWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
+      *
+      * @param request DeleteGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteGroupResponse
+     */
     public DeleteGroupResponse deleteGroupWithOptions(DeleteGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -679,6 +763,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGroupResponse());
     }
 
+    /**
+      * Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
+      *
+      * @param request DeleteGroupRequest
+      * @return DeleteGroupResponse
+     */
     public DeleteGroupResponse deleteGroup(DeleteGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteGroupWithOptions(request, runtime);
@@ -713,6 +803,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteLoginProfileWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request DeleteOIDCProviderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteOIDCProviderResponse
+     */
     public DeleteOIDCProviderResponse deleteOIDCProviderWithOptions(DeleteOIDCProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -737,6 +834,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOIDCProviderResponse());
     }
 
+    /**
+      * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request DeleteOIDCProviderRequest
+      * @return DeleteOIDCProviderResponse
+     */
     public DeleteOIDCProviderResponse deleteOIDCProvider(DeleteOIDCProviderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteOIDCProviderWithOptions(request, runtime);
@@ -1141,6 +1244,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLoginProfileWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request GetOIDCProviderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetOIDCProviderResponse
+     */
     public GetOIDCProviderResponse getOIDCProviderWithOptions(GetOIDCProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1165,6 +1275,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetOIDCProviderResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request GetOIDCProviderRequest
+      * @return GetOIDCProviderResponse
+     */
     public GetOIDCProviderResponse getOIDCProvider(GetOIDCProviderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getOIDCProviderWithOptions(request, runtime);
@@ -1241,6 +1357,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSecurityPreferenceWithOptions(runtime);
     }
 
+    /**
+      * This topic provides an example to show how to query the information about a RAM user named `test@example.onaliyun.com`.
+      *
+      * @param request GetUserRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetUserResponse
+     */
     public GetUserResponse getUserWithOptions(GetUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1273,6 +1396,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserResponse());
     }
 
+    /**
+      * This topic provides an example to show how to query the information about a RAM user named `test@example.onaliyun.com`.
+      *
+      * @param request GetUserRequest
+      * @return GetUserResponse
+     */
     public GetUserResponse getUser(GetUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserWithOptions(request, runtime);
@@ -1469,6 +1598,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listGroupsForUserWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request ListOIDCProvidersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListOIDCProvidersResponse
+     */
     public ListOIDCProvidersResponse listOIDCProvidersWithOptions(ListOIDCProvidersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1497,6 +1633,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListOIDCProvidersResponse());
     }
 
+    /**
+      * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request ListOIDCProvidersRequest
+      * @return ListOIDCProvidersResponse
+     */
     public ListOIDCProvidersResponse listOIDCProviders(ListOIDCProvidersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOIDCProvidersWithOptions(request, runtime);
@@ -1564,6 +1706,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSAMLProvidersWithOptions(request, runtime);
     }
 
+    /**
+      * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+      * *   `ResourceId.N`
+      * *   `Tag.N.Key`
+      * *   `Tag.N.Key` and `Tag.N.Value`
+      *
+      * @param request ListTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1608,11 +1760,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+      * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+      * *   `ResourceId.N`
+      * *   `Tag.N.Key`
+      * *   `Tag.N.Key` and `Tag.N.Value`
+      *
+      * @param request ListTagResourcesRequest
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the following API operations to query the information about all RAM users:
+      * *   ListUsers: queries the details of all RAM users.
+      * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+      *
+      * @param request ListUserBasicInfosRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListUserBasicInfosResponse
+     */
     public ListUserBasicInfosResponse listUserBasicInfosWithOptions(ListUserBasicInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1645,11 +1815,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserBasicInfosResponse());
     }
 
+    /**
+      * You can call the following API operations to query the information about all RAM users:
+      * *   ListUsers: queries the details of all RAM users.
+      * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+      *
+      * @param request ListUserBasicInfosRequest
+      * @return ListUserBasicInfosResponse
+     */
     public ListUserBasicInfosResponse listUserBasicInfos(ListUserBasicInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserBasicInfosWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the following API operations to query the information about all RAM users:
+      * *   ListUsers: queries the details of all RAM users.
+      * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+      *
+      * @param request ListUsersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListUsersResponse
+     */
     public ListUsersResponse listUsersWithOptions(ListUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1682,6 +1869,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUsersResponse());
     }
 
+    /**
+      * You can call the following API operations to query the information about all RAM users:
+      * *   ListUsers: queries the details of all RAM users.
+      * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
+      *
+      * @param request ListUsersRequest
+      * @return ListUsersResponse
+     */
     public ListUsersResponse listUsers(ListUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUsersWithOptions(request, runtime);
@@ -1757,6 +1952,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listVirtualMFADevicesWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request RemoveClientIdFromOIDCProviderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveClientIdFromOIDCProviderResponse
+     */
     public RemoveClientIdFromOIDCProviderResponse removeClientIdFromOIDCProviderWithOptions(RemoveClientIdFromOIDCProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1785,11 +1987,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveClientIdFromOIDCProviderResponse());
     }
 
+    /**
+      * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request RemoveClientIdFromOIDCProviderRequest
+      * @return RemoveClientIdFromOIDCProviderResponse
+     */
     public RemoveClientIdFromOIDCProviderResponse removeClientIdFromOIDCProvider(RemoveClientIdFromOIDCProviderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeClientIdFromOIDCProviderWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request RemoveFingerprintFromOIDCProviderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveFingerprintFromOIDCProviderResponse
+     */
     public RemoveFingerprintFromOIDCProviderResponse removeFingerprintFromOIDCProviderWithOptions(RemoveFingerprintFromOIDCProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1818,6 +2033,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveFingerprintFromOIDCProviderResponse());
     }
 
+    /**
+      * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
+      *
+      * @param request RemoveFingerprintFromOIDCProviderRequest
+      * @return RemoveFingerprintFromOIDCProviderResponse
+     */
     public RemoveFingerprintFromOIDCProviderResponse removeFingerprintFromOIDCProvider(RemoveFingerprintFromOIDCProviderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeFingerprintFromOIDCProviderWithOptions(request, runtime);
@@ -1954,8 +2175,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setPasswordPolicyWithOptions(request, runtime);
     }
 
-    public SetSecurityPreferenceResponse setSecurityPreferenceWithOptions(SetSecurityPreferenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    /**
+      * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
+      *
+      * @param tmpReq SetSecurityPreferenceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetSecurityPreferenceResponse
+     */
+    public SetSecurityPreferenceResponse setSecurityPreferenceWithOptions(SetSecurityPreferenceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SetSecurityPreferenceShrinkRequest request = new SetSecurityPreferenceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.verificationTypes)) {
+            request.verificationTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.verificationTypes, "VerificationTypes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.allowUserToChangePassword)) {
             query.put("AllowUserToChangePassword", request.allowUserToChangePassword);
@@ -1993,6 +2227,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OperationForRiskLogin", request.operationForRiskLogin);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.verificationTypesShrink)) {
+            query.put("VerificationTypes", request.verificationTypesShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2010,6 +2248,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetSecurityPreferenceResponse());
     }
 
+    /**
+      * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
+      *
+      * @param request SetSecurityPreferenceRequest
+      * @return SetSecurityPreferenceResponse
+     */
     public SetSecurityPreferenceResponse setSecurityPreference(SetSecurityPreferenceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setSecurityPreferenceWithOptions(request, runtime);
@@ -2347,6 +2591,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLoginProfileWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
+      *
+      * @param request UpdateOIDCProviderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateOIDCProviderResponse
+     */
     public UpdateOIDCProviderResponse updateOIDCProviderWithOptions(UpdateOIDCProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2379,11 +2630,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateOIDCProviderResponse());
     }
 
+    /**
+      * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
+      *
+      * @param request UpdateOIDCProviderRequest
+      * @return UpdateOIDCProviderResponse
+     */
     public UpdateOIDCProviderResponse updateOIDCProvider(UpdateOIDCProviderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateOIDCProviderWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to change the description of an IdP named `test-provider` to `This is a new provider.`
+      *
+      * @param request UpdateSAMLProviderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateSAMLProviderResponse
+     */
     public UpdateSAMLProviderResponse updateSAMLProviderWithOptions(UpdateSAMLProviderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2416,11 +2680,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSAMLProviderResponse());
     }
 
+    /**
+      * This topic provides an example on how to change the description of an IdP named `test-provider` to `This is a new provider.`
+      *
+      * @param request UpdateSAMLProviderRequest
+      * @return UpdateSAMLProviderResponse
+     */
     public UpdateSAMLProviderResponse updateSAMLProvider(UpdateSAMLProviderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSAMLProviderWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example to show how to modify the name of a RAM user from `test@example.onaliyun.com` to `new@example.onaliyun.com`.
+      *
+      * @param request UpdateUserRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateUserResponse
+     */
     public UpdateUserResponse updateUserWithOptions(UpdateUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2469,6 +2746,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserResponse());
     }
 
+    /**
+      * This topic provides an example to show how to modify the name of a RAM user from `test@example.onaliyun.com` to `new@example.onaliyun.com`.
+      *
+      * @param request UpdateUserRequest
+      * @return UpdateUserResponse
+     */
     public UpdateUserResponse updateUser(UpdateUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateUserWithOptions(request, runtime);
