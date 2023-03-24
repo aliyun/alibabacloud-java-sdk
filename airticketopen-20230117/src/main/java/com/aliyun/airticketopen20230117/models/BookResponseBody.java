@@ -14,7 +14,7 @@ public class BookResponseBody extends TeaModel {
     public String errorCode;
 
     @NameInMap("error_data")
-    public Object errorData;
+    public BookResponseBodyErrorData errorData;
 
     @NameInMap("error_msg")
     public String errorMsg;
@@ -54,11 +54,11 @@ public class BookResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public BookResponseBody setErrorData(Object errorData) {
+    public BookResponseBody setErrorData(BookResponseBodyErrorData errorData) {
         this.errorData = errorData;
         return this;
     }
-    public Object getErrorData() {
+    public BookResponseBodyErrorData getErrorData() {
         return this.errorData;
     }
 
@@ -119,6 +119,44 @@ public class BookResponseBody extends TeaModel {
             return this;
         }
         public java.util.List<BookResponseBodyDataOrderList> getOrderList() {
+            return this.orderList;
+        }
+
+    }
+
+    public static class BookResponseBodyErrorDataOrderList extends TeaModel {
+        @NameInMap("order_num")
+        public Long orderNum;
+
+        public static BookResponseBodyErrorDataOrderList build(java.util.Map<String, ?> map) throws Exception {
+            BookResponseBodyErrorDataOrderList self = new BookResponseBodyErrorDataOrderList();
+            return TeaModel.build(map, self);
+        }
+
+        public BookResponseBodyErrorDataOrderList setOrderNum(Long orderNum) {
+            this.orderNum = orderNum;
+            return this;
+        }
+        public Long getOrderNum() {
+            return this.orderNum;
+        }
+
+    }
+
+    public static class BookResponseBodyErrorData extends TeaModel {
+        @NameInMap("order_list")
+        public java.util.List<BookResponseBodyErrorDataOrderList> orderList;
+
+        public static BookResponseBodyErrorData build(java.util.Map<String, ?> map) throws Exception {
+            BookResponseBodyErrorData self = new BookResponseBodyErrorData();
+            return TeaModel.build(map, self);
+        }
+
+        public BookResponseBodyErrorData setOrderList(java.util.List<BookResponseBodyErrorDataOrderList> orderList) {
+            this.orderList = orderList;
+            return this;
+        }
+        public java.util.List<BookResponseBodyErrorDataOrderList> getOrderList() {
             return this.orderList;
         }
 

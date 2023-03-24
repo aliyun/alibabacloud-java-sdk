@@ -1364,7 +1364,7 @@ public class OrderDetailResponseBody extends TeaModel {
         public Long orderNum;
 
         @NameInMap("order_status")
-        public String orderStatus;
+        public Integer orderStatus;
 
         @NameInMap("out_order_num")
         public String outOrderNum;
@@ -1373,7 +1373,7 @@ public class OrderDetailResponseBody extends TeaModel {
         public java.util.List<OrderDetailResponseBodyDataPassengerList> passengerList;
 
         @NameInMap("pay_status")
-        public String payStatus;
+        public Integer payStatus;
 
         @NameInMap("pay_time")
         public Long payTime;
@@ -1447,11 +1447,11 @@ public class OrderDetailResponseBody extends TeaModel {
             return this.orderNum;
         }
 
-        public OrderDetailResponseBodyData setOrderStatus(String orderStatus) {
+        public OrderDetailResponseBodyData setOrderStatus(Integer orderStatus) {
             this.orderStatus = orderStatus;
             return this;
         }
-        public String getOrderStatus() {
+        public Integer getOrderStatus() {
             return this.orderStatus;
         }
 
@@ -1471,11 +1471,11 @@ public class OrderDetailResponseBody extends TeaModel {
             return this.passengerList;
         }
 
-        public OrderDetailResponseBodyData setPayStatus(String payStatus) {
+        public OrderDetailResponseBodyData setPayStatus(Integer payStatus) {
             this.payStatus = payStatus;
             return this;
         }
-        public String getPayStatus() {
+        public Integer getPayStatus() {
             return this.payStatus;
         }
 
