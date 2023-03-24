@@ -4,12 +4,25 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateSAMLProviderRequest extends TeaModel {
+    /**
+     * <p>The new description.</p>
+     * <br>
+     * <p>>  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.</p>
+     */
     @NameInMap("NewDescription")
     public String newDescription;
 
+    /**
+     * <p>The new metadata file.</p>
+     * <br>
+     * <p>>  You must specify at least one of the `NewDescription` and `NewEncodedSAMLMetadataDocument` parameters.</p>
+     */
     @NameInMap("NewEncodedSAMLMetadataDocument")
     public String newEncodedSAMLMetadataDocument;
 
+    /**
+     * <p>The name of the IdP whose information you want to modify.</p>
+     */
     @NameInMap("SAMLProviderName")
     public String SAMLProviderName;
 

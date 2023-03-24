@@ -4,6 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DeleteSAMLProviderRequest extends TeaModel {
+    /**
+     * <p>The name of the IdP that you want to delete.</p>
+     */
     @NameInMap("SAMLProviderName")
     public String SAMLProviderName;
 

@@ -4,15 +4,30 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListVirtualMFADevicesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the MFA device.</p>
+     */
     @NameInMap("VirtualMFADevices")
     public ListVirtualMFADevicesResponseBodyVirtualMFADevices virtualMFADevices;
 
@@ -54,12 +69,21 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser extends TeaModel {
+        /**
+         * <p>The display name of the RAM user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the RAM user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The logon name of the RAM user.</p>
+         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 
@@ -95,12 +119,21 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice extends TeaModel {
+        /**
+         * <p>The time when the MFA device was activated.</p>
+         */
         @NameInMap("ActivateDate")
         public String activateDate;
 
+        /**
+         * <p>The serial number of the MFA device.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
+        /**
+         * <p>The information of the RAM user that has an MFA device bound.</p>
+         */
         @NameInMap("User")
         public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser user;
 

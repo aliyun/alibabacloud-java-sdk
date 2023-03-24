@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the RAM user.</p>
+     */
     @NameInMap("User")
     public UpdateUserResponseBodyUser user;
 
@@ -32,33 +38,64 @@ public class UpdateUserResponseBody extends TeaModel {
     }
 
     public static class UpdateUserResponseBodyUser extends TeaModel {
+        /**
+         * <p>The description of the RAM user.</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The time when the RAM user was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The display name of the RAM user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The email address of the RAM user.</p>
+         * <br>
+         * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The last time when the RAM user logged on to the console.</p>
+         */
         @NameInMap("LastLoginDate")
         public String lastLoginDate;
 
+        /**
+         * <p>The mobile phone number of the RAM user.</p>
+         * <br>
+         * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+         */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
         @NameInMap("ProvisionType")
         public String provisionType;
 
+        /**
+         * <p>The time when the information of the RAM user was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
+        /**
+         * <p>The ID of the RAM user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The logon name of the RAM user.</p>
+         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

@@ -4,9 +4,19 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserRequest extends TeaModel {
+    /**
+     * <p>The ID of the RAM user.</p>
+     * <br>
+     * <p>>  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The logon name of the RAM user.</p>
+     * <br>
+     * <p>>  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.</p>
+     */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 

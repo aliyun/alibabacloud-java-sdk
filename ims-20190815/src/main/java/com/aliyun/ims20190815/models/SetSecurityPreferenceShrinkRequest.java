@@ -3,7 +3,7 @@ package com.aliyun.ims20190815.models;
 
 import com.aliyun.tea.*;
 
-public class SetSecurityPreferenceRequest extends TeaModel {
+public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether RAM users can change their passwords. Valid values:</p>
      * <br>
@@ -92,14 +92,14 @@ public class SetSecurityPreferenceRequest extends TeaModel {
     public String operationForRiskLogin;
 
     @NameInMap("VerificationTypes")
-    public java.util.List<String> verificationTypes;
+    public String verificationTypesShrink;
 
-    public static SetSecurityPreferenceRequest build(java.util.Map<String, ?> map) throws Exception {
-        SetSecurityPreferenceRequest self = new SetSecurityPreferenceRequest();
+    public static SetSecurityPreferenceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SetSecurityPreferenceShrinkRequest self = new SetSecurityPreferenceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetSecurityPreferenceRequest setAllowUserToChangePassword(Boolean allowUserToChangePassword) {
+    public SetSecurityPreferenceShrinkRequest setAllowUserToChangePassword(Boolean allowUserToChangePassword) {
         this.allowUserToChangePassword = allowUserToChangePassword;
         return this;
     }
@@ -107,7 +107,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.allowUserToChangePassword;
     }
 
-    public SetSecurityPreferenceRequest setAllowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
+    public SetSecurityPreferenceShrinkRequest setAllowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
         this.allowUserToManageAccessKeys = allowUserToManageAccessKeys;
         return this;
     }
@@ -115,7 +115,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.allowUserToManageAccessKeys;
     }
 
-    public SetSecurityPreferenceRequest setAllowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
+    public SetSecurityPreferenceShrinkRequest setAllowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
         this.allowUserToManageMFADevices = allowUserToManageMFADevices;
         return this;
     }
@@ -123,7 +123,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.allowUserToManageMFADevices;
     }
 
-    public SetSecurityPreferenceRequest setAllowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
+    public SetSecurityPreferenceShrinkRequest setAllowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
         this.allowUserToManagePersonalDingTalk = allowUserToManagePersonalDingTalk;
         return this;
     }
@@ -131,7 +131,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.allowUserToManagePersonalDingTalk;
     }
 
-    public SetSecurityPreferenceRequest setEnableSaveMFATicket(Boolean enableSaveMFATicket) {
+    public SetSecurityPreferenceShrinkRequest setEnableSaveMFATicket(Boolean enableSaveMFATicket) {
         this.enableSaveMFATicket = enableSaveMFATicket;
         return this;
     }
@@ -139,7 +139,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.enableSaveMFATicket;
     }
 
-    public SetSecurityPreferenceRequest setLoginNetworkMasks(String loginNetworkMasks) {
+    public SetSecurityPreferenceShrinkRequest setLoginNetworkMasks(String loginNetworkMasks) {
         this.loginNetworkMasks = loginNetworkMasks;
         return this;
     }
@@ -147,7 +147,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.loginNetworkMasks;
     }
 
-    public SetSecurityPreferenceRequest setLoginSessionDuration(Integer loginSessionDuration) {
+    public SetSecurityPreferenceShrinkRequest setLoginSessionDuration(Integer loginSessionDuration) {
         this.loginSessionDuration = loginSessionDuration;
         return this;
     }
@@ -155,7 +155,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.loginSessionDuration;
     }
 
-    public SetSecurityPreferenceRequest setMFAOperationForLogin(String MFAOperationForLogin) {
+    public SetSecurityPreferenceShrinkRequest setMFAOperationForLogin(String MFAOperationForLogin) {
         this.MFAOperationForLogin = MFAOperationForLogin;
         return this;
     }
@@ -163,7 +163,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.MFAOperationForLogin;
     }
 
-    public SetSecurityPreferenceRequest setOperationForRiskLogin(String operationForRiskLogin) {
+    public SetSecurityPreferenceShrinkRequest setOperationForRiskLogin(String operationForRiskLogin) {
         this.operationForRiskLogin = operationForRiskLogin;
         return this;
     }
@@ -171,12 +171,12 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.operationForRiskLogin;
     }
 
-    public SetSecurityPreferenceRequest setVerificationTypes(java.util.List<String> verificationTypes) {
-        this.verificationTypes = verificationTypes;
+    public SetSecurityPreferenceShrinkRequest setVerificationTypesShrink(String verificationTypesShrink) {
+        this.verificationTypesShrink = verificationTypesShrink;
         return this;
     }
-    public java.util.List<String> getVerificationTypes() {
-        return this.verificationTypes;
+    public String getVerificationTypesShrink() {
+        return this.verificationTypesShrink;
     }
 
 }

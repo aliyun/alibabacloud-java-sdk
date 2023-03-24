@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetSAMLProviderResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the IdP.</p>
+     */
     @NameInMap("SAMLProvider")
     public GetSAMLProviderResponseBodySAMLProvider SAMLProvider;
 
@@ -32,21 +38,39 @@ public class GetSAMLProviderResponseBody extends TeaModel {
     }
 
     public static class GetSAMLProviderResponseBodySAMLProvider extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The metadata file, which is Base64 encoded.</p>
+         */
         @NameInMap("EncodedSAMLMetadataDocument")
         public String encodedSAMLMetadataDocument;
 
+        /**
+         * <p>The name of the IdP.</p>
+         */
         @NameInMap("SAMLProviderName")
         public String SAMLProviderName;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

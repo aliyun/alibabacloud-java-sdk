@@ -4,6 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetSAMLProviderRequest extends TeaModel {
+    /**
+     * <p>The name of the IdP.</p>
+     */
     @NameInMap("SAMLProviderName")
     public String SAMLProviderName;
 

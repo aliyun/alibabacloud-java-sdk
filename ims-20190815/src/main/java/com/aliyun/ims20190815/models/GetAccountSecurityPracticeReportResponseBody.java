@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
+    /**
+     * <p>The information of the security report for the Alibaba Cloud account.</p>
+     */
     @NameInMap("AccountSecurityPracticeInfo")
     public GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfo accountSecurityPracticeInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,64 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
     }
 
     public static class GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfoAccountSecurityPracticeUserInfo extends TeaModel {
+        /**
+         * <p>Indicates whether MFA is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("BindMfa")
         public Boolean bindMfa;
 
+        /**
+         * <p>The number of old AccessKey pairs for the Alibaba Cloud account.</p>
+         */
         @NameInMap("OldAkNum")
         public Integer oldAkNum;
 
+        /**
+         * <p>The number of AccessKey pairs for the Alibaba Cloud account.</p>
+         */
         @NameInMap("RootWithAccessKey")
         public Integer rootWithAccessKey;
 
+        /**
+         * <p>The number of RAM users within the Alibaba Cloud account.</p>
+         */
         @NameInMap("SubUser")
         public Integer subUser;
 
+        /**
+         * <p>The number of RAM users that have MFA devices bound.</p>
+         */
         @NameInMap("SubUserBindMfa")
         public Integer subUserBindMfa;
 
+        /**
+         * <p>The complexity level of the password for the RAM user. Valid values:</p>
+         * <br>
+         * <p>*   low</p>
+         * <p>*   mid</p>
+         * <p>*   high</p>
+         */
         @NameInMap("SubUserPwdLevel")
         public String subUserPwdLevel;
 
+        /**
+         * <p>The number of RAM users that use the old AccessKey pairs.</p>
+         */
         @NameInMap("SubUserWithOldAccessKey")
         public Integer subUserWithOldAccessKey;
 
+        /**
+         * <p>The number of RAM users that have no AccessKey pairs.</p>
+         */
         @NameInMap("SubUserWithUnusedAccessKey")
         public Integer subUserWithUnusedAccessKey;
 
+        /**
+         * <p>The number of AccessKey pairs that are not used for the Alibaba Cloud account.</p>
+         */
         @NameInMap("UnusedAkNum")
         public Integer unusedAkNum;
 
@@ -139,9 +179,15 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
     }
 
     public static class GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfo extends TeaModel {
+        /**
+         * <p>The information of the security report for the Alibaba Cloud account.</p>
+         */
         @NameInMap("AccountSecurityPracticeUserInfo")
         public GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfoAccountSecurityPracticeUserInfo accountSecurityPracticeUserInfo;
 
+        /**
+         * <p>The security score of the Alibaba Cloud account.</p>
+         */
         @NameInMap("Score")
         public Integer score;
 

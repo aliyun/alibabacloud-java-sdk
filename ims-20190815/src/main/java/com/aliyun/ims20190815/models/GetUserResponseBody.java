@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the RAM user.</p>
+     */
     @NameInMap("User")
     public GetUserResponseBodyUser user;
 
@@ -32,9 +38,15 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUserTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -81,36 +93,77 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUser extends TeaModel {
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The time when the RAM user was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The display name of the RAM user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The email address of the RAM user.</p>
+         * <br>
+         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The last time when the RAM user logged on to the Alibaba Cloud Management Console.</p>
+         */
         @NameInMap("LastLoginDate")
         public String lastLoginDate;
 
+        /**
+         * <p>The mobile phone number of the RAM user.</p>
+         * <br>
+         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        /**
+         * <p>The source of the RAM user. Valid values:</p>
+         * <br>
+         * <p>*   Manual: The RAM user is manually created in the RAM console.</p>
+         * <p>*   SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</p>
+         * <p>*   CloudSSO: The RAM user is mapped from a CloudSSO user.</p>
+         */
         @NameInMap("ProvisionType")
         public String provisionType;
 
+        /**
+         * <p>An array that consists of tags.</p>
+         */
         @NameInMap("Tags")
         public GetUserResponseBodyUserTags tags;
 
+        /**
+         * <p>The time when the information about the RAM user was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
+        /**
+         * <p>The ID of the RAM user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The logon name of the RAM user.</p>
+         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

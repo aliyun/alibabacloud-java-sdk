@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class SetSecurityPreferenceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of security preferences.</p>
+     */
     @NameInMap("SecurityPreference")
     public SetSecurityPreferenceResponseBodySecurityPreference securityPreference;
 
@@ -32,6 +38,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their AccessKey pairs.</p>
+         */
         @NameInMap("AllowUserToManageAccessKeys")
         public Boolean allowUserToManageAccessKeys;
 
@@ -51,21 +60,39 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can change their passwords.</p>
+         */
         @NameInMap("AllowUserToChangePassword")
         public Boolean allowUserToChangePassword;
 
+        /**
+         * <p>Indicates whether RAM users can remember the MFA devices for seven days.</p>
+         */
         @NameInMap("EnableSaveMFATicket")
         public Boolean enableSaveMFATicket;
 
+        /**
+         * <p>The subnet mask.</p>
+         */
         @NameInMap("LoginNetworkMasks")
         public String loginNetworkMasks;
 
+        /**
+         * <p>The validity period of the logon session of RAM users.</p>
+         */
         @NameInMap("LoginSessionDuration")
         public Integer loginSessionDuration;
 
+        /**
+         * <p>Indicates whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console.</p>
+         */
         @NameInMap("MFAOperationForLogin")
         public String MFAOperationForLogin;
 
+        /**
+         * <p>Indicates whether to enable MFA for RAM users who initiated unusual logons.</p>
+         */
         @NameInMap("OperationForRiskLogin")
         public String operationForRiskLogin;
 
@@ -125,6 +152,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their MFA devices.</p>
+         */
         @NameInMap("AllowUserToManageMFADevices")
         public Boolean allowUserToManageMFADevices;
 
@@ -144,6 +174,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts.</p>
+         */
         @NameInMap("AllowUserToManagePersonalDingTalk")
         public Boolean allowUserToManagePersonalDingTalk;
 
@@ -162,18 +195,52 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     }
 
+    public static class SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference extends TeaModel {
+        @NameInMap("VerificationTypes")
+        public java.util.List<String> verificationTypes;
+
+        public static SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference build(java.util.Map<String, ?> map) throws Exception {
+            SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference self = new SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference();
+            return TeaModel.build(map, self);
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference setVerificationTypes(java.util.List<String> verificationTypes) {
+            this.verificationTypes = verificationTypes;
+            return this;
+        }
+        public java.util.List<String> getVerificationTypes() {
+            return this.verificationTypes;
+        }
+
+    }
+
     public static class SetSecurityPreferenceResponseBodySecurityPreference extends TeaModel {
+        /**
+         * <p>The AccessKey pair preference.</p>
+         */
         @NameInMap("AccessKeyPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference accessKeyPreference;
 
+        /**
+         * <p>The logon preference.</p>
+         */
         @NameInMap("LoginProfilePreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference loginProfilePreference;
 
+        /**
+         * <p>The MFA preference.</p>
+         */
         @NameInMap("MFAPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
+        /**
+         * <p>The personal information preference.</p>
+         */
         @NameInMap("PersonalInfoPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference personalInfoPreference;
+
+        @NameInMap("VerificationPreference")
+        public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference verificationPreference;
 
         public static SetSecurityPreferenceResponseBodySecurityPreference build(java.util.Map<String, ?> map) throws Exception {
             SetSecurityPreferenceResponseBodySecurityPreference self = new SetSecurityPreferenceResponseBodySecurityPreference();
@@ -210,6 +277,14 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         }
         public SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference getPersonalInfoPreference() {
             return this.personalInfoPreference;
+        }
+
+        public SetSecurityPreferenceResponseBodySecurityPreference setVerificationPreference(SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference verificationPreference) {
+            this.verificationPreference = verificationPreference;
+            return this;
+        }
+        public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference getVerificationPreference() {
+            return this.verificationPreference;
         }
 
     }

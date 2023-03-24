@@ -4,6 +4,11 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessKeyRequest extends TeaModel {
+    /**
+     * <p>The logon name of the RAM user.</p>
+     * <br>
+     * <p>If this parameter is empty, an AccessKey pair is created for the current user.</p>
+     */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 

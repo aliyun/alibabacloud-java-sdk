@@ -4,15 +4,30 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The parameter that is used to obtain the truncated part. It takes effect only when `IsTruncated` is set to `true`.</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the information about the RAM user.</p>
+     */
     @NameInMap("Users")
     public ListUsersResponseBodyUsers users;
 
@@ -54,9 +69,15 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersUserTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -103,36 +124,77 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersUser extends TeaModel {
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The time when the RAM user was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The display name of the RAM user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The email address of the RAM user.</p>
+         * <br>
+         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The last time when the RAM user logged on to the Alibaba Cloud Management Console.</p>
+         */
         @NameInMap("LastLoginDate")
         public String lastLoginDate;
 
+        /**
+         * <p>The mobile phone number of the RAM user.</p>
+         * <br>
+         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        /**
+         * <p>The source of the RAM user. Valid values:</p>
+         * <br>
+         * <p>*   Manual: The RAM user is manually created in the RAM console.</p>
+         * <p>*   SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</p>
+         * <p>*   CloudSSO: The RAM user is mapped from a CloudSSO user.</p>
+         */
         @NameInMap("ProvisionType")
         public String provisionType;
 
+        /**
+         * <p>An array that consists of tags.</p>
+         */
         @NameInMap("Tags")
         public ListUsersResponseBodyUsersUserTags tags;
 
+        /**
+         * <p>The time when the information about the RAM user was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
+        /**
+         * <p>The ID of the RAM user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The logon name of the RAM user.</p>
+         */
         @NameInMap("UserPrincipalName")
         public String userPrincipalName;
 

@@ -4,15 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class BindMFADeviceRequest extends TeaModel {
+    /**
+     * <p>The first verification code.</p>
+     * <br>
+     * <p>>  You can call the [CreateVirtualMFADevice](~~186179~~) operation to create an MFA device and generate a key (value of `Base32StringSeed`). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.</p>
+     */
     @NameInMap("AuthenticationCode1")
     public String authenticationCode1;
 
+    /**
+     * <p>The second verification code.</p>
+     * <br>
+     * <p>>  You can call the [CreateVirtualMFADevice](~~186179~~) operation to create an MFA device and generate a key (value of `Base32StringSeed`). Then, use the key on the Alibaba Cloud app to manually add an MFA device, and obtain the two consecutive verification codes.</p>
+     */
     @NameInMap("AuthenticationCode2")
     public String authenticationCode2;
 
+    /**
+     * <p>The serial number of the MFA device.</p>
+     * <br>
+     * <p>>  You can call the [CreateVirtualMFADevice](~~186179~~) operation to obtain the serial number of the MFA device.</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
+    /**
+     * <p>The logon name of the RAM user.</p>
+     */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 
