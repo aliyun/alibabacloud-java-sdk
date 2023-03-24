@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>airticketopen20230117</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>airticketopen20230117</name>
   <description>Alibaba Cloud airticketOpen (20230117) SDK for Java
