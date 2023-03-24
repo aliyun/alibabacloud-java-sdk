@@ -28,6 +28,12 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
     @NameInMap("DirRemain")
     public String dirRemain;
 
+    @NameInMap("IgnoreParamsQuota")
+    public String ignoreParamsQuota;
+
+    @NameInMap("IgnoreParamsRemain")
+    public String ignoreParamsRemain;
+
     /**
      * <p>The maximum number of URLs that can be prefetched each day.</p>
      */
@@ -105,6 +111,22 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
     }
     public String getDirRemain() {
         return this.dirRemain;
+    }
+
+    public DescribeDcdnRefreshQuotaResponseBody setIgnoreParamsQuota(String ignoreParamsQuota) {
+        this.ignoreParamsQuota = ignoreParamsQuota;
+        return this;
+    }
+    public String getIgnoreParamsQuota() {
+        return this.ignoreParamsQuota;
+    }
+
+    public DescribeDcdnRefreshQuotaResponseBody setIgnoreParamsRemain(String ignoreParamsRemain) {
+        this.ignoreParamsRemain = ignoreParamsRemain;
+        return this;
+    }
+    public String getIgnoreParamsRemain() {
+        return this.ignoreParamsRemain;
     }
 
     public DescribeDcdnRefreshQuotaResponseBody setPreloadQuota(String preloadQuota) {
