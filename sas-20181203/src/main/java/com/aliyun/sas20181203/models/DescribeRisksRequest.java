@@ -4,15 +4,32 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRisksRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The maximum number of entries to return. Default value: 20.</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <p>The ID of the baseline.</p>
+     * <br>
+     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of baselines.</p>
+     */
     @NameInMap("RiskId")
     public Long riskId;
 
+    /**
+     * <p>The name of the baseline.</p>
+     */
     @NameInMap("RiskName")
     public String riskName;
 

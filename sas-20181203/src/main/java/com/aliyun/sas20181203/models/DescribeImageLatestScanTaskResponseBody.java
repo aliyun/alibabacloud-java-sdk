@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the information about the task.</p>
+     */
     @NameInMap("Task")
     public java.util.List<DescribeImageLatestScanTaskResponseBodyTask> task;
 
@@ -32,42 +38,96 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeImageLatestScanTaskResponseBodyTask extends TeaModel {
+        /**
+         * <p>The time when the task was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         */
         @NameInMap("Create")
         public String create;
 
+        /**
+         * <p>The number of images that are scanned.</p>
+         */
         @NameInMap("Finish")
         public Integer finish;
 
+        /**
+         * <p>The end time of the task. The value of this parameter is returned only if Status is SUCCESS. Otherwise, this parameter is returned empty.</p>
+         */
         @NameInMap("FinishTime")
         public Long finishTime;
 
+        /**
+         * <p>The primary key ID of the database.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The time when the task was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         */
         @NameInMap("Modified")
         public String modified;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The creation method. A task can be created in the Security Center console or by calling an operation. Valid values:</p>
+         * <br>
+         * <p>*   **console_batch**: The task was created in the Security Center console.</p>
+         * <p>*   **openapi**: The task was created by calling an operation.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The start time of the task.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **PROCESSING**: running</p>
+         * <p>*   **START**: starting</p>
+         * <p>*   **MESSAGE_SEND**: delivering</p>
+         * <p>*   **PRE_ANALYZER**: image prechecking</p>
+         * <p>*   **SUCCESS**: successful</p>
+         * <p>*   **FAIL**: failed</p>
+         * <p>*   **TIMOUT**: timed out</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The digest value of the image.</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>The type of the scanned asset. Valid values:</p>
+         * <br>
+         * <p>*   **IMAGE**: image</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>*   **IMAGE_SCAN**: image scan task</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

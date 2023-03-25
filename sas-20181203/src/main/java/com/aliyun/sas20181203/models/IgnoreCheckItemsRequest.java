@@ -4,18 +4,40 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class IgnoreCheckItemsRequest extends TeaModel {
+    /**
+     * <p>The risk items.</p>
+     */
     @NameInMap("CheckAndRiskTypeList")
     public java.util.List<IgnoreCheckItemsRequestCheckAndRiskTypeList> checkAndRiskTypeList;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The reason why you add the risk item to the whitelist.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The operation that you want to perform on the risk item.Valid values:</p>
+     * <p>*  **1**: adds the risk item to the whitelist</p>
+     * <p>*  **2**: removes the risk item from the whitelist</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
+    /**
+     * <p>The UUIDs of the servers.</p>
+     * <br>
+     * <p>> You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 
@@ -65,9 +87,15 @@ public class IgnoreCheckItemsRequest extends TeaModel {
     }
 
     public static class IgnoreCheckItemsRequestCheckAndRiskTypeList extends TeaModel {
+        /**
+         * <p>The ID of the check item.</p>
+         */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>The baseline type of the check item.</p>
+         */
         @NameInMap("RiskType")
         public String riskType;
 

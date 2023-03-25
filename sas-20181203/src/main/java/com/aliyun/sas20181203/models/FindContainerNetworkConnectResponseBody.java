@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class FindContainerNetworkConnectResponseBody extends TeaModel {
+    /**
+     * <p>The information about the network connections.</p>
+     */
     @NameInMap("Connects")
     public java.util.List<FindContainerNetworkConnectResponseBodyConnects> connects;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public FindContainerNetworkConnectResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +52,9 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     }
 
     public static class FindContainerNetworkConnectResponseBodyConnectsDstContainer extends TeaModel {
+        /**
+         * <p>The ID of the destination container.</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
@@ -62,6 +74,9 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     }
 
     public static class FindContainerNetworkConnectResponseBodyConnectsSrcContainer extends TeaModel {
+        /**
+         * <p>The ID of the source container.</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
@@ -81,30 +96,61 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     }
 
     public static class FindContainerNetworkConnectResponseBodyConnects extends TeaModel {
+        /**
+         * <p>The information about the destination container.</p>
+         * <br>
+         * <p>>  This parameter is not supported.</p>
+         */
         @NameInMap("DstContainer")
         public FindContainerNetworkConnectResponseBodyConnectsDstContainer dstContainer;
 
+        /**
+         * <p>The destination IP address.</p>
+         */
         @NameInMap("DstIp")
         public String dstIp;
 
+        /**
+         * <p>The destination port.</p>
+         */
         @NameInMap("DstPort")
         public String dstPort;
 
+        /**
+         * <p>The timestamp when the connection was first established.</p>
+         */
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        /**
+         * <p>The ID of the network connection.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The timestamp when the connection was last established.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The information about the source container.</p>
+         * <br>
+         * <p>>  This parameter is not supported.</p>
+         */
         @NameInMap("SrcContainer")
         public FindContainerNetworkConnectResponseBodyConnectsSrcContainer srcContainer;
 
+        /**
+         * <p>The source IP address.</p>
+         */
         @NameInMap("SrcIp")
         public String srcIp;
 
+        /**
+         * <p>The source port.</p>
+         */
         @NameInMap("SrcPort")
         public String srcPort;
 
@@ -188,15 +234,27 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     }
 
     public static class FindContainerNetworkConnectResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Long currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: **20**.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

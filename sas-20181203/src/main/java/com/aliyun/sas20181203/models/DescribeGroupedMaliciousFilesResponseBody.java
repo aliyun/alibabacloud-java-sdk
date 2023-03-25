@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the malicious image samples.</p>
+     */
     @NameInMap("GroupedMaliciousFileResponse")
     public java.util.List<DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse> groupedMaliciousFileResponse;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeGroupedMaliciousFilesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +52,54 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse extends TeaModel {
+        /**
+         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
 
+        /**
+         * <p>The number of affected images.</p>
+         */
         @NameInMap("ImageCount")
         public Long imageCount;
 
+        /**
+         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
+        /**
+         * <p>The severity of the malicious image sample. Valid values:</p>
+         * <br>
+         * <p>*   **serious**</p>
+         * <p>*   **suspicious**</p>
+         * <p>*   **remind**</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The MD5 hash value of the malicious image sample.</p>
+         */
         @NameInMap("MaliciousMd5")
         public String maliciousMd5;
 
+        /**
+         * <p>The name of the malicious image sample.</p>
+         */
         @NameInMap("MaliciousName")
         public String maliciousName;
 
+        /**
+         * <p>The handling status of the malicious image sample. Valid values:</p>
+         * <br>
+         * <p>*   **0**: unhandled</p>
+         * <p>*   **1**: handled</p>
+         * <p>*   **2**: verifying</p>
+         * <p>*   **3**: added to the whitelist</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -128,15 +167,27 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedMaliciousFilesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: **20**.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,15 +4,34 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebLockDeleteConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the protected directory that you want to delete.</p>
+     * <br>
+     * <p>> You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the IDs of protected directories.</p>
+     */
     @NameInMap("Id")
     public Integer id;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The UUID of the server for which you want to delete the protected directory.</p>
+     * <br>
+     * <p>> You can call the [DescribeWebLockConfigList](~~DescribeWebLockConfigList~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

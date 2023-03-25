@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulListPageResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeVulListPageResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,27 +52,57 @@ public class DescribeVulListPageResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListPageResponseBodyData extends TeaModel {
+        /**
+         * <p>The CVE ID of the vulnerability.</p>
+         */
         @NameInMap("CveId")
         public String cveId;
 
+        /**
+         * <p>The extended field for Server Guard.</p>
+         */
         @NameInMap("ExtAegis")
         public String extAegis;
 
+        /**
+         * <p>The primary key ID of the database.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Indicates whether the vulnerability was detected based on version comparison. Valid values:</p>
+         * <br>
+         * <p>*   1: The vulnerability was detected based on version comparison.</p>
+         * <p>*   0: The vulnerability was not detected based on version comparison.</p>
+         */
         @NameInMap("IsAegis")
         public Integer isAegis;
 
+        /**
+         * <p>Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:</p>
+         * <br>
+         * <p>*   1: The vulnerability was detected based on POC verification.</p>
+         * <p>*   0: The vulnerability was not detected based on POC verification.</p>
+         */
         @NameInMap("IsSas")
         public Integer isSas;
 
+        /**
+         * <p>The ID of the vulnerability.</p>
+         */
         @NameInMap("OtherId")
         public String otherId;
 
+        /**
+         * <p>The time when the vulnerability was disclosed.</p>
+         */
         @NameInMap("ReleaseTime")
         public Long releaseTime;
 
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("Title")
         public String title;
 

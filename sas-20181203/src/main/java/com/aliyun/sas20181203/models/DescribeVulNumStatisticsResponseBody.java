@@ -4,42 +4,81 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulNumStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The number of application vulnerabilities that are detected on the asset by using a web scanner.</p>
+     */
     @NameInMap("AppCnt")
     public Integer appCnt;
 
+    /**
+     * <p>The number of application vulnerabilities that are detected on the asset by using a web scanner.</p>
+     */
     @NameInMap("AppNum")
     public Integer appNum;
 
+    /**
+     * <p>The number of Web-CMS vulnerabilities that are handled.</p>
+     */
     @NameInMap("CmsDealedTotalNum")
     public Integer cmsDealedTotalNum;
 
+    /**
+     * <p>The number of Web-CMS vulnerabilities that are detected on the asset.</p>
+     */
     @NameInMap("CmsNum")
     public Integer cmsNum;
 
+    /**
+     * <p>The number of Linux software vulnerabilities that are detected on the asset.</p>
+     */
     @NameInMap("CveNum")
     public Integer cveNum;
 
+    /**
+     * <p>The number of urgent vulnerabilities that are detected on the asset.</p>
+     */
     @NameInMap("EmgNum")
     public Integer emgNum;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of middleware vulnerabilities that are detected on the asset.</p>
+     */
     @NameInMap("ScaNum")
     public Integer scaNum;
 
+    /**
+     * <p>The number of Windows system vulnerabilities that are detected on the asset.</p>
+     */
     @NameInMap("SysNum")
     public Integer sysNum;
 
+    /**
+     * <p>The number of vulnerabilities that have the high priority.</p>
+     */
     @NameInMap("VulAsapSum")
     public Integer vulAsapSum;
 
+    /**
+     * <p>The number of vulnerabilities that are handled.</p>
+     */
     @NameInMap("VulDealedTotalNum")
     public Integer vulDealedTotalNum;
 
+    /**
+     * <p>The number of vulnerabilities that have the medium priority.</p>
+     */
     @NameInMap("VulLaterSum")
     public Integer vulLaterSum;
 
+    /**
+     * <p>The number of vulnerabilities that have the low priority.</p>
+     */
     @NameInMap("VulNntfSum")
     public Integer vulNntfSum;
 

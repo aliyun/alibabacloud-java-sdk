@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the container assets returned.</p>
+     */
     @NameInMap("GroupedContainerInstanceList")
     public java.util.List<DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList> groupedContainerInstanceList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeGroupedContainerInstancesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,78 +52,170 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList extends TeaModel {
+        /**
+         * <p>The number of alerts that are generated on the current pod, application, namespace, or cluster.</p>
+         */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The ID of cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **Kubernetes**: dedicated Kubernetes cluster</p>
+         * <p>*   **ManagedKubernetes**: standard managed cluster (edge cluster)</p>
+         * <p>*   **Ask**: standard serverless cluster</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **running**: The cluster is running.</p>
+         * <p>*   **stopped**: The cluster is stopped.</p>
+         * <p>*   **deleted**: The cluster is deleted.</p>
+         * <p>*   **delete_failed**: The cluster fails to be deleted.</p>
+         * <p>*   **failed**: The cluster fails to be created.</p>
+         */
         @NameInMap("CusterState")
         public String custerState;
 
+        /**
+         * <p>The number of baseline risks that are detected on the current pod, application, namespace, or cluster.</p>
+         */
         @NameInMap("HcCount")
         public Integer hcCount;
 
+        /**
+         * <p>The IP address of the host in the container cluster.</p>
+         */
         @NameInMap("HostIp")
         public String hostIp;
 
+        /**
+         * <p>The image of the container.</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The digest value of the image.</p>
+         */
         @NameInMap("ImageDigest")
         public String imageDigest;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("ImageRepoName")
         public String imageRepoName;
 
+        /**
+         * <p>The namespace to which the image repository belongs.</p>
+         */
         @NameInMap("ImageRepoNamespace")
         public String imageRepoNamespace;
 
+        /**
+         * <p>The tag that is added to the image repository.</p>
+         */
         @NameInMap("ImageRepoTag")
         public String imageRepoTag;
 
+        /**
+         * <p>The UUID of the image.</p>
+         */
         @NameInMap("ImageUuid")
         public String imageUuid;
 
+        /**
+         * <p>The number of queried pods, applications, clusters, or namespaces.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The namespace of the cluster.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The name of the pod.</p>
+         */
         @NameInMap("Pod")
         public String pod;
 
+        /**
+         * <p>The IP address of the pod.</p>
+         */
         @NameInMap("PodIp")
         public String podIp;
 
+        /**
+         * <p>The ID of the region in which the server resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of at-risk instances.</p>
+         */
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **high**</p>
+         * <p>*   **medium**</p>
+         * <p>*   **low**</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>Indicates whether risks were detected. Valid values:</p>
+         * <br>
+         * <p>*   **NO**: No risks were detected.</p>
+         * <p>*   **YES**: Risks were detected.</p>
+         */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        /**
+         * <p>The number of vulnerabilities that are detected on the current pod, application, namespace, or cluster.</p>
+         */
         @NameInMap("VulCount")
         public Integer vulCount;
 
@@ -326,15 +427,27 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedContainerInstancesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of container assets returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: **20**.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of container assets returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,18 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageVulListResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries returned per page. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>An array that consists of the vulnerabilities.</p>
+     */
     @NameInMap("VulRecords")
     public java.util.List<DescribeImageVulListResponseBodyVulRecords> vulRecords;
 
@@ -65,27 +80,51 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
+        /**
+         * <p>The complete version number of the package.</p>
+         */
         @NameInMap("FullVersion")
         public String fullVersion;
 
+        /**
+         * <p>The SHA-256 value of the digest of the image layer.</p>
+         */
         @NameInMap("Layer")
         public String layer;
 
+        /**
+         * <p>The reason why the vulnerability is detected.</p>
+         */
         @NameInMap("MatchDetail")
         public String matchDetail;
 
+        /**
+         * <p>The details of the rules that are used to detect the vulnerability.</p>
+         */
         @NameInMap("MatchList")
         public java.util.List<String> matchList;
 
+        /**
+         * <p>The name of the software package.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The path of the software that has the vulnerability.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The command that is used to fix the vulnerability.</p>
+         */
         @NameInMap("UpdateCmd")
         public String updateCmd;
 
+        /**
+         * <p>The version number of the package.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -161,12 +200,21 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulListResponseBodyVulRecordsExtendContentJson extends TeaModel {
+        /**
+         * <p>The name of the operating system.</p>
+         */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <p>The version of the operating system in the image.</p>
+         */
         @NameInMap("OsRelease")
         public String osRelease;
 
+        /**
+         * <p>The details of the packages of the software that has the vulnerability.</p>
+         */
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
 
@@ -202,102 +250,221 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulListResponseBodyVulRecords extends TeaModel {
+        /**
+         * <p>The alias of the vulnerability.</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
+         * <br>
+         * <p>*   **yes**: yes</p>
+         * <p>*   **no**: no</p>
+         */
         @NameInMap("CanFix")
         public String canFix;
 
+        /**
+         * <p>Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The ID of the container.</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
+        /**
+         * <p>The extended information about the vulnerability.</p>
+         */
         @NameInMap("ExtendContentJson")
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
+        /**
+         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("FirstTs")
         public Long firstTs;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The digest of the image.</p>
+         */
         @NameInMap("ImageDigest")
         public String imageDigest;
 
+        /**
+         * <p>The name of the asset.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("LastTs")
         public Long lastTs;
 
+        /**
+         * <p>The image layers.</p>
+         */
         @NameInMap("Layers")
         public java.util.List<String> layers;
 
+        /**
+         * <p>The source of the malicious file. Valid values:</p>
+         * <br>
+         * <p>*   **agentless**: agentless detection</p>
+         * <p>*   **image**: image</p>
+         * <p>*   **container**: container</p>
+         */
         @NameInMap("MaliciousSource")
         public String maliciousSource;
 
+        /**
+         * <p>The timestamp when the information about the vulnerability was updated. Unit: milliseconds.</p>
+         */
         @NameInMap("ModifyTs")
         public Long modifyTs;
 
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The priority to fix the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **asap**: high. You must fix the vulnerability at the earliest opportunity.</p>
+         * <p>*   **later**: medium. You can fix the vulnerability based on your business requirements.</p>
+         * <p>*   **nntf**: low. You can ignore the vulnerability.</p>
+         */
         @NameInMap("Necessity")
         public String necessity;
 
+        /**
+         * <p>The pod.</p>
+         */
         @NameInMap("Pod")
         public String pod;
 
+        /**
+         * <p>The ID of the vulnerability.</p>
+         */
         @NameInMap("PrimaryId")
         public Long primaryId;
 
+        /**
+         * <p>The Common Vulnerabilities and Exposures (CVE) ID of the associated vulnerability.</p>
+         */
         @NameInMap("Related")
         public String related;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The namespace to which the image repository belongs.</p>
+         */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
+        /**
+         * <p>The timestamp of the scan. Unit: milliseconds.</p>
+         */
         @NameInMap("ScanTime")
         public Long scanTime;
 
+        /**
+         * <p>The status of the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **1**: unfixed</p>
+         * <p>*   **7**: fixed</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The tag that is added to the vulnerability.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The ID of the asset on which the vulnerability is detected.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the asset on which the vulnerability is detected.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the asset on which the vulnerability is detected. Valid values:</p>
+         * <br>
+         * <p>*   **ECS_IMAGE**: image</p>
+         * <p>*   **ECS_SNAPSHOT**: snapshot</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The type of the vulnerability. The value is fixed as cve, which indicates image vulnerabilities.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

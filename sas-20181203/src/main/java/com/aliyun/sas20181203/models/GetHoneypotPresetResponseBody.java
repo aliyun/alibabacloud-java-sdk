@@ -4,21 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetHoneypotPresetResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the honeypot template.</p>
+     */
     @NameInMap("Data")
     public GetHoneypotPresetResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +97,21 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
     }
 
     public static class GetHoneypotPresetResponseBodyDataFileInfoList extends TeaModel {
+        /**
+         * <p>The ID of the uploaded file.</p>
+         */
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <p>The name of the uploaded file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The download URL.</p>
+         */
         @NameInMap("OssUrl")
         public String ossUrl;
 
@@ -117,30 +147,61 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
     }
 
     public static class GetHoneypotPresetResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the management node to which the honeypot is deployed.</p>
+         */
         @NameInMap("ControlNodeName")
         public String controlNodeName;
 
+        /**
+         * <p>An array that consists of the configurations of the uploaded file.</p>
+         */
         @NameInMap("FileInfoList")
         public java.util.List<GetHoneypotPresetResponseBodyDataFileInfoList> fileInfoList;
 
+        /**
+         * <p>The display name of the image that is used for the honeypot.</p>
+         */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
+        /**
+         * <p>The name of the image that is used for the honeypot.</p>
+         */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
+        /**
+         * <p>The ID of the honeypot template.</p>
+         */
         @NameInMap("HoneypotPresetId")
         public String honeypotPresetId;
 
+        /**
+         * <p>The custom configurations of the honeypot template.</p>
+         */
         @NameInMap("Meta")
         public String meta;
 
+        /**
+         * <p>The ID of the management node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The custom name of the honeypot template.</p>
+         */
         @NameInMap("PresetName")
         public String presetName;
 
+        /**
+         * <p>The type of the template. Valid values:</p>
+         * <br>
+         * <p>*   **TEMP**: automatically generated</p>
+         * <p>*   **CUSTOM**: custom</p>
+         * <p>*   **DEFAULT**: default</p>
+         */
         @NameInMap("PresetType")
         public String presetType;
 

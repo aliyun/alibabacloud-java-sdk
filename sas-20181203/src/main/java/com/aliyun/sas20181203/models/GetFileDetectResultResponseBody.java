@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileDetectResultResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of file detection results.</p>
+     */
     @NameInMap("ResultList")
     public java.util.List<GetFileDetectResultResponseBodyResultList> resultList;
 
@@ -32,24 +38,74 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     }
 
     public static class GetFileDetectResultResponseBodyResultList extends TeaModel {
+        /**
+         * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The extended information about the file detection result.</p>
+         */
         @NameInMap("Ext")
         public String ext;
 
+        /**
+         * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+         */
         @NameInMap("HashKey")
         public String hashKey;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The file detection result. Valid values:</p>
+         * <br>
+         * <p>*   **0**: normal file.</p>
+         * <p>*   **1**: suspicious file.</p>
+         * <p>*   **3**: The detection is in progress.</p>
+         */
         @NameInMap("Result")
         public Integer result;
 
+        /**
+         * <p>The score of file detection result.</p>
+         * <br>
+         * <p>>  A higher score indicates a more suspicious file.</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <p>The type of virus. Valid values:</p>
+         * <br>
+         * <p>*   **Trojan**: self-mutating trojan</p>
+         * <p>*   **WebShell**: webshell</p>
+         * <p>*   **Backdoor**: backdoor program</p>
+         * <p>*   **RansomWare**: ransomware</p>
+         * <p>*   **Scanner**: scanner</p>
+         * <p>*   **Stealer**: tool that is used to steal information</p>
+         * <p>*   **Malbaseware**: tainted basic software</p>
+         * <p>*   **Hacktool**: attacker tool</p>
+         * <p>*   **Engtest**: engine test program</p>
+         * <p>*   **Downloader**: trojan downloader</p>
+         * <p>*   **Virus**: infectious virus</p>
+         * <p>*   **Miner**: mining program</p>
+         * <p>*   **Worm**: worm</p>
+         * <p>*   **DDoS**: DDoS trojan</p>
+         * <p>*   **Malware**: malicious program</p>
+         * <p>*   **Backdoor**: reverse shell</p>
+         * <p>*   **RiskWare**: software that has risks</p>
+         * <p>*   **Proxytool**: proxy</p>
+         * <p>*   **Suspicious**: suspicious program</p>
+         * <p>*   **MalScript**: malicious script</p>
+         * <p>*   **Rootkit**: rootkit</p>
+         * <p>*   **Exploit**: exploit</p>
+         */
         @NameInMap("VirusType")
         public String virusType;
 

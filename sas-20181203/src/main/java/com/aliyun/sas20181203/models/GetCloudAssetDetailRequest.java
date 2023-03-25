@@ -4,15 +4,59 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCloudAssetDetailRequest extends TeaModel {
+    /**
+     * <p>The subtype of the cloud asset.</p>
+     */
     @NameInMap("AssetSubType")
     public Integer assetSubType;
 
+    /**
+     * <p>The type of the cloud asset. Valid values:</p>
+     * <br>
+     * <p>*   **0**: Elastic Compute Service (ECS)</p>
+     * <p>*   **1**: Server Load Balancer (SLB)</p>
+     * <p>*   **3**: ApsaraDB RDS</p>
+     * <p>*   **4**: ApsaraDB for MongoDB (MongoDB)</p>
+     * <p>*   **5**: ApsaraDB for Redis (Redis)</p>
+     * <p>*   **6**: Container Registry</p>
+     * <p>*   **8**: Container Service for Kubernetes (ACK)</p>
+     * <p>*   **9**: Virtual Private Cloud (VPC)</p>
+     * <p>*   **11**: ActionTrail</p>
+     * <p>*   **12**: Alibaba Cloud CDN (CDN)</p>
+     * <p>*   **13**: Certificate Management Service (formerly SSL Certificates Service)</p>
+     * <p>*   **14**: Apsara Devops</p>
+     * <p>*   **15**: Resource Access Management (RAM)</p>
+     * <p>*   **16**: Anti-DDoS</p>
+     * <p>*   **17**: Web Application Firewall (WAF)</p>
+     * <p>*   **18**: Object Storage Service (OSS)</p>
+     * <p>*   **19**: PolarDB</p>
+     * <p>*   **20**: ApsaraDB RDS for PostgreSQL</p>
+     * <p>*   **21**: Microservices Engine (MSE)</p>
+     * <p>*   **22**: Apsara File Storage NAS (NAS)</p>
+     * <p>*   **23**: Data Security Center (DSC)</p>
+     * <p>*   **24**: Elastic IP Address (EIP)</p>
+     * <p>*   **25**: IDaaS EIAM</p>
+     * <p>*   **26**: PolarDB-X</p>
+     * <p>*   **27**: Elasticsearch</p>
+     */
     @NameInMap("AssetType")
     public Integer assetType;
 
+    /**
+     * <p>The details of the assets.</p>
+     */
     @NameInMap("CloudAssetInstances")
     public java.util.List<GetCloudAssetDetailRequestCloudAssetInstances> cloudAssetInstances;
 
+    /**
+     * <p>The service provider of the cloud asset. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The asset is provided by Alibaba Cloud.</p>
+     * <p>*   **1**: The asset is not provided by Alibaba Cloud.</p>
+     * <p>*   **2**: The asset resides in a data center.</p>
+     * <p>*   **3**, **4**, **5**, and **7**: other cloud asset.</p>
+     * <p>*   **8**: The asset is a simple application server.</p>
+     */
     @NameInMap("Vendor")
     public Integer vendor;
 
@@ -54,9 +98,17 @@ public class GetCloudAssetDetailRequest extends TeaModel {
     }
 
     public static class GetCloudAssetDetailRequestCloudAssetInstances extends TeaModel {
+        /**
+         * <p>The instance ID of the cloud asset.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The region where the cloud asset resides.</p>
+         * <br>
+         * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

@@ -4,12 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageBaselineDetailRequest extends TeaModel {
+    /**
+     * <p>The information about the baseline.</p>
+     */
     @NameInMap("BaselineItemKey")
     public String baselineItemKey;
 
+    /**
+     * <p>The UUID of the image.</p>
+     */
     @NameInMap("ImageUuid")
     public String imageUuid;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

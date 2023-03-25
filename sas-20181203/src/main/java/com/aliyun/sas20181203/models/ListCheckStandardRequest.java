@@ -4,18 +4,38 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckStandardRequest extends TeaModel {
+    /**
+     * <p>The instance IDs of the cloud services to which the check items belong.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The subtypes of cloud services.</p>
+     */
     @NameInMap("InstanceSubTypes")
     public java.util.List<String> instanceSubTypes;
 
+    /**
+     * <p>The asset types of cloud services.</p>
+     */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The cloud service providers. Valid values:</p>
+     * <br>
+     * <p>*   **ALIYUN**: Alibaba Cloud</p>
+     */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
 

@@ -4,21 +4,74 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class HandleSecurityEventsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to add multiple alert events to the whitelist at a time. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("MarkBatch")
     public String markBatch;
 
+    /**
+     * <p>The whitelist rule. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <br>
+     * <p>*   **field**: The field based on which alert events are added to the whitelist.</p>
+     * <br>
+     * <p>*   **operate**: The method that is used to added alert events to the whitelist. Valid values:</p>
+     * <br>
+     * <p>    *   **notContains**: does not contain</p>
+     * <p>    *   **contains**: contains</p>
+     * <p>    *   **regex**: matches by regular expression</p>
+     * <p>    *   **strEqual**: equals</p>
+     * <p>    *   **strNotEqual**: does not equal</p>
+     * <br>
+     * <p>*   **fieldValue**: The value of the field based on which alert events are added to the whitelist.</p>
+     * <br>
+     * <p>*   **uuid**: The application scope of the whitelist rule. Valid values:</p>
+     * <br>
+     * <p>    *   **part**: the current asset</p>
+     * <p>    *   **ALL**: all assets</p>
+     * <br>
+     * <p>>  You can call the [DescribeSecurityEventOperations](~~DescribeSecurityEventOperations~~) operation to obtain the fields that you can specify for **field**.</p>
+     */
     @NameInMap("MarkMissParam")
     public String markMissParam;
 
+    /**
+     * <p>The operation that you want to perform to handle the alert events. Valid values:</p>
+     * <br>
+     * <p>*   **block_ip**: blocks the source IP address.</p>
+     * <p>*   **advance\_mark\_mis_info**: adds the alert events to the whitelist.</p>
+     * <p>*   **ignore**: ignores the alert events.</p>
+     * <p>*   **manual_handled**: marks the alert events as manually handled.</p>
+     * <p>*   **kill_process**: terminates the malicious process.</p>
+     * <p>*   **cleanup**: performs in-depth virus detection and removal.</p>
+     * <p>*   **kill\_and_quara**: kills the malicious processes and quarantines the source file.</p>
+     * <p>*   **disable\_malicious_defense**: stops the container on which the alerting files or processes exist.</p>
+     * <p>*   **client\_problem_check**: performs troubleshooting.</p>
+     * <p>*   **quara**: quarantines the source file of the malicious process.</p>
+     */
     @NameInMap("OperationCode")
     public String operationCode;
 
+    /**
+     * <p>The configuration of the operation that you want to perform to handle the alert events.</p>
+     * <br>
+     * <p>>  If you set OperationCode to `kill_and_quara` or `block_ip`, you must specify OperationParams. If you set OperationCode to other values, you can leave OperationParams empty.</p>
+     */
     @NameInMap("OperationParams")
     public String operationParams;
 
+    /**
+     * <p>The IDs of the alert events.</p>
+     */
     @NameInMap("SecurityEventIds")
     public java.util.List<String> securityEventIds;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

@@ -4,15 +4,35 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageRequest extends TeaModel {
+    /**
+     * <p>The instance ID of the image.</p>
+     * <br>
+     * <p>>  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of instances.</p>
+     */
     @NameInMap("ImageInstanceId")
     public String imageInstanceId;
 
+    /**
+     * <p>The region ID of the image.</p>
+     * <br>
+     * <p>>  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of regions.</p>
+     */
     @NameInMap("ImageRegionId")
     public String imageRegionId;
 
+    /**
+     * <p>The ID of the image repository.</p>
+     * <br>
+     * <p>>  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of image repositories.</p>
+     */
     @NameInMap("ImageRepoId")
     public String imageRepoId;
 
+    /**
+     * <p>The tag that is added to the image.</p>
+     * <br>
+     * <p>>  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query tags.</p>
+     */
     @NameInMap("ImageTag")
     public String imageTag;
 

@@ -4,21 +4,41 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DisableBruteForceRecordRequest extends TeaModel {
+    /**
+     * <p>The IP address that you want to specify in the policy.</p>
+     */
     @NameInMap("BlockIp")
     public String blockIp;
 
+    /**
+     * <p>The traffic direction that you want to specify in the policy. Valid values:</p>
+     * <br>
+     * <p>*   **in**: inbound</p>
+     * <p>*   **out**: outbound</p>
+     */
     @NameInMap("Bound")
     public String bound;
 
+    /**
+     * <p>The ID of the IP address blocking policy.</p>
+     * <br>
+     * <p>> You can call the [DescribeBruteForceRecords](~~DescribeBruteForceRecords~~) operation to query the policy ID.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The port number.</p>
+     */
     @NameInMap("Port")
     public String port;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The UUID of the server.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

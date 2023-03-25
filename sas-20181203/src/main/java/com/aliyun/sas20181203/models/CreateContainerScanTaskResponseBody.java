@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateContainerScanTaskResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public CreateContainerScanTaskResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,30 +52,57 @@ public class CreateContainerScanTaskResponseBody extends TeaModel {
     }
 
     public static class CreateContainerScanTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether you can create more scan tasks.</p>
+         */
         @NameInMap("CanCreate")
         public Boolean canCreate;
 
+        /**
+         * <p>The collection time.</p>
+         */
         @NameInMap("CollectTime")
         public Long collectTime;
 
+        /**
+         * <p>The execution time of the task.</p>
+         */
         @NameInMap("ExecTime")
         public Long execTime;
 
+        /**
+         * <p>The number of scan tasks that are complete.</p>
+         */
         @NameInMap("FinishCount")
         public Integer finishCount;
 
+        /**
+         * <p>The progress of the task.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>The execution result of the task.</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The total number of scan tasks.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

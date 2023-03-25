@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckStandardResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the check items.</p>
+     */
     @NameInMap("Standards")
     public java.util.List<ListCheckStandardResponseBodyStandards> standards;
 
@@ -32,12 +38,21 @@ public class ListCheckStandardResponseBody extends TeaModel {
     }
 
     public static class ListCheckStandardResponseBodyStandardsRequirements extends TeaModel {
+        /**
+         * <p>The ID of the search condition.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The number of check items queried by using the search condition.</p>
+         */
         @NameInMap("RiskCheckCount")
         public Long riskCheckCount;
 
+        /**
+         * <p>The display name of the search condition.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
@@ -73,15 +88,27 @@ public class ListCheckStandardResponseBody extends TeaModel {
     }
 
     public static class ListCheckStandardResponseBodyStandards extends TeaModel {
+        /**
+         * <p>The ID of the check item.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>An array that consists of search conditions.</p>
+         */
         @NameInMap("Requirements")
         public java.util.List<ListCheckStandardResponseBodyStandardsRequirements> requirements;
 
+        /**
+         * <p>The display name of the check item.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <p>The type of the check item.</p>
+         */
         @NameInMap("Type")
         public String type;
 

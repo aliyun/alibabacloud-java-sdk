@@ -4,21 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityStatInfoResponseBody extends TeaModel {
+    /**
+     * <p>The detailed statistics of attacks.</p>
+     */
     @NameInMap("AttackEvent")
     public DescribeSecurityStatInfoResponseBodyAttackEvent attackEvent;
 
+    /**
+     * <p>The detailed statistics of baseline risk items.</p>
+     */
     @NameInMap("HealthCheck")
     public DescribeSecurityStatInfoResponseBodyHealthCheck healthCheck;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The detailed statistics of unhandled alerts.</p>
+     */
     @NameInMap("SecurityEvent")
     public DescribeSecurityStatInfoResponseBodySecurityEvent securityEvent;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The detailed statistics of unfixed vulnerabilities.</p>
+     */
     @NameInMap("Vulnerability")
     public DescribeSecurityStatInfoResponseBodyVulnerability vulnerability;
 
@@ -76,12 +97,21 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityStatInfoResponseBodyAttackEvent extends TeaModel {
+        /**
+         * <p>The points in time when the number of attacks is collected in the trend chart.</p>
+         */
         @NameInMap("DateArray")
         public java.util.List<String> dateArray;
 
+        /**
+         * <p>The total number of attacks on the current day.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The numbers of attacks at all points in time.</p>
+         */
         @NameInMap("ValueArray")
         public java.util.List<String> valueArray;
 
@@ -117,36 +147,69 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityStatInfoResponseBodyHealthCheck extends TeaModel {
+        /**
+         * <p>The points in time when data of baseline risk items is collected in the trend chart.</p>
+         */
         @NameInMap("DateArray")
         public java.util.List<String> dateArray;
 
+        /**
+         * <p>The number of baseline risk items that have the high-risk level on the current day.</p>
+         */
         @NameInMap("HighCount")
         public Integer highCount;
 
+        /**
+         * <p>The numbers of baseline risk items that have the high-risk level at all points in time.</p>
+         */
         @NameInMap("HighList")
         public java.util.List<String> highList;
 
+        /**
+         * <p>The risk levels of baseline risk items.</p>
+         */
         @NameInMap("LevelsOn")
         public java.util.List<String> levelsOn;
 
+        /**
+         * <p>The number of baseline risk items that have the low-risk level on the current day.</p>
+         */
         @NameInMap("LowCount")
         public Integer lowCount;
 
+        /**
+         * <p>The numbers of baseline risk items that have the low-risk level at all points in time.</p>
+         */
         @NameInMap("LowList")
         public java.util.List<String> lowList;
 
+        /**
+         * <p>The number of baseline risk items that have the medium-risk level on the current day.</p>
+         */
         @NameInMap("MediumCount")
         public Integer mediumCount;
 
+        /**
+         * <p>The numbers of baseline risk items that have the medium-risk level at all points in time.</p>
+         */
         @NameInMap("MediumList")
         public java.util.List<String> mediumList;
 
+        /**
+         * <p>The time periods during which data of baseline risk items is collected.</p>
+         */
         @NameInMap("TimeArray")
         public java.util.List<String> timeArray;
 
+        /**
+         * <p>The total number of baseline risk items on the current day.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The total number of baseline risk items at all points in time.</p>
+         */
         @NameInMap("ValueArray")
         public java.util.List<String> valueArray;
 
@@ -246,36 +309,69 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityStatInfoResponseBodySecurityEvent extends TeaModel {
+        /**
+         * <p>The points in time when data of unhandled alerts is collected in the trend chart.</p>
+         */
         @NameInMap("DateArray")
         public java.util.List<String> dateArray;
 
+        /**
+         * <p>The risk levels of unhandled alerts.</p>
+         */
         @NameInMap("LevelsOn")
         public java.util.List<String> levelsOn;
 
+        /**
+         * <p>The number of **remind** alerts on the current day.</p>
+         */
         @NameInMap("RemindCount")
         public Integer remindCount;
 
+        /**
+         * <p>The numbers of remind alerts at all points in time.</p>
+         */
         @NameInMap("RemindList")
         public java.util.List<String> remindList;
 
+        /**
+         * <p>The number of **serious** alerts on the current day.</p>
+         */
         @NameInMap("SeriousCount")
         public Integer seriousCount;
 
+        /**
+         * <p>The numbers of serious alerts at all points in time.</p>
+         */
         @NameInMap("SeriousList")
         public java.util.List<String> seriousList;
 
+        /**
+         * <p>The number of **suspicious** alerts on the current day.</p>
+         */
         @NameInMap("SuspiciousCount")
         public Integer suspiciousCount;
 
+        /**
+         * <p>The numbers of suspicious alerts at all points in time.</p>
+         */
         @NameInMap("SuspiciousList")
         public java.util.List<String> suspiciousList;
 
+        /**
+         * <p>The time periods during which data of the same alert is collected.</p>
+         */
         @NameInMap("TimeArray")
         public java.util.List<String> timeArray;
 
+        /**
+         * <p>The total number of unhandled alerts on the current day.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The numbers of unhandled alerts at all points in time.</p>
+         */
         @NameInMap("ValueArray")
         public java.util.List<String> valueArray;
 
@@ -375,36 +471,69 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityStatInfoResponseBodyVulnerability extends TeaModel {
+        /**
+         * <p>The number of **high-risk** unfixed vulnerabilities on the current day.</p>
+         */
         @NameInMap("AsapCount")
         public Integer asapCount;
 
+        /**
+         * <p>The numbers of high-risk unfixed vulnerabilities at all points in time.</p>
+         */
         @NameInMap("AsapList")
         public java.util.List<String> asapList;
 
+        /**
+         * <p>The points in time when data of unfixed vulnerabilities is collected in the trend chart.</p>
+         */
         @NameInMap("DateArray")
         public java.util.List<String> dateArray;
 
+        /**
+         * <p>The number of **medium-risk** unfixed vulnerabilities on the current day.</p>
+         */
         @NameInMap("LaterCount")
         public Integer laterCount;
 
+        /**
+         * <p>The numbers of medium-risk unfixed vulnerabilities at all points in time.</p>
+         */
         @NameInMap("LaterList")
         public java.util.List<String> laterList;
 
+        /**
+         * <p>The risk levels of unfixed vulnerabilities.</p>
+         */
         @NameInMap("LevelsOn")
         public java.util.List<String> levelsOn;
 
+        /**
+         * <p>The number of **low-risk** unfixed vulnerabilities on the current day.</p>
+         */
         @NameInMap("NntfCount")
         public Integer nntfCount;
 
+        /**
+         * <p>The numbers of low-risk unfixed vulnerabilities at all points in time.</p>
+         */
         @NameInMap("NntfList")
         public java.util.List<String> nntfList;
 
+        /**
+         * <p>The time periods during which data of unfixed vulnerabilities is collected.</p>
+         */
         @NameInMap("TimeArray")
         public java.util.List<String> timeArray;
 
+        /**
+         * <p>The total number of unfixed vulnerabilities on the current day.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The numbers of unfixed vulnerabilities at all points in time.</p>
+         */
         @NameInMap("ValueArray")
         public java.util.List<String> valueArray;
 

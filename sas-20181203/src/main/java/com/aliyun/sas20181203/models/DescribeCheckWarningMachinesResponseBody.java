@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
+    /**
+     * <p>The number of the servers on which the same risk item is detected.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>An array consisting of the servers on which the same risk item is detected.</p>
+     */
     @NameInMap("Machines")
     public java.util.List<DescribeCheckWarningMachinesResponseBodyMachines> machines;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +52,48 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckWarningMachinesResponseBodyMachines extends TeaModel {
+        /**
+         * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Bind")
         public Boolean bind;
 
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The ID of the region in which the server resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

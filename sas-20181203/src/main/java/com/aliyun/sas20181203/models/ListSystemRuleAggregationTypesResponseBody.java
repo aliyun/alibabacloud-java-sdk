@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the aggregation types.</p>
+     */
     @NameInMap("AggregationTypeList")
     public java.util.List<ListSystemRuleAggregationTypesResponseBodyAggregationTypeList> aggregationTypeList;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
     }
 
     public static class ListSystemRuleAggregationTypesResponseBodyAggregationTypeList extends TeaModel {
+        /**
+         * <p>The ID of the aggregation type.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The name of the aggregation type.</p>
+         */
         @NameInMap("Name")
         public String name;
 

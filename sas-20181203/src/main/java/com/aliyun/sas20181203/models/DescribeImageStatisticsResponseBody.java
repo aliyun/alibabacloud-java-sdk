@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The number of container images in your assets. Only Container Registry Enterprise Edition instances are counted.</p>
+     */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of container images that have security risks. Only Container Registry Enterprise Edition instances are counted.</p>
+     */
     @NameInMap("RiskInstanceCount")
     public Integer riskInstanceCount;
 

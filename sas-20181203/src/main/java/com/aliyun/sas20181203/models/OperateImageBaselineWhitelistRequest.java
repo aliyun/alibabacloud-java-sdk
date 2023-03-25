@@ -4,18 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperateImageBaselineWhitelistRequest extends TeaModel {
+    /**
+     * <p>The keys of baseline check items.</p>
+     */
     @NameInMap("BaselineItemKeyList")
     public String baselineItemKeyList;
 
+    /**
+     * <p>The UUID of the image.</p>
+     */
     @NameInMap("ImageUuid")
     public String imageUuid;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The operation that you want to perform on the check items. Valid values:</p>
+     * <br>
+     * <p>*   **add**: adds the check items to the whitelist</p>
+     * <p>*   **del**: removes the check items from the whitelist</p>
+     */
     @NameInMap("Operation")
     public String operation;
 
+    /**
+     * <p>The types of the assets that you want to scan.</p>
+     */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
