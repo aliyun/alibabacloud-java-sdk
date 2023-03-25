@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateRegistryTypeResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of image repository types.</p>
+     */
     @NameInMap("RegistryTypeInfos")
     public java.util.List<ListPrivateRegistryTypeResponseBodyRegistryTypeInfos> registryTypeInfos;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,20 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     }
 
     public static class ListPrivateRegistryTypeResponseBodyRegistryTypeInfos extends TeaModel {
+        /**
+         * <p>The number of image repositories.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The name of the image repository type. Valid values:</p>
+         * <br>
+         * <p>*   **acr**: Container Registry</p>
+         * <p>*   **harbor**: Harbor</p>
+         * <p>*   **quay**: Quay</p>
+         * <p>*   **CI/CD**: Jenkins</p>
+         */
         @NameInMap("RegistryType")
         public String registryType;
 

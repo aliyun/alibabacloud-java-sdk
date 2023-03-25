@@ -4,24 +4,45 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details about AccessKey pair leaks.</p>
+     */
     @NameInMap("AccessKeyLeakList")
     public java.util.List<DescribeAccesskeyLeakListResponseBodyAccessKeyLeakList> accessKeyLeakList;
 
+    /**
+     * <p>The number of AccessKey pair leaks that are unhandled.</p>
+     */
     @NameInMap("AkLeakCount")
     public Integer akLeakCount;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("GmtLast")
     public Long gmtLast;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of AccessKey pair leaks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,36 +108,80 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
     }
 
     public static class DescribeAccesskeyLeakListResponseBodyAccessKeyLeakList extends TeaModel {
+        /**
+         * <p>The ID of the AccessKey pair that is leaked.</p>
+         */
         @NameInMap("AccesskeyId")
         public String accesskeyId;
 
+        /**
+         * <p>The name of the Alibaba Cloud account that is affected.</p>
+         */
         @NameInMap("AliUserName")
         public String aliUserName;
 
+        /**
+         * <p>The platform to which the asset belongs. The value is fixed as **Cloud platform**.</p>
+         */
         @NameInMap("Asset")
         public String asset;
 
+        /**
+         * <p>The time when the AccessKey pair leak is handled.</p>
+         */
         @NameInMap("DealTime")
         public String dealTime;
 
+        /**
+         * <p>The method to handle the AccessKey pair leak. Valid values:</p>
+         * <br>
+         * <p>*   **pending**: The AccessKey pair leak is unhandled.</p>
+         * <p>*   **manual**: The AccessKey pair leak is manually handled.</p>
+         * <p>*   **disable**: The AccessKey pair leak is disabled.</p>
+         * <p>*   **add-whitelist**: The AccessKey pair leak is added to the whitelist.</p>
+         */
         @NameInMap("DealType")
         public String dealType;
 
+        /**
+         * <p>The time when the AccessKey pair leak is first detected. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The primary key ID of the database.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Indicates whether the AccessKey pair leak is handled. Valid values:</p>
+         * <br>
+         * <p>*   **pending**: unhandled</p>
+         * <p>*   **dealed**: handled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the leak. The value is fixed as **AccessKey**.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The URL of the platform on which the AccessKey pair leak is detected.</p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <p>The type of the account to which the leaked AccessKey pair belongs. Valid values:</p>
+         * <br>
+         * <p>*   **master**: Alibaba Cloud account</p>
+         * <p>*   **ram**: RAM user</p>
+         */
         @NameInMap("UserType")
         public String userType;
 

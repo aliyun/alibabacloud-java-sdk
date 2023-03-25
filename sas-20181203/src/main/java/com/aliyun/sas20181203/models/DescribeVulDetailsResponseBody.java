@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulDetailsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details about the vulnerability.</p>
+     */
     @NameInMap("Cves")
     public java.util.List<DescribeVulDetailsResponseBodyCves> cves;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulDetailsResponseBodyCvesClassifys extends TeaModel {
+        /**
+         * <p>The type of the vulnerability.</p>
+         */
         @NameInMap("Classify")
         public String classify;
 
+        /**
+         * <p>The URL of the demo video for the vulnerability.</p>
+         */
         @NameInMap("DemoVideoUrl")
         public String demoVideoUrl;
 
+        /**
+         * <p>The description of the vulnerability type.</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -73,75 +88,156 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulDetailsResponseBodyCves extends TeaModel {
+        /**
+         * <p>The type of the vulnerability.</p>
+         */
         @NameInMap("Classify")
         public String classify;
 
+        /**
+         * <p>An array that consists of vulnerability types.</p>
+         */
         @NameInMap("Classifys")
         public java.util.List<DescribeVulDetailsResponseBodyCvesClassifys> classifys;
 
+        /**
+         * <p>The China National Vulnerability Database (CNVD) ID.</p>
+         */
         @NameInMap("CnvdId")
         public String cnvdId;
 
+        /**
+         * <p>The difficulty level of exploiting the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **LOW**</p>
+         * <p>*   **MEDIUM**</p>
+         * <p>*   **HIGH**</p>
+         */
         @NameInMap("Complexity")
         public String complexity;
 
+        /**
+         * <p>The CVE content.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The Common Vulnerabilities and Exposures (CVE) ID.</p>
+         */
         @NameInMap("CveId")
         public String cveId;
 
+        /**
+         * <p>The Common Vulnerability Scoring System (CVSS) score of the vulnerability in the Alibaba Cloud vulnerability library.</p>
+         */
         @NameInMap("CvssScore")
         public String cvssScore;
 
+        /**
+         * <p>The vector that is used to calculate the CVSS score.</p>
+         */
         @NameInMap("CvssVector")
         public String cvssVector;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The POC content.</p>
+         */
         @NameInMap("Poc")
         public String poc;
 
+        /**
+         * <p>The timestamp when the proof of concept (POC) was created. Unit: milliseconds.</p>
+         */
         @NameInMap("PocCreateTime")
         public Long pocCreateTime;
 
+        /**
+         * <p>The timestamp when the POC was disclosed. Unit: milliseconds.</p>
+         */
         @NameInMap("PocDisclosureTime")
         public Long pocDisclosureTime;
 
+        /**
+         * <p>The service that is affected by the vulnerability.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The reference of the vulnerability in the Alibaba Cloud vulnerability library. The value is a URL.</p>
+         */
         @NameInMap("Reference")
         public String reference;
 
+        /**
+         * <p>The disclosure time that is displayed for the vulnerability in the Alibaba Cloud vulnerability library. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("ReleaseTime")
         public Long releaseTime;
 
+        /**
+         * <p>The fixing suggestions of the vulnerability.</p>
+         */
         @NameInMap("Solution")
         public String solution;
 
+        /**
+         * <p>The introduction to the vulnerability.</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>The ID of the asset on which the vulnerability is detected.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the asset on which the vulnerability is detected.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The title of the vulnerability announcement.</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The vendor that disclosed the vulnerability.</p>
+         */
         @NameInMap("Vendor")
         public String vendor;
 
+        /**
+         * <p>The severity of the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **serious**</p>
+         * <p>*   **high**</p>
+         * <p>*   **medium**</p>
+         * <p>*   **low**</p>
+         */
         @NameInMap("VulLevel")
         public String vulLevel;
 

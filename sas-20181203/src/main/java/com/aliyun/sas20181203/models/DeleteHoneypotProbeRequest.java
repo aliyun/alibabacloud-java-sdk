@@ -7,6 +7,11 @@ public class DeleteHoneypotProbeRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the probe.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.</p>
+     */
     @NameInMap("ProbeId")
     public String probeId;
 

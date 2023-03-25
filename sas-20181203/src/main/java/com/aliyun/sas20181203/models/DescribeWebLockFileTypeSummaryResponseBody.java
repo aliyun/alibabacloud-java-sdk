@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of events on web tamper proofing returned.</p>
+     */
     @NameInMap("List")
     public java.util.List<DescribeWebLockFileTypeSummaryResponseBodyList> list;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of events on web tamper proofing.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,9 +52,30 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeWebLockFileTypeSummaryResponseBodyList extends TeaModel {
+        /**
+         * <p>The number of attempts.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The type of the protected file. Valid values:</p>
+         * <br>
+         * <p>*   **php**: PHP file</p>
+         * <p>*   **jsp**: JSP file</p>
+         * <p>*   **asp**: ASP file</p>
+         * <p>*   **aspx**: ASPX file</p>
+         * <p>*   **js**: JS file</p>
+         * <p>*   **cgi**: CGI file</p>
+         * <p>*   **html**: HTML file</p>
+         * <p>*   **htm**: HTM file</p>
+         * <p>*   **xml**: XML file</p>
+         * <p>*   **shtml**: SHTML file</p>
+         * <p>*   **shtm**: SHTM file</p>
+         * <p>*   **jpg**: JPG file</p>
+         * <p>*   **gif**: GIF file</p>
+         * <p>*   **png**: PNG file</p>
+         */
         @NameInMap("Type")
         public String type;
 

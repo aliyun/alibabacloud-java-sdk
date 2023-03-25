@@ -4,15 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAntiBruteForceRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the defense rule.</p>
+     */
     @NameInMap("NewRuleId")
     public Long newRuleId;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

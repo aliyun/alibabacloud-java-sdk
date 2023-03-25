@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCloudAssetSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The summary of cloud services.</p>
+     */
     @NameInMap("GroupedFields")
     public GetCloudAssetSummaryResponseBodyGroupedFields groupedFields;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,53 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
     }
 
     public static class GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas extends TeaModel {
+        /**
+         * <p>The subtype of the cloud service.</p>
+         */
         @NameInMap("AssetSubType")
         public Integer assetSubType;
 
+        /**
+         * <p>The type of the cloud service. Valid values:</p>
+         * <br>
+         * <p>*   **0**: Elastic Compute Service (ECS)</p>
+         * <p>*   **1**: Server Load Balancer (SLB)</p>
+         * <p>*   **3**: ApsaraDB RDS</p>
+         * <p>*   **4**: ApsaraDB for MongoDB (MongoDB)</p>
+         * <p>*   **5**: ApsaraDB for Redis (Redis)</p>
+         * <p>*   **6**: Container Registry</p>
+         * <p>*   **8**: Container Service for Kubernetes (ACK)</p>
+         * <p>*   **9**: Virtual Private Cloud (VPC)</p>
+         * <p>*   **11**: ActionTrail</p>
+         * <p>*   **12**: Alibaba Cloud CDN (CDN)</p>
+         * <p>*   **13**: Certificate Management Service (formerly SSL Certificates Service)</p>
+         * <p>*   **14**: Apsara Devops</p>
+         * <p>*   **15**: Resource Access Management (RAM)</p>
+         * <p>*   **16**: Anti-DDoS</p>
+         * <p>*   **17**: Web Application Firewall (WAF)</p>
+         * <p>*   **18**: Object Storage Service (OSS)</p>
+         * <p>*   **19**: PolarDB</p>
+         * <p>*   **20**: ApsaraDB RDS for PostgreSQL</p>
+         * <p>*   **21**: Microservices Engine (MSE)</p>
+         * <p>*   **22**: Apsara File Storage NAS (NAS)</p>
+         * <p>*   **23**: Data Security Center (DSC)</p>
+         * <p>*   **24**: Elastic IP Address (EIP)</p>
+         * <p>*   **25**: IDaaS EIAM</p>
+         * <p>*   **26**: PolarDB-X</p>
+         * <p>*   **27**: Elasticsearch</p>
+         */
         @NameInMap("AssetType")
         public Integer assetType;
 
+        /**
+         * <p>The total number of cloud service instances of this type.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        /**
+         * <p>The total number of cloud service instances that are at risk of this type.</p>
+         */
         @NameInMap("InstanceRiskCount")
         public Integer instanceRiskCount;
 
@@ -84,12 +128,21 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
     }
 
     public static class GetCloudAssetSummaryResponseBodyGroupedFields extends TeaModel {
+        /**
+         * <p>An array that consists of the statistics of cloud services.</p>
+         */
         @NameInMap("CloudAssetSummaryMetas")
         public java.util.List<GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas> cloudAssetSummaryMetas;
 
+        /**
+         * <p>The total number of instances.</p>
+         */
         @NameInMap("InstanceCountTotal")
         public Integer instanceCountTotal;
 
+        /**
+         * <p>The total number of instances that are at risk.</p>
+         */
         @NameInMap("InstanceRiskCountTotal")
         public Integer instanceRiskCountTotal;
 

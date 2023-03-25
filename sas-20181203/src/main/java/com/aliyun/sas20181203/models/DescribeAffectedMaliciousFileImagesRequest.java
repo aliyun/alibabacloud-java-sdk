@@ -4,63 +4,152 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
+    /**
+     * <p>The ID of the container cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The ID of the container.</p>
+     */
     @NameInMap("ContainerId")
     public String containerId;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The name of the container image.</p>
+     */
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>The image digest.</p>
+     */
     @NameInMap("ImageDigest")
     public String imageDigest;
 
+    /**
+     * <p>The image layer.</p>
+     */
     @NameInMap("ImageLayer")
     public String imageLayer;
 
+    /**
+     * <p>The tag that is added to the image.</p>
+     */
     @NameInMap("ImageTag")
     public String imageTag;
 
+    /**
+     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The severity of the malicious image sample. Separate multiple severities with commas (,). Valid values: serious suspicious remind</p>
+     */
     @NameInMap("Levels")
     public String levels;
 
+    /**
+     * <p>The MD5 hash value of the malicious image sample.</p>
+     * <br>
+     * <p>>  You can call the [DescribeGroupedMaliciousFiles](~~DescribeGroupedMaliciousFiles~~) operation to query the MD5 hash values of malicious image samples.</p>
+     */
     @NameInMap("MaliciousMd5")
     public String maliciousMd5;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The pod.</p>
+     */
     @NameInMap("Pod")
     public String pod;
 
+    /**
+     * <p>The ID of the image repository.</p>
+     * <br>
+     * <p>>  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The ID of the container image.</p>
+     * <br>
+     * <p>>  You can call the [ListRepository](~~ListRepository~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.</p>
+     */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
+    /**
+     * <p>The name of the image repository.</p>
+     * <br>
+     * <p>>  Fuzzy match is supported.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The namespace to which the image repository belongs.</p>
+     * <br>
+     * <p>>  Fuzzy match is supported.</p>
+     */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
+    /**
+     * <p>The region ID of the image repository. Valid values:</p>
+     * <br>
+     * <p>*   **cn-beijing**: China (Beijing)</p>
+     * <p>*   **cn-zhangjiakou**: China (Zhangjiakou)</p>
+     * <p>*   **cn-hangzhou**: China (Hangzhou)</p>
+     * <p>*   **cn-shanghai**: China (Shanghai)</p>
+     * <p>*   **cn-shenzhen**: China (Shenzhen)</p>
+     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
+     * <p>*   **ap-southeast-1**: Singapore</p>
+     * <p>*   **ap-southeast-5**: Indonesia (Jakarta)</p>
+     * <p>*   **us-east-1**: US (Virginia)</p>
+     * <p>*   **us-west-1**: US (Silicon Valley)</p>
+     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
+     * <p>*   **eu-west-1**: UK (London)</p>
+     * <p>*   **ap-south-1**: India (Mumbai)</p>
+     */
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
+    /**
+     * <p>The types of the assets that you want to scan.</p>
+     */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 

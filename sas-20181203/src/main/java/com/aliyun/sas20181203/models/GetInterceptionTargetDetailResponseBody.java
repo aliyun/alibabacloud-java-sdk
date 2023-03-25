@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetInterceptionTargetDetailResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the network object.</p>
+     */
     @NameInMap("RuleTarget")
     public GetInterceptionTargetDetailResponseBodyRuleTarget ruleTarget;
 
@@ -32,30 +38,59 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
     }
 
     public static class GetInterceptionTargetDetailResponseBodyRuleTarget extends TeaModel {
+        /**
+         * <p>The name of the application to which the network object belongs.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The ID of the container cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the container cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>An array that consists of the images of the network object.</p>
+         */
         @NameInMap("ImageList")
         public java.util.List<String> imageList;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>An array that consists of the labels specified for the network object.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
 
+        /**
+         * <p>The ID of the network object.</p>
+         */
         @NameInMap("TargetId")
         public Long targetId;
 
+        /**
+         * <p>The name of the network object.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the network object. Valid values:</p>
+         * <br>
+         * <p>*   **IMAGE**: image</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 

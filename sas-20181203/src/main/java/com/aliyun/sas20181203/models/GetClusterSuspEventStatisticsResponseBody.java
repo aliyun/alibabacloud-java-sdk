@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of alerts by risk level.</p>
+     */
     @NameInMap("SuspStatistics")
     public GetClusterSuspEventStatisticsResponseBodySuspStatistics suspStatistics;
 
@@ -32,12 +38,21 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetClusterSuspEventStatisticsResponseBodySuspStatistics extends TeaModel {
+        /**
+         * <p>The number of alerts whose Emergency level is Reminder.</p>
+         */
         @NameInMap("Remind")
         public Integer remind;
 
+        /**
+         * <p>The number of alerts whose Emergency level is Urgent.</p>
+         */
         @NameInMap("Serious")
         public Integer serious;
 
+        /**
+         * <p>The number of alerts whose Emergency level is Suspicious.</p>
+         */
         @NameInMap("Suspicious")
         public Integer suspicious;
 

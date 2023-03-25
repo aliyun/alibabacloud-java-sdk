@@ -4,15 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateJenkinsImageRegistryNameResponseBody extends TeaModel {
+    /**
+     * <p>The result of the operation. Valid values:</p>
+     * <br>
+     * <p>*   **true**: successful</p>
+     * <p>*   **false**: failed</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time consumed. Unit: seconds.</p>
+     */
     @NameInMap("TimeCost")
     public Long timeCost;
 

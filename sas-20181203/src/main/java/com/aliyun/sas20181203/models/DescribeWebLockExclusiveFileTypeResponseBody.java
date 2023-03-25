@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the types of the files that have web tamper proofing disabled.</p>
+     */
     @NameInMap("ExclusiveFileType")
     public java.util.List<String> exclusiveFileType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of types of the files that have web tamper proofing disabled.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

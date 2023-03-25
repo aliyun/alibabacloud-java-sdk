@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckResultResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the check items.</p>
+     */
     @NameInMap("Checks")
     public java.util.List<ListCheckResultResponseBodyChecks> checks;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListCheckResultResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,39 @@ public class ListCheckResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckResultResponseBodyChecksCheckPolicies extends TeaModel {
+        /**
+         * <p>The requirement item ID of the check item.</p>
+         */
         @NameInMap("RequirementId")
         public Long requirementId;
 
+        /**
+         * <p>The display name of the requirement item for the check item.</p>
+         */
         @NameInMap("RequirementShowName")
         public String requirementShowName;
 
+        /**
+         * <p>The section ID of the check item.</p>
+         */
         @NameInMap("SectionId")
         public Long sectionId;
 
+        /**
+         * <p>The section display name of the check item.</p>
+         */
         @NameInMap("SectionShowName")
         public String sectionShowName;
 
+        /**
+         * <p>The standard ID of the check item.</p>
+         */
         @NameInMap("StandardId")
         public Long standardId;
 
+        /**
+         * <p>The standard display name of the check item.</p>
+         */
         @NameInMap("StandardShowName")
         public String standardShowName;
 
@@ -117,39 +144,134 @@ public class ListCheckResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckResultResponseBodyChecks extends TeaModel {
+        /**
+         * <p>The ID of the check item.</p>
+         */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>An array that consists of the check policies.</p>
+         */
         @NameInMap("CheckPolicies")
         public java.util.List<ListCheckResultResponseBodyChecksCheckPolicies> checkPolicies;
 
+        /**
+         * <p>The name of the check item.</p>
+         */
         @NameInMap("CheckShowName")
         public String checkShowName;
 
+        /**
+         * <p>The asset subtype of the cloud service. Valid values:</p>
+         * <br>
+         * <p>*   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **INSTANCE**</p>
+         * <p>    *   **DISK**</p>
+         * <p>    *   **SECURITY_GROUP**</p>
+         * <br>
+         * <p>*   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **REPOSITORY_ENTERPRISE**</p>
+         * <p>    *   **REPOSITORY_PERSON**</p>
+         * <br>
+         * <p>*   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **ALIAS**</p>
+         * <p>    *   **USER**</p>
+         * <p>    *   **POLICY**</p>
+         * <p>    *   **GROUP**</p>
+         * <br>
+         * <p>*   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **DOMAIN**</p>
+         * <br>
+         * <p>*   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **INSTANCE**</p>
+         */
         @NameInMap("InstanceSubType")
         public String instanceSubType;
 
+        /**
+         * <p>The asset type of the cloud service. Valid values:</p>
+         * <br>
+         * <p>*   **ECS**: ECS</p>
+         * <p>*   **SLB**: SLB</p>
+         * <p>*   **RDS**: ApsaraDB RDS</p>
+         * <p>*   **MONGODB**: MongoDB</p>
+         * <p>*   **KVSTORE**: Redis</p>
+         * <p>*   **ACR**: Container Registry</p>
+         * <p>*   **CSK**: ACK</p>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **ACTIONTRAIL**: ActionTrail</p>
+         * <p>*   **CDN**: CDN</p>
+         * <p>*   **CAS**: Certificate Management Service (formerly SSL Certificates Service)</p>
+         * <p>*   **RDC**: Apsara Devops</p>
+         * <p>*   **RAM**: RAM</p>
+         * <p>*   **DDOS**: Anti-DDoS</p>
+         * <p>*   **WAF**: WAF</p>
+         * <p>*   **OSS**: OSS</p>
+         * <p>*   **POLARDB**: PolarDB</p>
+         * <p>*   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL</p>
+         * <p>*   **MSE**: MSE</p>
+         * <p>*   **NAS**: NAS</p>
+         * <p>*   **SDDP**: SDDP</p>
+         * <p>*   **EIP**: EIP</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The timestamp when the last check was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("LastCheckTime")
         public Long lastCheckTime;
 
+        /**
+         * <p>The risk level of the check item. Valid values:</p>
+         * <br>
+         * <p>*   **HIGH**</p>
+         * <p>*   **MEDIUM**</p>
+         * <p>*   **LOW**</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The status of the check item. Valid values:</p>
+         * <br>
+         * <p>*   **PASS**</p>
+         * <p>*   **NOT_PASS**</p>
+         * <p>*   **CHECKING**</p>
+         * <p>*   **NOT_CHECK**</p>
+         * <p>*   **WHITELIST**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the check task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Indicates whether the TRIAL permission is required.</p>
+         */
         @NameInMap("TrialPermission")
         public Boolean trialPermission;
 
+        /**
+         * <p>The value of the cloud service provider.</p>
+         */
         @NameInMap("Vendor")
         public String vendor;
 
+        /**
+         * <p>The name of the cloud service provider.</p>
+         */
         @NameInMap("VendorShowName")
         public String vendorShowName;
 
@@ -257,15 +379,27 @@ public class ListCheckResultResponseBody extends TeaModel {
     }
 
     public static class ListCheckResultResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

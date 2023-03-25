@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedInstancesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information about the assets.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<DescribeGroupedInstancesResponseBodyInstances> instances;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeGroupedInstancesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,44 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <p>The number of assets on which high-risk vulnerabilities are detected.</p>
+         */
         @NameInMap("AsapVulInstanceCount")
         public Long asapVulInstanceCount;
 
+        /**
+         * <p>The name of the server group.</p>
+         */
         @NameInMap("FieldAliasName")
         public String fieldAliasName;
 
+        /**
+         * <p>The type of the server group. Valid values:</p>
+         * <br>
+         * <p>*   **0**: the default group</p>
+         * <p>*   **1**: other group</p>
+         */
         @NameInMap("GroupFlag")
         public Integer groupFlag;
 
+        /**
+         * <p>The total number of assets that belong to the specified type.</p>
+         * <br>
+         * <p>>  If the **MachineTypes** request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.</p>
+         */
         @NameInMap("InstanceCount")
         public String instanceCount;
 
+        /**
+         * <p>The number of assets that are at risk.</p>
+         */
         @NameInMap("RiskInstanceCount")
         public String riskInstanceCount;
 
+        /**
+         * <p>The number of assets that are not protected by Security Center.</p>
+         */
         @NameInMap("UnProtectedInstanceCount")
         public String unProtectedInstanceCount;
 
@@ -117,15 +149,27 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedInstancesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: **20**.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

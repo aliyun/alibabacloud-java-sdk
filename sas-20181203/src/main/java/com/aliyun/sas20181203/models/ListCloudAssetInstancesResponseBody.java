@@ -4,15 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCloudAssetInstancesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details of the cloud assets.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListCloudAssetInstancesResponseBodyInstances> instances;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListCloudAssetInstancesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,42 +69,174 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
     }
 
     public static class ListCloudAssetInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <p>Indicates whether alerts are generated for the cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
+        /**
+         * <p>The subtype of the cloud asset. The subtype of the cloud service. Valid values:</p>
+         * <br>
+         * <p>*   **0**: ECS</p>
+         * <p>    * **0**: instance</p>
+         * <p>    * **1**: disk (storage)</p>
+         * <p>    * **2**: security group</p>
+         * <p>*   **1**: SLB</p>
+         * <p>    * **0**: SLB</p>
+         * <p>    * **1**: Application Load Balancer (ALB)</p>
+         * <p>*   **3**: ApsaraDB RDS</p>
+         * <p>    * **0**: instance</p>
+         * <p>*   **4**: MongoDB</p>
+         * <p>    * **0**: instance</p>
+         * <p>*   **5**: Redis</p>
+         * <p>    * **0**: instance</p>
+         * <p>*   **6**: Container Registry</p>
+         * <p>    * **1**: Enterprise Edition</p>
+         * <p>    * **2**: Personal Edition</p>
+         * <p>*   **8**: ACK</p>
+         * <p>    * **0**: cluster</p>
+         * <p>*   **9**: VPC</p>
+         * <p>    * **0**: NAT gateway</p>
+         * <p>    * **1**:EIP</p>
+         * <p>    * **2**:VPN</p>
+         * <p>    * **3**:FLOW_LOG</p>
+         * <p>*   **11**: ActionTrail</p>
+         * <p>    * **0**: trail</p>
+         * <p>*   **12**: CDN</p>
+         * <p>    * **0**: instance</p>
+         * <p>*   **13**: Certificate Management Service (formerly SSL Certificates Service)</p>
+         * <p>     * **0**: certificate</p>
+         * <p>*   **14**: Apsara Devops</p>
+         * <p>    * **0**: organization</p>
+         * <p>*   **16**: Anti-DDoS</p>
+         * <p>    * **0**: instance</p>
+         * <p>*   **17**: WAF</p>
+         * <p>    * **0**: domain name</p>
+         * <p>*   **18**: OSS</p>
+         * <p>    * **0**:Bucket</p>
+         * <p>*   **19**: PolarDB</p>
+         * <p>    * **0**: cluster</p>
+         * <p>*   **20**: ApsaraDB RDS for PostgreSQL</p>
+         * <p>    * **0**: instance</p>
+         * <p>*   **21**: MSE</p>
+         * <p>    * **0**: cluster</p>
+         * <p>*   **22**: NAS</p>
+         * <p>    * **0**: file system</p>
+         * <p>*   **23**: DSC</p>
+         * <p>    * **0**: instance</p>
+         * <p>*   **24**: EIP</p>
+         * <p>    * **0**: Anycast EIP</p>
+         * <p>*   **25**: IDaaS EIAM</p>
+         * <p>    * **0**: instance</p>
+         * <p>*   **26**: PolarDB-X</p>
+         * <p>    * **0**: instance</p>
+         * <p>*   **27**: Elasticsearch</p>
+         * <p>    * **0**: instance</p>
+         */
         @NameInMap("AssetSubType")
         public String assetSubType;
 
+        /**
+         * <p>The subtype name of the cloud asset.</p>
+         */
         @NameInMap("AssetSubTypeName")
         public String assetSubTypeName;
 
+        /**
+         * <p>The type of the asset. Valid values:</p>
+         * <br>
+         * <p>*   **0**: Elastic Compute Service (ECS)</p>
+         * <p>*   **1**: Server Load Balancer (SLB)</p>
+         * <p>*   **3**: ApsaraDB RDS</p>
+         * <p>*   **4**: ApsaraDB for MongoDB (MongoDB)</p>
+         * <p>*   **5**: ApsaraDB for Redis (Redis)</p>
+         * <p>*   **6**: Container Registry</p>
+         * <p>*   **8**: Container Service for Kubernetes (ACK)</p>
+         * <p>*   **9**: Virtual Private Cloud (VPC)</p>
+         * <p>*   **11**: ActionTrail</p>
+         * <p>*   **12**: Alibaba Cloud CDN (CDN)</p>
+         * <p>*   **13**: Certificate Management Service (formerly SSL Certificates Service)</p>
+         * <p>*   **14**: Apsara Devops</p>
+         * <p>*   **16**: Anti-DDoS</p>
+         * <p>*   **17**: Web Application Firewall (WAF)</p>
+         * <p>*   **18**: Object Storage Service (OSS)</p>
+         * <p>*   **19**: PolarDB</p>
+         * <p>*   **20**: ApsaraDB RDS for PostgreSQL</p>
+         * <p>*   **21**: Microservices Engine (MSE)</p>
+         * <p>*   **22**: Apsara File Storage NAS (NAS)</p>
+         * <p>*   **23**: Data Security Center (DSC)</p>
+         * <p>*   **24**: Elastic IP Address (EIP)</p>
+         * <p>*   **25**: IDaaS EIAM</p>
+         * <p>*   **26**: PolarDB-X</p>
+         * <p>*   **27**: Elasticsearch</p>
+         */
         @NameInMap("AssetType")
         public Integer assetType;
 
+        /**
+         * <p>The type name of the cloud asset.</p>
+         */
         @NameInMap("AssetTypeName")
         public String assetTypeName;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The instance ID of the cloud asset.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name of the cloud asset.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the instance.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The region ID of the cloud asset.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Indicates whether risks are detected on the cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **YES**</p>
+         * <p>*   **NO**</p>
+         */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        /**
+         * <p>The security information about the cloud asset.</p>
+         */
         @NameInMap("SecurityInfo")
         public String securityInfo;
 
+        /**
+         * <p>The type of the cloud asset by source. Valid values:</p>
+         * <br>
+         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
+         * <p>*   **1**: a third-party cloud asset</p>
+         * <p>*   **2**: an asset in a data center</p>
+         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
+         * <p>*   **8**: a lightweight asset</p>
+         */
         @NameInMap("Vendor")
         public Integer vendor;
 
@@ -205,15 +352,27 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
     }
 
     public static class ListCloudAssetInstancesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of cloud assets.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

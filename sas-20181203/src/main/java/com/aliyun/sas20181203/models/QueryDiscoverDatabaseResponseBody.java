@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryDiscoverDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The progress of the database scan task in percentage.</p>
+     */
     @NameInMap("TaskProgress")
     public Integer taskProgress;
 

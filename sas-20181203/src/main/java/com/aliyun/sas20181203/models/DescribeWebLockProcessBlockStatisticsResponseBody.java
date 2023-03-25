@@ -4,18 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>An array consisting of the statistics on processes.</p>
+     */
     @NameInMap("List")
     public java.util.List<DescribeWebLockProcessBlockStatisticsResponseBodyList> list;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of processes.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
     }
 
     public static class DescribeWebLockProcessBlockStatisticsResponseBodyList extends TeaModel {
+        /**
+         * <p>The number of processes on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The process.</p>
+         */
         @NameInMap("Process")
         public String process;
 

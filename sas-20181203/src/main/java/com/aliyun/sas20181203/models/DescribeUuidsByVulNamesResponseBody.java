@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the statistics about the assets.</p>
+     */
     @NameInMap("MachineInfoStatistics")
     public java.util.List<DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics> machineInfoStatistics;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     }
 
     public static class DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics extends TeaModel {
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("MachineInstanceId")
         public String machineInstanceId;
 
+        /**
+         * <p>The IP address of the server.</p>
+         */
         @NameInMap("MachineIp")
         public String machineIp;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("MachineName")
         public String machineName;
 
+        /**
+         * <p>The name of the operating system that the server runs.</p>
+         */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <p>The ID of the region in which the server resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

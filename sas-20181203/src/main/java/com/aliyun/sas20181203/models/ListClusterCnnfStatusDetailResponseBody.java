@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the protection status of the container firewall.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListClusterCnnfStatusDetailResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +38,82 @@ public class ListClusterCnnfStatusDetailResponseBody extends TeaModel {
     }
 
     public static class ListClusterCnnfStatusDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>Indicates whether the container firewall plug-in is installed.</p>
+         */
         @NameInMap("Installed")
         public Boolean installed;
 
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The public IP address of the associated instance.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the associated instance.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The cause why the plug-in is invalid. Valid values:</p>
+         * <br>
+         * <p>*   **PLUGIN_OFFLINE**: The plug-in is offline.</p>
+         * <p>*   **PLUGIN\_NOT_INSTALLED**: The plug-in is not installed.</p>
+         * <p>*   **PLUGIN\_INVALID_VERSION**: The version of the plug-in is invalid.</p>
+         */
         @NameInMap("InvalidType")
         public String invalidType;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("MachineName")
         public String machineName;
 
+        /**
+         * <p>The machine type of the instance. The value is fixed as **ecs**.</p>
+         */
         @NameInMap("MachineType")
         public Integer machineType;
 
+        /**
+         * <p>The name of the plug-in. The value is fixed as **alinet**.</p>
+         */
         @NameInMap("PluginName")
         public String pluginName;
 
+        /**
+         * <p>The version of the plug-in.</p>
+         */
         @NameInMap("PluginVersion")
         public String pluginVersion;
 
+        /**
+         * <p>The online status of the plug-in. Valid values:</p>
+         * <br>
+         * <p>*   **false**: The plug-in is offline.</p>
+         * <p>*   **true**: The plug-in is online.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The UUID of the asset.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

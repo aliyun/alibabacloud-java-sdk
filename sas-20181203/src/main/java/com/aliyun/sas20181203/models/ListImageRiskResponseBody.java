@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListImageRiskResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of security information about the image.</p>
+     */
     @NameInMap("ImageRiskList")
     public java.util.List<ListImageRiskResponseBodyImageRiskList> imageRiskList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListImageRiskResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,18 @@ public class ListImageRiskResponseBody extends TeaModel {
     }
 
     public static class ListImageRiskResponseBodyImageRiskListEndPointList extends TeaModel {
+        /**
+         * <p>An array that consists the details of the domain name in the endpoint.</p>
+         */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
+        /**
+         * <p>The type of the domain name in the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **internet**: Internet</p>
+         * <p>*   **intranet**: internal network</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -73,57 +91,125 @@ public class ListImageRiskResponseBody extends TeaModel {
     }
 
     public static class ListImageRiskResponseBodyImageRiskList extends TeaModel {
+        /**
+         * <p>The digest value of the image.</p>
+         */
         @NameInMap("Digest")
         public String digest;
 
+        /**
+         * <p>An array that consists of the details of the endpoint.</p>
+         */
         @NameInMap("EndPointList")
         public java.util.List<ListImageRiskResponseBodyImageRiskListEndPointList> endPointList;
 
+        /**
+         * <p>The endpoint of Container Registry.</p>
+         */
         @NameInMap("Endpoints")
         public String endpoints;
 
+        /**
+         * <p>The image of the container.</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The registration status of the image repository. Valid values:</p>
+         * <br>
+         * <p>*   **IN_SAS**: The image repository is registered with Security Center.</p>
+         * <p>*   **NOT_IN_SAS**: The image repository is not registered with Security Center.</p>
+         */
         @NameInMap("ImageAccessType")
         public String imageAccessType;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The public endpoint of the image repository.</p>
+         */
         @NameInMap("InternetURLs")
         public String internetURLs;
 
+        /**
+         * <p>The region of the image repository.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The type of the image repository. Valid values:</p>
+         * <br>
+         * <p>*   **acr**</p>
+         * <p>*   **harbor**</p>
+         * <p>*   **quay**</p>
+         * <p>*   **CI/CD**: Jenkins</p>
+         */
         @NameInMap("RegistryType")
         public String registryType;
 
+        /**
+         * <p>The ID of the image repository.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The name of the namespace to which the repository belongs.</p>
+         */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
+        /**
+         * <p>The type of the repository. Valid values:</p>
+         * <br>
+         * <p>*   `PUBLIC`</p>
+         * <p>*   `PRIVATE`</p>
+         */
         @NameInMap("RepoType")
         public String repoType;
 
+        /**
+         * <p>The statistics on a security event.</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>The tag that is added to the image.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>Indicates whether the image version is immutable. If the image version is immutable, only the image of the latest version in the image repository can be overwritten. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The image version is mutable.</p>
+         * <p>*   **1**: The image version is immutable.</p>
+         */
         @NameInMap("TagImmutable")
         public Integer tagImmutable;
 
+        /**
+         * <p>The UUID of the image.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>The endpoint of the image repository in the VPC.</p>
+         */
         @NameInMap("VpcURLs")
         public String vpcURLs;
 
@@ -279,15 +365,27 @@ public class ListImageRiskResponseBody extends TeaModel {
     }
 
     public static class ListImageRiskResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,21 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSimilarSecurityEventsRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The ID of the task. You can call the [CreateSimilarSecurityEventsQueryTask](~~CreateSimilarSecurityEventsQueryTask~~) operation to query the IDs of tasks.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

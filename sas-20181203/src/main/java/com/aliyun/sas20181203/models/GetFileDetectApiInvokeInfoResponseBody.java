@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetFileDetectApiInvokeInfoResponseBodyData data;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,45 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
     }
 
     public static class GetFileDetectApiInvokeInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The total quota.</p>
+         */
         @NameInMap("AuthCount")
         public Long authCount;
 
+        /**
+         * <p>The timestamp when the quota expires.</p>
+         */
         @NameInMap("Expire")
         public Long expire;
 
+        /**
+         * <p>The API rate limit.</p>
+         */
         @NameInMap("FlowRate")
         public Integer flowRate;
 
+        /**
+         * <p>The remaining quota.</p>
+         */
         @NameInMap("RemainAuthCount")
         public Long remainAuthCount;
 
+        /**
+         * <p>The version of the malicious file detection SDK. Valid values:</p>
+         * <br>
+         * <p>*   **1**: the Trial version</p>
+         * <p>*   **2**: the Enterprise version</p>
+         */
         @NameInMap("SaleVersion")
         public Integer saleVersion;
 
+        /**
+         * <p>The time unit of the API rate limit. Valid values:</p>
+         * <br>
+         * <p>*   **SECONDS**</p>
+         * <p>*   **MINUTES**</p>
+         */
         @NameInMap("TimeUnit")
         public String timeUnit;
 

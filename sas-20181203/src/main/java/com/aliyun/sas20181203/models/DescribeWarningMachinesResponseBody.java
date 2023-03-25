@@ -4,21 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWarningMachinesResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries returned per page. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>An array that consists of the servers.</p>
+     */
     @NameInMap("WarningMachines")
     public java.util.List<DescribeWarningMachinesResponseBodyWarningMachines> warningMachines;
 
@@ -76,45 +94,109 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeWarningMachinesResponseBodyWarningMachines extends TeaModel {
+        /**
+         * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
+         * <br>
+         * <p>*   **1**: Basic edition</p>
+         * <p>*   **6**: Anti-virus edition</p>
+         * <p>*   **5**: Advanced edition</p>
+         * <p>*   **3**: Enterprise edition</p>
+         * <p>*   **7**: Ultimate edition</p>
+         * <p>*   **10**: Value-added Plan edition</p>
+         */
         @NameInMap("AuthVersion")
         public Integer authVersion;
 
+        /**
+         * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Bind")
         public Boolean bind;
 
+        @NameInMap("ContainerId")
+        public String containerId;
+
+        @NameInMap("ContainerName")
+        public String containerName;
+
+        /**
+         * <p>The number of **high-risk** items on the server.</p>
+         */
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The number of **low-risk** items on the server.</p>
+         */
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
 
+        /**
+         * <p>The number of **medium-risk** items on the server.</p>
+         */
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
 
+        /**
+         * <p>The number of the check items that passed the baseline check on the server.</p>
+         */
         @NameInMap("PassCount")
         public Integer passCount;
 
+        /**
+         * <p>Indicates whether a port on the server is accessible over the Internet. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("PortOpen")
         public Boolean portOpen;
 
+        /**
+         * <p>The ID of the region in which the server is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The verification status of the risk item after the risk item is fixed. Valid values:</p>
+         * <br>
+         * <p>*   **1**: complete</p>
+         * <p>*   **2**: verifying</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The UUID of the server on which the baseline check is performed.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -137,6 +219,22 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
         public Boolean getBind() {
             return this.bind;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setContainerId(String containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setContainerName(String containerName) {
+            this.containerName = containerName;
+            return this;
+        }
+        public String getContainerName() {
+            return this.containerName;
         }
 
         public DescribeWarningMachinesResponseBodyWarningMachines setHighWarningCount(Integer highWarningCount) {

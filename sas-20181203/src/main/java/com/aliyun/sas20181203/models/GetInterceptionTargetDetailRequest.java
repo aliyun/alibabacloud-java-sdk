@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetInterceptionTargetDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the network object.</p>
+     * <br>
+     * <p>> You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.</p>
+     */
     @NameInMap("TargetId")
     public Long targetId;
 

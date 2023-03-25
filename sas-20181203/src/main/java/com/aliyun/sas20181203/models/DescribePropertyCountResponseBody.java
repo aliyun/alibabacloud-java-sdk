@@ -4,39 +4,75 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCountResponseBody extends TeaModel {
+    /**
+     * <p>The number of startup items.</p>
+     */
     @NameInMap("Autorun")
     public Integer autorun;
 
+    /**
+     * <p>The number of scheduled tasks.</p>
+     */
     @NameInMap("Cron")
     public Integer cron;
 
+    /**
+     * <p>The number of databases.</p>
+     */
     @NameInMap("Database")
     public Integer database;
 
+    /**
+     * <p>The number of kernel modules.</p>
+     */
     @NameInMap("Lkm")
     public Integer lkm;
 
+    /**
+     * <p>The number of ports.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The number of processes.</p>
+     */
     @NameInMap("Process")
     public Integer process;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of middleware assets.</p>
+     */
     @NameInMap("Sca")
     public Integer sca;
 
+    /**
+     * <p>The number of software assets.</p>
+     */
     @NameInMap("Software")
     public Integer software;
 
+    /**
+     * <p>The number of accounts.</p>
+     */
     @NameInMap("User")
     public Integer user;
 
+    /**
+     * <p>The number of websites.</p>
+     */
     @NameInMap("Web")
     public Integer web;
 
+    /**
+     * <p>The number of web services.</p>
+     */
     @NameInMap("Webserver")
     public Integer webserver;
 

@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
+    /**
+     * <p>The authorization status of image scans.</p>
+     */
     @NameInMap("AuthStatus")
     public DescribeImageScanAuthorizationResponseBodyAuthStatus authStatus;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,11 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
     }
 
     public static class DescribeImageScanAuthorizationResponseBodyAuthStatus extends TeaModel {
+        /**
+         * <p>Indicates whether Security Center is authorized to scan images. Valid values:</p>
+         * <p>* **true**: yes </p>
+         * <p>* **false**: no</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 

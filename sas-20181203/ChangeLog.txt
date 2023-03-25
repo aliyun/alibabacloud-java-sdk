@@ -1,3 +1,8 @@
+2023-03-25 Version: 2.0.4
+- Support container info.
+- Support max item 1000.
+- Support hybrid proxy install.
+
 2023-03-21 Version: 2.0.3
 - Change DescribeLogstoreStorage Response.
 

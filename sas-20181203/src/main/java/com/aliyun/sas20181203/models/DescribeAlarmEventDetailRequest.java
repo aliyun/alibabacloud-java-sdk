@@ -4,15 +4,32 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmEventDetailRequest extends TeaModel {
+    /**
+     * <p>The unique ID of the alert event.</p>
+     * <br>
+     * <p>>  To query the details of an alert event, you must specify the unique ID of the alert event. You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to query the unique IDs of alert events.</p>
+     */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;
 
+    /**
+     * <p>The ID of the request source. Set the value to **sas**.</p>
+     */
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

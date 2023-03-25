@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCriteriaResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the filter conditions.</p>
+     */
     @NameInMap("CriteriaList")
     public java.util.List<DescribeCriteriaResponseBodyCriteriaList> criteriaList;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,33 @@ public class DescribeCriteriaResponseBody extends TeaModel {
     }
 
     public static class DescribeCriteriaResponseBodyCriteriaList extends TeaModel {
+        /**
+         * <p>The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <br>
+         * <p>*   **vendor**: providers</p>
+         * <p>*   **regionIds**: IDs of supported regions</p>
+         */
         @NameInMap("MultiValues")
         public String multiValues;
 
+        /**
+         * <p>The name of the filter condition.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the filter condition. Valid values:</p>
+         * <br>
+         * <p>*   **input**: The filter condition needs to be specified.</p>
+         * <p>*   **select**: The filter condition is an option that can be selected from the drop-down list.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The attribute values of the assets that match the keyword.</p>
+         */
         @NameInMap("Values")
         public String values;
 
