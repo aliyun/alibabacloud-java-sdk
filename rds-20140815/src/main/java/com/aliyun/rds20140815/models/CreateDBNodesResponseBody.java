@@ -10,6 +10,9 @@ public class CreateDBNodesResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("NodeIds")
+    public String nodeIds;
+
     /**
      * <p>The ID of the order.</p>
      */
@@ -33,6 +36,14 @@ public class CreateDBNodesResponseBody extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public CreateDBNodesResponseBody setNodeIds(String nodeIds) {
+        this.nodeIds = nodeIds;
+        return this;
+    }
+    public String getNodeIds() {
+        return this.nodeIds;
     }
 
     public CreateDBNodesResponseBody setOrderId(Long orderId) {

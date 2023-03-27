@@ -5,19 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The endpoint of the database.</p>
+     * <p>The endpoint of the instance.</p>
      * <br>
-     * <p>>  The **DBInstanceNetType** parameter indicates whether the endpoint is an internal endpoint or a public endpoint.</p>
+     * <p>> The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
-     * <p>The ID of the instance. If the value of the **Amount** parameter is greater than **1**, more than one instance ID is returned. The number of instance IDs that are returned is the same as the value of the Amount parameter. The returned instance IDs are separated by commas (,).</p>
+     * <p>The ID of the instance If the value of the **Amount** parameter is greater than **1**, more than one instance ID is returned. The number of instance IDs that are returned is the same as the value of the Amount parameter. The returned instance IDs are separated by commas (,).</p>
      * <br>
-     * <p>For example, if the value of the **Amount** parameter is **3**, three instance IDs are returned. Example:</p>
-     * <br>
-     * <p>`rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3`</p>
+     * <p>For example, if the value of the **Amount** parameter is **3**, three instance IDs are returned. Example: `rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3`</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,7 +23,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>Indicates that the system prechecks the request before the system creates the instance.</p>
      * <br>
-     * <p>> *   The value is fixed as **true**.</p>
+     * <br>
+     * <br>
+     * <p>> *   The return value is fixed as **true**.</p>
+     * <br>
      * <p>> *   If the system does not perform a precheck, this parameter is not returned.</p>
      */
     @NameInMap("DryRun")
@@ -34,11 +35,14 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request passed the precheck. Valid values:</p>
      * <br>
-     * <p>- **true**: The request passed the precheck.</p>
-     * <p>- **false**: The request failed the precheck.</p>
+     * <p>*   **true**: The request passed the precheck.</p>
+     * <p>*   **false**: The request failed the precheck.</p>
      * <br>
-     * <p>    > *   If the system does not perform a precheck, this parameter is not returned.</p>
-     * <p>    > *   If the request failed the precheck, an error is returned.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   If the system does not perform a precheck, this parameter is not returned.</p>
+     * <p>> </p>
+     * <p>*   If the request failed the precheck, an error is returned.</p>
      */
     @NameInMap("DryRunResult")
     public Boolean dryRunResult;
@@ -46,7 +50,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The message that indicates whether multiple instances are created.</p>
      * <br>
-     * <p>>  This parameter is returned only when the value of the **Amount** parameter is greater than 1.</p>
+     * <p>> The parameter is returned only when the value of the **Amount** parameter is greater than 1.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -60,7 +64,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The port that is used to connect to the instance.</p>
      * <br>
-     * <p>>  The **DBInstanceNetType** parameter indicates whether the port is an internal port or a public port.</p>
+     * <p>> The **DBInstanceNetType** parameter indicates whether the port number is internal or public.</p>
      */
     @NameInMap("Port")
     public String port;
@@ -75,9 +79,9 @@ public class CreateDBInstanceResponseBody extends TeaModel {
      * <p>Indicates whether the specified tag is added to the instance. Valid values:</p>
      * <br>
      * <p>*   **true**: The specified tag is added to the instance.</p>
-     * <p>*   **false**: The specified tag cannot be added to the instance.</p>
+     * <p>*   **false**: The specified tag fails to be added to the instance.</p>
      * <br>
-     * <p>>  If you do not add a tag to the instance, this parameter is not returned.</p>
+     * <p>> If you do not add a tag to the instance, this parameter is not returned.</p>
      */
     @NameInMap("TagResult")
     public Boolean tagResult;
@@ -85,7 +89,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the task that is run to create multiple instances.</p>
      * <br>
-     * <p>> *   The parameter is returned only when the value of the **Amount** parameter is greater than 1.</p>
+     * <br>
+     * <br>
+     * <p>> *   This parameter is returned only when the value of the **Amount** parameter is greater than 1.</p>
+     * <br>
      * <p>> *   The **TaskID** parameter cannot be used to query a task.</p>
      */
     @NameInMap("TaskId")

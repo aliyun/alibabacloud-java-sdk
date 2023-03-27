@@ -7,7 +7,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     /**
      * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
      * <br>
-     * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
+     * <p>> This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
      */
     @NameInMap("BabelfishPort")
     public String babelfishPort;
@@ -15,7 +15,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     /**
      * <p>The prefix of the public endpoint. A valid public endpoint is in the following format: Prefix.Database engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.</p>
      * <br>
-     * <p>>  The value can be 5 to 40 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following characters: ~ ! # % ^ & \* = + | {} ; : \" " , <> / ?</p>
+     * <p>> The value can be 5 to 40 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following characters: ~ ! # % ^ & \* = + | {} ; : \" " , <> / ?</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
@@ -27,7 +27,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+     * <p>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
      */
     @NameInMap("GeneralGroupName")
     public String generalGroupName;

@@ -5,32 +5,28 @@ import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
-     * <p>The username of the account.</p>
+     * <p>The name of the account.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The permission that you want to grant to the account. The number of permissions must be the same as the number of databases that you specify for the DBName parameter. You can specify this parameter based on your business requirements. Valid values:</p>
+     * <p>The permissions that you want to grant to the account. The number of permissions must be the same as the number of databases that you specify for the DBName parameter. You can specify this parameter based on your business requirements. Valid values:</p>
      * <br>
      * <p>*   **ReadWrite**: read and write permissions</p>
      * <p>*   **ReadOnly**: read-only permissions</p>
      * <p>*   **DDLOnly**: DDL-only permissions</p>
      * <p>*   **DMLOnly**: DML-only permissions</p>
      * <p>*   **DBOwner**: database owner permissions</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the instance runs MySQL or MariaDB TX, you can set this parameter to **ReadWrite**, **ReadOnly**, **DDLOnly**, or **DMLOnly**.</p>
-     * <br>
-     * <p>*   If the instance runs SQL Server, you can set this parameter to **ReadWrite**, **ReadOnly**, or **DBOwner**.</p>
-     * <p>*   If the instance runs PostgreSQL with standard SSDs or enhanced SSDs (ESSDs), you can set this parameter only to **DBOwner**.</p>
+     * <p>> *   If the instance runs MySQL or MariaDB, you can set this parameter to **ReadWrite**, **ReadOnly**, **DDLOnly**, or **DMLOnly**.</p>
+     * <p>> *   If the instance runs SQL Server, you can set this parameter to **ReadWrite**, **ReadOnly**, or **DBOwner**.</p>
+     * <p>> *   If the instance runs PostgreSQL with standard SSDs or enhanced SSDs (ESSDs), you can set this parameter only to **DBOwner**.</p>
      */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
     /**
-     * <p>The ID of the instance</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

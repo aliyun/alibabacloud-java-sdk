@@ -16,6 +16,9 @@ public class ModifyPGHbaConfigRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>AD domain service information list.</p>
+     */
     @NameInMap("HbaItem")
     public java.util.List<ModifyPGHbaConfigRequestHbaItem> hbaItem;
 

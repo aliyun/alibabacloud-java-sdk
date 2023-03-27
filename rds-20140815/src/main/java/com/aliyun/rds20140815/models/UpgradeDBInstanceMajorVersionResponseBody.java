@@ -23,7 +23,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>This parameter is reserved.</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

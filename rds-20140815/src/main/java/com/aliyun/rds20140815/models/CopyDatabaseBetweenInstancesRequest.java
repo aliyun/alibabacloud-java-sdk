@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the backup file based on which you want to copy databases. When you copy databases based on the backup file, you can call the [DescribeBackups](~~26273~~) operation to obtain the backup file ID.</p>
+     * <p>The ID of the backup set by which you want to restore databases of the source instance. You can call the [DescribeBackups](~~26273~~) operation to obtain the IDs of backup sets.</p>
      * <br>
-     * <p>>  You must specify one of the **BackupId** or **RestoreTime** parameter.</p>
+     * <p>> You must specify one of the **BackupId** and **RestoreTime** parameters.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -19,7 +19,7 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The names of the databases to be copied. Format: {"Source instance database name":"Destination instance database name"}.</p>
+     * <p>The names of the databases. Format: `{"Original database name 1":"New database name 1","Original database name 2":"New database name 2"}`.</p>
      */
     @NameInMap("DbNames")
     public String dbNames;
@@ -28,9 +28,9 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time when the system copies databases. You can select a point in time within the backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The point in time when the system replicates databases. You can select a point in time within the backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>>  You must specify one of the **BackupId** or **RestoreTime** parameter.</p>
+     * <p>> You must specify one of the **BackupId** and **RestoreTime** parameters.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;

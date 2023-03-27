@@ -11,7 +11,7 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -31,7 +31,7 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid values: **30** to **100**. Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -43,7 +43,7 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

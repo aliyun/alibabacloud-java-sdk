@@ -284,7 +284,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

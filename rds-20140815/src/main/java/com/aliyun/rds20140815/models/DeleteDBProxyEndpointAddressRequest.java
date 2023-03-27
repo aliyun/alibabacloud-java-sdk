@@ -19,8 +19,11 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
      * <br>
      * <p>Default value: **Classic**.</p>
      * <br>
-     * <p>> * If the instance uses standard SSDs or enhanced SSDs (ESSDs) and the network type of the proxy endpoint is VPC, you cannot delete the proxy endpoint.</p>
-     * <p>> * If the instance runs PostgreSQL, you can set this parameter to **Public** or **VPC**.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the instance uses standard SSDs or enhanced SSDs (ESSDs) and the network type of the proxy endpoint is VPC, you cannot delete the proxy endpoint.</p>
+     * <br>
+     * <p>*   If the instance runs PostgreSQL, you can set this parameter to **Public** or **VPC**.</p>
      */
     @NameInMap("DBProxyConnectStringNetType")
     public String DBProxyConnectStringNetType;
@@ -38,7 +41,7 @@ public class DeleteDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

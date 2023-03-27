@@ -7,14 +7,14 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
      * <br>
-     * <p>*   **Disable**</p>
-     * <p>*   **Enable**</p>
+     * <p>*   **Disable**: The feature is disabled.</p>
+     * <p>*   **Enable**: The feature is enabled.</p>
      */
     @NameInMap("BackupEnabled")
     public String backupEnabled;
 
     /**
-     * <p>The ID of the destination region where the cross-region backup files of the instance are stored.</p>
+     * <p>The ID of the region in which the cross-region backup files of the instance are stored.</p>
      */
     @NameInMap("CrossBackupRegion")
     public String crossBackupRegion;
@@ -26,7 +26,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String crossBackupType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -34,8 +34,8 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
      * <br>
-     * <p>*   **Disable**</p>
-     * <p>*   **Enable**</p>
+     * <p>*   **Disable**: The feature is disabled.</p>
+     * <p>*   **Enable**: The feature is enabled.</p>
      */
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;
