@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHpcClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the HPC cluster.</p>
+     * <p>The ID of cluster.</p>
      */
     @NameInMap("HpcClusterId")
     public String hpcClusterId;

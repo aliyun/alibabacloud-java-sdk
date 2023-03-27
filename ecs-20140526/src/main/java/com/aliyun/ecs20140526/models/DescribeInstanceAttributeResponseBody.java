@@ -51,6 +51,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("EipAddress")
     public DescribeInstanceAttributeResponseBodyEipAddress eipAddress;
 
+    @NameInMap("EnableJumboFrame")
+    public Boolean enableJumboFrame;
+
     /**
      * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](https://icms.alibaba-inc.com/content/ecs/api?l=1&m=277&n=10049).</p>
      */
@@ -289,6 +292,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
     public DescribeInstanceAttributeResponseBodyEipAddress getEipAddress() {
         return this.eipAddress;
+    }
+
+    public DescribeInstanceAttributeResponseBody setEnableJumboFrame(Boolean enableJumboFrame) {
+        this.enableJumboFrame = enableJumboFrame;
+        return this;
+    }
+    public Boolean getEnableJumboFrame() {
+        return this.enableJumboFrame;
     }
 
     public DescribeInstanceAttributeResponseBody setExpiredTime(String expiredTime) {

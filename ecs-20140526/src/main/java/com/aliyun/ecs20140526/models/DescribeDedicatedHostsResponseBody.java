@@ -354,6 +354,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceOwnerId")
+        public Long instanceOwnerId;
+
         /**
          * <p>The instance type of the ECS instance created on the dedicated host.</p>
          */
@@ -374,6 +377,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance setInstanceOwnerId(Long instanceOwnerId) {
+            this.instanceOwnerId = instanceOwnerId;
+            return this;
+        }
+        public Long getInstanceOwnerId() {
+            return this.instanceOwnerId;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance setInstanceType(String instanceType) {
@@ -607,7 +618,6 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost extends TeaModel {
         @NameInMap("SchedulerOptions")
-        @Validation(required = true)
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSchedulerOptions schedulerOptions;
 
         /**
@@ -685,6 +695,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
          */
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
+
+        @NameInMap("DedicatedHostOwnerId")
+        public Long dedicatedHostOwnerId;
 
         /**
          * <p>The type of the dedicated host.</p>
@@ -912,6 +925,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
         public String getDedicatedHostName() {
             return this.dedicatedHostName;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setDedicatedHostOwnerId(Long dedicatedHostOwnerId) {
+            this.dedicatedHostOwnerId = dedicatedHostOwnerId;
+            return this;
+        }
+        public Long getDedicatedHostOwnerId() {
+            return this.dedicatedHostOwnerId;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setDedicatedHostType(String dedicatedHostType) {

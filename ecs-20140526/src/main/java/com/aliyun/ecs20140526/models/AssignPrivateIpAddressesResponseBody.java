@@ -77,7 +77,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
+         * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
          */
         @NameInMap("Ipv4PrefixSet")
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetIpv4PrefixSet ipv4PrefixSet;

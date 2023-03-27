@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StopInvocationRequest extends TeaModel {
-    /**
-     * <p>The ID of instance N where the command needs to be stopped. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.</p>
-     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
-    /**
-     * <p>The ID of the execution. You can call the [DescribeInvocations](~~64840~~) operation to query all execution IDs.</p>
-     */
     @NameInMap("InvokeId")
     public String invokeId;
 
@@ -22,9 +16,6 @@ public class StopInvocationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

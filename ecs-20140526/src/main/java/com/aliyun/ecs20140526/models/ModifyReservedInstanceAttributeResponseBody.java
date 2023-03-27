@@ -11,13 +11,13 @@ public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message for this instance operation. The return value Success indicates that this operation is successful. For more information, see the "Error codes" section in this topic.</p>
+     * <p>The error message for this instance operation. The return value Success indicates that this operation is successful. For more information, see the "Error codes" section of this topic.</p>
      */
     @NameInMap("Message")
     public String message;

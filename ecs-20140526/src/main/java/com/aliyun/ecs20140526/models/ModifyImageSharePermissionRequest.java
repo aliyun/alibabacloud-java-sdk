@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyImageSharePermissionRequest extends TeaModel {
     /**
-     * <p>The ID of Alibaba Cloud account N to which to share the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.</p>
+     * <p>The ID of Alibaba Cloud account N with which you want to share the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.</p>
      */
     @NameInMap("AddAccount")
     public java.util.List<String> addAccount;
@@ -17,18 +17,18 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>Specifies whether to publish or unpublish the custom image as a community image. Valid values:</p>
+     * <p>Specifies whether to publish or unpublish a community image. Valid values:</p>
      * <br>
-     * <p>*   true: publishes the image as a community image.</p>
-     * <p>*   false: unpublishes the image as a community image. If the image is not a community image before the operation, it remains unchanged.</p>
+     * <p>*   true: publishes the custom image as a community image.</p>
+     * <p>*   false: unpublishes a community image. The unpublish operation takes effect only on community images.</p>
      * <br>
-     * <p>Default value: false.</p>
+     * <p>Default value: false</p>
      */
     @NameInMap("IsPublic")
     public Boolean isPublic;
 
     /**
-     * <p>>  This parameter is in invitational preview and is unavailable to general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
      */
     @NameInMap("LaunchPermission")
     public String launchPermission;
@@ -40,13 +40,13 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of Alibaba Cloud account N from which to unshare the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.</p>
+     * <p>The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.</p>
      */
     @NameInMap("RemoveAccount")
     public java.util.List<String> removeAccount;

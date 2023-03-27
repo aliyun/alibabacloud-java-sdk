@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
-    /**
-     * <p>The ID of the dedicated host cluster.</p>
-     */
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
 
-    /**
-     * <p>The new name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot contain `http://` or `https://`.</p>
-     */
     @NameInMap("DedicatedHostClusterName")
     public String dedicatedHostClusterName;
 
-    /**
-     * <p>The new description of the dedicated host cluster. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
-     */
     @NameInMap("Description")
     public String description;
 
@@ -28,9 +19,6 @@ public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

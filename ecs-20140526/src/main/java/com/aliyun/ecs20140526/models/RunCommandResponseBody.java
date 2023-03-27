@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RunCommandResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the command.</p>
-     */
     @NameInMap("CommandId")
     public String commandId;
 
-    /**
-     * <p>The ID of the command task.</p>
-     */
     @NameInMap("InvokeId")
     public String invokeId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

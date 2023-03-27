@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationResultsResponseBody extends TeaModel {
     /**
-     * <p>Details of the execution result.</p>
+     * <p>Details of the execution results.</p>
      */
     @NameInMap("Invocation")
     public DescribeInvocationResultsResponseBodyInvocation invocation;
@@ -39,13 +39,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     public static class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the command.</p>
+         * <p>The tag key of the command task.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the command.</p>
+         * <p>The tag value of the command task.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -112,7 +112,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public String containerName;
 
         /**
-         * <p>The size of truncated and discarded text when the size of text in the `Output` response parameter is larger than 24 KB.</p>
+         * <p>The size of the text that is truncated and discarded when the `Output` value exceeds 24 KB in size.</p>
          */
         @NameInMap("Dropped")
         public Integer dropped;
@@ -122,20 +122,20 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          * <br>
          * <p>*   If this parameter is empty, the command is run normally.</p>
          * <p>*   InstanceNotExists: The instance does not exist or has been released.</p>
-         * <p>*   InstanceReleased: The instance is released while the command is being run.</p>
-         * <p>*   InstanceNotRunning: The instance is not running while the command is being run.</p>
+         * <p>*   InstanceReleased: The instance was released while the command was being run.</p>
+         * <p>*   InstanceNotRunning: The instance was not running while the command was being run.</p>
          * <p>*   CommandNotApplicable: The command is not applicable to the specified instance.</p>
          * <p>*   AccountNotExists: The specified account does not exist.</p>
          * <p>*   DirectoryNotExists: The specified directory does not exist.</p>
-         * <p>*   BadCronExpression: The specified cron expression for the execution schedule is invalid.</p>
+         * <p>*   BadCronExpression: The cron expression used to specify a schedule is invalid.</p>
          * <p>*   ClientNotRunning: The Cloud Assistant client is not running.</p>
          * <p>*   ClientNotResponse: The Cloud Assistant client does not respond.</p>
          * <p>*   ClientIsUpgrading: The Cloud Assistant client is being upgraded.</p>
          * <p>*   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.</p>
-         * <p>*   DeliveryTimeout: The request to send the command has timed out.</p>
-         * <p>*   ExecutionTimeout: The execution has timed out.</p>
-         * <p>*   ExecutionException: An exception has occurred while the command is being run.</p>
-         * <p>*   ExecutionInterrupted: The execution is interrupted.</p>
+         * <p>*   DeliveryTimeout: The request to send the command timed out.</p>
+         * <p>*   ExecutionTimeout: The execution timed out.</p>
+         * <p>*   ExecutionException: An exception occurred while the command was being run.</p>
+         * <p>*   ExecutionInterrupted: The execution was interrupted.</p>
          * <p>*   ExitCodeNonzero: The execution is complete, but the exit code is not 0.</p>
          */
         @NameInMap("ErrorCode")
@@ -175,13 +175,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public Long exitCode;
 
         /**
-         * <p>The completion time of the execution. If an execution times out, the completion time of the execution is subject to the value of the TimedOut parameter specified in the [CreateCommand](~~64844~~) operation.</p>
+         * <p>The end time of the execution. If an execution times out, the end time of the execution is subject to the value of the TimedOut parameter specified in the [CreateCommand](~~64844~~) operation.</p>
          */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -205,7 +205,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          * <p>*   Failed:</p>
          * <br>
          * <p>    *   Command that is set to run only once: The execution is complete, but the exit code is not 0.</p>
-         * <p>    *   Command that is set to run on a schedule: The last execution is complete, the exit code is not 0, and the specified execution time is about to end.</p>
+         * <p>    *   Command that is set to run on a schedule: The last execution is complete, the exit code is not 0, and the specified cycle is about to end.</p>
          * <br>
          * <p>*   Error: The execution cannot proceed due to an exception.</p>
          * <br>
@@ -213,7 +213,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
          * <br>
          * <p>*   Cancelled: The execution is canceled, and the command is not run.</p>
          * <br>
-         * <p>*   Stopping: The command that is running is being stopped.</p>
+         * <p>*   Stopping: The running command is being stopped.</p>
          * <br>
          * <p>*   Terminated: The command is terminated while it is being run.</p>
          * <br>
@@ -232,7 +232,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public String invokeId;
 
         /**
-         * <p>The state of the execution.</p>
+         * <p>The execution state of the command.</p>
          */
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
@@ -259,19 +259,19 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time when the command stopped being run on the instance. If you call the `StopInvocation` operation to manually stop the execution, the value is the time when you call the operation.</p>
+         * <p>The time when the command stopped being run on the instance. If you call the `StopInvocation` operation to manually stop the execution, the value is the time when you called the operation.</p>
          */
         @NameInMap("StopTime")
         public String stopTime;
 
         /**
-         * <p>The tags of the command.</p>
+         * <p>The tags of the command task.</p>
          */
         @NameInMap("Tags")
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags tags;
 
         /**
-         * <p>The username that was used to run the command on the ECS instance.</p>
+         * <p>The username that was used to run the command on the instance.</p>
          */
         @NameInMap("Username")
         public String username;

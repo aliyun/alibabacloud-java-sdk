@@ -45,14 +45,14 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The state of the execution. Valid values:</p>
+     * <p>The execution state of the command. Valid values:</p>
      * <br>
      * <p>*   Running</p>
      * <p>*   Finished</p>
      * <p>*   Failed</p>
      * <p>*   Stopped</p>
      * <br>
-     * <p>>  To improve compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.</p>
+     * <p>> To ensure compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.</p>
      */
     @NameInMap("InvokeRecordStatus")
     public String invokeRecordStatus;
@@ -64,7 +64,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the page to return.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -90,9 +90,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
-     * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -104,7 +102,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInvocationResultsRequestTag> tag;
@@ -236,7 +234,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
 
     public static class DescribeInvocationResultsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
          * <br>
          * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
          * <br>
@@ -246,7 +244,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
          * <br>
          * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */

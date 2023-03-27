@@ -7,13 +7,13 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
     /**
      * <p>Details about preemptible instances in the zones of the specified region.</p>
      * <br>
-     * <p>>  The return values are sorted based on the historical percentages of average preemptible instance prices relative to pay-as-you-go instance prices for instance types.</p>
+     * <p>> The returned values are sorted based on the historical percentages of average preemptible instance prices relative to pay-as-you-go instance prices for instance types.</p>
      */
     @NameInMap("AvailableSpotZones")
     public DescribeSpotAdviceResponseBodyAvailableSpotZones availableSpotZones;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the region where the instance resides.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,9 +55,9 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
     public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource extends TeaModel {
         /**
-         * <p>The percentage of the average preemptible instance relative to the pay-as-you-go instance price in the last 30 days. Unit: percent (%). Valid values: 1 to 100.</p>
+         * <p>The percentage of the average preemptible instance relative to the pay-as-you-go instance price in the last 30 days. Unit: percentage (%). Valid values: 1 to 100.</p>
          * <br>
-         * <p>You can calculate the average preemptible instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average preemptible instance price in the last 30 days is 0.2.</p>
+         * <p>You can calculate the average preemptible instance price based on the returned value. For example, if the pay-as-you-go instance price is 1 and the returned value of this parameter is 20, the average preemptible instance price for the last 30 days is 0.2.</p>
          */
         @NameInMap("AverageSpotDiscount")
         public Integer averageSpotDiscount;
@@ -69,7 +69,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The release rate range of preemptible instances in the last 30 days, which corresponds to the `InterruptionRate` value. Valid values:</p>
+         * <p>The release rate range of preemptible instances in the last 30 days, which corresponds to the ` InterruptionRate  `value. Valid values:</p>
          * <br>
          * <p>*   0-3%</p>
          * <p>*   3-5%</p>
@@ -80,7 +80,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         public String interruptRateDesc;
 
         /**
-         * <p>The average release rate of preemptible instances in the last 30 days. Unit: percent (%).</p>
+         * <p>The average release rate of preemptible instances forn the last 30 days. Unit: percent (%).</p>
          */
         @NameInMap("InterruptionRate")
         public Float interruptionRate;
@@ -151,7 +151,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources availableSpotResources;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

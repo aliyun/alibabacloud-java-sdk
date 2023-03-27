@@ -658,7 +658,6 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData extends TeaModel {
         @NameInMap("SystemDisk")
-        @Validation(required = true)
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk systemDisk;
 
         /**

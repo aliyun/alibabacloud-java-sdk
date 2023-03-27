@@ -8,7 +8,7 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * <br>
      * <p>Maximum value: 100.</p>
      * <br>

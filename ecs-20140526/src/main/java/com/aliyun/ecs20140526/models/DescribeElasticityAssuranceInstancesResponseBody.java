@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details about the instances that were created by using the elasticity assurance.</p>
+     * <p>Details about the instances that match and use the elasticity assurance.</p>
      */
     @NameInMap("ElasticityAssuranceItem")
     public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem;

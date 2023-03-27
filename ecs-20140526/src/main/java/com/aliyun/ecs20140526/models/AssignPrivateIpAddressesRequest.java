@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
+     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
@@ -23,7 +23,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public Integer ipv4PrefixCount;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The IDs of the ENIs.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -35,10 +35,10 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Secondary private IP address N, which is selected from within the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:</p>
+     * <p>One or more secondary private IP addresses selected from within the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:</p>
      * <br>
-     * <p>*   When the ENI is in the Available (`Available`) state, the valid values of N are 1 to 32.</p>
-     * <p>*   When the ENI is in the InUse (`InUse`) state, the valid values of N are subject to the instance type. For more information, see [Instance families](~~25378~~).</p>
+     * <p>*   When the ENI is in the`Available` state, the valid values of N are 1 to 32.</p>
+     * <p>*   When the ENI is in the `InUse` state, the valid values of N are subject to the instance type. For more information, see [Instance families](~~25378~~).</p>
      * <br>
      * <p>To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.</p>
      */
@@ -46,7 +46,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

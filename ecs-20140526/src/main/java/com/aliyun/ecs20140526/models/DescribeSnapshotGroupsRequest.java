@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotGroupsRequest extends TeaModel {
+    /**
+     * <p>This parameter is unavailable.</p>
+     */
     @NameInMap("AdditionalAttributes")
     public java.util.List<String> additionalAttributes;
 
@@ -30,7 +33,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The query token. Set the value to the NextToken value that is returned in the last call to the DescribeSnapshotGroups operation.</p>
+     * <p>The token that determines the start point of the next query. Set the value to the NextToken value that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -59,12 +62,25 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of snapshot-consistent group N. Valid values of N: 1 to 10.</p>
+     */
     @NameInMap("SnapshotGroupId")
     public java.util.List<String> snapshotGroupId;
 
+    /**
+     * <p>The state of snapshot-consistent group N. Valid values of the second N: 1, 2, and 3. Valid values:</p>
+     * <br>
+     * <p>*   progressing: The snapshot-consistent group is being created.</p>
+     * <p>*   accomplished: The snapshot-consistent group is created.</p>
+     * <p>*   failed: The snapshot-consistent group fails to be created.</p>
+     */
     @NameInMap("Status")
     public java.util.List<String> status;
 
+    /**
+     * <p>The tags of the snapshot-consistent group.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeSnapshotGroupsRequestTag> tag;
 

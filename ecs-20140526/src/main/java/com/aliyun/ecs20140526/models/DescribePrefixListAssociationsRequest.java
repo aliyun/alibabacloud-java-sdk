@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrefixListAssociationsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * <br>
      * <p>Maximum value: 100.</p>
      * <br>
@@ -15,7 +15,7 @@ public class DescribePrefixListAssociationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The query token. Set the value to the `NextToken` value returned in the last call to this operation. Leave this parameter empty the first time you call this operation.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

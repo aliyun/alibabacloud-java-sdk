@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     /**
-     * <p>The ID of the ENI. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the ENIs to query.</p>
+     * <p>The ID of the ENI. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the query range.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
     /**
-     * <p>The IDs of permissions on the ENI. You can specify up to 100 ENI permission IDs.</p>
+     * <p>The IDs of ENI permissions. You can specify up to 100 ENI permission IDs.</p>
      */
     @NameInMap("NetworkInterfacePermissionId")
     public java.util.List<String> networkInterfacePermissionId;
@@ -27,7 +27,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
-     * <p>Default: 1.</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -43,7 +43,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI permission. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

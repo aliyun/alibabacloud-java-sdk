@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateHpcClusterRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the HPC cluster. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the HPC cluster. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -19,26 +19,38 @@ public class CreateHpcClusterRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>The name of the HPC cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>RAM用户的账号登录名称。</p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <p>RAM用户的虚拟账号ID。</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The region ID of the HPC cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the HPC cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>资源主账号的账号名称。</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>资源主账号的ID，亦即UID。</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class InstallCloudAssistantRequest extends TeaModel {
-    /**
-     * <p>The IDs of instances. You can specify up to 50 instance IDs in a single request.</p>
-     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -16,9 +13,6 @@ public class InstallCloudAssistantRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

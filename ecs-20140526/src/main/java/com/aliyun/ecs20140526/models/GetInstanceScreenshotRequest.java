@@ -17,7 +17,7 @@ public class GetInstanceScreenshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,7 +29,7 @@ public class GetInstanceScreenshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to wake up the instance for which the instance hibernation feature is enabled.</p>
+     * <p>Specifies whether to wake up hibernating instances.</p>
      * <br>
      * <p>Default value: false.</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHpcClustersResponseBody extends TeaModel {
     /**
-     * <p>Details about the HPC clusters.</p>
+     * <p>Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.</p>
      */
     @NameInMap("HpcClusters")
     public DescribeHpcClustersResponseBodyHpcClusters hpcClusters;
@@ -29,7 +29,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of HPC clusters queried.</p>
+     * <p>The total number of the HPC clusters.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachNetworkInterfaceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -35,9 +35,9 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The trunk network card ID.</p>
+     * <p>The ID of the trunk ENI.</p>
      * <br>
-     * <p>> This parameter is not online yet and cannot be used.</p>
+     * <p>>  This parameter is unavailable for use.</p>
      */
     @NameInMap("TrunkNetworkInstanceId")
     public String trunkNetworkInstanceId;

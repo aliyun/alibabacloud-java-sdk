@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ResetDisksRequest extends TeaModel {
     /**
-     * <p>云盘列表。</p>
+     * <p>The disks that you want to roll back.</p>
      */
     @NameInMap("Disk")
     public java.util.List<ResetDisksRequestDisk> disk;
 
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   true: The validity of the request is checked but the request is not made. Check items include the required parameters, request format, and resource status limits. If the check fails, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
-     * <p>*   false: The validity of the request is checked. If the check succeeds, the request is made.</p>
+     * <p>*   true: performs a dry run. The system checks the required parameters, request format, and resource status limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -28,7 +28,7 @@ public class ResetDisksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the disks that you want to roll back. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -102,13 +102,13 @@ public class ResetDisksRequest extends TeaModel {
 
     public static class ResetDisksRequestDisk extends TeaModel {
         /**
-         * <p>The ID of disk N to be rolled back. Valid values of N: 1 to 10.</p>
+         * <p>The IDs of the disks that you want to roll back. You can specify up to 10 disk IDs.</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
-         * <p>The ID of the snapshot contained in the instance snapshot for disk N. Valid values of N: 1 to 10.</p>
+         * <p>The IDs of the disk snapshots that are contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;

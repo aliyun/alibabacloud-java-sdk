@@ -31,11 +31,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableJumboFrame")
+    public Boolean enableJumboFrame;
+
     /**
      * <p>The hostname of the instance. Take note of the following items:</p>
      * <br>
      * <p>*   When you modify the hostname of an instance, the instance must not be in the Creating (Pending) or Starting (Starting) state. Otherwise, the new hostname and the configurations in `/etc/hosts` cannot take effect. You can call the [DescribeInstances](~~25506~~) operation to query the state of the instance.</p>
-     * <p>*   After the hostname is modified, you must call the [RebootInstance](~~25502~~) operation for the new hostname to take effect.</p>
+     * <p>*   After the hostname is modified, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the new hostname to take effect.</p>
      * <br>
      * <p>The following limits apply to the hostnames of instances that run different operating systems:</p>
      * <br>
@@ -106,7 +109,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
      * <p>*   The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, you must add the IDs of the current security groups to the list.</p>
      * <p>*   You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</p>
      * <p>*   The specified security group and instance must belong to the same virtual private cloud (VPC).</p>
-     * <p>*   The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).</p>
+     * <p>*   The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see [Limits](~~25412#SecurityGroupQuota1~~).</p>
      * <p>*   New security groups become valid for corresponding instances after a short latency.</p>
      */
     @NameInMap("SecurityGroupIds")
@@ -115,7 +118,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The user data of the instance. User data must be encoded in Base64.</p>
      * <br>
-     * <p>The size of the user data must be no greater than 16 KB before it is encoded in Base64. We recommend that you do not pass in confidential information such as passwords and private keys in the plaintext format. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then you can decode and decrypt the information in the same way within the instance.</p>
+     * <p>The size of the user data cannot exceed 16 KB before it is encoded in Base64. We recommend that you do not pass in confidential information such as passwords and private keys in the plaintext format. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then you can decode and decrypt the information in the same way within the instance.</p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -147,6 +150,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyInstanceAttributeRequest setEnableJumboFrame(Boolean enableJumboFrame) {
+        this.enableJumboFrame = enableJumboFrame;
+        return this;
+    }
+    public Boolean getEnableJumboFrame() {
+        return this.enableJumboFrame;
     }
 
     public ModifyInstanceAttributeRequest setHostName(String hostName) {

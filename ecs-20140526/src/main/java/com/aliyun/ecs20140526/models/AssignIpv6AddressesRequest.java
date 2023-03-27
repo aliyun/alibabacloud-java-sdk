@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.</p>
      * <br>
@@ -61,6 +64,14 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public static AssignIpv6AddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         AssignIpv6AddressesRequest self = new AssignIpv6AddressesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AssignIpv6AddressesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public AssignIpv6AddressesRequest setIpv6Address(java.util.List<String> ipv6Address) {

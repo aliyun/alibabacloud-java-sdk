@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
-     * <p>The query token returned in this call. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no more results are to be returned.</p>
+     * <p>The pagination token that can be used in the next request to retrieve a new page of results. If the return value of this parameter is empty when you specify the MaxResults and NextToken parameters for a paged query, no more results are to be returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -27,7 +27,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the security group.</p>
+     * <p>The region ID of the security groups.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -39,13 +39,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about the security groups.</p>
+     * <p>The information about the security groups.</p>
      */
     @NameInMap("SecurityGroups")
     public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
 
     /**
-     * <p>The total number of security groups. If the `MaxResults` and `NextToken` parameters are specified in the request, the value of this parameter is not returned.</p>
+     * <p>The total number of security groups. If you specify the `MaxResults` and `NextToken` parameters in the request, this parameter is empty.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -113,13 +113,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the security group.</p>
+         * <p>The tag keys of the security group.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the security group.</p>
+         * <p>The tag values of the security group.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

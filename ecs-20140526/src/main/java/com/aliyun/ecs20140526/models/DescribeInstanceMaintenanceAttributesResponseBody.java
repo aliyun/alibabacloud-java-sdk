@@ -106,7 +106,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         public String defaultValue;
 
         /**
-         * <p>The list of the supported maintenance actions.</p>
+         * <p>Details about the supported maintenance actions.</p>
          */
         @NameInMap("SupportedValues")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues;
@@ -215,7 +215,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

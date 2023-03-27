@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSpotAdviceRequest extends TeaModel {
     /**
-     * <p>The number of vCPUs of the instance type. For information about the valid values, see [Instance families](~~25378~~).</p>
+     * <p>The number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).</p>
      */
     @NameInMap("Cores")
     public Integer cores;
 
     /**
-     * <p>The number of GPUs per GPU-accelerated instance. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).</p>
+     * <p>The number of GPUs that the GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).</p>
      */
     @NameInMap("GpuAmount")
     public Integer gpuAmount;
@@ -33,9 +33,9 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     /**
      * <p>The level of the instance family. Valid values:</p>
      * <br>
-     * <p>*   EntryLevel</p>
-     * <p>*   EnterpriseLevel</p>
-     * <p>*   CreditEntryLevel. For more information, see [Burstable instance overview](~~59977~~).</p>
+     * <p>*   EntryLevel: entry level.</p>
+     * <p>*   EnterpriseLevel: enterprise level.</p>
+     * <p>*   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~) of burstable instances.</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that instance families of all levels are queried.</p>
      */
@@ -43,31 +43,31 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     public String instanceFamilyLevel;
 
     /**
-     * <p>The instance family. For information about the valid values, see [Instance families](~~25378~~).</p>
+     * <p>The instance family. For more information, see [Instance families](~~25378~~).</p>
      */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
     /**
-     * <p>The list of instance types. You can enter up to 10 instance types.</p>
+     * <p>The instance types. You can specify to 10 instance types.</p>
      */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>The memory size of the instance type. Unit: GiB. For information about the valid values, see [Instance families](~~25378~~).</p>
+     * <p>The memory size of the instance type. Unit: GiB. For more information, see [Instance families](~~25378~~).</p>
      */
     @NameInMap("Memory")
     public Float memory;
 
     /**
-     * <p>The minimum number of vCPUs of the instance type. For information about the valid values, see [Instance families](~~25378~~).</p>
+     * <p>The minimum number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).</p>
      */
     @NameInMap("MinCores")
     public Integer minCores;
 
     /**
-     * <p>The minimum memory size of the instance type. For information about the valid values, see [Instance families](~~25378~~).</p>
+     * <p>The minimum memory size of the instance type. For more information, see [Instance families](~~25378~~).</p>
      */
     @NameInMap("MinMemory")
     public Float minMemory;
@@ -79,7 +79,7 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
