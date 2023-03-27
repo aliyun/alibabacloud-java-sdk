@@ -11,19 +11,22 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</p>
      * <br>
      * <p>*   true: enables automatic payment.</p>
-     * <p>    > Make sure that your account balance is sufficient. Otherwise, your order becomes invalid. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** Make sure that your Alibaba Cloud account has sufficient balance. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set the `AutoPay` parameter to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
      * <br>
      * <p>*   false: An order is generated but no payment is made.</p>
      * <br>
      * <p>Default value: true.</p>
      * <br>
-     * <p>When `OperatorType` is set to `downgrade`, `AutoPay` is ignored.</p>
+     * <p>If you set the `OperatorType` parameter to `downgrade`, the `AutoPay` parameter is ignored.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -35,13 +38,13 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of instance.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The new instance type. For information about available instance types, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation.</p>
+     * <p>The new instance type. For information about supported instance types, see [Overview of instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -51,27 +54,27 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>When the `MigrateAcrossZone` parameter is set to `true` and you upgrade the instance based on the returned information, take note of the following items:</p>
+     * <p>If you set the `MigrateAcrossZone` parameter to `true` and you upgrade the instance based on the returned information, take note of the following items:</p>
      * <br>
      * <p>Instances of the classic network type:</p>
      * <br>
-     * <p>*   For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software license codes of the instance are changed. For more information, see [Retired instance types](~~55263~~). For Linux instances, basic disks (cloud) are identified as xvd\* such as xvda and xvdb. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
-     * <p>*   For instance families available for purchase, when the instance type of an instance is changed, the private IP address of the instance is also changed. For more information, see [Instance families](~~25378~~).</p>
+     * <p>*   For [retired instance types](~~55263~~), the private IP address, disk device names, and software license codes of a non-I/O optimized instance change when you upgrade the instance to an I/O optimized instance. For Linux instances, basic disks (cloud) are identified by the prefix xvd. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified by the prefix vd.</p>
+     * <p>*   For [instance families that can be purchased](~~25378~~), the private IP address of the instance changes when you change the instance type of the instance.</p>
      * <br>
-     * <p>Instances of the Virtual Private Cloud (VPC) type: For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software license codes of the instance are changed. For Linux instances, basic disks (cloud) are identified as xvd\* such as xvda and xvdb. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
+     * <p>Instances of the virtual private cloud (VPC) type: For retired instance types, the disk device names and software license codes of a non-I/O optimized instance change when you upgrade the instance to an I/O optimized instance. For Linux instances, basic disks (cloud) are identified by the prefix xvd. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified by the prefix vd.</p>
      */
     @NameInMap("MigrateAcrossZone")
     public Boolean migrateAcrossZone;
 
     /**
-     * <p>The operation type. Valid values:</p>
+     * <p>The type of the operation. Valid values:</p>
      * <br>
-     * <p>>  This parameter is optional. The system can define the operation type. If you want to specify this parameter, take note of the following rules:</p>
+     * <p>>  This parameter is optional. The system can automatically determine whether the operation is an upgrade or a downgrade. If you want to specify this parameter, you can refer to the following valid values of the parameter.</p>
      * <br>
      * <p>*   upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.</p>
-     * <p>*   downgrade: downgrades the instance type. When the new instance type specified by the `InstanceType` parameter has lower specifications than the current instance type, set `OperatorType` to downgrade.</p>
+     * <p>*   downgrade: downgrades the instance type. When the new instance type that is specified by the `InstanceType` parameter has lower specifications than the current instance type, set the `OperatorType` parameter to downgrade.</p>
      * <br>
-     * <p>>  For more information about the precautions on upgrading or downgrading instance types, see the preceding "Description" section in this topic.</p>
+     * <p>>  You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.</p>
      */
     @NameInMap("OperatorType")
     public String operatorType;
@@ -89,14 +92,14 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public String rebootTime;
 
     /**
-     * <p>Specifies whether to restart the instance immediately after the instance type is changed. Valid values:</p>
+     * <p>Specifies whether to immediately restart the instance after you change the instance type. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   true: immediately restarts the instance.</p>
+     * <p>*   false: does not immediately restart the instance.</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
-     * <p>>  If the instance is in the **Stopping** state, the instance state remains unchanged and no operations are performed regardless of whether the `RebootWhenFinished` parameter is set to true.</p>
+     * <p>>  If the instance is in the **Stopping** state, the instance status remains unchanged and no operations are performed regardless of whether you set the `RebootWhenFinished` parameter to true.</p>
      */
     @NameInMap("RebootWhenFinished")
     public Boolean rebootWhenFinished;
@@ -240,7 +243,7 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     public static class ModifyPrepayInstanceSpecRequestSystemDisk extends TeaModel {
         /**
-         * <p>The new category of the system disk. This parameter is valid only when you upgrade an instance from a retired instance type to an available instance type or upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Instance families](~~25378~~). Valid values:</p>
+         * <p>The new category of the system disk. This parameter is valid only if you upgrade an instance from a retired instance type to an available instance type or if you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Overview of instance families](~~25378~~). Valid values:</p>
          * <br>
          * <p>*   cloud_efficiency: ultra disk</p>
          * <p>*   cloud_ssd: standard SSD</p>

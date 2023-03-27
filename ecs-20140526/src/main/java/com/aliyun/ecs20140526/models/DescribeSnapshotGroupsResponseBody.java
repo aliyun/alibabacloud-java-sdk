@@ -7,7 +7,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     /**
      * <p>The token used to start the next query.</p>
      * <br>
-     * <p>>  If this parameter is empty, no more data is returned.</p>
+     * <p>> If the return value is empty, no more data exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -55,13 +55,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag extends TeaModel {
         /**
-         * <p>The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.</p>
+         * <p>The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot-consistent group belongs.</p>
+         * <p>The tag value of each snapshot in the snapshot- consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -110,10 +110,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot extends TeaModel {
         /**
-         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
+         * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
          * <br>
-         * <p>- true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>- false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
+         * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
@@ -137,7 +137,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The ID of the source disk. This parameter is retained even after the source disk of the snapshot is released.</p>
+         * <p>The ID of the source disk. This parameter is retained even after the source disk is released.</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
@@ -145,14 +145,14 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of the source disk. Valid values:</p>
          * <br>
-         * <p>- system: system disk</p>
-         * <p>- data: data disk</p>
+         * <p>*   system: system disk</p>
+         * <p>*   data: data disk</p>
          */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
         /**
-         * <p>The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot-consistent group belongs.</p>
+         * <p>The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot belongs.</p>
          */
         @NameInMap("Tags")
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTags tags;
@@ -320,7 +320,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>>  This parameter is unavailable.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("ProgressStatus")
         public String progressStatus;

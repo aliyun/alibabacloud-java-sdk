@@ -27,7 +27,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
      * <p>When you migrate an instance from a shared host to a dedicated host or between dedicated hosts, take note of the following items:</p>
      * <br>
      * <p>*   To migrate the instance to a specific dedicated host, specify this parameter.</p>
-     * <p>*   To migrate the instance to a system-selected dedicated host, leave this parameter empty and set `Tenancy` to host.</p>
+     * <p>*   To migrate the instance to a dedicated host that the system automatically selects, leave this parameter empty and set `Tenancy` to host.</p>
      * <br>
      * <p>For information about the automatic deployment feature, see [Features of dedicated hosts](~~118938~~).</p>
      */
@@ -35,9 +35,9 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>The number of the deployment set group in which to deploy the instance in the destination deployment set. This parameter is valid only when the destination deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.</p>
+     * <p>The number of the deployment set group in which to deploy the instance in the destination deployment set. This parameter takes effect only when the destination deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.</p>
      * <br>
-     * <p>> If you call this operation to deploy an instance to a deployment set that uses the high availability group strategy (`AvailablilityGroup`) and leave this parameter empty, the system evenly distributes instances among the deployment set groups in the deployment set. If you call this operation to change the deployment set of an instance and specify the current deployment set of the instance as the destination deployment set, the system evenly distributes instances again among the deployment set groups in the deployment set.</p>
+     * <p>> If you call this operation to deploy an instance to a deployment set that uses the high availability group strategy (`AvailablilityGroup`) and leave this parameter empty, the system evenly distributes instances among the deployment set groups in the deployment set. If you specify the current deployment set of the instance as the destination deployment set in the request, the system evenly distributes instances again among the deployment set groups in the deployment set.</p>
      */
     @NameInMap("DeploymentSetGroupNo")
     public Integer deploymentSetGroupNo;
@@ -55,7 +55,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully change the host of the instance when the deployment set of the instance is changed. Valid values:</p>
      * <br>
-     * <p>*   true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running (Running) or Stopped (Stopped) state. The instances that are in the Stopped (Stopped) state do not include pay-as-you-go instances that are stopped in economical mode.</p>
+     * <p>*   true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running or Stopped state. The instances that are in the Stopped state do not include pay-as-you-go instances that are stopped in economical mode.</p>
      * <br>
      * <p>    **</p>
      * <br>
@@ -69,7 +69,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -111,8 +111,8 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove the specified instance from the specified deployment set. Valid values:</p>
      * <br>
-     * <p>*   true: removes the instance from the deployment set.</p>
-     * <p>*   false: does not remove the instance from the deployment set.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      * <br>
@@ -128,7 +128,7 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to deploy the instance on a dedicated host. Set the value to host to deploy the instance on a dedicated host.</p>
+     * <p>Specifies whether to deploy the instance on a dedicated host. Set the value to host.</p>
      */
     @NameInMap("Tenancy")
     public String tenancy;

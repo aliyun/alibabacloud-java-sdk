@@ -11,7 +11,7 @@ public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about the reserved instance.</p>
+     * <p>The IDs of the reserved instances.</p>
      */
     @NameInMap("ReservedInstanceIdSets")
     public PurchaseReservedInstancesOfferingResponseBodyReservedInstanceIdSets reservedInstanceIdSets;

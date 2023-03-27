@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartImagePipelineExecutionRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The value of the **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The ID of the image template.</p>
-     */
     @NameInMap("ImagePipelineId")
     public String imagePipelineId;
 
@@ -22,9 +16,6 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the image creation task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,9 +25,6 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>> This parameter is deprecated.</p>
-     */
     @NameInMap("TemplateTag")
     public java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag;
 
@@ -110,15 +98,9 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     }
 
     public static class StartImagePipelineExecutionRequestTemplateTag extends TeaModel {
-        /**
-         * <p>>  This parameter is deprecated.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>>  This parameter is deprecated.</p>
-         */
         @NameInMap("Value")
         public String value;
 

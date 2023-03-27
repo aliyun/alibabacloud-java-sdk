@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances. You can enter up to 100 instance IDs.</p>
+     * <p>The IDs of instances. You can specify the IDs of up to 100 instances.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -35,7 +35,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

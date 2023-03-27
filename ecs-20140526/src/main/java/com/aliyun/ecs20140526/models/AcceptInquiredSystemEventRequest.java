@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AcceptInquiredSystemEventRequest extends TeaModel {
     /**
-     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
      */
     @NameInMap("Choice")
     public String choice;

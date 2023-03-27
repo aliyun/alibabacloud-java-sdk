@@ -17,13 +17,13 @@ public class JoinResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to add the resource.</p>
+     * <p>The ID of the resource group to which you want to assign the resource.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the resource. This parameter depends on the ResourceType value. For example, when ResourceType is set to instance, ResourceId can be interpreted as InstanceId.</p>
+     * <p>The ID of the resource. The value of this parameter varies based on the resource type. For example, when ResourceType is set to instance, the ResourceId refers to InstanceId.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

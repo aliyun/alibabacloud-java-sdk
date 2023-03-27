@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDisksResponseBody extends TeaModel {
     /**
-     * <p>Details about the rollback operation.</p>
+     * <p>The information about the rollback operations on one or more disks.</p>
      */
     @NameInMap("OperationProgressSet")
     public ResetDisksResponseBodyOperationProgressSet operationProgressSet;
@@ -94,31 +94,29 @@ public class ResetDisksResponseBody extends TeaModel {
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgress extends TeaModel {
         /**
-         * <p>The error code. This parameter is empty when the operation was successful.</p>
+         * <p>The error code that is returned if the request failed. This parameter is empty if the operation is successful.</p>
          * <br>
-         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         * <p>For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The error message. This parameter is empty when the operation was successful.</p>
+         * <p>The error message that is returned if the request failed. This parameter is empty if the operation is successful.</p>
          * <br>
-         * <p>For information about error codes and error messages, visit the [API error center](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         * <p>For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
-         * <br>
-         * <p>If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.</p>
+         * <p>Indicates whether the operation is successful. If the operation is successful, Success is returned. If the operation failed, an error code and an error message are returned.</p>
          */
         @NameInMap("OperationStatus")
         public String operationStatus;
 
         /**
-         * <p>Detail about the resources.</p>
+         * <p>The information about the resources.</p>
          */
         @NameInMap("RelatedItemSet")
         public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;

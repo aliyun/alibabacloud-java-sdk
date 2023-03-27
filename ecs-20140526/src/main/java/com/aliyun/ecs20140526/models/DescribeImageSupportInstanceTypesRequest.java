@@ -5,17 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     /**
-     * <p>The scenario in which the instance type is used. Default value: CreateEcs. Valid values:</p>
-     * <br>
-     * <p>*   CreateEcs: instance creation</p>
-     * <p>*   Upgrade: instance type upgrade</p>
-     * <p>*   Downgrade: instance type downgrade</p>
-     * <p>*   RenewDowngrade: renewal and configuration downgrade</p>
-     */
-    @NameInMap("ActionType")
-    public String actionType;
-
-    /**
      * <p>The list of filters to querying resources.</p>
      */
     @NameInMap("Filter")
@@ -45,14 +34,6 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     public static DescribeImageSupportInstanceTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageSupportInstanceTypesRequest self = new DescribeImageSupportInstanceTypesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImageSupportInstanceTypesRequest setActionType(String actionType) {
-        this.actionType = actionType;
-        return this;
-    }
-    public String getActionType() {
-        return this.actionType;
     }
 
     public DescribeImageSupportInstanceTypesRequest setFilter(java.util.List<DescribeImageSupportInstanceTypesRequestFilter> filter) {

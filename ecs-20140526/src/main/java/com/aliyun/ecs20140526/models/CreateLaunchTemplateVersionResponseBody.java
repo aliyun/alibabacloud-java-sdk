@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
+    @NameInMap("LaunchTemplateId")
+    public String launchTemplateId;
+
     /**
      * <p>The version number of the launch template.</p>
      */
@@ -19,6 +22,14 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
     public static CreateLaunchTemplateVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLaunchTemplateVersionResponseBody self = new CreateLaunchTemplateVersionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLaunchTemplateVersionResponseBody setLaunchTemplateId(String launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
+        return this;
+    }
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
     }
 
     public CreateLaunchTemplateVersionResponseBody setLaunchTemplateVersionNumber(Long launchTemplateVersionNumber) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ImportImageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the custom image.</p>
+     * <p>The ID of the image.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The region ID of the image.</p>
+     * <p>The ID of the region where the instance resides.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

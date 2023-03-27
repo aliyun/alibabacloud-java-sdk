@@ -8,7 +8,7 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
     public ReleaseCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>Specifies whether to check the validity of the request. Set the value to false. The validity of the request is not checked. Capacity reservations are directly released.</p>
+     * <p>Specifies whether to perform a dry run. Set the value to false. false: does not perform a dry run and sends the request. The operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;

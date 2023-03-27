@@ -280,6 +280,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute extends TeaModel {
+        @NameInMap("CanAccept")
+        public String canAccept;
+
+        @NameInMap("Code")
+        public String code;
+
         /**
          * <p>The device name of the local disk.</p>
          */
@@ -325,6 +331,15 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("OnlineRepairPolicy")
         public String onlineRepairPolicy;
 
+        @NameInMap("PunishDomain")
+        public String punishDomain;
+
+        @NameInMap("PunishType")
+        public String punishType;
+
+        @NameInMap("PunishUrl")
+        public String punishUrl;
+
         /**
          * <p>The rack number of the cloud box.</p>
          */
@@ -334,6 +349,22 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public static DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute self = new DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setCanAccept(String canAccept) {
+            this.canAccept = canAccept;
+            return this;
+        }
+        public String getCanAccept() {
+            return this.canAccept;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setDevice(String device) {
@@ -390,6 +421,30 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
         public String getOnlineRepairPolicy() {
             return this.onlineRepairPolicy;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setPunishDomain(String punishDomain) {
+            this.punishDomain = punishDomain;
+            return this;
+        }
+        public String getPunishDomain() {
+            return this.punishDomain;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setPunishType(String punishType) {
+            this.punishType = punishType;
+            return this;
+        }
+        public String getPunishType() {
+            return this.punishType;
+        }
+
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setPunishUrl(String punishUrl) {
+            this.punishUrl = punishUrl;
+            return this;
+        }
+        public String getPunishUrl() {
+            return this.punishUrl;
         }
 
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setRack(String rack) {

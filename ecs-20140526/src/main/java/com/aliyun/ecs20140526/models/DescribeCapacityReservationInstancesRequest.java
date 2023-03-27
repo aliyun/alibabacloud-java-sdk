@@ -10,15 +10,15 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Maximum value: 100</p>
+     * <p>Maximum value: 100.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the query. The token is obtained from the response of the previous request.</p>
+     * <p>The token used to start the next query. Set the value to the NextToken value obtained from the response to the previous request.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class UnassignIpv6AddressesRequest extends TeaModel {
-    /**
-     * <p>The IPv6 addresses to unassign. You can specify up to 10 IPv6 addresses in a single request.</p>
-     */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
-    /**
-     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
-     */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
-    /**
-     * <p>The ID of the ENI.</p>
-     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -28,9 +19,6 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvokeCommandResponseBody extends TeaModel {
     /**
-     * <p>The ID of the command task.</p>
+     * <p>The ID of the command execution.</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <br>
-     * <p>*   true: Automatic payment is enabled. Make sure that you have sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</p>
+     * <p>*   true: The payment is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</p>
      * <p>*   false: An order is generated but no payment is made. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,7 +29,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public String diskChargeType;
 
     /**
-     * <p>The list of disk IDs. The value is a JSON array that consists of up to 16 disk IDs. Separate multiple disk IDs with commas (,).</p>
+     * <p>The IDs of disks. The value is a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).</p>
      */
     @NameInMap("DiskIds")
     public String diskIds;
@@ -43,9 +43,6 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <p>资源主账号的ID，亦即UID。</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -55,15 +52,9 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>资源主账号的账号名称。</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>RAM用户的虚拟账号ID。</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

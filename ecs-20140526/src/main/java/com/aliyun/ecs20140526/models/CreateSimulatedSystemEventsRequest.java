@@ -8,27 +8,27 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
      * <p>The type of the system event. Valid values:</p>
      * <br>
      * <p>*   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</p>
-     * <p>*   SystemFailure.Reboot: The instance is restarted due to a system failure.</p>
-     * <p>*   InstanceFailure.Reboot: The instance is restarted due to an instance failure.</p>
+     * <p>*   SystemFailure.Reboot: The instance is restarted due to a system error.</p>
+     * <p>*   InstanceFailure.Reboot: The instance is restarted due to an instance error.</p>
      * <p>*   SystemMaintenance.Stop: The instance is stopped due to system maintenance.</p>
      * <p>*   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</p>
-     * <p>*   SystemFailure.Redeploy: The instance is redeployed due to a system failure.</p>
-     * <p>*   SystemFailure.Stop: The instance is stopped due to a system failure.</p>
-     * <p>*   InstanceFailure.Reboot: The instance is restarted due to an instance failure.</p>
+     * <p>*   SystemFailure.Redeploy: The instance is redeployed due to a system error.</p>
+     * <p>*   SystemFailure.Stop: The instance is stopped due to a system error.</p>
+     * <p>*   InstanceFailure.Reboot: The instance is restarted due to an instance error.</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
-     * <p>The IDs of the instances. You can specify the IDs of up to 100 instances.</p>
+     * <p>The IDs of instances. You can specify the IDs of up to 100 instances.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The start time of the scheduled event execution. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The scheduled start time of the scheduled event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>> For events that occur due to system failures or instance failures, the simulated events enter the Executing (`Executing`) state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the Executed (`Executed`) state.</p>
+     * <p>> For system events that occur due to system errors or instance errors, the simulated events of such system events enter the Executing (`Executing`) state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the Executed (`Executed`) state.</p>
      */
     @NameInMap("NotBefore")
     public String notBefore;
@@ -40,7 +40,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the event. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

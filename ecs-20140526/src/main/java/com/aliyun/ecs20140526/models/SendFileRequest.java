@@ -4,72 +4,30 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class SendFileRequest extends TeaModel {
-    /**
-     * <p>The content of the file. The content must not exceed 32 KB in size after it is encoded in Base64.</p>
-     * <br>
-     * <p>*   If `ContentType` is set to `PlainText`, the Content value is in plaintext.</p>
-     * <p>*   If `ContentType` is set to `Base64`, the Content value is Base64-encoded.</p>
-     */
     @NameInMap("Content")
     public String content;
 
-    /**
-     * <p>The content type of the file. Valid values:</p>
-     * <br>
-     * <p>*   PlainText: The command content is not encoded.</p>
-     * <p>*   Base64: The command content is Base64-encoded.</p>
-     * <br>
-     * <p>Default value: PlainText.</p>
-     */
     @NameInMap("ContentType")
     public String contentType;
 
-    /**
-     * <p>The description of the file. The description supports all character sets and can be up to 512 characters in length.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The user group of the file. This parameter takes effect only on Linux instances. Default value: root.</p>
-     */
     @NameInMap("FileGroup")
     public String fileGroup;
 
-    /**
-     * <p>The permissions on the file. This parameter takes effect only on Linux instances. You can configure this parameter in the same way as you configure the chmod command.</p>
-     * <br>
-     * <p>Default value: 0644, which indicates that the owner of the file has the read and write permissions on the file and that the user group of the file and other users have only the read permissions on the file.</p>
-     */
     @NameInMap("FileMode")
     public String fileMode;
 
-    /**
-     * <p>The owner of the file. This parameter takes effect only on Linux instances. Default value: root.</p>
-     */
     @NameInMap("FileOwner")
     public String fileOwner;
 
-    /**
-     * <p>The IDs of instances to which to send the file. A maximum of 50 instance IDs can be specified.</p>
-     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
-    /**
-     * <p>The name of the file. The name supports all character sets and can be up to 255 characters in length.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>Specifies whether to overwrite a file in the destination directory if the file has the same name as the sent file.</p>
-     * <br>
-     * <p>*   true: overwrites the file.</p>
-     * <p>*   false: does not overwrite the file.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
@@ -79,18 +37,9 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the instance to which to send the file. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource group for send files. When specify this parameter:</p>
-     * <br>
-     * <p>- The InstanceId of the ECS instance must belongs to the resource group.</p>
-     * <p>- Support via the parameter to filter out results of send file(via Call [DescribeSendFileResults](~~184117~~)).</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -103,20 +52,9 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<SendFileRequestTag> tag;
 
-    /**
-     * <p>The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance.</p>
-     */
     @NameInMap("TargetDir")
     public String targetDir;
 
-    /**
-     * <p>The timeout period for sending the file. Unit: seconds.</p>
-     * <br>
-     * <p>*   A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or the Cloud Assistant client does not exist.</p>
-     * <p>*   If the specified timeout period is less than 10 seconds, the system automatically sets the timeout period to 10 seconds to ensure that the file is sent to the instances.</p>
-     * <br>
-     * <p>Default value: 60.</p>
-     */
     @NameInMap("Timeout")
     public Long timeout;
 

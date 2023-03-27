@@ -12,7 +12,7 @@ public class DetachDiskRequest extends TeaModel {
      * <br>
      * <p>Default value: true.</p>
      * <br>
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>Take note of the following items:</p>
      * <br>
      * <p>*   This parameter cannot be set for disks for which the multi-attach feature is enabled.</p>
      * <p>*   If a data disk is to be detached, the default value is `false`.</p>
