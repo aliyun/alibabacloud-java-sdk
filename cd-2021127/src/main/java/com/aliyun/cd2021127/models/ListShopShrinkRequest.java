@@ -4,6 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class ListShopShrinkRequest extends TeaModel {
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -22,6 +25,14 @@ public class ListShopShrinkRequest extends TeaModel {
     public static ListShopShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListShopShrinkRequest self = new ListShopShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListShopShrinkRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public ListShopShrinkRequest setPageNumber(Integer pageNumber) {
