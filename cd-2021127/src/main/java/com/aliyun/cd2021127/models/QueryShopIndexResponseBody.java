@@ -7,6 +7,9 @@ public class QueryShopIndexResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryShopIndexResponseBodyData data;
 

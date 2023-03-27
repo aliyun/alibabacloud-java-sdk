@@ -4,12 +4,23 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateShopRequest extends TeaModel {
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("ShopList")
     public java.util.List<BatchCreateShopRequestShopList> shopList;
 
     public static BatchCreateShopRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchCreateShopRequest self = new BatchCreateShopRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchCreateShopRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public BatchCreateShopRequest setShopList(java.util.List<BatchCreateShopRequestShopList> shopList) {

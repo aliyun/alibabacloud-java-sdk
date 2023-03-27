@@ -4,6 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketListRequest extends TeaModel {
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -31,6 +34,14 @@ public class QueryTicketListRequest extends TeaModel {
     public static QueryTicketListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTicketListRequest self = new QueryTicketListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryTicketListRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public QueryTicketListRequest setEndTime(Long endTime) {

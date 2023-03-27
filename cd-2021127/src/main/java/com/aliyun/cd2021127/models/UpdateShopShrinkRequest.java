@@ -7,6 +7,9 @@ public class UpdateShopShrinkRequest extends TeaModel {
     @NameInMap("BusinessStatus")
     public Integer businessStatus;
 
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("Latitude")
     public String latitude;
 
@@ -57,6 +60,14 @@ public class UpdateShopShrinkRequest extends TeaModel {
     }
     public Integer getBusinessStatus() {
         return this.businessStatus;
+    }
+
+    public UpdateShopShrinkRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public UpdateShopShrinkRequest setLatitude(String latitude) {

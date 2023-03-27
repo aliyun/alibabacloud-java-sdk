@@ -7,6 +7,9 @@ public class GetMenuDataStatusRequest extends TeaModel {
     @NameInMap("BatchId")
     public String batchId;
 
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("ProductContainerId")
     public String productContainerId;
 
@@ -21,6 +24,14 @@ public class GetMenuDataStatusRequest extends TeaModel {
     }
     public String getBatchId() {
         return this.batchId;
+    }
+
+    public GetMenuDataStatusRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public GetMenuDataStatusRequest setProductContainerId(String productContainerId) {

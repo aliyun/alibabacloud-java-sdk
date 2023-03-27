@@ -7,6 +7,9 @@ public class ListMenuDataRequest extends TeaModel {
     @NameInMap("BatchId")
     public String batchId;
 
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("CreateRequestId")
     public String createRequestId;
 
@@ -30,6 +33,14 @@ public class ListMenuDataRequest extends TeaModel {
     }
     public String getBatchId() {
         return this.batchId;
+    }
+
+    public ListMenuDataRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public ListMenuDataRequest setCreateRequestId(String createRequestId) {

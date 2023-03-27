@@ -4,6 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class UpdateShopGroupRequest extends TeaModel {
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("ShopGroupId")
     public String shopGroupId;
 
@@ -13,6 +16,14 @@ public class UpdateShopGroupRequest extends TeaModel {
     public static UpdateShopGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateShopGroupRequest self = new UpdateShopGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateShopGroupRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public UpdateShopGroupRequest setShopGroupId(String shopGroupId) {
