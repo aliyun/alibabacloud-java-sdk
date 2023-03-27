@@ -37,11 +37,14 @@ public class CreateDatabaseRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
      * <br>
-     * <p>> *   The name must be 2 to 64 characters in length.</p>
-     * <p>> *   The name must start with a lowercase letter and end with a lowercase letter or digit.</p>
-     * <p>> *   The name can contain lowercase letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>> *   The name must be unique within the instance.</p>
-     * <p>> *   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   The name must be 2 to 64 characters in length.</p>
+     * <br>
+     * <p>*   The name must start with a lowercase letter and end with a lowercase letter or digit.</p>
+     * <p>*   The name can contain lowercase letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   The name must be unique within the instance.</p>
+     * <p>*   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).</p>
      */
     @NameInMap("DBName")
     public String DBName;

@@ -7,7 +7,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
      * <p>The TDS port of the instance for which Babelfish is enabled.</p>
      * <br>
-     * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
+     * <p>> This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).</p>
      */
     @NameInMap("BabelfishPort")
     public String babelfishPort;
@@ -15,7 +15,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
      * <p>The prefix of the endpoint after the change. Only the prefix of the value of the **CurrentConnectionString** parameter can be changed.</p>
      * <br>
-     * <p>>  The value can be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following characters: ~ ! # % ^ & \* = + \ | {} ; : \" " , <> / ?</p>
+     * <p>> The value can be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following special characters: ! # % ^ & \* = + | {} ; : \" " ,<> / ?</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
@@ -23,7 +23,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
      * <p>The endpoint of the instance. It can be an internal endpoint, a public endpoint, or a classic network endpoint in hybrid access mode.</p>
      * <br>
-     * <p>>  The read/write splitting endpoint cannot be changed.</p>
+     * <p>> The read/write splitting endpoint cannot be changed.</p>
      */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
@@ -35,7 +35,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+     * <p>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
      */
     @NameInMap("GeneralGroupName")
     public String generalGroupName;

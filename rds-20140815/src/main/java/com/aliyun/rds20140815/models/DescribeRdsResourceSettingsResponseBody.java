@@ -45,7 +45,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>IsTop。</p>
+         * <p>IsTop.</p>
          */
         @NameInMap("IsTop")
         public String isTop;

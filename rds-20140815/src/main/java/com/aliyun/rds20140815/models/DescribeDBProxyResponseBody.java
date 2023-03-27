@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyResponseBody extends TeaModel {
+    @NameInMap("DBProxyAVZones")
+    public DescribeDBProxyResponseBodyDBProxyAVZones DBProxyAVZones;
+
     /**
      * <p>An array consisting of the information about the proxy endpoint that is created for the instance.</p>
      */
@@ -100,6 +103,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     public static DescribeDBProxyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBProxyResponseBody self = new DescribeDBProxyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyAVZones(DescribeDBProxyResponseBodyDBProxyAVZones DBProxyAVZones) {
+        this.DBProxyAVZones = DBProxyAVZones;
+        return this;
+    }
+    public DescribeDBProxyResponseBodyDBProxyAVZones getDBProxyAVZones() {
+        return this.DBProxyAVZones;
     }
 
     public DescribeDBProxyResponseBody setDBProxyConnectStringItems(DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems) {
@@ -206,6 +217,25 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public static class DescribeDBProxyResponseBodyDBProxyAVZones extends TeaModel {
+        @NameInMap("DBProxyAVZones")
+        public java.util.List<String> DBProxyAVZones;
+
+        public static DescribeDBProxyResponseBodyDBProxyAVZones build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBProxyResponseBodyDBProxyAVZones self = new DescribeDBProxyResponseBodyDBProxyAVZones();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBProxyResponseBodyDBProxyAVZones setDBProxyAVZones(java.util.List<String> DBProxyAVZones) {
+            this.DBProxyAVZones = DBProxyAVZones;
+            return this;
+        }
+        public java.util.List<String> getDBProxyAVZones() {
+            return this.DBProxyAVZones;
+        }
+
+    }
+
     public static class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems extends TeaModel {
         /**
          * <p>The endpoint of the proxy terminal.</p>
@@ -250,11 +280,17 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         @NameInMap("DBProxyEndpointName")
         public String DBProxyEndpointName;
 
+        @NameInMap("DBProxyVpcId")
+        public String DBProxyVpcId;
+
         /**
          * <p>The ID of the proxy instance.</p>
          */
         @NameInMap("DBProxyVpcInstanceId")
         public String DBProxyVpcInstanceId;
+
+        @NameInMap("DBProxyVswitchId")
+        public String DBProxyVswitchId;
 
         public static DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems self = new DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems();
@@ -309,12 +345,28 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             return this.DBProxyEndpointName;
         }
 
+        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyVpcId(String DBProxyVpcId) {
+            this.DBProxyVpcId = DBProxyVpcId;
+            return this;
+        }
+        public String getDBProxyVpcId() {
+            return this.DBProxyVpcId;
+        }
+
         public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyVpcInstanceId(String DBProxyVpcInstanceId) {
             this.DBProxyVpcInstanceId = DBProxyVpcInstanceId;
             return this;
         }
         public String getDBProxyVpcInstanceId() {
             return this.DBProxyVpcInstanceId;
+        }
+
+        public DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems setDBProxyVswitchId(String DBProxyVswitchId) {
+            this.DBProxyVswitchId = DBProxyVswitchId;
+            return this;
+        }
+        public String getDBProxyVswitchId() {
+            return this.DBProxyVswitchId;
         }
 
     }

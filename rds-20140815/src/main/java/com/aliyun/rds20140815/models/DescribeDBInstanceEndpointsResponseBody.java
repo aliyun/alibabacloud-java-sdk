@@ -72,7 +72,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The virtual private cloud (VPC) ID of the endpoint.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

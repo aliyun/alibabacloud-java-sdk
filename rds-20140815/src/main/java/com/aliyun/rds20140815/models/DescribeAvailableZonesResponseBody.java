@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableZonesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of available zones.</p>
+     * <p>An array that consists of available zones and resources available in the zones.</p>
      */
     @NameInMap("AvailableZones")
     public java.util.List<DescribeAvailableZonesResponseBodyAvailableZones> availableZones;
@@ -103,7 +103,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> supportedCategorys;
 
         /**
-         * <p>The version of the database engine that is run by the instance.</p>
+         * <p>The database engine version of the instance.</p>
          */
         @NameInMap("Version")
         public String version;
@@ -133,7 +133,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines extends TeaModel {
         /**
-         * <p>The database engine that is run by the instance.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -181,7 +181,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> supportedEngines;
 
         /**
-         * <p>The ID of the zone in which the instance is located.</p>
+         * <p>The zone ID of the instance.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

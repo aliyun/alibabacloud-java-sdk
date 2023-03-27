@@ -60,7 +60,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <br>
      * <p>To change the storage type, take note of the following information:</p>
      * <br>
-     * <p>*   If the instance runs MySQL or MariaDB TX and uses the standard SSD storage type, you can set the DBInstanceStorageType parameter to **cloud_essd** to upgrade the storage type of the instance to ESSD. If you want to upgrade the storage type of the instance, you must also set the **DBInstanceClass** parameter to the current instance type of the instance and the **DBInstanceStorage** parameter to the current storage capacity of the instance. For more information, see [Upgrade the storage type of an ApsaraDB RDS for MySQL instance from standard SSDs to ESSDs](~~314678~~).</p>
+     * <p>*   If the instance runs MySQL or MariaDB and uses the standard SSD storage type, you can set the DBInstanceStorageType parameter to **cloud_essd** to upgrade the storage type of the instance to ESSD. If you want to upgrade the storage type of the instance, you must also set the **DBInstanceClass** parameter to the current instance type of the instance and the **DBInstanceStorage** parameter to the current storage capacity of the instance. For more information, see [Upgrade the storage type of an ApsaraDB RDS for MySQL instance from standard SSDs to ESSDs](~~314678~~).</p>
      * <p>*   If the instance runs PostgreSQL, you can upgrade the storage type of the instance from standard SSDs to ESSDs. However, you cannot downgrade the storage type of the instance from ESSDs to standard SSDs. ESSDs provide the following PLs: ESSDs of PL1, ESSDs of PL2, and ESSDs of PL3. You can upgrade or downgrade the storage type between ESSDs of PL1, ESSDs of PL2, and ESSDs of PL3. For more information, see [Configuration items](~~96750~~).</p>
      */
     @NameInMap("DBInstanceStorageType")
@@ -105,7 +105,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <p>*   Valid values for MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
      * <p>*   Valid values for SQL Server: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**</p>
      * <p>*   Valid values for PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**</p>
-     * <p>*   Valid values for MariaDB TX: **10.3**</p>
+     * <p>*   Valid values for MariaDB: **10.3**</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

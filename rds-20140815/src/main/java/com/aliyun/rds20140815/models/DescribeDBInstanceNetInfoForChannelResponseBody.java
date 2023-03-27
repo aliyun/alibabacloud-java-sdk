@@ -58,8 +58,8 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         /**
          * <p>The availability of the instance. Valid values:</p>
          * <br>
-         * <p>- **Unavailable**</p>
-         * <p>- **Available**</p>
+         * <p>*   **Unavailable**</p>
+         * <p>*   **Available**</p>
          */
         @NameInMap("Availability")
         public String availability;
@@ -73,8 +73,8 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         /**
          * <p>The type of the instance. Valid values:</p>
          * <br>
-         * <p>- **Master**: primary instance</p>
-         * <p>- **Readonly**: read-only instance</p>
+         * <p>*   **Master**: primary instance</p>
+         * <p>*   **Readonly**: read-only instance</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
@@ -224,7 +224,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         public String connectionStringType;
 
         /**
-         * <p>An array that consists of the information about read/write splitting after the shared proxy feature is enabled.</p>
+         * <p>An array that consists of the information about read weights to implement read/write splitting after the shared proxy feature is enabled.</p>
          */
         @NameInMap("DBInstanceWeights")
         public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights;
@@ -233,7 +233,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
          * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint that is assigned after the shared proxy feature is enabled. Valid values:</p>
          * <br>
          * <p>*   **Standard**: ApsaraDB RDS automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</p>
-         * <p>*   **Custom**: You must manually assign read weights to the instance and its read-only instances.</p>
+         * <p>*   **Custom**: You must manually allocate read weights to the instance and its read-only instances.</p>
          */
         @NameInMap("DistributionType")
         public String distributionType;
@@ -257,19 +257,19 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         /**
          * <p>The latency threshold that is allowed for read/write splitting of the shared proxy feature. Unit: seconds</p>
          * <br>
-         * <p>>  This parameter is returned only when **ConnectionStringType** is set to **ReadWriteSplitting**.</p>
+         * <p>> This parameter is returned only when the **ConnectionStringType** parameter is set to **ReadWriteSplitting**.</p>
          */
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
 
         /**
-         * <p>The service port.</p>
+         * <p>The port number of the instance.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>An array that consists of the IP address whitelists of the instance.</p>
+         * <p>Details of the IP address whitelist.</p>
          */
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
@@ -281,13 +281,13 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         public String upgradeable;
 
         /**
-         * <p>The ID of the VPC to which the instance belongs.</p>
+         * <p>The VPC ID of the instance.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
-         * <p>The ID of the vSwitch to which the instance belongs.</p>
+         * <p>The vSwitch ID of the instance.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

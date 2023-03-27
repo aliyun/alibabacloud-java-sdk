@@ -44,7 +44,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the new instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -60,17 +60,17 @@ public class CloneDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage type of the new instance. Valid values:</p>
      * <br>
-     * <p>*   **local_ssd**: local SSD</p>
-     * <p>*   **cloud_ssd**: standard SSD</p>
-     * <p>*   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)</p>
-     * <p>*   **cloud_essd2**: ESSD of PL2</p>
-     * <p>*   **cloud_essd3**: ESSD of PL3</p>
+     * <p>*   **local_ssd**: local SSDs</p>
+     * <p>*   **cloud_ssd**: standard SSDs</p>
+     * <p>*   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)</p>
+     * <p>*   **cloud_essd2**: ESSDs of PL2</p>
+     * <p>*   **cloud_essd3**: ESSDs of PL3</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
     /**
-     * <p>The name of the database. If you specify more than one database, specify the value in the following format: {"Original database name 1":"New database name 1","Original database name 2":"New database name 2"}</p>
+     * <p>The name of the database. If you specify more than one database, the value is in the following format: `Original database name 1,Original database name 2`.</p>
      */
     @NameInMap("DbNames")
     public String dbNames;
@@ -87,7 +87,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * <p>*   **true**: enables the feature.</p>
      * <p>*   **false**: disables the feature.</p>
      * <br>
-     * <p>Default value: **false**</p>
+     * <p>Default value: **false**.</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
@@ -113,18 +113,18 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:</p>
+     * <p>The unit that is used to calculate the billing cycle of the new instance. Valid values:</p>
      * <br>
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
      * <br>
-     * <p>> If you set the PayType parameter to **Prepaid**, you must also specify the UsedTime parameter.</p>
+     * <p>> If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     * <p>The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address to the new instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -139,7 +139,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to restore only the databases and tables that you specify. The value **1** specifies to restore only the specified databases and tables. If you do not want to restore only the specified databases or tables, you do not need to specify this parameter.</p>
+     * <p>Specifies whether to restore only the databases and tables that you specify. The value **1** specifies to restore only the specified databases and tables. If you do not want to restore only the specified databases or tables, you can choose not to specify this parameter.</p>
      */
     @NameInMap("RestoreTable")
     public String restoreTable;
@@ -153,17 +153,13 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The configuration of a serverless instance. You must specify this parameter only when you restore data to a new serverless instance.</p>
+     * <p>The configuration of a serverless instance. You must specify this parameter when you restore data to a new serverless instance.</p>
      */
     @NameInMap("ServerlessConfig")
     public CloneDBInstanceRequestServerlessConfig serverlessConfig;
 
     /**
-     * <p>The information about the database and table that you want to restore. The value is in the following format: </p>
-     * <br>
-     * <p>```</p>
-     * <p>[{"type":"db","name":"Name of Database 1","newname":"New name of Database 1","tables":[{"type":"table","name":"Name of Table 1 in Database 1","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 1","newname":"New name of Table 2"}]},{"type":"db","name":"Name of Database 2","newname":"New name of Database 2","tables":[{"type":"table","name":"Name of Table 1 in Database 2","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 2","newname":"New name of Table 2"}]}]</p>
-     * <p>```</p>
+     * <p>The information about the database and table that you want to restore. Syntax: `[{"type":"db","name":"Name of Database 1","newname":"New name of Database 1","tables":[{"type":"table","name":"Name of Table 1 in Database 1","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 1","newname":"New name of Table 2"}]},{"type":"db","name":"Name of Database 2","newname":"New name of Database 2","tables":[{"type":"table","name":"Name of Table 1 in Database 2","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 2","newname":"New name of Table 2"}]}]`</p>
      */
     @NameInMap("TableMeta")
     public String tableMeta;
@@ -174,7 +170,7 @@ public class CloneDBInstanceRequest extends TeaModel {
      * <p>*   If you set the **Period** parameter to **Year**, the value of the UsedTime parameter ranges from **1 to 3**.</p>
      * <p>*   If you set the **Period** parameter to **Month**, the value of the UsedTime parameter ranges from **1 to 9**.</p>
      * <br>
-     * <p>> If you set the PayType parameter to **Prepaid**, you must also specify the UsedTime parameter.</p>
+     * <p>> If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.</p>
      */
     @NameInMap("UsedTime")
     public Integer usedTime;
@@ -188,24 +184,34 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The ID of the vSwitch that is associated with the specified VPC. The vSwitch must belong to the zone that is specified by the **ZoneId** parameter.</p>
      * <br>
-     * <p>> Make sure that the vSwitch belongs to the required VPC and region.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you set the **InstanceNetworkType** parameter to **VPC**, you must also specify the VSwitchId parameter.</p>
+     * <br>
+     * <p>*   If you specify the **ZoneSlaveId1** parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The zone ID of the new instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the primary instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.</p>
      * <br>
      * <p>> By default, the new instance resides in the same region as the original instance.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
 
+    /**
+     * <p>The zone ID of the secondary instance. If you set the ZoneIdSlave1 parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter to a different value from the **ZoneId** parameter, the multi-zone deployment method is used.</p>
+     */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
 
+    /**
+     * <p>The zone ID of the logger instance. If you set the ZoneIdSlave1 parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter to a different value from the **ZoneId** parameter, the multi-zone deployment method is used.</p>
+     */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;
 

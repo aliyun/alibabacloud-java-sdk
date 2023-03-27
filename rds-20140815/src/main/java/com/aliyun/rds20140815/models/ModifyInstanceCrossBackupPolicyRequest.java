@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The status of the cross-region backup feature on the instance. This parameter specifies whether you can back up data and logs. Valid values:</p>
+     * <p>Specifies whether to enable the cross-region backup feature on the instance. This parameter specifies whether you can back up data and logs. Valid values:</p>
      * <br>
-     * <p>*   **0**: disables the feature.</p>
-     * <p>*   **1**: enables the feature.</p>
+     * <p>*   **0:** disables the feature.</p>
+     * <p>*   **1:** enables the feature.</p>
      * <br>
-     * <p>>  Before you enable the cross-region backup feature, you must configure the CrossBackupRegion parameter.</p>
+     * <p>> Before you enable the cross-region backup feature, you must configure the CrossBackupRegion parameter.</p>
      */
     @NameInMap("BackupEnabled")
     public String backupEnabled;
 
     /**
-     * <p>The ID of the destination region where the cross-region backup files of the instance are stored.</p>
+     * <p>The ID of the region in which the cross-region backup files of the instance are stored.</p>
      */
     @NameInMap("CrossBackupRegion")
     public String crossBackupRegion;
@@ -34,12 +34,12 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
+     * <p>Specifies whether to enable the cross-region log backup feature on the instance. Valid values:</p>
      * <br>
      * <p>*   **0**: disables the feature.</p>
-     * <p>*   **1**: enables the feature.</p>
+     * <p>*   **1:** enables the feature.</p>
      * <br>
-     * <p>>  You can enable the cross-region log backup feature only when the cross-region backup feature is enabled.</p>
+     * <p>> You can enable the cross-region log backup feature only when the cross-region backup feature is enabled.</p>
      */
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;

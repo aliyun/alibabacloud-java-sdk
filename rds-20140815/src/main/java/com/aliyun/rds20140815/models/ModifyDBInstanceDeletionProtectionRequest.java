@@ -16,7 +16,7 @@ public class ModifyDBInstanceDeletionProtectionRequest extends TeaModel {
      * <p>> * Before you call this operation, make sure that the instance runs one of the following database engines:</p>
      * <p>>     *   MySQL</p>
      * <p>>     *   PostgreSQL</p>
-     * <p>>     *   MariaDB TX</p>
+     * <p>>     *   MariaDB</p>
      * <p>> *   The instance is a pay-as-you-go instance.</p>
      */
     @NameInMap("DBInstanceId")

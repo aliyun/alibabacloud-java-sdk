@@ -222,7 +222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > An RDS instance is only allowed to apply for one external network connection address.
+      * You can apply for only one public endpoint for an instance.
       *
       * @param request AllocateInstancePublicConnectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -285,7 +285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > An RDS instance is only allowed to apply for one external network connection address.
+      * You can apply for only one public endpoint for an instance.
       *
       * @param request AllocateInstancePublicConnectionRequest
       * @return AllocateInstancePublicConnectionResponse
@@ -872,7 +872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   The original instance does not have ongoing migration tasks.
       * *   The log backup feature is enabled for the original instance to support point-in-time recovery.
       * *   If you want to clone the original instance by using backup sets, the original instance must have at least one backup set.
-      * > ApsaraDB RDS allows you to create a cloned instance by using the credentials of your RAM user. Make sure that your RAM user is granted the permissions that are required to clone an instance. For more information, see [Use RAM to manage ApsaraDB for RDS permissions](~~58932~~).
+      * > ApsaraDB RDS allows you to create a cloned instance by using the credentials of your RAM user. Make sure that your RAM user is granted the permissions that are required to clone an instance. For more information, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
       * Take note of the following information:
       * *   The new instance has the same IP address whitelist, SQL Explorer (SQL Audit), alert threshold, backup, and parameter settings as the original instance.
       * *   The account information and data of the new instance are the same as the account information and data that are indicated by the backup file or point in time used for restoration of the original instance.
@@ -1017,7 +1017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   The original instance does not have ongoing migration tasks.
       * *   The log backup feature is enabled for the original instance to support point-in-time recovery.
       * *   If you want to clone the original instance by using backup sets, the original instance must have at least one backup set.
-      * > ApsaraDB RDS allows you to create a cloned instance by using the credentials of your RAM user. Make sure that your RAM user is granted the permissions that are required to clone an instance. For more information, see [Use RAM to manage ApsaraDB for RDS permissions](~~58932~~).
+      * > ApsaraDB RDS allows you to create a cloned instance by using the credentials of your RAM user. Make sure that your RAM user is granted the permissions that are required to clone an instance. For more information, see [Use RAM to manage ApsaraDB RDS permissions](~~58932~~).
       * Take note of the following information:
       * *   The new instance has the same IP address whitelist, SQL Explorer (SQL Audit), alert threshold, backup, and parameter settings as the original instance.
       * *   The account information and data of the new instance are the same as the account information and data that are indicated by the backup file or point in time used for restoration of the original instance.
@@ -1205,14 +1205,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also call the CopyDatabaseBetweenInstances operation to restore specific databases to an existing instance by point in time or backup file. For more information, see [Restore the data of an ApsaraDB RDS for SQL Server instance](~~95722~~).
+      * You can also call this operation to restore specific databases to an existing instance by point in time or backup set. For more information, see [Restore the data of an ApsaraDB RDS for SQL Server instance](~~95722~~).
       * Before you call this operation, make sure that the following requirements are met:
       * *   The source and destination instances belong to the same account.
       * *   The source and destination instances run the same version of database engine.
-      * *   The source and destination instances are in the same region and can belong to different zones. The network types must be the same.
+      * *   The source and destination instances reside in the same region and use the same network type. Their zones can be different.
       * *   The source and destination instances do not have databases whose names are the same.
-      * *   The available storage space of the destination instance is larger than the size of the databases to be copied.
-      * > The CopyDatabaseBetweenInstances operation is applicable only to ApsaraDB RDS for SQL Server instances that run SQL Server 2012 or SQL Server 2016. You can restore specific databases or tables of an ApsaraDB RDS for MySQL instance to the original instance or a new instance. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+      * *   The available storage of the destination instance is larger than the total size of the databases that you want to replicate from the source instance.
+      * > This operation is supported only for instances that run SQL Server 2012 and later.
       *
       * @param request CopyDatabaseBetweenInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1267,14 +1267,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can also call the CopyDatabaseBetweenInstances operation to restore specific databases to an existing instance by point in time or backup file. For more information, see [Restore the data of an ApsaraDB RDS for SQL Server instance](~~95722~~).
+      * You can also call this operation to restore specific databases to an existing instance by point in time or backup set. For more information, see [Restore the data of an ApsaraDB RDS for SQL Server instance](~~95722~~).
       * Before you call this operation, make sure that the following requirements are met:
       * *   The source and destination instances belong to the same account.
       * *   The source and destination instances run the same version of database engine.
-      * *   The source and destination instances are in the same region and can belong to different zones. The network types must be the same.
+      * *   The source and destination instances reside in the same region and use the same network type. Their zones can be different.
       * *   The source and destination instances do not have databases whose names are the same.
-      * *   The available storage space of the destination instance is larger than the size of the databases to be copied.
-      * > The CopyDatabaseBetweenInstances operation is applicable only to ApsaraDB RDS for SQL Server instances that run SQL Server 2012 or SQL Server 2016. You can restore specific databases or tables of an ApsaraDB RDS for MySQL instance to the original instance or a new instance. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
+      * *   The available storage of the destination instance is larger than the total size of the databases that you want to replicate from the source instance.
+      * > This operation is supported only for instances that run SQL Server 2012 and later.
       *
       * @param request CopyDatabaseBetweenInstancesRequest
       * @return CopyDatabaseBetweenInstancesResponse
@@ -1286,11 +1286,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is in the running state.
-      * *   The database is in the running state.
-      * *   The number of accounts that are created on the instance does not exceed the maximum number of accounts for an instance. For more information about the maximum number of accounts, see [Limits](~~41872~~).
+      * *   The instance is in the Running state.
+      * *   The database is in the Running state.
+      * *   The number of accounts that are created on the instance does not exceed the upper limit. For more information, see [Limits](~~41872~~).
       * > 
-      * *   This operation is supported for instances that run MySQL, MariaDB TX, PostgreSQL, and SQL Server. However, if the instance runs SQL Server 2017 or SQL Server 2019 on RDS Cluster Edition, this operation is not supported.
+      * *   This operation is supported for instances that run MySQL, MariaDB, PostgreSQL, and SQL Server. However, if the instance runs SQL Server 2017 or SQL Server 2019 on RDS Cluster Edition, this operation is not supported.
       * *   You can create multiple privileged accounts and standard accounts on an instance that runs PostgreSQL.
       *
       * @param request CreateAccountRequest
@@ -1355,11 +1355,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is in the running state.
-      * *   The database is in the running state.
-      * *   The number of accounts that are created on the instance does not exceed the maximum number of accounts for an instance. For more information about the maximum number of accounts, see [Limits](~~41872~~).
+      * *   The instance is in the Running state.
+      * *   The database is in the Running state.
+      * *   The number of accounts that are created on the instance does not exceed the upper limit. For more information, see [Limits](~~41872~~).
       * > 
-      * *   This operation is supported for instances that run MySQL, MariaDB TX, PostgreSQL, and SQL Server. However, if the instance runs SQL Server 2017 or SQL Server 2019 on RDS Cluster Edition, this operation is not supported.
+      * *   This operation is supported for instances that run MySQL, MariaDB, PostgreSQL, and SQL Server. However, if the instance runs SQL Server 2017 or SQL Server 2019 on RDS Cluster Edition, this operation is not supported.
       * *   You can create multiple privileged accounts and standard accounts on an instance that runs PostgreSQL.
       *
       * @param request CreateAccountRequest
@@ -1741,6 +1741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Period", request.period);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
             query.put("PrivateIpAddress", request.privateIpAddress);
         }
@@ -2028,6 +2032,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDBInstanceEndpointAddressWithOptions(request, runtime);
     }
 
+    /**
+      * **Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Pricing, billable items, and billing methods](~~45020~~).**
+      * You can call this operation only for instances that are moved to the recycle bin. For more information about instances that can be moved to the recycle bin, see [Recycle bin](~~96065~~).
+      *
+      * @param request CreateDBInstanceForRebuildRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDBInstanceForRebuildResponse
+     */
     public CreateDBInstanceForRebuildResponse createDBInstanceForRebuildWithOptions(CreateDBInstanceForRebuildRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2132,6 +2144,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDBInstanceForRebuildResponse());
     }
 
+    /**
+      * **Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Pricing, billable items, and billing methods](~~45020~~).**
+      * You can call this operation only for instances that are moved to the recycle bin. For more information about instances that can be moved to the recycle bin, see [Recycle bin](~~96065~~).
+      *
+      * @param request CreateDBInstanceForRebuildRequest
+      * @return CreateDBInstanceForRebuildResponse
+     */
     public CreateDBInstanceForRebuildResponse createDBInstanceForRebuild(CreateDBInstanceForRebuildRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDBInstanceForRebuildWithOptions(request, runtime);
@@ -2303,7 +2322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * If you want to perform data management tasks such as data change and schema design, use Data Management (DMS). For more information, see [List of operations by function of DMS](~~97965~~).
       * Before you call this operation, make sure that the following requirements are met:
       * *   The instance is in the Running state.
-      * *   The maximum number of databases for the instance is not reached. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the maximum number of databases.
+      * *   The maximum number of databases that can be created on an instance is not reached. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the maximum number of databases that can be created on an instance.
       * *   The instance is not a read-only instance.
       * > This operation is not supported for instances that run PostgreSQL with local SSDs or SQL Server 2017 (cluster edition). You can execute the CREATE DATABASE statement to create a database.
       *
@@ -2371,7 +2390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * If you want to perform data management tasks such as data change and schema design, use Data Management (DMS). For more information, see [List of operations by function of DMS](~~97965~~).
       * Before you call this operation, make sure that the following requirements are met:
       * *   The instance is in the Running state.
-      * *   The maximum number of databases for the instance is not reached. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the maximum number of databases.
+      * *   The maximum number of databases that can be created on an instance is not reached. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the maximum number of databases that can be created on an instance.
       * *   The instance is not a read-only instance.
       * > This operation is not supported for instances that run PostgreSQL with local SSDs or SQL Server 2017 (cluster edition). You can execute the CREATE DATABASE statement to create a database.
       *
@@ -3502,12 +3521,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Only the backup sets of the instance itself are deleted. The backup sets of the associated instances such as read-only, disaster recovery, and clone instances are not deleted.
+      * You can call this operation to delete backup sets of the instance itself. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is in the running state.
-      * *   The instance is of the High-availability Edition and runs MySQL or PostgreSQL.
-      * *   If log backups are disabled, RDS instance does not support data restoration by time. You can delete data backup sets which are retained for more than seven days.
-      * *   If log backups are enabled and the retention period of log backups is less than the retention period of data backups, the data backup sets that exceed the retention period of log backups can be deleted.
+      * *   The instance is in the Running state.
+      * *   The instance runs MySQL or PostgreSQL on RDS High-availability Edition.
+      * *   If the log backup feature is disabled, instances cannot be restored by point in time. You can delete backup sets that are retained for more than seven days.
+      * *   If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.
       *
       * @param request DeleteBackupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3558,12 +3577,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Only the backup sets of the instance itself are deleted. The backup sets of the associated instances such as read-only, disaster recovery, and clone instances are not deleted.
+      * You can call this operation to delete backup sets of the instance itself. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is in the running state.
-      * *   The instance is of the High-availability Edition and runs MySQL or PostgreSQL.
-      * *   If log backups are disabled, RDS instance does not support data restoration by time. You can delete data backup sets which are retained for more than seven days.
-      * *   If log backups are enabled and the retention period of log backups is less than the retention period of data backups, the data backup sets that exceed the retention period of log backups can be deleted.
+      * *   The instance is in the Running state.
+      * *   The instance runs MySQL or PostgreSQL on RDS High-availability Edition.
+      * *   If the log backup feature is disabled, instances cannot be restored by point in time. You can delete backup sets that are retained for more than seven days.
+      * *   If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.
       *
       * @param request DeleteBackupRequest
       * @return DeleteBackupResponse
@@ -4513,6 +4532,95 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeActionEventPolicyWithOptions(request, runtime);
     }
 
+    public DescribeActiveOperationTasksResponse describeActiveOperationTasksWithOptions(DescribeActiveOperationTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowCancel)) {
+            query.put("AllowCancel", request.allowCancel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowChange)) {
+            query.put("AllowChange", request.allowChange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.changeLevel)) {
+            query.put("ChangeLevel", request.changeLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
+            query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.insName)) {
+            query.put("InsName", request.insName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
+            query.put("ProductId", request.productId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            query.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeActiveOperationTasks"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeActiveOperationTasksResponse());
+    }
+
+    public DescribeActiveOperationTasksResponse describeActiveOperationTasks(DescribeActiveOperationTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeActiveOperationTasksWithOptions(request, runtime);
+    }
+
     public DescribeAnalyticdbByPrimaryDBInstanceResponse describeAnalyticdbByPrimaryDBInstanceWithOptions(DescribeAnalyticdbByPrimaryDBInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5137,10 +5245,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If the return value of the **DownloadLink** parameter is NULL for a log backup file, ApsaraDB RDS does not provide a URL from which you can download the file.
-      * *   If the return value of the **DownloadLink** parameter is not NULL for a log backup file, ApsaraDB RDS provides a URL from which you can download the file. The expiration time of the provided URL is specified by the **LinkExpiredTime** parameter. You must download the file before the expiration time.
-      * *   This operation returns SQL log entries that are generated over a specified time range. The beginning of the time range must be later than or equal to the time that is specified by the LogEndTime parameter. In addition, the end of the time range must be earlier than or equal to the time that is specified by the LogBeginTime parameter.
-      * >  This operation is not supported for instances that run SQL Server.
+      * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a URL for you to download binary log files.
+      * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download binary log files. The expiration time of the URL is specified by the **LinkExpiredTime** parameter. You must download the binary log files before the expiration time.
+      * *   Each binary log file that is returned by this operation contains the log entries that are generated over the time range specified by the StartTime and EndTime parameters.
+      * > This operation is not supported for instances that run SQL Server.
       *
       * @param request DescribeBinlogFilesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5203,10 +5311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If the return value of the **DownloadLink** parameter is NULL for a log backup file, ApsaraDB RDS does not provide a URL from which you can download the file.
-      * *   If the return value of the **DownloadLink** parameter is not NULL for a log backup file, ApsaraDB RDS provides a URL from which you can download the file. The expiration time of the provided URL is specified by the **LinkExpiredTime** parameter. You must download the file before the expiration time.
-      * *   This operation returns SQL log entries that are generated over a specified time range. The beginning of the time range must be later than or equal to the time that is specified by the LogEndTime parameter. In addition, the end of the time range must be earlier than or equal to the time that is specified by the LogBeginTime parameter.
-      * >  This operation is not supported for instances that run SQL Server.
+      * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a URL for you to download binary log files.
+      * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download binary log files. The expiration time of the URL is specified by the **LinkExpiredTime** parameter. You must download the binary log files before the expiration time.
+      * *   Each binary log file that is returned by this operation contains the log entries that are generated over the time range specified by the StartTime and EndTime parameters.
+      * > This operation is not supported for instances that run SQL Server.
       *
       * @param request DescribeBinlogFilesRequest
       * @return DescribeBinlogFilesResponse
@@ -6478,7 +6586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * You can query the performance of an instance over a specific time range based on its performance metrics. Performance metrics are generated by using one of the following methods based on the database engine and version, RDS edition, [monitoring frequency](~~26200~~) ([ModifyDBInstanceMonitor](~~26282~~)), and query time range:
-      * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB TX:
+      * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB:
       *     *   5-second monitoring frequency
       *         *   If the query time range is greater than seven days, performance metrics are collected at 1-day intervals.
       *         *   If the query time range is greater than one day but less than or equal to seven days, performance metrics are collected at 1-hour intervals.
@@ -6492,7 +6600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
       *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
       *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 5-minute intervals.
-      * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB TX:
+      * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB:
       *     *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
       *     *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
       *     *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
@@ -6556,7 +6664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * You can query the performance of an instance over a specific time range based on its performance metrics. Performance metrics are generated by using one of the following methods based on the database engine and version, RDS edition, [monitoring frequency](~~26200~~) ([ModifyDBInstanceMonitor](~~26282~~)), and query time range:
-      * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB TX:
+      * *   For instances that do not run MySQL on RDS High-availability Edition with standard SSDs or enhanced SSDs (ESSDs) and those that do not run MariaDB:
       *     *   5-second monitoring frequency
       *         *   If the query time range is greater than seven days, performance metrics are collected at 1-day intervals.
       *         *   If the query time range is greater than one day but less than or equal to seven days, performance metrics are collected at 1-hour intervals.
@@ -6570,7 +6678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *         *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
       *         *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
       *         *   If the query time range is less than or equal to seven days, performance metrics are collected at 5-minute intervals.
-      * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB TX:
+      * *   For instances that are running MySQL on RDS High-availability Edition with standard SSDs or ESSDs and those that are running MariaDB:
       *     *   If the query time range is greater than 30 days, performance metrics are collected at 1-day intervals.
       *     *   If the query time range is greater than seven days but less than or equal to 30 days, performance metrics are collected at 1-hour intervals.
       *     *   If the query time range is less than or equal to seven days, performance metrics are collected at 1-minute intervals.
@@ -6843,8 +6951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can use one of the following methods to check the response:
       * *   Method 1: Use the **MaxResults** parameter to specify the number of entries per page. Then, use the **NextToken** parameter to specify the token that is used to display the next page. The **NextToken** parameter is set to the value that is returned from the most recent call of the **DescribeDBInstances** operation for the **NextToken** parameter.
-      *     **
-      *     **Note**The first time you call the DescribeDBInstances operation to perform a paged query, you need only to specify the **MaxResults** parameter. In this case, the operation returns the data of the first page and the value of the **NextToken** parameter.
+      *     > The first time you call the DescribeDBInstances operation to perform a paged query, you need only to specify the **MaxResults** parameter. In this case, the operation returns the data of the first page and the value of the **NextToken** parameter.
       * *   Method 2: Use the **PageSize** parameter to specify the number of entries per page. Then, use the **PageNumber** parameter to display the next page.
       * > You can use only one of the preceding methods. If a large number of entries are returned, we recommend that you use Method 1 to increase the query speed.
       *
@@ -6999,8 +7106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can use one of the following methods to check the response:
       * *   Method 1: Use the **MaxResults** parameter to specify the number of entries per page. Then, use the **NextToken** parameter to specify the token that is used to display the next page. The **NextToken** parameter is set to the value that is returned from the most recent call of the **DescribeDBInstances** operation for the **NextToken** parameter.
-      *     **
-      *     **Note**The first time you call the DescribeDBInstances operation to perform a paged query, you need only to specify the **MaxResults** parameter. In this case, the operation returns the data of the first page and the value of the **NextToken** parameter.
+      *     > The first time you call the DescribeDBInstances operation to perform a paged query, you need only to specify the **MaxResults** parameter. In this case, the operation returns the data of the first page and the value of the **NextToken** parameter.
       * *   Method 2: Use the **PageSize** parameter to specify the number of entries per page. Then, use the **PageNumber** parameter to display the next page.
       * > You can use only one of the preceding methods. If a large number of entries are returned, we recommend that you use Method 1 to increase the query speed.
       *
@@ -9567,12 +9673,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated
       * This operation is phased out.
       *
       * @param request DescribeRdsResourceSettingsRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return DescribeRdsResourceSettingsResponse
      */
+    // Deprecated
     public DescribeRdsResourceSettingsResponse describeRdsResourceSettingsWithOptions(DescribeRdsResourceSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9610,11 +9718,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated
       * This operation is phased out.
       *
       * @param request DescribeRdsResourceSettingsRequest
       * @return DescribeRdsResourceSettingsResponse
      */
+    // Deprecated
     public DescribeRdsResourceSettingsResponse describeRdsResourceSettings(DescribeRdsResourceSettingsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRdsResourceSettingsWithOptions(request, runtime);
@@ -11246,8 +11356,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the running state.
-      * > This operation is not supported for instances that run SQL Server 2017 (cluster edition) or PostgreSQL with local SSDs.
+      * Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.
+      * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local SSDs.
       *
       * @param request GrantAccountPrivilegeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -11294,8 +11404,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the running state.
-      * > This operation is not supported for instances that run SQL Server 2017 (cluster edition) or PostgreSQL with local SSDs.
+      * Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.
+      * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local SSDs.
       *
       * @param request GrantAccountPrivilegeRequest
       * @return GrantAccountPrivilegeResponse
@@ -12300,6 +12410,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyActionEventPolicyWithOptions(request, runtime);
     }
 
+    public ModifyActiveOperationTasksResponse modifyActiveOperationTasksWithOptions(ModifyActiveOperationTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ids)) {
+            query.put("Ids", request.ids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.immediateStart)) {
+            query.put("ImmediateStart", request.immediateStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchTime)) {
+            query.put("SwitchTime", request.switchTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyActiveOperationTasks"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyActiveOperationTasksResponse());
+    }
+
+    public ModifyActiveOperationTasksResponse modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyActiveOperationTasksWithOptions(request, runtime);
+    }
+
     /**
       * Before you call this operation, make sure that the following requirements are met:
       * *   The instance is not a read-only instance.
@@ -12699,9 +12866,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ApsaraDB RDS provides the internal and public endpoints. ApsaraDB RDS also allows hybrid access by using both a Virtual Private Cloud (VPC) endpoint and a classic network endpoint.
-      * > *   You can change only the prefix of an endpoint.
-      * > *   The read/write splitting endpoint cannot be changed.
+      * ApsaraDB RDS provides the internal and public endpoints. ApsaraDB RDS also allows hybrid access by using both a virtual private cloud (VPC) endpoint and a classic network endpoint.
+      * > * You can change only the prefix of an endpoint.
+      * > * The read/write splitting endpoint cannot be changed.
       *
       * @param request ModifyDBInstanceConnectionStringRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -12768,9 +12935,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ApsaraDB RDS provides the internal and public endpoints. ApsaraDB RDS also allows hybrid access by using both a Virtual Private Cloud (VPC) endpoint and a classic network endpoint.
-      * > *   You can change only the prefix of an endpoint.
-      * > *   The read/write splitting endpoint cannot be changed.
+      * ApsaraDB RDS provides the internal and public endpoints. ApsaraDB RDS also allows hybrid access by using both a virtual private cloud (VPC) endpoint and a classic network endpoint.
+      * > * You can change only the prefix of an endpoint.
+      * > * The read/write splitting endpoint cannot be changed.
       *
       * @param request ModifyDBInstanceConnectionStringRequest
       * @return ModifyDBInstanceConnectionStringResponse
@@ -13506,7 +13673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * The following requirements must be met:
       * *   The instance belongs to the current account.
       * *   The instance uses one of the most recent instance types. For more information, see [Instance types](~~26312~~).
-      *     > You cannot directly change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~26178~~).
+      *     > You cannot directly change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~96061~~).
       * *   The instance uses the pay-as-you-go billing method and is in the Running state.
       * *   Your Alibaba Cloud account has no unpaid orders for the instance for which you want to change the billing method.
       *
@@ -13559,7 +13726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * The following requirements must be met:
       * *   The instance belongs to the current account.
       * *   The instance uses one of the most recent instance types. For more information, see [Instance types](~~26312~~).
-      *     > You cannot directly change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~26178~~).
+      *     > You cannot directly change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~96061~~).
       * *   The instance uses the pay-as-you-go billing method and is in the Running state.
       * *   Your Alibaba Cloud account has no unpaid orders for the instance for which you want to change the billing method.
       *
@@ -14808,9 +14975,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that the source instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for MySQL instance](~~120824~~).
-      * *   SQL Server. For more information, see [Enable cross-region backups for an ApsaraDB RDS for SQL Server instance](~~187923~~).
+      * Before you call this operation, make sure that the instance runs one of the following database engines:
+      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+      * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
       * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
       *
       * @param request ModifyInstanceCrossBackupPolicyRequest
@@ -14882,9 +15049,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that the source instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for MySQL instance](~~120824~~).
-      * *   SQL Server. For more information, see [Enable cross-region backups for an ApsaraDB RDS for SQL Server instance](~~187923~~).
+      * Before you call this operation, make sure that the instance runs one of the following database engines:
+      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
+      * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
       * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
       *
       * @param request ModifyInstanceCrossBackupPolicyRequest
@@ -16483,7 +16650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If a large number of transactions need to be submitted or rolled back, the restart process may be delayed for a minute.
+      * If a large number of transactions need to be submitted or rolled back, the restart process may be delayed for about 1 minute.\\
       * Before you call this operation, make sure that the following requirements are met:
       * *   The instance is in the running state.
       * *   The instance does not have ongoing backup tasks.
@@ -16537,7 +16704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If a large number of transactions need to be submitted or rolled back, the restart process may be delayed for a minute.
+      * If a large number of transactions need to be submitted or rolled back, the restart process may be delayed for about 1 minute.\\
       * Before you call this operation, make sure that the following requirements are met:
       * *   The instance is in the running state.
       * *   The instance does not have ongoing backup tasks.
@@ -16659,12 +16826,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
       * Before you call this operation, make sure that the following requirements are met:
-      * *   Your RDS instance is in the Running state.
+      * *   The instance is in the Running state.
       * *   The instance does not have ongoing migration tasks.
       * *   If you want to restore data to a specific point in time, the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
       * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
       * *   The names that you want to use for the restored tables do not exist in the instance.
-      * >  This operation is supported only by instances that run MySQL.
+      * > This operation is supported only by instances that run MySQL.
       *
       * @param request RestoreTableRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16733,12 +16900,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * ApsaraDB RDS for MySQL supports the restoration of individual databases and tables. If you delete databases or tables from an instance, you can restore the databases or tables by using a backup file. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
       * Before you call this operation, make sure that the following requirements are met:
-      * *   Your RDS instance is in the Running state.
+      * *   The instance is in the Running state.
       * *   The instance does not have ongoing migration tasks.
       * *   If you want to restore data to a specific point in time, the log backup feature is enabled for the instance. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).
       * *   The restoration of individual databases or tables is enabled, and new backups are created. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).
       * *   The names that you want to use for the restored tables do not exist in the instance.
-      * >  This operation is supported only by instances that run MySQL.
+      * > This operation is supported only by instances that run MySQL.
       *
       * @param request RestoreTableRequest
       * @return RestoreTableResponse
@@ -17203,9 +17370,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * The instance must run one of the following database engines:
-      * *   MySQL with local SSDs, standard SSDs, or enhanced SSDs (ESSDs)
+      * *   MySQL with local SSDs, standard SSDs, or enhanced ESSDs (ESSDs)
       * *   SQL Server with standard SSDs or ESSDs
-      * *   MariaDB TX with standard SSDs or ESSDs
+      * *   MariaDB with standard SSDs or ESSDs
       * *   PostgreSQL with standard SSDs or ESSDs
       * For more information about the impact of VPC and vSwitch changes, see [Switch an ApsaraDB RDS for MySQL instance to a new VPC and a new vSwitch](~~137567~~).
       *
@@ -17255,9 +17422,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * The instance must run one of the following database engines:
-      * *   MySQL with local SSDs, standard SSDs, or enhanced SSDs (ESSDs)
+      * *   MySQL with local SSDs, standard SSDs, or enhanced ESSDs (ESSDs)
       * *   SQL Server with standard SSDs or ESSDs
-      * *   MariaDB TX with standard SSDs or ESSDs
+      * *   MariaDB with standard SSDs or ESSDs
       * *   PostgreSQL with standard SSDs or ESSDs
       * For more information about the impact of VPC and vSwitch changes, see [Switch an ApsaraDB RDS for MySQL instance to a new VPC and a new vSwitch](~~137567~~).
       *
@@ -17882,15 +18049,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * During an upgrade, ApsaraDB RDS retains the original RDS instance and creates an RDS instance that runs the new major engine version. You start to be **charged** for the new RDS instance based on the **pay-as-you-go** billing method after the instance is created. The new instance **does not inherit the reduced price that is offered to the original instance**. Before you call this operation, make sure that you fully understand the [billing methods and pricing](~~45020~~) of ApsaraDB RDS. You can decide whether to upgrade the major engine version based on your business requirements.
+      * During an upgrade, ApsaraDB RDS retains the original instance and creates an instance that runs the new major engine version. You start to be **charged** for the new instance based on the **pay-as-you-go** billing method after the instance is created. The new instance **does not inherit the reduced price that is offered to the original instance**. Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraDB RDS. You can decide whether to upgrade the major engine version based on your business requirements. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
       * Before you upgrade the major engine version, you must call the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation to perform an upgrade check and then call the [DescribeUpgradeMajorVersionPrecheckTask](~~330088~~) operation to query the upgrade check report. You can call the UpgradeDBInstanceMajorVersion operation only when the check result is **Success**.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The original instance must run PostgreSQL 13, PostgreSQL 12, PostgreSQL 11, PostgreSQL 10, or PostgreSQL 9.4.
-      * *   The original instance must run RDS High-availability Edition or RDS Basic Edition.
-      * *   The original RDS instance must reside in a virtual private cloud (VPC). If the original instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~).
-      * *   The original instance cannot be a read-only instance and cannot be created in a dedicated cluster.
-      * *   The ID of the original instance cannot start with pg-cn.
-      * An upgrade brings impacts, such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+      * *   The original instance runs PostgreSQL 14, PostgreSQL 13, PostgreSQL 12, PostgreSQL 11, PostgreSQL 10, or PostgreSQL 9.4.
+      * *   The instance runs RDS High-availability Edition or RDS Basic Edition.
+      * *   The original instance resides in a virtual private cloud (VPC). If the original instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~).
+      * *   The original instance is not a read-only instance and is not created in a dedicated cluster.
+      * An upgrade causes impacts such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read the description in [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
       *
       * @param request UpgradeDBInstanceMajorVersionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17997,15 +18163,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * During an upgrade, ApsaraDB RDS retains the original RDS instance and creates an RDS instance that runs the new major engine version. You start to be **charged** for the new RDS instance based on the **pay-as-you-go** billing method after the instance is created. The new instance **does not inherit the reduced price that is offered to the original instance**. Before you call this operation, make sure that you fully understand the [billing methods and pricing](~~45020~~) of ApsaraDB RDS. You can decide whether to upgrade the major engine version based on your business requirements.
+      * During an upgrade, ApsaraDB RDS retains the original instance and creates an instance that runs the new major engine version. You start to be **charged** for the new instance based on the **pay-as-you-go** billing method after the instance is created. The new instance **does not inherit the reduced price that is offered to the original instance**. Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraDB RDS. You can decide whether to upgrade the major engine version based on your business requirements. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
       * Before you upgrade the major engine version, you must call the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation to perform an upgrade check and then call the [DescribeUpgradeMajorVersionPrecheckTask](~~330088~~) operation to query the upgrade check report. You can call the UpgradeDBInstanceMajorVersion operation only when the check result is **Success**.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The original instance must run PostgreSQL 13, PostgreSQL 12, PostgreSQL 11, PostgreSQL 10, or PostgreSQL 9.4.
-      * *   The original instance must run RDS High-availability Edition or RDS Basic Edition.
-      * *   The original RDS instance must reside in a virtual private cloud (VPC). If the original instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~).
-      * *   The original instance cannot be a read-only instance and cannot be created in a dedicated cluster.
-      * *   The ID of the original instance cannot start with pg-cn.
-      * An upgrade brings impacts, such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
+      * *   The original instance runs PostgreSQL 14, PostgreSQL 13, PostgreSQL 12, PostgreSQL 11, PostgreSQL 10, or PostgreSQL 9.4.
+      * *   The instance runs RDS High-availability Edition or RDS Basic Edition.
+      * *   The original instance resides in a virtual private cloud (VPC). If the original instance resides in the classic network, you must migrate the instance to a VPC before you call this operation. For more information about how to view or change the network type of an instance, see [Change the network type of an ApsaraDB RDS for PostgreSQL instance](~~96761~~).
+      * *   The original instance is not a read-only instance and is not created in a dedicated cluster.
+      * An upgrade causes impacts such as a transient connection that lasts a few minutes. We recommend that you perform an upgrade during off-peak hours. Before you perform an upgrade, we recommend that you read the description in [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~).
       *
       * @param request UpgradeDBInstanceMajorVersionRequest
       * @return UpgradeDBInstanceMajorVersionResponse

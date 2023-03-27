@@ -14,15 +14,15 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
      * <p>The high availability mode of the instance. Valid values:</p>
      * <br>
      * <p>*   **RPO**: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</p>
-     * <p>*   **RTO**: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on service availability, select this mode.</p>
+     * <p>*   **RTO**: Instance availability is preferred. The instance restores the database service at the earliest opportunity to ensure instance availability. If you have high requirements on instance availability, select this mode.</p>
      * <br>
-     * <p>>  This parameter is returned only for instances that run MySQL.</p>
+     * <p>> This parameter is returned only for instances that run MySQL.</p>
      */
     @NameInMap("HAMode")
     public String HAMode;
 
     /**
-     * <p>An array that consists of the information about the primary and secondary instances.</p>
+     * <p>An array that consists of the information of the primary and secondary instances.</p>
      */
     @NameInMap("HostInstanceInfos")
     public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfos hostInstanceInfos;
@@ -34,13 +34,13 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The data replication mode of the instance. For more information, see [Change the data replication mode of an ApsaraDB RDS for MySQL instance](~~96055~~). Valid values:</p>
+     * <p>[The data replication mode of the instance.](~~96055~~) Valid values:</p>
      * <br>
      * <p>*   **Sync**: the synchronous mode</p>
      * <p>*   **Semi-sync**: the semi-synchronous mode</p>
      * <p>*   **Async**: the asynchronous mode</p>
      * <br>
-     * <p>>  This parameter is returned only for instances that run MySQL.</p>
+     * <p>> This parameter is returned only for instances that run MySQL.</p>
      */
     @NameInMap("SyncMode")
     public String syncMode;
@@ -92,7 +92,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo extends TeaModel {
         /**
-         * <p>The time when the secondary instance finished the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("DataSyncTime")
         public String dataSyncTime;
@@ -110,10 +110,10 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The role of the instance. Valid values:</p>
+         * <p>The type of the node. Valid values:</p>
          * <br>
-         * <p>*   **Master**: the primary instance role</p>
-         * <p>*   **Slave**: the secondary instance role</p>
+         * <p>*   **Master**: the primary node</p>
+         * <p>*   **Slave**: the secondary node</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
@@ -125,11 +125,11 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The synchronization status of the instance. Valid values:</p>
+         * <p>The synchronization status. Valid values:</p>
          * <br>
          * <p>*   **NotAvailable**: The synchronization fails. This means that faults occur.</p>
          * <p>*   **Syncing**: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.</p>
-         * <p>*   **Synchronized**: The synchronization is completed.</p>
+         * <p>*   **Synchronized**: The synchronization is complete.</p>
          * <p>*   **NotSupport**: The database engine or version does not involve the synchronization between the primary and secondary instances.</p>
          */
         @NameInMap("SyncStatus")
