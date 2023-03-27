@@ -7,6 +7,9 @@ public class QueryLabelRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("Label")
     public String label;
 
@@ -33,6 +36,14 @@ public class QueryLabelRequest extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public QueryLabelRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public QueryLabelRequest setLabel(String label) {

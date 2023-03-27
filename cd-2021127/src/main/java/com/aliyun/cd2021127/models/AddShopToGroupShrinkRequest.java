@@ -4,6 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class AddShopToGroupShrinkRequest extends TeaModel {
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("ShopGroupId")
     public String shopGroupId;
 
@@ -13,6 +16,14 @@ public class AddShopToGroupShrinkRequest extends TeaModel {
     public static AddShopToGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AddShopToGroupShrinkRequest self = new AddShopToGroupShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddShopToGroupShrinkRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public AddShopToGroupShrinkRequest setShopGroupId(String shopGroupId) {

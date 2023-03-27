@@ -4,6 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class QueryOperationIndexRequest extends TeaModel {
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("EndDate")
     public String endDate;
 
@@ -16,6 +19,14 @@ public class QueryOperationIndexRequest extends TeaModel {
     public static QueryOperationIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryOperationIndexRequest self = new QueryOperationIndexRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryOperationIndexRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public QueryOperationIndexRequest setEndDate(String endDate) {

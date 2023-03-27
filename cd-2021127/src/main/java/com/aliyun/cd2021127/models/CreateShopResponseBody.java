@@ -75,45 +75,4 @@ public class CreateShopResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class BatchCreateShopResponseBodyData extends TeaModel {
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("ShopId")
-        public String shopId;
-
-        public static BatchCreateShopResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            BatchCreateShopResponseBodyData self = new BatchCreateShopResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchCreateShopResponseBodyData setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public BatchCreateShopResponseBodyData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public BatchCreateShopResponseBodyData setShopId(String shopId) {
-            this.shopId = shopId;
-            return this;
-        }
-        public String getShopId() {
-            return this.shopId;
-        }
-
-    }
-
 }

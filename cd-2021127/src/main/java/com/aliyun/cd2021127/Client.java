@@ -26,12 +26,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AddProductImageResponse addProductImage(AddProductImageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.addProductImageWithOptions(request, headers, runtime);
-    }
-
     public AddProductImageResponse addProductImageWithOptions(AddProductImageRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddProductImageShrinkRequest request = new AddProductImageShrinkRequest();
@@ -41,6 +35,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
             body.put("ProductId", request.productId);
         }
@@ -71,10 +69,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddProductImageResponse());
     }
 
-    public AddShopToGroupResponse addShopToGroup(AddShopToGroupRequest request) throws Exception {
+    public AddProductImageResponse addProductImage(AddProductImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.addShopToGroupWithOptions(request, headers, runtime);
+        return this.addProductImageWithOptions(request, headers, runtime);
     }
 
     public AddShopToGroupResponse addShopToGroupWithOptions(AddShopToGroupRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -86,6 +84,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopGroupId)) {
             body.put("ShopGroupId", request.shopGroupId);
         }
@@ -112,10 +114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddShopToGroupResponse());
     }
 
-    public AddShopsToGroupResponse addShopsToGroup(AddShopsToGroupRequest request) throws Exception {
+    public AddShopToGroupResponse addShopToGroup(AddShopToGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.addShopsToGroupWithOptions(request, headers, runtime);
+        return this.addShopToGroupWithOptions(request, headers, runtime);
     }
 
     public AddShopsToGroupResponse addShopsToGroupWithOptions(AddShopsToGroupRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -153,10 +155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddShopsToGroupResponse());
     }
 
-    public BatchCreateShopResponse batchCreateShop(BatchCreateShopRequest request) throws Exception {
+    public AddShopsToGroupResponse addShopsToGroup(AddShopsToGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.batchCreateShopWithOptions(request, headers, runtime);
+        return this.addShopsToGroupWithOptions(request, headers, runtime);
     }
 
     public BatchCreateShopResponse batchCreateShopWithOptions(BatchCreateShopRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -168,6 +170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopListShrink)) {
             body.put("ShopList", request.shopListShrink);
         }
@@ -190,10 +196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateShopResponse());
     }
 
-    public BatchCreateShopGroupResponse batchCreateShopGroup(BatchCreateShopGroupRequest request) throws Exception {
+    public BatchCreateShopResponse batchCreateShop(BatchCreateShopRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.batchCreateShopGroupWithOptions(request, headers, runtime);
+        return this.batchCreateShopWithOptions(request, headers, runtime);
     }
 
     public BatchCreateShopGroupResponse batchCreateShopGroupWithOptions(BatchCreateShopGroupRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -205,6 +211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopGroupListShrink)) {
             body.put("ShopGroupList", request.shopGroupListShrink);
         }
@@ -227,10 +237,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateShopGroupResponse());
     }
 
-    public CreateLabelResponse createLabel(CreateLabelRequest request) throws Exception {
+    public BatchCreateShopGroupResponse batchCreateShopGroup(BatchCreateShopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createLabelWithOptions(request, headers, runtime);
+        return this.batchCreateShopGroupWithOptions(request, headers, runtime);
     }
 
     public CreateLabelResponse createLabelWithOptions(CreateLabelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -238,6 +248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             body.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.label)) {
@@ -266,10 +280,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLabelResponse());
     }
 
-    public CreateMenuDataResponse createMenuData(CreateMenuDataRequest request) throws Exception {
+    public CreateLabelResponse createLabel(CreateLabelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createMenuDataWithOptions(request, headers, runtime);
+        return this.createLabelWithOptions(request, headers, runtime);
     }
 
     public CreateMenuDataResponse createMenuDataWithOptions(CreateMenuDataRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -287,6 +301,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.batchId)) {
             body.put("BatchId", request.batchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
@@ -331,73 +349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMenuDataResponse());
     }
 
-    public CreateProductResponse createProduct(CreateProductRequest request) throws Exception {
+    public CreateMenuDataResponse createMenuData(CreateMenuDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createProductWithOptions(request, headers, runtime);
-    }
-
-    public CreateProductResponse createProductWithOptions(CreateProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.chineseName)) {
-            body.put("ChineseName", request.chineseName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPrice)) {
-            body.put("CurrentPrice", request.currentPrice);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            body.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.englishName)) {
-            body.put("EnglishName", request.englishName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.iconText)) {
-            body.put("IconText", request.iconText);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.originalPrice)) {
-            body.put("OriginalPrice", request.originalPrice);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
-            body.put("ProductId", request.productId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
-            body.put("ProductType", request.productType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.temperature)) {
-            body.put("Temperature", request.temperature);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateProduct"),
-            new TeaPair("version", "2021-12-7"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/CreateProduct"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProductResponse());
-    }
-
-    public CreateShopResponse createShop(CreateShopRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createShopWithOptions(request, headers, runtime);
+        return this.createMenuDataWithOptions(request, headers, runtime);
     }
 
     public CreateShopResponse createShopWithOptions(CreateShopRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -409,6 +364,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopListShrink)) {
             body.put("ShopList", request.shopListShrink);
         }
@@ -431,10 +390,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateShopResponse());
     }
 
-    public CreateShopGroupResponse createShopGroup(CreateShopGroupRequest request) throws Exception {
+    public CreateShopResponse createShop(CreateShopRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createShopGroupWithOptions(request, headers, runtime);
+        return this.createShopWithOptions(request, headers, runtime);
     }
 
     public CreateShopGroupResponse createShopGroupWithOptions(CreateShopGroupRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -446,6 +405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopGroupListShrink)) {
             body.put("ShopGroupList", request.shopGroupListShrink);
         }
@@ -468,15 +431,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateShopGroupResponse());
     }
 
-    public DeleteLabelResponse deleteLabel(DeleteLabelRequest request) throws Exception {
+    public CreateShopGroupResponse createShopGroup(CreateShopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteLabelWithOptions(request, headers, runtime);
+        return this.createShopGroupWithOptions(request, headers, runtime);
     }
 
     public DeleteLabelResponse deleteLabelWithOptions(DeleteLabelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.labelId)) {
             body.put("LabelId", request.labelId);
         }
@@ -499,41 +466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLabelResponse());
     }
 
-    public DeleteProductResponse deleteProduct(DeleteProductRequest request) throws Exception {
+    public DeleteLabelResponse deleteLabel(DeleteLabelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteProductWithOptions(request, headers, runtime);
-    }
-
-    public DeleteProductResponse deleteProductWithOptions(DeleteProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
-            body.put("ProductId", request.productId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteProduct"),
-            new TeaPair("version", "2021-12-7"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/DeleteProduct"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProductResponse());
-    }
-
-    public DeleteProductImageResponse deleteProductImage(DeleteProductImageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteProductImageWithOptions(request, headers, runtime);
+        return this.deleteLabelWithOptions(request, headers, runtime);
     }
 
     public DeleteProductImageResponse deleteProductImageWithOptions(DeleteProductImageRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -545,6 +481,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
             body.put("ProductCode", request.productCode);
         }
@@ -571,15 +511,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProductImageResponse());
     }
 
-    public DeleteShopResponse deleteShop(DeleteShopRequest request) throws Exception {
+    public DeleteProductImageResponse deleteProductImage(DeleteProductImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteShopWithOptions(request, headers, runtime);
+        return this.deleteProductImageWithOptions(request, headers, runtime);
     }
 
     public DeleteShopResponse deleteShopWithOptions(DeleteShopRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopId)) {
             body.put("ShopId", request.shopId);
         }
@@ -602,15 +546,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteShopResponse());
     }
 
-    public DeleteShopGroupResponse deleteShopGroup(DeleteShopGroupRequest request) throws Exception {
+    public DeleteShopResponse deleteShop(DeleteShopRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteShopGroupWithOptions(request, headers, runtime);
+        return this.deleteShopWithOptions(request, headers, runtime);
     }
 
     public DeleteShopGroupResponse deleteShopGroupWithOptions(DeleteShopGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopGroupId)) {
             body.put("ShopGroupId", request.shopGroupId);
         }
@@ -633,10 +581,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteShopGroupResponse());
     }
 
-    public GetMenuDataStatusResponse getMenuDataStatus(GetMenuDataStatusRequest request) throws Exception {
+    public DeleteShopGroupResponse deleteShopGroup(DeleteShopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getMenuDataStatusWithOptions(request, headers, runtime);
+        return this.deleteShopGroupWithOptions(request, headers, runtime);
     }
 
     public GetMenuDataStatusResponse getMenuDataStatusWithOptions(GetMenuDataStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -644,6 +592,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.batchId)) {
             body.put("BatchId", request.batchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productContainerId)) {
@@ -668,46 +620,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMenuDataStatusResponse());
     }
 
-    public GetProductResponse getProduct(GetProductRequest request) throws Exception {
+    public GetMenuDataStatusResponse getMenuDataStatus(GetMenuDataStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getProductWithOptions(request, headers, runtime);
-    }
-
-    public GetProductResponse getProductWithOptions(GetProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
-            body.put("ProductId", request.productId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetProduct"),
-            new TeaPair("version", "2021-12-7"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/GetProduct"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductResponse());
-    }
-
-    public GetShopResponse getShop(GetShopRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getShopWithOptions(request, headers, runtime);
+        return this.getMenuDataStatusWithOptions(request, headers, runtime);
     }
 
     public GetShopResponse getShopWithOptions(GetShopRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopId)) {
             body.put("ShopId", request.shopId);
         }
@@ -730,15 +655,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetShopResponse());
     }
 
-    public GetShopGroupResponse getShopGroup(GetShopGroupRequest request) throws Exception {
+    public GetShopResponse getShop(GetShopRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getShopGroupWithOptions(request, headers, runtime);
+        return this.getShopWithOptions(request, headers, runtime);
     }
 
     public GetShopGroupResponse getShopGroupWithOptions(GetShopGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopGroupId)) {
             body.put("ShopGroupId", request.shopGroupId);
         }
@@ -761,10 +690,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetShopGroupResponse());
     }
 
-    public ListMenuDataResponse listMenuData(ListMenuDataRequest request) throws Exception {
+    public GetShopGroupResponse getShopGroup(GetShopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listMenuDataWithOptions(request, headers, runtime);
+        return this.getShopGroupWithOptions(request, headers, runtime);
     }
 
     public ListMenuDataResponse listMenuDataWithOptions(ListMenuDataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -772,6 +701,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.batchId)) {
             body.put("BatchId", request.batchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.createRequestId)) {
@@ -808,49 +741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListMenuDataResponse());
     }
 
-    public ListProductResponse listProduct(ListProductRequest request) throws Exception {
+    public ListMenuDataResponse listMenuData(ListMenuDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listProductWithOptions(request, headers, runtime);
-    }
-
-    public ListProductResponse listProductWithOptions(ListProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
-            body.put("PageNo", request.pageNo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            body.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.productName)) {
-            body.put("ProductName", request.productName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListProduct"),
-            new TeaPair("version", "2021-12-7"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/ListProduct"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductResponse());
-    }
-
-    public ListShopResponse listShop(ListShopRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listShopWithOptions(request, headers, runtime);
+        return this.listMenuDataWithOptions(request, headers, runtime);
     }
 
     public ListShopResponse listShopWithOptions(ListShopRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -900,15 +794,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListShopResponse());
     }
 
-    public ListShopGroupResponse listShopGroup(ListShopGroupRequest request) throws Exception {
+    public ListShopResponse listShop(ListShopRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listShopGroupWithOptions(request, headers, runtime);
+        return this.listShopWithOptions(request, headers, runtime);
     }
 
     public ListShopGroupResponse listShopGroupWithOptions(ListShopGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             body.put("PageNumber", request.pageNumber);
         }
@@ -943,10 +841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListShopGroupResponse());
     }
 
-    public QueryDeviceDataListResponse queryDeviceDataList(QueryDeviceDataListRequest request) throws Exception {
+    public ListShopGroupResponse listShopGroup(ListShopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryDeviceDataListWithOptions(request, headers, runtime);
+        return this.listShopGroupWithOptions(request, headers, runtime);
     }
 
     public QueryDeviceDataListResponse queryDeviceDataListWithOptions(QueryDeviceDataListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -982,10 +880,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDeviceDataListResponse());
     }
 
-    public QueryFaultBriefListResponse queryFaultBriefList(QueryFaultBriefListRequest request) throws Exception {
+    public QueryDeviceDataListResponse queryDeviceDataList(QueryDeviceDataListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryFaultBriefListWithOptions(request, headers, runtime);
+        return this.queryDeviceDataListWithOptions(request, headers, runtime);
     }
 
     public QueryFaultBriefListResponse queryFaultBriefListWithOptions(QueryFaultBriefListRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1019,10 +917,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryFaultBriefListResponse());
     }
 
-    public QueryFaultDeviceListResponse queryFaultDeviceList(QueryFaultDeviceListRequest request) throws Exception {
+    public QueryFaultBriefListResponse queryFaultBriefList(QueryFaultBriefListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryFaultDeviceListWithOptions(request, headers, runtime);
+        return this.queryFaultBriefListWithOptions(request, headers, runtime);
     }
 
     public QueryFaultDeviceListResponse queryFaultDeviceListWithOptions(QueryFaultDeviceListRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1080,10 +978,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryFaultDeviceListResponse());
     }
 
-    public QueryLabelResponse queryLabel(QueryLabelRequest request) throws Exception {
+    public QueryFaultDeviceListResponse queryFaultDeviceList(QueryFaultDeviceListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryLabelWithOptions(request, headers, runtime);
+        return this.queryFaultDeviceListWithOptions(request, headers, runtime);
     }
 
     public QueryLabelResponse queryLabelWithOptions(QueryLabelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1091,6 +989,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             body.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.label)) {
@@ -1131,10 +1033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryLabelResponse());
     }
 
-    public QueryOperationIndexResponse queryOperationIndex(QueryOperationIndexRequest request) throws Exception {
+    public QueryLabelResponse queryLabel(QueryLabelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryOperationIndexWithOptions(request, headers, runtime);
+        return this.queryLabelWithOptions(request, headers, runtime);
     }
 
     public QueryOperationIndexResponse queryOperationIndexWithOptions(QueryOperationIndexRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1146,6 +1048,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
             body.put("EndDate", request.endDate);
         }
@@ -1176,10 +1082,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryOperationIndexResponse());
     }
 
-    public QueryShopIndexResponse queryShopIndex(QueryShopIndexRequest request) throws Exception {
+    public QueryOperationIndexResponse queryOperationIndex(QueryOperationIndexRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryShopIndexWithOptions(request, headers, runtime);
+        return this.queryOperationIndexWithOptions(request, headers, runtime);
     }
 
     public QueryShopIndexResponse queryShopIndexWithOptions(QueryShopIndexRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1191,6 +1097,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopIdListShrink)) {
             body.put("ShopIdList", request.shopIdListShrink);
         }
@@ -1213,10 +1123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryShopIndexResponse());
     }
 
-    public QueryTicketListResponse queryTicketList(QueryTicketListRequest request) throws Exception {
+    public QueryShopIndexResponse queryShopIndex(QueryShopIndexRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryTicketListWithOptions(request, headers, runtime);
+        return this.queryShopIndexWithOptions(request, headers, runtime);
     }
 
     public QueryTicketListResponse queryTicketListWithOptions(QueryTicketListRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1236,6 +1146,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             body.put("EndTime", request.endTime);
         }
@@ -1286,10 +1200,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTicketListResponse());
     }
 
-    public RemoveShopFromGroupResponse removeShopFromGroup(RemoveShopFromGroupRequest request) throws Exception {
+    public QueryTicketListResponse queryTicketList(QueryTicketListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeShopFromGroupWithOptions(request, headers, runtime);
+        return this.queryTicketListWithOptions(request, headers, runtime);
     }
 
     public RemoveShopFromGroupResponse removeShopFromGroupWithOptions(RemoveShopFromGroupRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1327,10 +1241,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveShopFromGroupResponse());
     }
 
-    public RemoveShopsFromGroupResponse removeShopsFromGroup(RemoveShopsFromGroupRequest request) throws Exception {
+    public RemoveShopFromGroupResponse removeShopFromGroup(RemoveShopFromGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeShopsFromGroupWithOptions(request, headers, runtime);
+        return this.removeShopFromGroupWithOptions(request, headers, runtime);
     }
 
     public RemoveShopsFromGroupResponse removeShopsFromGroupWithOptions(RemoveShopsFromGroupRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1342,6 +1256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopGroupId)) {
             body.put("ShopGroupId", request.shopGroupId);
         }
@@ -1368,15 +1286,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveShopsFromGroupResponse());
     }
 
-    public UpdateLabelResponse updateLabel(UpdateLabelRequest request) throws Exception {
+    public RemoveShopsFromGroupResponse removeShopsFromGroup(RemoveShopsFromGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateLabelWithOptions(request, headers, runtime);
+        return this.removeShopsFromGroupWithOptions(request, headers, runtime);
     }
 
     public UpdateLabelResponse updateLabelWithOptions(UpdateLabelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.label)) {
             body.put("Label", request.label);
         }
@@ -1407,73 +1329,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLabelResponse());
     }
 
-    public UpdateProductResponse updateProduct(UpdateProductRequest request) throws Exception {
+    public UpdateLabelResponse updateLabel(UpdateLabelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateProductWithOptions(request, headers, runtime);
-    }
-
-    public UpdateProductResponse updateProductWithOptions(UpdateProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.chineseName)) {
-            body.put("ChineseName", request.chineseName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPrice)) {
-            body.put("CurrentPrice", request.currentPrice);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            body.put("Description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.englishName)) {
-            body.put("EnglishName", request.englishName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.iconText)) {
-            body.put("IconText", request.iconText);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.originalPrice)) {
-            body.put("OriginalPrice", request.originalPrice);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.productId)) {
-            body.put("ProductId", request.productId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
-            body.put("ProductType", request.productType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.temperature)) {
-            body.put("Temperature", request.temperature);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateProduct"),
-            new TeaPair("version", "2021-12-7"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/UpdateProduct"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProductResponse());
-    }
-
-    public UpdateShopResponse updateShop(UpdateShopRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateShopWithOptions(request, headers, runtime);
+        return this.updateLabelWithOptions(request, headers, runtime);
     }
 
     public UpdateShopResponse updateShopWithOptions(UpdateShopRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1487,6 +1346,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.businessStatus)) {
             body.put("BusinessStatus", request.businessStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.latitude)) {
@@ -1559,15 +1422,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateShopResponse());
     }
 
-    public UpdateShopGroupResponse updateShopGroup(UpdateShopGroupRequest request) throws Exception {
+    public UpdateShopResponse updateShop(UpdateShopRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateShopGroupWithOptions(request, headers, runtime);
+        return this.updateShopWithOptions(request, headers, runtime);
     }
 
     public UpdateShopGroupResponse updateShopGroupWithOptions(UpdateShopGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            body.put("Country", request.country);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shopGroupId)) {
             body.put("ShopGroupId", request.shopGroupId);
         }
@@ -1592,5 +1459,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateShopGroupResponse());
+    }
+
+    public UpdateShopGroupResponse updateShopGroup(UpdateShopGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateShopGroupWithOptions(request, headers, runtime);
     }
 }

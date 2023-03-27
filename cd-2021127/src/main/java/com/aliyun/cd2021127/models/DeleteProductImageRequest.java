@@ -4,6 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class DeleteProductImageRequest extends TeaModel {
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("ProductCode")
     public String productCode;
 
@@ -13,6 +16,14 @@ public class DeleteProductImageRequest extends TeaModel {
     public static DeleteProductImageRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProductImageRequest self = new DeleteProductImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteProductImageRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public DeleteProductImageRequest setProductCode(String productCode) {

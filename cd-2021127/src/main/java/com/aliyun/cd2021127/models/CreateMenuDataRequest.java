@@ -7,6 +7,9 @@ public class CreateMenuDataRequest extends TeaModel {
     @NameInMap("BatchId")
     public String batchId;
 
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("Priority")
     public Integer priority;
 
@@ -36,6 +39,14 @@ public class CreateMenuDataRequest extends TeaModel {
     }
     public String getBatchId() {
         return this.batchId;
+    }
+
+    public CreateMenuDataRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public CreateMenuDataRequest setPriority(Integer priority) {

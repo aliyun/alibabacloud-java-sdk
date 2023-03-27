@@ -4,6 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class UpdateLabelRequest extends TeaModel {
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("Label")
     public String label;
 
@@ -16,6 +19,14 @@ public class UpdateLabelRequest extends TeaModel {
     public static UpdateLabelRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLabelRequest self = new UpdateLabelRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateLabelRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public UpdateLabelRequest setLabel(String label) {

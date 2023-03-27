@@ -4,6 +4,9 @@ package com.aliyun.cd2021127.models;
 import com.aliyun.tea.*;
 
 public class AddProductImageRequest extends TeaModel {
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("ProductId")
     public String productId;
 
@@ -16,6 +19,14 @@ public class AddProductImageRequest extends TeaModel {
     public static AddProductImageRequest build(java.util.Map<String, ?> map) throws Exception {
         AddProductImageRequest self = new AddProductImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddProductImageRequest setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public AddProductImageRequest setProductId(String productId) {

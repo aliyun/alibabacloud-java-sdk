@@ -7,6 +7,9 @@ public class QueryDeviceDataListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryDeviceDataListResponseBodyData> data;
 
@@ -154,6 +157,9 @@ public class QueryDeviceDataListResponseBody extends TeaModel {
         @NameInMap("ShopName")
         public String shopName;
 
+        /**
+         * <p>SN</p>
+         */
         @NameInMap("Sn")
         public String sn;
 
