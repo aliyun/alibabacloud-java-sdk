@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cd2021127</artifactId>
-  <version>1.0.18</version>
+  <version>1.0.19</version>
   <packaging>jar</packaging>
   <name>cd2021127</name>
   <description>Alibaba Cloud Cloud Display (2021127) SDK for Java
