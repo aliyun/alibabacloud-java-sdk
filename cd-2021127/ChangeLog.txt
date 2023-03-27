@@ -1,3 +1,6 @@
+2023-03-27 Version: 1.0.20
+- Add Country Support.
+
 2023-03-27 Version: 1.0.19
 - Add Label API Support.
 
