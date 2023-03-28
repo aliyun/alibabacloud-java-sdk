@@ -168,6 +168,227 @@ public class CreateClusterRequest extends TeaModel {
 
     }
 
+    public static class CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Subnet")
+        public String subnet;
+
+        public static CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds self = new CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds setSubnet(String subnet) {
+            this.subnet = subnet;
+            return this;
+        }
+        public String getSubnet() {
+            return this.subnet;
+        }
+
+    }
+
+    public static class CreateClusterRequestNetworksIpAllocationPolicyBondPolicy extends TeaModel {
+        @NameInMap("BondDefaultSubnet")
+        public String bondDefaultSubnet;
+
+        @NameInMap("Bonds")
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds> bonds;
+
+        public static CreateClusterRequestNetworksIpAllocationPolicyBondPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNetworksIpAllocationPolicyBondPolicy self = new CreateClusterRequestNetworksIpAllocationPolicyBondPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyBondPolicy setBondDefaultSubnet(String bondDefaultSubnet) {
+            this.bondDefaultSubnet = bondDefaultSubnet;
+            return this;
+        }
+        public String getBondDefaultSubnet() {
+            return this.bondDefaultSubnet;
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyBondPolicy setBonds(java.util.List<CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds> bonds) {
+            this.bonds = bonds;
+            return this;
+        }
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds> getBonds() {
+            return this.bonds;
+        }
+
+    }
+
+    public static class CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Subnet")
+        public String subnet;
+
+        public static CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds self = new CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds setSubnet(String subnet) {
+            this.subnet = subnet;
+            return this;
+        }
+        public String getSubnet() {
+            return this.subnet;
+        }
+
+    }
+
+    public static class CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy extends TeaModel {
+        @NameInMap("Bonds")
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds> bonds;
+
+        @NameInMap("MachineType")
+        public String machineType;
+
+        public static CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy self = new CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy setBonds(java.util.List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds> bonds) {
+            this.bonds = bonds;
+            return this;
+        }
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds> getBonds() {
+            return this.bonds;
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy setMachineType(String machineType) {
+            this.machineType = machineType;
+            return this;
+        }
+        public String getMachineType() {
+            return this.machineType;
+        }
+
+    }
+
+    public static class CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Subnet")
+        public String subnet;
+
+        public static CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds self = new CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds setSubnet(String subnet) {
+            this.subnet = subnet;
+            return this;
+        }
+        public String getSubnet() {
+            return this.subnet;
+        }
+
+    }
+
+    public static class CreateClusterRequestNetworksIpAllocationPolicyNodePolicy extends TeaModel {
+        @NameInMap("Bonds")
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds> bonds;
+
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        public static CreateClusterRequestNetworksIpAllocationPolicyNodePolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNetworksIpAllocationPolicyNodePolicy self = new CreateClusterRequestNetworksIpAllocationPolicyNodePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyNodePolicy setBonds(java.util.List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds> bonds) {
+            this.bonds = bonds;
+            return this;
+        }
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds> getBonds() {
+            return this.bonds;
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicyNodePolicy setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+    }
+
+    public static class CreateClusterRequestNetworksIpAllocationPolicy extends TeaModel {
+        @NameInMap("BondPolicy")
+        public CreateClusterRequestNetworksIpAllocationPolicyBondPolicy bondPolicy;
+
+        @NameInMap("MachineTypePolicy")
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy> machineTypePolicy;
+
+        @NameInMap("NodePolicy")
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicy> nodePolicy;
+
+        public static CreateClusterRequestNetworksIpAllocationPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNetworksIpAllocationPolicy self = new CreateClusterRequestNetworksIpAllocationPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicy setBondPolicy(CreateClusterRequestNetworksIpAllocationPolicyBondPolicy bondPolicy) {
+            this.bondPolicy = bondPolicy;
+            return this;
+        }
+        public CreateClusterRequestNetworksIpAllocationPolicyBondPolicy getBondPolicy() {
+            return this.bondPolicy;
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicy setMachineTypePolicy(java.util.List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy> machineTypePolicy) {
+            this.machineTypePolicy = machineTypePolicy;
+            return this;
+        }
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy> getMachineTypePolicy() {
+            return this.machineTypePolicy;
+        }
+
+        public CreateClusterRequestNetworksIpAllocationPolicy setNodePolicy(java.util.List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicy> nodePolicy) {
+            this.nodePolicy = nodePolicy;
+            return this;
+        }
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicy> getNodePolicy() {
+            return this.nodePolicy;
+        }
+
+    }
+
     public static class CreateClusterRequestNetworksNewVpdInfoVpdSubnets extends TeaModel {
         @NameInMap("SubnetCidr")
         public String subnetCidr;
@@ -325,6 +546,9 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNetworks extends TeaModel {
+        @NameInMap("IpAllocationPolicy")
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicy> ipAllocationPolicy;
+
         @NameInMap("NewVpdInfo")
         public CreateClusterRequestNetworksNewVpdInfo newVpdInfo;
 
@@ -334,6 +558,14 @@ public class CreateClusterRequest extends TeaModel {
         public static CreateClusterRequestNetworks build(java.util.Map<String, ?> map) throws Exception {
             CreateClusterRequestNetworks self = new CreateClusterRequestNetworks();
             return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNetworks setIpAllocationPolicy(java.util.List<CreateClusterRequestNetworksIpAllocationPolicy> ipAllocationPolicy) {
+            this.ipAllocationPolicy = ipAllocationPolicy;
+            return this;
+        }
+        public java.util.List<CreateClusterRequestNetworksIpAllocationPolicy> getIpAllocationPolicy() {
+            return this.ipAllocationPolicy;
         }
 
         public CreateClusterRequestNetworks setNewVpdInfo(CreateClusterRequestNetworksNewVpdInfo newVpdInfo) {
