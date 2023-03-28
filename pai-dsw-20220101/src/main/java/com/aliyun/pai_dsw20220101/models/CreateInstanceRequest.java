@@ -276,6 +276,9 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestUserVpc extends TeaModel {
+        @NameInMap("ExtendedCIDRs")
+        public java.util.List<String> extendedCIDRs;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -291,6 +294,14 @@ public class CreateInstanceRequest extends TeaModel {
         public static CreateInstanceRequestUserVpc build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceRequestUserVpc self = new CreateInstanceRequestUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {
+            this.extendedCIDRs = extendedCIDRs;
+            return this;
+        }
+        public java.util.List<String> getExtendedCIDRs() {
+            return this.extendedCIDRs;
         }
 
         public CreateInstanceRequestUserVpc setSecurityGroupId(String securityGroupId) {
