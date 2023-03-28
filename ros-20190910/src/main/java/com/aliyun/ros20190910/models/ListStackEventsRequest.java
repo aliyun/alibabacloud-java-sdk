@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackEventsRequest extends TeaModel {
+    /**
+     * <p>The logical ID of the resource that is defined in the template.</p>
+     */
     @NameInMap("LogicalResourceId")
     public java.util.List<String> logicalResourceId;
 
@@ -33,6 +36,9 @@ public class ListStackEventsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of resource types.</p>
+     */
     @NameInMap("ResourceType")
     public java.util.List<String> resourceType;
 
@@ -42,6 +48,9 @@ public class ListStackEventsRequest extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
+    /**
+     * <p>The state of the resource.</p>
+     */
     @NameInMap("Status")
     public java.util.List<String> status;
 

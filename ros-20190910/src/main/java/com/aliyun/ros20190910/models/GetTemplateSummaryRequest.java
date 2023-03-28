@@ -23,7 +23,7 @@ public class GetTemplateSummaryRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>test</p>
+     * <p>The parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<GetTemplateSummaryRequestParameters> parameters;

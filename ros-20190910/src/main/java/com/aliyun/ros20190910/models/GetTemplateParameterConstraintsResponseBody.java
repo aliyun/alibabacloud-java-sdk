@@ -38,9 +38,17 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     }
 
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources extends TeaModel {
+        /**
+         * <p>The name of the resource property.</p>
+         */
         @NameInMap("PropertyName")
         public String propertyName;
 
+        /**
+         * <p>The resource type.</p>
+         * <br>
+         * <p>You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -68,12 +76,21 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     }
 
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors extends TeaModel {
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -155,6 +172,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("IllegalValueByRules")
         public java.util.List<?> illegalValueByRules;
 
+        /**
+         * <p>The unsupported resources in the template.</p>
+         */
         @NameInMap("NotSupportResources")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> notSupportResources;
 
@@ -164,6 +184,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <p>The error details that are returned if the request fails.</p>
+         */
         @NameInMap("QueryErrors")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> queryErrors;
 

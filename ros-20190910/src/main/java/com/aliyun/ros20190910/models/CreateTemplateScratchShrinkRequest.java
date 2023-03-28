@@ -71,6 +71,9 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     @NameInMap("SourceTag")
     public String sourceTagShrink;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateTemplateScratchShrinkRequestTags> tags;
 

@@ -26,6 +26,9 @@ public class GetStackResourceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of resource property N that you want to query.</p>
+     */
     @NameInMap("ResourceAttributes")
     public java.util.List<String> resourceAttributes;
 

@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class SetTemplatePermissionRequest extends TeaModel {
+    /**
+     * <p>The list of one or more Alibaba Cloud accounts with which you want to share or unshare the template.</p>
+     */
     @NameInMap("AccountIds")
     public java.util.List<String> accountIds;
 

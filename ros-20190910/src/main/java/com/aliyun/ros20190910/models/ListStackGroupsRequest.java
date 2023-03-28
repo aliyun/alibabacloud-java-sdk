@@ -47,6 +47,9 @@ public class ListStackGroupsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListStackGroupsRequestTags> tags;
 

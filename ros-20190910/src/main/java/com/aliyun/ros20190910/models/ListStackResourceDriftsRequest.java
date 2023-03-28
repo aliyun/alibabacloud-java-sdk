@@ -26,6 +26,9 @@ public class ListStackResourceDriftsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The drift status of the resource.</p>
+     */
     @NameInMap("ResourceDriftStatus")
     public java.util.List<String> resourceDriftStatus;
 

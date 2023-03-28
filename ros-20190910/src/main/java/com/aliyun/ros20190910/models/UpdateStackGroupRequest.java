@@ -118,7 +118,7 @@ public class UpdateStackGroupRequest extends TeaModel {
     public java.util.Map<String, ?> operationPreferences;
 
     /**
-     * <p>test</p>
+     * <p>The list of parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<UpdateStackGroupRequestParameters> parameters;

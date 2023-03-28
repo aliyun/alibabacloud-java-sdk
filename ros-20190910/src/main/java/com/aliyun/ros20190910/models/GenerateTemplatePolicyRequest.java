@@ -4,6 +4,23 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GenerateTemplatePolicyRequest extends TeaModel {
+    /**
+     * <p>The type of operation N for which you want to generate the policy information.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   CreateStack: creates a stack by calling the CreateStack operation.</p>
+     * <p>*   UpdateStack: updates a stack by calling the UpdateStack operation.</p>
+     * <p>*   DeleteStack: deletes a stack by calling the DeleteStack operation.</p>
+     * <p>*   DetectStackDrift: detects drifts on a stack by calling the DelectStackDrift operation.</p>
+     * <p>*   ListStackOperationRisks: lists the risks of a deletion operation on a stack by setting the OperationType parameter to DeleteStack in the ListStackOperationRisks operation.</p>
+     * <p>*   GetTemplateEstimateCost: queries the estimated prices of resources that you want to use in the template by calling the GetTemplateEstimateCost operation.</p>
+     * <p>*   GetTemplateParameterConstraints: queries the values of parameters in the template by calling the GetTemplateParameterConstraints operation.</p>
+     * <p>*   ImportResourcesToStack: imports resources to a stack by setting the ChangeSetType parameter to IMPORT in the CreateChangeSet operation.</p>
+     * <p>*   SignalResource: sends a signal to a stack.</p>
+     * <br>
+     * <p>>  The default value is the combination of all valid values.</p>
+     */
     @NameInMap("OperationTypes")
     public java.util.List<String> operationTypes;
 

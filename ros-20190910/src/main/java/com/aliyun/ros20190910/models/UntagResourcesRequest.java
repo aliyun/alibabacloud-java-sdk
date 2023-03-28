@@ -19,6 +19,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>A list of resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -33,6 +36,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag keys of the resource.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

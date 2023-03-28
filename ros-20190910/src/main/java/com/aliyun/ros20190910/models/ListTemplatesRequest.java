@@ -53,6 +53,9 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("ShareType")
     public String shareType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTemplatesRequestTag> tag;
 

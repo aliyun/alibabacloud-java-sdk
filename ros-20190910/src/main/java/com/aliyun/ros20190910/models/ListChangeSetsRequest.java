@@ -10,9 +10,15 @@ public class ListChangeSetsRequest extends TeaModel {
     @NameInMap("ChangeSetId")
     public String changeSetId;
 
+    /**
+     * <p>The name of change set.</p>
+     */
     @NameInMap("ChangeSetName")
     public java.util.List<String> changeSetName;
 
+    /**
+     * <p>The execution status of change set.</p>
+     */
     @NameInMap("ExecutionStatus")
     public java.util.List<String> executionStatus;
 
@@ -48,6 +54,9 @@ public class ListChangeSetsRequest extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
+    /**
+     * <p>The status of change set.</p>
+     */
     @NameInMap("Status")
     public java.util.List<String> status;
 

@@ -14,6 +14,9 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<GetTemplateEstimateCostRequestParameters> parameters;
 

@@ -62,15 +62,27 @@ public class ListStacksRequest extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
+    /**
+     * <p>The ID of stack N.</p>
+     */
     @NameInMap("StackIds")
     public java.util.List<String> stackIds;
 
+    /**
+     * <p>The name of stack N.</p>
+     */
     @NameInMap("StackName")
     public java.util.List<String> stackName;
 
+    /**
+     * <p>The state N of the stack.</p>
+     */
     @NameInMap("Status")
     public java.util.List<String> status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListStacksRequestTag> tag;
 

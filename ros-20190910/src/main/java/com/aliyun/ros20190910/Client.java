@@ -4586,10 +4586,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
-            query.put("TemplateBody", request.templateBody);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.templateURL)) {
             query.put("TemplateURL", request.templateURL);
         }
@@ -4598,8 +4594,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ValidationOption", request.validationOption);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
+            body.put("TemplateBody", request.templateBody);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ValidateTemplate"),

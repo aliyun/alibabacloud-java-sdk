@@ -47,7 +47,7 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     public String executionRoleName;
 
     /**
-     * <p>test</p>
+     * <p>The parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<CreateStackGroupShrinkRequestParameters> parameters;
@@ -87,6 +87,9 @@ public class CreateStackGroupShrinkRequest extends TeaModel {
     @NameInMap("StackGroupName")
     public String stackGroupName;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateStackGroupShrinkRequestTags> tags;
 
