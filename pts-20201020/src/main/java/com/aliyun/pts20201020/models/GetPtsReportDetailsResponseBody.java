@@ -944,7 +944,9 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static class GetPtsReportDetailsResponseBodySceneSnapShotRelationListApiList extends TeaModel {
-        // API ID。
+        /**
+         * <p>API ID。</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 

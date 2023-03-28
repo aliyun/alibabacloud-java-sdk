@@ -217,6 +217,36 @@ public class GetPtsSceneResponseBody extends TeaModel {
 
     }
 
+    public static class GetPtsSceneResponseBodySceneHeaders extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetPtsSceneResponseBodySceneHeaders build(java.util.Map<String, ?> map) throws Exception {
+            GetPtsSceneResponseBodySceneHeaders self = new GetPtsSceneResponseBodySceneHeaders();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPtsSceneResponseBodySceneHeaders setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetPtsSceneResponseBodySceneHeaders setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList extends TeaModel {
         @NameInMap("ApiId")
         public String apiId;
@@ -920,6 +950,9 @@ public class GetPtsSceneResponseBody extends TeaModel {
         @NameInMap("GlobalParameterList")
         public java.util.List<GetPtsSceneResponseBodySceneGlobalParameterList> globalParameterList;
 
+        @NameInMap("Headers")
+        public java.util.List<GetPtsSceneResponseBodySceneHeaders> headers;
+
         @NameInMap("LoadConfig")
         public GetPtsSceneResponseBodySceneLoadConfig loadConfig;
 
@@ -973,6 +1006,14 @@ public class GetPtsSceneResponseBody extends TeaModel {
         }
         public java.util.List<GetPtsSceneResponseBodySceneGlobalParameterList> getGlobalParameterList() {
             return this.globalParameterList;
+        }
+
+        public GetPtsSceneResponseBodyScene setHeaders(java.util.List<GetPtsSceneResponseBodySceneHeaders> headers) {
+            this.headers = headers;
+            return this;
+        }
+        public java.util.List<GetPtsSceneResponseBodySceneHeaders> getHeaders() {
+            return this.headers;
         }
 
         public GetPtsSceneResponseBodyScene setLoadConfig(GetPtsSceneResponseBodySceneLoadConfig loadConfig) {
