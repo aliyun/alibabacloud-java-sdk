@@ -4,12 +4,26 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyNatGatewaySpecRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically complete the payment.</p>
+     * <br>
+     * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
+     * <p>*   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the Internet NAT gateway that you want to upgrade.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
@@ -19,6 +33,11 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the Internet NAT gateway is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +47,13 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The size of the Internet NAT gateway. Valid values:</p>
+     * <br>
+     * <p>*   **Small**: small</p>
+     * <p>*   **Middle**: medium</p>
+     * <p>*   **Large**: large</p>
+     */
     @NameInMap("Spec")
     public String spec;
 

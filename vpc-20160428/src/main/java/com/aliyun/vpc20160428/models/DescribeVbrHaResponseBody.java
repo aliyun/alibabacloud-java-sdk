@@ -4,30 +4,62 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVbrHaResponseBody extends TeaModel {
+    /**
+     * <p>The time when the VBR was created.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The description of the VBR failover group.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://`or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the VBR failover group.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the other VBR in the VBR failover group.</p>
+     */
     @NameInMap("PeerVbrId")
     public String peerVbrId;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The state of the VBR failover group.</p>
+     * <br>
+     * <p>*   **Creating**: The VBR failover group is being created.</p>
+     * <p>*   **Active**: The VBR failover group is running as expected.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the VBR failover group.</p>
+     */
     @NameInMap("VbrHaId")
     public String vbrHaId;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     */
     @NameInMap("VbrId")
     public String vbrId;
 

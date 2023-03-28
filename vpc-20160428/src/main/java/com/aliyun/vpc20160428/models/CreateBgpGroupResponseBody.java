@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateBgpGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the BGP group.</p>
+     */
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

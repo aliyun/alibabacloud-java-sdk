@@ -10,6 +10,11 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the resource to which you want to create and add tags.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +27,9 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Set the value to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -98,9 +106,19 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
     }
 
     public static class TagResourcesForExpressConnectRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

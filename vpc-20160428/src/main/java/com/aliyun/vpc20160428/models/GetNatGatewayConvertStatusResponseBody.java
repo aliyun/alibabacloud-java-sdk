@@ -4,15 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
+    /**
+     * <p>The status during the switch.</p>
+     */
     @NameInMap("ConvertSteps")
     public java.util.List<GetNatGatewayConvertStatusResponseBodyConvertSteps> convertSteps;
 
+    /**
+     * <p>The type of the NAT gateway. Set the value to **Enhanced**, which specifies an enhanced Internet NAT gateway.</p>
+     */
     @NameInMap("DstNatType")
     public String dstNatType;
 
+    /**
+     * <p>The ID of the Internet NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,34 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayConvertStatusResponseBodyConvertSteps extends TeaModel {
+        /**
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **init**: initializing</p>
+         * <p>*   **check**: checking configurations</p>
+         * <p>*   **configure**: pushing configurations</p>
+         * <p>*   **activate**: switching</p>
+         * <p>*   **conf_delete**: deleting configurations</p>
+         * <p>*   **rollback**: rolling back</p>
+         * <p>*   **end_success**: switched</p>
+         * <p>*   **end_fail**: failed</p>
+         */
         @NameInMap("StepName")
         public String stepName;
 
+        /**
+         * <p>The time when the switch started.</p>
+         */
         @NameInMap("StepStartTime")
         public String stepStartTime;
 
+        /**
+         * <p>The switch status. Valid values:</p>
+         * <br>
+         * <p>*   **processing**: switching</p>
+         * <p>*   **successful**: switched</p>
+         * <p>*   **failed**: failed</p>
+         */
         @NameInMap("StepStatus")
         public String stepStatus;
 

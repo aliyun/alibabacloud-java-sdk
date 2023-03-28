@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpPeersResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information about the BGP peers.</p>
+     */
     @NameInMap("BgpPeers")
     public DescribeBgpPeersResponseBodyBgpPeers bgpPeers;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,69 +80,153 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
     }
 
     public static class DescribeBgpPeersResponseBodyBgpPeersBgpPeer extends TeaModel {
+        /**
+         * <p>The number of advertised routes.</p>
+         */
         @NameInMap("AdvertisedRouteCount")
         public Integer advertisedRouteCount;
 
+        /**
+         * <p>The authentication key of the BGP group.</p>
+         */
         @NameInMap("AuthKey")
         public String authKey;
 
+        /**
+         * <p>The Bidirectional Forwarding Detection (BFD) hop count.</p>
+         */
         @NameInMap("BfdMultiHop")
         public Integer bfdMultiHop;
 
+        /**
+         * <p>The ID of the BGP group.</p>
+         */
         @NameInMap("BgpGroupId")
         public String bgpGroupId;
 
+        /**
+         * <p>The ID of the BGP peer.</p>
+         */
         @NameInMap("BgpPeerId")
         public String bgpPeerId;
 
+        /**
+         * <p>The status of the BGP connection. Valid values:</p>
+         * <br>
+         * <p>*   **Idle**: not connected</p>
+         * <p>*   **Connect**: in use</p>
+         * <p>*   **Active**: available</p>
+         * <p>*   **Established**: established</p>
+         * <p>*   **Down**: unavailable</p>
+         */
         @NameInMap("BgpStatus")
         public String bgpStatus;
 
+        /**
+         * <p>The description of the BGP group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether BFD is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: enabled</p>
+         * <p>*   **false**: disabled</p>
+         */
         @NameInMap("EnableBfd")
         public Boolean enableBfd;
 
+        /**
+         * <p>The time when the BGP peer is modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The hold time.</p>
+         */
         @NameInMap("Hold")
         public String hold;
 
+        /**
+         * <p>The version of the IP address.</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        /**
+         * <p>Indicates whether a fake ASN is used. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("IsFake")
         public Boolean isFake;
 
+        /**
+         * <p>The Keepalive interval.</p>
+         */
         @NameInMap("Keepalive")
         public String keepalive;
 
+        /**
+         * <p>The AS number of the device on the Alibaba Cloud side.</p>
+         */
         @NameInMap("LocalAsn")
         public String localAsn;
 
+        /**
+         * <p>The name of the BGP peer.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The autonomous system (AS) number of the BGP peer.</p>
+         */
         @NameInMap("PeerAsn")
         public String peerAsn;
 
+        /**
+         * <p>The IP address of the BGP peer.</p>
+         */
         @NameInMap("PeerIpAddress")
         public String peerIpAddress;
 
+        /**
+         * <p>The number of received routes.</p>
+         */
         @NameInMap("ReceivedRouteCount")
         public Integer receivedRouteCount;
 
+        /**
+         * <p>The ID of the region to which the BGP group belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The limit on routes.</p>
+         */
         @NameInMap("RouteLimit")
         public String routeLimit;
 
+        /**
+         * <p>The ID of the router.</p>
+         */
         @NameInMap("RouterId")
         public String routerId;
 
+        /**
+         * <p>The status of the BGP peer. Valid values:</p>
+         * <br>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Modifying**</p>
+         * <p>*   **Deleting**</p>
+         * <p>*   **Deleted**</p>
+         */
         @NameInMap("Status")
         public String status;
 

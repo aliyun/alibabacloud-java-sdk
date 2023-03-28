@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The details of DNAT entries.</p>
+     */
     @NameInMap("ForwardTableEntries")
     public DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +80,71 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry extends TeaModel {
+        /**
+         * <p>*   The EIPs that can be accessed over the Internet when you query DNAT entries of Internet NAT gateways.</p>
+         * <p>*   The NAT IP addresses that can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</p>
+         */
         @NameInMap("ExternalIp")
         public String externalIp;
 
+        /**
+         * <p>*   The external port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</p>
+         * <p>*   The port that is used when the NAT IP address can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</p>
+         */
         @NameInMap("ExternalPort")
         public String externalPort;
 
+        /**
+         * <p>The ID of the DNAT entry.</p>
+         */
         @NameInMap("ForwardEntryId")
         public String forwardEntryId;
 
+        /**
+         * <p>The name of the DNAT entry.</p>
+         */
         @NameInMap("ForwardEntryName")
         public String forwardEntryName;
 
+        /**
+         * <p>The ID of the DNAT table to which the DNAT entry belongs.</p>
+         */
         @NameInMap("ForwardTableId")
         public String forwardTableId;
 
+        /**
+         * <p>The private IP address.</p>
+         * <br>
+         * <p>*   The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you query DNAT entries of Internet NAT gateways.</p>
+         * <p>*   The private IP address that uses DNAT entries when you query DNAT entries of VPC NAT gateways.</p>
+         */
         @NameInMap("InternalIp")
         public String internalIp;
 
+        /**
+         * <p>*   The internal port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</p>
+         * <p>*   The destination ECS instance port to be mapped when you query DNAT entries of VPC NAT gateways.</p>
+         */
         @NameInMap("InternalPort")
         public String internalPort;
 
+        /**
+         * <p>The protocol. Valid values:</p>
+         * <br>
+         * <p>*   **TCP**: The NAT gateway forwards TCP packets.</p>
+         * <p>*   **UDP**: The NAT gateway forwards UDP packets.</p>
+         * <p>*   **Any**: The NAT gateway forwards packets of all protocols.</p>
+         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        /**
+         * <p>The status of the DNAT entry. Valid values:</p>
+         * <br>
+         * <p>*   **Pending**: being created or modified</p>
+         * <p>*   **Available**: available</p>
+         * <p>*   **Deleting**: being deleted</p>
+         */
         @NameInMap("Status")
         public String status;
 

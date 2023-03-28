@@ -4,21 +4,42 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowLogsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the flow logs.</p>
+     */
     @NameInMap("FlowLogs")
     public DescribeFlowLogsResponseBodyFlowLogs flowLogs;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The number of flow logs that are queried.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -76,9 +97,15 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -144,54 +171,130 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLog extends TeaModel {
+        /**
+         * <p>The sampling interval of the flow log. Unit: seconds.</p>
+         */
         @NameInMap("AggregationInterval")
         public Integer aggregationInterval;
 
+        /**
+         * <p>The business status of the flow log. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: active</p>
+         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        /**
+         * <p>The time when the flow log was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the flow log.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the flow log.</p>
+         */
         @NameInMap("FlowLogId")
         public String flowLogId;
 
+        /**
+         * <p>The name of the flow log.</p>
+         */
         @NameInMap("FlowLogName")
         public String flowLogName;
 
+        /**
+         * <p>The Logstore that stores the captured traffic data.</p>
+         */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
+        /**
+         * <p>The project that manages the captured traffic data.</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The region ID of the flow log.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the flow log belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the resource from which traffic is captured.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource from which traffic is captured. Valid values:</p>
+         * <br>
+         * <p>*   **NetworkInterface**: an ENI</p>
+         * <p>*   **VSwitch**: all ENIs in a vSwitch</p>
+         * <p>*   **VPC**: all ENIs in a VPC</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The hosting type of the cloud service.</p>
+         * <br>
+         * <p>*   This parameter can be empty, which indicates that the flow log is created by the user.</p>
+         * <p>*   If this parameter is not empty, the value is fixed as **sls**. The value sls indicates that the flow log is created in the Log Service console.</p>
+         * <br>
+         * <p>>  A flow log that is created in the Log Service console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the [Log Service console](https://sls.console.aliyun.com) and perform required operations.</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
+        /**
+         * <p>The status of the flow log. Valid values:</p>
+         * <br>
+         * <p>*   **Active**: enabled</p>
+         * <p>*   **Activating**: being enabled</p>
+         * <p>*   **Inactive**: disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>An array that consists of the details of the returned tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTags tags;
 
+        /**
+         * <p>The scope of the traffic that you want to capture. Valid values:</p>
+         * <br>
+         * <p>*   **all** (default value): all traffic</p>
+         * <p>*   **internetGateway**: Internet traffic</p>
+         * <br>
+         * <p>>  By default, the traffic path feature is unavailable. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).</p>
+         */
         @NameInMap("TrafficPath")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath trafficPath;
 
+        /**
+         * <p>The type of traffic that is captured by the flow log. Valid values:</p>
+         * <br>
+         * <p>*   **All**: all traffic</p>
+         * <p>*   **Allow**: traffic that is allowed by access control</p>
+         * <p>*   **Drop**: traffic that is denied by access control</p>
+         */
         @NameInMap("TrafficType")
         public String trafficType;
 

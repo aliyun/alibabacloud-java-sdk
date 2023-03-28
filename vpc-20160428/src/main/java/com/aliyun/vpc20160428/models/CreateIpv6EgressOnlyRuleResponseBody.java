@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIpv6EgressOnlyRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the egress-only rule.</p>
+     */
     @NameInMap("Ipv6EgressRuleId")
     public String ipv6EgressRuleId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

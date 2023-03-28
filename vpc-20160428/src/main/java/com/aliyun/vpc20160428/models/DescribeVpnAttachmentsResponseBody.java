@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnAttachmentsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of IPsec-VPN connections associated with the transit router.</p>
+     */
     @NameInMap("VpnAttachments")
     public java.util.List<DescribeVpnAttachmentsResponseBodyVpnAttachments> vpnAttachments;
 
@@ -65,24 +80,48 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnAttachmentsResponseBodyVpnAttachments extends TeaModel {
+        /**
+         * <p>The type of resource that is associated with the IPsec-VPN connection. The value is set to **CEN**, which indicates that the IPsec-VPN connection is associated with a transit router.</p>
+         */
         @NameInMap("AttachType")
         public String attachType;
 
+        /**
+         * <p>Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("CrossAccountAuthorized")
         public Boolean crossAccountAuthorized;
 
+        /**
+         * <p>The description of the IPsec-VPN connection.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the IPsec-VPN connection.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the IPsec-VPN connection.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the transit router with which the IPsec-VPN connection is associated.</p>
+         */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
+        /**
+         * <p>The name of the transit router.</p>
+         */
         @NameInMap("TransitRouterName")
         public String transitRouterName;
 

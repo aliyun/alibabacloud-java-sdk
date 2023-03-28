@@ -4,24 +4,53 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListIpsecServerLogsRequest extends TeaModel {
+    /**
+     * <p>The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.</p>
+     * <br>
+     * <p>>  If you specify **From**, you must also specify **To** or **MinutePeriod**.</p>
+     */
     @NameInMap("From")
     public Integer from;
 
+    /**
+     * <p>The ID of the IPsec server.</p>
+     */
     @NameInMap("IpsecServerId")
     public String ipsecServerId;
 
+    /**
+     * <p>The interval at which log data is queried. Valid values: **1** to **10**. Unit: minutes.</p>
+     * <br>
+     * <p>>  If both **From** and **To** are not specified, you must specify **MinutePeriod**.</p>
+     */
     @NameInMap("MinutePeriod")
     public Integer minutePeriod;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the IPsec server is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The end of the time range to query. The value must be a unix timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.</p>
+     * <br>
+     * <p>>  If you specify **To**, you must also specify **From** or **MinutePeriod**.</p>
+     */
     @NameInMap("To")
     public Integer to;
 

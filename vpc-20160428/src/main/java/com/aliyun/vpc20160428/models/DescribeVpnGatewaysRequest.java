@@ -4,9 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnGatewaysRequest extends TeaModel {
+    /**
+     * <p>The payment status of the VPN gateway. Valid values:</p>
+     * <br>
+     * <p>*   **Normal:** The VPN gateway is running as expected.</p>
+     * <p>*   **FinancialLocked**: The VPN gateway is locked due to overdue payments.</p>
+     */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
+    /**
+     * <p>Specifies whether to return information about the pending orders. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): no</p>
+     * <p>*   **true**: yes</p>
+     */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
 
@@ -16,12 +28,23 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the VPN gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,15 +54,30 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the VPN gateway. Valid values: </p>
+     * <br>
+     * <p>- **init**: The VPN gateway is being initialized.</p>
+     * <p>- **provisioning**: The VPN gateway is being prepared.</p>
+     * <p>- **active**: The VPN gateway is running as expected.</p>
+     * <p>- **updating**: The VPN gateway is being updated.</p>
+     * <p>- **deleting**: The VPN gateway is being deleted.</p>
+     */
     @NameInMap("Status")
     public String status;
 
     @NameInMap("Tag")
     public java.util.List<DescribeVpnGatewaysRequestTag> tag;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the VPN gateway belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
@@ -153,9 +191,23 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     }
 
     public static class DescribeVpnGatewaysRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys in each call.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <br>
+         * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -7,6 +7,11 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the router interface is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -16,6 +21,9 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the router interface.</p>
+     */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
 

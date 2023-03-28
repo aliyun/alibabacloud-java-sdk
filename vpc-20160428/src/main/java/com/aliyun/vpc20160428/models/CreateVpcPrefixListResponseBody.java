@@ -4,12 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcPrefixListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the prefix list.</p>
+     */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the prefix list belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

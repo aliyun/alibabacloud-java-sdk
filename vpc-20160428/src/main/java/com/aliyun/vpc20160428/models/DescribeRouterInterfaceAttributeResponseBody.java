@@ -4,132 +4,337 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the access point.</p>
+     */
     @NameInMap("AccessPointId")
     public String accessPointId;
 
+    /**
+     * <p>The bandwidth of the router interface. Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The status of the router interface. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: normal</p>
+     * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+     * <p>*   **SecurityLocked**: locked due to security reasons</p>
+     */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   **AfterPay**: pay-as-you-go</p>
+     * <p>*   **PrePaid**: subscription</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The time when the connection is established.</p>
+     */
     @NameInMap("ConnectedTime")
     public String connectedTime;
 
+    /**
+     * <p>The time when the router interface was created.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>Indicates whether the connection is a cross-border connection. Valid values:</p>
+     * <br>
+     * <p>*   **false**: no</p>
+     * <p>*   **true**: yes</p>
+     */
     @NameInMap("CrossBorder")
     public Boolean crossBorder;
 
+    /**
+     * <p>The description of the router interface.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The end of the time range queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The time when the router interface was modified.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>Indicates whether renewal data is included. Valid values:</p>
+     * <br>
+     * <p>*   **false**: no</p>
+     * <p>*   **true**: yes</p>
+     */
     @NameInMap("HasReservationData")
     public String hasReservationData;
 
+    /**
+     * <p>The rate of health checks. Unit: seconds. The value indicates the interval at which probe packets are sent during a health check.</p>
+     */
     @NameInMap("HcRate")
     public Integer hcRate;
 
+    /**
+     * <p>The health check threshold, which is the number of probe packets that are sent during a health check. Unit: packets.</p>
+     */
     @NameInMap("HcThreshold")
     public Integer hcThreshold;
 
+    /**
+     * <p>The source IP address that is used for health checks.</p>
+     */
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
 
+    /**
+     * <p>The health check status. Valid values:</p>
+     * <br>
+     * <p>*   **Abnormal**: abnormal.</p>
+     * <p>*   **Normal**: normal.</p>
+     * <p>*   **NoRedundantRoute**: No redundant route is configured.</p>
+     * <p>*   **NoHealthCheckConfig**: No health check is configured.</p>
+     */
     @NameInMap("HealthCheckStatus")
     public String healthCheckStatus;
 
+    /**
+     * <p>The destination IP address that is used for health checks.</p>
+     */
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The name of the router interface.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the peer access point.</p>
+     */
     @NameInMap("OppositeAccessPointId")
     public String oppositeAccessPointId;
 
+    /**
+     * <p>The bandwidth of the peer router interface. Unit: Mbit/s.</p>
+     */
     @NameInMap("OppositeBandwidth")
     public Integer oppositeBandwidth;
 
+    /**
+     * <p>The service status of the peer router interface. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: normal</p>
+     * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+     * <p>*   **SecurityLocked**: locked due to security reasons</p>
+     */
     @NameInMap("OppositeInterfaceBusinessStatus")
     public String oppositeInterfaceBusinessStatus;
 
+    /**
+     * <p>The ID of the peer router interface.</p>
+     */
     @NameInMap("OppositeInterfaceId")
     public String oppositeInterfaceId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the peer router interface belongs.</p>
+     */
     @NameInMap("OppositeInterfaceOwnerId")
     public String oppositeInterfaceOwnerId;
 
+    /**
+     * <p>The specification of the peer router interface. Valid values:</p>
+     * <br>
+     * <p>*   **Mini.2**: 2 Mbit/s</p>
+     * <p>*   **Mini.5**: 5 Mbit/s</p>
+     * <p>*   **Small.1**: 10 Mbit/s</p>
+     * <p>*   **Small.2**: 20 Mbit/s</p>
+     * <p>*   **Small.5**: 50 Mbit/s</p>
+     * <p>*   **Middle.1**: 100 Mbit/s</p>
+     * <p>*   **Middle.2**: 200 Mbit/s</p>
+     * <p>*   **Middle.5**: 500 Mbit/s</p>
+     * <p>*   **Large.1**: 1,000 Mbit/s</p>
+     * <p>*   **Large.2**: 2,000 Mbit/s</p>
+     * <p>*   **Large.5**: 5,000 Mbit/s</p>
+     * <p>*   **Xlarge.1**: 10,000 Mbit/s</p>
+     * <p>*   **Negative**: not applicable</p>
+     */
     @NameInMap("OppositeInterfaceSpec")
     public String oppositeInterfaceSpec;
 
+    /**
+     * <p>The status of the peer router interface. Valid values:</p>
+     * <br>
+     * <p>*   **Idle**: not connected</p>
+     * <p>*   **AcceptingConnecting**: accepting a connection</p>
+     * <p>*   **Connecting**: connecting</p>
+     * <p>*   **Activating**: being activated</p>
+     * <p>*   **Active**: activated</p>
+     * <p>*   **Modifying**: being modified</p>
+     * <p>*   **Deactivating**: being disabled</p>
+     * <p>*   **Inactive**: disabled</p>
+     * <p>*   **Deleting**: being deleted</p>
+     * <p>*   **Deleted**: deleted</p>
+     */
     @NameInMap("OppositeInterfaceStatus")
     public String oppositeInterfaceStatus;
 
+    /**
+     * <p>The region ID of the peer router interface.</p>
+     */
     @NameInMap("OppositeRegionId")
     public String oppositeRegionId;
 
+    /**
+     * <p>The ID of the router to which the peer router interface belongs.</p>
+     */
     @NameInMap("OppositeRouterId")
     public String oppositeRouterId;
 
+    /**
+     * <p>The type of the router to which the peer router interface belongs. Valid values:</p>
+     * <br>
+     * <p>*   **VRouter**: a vRouter</p>
+     * <p>*   **VBR**: a virtual border router (VBR)</p>
+     */
     @NameInMap("OppositeRouterType")
     public String oppositeRouterType;
 
+    /**
+     * <p>The ID of the peer VPC.</p>
+     */
     @NameInMap("OppositeVpcInstanceId")
     public String oppositeVpcInstanceId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the renewal takes effect.</p>
+     */
     @NameInMap("ReservationActiveTime")
     public String reservationActiveTime;
 
+    /**
+     * <p>The bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
+     */
     @NameInMap("ReservationBandwidth")
     public String reservationBandwidth;
 
+    /**
+     * <p>The metering method that is used after the renewal takes effect. The value is set to **PayByBandwidth**, which indicates the pay-by-bandwidth metering method.</p>
+     */
     @NameInMap("ReservationInternetChargeType")
     public String reservationInternetChargeType;
 
+    /**
+     * <p>The type of the renewal order. The value is set to **RENEW**, which indicates that the order is placed for service renewal.</p>
+     */
     @NameInMap("ReservationOrderType")
     public String reservationOrderType;
 
+    /**
+     * <p>Indicates whether the router interface is the requester or the acceptor of the peering connection.</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>The ID of the router to which the router interface belongs.</p>
+     */
     @NameInMap("RouterId")
     public String routerId;
 
+    /**
+     * <p>The ID of the router interface.</p>
+     */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
 
+    /**
+     * <p>The type of the router to which the route table belongs. Valid values:</p>
+     * <br>
+     * <p>*   **VRouter**: a vRouter</p>
+     * <p>*   **VBR**: a VBR</p>
+     */
     @NameInMap("RouterType")
     public String routerType;
 
+    /**
+     * <p>The specification of the router interface. Valid values:</p>
+     * <br>
+     * <p>*   **Mini.2**: 2 Mbit/s</p>
+     * <p>*   **Mini.5**: 5 Mbit/s</p>
+     * <p>*   **Small.1**: 10 Mbit/s</p>
+     * <p>*   **Small.2**: 20 Mbit/s</p>
+     * <p>*   **Small.5**: 50 Mbit/s</p>
+     * <p>*   **Middle.1**: 100 Mbit/s</p>
+     * <p>*   **Middle.2**: 200 Mbit/s</p>
+     * <p>*   **Middle.5**: 500 Mbit/s</p>
+     * <p>*   **Large.1**: 1,000 Mbit/s</p>
+     * <p>*   **Large.2**: 2,000 Mbit/s</p>
+     * <p>*   **Large.5**: 5,000 Mbit/s</p>
+     * <p>*   **Xlarge.1**: 10,000 Mbit/s</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The status of the router interface. Valid values:</p>
+     * <br>
+     * <p>*   **Idle**: not connected</p>
+     * <p>*   **AcceptingConnecting**: accepting a connection</p>
+     * <p>*   **Connecting**: connecting</p>
+     * <p>*   **Activating**: being activated</p>
+     * <p>*   **Active**: activated</p>
+     * <p>*   **Modifying**: being modified</p>
+     * <p>*   **Deactivating**: being disabled</p>
+     * <p>*   **Inactive**: disabled</p>
+     * <p>*   **Deleting**: being deleted</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the operation is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the router interface belongs.</p>
+     */
     @NameInMap("VpcInstanceId")
     public String vpcInstanceId;
 

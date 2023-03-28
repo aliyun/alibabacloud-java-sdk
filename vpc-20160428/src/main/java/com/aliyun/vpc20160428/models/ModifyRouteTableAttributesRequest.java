@@ -4,6 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouteTableAttributesRequest extends TeaModel {
+    /**
+     * <p>The description of the route table.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -13,6 +18,11 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the virtual private cloud (VPC) to which the route table belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,9 +32,17 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the route table.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    /**
+     * <p>The name of the route table.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("RouteTableName")
     public String routeTableName;
 

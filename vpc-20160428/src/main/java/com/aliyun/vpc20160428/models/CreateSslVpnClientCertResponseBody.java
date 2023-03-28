@@ -4,12 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateSslVpnClientCertResponseBody extends TeaModel {
+    /**
+     * <p>The name of the SSL client certificate.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the SSL client certificate.</p>
+     */
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;
 

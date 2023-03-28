@@ -4,6 +4,13 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ReleaseEipSegmentAddressRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,6 +20,9 @@ public class ReleaseEipSegmentAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the contiguous EIPs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +32,11 @@ public class ReleaseEipSegmentAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the group to which the contiguous EIPs to be released belongs.</p>
+     * <br>
+     * <p>The system releases all EIPs in the group.</p>
+     */
     @NameInMap("SegmentInstanceId")
     public String segmentInstanceId;
 

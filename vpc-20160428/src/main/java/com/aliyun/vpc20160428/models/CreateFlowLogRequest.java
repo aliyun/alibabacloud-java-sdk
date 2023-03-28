@@ -4,15 +4,35 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowLogRequest extends TeaModel {
+    /**
+     * <p>The sampling interval of the flow log. Unit: seconds. Valid values: **1**, **5**, and **10** (default).</p>
+     */
     @NameInMap("AggregationInterval")
     public Integer aggregationInterval;
 
+    /**
+     * <p>The description of the flow log.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the flow log.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    /**
+     * <p>The name of the Logstore that stores the captured traffic data.</p>
+     * <br>
+     * <p>*   The name can contain only lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>*   The name must start and end with a lowercase letter or a digit.</p>
+     * <p>*   The name must be 3 to 63 characters in length.</p>
+     */
     @NameInMap("LogStoreName")
     public String logStoreName;
 
@@ -22,15 +42,31 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The name of the project that stores the captured traffic data.</p>
+     * <br>
+     * <p>*   The name can contain only lowercase letters, digits, and hyphens (-).</p>
+     * <p>*   The name must start and end with a lowercase letter or a digit.</p>
+     * <p>*   The name must be 3 to 63 characters in length.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The ID of the region where you want to create the flow log. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the resource whose traffic you want to capture.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -40,12 +76,26 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource whose traffic you want to capture. Valid values:</p>
+     * <br>
+     * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
+     * <p>*   **VSwitch**: all ENIs in a vSwitch</p>
+     * <p>*   **VPC**: all ENIs in a virtual private cloud (VPC)</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     @NameInMap("TrafficPath")
     public java.util.List<String> trafficPath;
 
+    /**
+     * <p>The type of traffic that you want to capture. Valid values:</p>
+     * <br>
+     * <p>*   **All**: all traffic</p>
+     * <p>*   **Allow**: traffic that is allowed</p>
+     * <p>*   **Drop**: traffic that is rejected</p>
+     */
     @NameInMap("TrafficType")
     public String trafficType;
 

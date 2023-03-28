@@ -4,42 +4,88 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The service status of the IPv6 gateway. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: The IPv6 gateway runs as expected.</p>
+     * <p>*   **FinacialLocked**: The IPv6 gateway is locked due to overdue payments.</p>
+     * <p>*   **SecurityLocked**: The IPv6 gateway is locked due to security reasons.</p>
+     */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
+    /**
+     * <p>The time when the IPv6 gateway was created.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The description of the IPv6 gateway.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The time when the IPv6 gateway expires.</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The metering method of the IPv6 gateway.</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <p>The ID of the IPv6 gateway.</p>
+     */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
+    /**
+     * <p>The name of the IPv6 gateway.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the region where the IPv6 gateway is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The status of the IPv6 gateway. Valid values:</p>
+     * <br>
+     * <p>*   **Pending**</p>
+     * <p>*   **Available**</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public DescribeIpv6GatewayAttributeResponseBodyTags tags;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the IPv6 gateway belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -153,9 +199,15 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6GatewayAttributeResponseBodyTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

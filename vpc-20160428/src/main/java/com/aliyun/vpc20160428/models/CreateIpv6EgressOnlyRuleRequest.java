@@ -4,21 +4,49 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the egress-only rule.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the IPv6 address for which you want to create an egress-only rule.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the instance for which you want to create an egress-only rule.</p>
+     * <br>
+     * <p>Set the value to **Ipv6Address** (default). This value specifies the IPv6 address type.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The ID of the IPv6 gateway.</p>
+     */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
+    /**
+     * <p>The name of the egress-only rule.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -28,6 +56,11 @@ public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the IPv6 gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

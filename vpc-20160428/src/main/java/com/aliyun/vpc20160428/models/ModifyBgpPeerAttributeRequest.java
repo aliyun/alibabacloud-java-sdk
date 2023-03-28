@@ -4,18 +4,44 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyBgpPeerAttributeRequest extends TeaModel {
+    /**
+     * <p>The BFD hop count. Valid values: **1** to **255**.</p>
+     * <br>
+     * <p>This parameter is required only if you enable BFD.</p>
+     * <br>
+     * <p>The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. You can set a proper value based on the factors that affect the physical connection.</p>
+     */
     @NameInMap("BfdMultiHop")
     public Integer bfdMultiHop;
 
+    /**
+     * <p>The ID of the BGP group to which the BGP peer that you want to modify belongs.</p>
+     */
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
 
+    /**
+     * <p>The ID of the BGP peer that you want to modify.</p>
+     */
     @NameInMap("BgpPeerId")
     public String bgpPeerId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables BFD.</p>
+     * <p>*   **false**: disables BFD. This is the default value.</p>
+     */
     @NameInMap("EnableBfd")
     public Boolean enableBfd;
 
@@ -25,9 +51,17 @@ public class ModifyBgpPeerAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The IP address of the BGP peer that you want to modify.</p>
+     */
     @NameInMap("PeerIpAddress")
     public String peerIpAddress;
 
+    /**
+     * <p>The region ID of the BGP group to which the BGP peer that you want to modify belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

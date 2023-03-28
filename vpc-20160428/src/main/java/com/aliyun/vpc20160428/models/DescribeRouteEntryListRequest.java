@@ -7,21 +7,54 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     @NameInMap("DestCidrBlockList")
     public java.util.List<String> destCidrBlockList;
 
+    /**
+     * <p>The destination CIDR block of the route. IPv4 and IPv6 CIDR blocks are supported.</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    /**
+     * <p>The IP version. Valid values:</p>
+     * <br>
+     * <p>*   **IPv4**</p>
+     * <p>*   **IPv6**</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.</p>
+     */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
+    /**
+     * <p>The ID of the next hop.</p>
+     */
     @NameInMap("NextHopId")
     public String nextHopId;
 
+    /**
+     * <p>The type of the next hop. Valid values:</p>
+     * <br>
+     * <p>*   **Instance** (default): an Elastic Compute Service (ECS) instance</p>
+     * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
+     * <p>*   **VpnGateway**: a VPN gateway</p>
+     * <p>*   **NatGateway**: a NAT gateway</p>
+     * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI)</p>
+     * <p>*   **RouterInterface**: a router interface</p>
+     * <p>*   **IPv6Gateway**: an IPv6 gateway</p>
+     * <p>*   **Attachment**: a transit router</p>
+     */
     @NameInMap("NextHopType")
     public String nextHopType;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -31,6 +64,11 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the route table.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -40,18 +78,42 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the route that you want to query.</p>
+     */
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 
+    /**
+     * <p>The name of the route.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
+    /**
+     * <p>The type of the route. Valid values:</p>
+     * <br>
+     * <p>*   **Custom**: a custom route</p>
+     * <p>*   **System**: a system route</p>
+     * <p>*   **BGP**: a BGP route</p>
+     * <p>*   **CEN**: a Cloud Enterprise Network (CEN) route</p>
+     */
     @NameInMap("RouteEntryType")
     public String routeEntryType;
 
+    /**
+     * <p>The ID of the route table.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    /**
+     * <p>Specifies whether to host the route. If the parameter is empty, the route is not hosted.</p>
+     * <br>
+     * <p>If you set the value to **TR**, the route is hosted by a transit router.</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 

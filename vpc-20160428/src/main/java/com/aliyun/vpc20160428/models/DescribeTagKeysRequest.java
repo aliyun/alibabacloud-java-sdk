@@ -4,12 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagKeysRequest extends TeaModel {
+    /**
+     * <p>The tag keys.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</p>
+     */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -19,6 +31,11 @@ public class DescribeTagKeysRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the resource.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +48,17 @@ public class DescribeTagKeysRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The resource type. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VSWITCH**: vSwitch</p>
+     * <p>*   **ROUTETABLE**: route table</p>
+     * <p>*   **EIP**: elastic IP address (EIP)</p>
+     * <p>*   **VpnGateway**: VPN gateway</p>
+     * <p>*   **NATGATEWAY**: NAT gateway</p>
+     * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

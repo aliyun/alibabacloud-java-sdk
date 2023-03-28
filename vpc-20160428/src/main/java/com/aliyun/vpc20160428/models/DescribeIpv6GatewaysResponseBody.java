@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6GatewaysResponseBody extends TeaModel {
+    /**
+     * <p>The details about the IPv6 gateways.</p>
+     */
     @NameInMap("Ipv6Gateways")
     public DescribeIpv6GatewaysResponseBodyIpv6Gateways ipv6Gateways;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,39 +135,83 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway extends TeaModel {
+        /**
+         * <p>The state of the IPv6 gateway. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: The IPv6 gateway runs as expected.</p>
+         * <p>*   **FinancialLocked**: The IPv6 gateway is locked due to overdue payments.</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        /**
+         * <p>The time when the IPv6 gateway was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the IPv6 gateway.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the IPv6 gateway expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The billing method of the IPv6 gateway.</p>
+         * <br>
+         * <p>The value is set to **PostPaid**. This value indicates the pay-as-you-go billing method.</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>The ID of the IPv6 gateway.</p>
+         */
         @NameInMap("Ipv6GatewayId")
         public String ipv6GatewayId;
 
+        /**
+         * <p>The name of the IPv6 gateway.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The region ID of the IPv6 gateway.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The state of the IPv6 gateway. Valid values:</p>
+         * <br>
+         * <p>*   **Pending**: The IPv6 gateway is being configured.</p>
+         * <p>*   **Available**: The IPv6 gateway is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTags tags;
 
+        /**
+         * <p>The ID of the VPC to which the IPv6 gateway belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

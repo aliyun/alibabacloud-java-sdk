@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnatTableEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the SNAT entries.</p>
+     */
     @NameInMap("SnatTableEntries")
     public DescribeSnatTableEntriesResponseBodySnatTableEntries snatTableEntries;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,51 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry extends TeaModel {
+        /**
+         * <p>The ID of the SNAT entry.</p>
+         */
         @NameInMap("SnatEntryId")
         public String snatEntryId;
 
+        /**
+         * <p>The name of the SNAT entry.</p>
+         */
         @NameInMap("SnatEntryName")
         public String snatEntryName;
 
+        /**
+         * <p>*   When you query SNAT entries of Internet NAT gateways, this parameter indicates the EIP in an SNAT entry.</p>
+         * <p>*   When you query SNAT entries of VPC NAT gateways, this parameter indicates the NAT IP address in an SNAT entry.</p>
+         */
         @NameInMap("SnatIp")
         public String snatIp;
 
+        /**
+         * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
+         */
         @NameInMap("SnatTableId")
         public String snatTableId;
 
+        /**
+         * <p>The source CIDR block specified in the SNAT entry.</p>
+         */
         @NameInMap("SourceCIDR")
         public String sourceCIDR;
 
+        /**
+         * <p>*   When you query SNAT entries of Internet NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access the Internet.</p>
+         * <p>*   When you query SNAT entries of VPC NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access external networks.</p>
+         */
         @NameInMap("SourceVSwitchId")
         public String sourceVSwitchId;
 
+        /**
+         * <p>The status of the SNAT entry. Valid values:</p>
+         * <br>
+         * <p>*   **Pending**: being created or modified</p>
+         * <p>*   **Available**: available</p>
+         * <p>*   **Deleting**: being deleted</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSslVpnServersResponseBody extends TeaModel {
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The detailed information about the SSL servers.</p>
+     */
     @NameInMap("SslVpnServers")
     public DescribeSslVpnServersResponseBodySslVpnServers sslVpnServers;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,54 +80,111 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
     }
 
     public static class DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer extends TeaModel {
+        /**
+         * <p>The encryption algorithm.</p>
+         */
         @NameInMap("Cipher")
         public String cipher;
 
+        /**
+         * <p>The client CIDR block.</p>
+         */
         @NameInMap("ClientIpPool")
         public String clientIpPool;
 
+        /**
+         * <p>Indicates whether data compression is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false** (default): no</p>
+         */
         @NameInMap("Compress")
         public Boolean compress;
 
+        /**
+         * <p>The total number of current connections.</p>
+         */
         @NameInMap("Connections")
         public Integer connections;
 
+        /**
+         * <p>The timestamp generated when the SSL server was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false** (default): no</p>
+         */
         @NameInMap("EnableMultiFactorAuth")
         public Boolean enableMultiFactorAuth;
 
+        /**
+         * <p>The ID of the Identity as a Service (IDaaS) instance.</p>
+         */
         @NameInMap("IDaaSInstanceId")
         public String IDaaSInstanceId;
 
+        /**
+         * <p>The ID of the region where the IDaaS instance is created.</p>
+         */
         @NameInMap("IDaaSRegionId")
         public String IDaaSRegionId;
 
+        /**
+         * <p>The public IP address of the VPN gateway.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The local CIDR block.</p>
+         */
         @NameInMap("LocalSubnet")
         public String localSubnet;
 
+        /**
+         * <p>The maximum number of connections.</p>
+         */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
+        /**
+         * <p>The name of the SSL server.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The port that is used by the SSL server.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The protocol that is used by the SSL server.</p>
+         */
         @NameInMap("Proto")
         public String proto;
 
+        /**
+         * <p>The ID of the region where the SSL server is created.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the SSL server.</p>
+         */
         @NameInMap("SslVpnServerId")
         public String sslVpnServerId;
 
+        /**
+         * <p>The ID of the VPN gateway.</p>
+         */
         @NameInMap("VpnGatewayId")
         public String vpnGatewayId;
 

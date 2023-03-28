@@ -4,36 +4,77 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
+    /**
+     * <p>The timestamp generated when the policy-based route was created. Unit: milliseconds.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The description of the policy-based route.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The next hop of the policy-based route.</p>
+     */
     @NameInMap("NextHop")
     public String nextHop;
 
+    /**
+     * <p>The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.</p>
+     */
     @NameInMap("OverlayMode")
     public String overlayMode;
 
+    /**
+     * <p>The priority of the policy-based route.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The destination CIDR block of the policy-based route.</p>
+     */
     @NameInMap("RouteDest")
     public String routeDest;
 
+    /**
+     * <p>The source CIDR block of the policy-based route.</p>
+     */
     @NameInMap("RouteSource")
     public String routeSource;
 
+    /**
+     * <p>The status of the policy-based route. Valid values:</p>
+     * <br>
+     * <p>*   **published**: advertised to the VPC route table.</p>
+     * <p>*   **normal**: not advertised to the VPC route table.</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnInstanceId")
     public String vpnInstanceId;
 
+    /**
+     * <p>The weight of the policy-based route.</p>
+     * <br>
+     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
+     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
+     */
     @NameInMap("Weight")
     public Integer weight;
 

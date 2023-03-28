@@ -4,12 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteTableResponseBody extends TeaModel {
+    /**
+     * <p>The type of the route table. Valid values:</p>
+     * <br>
+     * <p>*   **VSwitch**: vSwitch route table</p>
+     * <p>*   **Gateway**: gateway route table</p>
+     */
     @NameInMap("AssociateType")
     public String associateType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The IDs of the route tables.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 

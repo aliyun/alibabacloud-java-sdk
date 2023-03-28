@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
+    /**
+     * <p>The version of the private IP address. Valid values:</p>
+     * <br>
+     * <p>*   **ipv4**: IPv4 If you want to query an IPv4 address, this parameter is optional.</p>
+     * <p>*   **ipv6**: IPv6 If you want to query an IPv6 address, this parameter is required.</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
@@ -13,9 +19,17 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
+    /**
+     * <p>The region ID of the vSwitch to which the private IP address that you want to query belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +39,9 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the vSwitch to which the private IP address to be queried belongs.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

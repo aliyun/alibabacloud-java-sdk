@@ -4,15 +4,34 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The new weight of the policy-based route. Valid values:</p>
+     * <br>
+     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
+     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
+     */
     @NameInMap("NewWeight")
     public Integer newWeight;
 
+    /**
+     * <p>The next hop of the policy-based route.</p>
+     */
     @NameInMap("NextHop")
     public String nextHop;
 
+    /**
+     * <p>The tunneling protocol. Set the value to **Ipsec**.</p>
+     */
     @NameInMap("OverlayMode")
     public String overlayMode;
 
@@ -22,9 +41,21 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The priority of the policy-based route.</p>
+     * <br>
+     * <p>*   If the route was not assigned a priority, this parameter is optional.</p>
+     * <br>
+     * <p>*   If the route was assigned a priority, this parameter is optional.</p>
+     * <br>
+     * <p>    If you set this parameter, set the value to the priority that was assigned to the route. Otherwise, the operation fails.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,15 +65,30 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The destination CIDR block of the policy-based route.</p>
+     */
     @NameInMap("RouteDest")
     public String routeDest;
 
+    /**
+     * <p>The source CIDR block of the policy-based route.</p>
+     */
     @NameInMap("RouteSource")
     public String routeSource;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
+    /**
+     * <p>The original weight of the policy-based route. Valid values:</p>
+     * <br>
+     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
+     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
+     */
     @NameInMap("Weight")
     public Integer weight;
 

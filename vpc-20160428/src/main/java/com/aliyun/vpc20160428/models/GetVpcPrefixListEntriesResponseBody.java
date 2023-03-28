@@ -4,18 +4,36 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries.</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The information about the prefix list.</p>
+     */
     @NameInMap("PrefixListEntry")
     public java.util.List<GetVpcPrefixListEntriesResponseBodyPrefixListEntry> prefixListEntry;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,15 +83,27 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     }
 
     public static class GetVpcPrefixListEntriesResponseBodyPrefixListEntry extends TeaModel {
+        /**
+         * <p>The CIDR blocks specified in the prefix list.</p>
+         */
         @NameInMap("Cidr")
         public String cidr;
 
+        /**
+         * <p>The description of the prefix list.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the prefix list.</p>
+         */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
+        /**
+         * <p>The region ID of the prefix list.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

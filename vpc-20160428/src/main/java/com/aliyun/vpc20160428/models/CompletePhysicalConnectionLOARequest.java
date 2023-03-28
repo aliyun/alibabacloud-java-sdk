@@ -4,15 +4,31 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CompletePhysicalConnectionLOARequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the Express Connect circuit.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The circuit code provided by the connectivity provider.</p>
+     */
     @NameInMap("LineCode")
     public String lineCode;
 
+    /**
+     * <p>The label of the cable in the data center.</p>
+     */
     @NameInMap("LineLabel")
     public String lineLabel;
 
@@ -22,6 +38,11 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

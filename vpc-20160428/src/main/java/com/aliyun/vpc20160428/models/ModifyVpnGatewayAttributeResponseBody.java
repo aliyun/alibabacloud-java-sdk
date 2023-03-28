@@ -4,48 +4,112 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether BGP routes are automatically advertised to the VPC. Valid values:</p>
+     * <br>
+     * <p>*   **true:** yes.</p>
+     * <p>*   **false:** no.</p>
+     */
     @NameInMap("AutoPropagate")
     public Boolean autoPropagate;
 
+    /**
+     * <p>The payment status of the VPN gateway. Valid values:</p>
+     * <br>
+     * <p>*   **Normal:** The VPN gateway is running as expected.</p>
+     * <p>*   **FinancialLocked:** The VPN gateway is locked due to overdue payments.</p>
+     */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
+    /**
+     * <p>The timestamp generated when the VPN gateway was created. Unit: milliseconds.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The description of the VPN gateway.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The BGP status of the VPN gateway. Valid values:</p>
+     * <br>
+     * <p>*   **true:** enabled.</p>
+     * <p>*   **false:** disabled.</p>
+     */
     @NameInMap("EnableBgp")
     public Boolean enableBgp;
 
+    /**
+     * <p>The timestamp generated when the VPN gateway expires. Unit: milliseconds.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The public IP address of the VPN gateway.</p>
+     */
     @NameInMap("InternetIp")
     public String internetIp;
 
+    /**
+     * <p>The private IP address of the VPN gateway.</p>
+     */
     @NameInMap("IntranetIp")
     public String intranetIp;
 
+    /**
+     * <p>The name of the VPN gateway.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The maximum bandwidth of the VPN gateway. Unit: Mbit/s.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The status of the VPN gateway. Valid values:</p>
+     * <br>
+     * <p>*   **init:** The VPN gateway is being initialized.</p>
+     * <p>*   **provisioning:** The VPN gateway is being prepared.</p>
+     * <p>*   **active:** The VPN gateway is ready.</p>
+     * <p>*   **updating:** The VPN gateway is being updated.</p>
+     * <p>*   **deleting:** The VPN gateway is being deleted.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the vSwitch to which the VPN gateway belongs.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the VPC to which the VPN gateway belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 

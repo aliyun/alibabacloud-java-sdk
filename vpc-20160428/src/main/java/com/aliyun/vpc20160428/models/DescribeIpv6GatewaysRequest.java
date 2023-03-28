@@ -4,9 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6GatewaysRequest extends TeaModel {
+    /**
+     * <p>The ID of the IPv6 gateway.</p>
+     */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
+    /**
+     * <p>The name of the IPv6 gateway.</p>
+     * <br>
+     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. It cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -16,15 +24,29 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the IPv6 gateway is deployed.</p>
+     * <br>
+     * <p>>  IPv6 gateways are available in the following regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Philippines (Manila), Singapore, US (Virginia), and Germany (Frankfurt).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -37,6 +59,9 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<DescribeIpv6GatewaysRequestTags> tags;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the IPv6 gateway belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -142,9 +167,23 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
     }
 
     public static class DescribeIpv6GatewaysRequestTags extends TeaModel {
+        /**
+         * <p>The key of the tag. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>It must be 1 to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys in each call.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * <br>
+         * <p>The tag value can be an empty string and must be 1 to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

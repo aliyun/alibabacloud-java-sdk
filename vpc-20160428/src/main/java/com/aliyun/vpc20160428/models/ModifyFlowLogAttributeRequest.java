@@ -4,15 +4,31 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyFlowLogAttributeRequest extends TeaModel {
+    /**
+     * <p>The new sampling interval of the flow log. Unit: seconds. Valid values: **1**, **5**, and **10**.</p>
+     */
     @NameInMap("AggregationInterval")
     public Integer aggregationInterval;
 
+    /**
+     * <p>The new description of the flow log.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the flow log.</p>
+     */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
+    /**
+     * <p>The new name of the flow log.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("FlowLogName")
     public String flowLogName;
 
@@ -22,6 +38,11 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the flow log is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

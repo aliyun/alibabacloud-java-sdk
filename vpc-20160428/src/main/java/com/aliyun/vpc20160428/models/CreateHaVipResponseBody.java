@@ -4,12 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateHaVipResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the HAVIP.</p>
+     */
     @NameInMap("HaVipId")
     public String haVipId;
 
+    /**
+     * <p>The IP address of the HAVIP.</p>
+     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

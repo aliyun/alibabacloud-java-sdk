@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information about the BGP group.</p>
+     */
     @NameInMap("BgpGroups")
     public DescribeBgpGroupsResponseBodyBgpGroups bgpGroups;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,45 +80,95 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBgpGroupsResponseBodyBgpGroupsBgpGroup extends TeaModel {
+        /**
+         * <p>The key used by the BGP group.</p>
+         */
         @NameInMap("AuthKey")
         public String authKey;
 
+        /**
+         * <p>The ID of the BGP group.</p>
+         */
         @NameInMap("BgpGroupId")
         public String bgpGroupId;
 
+        /**
+         * <p>The description of the BGP group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The hold time to receive BGP messages. Unit: seconds.</p>
+         * <br>
+         * <p>>  If no message is received within the hold time, the BGP peer is considered disconnected.</p>
+         */
         @NameInMap("Hold")
         public String hold;
 
+        /**
+         * <p>The IP version of the BGP group. Valid values:</p>
+         * <br>
+         * <p>*   **ipv4**: IPv4</p>
+         * <p>*   **ipv6**: IPv6. IPv6 is supported only if the VBR of the BGP group has IPv6 enabled.</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        /**
+         * <p>Indicates whether the ASN is fake. Valid values:</p>
+         * <br>
+         * <p>*   **false**: no</p>
+         * <p>*   **true**: yes</p>
+         */
         @NameInMap("IsFake")
         public String isFake;
 
+        /**
+         * <p>The keepalive time. Unit: seconds.</p>
+         */
         @NameInMap("Keepalive")
         public String keepalive;
 
+        /**
+         * <p>The ASN of the VBR.</p>
+         */
         @NameInMap("LocalAsn")
         public String localAsn;
 
+        /**
+         * <p>The name of the BGP group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
+         */
         @NameInMap("PeerAsn")
         public String peerAsn;
 
+        /**
+         * <p>The ID of the region to which the BGP group belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The maximum number of route entries for BGP dynamic route learning.</p>
+         */
         @NameInMap("RouteLimit")
         public String routeLimit;
 
+        /**
+         * <p>The ID of the VBR.</p>
+         */
         @NameInMap("RouterId")
         public String routerId;
 
+        /**
+         * <p>The status of the BGP group.</p>
+         */
         @NameInMap("Status")
         public String status;
 

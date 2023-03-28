@@ -4,9 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteCommonBandwidthPackageRequest extends TeaModel {
+    /**
+     * <p>The ID of the EIP bandwidth plan.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>Specifies whether to forcibly delete the EIP bandwidth plan. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): deletes the EIP bandwidth plan only when no EIPs are associated with the EIP bandwidth plan.</p>
+     * <p>*   **true**: disassociates all EIPs from the EIP bandwidth plan and deletes the EIP bandwidth plan.</p>
+     */
     @NameInMap("Force")
     public String force;
 
@@ -16,6 +25,11 @@ public class DeleteCommonBandwidthPackageRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the EIP bandwidth plan is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

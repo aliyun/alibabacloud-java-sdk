@@ -4,24 +4,50 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpnAttachmentResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned by the current operation. **200** indicates that the operation is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The information returned by the current operation.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The name of the IPsec-VPN connection.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the current operation is successful.</p>
+     * <br>
+     * <p>*   **true**: The operation is successful.</p>
+     * <p>*   **false**: The operation failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the IPsec-VPN connection.</p>
+     */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;
 

@@ -4,12 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListGeographicSubRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The list of regions available for Express Connect circuits.</p>
+     */
     @NameInMap("GeographicSubRegions")
     public java.util.List<String> geographicSubRegions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

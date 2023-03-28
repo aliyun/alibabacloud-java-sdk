@@ -4,21 +4,50 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DiagnoseVpnGatewayRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The ID of each request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The configuration when you check the connectivity of the IPsec-VPN connection. Valid values:</p>
+     * <br>
+     * <p>*   **PrivateSourceIp**: the source IP address used when you check the connectivity of the IPsec-VPN connection. The source IP address must be on the VPC side.</p>
+     * <p>*   **PrivateDestinationIp**: the destination IP address used when you check the connectivity of the IPsec-VPN connection. The destination IP address must be on the data center side.</p>
+     */
     @NameInMap("IPsecExtendInfo")
     public String IPsecExtendInfo;
 
+    /**
+     * <p>The region ID of the VPN gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource to be diagnosed.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of the resource.</p>
+     * <br>
+     * <p>Set the value to **Ipsec**, which specifies an IPsec-VPN connection.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 

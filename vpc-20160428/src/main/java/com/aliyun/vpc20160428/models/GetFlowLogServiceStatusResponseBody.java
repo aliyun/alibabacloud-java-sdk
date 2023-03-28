@@ -4,9 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetFlowLogServiceStatusResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the flow log feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no You can call the [OpenFlowLogService](~~449637~~) operation to enable the flow log feature.</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

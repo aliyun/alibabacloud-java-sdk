@@ -10,6 +10,11 @@ public class DeleteRouteEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the route table.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -76,15 +81,33 @@ public class DeleteRouteEntriesRequest extends TeaModel {
     }
 
     public static class DeleteRouteEntriesRequestRouteEntries extends TeaModel {
+        /**
+         * <p>The destination CIDR block of the route entry that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.</p>
+         * <br>
+         * <p>>  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.</p>
+         */
         @NameInMap("DstCidrBlock")
         public String dstCidrBlock;
 
+        /**
+         * <p>The ID of the next hop that you want to delete. You can specify up to 50 next hop IDs.</p>
+         * <br>
+         * <p>>  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.</p>
+         */
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <p>The ID of the route entry that you want to delete. You can specify up to 50 route entry IDs.</p>
+         * <br>
+         * <p>>  If the **RouteEntryId** parameter is not specified, you must specify the **DstCidrBlock** and **NextHop** parameters.</p>
+         */
         @NameInMap("RouteEntryId")
         public String routeEntryId;
 
+        /**
+         * <p>The ID of the route table in which the route entry to be deleted resides. You can specify up to 50 route table IDs.</p>
+         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 

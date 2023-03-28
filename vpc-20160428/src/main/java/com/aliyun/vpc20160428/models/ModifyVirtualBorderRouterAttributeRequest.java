@@ -4,39 +4,98 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
+    /**
+     * <p>The information about the Express Connect circuit associated with the VBR, including the following parameters:</p>
+     * <br>
+     * <p>*   **CircuitCode**: the circuit code provided by the connectivity provider for the Express Connect circuit.</p>
+     * <p>*   **LocalGatewayIp**: the IP address of the gateway device on the Alibaba Cloud side.</p>
+     * <p>*   **PeerGatewayIp**: the IP address of the gateway device on the user side.</p>
+     * <p>*   **PeeringSubnetMask**: the subnet mask for the IP addresses of gateway devices on the Alibaba Cloud side and the user side.</p>
+     * <p>*   **PhysicalConnectionId**: the ID of the Express Connect circuit.</p>
+     */
     @NameInMap("AssociatedPhysicalConnections")
     public String associatedPhysicalConnections;
 
+    /**
+     * <p>The bandwidth value. Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+     * <br>
+     * <p>>  Only the owner of the Express Connect circuit can set this parameter.</p>
+     */
     @NameInMap("CircuitCode")
     public String circuitCode;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the VBR.</p>
+     * <br>
+     * <p>It must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The maximum number of dropped packets that is allowed by the receiver when the initiator transmits packets. This value can be used to check whether a connection works as expected.</p>
+     * <br>
+     * <p>Valid values: **3 to 10**.</p>
+     */
     @NameInMap("DetectMultiplier")
     public Long detectMultiplier;
 
+    /**
+     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
+    /**
+     * <p>The IP address of the gateway device on the Alibaba Cloud side.</p>
+     * <br>
+     * <p>Only the owner of the VBR can set or modify this parameter.</p>
+     */
     @NameInMap("LocalGatewayIp")
     public String localGatewayIp;
 
+    /**
+     * <p>The IPv6 address of the gateway device on the Alibaba Cloud side.</p>
+     */
     @NameInMap("LocalIpv6GatewayIp")
     public String localIpv6GatewayIp;
 
+    /**
+     * <p>The time interval to receive BFD packets. Valid values: **200 to 1000**. Unit: milliseconds.</p>
+     */
     @NameInMap("MinRxInterval")
     public Long minRxInterval;
 
+    /**
+     * <p>The time interval to send BFD packets. Valid values: **200 to 1000**. Unit: milliseconds.</p>
+     */
     @NameInMap("MinTxInterval")
     public Long minTxInterval;
 
+    /**
+     * <p>The name of the VBR.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter. It cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -46,18 +105,44 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The IP address of the gateway device on the user side.</p>
+     * <br>
+     * <p>Only the owner of the VBR can set or modify this parameter.</p>
+     */
     @NameInMap("PeerGatewayIp")
     public String peerGatewayIp;
 
+    /**
+     * <p>The IPv6 address of the gateway device in the data center.</p>
+     * <br>
+     * <p>*   Only the owner of the VBR can set or modify this property.</p>
+     * <p>*   This property is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this property when you create a VBR for another Alibaba Cloud account.</p>
+     */
     @NameInMap("PeerIpv6GatewayIp")
     public String peerIpv6GatewayIp;
 
+    /**
+     * <p>The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.</p>
+     * <br>
+     * <p>The two IPv6 addresses must fall within the same subnet.</p>
+     */
     @NameInMap("PeeringIpv6SubnetMask")
     public String peeringIpv6SubnetMask;
 
+    /**
+     * <p>The subnet mask for the IP addresses of the gateway devices on the Alibaba Cloud side and on the user side. Only the owner of the VBR can set or modify this parameter.</p>
+     * <br>
+     * <p>The two IP addresses must fall within the same subnet.</p>
+     */
     @NameInMap("PeeringSubnetMask")
     public String peeringSubnetMask;
 
+    /**
+     * <p>The region ID of the VBR.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -67,9 +152,17 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     */
     @NameInMap("VbrId")
     public String vbrId;
 
+    /**
+     * <p>The VLAN ID of the VBR. Valid values: **0 to 2999**.</p>
+     * <br>
+     * <p>>  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.</p>
+     */
     @NameInMap("VlanId")
     public Integer vlanId;
 

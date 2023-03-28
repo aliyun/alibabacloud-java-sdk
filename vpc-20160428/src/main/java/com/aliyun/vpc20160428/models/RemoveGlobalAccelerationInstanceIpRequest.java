@@ -4,9 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
+    /**
+     * <p>The ID of the shared-bandwidth instance.</p>
+     */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
+    /**
+     * <p>The ID of the EIP.</p>
+     * <br>
+     * <p>To query the EIP ID, call DescribeEipAddresses.</p>
+     */
     @NameInMap("IpInstanceId")
     public String ipInstanceId;
 
@@ -16,6 +24,11 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the shared-bandwidth instance is located.</p>
+     * <br>
+     * <p>To query the region ID, call DescribeRegions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

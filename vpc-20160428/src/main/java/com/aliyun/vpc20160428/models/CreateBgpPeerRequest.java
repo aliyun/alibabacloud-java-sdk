@@ -4,18 +4,47 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateBgpPeerRequest extends TeaModel {
+    /**
+     * <p>The BFD hop count. Valid values: **1** to **255**.</p>
+     * <br>
+     * <p>This parameter is required only if you enable BFD.</p>
+     * <br>
+     * <p>The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</p>
+     */
     @NameInMap("BfdMultiHop")
     public Integer bfdMultiHop;
 
+    /**
+     * <p>The ID of the BGP group.</p>
+     */
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** for each API request is different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables BFD.</p>
+     * <p>*   **false**: disables BFD.</p>
+     */
     @NameInMap("EnableBfd")
     public Boolean enableBfd;
 
+    /**
+     * <p>The IP version. Valid values:</p>
+     * <br>
+     * <p>*   **IPv4**: This is the default value.</p>
+     * <p>*   **IPv6**: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
@@ -25,9 +54,17 @@ public class CreateBgpPeerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The IP address of the BGP peer.</p>
+     */
     @NameInMap("PeerIpAddress")
     public String peerIpAddress;
 
+    /**
+     * <p>The ID of the region to which the BGP group belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

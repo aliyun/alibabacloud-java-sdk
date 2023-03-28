@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about VBRs.</p>
+     */
     @NameInMap("VirtualBorderRouterForPhysicalConnectionSet")
     public DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSet virtualBorderRouterForPhysicalConnectionSet;
 
@@ -65,72 +80,168 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
     }
 
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSetVirtualBorderRouterForPhysicalConnectionType extends TeaModel {
+        /**
+         * <p>The first time when the VBR was activated.</p>
+         */
         @NameInMap("ActivationTime")
         public String activationTime;
 
+        /**
+         * <p>The bandwidth of the VBR associated with the Express Connect circuit. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
+        /**
+         * <p>The status of the bandwidth. Valid values:</p>
+         * <br>
+         * <p>*   **Active**: normal</p>
+         * <p>*   **Inactive**: abnormal</p>
+         */
         @NameInMap("BandwidthStatus")
         public String bandwidthStatus;
 
+        /**
+         * <p>The circuit code of the Express Connect circuit. The circuit code is predefined by the connectivity provider.</p>
+         */
         @NameInMap("CircuitCode")
         public String circuitCode;
 
+        /**
+         * <p>The time when the VBR was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the ECC instance.</p>
+         */
         @NameInMap("EccId")
         public String eccId;
 
+        /**
+         * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("EnableIpv6")
         public Boolean enableIpv6;
 
+        /**
+         * <p>The IPv4 address of the VBR.</p>
+         */
         @NameInMap("LocalGatewayIp")
         public String localGatewayIp;
 
+        /**
+         * <p>The IPv6 address of the VBR.</p>
+         */
         @NameInMap("LocalIpv6GatewayIp")
         public String localIpv6GatewayIp;
 
+        /**
+         * <p>The status of the VBR associated with the Express Connect circuit. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: normal</p>
+         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+         */
         @NameInMap("PConnVbrBussinessStatus")
         public String PConnVbrBussinessStatus;
 
+        /**
+         * <p>The billing method of the VBR that is associated with the Express Connect circuit. Valid values:</p>
+         * <br>
+         * <p>*   **PrePaid**: subscription If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
+         * <p>*   **PostPaid**: pay-as-you-go</p>
+         */
         @NameInMap("PConnVbrChargeType")
         public String PConnVbrChargeType;
 
+        /**
+         * <p>The time when the VBR associated with the Express Connect circuit expires.</p>
+         */
         @NameInMap("PConnVbrExpireTime")
         public String PConnVbrExpireTime;
 
+        /**
+         * <p>The IPv4 address of the gateway device in the data center.</p>
+         */
         @NameInMap("PeerGatewayIp")
         public String peerGatewayIp;
 
+        /**
+         * <p>The IPv6 address of the gateway device in the data center.</p>
+         * <br>
+         * <p>This parameter is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this parameter when you create a VBR for another Alibaba Cloud account.</p>
+         */
         @NameInMap("PeerIpv6GatewayIp")
         public String peerIpv6GatewayIp;
 
+        /**
+         * <p>The subnet mask for the IPv6 addresses of the gateway devices in the data center and the VBRs.</p>
+         * <br>
+         * <p>The two IPv6 addresses must fall within the same subnet.</p>
+         */
         @NameInMap("PeeringIpv6SubnetMask")
         public String peeringIpv6SubnetMask;
 
+        /**
+         * <p>The subnet mask for the IPv4 addresses of the gateway device in the data center and the VBR.</p>
+         * <br>
+         * <p>The two IPv4 addresses must fall within the same subnet.</p>
+         */
         @NameInMap("PeeringSubnetMask")
         public String peeringSubnetMask;
 
+        /**
+         * <p>The last time when the status of the VBR changed from Terminated to Active.</p>
+         */
         @NameInMap("RecoveryTime")
         public String recoveryTime;
 
+        /**
+         * <p>The status of the VBR. Valid values: Valid values:</p>
+         * <br>
+         * <p>*   **Unconfirmed**: pending confirmation from other users</p>
+         * <p>*   **Active**: normal</p>
+         * <p>*   **Terminating**: being disabled</p>
+         * <p>*   **Terminated**: disabled</p>
+         * <p>*   **Recovering**: being enabled</p>
+         * <p>*   **Deleting**: being deleted</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The last time when the VBR was disabled.</p>
+         */
         @NameInMap("TerminationTime")
         public String terminationTime;
 
+        /**
+         * <p>The type of the VBR.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The ID of the VBR.</p>
+         */
         @NameInMap("VbrId")
         public String vbrId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * <br>
+         * <p>If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is empty.</p>
+         */
         @NameInMap("VbrOwnerUid")
         public Long vbrOwnerUid;
 
+        /**
+         * <p>The VLAN ID of the VBR.</p>
+         */
         @NameInMap("VlanId")
         public Integer vlanId;
 

@@ -4,21 +4,41 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomerGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The timestamp generated when the customer gateway was created. Unit: milliseconds.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The ID of the customer gateway.</p>
+     */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
+    /**
+     * <p>The description of the customer gateway.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The static public IP address of the gateway device in the data center.</p>
+     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
+    /**
+     * <p>The name of the customer gateway.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

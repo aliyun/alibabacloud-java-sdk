@@ -4,9 +4,22 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateTrafficMirrorFilterRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,9 +35,17 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the mirrored traffic belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,9 +55,19 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The description of the filter.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("TrafficMirrorFilterDescription")
     public String trafficMirrorFilterDescription;
 
+    /**
+     * <p>The name of the filter.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("TrafficMirrorFilterName")
     public String trafficMirrorFilterName;
 
@@ -142,24 +173,59 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     }
 
     public static class CreateTrafficMirrorFilterRequestEgressRules extends TeaModel {
+        /**
+         * <p>The action of the outbound rule. Valid values:</p>
+         * <br>
+         * <p>*   **accept**: collects network traffic.</p>
+         * <p>*   **drop**: does not collect network traffic.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The destination CIDR block of the outbound traffic.</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>The destination port range of the outbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**. You cannot set this parameter to only **-1/-1**. The value -1/-1 specifies all ports.</p>
+         * <br>
+         * <p>>  If you set **EgressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.</p>
+         */
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        /**
+         * <p>The priority of the outbound rule. A smaller value indicates a higher priority.</p>
+         * <br>
+         * <p>The maximum value of **N** is **10**. You can configure up to 10 outbound rules for a filter.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The protocol that is used by the outbound traffic to be mirrored. Valid values:</p>
+         * <br>
+         * <p>*   **ALL**: all protocols</p>
+         * <p>*   **ICMP**: ICMP</p>
+         * <p>*   **TCP**: TCP</p>
+         * <p>*   **UDP**: UDP</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The source CIDR block of the outbound traffic.</p>
+         */
         @NameInMap("SourceCidrBlock")
         public String sourceCidrBlock;
 
+        /**
+         * <p>The source port range of the outbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**. You cannot set this parameter to only **-1/-1**. The value -1/-1 specifies all ports.</p>
+         * <br>
+         * <p>>  If you set **EgressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.</p>
+         */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 
@@ -227,24 +293,59 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     }
 
     public static class CreateTrafficMirrorFilterRequestIngressRules extends TeaModel {
+        /**
+         * <p>The action of the inbound rule. Valid values:</p>
+         * <br>
+         * <p>*   **accept**: collects network traffic.</p>
+         * <p>*   **drop**: does not collect network traffic.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The destination CIDR block of the inbound traffic.</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>The destination port range of the inbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**.</p>
+         * <br>
+         * <p>>  If you set **IngressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.</p>
+         */
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        /**
+         * <p>The priority of the inbound rule. A smaller value indicates a higher priority.</p>
+         * <br>
+         * <p>The maximum value of **N** is **10**. You can configure up to 10 inbound rules for a filter.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The protocol that is used by the inbound traffic to be mirrored. Valid values:</p>
+         * <br>
+         * <p>*   **ALL**: all protocols</p>
+         * <p>*   **ICMP**: ICMP</p>
+         * <p>*   **TCP**: TCP</p>
+         * <p>*   **UDP**: UDP</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The source CIDR block of the inbound traffic.</p>
+         */
         @NameInMap("SourceCidrBlock")
         public String sourceCidrBlock;
 
+        /**
+         * <p>The source port range of the inbound traffic. Valid values for a port: **1** to **65535**. Separate the first port and the last port with a forward slash (/). Examples: **1/200** and **80/80**.</p>
+         * <br>
+         * <p>>  If you set **IngressRules.N.Protocol** to **ALL** or **ICMP**, you do not need to set this parameter. In this case, all ports are available.</p>
+         */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 

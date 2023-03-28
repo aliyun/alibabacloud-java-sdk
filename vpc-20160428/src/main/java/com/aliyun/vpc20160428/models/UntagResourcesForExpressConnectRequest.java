@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesForExpressConnectRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+     * <br>
+     * <p>*   **true**: removes all tags from the specified resource.</p>
+     * <p>*   **false**: does not remove all tags from the specified resource. This is the default value.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -13,6 +19,11 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the resource.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +36,9 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Set the value to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

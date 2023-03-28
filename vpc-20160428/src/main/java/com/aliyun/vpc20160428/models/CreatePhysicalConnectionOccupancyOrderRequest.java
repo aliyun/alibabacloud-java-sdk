@@ -4,12 +4,28 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable automatic payments. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.</p>
+     * <p>*   **false**: disables automatic payment. This is the default value.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The billing method of the Express Connect circuit. Set the value to</p>
+     * <br>
+     * <p>**PrePaid**, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -19,15 +35,35 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The subscription duration.</p>
+     * <br>
+     * <p>*   If **PricingCycle** is set to **Month**, set **Period** to a value from **1 to 9**.</p>
+     * <p>*   If **PricingCycle** is set to **Year**, set **Period** to a value from **1 to 5**.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The ID of the Express Connect circuit.</p>
+     */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
+    /**
+     * <p>The billing cycle of the subscription. Valid values:</p>
+     * <br>
+     * <p>*   **Month**: Bills are paid on a monthly basis. This is the default value.</p>
+     * <p>*   **Year**: Bills are paid on an annual basis.</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

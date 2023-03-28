@@ -4,15 +4,30 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListIpv4GatewaysResponseBody extends TeaModel {
+    /**
+     * <p>The list of IPv4 gateways.</p>
+     */
     @NameInMap("Ipv4GatewayModels")
     public java.util.List<ListIpv4GatewaysResponseBodyIpv4GatewayModels> ipv4GatewayModels;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -54,9 +69,15 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
     }
 
     public static class ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -84,33 +105,72 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
     }
 
     public static class ListIpv4GatewaysResponseBodyIpv4GatewayModels extends TeaModel {
+        /**
+         * <p>Indicates whether the IPv4 gateway is activated. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The time when the IPv4 gateway was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The description of the IPv4 gateway.</p>
+         */
         @NameInMap("Ipv4GatewayDescription")
         public String ipv4GatewayDescription;
 
+        /**
+         * <p>The ID of the IPv4 gateway.</p>
+         */
         @NameInMap("Ipv4GatewayId")
         public String ipv4GatewayId;
 
+        /**
+         * <p>The name of the IPv4 gateway.</p>
+         */
         @NameInMap("Ipv4GatewayName")
         public String ipv4GatewayName;
 
+        /**
+         * <p>The ID of the route table associated with the IPv4 gateway.</p>
+         */
         @NameInMap("Ipv4GatewayRouteTableId")
         public String ipv4GatewayRouteTableId;
 
+        /**
+         * <p>The ID of the resource group to which the IPv4 gateway belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The status of the IPv4 gateway. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Created**</p>
+         * <p>*   **Modifying**</p>
+         * <p>*   **Deleting**</p>
+         * <p>*   **Deleted**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags that are added to the resource group.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags> tags;
 
+        /**
+         * <p>The ID of the VPC with which the IPv4 gateways are associated.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

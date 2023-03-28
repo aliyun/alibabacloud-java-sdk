@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetNatGatewayConvertStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the Internet NAT gateway to be queried.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
@@ -13,6 +16,9 @@ public class GetNatGatewayConvertStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the NAT gateway belongs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

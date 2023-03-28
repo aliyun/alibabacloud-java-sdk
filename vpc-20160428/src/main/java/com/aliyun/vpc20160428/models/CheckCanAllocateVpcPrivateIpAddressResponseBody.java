@@ -4,9 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CheckCanAllocateVpcPrivateIpAddressResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the private IP address is available. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("CanAllocate")
     public Boolean canAllocate;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

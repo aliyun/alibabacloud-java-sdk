@@ -4,9 +4,23 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <br>
+     * <p>*   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Specifies whether to query the default vSwitch in the specified region. Valid values:</p>
+     * <br>
+     * <p>*   **true**: queries the default vSwitch in the specified region.</p>
+     * <p>*   **false**: does not query the default vSwitch in the specified region.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the system queries all vSwitches in the specified region by default.</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
@@ -16,15 +30,29 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>>  You must set at least one of the **RegionId** and **VpcId** parameters.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the vSwitch belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,21 +62,43 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the route table.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    /**
+     * <p>The ID of the vSwitch that you want to query.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The name of the vSwitch.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     */
     @NameInMap("VSwitchOwnerId")
     public Long vSwitchOwnerId;
 
+    /**
+     * <p>The ID of the VPC to which the vSwitches belong.</p>
+     * <br>
+     * <p>>  You must set at least one of the **RegionId** and **VpcId** parameters.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the zone to which the vSwitch belongs. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

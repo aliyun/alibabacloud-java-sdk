@@ -4,15 +4,32 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListVpcGatewayEndpointsRequest extends TeaModel {
+    /**
+     * <p>The ID of the gateway endpoint.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The name of the gateway endpoint.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("EndpointName")
     public String endpointName;
 
+    /**
+     * <p>The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,8 +39,16 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the gateway endpoint.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -31,8 +56,14 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the endpoint service.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
+
+    @NameInMap("Tags")
+    public java.util.List<ListVpcGatewayEndpointsRequestTags> tags;
 
     public static ListVpcGatewayEndpointsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpcGatewayEndpointsRequest self = new ListVpcGatewayEndpointsRequest();
@@ -95,6 +126,14 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListVpcGatewayEndpointsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ListVpcGatewayEndpointsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -117,6 +156,44 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     }
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    public ListVpcGatewayEndpointsRequest setTags(java.util.List<ListVpcGatewayEndpointsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListVpcGatewayEndpointsRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListVpcGatewayEndpointsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVpcGatewayEndpointsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcGatewayEndpointsRequestTags self = new ListVpcGatewayEndpointsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcGatewayEndpointsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVpcGatewayEndpointsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

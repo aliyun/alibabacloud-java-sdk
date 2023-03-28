@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The configuration of the IPsec-VPN connection.</p>
+     */
     @NameInMap("VpnConnectionConfig")
     public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig vpnConnectionConfig;
 
@@ -32,30 +38,57 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig extends TeaModel {
+        /**
+         * <p>The IKE authentication algorithm. Valid values: **sha1** and **MD5**.</p>
+         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
+        /**
+         * <p>The IKE encryption algorithm.</p>
+         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
+        /**
+         * <p>The IKE lifetime. Unit: seconds.</p>
+         */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
+        /**
+         * <p>The IKE mode. Valid values: **main** and **aggressive**. The **main** mode offers higher security. If NAT traversal is enabled, we recommend that you use the **aggressive** mode.</p>
+         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
+        /**
+         * <p>The DH group.</p>
+         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
+        /**
+         * <p>The IKE version.</p>
+         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
+        /**
+         * <p>The local ID. The default value is the IP address of the VPN gateway. You can specify the value as an IP address or in the FQDN format.</p>
+         */
         @NameInMap("LocalId")
         public String localId;
 
+        /**
+         * <p>The pre-shared key.</p>
+         */
         @NameInMap("Psk")
         public String psk;
 
+        /**
+         * <p>The peer ID. The default value is the IP address of the customer gateway. You can specify the value as an IP address or in the fully qualified domain name (FQDN) format.</p>
+         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -139,15 +172,27 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig extends TeaModel {
+        /**
+         * <p>The IPsec authentication algorithm. Valid values: **sha1** and **md5**.</p>
+         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
+        /**
+         * <p>The IPsec encryption algorithm.</p>
+         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        /**
+         * <p>The IPsec lifetime. Unit: seconds.</p>
+         */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
+        /**
+         * <p>The DH group.</p>
+         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 
@@ -191,21 +236,39 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig extends TeaModel {
+        /**
+         * <p>The IKE configuration.</p>
+         */
         @NameInMap("IkeConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig ikeConfig;
 
+        /**
+         * <p>The configuration of the IPsec-VPN connection.</p>
+         */
         @NameInMap("IpsecConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig ipsecConfig;
 
+        /**
+         * <p>The identifier of the VPN gateway.</p>
+         */
         @NameInMap("Local")
         public String local;
 
+        /**
+         * <p>The CIDR block on the virtual private cloud (VPC) side.</p>
+         */
         @NameInMap("LocalSubnet")
         public String localSubnet;
 
+        /**
+         * <p>The identifier of the customer gateway.</p>
+         */
         @NameInMap("Remote")
         public String remote;
 
+        /**
+         * <p>The CIDR block on the data center side.</p>
+         */
         @NameInMap("RemoteSubnet")
         public String remoteSubnet;
 

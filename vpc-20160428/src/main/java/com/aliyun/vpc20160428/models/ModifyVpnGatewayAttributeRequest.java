@@ -4,15 +4,38 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnGatewayAttributeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically advertise BGP routes to the virtual private cloud (VPC). Valid values:</p>
+     * <br>
+     * <p>*   **true:** yes.</p>
+     * <p>*   **false:** no.</p>
+     */
     @NameInMap("AutoPropagate")
     public Boolean autoPropagate;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The new description of the VPN gateway.</p>
+     * <br>
+     * <p>The description must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The new name of the VPN gateway.</p>
+     * <br>
+     * <p>The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,6 +45,9 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +57,9 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 

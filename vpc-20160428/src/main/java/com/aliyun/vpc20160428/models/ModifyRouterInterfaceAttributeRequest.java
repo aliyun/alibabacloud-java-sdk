@@ -4,42 +4,96 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     */
     @NameInMap("DeleteHealthCheckIp")
     public Boolean deleteHealthCheckIp;
 
+    /**
+     * <p>The description of the router interface.</p>
+     * <br>
+     * <p>The value must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The rate of the heath check. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.</p>
+     * <br>
+     * <p>In this example, **HcThreshold** is set to **8** and **HcRate** is set to **2000**. In this example, probe packets are sent from **HealthCheckSourceIp** (source address) to **HealthCheckTargetIp** (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.</p>
+     */
     @NameInMap("HcRate")
     public Integer hcRate;
 
+    /**
+     * <p>The health check threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.</p>
+     */
     @NameInMap("HcThreshold")
     public Integer hcThreshold;
 
+    /**
+     * <p>The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).</p>
+     * <br>
+     * <p>>  You can set this parameter if an Express Connect circuit is used.</p>
+     */
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
 
+    /**
+     * <p>The destination IP address that is used to perform health checks.</p>
+     * <br>
+     * <p>>  This parameter is required when the **HealthCheckSourceIp** parameter is set.</p>
+     */
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
 
+    /**
+     * <p>The name of the router interface.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the peer router interface.</p>
+     */
     @NameInMap("OppositeInterfaceId")
     public String oppositeInterfaceId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the peer router interface belongs.</p>
+     */
     @NameInMap("OppositeInterfaceOwnerId")
     public Long oppositeInterfaceOwnerId;
 
+    /**
+     * <p>The ID of the peer router.</p>
+     */
     @NameInMap("OppositeRouterId")
     public String oppositeRouterId;
 
+    /**
+     * <p>The type of router to which the peer router interface belongs. Valid values:</p>
+     * <br>
+     * <p>*   **VRouter**: vRouter</p>
+     * <p>*   **VBR** (default): virtual border router (VBR)</p>
+     */
     @NameInMap("OppositeRouterType")
     public String oppositeRouterType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the router interface belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -49,6 +103,9 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the router interface.</p>
+     */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
 

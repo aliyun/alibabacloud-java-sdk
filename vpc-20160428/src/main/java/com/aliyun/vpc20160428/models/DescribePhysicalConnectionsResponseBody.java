@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribePhysicalConnectionsResponseBody extends TeaModel {
+    /**
+     * <p>The number of the returned page. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of Express Connect circuits.</p>
+     */
     @NameInMap("PhysicalConnectionSet")
     public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSet physicalConnectionSet;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,108 +80,276 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
     }
 
     public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType extends TeaModel {
+        /**
+         * <p>The ID of the access point.</p>
+         */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
+        /**
+         * <p>The type of the access point.</p>
+         */
         @NameInMap("AccessPointType")
         public String accessPointType;
 
+        /**
+         * <p>The geographical location of the access device.</p>
+         */
         @NameInMap("AdLocation")
         public String adLocation;
 
+        /**
+         * <p>The maximum bandwidth of the Express Connect circuit.</p>
+         * <br>
+         * <p>Unit: Gbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
+        /**
+         * <p>The status of the Express Connect circuit. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: enabled</p>
+         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+         * <p>*   **SecurityLocked**: locked for security reasons</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        /**
+         * <p>The billing method of the Express Connect circuit.</p>
+         * <br>
+         * <p>If the value is set to **Prepaid**, it indicates that the Express Connect circuit is billed on a subscription basis.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+         */
         @NameInMap("CircuitCode")
         public String circuitCode;
 
+        /**
+         * <p>The time when the Express Connect circuit was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the Express Connect circuit.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the Express Connect circuit was enabled.</p>
+         */
         @NameInMap("EnabledTime")
         public String enabledTime;
 
+        /**
+         * <p>The time when the Express Connect circuit expires.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The estimated bandwidth value of the hosted connection. The estimated bandwidth takes effect after you complete the payment.</p>
+         * <br>
+         * <p>**M** indicates Mbit/s and **G** indicates Gbit/s.</p>
+         */
         @NameInMap("ExpectSpec")
         public String expectSpec;
 
+        /**
+         * <p>Indicates whether the data about pending orders is returned. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("HasReservationData")
         public String hasReservationData;
 
+        /**
+         * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+         * <br>
+         * <p>*   **CT**: China Telecom.</p>
+         * <p>*   **CU**: China Unicom.</p>
+         * <p>*   **CM**: China Mobile.</p>
+         * <p>*   **CO**: other connectivity providers in the Chinese mainland.</p>
+         * <p>*   **Equinix**: Equinix.</p>
+         * <p>*   **Other**: other connectivity providers outside the Chinese mainland.</p>
+         */
         @NameInMap("LineOperator")
         public String lineOperator;
 
+        /**
+         * <p>The status of the letter of authorization (LOA). Valid values:</p>
+         * <br>
+         * <p>*   **Applying**: The LOA is pending approval.</p>
+         * <p>*   **Accept**: The LOA is approved.</p>
+         * <p>*   **Available**: The LOA is available.</p>
+         * <p>*   **Rejected**: The LOA is rejected.</p>
+         * <p>*   **Completing**: The Express Connect circuit is under construction.</p>
+         * <p>*   **Complete**: The Express Connect circuit is installed.</p>
+         * <p>*   **Deleted**: The LOA is deleted.</p>
+         */
         @NameInMap("LoaStatus")
         public String loaStatus;
 
+        /**
+         * <p>The name of the Express Connect circuit.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The payer for the hosted connection. Valid values:</p>
+         * <br>
+         * <p>*   **PayByPhysicalConnectionOwner**: The partner pays for the hosted connection.</p>
+         * <p>*   **PayByVirtualPhysicalConnectionOwner**: The tenant pays for the hosted connection.</p>
+         */
         @NameInMap("OrderMode")
         public String orderMode;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the Express Connect circuit that is used to create the hosted connection.</p>
+         */
         @NameInMap("ParentPhysicalConnectionAliUid")
         public Long parentPhysicalConnectionAliUid;
 
+        /**
+         * <p>The ID of the Express Connect circuit that is used to create the hosted connection.</p>
+         */
         @NameInMap("ParentPhysicalConnectionId")
         public String parentPhysicalConnectionId;
 
+        /**
+         * <p>The geographical location of the data center.</p>
+         */
         @NameInMap("PeerLocation")
         public String peerLocation;
 
+        /**
+         * <p>The ID of the Express Connect circuit.</p>
+         */
         @NameInMap("PhysicalConnectionId")
         public String physicalConnectionId;
 
+        /**
+         * <p>The ID of the port on the access device.</p>
+         */
         @NameInMap("PortNumber")
         public String portNumber;
 
+        /**
+         * <p>The port type. Valid values:</p>
+         * <br>
+         * <p>*   **100Base-T**: 100 Mbit/s copper Ethernet port</p>
+         * <p>*   **1000Base-T**: 1,000 Mbit/s copper Ethernet port</p>
+         * <p>*   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)</p>
+         * <p>*   **10GBase-T**: 10,000 Mbit/s copper Ethernet port</p>
+         * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)</p>
+         * <p>*   **40GBase-LR**: 40,000 Mbit/s single-mode optical port</p>
+         * <p>*   **100GBase-LR**: 100,000 Mbit/s single-mode optical port</p>
+         * <br>
+         * <p>>  Whether 40GBase-LR and 100GBase-LR ports can be created is based on resource supplies. For more information, contact your business manager.</p>
+         */
         @NameInMap("PortType")
         public String portType;
 
+        /**
+         * <p>The type of the Express Connect circuit. Valid values:</p>
+         * <br>
+         * <p>*   **VirtualPhysicalConnection**: a shared Express Connect circuit</p>
+         * <p>*   **PhysicalConnection**: a dedicated Express Connect circuit</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The ID of the redundant Express Connect circuit.</p>
+         */
         @NameInMap("RedundantPhysicalConnectionId")
         public String redundantPhysicalConnectionId;
 
+        /**
+         * <p>The time when the pending order takes effect.</p>
+         */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
 
+        /**
+         * <p>The billing method of the pending order.</p>
+         * <br>
+         * <p>The value is set to **PayByBandwidth**, which indicates the pay-by-bandwidth metering method.</p>
+         */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
 
+        /**
+         * <p>The type of the pending order.</p>
+         * <br>
+         * <p>If the value is set to **RENEW**, it indicates that the order is placed for service renewal.</p>
+         */
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The specification of the Express Connect circuit.</p>
+         * <br>
+         * <p>Unit: **G** (Gbit/s).</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The status of the Express Connect circuit. Valid values:</p>
+         * <br>
+         * <p>*   **Initial**: The application is under review.</p>
+         * <p>*   **Approved**: The application is approved.</p>
+         * <p>*   **Allocating**: The system is allocating resources.</p>
+         * <p>*   **Allocated**: The Express Connect circuit is under construction.</p>
+         * <p>*   **Confirmed**: The Express Connect circuit is pending user confirmation.</p>
+         * <p>*   **Enabled**: The Express Connect circuit is enabled.</p>
+         * <p>*   **Rejected**: The application is rejected.</p>
+         * <p>*   **Canceled**: The application is canceled.</p>
+         * <p>*   **Allocation Failed**: The system failed to allocate resources.</p>
+         * <p>*   **Terminating**: The Express Connect circuit is being disabled.</p>
+         * <p>*   **Terminated**: The Express Connect circuit is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the Express Connect circuit. The value is set to **VPC**.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The number of hosted connections that are established over the Express Connect circuit.</p>
+         */
         @NameInMap("VirtualPhysicalConnectionCount")
         public Integer virtualPhysicalConnectionCount;
 
+        /**
+         * <p>The VLAN ID of the hosted connection.</p>
+         */
         @NameInMap("VlanId")
         public String vlanId;
 
+        /**
+         * <p>The status of the hosted connection. Valid values:</p>
+         * <br>
+         * <p>*   **Confirmed**: accepted</p>
+         * <p>*   **UnConfirmed**: pending acceptance</p>
+         * <p>*   **Deleted**: deleted</p>
+         */
         @NameInMap("VpconnStatus")
         public String vpconnStatus;
 

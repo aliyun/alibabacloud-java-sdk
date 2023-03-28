@@ -4,15 +4,41 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
+    /**
+     * <p>The ID of the access point.</p>
+     */
     @NameInMap("AccessPointId")
     public String accessPointId;
 
+    /**
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): disables automatic payment.</p>
+     * <p>*   **true**: enables automatic payment.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+     * <br>
+     * <p>*   **CT**: China Telecom</p>
+     * <p>*   **CU**: China Unicom</p>
+     * <p>*   **CM**: China Mobile</p>
+     * <p>*   **CO**: other connectivity providers in the Chinese mainland</p>
+     * <p>*   **Equinix**: Equinix</p>
+     * <p>*   **Other**: other connectivity providers outside the Chinese mainland</p>
+     */
     @NameInMap("LineOperator")
     public String lineOperator;
 
@@ -22,12 +48,33 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The port type. Valid values:</p>
+     * <br>
+     * <p>*   **100Base-T**: 100 Mbit/s copper Ethernet port</p>
+     * <p>*   **1000Base-T** (default): 1,000 Mbit/s copper Ethernet port</p>
+     * <p>*   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)</p>
+     * <p>*   **10GBase-T**: 10,000 Mbit/s copper Ethernet port</p>
+     * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)</p>
+     * <p>*   **40GBase-LR**: 40,000 Mbit/s single-mode optical port</p>
+     * <p>*   **100GBase-LR**: 100,000 Mbit/s single-mode optical port</p>
+     * <br>
+     * <p>>  Whether 40GBase-LR and 100GBase-LR ports can be created is based on resource supplies. For more information, contact your business manager.</p>
+     */
     @NameInMap("PortType")
     public String portType;
 
+    /**
+     * <p>The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.</p>
+     */
     @NameInMap("RedundantPhysicalConnectionId")
     public String redundantPhysicalConnectionId;
 
+    /**
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

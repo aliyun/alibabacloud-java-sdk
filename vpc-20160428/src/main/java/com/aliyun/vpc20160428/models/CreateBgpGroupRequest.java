@@ -4,24 +4,67 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateBgpGroupRequest extends TeaModel {
+    /**
+     * <p>The authentication key of the BGP group.</p>
+     */
     @NameInMap("AuthKey")
     public String authKey;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the BGP group.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The IP version. Valid values:</p>
+     * <br>
+     * <p>*   **IPv4**: This is the default value.</p>
+     * <p>*   **IPv6**: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <p>Specifies whether to use a fake ASN. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): no</p>
+     * <p>*   **true**: yes</p>
+     * <br>
+     * <p>>  In most cases, a router that runs BGP belongs to only one AS. If you want to use a different ASN to communicate with the peer but you cannot modify the BGP configuration because it may cause service downtime, you can use a fake ASN. For example, you can use a fake ASN to communicate with the peer when you migrate or merge ASs. This prevents service interruptions.</p>
+     */
     @NameInMap("IsFakeAsn")
     public Boolean isFakeAsn;
 
+    /**
+     * <p>The custom ASN on the Alibaba Cloud side. Valid values:</p>
+     * <br>
+     * <p>*   **45104**</p>
+     * <p>*   **64512~65534**</p>
+     * <p>*   **4200000000~4294967294**</p>
+     * <br>
+     * <p>>  **65025** is reserved by Alibaba Cloud. By default, Alibaba Cloud uses **45104** as **LocalAsn**. If you use a custom **LocalAsn** in scenarios where multiple connections are used, BGP loops may occur. Proceed with caution.</p>
+     */
     @NameInMap("LocalAsn")
     public Long localAsn;
 
+    /**
+     * <p>The name of the BGP group.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -31,9 +74,17 @@ public class CreateBgpGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ASN of the gateway device in the data center.</p>
+     */
     @NameInMap("PeerAsn")
     public Long peerAsn;
 
+    /**
+     * <p>The region ID of the VBR.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,9 +94,15 @@ public class CreateBgpGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The maximum number of routes supported by a BGP peer. Default value: **110**.</p>
+     */
     @NameInMap("RouteQuota")
     public Integer routeQuota;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     */
     @NameInMap("RouterId")
     public String routerId;
 

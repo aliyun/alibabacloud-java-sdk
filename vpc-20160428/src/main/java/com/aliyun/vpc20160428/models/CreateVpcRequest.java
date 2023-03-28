@@ -4,24 +4,67 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcRequest extends TeaModel {
+    /**
+     * <p>The CIDR block of the VPC.</p>
+     * <br>
+     * <p>*   You can specify one of the following CIDR blocks or their subsets as the primary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8. These CIDR blocks are standard private CIDR blocks as defined by Request for Comments (RFC) documents. The subnet mask must be 8 to 28 bits in length.</p>
+     * <p>*   You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, and their subnets as the primary IPv4 CIDR block of the VPC.</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the VPC.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): no</p>
+     * <p>*   **true**: yes</p>
+     */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
+    /**
+     * <p>The IPv6 CIDR blocks of the VPC.</p>
+     */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
+    /**
+     * <p>The type of the IPv6 CIDR block. Valid values:</p>
+     * <br>
+     * <p>*   **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP)</p>
+     * <p>*   **ChinaMobile**: China Mobile (single ISP).</p>
+     * <p>*   **ChinaUnicom**: China Unicom (single ISP).</p>
+     * <p>*   **ChinaTelecom**: China Telecom (single ISP).</p>
+     * <br>
+     * <p>>  If your Alibaba Cloud account is allowed to use single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
+     */
     @NameInMap("Ipv6Isp")
     public String ipv6Isp;
 
@@ -31,9 +74,19 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the VPC belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>For more information about resource groups, see [What is a resource group?](~~94475~~)</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -43,9 +96,19 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The user CIDR block. Separate user CIDR blocks with commas (,). You can specify up to three user CIDR blocks.</p>
+     * <br>
+     * <p>For more information about user CIDR blocks, see the `What is a user CIDR block?` section in [VPC FAQ](~~185311~~).</p>
+     */
     @NameInMap("UserCidr")
     public String userCidr;
 
+    /**
+     * <p>The name of the VPC.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("VpcName")
     public String vpcName;
 

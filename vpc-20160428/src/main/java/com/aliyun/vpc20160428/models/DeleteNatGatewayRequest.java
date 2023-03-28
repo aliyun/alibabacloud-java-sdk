@@ -4,9 +4,29 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteNatGatewayRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to forcefully delete the NAT gateway. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes If you set the value to **true**:</p>
+     * <br>
+     * <p>    *   If the NAT gateway has SNAT entries, the system automatically deletes them.</p>
+     * <p>    *   If the NAT gateway has DNAT entries, the system automatically deletes them.</p>
+     * <p>    *   If the NAT gateway is associated with an elastic IP address (EIP), the system automatically disassociates the EIP from the NAT gateway.</p>
+     * <p>    *   If the NAT gateway is associated with a NAT bandwidth plan, the system automatically disassociates the NAT bandwidth plan from the NAT gateway.</p>
+     * <br>
+     * <p>*   **false**(default): no If you set the value to **false**:</p>
+     * <br>
+     * <p>    *   If the NAT gateway is associated with a NAT bandwidth plan, disassociate the NAT gateway from the NAT bandwidth plan first.</p>
+     * <p>    *   If the NAT gateway has SNAT entries, delete them first.</p>
+     * <p>    *   If the NAT gateway has DNAT entries, delete them first.</p>
+     * <p>    *   If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>The ID of the NAT gateway that you want to delete.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
@@ -16,6 +36,11 @@ public class DeleteNatGatewayRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the NAT gateway is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

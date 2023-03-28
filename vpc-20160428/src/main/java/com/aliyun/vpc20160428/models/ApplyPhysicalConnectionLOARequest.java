@@ -4,21 +4,50 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ApplyPhysicalConnectionLOARequest extends TeaModel {
+    /**
+     * <p>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</p>
+     * <br>
+     * <p>Valid values: **2** to **10240**.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The name of the customer company that requires the Express Connect circuit.</p>
+     */
     @NameInMap("CompanyName")
     public String companyName;
 
+    /**
+     * <p>The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("ConstructionTime")
     public String constructionTime;
 
+    /**
+     * <p>The ID of the Express Connect circuit.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of Express Connect circuit. Valid values:</p>
+     * <br>
+     * <p>*   **MSTP**: MSTP line</p>
+     * <p>*   **MPLSVPN**: MPLSVPN line</p>
+     * <p>*   **FIBRE**: fiber line</p>
+     * <p>*   **Other**: other types</p>
+     */
     @NameInMap("LineType")
     public String lineType;
 
@@ -31,9 +60,17 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     @NameInMap("PMInfo")
     public java.util.List<ApplyPhysicalConnectionLOARequestPMInfo> PMInfo;
 
+    /**
+     * <p>The geographical location where the Express Connect circuit is deployed.</p>
+     */
     @NameInMap("PeerLocation")
     public String peerLocation;
 
+    /**
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -43,6 +80,9 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The construction company.</p>
+     */
     @NameInMap("Si")
     public String si;
 
@@ -164,18 +204,38 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     }
 
     public static class ApplyPhysicalConnectionLOARequestPMInfo extends TeaModel {
+        /**
+         * <p>The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.</p>
+         * <br>
+         * <p>You can configure information for up to 16 construction engineers.</p>
+         */
         @NameInMap("PMCertificateNo")
         public String PMCertificateNo;
 
+        /**
+         * <p>The type of the identity document of the construction engineer. Valid values:</p>
+         * <br>
+         * <p>*   **IDCard**: identity card</p>
+         * <p>*   **Passport**: international passport</p>
+         */
         @NameInMap("PMCertificateType")
         public String PMCertificateType;
 
+        /**
+         * <p>The contact information about the construction engineer.</p>
+         */
         @NameInMap("PMContactInfo")
         public String PMContactInfo;
 
+        /**
+         * <p>The gender of the construction engineer.</p>
+         */
         @NameInMap("PMGender")
         public String PMGender;
 
+        /**
+         * <p>The name of the construction engineer.</p>
+         */
         @NameInMap("PMName")
         public String PMName;
 

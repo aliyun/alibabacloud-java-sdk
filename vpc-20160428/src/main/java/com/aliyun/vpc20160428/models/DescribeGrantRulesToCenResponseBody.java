@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToCenResponseBody extends TeaModel {
+    /**
+     * <p>The information about the authorization.</p>
+     */
     @NameInMap("CenGrantRules")
     public DescribeGrantRulesToCenResponseBodyCenGrantRules cenGrantRules;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,21 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     }
 
     public static class DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule extends TeaModel {
+        /**
+         * <p>The ID of the authorized CEN instance.</p>
+         */
         @NameInMap("CenInstanceId")
         public String cenInstanceId;
 
+        /**
+         * <p>The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.</p>
+         */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 

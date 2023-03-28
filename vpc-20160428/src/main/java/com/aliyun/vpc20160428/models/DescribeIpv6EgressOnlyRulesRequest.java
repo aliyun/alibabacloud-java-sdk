@@ -4,18 +4,35 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance that is associated with the IPv6 address to which the egress-only rule is applied.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the instance to which you want to apply the egress-only rule. Set the value to</p>
+     * <br>
+     * <p>**Ipv6Address**, which specifies that the egress-only rule applies to an IPv6 address.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The ID of the egress-only rule that you want to query.</p>
+     */
     @NameInMap("Ipv6EgressOnlyRuleId")
     public String ipv6EgressOnlyRuleId;
 
+    /**
+     * <p>The ID of the IPv6 gateway.</p>
+     */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,12 +42,21 @@ public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

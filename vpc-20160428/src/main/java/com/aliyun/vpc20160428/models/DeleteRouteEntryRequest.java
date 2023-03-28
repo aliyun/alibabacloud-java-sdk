@@ -4,9 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouteEntryRequest extends TeaModel {
+    /**
+     * <p>The destination CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    /**
+     * <p>The ID of the next hop.</p>
+     * <br>
+     * <p>*   To delete a route other than an equal-cost multi-path (ECMP) route, set the **NextHopId** parameter and ignore the **NextHopList** parameter.</p>
+     * <p>*   To delete an ECMP route, set the **NextHopList** parameter and ignore the **NextHopId** parameter.</p>
+     */
     @NameInMap("NextHopId")
     public String nextHopId;
 
@@ -19,6 +28,11 @@ public class DeleteRouteEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the route table.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,9 +42,15 @@ public class DeleteRouteEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the route that you want to delete.</p>
+     */
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 
+    /**
+     * <p>The ID of the route table to which the route belongs.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
@@ -120,9 +140,15 @@ public class DeleteRouteEntryRequest extends TeaModel {
     }
 
     public static class DeleteRouteEntryRequestNextHopList extends TeaModel {
+        /**
+         * <p>The ID of the next hop that is configured for ECMP routing. You can specify information about at most 16 next hops.</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>The type of the next hop that is configured for ECMP routing. Set the value to **RouterInterface**. You can specify information about at most 16 next hops.</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 

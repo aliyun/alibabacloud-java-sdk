@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVRoutersResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The details about the vRouters.</p>
+     */
     @NameInMap("VRouters")
     public DescribeVRoutersResponseBodyVRouters VRouters;
 
@@ -84,24 +99,45 @@ public class DescribeVRoutersResponseBody extends TeaModel {
     }
 
     public static class DescribeVRoutersResponseBodyVRoutersVRouter extends TeaModel {
+        /**
+         * <p>The time when the vRouter was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the vRouter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The region to which the vRouter belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the route table in the vRouter.</p>
+         */
         @NameInMap("RouteTableIds")
         public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds routeTableIds;
 
+        /**
+         * <p>The ID of the vRouter.</p>
+         */
         @NameInMap("VRouterId")
         public String VRouterId;
 
+        /**
+         * <p>The name of the vRouter.</p>
+         */
         @NameInMap("VRouterName")
         public String VRouterName;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the vRouter belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

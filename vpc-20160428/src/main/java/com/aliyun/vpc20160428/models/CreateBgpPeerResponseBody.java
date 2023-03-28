@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateBgpPeerResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the BGP peer.</p>
+     */
     @NameInMap("BgpPeerId")
     public String bgpPeerId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

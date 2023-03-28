@@ -4,15 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouteEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The number of route entries that failed to be deleted.</p>
+     */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
+    /**
+     * <p>The information about the route entry that failed to be deleted.</p>
+     */
     @NameInMap("FailedRouteEntries")
     public java.util.List<DeleteRouteEntriesResponseBodyFailedRouteEntries> failedRouteEntries;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of route entries that were deleted.</p>
+     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
@@ -54,18 +66,33 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DeleteRouteEntriesResponseBodyFailedRouteEntries extends TeaModel {
+        /**
+         * <p>The destination CIDR block of the route entry that failed to be deleted. IPv4 and IPv6 CIDR blocks are supported.</p>
+         */
         @NameInMap("DstCidrBlock")
         public String dstCidrBlock;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("FailedCode")
         public String failedCode;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("FailedMessage")
         public String failedMessage;
 
+        /**
+         * <p>The ID of the next hop that failed to be deleted.</p>
+         */
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <p>The ID of the route entry that failed to be deleted.</p>
+         */
         @NameInMap("RouteEntryId")
         public String routeEntryId;
 

@@ -4,21 +4,41 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIpsecServerResponseBody extends TeaModel {
+    /**
+     * <p>The time when the IPsec server was created.</p>
+     * <br>
+     * <p>T is used as a delimiter. Z indicates that the time is in UTC.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The ID of the IPsec server.</p>
+     */
     @NameInMap("IpsecServerId")
     public String ipsecServerId;
 
+    /**
+     * <p>The name of the IPsec server.</p>
+     */
     @NameInMap("IpsecServerName")
     public String ipsecServerName;
 
+    /**
+     * <p>The ID of the region where the VPN gateway is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 

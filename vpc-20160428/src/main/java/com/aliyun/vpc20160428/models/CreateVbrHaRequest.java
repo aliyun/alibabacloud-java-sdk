@@ -4,15 +4,34 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVbrHaRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>The client token must be unique among different requests. It can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the VBR failover group.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://`or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to precheck the request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: prechecks the request without performing the operation. The system checks the request format, instance status, and whether the required parameters are specified. An error message is returned if the request fails the precheck. If the request passes the precheck, `DRYRUN.SUCCESS` is returned.</p>
+     * <p>*   **false**: prechecks the request. After the request passes the precheck, the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The name of the VBR failover group.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,9 +41,15 @@ public class CreateVbrHaRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the other VBR in the VBR failover group.</p>
+     */
     @NameInMap("PeerVbrId")
     public String peerVbrId;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,6 +59,9 @@ public class CreateVbrHaRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     */
     @NameInMap("VbrId")
     public String vbrId;
 
