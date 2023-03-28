@@ -4,6 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSslVpnServersRequest extends TeaModel {
+    /**
+     * <p>The name of the SSL-VPN server.</p>
+     * <br>
+     * <p>The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -13,12 +18,23 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the returned page. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the SSL servers are created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,9 +44,15 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SSL-VPN server.</p>
+     */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 

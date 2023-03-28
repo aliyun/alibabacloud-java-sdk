@@ -4,15 +4,40 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AddPublicIpAddressPoolCidrBlockRequest extends TeaModel {
+    /**
+     * <p>The CIDR block.</p>
+     * <br>
+     * <p>>  You cannot set the **CidrBlock** and **CidrMask** parameters at the same time.</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>The subnet mask of the CIDR block.</p>
+     * <br>
+     * <p>After you enter the subnet mask, the system automatically allocates IP addresses.</p>
+     * <br>
+     * <p>Valid values: **24** to **30**.</p>
+     * <br>
+     * <p>>  You cannot set the **CidrBlock** and **CidrMask** parameters at the same time. Set one of them.</p>
+     */
     @NameInMap("CidrMask")
     public Integer cidrMask;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -22,9 +47,15 @@ public class AddPublicIpAddressPoolCidrBlockRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the IP address pool.</p>
+     */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
+    /**
+     * <p>The region ID of the IP address pool to which you want to add the CIDR block.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

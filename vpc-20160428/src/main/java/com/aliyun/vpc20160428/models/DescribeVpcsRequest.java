@@ -4,12 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcsRequest extends TeaModel {
+    /**
+     * <p>The ID of the DHCP options set.</p>
+     */
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
 
+    /**
+     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <br>
+     * <p>*   **true**: checks the request but does not query VPCs. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and VPCs are queried.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Specifies whether to query the default VPC in the specified region. Valid values:</p>
+     * <br>
+     * <p>*   **true** (default): yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
@@ -19,15 +34,29 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the VPC.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the VPC to be queried belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -37,12 +66,23 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     * <br>
+     * <p>You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The name of the VPC.</p>
+     */
     @NameInMap("VpcName")
     public String vpcName;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+     */
     @NameInMap("VpcOwnerId")
     public Long vpcOwnerId;
 

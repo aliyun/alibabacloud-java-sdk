@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnConnectionsRequest extends TeaModel {
+    /**
+     * <p>The ID of the customer gateway.</p>
+     */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
@@ -13,12 +16,23 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the IPsec-VPN connection is established.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,9 +45,15 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeVpnConnectionsRequestTag> tag;
 
+    /**
+     * <p>The ID of the IPsec-VPN connection.</p>
+     */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
@@ -131,9 +151,23 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     }
 
     public static class DescribeVpnConnectionsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys in each call.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <br>
+         * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

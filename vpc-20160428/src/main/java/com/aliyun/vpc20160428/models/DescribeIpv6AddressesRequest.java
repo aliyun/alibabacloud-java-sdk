@@ -4,24 +4,52 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6AddressesRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance that is assigned the IPv6 address.</p>
+     */
     @NameInMap("AssociatedInstanceId")
     public String associatedInstanceId;
 
+    /**
+     * <p>The type of the instance that is assigned the IPv6 address.</p>
+     * <br>
+     * <p>Set the value to **EcsInstance**, which specifies an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC). This is the default value.</p>
+     */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
 
+    /**
+     * <p>The IPv6 address that you want to query.</p>
+     */
     @NameInMap("Ipv6Address")
     public String ipv6Address;
 
+    /**
+     * <p>The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 IDs in each API request. Separate IPv6 IDs with commas (,).</p>
+     */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
 
+    /**
+     * <p>The ID of the Internet bandwidth that you purchased for the IPv6 address.</p>
+     */
     @NameInMap("Ipv6InternetBandwidthId")
     public String ipv6InternetBandwidthId;
 
+    /**
+     * <p>The name of the IPv6 address that you want to query.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The type of communication supported by the IPv6 address. Valid values:</p>
+     * <br>
+     * <p>*   **Private**: communication within private networks</p>
+     * <p>*   **Public**: communication over the Internet</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
@@ -31,12 +59,21 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region in which you want to query IPv6 addresses. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,9 +83,15 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the vSwitch to which the IPv6 address belongs.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the VPC to which the IPv6 address belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

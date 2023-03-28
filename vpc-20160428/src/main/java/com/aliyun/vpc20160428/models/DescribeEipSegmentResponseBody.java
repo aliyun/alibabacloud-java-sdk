@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipSegmentResponseBody extends TeaModel {
+    /**
+     * <p>The details of the contiguous EIP group.</p>
+     */
     @NameInMap("EipSegments")
     public DescribeEipSegmentResponseBodyEipSegments eipSegments;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,55 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
     }
 
     public static class DescribeEipSegmentResponseBodyEipSegmentsEipSegment extends TeaModel {
+        /**
+         * <p>The time when the contiguous EIP group was created. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the contiguous EIP group.</p>
+         */
         @NameInMap("Descritpion")
         public String descritpion;
 
+        /**
+         * <p>The ID of the contiguous EIP group.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The number of EIPs in the contiguous EIP group.</p>
+         */
         @NameInMap("IpCount")
         public String ipCount;
 
+        /**
+         * <p>The name of the contiguous EIP group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the region to which the contiguous EIP group belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The CIDR block and mask of the contiguous EIP group.</p>
+         */
         @NameInMap("Segment")
         public String segment;
 
+        /**
+         * <p>The status of the contiguous EIP group.</p>
+         * <br>
+         * <p>*   **Allocating**: being allocated</p>
+         * <p>*   **Allocated**: allocated</p>
+         * <p>*   **Releasing**: being released</p>
+         */
         @NameInMap("Status")
         public String status;
 

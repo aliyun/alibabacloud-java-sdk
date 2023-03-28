@@ -4,12 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the IP address pool.</p>
+     */
     @NameInMap("PulbicIpAddressPoolId")
     public String pulbicIpAddressPoolId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the IP address pool belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

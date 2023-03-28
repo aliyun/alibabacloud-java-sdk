@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the access point.</p>
+     */
     @NameInMap("AccessPointSet")
     public DescribeAccessPointsResponseBodyAccessPointSet accessPointSet;
 
+    /**
+     * <p>The number of the returned page. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessPointsResponseBodyAccessPointSetAccessPointTypeAccessPointFeatureModelsAccessPointFeatureModel extends TeaModel {
+        /**
+         * <p>The feature of the access point.</p>
+         */
         @NameInMap("FeatureKey")
         public String featureKey;
 
+        /**
+         * <p>The feature value of the access point.</p>
+         */
         @NameInMap("FeatureValue")
         public String featureValue;
 
@@ -114,30 +135,62 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessPointsResponseBodyAccessPointSetAccessPointType extends TeaModel {
+        /**
+         * <p>The feature model of the access point.</p>
+         */
         @NameInMap("AccessPointFeatureModels")
         public DescribeAccessPointsResponseBodyAccessPointSetAccessPointTypeAccessPointFeatureModels accessPointFeatureModels;
 
+        /**
+         * <p>The ID of the access point.</p>
+         */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
+        /**
+         * <p>The region ID of the access point.</p>
+         */
         @NameInMap("AttachedRegionNo")
         public String attachedRegionNo;
 
+        /**
+         * <p>The description of the access point.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The colocation provider of the access point.</p>
+         */
         @NameInMap("HostOperator")
         public String hostOperator;
 
+        /**
+         * <p>The location of the access point.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The name of the access point.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the access point. Valid values:</p>
+         * <br>
+         * <p>*   **Recommended**: The access point is ready for use.</p>
+         * <p>*   **hot**: A large number of Express Connect circuits are connected to the access point.</p>
+         * <p>*   **full**: The number of Express Connect circuits connected to the access point has reached the upper limit.</p>
+         * <p>*   **disabled**: The access point is unavailable.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The network type of the Express Connect circuit. Default value: **VPC**.</p>
+         */
         @NameInMap("Type")
         public String type;
 

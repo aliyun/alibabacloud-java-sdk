@@ -4,12 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNatIpResponseBody extends TeaModel {
+    /**
+     * <p>The NAT IP address.</p>
+     */
     @NameInMap("NatIp")
     public String natIp;
 
+    /**
+     * <p>The ID of the NAT IP address.</p>
+     */
     @NameInMap("NatIpId")
     public String natIpId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

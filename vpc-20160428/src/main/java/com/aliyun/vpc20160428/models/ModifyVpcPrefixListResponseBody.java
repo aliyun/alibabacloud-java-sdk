@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcPrefixListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the prefix list.</p>
+     */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -10,6 +10,11 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the route table.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,12 +24,27 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the route. Valid values:</p>
+     * <br>
+     * <p>*   **All**: all route types</p>
+     * <p>*   **Custom**: a custom route</p>
+     * <p>*   **System**: a system route</p>
+     * <p>*   **BGP**: a BGP route</p>
+     * <p>*   **CEN**: a Cloud Enterprise Network (CEN) route</p>
+     */
     @NameInMap("RouteEntryType")
     public String routeEntryType;
 
+    /**
+     * <p>The ID of the route table that you want to query.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

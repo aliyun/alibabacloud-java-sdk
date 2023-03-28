@@ -4,9 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpv6EgressOnlyRuleRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate a value, but you must make sure that the value is unique among all requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the egress-only rule that you want to delete.</p>
+     */
     @NameInMap("Ipv6EgressOnlyRuleId")
     public String ipv6EgressOnlyRuleId;
 
@@ -16,6 +26,9 @@ public class DeleteIpv6EgressOnlyRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the IPv6 gateway.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

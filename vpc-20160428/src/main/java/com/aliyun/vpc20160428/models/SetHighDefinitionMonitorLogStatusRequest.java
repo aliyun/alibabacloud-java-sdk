@@ -4,15 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance for which you want to configure fine-grained monitoring.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the instance. Set the value to **EIP**.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The name of the project of Log Service.</p>
+     */
     @NameInMap("LogProject")
     public String logProject;
 
+    /**
+     * <p>The name of the Logstore of Log Service.</p>
+     */
     @NameInMap("LogStore")
     public String logStore;
 
@@ -22,6 +34,11 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +48,12 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of fine-grained monitoring. Valid values:</p>
+     * <br>
+     * <p>*   **ON**: enables fine-grained monitoring.</p>
+     * <p>*   **OFF**: disables fine-grained monitoring.</p>
+     */
     @NameInMap("Status")
     public String status;
 

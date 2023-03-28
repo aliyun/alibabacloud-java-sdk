@@ -4,15 +4,34 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The new weight that you want to set for the destination-based route. Valid values:</p>
+     * <br>
+     * <p>*   **0**: a low priority</p>
+     * <p>*   **100**: a high priority</p>
+     */
     @NameInMap("NewWeight")
     public Integer newWeight;
 
+    /**
+     * <p>The next hop of the destination-based route.</p>
+     */
     @NameInMap("NextHop")
     public String nextHop;
 
+    /**
+     * <p>The tunneling protocol. Set the value to **Ipsec**.</p>
+     */
     @NameInMap("OverlayMode")
     public String overlayMode;
 
@@ -22,6 +41,9 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,12 +53,24 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The destination CIDR block of the destination-based route.</p>
+     */
     @NameInMap("RouteDest")
     public String routeDest;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
+    /**
+     * <p>The previous weight of the destination-based route. Valid values:</p>
+     * <br>
+     * <p>*   **0**: a low priority</p>
+     * <p>*   **100**: a high priority</p>
+     */
     @NameInMap("Weight")
     public Integer weight;
 

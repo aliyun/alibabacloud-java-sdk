@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel {
+    /**
+     * <p>The details.</p>
+     */
     @NameInMap("Data")
     public CreatePhysicalConnectionOccupancyOrderResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
     }
 
     public static class CreatePhysicalConnectionOccupancyOrderResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the order that is placed.</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 

@@ -4,12 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagKeysResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.</p>
+     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of tag keys.</p>
+     */
     @NameInMap("TagKeys")
     public DescribeTagKeysResponseBodyTagKeys tagKeys;
 
@@ -43,9 +55,18 @@ public class DescribeTagKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeTagKeysResponseBodyTagKeysTagKey extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The type of the tag key. Valid values:</p>
+         * <br>
+         * <p>*   **Custom**: custom</p>
+         * <p>*   **System**: system</p>
+         */
         @NameInMap("Type")
         public String type;
 

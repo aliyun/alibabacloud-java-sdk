@@ -4,18 +4,37 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeletionProtectionRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance for which you want to enable deletion protection.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies whether to enable deletion protection. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("ProtectionEnable")
     public Boolean protectionEnable;
 
+    /**
+     * <p>The ID of the region where the instance for which you want to enable deletion protection is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +44,13 @@ public class DeletionProtectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of instance. Valid values:</p>
+     * <br>
+     * <p>*   **EIP**: Elastic IP Address (EIP)</p>
+     * <p>*   **CBWP**: EIP bandwidth plan</p>
+     * <p>*   **NATGW**: NAT gateway</p>
+     */
     @NameInMap("Type")
     public String type;
 

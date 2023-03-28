@@ -4,9 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AddBgpNetworkRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The CIDR block of the virtual private cloud (VPC) or vSwitch that you want to connect to a data center.</p>
+     */
     @NameInMap("DstCidrBlock")
     public String dstCidrBlock;
 
@@ -16,6 +26,11 @@ public class AddBgpNetworkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the virtual border router (VBR) group.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +40,15 @@ public class AddBgpNetworkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the router that is associated with the router interface.</p>
+     */
     @NameInMap("RouterId")
     public String routerId;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

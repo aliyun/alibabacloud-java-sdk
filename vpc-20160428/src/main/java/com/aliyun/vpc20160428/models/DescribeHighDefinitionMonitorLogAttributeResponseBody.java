@@ -4,21 +4,42 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the fine-grained monitoring instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the monitoring instance that is queried. The value is set to **EIP**.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The name of the log project of Log Service.</p>
+     */
     @NameInMap("LogProject")
     public String logProject;
 
+    /**
+     * <p>The name of the Logstore of Log Service.</p>
+     */
     @NameInMap("LogStore")
     public String logStore;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is performed. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The operation is performed.</p>
+     * <p>*   **false**: The operation is not performed.</p>
+     */
     @NameInMap("Success")
     public String success;
 

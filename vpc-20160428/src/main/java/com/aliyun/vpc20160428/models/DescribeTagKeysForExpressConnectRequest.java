@@ -4,12 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
+    /**
+     * <p>The keyword of the tag. The keyword is used to perform a fuzzy match. You can specify a keyword to query all tags that contain the keyword.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -19,6 +31,11 @@ public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the resource belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,6 +48,9 @@ public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies an Express Connect circuit.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

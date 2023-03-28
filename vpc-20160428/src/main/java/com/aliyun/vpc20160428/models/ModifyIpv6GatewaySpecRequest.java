@@ -4,9 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIpv6GatewaySpecRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the IPv6 gateway.</p>
+     */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
@@ -16,6 +24,9 @@ public class ModifyIpv6GatewaySpecRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the available regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +36,9 @@ public class ModifyIpv6GatewaySpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is no longer used because no specifications options are available for the IPv6 gateway.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 

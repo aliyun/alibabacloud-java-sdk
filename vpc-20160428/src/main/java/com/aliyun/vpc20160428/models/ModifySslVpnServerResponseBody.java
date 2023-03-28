@@ -4,54 +4,108 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifySslVpnServerResponseBody extends TeaModel {
+    /**
+     * <p>The encryption algorithm.</p>
+     */
     @NameInMap("Cipher")
     public String cipher;
 
+    /**
+     * <p>The client IP address pool.</p>
+     */
     @NameInMap("ClientIpPool")
     public String clientIpPool;
 
+    /**
+     * <p>Indicates whether data compression is enabled.</p>
+     */
     @NameInMap("Compress")
     public Boolean compress;
 
+    /**
+     * <p>The total number of current connections.</p>
+     */
     @NameInMap("Connections")
     public Integer connections;
 
+    /**
+     * <p>The time when the SSL server was created.</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>Indicates whether two-factor authentication is enabled.</p>
+     * <br>
+     * <p>*   **true**: enabled</p>
+     * <p>*   **false** (default): disabled</p>
+     */
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
 
+    /**
+     * <p>The ID of the IDaaS instance.</p>
+     */
     @NameInMap("IDaaSInstanceId")
     public String IDaaSInstanceId;
 
+    /**
+     * <p>The public IP address.</p>
+     */
     @NameInMap("InternetIp")
     public String internetIp;
 
+    /**
+     * <p>The CIDR block of the client.</p>
+     */
     @NameInMap("LocalSubnet")
     public String localSubnet;
 
+    /**
+     * <p>The maximum number of connections.</p>
+     */
     @NameInMap("MaxConnections")
     public Integer maxConnections;
 
+    /**
+     * <p>The name of the SSL server.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The port that is used by the SSL server.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The protocol that is used by the SSL server.</p>
+     */
     @NameInMap("Proto")
     public String proto;
 
+    /**
+     * <p>The ID of the region where the SSL server is created.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the SSL server.</p>
+     */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 

@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeHaVipsResponseBody extends TeaModel {
+    /**
+     * <p>The details about the HAVIP.</p>
+     */
     @NameInMap("HaVips")
     public DescribeHaVipsResponseBodyHaVips haVips;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -103,9 +118,15 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     }
 
     public static class DescribeHaVipsResponseBodyHaVipsHaVipTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -152,51 +173,106 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     }
 
     public static class DescribeHaVipsResponseBodyHaVipsHaVip extends TeaModel {
+        /**
+         * <p>The elastic IP address (EIP) associated with the HAVIP.</p>
+         */
         @NameInMap("AssociatedEipAddresses")
         public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses associatedEipAddresses;
 
+        /**
+         * <p>The type of the instance with which the HAVIP is associated. Valid values:</p>
+         * <br>
+         * <p>*   **EcsInstance**: an ECS instance</p>
+         * <p>*   **NetworkInterface**: an ENI</p>
+         */
         @NameInMap("AssociatedInstanceType")
         public String associatedInstanceType;
 
+        /**
+         * <p>The ID of the instance with which the HAVIP is associated.</p>
+         */
         @NameInMap("AssociatedInstances")
         public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances associatedInstances;
 
+        /**
+         * <p>The parameter is invalid. No value is returned.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The time when the HAVIP was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the HAVIP.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the HAVIP.</p>
+         */
         @NameInMap("HaVipId")
         public String haVipId;
 
+        /**
+         * <p>The private IP address of the HAVIP.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The ID of the active instance that is associated with the HAVIP.</p>
+         */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
+        /**
+         * <p>The name of the HAVIP.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the region to which the HAVIP belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the HAVIP belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The status of the HAVIP. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Deleting**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeHaVipsResponseBodyHaVipsHaVipTags tags;
 
+        /**
+         * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC to which the HAVIP belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

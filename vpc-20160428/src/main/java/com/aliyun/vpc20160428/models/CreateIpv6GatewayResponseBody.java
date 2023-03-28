@@ -4,12 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIpv6GatewayResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the IPv6 gateway.</p>
+     */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

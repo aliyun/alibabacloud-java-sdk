@@ -4,18 +4,45 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyNatGatewayAttributeRequest extends TeaModel {
+    /**
+     * <p>The description of the NAT gateway.</p>
+     * <br>
+     * <p>The description must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The mode in which the NAT gateway is associated with an elastic IP address (EIP). You can leave this parameter empty. If you want to specify a value for this parameter, set the value to **NAT**, which indicates that the NAT gateway is associated with the EIP in NAT mode.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   If the EipBindMode parameter is set to MULTI_BINDED when the NAT gateway is created, you can change the value of this parameter from **MULTI_BINDED** to **NAT**. If the EipBindMode parameter is set to NAT when the NAT gateway is created, you cannot change the value of this parameter from **NAT** to **MULTI_BINDED**. For more information about **MULTI_BINDED**, see [CreateNatGateway](~~120219~~).</p>
+     * <p>*   When the mode in which the NAT gateway is associated with an EIP is being changed, a transient connection that lasts a few seconds may occur. If the number of EIPs with which the NAT gateway is associated increases, the transient connection lasts longer. You can change the mode only for a NAT gateway that is associated with up to five EIPs. We recommend that you change the mode during off-peak hours.</p>
+     * <p>*   After the mode is changed to **NAT**, the Internet NAT gateway is compatible with the IPv4 gateway. However, if you associate an EIP with the NAT gateway, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the EIP fails to be associated with the NAT gateway.</p>
+     */
     @NameInMap("EipBindMode")
     public String eipBindMode;
 
+    /**
+     * <p>Specifies whether to enable the Internet control message protocol (ICMP) non-retrieval feature. Valid values:</p>
+     * <br>
+     * <p>*   **false**: disables the ICMP non-retrieval feature. This is the default value.</p>
+     * <p>*   **true**: enables the ICMP non-retrieval feature.</p>
+     */
     @NameInMap("IcmpReplyEnabled")
     public Boolean icmpReplyEnabled;
 
+    /**
+     * <p>The name of the NAT gateway.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
@@ -25,6 +52,11 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the NAT gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

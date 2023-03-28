@@ -4,15 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpnRouteEntryRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the destination-based route.</p>
+     * <br>
+     * <p>The description must be **1** to **100** characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The next hop of the destination-based route.</p>
+     */
     @NameInMap("NextHop")
     public String nextHop;
 
+    /**
+     * <p>The tunneling protocol. Set the value to **Ipsec**.</p>
+     */
     @NameInMap("OverlayMode")
     public String overlayMode;
 
@@ -22,9 +40,20 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies whether to advertise the destination-based route to a virtual private cloud (VPC) route table. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("PublishVpc")
     public Boolean publishVpc;
 
+    /**
+     * <p>The ID of the region where the VPN gateway is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,12 +63,24 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The destination CIDR block of the destination-based route.</p>
+     */
     @NameInMap("RouteDest")
     public String routeDest;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
+    /**
+     * <p>The weight of the destination-based route. Valid values:</p>
+     * <br>
+     * <p>*   **100**: a high priority</p>
+     * <p>*   **0**: a low priority</p>
+     */
     @NameInMap("Weight")
     public Integer weight;
 

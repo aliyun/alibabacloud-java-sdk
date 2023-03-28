@@ -4,9 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetVpcPrefixListEntriesRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListenerCertificates operation.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,9 +25,17 @@ public class GetVpcPrefixListEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the prefix list that you want to query.</p>
+     */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
+    /**
+     * <p>The region ID of the prefix list.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query available regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

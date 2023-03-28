@@ -4,15 +4,30 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If the return value of **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
+    /**
+     * <p>The details about the filters.</p>
+     */
     @NameInMap("TrafficMirrorFilters")
     public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters> trafficMirrorFilters;
 
@@ -54,36 +69,85 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     }
 
     public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules extends TeaModel {
+        /**
+         * <p>The action of the outbound rule. Valid values:</p>
+         * <br>
+         * <p>*   **accept**: collects network traffic.</p>
+         * <p>*   **drop**: does not collect network traffic.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The destination CIDR block of the outbound traffic.</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>The destination port range of the outbound traffic.</p>
+         */
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        /**
+         * <p>The priority of the outbound rule. A smaller value indicates a higher priority.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The protocol that is used by the outbound traffic to be mirrored. Valid values:</p>
+         * <br>
+         * <p>*   **ALL**: all protocols</p>
+         * <p>*   **ICMP**: ICMP</p>
+         * <p>*   **TCP**: TCP</p>
+         * <p>*   **UDP**: UDP</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The source CIDR block of the outbound traffic.</p>
+         */
         @NameInMap("SourceCidrBlock")
         public String sourceCidrBlock;
 
+        /**
+         * <p>The source port range of the outbound traffic.</p>
+         */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 
+        /**
+         * <p>The direction of the network traffic. Valid values:</p>
+         * <br>
+         * <p>*   **egress**: outbound</p>
+         * <p>*   **ingress**: inbound</p>
+         */
         @NameInMap("TrafficDirection")
         public String trafficDirection;
 
+        /**
+         * <p>The ID of the filter associated with the outbound rule.</p>
+         */
         @NameInMap("TrafficMirrorFilterId")
         public String trafficMirrorFilterId;
 
+        /**
+         * <p>The ID of the outbound rule.</p>
+         */
         @NameInMap("TrafficMirrorFilterRuleId")
         public String trafficMirrorFilterRuleId;
 
+        /**
+         * <p>The status of the outbound rule. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Created**</p>
+         * <p>*   **Modifying**</p>
+         * <p>*   **Deleting**</p>
+         */
         @NameInMap("TrafficMirrorFilterRuleStatus")
         public String trafficMirrorFilterRuleStatus;
 
@@ -183,36 +247,85 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     }
 
     public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules extends TeaModel {
+        /**
+         * <p>The action of the inbound rule. Valid values:</p>
+         * <br>
+         * <p>*   **accept**: accepts network traffic.</p>
+         * <p>*   **drop**: does not collect network traffic.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The destination CIDR block of the inbound traffic.</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>The destination port range of the inbound traffic.</p>
+         */
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        /**
+         * <p>The priority of the inbound rule. A smaller value indicates a higher priority.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The protocol that is used by the inbound traffic to be mirrored. Valid values:</p>
+         * <br>
+         * <p>*   **ALL**: all protocols</p>
+         * <p>*   **ICMP**: ICMP</p>
+         * <p>*   **TCP**: TCP</p>
+         * <p>*   **UDP**: UDP</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The source CIDR block of the inbound traffic.</p>
+         */
         @NameInMap("SourceCidrBlock")
         public String sourceCidrBlock;
 
+        /**
+         * <p>The destination port range of the inbound traffic.</p>
+         */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 
+        /**
+         * <p>The direction of the network traffic. Valid values:</p>
+         * <br>
+         * <p>*   **egress**: outbound</p>
+         * <p>*   **ingress**: inbound</p>
+         */
         @NameInMap("TrafficDirection")
         public String trafficDirection;
 
+        /**
+         * <p>The ID of the filter associated with the inbound rule.</p>
+         */
         @NameInMap("TrafficMirrorFilterId")
         public String trafficMirrorFilterId;
 
+        /**
+         * <p>The ID of the inbound rule.</p>
+         */
         @NameInMap("TrafficMirrorFilterRuleId")
         public String trafficMirrorFilterRuleId;
 
+        /**
+         * <p>The status of the inbound rule. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Created**</p>
+         * <p>*   **Modifying**</p>
+         * <p>*   **Deleting**</p>
+         */
         @NameInMap("TrafficMirrorFilterRuleStatus")
         public String trafficMirrorFilterRuleStatus;
 
@@ -312,9 +425,15 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     }
 
     public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -342,27 +461,56 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     }
 
     public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters extends TeaModel {
+        /**
+         * <p>The details about the outbound rules.</p>
+         */
         @NameInMap("EgressRules")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules> egressRules;
 
+        /**
+         * <p>The details about the inbound rules.</p>
+         */
         @NameInMap("IngressRules")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules> ingressRules;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags> tags;
 
+        /**
+         * <p>The description of the filter.</p>
+         */
         @NameInMap("TrafficMirrorFilterDescription")
         public String trafficMirrorFilterDescription;
 
+        /**
+         * <p>The ID of the filter.</p>
+         */
         @NameInMap("TrafficMirrorFilterId")
         public String trafficMirrorFilterId;
 
+        /**
+         * <p>The name of the filter.</p>
+         */
         @NameInMap("TrafficMirrorFilterName")
         public String trafficMirrorFilterName;
 
+        /**
+         * <p>The status of the filter. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Created**</p>
+         * <p>*   **Modifying**</p>
+         * <p>*   **Deleting**</p>
+         */
         @NameInMap("TrafficMirrorFilterStatus")
         public String trafficMirrorFilterStatus;
 

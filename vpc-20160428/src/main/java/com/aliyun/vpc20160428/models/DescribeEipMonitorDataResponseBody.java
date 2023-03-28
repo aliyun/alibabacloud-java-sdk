@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipMonitorDataResponseBody extends TeaModel {
+    /**
+     * <p>The detailed information about the monitoring data of the EIP.</p>
+     */
     @NameInMap("EipMonitorDatas")
     public DescribeEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,18 +41,33 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         @NameInMap("EipBandwidth")
         public Integer eipBandwidth;
 
+        /**
+         * <p>The sum of inbound and outbound traffic.</p>
+         */
         @NameInMap("EipFlow")
         public Long eipFlow;
 
+        /**
+         * <p>The number of packets.</p>
+         */
         @NameInMap("EipPackets")
         public Integer eipPackets;
 
+        /**
+         * <p>The inbound traffic. Unit: bytes.</p>
+         */
         @NameInMap("EipRX")
         public Long eipRX;
 
+        /**
+         * <p>The outbound traffic. Unit: bytes.</p>
+         */
         @NameInMap("EipTX")
         public Long eipTX;
 
+        /**
+         * <p>The timestamp of the monitoring data. Specify the time in the ISO8601 standard. Example: `2020-01-21T09:50:23Z`.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

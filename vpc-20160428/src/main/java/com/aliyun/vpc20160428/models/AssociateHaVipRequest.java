@@ -4,15 +4,34 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AssociateHaVipRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the HAVIP.</p>
+     */
     @NameInMap("HaVipId")
     public String haVipId;
 
+    /**
+     * <p>The ID of the ECS instance to be associated with the HAVIP.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the instance to be associated with the HAVIP. Valid values:</p>
+     * <br>
+     * <p>*   **EcsInstance**: an ECS instance</p>
+     * <p>*   **NetworkInterface**: an ENI. If you want to associate the HAVIP with an ENI, this parameter is required.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -22,6 +41,11 @@ public class AssociateHaVipRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the HAVIP belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

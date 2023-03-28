@@ -4,9 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteVbrHaRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the VBR failover group.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,6 +24,9 @@ public class DeleteVbrHaRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

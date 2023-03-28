@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetDhcpOptionsSetRequest extends TeaModel {
+    /**
+     * <p>The ID of the DHCP options set.</p>
+     */
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
 
@@ -13,6 +16,11 @@ public class GetDhcpOptionsSetRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the DHCP options set that you want to query.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,24 +4,52 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AssociateEipAddressBatchRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance to be associated with EIPs.</p>
+     * <br>
+     * <p>The instance can be a NAT gateway or a secondary ENI.</p>
+     */
     @NameInMap("BindedInstanceId")
     public String bindedInstanceId;
 
+    /**
+     * <p>The type of instance with which you want to associate the EIPs. Valid values:</p>
+     * <br>
+     * <p>*   **Nat**: a NAT gateway</p>
+     * <p>*   **NetworkInterface**: a secondary ENI</p>
+     */
     @NameInMap("BindedInstanceType")
     public String bindedInstanceType;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can only contain ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The association mode. Set the value to **MULTI_BINDED**, which specifies the Multi-EIP-to-ENI mode.</p>
+     * <br>
+     * <p>This parameter is required only if **InstanceType** is set to **NetworkInterface**.</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the EIPs belong.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

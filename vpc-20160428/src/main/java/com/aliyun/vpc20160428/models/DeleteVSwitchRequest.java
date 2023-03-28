@@ -10,6 +10,11 @@ public class DeleteVSwitchRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the vSwitch.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +24,9 @@ public class DeleteVSwitchRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the vSwitch that you want to delete.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

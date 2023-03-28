@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6AddressesResponseBody extends TeaModel {
+    /**
+     * <p>The details about the IPv6 addresses.</p>
+     */
     @NameInMap("Ipv6Addresses")
     public DescribeIpv6AddressesResponseBodyIpv6Addresses ipv6Addresses;
 
+    /**
+     * <p>The number of the returned page. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,42 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth extends TeaModel {
+        /**
+         * <p>The exclusive Internet bandwidth of the IPv6 address. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The status of the Internet bandwidth of the IPv6 address. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: normal</p>
+         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+         * <p>*   **SecurityLocked**: locked due to security reasons</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        /**
+         * <p>The billing method of the Internet bandwidth of the IPv6 address. Valid values:</p>
+         * <br>
+         * <p>**PostPaid**: pay-as-you-go</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>The billing method of the Internet bandwidth of the IPv6 address. Valid values:</p>
+         * <br>
+         * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+         * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        /**
+         * <p>The instance ID of the Internet bandwidth of the IPv6 address.</p>
+         */
         @NameInMap("Ipv6InternetBandwidthId")
         public String ipv6InternetBandwidthId;
 
@@ -128,45 +167,102 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address extends TeaModel {
+        /**
+         * <p>The time when the IPv6 address was created.</p>
+         */
         @NameInMap("AllocationTime")
         public String allocationTime;
 
+        /**
+         * <p>The ID of the instance that is assigned the IPv6 address.</p>
+         */
         @NameInMap("AssociatedInstanceId")
         public String associatedInstanceId;
 
+        /**
+         * <p>The type of the instance that is assigned the IPv6 address.</p>
+         */
         @NameInMap("AssociatedInstanceType")
         public String associatedInstanceType;
 
+        /**
+         * <p>The IPv6 address.</p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        /**
+         * <p>The ID of the IPv6 address.</p>
+         */
         @NameInMap("Ipv6AddressId")
         public String ipv6AddressId;
 
+        /**
+         * <p>The name of the IPv6 address.</p>
+         */
         @NameInMap("Ipv6AddressName")
         public String ipv6AddressName;
 
+        /**
+         * <p>The ID of the IPv6 gateway to which the IPv6 address belongs.</p>
+         */
         @NameInMap("Ipv6GatewayId")
         public String ipv6GatewayId;
 
+        /**
+         * <p>The information about the Internet bandwidth of the IPv6 address.</p>
+         */
         @NameInMap("Ipv6InternetBandwidth")
         public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth ipv6InternetBandwidth;
 
+        /**
+         * <p>The service provider of the IPv6 address. Valid values:</p>
+         * <br>
+         * <p>*   **BGP**: Alibaba Cloud Border Gateway Protocol (BGP) IPv6. This is the default value.</p>
+         * <p>*   **ChinaMobile**: China Mobile (single ISP).</p>
+         * <p>*   **ChinaUnicom**: China Unicom (single ISP).</p>
+         * <p>*   **ChinaTelecom**: China Telecom (single ISP).</p>
+         */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
 
+        /**
+         * <p>The type of communication supported by the IPv6 address. Valid values:</p>
+         * <br>
+         * <p>*   **Private**: communication within private networks</p>
+         * <p>*   **Public**: communication over the Internet</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The maximum bandwidth value of the IPv6 address.</p>
+         * <br>
+         * <p>*   If the IPv6 address is associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the EIP bandwidth plan.</p>
+         * <p>*   If the IPv6 address is not associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the Internet bandwidth of the IPv6 address.</p>
+         * <p>*   If the IPv6 address is not associated with an EIP bandwidth plan or an Internet bandwidth plan, the values of **RealBandwidth** and **Bandwidth** are both 0.</p>
+         */
         @NameInMap("RealBandwidth")
         public Integer realBandwidth;
 
+        /**
+         * <p>The status of the IPv6 address. Valid values:</p>
+         * <br>
+         * <p>*   **Pending**: being configured</p>
+         * <p>*   **Available**: available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the vSwitch to which the IPv6 address belongs.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC to which the IPv6 address belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

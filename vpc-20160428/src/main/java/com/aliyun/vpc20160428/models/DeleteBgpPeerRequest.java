@@ -4,9 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteBgpPeerRequest extends TeaModel {
+    /**
+     * <p>The ID of the BGP peer.</p>
+     */
     @NameInMap("BgpPeerId")
     public String bgpPeerId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -16,6 +26,11 @@ public class DeleteBgpPeerRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the BGP group.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

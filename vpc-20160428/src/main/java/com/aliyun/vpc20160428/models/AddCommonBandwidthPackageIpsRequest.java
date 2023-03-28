@@ -4,15 +4,28 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AddCommonBandwidthPackageIpsRequest extends TeaModel {
+    /**
+     * <p>The ID of the EIP bandwidth plan.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("IpInstanceIds")
     public java.util.List<String> ipInstanceIds;
 
+    /**
+     * <p>The type of IP address. Set the value to **EIP** to associate EIPs with the EIP bandwidth plan.</p>
+     */
     @NameInMap("IpType")
     public String ipType;
 
@@ -22,6 +35,11 @@ public class AddCommonBandwidthPackageIpsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the EIP bandwidth plan.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

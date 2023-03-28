@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh-CN** (default): Chinese</p>
+     * <p>*   **en-US**: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -13,6 +19,9 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The service type. Default value: **VPC**.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

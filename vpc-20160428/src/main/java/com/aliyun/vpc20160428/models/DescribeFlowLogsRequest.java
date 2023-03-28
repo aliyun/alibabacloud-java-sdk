@@ -4,15 +4,31 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowLogsRequest extends TeaModel {
+    /**
+     * <p>The description of the flow log.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the flow log.</p>
+     */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
+    /**
+     * <p>The name of the flow log.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    /**
+     * <p>The Logstore that stores the captured traffic data.</p>
+     */
     @NameInMap("LogStoreName")
     public String logStoreName;
 
@@ -22,21 +38,41 @@ public class DescribeFlowLogsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The project that manages the captured traffic data.</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The region ID of the flow log.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the flow log belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the resource from which traffic is captured.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -46,18 +82,42 @@ public class DescribeFlowLogsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource from which traffic is captured. Valid values:</p>
+     * <br>
+     * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
+     * <p>*   **VSwitch**: all ENIs in a vSwitch</p>
+     * <p>*   **VPC**: all ENIs in a virtual private cloud (VPC)</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The status of the flow log. Valid values:</p>
+     * <br>
+     * <p>*   **Active**: enabled</p>
+     * <p>*   **Activating**: being enabled</p>
+     * <p>*   **Inactive**: disabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
     @NameInMap("Tags")
     public java.util.List<DescribeFlowLogsRequestTags> tags;
 
+    /**
+     * <p>The type of traffic that is captured. Valid values:</p>
+     * <br>
+     * <p>*   **All**: all traffic</p>
+     * <p>*   **Allow**: traffic that is allowed by access control</p>
+     * <p>*   **Drop**: traffic that is denied by access control</p>
+     */
     @NameInMap("TrafficType")
     public String trafficType;
 
+    /**
+     * <p>The ID of the VPC to which the flow log belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -219,9 +279,19 @@ public class DescribeFlowLogsRequest extends TeaModel {
     }
 
     public static class DescribeFlowLogsRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

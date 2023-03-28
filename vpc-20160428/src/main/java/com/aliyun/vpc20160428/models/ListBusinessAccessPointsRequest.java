@@ -4,6 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListBusinessAccessPointsRequest extends TeaModel {
+    /**
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -10,6 +10,9 @@ public class DescribeSslVpnClientCertRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the SSL client certificate. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +22,9 @@ public class DescribeSslVpnClientCertRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SSL client certificate that you want to query.</p>
+     */
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;
 

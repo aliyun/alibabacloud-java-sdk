@@ -4,72 +4,162 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetNatGatewayAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The billing information.</p>
+     */
     @NameInMap("BillingConfig")
     public GetNatGatewayAttributeResponseBodyBillingConfig billingConfig;
 
+    /**
+     * <p>The service status of the NAT gateway. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: normal</p>
+     * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+     */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
+    /**
+     * <p>The time when the NAT gateway was created. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The information about the deletion protection feature.</p>
+     */
     @NameInMap("DeletionProtectionInfo")
     public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo deletionProtectionInfo;
 
+    /**
+     * <p>The description of the NAT gateway.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Indicates whether the traffic monitoring feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("EcsMetricEnabled")
     public Boolean ecsMetricEnabled;
 
+    /**
+     * <p>The time when the NAT gateway expires.</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The information about the DNAT table.</p>
+     */
     @NameInMap("ForwardTable")
     public GetNatGatewayAttributeResponseBodyForwardTable forwardTable;
 
+    /**
+     * <p>The information about the FULLNAT table.</p>
+     */
     @NameInMap("FullNatTable")
     public GetNatGatewayAttributeResponseBodyFullNatTable fullNatTable;
 
+    /**
+     * <p>The elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</p>
+     */
     @NameInMap("IpList")
     public java.util.List<GetNatGatewayAttributeResponseBodyIpList> ipList;
 
+    /**
+     * <p>The name of the NAT gateway.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The type of the Internet NAT gateway. Only **Enhanced** is returned, which indicates an enhanced Internet NAT gateway.</p>
+     */
     @NameInMap("NatType")
     public String natType;
 
+    /**
+     * <p>The type of the NAT gateway. Valid values:</p>
+     * <br>
+     * <p>*   **internet**: an Internet NAT gateway</p>
+     * <p>*   **intranet**: a VPC NAT gateway</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The private network information about the NAT gateway.</p>
+     */
     @NameInMap("PrivateInfo")
     public GetNatGatewayAttributeResponseBodyPrivateInfo privateInfo;
 
+    /**
+     * <p>Indicates whether the NAT gateway supports PrivateLink. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("PrivateLinkEnabled")
     public Boolean privateLinkEnabled;
 
+    /**
+     * <p>The mode that is used by PrivateLink. Valid values:</p>
+     * <br>
+     * <p>*   **FullNat**: the FULLNAT mode</p>
+     * <p>*   **Geneve**: the GENEVE mode</p>
+     */
     @NameInMap("PrivateLinkMode")
     public String privateLinkMode;
 
+    /**
+     * <p>The ID of the region where the NAT gateway is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The information about the SNAT table.</p>
+     */
     @NameInMap("SnatTable")
     public GetNatGatewayAttributeResponseBodySnatTable snatTable;
 
+    /**
+     * <p>The status of the NAT gateway. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**: being created. The operation to create a NAT gateway is asynchronous. The NAT gateway remains in the **Creating** state until it is created.</p>
+     * <p>*   **Available**: available. After a NAT gateway is created, it remains in a stable state.</p>
+     * <p>*   **Modifying**: being modified. The operation to upgrade or downgrade a NAT gateway is asynchronous. The NAT gateway remains in the **Modifying** state until it is upgraded or downgraded.</p>
+     * <p>*   **Deleting**: being deleted. The operation to delete a NAT gateway is asynchronous. The NAT gateway remains in the **Deleting** state until it is deleted.</p>
+     * <p>*   **Converting**: being converted. The operation to convert a standard NAT gateway to an enhanced NAT gateway is asynchronous. The NAT gateway remains in the **Converting** state until it is converted.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the VPC to which the NAT gateway belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -263,15 +353,43 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayAttributeResponseBodyBillingConfig extends TeaModel {
+        /**
+         * <p>Indicates whether automatic payment is enabled. If the **InstanceChargeType** parameter is set to **PrePaid**, one of the following values is returned:</p>
+         * <br>
+         * <p>*   **false**: disabled. After an order is generated, you must go to the Order Center to complete the payment.</p>
+         * <p>*   **true**: enabled. Payments are automatically completed.</p>
+         * <br>
+         * <p>The return value of this parameter is empty if **InstanceChargeType** is set to **PostPaid**.</p>
+         */
         @NameInMap("AutoPay")
         public String autoPay;
 
+        /**
+         * <p>The billing method of the NAT gateway. The value is set to **PostPaid**, which indicates the pay-as-you-go billing method.</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>The metering method of the NAT gateway. Valid values:</p>
+         * <br>
+         * <p>*   **PayBySpec**: pay-by-specification</p>
+         * <p>*   **PayByLcu**: pay-by-CU</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        /**
+         * <p>The specification of the Internet NAT gateway. If the **InternetChargeType** parameter is set to **PayBySpec**, one of the following values is returned:</p>
+         * <br>
+         * <p>*   **Small**: small</p>
+         * <br>
+         * <p>*   **Middle**: medium</p>
+         * <br>
+         * <p>*   **Large**: large</p>
+         * <br>
+         * <p>    The return value of this parameter is empty if **InternetChargeType** is set to **PayByLcu**.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
@@ -315,6 +433,12 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayAttributeResponseBodyDeletionProtectionInfo extends TeaModel {
+        /**
+         * <p>Indicates whether deletion protection is enabled.</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -334,9 +458,15 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayAttributeResponseBodyForwardTable extends TeaModel {
+        /**
+         * <p>The number of DNAT entries.</p>
+         */
         @NameInMap("ForwardEntryCount")
         public Integer forwardEntryCount;
 
+        /**
+         * <p>The ID of the DNAT table.</p>
+         */
         @NameInMap("ForwardTableId")
         public String forwardTableId;
 
@@ -364,9 +494,15 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayAttributeResponseBodyFullNatTable extends TeaModel {
+        /**
+         * <p>The number of FULLNAT entries.</p>
+         */
         @NameInMap("FullNatEntryCount")
         public Long fullNatEntryCount;
 
+        /**
+         * <p>The ID of the FULLNAT table.</p>
+         */
         @NameInMap("FullNatTableId")
         public String fullNatTableId;
 
@@ -394,12 +530,25 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayAttributeResponseBodyIpList extends TeaModel {
+        /**
+         * <p>The ID of the EIP.</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>The IP address of the EIP.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The association status of the EIP.</p>
+         * <br>
+         * <p>*   **idle**: The EIP is not specified in an SNAT entry or a DNAT entry.</p>
+         * <p>*   **UsedBySnatTable**: The EIP is specified in an SNAT entry.</p>
+         * <p>*   **UsedByForwardTable**: The EIP is specified in a DNAT entry.</p>
+         */
         @NameInMap("UsingStatus")
         public String usingStatus;
 
@@ -435,18 +584,33 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayAttributeResponseBodyPrivateInfo extends TeaModel {
+        /**
+         * <p>The ID of the elastic network interface (ENI).</p>
+         */
         @NameInMap("EniInstanceId")
         public String eniInstanceId;
 
+        /**
+         * <p>The zone where the NAT gateway is deployed.</p>
+         */
         @NameInMap("IzNo")
         public String izNo;
 
+        /**
+         * <p>The maximum bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("MaxBandwidth")
         public Integer maxBandwidth;
 
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
+        /**
+         * <p>The ID of the vSwitch to which the NAT gateway belongs.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
@@ -498,9 +662,15 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     public static class GetNatGatewayAttributeResponseBodySnatTable extends TeaModel {
+        /**
+         * <p>The number of SNAT entries.</p>
+         */
         @NameInMap("SnatEntryCount")
         public Integer snatEntryCount;
 
+        /**
+         * <p>The ID of the SNAT table.</p>
+         */
         @NameInMap("SnatTableId")
         public String snatTableId;
 

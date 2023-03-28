@@ -4,54 +4,111 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchAttributesResponseBody extends TeaModel {
+    /**
+     * <p>The number of available IP addresses.</p>
+     */
     @NameInMap("AvailableIpAddressCount")
     public Long availableIpAddressCount;
 
+    /**
+     * <p>The CIDR block of the vSwitch.</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>The time when the vSwitch was created.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The description of the vSwitch.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The IPv6 CIDR block of the vSwitch.</p>
+     */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
+    /**
+     * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
+    /**
+     * <p>The network access control list (ACL) rules.</p>
+     */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the vSwitch belongs.</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The information about the route table that is associated with the vSwitch.</p>
+     */
     @NameInMap("RouteTable")
     public DescribeVSwitchAttributesResponseBodyRouteTable routeTable;
 
+    /**
+     * <p>The status of the vSwitch. Valid values:</p>
+     * <br>
+     * <p>*   **Pending**</p>
+     * <p>*   **Available**</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public DescribeVSwitchAttributesResponseBodyTags tags;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The name of the vSwitch.</p>
+     */
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
+    /**
+     * <p>The ID of the VPC to which the vSwitch belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the zone to which the vSwitch belongs.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -197,9 +254,18 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchAttributesResponseBodyRouteTable extends TeaModel {
+        /**
+         * <p>The ID of the route table that is associated with the vSwitch.</p>
+         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
+        /**
+         * <p>The type of the route table. Valid values:</p>
+         * <br>
+         * <p>*   **System**: system route table</p>
+         * <p>*   **Custom**: custom route table</p>
+         */
         @NameInMap("RouteTableType")
         public String routeTableType;
 
@@ -227,9 +293,15 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchAttributesResponseBodyTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

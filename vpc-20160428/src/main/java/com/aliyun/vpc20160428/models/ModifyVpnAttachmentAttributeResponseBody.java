@@ -4,66 +4,154 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the transit router associated with the IPsec-VPN connection belongs.</p>
+     */
     @NameInMap("AttachInstanceId")
     public String attachInstanceId;
 
+    /**
+     * <p>The type of resource that is associated with the IPsec-VPN connection.</p>
+     * <br>
+     * <p>*   **CEN:** indicates that the IPsec-VPN connection is associated with a transit router.</p>
+     * <p>*   **VPNGW:** indicates that the IPsec-VPN connection is associated with a VPN gateway.</p>
+     * <p>*   **NO_ASSOCIATED:** indicates that the IPsec-VPN connection is not associated with any resource.</p>
+     */
     @NameInMap("AttachType")
     public String attachType;
 
+    /**
+     * <p>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The ID of the customer gateway associated with the IPsec-VPN connection.</p>
+     */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
+    /**
+     * <p>The description of the IPsec-VPN connection.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Indicates whether IPsec negotiations immediately start after the configuration is complete. Valid values:</p>
+     * <br>
+     * <p>*   **true:** IPsec negotiations immediately start after the configuration is complete.</p>
+     * <p>*   **false:** IPsec negotiations start when inbound traffic is detected.</p>
+     */
     @NameInMap("EffectImmediately")
     public Boolean effectImmediately;
 
+    /**
+     * <p>Indicates whether the DPD feature is enabled for the IPsec-VPN connection.</p>
+     * <br>
+     * <p>*   **true:** The DPD feature is enabled.</p>
+     * <p>*   **false:** The DPD feature is disabled.</p>
+     */
     @NameInMap("EnableDpd")
     public Boolean enableDpd;
 
+    /**
+     * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection.</p>
+     * <br>
+     * <p>*   **true:** NAT traversal is enabled.</p>
+     * <p>*   **false:** NAT traversal is disabled.</p>
+     */
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
 
+    /**
+     * <p>The configurations of Phase 1 negotiations.</p>
+     */
     @NameInMap("IkeConfig")
     public ModifyVpnAttachmentAttributeResponseBodyIkeConfig ikeConfig;
 
+    /**
+     * <p>The configurations of Phase 2 negotiations.</p>
+     */
     @NameInMap("IpsecConfig")
     public ModifyVpnAttachmentAttributeResponseBodyIpsecConfig ipsecConfig;
 
+    /**
+     * <p>The CIDR block on the VPC side.</p>
+     */
     @NameInMap("LocalSubnet")
     public String localSubnet;
 
+    /**
+     * <p>The name of the IPsec-VPN connection.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The network type of the IPsec-VPN connection.</p>
+     * <br>
+     * <p>*   **public:** Internet.</p>
+     * <p>*   **private:** private networks.</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The CIDR block on the data center side.</p>
+     */
     @NameInMap("RemoteSubnet")
     public String remoteSubnet;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The bandwidth specification of the IPsec-VPN connection.</p>
+     * <br>
+     * <p>**M** in the response indicates **Mbit/s**.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The status of the IPsec-VPN connection.</p>
+     * <br>
+     * <p>*   **ike_sa_not_established:** Phase 1 negotiations failed.</p>
+     * <p>*   **ike_sa_established:** Phase 1 negotiations were successful.</p>
+     * <p>*   **ipsec_sa_not_established:** Phase 2 negotiations failed.</p>
+     * <p>*   **ipsec_sa_established:** Phase 2 negotiations were successful.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The health check configurations of the IPsec-VPN connection.</p>
+     */
     @NameInMap("VcoHealthCheck")
     public ModifyVpnAttachmentAttributeResponseBodyVcoHealthCheck vcoHealthCheck;
 
+    /**
+     * <p>The BGP configurations of the IPsec-VPN connection.</p>
+     */
     @NameInMap("VpnBgpConfig")
     public ModifyVpnAttachmentAttributeResponseBodyVpnBgpConfig vpnBgpConfig;
 
+    /**
+     * <p>The ID of the IPsec-VPN connection.</p>
+     */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;
 
+    /**
+     * <p>The ID of the VPN gateway associated with the IPsec-VPN connection.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
@@ -241,30 +329,59 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyVpnAttachmentAttributeResponseBodyIkeConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm that was used in Phase 1 negotiations.</p>
+         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
+        /**
+         * <p>The encryption algorithm that was used in Phase 1 negotiations.</p>
+         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
+        /**
+         * <p>The SA lifetime that was determined by Phase 1 negotiations. Unit: seconds.</p>
+         */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
+        /**
+         * <p>The negotiation mode.</p>
+         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
+        /**
+         * <p>The Diffie-Hellman key exchange algorithm that was used in Phase 1 negotiations.</p>
+         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
+        /**
+         * <p>The version of the IKE protocol.</p>
+         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
+        /**
+         * <p>The identifier on the Alibaba Cloud side.</p>
+         */
         @NameInMap("LocalId")
         public String localId;
 
+        /**
+         * <p>The pre-shared key that was used for identity authentication between the VPN gateway and the data center.</p>
+         * <br>
+         * <p>>  The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the data center. Otherwise, you cannot establish a connection between the data center and the VPN gateway.</p>
+         */
         @NameInMap("Psk")
         public String psk;
 
+        /**
+         * <p>The identifier on the data center side.</p>
+         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -348,15 +465,27 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyVpnAttachmentAttributeResponseBodyIpsecConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm that was used in Phase 2 negotiations.</p>
+         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
+        /**
+         * <p>The encryption algorithm that was used in Phase 2 negotiations.</p>
+         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        /**
+         * <p>The SA lifetime that was determined by Phase 2 negotiations. Unit: seconds.</p>
+         */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
+        /**
+         * <p>The Diffie-Hellman key exchange algorithm that was used in Phase 2 negotiations.</p>
+         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 
@@ -400,21 +529,45 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyVpnAttachmentAttributeResponseBodyVcoHealthCheck extends TeaModel {
+        /**
+         * <p>The destination IP address that was used for health checks.</p>
+         */
         @NameInMap("Dip")
         public String dip;
 
+        /**
+         * <p>Indicates whether the health check feature is enabled for the IPsec-VPN connection.</p>
+         * <br>
+         * <p>*   **true:** The health check feature is enabled.</p>
+         * <p>*   **false:** The health check feature is disabled.</p>
+         */
         @NameInMap("Enable")
         public String enable;
 
+        /**
+         * <p>The interval between two consecutive health check retries. Unit: seconds.</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>Indicates whether published routes are withdrawn when the health check fails.</p>
+         * <br>
+         * <p>*   **revoke_route:** Published routes were withdrawn when the health check failed.</p>
+         * <p>*   **reserve_route:** Published routes were not withdrawn when the health check failed.</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <p>The maximum number of health check retries.</p>
+         */
         @NameInMap("Retry")
         public Integer retry;
 
+        /**
+         * <p>The source IP address that was used for health checks.</p>
+         */
         @NameInMap("Sip")
         public String sip;
 
@@ -474,24 +627,51 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyVpnAttachmentAttributeResponseBodyVpnBgpConfig extends TeaModel {
+        /**
+         * <p>Indicates whether BGP is enabled for the IPsec-VPN connection.</p>
+         * <br>
+         * <p>*   **true:** BGP is enabled.</p>
+         * <p>*   **false:** BGP is disabled.</p>
+         */
         @NameInMap("EnableBgp")
         public String enableBgp;
 
+        /**
+         * <p>The ASN on the Alibaba Cloud side.</p>
+         */
         @NameInMap("LocalAsn")
         public Long localAsn;
 
+        /**
+         * <p>The BGP IP address on the Alibaba Cloud side.</p>
+         */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
 
+        /**
+         * <p>The ASN on the data center side.</p>
+         */
         @NameInMap("PeerAsn")
         public Long peerAsn;
 
+        /**
+         * <p>The BGP IP address on the data center side.</p>
+         */
         @NameInMap("PeerBgpIp")
         public String peerBgpIp;
 
+        /**
+         * <p>The negotiation status of BGP.</p>
+         * <br>
+         * <p>*   **success:** normal.</p>
+         * <p>*   **false:** abnormal.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The CIDR block of the IPsec tunnel.</p>
+         */
         @NameInMap("TunnelCidr")
         public String tunnelCidr;
 

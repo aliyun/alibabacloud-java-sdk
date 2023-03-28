@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
+    /**
+     * <p>The language to display the results. Valid values:</p>
+     * <br>
+     * <p>*   **zh-CN** (default): Chinese</p>
+     * <p>*   **en-US**: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -13,6 +19,13 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region that you want to query.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

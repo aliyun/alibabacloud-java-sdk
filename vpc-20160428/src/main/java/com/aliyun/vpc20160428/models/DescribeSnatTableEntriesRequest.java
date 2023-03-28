@@ -4,6 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnatTableEntriesRequest extends TeaModel {
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     * <br>
+     * <p>>  You must set at least one of the **SnatTableId** and **NatGatewayId** parameters.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
@@ -13,12 +18,23 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the NAT gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,21 +44,47 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SNAT entry.</p>
+     */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
+    /**
+     * <p>The name of the SNAT entry.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     */
     @NameInMap("SnatEntryName")
     public String snatEntryName;
 
+    /**
+     * <p>*   When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.</p>
+     * <p>*   When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.</p>
+     */
     @NameInMap("SnatIp")
     public String snatIp;
 
+    /**
+     * <p>The ID of the SNAT table.</p>
+     * <br>
+     * <p>>  You must set at least one of the **SnatTableId** and **NatGatewayId** parameters.</p>
+     */
     @NameInMap("SnatTableId")
     public String snatTableId;
 
+    /**
+     * <p>The source CIDR block specified in the SNAT entry.</p>
+     */
     @NameInMap("SourceCIDR")
     public String sourceCIDR;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     * <br>
+     * <p>*   When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.</p>
+     * <p>*   When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.</p>
+     */
     @NameInMap("SourceVSwitchId")
     public String sourceVSwitchId;
 

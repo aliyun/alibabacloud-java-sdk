@@ -4,30 +4,76 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyForwardEntryRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>*   When you modify DNAT entries of Internet NAT gateways, this parameter specifies the elastic IP addresses (EIPs) that are used to access the Internet.</p>
+     * <p>*   When you modify DNAT entries of Virtual Private Cloud (VPC) NAT gateways, this parameter specifies the NAT IP addresses that are accessed by external networks.</p>
+     */
     @NameInMap("ExternalIp")
     public String externalIp;
 
+    /**
+     * <p>*   The external port that is used to forward traffic when you modify DNAT entries of Internet NAT gateways.</p>
+     * <br>
+     * <p>    *   Valid values: **1** to **65535**.</p>
+     * <p>    *   If you want to modify the port range, separate port numbers with a forward slash (/), such as `10/20`.</p>
+     * <p>    *   If you want to modify **ExternalPort** and **InternalPort** at the same time, and set **ExternalPort** to a port range, you must also set **InternalPort** to a port range. For example, you can set **ExternalPort** to `10/20` and set **InternalPor** to `80/90`.</p>
+     * <br>
+     * <p>*   The port that is accessed by external networks when you modify DNAT entries of VPC NAT gateways. Valid values: **1** to **65535**.</p>
+     */
     @NameInMap("ExternalPort")
     public String externalPort;
 
+    /**
+     * <p>The ID of the DNAT entry.</p>
+     */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
+    /**
+     * <p>The new name of the DNAT entry.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("ForwardEntryName")
     public String forwardEntryName;
 
+    /**
+     * <p>The ID of the DNAT table to which the DNAT entry belongs.</p>
+     */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
 
+    /**
+     * <p>*   The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you modify DNAT entries of Internet NAT gateways.</p>
+     * <p>*   The private IP address that uses DNAT entries to communicate when you modify DNAT entries of VPC NAT gateways.</p>
+     */
     @NameInMap("InternalIp")
     public String internalIp;
 
+    /**
+     * <p>*   The internal port or port range that is used to forward traffic when you modify DNAT entries of Internet NAT gateways. Valid values: **1** to **65535**.</p>
+     * <p>*   The port of the destination ECS instance to be mapped when you modify DNAT entries of VPC NAT gateways. Valid values: **1** to **65535**.</p>
+     */
     @NameInMap("InternalPort")
     public String internalPort;
 
+    /**
+     * <p>The protocol type. Valid values:</p>
+     * <br>
+     * <p>*   **TCP**: The NAT gateway forwards TCP packets.</p>
+     * <p>*   **UDP**: The NAT gateway forwards UDP packets.</p>
+     * <p>*   **Any**: The NAT gateway forwards packets of all protocols.</p>
+     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
@@ -37,9 +83,20 @@ public class ModifyForwardEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies whether to remove limits on the port range. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than `1024`, set `PortBreak` to `true`.</p>
+     */
     @NameInMap("PortBreak")
     public Boolean portBreak;
 
+    /**
+     * <p>The region ID of the NAT gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

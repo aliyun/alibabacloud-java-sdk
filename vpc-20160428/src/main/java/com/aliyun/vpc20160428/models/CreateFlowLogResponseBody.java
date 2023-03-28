@@ -4,15 +4,30 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowLogResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the flow log.</p>
+     */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public String success;
 

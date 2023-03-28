@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the route table that is automatically created by the system after the VPC is created.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    /**
+     * <p>The ID of the vRouter that is automatically created by the system after the VPC is created.</p>
+     */
     @NameInMap("VRouterId")
     public String VRouterId;
 
+    /**
+     * <p>The ID of the created VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

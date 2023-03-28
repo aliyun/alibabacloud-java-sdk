@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSslVpnClientCertsRequest extends TeaModel {
+    /**
+     * <p>The name of the SSL client certificate.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -13,12 +16,23 @@ public class DescribeSslVpnClientCertsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the SSL client certificates to be queried.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,9 +42,15 @@ public class DescribeSslVpnClientCertsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SSL client certificate.</p>
+     */
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;
 
+    /**
+     * <p>The ID of the SSL server.</p>
+     */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;
 

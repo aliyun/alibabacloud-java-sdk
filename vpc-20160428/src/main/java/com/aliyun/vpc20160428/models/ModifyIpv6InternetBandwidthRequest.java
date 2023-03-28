@@ -4,15 +4,35 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
+    /**
+     * <p>The Internet bandwidth for the IPv6 CIDR block. Valid values: **1** to **5000**. Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the IPv6 address.</p>
+     * <br>
+     * <p>>  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.</p>
+     */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
 
+    /**
+     * <p>The ID of the Internet bandwidth that you purchase for the IPv6 CIDR block.</p>
+     * <br>
+     * <p>>  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.</p>
+     */
     @NameInMap("Ipv6InternetBandwidthId")
     public String ipv6InternetBandwidthId;
 
@@ -22,6 +42,9 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

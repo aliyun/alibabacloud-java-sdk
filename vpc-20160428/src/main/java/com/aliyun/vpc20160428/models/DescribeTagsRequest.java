@@ -4,9 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</p>
+     */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,6 +25,11 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the resource belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +42,17 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The resource type. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VSWITCH**: vSwitch</p>
+     * <p>*   **ROUTETABLE**: route table</p>
+     * <p>*   **EIP**: elastic IP address (EIP)</p>
+     * <p>*   **VpnGateway**: VPN gateway</p>
+     * <p>*   **NATGATEWAY**: NAT gateway</p>
+     * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -120,9 +145,19 @@ public class DescribeTagsRequest extends TeaModel {
     }
 
     public static class DescribeTagsRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

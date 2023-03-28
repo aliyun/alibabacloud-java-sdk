@@ -4,18 +4,43 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyCustomerGatewayAttributeRequest extends TeaModel {
+    /**
+     * <p>The authentication key of the BGP routing protocol for the gateway device in the data center.</p>
+     * <br>
+     * <p>The key must be 1 to 64 characters in length. It can contain only ASCII characters and cannot contain spaces or question marks (?).</p>
+     */
     @NameInMap("AuthKey")
     public String authKey;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the customer gateway.</p>
+     */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
+    /**
+     * <p>The description of the customer gateway.</p>
+     * <br>
+     * <p>The description must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the customer gateway.</p>
+     * <br>
+     * <p>The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,6 +50,11 @@ public class ModifyCustomerGatewayAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the NAT gateway is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

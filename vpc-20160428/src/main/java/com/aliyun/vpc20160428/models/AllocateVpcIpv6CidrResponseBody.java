@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateVpcIpv6CidrResponseBody extends TeaModel {
+    /**
+     * <p>The IPv6 CIDR block that is reserved.</p>
+     */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

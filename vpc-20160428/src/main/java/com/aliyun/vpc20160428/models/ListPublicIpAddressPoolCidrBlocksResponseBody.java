@@ -4,18 +4,36 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned. Valid values: **10** to **100**. Default value: **10**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The information about the CIDR blocks.</p>
+     */
     @NameInMap("PublicIpPoolCidrBlockList")
     public java.util.List<ListPublicIpAddressPoolCidrBlocksResponseBodyPublicIpPoolCidrBlockList> publicIpPoolCidrBlockList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,21 +83,43 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     }
 
     public static class ListPublicIpAddressPoolCidrBlocksResponseBodyPublicIpPoolCidrBlockList extends TeaModel {
+        /**
+         * <p>The CIDR blocks.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>The time when the CIDR block was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the IP address pool.</p>
+         */
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
 
+        /**
+         * <p>The status of the CIDR block in the IP address pool. Valid values:</p>
+         * <br>
+         * <p>*   **Created**: available</p>
+         * <p>*   **Deleting**: being deleted</p>
+         * <p>*   **Modifying**: being modified</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The total number of occupied IP addresses in the CIDR block.</p>
+         */
         @NameInMap("TotalIpNum")
         public Integer totalIpNum;
 
+        /**
+         * <p>The total number of available IP addresses in the CIDR block.</p>
+         */
         @NameInMap("UsedIpNum")
         public Integer usedIpNum;
 

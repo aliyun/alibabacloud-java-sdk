@@ -4,21 +4,44 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries on the current page.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>An array of strings.</p>
+     * <br>
+     * <p>Each item in the array is a log entry.</p>
+     */
     @NameInMap("Data")
     public DescribeVpnConnectionLogsResponseBodyData data;
 
+    /**
+     * <p>Indicates whether the log is accurate. Valid values:</p>
+     * <br>
+     * <p>*   **true**: accurate</p>
+     * <p>*   **false**: inaccurate</p>
+     */
     @NameInMap("IsCompleted")
     public Boolean isCompleted;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

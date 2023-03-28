@@ -4,12 +4,25 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteForwardEntryRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the DNAT entry to be deleted.</p>
+     */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
+    /**
+     * <p>The ID of the DNAT table to which the DNAT entry belongs.</p>
+     */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
 
@@ -19,6 +32,11 @@ public class DeleteForwardEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the NAT gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

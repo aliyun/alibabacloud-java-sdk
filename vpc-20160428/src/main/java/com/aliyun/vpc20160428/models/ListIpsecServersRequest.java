@@ -7,18 +7,40 @@ public class ListIpsecServersRequest extends TeaModel {
     @NameInMap("IpsecServerId")
     public java.util.List<String> ipsecServerId;
 
+    /**
+     * <p>The name of the IPsec server.</p>
+     * <br>
+     * <p>The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("IpsecServerName")
     public String ipsecServerName;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **20**. Default value: **10**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region where the IPsec server is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 

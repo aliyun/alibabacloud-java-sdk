@@ -10,15 +10,29 @@ public class DescribeRouteTableListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the VPC to which the route table belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the route table to be queried belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -28,18 +42,38 @@ public class DescribeRouteTableListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the route table that you want to query.</p>
+     */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    /**
+     * <p>The name of the route table that you want to query.</p>
+     */
     @NameInMap("RouteTableName")
     public String routeTableName;
 
+    /**
+     * <p>The ID of the router to which the route table belongs.</p>
+     */
     @NameInMap("RouterId")
     public String routerId;
 
+    /**
+     * <p>The type of the router to which the route table belongs. Valid values:</p>
+     * <br>
+     * <p>*   **VRouter** (default): a vRouter</p>
+     * <p>*   **VBR**: a virtual border router (VBR)</p>
+     */
     @NameInMap("RouterType")
     public String routerType;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
+     * <br>
+     * <p>After this parameter is set, the value of the **RouterType** parameter is automatically set to **VRouter**.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

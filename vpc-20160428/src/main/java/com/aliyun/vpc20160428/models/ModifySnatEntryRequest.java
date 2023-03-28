@@ -4,6 +4,13 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifySnatEntryRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,6 +20,11 @@ public class ModifySnatEntryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the NAT gateway is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,15 +34,33 @@ public class ModifySnatEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the SNAT entry that you want to modify.</p>
+     */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
+    /**
+     * <p>The name of the SNAT entry.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("SnatEntryName")
     public String snatEntryName;
 
+    /**
+     * <p>*   The elastic IP addresses (EIPs) in the SNAT entry when you modify an SNAT entry of an Internet NAT gateway. Separate EIPs with commas (,).</p>
+     * <br>
+     * <p>    If you select multiple EIPs to create an SNAT address pool, connections are hashed to these EIPs. Network traffic may not be evenly distributed to the EIPs because the amount of traffic passes through each connection varies. We recommend that you associate these EIPs with the same EIP bandwidth plan to prevent service interruptions due to the bandwidth limit of an individual EIP.</p>
+     * <br>
+     * <p>*   When you modify an SNAT entry of a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.</p>
+     */
     @NameInMap("SnatIp")
     public String snatIp;
 
+    /**
+     * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
+     */
     @NameInMap("SnatTableId")
     public String snatTableId;
 

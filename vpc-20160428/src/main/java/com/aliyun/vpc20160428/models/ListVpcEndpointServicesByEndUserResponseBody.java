@@ -4,15 +4,30 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of entries returned.</p>
+     */
     @NameInMap("Services")
     public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServices> services;
 
@@ -54,18 +69,36 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServicesByEndUserResponseBodyServices extends TeaModel {
+        /**
+         * <p>The default access policy.</p>
+         */
         @NameInMap("DefaultPolicyDocument")
         public String defaultPolicyDocument;
 
+        /**
+         * <p>The domain name of the cloud service to which the endpoint service belongs.</p>
+         */
         @NameInMap("ServiceDomain")
         public String serviceDomain;
 
+        /**
+         * <p>The ID of the endpoint service.</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <p>The name of the endpoint service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>Indicate whether the endpoint service supports the access policy. Valid values:</p>
+         * <br>
+         * <p>*   **false**: no</p>
+         * <p>*   **true**: yes</p>
+         */
         @NameInMap("SupportPolicy")
         public Boolean supportPolicy;
 

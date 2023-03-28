@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
+    /**
+     * <p>The details about the egress-only rules.</p>
+     */
     @NameInMap("Ipv6EgressOnlyRules")
     public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRules ipv6EgressOnlyRules;
 
+    /**
+     * <p>The number of the returned page. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,21 +80,39 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule extends TeaModel {
+        /**
+         * <p>The description of the egress-only rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the instance to which the egress-only rule applies.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The type of the instance to which the egress-only rule applies.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The ID of the egress-only rule.</p>
+         */
         @NameInMap("Ipv6EgressOnlyRuleId")
         public String ipv6EgressOnlyRuleId;
 
+        /**
+         * <p>The name of the egress-only rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the egress-only rule.</p>
+         */
         @NameInMap("Status")
         public String status;
 

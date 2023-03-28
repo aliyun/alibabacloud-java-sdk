@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of route entries.</p>
+     */
     @NameInMap("VpnRouteEntries")
     public DescribeVpnRouteEntriesResponseBodyVpnRouteEntries vpnRouteEntries;
 
@@ -65,33 +80,72 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry extends TeaModel {
+        /**
+         * <p>The AS path of the route entry.</p>
+         */
         @NameInMap("AsPath")
         public String asPath;
 
+        /**
+         * <p>The community attributes of the route entry.</p>
+         */
         @NameInMap("Community")
         public String community;
 
+        /**
+         * <p>The timestamp when the route entry was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The next hop of the route entry.</p>
+         */
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <p>The destination CIDR block of the route entry.</p>
+         */
         @NameInMap("RouteDest")
         public String routeDest;
 
+        /**
+         * <p>The type of the route entry. Valid values:</p>
+         * <br>
+         * <p>*   **Custom**: custom</p>
+         * <p>*   **System**: system</p>
+         */
         @NameInMap("RouteEntryType")
         public String routeEntryType;
 
+        /**
+         * <p>The source CIDR block of the route entry.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status of the route entry. Valid values:</p>
+         * <br>
+         * <p>*   **published**: advertised</p>
+         * <p>*   **normal**: not advertised</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The ID of the VPN gateway.</p>
+         */
         @NameInMap("VpnInstanceId")
         public String vpnInstanceId;
 
+        /**
+         * <p>The weight of the route entry. Valid values: **0** and **100**.</p>
+         * <br>
+         * <p>*   **0**: a low priority</p>
+         * <p>*   **100**: a high priority</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

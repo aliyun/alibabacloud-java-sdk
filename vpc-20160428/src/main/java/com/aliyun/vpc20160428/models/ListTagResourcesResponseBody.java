@@ -4,12 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details about the resource to which the tags are added.</p>
+     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -43,15 +55,35 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource. Valid values:</p>
+         * <br>
+         * <p>*   **VPC**: virtual private cloud (VPC)</p>
+         * <p>*   **VSWITCH**: vSwitch</p>
+         * <p>*   **ROUTETABLE**: route table</p>
+         * <p>*   **EIP**: EIP</p>
+         * <p>*   **VpnGateWay**: VPN gateway</p>
+         * <p>*   **NATGATEWAY**: NAT gateway</p>
+         * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

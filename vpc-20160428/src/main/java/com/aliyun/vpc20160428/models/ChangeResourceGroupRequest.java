@@ -4,15 +4,31 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the new resource group.</p>
+     * <br>
+     * <p>>  You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~).</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    /**
+     * <p>The region ID of the resource group.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query available regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the Express Connect circuit.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies an Express Connect circuit.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

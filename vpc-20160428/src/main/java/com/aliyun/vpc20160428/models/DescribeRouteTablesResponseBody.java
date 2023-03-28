@@ -4,15 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteTablesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about the route table.</p>
+     */
     @NameInMap("RouteTables")
     public DescribeRouteTablesResponseBodyRouteTables routeTables;
 
@@ -65,15 +77,38 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop extends TeaModel {
+        /**
+         * <p>Indicates whether the next hop feature is enabled.</p>
+         * <br>
+         * <p>*   **0**: The next hop feature is disabled.</p>
+         * <p>*   **1**: The next hop feature is enabled.</p>
+         */
         @NameInMap("Enabled")
         public Integer enabled;
 
+        /**
+         * <p>The ID of the next hop.</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>The type of the next hop.</p>
+         * <br>
+         * <p>*   **Instance**: The next hop is an Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **HaVip**: The next hop is a high-availability virtual IP address (HAVIP).</p>
+         * <p>*   **VpnGateway**: The next hop is a VPN gateway.</p>
+         * <p>*   **NatGateway**: The next hop is a NAT gateway.</p>
+         * <p>*   **NetworkInterface**: The next hop is a secondary elastic network interface (ENI).</p>
+         * <p>*   **RouterInterface**: The next hop is a router interface.</p>
+         * <p>*   **IPv6Gateway**: The next hop is an IPv6 gateway.</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>The route weight of the next hop.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -136,33 +171,72 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry extends TeaModel {
+        /**
+         * <p>The description of the router entry.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The destination CIDR block of the route entry.</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>The ID of the next hop.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The type of the route.</p>
+         * <br>
+         * <p>*   **local**: a vSwitch route</p>
+         * <p>*   **service**: a cloud service route</p>
+         * <p>*   **classicLink**: a route added by the system after ClassicLink is enabled</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>The list of next hops of equal-cost multi-path routing (ECMP) routes.</p>
+         */
         @NameInMap("NextHops")
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops nextHops;
 
         @NameInMap("RouteEntryId")
         public String routeEntryId;
 
+        /**
+         * <p>The name of the route entry.</p>
+         */
         @NameInMap("RouteEntryName")
         public String routeEntryName;
 
+        /**
+         * <p>The ID of the route table to which the route entry belongs.</p>
+         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
+        /**
+         * <p>The state of the route entry.</p>
+         * <br>
+         * <p>*   **Pending**: The route entry is being configured.</p>
+         * <p>*   **Available**: The route entry is available.</p>
+         * <p>*   **Modifying**: The route entry is being modified.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the route entry.</p>
+         * <br>
+         * <p>*   **System** : a system route entry</p>
+         * <p>*   **Custom**: a custom route entry</p>
+         * <p>*   **BGP**: a BGP route entry</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -292,27 +366,51 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTablesResponseBodyRouteTablesRouteTable extends TeaModel {
+        /**
+         * <p>The time when the route table was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the resource group to which the elastic IP address (EIP) belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Detailed information about the route entry.</p>
+         */
         @NameInMap("RouteEntrys")
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys;
 
+        /**
+         * <p>The ID of the route table to which the route entry belongs.</p>
+         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
         @NameInMap("RouteTableType")
         public String routeTableType;
 
+        /**
+         * <p>The state of the route table.</p>
+         * <br>
+         * <p>*   **Pending**: The route table is being configured.</p>
+         * <p>*   **Available**: The route table is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the vRouter.</p>
+         */
         @NameInMap("VRouterId")
         public String VRouterId;
 
+        /**
+         * <p>The list of vSwitches that belong to the VPC.</p>
+         */
         @NameInMap("VSwitchIds")
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableVSwitchIds vSwitchIds;
 

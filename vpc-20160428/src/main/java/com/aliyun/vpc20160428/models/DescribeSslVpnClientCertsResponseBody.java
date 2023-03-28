@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the SSL client certificates.</p>
+     */
     @NameInMap("SslVpnClientCertKeys")
     public DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeys sslVpnClientCertKeys;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,53 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
     }
 
     public static class DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey extends TeaModel {
+        /**
+         * <p>The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The name of the SSL client certificate.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The region where the SSL client certificate is created.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the SSL client certificate.</p>
+         */
         @NameInMap("SslVpnClientCertId")
         public String sslVpnClientCertId;
 
+        /**
+         * <p>The ID of the SSL server.</p>
+         */
         @NameInMap("SslVpnServerId")
         public String sslVpnServerId;
 
+        /**
+         * <p>The status of the SSL client certificate. Valid values:</p>
+         * <br>
+         * <p>*   **expiring-soon**: The certificate expires in one week.</p>
+         * <p>*   **normal**: The certificate is active.</p>
+         * <p>*   **expired**: The certificate has expired.</p>
+         */
         @NameInMap("Status")
         public String status;
 

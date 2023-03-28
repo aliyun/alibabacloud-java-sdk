@@ -4,18 +4,36 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The list of gateway endpoints.</p>
+     */
     @NameInMap("Endpoints")
     public java.util.List<ListVpcGatewayEndpointsResponseBodyEndpoints> endpoints;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -64,31 +82,103 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListVpcGatewayEndpointsResponseBodyEndpointsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVpcGatewayEndpointsResponseBodyEndpointsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListVpcGatewayEndpointsResponseBodyEndpointsTags self = new ListVpcGatewayEndpointsResponseBodyEndpointsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVpcGatewayEndpointsResponseBodyEndpointsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVpcGatewayEndpointsResponseBodyEndpointsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListVpcGatewayEndpointsResponseBodyEndpoints extends TeaModel {
+        /**
+         * <p>The ID of the route table associated with the gateway endpoint.</p>
+         */
         @NameInMap("AssociatedRouteTables")
         public java.util.List<String> associatedRouteTables;
 
+        /**
+         * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the gateway endpoint.</p>
+         */
         @NameInMap("EndpointDescription")
         public String endpointDescription;
 
+        /**
+         * <p>The ID of the gateway endpoint.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The name of the gateway endpoint.</p>
+         */
         @NameInMap("EndpointName")
         public String endpointName;
 
+        /**
+         * <p>The status of the gateway endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Created**</p>
+         * <p>*   **Modifying**</p>
+         * <p>*   **Associating**</p>
+         * <p>*   **Dissociating**</p>
+         * <p>*   **Deleting**</p>
+         */
         @NameInMap("EndpointStatus")
         public String endpointStatus;
 
+        /**
+         * <p>The access policy for the cloud service.</p>
+         * <br>
+         * <p>For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).</p>
+         */
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The name of the endpoint service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        @NameInMap("Tags")
+        public java.util.List<ListVpcGatewayEndpointsResponseBodyEndpointsTags> tags;
+
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -153,12 +243,28 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             return this.policyDocument;
         }
 
+        public ListVpcGatewayEndpointsResponseBodyEndpoints setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListVpcGatewayEndpointsResponseBodyEndpoints setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public ListVpcGatewayEndpointsResponseBodyEndpoints setTags(java.util.List<ListVpcGatewayEndpointsResponseBodyEndpointsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListVpcGatewayEndpointsResponseBodyEndpointsTags> getTags() {
+            return this.tags;
         }
 
         public ListVpcGatewayEndpointsResponseBodyEndpoints setVpcId(String vpcId) {

@@ -4,15 +4,37 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcPrefixListRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The IP version. Valid values:</p>
+     * <br>
+     * <p>*   **IPv4** (default)</p>
+     * <p>*   **IPv6**</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <p>The maximum number of CIDR blocks that you can specify in the prefix list. Default value: 50.</p>
+     */
     @NameInMap("MaxEntries")
     public Integer maxEntries;
 
@@ -22,18 +44,36 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The description of the prefix list.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("PrefixListDescription")
     public String prefixListDescription;
 
     @NameInMap("PrefixListEntries")
     public java.util.List<CreateVpcPrefixListRequestPrefixListEntries> prefixListEntries;
 
+    /**
+     * <p>The name of the prefix list.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
+    /**
+     * <p>The ID of the region where you want to create the prefix list.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the prefix list belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -153,9 +193,17 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     }
 
     public static class CreateVpcPrefixListRequestPrefixListEntries extends TeaModel {
+        /**
+         * <p>The CIDR block specified in the prefix list.</p>
+         */
         @NameInMap("Cidr")
         public String cidr;
 
+        /**
+         * <p>The description of the CIDR block specified in the prefix list.</p>
+         * <br>
+         * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+         */
         @NameInMap("Description")
         public String description;
 

@@ -7,18 +7,35 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeRouterInterfacesRequestFilter> filter;
 
+    /**
+     * <p>Specifies whether renewal data is included. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the router interface.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -98,6 +115,22 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     }
 
     public static class DescribeRouterInterfacesRequestFilter extends TeaModel {
+        /**
+         * <p>The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:</p>
+         * <br>
+         * <p>*   **RouterInterfaceId**: the ID of the router interface.</p>
+         * <p>*   **RouterId**: the ID of the router.</p>
+         * <p>*   **RouterType**: the router type. Valid values: **VRouter** and **VBR**.</p>
+         * <p>*   **RouterInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the router interface belongs.</p>
+         * <p>*   **OppositeInterfaceId**: the ID of the peer router interface.</p>
+         * <p>*   **OppositeRouterType**: the type of the peer router interface. Valid values: **VRouter** and **VBR**.</p>
+         * <p>*   **OppositeRouterId**: the ID of the peer router.</p>
+         * <p>*   **OppositeInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the peer router interface belongs.</p>
+         * <p>*   **Status**: the status of the router interface.</p>
+         * <p>*   **Name**: the name of the router interface.</p>
+         * <br>
+         * <p>>  The logical operator between multiple values in the filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator between filter conditions is AND, which means that a result is returned only when all conditions are met.</p>
+         */
         @NameInMap("Key")
         public String key;
 

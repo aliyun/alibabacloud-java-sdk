@@ -4,9 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipMonitorDataRequest extends TeaModel {
+    /**
+     * <p>The ID of the EIP.</p>
+     */
     @NameInMap("AllocationId")
     public String allocationId;
 
+    /**
+     * <p>The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
+     * <br>
+     * <p>If the value of seconds (ss) is not 00, the end time is automatically rounded up to the next minute.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -16,9 +24,20 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The duration of each monitoring data entry. Unit: seconds. Valid values: **60** (default), **300**, **900**, and **3600**.</p>
+     * <br>
+     * <p>*   If the value of **(EndTime** - **StartTime**)/**Period** is greater than 200, a maximum of 200 monitoring data entries are returned at a time.</p>
+     * <p>*   If the value of (**EndTime** - **StartTime**)/**Period** is less than or equal to 200, only the monitoring data collected between the start time and end time is returned.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The ID of the region to which the EIP belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query available regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +47,11 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The beginning of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
+     * <br>
+     * <p>If the value of seconds (ss) is not 00, the start time is automatically rounded up to the next minute.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

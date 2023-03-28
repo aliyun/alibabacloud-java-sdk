@@ -4,33 +4,76 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The description of the gateway endpoint.</p>
+     */
     @NameInMap("EndpointDescription")
     public String endpointDescription;
 
+    /**
+     * <p>The ID of the gateway endpoint.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The name of the gateway endpoint.</p>
+     */
     @NameInMap("EndpointName")
     public String endpointName;
 
+    /**
+     * <p>The status of the gateway endpoint. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**: being created</p>
+     * <p>*   **Created**: created</p>
+     * <p>*   **Modifying**: being modified</p>
+     * <p>*   **Associating**: being associated</p>
+     * <p>*   **Dissociating**: being disassociated</p>
+     * <p>*   **Deleting**: being deleted</p>
+     */
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
+    /**
+     * <p>The access policy for the cloud service.</p>
+     */
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The ID of the route table associated with the gateway endpoint.</p>
+     */
     @NameInMap("RouteTables")
     public java.util.List<String> routeTables;
 
+    /**
+     * <p>The name of the endpoint service.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    @NameInMap("Tags")
+    public java.util.List<GetVpcGatewayEndpointAttributeResponseBodyTags> tags;
+
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -95,6 +138,14 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetVpcGatewayEndpointAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public GetVpcGatewayEndpointAttributeResponseBody setRouteTables(java.util.List<String> routeTables) {
         this.routeTables = routeTables;
         return this;
@@ -111,12 +162,50 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         return this.serviceName;
     }
 
+    public GetVpcGatewayEndpointAttributeResponseBody setTags(java.util.List<GetVpcGatewayEndpointAttributeResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetVpcGatewayEndpointAttributeResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public GetVpcGatewayEndpointAttributeResponseBody setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class GetVpcGatewayEndpointAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetVpcGatewayEndpointAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetVpcGatewayEndpointAttributeResponseBodyTags self = new GetVpcGatewayEndpointAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetVpcGatewayEndpointAttributeResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetVpcGatewayEndpointAttributeResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

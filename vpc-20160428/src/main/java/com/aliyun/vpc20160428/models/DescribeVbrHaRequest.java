@@ -4,9 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVbrHaRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to precheck the request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: prechecks the request without performing the operation. The system checks the request format, instance status, and whether the required parameters are specified. An error message is returned if the request fails the precheck. If the request passes the precheck, `DRYRUN.SUCCESS` is returned.</p>
+     * <p>*   **false**: prechecks the request. After the request passes the precheck, the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -16,6 +27,9 @@ public class DescribeVbrHaRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the VBR is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +39,15 @@ public class DescribeVbrHaRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VBR failover group.</p>
+     */
     @NameInMap("VbrHaId")
     public String vbrHaId;
 
+    /**
+     * <p>The ID of the VBR.</p>
+     */
     @NameInMap("VbrId")
     public String vbrId;
 

@@ -4,6 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnAttachmentsRequest extends TeaModel {
+    /**
+     * <p>The type of resource that is associated with the IPsec-VPN connection. Default value: **CEN**.</p>
+     * <br>
+     * <p>Set the value to **CEN**, which specifies to query IPsec-VPN connections associated with the transit router.</p>
+     */
     @NameInMap("AttachType")
     public String attachType;
 
@@ -13,12 +18,23 @@ public class DescribeVpnAttachmentsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region to which the IPsec-VPN connection belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +44,11 @@ public class DescribeVpnAttachmentsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the IPsec-VPN connection.</p>
+     * <br>
+     * <p>>  If you do not specify an ID, the system queries all IPsec-VPN connections associated with the transit router in the region.</p>
+     */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;
 

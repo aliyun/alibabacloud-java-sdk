@@ -4,18 +4,43 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UnassociateHaVipRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:</p>
+     * <br>
+     * <p>*   **True**: yes</p>
+     * <p>*   **False** (default): no</p>
+     * <br>
+     * <p>>  If you set the value to **False**, you cannot disassociate the HAVIP from the primary instance.</p>
+     */
     @NameInMap("Force")
     public String force;
 
+    /**
+     * <p>The ID of the HAVIP that you want to disassociate.</p>
+     */
     @NameInMap("HaVipId")
     public String haVipId;
 
+    /**
+     * <p>The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the instance from which you want to disassociate the HAVIP. Valid values:</p>
+     * <br>
+     * <p>*   **EcsInstance**: an ECS instance</p>
+     * <p>*   **NetworkInterface**: an ENI</p>
+     * <br>
+     * <p>>  If you want to disassociate the HAVIP from an ENI, this parameter is required.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -25,6 +50,11 @@ public class UnassociateHaVipRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the HAVIP belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

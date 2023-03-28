@@ -4,15 +4,30 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpnAttachmentResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned for the operation. A value of **200** indicates that the operation is performed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information returned for the operation.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is performed.</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -72,6 +72,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+      * >  You cannot activate a router interface that has overdue payments.
+      *
+      * @param request ActivateRouterInterfaceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ActivateRouterInterfaceResponse
+     */
     public ActivateRouterInterfaceResponse activateRouterInterfaceWithOptions(ActivateRouterInterfaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -112,11 +120,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ActivateRouterInterfaceResponse());
     }
 
+    /**
+      * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+      * >  You cannot activate a router interface that has overdue payments.
+      *
+      * @param request ActivateRouterInterfaceRequest
+      * @return ActivateRouterInterfaceResponse
+     */
     public ActivateRouterInterfaceResponse activateRouterInterface(ActivateRouterInterfaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.activateRouterInterfaceWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **ActiveFlowLog** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      *     *   If the flow log is in the **Activating** state, the flow log is being started.
+      *     *   If the flow log is in the **Active** state, the flow log is started.
+      * *   You cannot repeatedly call the **ActiveFlowLog** operation to start a flow log within the specified period of time.
+      *
+      * @param request ActiveFlowLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ActiveFlowLogResponse
+     */
     public ActiveFlowLogResponse activeFlowLogWithOptions(ActiveFlowLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -161,6 +186,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ActiveFlowLogResponse());
     }
 
+    /**
+      * *   The **ActiveFlowLog** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      *     *   If the flow log is in the **Activating** state, the flow log is being started.
+      *     *   If the flow log is in the **Active** state, the flow log is started.
+      * *   You cannot repeatedly call the **ActiveFlowLog** operation to start a flow log within the specified period of time.
+      *
+      * @param request ActiveFlowLogRequest
+      * @return ActiveFlowLogResponse
+     */
     public ActiveFlowLogResponse activeFlowLog(ActiveFlowLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.activeFlowLogWithOptions(request, runtime);
@@ -227,6 +261,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addBgpNetworkWithOptions(request, runtime);
     }
 
+    /**
+      * *   When you call this operation to associate an EIP with an EIP bandwidth plan, make sure that the EIP meets the following requirements:
+      *     *   The EIP uses the pay-as-you-go billing method.
+      *     *   The EIP and the EIP bandwidth plan belong to the same region.
+      *     *   The line type of the EIP is the same as that of the EIP bandwidth plan.
+      * *   The **AddCommonBandwidthPackageIp** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeCommonBandwidthPackages](~~120309~~) operation to query the status of an EIP bandwidth plan:
+      *     *   If the EIP bandwidth plan is in the **BINDING** state, the EIP is being associated with the EIP bandwidth plan. In this state, you can only query the EIP bandwidth plan and cannot perform other operations.
+      *     *   If the EIP bandwidth plan is in the **BINDED** state, the EIP is associated with the EIP bandwidth plan.
+      *
+      * @param request AddCommonBandwidthPackageIpRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddCommonBandwidthPackageIpResponse
+     */
     public AddCommonBandwidthPackageIpResponse addCommonBandwidthPackageIpWithOptions(AddCommonBandwidthPackageIpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -283,11 +330,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddCommonBandwidthPackageIpResponse());
     }
 
+    /**
+      * *   When you call this operation to associate an EIP with an EIP bandwidth plan, make sure that the EIP meets the following requirements:
+      *     *   The EIP uses the pay-as-you-go billing method.
+      *     *   The EIP and the EIP bandwidth plan belong to the same region.
+      *     *   The line type of the EIP is the same as that of the EIP bandwidth plan.
+      * *   The **AddCommonBandwidthPackageIp** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeCommonBandwidthPackages](~~120309~~) operation to query the status of an EIP bandwidth plan:
+      *     *   If the EIP bandwidth plan is in the **BINDING** state, the EIP is being associated with the EIP bandwidth plan. In this state, you can only query the EIP bandwidth plan and cannot perform other operations.
+      *     *   If the EIP bandwidth plan is in the **BINDED** state, the EIP is associated with the EIP bandwidth plan.
+      *
+      * @param request AddCommonBandwidthPackageIpRequest
+      * @return AddCommonBandwidthPackageIpResponse
+     */
     public AddCommonBandwidthPackageIpResponse addCommonBandwidthPackageIp(AddCommonBandwidthPackageIpRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addCommonBandwidthPackageIpWithOptions(request, runtime);
     }
 
+    /**
+      * *   When you call this operation to associate EIPs with an EIP bandwidth plan, make sure that the EIPs meet the following requirements:
+      *     *   The EIPs use the pay-as-you-go billing method.
+      *     *   The EIPs and the EIP bandwidth plan belong to the same region.
+      *     *   The line type of the EIPs is the same as that of the EIP bandwidth plan.
+      * *   The **AddCommonBandwidthPackageIps** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeCommonBandwidthPackages](~~120309~~) operation to query the status of an EIP bandwidth plan:
+      *     *   If the EIP bandwidth plan is in the **BINDING** state, the EIPs are being associated with the EIP bandwidth plan. In this state, you can only query the EIP bandwidth plan and cannot perform other operations.
+      *     *   If the EIP bandwidth plan is in the **BINDED** state, the EIPs are associated with the EIP bandwidth plan.
+      *
+      * @param request AddCommonBandwidthPackageIpsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddCommonBandwidthPackageIpsResponse
+     */
     public AddCommonBandwidthPackageIpsResponse addCommonBandwidthPackageIpsWithOptions(AddCommonBandwidthPackageIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -344,6 +416,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddCommonBandwidthPackageIpsResponse());
     }
 
+    /**
+      * *   When you call this operation to associate EIPs with an EIP bandwidth plan, make sure that the EIPs meet the following requirements:
+      *     *   The EIPs use the pay-as-you-go billing method.
+      *     *   The EIPs and the EIP bandwidth plan belong to the same region.
+      *     *   The line type of the EIPs is the same as that of the EIP bandwidth plan.
+      * *   The **AddCommonBandwidthPackageIps** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeCommonBandwidthPackages](~~120309~~) operation to query the status of an EIP bandwidth plan:
+      *     *   If the EIP bandwidth plan is in the **BINDING** state, the EIPs are being associated with the EIP bandwidth plan. In this state, you can only query the EIP bandwidth plan and cannot perform other operations.
+      *     *   If the EIP bandwidth plan is in the **BINDED** state, the EIPs are associated with the EIP bandwidth plan.
+      *
+      * @param request AddCommonBandwidthPackageIpsRequest
+      * @return AddCommonBandwidthPackageIpsResponse
+     */
     public AddCommonBandwidthPackageIpsResponse addCommonBandwidthPackageIps(AddCommonBandwidthPackageIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addCommonBandwidthPackageIpsWithOptions(request, runtime);
@@ -459,6 +543,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addIPv6TranslatorAclListEntryWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, take note of the following limits:
+      * *   The CIDR block and the IP address pool must belong to the same region.
+      * *   The CIDR block and the IP address pool must use the same line type.
+      * *   The **AddPublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
+      *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
+      * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
+      *
+      * @param request AddPublicIpAddressPoolCidrBlockRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddPublicIpAddressPoolCidrBlockResponse
+     */
     public AddPublicIpAddressPoolCidrBlockResponse addPublicIpAddressPoolCidrBlockWithOptions(AddPublicIpAddressPoolCidrBlockRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -519,11 +616,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddPublicIpAddressPoolCidrBlockResponse());
     }
 
+    /**
+      * Before you call this operation, take note of the following limits:
+      * *   The CIDR block and the IP address pool must belong to the same region.
+      * *   The CIDR block and the IP address pool must use the same line type.
+      * *   The **AddPublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
+      *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
+      * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
+      *
+      * @param request AddPublicIpAddressPoolCidrBlockRequest
+      * @return AddPublicIpAddressPoolCidrBlockResponse
+     */
     public AddPublicIpAddressPoolCidrBlockResponse addPublicIpAddressPoolCidrBlock(AddPublicIpAddressPoolCidrBlockRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addPublicIpAddressPoolCidrBlockWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **AddSourcesToTrafficMirrorSession** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session:
+      *     *   If the traffic mirror session is in the **Modifying** state, the traffic mirror source is being added to the traffic mirror session.
+      *     *   If the traffic mirror session is in the **Created** state, the traffic mirror source is being added to the traffic mirror session.
+      * *   You cannot repeatedly call the **AddSourcesToTrafficMirrorSession** operation to add a traffic mirror source to a traffic mirror session within the specified period of time.
+      *
+      * @param request AddSourcesToTrafficMirrorSessionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddSourcesToTrafficMirrorSessionResponse
+     */
     public AddSourcesToTrafficMirrorSessionResponse addSourcesToTrafficMirrorSessionWithOptions(AddSourcesToTrafficMirrorSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -580,11 +699,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddSourcesToTrafficMirrorSessionResponse());
     }
 
+    /**
+      * *   The **AddSourcesToTrafficMirrorSession** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session:
+      *     *   If the traffic mirror session is in the **Modifying** state, the traffic mirror source is being added to the traffic mirror session.
+      *     *   If the traffic mirror session is in the **Created** state, the traffic mirror source is being added to the traffic mirror session.
+      * *   You cannot repeatedly call the **AddSourcesToTrafficMirrorSession** operation to add a traffic mirror source to a traffic mirror session within the specified period of time.
+      *
+      * @param request AddSourcesToTrafficMirrorSessionRequest
+      * @return AddSourcesToTrafficMirrorSessionResponse
+     */
     public AddSourcesToTrafficMirrorSessionResponse addSourcesToTrafficMirrorSession(AddSourcesToTrafficMirrorSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addSourcesToTrafficMirrorSessionWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of EIPs. For more information, see [Billing overview](~~122035~~).
+      * After you call this operation, the system randomly allocates an EIP that is in the **Available** state in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.
+      *
+      * @param request AllocateEipAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AllocateEipAddressResponse
+     */
     public AllocateEipAddressResponse allocateEipAddressWithOptions(AllocateEipAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -685,6 +821,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AllocateEipAddressResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of EIPs. For more information, see [Billing overview](~~122035~~).
+      * After you call this operation, the system randomly allocates an EIP that is in the **Available** state in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.
+      *
+      * @param request AllocateEipAddressRequest
+      * @return AllocateEipAddressResponse
+     */
     public AllocateEipAddressResponse allocateEipAddress(AllocateEipAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.allocateEipAddressWithOptions(request, runtime);
@@ -791,6 +934,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.allocateEipAddressProWithOptions(request, runtime);
     }
 
+    /**
+      * **AllocateEipSegmentAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](/help/en/elastic-ip-address/latest/156063) operation to query the status of a contiguous EIP group: 
+      * - If the contiguous EIP group is in the **Allocating** state, the EIPs are being allocated. In this case, you can only perform the query operation and cannot perform other operations.
+      * - If the contiguous EIP group is in the **Allocated** state, the EIPs are allocated.
+      *
+      * @param request AllocateEipSegmentAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AllocateEipSegmentAddressResponse
+     */
     public AllocateEipSegmentAddressResponse allocateEipSegmentAddressWithOptions(AllocateEipSegmentAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -859,11 +1011,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AllocateEipSegmentAddressResponse());
     }
 
+    /**
+      * **AllocateEipSegmentAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](/help/en/elastic-ip-address/latest/156063) operation to query the status of a contiguous EIP group: 
+      * - If the contiguous EIP group is in the **Allocating** state, the EIPs are being allocated. In this case, you can only perform the query operation and cannot perform other operations.
+      * - If the contiguous EIP group is in the **Allocated** state, the EIPs are allocated.
+      *
+      * @param request AllocateEipSegmentAddressRequest
+      * @return AllocateEipSegmentAddressResponse
+     */
     public AllocateEipSegmentAddressResponse allocateEipSegmentAddress(AllocateEipSegmentAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.allocateEipSegmentAddressWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot call the **AllocateIpv6InternetBandwidth** operation to purchase Internet bandwidth for an IPv6 gateway at the same time.
+      *
+      * @param request AllocateIpv6InternetBandwidthRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AllocateIpv6InternetBandwidthResponse
+     */
     public AllocateIpv6InternetBandwidthResponse allocateIpv6InternetBandwidthWithOptions(AllocateIpv6InternetBandwidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -928,11 +1095,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AllocateIpv6InternetBandwidthResponse());
     }
 
+    /**
+      * You cannot call the **AllocateIpv6InternetBandwidth** operation to purchase Internet bandwidth for an IPv6 gateway at the same time.
+      *
+      * @param request AllocateIpv6InternetBandwidthRequest
+      * @return AllocateIpv6InternetBandwidthResponse
+     */
     public AllocateIpv6InternetBandwidthResponse allocateIpv6InternetBandwidth(AllocateIpv6InternetBandwidthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.allocateIpv6InternetBandwidthWithOptions(request, runtime);
     }
 
+    /**
+      * The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):
+      * 1\\. Call the AllocateVpcIpv6Cidr operation to reserve an IPv6 CIDR block.
+      * 2\\. If you want to allocate the reserved IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation, specify the **RegionId** and **VpcId** parameters, and set the **IPv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **IpVersion** parameter to **IPV6**. If you want to allocate the reserved IPv6 CIDR block to a new VPC, call the [CreateVpc](~~35737~~) operation, specify the **RegionId** parameter, and set the **Ipv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **EnableIpv6** parameter to **true**.
+      *
+      * @param request AllocateVpcIpv6CidrRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AllocateVpcIpv6CidrResponse
+     */
     public AllocateVpcIpv6CidrResponse allocateVpcIpv6CidrWithOptions(AllocateVpcIpv6CidrRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -993,6 +1175,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AllocateVpcIpv6CidrResponse());
     }
 
+    /**
+      * The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):
+      * 1\\. Call the AllocateVpcIpv6Cidr operation to reserve an IPv6 CIDR block.
+      * 2\\. If you want to allocate the reserved IPv6 CIDR block to an existing VPC, call the [AssociateVpcCidrBlock](~~146745~~) operation, specify the **RegionId** and **VpcId** parameters, and set the **IPv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **IpVersion** parameter to **IPV6**. If you want to allocate the reserved IPv6 CIDR block to a new VPC, call the [CreateVpc](~~35737~~) operation, specify the **RegionId** parameter, and set the **Ipv6CidrBlock** parameter to the reserved IPv6 CIDR block and the **EnableIpv6** parameter to **true**.
+      *
+      * @param request AllocateVpcIpv6CidrRequest
+      * @return AllocateVpcIpv6CidrResponse
+     */
     public AllocateVpcIpv6CidrResponse allocateVpcIpv6Cidr(AllocateVpcIpv6CidrRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.allocateVpcIpv6CidrWithOptions(request, runtime);
@@ -1083,6 +1273,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyPhysicalConnectionLOAWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can associate an EIP with an Elastic Compute Service (ECS) instance, a Classic Load Balancer (CLB) instance, a secondary elastic network interface (ENI), a NAT gateway, or a high-availability virtual IP address (HAVIP) in the same region. The ECS instance and CLB instance must be deployed in a virtual private cloud (VPC).
+      * *   **AssociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP.
+      *     *   If the EIP is in the **Associating** state, the EIP is being associated. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If the EIP is in the **InUse** state, the EIP is associated.
+      * *   You cannot repeatedly call **AssociateEipAddress** to associate an EIP with an instance within the specified period of time.
+      *
+      * @param request AssociateEipAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateEipAddressResponse
+     */
     public AssociateEipAddressResponse associateEipAddressWithOptions(AssociateEipAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1155,11 +1356,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateEipAddressResponse());
     }
 
+    /**
+      * *   You can associate an EIP with an Elastic Compute Service (ECS) instance, a Classic Load Balancer (CLB) instance, a secondary elastic network interface (ENI), a NAT gateway, or a high-availability virtual IP address (HAVIP) in the same region. The ECS instance and CLB instance must be deployed in a virtual private cloud (VPC).
+      * *   **AssociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP.
+      *     *   If the EIP is in the **Associating** state, the EIP is being associated. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If the EIP is in the **InUse** state, the EIP is associated.
+      * *   You cannot repeatedly call **AssociateEipAddress** to associate an EIP with an instance within the specified period of time.
+      *
+      * @param request AssociateEipAddressRequest
+      * @return AssociateEipAddressResponse
+     */
     public AssociateEipAddressResponse associateEipAddress(AssociateEipAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateEipAddressWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call the **AssociateEipAddressBatch** operation to associate EIPs with a NAT gateway or a secondary elastic network interface (ENI) in the same region. For more information about how to associate EIPs with other instances, see [AssociateEipAddress](~~120195~~).
+      * *   The **AssociateEipAddressBatch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP.
+      *     *   If the EIP is in the **Associating** state, the EIP is being associated. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If the EIP is in the **InUse** state, the EIP is associated.
+      * *   You cannot repeatedly call **AssociateEipAddressBatch** to associate an EIP with an instance within the specified period of time.
+      *
+      * @param request AssociateEipAddressBatchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateEipAddressBatchResponse
+     */
     public AssociateEipAddressBatchResponse associateEipAddressBatchWithOptions(AssociateEipAddressBatchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1220,6 +1442,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateEipAddressBatchResponse());
     }
 
+    /**
+      * *   You can call the **AssociateEipAddressBatch** operation to associate EIPs with a NAT gateway or a secondary elastic network interface (ENI) in the same region. For more information about how to associate EIPs with other instances, see [AssociateEipAddress](~~120195~~).
+      * *   The **AssociateEipAddressBatch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP.
+      *     *   If the EIP is in the **Associating** state, the EIP is being associated. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If the EIP is in the **InUse** state, the EIP is associated.
+      * *   You cannot repeatedly call **AssociateEipAddressBatch** to associate an EIP with an instance within the specified period of time.
+      *
+      * @param request AssociateEipAddressBatchRequest
+      * @return AssociateEipAddressBatchResponse
+     */
     public AssociateEipAddressBatchResponse associateEipAddressBatch(AssociateEipAddressBatchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateEipAddressBatchWithOptions(request, runtime);
@@ -1286,6 +1518,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.associateGlobalAccelerationInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.
+      * *   The HAVIP and ECS instance must belong to the same vSwitch.
+      * *   You can associate an HAVIP with at most two ECS instances.
+      * *   The ECS instance must be in the **Running** or **Stopped** state.
+      * *   The HAVIP must be in the **Available** or **InUse** state.
+      * *   The **AssociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+      *     *   If the HAVIP is in the **Associating** state, the HAVIP is being associated.
+      *     *   If the HAVIP is in the **InUse** state, the HAVIP is associated.
+      * *   You cannot repeatedly call the **AssociateHaVip** operation to associate an HAVIP within the specified period of time.
+      *
+      * @param request AssociateHaVipRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateHaVipResponse
+     */
     public AssociateHaVipResponse associateHaVipWithOptions(AssociateHaVipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1342,11 +1590,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateHaVipResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.
+      * *   The HAVIP and ECS instance must belong to the same vSwitch.
+      * *   You can associate an HAVIP with at most two ECS instances.
+      * *   The ECS instance must be in the **Running** or **Stopped** state.
+      * *   The HAVIP must be in the **Available** or **InUse** state.
+      * *   The **AssociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+      *     *   If the HAVIP is in the **Associating** state, the HAVIP is being associated.
+      *     *   If the HAVIP is in the **InUse** state, the HAVIP is associated.
+      * *   You cannot repeatedly call the **AssociateHaVip** operation to associate an HAVIP within the specified period of time.
+      *
+      * @param request AssociateHaVipRequest
+      * @return AssociateHaVipResponse
+     */
     public AssociateHaVipResponse associateHaVip(AssociateHaVipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateHaVipWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **AssociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **BINDING** state, the network ACL is being associated.
+      *     *   If the network ACL is in the **BINDED** state, the network ACL is associated.
+      * *   You cannot repeatedly call the **AssociateNetworkAcl** operation to associate a network ACL within the specified period of time.
+      *
+      * @param request AssociateNetworkAclRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateNetworkAclResponse
+     */
     public AssociateNetworkAclResponse associateNetworkAclWithOptions(AssociateNetworkAclRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1399,6 +1672,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateNetworkAclResponse());
     }
 
+    /**
+      * *   The **AssociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **BINDING** state, the network ACL is being associated.
+      *     *   If the network ACL is in the **BINDED** state, the network ACL is associated.
+      * *   You cannot repeatedly call the **AssociateNetworkAcl** operation to associate a network ACL within the specified period of time.
+      *
+      * @param request AssociateNetworkAclRequest
+      * @return AssociateNetworkAclResponse
+     */
     public AssociateNetworkAclResponse associateNetworkAcl(AssociateNetworkAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateNetworkAclWithOptions(request, runtime);
@@ -1497,6 +1779,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.associatePhysicalConnectionToVirtualBorderRouterWithOptions(request, runtime);
     }
 
+    /**
+      * The **AssociateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      * *   If the vSwitch is in the **Pending** state, the route table is being associated with the vSwitch.
+      * *   If the vSwitch is in the **Available** state, the route table is associated with the vSwitch.
+      *
+      * @param request AssociateRouteTableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateRouteTableResponse
+     */
     public AssociateRouteTableResponse associateRouteTableWithOptions(AssociateRouteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1553,6 +1844,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateRouteTableResponse());
     }
 
+    /**
+      * The **AssociateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      * *   If the vSwitch is in the **Pending** state, the route table is being associated with the vSwitch.
+      * *   If the vSwitch is in the **Available** state, the route table is associated with the vSwitch.
+      *
+      * @param request AssociateRouteTableRequest
+      * @return AssociateRouteTableResponse
+     */
     public AssociateRouteTableResponse associateRouteTable(AssociateRouteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateRouteTableWithOptions(request, runtime);
@@ -1623,6 +1922,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.associateRouteTableWithGatewayWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   The gateway endpoint to be associated with the route table cannot be in one of the following states: **Creating**, **Modifying**, **Associating**, **Dissociating**, or **Deleting**.
+      * *   The route table cannot be in one of the following states: **Creating**, **Modifying**, **Associating**, **Dissociating**, or **Deleting**.
+      * *   The gateway endpoint and route table must belong to the same virtual private cloud (VPC).
+      * *   The route table cannot be shared.
+      * *   You cannot associate a gateway endpoint with a virtual border router (VBR) route table.
+      * *   You can associate a gateway endpoint with at most 20 route tables at a time.
+      * *   **AssociateRouteTablesWithVpcGatewayEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetVpcGatewayEndpointAttribute](~~311017~~) operation to query whether a route table is associated with a gateway endpoint.
+      *     *   If the **Associating** status is returned, the route table is being associated with the gateway endpoint.
+      *     *   If the **Created** status is returned, the route table is associated with the gateway endpoint.
+      * *   You cannot repeatedly call the **AssociateRouteTablesWithVpcGatewayEndpoint** operation within a specific period of time.
+      *
+      * @param request AssociateRouteTablesWithVpcGatewayEndpointRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateRouteTablesWithVpcGatewayEndpointResponse
+     */
     public AssociateRouteTablesWithVpcGatewayEndpointResponse associateRouteTablesWithVpcGatewayEndpointWithOptions(AssociateRouteTablesWithVpcGatewayEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1679,11 +1995,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateRouteTablesWithVpcGatewayEndpointResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   The gateway endpoint to be associated with the route table cannot be in one of the following states: **Creating**, **Modifying**, **Associating**, **Dissociating**, or **Deleting**.
+      * *   The route table cannot be in one of the following states: **Creating**, **Modifying**, **Associating**, **Dissociating**, or **Deleting**.
+      * *   The gateway endpoint and route table must belong to the same virtual private cloud (VPC).
+      * *   The route table cannot be shared.
+      * *   You cannot associate a gateway endpoint with a virtual border router (VBR) route table.
+      * *   You can associate a gateway endpoint with at most 20 route tables at a time.
+      * *   **AssociateRouteTablesWithVpcGatewayEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetVpcGatewayEndpointAttribute](~~311017~~) operation to query whether a route table is associated with a gateway endpoint.
+      *     *   If the **Associating** status is returned, the route table is being associated with the gateway endpoint.
+      *     *   If the **Created** status is returned, the route table is associated with the gateway endpoint.
+      * *   You cannot repeatedly call the **AssociateRouteTablesWithVpcGatewayEndpoint** operation within a specific period of time.
+      *
+      * @param request AssociateRouteTablesWithVpcGatewayEndpointRequest
+      * @return AssociateRouteTablesWithVpcGatewayEndpointResponse
+     */
     public AssociateRouteTablesWithVpcGatewayEndpointResponse associateRouteTablesWithVpcGatewayEndpoint(AssociateRouteTablesWithVpcGatewayEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateRouteTablesWithVpcGatewayEndpointWithOptions(request, runtime);
     }
 
+    /**
+      * *   The following list describes the limits on the maximum number of secondary CIDR blocks that can be added:
+      *     *   You can add up to five secondary IPv4 CIDR blocks to each VPC.
+      *     *   You can add up to three secondary IPv6 CIDR blocks to each VPC.
+      * *   You cannot repeatedly call the **AssociateVpcCidrBlock** operation to add secondary CIDR blocks to a VPC within the specified period of time.
+      *
+      * @param request AssociateVpcCidrBlockRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateVpcCidrBlockResponse
+     */
     public AssociateVpcCidrBlockResponse associateVpcCidrBlockWithOptions(AssociateVpcCidrBlockRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1748,6 +2090,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateVpcCidrBlockResponse());
     }
 
+    /**
+      * *   The following list describes the limits on the maximum number of secondary CIDR blocks that can be added:
+      *     *   You can add up to five secondary IPv4 CIDR blocks to each VPC.
+      *     *   You can add up to three secondary IPv6 CIDR blocks to each VPC.
+      * *   You cannot repeatedly call the **AssociateVpcCidrBlock** operation to add secondary CIDR blocks to a VPC within the specified period of time.
+      *
+      * @param request AssociateVpcCidrBlockRequest
+      * @return AssociateVpcCidrBlockResponse
+     */
     public AssociateVpcCidrBlockResponse associateVpcCidrBlock(AssociateVpcCidrBlockRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateVpcCidrBlockWithOptions(request, runtime);
@@ -1802,6 +2153,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.associateVpnGatewayWithCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **AttachDhcpOptionsSetToVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being associated.
+      *     *   If the DHCP options set is in the **InUse** state, the DHCP options set is associated.
+      * *   You cannot repeatedly call the **AttachDhcpOptionsSetToVpc** operation to associate DHCP options sets with a VPC within the specified period of time.
+      *
+      * @param request AttachDhcpOptionsSetToVpcRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AttachDhcpOptionsSetToVpcResponse
+     */
     public AttachDhcpOptionsSetToVpcResponse attachDhcpOptionsSetToVpcWithOptions(AttachDhcpOptionsSetToVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1858,6 +2219,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachDhcpOptionsSetToVpcResponse());
     }
 
+    /**
+      * *   The **AttachDhcpOptionsSetToVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being associated.
+      *     *   If the DHCP options set is in the **InUse** state, the DHCP options set is associated.
+      * *   You cannot repeatedly call the **AttachDhcpOptionsSetToVpc** operation to associate DHCP options sets with a VPC within the specified period of time.
+      *
+      * @param request AttachDhcpOptionsSetToVpcRequest
+      * @return AttachDhcpOptionsSetToVpcResponse
+     */
     public AttachDhcpOptionsSetToVpcResponse attachDhcpOptionsSetToVpc(AttachDhcpOptionsSetToVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachDhcpOptionsSetToVpcWithOptions(request, runtime);
@@ -1908,6 +2278,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachVbrToVpconnWithOptions(request, runtime);
     }
 
+    /**
+      * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the EIP bandwidth plan.
+      * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation to remove the maximum bandwidth configured for an EIP within the specified period of time.
+      *
+      * @param request CancelCommonBandwidthPackageIpBandwidthRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelCommonBandwidthPackageIpBandwidthResponse
+     */
     public CancelCommonBandwidthPackageIpBandwidthResponse cancelCommonBandwidthPackageIpBandwidthWithOptions(CancelCommonBandwidthPackageIpBandwidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1956,11 +2334,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelCommonBandwidthPackageIpBandwidthResponse());
     }
 
+    /**
+      * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the EIP bandwidth plan.
+      * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation to remove the maximum bandwidth configured for an EIP within the specified period of time.
+      *
+      * @param request CancelCommonBandwidthPackageIpBandwidthRequest
+      * @return CancelCommonBandwidthPackageIpBandwidthResponse
+     */
     public CancelCommonBandwidthPackageIpBandwidthResponse cancelCommonBandwidthPackageIpBandwidth(CancelCommonBandwidthPackageIpBandwidthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelCommonBandwidthPackageIpBandwidthWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * You can cancel only an Express Connect circuit that is in the **Initial**, **Approved**, **Allocated**, or **Confirmed** state.
+      *
+      * @param request CancelPhysicalConnectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelPhysicalConnectionResponse
+     */
     public CancelPhysicalConnectionResponse cancelPhysicalConnectionWithOptions(CancelPhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2009,11 +2402,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelPhysicalConnectionResponse());
     }
 
+    /**
+      * ## Limits
+      * You can cancel only an Express Connect circuit that is in the **Initial**, **Approved**, **Allocated**, or **Confirmed** state.
+      *
+      * @param request CancelPhysicalConnectionRequest
+      * @return CancelPhysicalConnectionResponse
+     */
     public CancelPhysicalConnectionResponse cancelPhysicalConnection(CancelPhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelPhysicalConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **ChangeResourceGroup** operation within the specified period of time.
+      *
+      * @param request ChangeResourceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2050,6 +2457,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **ChangeResourceGroup** operation within the specified period of time.
+      *
+      * @param request ChangeResourceGroupRequest
+      * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeResourceGroupWithOptions(request, runtime);
@@ -2275,6 +2688,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.confirmPhysicalConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * After you call this operation, the router interface enters the **Connecting** state. When the connection is established, it enters the **Active** state.
+      * When you call this operation, take note of the following rules:
+      * *   Only an initiator router interface in the **Idle** state can initiate a connection.
+      * *   You can create only one pair of connected router interfaces between two routers.
+      * *   You cannot initiate a connection if your Alibaba Cloud account has a router interface with overdue payments.
+      *
+      * @param request ConnectRouterInterfaceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ConnectRouterInterfaceResponse
+     */
     public ConnectRouterInterfaceResponse connectRouterInterfaceWithOptions(ConnectRouterInterfaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2315,11 +2739,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConnectRouterInterfaceResponse());
     }
 
+    /**
+      * After you call this operation, the router interface enters the **Connecting** state. When the connection is established, it enters the **Active** state.
+      * When you call this operation, take note of the following rules:
+      * *   Only an initiator router interface in the **Idle** state can initiate a connection.
+      * *   You can create only one pair of connected router interfaces between two routers.
+      * *   You cannot initiate a connection if your Alibaba Cloud account has a router interface with overdue payments.
+      *
+      * @param request ConnectRouterInterfaceRequest
+      * @return ConnectRouterInterfaceResponse
+     */
     public ConnectRouterInterfaceResponse connectRouterInterface(ConnectRouterInterfaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.connectRouterInterfaceWithOptions(request, runtime);
     }
 
+    /**
+      * Before you convert a NAT bandwidth package to an Internet Shared Bandwidth instance, make sure you are aware of the following:
+      * *   The conversion does not incur any additional fees.
+      * *   The conversion does not affect the SNAT or DNAT entries of the NAT Gateway, and has no impact on the running services. However, we recommend that you perform the conversion during off-peak hours.
+      * *   After the conversion, the public IP address in the NAT bandwidth package is converted to an EIP. The peak bandwidth and billing method of the Internet Shared Bandwidth instance are consistent with those of the original NAT bandwidth package.
+      *
+      * @param request ConvertBandwidthPackageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ConvertBandwidthPackageResponse
+     */
     public ConvertBandwidthPackageResponse convertBandwidthPackageWithOptions(ConvertBandwidthPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2368,11 +2812,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConvertBandwidthPackageResponse());
     }
 
+    /**
+      * Before you convert a NAT bandwidth package to an Internet Shared Bandwidth instance, make sure you are aware of the following:
+      * *   The conversion does not incur any additional fees.
+      * *   The conversion does not affect the SNAT or DNAT entries of the NAT Gateway, and has no impact on the running services. However, we recommend that you perform the conversion during off-peak hours.
+      * *   After the conversion, the public IP address in the NAT bandwidth package is converted to an EIP. The peak bandwidth and billing method of the Internet Shared Bandwidth instance are consistent with those of the original NAT bandwidth package.
+      *
+      * @param request ConvertBandwidthPackageRequest
+      * @return ConvertBandwidthPackageResponse
+     */
     public ConvertBandwidthPackageResponse convertBandwidthPackage(ConvertBandwidthPackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.convertBandwidthPackageWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **CopyNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being copied.
+      *     *   If the network ACL is in the **Available** state, the rules of the network ACL are copied.
+      * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation to copy the rules of a network ACL within the specified period of time.
+      *
+      * @param request CopyNetworkAclEntriesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CopyNetworkAclEntriesResponse
+     */
     public CopyNetworkAclEntriesResponse copyNetworkAclEntriesWithOptions(CopyNetworkAclEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2425,11 +2888,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CopyNetworkAclEntriesResponse());
     }
 
+    /**
+      * *   The **CopyNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being copied.
+      *     *   If the network ACL is in the **Available** state, the rules of the network ACL are copied.
+      * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation to copy the rules of a network ACL within the specified period of time.
+      *
+      * @param request CopyNetworkAclEntriesRequest
+      * @return CopyNetworkAclEntriesResponse
+     */
     public CopyNetworkAclEntriesResponse copyNetworkAclEntries(CopyNetworkAclEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.copyNetworkAclEntriesWithOptions(request, runtime);
     }
 
+    /**
+      * You can use BGP to connect a VBR to a data center. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
+      * BGP groups are used to simplify BGP configurations. You can add BGP peers that use the same configurations to one BGP group. Before you start, you must create a BGP group with the requested autonomous system number (ASN).
+      * When you call this operation, take note of the following limits:
+      * *   You can specify only the data center that is connected to the VBR through an Express Connect circuit as a BGP peer.
+      * *   VBRs support only BGP-4.
+      * *   You can create at most eight BGP peers for each VBR.
+      * *   Each BGP peer supports at most 110 dynamic routes.
+      * *   The ASN of Alibaba Cloud is 45104. You can specify a 2-byte or 4-byte ASN for the data center.
+      *
+      * @param request CreateBgpGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateBgpGroupResponse
+     */
     public CreateBgpGroupResponse createBgpGroupWithOptions(CreateBgpGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2510,6 +2996,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBgpGroupResponse());
     }
 
+    /**
+      * You can use BGP to connect a VBR to a data center. Each BGP group is associated with a VBR. You can add a BGP peer that needs to communicate with a VBR to a BGP group and advertise the BGP network in the VBR.
+      * BGP groups are used to simplify BGP configurations. You can add BGP peers that use the same configurations to one BGP group. Before you start, you must create a BGP group with the requested autonomous system number (ASN).
+      * When you call this operation, take note of the following limits:
+      * *   You can specify only the data center that is connected to the VBR through an Express Connect circuit as a BGP peer.
+      * *   VBRs support only BGP-4.
+      * *   You can create at most eight BGP peers for each VBR.
+      * *   Each BGP peer supports at most 110 dynamic routes.
+      * *   The ASN of Alibaba Cloud is 45104. You can specify a 2-byte or 4-byte ASN for the data center.
+      *
+      * @param request CreateBgpGroupRequest
+      * @return CreateBgpGroupResponse
+     */
     public CreateBgpGroupResponse createBgpGroup(CreateBgpGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBgpGroupWithOptions(request, runtime);
@@ -2907,6 +3406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -3026,6 +3529,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createExpressCloudConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      * *   If the flow log is in the **Activating** state, the flow log is being created.
+      * *   If the flow log is in the **Active** state, the flow log is created and started.
+      *
+      * @param request CreateFlowLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateFlowLogResponse
+     */
     public CreateFlowLogResponse createFlowLogWithOptions(CreateFlowLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3106,11 +3618,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFlowLogResponse());
     }
 
+    /**
+      * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      * *   If the flow log is in the **Activating** state, the flow log is being created.
+      * *   If the flow log is in the **Active** state, the flow log is created and started.
+      *
+      * @param request CreateFlowLogRequest
+      * @return CreateFlowLogResponse
+     */
     public CreateFlowLogResponse createFlowLog(CreateFlowLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFlowLogWithOptions(request, runtime);
     }
 
+    /**
+      * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets of the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
+      * When you call this operation, take note of the following limits:
+      * *   **CreateForwardEntry** is an asynchronous operation. After you make a request, a DNAT entry ID is returned but the specified DNAT entry is not added. The system adds the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+      *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the status of the DNAT entry, but cannot perform other operations.
+      *     *   If the DNAT entry is in the **Available** state, the DNAT entry is added.
+      * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within the specified period of time.
+      * *   All combinations of **ExternalIp**, **ExternalPort**, and **IpProtocol** used in DNAT entries must be unique. You cannot distribute requests to more than one Elastic Compute Service (ECS) instance if these requests are initiated from the same source IP address, received on the same port, and use the same protocol.
+      * *   The combinations of **IpProtocol**, **InternalIp**, and **InternalPort** must be unique.
+      * *   If one or more DNAT entries in the DNAT table are in the **Pending** or **Modifying** state, you cannot add DNAT entries to the DNAT table.
+      * *   You can add at most 100 DNAT entries to a DNAT table.
+      * *   For an elastic IP address (EIP) used by an Internet NAT gateway or a NAT IP address used by a Virtual Private Cloud (VPC) NAT gateway, take note of the following limit: If the IP address has IP mapping enabled and is specified in a DNAT entry, the IP address cannot be used by another DNAT or SNAT entry.
+      *
+      * @param request CreateForwardEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateForwardEntryResponse
+     */
     public CreateForwardEntryResponse createForwardEntryWithOptions(CreateForwardEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3187,11 +3724,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateForwardEntryResponse());
     }
 
+    /**
+      * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets of the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
+      * When you call this operation, take note of the following limits:
+      * *   **CreateForwardEntry** is an asynchronous operation. After you make a request, a DNAT entry ID is returned but the specified DNAT entry is not added. The system adds the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+      *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the status of the DNAT entry, but cannot perform other operations.
+      *     *   If the DNAT entry is in the **Available** state, the DNAT entry is added.
+      * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within the specified period of time.
+      * *   All combinations of **ExternalIp**, **ExternalPort**, and **IpProtocol** used in DNAT entries must be unique. You cannot distribute requests to more than one Elastic Compute Service (ECS) instance if these requests are initiated from the same source IP address, received on the same port, and use the same protocol.
+      * *   The combinations of **IpProtocol**, **InternalIp**, and **InternalPort** must be unique.
+      * *   If one or more DNAT entries in the DNAT table are in the **Pending** or **Modifying** state, you cannot add DNAT entries to the DNAT table.
+      * *   You can add at most 100 DNAT entries to a DNAT table.
+      * *   For an elastic IP address (EIP) used by an Internet NAT gateway or a NAT IP address used by a Virtual Private Cloud (VPC) NAT gateway, take note of the following limit: If the IP address has IP mapping enabled and is specified in a DNAT entry, the IP address cannot be used by another DNAT or SNAT entry.
+      *
+      * @param request CreateForwardEntryRequest
+      * @return CreateForwardEntryResponse
+     */
     public CreateForwardEntryResponse createForwardEntry(CreateForwardEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createForwardEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateFullNatEntry** is an asynchronous operation. After you make a request, a FULLNAT entry ID is returned but the specified FULLNAT entry is not added. The system adds the entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+      *     *   If the FULLNAT entry is in the **Pending** state, the system is adding the FULLNAT entry. You can only query the status of the FULLNAT entry, but cannot perform other operations.
+      *     *   If the FULLNAT entry is in the **Available** state, the FULLNAT entry is added.
+      * *   You cannot repeatedly call the **CreateFullNatEntry** operation to add a FULLNAT entry to the FULLNAT table within the specified period of time.
+      *
+      * @param request CreateFullNatEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateFullNatEntryResponse
+     */
     public CreateFullNatEntryResponse createFullNatEntryWithOptions(CreateFullNatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3276,6 +3839,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFullNatEntryResponse());
     }
 
+    /**
+      * *   **CreateFullNatEntry** is an asynchronous operation. After you make a request, a FULLNAT entry ID is returned but the specified FULLNAT entry is not added. The system adds the entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+      *     *   If the FULLNAT entry is in the **Pending** state, the system is adding the FULLNAT entry. You can only query the status of the FULLNAT entry, but cannot perform other operations.
+      *     *   If the FULLNAT entry is in the **Available** state, the FULLNAT entry is added.
+      * *   You cannot repeatedly call the **CreateFullNatEntry** operation to add a FULLNAT entry to the FULLNAT table within the specified period of time.
+      *
+      * @param request CreateFullNatEntryRequest
+      * @return CreateFullNatEntryResponse
+     */
     public CreateFullNatEntryResponse createFullNatEntry(CreateFullNatEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFullNatEntryWithOptions(request, runtime);
@@ -3350,6 +3922,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createGlobalAccelerationInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * **CreateHaVip** is an asynchronous operation. After you send the request, the system returns a request ID and runs the task in the background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+      * *   If the HAVIP is in the **Creating** state, the HAVIP is being created.
+      * *   If the HAVIP is in the **Available** state, the HAVIP is created.
+      *
+      * @param request CreateHaVipRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateHaVipResponse
+     */
     public CreateHaVipResponse createHaVipWithOptions(CreateHaVipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3414,6 +3995,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHaVipResponse());
     }
 
+    /**
+      * **CreateHaVip** is an asynchronous operation. After you send the request, the system returns a request ID and runs the task in the background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+      * *   If the HAVIP is in the **Creating** state, the HAVIP is being created.
+      * *   If the HAVIP is in the **Available** state, the HAVIP is created.
+      *
+      * @param request CreateHaVipRequest
+      * @return CreateHaVipResponse
+     */
     public CreateHaVipResponse createHaVip(CreateHaVipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createHaVipWithOptions(request, runtime);
@@ -3638,6 +4227,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createIPv6TranslatorEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
+      * *   The **CreateIpsecServer** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
+      *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
+      * *   You cannot repeatedly call **CreateIpsecServer** to create an IPsec server for a VPN gateway within the specified period of time.
+      *
+      * @param request CreateIpsecServerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateIpsecServerResponse
+     */
     public CreateIpsecServerResponse createIpsecServerWithOptions(CreateIpsecServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3706,11 +4306,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpsecServerResponse());
     }
 
+    /**
+      * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
+      * *   The **CreateIpsecServer** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
+      *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
+      * *   You cannot repeatedly call **CreateIpsecServer** to create an IPsec server for a VPN gateway within the specified period of time.
+      *
+      * @param request CreateIpsecServerRequest
+      * @return CreateIpsecServerResponse
+     */
     public CreateIpsecServerResponse createIpsecServer(CreateIpsecServerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createIpsecServerWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateIpv4Gateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
+      *     *   If the IPv4 gateway is in the **Creating** state, the IPv4 gateway is being created.
+      *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is created.
+      * *   You cannot repeatedly call the **CreateIpv4Gateway** operation to create IPv4 gateways in a virtual private cloud (VPC) within the specified period of time.
+      *
+      * @param request CreateIpv4GatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateIpv4GatewayResponse
+     */
     public CreateIpv4GatewayResponse createIpv4GatewayWithOptions(CreateIpv4GatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3779,11 +4399,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpv4GatewayResponse());
     }
 
+    /**
+      * *   **CreateIpv4Gateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
+      *     *   If the IPv4 gateway is in the **Creating** state, the IPv4 gateway is being created.
+      *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is created.
+      * *   You cannot repeatedly call the **CreateIpv4Gateway** operation to create IPv4 gateways in a virtual private cloud (VPC) within the specified period of time.
+      *
+      * @param request CreateIpv4GatewayRequest
+      * @return CreateIpv4GatewayResponse
+     */
     public CreateIpv4GatewayResponse createIpv4Gateway(CreateIpv4GatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createIpv4GatewayWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **CreateIpv6EgressOnlyRule** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6EgressOnlyRules](~~102208~~) operation to query the status of an egress-only rule.
+      *     *   If the egress-only rule is in the **Creating** state, the egress-only rule is being created.
+      *     *   If the egress-only rule is in the **Created** state, the egress-only rule is created.
+      * *   You cannot repeatedly call the **CreateIpv6EgressOnlyRule** operation to add egress-only rules for an IPv6 address within the specified period of time.
+      *
+      * @param request CreateIpv6EgressOnlyRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateIpv6EgressOnlyRuleResponse
+     */
     public CreateIpv6EgressOnlyRuleResponse createIpv6EgressOnlyRuleWithOptions(CreateIpv6EgressOnlyRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3852,11 +4491,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpv6EgressOnlyRuleResponse());
     }
 
+    /**
+      * *   The **CreateIpv6EgressOnlyRule** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6EgressOnlyRules](~~102208~~) operation to query the status of an egress-only rule.
+      *     *   If the egress-only rule is in the **Creating** state, the egress-only rule is being created.
+      *     *   If the egress-only rule is in the **Created** state, the egress-only rule is created.
+      * *   You cannot repeatedly call the **CreateIpv6EgressOnlyRule** operation to add egress-only rules for an IPv6 address within the specified period of time.
+      *
+      * @param request CreateIpv6EgressOnlyRuleRequest
+      * @return CreateIpv6EgressOnlyRuleResponse
+     */
     public CreateIpv6EgressOnlyRuleResponse createIpv6EgressOnlyRule(CreateIpv6EgressOnlyRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createIpv6EgressOnlyRuleWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateIpv6Gateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the state of an IPv6 gateway.
+      *     *   If the IPv6 gateway is in the **Creating** state, the IPv6 gateway is being created.
+      *     *   If the IPv6 gateway is in the **Created** state, the IPv6 gateway is created.
+      * *   You cannot call the **CreateIpv6Gateway** operation to create multiple IPv6 gateways in a virtual private cloud (VPC) at the same time.
+      *
+      * @param request CreateIpv6GatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateIpv6GatewayResponse
+     */
     public CreateIpv6GatewayResponse createIpv6GatewayWithOptions(CreateIpv6GatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3921,11 +4579,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpv6GatewayResponse());
     }
 
+    /**
+      * *   **CreateIpv6Gateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeIpv6GatewayAttribute](~~102226~~) operation to query the state of an IPv6 gateway.
+      *     *   If the IPv6 gateway is in the **Creating** state, the IPv6 gateway is being created.
+      *     *   If the IPv6 gateway is in the **Created** state, the IPv6 gateway is created.
+      * *   You cannot call the **CreateIpv6Gateway** operation to create multiple IPv6 gateways in a virtual private cloud (VPC) at the same time.
+      *
+      * @param request CreateIpv6GatewayRequest
+      * @return CreateIpv6GatewayResponse
+     */
     public CreateIpv6GatewayResponse createIpv6Gateway(CreateIpv6GatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createIpv6GatewayWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
+      * *   After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.
+      * *   **CreateNatGateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of a NAT gateway.
+      *     *   If a NAT gateway is in the **Creating** state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.
+      *     *   If a NAT gateway is in the **Available** state, the NAT gateway is created.
+      *         It takes 1 to 3 minutes to create a NAT gateway.
+      * *   You cannot repeatedly call the **CreateNatGateway** operation to create a VPC NAT gateway or an Internet NAT gateway within the specified period of time.
+      *
+      * @param request CreateNatGatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateNatGatewayResponse
+     */
     public CreateNatGatewayResponse createNatGatewayWithOptions(CreateNatGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4034,11 +4715,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNatGatewayResponse());
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   When you create an enhanced NAT gateway for the first time, the system automatically creates the service-linked role AliyunServiceRoleForNatgw. Then, the system attaches the permission policy AliyunServiceRolePolicyForNatgw to the role. This allows the NAT gateway to access other resources on Alibaba Cloud. For more information, see [Service-linked roles](~~174251~~).
+      * *   After you create an enhanced Internet NAT gateway, a route entry is automatically added to the route table of the VPC. The destination CIDR block of the route entry is 0.0.0.0/0 and the next hop is the NAT gateway. This ensures that traffic is routed to the NAT gateway.
+      * *   **CreateNatGateway** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeNatGateways](~~36054~~) operation to query the status of a NAT gateway.
+      *     *   If a NAT gateway is in the **Creating** state, the NAT gateway is being created. In this case, you can query the NAT gateway but cannot perform other operations.
+      *     *   If a NAT gateway is in the **Available** state, the NAT gateway is created.
+      *         It takes 1 to 3 minutes to create a NAT gateway.
+      * *   You cannot repeatedly call the **CreateNatGateway** operation to create a VPC NAT gateway or an Internet NAT gateway within the specified period of time.
+      *
+      * @param request CreateNatGatewayRequest
+      * @return CreateNatGatewayResponse
+     */
     public CreateNatGatewayResponse createNatGateway(CreateNatGatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNatGatewayWithOptions(request, runtime);
     }
 
+    /**
+      * **CreateNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT IP address is not created. The system creates the NAT IP address in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of a NAT IP address.
+      * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address but cannot perform other operations.
+      * *   If a NAT IP address is in the **Available** state, the NAT IP address is created.
+      * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within the specified period of time.
+      *
+      * @param request CreateNatIpRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateNatIpResponse
+     */
     public CreateNatIpResponse createNatIpWithOptions(CreateNatIpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4115,11 +4819,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNatIpResponse());
     }
 
+    /**
+      * **CreateNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT IP address is not created. The system creates the NAT IP address in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of a NAT IP address.
+      * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address but cannot perform other operations.
+      * *   If a NAT IP address is in the **Available** state, the NAT IP address is created.
+      * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within the specified period of time.
+      *
+      * @param request CreateNatIpRequest
+      * @return CreateNatIpResponse
+     */
     public CreateNatIpResponse createNatIp(CreateNatIpRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNatIpWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **CreateNatIpCidr** operation to create a NAT CIDR block within the specified period of time.
+      *
+      * @param request CreateNatIpCidrRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateNatIpCidrResponse
+     */
     public CreateNatIpCidrResponse createNatIpCidrWithOptions(CreateNatIpCidrRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4188,6 +4908,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNatIpCidrResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **CreateNatIpCidr** operation to create a NAT CIDR block within the specified period of time.
+      *
+      * @param request CreateNatIpCidrRequest
+      * @return CreateNatIpCidrResponse
+     */
     public CreateNatIpCidrResponse createNatIpCidr(CreateNatIpCidrRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNatIpCidrWithOptions(request, runtime);
@@ -4254,6 +4980,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createNetworkAclWithOptions(request, runtime);
     }
 
+    /**
+      * You can apply for a dedicated Express Connect circuit for yourself or create a hosted connection for a tenant. After your application is approved, the Express Connect circuit changes to the **Initial** state. You can contact the connectivity provider to start construction.
+      * When you call this operation, take note of the following limits:
+      * *   If your Alibaba Cloud account has more than five Express Connect circuits that are not in the **Enabled** state, you cannot apply for another Express Connect circuit.
+      * *   If your Alibaba Cloud account has an Express Connect circuit with overdue payments, you cannot apply for another Express Connect circuit.
+      *
+      * @param request CreatePhysicalConnectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreatePhysicalConnectionResponse
+     */
     public CreatePhysicalConnectionResponse createPhysicalConnectionWithOptions(CreatePhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4321,6 +5057,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("Type", request.type);
         }
@@ -4346,11 +5086,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePhysicalConnectionResponse());
     }
 
+    /**
+      * You can apply for a dedicated Express Connect circuit for yourself or create a hosted connection for a tenant. After your application is approved, the Express Connect circuit changes to the **Initial** state. You can contact the connectivity provider to start construction.
+      * When you call this operation, take note of the following limits:
+      * *   If your Alibaba Cloud account has more than five Express Connect circuits that are not in the **Enabled** state, you cannot apply for another Express Connect circuit.
+      * *   If your Alibaba Cloud account has an Express Connect circuit with overdue payments, you cannot apply for another Express Connect circuit.
+      *
+      * @param request CreatePhysicalConnectionRequest
+      * @return CreatePhysicalConnectionResponse
+     */
     public CreatePhysicalConnectionResponse createPhysicalConnection(CreatePhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPhysicalConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation only when the Express Connect circuit is in the **Complete** state.
+      *
+      * @param request CreatePhysicalConnectionOccupancyOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreatePhysicalConnectionOccupancyOrderResponse
+     */
     public CreatePhysicalConnectionOccupancyOrderResponse createPhysicalConnectionOccupancyOrderWithOptions(CreatePhysicalConnectionOccupancyOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4415,6 +5171,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePhysicalConnectionOccupancyOrderResponse());
     }
 
+    /**
+      * >  You can call this operation only when the Express Connect circuit is in the **Complete** state.
+      *
+      * @param request CreatePhysicalConnectionOccupancyOrderRequest
+      * @return CreatePhysicalConnectionOccupancyOrderResponse
+     */
     public CreatePhysicalConnectionOccupancyOrderResponse createPhysicalConnectionOccupancyOrder(CreatePhysicalConnectionOccupancyOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPhysicalConnectionOccupancyOrderWithOptions(request, runtime);
@@ -4493,6 +5255,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createPhysicalConnectionSetupOrderWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * By default, the IP address pool feature is unavailable. You can apply for the privilege to use the **IP address pool feature** on the Quota Center page. For more information, see [Request a quota increase in the Quota Center console](~~108213~~).
+      *
+      * @param request CreatePublicIpAddressPoolRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreatePublicIpAddressPoolResponse
+     */
     public CreatePublicIpAddressPoolResponse createPublicIpAddressPoolWithOptions(CreatePublicIpAddressPoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4557,11 +5327,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePublicIpAddressPoolResponse());
     }
 
+    /**
+      * ## Limits
+      * By default, the IP address pool feature is unavailable. You can apply for the privilege to use the **IP address pool feature** on the Quota Center page. For more information, see [Request a quota increase in the Quota Center console](~~108213~~).
+      *
+      * @param request CreatePublicIpAddressPoolRequest
+      * @return CreatePublicIpAddressPoolResponse
+     */
     public CreatePublicIpAddressPoolResponse createPublicIpAddressPool(CreatePublicIpAddressPoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPublicIpAddressPoolWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateRouteEntries** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry:
+      *     *   If the route entry is in the **Creating** state, the route entry is being created.
+      *     *   If the route entry is in the **Created** state, the route entry is created.
+      * *   You cannot repeatedly call the **CreateRouteEntries** operation to create the same route entry within the specified period of time.
+      * **When you call this operation to add custom route entries to the route table of a vRouter, take note of the following items:**
+      * *   A route table can contain up to 200 custom route entries.
+      * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+      * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or its subnets.
+      * *   The destination CIDR blocks (**DstCidrBlock**) of route entries in the same route table must be unique.
+      * *   If you do not include the mask length when you specify the destination CIDR block (**DstCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
+      * *   Multiple custom route entries can point to the same next hop (**NextHop**).
+      * *   The next hop (**NextHop**) of a custom route entry must belong to the same VPC as the route table.
+      *
+      * @param request CreateRouteEntriesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRouteEntriesResponse
+     */
     public CreateRouteEntriesResponse createRouteEntriesWithOptions(CreateRouteEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4610,11 +5405,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRouteEntriesResponse());
     }
 
+    /**
+      * *   **CreateRouteEntries** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry:
+      *     *   If the route entry is in the **Creating** state, the route entry is being created.
+      *     *   If the route entry is in the **Created** state, the route entry is created.
+      * *   You cannot repeatedly call the **CreateRouteEntries** operation to create the same route entry within the specified period of time.
+      * **When you call this operation to add custom route entries to the route table of a vRouter, take note of the following items:**
+      * *   A route table can contain up to 200 custom route entries.
+      * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+      * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or its subnets.
+      * *   The destination CIDR blocks (**DstCidrBlock**) of route entries in the same route table must be unique.
+      * *   If you do not include the mask length when you specify the destination CIDR block (**DstCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
+      * *   Multiple custom route entries can point to the same next hop (**NextHop**).
+      * *   The next hop (**NextHop**) of a custom route entry must belong to the same VPC as the route table.
+      *
+      * @param request CreateRouteEntriesRequest
+      * @return CreateRouteEntriesResponse
+     */
     public CreateRouteEntriesResponse createRouteEntries(CreateRouteEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRouteEntriesWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
+      *     *   If the route entry is in the **Creating** state, the route entry is being created.
+      *     *   If the route entry is in the **Created** state, the route entry is created.
+      * *   You cannot repeatedly call the **CreateRouteEntry** operation to add a custom route entry to the route table of a vRouter or a VBR within the specified period of time.
+      * **When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following limits:**
+      * *   A route table can contain up to 200 custom route entries.
+      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
+      * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
+      * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
+      * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
+      * *   The next hop (**NextHopId**) of a custom route entry must belong to the same VPC as the route table.
+      * *   Equal-cost multi-path (ECMP) routing can be configured by specifying the **NextHopList** parameter.
+      *     *   When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you must not specify **NextHopList**.
+      *     *   When you add route entries for ECMP routing, you must specify **DestinationCidrBlock** and **NextHopList**, and you must not specify **NextHopType** or **NextHopId**.
+      * **When you call this operation to add a custom route entry to the route table of a VBR, take note of the following limits:**
+      * *   A route table can contain up to 200 custom route entries.
+      * *   The **NextHopList** parameter is not supported.
+      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
+      * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
+      * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
+      * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
+      * *   The next hop (**NextHopId**) of a custom route entry must be a router interface associated with the VBR.
+      * *   You can add route entries only when the VBR is in the **Active** state, and the Express Connect circuit associated with the VBR is in the **Enabled** state and is not locked due to overdue payments.
+      * *   Only non-ECMP route entries are supported. When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you cannot specify **NextHopList**.
+      *
+      * @param request CreateRouteEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRouteEntryResponse
+     */
     public CreateRouteEntryResponse createRouteEntryWithOptions(CreateRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4687,11 +5530,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRouteEntryResponse());
     }
 
+    /**
+      * *   **CreateRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
+      *     *   If the route entry is in the **Creating** state, the route entry is being created.
+      *     *   If the route entry is in the **Created** state, the route entry is created.
+      * *   You cannot repeatedly call the **CreateRouteEntry** operation to add a custom route entry to the route table of a vRouter or a VBR within the specified period of time.
+      * **When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following limits:**
+      * *   A route table can contain up to 200 custom route entries.
+      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
+      * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
+      * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
+      * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
+      * *   The next hop (**NextHopId**) of a custom route entry must belong to the same VPC as the route table.
+      * *   Equal-cost multi-path (ECMP) routing can be configured by specifying the **NextHopList** parameter.
+      *     *   When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you must not specify **NextHopList**.
+      *     *   When you add route entries for ECMP routing, you must specify **DestinationCidrBlock** and **NextHopList**, and you must not specify **NextHopType** or **NextHopId**.
+      * **When you call this operation to add a custom route entry to the route table of a VBR, take note of the following limits:**
+      * *   A route table can contain up to 200 custom route entries.
+      * *   The **NextHopList** parameter is not supported.
+      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
+      * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
+      * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
+      * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
+      * *   The next hop (**NextHopId**) of a custom route entry must be a router interface associated with the VBR.
+      * *   You can add route entries only when the VBR is in the **Active** state, and the Express Connect circuit associated with the VBR is in the **Enabled** state and is not locked due to overdue payments.
+      * *   Only non-ECMP route entries are supported. When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you cannot specify **NextHopList**.
+      *
+      * @param request CreateRouteEntryRequest
+      * @return CreateRouteEntryResponse
+     */
     public CreateRouteEntryResponse createRouteEntry(CreateRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRouteEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **CreateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of a custom route table:
+      *     *   If the custom route table is in the **Creating** state, the custom route table is being created.
+      *     *   If the custom route table is in the **Created** state, the custom route table is created.
+      * *   You cannot repeatedly call the **CreateRouteTable** operation to create a custom route table within the specified period of time.
+      *
+      * @param request CreateRouteTableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRouteTableResponse
+     */
     public CreateRouteTableResponse createRouteTableWithOptions(CreateRouteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4756,11 +5639,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRouteTableResponse());
     }
 
+    /**
+      * *   The **CreateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of a custom route table:
+      *     *   If the custom route table is in the **Creating** state, the custom route table is being created.
+      *     *   If the custom route table is in the **Created** state, the custom route table is created.
+      * *   You cannot repeatedly call the **CreateRouteTable** operation to create a custom route table within the specified period of time.
+      *
+      * @param request CreateRouteTableRequest
+      * @return CreateRouteTableResponse
+     */
     public CreateRouteTableResponse createRouteTable(CreateRouteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRouteTableWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   You can create only one pair of interfaces to be connected between two routers.
+      * *   You can create a maximum of five router interfaces for a router.
+      * *   If your Alibaba Cloud account has a router interface with overdue payments, you cannot create new router interfaces.
+      * *   Each destination CIDR block of route entries in the same route table must be unique.
+      * *   A virtual border router (VBR) can serve only as a requester. The VBR must be in the Activated state.
+      * *   You can call this operation to create subscription and pay-as-you-go router interfaces.
+      *
+      * @param request CreateRouterInterfaceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRouterInterfaceResponse
+     */
     public CreateRouterInterfaceResponse createRouterInterfaceWithOptions(CreateRouterInterfaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4889,11 +5794,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRouterInterfaceResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   You can create only one pair of interfaces to be connected between two routers.
+      * *   You can create a maximum of five router interfaces for a router.
+      * *   If your Alibaba Cloud account has a router interface with overdue payments, you cannot create new router interfaces.
+      * *   Each destination CIDR block of route entries in the same route table must be unique.
+      * *   A virtual border router (VBR) can serve only as a requester. The VBR must be in the Activated state.
+      * *   You can call this operation to create subscription and pay-as-you-go router interfaces.
+      *
+      * @param request CreateRouterInterfaceRequest
+      * @return CreateRouterInterfaceResponse
+     */
     public CreateRouterInterfaceResponse createRouterInterface(CreateRouterInterfaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRouterInterfaceWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a NAT gateway refers to both gateway types.
+      * Before you call this operation, take note of the following limits:
+      * *   **CreateSnatEntry** is an asynchronous operation. After you make a request, an SNAT entry ID is returned but the specified SNAT entry is not added. The system adds the entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the SNAT entry.
+      *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+      *     *   If the SNAT entry is in the **Available** state, the SNAT entry is added.
+      * *   You cannot repeatedly call the **CreateSnatEntry** operation to add an SNAT entry to an SNAT table within the specified period of time.
+      * *   The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the virtual private cloud (VPC) where the NAT gateway is deployed.
+      * *   Each vSwitch or ECS instance can be specified in only one SNAT entry.
+      * *   If a high-availability virtual IP address (HAVIP) exists in a vSwitch, you cannot create SNAT entries.
+      *
+      * @param request CreateSnatEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateSnatEntryResponse
+     */
     public CreateSnatEntryResponse createSnatEntryWithOptions(CreateSnatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4962,6 +5894,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSnatEntryResponse());
     }
 
+    /**
+      * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a NAT gateway refers to both gateway types.
+      * Before you call this operation, take note of the following limits:
+      * *   **CreateSnatEntry** is an asynchronous operation. After you make a request, an SNAT entry ID is returned but the specified SNAT entry is not added. The system adds the entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the SNAT entry.
+      *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+      *     *   If the SNAT entry is in the **Available** state, the SNAT entry is added.
+      * *   You cannot repeatedly call the **CreateSnatEntry** operation to add an SNAT entry to an SNAT table within the specified period of time.
+      * *   The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the virtual private cloud (VPC) where the NAT gateway is deployed.
+      * *   Each vSwitch or ECS instance can be specified in only one SNAT entry.
+      * *   If a high-availability virtual IP address (HAVIP) exists in a vSwitch, you cannot create SNAT entries.
+      *
+      * @param request CreateSnatEntryRequest
+      * @return CreateSnatEntryResponse
+     */
     public CreateSnatEntryResponse createSnatEntry(CreateSnatEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSnatEntryWithOptions(request, runtime);
@@ -5024,6 +5970,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSslVpnClientCertWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **CreateSslVpnServer** operation is asynchronous. After you send the request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the associated VPN gateway and determine whether the SSL server is created.
+      *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
+      *     *   If the VPN gateway is in the **active** state, the SSL server is created.
+      * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
+      *
+      * @param request CreateSslVpnServerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateSslVpnServerResponse
+     */
     public CreateSslVpnServerResponse createSslVpnServerWithOptions(CreateSslVpnServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5112,11 +6068,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSslVpnServerResponse());
     }
 
+    /**
+      * *   The **CreateSslVpnServer** operation is asynchronous. After you send the request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the associated VPN gateway and determine whether the SSL server is created.
+      *     *   If the VPN gateway is in the **updating** state, the SSL server is being created.
+      *     *   If the VPN gateway is in the **active** state, the SSL server is created.
+      * *   You cannot repeatedly call the **CreateSslVpnServer** operation for the same VPN gateway within the specified period of time.
+      *
+      * @param request CreateSslVpnServerRequest
+      * @return CreateSslVpnServerResponse
+     */
     public CreateSslVpnServerResponse createSslVpnServer(CreateSslVpnServerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSslVpnServerWithOptions(request, runtime);
     }
 
+    /**
+      * **CreateTrafficMirrorFilter** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of a filter.
+      * *   If the filter is in the **Creating** state, the filter is being created.
+      * *   If the filter is in the **Created** state, the filter is created.
+      *
+      * @param request CreateTrafficMirrorFilterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateTrafficMirrorFilterResponse
+     */
     public CreateTrafficMirrorFilterResponse createTrafficMirrorFilterWithOptions(CreateTrafficMirrorFilterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5185,11 +6159,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTrafficMirrorFilterResponse());
     }
 
+    /**
+      * **CreateTrafficMirrorFilter** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of a filter.
+      * *   If the filter is in the **Creating** state, the filter is being created.
+      * *   If the filter is in the **Created** state, the filter is created.
+      *
+      * @param request CreateTrafficMirrorFilterRequest
+      * @return CreateTrafficMirrorFilterResponse
+     */
     public CreateTrafficMirrorFilterResponse createTrafficMirrorFilter(CreateTrafficMirrorFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTrafficMirrorFilterWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **CreateTrafficMirrorFilterRules** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
+      *     *   If the rule is in the **Creating** state, the rule is being created.
+      *     *   If the rule is in the **Created** state, the rule is created.
+      * *   You cannot repeatedly call the **CreateTrafficMirrorFilterRules** operation to create an inbound or outbound rule for a traffic mirroring filter.
+      *
+      * @param request CreateTrafficMirrorFilterRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateTrafficMirrorFilterRulesResponse
+     */
     public CreateTrafficMirrorFilterRulesResponse createTrafficMirrorFilterRulesWithOptions(CreateTrafficMirrorFilterRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5250,11 +6242,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTrafficMirrorFilterRulesResponse());
     }
 
+    /**
+      * *   The **CreateTrafficMirrorFilterRules** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
+      *     *   If the rule is in the **Creating** state, the rule is being created.
+      *     *   If the rule is in the **Created** state, the rule is created.
+      * *   You cannot repeatedly call the **CreateTrafficMirrorFilterRules** operation to create an inbound or outbound rule for a traffic mirroring filter.
+      *
+      * @param request CreateTrafficMirrorFilterRulesRequest
+      * @return CreateTrafficMirrorFilterRulesResponse
+     */
     public CreateTrafficMirrorFilterRulesResponse createTrafficMirrorFilterRules(CreateTrafficMirrorFilterRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTrafficMirrorFilterRulesWithOptions(request, runtime);
     }
 
+    /**
+      * **CreateTrafficMirrorSession** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session:
+      * *   If the traffic mirror session is in the **Creating** state, the traffic mirror session is being created.
+      * *   If the traffic mirror session is in the **Created** state, the traffic mirror session is created.
+      *
+      * @param request CreateTrafficMirrorSessionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateTrafficMirrorSessionResponse
+     */
     public CreateTrafficMirrorSessionResponse createTrafficMirrorSessionWithOptions(CreateTrafficMirrorSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5347,11 +6357,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTrafficMirrorSessionResponse());
     }
 
+    /**
+      * **CreateTrafficMirrorSession** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session:
+      * *   If the traffic mirror session is in the **Creating** state, the traffic mirror session is being created.
+      * *   If the traffic mirror session is in the **Created** state, the traffic mirror session is created.
+      *
+      * @param request CreateTrafficMirrorSessionRequest
+      * @return CreateTrafficMirrorSessionResponse
+     */
     public CreateTrafficMirrorSessionResponse createTrafficMirrorSession(CreateTrafficMirrorSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createTrafficMirrorSessionWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   You can create at most 150 vSwitches in a virtual private cloud (VPC).
+      * *   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+      * *   The number of instances in a vSwitch cannot exceed the remaining capacity of the VPC. The remaining capacity is the difference between 15,000 and the current number of instances.
+      * *   Each instance can belong to only one vSwitch.
+      * *   vSwitches do not support multicast or broadcast.
+      * *   After you create a vSwitch, you cannot modify its CIDR block.
+      * *   The **CreateVSwitch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
+      *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+      * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
+      *
+      * @param request CreateVSwitchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVSwitchResponse
+     */
     public CreateVSwitchResponse createVSwitchWithOptions(CreateVSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5424,6 +6459,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVSwitchResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   You can create at most 150 vSwitches in a virtual private cloud (VPC).
+      * *   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+      * *   The number of instances in a vSwitch cannot exceed the remaining capacity of the VPC. The remaining capacity is the difference between 15,000 and the current number of instances.
+      * *   Each instance can belong to only one vSwitch.
+      * *   vSwitches do not support multicast or broadcast.
+      * *   After you create a vSwitch, you cannot modify its CIDR block.
+      * *   The **CreateVSwitch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
+      *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+      * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
+      *
+      * @param request CreateVSwitchRequest
+      * @return CreateVSwitchResponse
+     */
     public CreateVSwitchResponse createVSwitch(CreateVSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVSwitchWithOptions(request, runtime);
@@ -5498,6 +6549,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createVbrHaWithOptions(request, runtime);
     }
 
+    /**
+      * *   You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.
+      * *   When you create a destination-based route for an IPsec-VPN connection, do not create a route that meets the following conditions: The destination CIDR block is 100.64.0.0/10 or one of its subnets. The next hop is the IPsec-VPN connection. Such a route results in one of the following errors: The status of the IPsec-VPN connection cannot be displayed in the console. The negotiations of the IPsec-VPN connection fail.
+      * *   **CreateVcoRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of a route based on the status of the associated IPsec-VPN connection.
+      *     *   If the IPsec-VPN connection is in the **updating** state, the route is being created.
+      *     *   If the IPsec-VPN connection is in the **attached** state, the route is created.
+      * *   You cannot repeatedly call **CreateVcoRouteEntry** to create a route for the same IPsec-VPN connection within the specified period of time.
+      *
+      * @param request CreateVcoRouteEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVcoRouteEntryResponse
+     */
     public CreateVcoRouteEntryResponse createVcoRouteEntryWithOptions(CreateVcoRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5562,11 +6625,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVcoRouteEntryResponse());
     }
 
+    /**
+      * *   You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.
+      * *   When you create a destination-based route for an IPsec-VPN connection, do not create a route that meets the following conditions: The destination CIDR block is 100.64.0.0/10 or one of its subnets. The next hop is the IPsec-VPN connection. Such a route results in one of the following errors: The status of the IPsec-VPN connection cannot be displayed in the console. The negotiations of the IPsec-VPN connection fail.
+      * *   **CreateVcoRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of a route based on the status of the associated IPsec-VPN connection.
+      *     *   If the IPsec-VPN connection is in the **updating** state, the route is being created.
+      *     *   If the IPsec-VPN connection is in the **attached** state, the route is created.
+      * *   You cannot repeatedly call **CreateVcoRouteEntry** to create a route for the same IPsec-VPN connection within the specified period of time.
+      *
+      * @param request CreateVcoRouteEntryRequest
+      * @return CreateVcoRouteEntryResponse
+     */
     public CreateVcoRouteEntryResponse createVcoRouteEntry(CreateVcoRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVcoRouteEntryWithOptions(request, runtime);
     }
 
+    /**
+      * When you create a VBR, the VBR is in the **Enabled** state by default.
+      *
+      * @param request CreateVirtualBorderRouterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVirtualBorderRouterResponse
+     */
     public CreateVirtualBorderRouterResponse createVirtualBorderRouterWithOptions(CreateVirtualBorderRouterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5671,11 +6752,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVirtualBorderRouterResponse());
     }
 
+    /**
+      * When you create a VBR, the VBR is in the **Enabled** state by default.
+      *
+      * @param request CreateVirtualBorderRouterRequest
+      * @return CreateVirtualBorderRouterResponse
+     */
     public CreateVirtualBorderRouterResponse createVirtualBorderRouter(CreateVirtualBorderRouterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVirtualBorderRouterWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this API operation, familiarize yourself with the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview](~~146571~~) and [Operation guide for Express Connect partners](~~155987~~).
+      *
+      * @param request CreateVirtualPhysicalConnectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVirtualPhysicalConnectionResponse
+     */
     public CreateVirtualPhysicalConnectionResponse createVirtualPhysicalConnectionWithOptions(CreateVirtualPhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5711,6 +6805,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Spec", request.spec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.token)) {
             query.put("Token", request.token);
         }
@@ -5740,11 +6838,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVirtualPhysicalConnectionResponse());
     }
 
+    /**
+      * Before you call this API operation, familiarize yourself with the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview](~~146571~~) and [Operation guide for Express Connect partners](~~155987~~).
+      *
+      * @param request CreateVirtualPhysicalConnectionRequest
+      * @return CreateVirtualPhysicalConnectionResponse
+     */
     public CreateVirtualPhysicalConnectionResponse createVirtualPhysicalConnection(CreateVirtualPhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVirtualPhysicalConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following rules:
+      * *   You can specify only one CIDR block for each VPC.
+      * *   After you create a VPC, you cannot change its CIDR block. However, you can add secondary IPv4 CIDR blocks to the VPC.
+      * *   In each VPC, cloud services can use a maximum of 60,000 private IP addresses. You cannot increase the quota.
+      * *   After you create a VPC, a vRouter and a route table are automatically created.
+      * *   At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.
+      * *   The **CreateVpc** operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a VPC:
+      *     *   If the VPC is in the **Creating** state, the VPC is being created.
+      *     *   If the VPC is in the **Created** state, the VPC is created.
+      * *   You cannot repeatedly call the **CreateVpc** operation to create default VPCs within the specified period of time. However, you can repeatedly call this operation to create custom VPCs within the specified period of time.
+      *
+      * @param request CreateVpcRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpcResponse
+     */
     public CreateVpcResponse createVpcWithOptions(CreateVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5825,11 +6945,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following rules:
+      * *   You can specify only one CIDR block for each VPC.
+      * *   After you create a VPC, you cannot change its CIDR block. However, you can add secondary IPv4 CIDR blocks to the VPC.
+      * *   In each VPC, cloud services can use a maximum of 60,000 private IP addresses. You cannot increase the quota.
+      * *   After you create a VPC, a vRouter and a route table are automatically created.
+      * *   At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.
+      * *   The **CreateVpc** operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a VPC:
+      *     *   If the VPC is in the **Creating** state, the VPC is being created.
+      *     *   If the VPC is in the **Created** state, the VPC is created.
+      * *   You cannot repeatedly call the **CreateVpc** operation to create default VPCs within the specified period of time. However, you can repeatedly call this operation to create custom VPCs within the specified period of time.
+      *
+      * @param request CreateVpcRequest
+      * @return CreateVpcResponse
+     */
     public CreateVpcResponse createVpc(CreateVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpcWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After you send a request, the system returns an **EndpointId** and runs the task in the background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of a gateway endpoint.
+      *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+      *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+      * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
+      *
+      * @param request CreateVpcGatewayEndpointRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpcGatewayEndpointResponse
+     */
     public CreateVpcGatewayEndpointResponse createVpcGatewayEndpointWithOptions(CreateVpcGatewayEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5865,6 +7010,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -5898,11 +7047,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcGatewayEndpointResponse());
     }
 
+    /**
+      * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After you send a request, the system returns an **EndpointId** and runs the task in the background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of a gateway endpoint.
+      *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+      *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+      * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
+      *
+      * @param request CreateVpcGatewayEndpointRequest
+      * @return CreateVpcGatewayEndpointResponse
+     */
     public CreateVpcGatewayEndpointResponse createVpcGatewayEndpoint(CreateVpcGatewayEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpcGatewayEndpointWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **CreateVpcPrefixList** operation to create a prefix list in a region within the specified period of time.
+      *
+      * @param request CreateVpcPrefixListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpcPrefixListResponse
+     */
     public CreateVpcPrefixListResponse createVpcPrefixListWithOptions(CreateVpcPrefixListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5975,11 +7140,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcPrefixListResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **CreateVpcPrefixList** operation to create a prefix list in a region within the specified period of time.
+      *
+      * @param request CreateVpcPrefixListRequest
+      * @return CreateVpcPrefixListResponse
+     */
     public CreateVpcPrefixListResponse createVpcPrefixList(CreateVpcPrefixListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpcPrefixListWithOptions(request, runtime);
     }
 
+    /**
+      * If an Express Connect partner has created a virtual border router (VBR) for a tenant before, the Express Connect partner can push the Express Connect circuit that is associated with the VBR to the tenant account by adding a shared port for the tenant account. The service of the tenant is not interrupted in this process.
+      * Preparations:
+      * Before the Express Connect partner performs the operation, the Express Connect partner must notify the tenant and request the tenant to enable outbound data transfer billing. For more information, see [Enable outbound data transfer billing](~~274385~~).
+      * What to do next:
+      * 1\\. After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
+      * 2\\. Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
+      *
+      * @param request CreateVpconnFromVbrRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpconnFromVbrResponse
+     */
     public CreateVpconnFromVbrResponse createVpconnFromVbrWithOptions(CreateVpconnFromVbrRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6020,11 +7203,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpconnFromVbrResponse());
     }
 
+    /**
+      * If an Express Connect partner has created a virtual border router (VBR) for a tenant before, the Express Connect partner can push the Express Connect circuit that is associated with the VBR to the tenant account by adding a shared port for the tenant account. The service of the tenant is not interrupted in this process.
+      * Preparations:
+      * Before the Express Connect partner performs the operation, the Express Connect partner must notify the tenant and request the tenant to enable outbound data transfer billing. For more information, see [Enable outbound data transfer billing](~~274385~~).
+      * What to do next:
+      * 1\\. After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
+      * 2\\. Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
+      *
+      * @param request CreateVpconnFromVbrRequest
+      * @return CreateVpconnFromVbrResponse
+     */
     public CreateVpconnFromVbrResponse createVpconnFromVbr(CreateVpconnFromVbrRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpconnFromVbrWithOptions(request, runtime);
     }
 
+    /**
+      * By default, an IPsec-VPN connection created by calling the `CreateVpnAttachment` operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the [CreateTransitRouterVpnAttachment](~~443993~~) operation.
+      * ## Prerequisites
+      * Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see [CreateCustomerGateway](/help/en/vpn-gateway/latest/createcustomergateway). 
+      * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.
+      *
+      * @param request CreateVpnAttachmentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpnAttachmentResponse
+     */
     public CreateVpnAttachmentResponse createVpnAttachmentWithOptions(CreateVpnAttachmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6125,11 +7329,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpnAttachmentResponse());
     }
 
+    /**
+      * By default, an IPsec-VPN connection created by calling the `CreateVpnAttachment` operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the [CreateTransitRouterVpnAttachment](~~443993~~) operation.
+      * ## Prerequisites
+      * Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see [CreateCustomerGateway](/help/en/vpn-gateway/latest/createcustomergateway). 
+      * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.
+      *
+      * @param request CreateVpnAttachmentRequest
+      * @return CreateVpnAttachmentResponse
+     */
     public CreateVpnAttachmentResponse createVpnAttachment(CreateVpnAttachmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpnAttachmentWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateVpnConnection** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being created.
+      *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection has been created.
+      * *   You cannot repeatedly call **CreateVpnConnection** to create an IPsec-VPN connection on a VPN gateway within the specified period of time.
+      *
+      * @param request CreateVpnConnectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpnConnectionResponse
+     */
     public CreateVpnConnectionResponse createVpnConnectionWithOptions(CreateVpnConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6234,11 +7457,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpnConnectionResponse());
     }
 
+    /**
+      * *   **CreateVpnConnection** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being created.
+      *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection has been created.
+      * *   You cannot repeatedly call **CreateVpnConnection** to create an IPsec-VPN connection on a VPN gateway within the specified period of time.
+      *
+      * @param request CreateVpnConnectionRequest
+      * @return CreateVpnConnectionResponse
+     */
     public CreateVpnConnectionResponse createVpnConnection(CreateVpnConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpnConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * *   Before you create a VPN gateway, we recommend that you understand its limits. For more information, see [Limits on VPN gateways](~~65290~~).
+      * *   The **CreateVpnGateway** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **provisioning** state, the VPN gateway is being created.
+      *     *   If the VPN gateway is in the **active** state, the VPN gateway is created.
+      *
+      * @param request CreateVpnGatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpnGatewayResponse
+     */
     public CreateVpnGatewayResponse createVpnGatewayWithOptions(CreateVpnGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6331,11 +7573,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpnGatewayResponse());
     }
 
+    /**
+      * *   Before you create a VPN gateway, we recommend that you understand its limits. For more information, see [Limits on VPN gateways](~~65290~~).
+      * *   The **CreateVpnGateway** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **provisioning** state, the VPN gateway is being created.
+      *     *   If the VPN gateway is in the **active** state, the VPN gateway is created.
+      *
+      * @param request CreateVpnGatewayRequest
+      * @return CreateVpnGatewayResponse
+     */
     public CreateVpnGatewayResponse createVpnGateway(CreateVpnGatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpnGatewayWithOptions(request, runtime);
     }
 
+    /**
+      * *   Before you call this operation, we recommend that you learn about the match rules of policy-based routes and limits on policy-based routes. For more information, see [Work with policy-based routes](~~110777~~).
+      * *   Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see [CreateVpnConnection](~~120391~~).
+      * *   **CreateVpnPbrRouteEntry** is an asynchronous operation. After you send the request, the route information is returned but the operation is still being performed in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the policy-based route entry is being created.
+      *     *   If a VPN gateway is in the **active** state, the policy-based route entry is created.
+      * *   You cannot repeatedly call **CreateVpnPbrRouteEntry** to create a policy-based route for a VPN gateway within the specified period of time.
+      *
+      * @param request CreateVpnPbrRouteEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpnPbrRouteEntryResponse
+     */
     public CreateVpnPbrRouteEntryResponse createVpnPbrRouteEntryWithOptions(CreateVpnPbrRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6416,11 +7679,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpnPbrRouteEntryResponse());
     }
 
+    /**
+      * *   Before you call this operation, we recommend that you learn about the match rules of policy-based routes and limits on policy-based routes. For more information, see [Work with policy-based routes](~~110777~~).
+      * *   Before you create a policy-based route, make sure that an IPsec-VPN connection is created. For more information, see [CreateVpnConnection](~~120391~~).
+      * *   **CreateVpnPbrRouteEntry** is an asynchronous operation. After you send the request, the route information is returned but the operation is still being performed in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the policy-based route entry is being created.
+      *     *   If a VPN gateway is in the **active** state, the policy-based route entry is created.
+      * *   You cannot repeatedly call **CreateVpnPbrRouteEntry** to create a policy-based route for a VPN gateway within the specified period of time.
+      *
+      * @param request CreateVpnPbrRouteEntryRequest
+      * @return CreateVpnPbrRouteEntryResponse
+     */
     public CreateVpnPbrRouteEntryResponse createVpnPbrRouteEntry(CreateVpnPbrRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpnPbrRouteEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateVpnRouteEntry** is an asynchronous operation. After you call the operation, the route configurations are returned but the operation is still being performed in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a destination-based route entry.
+      *     *   If a VPN gateway is in the **updating** state, the destination-based route entry is being created.
+      *     *   If a VPN gateway is in the **active** state, the destination-based route entry has been created.
+      * *   You cannot repeatedly call **CreateVpnRouteEntry** to create a destination-based route entry for a VPN gateway within the specified period of time.
+      *
+      * @param request CreateVpnRouteEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpnRouteEntryResponse
+     */
     public CreateVpnRouteEntryResponse createVpnRouteEntryWithOptions(CreateVpnRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6493,6 +7777,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpnRouteEntryResponse());
     }
 
+    /**
+      * *   **CreateVpnRouteEntry** is an asynchronous operation. After you call the operation, the route configurations are returned but the operation is still being performed in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a destination-based route entry.
+      *     *   If a VPN gateway is in the **updating** state, the destination-based route entry is being created.
+      *     *   If a VPN gateway is in the **active** state, the destination-based route entry has been created.
+      * *   You cannot repeatedly call **CreateVpnRouteEntry** to create a destination-based route entry for a VPN gateway within the specified period of time.
+      *
+      * @param request CreateVpnRouteEntryRequest
+      * @return CreateVpnRouteEntryResponse
+     */
     public CreateVpnRouteEntryResponse createVpnRouteEntry(CreateVpnRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createVpnRouteEntryWithOptions(request, runtime);
@@ -6543,6 +7836,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deactivateRouterInterfaceWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeactiveFlowLog** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      *     *   If the flow log is in the **Deactivating** state, the flow log is being disabled.
+      *     *   If the flow log is in the **Inactive** state, the flow log is disabled.
+      * *   You cannot repeatedly call the **DeactiveFlowLog** operation to disable a flow log within the specified period of time.
+      *
+      * @param request DeactiveFlowLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeactiveFlowLogResponse
+     */
     public DeactiveFlowLogResponse deactiveFlowLogWithOptions(DeactiveFlowLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6587,6 +7890,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeactiveFlowLogResponse());
     }
 
+    /**
+      * *   The **DeactiveFlowLog** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      *     *   If the flow log is in the **Deactivating** state, the flow log is being disabled.
+      *     *   If the flow log is in the **Inactive** state, the flow log is disabled.
+      * *   You cannot repeatedly call the **DeactiveFlowLog** operation to disable a flow log within the specified period of time.
+      *
+      * @param request DeactiveFlowLogRequest
+      * @return DeactiveFlowLogResponse
+     */
     public DeactiveFlowLogResponse deactiveFlowLog(DeactiveFlowLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deactiveFlowLogWithOptions(request, runtime);
@@ -6755,6 +8067,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteBgpPeerWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an EIP bandwidth plan within the specified period of time.
+      *
+      * @param request DeleteCommonBandwidthPackageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteCommonBandwidthPackageResponse
+     */
     public DeleteCommonBandwidthPackageResponse deleteCommonBandwidthPackageWithOptions(DeleteCommonBandwidthPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6803,6 +8122,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCommonBandwidthPackageResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an EIP bandwidth plan within the specified period of time.
+      *
+      * @param request DeleteCommonBandwidthPackageRequest
+      * @return DeleteCommonBandwidthPackageResponse
+     */
     public DeleteCommonBandwidthPackageResponse deleteCommonBandwidthPackage(DeleteCommonBandwidthPackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCommonBandwidthPackageWithOptions(request, runtime);
@@ -6861,6 +8186,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteCustomerGatewayWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteDhcpOptionsSet** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of a DHCP options set:
+      *     *   If the DHCP options set is in the **Deleting** state, the DHCP options set is being deleted.
+      *     *   If you cannot query the DHCP options set, the DHCP options set is deleted.
+      * *   You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a DHCP options set within the specified period of time.
+      *
+      * @param request DeleteDhcpOptionsSetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDhcpOptionsSetResponse
+     */
     public DeleteDhcpOptionsSetResponse deleteDhcpOptionsSetWithOptions(DeleteDhcpOptionsSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6913,11 +8248,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDhcpOptionsSetResponse());
     }
 
+    /**
+      * *   The **DeleteDhcpOptionsSet** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of a DHCP options set:
+      *     *   If the DHCP options set is in the **Deleting** state, the DHCP options set is being deleted.
+      *     *   If you cannot query the DHCP options set, the DHCP options set is deleted.
+      * *   You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a DHCP options set within the specified period of time.
+      *
+      * @param request DeleteDhcpOptionsSetRequest
+      * @return DeleteDhcpOptionsSetResponse
+     */
     public DeleteDhcpOptionsSetResponse deleteDhcpOptionsSet(DeleteDhcpOptionsSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDhcpOptionsSetWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteFlowLog** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      *     *   If the flow log is in the **Deleting** state, the flow log is being deleted.
+      *     *   If you cannot query the flow log, the flow log is deleted.
+      * *   You cannot repeatedly call the **DeleteFlowLog** operation to delete a flow log within the specified period of time.
+      *
+      * @param request DeleteFlowLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteFlowLogResponse
+     */
     public DeleteFlowLogResponse deleteFlowLogWithOptions(DeleteFlowLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6962,11 +8316,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFlowLogResponse());
     }
 
+    /**
+      * *   The **DeleteFlowLog** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      *     *   If the flow log is in the **Deleting** state, the flow log is being deleted.
+      *     *   If you cannot query the flow log, the flow log is deleted.
+      * *   You cannot repeatedly call the **DeleteFlowLog** operation to delete a flow log within the specified period of time.
+      *
+      * @param request DeleteFlowLogRequest
+      * @return DeleteFlowLogResponse
+     */
     public DeleteFlowLogResponse deleteFlowLog(DeleteFlowLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteFlowLogWithOptions(request, runtime);
     }
 
+    /**
+      * *   **DeleteForwardEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified DNAT entry is not deleted. The system deletes the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+      *     *   If the DNAT entry is in the **Deleting** state, the system is deleting the DNAT entry. In this case, you can only query the status of the DNAT entry, but cannot perform other operations.
+      *     *   If the DNAT entry cannot be found, it is deleted.
+      * >  If a DNAT table has DNAT entries in the **Pending** state, you cannot delete the DNAT entries.
+      * *   You cannot repeatedly call the **DeleteForwardEntry** operation to delete a DNAT entry within the specified period of time.
+      *
+      * @param request DeleteForwardEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteForwardEntryResponse
+     */
     public DeleteForwardEntryResponse deleteForwardEntryWithOptions(DeleteForwardEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7019,11 +8393,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteForwardEntryResponse());
     }
 
+    /**
+      * *   **DeleteForwardEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified DNAT entry is not deleted. The system deletes the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+      *     *   If the DNAT entry is in the **Deleting** state, the system is deleting the DNAT entry. In this case, you can only query the status of the DNAT entry, but cannot perform other operations.
+      *     *   If the DNAT entry cannot be found, it is deleted.
+      * >  If a DNAT table has DNAT entries in the **Pending** state, you cannot delete the DNAT entries.
+      * *   You cannot repeatedly call the **DeleteForwardEntry** operation to delete a DNAT entry within the specified period of time.
+      *
+      * @param request DeleteForwardEntryRequest
+      * @return DeleteForwardEntryResponse
+     */
     public DeleteForwardEntryResponse deleteForwardEntry(DeleteForwardEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteForwardEntryWithOptions(request, runtime);
     }
 
+    /**
+      * **DeleteFullNatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the FULLNAT entry is not deleted. The system deletes the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+      * *   If the FULLNAT entry is in the **Deleting** state, the system is deleting the FULLNAT entry. In this case, you can query the status of the FULLNAT entry, but cannot perform other operations.
+      * *   If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.
+      * You cannot repeatedly call the **DeleteFullNatEntry** operation to delete a FULLNAT entry within the specified period of time.
+      *
+      * @param request DeleteFullNatEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteFullNatEntryResponse
+     */
     public DeleteFullNatEntryResponse deleteFullNatEntryWithOptions(DeleteFullNatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7080,6 +8474,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFullNatEntryResponse());
     }
 
+    /**
+      * **DeleteFullNatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the FULLNAT entry is not deleted. The system deletes the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+      * *   If the FULLNAT entry is in the **Deleting** state, the system is deleting the FULLNAT entry. In this case, you can query the status of the FULLNAT entry, but cannot perform other operations.
+      * *   If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.
+      * You cannot repeatedly call the **DeleteFullNatEntry** operation to delete a FULLNAT entry within the specified period of time.
+      *
+      * @param request DeleteFullNatEntryRequest
+      * @return DeleteFullNatEntryResponse
+     */
     public DeleteFullNatEntryResponse deleteFullNatEntry(DeleteFullNatEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteFullNatEntryWithOptions(request, runtime);
@@ -7134,6 +8537,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteGlobalAccelerationInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following rules:
+      * *   You can delete only HAVIPs that are in the Available state.
+      * *   Make sure that no route points to the HAVIP that you want to delete.
+      * *   Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.
+      * *   The **DeleteHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+      *     *   If the HAVIP is in the **Deleting** state, the HAVIP is being deleted.
+      *     *   If you cannot query the HAVIP, the HAVIP is deleted.
+      * *   You cannot repeatedly call the **DeleteHaVip** operation to delete an HAVIP within the specified period of time.
+      *
+      * @param request DeleteHaVipRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteHaVipResponse
+     */
     public DeleteHaVipResponse deleteHaVipWithOptions(DeleteHaVipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7182,6 +8599,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHaVipResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following rules:
+      * *   You can delete only HAVIPs that are in the Available state.
+      * *   Make sure that no route points to the HAVIP that you want to delete.
+      * *   Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.
+      * *   The **DeleteHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+      *     *   If the HAVIP is in the **Deleting** state, the HAVIP is being deleted.
+      *     *   If you cannot query the HAVIP, the HAVIP is deleted.
+      * *   You cannot repeatedly call the **DeleteHaVip** operation to delete an HAVIP within the specified period of time.
+      *
+      * @param request DeleteHaVipRequest
+      * @return DeleteHaVipResponse
+     */
     public DeleteHaVipResponse deleteHaVip(DeleteHaVipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteHaVipWithOptions(request, runtime);
@@ -7350,6 +8780,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteIPv6TranslatorEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteIpsecServer** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the IPsec server is being deleted.
+      *     *   If a VPN gateway is in the **active** state, the IPsec server has been deleted.
+      * *   You cannot repeatedly call **DeleteIpsecServer** to delete an IPsec server from a VPN gateway within the specified period of time.
+      *
+      * @param request DeleteIpsecServerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteIpsecServerResponse
+     */
     public DeleteIpsecServerResponse deleteIpsecServerWithOptions(DeleteIpsecServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7386,11 +8826,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpsecServerResponse());
     }
 
+    /**
+      * *   The **DeleteIpsecServer** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the IPsec server is being deleted.
+      *     *   If a VPN gateway is in the **active** state, the IPsec server has been deleted.
+      * *   You cannot repeatedly call **DeleteIpsecServer** to delete an IPsec server from a VPN gateway within the specified period of time.
+      *
+      * @param request DeleteIpsecServerRequest
+      * @return DeleteIpsecServerResponse
+     */
     public DeleteIpsecServerResponse deleteIpsecServer(DeleteIpsecServerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteIpsecServerWithOptions(request, runtime);
     }
 
+    /**
+      * *   Before you delete an IPv4 gateway, make sure that no route tables are associated with the IPv4 gateway.
+      * *   The **DeleteIpv4Gateway** operation is an asynchronous operation. After you call this operation, the system returns a **request ID**. However, the deletion task is still being run in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the IPv4 gateway.
+      *     *   If the IPv4 gateway is in the **Deleting** state, the IPv4 gateway is being deleted.
+      *     *   If the IPv4 gateway cannot be queried, the deletion is complete.
+      * *   After you call the **DeleteIpv4Gateway** operation to delete an IPv4 gateway, you cannot call the operation again to delete the IPv4 gateway until the deletion task is complete.
+      *
+      * @param request DeleteIpv4GatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteIpv4GatewayResponse
+     */
     public DeleteIpv4GatewayResponse deleteIpv4GatewayWithOptions(DeleteIpv4GatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7447,11 +8907,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpv4GatewayResponse());
     }
 
+    /**
+      * *   Before you delete an IPv4 gateway, make sure that no route tables are associated with the IPv4 gateway.
+      * *   The **DeleteIpv4Gateway** operation is an asynchronous operation. After you call this operation, the system returns a **request ID**. However, the deletion task is still being run in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the IPv4 gateway.
+      *     *   If the IPv4 gateway is in the **Deleting** state, the IPv4 gateway is being deleted.
+      *     *   If the IPv4 gateway cannot be queried, the deletion is complete.
+      * *   After you call the **DeleteIpv4Gateway** operation to delete an IPv4 gateway, you cannot call the operation again to delete the IPv4 gateway until the deletion task is complete.
+      *
+      * @param request DeleteIpv4GatewayRequest
+      * @return DeleteIpv4GatewayResponse
+     */
     public DeleteIpv4GatewayResponse deleteIpv4Gateway(DeleteIpv4GatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteIpv4GatewayWithOptions(request, runtime);
     }
 
+    /**
+      * *   **DeleteIpv6EgressOnlyRule** is an asynchronous operation. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6EgressOnlyRules](~~102208~~) operation to query whether the egress-only rule is deleted.
+      *     *   If the egress-only rule is in the **Deleting** state, it indicates that the egress-only rule is being deleted.
+      *     *   If you cannot query the egress-only rule, it indicates that the egress-only rule is deleted.
+      * *   You cannot call the **DeleteIpv6EgressOnlyRule** operation to delete an egress-only rule again when the rule is being deleted.
+      *
+      * @param request DeleteIpv6EgressOnlyRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteIpv6EgressOnlyRuleResponse
+     */
     public DeleteIpv6EgressOnlyRuleResponse deleteIpv6EgressOnlyRuleWithOptions(DeleteIpv6EgressOnlyRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7504,11 +8984,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpv6EgressOnlyRuleResponse());
     }
 
+    /**
+      * *   **DeleteIpv6EgressOnlyRule** is an asynchronous operation. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6EgressOnlyRules](~~102208~~) operation to query whether the egress-only rule is deleted.
+      *     *   If the egress-only rule is in the **Deleting** state, it indicates that the egress-only rule is being deleted.
+      *     *   If you cannot query the egress-only rule, it indicates that the egress-only rule is deleted.
+      * *   You cannot call the **DeleteIpv6EgressOnlyRule** operation to delete an egress-only rule again when the rule is being deleted.
+      *
+      * @param request DeleteIpv6EgressOnlyRuleRequest
+      * @return DeleteIpv6EgressOnlyRuleResponse
+     */
     public DeleteIpv6EgressOnlyRuleResponse deleteIpv6EgressOnlyRule(DeleteIpv6EgressOnlyRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteIpv6EgressOnlyRuleWithOptions(request, runtime);
     }
 
+    /**
+      * - The **DeleteIpv6Gateway** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6GatewayAttribute](/help/en/virtual-private-cloud/latest/describeipv6gatewayattribute) operation to query the status of an IPv6 gateway:   - If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
+      *   - If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
+      * - After you call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway, you cannot call the operation again to delete the IPv6 gateway until the deletion task is complete.
+      * ## Prerequisites
+      * Before you delete an IPv6 gateway, you must delete the egress-only rules of the IPv6 gateway. For more information, see [DeleteIpv6EgressOnlyRule](~~102201~~).
+      *
+      * @param request DeleteIpv6GatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteIpv6GatewayResponse
+     */
     public DeleteIpv6GatewayResponse deleteIpv6GatewayWithOptions(DeleteIpv6GatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7557,11 +9057,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpv6GatewayResponse());
     }
 
+    /**
+      * - The **DeleteIpv6Gateway** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeIpv6GatewayAttribute](/help/en/virtual-private-cloud/latest/describeipv6gatewayattribute) operation to query the status of an IPv6 gateway:   - If the IPv6 gateway is in the **Deleting** state, the IPv6 gateway is being deleted.
+      *   - If you cannot query the IPv6 gateway, the IPv6 gateway is deleted.
+      * - After you call the **DeleteIpv6Gateway** operation to delete an IPv6 gateway, you cannot call the operation again to delete the IPv6 gateway until the deletion task is complete.
+      * ## Prerequisites
+      * Before you delete an IPv6 gateway, you must delete the egress-only rules of the IPv6 gateway. For more information, see [DeleteIpv6EgressOnlyRule](~~102201~~).
+      *
+      * @param request DeleteIpv6GatewayRequest
+      * @return DeleteIpv6GatewayResponse
+     */
     public DeleteIpv6GatewayResponse deleteIpv6Gateway(DeleteIpv6GatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteIpv6GatewayWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot call the **DeleteIpv6InternetBandwidth** operation to delete the same Internet bandwidth at the same time.
+      *
+      * @param request DeleteIpv6InternetBandwidthRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteIpv6InternetBandwidthResponse
+     */
     public DeleteIpv6InternetBandwidthResponse deleteIpv6InternetBandwidthWithOptions(DeleteIpv6InternetBandwidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7614,11 +9131,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpv6InternetBandwidthResponse());
     }
 
+    /**
+      * You cannot call the **DeleteIpv6InternetBandwidth** operation to delete the same Internet bandwidth at the same time.
+      *
+      * @param request DeleteIpv6InternetBandwidthRequest
+      * @return DeleteIpv6InternetBandwidthResponse
+     */
     public DeleteIpv6InternetBandwidthResponse deleteIpv6InternetBandwidth(DeleteIpv6InternetBandwidthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteIpv6InternetBandwidthWithOptions(request, runtime);
     }
 
+    /**
+      * *   **DeleteNatGateway** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT gateway is not deleted. The system deletes the NAT gateway in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of a NAT gateway.
+      *     *   If a NAT gateway is in the **Deleting** state, the NAT gateway is being deleted. In this case, you can query the NAT gateway but you cannot perform other operations.
+      *     *   If the NAY gateway cannot be found, the NAT gateway is deleted.
+      *         After you delete a NAT gateway, you cannot restore the NAT gateway. Proceed with caution.
+      * *   You cannot repeatedly call the **DeleteNatGateway** operation to delete a NAT gateway within the specified period of time.
+      *
+      * @param request DeleteNatGatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteNatGatewayResponse
+     */
     public DeleteNatGatewayResponse deleteNatGatewayWithOptions(DeleteNatGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7667,11 +9201,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNatGatewayResponse());
     }
 
+    /**
+      * *   **DeleteNatGateway** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT gateway is not deleted. The system deletes the NAT gateway in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of a NAT gateway.
+      *     *   If a NAT gateway is in the **Deleting** state, the NAT gateway is being deleted. In this case, you can query the NAT gateway but you cannot perform other operations.
+      *     *   If the NAY gateway cannot be found, the NAT gateway is deleted.
+      *         After you delete a NAT gateway, you cannot restore the NAT gateway. Proceed with caution.
+      * *   You cannot repeatedly call the **DeleteNatGateway** operation to delete a NAT gateway within the specified period of time.
+      *
+      * @param request DeleteNatGatewayRequest
+      * @return DeleteNatGatewayResponse
+     */
     public DeleteNatGatewayResponse deleteNatGateway(DeleteNatGatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNatGatewayWithOptions(request, runtime);
     }
 
+    /**
+      * *   **DeleteNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified NAT IP address is not deleted. The system deletes the NAT IP address in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of a NAT IP address.
+      *     *   If a NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
+      *     *   If the NAT IP address cannot be found, it is deleted.
+      * *   You cannot repeatedly call the **DeleteNatIp** operation to delete a NAT IP address within the specified period of time.
+      *
+      * @param request DeleteNatIpRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteNatIpResponse
+     */
     public DeleteNatIpResponse deleteNatIpWithOptions(DeleteNatIpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7728,11 +9282,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNatIpResponse());
     }
 
+    /**
+      * *   **DeleteNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified NAT IP address is not deleted. The system deletes the NAT IP address in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of a NAT IP address.
+      *     *   If a NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
+      *     *   If the NAT IP address cannot be found, it is deleted.
+      * *   You cannot repeatedly call the **DeleteNatIp** operation to delete a NAT IP address within the specified period of time.
+      *
+      * @param request DeleteNatIpRequest
+      * @return DeleteNatIpResponse
+     */
     public DeleteNatIpResponse deleteNatIp(DeleteNatIpRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNatIpWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **DeleteNatIpCidr** operation to delete a NAT CIDR block within the specified period of time.
+      *
+      * @param request DeleteNatIpCidrRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteNatIpCidrResponse
+     */
     public DeleteNatIpCidrResponse deleteNatIpCidrWithOptions(DeleteNatIpCidrRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7793,11 +9363,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNatIpCidrResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **DeleteNatIpCidr** operation to delete a NAT CIDR block within the specified period of time.
+      *
+      * @param request DeleteNatIpCidrRequest
+      * @return DeleteNatIpCidrResponse
+     */
     public DeleteNatIpCidrResponse deleteNatIpCidr(DeleteNatIpCidrRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNatIpCidrWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **DeleteNetworkAcl** operation to delete a network ACL within the specified period of time.
+      *
+      * @param request DeleteNetworkAclRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteNetworkAclResponse
+     */
     public DeleteNetworkAclResponse deleteNetworkAclWithOptions(DeleteNetworkAclRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7846,11 +9429,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNetworkAclResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **DeleteNetworkAcl** operation to delete a network ACL within the specified period of time.
+      *
+      * @param request DeleteNetworkAclRequest
+      * @return DeleteNetworkAclResponse
+     */
     public DeleteNetworkAclResponse deleteNetworkAcl(DeleteNetworkAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNetworkAclWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limit
+      * You can only delete a connection over an Express Connect circuit that is in the **Rejected**, **Canceled**, **AllocationFailed**, or **Terminated** state.
+      *
+      * @param request DeletePhysicalConnectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeletePhysicalConnectionResponse
+     */
     public DeletePhysicalConnectionResponse deletePhysicalConnectionWithOptions(DeletePhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7899,11 +9496,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePhysicalConnectionResponse());
     }
 
+    /**
+      * ## Limit
+      * You can only delete a connection over an Express Connect circuit that is in the **Rejected**, **Canceled**, **AllocationFailed**, or **Terminated** state.
+      *
+      * @param request DeletePhysicalConnectionRequest
+      * @return DeletePhysicalConnectionResponse
+     */
     public DeletePhysicalConnectionResponse deletePhysicalConnection(DeletePhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePhysicalConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeletePublicIpAddressPool** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPools](~~429433~~) operation to query the status of an IP address pool:
+      *     *   If the IP address pool is in the **Deleting** state, the IP address pool is being deleted. In this state. you can only query the IP address pool and cannot perform other operations.
+      *     *   If you cannot query the IP address pool, the IP address pool is deleted.
+      * *   You cannot repeatedly call the **DeletePublicIpAddressPool** operation to delete an IP address pool within the specified period of time.
+      * ## Prerequisites
+      * Before you delete an IP address pool, make sure that no IP address in the pool is being used.
+      *
+      * @param request DeletePublicIpAddressPoolRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeletePublicIpAddressPoolResponse
+     */
     public DeletePublicIpAddressPoolResponse deletePublicIpAddressPoolWithOptions(DeletePublicIpAddressPoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7956,11 +9572,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePublicIpAddressPoolResponse());
     }
 
+    /**
+      * *   The **DeletePublicIpAddressPool** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPools](~~429433~~) operation to query the status of an IP address pool:
+      *     *   If the IP address pool is in the **Deleting** state, the IP address pool is being deleted. In this state. you can only query the IP address pool and cannot perform other operations.
+      *     *   If you cannot query the IP address pool, the IP address pool is deleted.
+      * *   You cannot repeatedly call the **DeletePublicIpAddressPool** operation to delete an IP address pool within the specified period of time.
+      * ## Prerequisites
+      * Before you delete an IP address pool, make sure that no IP address in the pool is being used.
+      *
+      * @param request DeletePublicIpAddressPoolRequest
+      * @return DeletePublicIpAddressPoolResponse
+     */
     public DeletePublicIpAddressPoolResponse deletePublicIpAddressPool(DeletePublicIpAddressPoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePublicIpAddressPoolWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeletePublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
+      *     *   If you cannot query the CIDR block, the CIDR block is deleted.
+      * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
+      * ## Prerequisites
+      * Before you delete a CIDR block, make sure that it is not being used.
+      *
+      * @param request DeletePublicIpAddressPoolCidrBlockRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeletePublicIpAddressPoolCidrBlockResponse
+     */
     public DeletePublicIpAddressPoolCidrBlockResponse deletePublicIpAddressPoolCidrBlockWithOptions(DeletePublicIpAddressPoolCidrBlockRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8017,11 +9656,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePublicIpAddressPoolCidrBlockResponse());
     }
 
+    /**
+      * *   The **DeletePublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
+      *     *   If you cannot query the CIDR block, the CIDR block is deleted.
+      * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
+      * ## Prerequisites
+      * Before you delete a CIDR block, make sure that it is not being used.
+      *
+      * @param request DeletePublicIpAddressPoolCidrBlockRequest
+      * @return DeletePublicIpAddressPoolCidrBlockResponse
+     */
     public DeletePublicIpAddressPoolCidrBlockResponse deletePublicIpAddressPoolCidrBlock(DeletePublicIpAddressPoolCidrBlockRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePublicIpAddressPoolCidrBlockWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   You can delete only route entries that are in the **Available** state.
+      * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
+      * *   **DeleteRouteEntries** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
+      *     *   If the route entry is in the **Deleting** state, the route entry is being deleted.
+      *     *   If you cannot query the route entry, the route entry is deleted.
+      * *   You cannot repeatedly call **DeleteRouteEntries** within a specific period of time.
+      *
+      * @param request DeleteRouteEntriesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRouteEntriesResponse
+     */
     public DeleteRouteEntriesResponse deleteRouteEntriesWithOptions(DeleteRouteEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8070,11 +9733,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRouteEntriesResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * *   You can delete only route entries that are in the **Available** state.
+      * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
+      * *   **DeleteRouteEntries** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
+      *     *   If the route entry is in the **Deleting** state, the route entry is being deleted.
+      *     *   If you cannot query the route entry, the route entry is deleted.
+      * *   You cannot repeatedly call **DeleteRouteEntries** within a specific period of time.
+      *
+      * @param request DeleteRouteEntriesRequest
+      * @return DeleteRouteEntriesResponse
+     */
     public DeleteRouteEntriesResponse deleteRouteEntries(DeleteRouteEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRouteEntriesWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following rules:
+      * *   You can delete only routes that are in the **Available** state.
+      * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or a route is being created.
+      * *   Before you call this operation to delete a route of a VBR route table, call the [DescribeRouteEntryList](~~138148~~) operation to query the **NextHopId** of the route first.
+      * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route:
+      *     *   If the route is in the **Deleting** state, the route is being deleted.
+      *     *   If you cannot query the route, the route is deleted.
+      * *   You cannot repeatedly call the **DeleteRouteEntry** operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.
+      *
+      * @param request DeleteRouteEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRouteEntryResponse
+     */
     public DeleteRouteEntryResponse deleteRouteEntryWithOptions(DeleteRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8135,11 +9824,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRouteEntryResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following rules:
+      * *   You can delete only routes that are in the **Available** state.
+      * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or a route is being created.
+      * *   Before you call this operation to delete a route of a VBR route table, call the [DescribeRouteEntryList](~~138148~~) operation to query the **NextHopId** of the route first.
+      * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route:
+      *     *   If the route is in the **Deleting** state, the route is being deleted.
+      *     *   If you cannot query the route, the route is deleted.
+      * *   You cannot repeatedly call the **DeleteRouteEntry** operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.
+      *
+      * @param request DeleteRouteEntryRequest
+      * @return DeleteRouteEntryResponse
+     */
     public DeleteRouteEntryResponse deleteRouteEntry(DeleteRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRouteEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of a custom route table:
+      *     *   If the custom route table is in the **Deleting** state, the custom route table is being deleted.
+      *     *   If you cannot query the custom route table, the custom route table is deleted.
+      * *   You cannot repeatedly call the **DeleteRouteTable** operation to delete a custom route table within the specified period of time.
+      *
+      * @param request DeleteRouteTableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRouteTableResponse
+     */
     public DeleteRouteTableResponse deleteRouteTableWithOptions(DeleteRouteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8188,11 +9900,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRouteTableResponse());
     }
 
+    /**
+      * *   The **DeleteRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteTableList](~~87602~~) operation to query the status of a custom route table:
+      *     *   If the custom route table is in the **Deleting** state, the custom route table is being deleted.
+      *     *   If you cannot query the custom route table, the custom route table is deleted.
+      * *   You cannot repeatedly call the **DeleteRouteTable** operation to delete a custom route table within the specified period of time.
+      *
+      * @param request DeleteRouteTableRequest
+      * @return DeleteRouteTableResponse
+     */
     public DeleteRouteTableResponse deleteRouteTable(DeleteRouteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRouteTableWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   You can delete only a router interface that is in the **Idle** or **Inactive** state.
+      * *   Before you delete a router interface, you must delete all custom route entries destined for the router interface.
+      *
+      * @param request DeleteRouterInterfaceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRouterInterfaceResponse
+     */
     public DeleteRouterInterfaceResponse deleteRouterInterfaceWithOptions(DeleteRouterInterfaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8241,11 +9971,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRouterInterfaceResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   You can delete only a router interface that is in the **Idle** or **Inactive** state.
+      * *   Before you delete a router interface, you must delete all custom route entries destined for the router interface.
+      *
+      * @param request DeleteRouterInterfaceRequest
+      * @return DeleteRouterInterfaceResponse
+     */
     public DeleteRouterInterfaceResponse deleteRouterInterface(DeleteRouterInterfaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRouterInterfaceWithOptions(request, runtime);
     }
 
+    /**
+      * DeleteSnatEntry is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not deleted. The system deletes the SNAT entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of SNAT entries.
+      * *   If the SNAT entries are in the **Deleting** state, the system is deleting the SNAT entries. In this case, you can only query the status of the SNAT entries, and cannot perform other operations.
+      * *   If no SNAT entry is returned in the response, the SNAT entry is deleted.
+      * If some SNAT entries are in the **Pending** state, you cannot delete these SNAT entries.
+      *
+      * @param request DeleteSnatEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteSnatEntryResponse
+     */
     public DeleteSnatEntryResponse deleteSnatEntryWithOptions(DeleteSnatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8298,11 +10046,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSnatEntryResponse());
     }
 
+    /**
+      * DeleteSnatEntry is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not deleted. The system deletes the SNAT entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of SNAT entries.
+      * *   If the SNAT entries are in the **Deleting** state, the system is deleting the SNAT entries. In this case, you can only query the status of the SNAT entries, and cannot perform other operations.
+      * *   If no SNAT entry is returned in the response, the SNAT entry is deleted.
+      * If some SNAT entries are in the **Pending** state, you cannot delete these SNAT entries.
+      *
+      * @param request DeleteSnatEntryRequest
+      * @return DeleteSnatEntryResponse
+     */
     public DeleteSnatEntryResponse deleteSnatEntry(DeleteSnatEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSnatEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteSslVpnClientCert** operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway associated with an SSL server. You can check whether an SSL client certificate is deleted based on the status of the VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the SSL client certificate is being deleted.
+      *     *   If the VPN gateway is in the **active** state, the SSL client certificate is deleted.
+      * *   You cannot repeatedly call **DeleteSslVpnClientCert** to delete an SSL client certificate from the same VPN gateway within the specified period of time.
+      *
+      * @param request DeleteSslVpnClientCertRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteSslVpnClientCertResponse
+     */
     public DeleteSslVpnClientCertResponse deleteSslVpnClientCertWithOptions(DeleteSslVpnClientCertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8351,11 +10118,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSslVpnClientCertResponse());
     }
 
+    /**
+      * *   The **DeleteSslVpnClientCert** operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway associated with an SSL server. You can check whether an SSL client certificate is deleted based on the status of the VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the SSL client certificate is being deleted.
+      *     *   If the VPN gateway is in the **active** state, the SSL client certificate is deleted.
+      * *   You cannot repeatedly call **DeleteSslVpnClientCert** to delete an SSL client certificate from the same VPN gateway within the specified period of time.
+      *
+      * @param request DeleteSslVpnClientCertRequest
+      * @return DeleteSslVpnClientCertResponse
+     */
     public DeleteSslVpnClientCertResponse deleteSslVpnClientCert(DeleteSslVpnClientCertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSslVpnClientCertWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteSslVpnServer** operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of an SSL server based on the status of the associated VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the SSL server is being deleted.
+      *     *   If the VPN gateway is in the **active** state, the SSL server is deleted.
+      * *   You cannot repeatedly call the **DeleteSslVpnServer** operation to delete an SSL server from the same VPN gateway within the specified period of time.
+      *
+      * @param request DeleteSslVpnServerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteSslVpnServerResponse
+     */
     public DeleteSslVpnServerResponse deleteSslVpnServerWithOptions(DeleteSslVpnServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8404,11 +10190,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSslVpnServerResponse());
     }
 
+    /**
+      * *   The **DeleteSslVpnServer** operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of an SSL server based on the status of the associated VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the SSL server is being deleted.
+      *     *   If the VPN gateway is in the **active** state, the SSL server is deleted.
+      * *   You cannot repeatedly call the **DeleteSslVpnServer** operation to delete an SSL server from the same VPN gateway within the specified period of time.
+      *
+      * @param request DeleteSslVpnServerRequest
+      * @return DeleteSslVpnServerResponse
+     */
     public DeleteSslVpnServerResponse deleteSslVpnServer(DeleteSslVpnServerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSslVpnServerWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteTrafficMirrorFilter** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of a filter:
+      *     *   If the filter is in the **Deleting** state, the filter is being deleted.
+      *     *   If you cannot query the filter, the filter is deleted.
+      * *   You cannot repeatedly call the **DeleteTrafficMirrorFilter** operation to delete a filter within the specified period of time.
+      *
+      * @param request DeleteTrafficMirrorFilterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTrafficMirrorFilterResponse
+     */
     public DeleteTrafficMirrorFilterResponse deleteTrafficMirrorFilterWithOptions(DeleteTrafficMirrorFilterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8461,11 +10266,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTrafficMirrorFilterResponse());
     }
 
+    /**
+      * *   The **DeleteTrafficMirrorFilter** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of a filter:
+      *     *   If the filter is in the **Deleting** state, the filter is being deleted.
+      *     *   If you cannot query the filter, the filter is deleted.
+      * *   You cannot repeatedly call the **DeleteTrafficMirrorFilter** operation to delete a filter within the specified period of time.
+      *
+      * @param request DeleteTrafficMirrorFilterRequest
+      * @return DeleteTrafficMirrorFilterResponse
+     */
     public DeleteTrafficMirrorFilterResponse deleteTrafficMirrorFilter(DeleteTrafficMirrorFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTrafficMirrorFilterWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteTrafficMirrorFilterRules** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
+      *     *   If the rule is in the **Deleting** state, the rule is being deleted.
+      *     *   If you cannot query the rule, the rule is deleted.
+      * *   You cannot repeatedly call the **DeleteTrafficMirrorFilterRules** operation to delete an inbound or outbound rule within the specified period of time.
+      *
+      * @param request DeleteTrafficMirrorFilterRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTrafficMirrorFilterRulesResponse
+     */
     public DeleteTrafficMirrorFilterRulesResponse deleteTrafficMirrorFilterRulesWithOptions(DeleteTrafficMirrorFilterRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8522,11 +10346,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTrafficMirrorFilterRulesResponse());
     }
 
+    /**
+      * *   The **DeleteTrafficMirrorFilterRules** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
+      *     *   If the rule is in the **Deleting** state, the rule is being deleted.
+      *     *   If you cannot query the rule, the rule is deleted.
+      * *   You cannot repeatedly call the **DeleteTrafficMirrorFilterRules** operation to delete an inbound or outbound rule within the specified period of time.
+      *
+      * @param request DeleteTrafficMirrorFilterRulesRequest
+      * @return DeleteTrafficMirrorFilterRulesResponse
+     */
     public DeleteTrafficMirrorFilterRulesResponse deleteTrafficMirrorFilterRules(DeleteTrafficMirrorFilterRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTrafficMirrorFilterRulesWithOptions(request, runtime);
     }
 
+    /**
+      * *   **DeleteTrafficMirrorSession** is an asynchronous operation. After you send the request, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session.
+      *     *   If the traffic mirror session is in the **Deleting** state, the traffic mirror session is being deleted.
+      *     *   If you cannot query the traffic mirror session, the traffic mirror session is deleted.
+      * *   You cannot repeatedly call the **DeleteTrafficMirrorSession** operation to delete a traffic mirror session within the specified period of time.
+      *
+      * @param request DeleteTrafficMirrorSessionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTrafficMirrorSessionResponse
+     */
     public DeleteTrafficMirrorSessionResponse deleteTrafficMirrorSessionWithOptions(DeleteTrafficMirrorSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8579,11 +10422,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTrafficMirrorSessionResponse());
     }
 
+    /**
+      * *   **DeleteTrafficMirrorSession** is an asynchronous operation. After you send the request, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session.
+      *     *   If the traffic mirror session is in the **Deleting** state, the traffic mirror session is being deleted.
+      *     *   If you cannot query the traffic mirror session, the traffic mirror session is deleted.
+      * *   You cannot repeatedly call the **DeleteTrafficMirrorSession** operation to delete a traffic mirror session within the specified period of time.
+      *
+      * @param request DeleteTrafficMirrorSessionRequest
+      * @return DeleteTrafficMirrorSessionResponse
+     */
     public DeleteTrafficMirrorSessionResponse deleteTrafficMirrorSession(DeleteTrafficMirrorSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTrafficMirrorSessionWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).
+      * *   You can delete only vSwitches that are in the **Available** state.
+      * *   You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.
+      * *   **DeleteVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being deleted.
+      *     *   If you cannot query the vSwitch, the vSwitch is deleted.
+      * *   You cannot repeatedly call the **DeleteVSwitch** operation to delete a vSwitch within the specified period of time.
+      *
+      * @param request DeleteVSwitchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVSwitchResponse
+     */
     public DeleteVSwitchResponse deleteVSwitchWithOptions(DeleteVSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8628,6 +10494,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVSwitchResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).
+      * *   You can delete only vSwitches that are in the **Available** state.
+      * *   You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.
+      * *   **DeleteVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being deleted.
+      *     *   If you cannot query the vSwitch, the vSwitch is deleted.
+      * *   You cannot repeatedly call the **DeleteVSwitch** operation to delete a vSwitch within the specified period of time.
+      *
+      * @param request DeleteVSwitchRequest
+      * @return DeleteVSwitchResponse
+     */
     public DeleteVSwitchResponse deleteVSwitch(DeleteVSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVSwitchWithOptions(request, runtime);
@@ -8686,6 +10565,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteVbrHaWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteVcoRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of a route based on the status of the associated IPsec-VPN connection.
+      *     *   If the IPsec-VPN connection is in the **updating** state, the route is being deleted.
+      *     *   If the IPsec-VPN connection is in the **attached** state, the route is deleted.
+      * *   You cannot repeatedly call the **DeleteVcoRouteEntry** operation to delete a route from the same IPsec-VPN connection within the specified period of time.
+      *
+      * @param request DeleteVcoRouteEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVcoRouteEntryResponse
+     */
     public DeleteVcoRouteEntryResponse deleteVcoRouteEntryWithOptions(DeleteVcoRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8746,11 +10635,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVcoRouteEntryResponse());
     }
 
+    /**
+      * *   The **DeleteVcoRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of a route based on the status of the associated IPsec-VPN connection.
+      *     *   If the IPsec-VPN connection is in the **updating** state, the route is being deleted.
+      *     *   If the IPsec-VPN connection is in the **attached** state, the route is deleted.
+      * *   You cannot repeatedly call the **DeleteVcoRouteEntry** operation to delete a route from the same IPsec-VPN connection within the specified period of time.
+      *
+      * @param request DeleteVcoRouteEntryRequest
+      * @return DeleteVcoRouteEntryResponse
+     */
     public DeleteVcoRouteEntryResponse deleteVcoRouteEntry(DeleteVcoRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVcoRouteEntryWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * Before you call this operation, take note of the following limits:
+      * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
+      * *   You can delete only a VBR that is in the** Unconfirmed**,** Enabled**, or** Terminated** state.
+      * *   If the owner of an Express Connect circuit wants to delete a VBR that belongs to another Alibaba Cloud account, the VBR must be in the **Unconfirmed** state.
+      *
+      * @param request DeleteVirtualBorderRouterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVirtualBorderRouterResponse
+     */
     public DeleteVirtualBorderRouterResponse deleteVirtualBorderRouterWithOptions(DeleteVirtualBorderRouterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8799,11 +10708,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVirtualBorderRouterResponse());
     }
 
+    /**
+      * ## Limits
+      * Before you call this operation, take note of the following limits:
+      * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
+      * *   You can delete only a VBR that is in the** Unconfirmed**,** Enabled**, or** Terminated** state.
+      * *   If the owner of an Express Connect circuit wants to delete a VBR that belongs to another Alibaba Cloud account, the VBR must be in the **Unconfirmed** state.
+      *
+      * @param request DeleteVirtualBorderRouterRequest
+      * @return DeleteVirtualBorderRouterResponse
+     */
     public DeleteVirtualBorderRouterResponse deleteVirtualBorderRouter(DeleteVirtualBorderRouterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVirtualBorderRouterWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).
+      * *   You can delete only a VPC that is in the **Available** state.
+      * *   The **DeleteVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a VPC:
+      *     *   If the VPC is in the **Deleting** state, the VPC is being deleted.
+      *     *   If you cannot query the VPC, the VPC is deleted.
+      * *   You cannot repeatedly call the **DeleteVpc** operation to delete a VPC within the specified period of time.
+      *
+      * @param request DeleteVpcRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVpcResponse
+     */
     public DeleteVpcResponse deleteVpcWithOptions(DeleteVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8856,6 +10788,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpcResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).
+      * *   You can delete only a VPC that is in the **Available** state.
+      * *   The **DeleteVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a VPC:
+      *     *   If the VPC is in the **Deleting** state, the VPC is being deleted.
+      *     *   If you cannot query the VPC, the VPC is deleted.
+      * *   You cannot repeatedly call the **DeleteVpc** operation to delete a VPC within the specified period of time.
+      *
+      * @param request DeleteVpcRequest
+      * @return DeleteVpcResponse
+     */
     public DeleteVpcResponse deleteVpc(DeleteVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVpcWithOptions(request, runtime);
@@ -8918,6 +10862,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteVpcGatewayEndpointWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a prefix list within the specified period of time.
+      *
+      * @param request DeleteVpcPrefixListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVpcPrefixListResponse
+     */
     public DeleteVpcPrefixListResponse deleteVpcPrefixListWithOptions(DeleteVpcPrefixListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8970,11 +10921,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpcPrefixListResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a prefix list within the specified period of time.
+      *
+      * @param request DeleteVpcPrefixListRequest
+      * @return DeleteVpcPrefixListResponse
+     */
     public DeleteVpcPrefixListResponse deleteVpcPrefixList(DeleteVpcPrefixListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVpcPrefixListWithOptions(request, runtime);
     }
 
+    /**
+      * *   If the IPsec-VPN connection is associated with a transit router, you must first disassociate the IPsec-VPN connection from the transit router before you delete the IPsec-VPN connection.
+      * *   If the IPsec-VPN connection is not associated with a resource, you can call the `DeleteVpnAttachment` to delete the IPsec-VPN connection.
+      *
+      * @param request DeleteVpnAttachmentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVpnAttachmentResponse
+     */
     public DeleteVpnAttachmentResponse deleteVpnAttachmentWithOptions(DeleteVpnAttachmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9019,11 +10984,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpnAttachmentResponse());
     }
 
+    /**
+      * *   If the IPsec-VPN connection is associated with a transit router, you must first disassociate the IPsec-VPN connection from the transit router before you delete the IPsec-VPN connection.
+      * *   If the IPsec-VPN connection is not associated with a resource, you can call the `DeleteVpnAttachment` to delete the IPsec-VPN connection.
+      *
+      * @param request DeleteVpnAttachmentRequest
+      * @return DeleteVpnAttachmentResponse
+     */
     public DeleteVpnAttachmentResponse deleteVpnAttachment(DeleteVpnAttachmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVpnAttachmentWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteVpnConnection** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
+      *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is deleted.
+      * *   You cannot repeatedly call **DeleteVpnConnection** to delete an IPsec-VPN connection from the same VPN gateway within the specified period of time.
+      * >  After an IPsec-VPN connection between a virtual private cloud (VPC) and a data center is deleted, the communication between the VPC and data center is interrupted.
+      *
+      * @param request DeleteVpnConnectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVpnConnectionResponse
+     */
     public DeleteVpnConnectionResponse deleteVpnConnectionWithOptions(DeleteVpnConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9072,11 +11055,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpnConnectionResponse());
     }
 
+    /**
+      * *   The **DeleteVpnConnection** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being deleted.
+      *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is deleted.
+      * *   You cannot repeatedly call **DeleteVpnConnection** to delete an IPsec-VPN connection from the same VPN gateway within the specified period of time.
+      * >  After an IPsec-VPN connection between a virtual private cloud (VPC) and a data center is deleted, the communication between the VPC and data center is interrupted.
+      *
+      * @param request DeleteVpnConnectionRequest
+      * @return DeleteVpnConnectionResponse
+     */
     public DeleteVpnConnectionResponse deleteVpnConnection(DeleteVpnConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVpnConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * >  You cannot delete a VPN gateway that is associated with an IPsec-VPN connection.
+      *
+      * @param request DeleteVpnGatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVpnGatewayResponse
+     */
     public DeleteVpnGatewayResponse deleteVpnGatewayWithOptions(DeleteVpnGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9125,11 +11125,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpnGatewayResponse());
     }
 
+    /**
+      * >  You cannot delete a VPN gateway that is associated with an IPsec-VPN connection.
+      *
+      * @param request DeleteVpnGatewayRequest
+      * @return DeleteVpnGatewayResponse
+     */
     public DeleteVpnGatewayResponse deleteVpnGateway(DeleteVpnGatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVpnGatewayWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteVpnPbrRouteEntry** operation is asynchronous. After you call the operation, the request ID is returned but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the policy-based route is being deleted.
+      *     *   If a VPN gateway is in the **active** state, the policy-based route has been deleted.
+      * *   You cannot repeatedly call **DeleteVpnPbrRouteEntry** to delete a policy-based route within the specified period of time.
+      *
+      * @param request DeleteVpnPbrRouteEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVpnPbrRouteEntryResponse
+     */
     public DeleteVpnPbrRouteEntryResponse deleteVpnPbrRouteEntryWithOptions(DeleteVpnPbrRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9202,11 +11218,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpnPbrRouteEntryResponse());
     }
 
+    /**
+      * *   The **DeleteVpnPbrRouteEntry** operation is asynchronous. After you call the operation, the request ID is returned but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the policy-based route is being deleted.
+      *     *   If a VPN gateway is in the **active** state, the policy-based route has been deleted.
+      * *   You cannot repeatedly call **DeleteVpnPbrRouteEntry** to delete a policy-based route within the specified period of time.
+      *
+      * @param request DeleteVpnPbrRouteEntryRequest
+      * @return DeleteVpnPbrRouteEntryResponse
+     */
     public DeleteVpnPbrRouteEntryResponse deleteVpnPbrRouteEntry(DeleteVpnPbrRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVpnPbrRouteEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the destination-based route is being deleted.
+      *     *   If the VPN gateway is in the **active** state, the destination-based route has been deleted.
+      * *   You cannot repeatedly call **DeleteVpnRouteEntry** to delete a destination-based route from a VPN gateway within the specified period of time.
+      *
+      * @param request DeleteVpnRouteEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVpnRouteEntryResponse
+     */
     public DeleteVpnRouteEntryResponse deleteVpnRouteEntryWithOptions(DeleteVpnRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9271,11 +11306,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpnRouteEntryResponse());
     }
 
+    /**
+      * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the destination-based route is being deleted.
+      *     *   If the VPN gateway is in the **active** state, the destination-based route has been deleted.
+      * *   You cannot repeatedly call **DeleteVpnRouteEntry** to delete a destination-based route from a VPN gateway within the specified period of time.
+      *
+      * @param request DeleteVpnRouteEntryRequest
+      * @return DeleteVpnRouteEntryResponse
+     */
     public DeleteVpnRouteEntryResponse deleteVpnRouteEntry(DeleteVpnRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVpnRouteEntryWithOptions(request, runtime);
     }
 
+    /**
+      * After you enable deletion protection for an instance, you cannot delete the instance. You must disable deletion protection before you can delete the instance.
+      *
+      * @param request DeletionProtectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeletionProtectionResponse
+     */
     public DeletionProtectionResponse deletionProtectionWithOptions(DeletionProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9332,6 +11383,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeletionProtectionResponse());
     }
 
+    /**
+      * After you enable deletion protection for an instance, you cannot delete the instance. You must disable deletion protection before you can delete the instance.
+      *
+      * @param request DeletionProtectionRequest
+      * @return DeletionProtectionResponse
+     */
     public DeletionProtectionResponse deletionProtection(DeletionProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletionProtectionWithOptions(request, runtime);
@@ -9809,6 +11866,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEcGrantRelationWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query the information about EIPs in a specified region, including the maximum bandwidth, billing methods, and associated instances.
+      *
+      * @param request DescribeEipAddressesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeEipAddressesResponse
+     */
     public DescribeEipAddressesResponse describeEipAddressesWithOptions(DescribeEipAddressesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9921,11 +11985,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEipAddressesResponse());
     }
 
+    /**
+      * You can call this operation to query the information about EIPs in a specified region, including the maximum bandwidth, billing methods, and associated instances.
+      *
+      * @param request DescribeEipAddressesRequest
+      * @return DescribeEipAddressesResponse
+     */
     public DescribeEipAddressesResponse describeEipAddresses(DescribeEipAddressesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEipAddressesWithOptions(request, runtime);
     }
 
+    /**
+      * You can query only EIPs that are associated with secondary elastic network interfaces (ENIs) in multi-EIP-to-ENI mode.
+      *
+      * @param request DescribeEipGatewayInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeEipGatewayInfoResponse
+     */
     public DescribeEipGatewayInfoResponse describeEipGatewayInfoWithOptions(DescribeEipGatewayInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9974,11 +12051,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEipGatewayInfoResponse());
     }
 
+    /**
+      * You can query only EIPs that are associated with secondary elastic network interfaces (ENIs) in multi-EIP-to-ENI mode.
+      *
+      * @param request DescribeEipGatewayInfoRequest
+      * @return DescribeEipGatewayInfoResponse
+     */
     public DescribeEipGatewayInfoResponse describeEipGatewayInfo(DescribeEipGatewayInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEipGatewayInfoWithOptions(request, runtime);
     }
 
+    /**
+      * To improve user experience in querying monitoring data, we recommend that you call the DescribeMetricList API operation provided by CloudMonitor to query EIP monitoring data. For more information, see [DescribeMetricList](~~51936~~) and [EIP monitoring data](~~162874~~).
+      *
+      * @param request DescribeEipMonitorDataRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeEipMonitorDataResponse
+     */
     public DescribeEipMonitorDataResponse describeEipMonitorDataWithOptions(DescribeEipMonitorDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10035,6 +12125,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEipMonitorDataResponse());
     }
 
+    /**
+      * To improve user experience in querying monitoring data, we recommend that you call the DescribeMetricList API operation provided by CloudMonitor to query EIP monitoring data. For more information, see [DescribeMetricList](~~51936~~) and [EIP monitoring data](~~162874~~).
+      *
+      * @param request DescribeEipMonitorDataRequest
+      * @return DescribeEipMonitorDataResponse
+     */
     public DescribeEipMonitorDataResponse describeEipMonitorData(DescribeEipMonitorDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEipMonitorDataWithOptions(request, runtime);
@@ -11167,6 +13263,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeIpv6GatewaysWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query both Virtual Private Cloud (VPC) NAT gateways and Internet NAT gateways. NAT gateways in this topic refer to both VPC NAT gateways and Internet NAT gateways.
+      *
+      * @param request DescribeNatGatewaysRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeNatGatewaysResponse
+     */
     public DescribeNatGatewaysResponse describeNatGatewaysWithOptions(DescribeNatGatewaysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11263,6 +13366,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNatGatewaysResponse());
     }
 
+    /**
+      * You can call this operation to query both Virtual Private Cloud (VPC) NAT gateways and Internet NAT gateways. NAT gateways in this topic refer to both VPC NAT gateways and Internet NAT gateways.
+      *
+      * @param request DescribeNatGatewaysRequest
+      * @return DescribeNatGatewaysResponse
+     */
     public DescribeNatGatewaysResponse describeNatGateways(DescribeNatGatewaysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeNatGatewaysWithOptions(request, runtime);
@@ -11455,6 +13564,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describePhysicalConnectionLOAWithOptions(request, runtime);
     }
 
+    /**
+      * By default, the system queries information about all Express Connect circuits in the specified region. You can query Express Connect circuits that meet specific conditions by specifying filter conditions provided by the **DescribePhysicalConnections** operation. For more information about the supported filter conditions, see **Key** in the **Request parameters** section.
+      *
+      * @param request DescribePhysicalConnectionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribePhysicalConnectionsResponse
+     */
     public DescribePhysicalConnectionsResponse describePhysicalConnectionsWithOptions(DescribePhysicalConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11523,11 +13639,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePhysicalConnectionsResponse());
     }
 
+    /**
+      * By default, the system queries information about all Express Connect circuits in the specified region. You can query Express Connect circuits that meet specific conditions by specifying filter conditions provided by the **DescribePhysicalConnections** operation. For more information about the supported filter conditions, see **Key** in the **Request parameters** section.
+      *
+      * @param request DescribePhysicalConnectionsRequest
+      * @return DescribePhysicalConnectionsResponse
+     */
     public DescribePhysicalConnectionsResponse describePhysicalConnections(DescribePhysicalConnectionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePhysicalConnectionsWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot query the range of public IP addresses of a classic network by calling the **DescribePublicIpAddress** operation.
+      *
+      * @param request DescribePublicIpAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribePublicIpAddressResponse
+     */
     public DescribePublicIpAddressResponse describePublicIpAddressWithOptions(DescribePublicIpAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11580,6 +13709,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePublicIpAddressResponse());
     }
 
+    /**
+      * You cannot query the range of public IP addresses of a classic network by calling the **DescribePublicIpAddress** operation.
+      *
+      * @param request DescribePublicIpAddressRequest
+      * @return DescribePublicIpAddressResponse
+     */
     public DescribePublicIpAddressResponse describePublicIpAddress(DescribePublicIpAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePublicIpAddressWithOptions(request, runtime);
@@ -11634,6 +13769,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRegionsWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
+      *
+      * @param request DescribeRouteEntryListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRouteEntryListResponse
+     */
     public DescribeRouteEntryListResponse describeRouteEntryListWithOptions(DescribeRouteEntryListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -11726,6 +13868,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRouteEntryListResponse());
     }
 
+    /**
+      * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
+      *
+      * @param request DescribeRouteEntryListRequest
+      * @return DescribeRouteEntryListResponse
+     */
     public DescribeRouteEntryListResponse describeRouteEntryList(DescribeRouteEntryListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRouteEntryListWithOptions(request, runtime);
@@ -12434,6 +14582,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTagKeysForExpressConnectWithOptions(request, runtime);
     }
 
+    /**
+      * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
+      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Tag.N.Value**, an error message is returned.
+      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, all tags that match the key-value pairs are returned.
+      *
+      * @param request DescribeTagsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeTagsResponse
+     */
     public DescribeTagsResponse describeTagsWithOptions(DescribeTagsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12494,6 +14652,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTagsResponse());
     }
 
+    /**
+      * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
+      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Tag.N.Value**, an error message is returned.
+      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, all tags that match the key-value pairs are returned.
+      *
+      * @param request DescribeTagsRequest
+      * @return DescribeTagsResponse
+     */
     public DescribeTagsResponse describeTags(DescribeTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTagsWithOptions(request, runtime);
@@ -13751,6 +15918,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeZonesWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **DetachDhcpOptionsSetFromVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being disassociated.
+      *     *   If the DHCP options set is in the **UnUsed** state, the DHCP options set is disassociated.
+      * *   You cannot repeatedly call the **DetachDhcpOptionsSetFromVpc** operation to disassociate a DHCP options set from a VPC within the specified period of time.
+      *
+      * @param request DetachDhcpOptionsSetFromVpcRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DetachDhcpOptionsSetFromVpcResponse
+     */
     public DetachDhcpOptionsSetFromVpcResponse detachDhcpOptionsSetFromVpcWithOptions(DetachDhcpOptionsSetFromVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13807,13 +15984,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachDhcpOptionsSetFromVpcResponse());
     }
 
+    /**
+      * *   The **DetachDhcpOptionsSetFromVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being disassociated.
+      *     *   If the DHCP options set is in the **UnUsed** state, the DHCP options set is disassociated.
+      * *   You cannot repeatedly call the **DetachDhcpOptionsSetFromVpc** operation to disassociate a DHCP options set from a VPC within the specified period of time.
+      *
+      * @param request DetachDhcpOptionsSetFromVpcRequest
+      * @return DetachDhcpOptionsSetFromVpcResponse
+     */
     public DetachDhcpOptionsSetFromVpcResponse detachDhcpOptionsSetFromVpc(DetachDhcpOptionsSetFromVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachDhcpOptionsSetFromVpcWithOptions(request, runtime);
     }
 
     /**
-      * VPN网关发起诊断
+      * Only VPN gateways in specific regions support the quick diagnostics feature. For more information about the supported regions, see [Supported regions](~~430697~~).
       *
       * @param request DiagnoseVpnGatewayRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -13864,7 +16050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * VPN网关发起诊断
+      * Only VPN gateways in specific regions support the quick diagnostics feature. For more information about the supported regions, see [Supported regions](~~430697~~).
       *
       * @param request DiagnoseVpnGatewayRequest
       * @return DiagnoseVpnGatewayResponse
@@ -14233,6 +16419,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableNatGatewayEcsMetricWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   You can enable only an Express Connect circuit that is in the **Confirmed** state.
+      * *   After you enable an Express Connect circuit, it changes to the **Enabled** state.
+      *
+      * @param request EnablePhysicalConnectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EnablePhysicalConnectionResponse
+     */
     public EnablePhysicalConnectionResponse enablePhysicalConnectionWithOptions(EnablePhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14281,6 +16476,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnablePhysicalConnectionResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   You can enable only an Express Connect circuit that is in the **Confirmed** state.
+      * *   After you enable an Express Connect circuit, it changes to the **Enabled** state.
+      *
+      * @param request EnablePhysicalConnectionRequest
+      * @return EnablePhysicalConnectionResponse
+     */
     public EnablePhysicalConnectionResponse enablePhysicalConnection(EnablePhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enablePhysicalConnectionWithOptions(request, runtime);
@@ -14339,6 +16542,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableVpcClassicLinkWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **EnableVpcIpv4Gateway** operation is asynchronous. After you send the request, the system returns **RequestId**. However, the operation is still being performed in the system background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
+      *     *   If the IPv4 gateway is in the **Activating** state, the IPv4 gateway is being activated.
+      *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is activated.
+      * *   You cannot repeatedly call the **EnableVpcIpv4Gateway** operation to activate an IPv4 gateway within the specified period of time.
+      *
+      * @param request EnableVpcIpv4GatewayRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EnableVpcIpv4GatewayResponse
+     */
     public EnableVpcIpv4GatewayResponse enableVpcIpv4GatewayWithOptions(EnableVpcIpv4GatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14399,6 +16612,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableVpcIpv4GatewayResponse());
     }
 
+    /**
+      * *   The **EnableVpcIpv4Gateway** operation is asynchronous. After you send the request, the system returns **RequestId**. However, the operation is still being performed in the system background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
+      *     *   If the IPv4 gateway is in the **Activating** state, the IPv4 gateway is being activated.
+      *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is activated.
+      * *   You cannot repeatedly call the **EnableVpcIpv4Gateway** operation to activate an IPv4 gateway within the specified period of time.
+      *
+      * @param request EnableVpcIpv4GatewayRequest
+      * @return EnableVpcIpv4GatewayResponse
+     */
     public EnableVpcIpv4GatewayResponse enableVpcIpv4Gateway(EnableVpcIpv4GatewayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableVpcIpv4GatewayWithOptions(request, runtime);
@@ -14559,6 +16781,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getIpv4GatewayAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query information about a specified Internet NAT gateway or Virtual Private Cloud (VPC) NAT gateway. In this topic, "NAT gateway" refers to both gateway types.
+      *
+      * @param request GetNatGatewayAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetNatGatewayAttributeResponse
+     */
     public GetNatGatewayAttributeResponse getNatGatewayAttributeWithOptions(GetNatGatewayAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14607,6 +16836,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetNatGatewayAttributeResponse());
     }
 
+    /**
+      * You can call this operation to query information about a specified Internet NAT gateway or Virtual Private Cloud (VPC) NAT gateway. In this topic, "NAT gateway" refers to both gateway types.
+      *
+      * @param request GetNatGatewayAttributeRequest
+      * @return GetNatGatewayAttributeResponse
+     */
     public GetNatGatewayAttributeResponse getNatGatewayAttribute(GetNatGatewayAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNatGatewayAttributeWithOptions(request, runtime);
@@ -14665,6 +16900,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getNatGatewayConvertStatusWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this API operation to query the status of outbound data transfer billing for the current account. For more information about outbound data transfer billing, see [Outbound data transfer billing](~~274385~~) and [Billing](~~54582~~).
+      *
+      * @param request GetPhysicalConnectionServiceStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetPhysicalConnectionServiceStatusResponse
+     */
     public GetPhysicalConnectionServiceStatusResponse getPhysicalConnectionServiceStatusWithOptions(GetPhysicalConnectionServiceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14705,6 +16947,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhysicalConnectionServiceStatusResponse());
     }
 
+    /**
+      * You can call this API operation to query the status of outbound data transfer billing for the current account. For more information about outbound data transfer billing, see [Outbound data transfer billing](~~274385~~) and [Billing](~~54582~~).
+      *
+      * @param request GetPhysicalConnectionServiceStatusRequest
+      * @return GetPhysicalConnectionServiceStatusResponse
+     */
     public GetPhysicalConnectionServiceStatusResponse getPhysicalConnectionServiceStatus(GetPhysicalConnectionServiceStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPhysicalConnectionServiceStatusWithOptions(request, runtime);
@@ -14960,7 +17208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 查询VPN网关一键诊断结果
+      * When you call the **GetVpnGatewayDiagnoseResult** operation, you must set one of the **DiagnoseId** and **VpnGatewayId** parameters.
       *
       * @param request GetVpnGatewayDiagnoseResultRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -15003,7 +17251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 查询VPN网关一键诊断结果
+      * When you call the **GetVpnGatewayDiagnoseResult** operation, you must set one of the **DiagnoseId** and **VpnGatewayId** parameters.
       *
       * @param request GetVpnGatewayDiagnoseResultRequest
       * @return GetVpnGatewayDiagnoseResultResponse
@@ -15013,6 +17261,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getVpnGatewayDiagnoseResultWithOptions(request, runtime);
     }
 
+    /**
+      * *   Before you can attach a network instance that belongs to another Alibaba Cloud account to your CEN instance, you must grant permissions to your CEN instance.
+      * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
+      * *   You cannot repeatedly call the **GrantInstanceToCen** operation to grant the permissions on a network instance to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
+      *
+      * @param request GrantInstanceToCenRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GrantInstanceToCenResponse
+     */
     public GrantInstanceToCenResponse grantInstanceToCenWithOptions(GrantInstanceToCenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15073,6 +17330,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GrantInstanceToCenResponse());
     }
 
+    /**
+      * *   Before you can attach a network instance that belongs to another Alibaba Cloud account to your CEN instance, you must grant permissions to your CEN instance.
+      * >  **GrantInstanceToCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
+      * *   You cannot repeatedly call the **GrantInstanceToCen** operation to grant the permissions on a network instance to a CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
+      *
+      * @param request GrantInstanceToCenRequest
+      * @return GrantInstanceToCenResponse
+     */
     public GrantInstanceToCenResponse grantInstanceToCen(GrantInstanceToCenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.grantInstanceToCenWithOptions(request, runtime);
@@ -15201,12 +17466,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -15231,6 +17504,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDhcpOptionsSetsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query zones that support NAT gateways, including Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways.
+      *
+      * @param request ListEnhanhcedNatGatewayAvailableZonesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListEnhanhcedNatGatewayAvailableZonesResponse
+     */
     public ListEnhanhcedNatGatewayAvailableZonesResponse listEnhanhcedNatGatewayAvailableZonesWithOptions(ListEnhanhcedNatGatewayAvailableZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15279,6 +17559,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnhanhcedNatGatewayAvailableZonesResponse());
     }
 
+    /**
+      * You can call this operation to query zones that support NAT gateways, including Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways.
+      *
+      * @param request ListEnhanhcedNatGatewayAvailableZonesRequest
+      * @return ListEnhanhcedNatGatewayAvailableZonesResponse
+     */
     public ListEnhanhcedNatGatewayAvailableZonesResponse listEnhanhcedNatGatewayAvailableZones(ListEnhanhcedNatGatewayAvailableZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEnhanhcedNatGatewayAvailableZonesWithOptions(request, runtime);
@@ -15800,13 +18086,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listNatIpsWithOptions(request, runtime);
     }
 
-    /**
-      * **
-      *
-      * @param request ListPrefixListsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListPrefixListsResponse
-     */
     public ListPrefixListsResponse listPrefixListsWithOptions(ListPrefixListsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15871,12 +18150,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrefixListsResponse());
     }
 
-    /**
-      * **
-      *
-      * @param request ListPrefixListsRequest
-      * @return ListPrefixListsResponse
-     */
     public ListPrefixListsResponse listPrefixLists(ListPrefixListsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPrefixListsWithOptions(request, runtime);
@@ -16028,6 +18301,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listPublicIpAddressPoolsWithOptions(request, runtime);
     }
 
+    /**
+      * *   Set **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object to be queried.
+      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you set only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you set only **Tag.N.Value**, an error message is returned.
+      * *   If you set **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+      *
+      * @param request ListTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16088,11 +18371,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+      * *   Set **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object to be queried.
+      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you set only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you set only **Tag.N.Value**, an error message is returned.
+      * *   If you set **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+      *
+      * @param request ListTagResourcesRequest
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
+      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Tag.N.Value**, an error message is returned.
+      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+      *
+      * @param request ListTagResourcesForExpressConnectRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagResourcesForExpressConnectResponse
+     */
     public ListTagResourcesForExpressConnectResponse listTagResourcesForExpressConnectWithOptions(ListTagResourcesForExpressConnectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16153,6 +18455,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesForExpressConnectResponse());
     }
 
+    /**
+      * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
+      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified tag key are returned. If you specify only **Tag.N.Value**, an error message is returned.
+      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+      *
+      * @param request ListTagResourcesForExpressConnectRequest
+      * @return ListTagResourcesForExpressConnectResponse
+     */
     public ListTagResourcesForExpressConnectResponse listTagResourcesForExpressConnect(ListTagResourcesForExpressConnectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesForExpressConnectWithOptions(request, runtime);
@@ -16481,6 +18792,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -16491,6 +18806,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
             query.put("ServiceName", request.serviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -16775,6 +19094,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyCommonBandwidthPackageAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the **ModifyCommonBandwidthPackageIpBandwidth** operation to set the maximum bandwidth of an EIP that is associated with an EIP bandwidth plan. This prevents an EIP from exhausting the bandwidth resources of an EIP bandwidth plan.
+      * For example, two EIPs are associated with an EIP bandwidth plan whose maximum bandwidth is 800 Mbit/s. In this case, you can set the maximum bandwidth of one EIP to 500 Mbit/s and that of the other EIP to 400 Mbit/s. After you set the maximum bandwidth values, the first EIP cannot consume bandwidth higher than 500 Mbit/s. The second EIP cannot consume bandwidth higher than 400 Mbit/s.
+      * When you call this operation, take note of the following items:
+      * *   This operation is valid only for EIPs that are associated with Elastic Compute Service (ECS) instances. This operation is invalid for EIPs that are associated with Server Load Balancer (SLB) instances, NAT gateways, secondary elastic network interfaces (ENIs), or high-availability virtual IP addresses (HAVIPs).
+      * *   This operation is in public preview. You can call this operation to set the maximum bandwidth of EIPs only if the EIPs are associated with an EIP bandwidth plan. The feature is not supported in the console.
+      * *   You cannot repeatedly call this operation to set the maximum bandwidth of an EIP within the specified period of time.
+      *
+      * @param request ModifyCommonBandwidthPackageIpBandwidthRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyCommonBandwidthPackageIpBandwidthResponse
+     */
     public ModifyCommonBandwidthPackageIpBandwidthResponse modifyCommonBandwidthPackageIpBandwidthWithOptions(ModifyCommonBandwidthPackageIpBandwidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16827,11 +19158,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCommonBandwidthPackageIpBandwidthResponse());
     }
 
+    /**
+      * You can call the **ModifyCommonBandwidthPackageIpBandwidth** operation to set the maximum bandwidth of an EIP that is associated with an EIP bandwidth plan. This prevents an EIP from exhausting the bandwidth resources of an EIP bandwidth plan.
+      * For example, two EIPs are associated with an EIP bandwidth plan whose maximum bandwidth is 800 Mbit/s. In this case, you can set the maximum bandwidth of one EIP to 500 Mbit/s and that of the other EIP to 400 Mbit/s. After you set the maximum bandwidth values, the first EIP cannot consume bandwidth higher than 500 Mbit/s. The second EIP cannot consume bandwidth higher than 400 Mbit/s.
+      * When you call this operation, take note of the following items:
+      * *   This operation is valid only for EIPs that are associated with Elastic Compute Service (ECS) instances. This operation is invalid for EIPs that are associated with Server Load Balancer (SLB) instances, NAT gateways, secondary elastic network interfaces (ENIs), or high-availability virtual IP addresses (HAVIPs).
+      * *   This operation is in public preview. You can call this operation to set the maximum bandwidth of EIPs only if the EIPs are associated with an EIP bandwidth plan. The feature is not supported in the console.
+      * *   You cannot repeatedly call this operation to set the maximum bandwidth of an EIP within the specified period of time.
+      *
+      * @param request ModifyCommonBandwidthPackageIpBandwidthRequest
+      * @return ModifyCommonBandwidthPackageIpBandwidthResponse
+     */
     public ModifyCommonBandwidthPackageIpBandwidthResponse modifyCommonBandwidthPackageIpBandwidth(ModifyCommonBandwidthPackageIpBandwidthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyCommonBandwidthPackageIpBandwidthWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **ModifyCommonBandwidthPackageSpec** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeCommonBandwidthPackages](~~120309~~) operation to query the status of an EIP bandwidth plan:
+      *     *   If the EIP bandwidth plan is in the **Modifying** state, the maximum bandwidth of the EIP bandwidth plan is being modified. In this state, you can only query the EIP bandwidth plan and cannot perform other operations.
+      *     *   If the EIP bandwidth plan is in the **Available** state, the maximum bandwidth of the EIP bandwidth plan is modified.
+      * *   You cannot repeatedly call the **ModifyCommonBandwidthPackageSpec** operation to modify the maximum bandwidth of an EIP bandwidth plan within the specified period of time.
+      *
+      * @param request ModifyCommonBandwidthPackageSpecRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyCommonBandwidthPackageSpecResponse
+     */
     public ModifyCommonBandwidthPackageSpecResponse modifyCommonBandwidthPackageSpecWithOptions(ModifyCommonBandwidthPackageSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16880,11 +19232,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCommonBandwidthPackageSpecResponse());
     }
 
+    /**
+      * *   The **ModifyCommonBandwidthPackageSpec** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeCommonBandwidthPackages](~~120309~~) operation to query the status of an EIP bandwidth plan:
+      *     *   If the EIP bandwidth plan is in the **Modifying** state, the maximum bandwidth of the EIP bandwidth plan is being modified. In this state, you can only query the EIP bandwidth plan and cannot perform other operations.
+      *     *   If the EIP bandwidth plan is in the **Available** state, the maximum bandwidth of the EIP bandwidth plan is modified.
+      * *   You cannot repeatedly call the **ModifyCommonBandwidthPackageSpec** operation to modify the maximum bandwidth of an EIP bandwidth plan within the specified period of time.
+      *
+      * @param request ModifyCommonBandwidthPackageSpecRequest
+      * @return ModifyCommonBandwidthPackageSpecResponse
+     */
     public ModifyCommonBandwidthPackageSpecResponse modifyCommonBandwidthPackageSpec(ModifyCommonBandwidthPackageSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyCommonBandwidthPackageSpecWithOptions(request, runtime);
     }
 
+    /**
+      * *   When you call **ModifyCustomerGatewayAttribute**, if a value is assigned to **AuthKey**, the operation is asynchronous. After you call the operation, the information about the customer gateway is returned but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a customer gateway.
+      *     *   If a VPN gateway is in the **updating** state, the configurations are being modified.
+      *     *   If a VPN gateway is in the **active** state, the configurations have been modified.
+      * *   When you call **ModifyCustomerGatewayAttribute**, if no value is assigned to **AuthKey**, the operation is synchronous.
+      * *   You cannot repeatedly call **ModifyCustomerGatewayAttribute** to modify the configurations of a customer gateway within the specified period of time.
+      *
+      * @param request ModifyCustomerGatewayAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyCustomerGatewayAttributeResponse
+     */
     public ModifyCustomerGatewayAttributeResponse modifyCustomerGatewayAttributeWithOptions(ModifyCustomerGatewayAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16945,6 +19317,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCustomerGatewayAttributeResponse());
     }
 
+    /**
+      * *   When you call **ModifyCustomerGatewayAttribute**, if a value is assigned to **AuthKey**, the operation is asynchronous. After you call the operation, the information about the customer gateway is returned but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a customer gateway.
+      *     *   If a VPN gateway is in the **updating** state, the configurations are being modified.
+      *     *   If a VPN gateway is in the **active** state, the configurations have been modified.
+      * *   When you call **ModifyCustomerGatewayAttribute**, if no value is assigned to **AuthKey**, the operation is synchronous.
+      * *   You cannot repeatedly call **ModifyCustomerGatewayAttribute** to modify the configurations of a customer gateway within the specified period of time.
+      *
+      * @param request ModifyCustomerGatewayAttributeRequest
+      * @return ModifyCustomerGatewayAttributeResponse
+     */
     public ModifyCustomerGatewayAttributeResponse modifyCustomerGatewayAttribute(ModifyCustomerGatewayAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyCustomerGatewayAttributeWithOptions(request, runtime);
@@ -17133,6 +19515,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyExpressCloudConnectionBandwidthWithOptions(request, runtime);
     }
 
+    /**
+      * *   **ModifyFlowLogAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      *     *   If the flow log is in the **Modifying** state, the flow log is being modified.
+      *     *   If the flow log is in the **Active** or **Inactive** state, the flow log is modified.
+      * *   You cannot repeatedly call the **ModifyFlowLogAttribute** operation to modify a flow log within the specified period of time.
+      *
+      * @param request ModifyFlowLogAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyFlowLogAttributeResponse
+     */
     public ModifyFlowLogAttributeResponse modifyFlowLogAttributeWithOptions(ModifyFlowLogAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -17189,11 +19581,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFlowLogAttributeResponse());
     }
 
+    /**
+      * *   **ModifyFlowLogAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      *     *   If the flow log is in the **Modifying** state, the flow log is being modified.
+      *     *   If the flow log is in the **Active** or **Inactive** state, the flow log is modified.
+      * *   You cannot repeatedly call the **ModifyFlowLogAttribute** operation to modify a flow log within the specified period of time.
+      *
+      * @param request ModifyFlowLogAttributeRequest
+      * @return ModifyFlowLogAttributeResponse
+     */
     public ModifyFlowLogAttributeResponse modifyFlowLogAttribute(ModifyFlowLogAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyFlowLogAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   **ModifyForwardEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+      *     *   **Pending**: indicates that the system is modifying the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
+      *     *   **Available**: indicates that the DNAT entry is modified.
+      * *   You cannot repeatedly call the **ModifyForwardEntry** operation to modify a DNAT entry within the specified period of time.
+      *
+      * @param request ModifyForwardEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyForwardEntryResponse
+     */
     public ModifyForwardEntryResponse modifyForwardEntryWithOptions(ModifyForwardEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -17274,11 +19685,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyForwardEntryResponse());
     }
 
+    /**
+      * *   **ModifyForwardEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+      *     *   **Pending**: indicates that the system is modifying the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
+      *     *   **Available**: indicates that the DNAT entry is modified.
+      * *   You cannot repeatedly call the **ModifyForwardEntry** operation to modify a DNAT entry within the specified period of time.
+      *
+      * @param request ModifyForwardEntryRequest
+      * @return ModifyForwardEntryResponse
+     */
     public ModifyForwardEntryResponse modifyForwardEntry(ModifyForwardEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyForwardEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified FULLNAT entry is not modified. The system modifies the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+      *     *   **Modifying**: indicates that the system is modifying the FULLNAT entry. You can query the FULLNAT entry, but cannot perform other operations.
+      *     *   **Available**: indicates that the FULLNAT entry is modified.
+      * *   You cannot repeatedly call the **ModifyFullNatEntryAttribute** operation to modify a FULLNAT entry within the specified period of time.
+      *
+      * @param request ModifyFullNatEntryAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyFullNatEntryAttributeResponse
+     */
     public ModifyFullNatEntryAttributeResponse modifyFullNatEntryAttributeWithOptions(ModifyFullNatEntryAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -17367,6 +19797,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFullNatEntryAttributeResponse());
     }
 
+    /**
+      * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified FULLNAT entry is not modified. The system modifies the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+      *     *   **Modifying**: indicates that the system is modifying the FULLNAT entry. You can query the FULLNAT entry, but cannot perform other operations.
+      *     *   **Available**: indicates that the FULLNAT entry is modified.
+      * *   You cannot repeatedly call the **ModifyFullNatEntryAttribute** operation to modify a FULLNAT entry within the specified period of time.
+      *
+      * @param request ModifyFullNatEntryAttributeRequest
+      * @return ModifyFullNatEntryAttributeResponse
+     */
     public ModifyFullNatEntryAttributeResponse modifyFullNatEntryAttribute(ModifyFullNatEntryAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyFullNatEntryAttributeWithOptions(request, runtime);
@@ -17482,6 +19921,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyGlobalAccelerationInstanceSpecWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyHaVipAttribute** operation to modify the name and description of an HAVIP within the specified period of time.
+      *
+      * @param request ModifyHaVipAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyHaVipAttributeResponse
+     */
     public ModifyHaVipAttributeResponse modifyHaVipAttributeWithOptions(ModifyHaVipAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -17538,6 +19984,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHaVipAttributeResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyHaVipAttribute** operation to modify the name and description of an HAVIP within the specified period of time.
+      *
+      * @param request ModifyHaVipAttributeRequest
+      * @return ModifyHaVipAttributeResponse
+     */
     public ModifyHaVipAttributeResponse modifyHaVipAttribute(ModifyHaVipAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyHaVipAttributeWithOptions(request, runtime);
@@ -17990,6 +20442,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyIpv6GatewayAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyIpv6GatewaySpec** operation to change the specification of an IPv6 gateway within the specified period of time.
+      *
+      * @param request ModifyIpv6GatewaySpecRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyIpv6GatewaySpecResponse
+     */
     public ModifyIpv6GatewaySpecResponse modifyIpv6GatewaySpecWithOptions(ModifyIpv6GatewaySpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18046,11 +20505,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyIpv6GatewaySpecResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyIpv6GatewaySpec** operation to change the specification of an IPv6 gateway within the specified period of time.
+      *
+      * @param request ModifyIpv6GatewaySpecRequest
+      * @return ModifyIpv6GatewaySpecResponse
+     */
     public ModifyIpv6GatewaySpecResponse modifyIpv6GatewaySpec(ModifyIpv6GatewaySpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyIpv6GatewaySpecWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot call the **ModifyIpv6InternetBandwidth** operation to modify the Internet bandwidth value of an IPv6 CIDR block at the same time.
+      *
+      * @param request ModifyIpv6InternetBandwidthRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyIpv6InternetBandwidthResponse
+     */
     public ModifyIpv6InternetBandwidthResponse modifyIpv6InternetBandwidthWithOptions(ModifyIpv6InternetBandwidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18111,11 +20583,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyIpv6InternetBandwidthResponse());
     }
 
+    /**
+      * You cannot call the **ModifyIpv6InternetBandwidth** operation to modify the Internet bandwidth value of an IPv6 CIDR block at the same time.
+      *
+      * @param request ModifyIpv6InternetBandwidthRequest
+      * @return ModifyIpv6InternetBandwidthResponse
+     */
     public ModifyIpv6InternetBandwidthResponse modifyIpv6InternetBandwidth(ModifyIpv6InternetBandwidthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyIpv6InternetBandwidthWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both types of NAT gateway.
+      *
+      * @param request ModifyNatGatewayAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyNatGatewayAttributeResponse
+     */
     public ModifyNatGatewayAttributeResponse modifyNatGatewayAttributeWithOptions(ModifyNatGatewayAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18176,11 +20661,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNatGatewayAttributeResponse());
     }
 
+    /**
+      * You can call this operation to query an Internet NAT gateway or a virtual private cloud (VPC) NAT gateway. The term NAT gateway in this topic refers to both types of NAT gateway.
+      *
+      * @param request ModifyNatGatewayAttributeRequest
+      * @return ModifyNatGatewayAttributeResponse
+     */
     public ModifyNatGatewayAttributeResponse modifyNatGatewayAttribute(ModifyNatGatewayAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyNatGatewayAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * - You cannot call this operation to downgrade a subscription Internet NAT gateway. You can downgrade a subscription Internet NAT gateway only in the console.
+      * - When you call this operation to upgrade a subscription Internet NAT gateway, an order is generated. After you complete the payment in the order center, the Internet NAT gateway is upgraded.
+      * - **ModifyNatGatewaySpec** is an asynchronous operation. After you make a request, the ID of the request is returned but the Internet NAT gateway is not upgraded. The system upgrades the NAT gateway in the background. You can call the [DescribeNatGateways](/help/en/virtual-private-cloud/latest/describenatgateways) operation to query the status of an Internet NAT gateway.    - If an Internet NAT gateway is in the **Modifying** state, the NAT gateway is being upgraded. In this case, you can only query the NAT gateway but cannot perform other operations.
+      *   - If an Internet NAT gateway is in the **Available** state, the Internet NAT gateway is upgraded.
+      * - You cannot repeatedly call the **ModifyNatGatewaySpec** operation to resize a pay-by-specification NAT gateway.
+      * Internet NAT gateways are available in different sizes. The size of an Internet NAT gateway determines the SNAT performance, which includes the maximum number of connections and the number of new connections per second. However, the size of a NAT gateway does not affect the data throughput. The following table describes the correlations between different sizes of Internet NAT gateways and SNAT performance metrics.  
+      * | Size | Maximum number of connections | Number of new connections per second |
+      * | ---- | ----------------------------- | ------------------------------------ |
+      * | Small | 10,000 | 1,000 |
+      * | Medium | 50,000 | 5,000 |
+      * | Large | 200,000 | 10,000 |
+      *
+      * @param request ModifyNatGatewaySpecRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyNatGatewaySpecResponse
+     */
     public ModifyNatGatewaySpecResponse modifyNatGatewaySpecWithOptions(ModifyNatGatewaySpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18237,11 +20745,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNatGatewaySpecResponse());
     }
 
+    /**
+      * - You cannot call this operation to downgrade a subscription Internet NAT gateway. You can downgrade a subscription Internet NAT gateway only in the console.
+      * - When you call this operation to upgrade a subscription Internet NAT gateway, an order is generated. After you complete the payment in the order center, the Internet NAT gateway is upgraded.
+      * - **ModifyNatGatewaySpec** is an asynchronous operation. After you make a request, the ID of the request is returned but the Internet NAT gateway is not upgraded. The system upgrades the NAT gateway in the background. You can call the [DescribeNatGateways](/help/en/virtual-private-cloud/latest/describenatgateways) operation to query the status of an Internet NAT gateway.    - If an Internet NAT gateway is in the **Modifying** state, the NAT gateway is being upgraded. In this case, you can only query the NAT gateway but cannot perform other operations.
+      *   - If an Internet NAT gateway is in the **Available** state, the Internet NAT gateway is upgraded.
+      * - You cannot repeatedly call the **ModifyNatGatewaySpec** operation to resize a pay-by-specification NAT gateway.
+      * Internet NAT gateways are available in different sizes. The size of an Internet NAT gateway determines the SNAT performance, which includes the maximum number of connections and the number of new connections per second. However, the size of a NAT gateway does not affect the data throughput. The following table describes the correlations between different sizes of Internet NAT gateways and SNAT performance metrics.  
+      * | Size | Maximum number of connections | Number of new connections per second |
+      * | ---- | ----------------------------- | ------------------------------------ |
+      * | Small | 10,000 | 1,000 |
+      * | Medium | 50,000 | 5,000 |
+      * | Large | 200,000 | 10,000 |
+      *
+      * @param request ModifyNatGatewaySpecRequest
+      * @return ModifyNatGatewaySpecResponse
+     */
     public ModifyNatGatewaySpecResponse modifyNatGatewaySpec(ModifyNatGatewaySpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyNatGatewaySpecWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyNatIpAttribute** operation to modify the name and description of a NAT IP address within the specified period of time.
+      *
+      * @param request ModifyNatIpAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyNatIpAttributeResponse
+     */
     public ModifyNatIpAttributeResponse modifyNatIpAttributeWithOptions(ModifyNatIpAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18306,6 +20837,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNatIpAttributeResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyNatIpAttribute** operation to modify the name and description of a NAT IP address within the specified period of time.
+      *
+      * @param request ModifyNatIpAttributeRequest
+      * @return ModifyNatIpAttributeResponse
+     */
     public ModifyNatIpAttributeResponse modifyNatIpAttribute(ModifyNatIpAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyNatIpAttributeWithOptions(request, runtime);
@@ -18445,6 +20982,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyNetworkAclAttributesWithOptions(request, runtime);
     }
 
+    /**
+      * ## Limits
+      * When you call this operation, take note of the following limits:
+      * *   If an Express Connect circuit is in the **Initial**, **Enabled**, or **Rejected** state, you can modify the specifications of the Express Connect circuit and the ID of the redundant circuit.
+      * *   If an Express Connect circuit is in the **Canceled**, **Allocating**, **AllocationFailed**, or **Terminated** state, you cannot modify the specifications of the Express Connect circuit.
+      * *   After you modify the specifications of an Express Connect circuit that is in the **Rejected** state, the Express Connect circuit enters the **Initial** state.
+      *
+      * @param request ModifyPhysicalConnectionAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyPhysicalConnectionAttributeResponse
+     */
     public ModifyPhysicalConnectionAttributeResponse modifyPhysicalConnectionAttributeWithOptions(ModifyPhysicalConnectionAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18529,11 +21077,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPhysicalConnectionAttributeResponse());
     }
 
+    /**
+      * ## Limits
+      * When you call this operation, take note of the following limits:
+      * *   If an Express Connect circuit is in the **Initial**, **Enabled**, or **Rejected** state, you can modify the specifications of the Express Connect circuit and the ID of the redundant circuit.
+      * *   If an Express Connect circuit is in the **Canceled**, **Allocating**, **AllocationFailed**, or **Terminated** state, you cannot modify the specifications of the Express Connect circuit.
+      * *   After you modify the specifications of an Express Connect circuit that is in the **Rejected** state, the Express Connect circuit enters the **Initial** state.
+      *
+      * @param request ModifyPhysicalConnectionAttributeRequest
+      * @return ModifyPhysicalConnectionAttributeResponse
+     */
     public ModifyPhysicalConnectionAttributeResponse modifyPhysicalConnectionAttribute(ModifyPhysicalConnectionAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPhysicalConnectionAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyRouteEntry** operation to modify the name and description of a custom route within the specified period of time.
+      *
+      * @param request ModifyRouteEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyRouteEntryResponse
+     */
     public ModifyRouteEntryResponse modifyRouteEntryWithOptions(ModifyRouteEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18586,11 +21151,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRouteEntryResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyRouteEntry** operation to modify the name and description of a custom route within the specified period of time.
+      *
+      * @param request ModifyRouteEntryRequest
+      * @return ModifyRouteEntryResponse
+     */
     public ModifyRouteEntryResponse modifyRouteEntry(ModifyRouteEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyRouteEntryWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
+      *
+      * @param request ModifyRouteTableAttributesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyRouteTableAttributesResponse
+     */
     public ModifyRouteTableAttributesResponse modifyRouteTableAttributesWithOptions(ModifyRouteTableAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18643,6 +21221,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRouteTableAttributesResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
+      *
+      * @param request ModifyRouteTableAttributesRequest
+      * @return ModifyRouteTableAttributesResponse
+     */
     public ModifyRouteTableAttributesResponse modifyRouteTableAttributes(ModifyRouteTableAttributesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyRouteTableAttributesWithOptions(request, runtime);
@@ -18737,6 +21321,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyRouterInterfaceAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
+      * >  You cannot modify the specifications of a router interface that has overdue payments.
+      *
+      * @param request ModifyRouterInterfaceSpecRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyRouterInterfaceSpecResponse
+     */
     public ModifyRouterInterfaceSpecResponse modifyRouterInterfaceSpecWithOptions(ModifyRouterInterfaceSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18789,11 +21381,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRouterInterfaceSpecResponse());
     }
 
+    /**
+      * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
+      * >  You cannot modify the specifications of a router interface that has overdue payments.
+      *
+      * @param request ModifyRouterInterfaceSpecRequest
+      * @return ModifyRouterInterfaceSpecResponse
+     */
     public ModifyRouterInterfaceSpecResponse modifyRouterInterfaceSpec(ModifyRouterInterfaceSpecRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyRouterInterfaceSpecWithOptions(request, runtime);
     }
 
+    /**
+      * **ModifySnatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not modified. The system modifies the entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of a SNAT entry.
+      * *   **Pending**: indicates that the system is modifying the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+      * *   **Available**: indicates that the SNAT entry is modified.
+      * >  **Pending**: indicates that you cannot modify the SNAT entry in the SNAT table.
+      * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within the specified period of time.
+      *
+      * @param request ModifySnatEntryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifySnatEntryResponse
+     */
     public ModifySnatEntryResponse modifySnatEntryWithOptions(ModifySnatEntryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -18854,6 +21464,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySnatEntryResponse());
     }
 
+    /**
+      * **ModifySnatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified SNAT entry is not modified. The system modifies the entry in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of a SNAT entry.
+      * *   **Pending**: indicates that the system is modifying the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+      * *   **Available**: indicates that the SNAT entry is modified.
+      * >  **Pending**: indicates that you cannot modify the SNAT entry in the SNAT table.
+      * You cannot repeatedly call the **ModifySnatEntry** operation to modify an SNAT entry within the specified period of time.
+      *
+      * @param request ModifySnatEntryRequest
+      * @return ModifySnatEntryResponse
+     */
     public ModifySnatEntryResponse modifySnatEntry(ModifySnatEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySnatEntryWithOptions(request, runtime);
@@ -18916,6 +21536,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifySslVpnClientCertWithOptions(request, runtime);
     }
 
+    /**
+      * *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations, the operation is asynchronous.
+      * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns the request ID but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
+      *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server have been modified.
+      * *   You cannot repeatedly call **ModifySslVpnServer** to modify the configurations of an SSL server within the specified period of time.
+      *
+      * @param request ModifySslVpnServerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifySslVpnServerResponse
+     */
     public ModifySslVpnServerResponse modifySslVpnServerWithOptions(ModifySslVpnServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19004,11 +21635,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySslVpnServerResponse());
     }
 
+    /**
+      * *   If you modify only the **name** of the SSL server, the operation is synchronous. If you also modify other configurations, the operation is asynchronous.
+      * *   When **ModifySslVpnServer** is an asynchronous operation, the system returns the request ID but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the configurations of the SSL server are being modified.
+      *     *   If a VPN gateway is in the **active** state, the configurations of the SSL server have been modified.
+      * *   You cannot repeatedly call **ModifySslVpnServer** to modify the configurations of an SSL server within the specified period of time.
+      *
+      * @param request ModifySslVpnServerRequest
+      * @return ModifySslVpnServerResponse
+     */
     public ModifySslVpnServerResponse modifySslVpnServer(ModifySslVpnServerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySslVpnServerWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyVRouterAttribute** operation to modify the name and description of a vRouter within the specified period of time.
+      *
+      * @param request ModifyVRouterAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVRouterAttributeResponse
+     */
     public ModifyVRouterAttributeResponse modifyVRouterAttributeWithOptions(ModifyVRouterAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19061,11 +21709,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVRouterAttributeResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyVRouterAttribute** operation to modify the name and description of a vRouter within the specified period of time.
+      *
+      * @param request ModifyVRouterAttributeRequest
+      * @return ModifyVRouterAttributeResponse
+     */
     public ModifyVRouterAttributeResponse modifyVRouterAttribute(ModifyVRouterAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVRouterAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **ModifyVSwitchAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being modified.
+      *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+      * *   You cannot repeatedly call the **ModifyVSwitchAttribute** operation to modify the name and description of a vSwitch within the specified period of time.
+      *
+      * @param request ModifyVSwitchAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVSwitchAttributeResponse
+     */
     public ModifyVSwitchAttributeResponse modifyVSwitchAttributeWithOptions(ModifyVSwitchAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19130,11 +21794,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVSwitchAttributeResponse());
     }
 
+    /**
+      * *   The **ModifyVSwitchAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being modified.
+      *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+      * *   You cannot repeatedly call the **ModifyVSwitchAttribute** operation to modify the name and description of a vSwitch within the specified period of time.
+      *
+      * @param request ModifyVSwitchAttributeRequest
+      * @return ModifyVSwitchAttributeResponse
+     */
     public ModifyVSwitchAttributeResponse modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVSwitchAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   **ModifyVcoRouteEntryWeight** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the associated IPsec-VPN connection and determine whether the weight of the specified destination-based route is modified.
+      *     *   If the IPsec-VPN connection is in the **updating** state, the weight of the destination-based route is being modified.
+      *     *   If the IPsec-VPN connection is in the **attached** state, the weight of the destination-based route is modified.
+      * *   You cannot repeatedly call the **ModifyVcoRouteEntryWeight** operation for the same IPsec-VPN connection within the specified period of time.
+      *
+      * @param request ModifyVcoRouteEntryWeightRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVcoRouteEntryWeightResponse
+     */
     public ModifyVcoRouteEntryWeightResponse modifyVcoRouteEntryWeightWithOptions(ModifyVcoRouteEntryWeightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19199,11 +21882,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVcoRouteEntryWeightResponse());
     }
 
+    /**
+      * *   **ModifyVcoRouteEntryWeight** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of the associated IPsec-VPN connection and determine whether the weight of the specified destination-based route is modified.
+      *     *   If the IPsec-VPN connection is in the **updating** state, the weight of the destination-based route is being modified.
+      *     *   If the IPsec-VPN connection is in the **attached** state, the weight of the destination-based route is modified.
+      * *   You cannot repeatedly call the **ModifyVcoRouteEntryWeight** operation for the same IPsec-VPN connection within the specified period of time.
+      *
+      * @param request ModifyVcoRouteEntryWeightRequest
+      * @return ModifyVcoRouteEntryWeightResponse
+     */
     public ModifyVcoRouteEntryWeightResponse modifyVcoRouteEntryWeight(ModifyVcoRouteEntryWeightRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVcoRouteEntryWeightWithOptions(request, runtime);
     }
 
+    /**
+      * *   Only the owner of an Express Connect circuit can modify the **VlanId** parameter.
+      * *   One VLAN ID of an Express Connect circuit cannot be used by two VBRs at the same time.
+      * *   The VLAN ID of a VBR in the **Terminated** state is reserved for seven days and cannot be used by other VBRs. The VLAN ID can be used by other VBRs after 7 days.
+      * *   You cannot set **LocalGatewayIp**, **PeerGatewayIp**, or **PeeringSubnetMask** for VBRs that do not belong to your Alibaba Cloud account.
+      * *   Set **PeeringSubnetMask** to a subnet mask with 24 to 30 bits in length (255.255.255.0～255.255.255.252).
+      * *   Set **LocalGatewayIp** and **PeerGatewayIp** to IP addresses that belong to the same CIDR block. For example, you can set LocalGatewayIp to 192.168.XX.XX, PeerGatewayIp to 192.168.XX.XX, and PeeringSubnetMask to 255.255.255.248.
+      *
+      * @param request ModifyVirtualBorderRouterAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVirtualBorderRouterAttributeResponse
+     */
     public ModifyVirtualBorderRouterAttributeResponse modifyVirtualBorderRouterAttributeWithOptions(ModifyVirtualBorderRouterAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19316,11 +22020,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVirtualBorderRouterAttributeResponse());
     }
 
+    /**
+      * *   Only the owner of an Express Connect circuit can modify the **VlanId** parameter.
+      * *   One VLAN ID of an Express Connect circuit cannot be used by two VBRs at the same time.
+      * *   The VLAN ID of a VBR in the **Terminated** state is reserved for seven days and cannot be used by other VBRs. The VLAN ID can be used by other VBRs after 7 days.
+      * *   You cannot set **LocalGatewayIp**, **PeerGatewayIp**, or **PeeringSubnetMask** for VBRs that do not belong to your Alibaba Cloud account.
+      * *   Set **PeeringSubnetMask** to a subnet mask with 24 to 30 bits in length (255.255.255.0～255.255.255.252).
+      * *   Set **LocalGatewayIp** and **PeerGatewayIp** to IP addresses that belong to the same CIDR block. For example, you can set LocalGatewayIp to 192.168.XX.XX, PeerGatewayIp to 192.168.XX.XX, and PeeringSubnetMask to 255.255.255.248.
+      *
+      * @param request ModifyVirtualBorderRouterAttributeRequest
+      * @return ModifyVirtualBorderRouterAttributeResponse
+     */
     public ModifyVirtualBorderRouterAttributeResponse modifyVirtualBorderRouterAttribute(ModifyVirtualBorderRouterAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVirtualBorderRouterAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyVpcAttribute** operation to modify the name and description of a VPC within the specified period of time.
+      *
+      * @param request ModifyVpcAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVpcAttributeResponse
+     */
     public ModifyVpcAttributeResponse modifyVpcAttributeWithOptions(ModifyVpcAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19389,11 +22111,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpcAttributeResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **ModifyVpcAttribute** operation to modify the name and description of a VPC within the specified period of time.
+      *
+      * @param request ModifyVpcAttributeRequest
+      * @return ModifyVpcAttributeResponse
+     */
     public ModifyVpcAttributeResponse modifyVpcAttribute(ModifyVpcAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpcAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+      *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
+      *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
+      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+      * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
+      *
+      * @param request ModifyVpcPrefixListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVpcPrefixListResponse
+     */
     public ModifyVpcPrefixListResponse modifyVpcPrefixListWithOptions(ModifyVpcPrefixListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19466,11 +22205,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpcPrefixListResponse());
     }
 
+    /**
+      * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+      *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
+      *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
+      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+      * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
+      *
+      * @param request ModifyVpcPrefixListRequest
+      * @return ModifyVpcPrefixListResponse
+     */
     public ModifyVpcPrefixListResponse modifyVpcPrefixList(ModifyVpcPrefixListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpcPrefixListWithOptions(request, runtime);
     }
 
+    /**
+      * *   **ModifyVpnAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of an IPsec-VPN connection.
+      *     *   If the IPsec-VPN connection is in the **updating** state, it indicates that the IPsec-VPN connection is being modified.
+      *     *   If the IPsec-VPN connection is in the **attached** state, it indicates that the IPsec-VPN connection is modified.
+      * *   You cannot call the **ModifyVpnAttachmentAttribute** operation again on the same IPsec-VPN connection before the previous operation is complete.
+      * *   When you call the **ModifyVpnAttachmentAttribute** operation, take note of the following items:
+      *     *   If the IPsec-VPN connection is associated with a transit router, you cannot change the type of the gateway connected to the IPsec-VPN connection.
+      *     *   If the IPsec-VPN connection is not associated with a resource, you cannot change the type of the gateway connected to the IPsec-VPN connection or the customer gateway connected to the IPsec-VPN connection.
+      *
+      * @param request ModifyVpnAttachmentAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVpnAttachmentAttributeResponse
+     */
     public ModifyVpnAttachmentAttributeResponse modifyVpnAttachmentAttributeWithOptions(ModifyVpnAttachmentAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19571,11 +22333,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpnAttachmentAttributeResponse());
     }
 
+    /**
+      * *   **ModifyVpnAttachmentAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of an IPsec-VPN connection.
+      *     *   If the IPsec-VPN connection is in the **updating** state, it indicates that the IPsec-VPN connection is being modified.
+      *     *   If the IPsec-VPN connection is in the **attached** state, it indicates that the IPsec-VPN connection is modified.
+      * *   You cannot call the **ModifyVpnAttachmentAttribute** operation again on the same IPsec-VPN connection before the previous operation is complete.
+      * *   When you call the **ModifyVpnAttachmentAttribute** operation, take note of the following items:
+      *     *   If the IPsec-VPN connection is associated with a transit router, you cannot change the type of the gateway connected to the IPsec-VPN connection.
+      *     *   If the IPsec-VPN connection is not associated with a resource, you cannot change the type of the gateway connected to the IPsec-VPN connection or the customer gateway connected to the IPsec-VPN connection.
+      *
+      * @param request ModifyVpnAttachmentAttributeRequest
+      * @return ModifyVpnAttachmentAttributeResponse
+     */
     public ModifyVpnAttachmentAttributeResponse modifyVpnAttachmentAttribute(ModifyVpnAttachmentAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpnAttachmentAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   **ModifyVpnConnectionAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the VPN gateway. The status of the VPN gateway indicates whether the IPsec-VPN connection is modified.
+      *     *   If the VPN gateway is in the **updating** state, it indicates that the IPsec-VPN connection is being modified.
+      *     *   If the VPN gateway is in the **active** state, it indicates that the IPsec-VPN connection is modified.
+      * *   You cannot call the **ModifyVpnConnectionAttribute** operation again on the same VPN gateway to modify the configuration of an IPsec-VPN connection before the previous operation is complete.
+      *
+      * @param request ModifyVpnConnectionAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVpnConnectionAttributeResponse
+     */
     public ModifyVpnConnectionAttributeResponse modifyVpnConnectionAttributeWithOptions(ModifyVpnConnectionAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19672,11 +22456,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpnConnectionAttributeResponse());
     }
 
+    /**
+      * *   **ModifyVpnConnectionAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of the VPN gateway. The status of the VPN gateway indicates whether the IPsec-VPN connection is modified.
+      *     *   If the VPN gateway is in the **updating** state, it indicates that the IPsec-VPN connection is being modified.
+      *     *   If the VPN gateway is in the **active** state, it indicates that the IPsec-VPN connection is modified.
+      * *   You cannot call the **ModifyVpnConnectionAttribute** operation again on the same VPN gateway to modify the configuration of an IPsec-VPN connection before the previous operation is complete.
+      *
+      * @param request ModifyVpnConnectionAttributeRequest
+      * @return ModifyVpnConnectionAttributeResponse
+     */
     public ModifyVpnConnectionAttributeResponse modifyVpnConnectionAttribute(ModifyVpnConnectionAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpnConnectionAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   **ModifyVpnGatewayAttribute** is an asynchronous operation. After you send the request, the information about the VPN gateway is returned but the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the VPN gateway is being modified.
+      *     *   If a VPN gateway is in the **active** state, the VPN gateway has been modified.
+      * *   You cannot repeatedly call **ModifyVpnGatewayAttribute** to modify a VPN gateway within the specified period of time.
+      *
+      * @param request ModifyVpnGatewayAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVpnGatewayAttributeResponse
+     */
     public ModifyVpnGatewayAttributeResponse modifyVpnGatewayAttributeWithOptions(ModifyVpnGatewayAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19737,11 +22540,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpnGatewayAttributeResponse());
     }
 
+    /**
+      * *   **ModifyVpnGatewayAttribute** is an asynchronous operation. After you send the request, the information about the VPN gateway is returned but the operation is still being performed in the system background. You can call the [DescribeVpnGateway](~~73720~~) operation to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the VPN gateway is being modified.
+      *     *   If a VPN gateway is in the **active** state, the VPN gateway has been modified.
+      * *   You cannot repeatedly call **ModifyVpnGatewayAttribute** to modify a VPN gateway within the specified period of time.
+      *
+      * @param request ModifyVpnGatewayAttributeRequest
+      * @return ModifyVpnGatewayAttributeResponse
+     */
     public ModifyVpnGatewayAttributeResponse modifyVpnGatewayAttribute(ModifyVpnGatewayAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpnGatewayAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call the **ModifyVpnPbrRouteEntryAttribute** operation to modify the weight and priority of a policy-based route.
+      *     *   If you want to modify only the weight of a policy-based route, call [ModifyVpnPbrRouteEntryWeight](~~127249~~).
+      *     *   If you want to modify only the priority of a policy-based route, call [ModifyVpnPbrRouteEntryPriority](~~466870~~).
+      *     *   If a policy-based route does not support priorities, you can only call [ModifyVpnPbrRouteEntryWeight](~~127249~~) to modify its weight.
+      * *   The **ModifyVpnPbrRouteEntryAttribute** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the policy-based route is being created.
+      *     *   If the VPN gateway is in the **active** state, the policy-based route is created.
+      * *   You cannot repeatedly call the **ModifyVpnPbrRouteEntryAttribute** operation for the same VPN gateway within the specified period of time
+      *
+      * @param request ModifyVpnPbrRouteEntryAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVpnPbrRouteEntryAttributeResponse
+     */
     public ModifyVpnPbrRouteEntryAttributeResponse modifyVpnPbrRouteEntryAttributeWithOptions(ModifyVpnPbrRouteEntryAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19818,11 +22644,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpnPbrRouteEntryAttributeResponse());
     }
 
+    /**
+      * *   You can call the **ModifyVpnPbrRouteEntryAttribute** operation to modify the weight and priority of a policy-based route.
+      *     *   If you want to modify only the weight of a policy-based route, call [ModifyVpnPbrRouteEntryWeight](~~127249~~).
+      *     *   If you want to modify only the priority of a policy-based route, call [ModifyVpnPbrRouteEntryPriority](~~466870~~).
+      *     *   If a policy-based route does not support priorities, you can only call [ModifyVpnPbrRouteEntryWeight](~~127249~~) to modify its weight.
+      * *   The **ModifyVpnPbrRouteEntryAttribute** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the policy-based route is being created.
+      *     *   If the VPN gateway is in the **active** state, the policy-based route is created.
+      * *   You cannot repeatedly call the **ModifyVpnPbrRouteEntryAttribute** operation for the same VPN gateway within the specified period of time
+      *
+      * @param request ModifyVpnPbrRouteEntryAttributeRequest
+      * @return ModifyVpnPbrRouteEntryAttributeResponse
+     */
     public ModifyVpnPbrRouteEntryAttributeResponse modifyVpnPbrRouteEntryAttribute(ModifyVpnPbrRouteEntryAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpnPbrRouteEntryAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **ModifyVpnPbrRouteEntryPriority** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the policy-based route is being created.
+      *     *   If the VPN gateway is in the **active** state, the policy-based route is created.
+      * *   You cannot repeatedly call the **ModifyVpnPbrRouteEntryPriority** operation for the same VPN gateway within the specified period of time.
+      *
+      * @param request ModifyVpnPbrRouteEntryPriorityRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVpnPbrRouteEntryPriorityResponse
+     */
     public ModifyVpnPbrRouteEntryPriorityResponse modifyVpnPbrRouteEntryPriorityWithOptions(ModifyVpnPbrRouteEntryPriorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19895,11 +22744,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpnPbrRouteEntryPriorityResponse());
     }
 
+    /**
+      * *   The **ModifyVpnPbrRouteEntryPriority** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the policy-based route is being created.
+      *     *   If the VPN gateway is in the **active** state, the policy-based route is created.
+      * *   You cannot repeatedly call the **ModifyVpnPbrRouteEntryPriority** operation for the same VPN gateway within the specified period of time.
+      *
+      * @param request ModifyVpnPbrRouteEntryPriorityRequest
+      * @return ModifyVpnPbrRouteEntryPriorityResponse
+     */
     public ModifyVpnPbrRouteEntryPriorityResponse modifyVpnPbrRouteEntryPriority(ModifyVpnPbrRouteEntryPriorityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpnPbrRouteEntryPriorityWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **ModifyVpnPbrRouteEntryWeight** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the policy-based route entry is being modified.
+      *     *   If a VPN gateway is in the **active** state, the policy-based route entry is modified.
+      * *   You cannot repeatedly call the **ModifyVpnPbrRouteEntryWeight** operation for the same VPN gateway within the specified period of time.
+      *
+      * @param request ModifyVpnPbrRouteEntryWeightRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVpnPbrRouteEntryWeightResponse
+     */
     public ModifyVpnPbrRouteEntryWeightResponse modifyVpnPbrRouteEntryWeightWithOptions(ModifyVpnPbrRouteEntryWeightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19976,11 +22844,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpnPbrRouteEntryWeightResponse());
     }
 
+    /**
+      * *   The **ModifyVpnPbrRouteEntryWeight** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If a VPN gateway is in the **updating** state, the policy-based route entry is being modified.
+      *     *   If a VPN gateway is in the **active** state, the policy-based route entry is modified.
+      * *   You cannot repeatedly call the **ModifyVpnPbrRouteEntryWeight** operation for the same VPN gateway within the specified period of time.
+      *
+      * @param request ModifyVpnPbrRouteEntryWeightRequest
+      * @return ModifyVpnPbrRouteEntryWeightResponse
+     */
     public ModifyVpnPbrRouteEntryWeightResponse modifyVpnPbrRouteEntryWeight(ModifyVpnPbrRouteEntryWeightRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpnPbrRouteEntryWeightWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **ModifyVpnRouteEntryWeight** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the weight of the destination-based route is being modified.
+      *     *   If the VPN gateway is in the **active** state, the weight of the destination-based route is modified.
+      * *   You cannot repeatedly call the **ModifyVpnRouteEntryWeight** operation to modify the weight of destination-based route for the same VPN gateway within the specified period of time.
+      *
+      * @param request ModifyVpnRouteEntryWeightRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyVpnRouteEntryWeightResponse
+     */
     public ModifyVpnRouteEntryWeightResponse modifyVpnRouteEntryWeightWithOptions(ModifyVpnRouteEntryWeightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20049,6 +22936,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyVpnRouteEntryWeightResponse());
     }
 
+    /**
+      * *   The **ModifyVpnRouteEntryWeight** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the weight of the destination-based route is being modified.
+      *     *   If the VPN gateway is in the **active** state, the weight of the destination-based route is modified.
+      * *   You cannot repeatedly call the **ModifyVpnRouteEntryWeight** operation to modify the weight of destination-based route for the same VPN gateway within the specified period of time.
+      *
+      * @param request ModifyVpnRouteEntryWeightRequest
+      * @return ModifyVpnRouteEntryWeightResponse
+     */
     public ModifyVpnRouteEntryWeightResponse modifyVpnRouteEntryWeight(ModifyVpnRouteEntryWeightRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyVpnRouteEntryWeightWithOptions(request, runtime);
@@ -20111,6 +23007,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.moveResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * *   You cannot repeatedly call the **OpenFlowLogService** operation within the specified period of time by using an Alibaba Cloud account.
+      * *   You can call the [GetFlowLogServiceStatus](~~449624~~) operation to query the status of the flow log feature.
+      *
+      * @param request OpenFlowLogServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return OpenFlowLogServiceResponse
+     */
     public OpenFlowLogServiceResponse openFlowLogServiceWithOptions(OpenFlowLogServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20159,6 +23063,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenFlowLogServiceResponse());
     }
 
+    /**
+      * *   You cannot repeatedly call the **OpenFlowLogService** operation within the specified period of time by using an Alibaba Cloud account.
+      * *   You can call the [GetFlowLogServiceStatus](~~449624~~) operation to query the status of the flow log feature.
+      *
+      * @param request OpenFlowLogServiceRequest
+      * @return OpenFlowLogServiceResponse
+     */
     public OpenFlowLogServiceResponse openFlowLogService(OpenFlowLogServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openFlowLogServiceWithOptions(request, runtime);
@@ -20209,6 +23120,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.openPhysicalConnectionServiceWithOptions(request, runtime);
     }
 
+    /**
+      * You can enable traffic mirroring for different regions. You cannot repeatedly call the **OpenTrafficMirrorService** operation to enable traffic mirroring for one region within the specified period of time.
+      *
+      * @param request OpenTrafficMirrorServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return OpenTrafficMirrorServiceResponse
+     */
     public OpenTrafficMirrorServiceResponse openTrafficMirrorServiceWithOptions(OpenTrafficMirrorServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20233,6 +23151,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenTrafficMirrorServiceResponse());
     }
 
+    /**
+      * You can enable traffic mirroring for different regions. You cannot repeatedly call the **OpenTrafficMirrorService** operation to enable traffic mirroring for one region within the specified period of time.
+      *
+      * @param request OpenTrafficMirrorServiceRequest
+      * @return OpenTrafficMirrorServiceResponse
+     */
     public OpenTrafficMirrorServiceResponse openTrafficMirrorService(OpenTrafficMirrorServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openTrafficMirrorServiceWithOptions(request, runtime);
@@ -20307,6 +23231,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.publishVpnRouteEntryWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this API operation to resume a suspended Express Connect circuit. You can resume only shared Express Connect circuits by calling this API operation.
+      *
+      * @param request RecoverPhysicalConnectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RecoverPhysicalConnectionResponse
+     */
     public RecoverPhysicalConnectionResponse recoverPhysicalConnectionWithOptions(RecoverPhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20343,11 +23274,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RecoverPhysicalConnectionResponse());
     }
 
+    /**
+      * You can call this API operation to resume a suspended Express Connect circuit. You can resume only shared Express Connect circuits by calling this API operation.
+      *
+      * @param request RecoverPhysicalConnectionRequest
+      * @return RecoverPhysicalConnectionResponse
+     */
     public RecoverPhysicalConnectionResponse recoverPhysicalConnection(RecoverPhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.recoverPhysicalConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * After the operation is called, the virtual border router (VBR) changes from the **Terminated** state to the **Recovering** state. When the VBR recovers, it enters the **Enabled** state.
+      * When you call this operation, take note of the following items:
+      * *   Only the owner of the Express Connect circuit can call this operation.
+      * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
+      *
+      * @param request RecoverVirtualBorderRouterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RecoverVirtualBorderRouterResponse
+     */
     public RecoverVirtualBorderRouterResponse recoverVirtualBorderRouterWithOptions(RecoverVirtualBorderRouterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20396,11 +23343,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RecoverVirtualBorderRouterResponse());
     }
 
+    /**
+      * After the operation is called, the virtual border router (VBR) changes from the **Terminated** state to the **Recovering** state. When the VBR recovers, it enters the **Enabled** state.
+      * When you call this operation, take note of the following items:
+      * *   Only the owner of the Express Connect circuit can call this operation.
+      * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
+      *
+      * @param request RecoverVirtualBorderRouterRequest
+      * @return RecoverVirtualBorderRouterResponse
+     */
     public RecoverVirtualBorderRouterResponse recoverVirtualBorderRouter(RecoverVirtualBorderRouterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.recoverVirtualBorderRouterWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, take note of the following limits:
+      * *   Before you release an EIP, make sure that the EIP meets the following requirements:
+      *     *   You can release only an EIP that is in the **Available** state.
+      *     *   You can release only a pay-as-you-go EIP. You cannot release a subscription EIP.
+      * *   The **ReleaseEipAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+      *     *   If the EIP is in the **Releasing** state, the EIP is being released. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If you cannot query the EIP, the EIP is released.
+      * *   You cannot repeatedly call the **ReleaseEipAddress** operation to release an EIP within the specified period of time.
+      *
+      * @param request ReleaseEipAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReleaseEipAddressResponse
+     */
     public ReleaseEipAddressResponse releaseEipAddressWithOptions(ReleaseEipAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20445,11 +23415,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseEipAddressResponse());
     }
 
+    /**
+      * Before you call this operation, take note of the following limits:
+      * *   Before you release an EIP, make sure that the EIP meets the following requirements:
+      *     *   You can release only an EIP that is in the **Available** state.
+      *     *   You can release only a pay-as-you-go EIP. You cannot release a subscription EIP.
+      * *   The **ReleaseEipAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+      *     *   If the EIP is in the **Releasing** state, the EIP is being released. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If you cannot query the EIP, the EIP is released.
+      * *   You cannot repeatedly call the **ReleaseEipAddress** operation to release an EIP within the specified period of time.
+      *
+      * @param request ReleaseEipAddressRequest
+      * @return ReleaseEipAddressResponse
+     */
     public ReleaseEipAddressResponse releaseEipAddress(ReleaseEipAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseEipAddressWithOptions(request, runtime);
     }
 
+    /**
+      * *   After you call the **ReleaseEipSegmentAddress** operation, all EIPs in the specified group are released.
+      * *   The **ReleaseEipSegmentAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of a group of contiguous EIPs:
+      *     *   If the group is in the **Releasing** state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.
+      *     *   If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.
+      * *   You cannot repeatedly call the **ReleaseEipSegmentAddress** operation to release a group of contiguous EIPs within the specified period of time.
+      *
+      * @param request ReleaseEipSegmentAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReleaseEipSegmentAddressResponse
+     */
     public ReleaseEipSegmentAddressResponse releaseEipSegmentAddressWithOptions(ReleaseEipSegmentAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20498,6 +23492,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseEipSegmentAddressResponse());
     }
 
+    /**
+      * *   After you call the **ReleaseEipSegmentAddress** operation, all EIPs in the specified group are released.
+      * *   The **ReleaseEipSegmentAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of a group of contiguous EIPs:
+      *     *   If the group is in the **Releasing** state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.
+      *     *   If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.
+      * *   You cannot repeatedly call the **ReleaseEipSegmentAddress** operation to release a group of contiguous EIPs within the specified period of time.
+      *
+      * @param request ReleaseEipSegmentAddressRequest
+      * @return ReleaseEipSegmentAddressResponse
+     */
     public ReleaseEipSegmentAddressResponse releaseEipSegmentAddress(ReleaseEipSegmentAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseEipSegmentAddressWithOptions(request, runtime);
@@ -20670,6 +23674,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.removeIPv6TranslatorAclListEntryWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **RemoveSourcesFromTrafficMirrorSession** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session:
+      *     *   If the traffic mirror session is in the **Modifying** state, the traffic mirror source is being deleted.
+      *     *   If the traffic mirror session is in the **Created** state, the traffic mirror source is deleted.
+      * *   You cannot repeatedly call the **RemoveSourcesFromTrafficMirrorSession** operation to delete a traffic mirror source from a traffic mirror session within the specified period of time.
+      *
+      * @param request RemoveSourcesFromTrafficMirrorSessionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveSourcesFromTrafficMirrorSessionResponse
+     */
     public RemoveSourcesFromTrafficMirrorSessionResponse removeSourcesFromTrafficMirrorSessionWithOptions(RemoveSourcesFromTrafficMirrorSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20726,11 +23740,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveSourcesFromTrafficMirrorSessionResponse());
     }
 
+    /**
+      * *   The **RemoveSourcesFromTrafficMirrorSession** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session:
+      *     *   If the traffic mirror session is in the **Modifying** state, the traffic mirror source is being deleted.
+      *     *   If the traffic mirror session is in the **Created** state, the traffic mirror source is deleted.
+      * *   You cannot repeatedly call the **RemoveSourcesFromTrafficMirrorSession** operation to delete a traffic mirror source from a traffic mirror session within the specified period of time.
+      *
+      * @param request RemoveSourcesFromTrafficMirrorSessionRequest
+      * @return RemoveSourcesFromTrafficMirrorSessionResponse
+     */
     public RemoveSourcesFromTrafficMirrorSessionResponse removeSourcesFromTrafficMirrorSession(RemoveSourcesFromTrafficMirrorSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeSourcesFromTrafficMirrorSessionWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **ReplaceVpcDhcpOptionsSet** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being replaced.
+      *     *   If the DHCP options set is in the **InUse** state, the DHCP options set is replaced.
+      * *   You cannot repeatedly call the **ReplaceVpcDhcpOptionsSet** operation to replace the DHCP options set associated with a VPC within the specified period of time.
+      *
+      * @param request ReplaceVpcDhcpOptionsSetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReplaceVpcDhcpOptionsSetResponse
+     */
     public ReplaceVpcDhcpOptionsSetResponse replaceVpcDhcpOptionsSetWithOptions(ReplaceVpcDhcpOptionsSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20787,11 +23820,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReplaceVpcDhcpOptionsSetResponse());
     }
 
+    /**
+      * *   The **ReplaceVpcDhcpOptionsSet** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being replaced.
+      *     *   If the DHCP options set is in the **InUse** state, the DHCP options set is replaced.
+      * *   You cannot repeatedly call the **ReplaceVpcDhcpOptionsSet** operation to replace the DHCP options set associated with a VPC within the specified period of time.
+      *
+      * @param request ReplaceVpcDhcpOptionsSetRequest
+      * @return ReplaceVpcDhcpOptionsSetResponse
+     */
     public ReplaceVpcDhcpOptionsSetResponse replaceVpcDhcpOptionsSet(ReplaceVpcDhcpOptionsSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.replaceVpcDhcpOptionsSetWithOptions(request, runtime);
     }
 
+    /**
+      * *   If you modify the information about a prefix list but the modification is not automatically applied to the route table that is associated with the prefix list, you can call this operation to apply the latest prefix list to the associated route table.
+      * *   The **RetryVpcPrefixListAssociation** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the background. You can call the [GetVpcPrefixListAssociations](~~445478~~) to check whether the prefix list is re-applied.
+      *     *   If the prefix list is in the **Modifying** state, the prefix list is being re-applied.
+      *     *   If the prefix list is in the **ModifyFailed** state, the prefix list fails to be re-applied.
+      *     *   If the prefix list is in the **Created** state, the prefix list is re-applied.
+      * *   After you call the **RetryVpcPrefixListAssociation** operation to re-apply a prefix list, you cannot call the operation again until the current task is complete.
+      * ## Scenarios
+      * A prefix list can be successfully modified if the following requirements are met: CIDR blocks are valid, CIDR blocks do not conflict, and the number of CIDR blocks does not exceed the maximum number of CIDR blocks supported by the prefix list. If issues occur on the resource that references the prefix list, the reference may fail. The issues include the number of prefix list entries exceeding the quota or CIDR blocks conflicting with existing routes. After you resolve the issues, you can call the **RetryVpcPrefixListAssociation** operation to re-apply the prefix list.
+      *
+      * @param request RetryVpcPrefixListAssociationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RetryVpcPrefixListAssociationResponse
+     */
     public RetryVpcPrefixListAssociationResponse retryVpcPrefixListAssociationWithOptions(RetryVpcPrefixListAssociationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20852,11 +23908,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RetryVpcPrefixListAssociationResponse());
     }
 
+    /**
+      * *   If you modify the information about a prefix list but the modification is not automatically applied to the route table that is associated with the prefix list, you can call this operation to apply the latest prefix list to the associated route table.
+      * *   The **RetryVpcPrefixListAssociation** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the background. You can call the [GetVpcPrefixListAssociations](~~445478~~) to check whether the prefix list is re-applied.
+      *     *   If the prefix list is in the **Modifying** state, the prefix list is being re-applied.
+      *     *   If the prefix list is in the **ModifyFailed** state, the prefix list fails to be re-applied.
+      *     *   If the prefix list is in the **Created** state, the prefix list is re-applied.
+      * *   After you call the **RetryVpcPrefixListAssociation** operation to re-apply a prefix list, you cannot call the operation again until the current task is complete.
+      * ## Scenarios
+      * A prefix list can be successfully modified if the following requirements are met: CIDR blocks are valid, CIDR blocks do not conflict, and the number of CIDR blocks does not exceed the maximum number of CIDR blocks supported by the prefix list. If issues occur on the resource that references the prefix list, the reference may fail. The issues include the number of prefix list entries exceeding the quota or CIDR blocks conflicting with existing routes. After you resolve the issues, you can call the **RetryVpcPrefixListAssociation** operation to re-apply the prefix list.
+      *
+      * @param request RetryVpcPrefixListAssociationRequest
+      * @return RetryVpcPrefixListAssociationResponse
+     */
     public RetryVpcPrefixListAssociationResponse retryVpcPrefixListAssociation(RetryVpcPrefixListAssociationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.retryVpcPrefixListAssociationWithOptions(request, runtime);
     }
 
+    /**
+      * *   **RevokeInstanceFromCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
+      * *   You cannot repeatedly call the **RevokeInstanceFromCen** operation to revoke the permissions on a network instance that is attached to a CEN instance within the specified period of time. The network instance can be a VPC, virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
+      *
+      * @param request RevokeInstanceFromCenRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RevokeInstanceFromCenResponse
+     */
     public RevokeInstanceFromCenResponse revokeInstanceFromCenWithOptions(RevokeInstanceFromCenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20917,6 +23994,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeInstanceFromCenResponse());
     }
 
+    /**
+      * *   **RevokeInstanceFromCen** is a Virtual Private Cloud (VPC) operation. Therefore, you must use `vpc.aliyuncs.com` as the domain name when you call this operation. The API version is `2016-04-28`.
+      * *   You cannot repeatedly call the **RevokeInstanceFromCen** operation to revoke the permissions on a network instance that is attached to a CEN instance within the specified period of time. The network instance can be a VPC, virtual border router (VBR), or a Cloud Connect Network (CCN) instance.
+      *
+      * @param request RevokeInstanceFromCenRequest
+      * @return RevokeInstanceFromCenResponse
+     */
     public RevokeInstanceFromCenResponse revokeInstanceFromCen(RevokeInstanceFromCenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.revokeInstanceFromCenWithOptions(request, runtime);
@@ -20977,6 +24061,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.revokeInstanceFromVbrWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call **SetHighDefinitionMonitorLogStatus** within a specific period of time.
+      *
+      * @param request SetHighDefinitionMonitorLogStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetHighDefinitionMonitorLogStatusResponse
+     */
     public SetHighDefinitionMonitorLogStatusResponse setHighDefinitionMonitorLogStatusWithOptions(SetHighDefinitionMonitorLogStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21037,11 +24128,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetHighDefinitionMonitorLogStatusResponse());
     }
 
+    /**
+      * You cannot repeatedly call **SetHighDefinitionMonitorLogStatus** within a specific period of time.
+      *
+      * @param request SetHighDefinitionMonitorLogStatusRequest
+      * @return SetHighDefinitionMonitorLogStatusResponse
+     */
     public SetHighDefinitionMonitorLogStatusResponse setHighDefinitionMonitorLogStatus(SetHighDefinitionMonitorLogStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setHighDefinitionMonitorLogStatusWithOptions(request, runtime);
     }
 
+    /**
+      * Tags are used to classify instances. Each tag consists of a key and a value. Take note of the following limits when you use tags:
+      * *   The keys of tags that are added to the same instance must be unique.
+      * *   You cannot create tags without adding them to instances. All tags must be added to instances.
+      * *   Tag information is not shared across regions.
+      *     For example, in the China (Shanghai) region, you cannot view the tags that are created in the China (Hangzhou) region.
+      * *   Virtual private clouds (VPCs), route tables, vSwitches, and elastic IP addresses (EIPs) that belong to the same Alibaba Cloud account and are deployed in the same region share tag information with each other.
+      *     For example, if you added a tag to a VPC, the tag is available to vSwitches, route tables, and EIPs that belong to the same account and are deployed in the same region in which the VPC is created. You can select this tag from the editing page without the need to enter the tag again. You can modify the key and value of a tag or remove a tag from an instance. After you delete an instance, all tags that are added to the instance are deleted.
+      * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.
+      *
+      * @param request TagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21094,11 +24205,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
+    /**
+      * Tags are used to classify instances. Each tag consists of a key and a value. Take note of the following limits when you use tags:
+      * *   The keys of tags that are added to the same instance must be unique.
+      * *   You cannot create tags without adding them to instances. All tags must be added to instances.
+      * *   Tag information is not shared across regions.
+      *     For example, in the China (Shanghai) region, you cannot view the tags that are created in the China (Hangzhou) region.
+      * *   Virtual private clouds (VPCs), route tables, vSwitches, and elastic IP addresses (EIPs) that belong to the same Alibaba Cloud account and are deployed in the same region share tag information with each other.
+      *     For example, if you added a tag to a VPC, the tag is available to vSwitches, route tables, and EIPs that belong to the same account and are deployed in the same region in which the VPC is created. You can select this tag from the editing page without the need to enter the tag again. You can modify the key and value of a tag or remove a tag from an instance. After you delete an instance, all tags that are added to the instance are deleted.
+      * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.
+      *
+      * @param request TagResourcesRequest
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * Tags are used to classify instances. Each tag consists of a key-value pair. To use tags, make sure that the following requirements are met:
+      * *   The keys of tags that are added to the same instance must be unique.
+      * *   You cannot create tags without adding them to instances. All tags must be added to instances.
+      * *   Tag information is not shared across regions.
+      *     For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.
+      * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. If the maximum number of tags is reached, an error message is returned.
+      *
+      * @param request TagResourcesForExpressConnectRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TagResourcesForExpressConnectResponse
+     */
     public TagResourcesForExpressConnectResponse tagResourcesForExpressConnectWithOptions(TagResourcesForExpressConnectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21151,11 +24287,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesForExpressConnectResponse());
     }
 
+    /**
+      * Tags are used to classify instances. Each tag consists of a key-value pair. To use tags, make sure that the following requirements are met:
+      * *   The keys of tags that are added to the same instance must be unique.
+      * *   You cannot create tags without adding them to instances. All tags must be added to instances.
+      * *   Tag information is not shared across regions.
+      *     For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.
+      * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. If the maximum number of tags is reached, an error message is returned.
+      *
+      * @param request TagResourcesForExpressConnectRequest
+      * @return TagResourcesForExpressConnectResponse
+     */
     public TagResourcesForExpressConnectResponse tagResourcesForExpressConnect(TagResourcesForExpressConnectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesForExpressConnectWithOptions(request, runtime);
     }
 
+    /**
+      * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state.
+      * When you call this operation, take note of the following limits:
+      * *   You can only terminate an Express Connect circuit that is in the **Enabled** state.
+      * *   Before you disable an Express Connect circuit, you must delete the virtual border routers (VBRs) associated with it.
+      *
+      * @param request TerminatePhysicalConnectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TerminatePhysicalConnectionResponse
+     */
     public TerminatePhysicalConnectionResponse terminatePhysicalConnectionWithOptions(TerminatePhysicalConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21204,11 +24361,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TerminatePhysicalConnectionResponse());
     }
 
+    /**
+      * After you call this operation, the specified Express Connect circuit changes to the **Terminating** state. After the Express Connect circuit is disabled, it changes to the **Terminated** state.
+      * When you call this operation, take note of the following limits:
+      * *   You can only terminate an Express Connect circuit that is in the **Enabled** state.
+      * *   Before you disable an Express Connect circuit, you must delete the virtual border routers (VBRs) associated with it.
+      *
+      * @param request TerminatePhysicalConnectionRequest
+      * @return TerminatePhysicalConnectionResponse
+     */
     public TerminatePhysicalConnectionResponse terminatePhysicalConnection(TerminatePhysicalConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.terminatePhysicalConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * After the operation is called, the VBR changes from the **Enabled** state to the **Terminating** state. After the VBR is terminated, it enters the **Terminated** state.
+      * >  Only the owner of an Express Connect circuit can call this operation.
+      *
+      * @param request TerminateVirtualBorderRouterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TerminateVirtualBorderRouterResponse
+     */
     public TerminateVirtualBorderRouterResponse terminateVirtualBorderRouterWithOptions(TerminateVirtualBorderRouterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21257,6 +24431,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TerminateVirtualBorderRouterResponse());
     }
 
+    /**
+      * After the operation is called, the VBR changes from the **Enabled** state to the **Terminating** state. After the VBR is terminated, it enters the **Terminated** state.
+      * >  Only the owner of an Express Connect circuit can call this operation.
+      *
+      * @param request TerminateVirtualBorderRouterRequest
+      * @return TerminateVirtualBorderRouterResponse
+     */
     public TerminateVirtualBorderRouterResponse terminateVirtualBorderRouter(TerminateVirtualBorderRouterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.terminateVirtualBorderRouterWithOptions(request, runtime);
@@ -21323,6 +24504,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.unTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * *   **UnassociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+      *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If the EIP is in the **Available** state, the EIP is disassociated.
+      * *   You cannot repeatedly call the **UnassociateEipAddress** operation to disassociate an EIP within the specified period of time.
+      *
+      * @param request UnassociateEipAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UnassociateEipAddressResponse
+     */
     public UnassociateEipAddressResponse unassociateEipAddressWithOptions(UnassociateEipAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21387,6 +24578,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnassociateEipAddressResponse());
     }
 
+    /**
+      * *   **UnassociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+      *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If the EIP is in the **Available** state, the EIP is disassociated.
+      * *   You cannot repeatedly call the **UnassociateEipAddress** operation to disassociate an EIP within the specified period of time.
+      *
+      * @param request UnassociateEipAddressRequest
+      * @return UnassociateEipAddressResponse
+     */
     public UnassociateEipAddressResponse unassociateEipAddress(UnassociateEipAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unassociateEipAddressWithOptions(request, runtime);
@@ -21445,6 +24645,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.unassociateGlobalAccelerationInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   The ECS instance must be in the **Running** or **Stopped** state.
+      * *   The HAVIP must be in the **Available** or **InUse** state.
+      * *   The **UnassociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+      *     *   If the HAVIP is in the **Unassociating** state, the HAVIP is being disassociated.
+      *     *   If the HAVIP is in the **Inuse** or **Available** state, the HAVIP is disassociated.
+      * *   You cannot repeatedly call the **UnassociateHaVip** operation to disassociate an HAVIP within the specified period of time.
+      *
+      * @param request UnassociateHaVipRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UnassociateHaVipResponse
+     */
     public UnassociateHaVipResponse unassociateHaVipWithOptions(UnassociateHaVipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21505,11 +24718,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnassociateHaVipResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   The ECS instance must be in the **Running** or **Stopped** state.
+      * *   The HAVIP must be in the **Available** or **InUse** state.
+      * *   The **UnassociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+      *     *   If the HAVIP is in the **Unassociating** state, the HAVIP is being disassociated.
+      *     *   If the HAVIP is in the **Inuse** or **Available** state, the HAVIP is disassociated.
+      * *   You cannot repeatedly call the **UnassociateHaVip** operation to disassociate an HAVIP within the specified period of time.
+      *
+      * @param request UnassociateHaVipRequest
+      * @return UnassociateHaVipResponse
+     */
     public UnassociateHaVipResponse unassociateHaVip(UnassociateHaVipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unassociateHaVipWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **UnassociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **UNBINDING** state, the network ACL is being disassociated from the vSwitch.
+      *     *   If the network ACL is in the **UNBINDED** state, the network ACL is disassociated from the vSwitch.
+      * *   You cannot repeatedly call the **UnassociateNetworkAcl** operation to disassociate a network ACL from a vSwitch within the specified period of time.
+      *
+      * @param request UnassociateNetworkAclRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UnassociateNetworkAclResponse
+     */
     public UnassociateNetworkAclResponse unassociateNetworkAclWithOptions(UnassociateNetworkAclRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21562,6 +24797,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnassociateNetworkAclResponse());
     }
 
+    /**
+      * *   The **UnassociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **UNBINDING** state, the network ACL is being disassociated from the vSwitch.
+      *     *   If the network ACL is in the **UNBINDED** state, the network ACL is disassociated from the vSwitch.
+      * *   You cannot repeatedly call the **UnassociateNetworkAcl** operation to disassociate a network ACL from a vSwitch within the specified period of time.
+      *
+      * @param request UnassociateNetworkAclRequest
+      * @return UnassociateNetworkAclResponse
+     */
     public UnassociateNetworkAclResponse unassociateNetworkAcl(UnassociateNetworkAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unassociateNetworkAclWithOptions(request, runtime);
@@ -21624,6 +24868,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.unassociatePhysicalConnectionFromVirtualBorderRouterWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **UnassociateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      *     *   If the vSwitch is in the **Pending** state, the route table is being disassociated.
+      *     *   If the vSwitch is in the **Available** state, the route table is disassociated.
+      * *   You cannot repeatedly call the **UnassociateRouteTable** operation to disassociate a route table from a vSwitch within the specified period of time.
+      *
+      * @param request UnassociateRouteTableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UnassociateRouteTableResponse
+     */
     public UnassociateRouteTableResponse unassociateRouteTableWithOptions(UnassociateRouteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21680,11 +24934,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnassociateRouteTableResponse());
     }
 
+    /**
+      * *   The **UnassociateRouteTable** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      *     *   If the vSwitch is in the **Pending** state, the route table is being disassociated.
+      *     *   If the vSwitch is in the **Available** state, the route table is disassociated.
+      * *   You cannot repeatedly call the **UnassociateRouteTable** operation to disassociate a route table from a vSwitch within the specified period of time.
+      *
+      * @param request UnassociateRouteTableRequest
+      * @return UnassociateRouteTableResponse
+     */
     public UnassociateRouteTableResponse unassociateRouteTable(UnassociateRouteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unassociateRouteTableWithOptions(request, runtime);
     }
 
+    /**
+      * *   Before you delete a secondary CIDR block from a VPC, delete the vSwitch which is created with the CIDR block. For more information, see [DeleteVSwitch](~~35746~~).
+      * *   You cannot repeatedly call the **UnassociateVpcCidrBlock** operation to delete a secondary CIDR block from a VPC within the specified period of time.
+      *
+      * @param request UnassociateVpcCidrBlockRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UnassociateVpcCidrBlockResponse
+     */
     public UnassociateVpcCidrBlockResponse unassociateVpcCidrBlockWithOptions(UnassociateVpcCidrBlockRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21741,6 +25012,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UnassociateVpcCidrBlockResponse());
     }
 
+    /**
+      * *   Before you delete a secondary CIDR block from a VPC, delete the vSwitch which is created with the CIDR block. For more information, see [DeleteVSwitch](~~35746~~).
+      * *   You cannot repeatedly call the **UnassociateVpcCidrBlock** operation to delete a secondary CIDR block from a VPC within the specified period of time.
+      *
+      * @param request UnassociateVpcCidrBlockRequest
+      * @return UnassociateVpcCidrBlockResponse
+     */
     public UnassociateVpcCidrBlockResponse unassociateVpcCidrBlock(UnassociateVpcCidrBlockRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unassociateVpcCidrBlockWithOptions(request, runtime);
@@ -21969,6 +25247,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateGatewayRouteTableEntryAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   If you modify only the **IpsecServerName** parameter, this operation is synchronous. If you modify parameters other than **IpsecServerName**, this operation is asynchronous.
+      * *   When the **UpdateIpsecServer** operation is asynchronous, the system returns a request ID after you send the request. However, the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the configuration of the IPsec server is being modified.
+      *     *   If the VPN gateway is in the **active** state, the configuration of the IPsec server is modified.
+      * *   You cannot repeatedly call **UpdateIpsecServer** to modify the configuration of an IPsec server of the same VPN gateway within the specified period of time.
+      *
+      * @param request UpdateIpsecServerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateIpsecServerResponse
+     */
     public UpdateIpsecServerResponse updateIpsecServerWithOptions(UpdateIpsecServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22037,11 +25326,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpsecServerResponse());
     }
 
+    /**
+      * *   If you modify only the **IpsecServerName** parameter, this operation is synchronous. If you modify parameters other than **IpsecServerName**, this operation is asynchronous.
+      * *   When the **UpdateIpsecServer** operation is asynchronous, the system returns a request ID after you send the request. However, the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **updating** state, the configuration of the IPsec server is being modified.
+      *     *   If the VPN gateway is in the **active** state, the configuration of the IPsec server is modified.
+      * *   You cannot repeatedly call **UpdateIpsecServer** to modify the configuration of an IPsec server of the same VPN gateway within the specified period of time.
+      *
+      * @param request UpdateIpsecServerRequest
+      * @return UpdateIpsecServerResponse
+     */
     public UpdateIpsecServerResponse updateIpsecServer(UpdateIpsecServerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateIpsecServerWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **UpdateIpv4GatewayAttribute** operation to modify the name or description of an IPv4 gateway within the specified period of time.
+      *
+      * @param request UpdateIpv4GatewayAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateIpv4GatewayAttributeResponse
+     */
     public UpdateIpv4GatewayAttributeResponse updateIpv4GatewayAttributeWithOptions(UpdateIpv4GatewayAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22106,11 +25412,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpv4GatewayAttributeResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **UpdateIpv4GatewayAttribute** operation to modify the name or description of an IPv4 gateway within the specified period of time.
+      *
+      * @param request UpdateIpv4GatewayAttributeRequest
+      * @return UpdateIpv4GatewayAttributeResponse
+     */
     public UpdateIpv4GatewayAttributeResponse updateIpv4GatewayAttribute(UpdateIpv4GatewayAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateIpv4GatewayAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, take note of the following limits:
+      * *   **UpdateNatGatewayNatType** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT gateway is not upgraded. The system upgrades the NAT gateway in the background. You can call the GetNatGatewayConvertStatus operation to query the upgrade progress of a NAT gateway. For more information, see [GetNatGatewayConvertStatus](~~184744~~).
+      *     *   If a NAT gateway is in the **processing** state, it indicates that the NAT gateway is being upgraded. You can only query the state of the NAT gateway but cannot perform other operations.
+      *     *   If a NAT gateway is in the **successful** state, it indicates that the NAT gateway is upgraded.
+      *     *   If a NAT gateway is in the **failed** state, it indicates that the system failed to upgrade the NAT gateway.
+      * *   You cannot repeatedly call the **UpdateNatGatewayNatType** operation to upgrade a NAT gateway within the specified period of time.
+      * *   The billing method and billable items remain the same after the upgrade.
+      * *   It takes about 5 minutes to upgrade a standard NAT gateway to an enhanced NAT gateway. During the upgrade, transient connections may occur once or twice. You can determine whether to enable automatic reconnection or use manual reconnection based on your business requirements.
+      * *   You can only upgrade standard NAT gateways to enhanced NAT gateways. You are not allowed to downgrade enhanced NAT gateways to standard NAT gateways.
+      *
+      * @param request UpdateNatGatewayNatTypeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateNatGatewayNatTypeResponse
+     */
     public UpdateNatGatewayNatTypeResponse updateNatGatewayNatTypeWithOptions(UpdateNatGatewayNatTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22175,11 +25502,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNatGatewayNatTypeResponse());
     }
 
+    /**
+      * Before you call this operation, take note of the following limits:
+      * *   **UpdateNatGatewayNatType** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT gateway is not upgraded. The system upgrades the NAT gateway in the background. You can call the GetNatGatewayConvertStatus operation to query the upgrade progress of a NAT gateway. For more information, see [GetNatGatewayConvertStatus](~~184744~~).
+      *     *   If a NAT gateway is in the **processing** state, it indicates that the NAT gateway is being upgraded. You can only query the state of the NAT gateway but cannot perform other operations.
+      *     *   If a NAT gateway is in the **successful** state, it indicates that the NAT gateway is upgraded.
+      *     *   If a NAT gateway is in the **failed** state, it indicates that the system failed to upgrade the NAT gateway.
+      * *   You cannot repeatedly call the **UpdateNatGatewayNatType** operation to upgrade a NAT gateway within the specified period of time.
+      * *   The billing method and billable items remain the same after the upgrade.
+      * *   It takes about 5 minutes to upgrade a standard NAT gateway to an enhanced NAT gateway. During the upgrade, transient connections may occur once or twice. You can determine whether to enable automatic reconnection or use manual reconnection based on your business requirements.
+      * *   You can only upgrade standard NAT gateways to enhanced NAT gateways. You are not allowed to downgrade enhanced NAT gateways to standard NAT gateways.
+      *
+      * @param request UpdateNatGatewayNatTypeRequest
+      * @return UpdateNatGatewayNatTypeResponse
+     */
     public UpdateNatGatewayNatTypeResponse updateNatGatewayNatType(UpdateNatGatewayNatTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateNatGatewayNatTypeWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **UpdateNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being updated.
+      *     *   If the network ACL is in the **Available** state, the rules of the network ACL are updated.
+      * *   You cannot repeatedly call the **UpdateNetworkAclEntries** operation to update the rules of a network ACL within the specified period of time.
+      *
+      * @param request UpdateNetworkAclEntriesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateNetworkAclEntriesResponse
+     */
     public UpdateNetworkAclEntriesResponse updateNetworkAclEntriesWithOptions(UpdateNetworkAclEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22244,11 +25595,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNetworkAclEntriesResponse());
     }
 
+    /**
+      * *   The **UpdateNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being updated.
+      *     *   If the network ACL is in the **Available** state, the rules of the network ACL are updated.
+      * *   You cannot repeatedly call the **UpdateNetworkAclEntries** operation to update the rules of a network ACL within the specified period of time.
+      *
+      * @param request UpdateNetworkAclEntriesRequest
+      * @return UpdateNetworkAclEntriesResponse
+     */
     public UpdateNetworkAclEntriesResponse updateNetworkAclEntries(UpdateNetworkAclEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateNetworkAclEntriesWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **UpdatePublicIpAddressPoolAttribute** operation to modify the attributes of an IP address pool within the specified period of time.
+      *
+      * @param request UpdatePublicIpAddressPoolAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdatePublicIpAddressPoolAttributeResponse
+     */
     public UpdatePublicIpAddressPoolAttributeResponse updatePublicIpAddressPoolAttributeWithOptions(UpdatePublicIpAddressPoolAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22309,11 +25676,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePublicIpAddressPoolAttributeResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **UpdatePublicIpAddressPoolAttribute** operation to modify the attributes of an IP address pool within the specified period of time.
+      *
+      * @param request UpdatePublicIpAddressPoolAttributeRequest
+      * @return UpdatePublicIpAddressPoolAttributeResponse
+     */
     public UpdatePublicIpAddressPoolAttributeResponse updatePublicIpAddressPoolAttribute(UpdatePublicIpAddressPoolAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePublicIpAddressPoolAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot repeatedly call the **UpdateTrafficMirrorFilterAttribute** operation to modify the configuration of a filter for traffic mirroring within the specified period of time.
+      *
+      * @param request UpdateTrafficMirrorFilterAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTrafficMirrorFilterAttributeResponse
+     */
     public UpdateTrafficMirrorFilterAttributeResponse updateTrafficMirrorFilterAttributeWithOptions(UpdateTrafficMirrorFilterAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22374,11 +25754,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTrafficMirrorFilterAttributeResponse());
     }
 
+    /**
+      * You cannot repeatedly call the **UpdateTrafficMirrorFilterAttribute** operation to modify the configuration of a filter for traffic mirroring within the specified period of time.
+      *
+      * @param request UpdateTrafficMirrorFilterAttributeRequest
+      * @return UpdateTrafficMirrorFilterAttributeResponse
+     */
     public UpdateTrafficMirrorFilterAttributeResponse updateTrafficMirrorFilterAttribute(UpdateTrafficMirrorFilterAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTrafficMirrorFilterAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **UpdateTrafficMirrorFilterRuleAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
+      *     *   If the rule is in the **Modifying** state, the rule is being modified.
+      *     *   If the rule is in the **Created** state, the rule is modified.
+      * *   You cannot repeatedly call the **UpdateTrafficMirrorFilterRuleAttribute** operation to modify an inbound or outbound rule within the specified period of time.
+      *
+      * @param request UpdateTrafficMirrorFilterRuleAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTrafficMirrorFilterRuleAttributeResponse
+     */
     public UpdateTrafficMirrorFilterRuleAttributeResponse updateTrafficMirrorFilterRuleAttributeWithOptions(UpdateTrafficMirrorFilterRuleAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22459,11 +25855,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTrafficMirrorFilterRuleAttributeResponse());
     }
 
+    /**
+      * *   The **UpdateTrafficMirrorFilterRuleAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
+      *     *   If the rule is in the **Modifying** state, the rule is being modified.
+      *     *   If the rule is in the **Created** state, the rule is modified.
+      * *   You cannot repeatedly call the **UpdateTrafficMirrorFilterRuleAttribute** operation to modify an inbound or outbound rule within the specified period of time.
+      *
+      * @param request UpdateTrafficMirrorFilterRuleAttributeRequest
+      * @return UpdateTrafficMirrorFilterRuleAttributeResponse
+     */
     public UpdateTrafficMirrorFilterRuleAttributeResponse updateTrafficMirrorFilterRuleAttribute(UpdateTrafficMirrorFilterRuleAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTrafficMirrorFilterRuleAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * *   The **UpdateTrafficMirrorSessionAttribute** operation is asynchronous. After you send a request, the system returns the request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session.
+      *     *   If the traffic mirror session is in the **Modifying** state, the configuration of the traffic mirror session is being modified.
+      *     *   If the traffic mirror session is in the **Created** state, the configuration of the traffic mirror session is modified.
+      * *   After you call the **UpdateTrafficMirrorSessionAttribute** operation to modify the configuration of a traffic mirror session, you cannot call the operation again to modify the configuration of the traffic mirror session until the previous modification task is complete.
+      *
+      * @param request UpdateTrafficMirrorSessionAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateTrafficMirrorSessionAttributeResponse
+     */
     public UpdateTrafficMirrorSessionAttributeResponse updateTrafficMirrorSessionAttributeWithOptions(UpdateTrafficMirrorSessionAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22548,6 +25963,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTrafficMirrorSessionAttributeResponse());
     }
 
+    /**
+      * *   The **UpdateTrafficMirrorSessionAttribute** operation is asynchronous. After you send a request, the system returns the request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session.
+      *     *   If the traffic mirror session is in the **Modifying** state, the configuration of the traffic mirror session is being modified.
+      *     *   If the traffic mirror session is in the **Created** state, the configuration of the traffic mirror session is modified.
+      * *   After you call the **UpdateTrafficMirrorSessionAttribute** operation to modify the configuration of a traffic mirror session, you cannot call the operation again to modify the configuration of the traffic mirror session until the previous modification task is complete.
+      *
+      * @param request UpdateTrafficMirrorSessionAttributeRequest
+      * @return UpdateTrafficMirrorSessionAttributeResponse
+     */
     public UpdateTrafficMirrorSessionAttributeResponse updateTrafficMirrorSessionAttribute(UpdateTrafficMirrorSessionAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTrafficMirrorSessionAttributeWithOptions(request, runtime);
@@ -22659,6 +26083,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateVirtualPhysicalConnectionWithOptions(request, runtime);
     }
 
+    /**
+      * *   **UpdateVpcGatewayEndpointAttribute** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the [GetVpcGatewayEndpointAttribute](~~311017~~) operation to query the status of a gateway endpoint.
+      *     *   If the gateway endpoint is in the **Updating** state, it is being modified.
+      *     *   If the gateway endpoint is in the **Created** state, it is modified.
+      * *   You cannot call the **UpdateVpcGatewayEndpointAttribute** operation within a specific period of time.
+      *
+      * @param request UpdateVpcGatewayEndpointAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateVpcGatewayEndpointAttributeResponse
+     */
     public UpdateVpcGatewayEndpointAttributeResponse updateVpcGatewayEndpointAttributeWithOptions(UpdateVpcGatewayEndpointAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22723,11 +26157,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVpcGatewayEndpointAttributeResponse());
     }
 
+    /**
+      * *   **UpdateVpcGatewayEndpointAttribute** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the [GetVpcGatewayEndpointAttribute](~~311017~~) operation to query the status of a gateway endpoint.
+      *     *   If the gateway endpoint is in the **Updating** state, it is being modified.
+      *     *   If the gateway endpoint is in the **Created** state, it is modified.
+      * *   You cannot call the **UpdateVpcGatewayEndpointAttribute** operation within a specific period of time.
+      *
+      * @param request UpdateVpcGatewayEndpointAttributeRequest
+      * @return UpdateVpcGatewayEndpointAttributeResponse
+     */
     public UpdateVpcGatewayEndpointAttributeResponse updateVpcGatewayEndpointAttribute(UpdateVpcGatewayEndpointAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateVpcGatewayEndpointAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that a VPC NAT gateway is created. For more information, see [CreateNatGateway](~~120219~~).
+      *
+      * @param request VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse
+     */
     public VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse vpcDescribeVpcNatGatewayNetworkInterfaceQuotaWithOptions(VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -22780,6 +26230,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that a VPC NAT gateway is created. For more information, see [CreateNatGateway](~~120219~~).
+      *
+      * @param request VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest
+      * @return VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse
+     */
     public VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse vpcDescribeVpcNatGatewayNetworkInterfaceQuota(VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.vpcDescribeVpcNatGatewayNetworkInterfaceQuotaWithOptions(request, runtime);

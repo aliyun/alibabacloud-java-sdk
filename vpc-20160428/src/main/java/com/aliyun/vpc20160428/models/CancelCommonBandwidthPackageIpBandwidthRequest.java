@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CancelCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
+    /**
+     * <p>The ID of the EIP bandwidth plan.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>The ID of the EIP that is associated with the EIP bandwidth plan.</p>
+     */
     @NameInMap("EipId")
     public String eipId;
 
@@ -16,6 +22,9 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the EIP bandwidth plan. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

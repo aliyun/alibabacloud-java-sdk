@@ -4,12 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipSegmentAddressResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the contiguous EIP group.</p>
+     */
     @NameInMap("EipSegmentInstanceId")
     public String eipSegmentInstanceId;
 
-    @NameInMap("OrderId")
-    public Long orderId;
-
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -24,14 +27,6 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
     }
     public String getEipSegmentInstanceId() {
         return this.eipSegmentInstanceId;
-    }
-
-    public AllocateEipSegmentAddressResponseBody setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
     }
 
     public AllocateEipSegmentAddressResponseBody setRequestId(String requestId) {

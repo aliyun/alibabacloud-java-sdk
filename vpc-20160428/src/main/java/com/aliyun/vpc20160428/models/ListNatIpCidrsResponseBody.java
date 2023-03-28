@@ -4,15 +4,30 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListNatIpCidrsResponseBody extends TeaModel {
+    /**
+     * <p>The CIDR blocks of the NAT gateway.</p>
+     */
     @NameInMap("NatIpCidrs")
     public java.util.List<ListNatIpCidrsResponseBodyNatIpCidrs> natIpCidrs;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.</p>
+     * <p>*   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of CIDR blocks that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -54,27 +69,54 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
     }
 
     public static class ListNatIpCidrsResponseBodyNatIpCidrs extends TeaModel {
+        /**
+         * <p>The time when the CIDR block was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>Indicates whether the CIDR block is the default CIDR block of the NAT gateway. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The CIDR block is the default CIDR block of the NAT gateway.</p>
+         * <p>*   **false**: The CIDR block is not the default CIDR block of the NAT gateway.</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The ID of the VPC NAT gateway.</p>
+         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
+        /**
+         * <p>The CIDR block of the NAT gateway.</p>
+         */
         @NameInMap("NatIpCidr")
         public String natIpCidr;
 
+        /**
+         * <p>The description of the CIDR block of the NAT gateway.</p>
+         */
         @NameInMap("NatIpCidrDescription")
         public String natIpCidrDescription;
 
+        /**
+         * <p>The ID of the CIDR block of the NAT gateway.</p>
+         */
         @NameInMap("NatIpCidrId")
         public String natIpCidrId;
 
+        /**
+         * <p>The name of the CIDR block of the NAT gateway.</p>
+         */
         @NameInMap("NatIpCidrName")
         public String natIpCidrName;
 
+        /**
+         * <p>The status of the CIDR block of the NAT gateway. If **Available** is returned, it indicates that the CIDR block is available.</p>
+         */
         @NameInMap("NatIpCidrStatus")
         public String natIpCidrStatus;
 

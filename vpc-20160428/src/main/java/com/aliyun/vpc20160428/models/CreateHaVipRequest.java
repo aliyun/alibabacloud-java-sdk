@@ -4,15 +4,37 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateHaVipRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among all requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the HAVIP.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The IP address of the HAVIP.</p>
+     * <br>
+     * <p>The specified IP address must be an idle IP address that falls within the CIDR block of the vSwitch. If this parameter is not set, an idle IP address from the CIDR block of the vSwitch is randomly assigned to the HAVIP.</p>
+     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
+    /**
+     * <p>The name of the HAVIP.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,9 +44,15 @@ public class CreateHaVipRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the HAVIP. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the HAVIP belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,6 +62,9 @@ public class CreateHaVipRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

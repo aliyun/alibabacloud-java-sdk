@@ -4,9 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
+    /**
+     * <p>The ID of the IPv6 address.</p>
+     * <br>
+     * <p>>  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.</p>
+     */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
 
+    /**
+     * <p>The ID of the Internet bandwidth that you purchase for the IPv6 gateway.</p>
+     * <br>
+     * <p>>  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.</p>
+     */
     @NameInMap("Ipv6InternetBandwidthId")
     public String ipv6InternetBandwidthId;
 
@@ -16,6 +26,11 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the IPv6 gateway is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

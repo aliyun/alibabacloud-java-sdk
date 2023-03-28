@@ -7,18 +7,33 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeVirtualBorderRoutersRequestFilter> filter;
 
+    /**
+     * <p>Specifies whether cross-account VBRs are included.</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no. This is the default value.</p>
+     */
     @NameInMap("IncludeCrossAccountVbr")
     public Boolean includeCrossAccountVbr;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the VBRs are deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -98,6 +113,17 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     }
 
     public static class DescribeVirtualBorderRoutersRequestFilter extends TeaModel {
+        /**
+         * <p>The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:</p>
+         * <br>
+         * <p>*   **PhysicalConnectionId**: Filter by Express Connect circuit ID.</p>
+         * <p>*   **VbrId**: Filter by VBR ID.</p>
+         * <p>*   **Status**: Filter by VBR status.</p>
+         * <p>*   **Name**: Filter by VBR name.</p>
+         * <p>*   **AccessPointId**: Filter by access point ID.</p>
+         * <p>*   **eccId**: Filter by Express Cloud Connect (ECC) instance ID.</p>
+         * <p>*   **type**: Filter by Express Connect circuit type.</p>
+         */
         @NameInMap("Key")
         public String key;
 

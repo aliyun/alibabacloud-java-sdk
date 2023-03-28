@@ -13,15 +13,29 @@ public class DescribeHaVipsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region to which the HAVIP belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the HAVIP belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -120,6 +134,21 @@ public class DescribeHaVipsRequest extends TeaModel {
     }
 
     public static class DescribeHaVipsRequestFilter extends TeaModel {
+        /**
+         * <p>The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**.</p>
+         * <br>
+         * <p>The following filter keys are supported:</p>
+         * <br>
+         * <p>*   **VpcId**: virtual private cloud (VPC) ID</p>
+         * <p>*   **VSwitchId**: vSwitch ID</p>
+         * <p>*   **Status**: HAVIP status</p>
+         * <p>*   **HaVipId**: HAVIP ID</p>
+         * <p>*   **HaVipAddress**: HAVIP IP address</p>
+         * <br>
+         * <p>You can specify multiple values for each filter key. The logical operator among multiple values is OR. If one value is matched, the filter key is matched.</p>
+         * <br>
+         * <p>The logical operator among multiple filter keys is AND. HAVIPs can be queried only if all filter keys are matched.</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -150,9 +179,19 @@ public class DescribeHaVipsRequest extends TeaModel {
     }
 
     public static class DescribeHaVipsRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. It can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

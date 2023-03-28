@@ -4,18 +4,44 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
+    /**
+     * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+     */
     @NameInMap("CircuitCode")
     public String circuitCode;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the Express Connect circuit.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+     * <br>
+     * <p>*   **CT**: China Telecom</p>
+     * <p>*   **CU**: China Unicom</p>
+     * <p>*   **CM**: China Mobile</p>
+     * <p>*   **CO**: other connectivity providers in the Chinese mainland</p>
+     * <p>*   **Equinix**: Equinix</p>
+     * <p>*   **Other**: other connectivity providers outside the Chinese Mainland</p>
+     */
     @NameInMap("LineOperator")
     public String lineOperator;
 
+    /**
+     * <p>The name of the Express Connect circuit.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,18 +51,45 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The geographical location of the data center.</p>
+     */
     @NameInMap("PeerLocation")
     public String peerLocation;
 
+    /**
+     * <p>The ID of the Express Connect circuit.</p>
+     */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
+    /**
+     * <p>The port type of the Express Connect circuit. Valid values:</p>
+     * <br>
+     * <p>*   **100Base-T**: 100 Mbit/s copper Ethernet port</p>
+     * <p>*   **1000Base-T** (default): 1,000 Mbit/s copper Ethernet port</p>
+     * <p>*   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 kilometers)</p>
+     * <p>*   **10GBase-T**: 10,000 Mbit/s copper Ethernet port</p>
+     * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 kilometers)</p>
+     * <p>*   **40GBase-LR**: 40,000 Mbit/s single-mode optical port</p>
+     * <p>*   **100GBase-LR**: 100,000 Mbit/s single-mode optical port</p>
+     * <br>
+     * <p>>  If you want to use the 40GBase-LR or 100GBase-LR port for an Express Connect circuit, you must first contact your account manager to obtain information about resource supplies.</p>
+     */
     @NameInMap("PortType")
     public String portType;
 
+    /**
+     * <p>The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.</p>
+     */
     @NameInMap("RedundantPhysicalConnectionId")
     public String redundantPhysicalConnectionId;
 
+    /**
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -46,6 +99,9 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The bandwidth value for the connection over the Express Connect circuit. Unit: Mbit/s. Valid values: 2 to 10240.</p>
+     */
     @NameInMap("bandwidth")
     public Integer bandwidth;
 

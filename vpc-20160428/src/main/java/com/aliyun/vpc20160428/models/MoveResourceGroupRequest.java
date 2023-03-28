@@ -4,6 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource group to which the cloud resource is to be moved.</p>
+     * <br>
+     * <p>>  You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~).</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
@@ -13,9 +18,17 @@ public class MoveResourceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the cloud resource belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the instance that you want to move.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -25,6 +38,13 @@ public class MoveResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **vpc**: a virtual private cloud (VPC)</p>
+     * <p>*   **eip**: an elastic IP address (EIP)</p>
+     * <p>*   **bandwidthpackage**: an EIP bandwidth plan</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

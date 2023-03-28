@@ -4,15 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipGatewayInfoResponseBody extends TeaModel {
+    /**
+     * <p>The status code of the operation.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information about the EIP.</p>
+     */
     @NameInMap("EipInfos")
     public DescribeEipGatewayInfoResponseBodyEipInfos eipInfos;
 
+    /**
+     * <p>The result of the operation.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,21 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeEipGatewayInfoResponseBodyEipInfosEipInfo extends TeaModel {
+        /**
+         * <p>The IP address of the EIP.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The IP address of the gateway that is associated with the EIP.</p>
+         */
         @NameInMap("IpGw")
         public String ipGw;
 
+        /**
+         * <p>The subnet mask of the EIP.</p>
+         */
         @NameInMap("IpMask")
         public String ipMask;
 

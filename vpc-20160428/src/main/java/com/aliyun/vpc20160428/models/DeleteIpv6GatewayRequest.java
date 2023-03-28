@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpv6GatewayRequest extends TeaModel {
+    /**
+     * <p>The ID of the IPv6 gateway that you want to delete.</p>
+     */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
@@ -13,6 +16,9 @@ public class DeleteIpv6GatewayRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

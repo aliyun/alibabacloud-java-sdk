@@ -4,12 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpPeersRequest extends TeaModel {
+    /**
+     * <p>The ID of the BGP group to which the BGP peer that you want to query belongs.</p>
+     */
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
 
+    /**
+     * <p>The ID of the BGP peer that you want to query.</p>
+     */
     @NameInMap("BgpPeerId")
     public String bgpPeerId;
 
+    /**
+     * <p>Specifies whether the BGP group is the default BGP group. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The BGP group is the default BGP group.</p>
+     * <p>*   **false**: The BGP group is not the default BGP group.</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
@@ -19,12 +31,23 @@ public class DescribeBgpPeersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the BGP group to which the BGP peer that you want to query belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,6 +57,9 @@ public class DescribeBgpPeersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the virtual border router (VBR) that is associated with the BGP peer that you want to query.</p>
+     */
     @NameInMap("RouterId")
     public String routerId;
 

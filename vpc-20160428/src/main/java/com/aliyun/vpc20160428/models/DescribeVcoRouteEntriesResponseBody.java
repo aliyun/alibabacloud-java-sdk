@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of routes.</p>
+     */
     @NameInMap("VcoRouteEntries")
     public java.util.List<DescribeVcoRouteEntriesResponseBodyVcoRouteEntries> vcoRouteEntries;
 
@@ -65,33 +80,77 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeVcoRouteEntriesResponseBodyVcoRouteEntries extends TeaModel {
+        /**
+         * <p>The list of autonomous system (AS) numbers that the BGP route goes through.</p>
+         */
         @NameInMap("AsPath")
         public String asPath;
 
+        /**
+         * <p>The community value carried by the BGP route.</p>
+         */
         @NameInMap("Community")
         public String community;
 
+        /**
+         * <p>The timestamp when the route was created.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The next hop of the route.</p>
+         */
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <p>The destination CIDR block of the route.</p>
+         */
         @NameInMap("RouteDest")
         public String routeDest;
 
+        /**
+         * <p>The route type. Valid values:</p>
+         * <br>
+         * <p>*   **custom**: a destination-based route</p>
+         * <p>*   **bgp**: a BGP route</p>
+         */
         @NameInMap("RouteEntryType")
         public String routeEntryType;
 
+        /**
+         * <p>The source of the BGP route. Valid values:</p>
+         * <br>
+         * <p>*   **CLOUD**: indicates that the current BGP route is learned by the IPsec-VPN connection from the transit router.</p>
+         * <p>*   **VPN_BGP**: indicates that the current BGP route is learned by the IPsec-VPN connection from the data center.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status of the route.</p>
+         * <br>
+         * <p>*   **published**: indicates that the current route is advertised to the transit router.</p>
+         * <p>*   **Active**: indicates that the current BGP route is available.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The ID of the IPsec-VPN connection.</p>
+         */
         @NameInMap("VpnConnectionId")
         public String vpnConnectionId;
 
+        /**
+         * <p>The weight of the destination-based route. Valid values:</p>
+         * <br>
+         * <p>*   **0**: a low priority</p>
+         * <p>*   **100**: a high priority</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

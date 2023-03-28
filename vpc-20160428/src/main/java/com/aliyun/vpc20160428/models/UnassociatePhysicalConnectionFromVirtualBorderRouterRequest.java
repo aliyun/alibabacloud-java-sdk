@@ -4,6 +4,13 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,9 +20,17 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the Express Connect circuit.</p>
+     */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
+    /**
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +40,9 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the VBR that you want to disassociate from the Express Connect circuit.</p>
+     */
     @NameInMap("VbrId")
     public String vbrId;
 

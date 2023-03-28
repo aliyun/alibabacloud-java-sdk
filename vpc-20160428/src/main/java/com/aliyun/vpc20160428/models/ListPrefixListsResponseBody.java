@@ -4,18 +4,36 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListPrefixListsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If a value is returned for **NextToken**, the value indicates the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The information about the prefix lists.</p>
+     */
     @NameInMap("PrefixLists")
     public java.util.List<ListPrefixListsResponseBodyPrefixLists> prefixLists;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,9 +83,15 @@ public class ListPrefixListsResponseBody extends TeaModel {
     }
 
     public static class ListPrefixListsResponseBodyPrefixListsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,45 +119,103 @@ public class ListPrefixListsResponseBody extends TeaModel {
     }
 
     public static class ListPrefixListsResponseBodyPrefixLists extends TeaModel {
+        /**
+         * <p>The CIDR block specified in the prefix list.</p>
+         */
         @NameInMap("CidrBlocks")
         public java.util.List<String> cidrBlocks;
 
+        /**
+         * <p>The time when the prefix list was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The IP version of the prefix list. Valid values:</p>
+         * <br>
+         * <p>*   **IPv4**</p>
+         * <p>*   **IPV6**</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        /**
+         * <p>The maximum number of CIDR blocks that you can specify in the prefix list.</p>
+         */
         @NameInMap("MaxEntries")
         public Integer maxEntries;
 
+        /**
+         * <p>The Alibaba Cloud account to which the prefix list belongs.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The description of the prefix list.</p>
+         */
         @NameInMap("PrefixListDescription")
         public String prefixListDescription;
 
+        /**
+         * <p>The ID of the prefix list.</p>
+         */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
+        /**
+         * <p>The name of the prefix list.</p>
+         */
         @NameInMap("PrefixListName")
         public String prefixListName;
 
+        /**
+         * <p>The status of the prefix list. Valid values:</p>
+         * <br>
+         * <p>*   **Created**</p>
+         * <p>*   **Deleted**</p>
+         * <p>*   **Modifying**</p>
+         * <br>
+         * <p>>  This parameter is the same as the **Status** parameter.</p>
+         */
         @NameInMap("PrefixListStatus")
         public String prefixListStatus;
 
+        /**
+         * <p>The region ID of the prefix list.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the prefix list belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Indicates whether the prefix list is shared. Valid values:</p>
+         * <br>
+         * <p>*   **Shared**: The prefix list is shared.</p>
+         * <p>*   If an empty value is returned, it indicates that the prefix list is not shared.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The status of the prefix list. Valid values:</p>
+         * <br>
+         * <p>*   **Created**</p>
+         * <p>*   **Deleted**</p>
+         * <p>*   **Modifying**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags that are added to the resource group.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListPrefixListsResponseBodyPrefixListsTags> tags;
 

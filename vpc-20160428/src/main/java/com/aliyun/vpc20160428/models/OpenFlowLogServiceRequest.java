@@ -4,6 +4,13 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class OpenFlowLogServiceRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically set **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request is different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,6 +20,11 @@ public class OpenFlowLogServiceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the flow log.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

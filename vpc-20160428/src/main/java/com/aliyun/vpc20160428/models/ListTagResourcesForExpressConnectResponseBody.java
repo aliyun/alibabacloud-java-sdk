@@ -4,12 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If the return value of **NextToken** is empty, no next query is to be sent.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that is used for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details about the tag.</p>
+     */
     @NameInMap("TagResources")
     public ListTagResourcesForExpressConnectResponseBodyTagResources tagResources;
 
@@ -43,15 +55,27 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesForExpressConnectResponseBodyTagResourcesTagResource extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The key of the tag that is added to the resource.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag that is added to the resource.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

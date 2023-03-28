@@ -4,12 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Internet bandwidth that you purchased for the IPv6 gateway.</p>
+     */
     @NameInMap("InternetBandwidthId")
     public String internetBandwidthId;
 
+    /**
+     * <p>The ID of the IPv6 address.</p>
+     */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

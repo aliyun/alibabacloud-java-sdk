@@ -4,12 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListTrafficMirrorSessionsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the traffic mirror session. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): does not enable the traffic mirror session.</p>
+     * <p>*   **true**: enables the traffic mirror session.</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The maximum number of entries to return. Valid values: **1** to **100**. Default value: **10**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -19,12 +34,23 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The priority of the traffic mirror session. Valid values: **1** to **32766**.</p>
+     * <br>
+     * <p>A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -37,21 +63,38 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<ListTrafficMirrorSessionsRequestTags> tags;
 
+    /**
+     * <p>The ID of the traffic mirror filter.</p>
+     */
     @NameInMap("TrafficMirrorFilterId")
     public String trafficMirrorFilterId;
 
     @NameInMap("TrafficMirrorSessionIds")
     public java.util.List<String> trafficMirrorSessionIds;
 
+    /**
+     * <p>The name of the traffic mirror session.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("TrafficMirrorSessionName")
     public String trafficMirrorSessionName;
 
+    /**
+     * <p>The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the mirror source.</p>
+     */
     @NameInMap("TrafficMirrorSourceId")
     public String trafficMirrorSourceId;
 
+    /**
+     * <p>The ID of the traffic mirror destination. You can specify only an ENI or a Server Load Balancer (SLB) instance as a traffic mirror destination.</p>
+     */
     @NameInMap("TrafficMirrorTargetId")
     public String trafficMirrorTargetId;
 
+    /**
+     * <p>The VXLAN network identifier (VNI) that is used to distinguish different mirrored traffic. Valid values: **0** to **16777215**. You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. You can specify a custom VNI or use a random VNI that is allocated by the system. If you want the system to randomly allocate a VNI, ignore this parameter.</p>
+     */
     @NameInMap("VirtualNetworkId")
     public Integer virtualNetworkId;
 
@@ -197,9 +240,19 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     }
 
     public static class ListTrafficMirrorSessionsRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

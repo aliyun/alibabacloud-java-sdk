@@ -4,15 +4,41 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateVpcIpv6CidrRequest extends TeaModel {
+    /**
+     * <p>The type of the IPv6 address pool. Set the value to **custom**.</p>
+     * <br>
+     * <p>>  This parameter is required.</p>
+     */
     @NameInMap("AddressPoolType")
     public String addressPoolType;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The IPv6 CIDR block that you want to reserve.</p>
+     */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
+    /**
+     * <p>The type of the IPv6 CIDR block. Valid values:</p>
+     * <br>
+     * <p>*   **BGP**: Alibaba Cloud Border Gateway Protocol (BGP) IPv6. This is the default value.</p>
+     * <p>*   **ChinaMobile**: China Mobile (single ISP).</p>
+     * <p>*   **ChinaUnicom**: China Unicom (single ISP).</p>
+     * <p>*   **ChinaTelecom**: China Telecom (single ISP).</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
+     * <p>*   You can reserve only one IPv6 CIDR block of each type. After a reserved IPv6 CIDR block of a type is allocated to a VPC, you can reserve another IPv6 CIDR of the type.</p>
+     */
     @NameInMap("Ipv6Isp")
     public String ipv6Isp;
 
@@ -22,6 +48,11 @@ public class AllocateVpcIpv6CidrRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region to which the VPC belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

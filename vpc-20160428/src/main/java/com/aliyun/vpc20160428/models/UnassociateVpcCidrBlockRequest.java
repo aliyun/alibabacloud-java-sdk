@@ -4,6 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UnassociateVpcCidrBlockRequest extends TeaModel {
+    /**
+     * <p>The secondary IPv6 CIDR block to be deleted.</p>
+     * <br>
+     * <p>>  You must set one of the **Ipv6CidrBlock** and **SecondaryCidrBlock** parameters.</p>
+     */
     @NameInMap("IPv6CidrBlock")
     public String IPv6CidrBlock;
 
@@ -13,6 +18,11 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the VPC to which the secondary CIDR block to be deleted belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,9 +32,17 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The secondary IPv4 CIDR block to be deleted.</p>
+     * <br>
+     * <p>>  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.</p>
+     */
     @NameInMap("SecondaryCidrBlock")
     public String secondaryCidrBlock;
 
+    /**
+     * <p>The ID of the VPC from which you want to delete a secondary CIDR block.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

@@ -4,18 +4,40 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GrantInstanceToCenRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance to which you want to grant permissions.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The user ID (UID) of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the network instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: a VPC</p>
+     * <p>*   **VBR**: a VBR</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -25,6 +47,11 @@ public class GrantInstanceToCenRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the network instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,6 +4,13 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
+    /**
+     * <p>The language used in the **LocalName** parameter to display the zone names. Valid values:</p>
+     * <br>
+     * <p>*   **zh-cn**: Chinese</p>
+     * <p>*   **en-us**: English</p>
+     * <p>*   **ja**: Japanese</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -13,6 +20,9 @@ public class DescribeZonesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where zones are queried. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +32,9 @@ public class DescribeZonesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the zones to be queried. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.</p>
+     */
     @NameInMap("ZoneType")
     public String zoneType;
 
