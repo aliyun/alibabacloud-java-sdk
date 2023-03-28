@@ -4,21 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
-    /**
-     * <p>The time scheduled for the instance to be automatically released. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>*   If the value of the field `ss` is not `00`, the field is automatically set to the start time of the current minute (`mm`).</p>
-     * <p>*   The release time must be at least 30 minutes later than the current time.</p>
-     * <p>*   The release time must be at most three years from the current time.</p>
-     * <br>
-     * <p>If `AutoReleaseTime` is not specified, the automatic release feature is disabled and the ECS instance will not be automatically released.</p>
-     */
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
 
-    /**
-     * <p>The ID of the ECS instance to be automatically released.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -28,9 +16,6 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

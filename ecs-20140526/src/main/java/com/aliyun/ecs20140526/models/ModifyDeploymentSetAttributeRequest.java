@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeploymentSetAttributeRequest extends TeaModel {
-    /**
-     * <p>The ID of the deployment set.</p>
-     */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
-    /**
-     * <p>The new name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
-     */
     @NameInMap("DeploymentSetName")
     public String deploymentSetName;
 
-    /**
-     * <p>The new description of the deployment set. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
-     */
     @NameInMap("Description")
     public String description;
 
@@ -28,9 +19,6 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

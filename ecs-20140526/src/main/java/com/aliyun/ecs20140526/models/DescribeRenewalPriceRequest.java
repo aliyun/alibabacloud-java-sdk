@@ -4,13 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
-    /**
-     * <p>The synchronized expiration date. If you set this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.</p>
-     * <br>
-     * <p>For information about how to synchronize the expiration dates of instances, see [Synchronize the expiration dates of instances](~~108486~~).</p>
-     * <br>
-     * <p>> The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.</p>
-     */
     @NameInMap("ExpectedRenewDay")
     public Integer expectedRenewDay;
 
@@ -20,39 +13,15 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The renewal period. Valid values:</p>
-     * <br>
-     * <p>*   Valid values when `PriceUnit` is set to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
-     * <p>*   Valid values when `PriceUnit` is set to `Year`: 1, 2, 3.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     * <br>
-     * <p>> The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.</p>
-     */
     @NameInMap("Period")
     public Integer period;
 
-    /**
-     * <p>The unit of the renewal period. Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <p>*   Year</p>
-     * <br>
-     * <p>Default value: Month.</p>
-     */
     @NameInMap("PriceUnit")
     public String priceUnit;
 
-    /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource. When the `ResourceType` parameter is set to`  instance `, `ResourceId` is interpreted as `InstanceId`.</p>
-     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -62,11 +31,6 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The type of the resource. Set the value to instance.</p>
-     * <br>
-     * <p>Default value: instance.</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 

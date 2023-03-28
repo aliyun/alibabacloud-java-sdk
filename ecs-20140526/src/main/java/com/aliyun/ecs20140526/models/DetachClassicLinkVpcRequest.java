@@ -4,18 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachClassicLinkVpcRequest extends TeaModel {
-    /**
-     * <p>The ID of the classic network-type instance.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the classic network-type instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,9 +19,6 @@ public class DetachClassicLinkVpcRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the VPC to which the instance is linked.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

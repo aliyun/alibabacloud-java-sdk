@@ -7,9 +7,6 @@ public class DescribeTaskAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,9 +16,6 @@ public class DescribeTaskAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the task. You can call the [DescribeTasks](~~25622~~) operation to query the list of task IDs.</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 

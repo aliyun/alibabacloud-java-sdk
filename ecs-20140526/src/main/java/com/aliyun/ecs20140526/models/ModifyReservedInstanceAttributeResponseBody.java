@@ -4,27 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The error code.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The HTTP status code.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The error message for this instance operation. The return value Success indicates that this operation is successful. For more information, see the "Error codes" section of this topic.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReleasePublicIpAddressResponseBody extends TeaModel {
-    /**
-     * <p>> This parameter is unavailable.</p>
-     */
     @NameInMap("RemainTimes")
     public String remainTimes;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
