@@ -486,6 +486,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("KeyPairName", request.keyPairName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSpace)) {
+            query.put("NameSpace", request.nameSpace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
             query.put("PayType", request.payType);
         }

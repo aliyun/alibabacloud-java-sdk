@@ -214,6 +214,9 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         @NameInMap("ServerId")
         public String serverId;
 
@@ -261,6 +264,14 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public DescribeARMServerInstancesResponseBodyServers setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public DescribeARMServerInstancesResponseBodyServers setServerId(String serverId) {

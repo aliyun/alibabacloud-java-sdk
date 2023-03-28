@@ -25,6 +25,9 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    @NameInMap("NameSpace")
+    public String nameSpace;
+
     @NameInMap("PayType")
     public String payType;
 
@@ -99,6 +102,14 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     }
     public String getKeyPairName() {
         return this.keyPairName;
+    }
+
+    public CreateARMServerInstancesRequest setNameSpace(String nameSpace) {
+        this.nameSpace = nameSpace;
+        return this;
+    }
+    public String getNameSpace() {
+        return this.nameSpace;
     }
 
     public CreateARMServerInstancesRequest setPayType(String payType) {
