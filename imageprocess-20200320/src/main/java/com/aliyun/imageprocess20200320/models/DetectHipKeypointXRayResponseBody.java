@@ -62,6 +62,9 @@ public class DetectHipKeypointXRayResponseBody extends TeaModel {
     }
 
     public static class DetectHipKeypointXRayResponseBodyDataKeyPoints extends TeaModel {
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Coordinates")
         public java.util.List<Integer> coordinates;
 

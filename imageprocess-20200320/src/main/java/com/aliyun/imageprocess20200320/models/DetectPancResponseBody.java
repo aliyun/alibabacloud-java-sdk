@@ -7,6 +7,9 @@ public class DetectPancResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectPancResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DetectPancResponseBody extends TeaModel {
     }
     public DetectPancResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectPancResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DetectPancResponseBody setRequestId(String requestId) {
