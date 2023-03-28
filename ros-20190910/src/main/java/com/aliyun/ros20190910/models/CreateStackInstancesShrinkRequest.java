@@ -103,7 +103,7 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
     public String operationPreferencesShrink;
 
     /**
-     * <p>test</p>
+     * <p>The parameters.</p>
      */
     @NameInMap("ParameterOverrides")
     public java.util.List<CreateStackInstancesShrinkRequestParameterOverrides> parameterOverrides;

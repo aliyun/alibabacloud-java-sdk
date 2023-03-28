@@ -18,6 +18,9 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateTemplateRequestTags> tags;
 

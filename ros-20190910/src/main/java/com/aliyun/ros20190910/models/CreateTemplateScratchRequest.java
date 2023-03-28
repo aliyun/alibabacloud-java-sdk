@@ -71,6 +71,9 @@ public class CreateTemplateScratchRequest extends TeaModel {
     @NameInMap("SourceTag")
     public CreateTemplateScratchRequestSourceTag sourceTag;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateTemplateScratchRequestTags> tags;
 

@@ -57,6 +57,9 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
 
+    /**
+     * <p>The callback URL that is used to receive stack event N.</p>
+     */
     @NameInMap("NotificationURLs")
     public java.util.List<String> notificationURLs;
 
@@ -79,6 +82,9 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("Parallelism")
     public Long parallelism;
 
+    /**
+     * <p>The list of parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<CreateChangeSetRequestParameters> parameters;
 
@@ -111,6 +117,9 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("ReplacementOption")
     public String replacementOption;
 
+    /**
+     * <p>The key-value mapping between strings.</p>
+     */
     @NameInMap("ResourcesToImport")
     public java.util.List<CreateChangeSetRequestResourcesToImport> resourcesToImport;
 

@@ -25,6 +25,9 @@ public class UpdateStackTemplateByResourcesRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The logical ID of resource.</p>
+     */
     @NameInMap("LogicalResourceId")
     public java.util.List<String> logicalResourceId;
 

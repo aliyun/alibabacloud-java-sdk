@@ -14,6 +14,9 @@ public class GetTemplateParameterConstraintsRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The name of parameter N in the template.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<GetTemplateParameterConstraintsRequestParameters> parameters;
 
@@ -39,6 +42,9 @@ public class GetTemplateParameterConstraintsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the stack.</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 

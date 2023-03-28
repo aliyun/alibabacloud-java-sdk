@@ -50,6 +50,9 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("Parallelism")
     public Long parallelism;
 
+    /**
+     * <p>The parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<UpdateStackRequestParameters> parameters;
 
@@ -146,6 +149,9 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
 
+    /**
+     * <p>The value of tag N that you want to add to the template.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<UpdateStackRequestTags> tags;
 

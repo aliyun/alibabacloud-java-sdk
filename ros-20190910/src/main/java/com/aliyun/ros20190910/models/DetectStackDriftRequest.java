@@ -14,6 +14,9 @@ public class DetectStackDriftRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The logical ID of resource.</p>
+     */
     @NameInMap("LogicalResourceId")
     public java.util.List<String> logicalResourceId;
 

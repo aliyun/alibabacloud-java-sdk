@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelStackOperationRequest extends TeaModel {
     /**
-     * <p>test</p>
+     * <p>The operation N that you want to cancel on the stack.</p>
      */
     @NameInMap("AllowedStackOperations")
     public java.util.List<String> allowedStackOperations;

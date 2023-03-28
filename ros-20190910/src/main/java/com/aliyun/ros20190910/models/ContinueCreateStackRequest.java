@@ -56,7 +56,7 @@ public class ContinueCreateStackRequest extends TeaModel {
     public Long parallelism;
 
     /**
-     * <p>test</p>
+     * <p>The parameters of the template.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<ContinueCreateStackRequestParameters> parameters;
@@ -74,11 +74,14 @@ public class ContinueCreateStackRequest extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>test</p>
+     * <p>Option N that ROS adopts when ROS continues to create the stack.</p>
      */
     @NameInMap("RecreatingOptions")
     public java.util.List<String> recreatingOptions;
 
+    /**
+     * <p>Resource N that ROS continues to create after the resource failed to be created.</p>
+     */
     @NameInMap("RecreatingResources")
     public java.util.List<String> recreatingResources;
 

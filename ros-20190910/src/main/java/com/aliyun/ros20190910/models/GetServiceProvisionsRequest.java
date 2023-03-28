@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetServiceProvisionsRequest extends TeaModel {
+    /**
+     * <p>The list of parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<GetServiceProvisionsRequestParameters> parameters;
 
@@ -15,6 +18,9 @@ public class GetServiceProvisionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The services.</p>
+     */
     @NameInMap("Services")
     public java.util.List<GetServiceProvisionsRequestServices> services;
 

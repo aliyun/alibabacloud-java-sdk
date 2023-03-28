@@ -33,6 +33,9 @@ public class DeleteStackRequest extends TeaModel {
     @NameInMap("RetainAllResources")
     public Boolean retainAllResources;
 
+    /**
+     * <p>The name of resource N that you want to retain.</p>
+     */
     @NameInMap("RetainResources")
     public java.util.List<String> retainResources;
 

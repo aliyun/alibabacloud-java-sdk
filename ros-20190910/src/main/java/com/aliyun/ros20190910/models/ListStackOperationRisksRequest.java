@@ -57,6 +57,9 @@ public class ListStackOperationRisksRequest extends TeaModel {
     @NameInMap("RetainAllResources")
     public Boolean retainAllResources;
 
+    /**
+     * <p>The resource N that you want to retain in the stack.</p>
+     */
     @NameInMap("RetainResources")
     public java.util.List<String> retainResources;
 

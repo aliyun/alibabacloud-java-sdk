@@ -44,6 +44,9 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
 
+    /**
+     * <p>The callback URL that is used to receive stack event N.</p>
+     */
     @NameInMap("NotificationURLs")
     public java.util.List<String> notificationURLs;
 
@@ -60,7 +63,7 @@ public class CreateStackRequest extends TeaModel {
     public Long parallelism;
 
     /**
-     * <p>test</p>
+     * <p>The parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<CreateStackRequestParameters> parameters;
@@ -118,7 +121,7 @@ public class CreateStackRequest extends TeaModel {
     public String stackPolicyURL;
 
     /**
-     * <p>test</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateStackRequestTags> tags;

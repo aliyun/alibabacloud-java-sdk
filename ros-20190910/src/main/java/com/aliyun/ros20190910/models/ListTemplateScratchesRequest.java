@@ -42,6 +42,9 @@ public class ListTemplateScratchesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListTemplateScratchesRequestTags> tags;
 
