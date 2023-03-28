@@ -63,7 +63,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public Float cpu;
 
         /**
-         * <p>The time when the function was created.</p>
+         * <p>The time when the function is created.</p>
          */
         @NameInMap("createdTime")
         public String createdTime;
@@ -93,7 +93,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public Integer diskSize;
 
         /**
-         * <p>The environment variables that you configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Overview](~~69777~~).</p>
+         * <p>The environment variables that you configured for the function. You can obtain the values of the environment variables from the function.</p>
          */
         @NameInMap("environmentVariables")
         public java.util.Map<String, String> environmentVariables;
@@ -111,7 +111,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public String functionName;
 
         /**
-         * <p>GPU instance memory specifications of the function. Unit: MB. The value is a multiple of 1024.</p>
+         * <p>The GPU memory capacity for the function. Unit: MB. The memory capacity must be a multiple of 1024 MB.</p>
          */
         @NameInMap("gpuMemorySize")
         public Integer gpuMemorySize;
@@ -147,9 +147,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         public InstanceLifecycleConfig instanceLifecycleConfig;
 
         /**
-         * <p>The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long term to start, you can specify a suitable soft concurrency to start the instance in advance.</p>
+         * <p>The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.</p>
          * <br>
-         * <p>The value must be less than or equal to that of **instanceConcurrency**.</p>
+         * <p>The value must be less than or equal to that of the **instanceConcurrency** parameter.</p>
          */
         @NameInMap("instanceSoftConcurrency")
         public Integer instanceSoftConcurrency;
@@ -159,6 +159,9 @@ public class ListFunctionsResponseBody extends TeaModel {
          * <br>
          * <p>*   **e1**: elastic instance</p>
          * <p>*   **c1**: performance instance</p>
+         * <p>*   **fc.gpu.tesla.1**: GPU-accelerated instances (Tesla T4)</p>
+         * <p>*   **fc.gpu.ampere.1**: GPU-accelerated instances (Ampere A10)</p>
+         * <p>*   **g1**: same fc.gpu.tesla.1</p>
          */
         @NameInMap("instanceType")
         public String instanceType;
@@ -172,8 +175,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information of layers.</p>
          * <br>
-         * <br>
-         * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript.</p>
+         * <p>> If multiple layers exist, the layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name and a larger subscript in the layer.</p>
          */
         @NameInMap("layers")
         public java.util.List<String> layers;

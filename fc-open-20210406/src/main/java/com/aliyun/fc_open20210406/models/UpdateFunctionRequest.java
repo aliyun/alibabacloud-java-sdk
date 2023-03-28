@@ -17,10 +17,10 @@ public class UpdateFunctionRequest extends TeaModel {
     public Integer caPort;
 
     /**
-     * <p>**Function code packages** can be provided with the following two methods. You must use only one of the methods in a request.</p>
+     * <p>The packaged code of the function. **Function code packages** can be provided with the following two methods. You must use only one of the methods in a request.</p>
      * <br>
-     * <p>*   Specify the name of the **Object Storage Service (OSS) bucket** and **object** where the code package is stored.</p>
-     * <p>*   Specify that the **zipFile** parameter is used as the Base64-encoded content of the ZIP file.</p>
+     * <p>*   Specify the name of the Object Storage Service (OSS) bucket and object where the code package is stored. The names are specified in the **ossBucketName** and **ossObjectName** parameters.</p>
+     * <p>*   Specify the Base64-encoded content of the ZIP file by using the **zipFile** parameter.</p>
      */
     @NameInMap("code")
     public Code code;
@@ -32,7 +32,7 @@ public class UpdateFunctionRequest extends TeaModel {
     public Float cpu;
 
     /**
-     * <p>The configuration of the custom container. After you configure the custom container, Function Compute can execute functions in a container created from a custom image.</p>
+     * <p>The configuration of the custom container. After you configure the custom container, Function Compute can execute the function in a container created from a custom image.</p>
      */
     @NameInMap("customContainerConfig")
     public CustomContainerConfig customContainerConfig;
@@ -73,6 +73,9 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
+    /**
+     * <p>The GPU memory capacity for the function. Unit: MB. The value must be a multiple of 1,024.</p>
+     */
     @NameInMap("gpuMemorySize")
     public Integer gpuMemorySize;
 
@@ -83,13 +86,13 @@ public class UpdateFunctionRequest extends TeaModel {
     public String handler;
 
     /**
-     * <p>The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the initializer function is terminated.</p>
+     * <p>The timeout period for the execution of the Initializer hook. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the Initializer hook is terminated.</p>
      */
     @NameInMap("initializationTimeout")
     public Integer initializationTimeout;
 
     /**
-     * <p>The handler of the initializer function. The format is determined by the programming language. For more information, see [Function handlers](~~157704~~).</p>
+     * <p>The handler of the Initializer hook. The format is determined by the programming language. For more information, see [Function handlers](~~157704~~).</p>
      */
     @NameInMap("initializer")
     public String initializer;
@@ -101,7 +104,7 @@ public class UpdateFunctionRequest extends TeaModel {
     public InstanceLifecycleConfig instanceLifecycleConfig;
 
     /**
-     * <p>The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.</p>
+     * <p>The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the value of soft concurrency, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.</p>
      * <br>
      * <p>The value must be less than or equal to that of the **instanceConcurrency** parameter.</p>
      */
@@ -113,6 +116,9 @@ public class UpdateFunctionRequest extends TeaModel {
      * <br>
      * <p>*   **e1**: elastic instance</p>
      * <p>*   **c1**: performance instance</p>
+     * <p>*   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)</p>
+     * <p>*   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)</p>
+     * <p>*   **g1**: same as **fc.gpu.tesla.1**</p>
      */
     @NameInMap("instanceType")
     public String instanceType;
@@ -120,13 +126,13 @@ public class UpdateFunctionRequest extends TeaModel {
     /**
      * <p>The information about layers.</p>
      * <br>
-     * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name and a larger subscript in the layer.</p>
+     * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.</p>
      */
     @NameInMap("layers")
     public java.util.List<String> layers;
 
     /**
-     * <p>The memory size for the function. Unit: MB. The memory size must be a multiple of 64 MB. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).</p>
+     * <p>The memory size for the function. Unit: MB. The memory size must be a multiple of 64. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).</p>
      */
     @NameInMap("memorySize")
     public Integer memorySize;

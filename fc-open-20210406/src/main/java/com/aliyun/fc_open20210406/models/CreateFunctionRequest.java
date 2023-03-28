@@ -35,7 +35,7 @@ public class CreateFunctionRequest extends TeaModel {
     public CustomDNS customDNS;
 
     /**
-     * <p>The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.</p>
+     * <p>The custom health check configurations of the function. This parameter is applicable to only custom runtimes and custom containers.</p>
      */
     @NameInMap("customHealthCheckConfig")
     public CustomHealthCheckConfig customHealthCheckConfig;
@@ -71,7 +71,7 @@ public class CreateFunctionRequest extends TeaModel {
     public String functionName;
 
     /**
-     * <p>GPU instance memory specifications of the function. Unit: MB. The value is a multiple of 1024.</p>
+     * <p>The GPU memory capacity for the function. Unit: MB. The value must be a multiple of 1,024.</p>
      */
     @NameInMap("gpuMemorySize")
     public Integer gpuMemorySize;
@@ -83,13 +83,13 @@ public class CreateFunctionRequest extends TeaModel {
     public String handler;
 
     /**
-     * <p>The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period expires, the execution of the initializer function is terminated.</p>
+     * <p>The timeout period for the execution of the Initializer hook. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period expires, the execution of the Initializer hook is terminated.</p>
      */
     @NameInMap("initializationTimeout")
     public Integer initializationTimeout;
 
     /**
-     * <p>The handler of the initializer function. For more information, see [Initializer functions](~~157704~~).</p>
+     * <p>The handler of the Initializer hook. For more information, see [Initializer hook](~~157704~~).</p>
      */
     @NameInMap("initializer")
     public String initializer;
@@ -107,9 +107,9 @@ public class CreateFunctionRequest extends TeaModel {
     public InstanceLifecycleConfig instanceLifecycleConfig;
 
     /**
-     * <p>The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the number of the soft concurrency, the instance scale-up is triggered. For example, if your instance requires a long term to start, you can specify a suitable soft concurrency to start the instance in advance.</p>
+     * <p>The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the value of soft concurrency, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.</p>
      * <br>
-     * <p>The value must be less than or equal to that of **instanceConcurrency**.</p>
+     * <p>The value must be less than or equal to that of the **instanceConcurrency** parameter.</p>
      */
     @NameInMap("instanceSoftConcurrency")
     public Integer instanceSoftConcurrency;
@@ -119,14 +119,17 @@ public class CreateFunctionRequest extends TeaModel {
      * <br>
      * <p>*   **e1**: elastic instance</p>
      * <p>*   **c1**: performance instance</p>
+     * <p>*   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)</p>
+     * <p>*   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)</p>
+     * <p>*   **g1**: same as **fc.gpu.tesla.1**</p>
      */
     @NameInMap("instanceType")
     public String instanceType;
 
     /**
-     * <p>An array that consists of the information of layers.</p>
+     * <p>The information about layers.</p>
      * <br>
-     * <p>>  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript.</p>
+     * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name as a layer with a larger subscript.</p>
      */
     @NameInMap("layers")
     public java.util.List<String> layers;
@@ -138,13 +141,13 @@ public class CreateFunctionRequest extends TeaModel {
     public Integer memorySize;
 
     /**
-     * <p>The runtime environment of the function. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom** and **custom-container**.</p>
+     * <p>The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom** and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).</p>
      */
     @NameInMap("runtime")
     public String runtime;
 
     /**
-     * <p>The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When this period ends, the execution of the function is terminated.</p>
+     * <p>The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When the period ends, the execution of the function is terminated.</p>
      */
     @NameInMap("timeout")
     public Integer timeout;

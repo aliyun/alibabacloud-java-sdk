@@ -31,13 +31,13 @@ public class CreateTriggerRequest extends TeaModel {
     /**
      * <p>The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:</p>
      * <br>
-     * <p>*   OSS trigger: [OSSTriggerConfig](javascript:void\(0\)).</p>
-     * <p>*   Log Service trigger: [LogTriggerConfig](javascript:void\(0\)).</p>
-     * <p>*   Time trigger: [TimeTriggerConfig](javascript:void\(0\)).</p>
-     * <p>*   HTTP trigger: [HTTPTriggerConfig](javascript:void\(0\)).</p>
-     * <p>*   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
-     * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).</p>
-     * <p>*   MNS topic trigger: [MnsTopicTriggerConfig](javascript:void\(0\)).</p>
+     * <p>* OSS trigger: [OSSTriggerConfig](~~struct:OSSTriggerConfig~~).</p>
+     * <p>* Log Service trigger: [LogTriggerConfig](~~struct:LogTriggerConfig~~).</p>
+     * <p>* Time trigger: [TimeTriggerConfig](~~struct:LogTriggerConfig~~).</p>
+     * <p>* HTTP trigger: [HTTPTriggerConfig](~~struct:HTTPTriggerConfig~~).</p>
+     * <p>* Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
+     * <p>* Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~struct:CDNEventsTriggerConfig~~).</p>
+     * <p>* MNS topic trigger: [MnsTopicTriggerConfig](~~struct:MnsTopicTriggerConfig~~).</p>
      */
     @NameInMap("triggerConfig")
     public String triggerConfig;
