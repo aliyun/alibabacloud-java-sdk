@@ -91,6 +91,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("ImageOptions")
+    public RunInstancesRequestImageOptions imageOptions;
+
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
@@ -461,6 +464,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public RunInstancesRequest setImageOptions(RunInstancesRequestImageOptions imageOptions) {
+        this.imageOptions = imageOptions;
+        return this;
+    }
+    public RunInstancesRequestImageOptions getImageOptions() {
+        return this.imageOptions;
     }
 
     public RunInstancesRequest setInstanceChargeType(String instanceChargeType) {
@@ -1312,6 +1323,25 @@ public class RunInstancesRequest extends TeaModel {
         }
         public String getStorageClusterId() {
             return this.storageClusterId;
+        }
+
+    }
+
+    public static class RunInstancesRequestImageOptions extends TeaModel {
+        @NameInMap("LoginAsNonRoot")
+        public Boolean loginAsNonRoot;
+
+        public static RunInstancesRequestImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestImageOptions self = new RunInstancesRequestImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestImageOptions setLoginAsNonRoot(Boolean loginAsNonRoot) {
+            this.loginAsNonRoot = loginAsNonRoot;
+            return this;
+        }
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
     }

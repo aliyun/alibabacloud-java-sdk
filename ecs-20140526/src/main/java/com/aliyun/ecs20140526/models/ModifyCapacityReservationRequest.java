@@ -7,32 +7,15 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public ModifyCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
-    /**
-     * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The expiration time of the capacity reservation. This parameter takes effect only when `EndTimeType` is set to Limited. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).</p>
-     */
     @NameInMap("EndTime")
     public String endTime;
 
-    /**
-     * <p>The release mode of the capacity reservation. Valid values:</p>
-     * <br>
-     * <p>*   Limited: The capacity reservation is released at the specified time. You must also specify the `EndTime` parameter.</p>
-     * <p>*   Unlimited: You must manually release the capacity reservation. You can release capacity reservations at any time.</p>
-     */
     @NameInMap("EndTimeType")
     public String endTimeType;
 
-    /**
-     * <p>The total number of instances reserved by the capacity reservation. Valid values: the number of created instances to 1000.</p>
-     * <br>
-     * <p>>  When you increase the number of instances reserved, the increase may fail due to insufficient resources.</p>
-     */
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
@@ -42,20 +25,9 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The operating system type of the instance reserved. Valid values:</p>
-     * <br>
-     * <p>*   Windows: Windows Server operating systems</p>
-     * <p>*   Linux: Linux and Unix-like operating systems</p>
-     * <br>
-     * <p>>  This parameter is unavailable.</p>
-     */
     @NameInMap("Platform")
     public String platform;
 
-    /**
-     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -65,11 +37,6 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The effective mode of the capacity reservation. The capacity reservation can be set only to take effect immediately. You do not need to pass in a value for the parameter.</p>
-     * <br>
-     * <p>>  The capacity reservation takes effect immediately when this parameter is left empty.</p>
-     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -175,15 +142,9 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     }
 
     public static class ModifyCapacityReservationRequestPrivatePoolOptions extends TeaModel {
-        /**
-         * <p>The ID of the capacity reservation.</p>
-         */
         @NameInMap("Id")
         public String id;
 
-        /**
-         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
-         */
         @NameInMap("Name")
         public String name;
 

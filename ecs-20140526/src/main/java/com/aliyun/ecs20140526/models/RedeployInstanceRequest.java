@@ -4,19 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RedeployInstanceRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to forcibly stop the instance that is in the Running state.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     * <br>
-     * <p>> A forcible stop is equivalent to a power outage and unsaved data may be lost. We recommend that you redeploy instances that are in the Stopped state.</p>
-     */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
-    /**
-     * <p>The ID of the instance that is in the Running or Stopped state.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 

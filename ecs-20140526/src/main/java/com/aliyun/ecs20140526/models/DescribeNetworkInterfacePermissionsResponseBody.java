@@ -4,33 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
-    /**
-     * <p>Details about the ENI permissions.</p>
-     */
     @NameInMap("NetworkInterfacePermissions")
     public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions networkInterfacePermissions;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,44 +65,21 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission extends TeaModel {
-        /**
-         * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
-         */
         @NameInMap("AccountId")
         public Long accountId;
 
-        /**
-         * <p>The ID of the ENI.</p>
-         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        /**
-         * <p>The ID of the ENI permission.</p>
-         */
         @NameInMap("NetworkInterfacePermissionId")
         public String networkInterfacePermissionId;
 
-        /**
-         * <p>The ENI permission.</p>
-         */
         @NameInMap("Permission")
         public String permission;
 
-        /**
-         * <p>The state of the ENI permission. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The permission is being granted.</p>
-         * <p>*   Granted: The permission is granted.</p>
-         * <p>*   Revoking: The permission is being revoked.</p>
-         * <p>*   Revoked: The permission is revoked.</p>
-         */
         @NameInMap("PermissionState")
         public String permissionState;
 
-        /**
-         * <p>The name of the Alibaba Cloud service.</p>
-         */
         @NameInMap("ServiceName")
         public String serviceName;
 

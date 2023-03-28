@@ -4,30 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePrefixListsRequest extends TeaModel {
-    /**
-     * <p>The IP address family of the prefix list. Valid values:</p>
-     * <br>
-     * <p>*   IPv4</p>
-     * <p>*   IPv6</p>
-     * <br>
-     * <p>This parameter is empty by default, which indicates that all prefix lists are queried.</p>
-     */
     @NameInMap("AddressFamily")
     public String addressFamily;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Maximum value: 100.</p>
-     * <br>
-     * <p>Default value: 10.</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixLists operation. Leave this parameter empty the first time you call this operation.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -37,21 +19,12 @@ public class DescribePrefixListsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The IDs of prefix list.</p>
-     */
     @NameInMap("PrefixListId")
     public java.util.List<String> prefixListId;
 
-    /**
-     * <p>The name of the prefix list.</p>
-     */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
-    /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

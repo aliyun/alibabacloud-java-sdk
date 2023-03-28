@@ -4,21 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ImportKeyPairResponseBody extends TeaModel {
-    /**
-     * <p>The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716.</p>
-     */
     @NameInMap("KeyPairFingerPrint")
     public String keyPairFingerPrint;
 
-    /**
-     * <p>The name of the key pair.</p>
-     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

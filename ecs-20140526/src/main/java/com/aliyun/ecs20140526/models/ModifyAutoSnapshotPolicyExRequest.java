@@ -4,23 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
-    /**
-     * <p>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</p>
-     * <br>
-     * <p>*   \-1: The snapshot is permanently retained.</p>
-     * <p>*   1 to 65535: The automatic snapshot is retained for the specified number of days.</p>
-     * <br>
-     * <p>Default value: -1.</p>
-     */
     @NameInMap("CopiedSnapshotsRetentionDays")
     public Integer copiedSnapshotsRetentionDays;
 
-    /**
-     * <p>Specifies whether to enable cross-region replication for the automatic snapshot.</p>
-     * <br>
-     * <p>*   true: enables cross-region replication for the automatic snapshot.</p>
-     * <p>*   false: disables cross-region replication for the automatic snapshot.</p>
-     */
     @NameInMap("EnableCrossRegionCopy")
     public Boolean enableCrossRegionCopy;
 
@@ -33,60 +19,24 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The destination region to which to copy the snapshot. You can specify only a single destination region.</p>
-     */
     @NameInMap("TargetCopyRegions")
     public String targetCopyRegions;
 
-    /**
-     * <p>The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](~~25530~~) operation to query available automatic snapshot policies.</p>
-     */
     @NameInMap("autoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
-    /**
-     * <p>The name of the automatic snapshot policy. If this parameter is not specified, the original name of the automatic snapshot policy is retained.</p>
-     */
     @NameInMap("autoSnapshotPolicyName")
     public String autoSnapshotPolicyName;
 
-    /**
-     * <p>The region ID of the automatic snapshot policy to be modified. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("regionId")
     public String regionId;
 
-    /**
-     * <p>The days of the week on which to create automatic snapshots. Valid values are 1 to 7, which correspond to the days of the week. For example, a value of 1 indicates Monday.</p>
-     * <br>
-     * <p>To schedule multiple automatic snapshots to be created in a week, you can specify multiple days.</p>
-     * <br>
-     * <p>*   You can specify up to seven days over a one-week period.</p>
-     * <p>*   You must set this parameter to a JSON array such as `["1", "2" ... "7"]`. Separate the values in the array with commas (,).</p>
-     */
     @NameInMap("repeatWeekdays")
     public String repeatWeekdays;
 
-    /**
-     * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
-     * <br>
-     * <p>*   \-1: The automatic snapshot is permanently retained.</p>
-     * <p>*   1 to 65536: The auto snapshot is retained for the specified number of days.</p>
-     * <br>
-     * <p>Default value: -1.</p>
-     */
     @NameInMap("retentionDays")
     public Integer retentionDays;
 
-    /**
-     * <p>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, a value of 1 indicates 01:00:00.</p>
-     * <br>
-     * <p>To schedule multiple automatic snapshots to be created in a day, you can specify multiple hours.</p>
-     * <br>
-     * <p>*   You can specify up to 24 points in time.</p>
-     * <p>*   You must set this parameter to a JSON array such as `["0", "1", ... "23"]`. Separate the points in time with commas (,).</p>
-     */
     @NameInMap("timePoints")
     public String timePoints;
 

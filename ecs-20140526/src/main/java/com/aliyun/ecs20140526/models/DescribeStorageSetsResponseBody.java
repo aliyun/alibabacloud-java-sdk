@@ -4,33 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageSetsResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Details about the storage sets. The value of this parameter is an array that consists of StorageSet data.</p>
-     */
     @NameInMap("StorageSets")
     public DescribeStorageSetsResponseBodyStorageSets storageSets;
 
-    /**
-     * <p>The total number of storage sets.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,45 +65,24 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeStorageSetsResponseBodyStorageSetsStorageSet extends TeaModel {
-        /**
-         * <p>The time when the storage set was created.</p>
-         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        /**
-         * <p>The description of the storage set.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the region to which the storage set belongs.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the storage set.</p>
-         */
         @NameInMap("StorageSetId")
         public String storageSetId;
 
-        /**
-         * <p>The name of the storage set.</p>
-         */
         @NameInMap("StorageSetName")
         public String storageSetName;
 
-        /**
-         * <p>The maximum number of partitions supported by the storage set.</p>
-         */
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
 
-        /**
-         * <p>The ID of the zone to which the storage set belongs.</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 
