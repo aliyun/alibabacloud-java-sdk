@@ -163,7 +163,9 @@ public class SavePtsSceneRequest extends TeaModel {
     }
 
     public static class SavePtsSceneRequestSceneLoadConfigApiLoadConfigList extends TeaModel {
-        // API ID。
+        /**
+         * <p>API ID。</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
@@ -307,7 +309,9 @@ public class SavePtsSceneRequest extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        // VPC ID。
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
