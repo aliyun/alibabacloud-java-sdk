@@ -14,13 +14,13 @@ public class GetFunctionOnDemandConfigHeaders extends TeaModel {
     public String xFcAccountId;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the yyyy-mm-ddhh:mm:ss format.</p>
+     * <p>The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The trace ID of the request for Function Compute API, which is also the unique ID of the request.</p>
+     * <p>The unique ID of the trace.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

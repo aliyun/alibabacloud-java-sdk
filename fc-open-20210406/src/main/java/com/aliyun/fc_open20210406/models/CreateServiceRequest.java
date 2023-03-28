@@ -13,8 +13,8 @@ public class CreateServiceRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow functions to access the Internet. Valid values:</p>
      * <br>
-     * <p>- **true**: allows functions in the specified service to access the Internet. Default value: true.</p>
-     * <p>- **false**: does not allow functions in the specified service to access the Internet.</p>
+     * <p>*   **true**: allows functions to access the Internet. This is the default value.</p>
+     * <p>*   **false**: does not allow functions to access the Internet.</p>
      */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
@@ -47,13 +47,13 @@ public class CreateServiceRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The name of the service. The name contains only letters, digits, hyphens (-), and underscores (_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).</p>
+     * <p>The name of the service. The name can contain only letters, digits, hyphens (-), and underscores (\_). It cannot start with a digit or hyphen (-). It must be 1 to 128 characters in length.</p>
      */
     @NameInMap("serviceName")
     public String serviceName;
 
     /**
-     * <p>The configurations of Tracing Analysis. After Function Compute is integrated with Tracing Analysis, you can record the duration of a request in Function Compute, view the cold start time of a function, and record the execution duration of a function. For more information, see [Tracing Analysis](~~189804~~).</p>
+     * <p>The configuration of Tracing Analysis. After Function Compute is integrated with Tracing Analysis, you can record the duration of a request in Function Compute, view the cold start time of a function, and record the execution duration of a function. For more information, see [Tracing Analysis](~~189804~~).</p>
      */
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;

@@ -11,7 +11,7 @@ public class ListFunctionsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * <p>The token required to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

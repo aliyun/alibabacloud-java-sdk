@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFunctionOnDemandConfigRequest extends TeaModel {
     /**
-     * <p>The alias of the service or LATEST.</p>
+     * <p>Service alias or LATEST. Other versions are not supported.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

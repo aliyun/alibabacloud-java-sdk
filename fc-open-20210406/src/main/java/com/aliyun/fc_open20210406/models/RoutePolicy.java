@@ -8,7 +8,7 @@ public class RoutePolicy extends TeaModel {
     public byte[] condition;
 
     @NameInMap("policyItems")
-    public PolicyItem policyItems;
+    public java.util.List<PolicyItem> policyItems;
 
     public static RoutePolicy build(java.util.Map<String, ?> map) throws Exception {
         RoutePolicy self = new RoutePolicy();
@@ -23,11 +23,11 @@ public class RoutePolicy extends TeaModel {
         return this.condition;
     }
 
-    public RoutePolicy setPolicyItems(PolicyItem policyItems) {
+    public RoutePolicy setPolicyItems(java.util.List<PolicyItem> policyItems) {
         this.policyItems = policyItems;
         return this;
     }
-    public PolicyItem getPolicyItems() {
+    public java.util.List<PolicyItem> getPolicyItems() {
         return this.policyItems;
     }
 

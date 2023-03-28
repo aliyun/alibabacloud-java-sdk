@@ -4,6 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class HTTPTriggerConfig extends TeaModel {
+    @NameInMap("authConfig")
+    public String authConfig;
+
     @NameInMap("authType")
     public String authType;
 
@@ -19,6 +22,14 @@ public class HTTPTriggerConfig extends TeaModel {
     public static HTTPTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
         HTTPTriggerConfig self = new HTTPTriggerConfig();
         return TeaModel.build(map, self);
+    }
+
+    public HTTPTriggerConfig setAuthConfig(String authConfig) {
+        this.authConfig = authConfig;
+        return this;
+    }
+    public String getAuthConfig() {
+        return this.authConfig;
     }
 
     public HTTPTriggerConfig setAuthType(String authType) {

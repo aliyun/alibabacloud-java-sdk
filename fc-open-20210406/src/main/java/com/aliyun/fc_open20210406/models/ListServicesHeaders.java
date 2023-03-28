@@ -14,7 +14,7 @@ public class ListServicesHeaders extends TeaModel {
     public String xFcAccountId;
 
     /**
-     * <p>The time when the function is invoked. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     * <p>The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;

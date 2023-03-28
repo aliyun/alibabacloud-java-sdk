@@ -83,13 +83,13 @@ public class ListTriggersResponseBody extends TeaModel {
         /**
          * <p>The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:</p>
          * <br>
-         * <p>*   OSS trigger: [OSSTriggerConfig](javascript:void\(0\)).</p>
-         * <p>*   Log Service trigger: [LogTriggerConfig](javascript:void\(0\)).</p>
-         * <p>*   Time trigger: [TimeTriggerConfig](javascript:void\(0\)).</p>
-         * <p>*   HTTP trigger: [HTTPTriggerConfig](javascript:void\(0\)).</p>
+         * <p>*   OSS trigger: [OSSTriggerConfig](~~struct:OSSTriggerConfig~~).</p>
+         * <p>*   Log Service trigger: [LogTriggerConfig](~~struct:LogTriggerConfig~~).</p>
+         * <p>*   Time trigger: [TimeTriggerConfig](~~struct:TimeTriggerConfig~~).</p>
+         * <p>*   HTTP trigger: [HTTPTriggerConfig](~~struct:HTTPTriggerConfig~~).</p>
          * <p>*   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
-         * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).</p>
-         * <p>*   MNS topic trigger: [MnsTopicTriggerConfig](javascript:void\(0\)).</p>
+         * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~struct:CDNEventsTriggerConfig~~).</p>
+         * <p>*   MNS topic trigger: [MnsTopicTriggerConfig](~~struct:MnsTopicTriggerConfig~~).</p>
          */
         @NameInMap("triggerConfig")
         public String triggerConfig;
@@ -107,7 +107,7 @@ public class ListTriggersResponseBody extends TeaModel {
         public String triggerName;
 
         /**
-         * <p>The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.</p>
+         * <p>The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn\_events**, and **mns\_topic**.</p>
          */
         @NameInMap("triggerType")
         public String triggerType;

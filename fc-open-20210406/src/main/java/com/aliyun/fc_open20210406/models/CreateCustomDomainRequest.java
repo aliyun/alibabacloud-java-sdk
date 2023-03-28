@@ -11,8 +11,7 @@ public class CreateCustomDomainRequest extends TeaModel {
     public CertConfig certConfig;
 
     /**
-     * <p>The domain name.</p>
-     * <p>Enter a custom domain name that has obtained an ICP filing in the Alibaba Cloud ICP Filing system, or a custom domain name whose ICP filing information includes Alibaba Cloud as a service provider.</p>
+     * <p>The domain name. Enter a custom domain name that has obtained an ICP filing in the Alibaba Cloud ICP Filing system, or a custom domain name whose ICP filing information includes Alibaba Cloud as a service provider.</p>
      */
     @NameInMap("domainName")
     public String domainName;
