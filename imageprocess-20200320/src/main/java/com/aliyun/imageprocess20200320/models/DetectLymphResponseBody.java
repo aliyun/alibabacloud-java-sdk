@@ -7,6 +7,9 @@ public class DetectLymphResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectLymphResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class DetectLymphResponseBody extends TeaModel {
     }
     public DetectLymphResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectLymphResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DetectLymphResponseBody setRequestId(String requestId) {

@@ -1,3 +1,6 @@
+2023-03-28 Version: 2.0.24
+- Release SegmentLymphNode.
+
 2023-02-14 Version: 2.0.23
 - Update ScreenChestCT and DetectLungNodule.
 

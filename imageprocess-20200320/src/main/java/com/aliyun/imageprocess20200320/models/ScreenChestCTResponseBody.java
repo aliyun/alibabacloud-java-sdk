@@ -43,6 +43,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
     }
 
     public static class ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo extends TeaModel {
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Area")
         public java.util.List<Float> area;
 
@@ -117,6 +120,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
     }
 
     public static class ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo extends TeaModel {
+        /**
+         * <p>1</p>
+         */
         @NameInMap("Area")
         public java.util.List<Float> area;
 
