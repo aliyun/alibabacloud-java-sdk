@@ -10,6 +10,9 @@ public class ExtendClusterShrinkRequest extends TeaModel {
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
+    @NameInMap("IpAllocationPolicy")
+    public String ipAllocationPolicyShrink;
+
     @NameInMap("NodeGroups")
     public String nodeGroupsShrink;
 
@@ -35,6 +38,14 @@ public class ExtendClusterShrinkRequest extends TeaModel {
     }
     public Boolean getIgnoreFailedNodeTasks() {
         return this.ignoreFailedNodeTasks;
+    }
+
+    public ExtendClusterShrinkRequest setIpAllocationPolicyShrink(String ipAllocationPolicyShrink) {
+        this.ipAllocationPolicyShrink = ipAllocationPolicyShrink;
+        return this;
+    }
+    public String getIpAllocationPolicyShrink() {
+        return this.ipAllocationPolicyShrink;
     }
 
     public ExtendClusterShrinkRequest setNodeGroupsShrink(String nodeGroupsShrink) {

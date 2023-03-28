@@ -318,6 +318,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ExtendClusterShrinkRequest request = new ExtendClusterShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ipAllocationPolicy)) {
+            request.ipAllocationPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ipAllocationPolicy, "IpAllocationPolicy", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeGroups)) {
             request.nodeGroupsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeGroups, "NodeGroups", "json");
         }
@@ -333,6 +337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ignoreFailedNodeTasks)) {
             body.put("IgnoreFailedNodeTasks", request.ignoreFailedNodeTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipAllocationPolicyShrink)) {
+            body.put("IpAllocationPolicy", request.ipAllocationPolicyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupsShrink)) {
