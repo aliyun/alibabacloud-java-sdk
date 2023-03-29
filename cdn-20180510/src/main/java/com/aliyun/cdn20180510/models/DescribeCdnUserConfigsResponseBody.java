@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserConfigsResponseBody extends TeaModel {
-    // The configurations of Alibaba Cloud CDN.
+    /**
+     * <p>The configurations of Alibaba Cloud CDN.</p>
+     */
     @NameInMap("Configs")
     public java.util.List<DescribeCdnUserConfigsResponseBodyConfigs> configs;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,25 +38,31 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserConfigsResponseBodyConfigs extends TeaModel {
-        // The name of the parameter.
-        // 
-        // The configurations set by enterprise or government users.
+        /**
+         * <p>The name of the parameter.</p>
+         * <br>
+         * <p>The configurations set by enterprise or government users.</p>
+         */
         @NameInMap("ArgName")
         public String argName;
 
-        // The value of the configuration. Valid values:
-        // 
-        // *   **cc_rule**: HTTP flood protection rules
-        // *   **ddos_dispatch**: integration with Anti-DDoS
-        // *   **edge_safe**: application security settings on edge nodes
-        // *   **blocked_regions**: blocked regions
-        // *   **http\_acl\_policy**: access control list (ACL) rules
-        // *   **bot_manager**: bot traffic management
-        // *   **ip_reputation**: IP reputation library
+        /**
+         * <p>The value of the configuration. Valid values:</p>
+         * <br>
+         * <p>*   **cc_rule**: HTTP flood protection rules</p>
+         * <p>*   **ddos_dispatch**: integration with Anti-DDoS</p>
+         * <p>*   **edge_safe**: application security settings on edge nodes</p>
+         * <p>*   **blocked_regions**: blocked regions</p>
+         * <p>*   **http\_acl\_policy**: access control list (ACL) rules</p>
+         * <p>*   **bot_manager**: bot traffic management</p>
+         * <p>*   **ip_reputation**: IP reputation library</p>
+         */
         @NameInMap("ArgValue")
         public String argValue;
 
-        // The name of the feature.
+        /**
+         * <p>The name of the feature.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 

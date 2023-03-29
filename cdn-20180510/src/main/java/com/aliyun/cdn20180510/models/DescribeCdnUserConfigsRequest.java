@@ -4,15 +4,14 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserConfigsRequest extends TeaModel {
-    // The configuration item that you want to query. Valid values:
-    // 
-    // *   **domain\_business\_control**: Alibaba Cloud CDN configurations
-    // *   **waf**: Web Application Firewall (WAF) configurations
+    /**
+     * <p>The configuration item that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **domain\_business\_control**: Alibaba Cloud CDN configurations</p>
+     * <p>*   **waf**: Web Application Firewall (WAF) configurations</p>
+     */
     @NameInMap("FunctionName")
     public String functionName;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     public static DescribeCdnUserConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnUserConfigsRequest self = new DescribeCdnUserConfigsRequest();
@@ -25,14 +24,6 @@ public class DescribeCdnUserConfigsRequest extends TeaModel {
     }
     public String getFunctionName() {
         return this.functionName;
-    }
-
-    public DescribeCdnUserConfigsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

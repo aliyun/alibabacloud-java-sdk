@@ -4,47 +4,58 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnReportRequest extends TeaModel {
-    // The region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.
-    // 
-    // *   If you do not specify a region, all regions are queried.
-    // *   If you specify a region, data in the specified region is returned. You can specify one or more regions. Separate regions with commas (,).
+    /**
+     * <p>The region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>*   If you do not specify a region, all regions are queried.</p>
+     * <p>*   If you specify a region, data in the specified region is returned. You can specify one or more regions. Separate regions with commas (,).</p>
+     */
     @NameInMap("Area")
     public String area;
 
-    // The domain names that you want to query. Separate domain names with commas (,).
+    /**
+     * <p>The domain names that you want to query. Separate domain names with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    /**
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The HTTP status code. Valid values:
-    // 
-    // *   **2xx**: HTTP 2xx status codes
-    // *   **3xx**: HTTP 3xx status codes
-    // *   **4xx**: HTTP 4xx status codes
-    // *   **5xx**: HTTP 5xx status codes
-    // 
-    // If you do not specify an HTTP status code, all HTTP status codes are queried.
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: HTTP 2xx status codes</p>
+     * <p>*   **3xx**: HTTP 3xx status codes</p>
+     * <p>*   **4xx**: HTTP 4xx status codes</p>
+     * <p>*   **5xx**: HTTP 5xx status codes</p>
+     * <br>
+     * <p>If you do not specify an HTTP status code, all HTTP status codes are queried.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
-    // Specify whether the region is outside the Chinese mainland. Valid values:
-    // 
-    // *   **1**: outside the Chinese mainland
-    // *   **0**: inside the Chinese mainland
+    /**
+     * <p>Specify whether the region is outside the Chinese mainland. Valid values:</p>
+     * <br>
+     * <p>*   **1**: outside the Chinese mainland</p>
+     * <p>*   **0**: inside the Chinese mainland</p>
+     */
     @NameInMap("IsOverseas")
     public String isOverseas;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The ID of the operations report that you want to query. You can enter only one ID in each call. You can call the [DescribeCdnSubList](~~271655~~) operation to query the report ID.
+    /**
+     * <p>The ID of the operations report that you want to query. You can enter only one ID in each call. You can call the [DescribeCdnSubList](~~271655~~) operation to query the report ID.</p>
+     */
     @NameInMap("ReportId")
     public Long reportId;
 
-    // The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -91,14 +102,6 @@ public class DescribeCdnReportRequest extends TeaModel {
     }
     public String getIsOverseas() {
         return this.isOverseas;
-    }
-
-    public DescribeCdnReportRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeCdnReportRequest setReportId(Long reportId) {

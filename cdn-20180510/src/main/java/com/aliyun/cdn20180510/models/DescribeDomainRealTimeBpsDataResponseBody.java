@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
-    // The response parameters.
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public DescribeDomainRealTimeBpsDataResponseBodyData data;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeBpsDataResponseBodyDataBpsModel extends TeaModel {
-        // The bandwidth. Unit: bit/s.
+        /**
+         * <p>The bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("Bps")
         public Float bps;
 
-        // The timestamp of the data entry. The time follows the ISO 8601 standard. The time is displayed in UTC.
+        /**
+         * <p>The timestamp of the data entry. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

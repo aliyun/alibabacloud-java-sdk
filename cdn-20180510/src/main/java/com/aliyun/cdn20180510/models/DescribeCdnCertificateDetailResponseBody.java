@@ -4,23 +4,33 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnCertificateDetailResponseBody extends TeaModel {
-    // The content of the SSL certificate.
+    /**
+     * <p>The content of the SSL certificate.</p>
+     */
     @NameInMap("Cert")
     public String cert;
 
-    // The ID of the SSL certificate.
+    /**
+     * <p>The ID of the SSL certificate.</p>
+     */
     @NameInMap("CertId")
     public Long certId;
 
-    // The name of the SSL certificate.
+    /**
+     * <p>The name of the SSL certificate.</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
-    // The key of the SSL certificate.
+    /**
+     * <p>The key of the SSL certificate.</p>
+     */
     @NameInMap("Key")
     public String key;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

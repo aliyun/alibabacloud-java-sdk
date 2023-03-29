@@ -4,7 +4,9 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class OpenCdnServiceRequest extends TeaModel {
-    // The metering method of Alibaba Cloud CDN. A value of **PayByTraffic** indicates that the metering method is pay-by-data-transfer.
+    /**
+     * <p>The metering method of Alibaba Cloud CDN. A value of **PayByTraffic** indicates that the metering method is pay-by-data-transfer.</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 

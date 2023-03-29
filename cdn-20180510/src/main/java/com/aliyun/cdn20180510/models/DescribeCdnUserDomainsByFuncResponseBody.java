@@ -4,23 +4,33 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
-    // The configurations of the accelerated domain name.
+    /**
+     * <p>The configurations of the accelerated domain name.</p>
+     */
     @NameInMap("Domains")
     public DescribeCdnUserDomainsByFuncResponseBodyDomains domains;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of domain names returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -70,23 +80,38 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserDomainsByFuncResponseBodyDomainsPageDataSourcesSource extends TeaModel {
-        // The address of the origin server.
+        /**
+         * <p>The address of the origin server.</p>
+         */
         @NameInMap("Content")
         public String content;
 
-        // The port of the origin server.
+        /**
+         * <p>The port of the origin server.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
-        // The priority of the configuration item.
+        /**
+         * <p>The priority.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
-        // The type of the origin server.
+        /**
+         * <p>The type of the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **ipaddr**: an origin IP address</p>
+         * <p>*   **domain:** a domain name</p>
+         * <p>*   **oss:** the OSS domain of an Object Storage Service (OSS) bucket</p>
+         * <p>*   **fc_domain:** a Function Compute domain name</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The weight of the origin server if multiple origin servers have been specified.
+        /**
+         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+         */
         @NameInMap("Weight")
         public String weight;
 
@@ -157,60 +182,80 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserDomainsByFuncResponseBodyDomainsPageData extends TeaModel {
-        // The type of workload accelerated by Alibaba Cloud CDN. Valid values:
-        // 
-        // *   **web**: image and small file distribution
-        // *   **download**: large file distribution
-        // *   **video**: on-demand video and audio streaming
-        // *   **liveStream**: live streaming
+        /**
+         * <p>The type of the workload accelerated by Alibaba Cloud CDN. Valid values:</p>
+         * <br>
+         * <p>*   **web**: image and small file distribution</p>
+         * <p>*   **download**: large file distribution</p>
+         * <p>*   **video**: on-demand video and audio streaming</p>
+         * <p>*   **liveStream**: live streaming</p>
+         */
         @NameInMap("CdnType")
         public String cdnType;
 
-        // The CNAME assigned to the accelerated domain name.
+        /**
+         * <p>The CNAME assigned to the accelerated domain name.</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
-        // The description of the status.
+        /**
+         * <p>The description of the accelerated domain name.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The accelerated domain name.
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The status of the accelerated domain name. Valid values:
-        // 
-        // *   **online**: The domain name is enabled.
-        // *   **offline**: The domain is disabled.
-        // *   **configuring**: The endpoint group is being configured.
-        // *   **configure_failed**: The domain failed to be configured.
-        // *   **checking**: The domain name is under review.
-        // *   **check_failed**: The domain name failed the review.
-        // *   **stopping**: The domain name is be disabled.
-        // *   **deleting**: being deleted
+        /**
+         * <p>The status of the accelerated domain name. Valid values:</p>
+         * <br>
+         * <p>*   **online:** enabled</p>
+         * <p>*   **offline:** disabled</p>
+         * <p>*   **configuring:** configuring</p>
+         * <p>*   **configure_failed:** configuration failed</p>
+         * <p>*   **checking:** reviewing</p>
+         * <p>*   **check_failed**: failed the review</p>
+         * <p>*   **stopping**: being disabled</p>
+         * <p>*   **deleting**: deleting</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        // The time when the accelerated domain name was added to Alibaba Cloud CDN.
+        /**
+         * <p>The time when the accelerated domain name was added.</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
-        // The last time when the accelerated domain was modified.
+        /**
+         * <p>The time when the accelerated domain name was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        // The ID of the resource group.
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        // The information about the origin server.
+        /**
+         * <p>The information about the origin server.</p>
+         */
         @NameInMap("Sources")
         public DescribeCdnUserDomainsByFuncResponseBodyDomainsPageDataSources sources;
 
-        // The status of HTTPS. Valid values:
-        // 
-        // - **on**: enabled
-        // - **off**: disabled
+        /**
+         * <p>Indicates whether HTTPS is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
+         */
         @NameInMap("SslProtocol")
         public String sslProtocol;
 

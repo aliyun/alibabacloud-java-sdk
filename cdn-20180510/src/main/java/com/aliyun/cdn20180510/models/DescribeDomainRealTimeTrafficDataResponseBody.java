@@ -4,29 +4,41 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
-    // The time interval between the data entries returned. Unit: seconds.
-    // 
-    // The time granularity varies with the time range to query. Supported values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see the usage notes.
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <br>
+     * <p>The time granularity varies with the time range to query. Supported values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see the usage notes.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The accelerated domain name.
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range that was queried.
+    /**
+     * <p>The end of the time range that was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The amount of network traffic at each time interval. Unit: bytes.
+    /**
+     * <p>The amount of network traffic at each time interval. Unit: bytes.</p>
+     */
     @NameInMap("RealTimeTrafficDataPerInterval")
     public DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range that was queried.
+    /**
+     * <p>The beginning of the time range that was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -84,11 +96,15 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerIntervalDataModule extends TeaModel {
-        // The timestamp of the data returned.
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The amount of network traffic.
+        /**
+         * <p>The amount of network traffic.</p>
+         */
         @NameInMap("Value")
         public String value;
 

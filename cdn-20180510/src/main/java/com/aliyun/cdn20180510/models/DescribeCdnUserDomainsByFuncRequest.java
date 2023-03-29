@@ -4,28 +4,31 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserDomainsByFuncRequest extends TeaModel {
-    // The ID of the feature.
-    // 
-    // For example, the ID of the origin host feature (set_req_host_header) is 18.
+    /**
+     * <p>The ID of the feature. For more information about how to query feature IDs, see [Feature settings for a domain name](~~388460~~). For example, the ID of the origin host feature (set_req_host_header) is 18.</p>
+     */
     @NameInMap("FuncId")
     public Integer funcId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The number of the page to return. Default value: **1**.
-    // 
-    // Valid values: **1** to **100000**.
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     * <br>
+     * <p>Valid values: **1** to **100000**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of domain names to return on each page. Default value: **20**.
-    // 
-    // Valid values: **1** to **50**.
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <br>
+     * <p>Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the resource group.
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -40,14 +43,6 @@ public class DescribeCdnUserDomainsByFuncRequest extends TeaModel {
     }
     public Integer getFuncId() {
         return this.funcId;
-    }
-
-    public DescribeCdnUserDomainsByFuncRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeCdnUserDomainsByFuncRequest setPageNumber(Integer pageNumber) {

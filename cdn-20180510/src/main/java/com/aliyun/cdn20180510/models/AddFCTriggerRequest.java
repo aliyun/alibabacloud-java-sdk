@@ -4,35 +4,45 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class AddFCTriggerRequest extends TeaModel {
-    // The name of the event.
+    /**
+     * <p>The name of the event.</p>
+     */
     @NameInMap("EventMetaName")
     public String eventMetaName;
 
-    // The version of the event.
+    /**
+     * <p>The version of the event.</p>
+     */
     @NameInMap("EventMetaVersion")
     public String eventMetaVersion;
 
-    // The feature trigger.
+    /**
+     * <p>The feature trigger.</p>
+     */
     @NameInMap("FunctionARN")
     public String functionARN;
 
-    // The remarks.
+    /**
+     * <p>The remarks.</p>
+     */
     @NameInMap("Notes")
     public String notes;
 
-    // 用户ID。
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The assigned Resource Access Management (RAM) role.
+    /**
+     * <p>The assigned Resource Access Management (RAM) role.</p>
+     */
     @NameInMap("RoleARN")
     public String roleARN;
 
-    // The resources and filters for event listening.
+    /**
+     * <p>The resources and filters for event listening.</p>
+     */
     @NameInMap("SourceARN")
     public String sourceARN;
 
-    // The trigger that corresponds to the Function Compute service.
+    /**
+     * <p>The trigger that corresponds to the Function Compute service.</p>
+     */
     @NameInMap("TriggerARN")
     public String triggerARN;
 
@@ -71,14 +81,6 @@ public class AddFCTriggerRequest extends TeaModel {
     }
     public String getNotes() {
         return this.notes;
-    }
-
-    public AddFCTriggerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public AddFCTriggerRequest setRoleARN(String roleARN) {

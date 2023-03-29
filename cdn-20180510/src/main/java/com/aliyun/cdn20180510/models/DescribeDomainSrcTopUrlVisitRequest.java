@@ -4,29 +4,34 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSrcTopUrlVisitRequest extends TeaModel {
-    // The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+    /**
+     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-    // 
-    // >  The end time must be later than the start time. The difference between the end time and the start time cannot exceed seven days.
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. The difference between the end time and the start time cannot exceed seven days.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The method that is used to sort the returned URLs.**** Valid values:
-    // 
-    // *   **traf**: by network traffic.
-    // *   **pv**: by the number of page views. This is the default value.
+    /**
+     * <p>The method that is used to sort the returned URLs.**** Valid values:</p>
+     * <br>
+     * <p>*   **traf**: by network traffic.</p>
+     * <p>*   **pv**: by the number of page views. This is the default value.</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
-    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-    // 
-    // >  If you do not set the StartTime parameter, the data within the previous day is queried.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  If you do not set the StartTime parameter, the data within the previous day is queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -49,14 +54,6 @@ public class DescribeDomainSrcTopUrlVisitRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDomainSrcTopUrlVisitRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainSrcTopUrlVisitRequest setSortBy(String sortBy) {

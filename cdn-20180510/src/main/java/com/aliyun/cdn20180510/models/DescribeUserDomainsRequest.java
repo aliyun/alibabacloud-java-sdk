@@ -4,94 +4,120 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserDomainsRequest extends TeaModel {
-    // The type of workload accelerated by Alibaba Cloud CDN. Separate types with commas (,). Valid values:
-    // 
-    // *   **web**: images and small files
-    // *   **download**: large files
-    // *   **video**: on-demand video and audio streaming
-    // 
-    // If you do not set this parameter, all service types are queried.
+    /**
+     * <p>The type of workload accelerated by Alibaba Cloud CDN. Separate types with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **web**: images and small files</p>
+     * <p>*   **download**: large files</p>
+     * <p>*   **video**: on-demand video and audio streaming</p>
+     * <br>
+     * <p>If you do not set this parameter, all service types are queried.</p>
+     */
     @NameInMap("CdnType")
     public String cdnType;
 
-    // The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-    // 
-    // >  The end time must be later than the start time.
+    /**
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time.</p>
+     */
     @NameInMap("ChangeEndTime")
     public String changeEndTime;
 
-    // The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("ChangeStartTime")
     public String changeStartTime;
 
-    // Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:
-    // 
-    // *   **true**: yes
-    // *   **false**: no
+    /**
+     * <p>Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("CheckDomainShow")
     public Boolean checkDomainShow;
 
-    // The accelerated region. By default, all accelerated regions are queried. Valid values:
-    // 
-    // *   **domestic**: Chinese mainland
-    // *   **global**
-    // *   **overseas**: global (excluding the Chinese mainland)
+    /**
+     * <p>The accelerated region. By default, all accelerated regions are queried. Valid values:</p>
+     * <br>
+     * <p>*   **domestic**: Chinese mainland</p>
+     * <p>*   **global**</p>
+     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     */
     @NameInMap("Coverage")
     public String coverage;
 
-    // The accelerated domain names. If you do not set this parameter, configurations of all domain names that match the conditions are returned.
+    /**
+     * <p>The accelerated domain names. If you do not set this parameter, configurations of all domain names that match the conditions are returned.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The search mode. Valid values:
-    // 
-    // *   **fuzzy_match**: fuzzy match
-    // *   **pre_match**: prefix match
-    // *   **suf_match**: suffix match
-    // *   **full_match** (default): exact match
-    // 
-    // >  If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.
+    /**
+     * <p>The search mode. Valid values:</p>
+     * <br>
+     * <p>*   **fuzzy_match**: fuzzy match</p>
+     * <p>*   **pre_match**: prefix match</p>
+     * <p>*   **suf_match**: suffix match</p>
+     * <p>*   **full_match** (default): exact match</p>
+     * <br>
+     * <p>>  If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.</p>
+     */
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
-    // The status of the domain name. You can filter domain names by status. Valid values:
-    // 
-    // *   **online**: enabled
-    // *   **offline**: disabled
-    // *   **configuring**: being configured
-    // *   **configure_failed**: failed to be configured
-    // *   **checking**: under review
-    // *   **check_failed**: failed the review
-    // *   **stopping**: being disabled
-    // *   **deleting**: deleting
-    // 
-    // If you do not set this parameter, all states are queried.
+    /**
+     * <p>The status of the domain name. You can filter domain names by status. Valid values:</p>
+     * <br>
+     * <p>*   **online**: enabled</p>
+     * <p>*   **offline**: disabled</p>
+     * <p>*   **configuring**: being configured</p>
+     * <p>*   **configure_failed**: failed to be configured</p>
+     * <p>*   **checking**: under review</p>
+     * <p>*   **check_failed**: failed the review</p>
+     * <p>*   **stopping**: being disabled</p>
+     * <p>*   **deleting**: deleting</p>
+     * <br>
+     * <p>If you do not set this parameter, all states are queried.</p>
+     */
     @NameInMap("DomainStatus")
     public String domainStatus;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The number of the page to return. Valid values: **1** to **100000**.
+    /**
+     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries to return on each page. Valid values: **1 to 50**. Default value: **20**. Maximum value: **50**.
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1 to 50**. Default value: **20**. Maximum value: **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the resource group. By default, all IDs are queried.
+    /**
+     * <p>The ID of the resource group. By default, all IDs are queried.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The information about the origin server.
+    /**
+     * <p>The information about the origin server.</p>
+     */
     @NameInMap("Source")
     public String source;
 
-    // The tags.
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeUserDomainsRequestTag> tag;
 
@@ -221,15 +247,19 @@ public class DescribeUserDomainsRequest extends TeaModel {
     }
 
     public static class DescribeUserDomainsRequestTag extends TeaModel {
-        // The key of the tag. Valid values of N: **1** to **20**.
-        // 
-        // By default, all tag keys are queried.
+        /**
+         * <p>The key of the tag. Valid values of N: **1** to **20**.</p>
+         * <br>
+         * <p>By default, all tag keys are queried.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag. Valid values of N: **1** to **20**.
-        // 
-        // By default, all tag values are queried.
+        /**
+         * <p>The value of the tag. Valid values of N: **1** to **20**.</p>
+         * <br>
+         * <p>By default, all tag values are queried.</p>
+         */
         @NameInMap("Value")
         public String value;
 

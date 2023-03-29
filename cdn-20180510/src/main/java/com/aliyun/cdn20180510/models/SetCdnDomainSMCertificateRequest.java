@@ -4,23 +4,29 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetCdnDomainSMCertificateRequest extends TeaModel {
-    // The ID of the SM certificate that you want to configure.
+    /**
+     * <p>The ID of the SM certificate that you want to configure.</p>
+     */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
-    // The accelerated domain name for which you want to configure the SM certificate.
-    // 
-    // >  The domain name uses HTTPS secure acceleration.
+    /**
+     * <p>The accelerated domain name for which you want to configure the SM certificate.</p>
+     * <br>
+     * <p>>  The domain name uses HTTPS secure acceleration.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // Specifies whether to enable the SSL certificate. Valid values:
-    // 
-    // *   **on**: enables the SSL certificate.
-    // *   **off**: disables the SSL certificate.
+    /**
+     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+     * <br>
+     * <p>*   **on**: enables the SSL certificate.</p>
+     * <p>*   **off**: disables the SSL certificate.</p>
+     */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 

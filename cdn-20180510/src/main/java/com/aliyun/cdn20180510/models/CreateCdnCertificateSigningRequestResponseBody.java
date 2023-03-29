@@ -4,19 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
-    // The Common Name of the certificate.
+    /**
+     * <p>The Common Name of the certificate.</p>
+     */
     @NameInMap("CommonName")
     public String commonName;
 
-    // The content of the CSR.
+    /**
+     * <p>The content of the CSR.</p>
+     */
     @NameInMap("Csr")
     public String csr;
 
-    // The MD5 value of the certificate public key.
+    /**
+     * <p>The MD5 value of the certificate public key.</p>
+     */
     @NameInMap("PubMd5")
     public String pubMd5;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

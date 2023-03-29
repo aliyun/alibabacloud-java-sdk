@@ -4,48 +4,59 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
-    // The accelerated domain names based on which the resource usage details are generated. If you do not specify a domain name group, resource usage details are exported based on this parameter.
-    // 
-    // If you do not set this parameter, resource usage details are exported based on user accounts.
+    /**
+     * <p>The accelerated domain names based on which the resource usage details are generated. If you do not specify a domain name group, resource usage details are exported based on this parameter.</p>
+     * <br>
+     * <p>If you do not set this parameter, resource usage details are exported based on user accounts.</p>
+     */
     @NameInMap("DomainNames")
     public String domainNames;
 
-    // The end of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
-    // 
-    // >  The end time must be later than the start time.
+    /**
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The group of accelerated domain names based on which the resource usage details are generated. If you set this parameter, ignore the **DomainNames** parameter.
+    /**
+     * <p>The group of accelerated domain names based on which the resource usage details are generated. If you set this parameter, ignore the **DomainNames** parameter.</p>
+     */
     @NameInMap("Group")
     public String group;
 
-    // The language of the exported file. Valid values:
-    // 
-    // *   **zh-cn**: Chinese. This is the default value.
-    // *   **en-us**: English
+    /**
+     * <p>The language of the exported file. Valid values:</p>
+     * <br>
+     * <p>*   **zh-cn**: Chinese. This is the default value.</p>
+     * <p>*   **en-us**: English</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The beginning of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The name of the task.
+    /**
+     * <p>The name of the task.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
-    // The type of content based on which the data is generated. Valid values:
-    // 
-    // *   **flow**: network traffic and bandwidth
-    // *   **vas**: requests
+    /**
+     * <p>The type of content based on which the data is generated. Valid values:</p>
+     * <br>
+     * <p>*   **flow**: network traffic and bandwidth</p>
+     * <p>*   **vas**: requests</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -84,14 +95,6 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
-    }
-
-    public CreateUsageDetailDataExportTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateUsageDetailDataExportTaskRequest setStartTime(String startTime) {

@@ -4,23 +4,33 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
-    // The information about the accelerated domain names.
+    /**
+     * <p>The information about the accelerated domain names.</p>
+     */
     @NameInMap("Domains")
     public DescribeCdnDeletedDomainsResponseBodyDomains domains;
 
-    // The page number of the returned page. It corresponds to the request parameter **PageNumber**.
+    /**
+     * <p>The page number of the returned page. It corresponds to the request parameter **PageNumber**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries returned per page. It corresponds to the request parameter **PageSize**.
+    /**
+     * <p>The number of entries returned per page. It corresponds to the request parameter **PageSize**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of domain names returned.
+    /**
+     * <p>The total number of domain names returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -70,11 +80,15 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDeletedDomainsResponseBodyDomainsPageData extends TeaModel {
-        // The accelerated domain name.
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The last time when the accelerated domain name was modified. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC+0.
+        /**
+         * <p>The last time when the accelerated domain name was modified. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC+0.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 

@@ -4,55 +4,81 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRefreshQuotaResponseBody extends TeaModel {
-    // The maximum number of URLs and directories that can be blocked on the current day.
+    /**
+     * <p>The maximum number of URLs and directories that can be blocked on the current day.</p>
+     */
     @NameInMap("BlockQuota")
     public String blockQuota;
 
-    // The remaining number of URLs and directories that can be blocked on the current day.
+    /**
+     * <p>The remaining number of URLs and directories that can be blocked on the current day.</p>
+     */
     @NameInMap("BlockRemain")
     public String blockRemain;
 
-    // The maximum number of directories that can be refreshed on the current day.
+    /**
+     * <p>The maximum number of directories that can be refreshed on the current day.</p>
+     */
     @NameInMap("DirQuota")
     public String dirQuota;
 
-    // The remaining number of directories that can be refreshed on the current day.
+    /**
+     * <p>The remaining number of directories that can be refreshed on the current day.</p>
+     */
     @NameInMap("DirRemain")
     public String dirRemain;
 
-    // The maximum number of times that you can prefetch content to L1 nodes on the current day.
+    /**
+     * <p>The maximum number of times that you can prefetch content to L1 nodes on the current day.</p>
+     */
     @NameInMap("PreloadEdgeQuota")
     public String preloadEdgeQuota;
 
-    // The remaining number of times that you can prefetch content to L1 nodes on the current day.
+    /**
+     * <p>The remaining number of times that you can prefetch content to L1 nodes on the current day.</p>
+     */
     @NameInMap("PreloadEdgeRemain")
     public String preloadEdgeRemain;
 
-    // The maximum number of times that you can prefetch content to L2 nodes on the current day.
+    /**
+     * <p>The maximum number of times that you can prefetch content to L2 nodes on the current day.</p>
+     */
     @NameInMap("PreloadQuota")
     public String preloadQuota;
 
-    // The remaining number of times that you can prefetch content to L2 nodes on the current day.
+    /**
+     * <p>The remaining number of times that you can prefetch content to L2 nodes on the current day.</p>
+     */
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
-    // The maximum number of times that you can use regular expressions to refresh directories or URLs on the current day.
+    /**
+     * <p>The maximum number of times that you can use regular expressions to refresh directories or URLs on the current day.</p>
+     */
     @NameInMap("RegexQuota")
     public String regexQuota;
 
-    // The remaining number of times that you can use regular expressions to refresh directories or URLs on the current day.
+    /**
+     * <p>The remaining number of times that you can use regular expressions to refresh directories or URLs on the current day.</p>
+     */
     @NameInMap("RegexRemain")
     public String regexRemain;
 
-    // The ID of the request
+    /**
+     * <p>The ID of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The maximum number of URLs that can be refreshed on the current day.
+    /**
+     * <p>The maximum number of URLs that can be refreshed on the current day.</p>
+     */
     @NameInMap("UrlQuota")
     public String urlQuota;
 
-    // The remaining number of URLs that can be refreshed on the current day.
+    /**
+     * <p>The remaining number of URLs that can be refreshed on the current day.</p>
+     */
     @NameInMap("UrlRemain")
     public String urlRemain;
 

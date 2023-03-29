@@ -4,20 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeSrcBpsDataRequest extends TeaModel {
-    // You can specify multiple domain names and separate them with commas (,). You can specify at most 100 domain names in each call.
+    /**
+     * <p>You can specify multiple domain names and separate them with commas (,). You can specify at most 100 domain names in each call.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-    // 
-    // >  The end time must be later than the start time.
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    /**
+     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -40,14 +43,6 @@ public class DescribeDomainRealTimeSrcBpsDataRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDomainRealTimeSrcBpsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainRealTimeSrcBpsDataRequest setStartTime(String startTime) {

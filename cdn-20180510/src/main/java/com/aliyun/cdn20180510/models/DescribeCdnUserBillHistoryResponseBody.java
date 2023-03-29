@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
-    // The billing history returned.
+    /**
+     * <p>The billing history returned.</p>
+     */
     @NameInMap("BillHistoryData")
     public DescribeCdnUserBillHistoryResponseBodyBillHistoryData billHistoryData;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,37 +38,47 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem extends TeaModel {
-        // The bandwidth. Unit: bit/s.
+        /**
+         * <p>The bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Float bandwidth;
 
-        // The billable region. Valid values:
-        // 
-        // *   **CN**: mainland China
-        // *   **OverSeas**: regions outside mainland China
-        // *   **AP1**: Asia Pacific 1
-        // *   **AP2**: Asia Pacific 2
-        // *   **AP3**: Asia Pacific 3
-        // *   **NA**: North America
-        // *   **SA**: South America
-        // *   **EU**: Europe
-        // *   **MEAA**: Middle East and Africa
+        /**
+         * <p>The billable region. Valid values:</p>
+         * <br>
+         * <p>*   **CN**: mainland China</p>
+         * <p>*   **OverSeas**: regions outside mainland China</p>
+         * <p>*   **AP1**: Asia Pacific 1</p>
+         * <p>*   **AP2**: Asia Pacific 2</p>
+         * <p>*   **AP3**: Asia Pacific 3</p>
+         * <p>*   **NA**: North America</p>
+         * <p>*   **SA**: South America</p>
+         * <p>*   **EU**: Europe</p>
+         * <p>*   **MEAA**: Middle East and Africa</p>
+         */
         @NameInMap("CdnRegion")
         public String cdnRegion;
 
-        // The billable item. Valid values:
-        // 
-        // *   **StaticHttp**: static HTTP requests
-        // *   **DynamicHttp**: dynamic HTTP requests
-        // *   **DynamicHttps**: dynamic HTTPS requests
+        /**
+         * <p>The billable item. Valid values:</p>
+         * <br>
+         * <p>*   **StaticHttp**: static HTTP requests</p>
+         * <p>*   **DynamicHttp**: dynamic HTTP requests</p>
+         * <p>*   **DynamicHttps**: dynamic HTTPS requests</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // The number of requests.
+        /**
+         * <p>The number of requests.</p>
+         */
         @NameInMap("Count")
         public Float count;
 
-        // The amount of network traffic. Unit: bytes.
+        /**
+         * <p>The amount of network traffic. Unit: bytes.</p>
+         */
         @NameInMap("Flow")
         public Float flow;
 
@@ -135,19 +149,27 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem extends TeaModel {
-        // The beginning of the time range that was queried.
+        /**
+         * <p>The beginning of the time range that was queried.</p>
+         */
         @NameInMap("BillTime")
         public String billTime;
 
-        // The billing method.
+        /**
+         * <p>The billing method.</p>
+         */
         @NameInMap("BillType")
         public String billType;
 
-        // The billable items.
+        /**
+         * <p>The billable items.</p>
+         */
         @NameInMap("BillingData")
         public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData;
 
-        // The dimension.
+        /**
+         * <p>The dimension.</p>
+         */
         @NameInMap("Dimension")
         public String dimension;
 

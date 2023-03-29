@@ -4,7 +4,9 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class StopCdnDomainRequest extends TeaModel {
-    // The accelerated domain name that you want to disable. You can specify only one domain name.
+    /**
+     * <p>The accelerated domain name that you want to disable. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

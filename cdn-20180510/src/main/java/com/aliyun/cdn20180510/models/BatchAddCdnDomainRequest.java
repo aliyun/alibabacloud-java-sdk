@@ -4,19 +4,25 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchAddCdnDomainRequest extends TeaModel {
-    // The workload type of the domain name to be accelerated. Valid values:
-    // 
-    // *   **web**: images and small files.
-    // *   **download**: large files.
-    // *   **video**: on-demand video and audio streaming.
+    /**
+     * <p>The workload type of the domain name to accelerate. Valid values:</p>
+     * <br>
+     * <p>*   **web**: images and small files</p>
+     * <p>*   **download**: large files</p>
+     * <p>*   **video**: on-demand video and audio streaming</p>
+     */
     @NameInMap("CdnType")
     public String cdnType;
 
-    // The URL that is used for health checks.
+    /**
+     * <p>The URL that is used for health checks.</p>
+     */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
-    // The domain names that you want to add to Alibaba Cloud CDN. Separate domain names with commas (,).
+    /**
+     * <p>The domain names that you want to add to Alibaba Cloud CDN. Separate domain names with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -26,26 +32,34 @@ public class BatchAddCdnDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the resource group. If you do not set this parameter, the system uses the ID of the default resource group.
+    /**
+     * <p>The ID of the resource group. If you do not specify a value for this parameter, the system uses the ID of the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The accelerated region. Valid values:
-    // 
-    // *   **domestic**: mainland China only
-    // *   **overseas**: global (excluding mainland China)
-    // *   **global**: global
+    /**
+     * <p>The acceleration region. Default value: domestic. Valid values:</p>
+     * <br>
+     * <p>*   **domestic**: Chinese mainland</p>
+     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **global**: global</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The information about the addresses of the origin servers.
+    /**
+     * <p>The information about the addresses of origin servers.</p>
+     */
     @NameInMap("Sources")
     public String sources;
 
-    // The top-level domain name.
+    /**
+     * <p>The top-level domain.</p>
+     */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 

@@ -4,33 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainByCertificateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The public key of the SSL certificate. You must encode the public key in Base64 and then call the encodeURIComponent function to encode the public key again.
-    // 
-    // The public key must be in the PEM format.
+    /**
+     * <p>The public key of the SSL certificate. You must encode the public key in Base64 and then call the encodeURIComponent function to encode the public key again.</p>
+     * <br>
+     * <p>The public key must be in the PEM format.</p>
+     */
     @NameInMap("SSLPub")
     public String SSLPub;
 
-    // Specifies whether the domain name list to return contains only domain names with HTTPS enabled or disabled.
-    // 
-    // - true: The domain name list contains only domain names with HTTPS enabled.
-    // - false: The domain name list contains only domain names with HTTPS disabled.
+    /**
+     * <p>Specifies whether the domain name list to return contains only domain names with HTTPS enabled or disabled.</p>
+     * <br>
+     * <p>- true: The domain name list contains only domain names with HTTPS enabled.</p>
+     * <p>- false: The domain name list contains only domain names with HTTPS disabled.</p>
+     */
     @NameInMap("SSLStatus")
     public Boolean SSLStatus;
 
     public static DescribeCdnDomainByCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnDomainByCertificateRequest self = new DescribeCdnDomainByCertificateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnDomainByCertificateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeCdnDomainByCertificateRequest setSSLPub(String SSLPub) {

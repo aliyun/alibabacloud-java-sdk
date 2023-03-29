@@ -4,58 +4,71 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeDetailDataRequest extends TeaModel {
-    // The accelerated domain name for which you want to query data. You can specify multiple accelerated domain names and separate them with commas (,).
+    /**
+     * <p>The accelerated domain name for which you want to query data. You can specify multiple accelerated domain names and separate them with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.
-    // 
-    // >  The end time must be later than the start time. The time range between the end time and the start time cannot exceed 10 minutes.
+    /**
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. The time range between the end time and the start time cannot exceed 10 minutes.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The metrics that you want to query. You can specify multiple metrics and separate them with commas (,). Valid values:
-    // 
-    // *   **qps**: the number of queries per second
-    // *   **bps**: bandwidth values
-    // *   **http_code**: HTTP status codes
+    /**
+     * <p>The metrics that you want to query. You can specify multiple metrics and separate them with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **qps**: the number of queries per second</p>
+     * <p>*   **bps**: bandwidth values</p>
+     * <p>*   **http_code**: HTTP status codes</p>
+     */
     @NameInMap("Field")
     public String field;
 
-    // The name of the Internet service provider. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs.
+    /**
+     * <p>The name of the Internet service provider. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs.</p>
+     */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
-    // The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.
+    /**
+     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    // Specifies whether to merge the results. Valid values:
-    // 
-    // *   **true**: merges the results.
-    // *   **false**: does not merge the results. This is the default value.
-    // 
-    // Default value: **false**.
+    /**
+     * <p>Specifies whether to merge the results. Valid values:</p>
+     * <br>
+     * <p>*   **true**: merges the results.</p>
+     * <p>*   **false**: does not merge the results. This is the default value.</p>
+     * <br>
+     * <p>Default value: **false**.</p>
+     */
     @NameInMap("Merge")
     public String merge;
 
-    // Specifies whether to merge the results. Valid values:
-    // 
-    // *   **true**: groups the results by domain name and merges the results by region and ISP.
-    // *   **false**: groups the results by domain name.
-    // 
-    // Default value: **false**.
+    /**
+     * <p>Specifies whether to merge the results. Valid values:</p>
+     * <br>
+     * <p>*   **true**: groups the results by domain name and merges the results by region and ISP.</p>
+     * <p>*   **false**: groups the results by domain name.</p>
+     * <br>
+     * <p>Default value: **false**.</p>
+     */
     @NameInMap("MergeLocIsp")
     public String mergeLocIsp;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The beginning of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -118,14 +131,6 @@ public class DescribeDomainRealTimeDetailDataRequest extends TeaModel {
     }
     public String getMergeLocIsp() {
         return this.mergeLocIsp;
-    }
-
-    public DescribeDomainRealTimeDetailDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainRealTimeDetailDataRequest setStartTime(String startTime) {

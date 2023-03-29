@@ -4,29 +4,37 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchUpdateCdnDomainRequest extends TeaModel {
-    // The accelerated domain names. You can specify one or more accelerated domain names. Separate domain names with commas (,).
+    /**
+     * <p>The accelerated domain names. You can specify one or more accelerated domain names. Separate domain names with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the resource group.
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The information about the addresses of origin servers.
-    // 
-    // >  You can set only one of **Sources** and **TopLevelDomain**. If you set both **Sources** and **TopLevelDomain**, **TopLevelDomain** does not take effect.
+    /**
+     * <p>The information about the addresses of origin servers.</p>
+     * <br>
+     * <p>>  You can set only one of **Sources** and **TopLevelDomain**. If you set both **Sources** and **TopLevelDomain**, **TopLevelDomain** does not take effect.</p>
+     */
     @NameInMap("Sources")
     public String sources;
 
-    // The top-level domain name.
-    // 
-    // >  You can set only one of **Sources** and **TopLevelDomain**. If you set both **Sources** and **TopLevelDomain**, **TopLevelDomain** does not take effect.
+    /**
+     * <p>The top-level domain name.</p>
+     * <br>
+     * <p>>  You can set only one of **Sources** and **TopLevelDomain**. If you set both **Sources** and **TopLevelDomain**, **TopLevelDomain** does not take effect.</p>
+     */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 

@@ -4,24 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeFCTriggerRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The trigger that corresponds to the Function Compute service.
+    /**
+     * <p>The trigger that corresponds to the Function Compute service.</p>
+     */
     @NameInMap("TriggerARN")
     public String triggerARN;
 
     public static DescribeFCTriggerRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFCTriggerRequest self = new DescribeFCTriggerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFCTriggerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeFCTriggerRequest setTriggerARN(String triggerARN) {

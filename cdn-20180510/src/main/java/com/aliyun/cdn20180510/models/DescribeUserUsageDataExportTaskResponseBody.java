@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The usage details returned per page.
+    /**
+     * <p>The usage details returned per page.</p>
+     */
     @NameInMap("UsageDataPerPage")
     public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage usageDataPerPage;
 
@@ -34,11 +38,15 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig extends TeaModel {
-        // The end of the time range that was queried.
+        /**
+         * <p>The end of the time range that was queried.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
-        // The start of the time range that was queried.
+        /**
+         * <p>The start of the time range that was queried.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -66,35 +74,49 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem extends TeaModel {
-        // The time when the task was created.
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The download URL.
+        /**
+         * <p>The download URL.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
-        // The status of the task.
-        // 
-        // *   created: The task is being created.
-        // *   success: The task has been created.
-        // *   failed: The creation of the task failed.
+        /**
+         * <p>The status of the task.</p>
+         * <br>
+         * <p>*   created: The task is being created.</p>
+         * <p>*   success: The task has been created.</p>
+         * <p>*   failed: The creation of the task failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The configurations of the task.
+        /**
+         * <p>The configurations of the task.</p>
+         */
         @NameInMap("TaskConfig")
         public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig;
 
-        // The ID of the task.
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
-        // The name of the task.
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
-        // The last time when the task was modified.
+        /**
+         * <p>The last time when the task was modified.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -181,19 +203,27 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage extends TeaModel {
-        // The description of the task.
+        /**
+         * <p>The description of the task.</p>
+         */
         @NameInMap("Data")
         public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageData data;
 
-        // The number of the current page.
+        /**
+         * <p>The number of the current page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

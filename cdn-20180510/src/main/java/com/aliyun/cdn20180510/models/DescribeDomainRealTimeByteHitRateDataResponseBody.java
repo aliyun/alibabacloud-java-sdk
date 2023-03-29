@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel {
-    // The response parameters.
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public DescribeDomainRealTimeByteHitRateDataResponseBodyData data;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
     }
 
     public static class DescribeDomainRealTimeByteHitRateDataResponseBodyDataByteHitRateDataModel extends TeaModel {
-        // The byte hit ratio. The byte hit ratio is measured in percentage.
+        /**
+         * <p>The byte hit ratio. The byte hit ratio is measured in percentage.</p>
+         */
         @NameInMap("ByteHitRate")
         public Float byteHitRate;
 
-        // The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

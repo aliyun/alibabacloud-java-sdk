@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
-    // The list of domain configurations.
+    /**
+     * <p>The list of domain configurations.</p>
+     */
     @NameInMap("DomainConfigList")
     public BatchSetCdnDomainConfigResponseBodyDomainConfigList domainConfigList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
     }
 
     public static class BatchSetCdnDomainConfigResponseBodyDomainConfigListDomainConfigModel extends TeaModel {
-        // The ID of the configuration.
+        /**
+         * <p>The ID of the configuration.</p>
+         */
         @NameInMap("ConfigId")
         public Long configId;
 
-        // The domain name.
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The name of the feature.
+        /**
+         * <p>The name of the feature.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 

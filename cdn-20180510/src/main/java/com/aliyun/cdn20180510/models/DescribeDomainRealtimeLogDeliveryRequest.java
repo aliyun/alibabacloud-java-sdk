@@ -4,12 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealtimeLogDeliveryRequest extends TeaModel {
-    // The accelerated domain name for which real-time log delivery is enabled. Only one domain name is supported.
+    /**
+     * <p>The accelerated domain name for which real-time log delivery is enabled. You can specify only one domain name.</p>
+     */
     @NameInMap("Domain")
     public String domain;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     public static DescribeDomainRealtimeLogDeliveryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainRealtimeLogDeliveryRequest self = new DescribeDomainRealtimeLogDeliveryRequest();
@@ -22,14 +21,6 @@ public class DescribeDomainRealtimeLogDeliveryRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
-    }
-
-    public DescribeDomainRealtimeLogDeliveryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

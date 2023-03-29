@@ -4,18 +4,19 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ModifyCdnDomainSchdmByPropertyRequest extends TeaModel {
-    // The accelerated domain name for which you want to change the accelerated region. You can specify only one domain name.
+    /**
+     * <p>The accelerated domain name for which you want to change the accelerated region. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The accelerated region. Valid values for coverage:
-    // 
-    // *   **domestic**: Chinese mainland
-    // *   **overseas**: global (excluding the Chinese mainland)
-    // *   **global**: global
+    /**
+     * <p>The accelerated region. Valid values for coverage:</p>
+     * <br>
+     * <p>*   **domestic**: Chinese mainland</p>
+     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **global**: global</p>
+     */
     @NameInMap("Property")
     public String property;
 
@@ -30,14 +31,6 @@ public class ModifyCdnDomainSchdmByPropertyRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public ModifyCdnDomainSchdmByPropertyRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ModifyCdnDomainSchdmByPropertyRequest setProperty(String property) {

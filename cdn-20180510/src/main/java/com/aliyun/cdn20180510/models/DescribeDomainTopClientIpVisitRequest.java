@@ -4,41 +4,50 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopClientIpVisitRequest extends TeaModel {
-    // The accelerated domain name. Separate multiple accelerated domain names with commas (,).
-    // 
-    // By default, this operation queries client IP addresses for all accelerated domain names.
+    /**
+     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <br>
+     * <p>By default, this operation queries client IP addresses for all accelerated domain names.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-    // 
-    // The end time must be later than the start time.
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The maximum number of entries to return. Maximum value: 100.
-    // 
-    // Default value: 20. The default value 20 specifies that the top 20 data entries are returned.
+    /**
+     * <p>The maximum number of entries to return. Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 20. The default value 20 specifies that the top 20 data entries are returned.</p>
+     */
     @NameInMap("Limit")
     public String limit;
 
-    // The name of the region. Separate multiple region names with commas (,).
-    // 
-    // You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+    /**
+     * <p>The name of the region. Separate multiple region names with commas (,).</p>
+     * <br>
+     * <p>You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
+     */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The method that is used to sort the client IP addresses. Valid values:
-    // 
-    // *   **traf**: by network traffic. This is the default value.
-    // *   **acc**: by the number of requests.
+    /**
+     * <p>The method that is used to sort the client IP addresses. Valid values:</p>
+     * <br>
+     * <p>*   **traf**: by network traffic. This is the default value.</p>
+     * <p>*   **acc**: by the number of requests.</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
-    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -77,14 +86,6 @@ public class DescribeDomainTopClientIpVisitRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
-    }
-
-    public DescribeDomainTopClientIpVisitRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainTopClientIpVisitRequest setSortBy(String sortBy) {

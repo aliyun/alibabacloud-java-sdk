@@ -4,32 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagResourcesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The list of resource ID.
+    /**
+     * <p>The IDs of the resources. You can specify up to 50 IDs in each request.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // The resource type. Set the value to **DOMAIN**.
+    /**
+     * <p>The type of the resource. Set this value to **DOMAIN**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The tags.
+    /**
+     * <p>The tags. You can specify up to 20 tags in each request.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeTagResourcesRequestTag> tag;
 
     public static DescribeTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagResourcesRequest self = new DescribeTagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTagResourcesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
@@ -57,11 +52,15 @@ public class DescribeTagResourcesRequest extends TeaModel {
     }
 
     public static class DescribeTagResourcesRequestTag extends TeaModel {
-        // The key of the tag. Valid values of N: **1** to **20**.
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of the tag. Valid values of N: **1** to **20**.
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

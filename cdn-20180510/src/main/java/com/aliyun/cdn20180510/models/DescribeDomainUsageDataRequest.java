@@ -4,78 +4,91 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataRequest extends TeaModel {
-    // The ID of the billable region. Valid values:
-    // 
-    // *   **CN** (default): the Chinese mainland
-    // *   **OverSeas**: outside the Chinese mainland
-    // *   **AP1**: Asia Pacific 1
-    // *   **AP2**: Asia Pacific 2
-    // *   **AP3**: Asia Pacific 3
-    // *   **NA**: North America
-    // *   **SA**: South America
-    // *   **EU**: Europe
-    // *   **MEAA**: Middle East and Africa
-    // *   **all**: all billable regions
-    // 
-    // >  For more information about billable regions, see [Billable regions](~~142221~~).
+    /**
+     * <p>The ID of the billable region. Valid values:</p>
+     * <br>
+     * <p>*   **CN** (default): the Chinese mainland</p>
+     * <p>*   **OverSeas**: outside the Chinese mainland</p>
+     * <p>*   **AP1**: Asia Pacific 1</p>
+     * <p>*   **AP2**: Asia Pacific 2</p>
+     * <p>*   **AP3**: Asia Pacific 3</p>
+     * <p>*   **NA**: North America</p>
+     * <p>*   **SA**: South America</p>
+     * <p>*   **EU**: Europe</p>
+     * <p>*   **MEAA**: Middle East and Africa</p>
+     * <p>*   **all**: all billable regions</p>
+     * <br>
+     * <p>>  For more information about billable regions, see [Billable regions](~~142221~~).</p>
+     */
     @NameInMap("Area")
     public String area;
 
-    // The protocol by which the data is queried. Valid values:
-    // 
-    // *   **http**: HTTP
-    // *   **https**: HTTPS
-    // *   **quic**: QUIC
-    // *   **all** (default): HTTP, HTTPS, and QUIC
+    /**
+     * <p>The protocol by which the data is queried. Valid values:</p>
+     * <br>
+     * <p>*   **http**: HTTP</p>
+     * <p>*   **https**: HTTPS</p>
+     * <p>*   **quic**: QUIC</p>
+     * <p>*   **all** (default): HTTP, HTTPS, and QUIC</p>
+     */
     @NameInMap("DataProtocol")
     public String dataProtocol;
 
-    // The accelerated domain name. You can query the resource usage data for a maximum of 100 domain names in each call. Separate domain names with commas (,).
-    // 
-    // >  If you do not set this parameter, the usage data of all accelerated domain names within your Alibaba Cloud account is returned.
+    /**
+     * <p>The accelerated domain name. You can query the resource usage data for a maximum of 100 domain names in each call. Separate domain names with commas (,).</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the usage data of all accelerated domain names within your Alibaba Cloud account is returned.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-    // 
-    // >  The end time must be later than the start time. The maximum time range that can be queried is 31 days.
+    /**
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. The maximum time range that can be queried is 31 days.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The type of data to be queried. Valid values:
-    // 
-    // *   **bps**: bandwidth
-    // *   **traf**: network traffic
-    // *   **acc**: requests
-    // 
-    // >  **acc** does not support the **Area** parameter.
+    /**
+     * <p>The type of data to be queried. Valid values:</p>
+     * <br>
+     * <p>*   **bps**: bandwidth</p>
+     * <p>*   **traf**: network traffic</p>
+     * <p>*   **acc**: requests</p>
+     * <br>
+     * <p>>  **acc** does not support the **Area** parameter.</p>
+     */
     @NameInMap("Field")
     public String field;
 
-    // The time interval between the data entries. Unit: seconds.
-    // 
-    // The time granularity varies with the time range to query. Supported values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.
+    /**
+     * <p>The time interval between the data entries. Unit: seconds.</p>
+     * <br>
+     * <p>The time granularity varies with the time range to query. Supported values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The beginning of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-    // 
-    // >  The data is collected every 5 minutes.
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The data is collected every 5 minutes.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The type of content based on which the data is queried. Valid values:
-    // 
-    // *   **static**: static content
-    // *   **dynamic**: dynamic content
-    // *   **all** (default): both static and dynamic content
+    /**
+     * <p>The type of content based on which the data is queried. Valid values:</p>
+     * <br>
+     * <p>*   **static**: static content</p>
+     * <p>*   **dynamic**: dynamic content</p>
+     * <p>*   **all** (default): both static and dynamic content</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -130,14 +143,6 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
-    }
-
-    public DescribeDomainUsageDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainUsageDataRequest setStartTime(String startTime) {

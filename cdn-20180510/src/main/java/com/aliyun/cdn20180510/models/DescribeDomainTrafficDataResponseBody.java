@@ -4,27 +4,39 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTrafficDataResponseBody extends TeaModel {
-    // The time interval between the data entries returned. Unit: seconds.
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The accelerated domain name.
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range that was queried.
+    /**
+     * <p>The end of the time range that was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range that was queried.
+    /**
+     * <p>The beginning of the time range that was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The amount of network traffic at each time interval. Unit: bytes.
+    /**
+     * <p>The amount of network traffic at each time interval. Unit: bytes.</p>
+     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -82,31 +94,45 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        // The amount of network traffic in the Chinese mainland.
+        /**
+         * <p>The amount of network traffic in the Chinese mainland.</p>
+         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        // The amount of HTTPS network traffic on L1 edge nodes in the Chinese mainland.
+        /**
+         * <p>The amount of HTTPS network traffic on L1 edge nodes in the Chinese mainland.</p>
+         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        // The amount of HTTPS network traffic on L1 edge nodes outside the Chinese mainland.
+        /**
+         * <p>The amount of HTTPS network traffic on L1 edge nodes outside the Chinese mainland.</p>
+         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        // The total amount of HTTPS network traffic on L1 edge nodes.
+        /**
+         * <p>The total amount of HTTPS network traffic on L1 edge nodes.</p>
+         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        // The amount of network traffic outside the Chinese mainland.
+        /**
+         * <p>The amount of network traffic outside the Chinese mainland.</p>
+         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        // The timestamp of the data returned.
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The total amount of network traffic.
+        /**
+         * <p>The total amount of network traffic.</p>
+         */
         @NameInMap("Value")
         public String value;
 

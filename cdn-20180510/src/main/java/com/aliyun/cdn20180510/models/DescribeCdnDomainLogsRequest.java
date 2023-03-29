@@ -4,32 +4,39 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainLogsRequest extends TeaModel {
-    // The accelerated domain name. You can specify only one domain name.
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
-    // 
-    // >  The end time must be later than the start time.
+    /**
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The number of the page to return. Pages start from page **1**.
+    /**
+     * <p>The number of the page to return. Pages start from page **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries to return on each page. Default value: **300**. Maximum value: **1000**. Valid values: **1** to **1000**.
+    /**
+     * <p>The number of entries to return on each page. Default value: **300**. Maximum value: **1000**. Valid values: **1** to **1000**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The beginning of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -52,14 +59,6 @@ public class DescribeCdnDomainLogsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeCdnDomainLogsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeCdnDomainLogsRequest setPageNumber(Long pageNumber) {

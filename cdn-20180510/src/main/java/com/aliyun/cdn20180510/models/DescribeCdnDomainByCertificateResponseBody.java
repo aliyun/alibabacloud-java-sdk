@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
-    // The information about the SSL certificate.
+    /**
+     * <p>The information about the SSL certificate.</p>
+     */
     @NameInMap("CertInfos")
     public DescribeCdnDomainByCertificateResponseBodyCertInfos certInfos;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,45 +38,63 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainByCertificateResponseBodyCertInfosCertInfo extends TeaModel {
-        // Indicates whether the SSL certificate is obsolete. Valid values:
-        // 
-        // *   **yes**: The SSL certificate is obsolete.
-        // *   **no**: The SSL certificate is working as expected.
+        /**
+         * <p>Indicates whether the SSL certificate is obsolete. Valid values:</p>
+         * <br>
+         * <p>*   **yes**: The SSL certificate is obsolete.</p>
+         * <p>*   **no**: The SSL certificate is working as expected.</p>
+         */
         @NameInMap("CertCaIsLegacy")
         public String certCaIsLegacy;
 
-        // The time when the SSL certificate expires.
+        /**
+         * <p>The time when the SSL certificate expires.</p>
+         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        // Indicates whether the SSL certificate is expired. Valid values:
-        // 
-        // *   **yes**: The SSL certificate is expired.
-        // *   **no**: The SSL certificate is not expired.
+        /**
+         * <p>Indicates whether the SSL certificate is expired. Valid values:</p>
+         * <br>
+         * <p>*   **yes**: The SSL certificate is expired.</p>
+         * <p>*   **no**: The SSL certificate is not expired.</p>
+         */
         @NameInMap("CertExpired")
         public String certExpired;
 
-        // The time when the SSL certificate became effective.
+        /**
+         * <p>The time when the SSL certificate became effective.</p>
+         */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
-        // The name of the SSL certificate owner.
+        /**
+         * <p>The name of the SSL certificate owner.</p>
+         */
         @NameInMap("CertSubjectCommonName")
         public String certSubjectCommonName;
 
-        // The type of the certificate. Valid responses: **RSA**, **DSA**, and **ECDSA**.
+        /**
+         * <p>The type of the certificate. Valid responses: **RSA**, **DSA**, and **ECDSA**.</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
-        // If a value is returned, the value matches the SSL certificate. Multiple domain names are separated with commas (,).
+        /**
+         * <p>If a value is returned, the value matches the SSL certificate. Multiple domain names are separated with commas (,).</p>
+         */
         @NameInMap("DomainList")
         public String domainList;
 
-        // The domain names (DNS fields) that match the SSL certificate. Multiple domain names are separated with commas (,).
+        /**
+         * <p>The domain names (DNS fields) that match the SSL certificate. Multiple domain names are separated with commas (,).</p>
+         */
         @NameInMap("DomainNames")
         public String domainNames;
 
-        // The certificate authority that issued the SSL certificate.
+        /**
+         * <p>The certificate authority that issued the SSL certificate.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 

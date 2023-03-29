@@ -3,7 +3,7 @@ package com.aliyun.cdn20180510.models;
 
 import com.aliyun.tea.*;
 
-public class SetDomainGreenManagerConfigResponse extends TeaModel {
+public class DescribePreloadDetailByIdResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class SetDomainGreenManagerConfigResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public SetDomainGreenManagerConfigResponseBody body;
+    public DescribePreloadDetailByIdResponseBody body;
 
-    public static SetDomainGreenManagerConfigResponse build(java.util.Map<String, ?> map) throws Exception {
-        SetDomainGreenManagerConfigResponse self = new SetDomainGreenManagerConfigResponse();
+    public static DescribePreloadDetailByIdResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribePreloadDetailByIdResponse self = new DescribePreloadDetailByIdResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDomainGreenManagerConfigResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribePreloadDetailByIdResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class SetDomainGreenManagerConfigResponse extends TeaModel {
         return this.headers;
     }
 
-    public SetDomainGreenManagerConfigResponse setStatusCode(Integer statusCode) {
+    public DescribePreloadDetailByIdResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class SetDomainGreenManagerConfigResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SetDomainGreenManagerConfigResponse setBody(SetDomainGreenManagerConfigResponseBody body) {
+    public DescribePreloadDetailByIdResponse setBody(DescribePreloadDetailByIdResponseBody body) {
         this.body = body;
         return this;
     }
-    public SetDomainGreenManagerConfigResponseBody getBody() {
+    public DescribePreloadDetailByIdResponseBody getBody() {
         return this.body;
     }
 

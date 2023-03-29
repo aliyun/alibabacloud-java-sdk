@@ -7,11 +7,15 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
     @NameInMap("OutPutDomains")
     public java.util.List<DescribeCdnWafDomainResponseBodyOutPutDomains> outPutDomains;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -51,7 +55,9 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
         @NameInMap("CcStatus")
         public String ccStatus;
 
-        // The domain name.
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 

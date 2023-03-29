@@ -4,23 +4,33 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
-    // The end of the time range that was queried.
+    /**
+     * <p>The end of the time range that was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about requests collected every 5 minutes.
+    /**
+     * <p>The information about requests collected every 5 minutes.</p>
+     */
     @NameInMap("RequestPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval;
 
-    // The beginning of the time range that was queried.
+    /**
+     * <p>The beginning of the time range that was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The statistics about data transfer collected every 5 minutes.
+    /**
+     * <p>The statistics about data transfer collected every 5 minutes.</p>
+     */
     @NameInMap("TrafficPerInterval")
     public DescribeDomainMultiUsageDataResponseBodyTrafficPerInterval trafficPerInterval;
 
@@ -70,21 +80,29 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule extends TeaModel {
-        // The information about the accelerated domain name.
+        /**
+         * <p>The information about the accelerated domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
-        // The number of requests.
+        /**
+         * <p>The number of requests.</p>
+         */
         @NameInMap("Request")
         public Long request;
 
-        // The timestamp of the data returned.
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The type of data returned.
-        // 
-        // >  For Alibaba Cloud CDN, the valid value is Simple.
+        /**
+         * <p>The type of data returned.</p>
+         * <br>
+         * <p>>  For Alibaba Cloud CDN, the valid value is Simple.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -147,29 +165,39 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule extends TeaModel {
-        // The name of the district.
+        /**
+         * <p>The name of the district.</p>
+         */
         @NameInMap("Area")
         public String area;
 
-        // The bandwidth. Unit: bit/s.
+        /**
+         * <p>The bandwidth. Unit: bit/s.</p>
+         */
         @NameInMap("Bps")
         public Float bps;
 
-        // The accelerated domain name.
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
-        // The timestamp of the data returned.
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The type of data returned. Valid values:
-        // 
-        // - **StaticHttps**: the number of HTTPS requests for static content.
-        // - **DynamicHttps**: the number of HTTPS requests for dynamic content.
-        // - **DynamicHttp**: the number of HTTP requests for dynamic content.
-        // - **StaticQuic**: the number of QUIC requests for static content.
-        // - **DynamicQuic**: the number of QUIC requests for dynamic content.
+        /**
+         * <p>The type of data returned. Valid values:</p>
+         * <br>
+         * <p>- **StaticHttps**: the number of HTTPS requests for static content.</p>
+         * <p>- **DynamicHttps**: the number of HTTPS requests for dynamic content.</p>
+         * <p>- **DynamicHttp**: the number of HTTP requests for dynamic content.</p>
+         * <p>- **StaticQuic**: the number of QUIC requests for static content.</p>
+         * <p>- **DynamicQuic**: the number of QUIC requests for dynamic content.</p>
+         */
         @NameInMap("Type")
         public String type;
 

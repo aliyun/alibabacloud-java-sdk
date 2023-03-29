@@ -4,35 +4,51 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataResponseBody extends TeaModel {
-    // The bandwidth values collected at each interval.
+    /**
+     * <p>The bandwidth values collected at each interval.</p>
+     */
     @NameInMap("BpsDataPerInterval")
     public DescribeDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
-    // The time interval between the returned entries. Unit: seconds.
+    /**
+     * <p>The time interval between the returned entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The accelerated domain name.
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range that was queried.
+    /**
+     * <p>The end of the time range that was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The name of the ISP for your Alibaba Cloud CDN service.
+    /**
+     * <p>The name of the ISP for your Alibaba Cloud CDN service.</p>
+     */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
-    // The name of the region.
+    /**
+     * <p>The name of the region.</p>
+     */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range that was queried.
+    /**
+     * <p>The beginning of the time range that was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -106,31 +122,45 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
-        // The bandwidth values in the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.
+        /**
+         * <p>The bandwidth values in the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.</p>
+         */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
-        // The bandwidth values for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.
+        /**
+         * <p>The bandwidth values for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.</p>
+         */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
-        // The bandwidth values for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.
+        /**
+         * <p>The bandwidth values for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.</p>
+         */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
-        // The bandwidth values for HTTPS requests. Unit: bit/s.
+        /**
+         * <p>The bandwidth values for HTTPS requests. Unit: bit/s.</p>
+         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
-        // The bandwidth values in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.
+        /**
+         * <p>The bandwidth values in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, no value is returned.</p>
+         */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
-        // The timestamp of the data returned.
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The bandwidth value. Unit: bit/s.
+        /**
+         * <p>The bandwidth value. Unit: bit/s.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,15 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
-    // The information about the SSL certificate.
+    /**
+     * <p>The information about the SSL certificate.</p>
+     */
     @NameInMap("CertInfos")
     public DescribeCdnHttpsDomainListResponseBodyCertInfos certInfos;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -46,44 +52,60 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnHttpsDomainListResponseBodyCertInfosCertInfo extends TeaModel {
-        // The Common Name on the SSL certificate.
+        /**
+         * <p>The Common Name on the SSL certificate.</p>
+         */
         @NameInMap("CertCommonName")
         public String certCommonName;
 
-        // The time when the SSL certificate expires.
+        /**
+         * <p>The time when the SSL certificate expires.</p>
+         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        // The name of the SSL certificate.
+        /**
+         * <p>The name of the SSL certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
-        // The time when the SSL certificate became effective.
+        /**
+         * <p>The time when the SSL certificate became effective.</p>
+         */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
-        // The status of the SSL certificate. Valid values:
-        // 
-        // *   **ok**: The SSL certificate is working as expected.
-        // *   **mismatch**: The SSL certificate does not match the specified domain name.
-        // *   **expired**: The SSL certificate has expired.
-        // *   **expire_soon**: The SSL certificate will expire soon.
+        /**
+         * <p>The status of the SSL certificate. Valid values:</p>
+         * <br>
+         * <p>*   **ok**: The SSL certificate is working as expected.</p>
+         * <p>*   **mismatch**: The SSL certificate does not match the specified domain name.</p>
+         * <p>*   **expired**: The SSL certificate has expired.</p>
+         * <p>*   **expire_soon**: The SSL certificate will expire soon.</p>
+         */
         @NameInMap("CertStatus")
         public String certStatus;
 
-        // The type of the SSL certificate. Valid values:
-        // 
-        // *   **free**: a free SSL certificate.
-        // *   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.
-        // *   **upload**: a user uploaded certificate.
+        /**
+         * <p>The type of the SSL certificate. Valid values:</p>
+         * <br>
+         * <p>*   **free**: a free SSL certificate.</p>
+         * <p>*   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.</p>
+         * <p>*   **upload**: a user uploaded certificate.</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
-        // The time when the certificate was renewed.
+        /**
+         * <p>The time when the certificate was renewed.</p>
+         */
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
-        // The accelerated domain name.
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 

@@ -4,28 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateIllegalUrlExportTaskRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The name of the export task.
+    /**
+     * <p>The name of the export task.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
-    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-DDThh:mm:ssZ format. The finest granularity is one day.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-DDThh:mm:ssZ format. The finest granularity is one day.</p>
+     */
     @NameInMap("TimePoint")
     public String timePoint;
 
     public static CreateIllegalUrlExportTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIllegalUrlExportTaskRequest self = new CreateIllegalUrlExportTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateIllegalUrlExportTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateIllegalUrlExportTaskRequest setTaskName(String taskName) {

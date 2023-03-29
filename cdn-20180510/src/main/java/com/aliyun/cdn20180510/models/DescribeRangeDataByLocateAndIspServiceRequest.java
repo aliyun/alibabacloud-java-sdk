@@ -4,36 +4,43 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
-    // The accelerated domain name.
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainNames")
     public String domainNames;
 
-    // The end of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
-    // 
-    // >  The end time must be later than the start time. The interval between the end time and the start time cannot exceed 1 hour.
+    /**
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. The interval between the end time and the start time cannot exceed 1 hour.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The name of the ISP. You can specify only one ISP name in each call.
-    // 
-    // You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs.
+    /**
+     * <p>The name of the ISP. You can specify only one ISP name in each call.</p>
+     * <br>
+     * <p>You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs.</p>
+     */
     @NameInMap("IspNames")
     public String ispNames;
 
-    // The names of the regions. Separate regions with commas (,).
-    // 
-    // You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.
+    /**
+     * <p>The names of the regions. Separate regions with commas (,).</p>
+     * <br>
+     * <p>You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("LocationNames")
     public String locationNames;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The beginning of the time range to query.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -72,14 +79,6 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
     }
     public String getLocationNames() {
         return this.locationNames;
-    }
-
-    public DescribeRangeDataByLocateAndIspServiceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeRangeDataByLocateAndIspServiceRequest setStartTime(String startTime) {

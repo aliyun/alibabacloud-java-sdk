@@ -4,13 +4,17 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRangeDataByLocateAndIspServiceResponseBody extends TeaModel {
-    // The response parameters in the JSON format.
-    // 
-    // These parameters indicate the following information in sequence: UNIX time, region, ISP, distribution of HTTP status codes, response time, bandwidth (bit/s), average response rate, page views, cache hit ratio, and request hit ratio.
+    /**
+     * <p>The response parameters in the JSON format.</p>
+     * <br>
+     * <p>These parameters indicate the following information in sequence: UNIX time, region, ISP, distribution of HTTP status codes, response time, bandwidth (bit/s), average response rate, page views, cache hit ratio, and request hit ratio.</p>
+     */
     @NameInMap("JsonResult")
     public String jsonResult;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
