@@ -28,6 +28,12 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
     @NameInMap("DirRemain")
     public String dirRemain;
 
+    @NameInMap("IgnoreParamsQuota")
+    public String ignoreParamsQuota;
+
+    @NameInMap("IgnoreParamsRemain")
+    public String ignoreParamsRemain;
+
     /**
      * <p>The maximum number of times that you can prefetch content to L1 nodes on the current day.</p>
      */
@@ -117,6 +123,22 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
     }
     public String getDirRemain() {
         return this.dirRemain;
+    }
+
+    public DescribeRefreshQuotaResponseBody setIgnoreParamsQuota(String ignoreParamsQuota) {
+        this.ignoreParamsQuota = ignoreParamsQuota;
+        return this;
+    }
+    public String getIgnoreParamsQuota() {
+        return this.ignoreParamsQuota;
+    }
+
+    public DescribeRefreshQuotaResponseBody setIgnoreParamsRemain(String ignoreParamsRemain) {
+        this.ignoreParamsRemain = ignoreParamsRemain;
+        return this;
+    }
+    public String getIgnoreParamsRemain() {
+        return this.ignoreParamsRemain;
     }
 
     public DescribeRefreshQuotaResponseBody setPreloadEdgeQuota(String preloadEdgeQuota) {
