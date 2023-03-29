@@ -4,31 +4,45 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
-    // The time interval between the data entries. Unit: seconds.
+    /**
+     * <p>The time interval between the data entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The information about the accelerated domain name.
+    /**
+     * <p>The information about the accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range that was queried.
+    /**
+     * <p>The end of the time range that was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The start of the time range that was queried.
+    /**
+     * <p>The start of the time range that was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The monitoring data collected at each time interval.
+    /**
+     * <p>The monitoring data collected at each time interval.</p>
+     */
     @NameInMap("UsageByDays")
     public DescribeDomainsUsageByDayResponseBodyUsageByDays usageByDays;
 
-    // The summarized monitoring data.
+    /**
+     * <p>The summarized monitoring data.</p>
+     */
     @NameInMap("UsageTotal")
     public DescribeDomainsUsageByDayResponseBodyUsageTotal usageTotal;
 
@@ -94,43 +108,63 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsUsageByDayResponseBodyUsageByDaysUsageByDay extends TeaModel {
-        // The cache hit ratio that is calculated based on bytes. The cache hit ratio is measured in percentage.
+        /**
+         * <p>The cache hit ratio that is calculated based on bytes. The cache hit ratio is measured in percentage.</p>
+         */
         @NameInMap("BytesHitRate")
         public String bytesHitRate;
 
-        // The peak bandwidth value. Unit: bit/s.
+        /**
+         * <p>The peak bandwidth value. Unit: bit/s.</p>
+         */
         @NameInMap("MaxBps")
         public String maxBps;
 
-        // The time when the bandwidth reached the peak value.
+        /**
+         * <p>The time when the bandwidth reached the peak value.</p>
+         */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
-        // The peak bandwidth value during back-to-origin routing. Unit: bit/s.
+        /**
+         * <p>The peak bandwidth value during back-to-origin routing. Unit: bit/s.</p>
+         */
         @NameInMap("MaxSrcBps")
         public String maxSrcBps;
 
-        // The time when the bandwidth during back-to-origin routing reached the peak value.
+        /**
+         * <p>The time when the bandwidth during back-to-origin routing reached the peak value.</p>
+         */
         @NameInMap("MaxSrcBpsTime")
         public String maxSrcBpsTime;
 
-        // The number of queries per second (QPS).
+        /**
+         * <p>The number of queries per second (QPS).</p>
+         */
         @NameInMap("Qps")
         public String qps;
 
-        // The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.
+        /**
+         * <p>The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.</p>
+         */
         @NameInMap("RequestHitRate")
         public String requestHitRate;
 
-        // The timestamp of the data returned.
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The total amount of requests.
+        /**
+         * <p>The total amount of requests.</p>
+         */
         @NameInMap("TotalAccess")
         public String totalAccess;
 
-        // The total amount of network traffic. Unit: bytes.
+        /**
+         * <p>The total amount of network traffic. Unit: bytes.</p>
+         */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
@@ -241,35 +275,51 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsUsageByDayResponseBodyUsageTotal extends TeaModel {
-        // The cache hit ratio that is calculated based on bytes. The cache hit ratio is measured in percentage.
+        /**
+         * <p>The cache hit ratio that is calculated based on bytes. The cache hit ratio is measured in percentage.</p>
+         */
         @NameInMap("BytesHitRate")
         public String bytesHitRate;
 
-        // The peak bandwidth value. Unit: bit/s.
+        /**
+         * <p>The peak bandwidth value. Unit: bit/s.</p>
+         */
         @NameInMap("MaxBps")
         public String maxBps;
 
-        // The time when the bandwidth reached the peak value.
+        /**
+         * <p>The time when the bandwidth reached the peak value.</p>
+         */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
-        // The peak bandwidth value during back-to-origin routing. Unit: bit/s.
+        /**
+         * <p>The peak bandwidth value during back-to-origin routing. Unit: bit/s.</p>
+         */
         @NameInMap("MaxSrcBps")
         public String maxSrcBps;
 
-        // The time when the bandwidth during back-to-origin routing reached the peak value.
+        /**
+         * <p>The time when the bandwidth during back-to-origin routing reached the peak value.</p>
+         */
         @NameInMap("MaxSrcBpsTime")
         public String maxSrcBpsTime;
 
-        // The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.
+        /**
+         * <p>The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.</p>
+         */
         @NameInMap("RequestHitRate")
         public String requestHitRate;
 
-        // The total number of requests.
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("TotalAccess")
         public String totalAccess;
 
-        // The total amount of network traffic. Unit: bytes.
+        /**
+         * <p>The total amount of network traffic. Unit: bytes.</p>
+         */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 

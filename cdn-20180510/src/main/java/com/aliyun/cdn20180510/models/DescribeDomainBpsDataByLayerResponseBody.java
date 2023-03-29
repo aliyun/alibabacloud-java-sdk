@@ -4,15 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
-    // The number of bytes per second collected at each time interval.
+    /**
+     * <p>The number of bytes per second collected at each time interval.</p>
+     */
     @NameInMap("BpsDataInterval")
     public DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval;
 
-    // The time interval between the data entries. Unit: seconds.
+    /**
+     * <p>The time interval between the data entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,15 +52,21 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule extends TeaModel {
-        // The timestamp of the data returned.
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The total amount of network traffic. Unit: bytes.
+        /**
+         * <p>The total amount of network traffic. Unit: bytes.</p>
+         */
         @NameInMap("TrafficValue")
         public String trafficValue;
 
-        // The peak bandwidth value. Unit: bit/s.
+        /**
+         * <p>The peak bandwidth value. Unit: bit/s.</p>
+         */
         @NameInMap("Value")
         public String value;
 

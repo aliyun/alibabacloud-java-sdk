@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeDetailDataResponseBody extends TeaModel {
-    // The data usage of each ISP and the number of visits in each region.
+    /**
+     * <p>The data usage of each ISP and the number of visits in each region.</p>
+     */
     @NameInMap("Data")
     public String data;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

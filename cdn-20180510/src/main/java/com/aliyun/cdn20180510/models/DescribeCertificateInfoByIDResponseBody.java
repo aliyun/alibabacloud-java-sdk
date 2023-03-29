@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
-    // The information about the certificate.
+    /**
+     * <p>The information about the certificate.</p>
+     */
     @NameInMap("CertInfos")
     public DescribeCertificateInfoByIDResponseBodyCertInfos certInfos;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,35 +38,49 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
     }
 
     public static class DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo extends TeaModel {
-        // The expiration time of the certificate.
+        /**
+         * <p>The expiration time of the certificate.</p>
+         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        // The ID of the certificate.
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertId")
         public String certId;
 
-        // The name of the certificate.
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
-        // The type of the certificate.
-        // 
-        // *   free: a free certificate.
-        // *   cas: a certificate purchased by using Certificate Management Service.
-        // *   upload: a user-uploaded certificate.
+        /**
+         * <p>The type of the certificate.</p>
+         * <br>
+         * <p>*   free: a free certificate.</p>
+         * <p>*   cas: a certificate purchased by using Certificate Management Service.</p>
+         * <p>*   upload: a user-uploaded certificate.</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
-        // The time when the certificate became effective.
+        /**
+         * <p>The time when the certificate became effective.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // A list of domain names that use the certificate.
+        /**
+         * <p>A list of domain names that use the certificate.</p>
+         */
         @NameInMap("DomainList")
         public String domainList;
 
-        // The content of the certificate.
+        /**
+         * <p>The content of the certificate.</p>
+         */
         @NameInMap("HttpsCrt")
         public String httpsCrt;
 

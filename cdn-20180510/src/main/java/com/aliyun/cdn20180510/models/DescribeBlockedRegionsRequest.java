@@ -4,16 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeBlockedRegionsRequest extends TeaModel {
-    // The language. Valid values:
-    // 
-    // - **zh**: simplified Chinese
-    // - **en**: English
-    // - **jp**: Japanese
+    /**
+     * <p>The language. Valid values:</p>
+     * <br>
+     * <p>- **zh**: simplified Chinese</p>
+     * <p>- **en**: English</p>
+     * <p>- **jp**: Japanese</p>
+     */
     @NameInMap("Language")
     public String language;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     public static DescribeBlockedRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBlockedRegionsRequest self = new DescribeBlockedRegionsRequest();
@@ -26,14 +25,6 @@ public class DescribeBlockedRegionsRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
-    }
-
-    public DescribeBlockedRegionsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

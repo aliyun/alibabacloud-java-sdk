@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
-    // The information about real-time log delivery.
+    /**
+     * <p>The information about real-time log delivery.</p>
+     */
     @NameInMap("ReatTimeDeliveryAccData")
     public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccData reatTimeDeliveryAccData;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
     }
 
     public static class DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData extends TeaModel {
-        // The number of failed attempts to deliver log data to Log Service.
+        /**
+         * <p>The number of failed attempts to deliver log data to Log Service.</p>
+         */
         @NameInMap("FailedNum")
         public Integer failedNum;
 
-        // The number of successful deliveries of log data to Log Service.
+        /**
+         * <p>The number of successful deliveries of log data to Log Service.</p>
+         */
         @NameInMap("SuccessNum")
         public Integer successNum;
 
-        // The timestamp of the data.
+        /**
+         * <p>The timestamp of the data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

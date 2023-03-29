@@ -4,15 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeIllegalUrlExportTaskResponseBody extends TeaModel {
-    // The URL where you can download the file that contains invalid URLs. This parameter is valid only if the export task is successful.
+    /**
+     * <p>The URL where you can download the file that contains invalid URLs. This parameter is valid only if the export task is successful.</p>
+     */
     @NameInMap("DownloadUrl")
     public String downloadUrl;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The status of the export task. A value of **complete** indicates that the task is successful.
+    /**
+     * <p>The status of the export task. A value of **complete** indicates that the task is successful.</p>
+     */
     @NameInMap("Status")
     public String status;
 

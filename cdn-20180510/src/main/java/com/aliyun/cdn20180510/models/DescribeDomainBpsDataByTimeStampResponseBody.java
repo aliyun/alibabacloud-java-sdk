@@ -4,19 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
-    // A list of bandwidth values queried by ISP and region.
+    /**
+     * <p>A list of bandwidth values queried by ISP and region.</p>
+     */
     @NameInMap("BpsDataList")
     public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList;
 
-    // The accelerated domain name.
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The timestamp of the data.
+    /**
+     * <p>The timestamp of the data.</p>
+     */
     @NameInMap("TimeStamp")
     public String timeStamp;
 
@@ -58,19 +66,27 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel extends TeaModel {
-        // The bandwidth value.
+        /**
+         * <p>The bandwidth value.</p>
+         */
         @NameInMap("Bps")
         public Long bps;
 
-        // The name of the ISP for your Content Delivery Network (CDN) service.
+        /**
+         * <p>The name of the ISP for your Content Delivery Network (CDN) service.</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
-        // The name of the region.
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("LocationName")
         public String locationName;
 
-        // The timestamp of the data.
+        /**
+         * <p>The timestamp of the data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -4,27 +4,39 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainISPDataResponseBody extends TeaModel {
-    // The time interval between the data entries. Unit: seconds.
+    /**
+     * <p>The time interval between the data entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The accelerated domain name.
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range that was queried.
+    /**
+     * <p>The end of the time range that was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range that was queried.
+    /**
+     * <p>The beginning of the time range that was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The access statistics by ISP.
+    /**
+     * <p>The access statistics by ISP.</p>
+     */
     @NameInMap("Value")
     public DescribeDomainISPDataResponseBodyValue value;
 
@@ -82,51 +94,75 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainISPDataResponseBodyValueISPProportionData extends TeaModel {
-        // The average response size. Unit: bytes.
+        /**
+         * <p>The average response size. Unit: bytes.</p>
+         */
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
-        // The average response speed. Unit: byte/ms.
+        /**
+         * <p>The average response speed. Unit: byte/ms.</p>
+         */
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
-        // The average response time. Unit: milliseconds.
+        /**
+         * <p>The average response time. Unit: milliseconds.</p>
+         */
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
-        // The bandwidth value.
+        /**
+         * <p>The bandwidth value.</p>
+         */
         @NameInMap("Bps")
         public String bps;
 
-        // The proportion of network traffic.
+        /**
+         * <p>The proportion of network traffic.</p>
+         */
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
-        // The information about the ISP.
+        /**
+         * <p>The information about the ISP.</p>
+         */
         @NameInMap("ISP")
         public String ISP;
 
-        // The name of the ISP.
+        /**
+         * <p>The name of the ISP.</p>
+         */
         @NameInMap("IspEname")
         public String ispEname;
 
-        // The proportion of the HTTP status code.
+        /**
+         * <p>The proportion of the HTTP status code.</p>
+         */
         @NameInMap("Proportion")
         public String proportion;
 
-        // The number of queries per second.
+        /**
+         * <p>The number of queries per second.</p>
+         */
         @NameInMap("Qps")
         public String qps;
 
-        // The request error rate.
+        /**
+         * <p>The request error rate.</p>
+         */
         @NameInMap("ReqErrRate")
         public String reqErrRate;
 
-        // The total amount of network traffic.
+        /**
+         * <p>The total amount of network traffic.</p>
+         */
         @NameInMap("TotalBytes")
         public String totalBytes;
 
-        // The total number of requests.
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("TotalQuery")
         public String totalQuery;
 

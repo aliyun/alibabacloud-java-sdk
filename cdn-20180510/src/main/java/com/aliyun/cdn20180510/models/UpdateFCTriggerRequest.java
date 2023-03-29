@@ -4,26 +4,33 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class UpdateFCTriggerRequest extends TeaModel {
-    // The feature trigger.
+    /**
+     * <p>The feature trigger.</p>
+     */
     @NameInMap("FunctionARN")
     public String functionARN;
 
-    // The remarks.
+    /**
+     * <p>The remarks.</p>
+     */
     @NameInMap("Notes")
     public String notes;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The assigned Resource Access Management (RAM) role.
+    /**
+     * <p>The assigned Resource Access Management (RAM) role.</p>
+     */
     @NameInMap("RoleARN")
     public String roleARN;
 
-    // The resources and filters for event listening.
+    /**
+     * <p>The resources and filters for event listening.</p>
+     */
     @NameInMap("SourceARN")
     public String sourceARN;
 
-    // The trigger that corresponds to the Function Compute service.
+    /**
+     * <p>The trigger that corresponds to the Function Compute service.</p>
+     */
     @NameInMap("TriggerARN")
     public String triggerARN;
 
@@ -46,14 +53,6 @@ public class UpdateFCTriggerRequest extends TeaModel {
     }
     public String getNotes() {
         return this.notes;
-    }
-
-    public UpdateFCTriggerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public UpdateFCTriggerRequest setRoleARN(String roleARN) {

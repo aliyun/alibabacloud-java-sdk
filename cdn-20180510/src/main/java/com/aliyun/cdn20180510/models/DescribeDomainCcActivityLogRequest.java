@@ -4,55 +4,68 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCcActivityLogRequest extends TeaModel {
-    // The accelerated domain name. You can specify multiple domain names and separate them with commas (,).
-    // 
-    // If you do not specify a domain name, data of all domain names is queried.
+    /**
+     * <p>The accelerated domain name. You can specify multiple domain names and separate them with commas (,).</p>
+     * <br>
+     * <p>If you do not specify a domain name, data of all domain names is queried.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
-    // 
-    // The end time must be later than the start time.
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <br>
+     * <p>The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The number of the page to return. Default value: **1**.
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // The number of entries to return on each page. Default value: **30**.
+    /**
+     * <p>The number of entries to return on each page. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // A custom rule name. Valid values:
-    // 
-    // *   Default mode: default_normal.
-    // *   Emergency mode: default_attack.
-    // 
-    // If you do not set this parameter, all events that triggered rate limiting are queried.
+    /**
+     * <p>A custom rule name. Valid values:</p>
+     * <br>
+     * <p>*   Default mode: default_normal.</p>
+     * <p>*   Emergency mode: default_attack.</p>
+     * <br>
+     * <p>If you do not set this parameter, all events that triggered rate limiting are queried.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
-    // The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
-    // 
-    // Data is collected every 5 minutes.
-    // 
-    // If you do not set this parameter, data within the last 24 hours is queried.
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <br>
+     * <p>Data is collected every 5 minutes.</p>
+     * <br>
+     * <p>If you do not set this parameter, data within the last 24 hours is queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The object that triggered rate limiting.
-    // 
-    // If you do not set this parameter, all events that triggered rate limiting are queried.
+    /**
+     * <p>The object that triggered rate limiting.</p>
+     * <br>
+     * <p>If you do not set this parameter, all events that triggered rate limiting are queried.</p>
+     */
     @NameInMap("TriggerObject")
     public String triggerObject;
 
-    // The value of the object that triggered rate limiting.
-    // 
-    // If you do not set this parameter, the values of all events that triggered rate limiting are queried.
+    /**
+     * <p>The value of the object that triggered rate limiting.</p>
+     * <br>
+     * <p>If you do not set this parameter, the values of all events that triggered rate limiting are queried.</p>
+     */
     @NameInMap("Value")
     public String value;
 
@@ -75,14 +88,6 @@ public class DescribeDomainCcActivityLogRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDomainCcActivityLogRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainCcActivityLogRequest setPageNumber(Long pageNumber) {

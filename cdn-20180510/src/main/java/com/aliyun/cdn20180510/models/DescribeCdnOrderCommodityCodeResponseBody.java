@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnOrderCommodityCodeResponseBody extends TeaModel {
-    // The commodity code that includes the organization unit.
+    /**
+     * <p>The commodity code that includes the organization unit.</p>
+     */
     @NameInMap("OrderCommodityCode")
     public String orderCommodityCode;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

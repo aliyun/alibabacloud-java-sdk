@@ -4,38 +4,51 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateCdnCertificateSigningRequestRequest extends TeaModel {
-    // The city to which the organization belongs. Default value: Hangzhou.
+    /**
+     * <p>The city to which the organization belongs. Default value: Hangzhou.</p>
+     */
     @NameInMap("City")
     public String city;
 
-    // The Common Name of the SSL certificate.
+    /**
+     * <p>The Common Name of the SSL certificate.</p>
+     */
     @NameInMap("CommonName")
     public String commonName;
 
-    // The country to which the organization belongs. Default value: CN.
+    /**
+     * <p>The country to which the organization belongs. Default value: CN.</p>
+     */
     @NameInMap("Country")
     public String country;
 
-    // The email address that can be used to contact the organization.
+    /**
+     * <p>The email address that can be used to contact the organization.</p>
+     */
     @NameInMap("Email")
     public String email;
 
-    // The name of the organization. Default value: Alibaba Inc.
+    /**
+     * <p>The name of the organization. Default value: Alibaba Inc.</p>
+     */
     @NameInMap("Organization")
     public String organization;
 
-    // The name of the organization unit. Default value: Aliyun CDN.
+    /**
+     * <p>The name of the organization unit. Default value: Aliyun CDN.</p>
+     */
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).
+    /**
+     * <p>The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).</p>
+     */
     @NameInMap("SANs")
     public String SANs;
 
-    // The provincial district to which the organization belongs. Default value: Zhejiang.
+    /**
+     * <p>The provincial district to which the organization belongs. Default value: Zhejiang.</p>
+     */
     @NameInMap("State")
     public String state;
 
@@ -90,14 +103,6 @@ public class CreateCdnCertificateSigningRequestRequest extends TeaModel {
     }
     public String getOrganizationUnit() {
         return this.organizationUnit;
-    }
-
-    public CreateCdnCertificateSigningRequestRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateCdnCertificateSigningRequestRequest setSANs(String SANs) {

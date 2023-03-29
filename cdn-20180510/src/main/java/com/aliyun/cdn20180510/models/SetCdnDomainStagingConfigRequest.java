@@ -4,38 +4,39 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetCdnDomainStagingConfigRequest extends TeaModel {
-    // The accelerated domain name. You can specify only one domain name.
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The features that you want to configure. Format:
-    // 
-    // > - **functionName**: The name of the feature. Separate multiple values with commas (,).
-    // > - **argName**: The feature parameters for **functionName**.
-    // > - **argValue**: The parameter values set for **functionName**.
-    // 
-    // ```
-    //         [
-    //          {
-    //            "functionArgs": [
-    //             {
-    //              "argName": "Parameter A", 
-    //              "argValue": "Parameter value"
-    //             }, 
-    //           {
-    //             "argName": "Parameter B", 
-    //             "argValue": "Parameter value"
-    //              }
-    //          ], 
-    //          "functionName": "Feature name"
-    //             }
-    //         ]
-    //  ```
+    /**
+     * <p>The features that you want to configure. Format:</p>
+     * <br>
+     * <p>> - **functionName**: The name of the feature. Separate multiple values with commas (,).</p>
+     * <p>> - **argName**: The feature parameters for **functionName**.</p>
+     * <p>> - **argValue**: The parameter values set for **functionName**.</p>
+     * <br>
+     * <p>```</p>
+     * <p>        [</p>
+     * <p>         {</p>
+     * <p>           "functionArgs": [</p>
+     * <p>            {</p>
+     * <p>             "argName": "Parameter A", </p>
+     * <p>             "argValue": "Parameter value"</p>
+     * <p>            }, </p>
+     * <p>          {</p>
+     * <p>            "argName": "Parameter B", </p>
+     * <p>            "argValue": "Parameter value"</p>
+     * <p>             }</p>
+     * <p>         ], </p>
+     * <p>         "functionName": "Feature name"</p>
+     * <p>            }</p>
+     * <p>        ]</p>
+     * <p> ```</p>
+     */
     @NameInMap("Functions")
     public String functions;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     public static SetCdnDomainStagingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetCdnDomainStagingConfigRequest self = new SetCdnDomainStagingConfigRequest();
@@ -56,14 +57,6 @@ public class SetCdnDomainStagingConfigRequest extends TeaModel {
     }
     public String getFunctions() {
         return this.functions;
-    }
-
-    public SetCdnDomainStagingConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

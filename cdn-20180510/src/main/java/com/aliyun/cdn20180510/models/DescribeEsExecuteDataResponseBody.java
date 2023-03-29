@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeEsExecuteDataResponseBody extends TeaModel {
-    // The content of the script.
+    /**
+     * <p>The content of the script.</p>
+     */
     @NameInMap("Contents")
     public java.util.List<DescribeEsExecuteDataResponseBodyContents> contents;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEsExecuteDataResponseBodyContents extends TeaModel {
-        // The column names of the chart that shows the status of the script and the time of each data entry.
+        /**
+         * <p>The column names of the chart that shows the status of the script and the time of each data entry.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
-        // The name of the chart that shows the status of the script.
+        /**
+         * <p>The name of the chart that shows the status of the script.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The value of each time and the column of each data entry.
+        /**
+         * <p>The value of each time and the column of each data entry.</p>
+         */
         @NameInMap("Points")
         public java.util.List<String> points;
 

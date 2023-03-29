@@ -4,30 +4,39 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetWaitingRoomConfigRequest extends TeaModel {
-    // The percentage of requests that are allowed to be redirected to the origin server. Valid values: **0** to **100**.
+    /**
+     * <p>The percentage of requests that are allowed to be redirected to the origin server. Valid values: **0** to **100**.</p>
+     */
     @NameInMap("AllowPct")
     public Integer allowPct;
 
-    // The accelerated domain name. You can specify only one domain name.
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The length of waiting time to skip after users exit the queue. Unit: seconds.
+    /**
+     * <p>The length of waiting time to skip after users exit the queue. Unit: seconds.</p>
+     */
     @NameInMap("GapTime")
     public Integer gapTime;
 
-    // The maximum length of time that users need to wait in the queue. Unit: seconds.
+    /**
+     * <p>The maximum length of time that users need to wait in the queue. Unit: seconds.</p>
+     */
     @NameInMap("MaxTimeWait")
     public Integer maxTimeWait;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The regular expression that is used to match URI strings for which the virtual waiting room feature is enabled.
+    /**
+     * <p>The regular expression that is used to match URI strings for which the virtual waiting room feature is enabled.</p>
+     */
     @NameInMap("WaitUri")
     public String waitUri;
 
-    // The URL of the waiting page.
+    /**
+     * <p>The URL of the waiting page.</p>
+     */
     @NameInMap("WaitUrl")
     public String waitUrl;
 
@@ -66,14 +75,6 @@ public class SetWaitingRoomConfigRequest extends TeaModel {
     }
     public Integer getMaxTimeWait() {
         return this.maxTimeWait;
-    }
-
-    public SetWaitingRoomConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public SetWaitingRoomConfigRequest setWaitUri(String waitUri) {

@@ -4,15 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetReqHeaderConfigRequest extends TeaModel {
-    // The ID of the configuration.
+    /**
+     * <p>The ID of the configuration.</p>
+     */
     @NameInMap("ConfigId")
     public Long configId;
 
-    // The accelerated domain names. You can specify one or more domain names and separate them with commas (,).
+    /**
+     * <p>The accelerated domain names. You can specify one or more domain names and separate them with commas (,).</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The parameter of the custom header.
+    /**
+     * <p>The parameter of the custom header.</p>
+     */
     @NameInMap("Key")
     public String key;
 
@@ -22,7 +28,9 @@ public class SetReqHeaderConfigRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The value of the custom parameter.
+    /**
+     * <p>The value of the custom parameter.</p>
+     */
     @NameInMap("Value")
     public String value;
 

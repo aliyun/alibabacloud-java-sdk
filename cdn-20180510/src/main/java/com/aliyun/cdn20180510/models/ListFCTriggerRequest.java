@@ -4,16 +4,17 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListFCTriggerRequest extends TeaModel {
-    // The name of the event for which the Function Compute trigger is set. You can specify only one name.
+    /**
+     * <p>The name of the event for which the Function Compute trigger is set. You can specify only one name.</p>
+     */
     @NameInMap("EventMetaName")
     public String eventMetaName;
 
-    // The version number of the event. You can specify only one version number.
+    /**
+     * <p>The version number of the event. You can specify only one version number.</p>
+     */
     @NameInMap("EventMetaVersion")
     public String eventMetaVersion;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     public static ListFCTriggerRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFCTriggerRequest self = new ListFCTriggerRequest();
@@ -34,14 +35,6 @@ public class ListFCTriggerRequest extends TeaModel {
     }
     public String getEventMetaVersion() {
         return this.eventMetaVersion;
-    }
-
-    public ListFCTriggerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

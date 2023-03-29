@@ -4,29 +4,34 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateUserUsageDataExportTaskRequest extends TeaModel {
-    // The end of the time range to query. The end time must be later than the start time.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The language of the exported file.
-    // 
-    // *   **zh-cn**: Chinese. This is the default value.
-    // *   **en-us**: English.
+    /**
+     * <p>The language of the exported file.</p>
+     * <br>
+     * <p>*   **zh-cn**: Chinese. This is the default value.</p>
+     * <p>*   **en-us**: English.</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The start of the time range to query. The time interval at which the specified data is collected is five minutes.
-    // 
-    // Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+    /**
+     * <p>The start of the time range to query. The time interval at which the specified data is collected is five minutes.</p>
+     * <br>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The name of the task.
+    /**
+     * <p>The name of the task.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
@@ -49,14 +54,6 @@ public class CreateUserUsageDataExportTaskRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
-    }
-
-    public CreateUserUsageDataExportTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public CreateUserUsageDataExportTaskRequest setStartTime(String startTime) {

@@ -4,43 +4,63 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserQuotaResponseBody extends TeaModel {
-    // The maximum number of URLs and directories that can be blocked.
+    /**
+     * <p>The maximum number of URLs and directories that can be blocked.</p>
+     */
     @NameInMap("BlockQuota")
     public Integer blockQuota;
 
-    // The remaining number of URLs and directories that can be blocked.
+    /**
+     * <p>The remaining number of URLs and directories that can be blocked.</p>
+     */
     @NameInMap("BlockRemain")
     public Integer blockRemain;
 
-    // The maximum number of accelerated domain names that can be added to Alibaba Cloud CDN.
+    /**
+     * <p>The maximum number of accelerated domain names that can be added to Alibaba Cloud CDN.</p>
+     */
     @NameInMap("DomainQuota")
     public Integer domainQuota;
 
-    // The maximum number of URLs that can be prefetched.
+    /**
+     * <p>The maximum number of URLs that can be prefetched.</p>
+     */
     @NameInMap("PreloadQuota")
     public Integer preloadQuota;
 
-    // The remaining number of URLs that can be prefetched.
+    /**
+     * <p>The remaining number of URLs that can be prefetched.</p>
+     */
     @NameInMap("PreloadRemain")
     public Integer preloadRemain;
 
-    // The maximum number of directories that can be refreshed.
+    /**
+     * <p>The maximum number of directories that can be refreshed.</p>
+     */
     @NameInMap("RefreshDirQuota")
     public Integer refreshDirQuota;
 
-    // The remaining number of directories that can be refreshed.
+    /**
+     * <p>The remaining number of directories that can be refreshed.</p>
+     */
     @NameInMap("RefreshDirRemain")
     public Integer refreshDirRemain;
 
-    // The maximum number of URLs that can be refreshed.
+    /**
+     * <p>The maximum number of URLs that can be refreshed.</p>
+     */
     @NameInMap("RefreshUrlQuota")
     public Integer refreshUrlQuota;
 
-    // The remaining number of URLs that can be refreshed.
+    /**
+     * <p>The remaining number of URLs that can be refreshed.</p>
+     */
     @NameInMap("RefreshUrlRemain")
     public Integer refreshUrlRemain;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

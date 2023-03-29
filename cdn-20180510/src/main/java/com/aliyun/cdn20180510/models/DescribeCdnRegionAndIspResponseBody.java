@@ -4,15 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
-    // A list of ISPs.
+    /**
+     * <p>A list of ISPs.</p>
+     */
     @NameInMap("Isps")
     public DescribeCdnRegionAndIspResponseBodyIsps isps;
 
-    // A list of regions.
+    /**
+     * <p>A list of regions.</p>
+     */
     @NameInMap("Regions")
     public DescribeCdnRegionAndIspResponseBodyRegions regions;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,11 +52,15 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnRegionAndIspResponseBodyIspsIsp extends TeaModel {
-        // The English name of the region.
+        /**
+         * <p>The English name of the region.</p>
+         */
         @NameInMap("NameEn")
         public String nameEn;
 
-        // The Chinese name of the ISP.
+        /**
+         * <p>The Chinese name of the ISP.</p>
+         */
         @NameInMap("NameZh")
         public String nameZh;
 
@@ -97,11 +107,15 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnRegionAndIspResponseBodyRegionsRegion extends TeaModel {
-        // The English name of the region.
+        /**
+         * <p>The English name of the region.</p>
+         */
         @NameInMap("NameEn")
         public String nameEn;
 
-        // The Chinese name of the region.
+        /**
+         * <p>The Chinese name of the region.</p>
+         */
         @NameInMap("NameZh")
         public String nameZh;
 

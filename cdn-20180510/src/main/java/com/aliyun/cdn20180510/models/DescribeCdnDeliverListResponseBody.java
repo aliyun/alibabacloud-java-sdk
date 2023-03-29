@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDeliverListResponseBody extends TeaModel {
-    // The information about the tracking task.
+    /**
+     * <p>The information about the tracking task.</p>
+     */
     @NameInMap("Content")
     public String content;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

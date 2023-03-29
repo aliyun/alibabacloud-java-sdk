@@ -4,23 +4,33 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
-    // The log entry of the event that triggered rate limiting.
+    /**
+     * <p>The log entry of the event that triggered rate limiting.</p>
+     */
     @NameInMap("ActivityLog")
     public java.util.List<DescribeDomainCcActivityLogResponseBodyActivityLog> activityLog;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageIndex")
     public Long pageIndex;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -70,31 +80,45 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainCcActivityLogResponseBodyActivityLog extends TeaModel {
-        // The action that was triggered.
+        /**
+         * <p>The action that was triggered.</p>
+         */
         @NameInMap("Action")
         public String action;
 
-        // The accelerated domain name.
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The name of the rule that was triggered
+        /**
+         * <p>The name of the rule that was triggered</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
-        // The timestamp of the data.
+        /**
+         * <p>The timestamp of the data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The object that triggered rate limiting.
+        /**
+         * <p>The object that triggered rate limiting.</p>
+         */
         @NameInMap("TriggerObject")
         public String triggerObject;
 
-        // The period of time that rate limiting remains effective.
+        /**
+         * <p>The period of time that rate limiting remains effective.</p>
+         */
         @NameInMap("Ttl")
         public Long ttl;
 
-        // The value of the object that triggered rate limiting.
+        /**
+         * <p>The value of the object that triggered rate limiting.</p>
+         */
         @NameInMap("Value")
         public String value;
 

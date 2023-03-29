@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeBlockedRegionsResponseBody extends TeaModel {
-    // A list of countries and regions.
+    /**
+     * <p>A list of countries and regions.</p>
+     */
     @NameInMap("InfoList")
     public DescribeBlockedRegionsResponseBodyInfoList infoList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeBlockedRegionsResponseBodyInfoListInfoItem extends TeaModel {
-        // The district to which the country or region belongs.
+        /**
+         * <p>The district to which the country or region belongs.</p>
+         */
         @NameInMap("Continent")
         public String continent;
 
-        // The abbreviation of the name of the country or region.
+        /**
+         * <p>The abbreviation of the name of the country or region.</p>
+         */
         @NameInMap("CountriesAndRegions")
         public String countriesAndRegions;
 
-        // The name of the country or region.
+        /**
+         * <p>The name of the country or region.</p>
+         */
         @NameInMap("CountriesAndRegionsName")
         public String countriesAndRegionsName;
 

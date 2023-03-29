@@ -4,27 +4,32 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    // Specifies whether to delete all tags. Valid values:
-    // 
-    // *   **true**: yes.
-    // *   **false**: no.
-    // 
-    // Default value: **false**.
+    /**
+     * <p>Specifies whether to delete all tags. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes.</p>
+     * <p>*   **false**: no.</p>
+     * <br>
+     * <p>Default value: **false**.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The list of resource ID. The max items count is up to 20.
+    /**
+     * <p>The list of resource ID. The max items count is up to 20.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // The type of resource. The resource type. Set the value to **DOMAIN**.
+    /**
+     * <p>The type of resource. The resource type. Set the value to **DOMAIN**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The list of tag key.
+    /**
+     * <p>The list of tag key.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 
@@ -39,14 +44,6 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public Boolean getAll() {
         return this.all;
-    }
-
-    public UntagResourcesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public UntagResourcesRequest setResourceId(java.util.List<String> resourceId) {

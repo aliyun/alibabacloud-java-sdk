@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainLogsResponseBody extends TeaModel {
-    // The detailed log information, which is indicated by the DomainLogDetail parameter.
+    /**
+     * <p>The detailed log information, which is indicated by the DomainLogDetail parameter.</p>
+     */
     @NameInMap("DomainLogDetails")
     public DescribeCdnDomainLogsResponseBodyDomainLogDetails domainLogDetails;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,23 +38,33 @@ public class DescribeCdnDomainLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
-        // The end of the time range where the QPS data was queried.
+        /**
+         * <p>The end of the time range where the QPS data was queried.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
-        // The name of the log file.
+        /**
+         * <p>The name of the log file.</p>
+         */
         @NameInMap("LogName")
         public String logName;
 
-        // The path of the log file.
+        /**
+         * <p>The path of the log file.</p>
+         */
         @NameInMap("LogPath")
         public String logPath;
 
-        // The size of the log file.
+        /**
+         * <p>The size of the log file.</p>
+         */
         @NameInMap("LogSize")
         public Long logSize;
 
-        // The start of the time range that was queried.
+        /**
+         * <p>The start of the time range that was queried.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -121,15 +135,21 @@ public class DescribeCdnDomainLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
-        // The page number of the returned page.
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
-        // The number of entries returned per page.
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
-        // The total number of entries returned.
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
@@ -165,19 +185,27 @@ public class DescribeCdnDomainLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
-        // The accelerated domain name.
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The total number of entries returned on the current page.
+        /**
+         * <p>The total number of entries returned on the current page.</p>
+         */
         @NameInMap("LogCount")
         public Long logCount;
 
-        // The detailed log information, which is indicated by the LogInfoDetail parameter.
+        /**
+         * <p>The detailed log information, which is indicated by the LogInfoDetail parameter.</p>
+         */
         @NameInMap("LogInfos")
         public DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
-        // The detailed log information, which is indicated by the PageInfoDetail parameter.
+        /**
+         * <p>The detailed log information, which is indicated by the PageInfoDetail parameter.</p>
+         */
         @NameInMap("PageInfos")
         public DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;
 

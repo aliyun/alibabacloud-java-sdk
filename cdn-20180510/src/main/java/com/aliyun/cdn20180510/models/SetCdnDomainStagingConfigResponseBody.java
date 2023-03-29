@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
-    // The list of the domain configuration.
+    /**
+     * <p>The list of the domain configuration.</p>
+     */
     @NameInMap("DomainConfigList")
     public java.util.List<SetCdnDomainStagingConfigResponseBodyDomainConfigList> domainConfigList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,15 +38,21 @@ public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
     }
 
     public static class SetCdnDomainStagingConfigResponseBodyDomainConfigList extends TeaModel {
-        // The ID of the configuration.
+        /**
+         * <p>The ID of the configuration.</p>
+         */
         @NameInMap("ConfigId")
         public Long configId;
 
-        // The accelerated domain name.
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The function name.
+        /**
+         * <p>The function name.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 

@@ -4,21 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class AddCdnDomainRequest extends TeaModel {
-    // The workload type of the domain name. Valid values:
-    // 
-    // *   **web**: images and small files.
-    // *   **download**: large files.
-    // *   **video**: on-demand video and audio streaming.
+    /**
+     * <p>The workload type of the domain name to accelerate. Valid values:</p>
+     * <br>
+     * <p>*   **web**: images and small files</p>
+     * <p>*   **download**: large files</p>
+     * <p>*   **video**: on-demand video and audio streaming</p>
+     */
     @NameInMap("CdnType")
     public String cdnType;
 
-    // The URL that is used for health checks.
+    /**
+     * <p>The URL that is used for health checks.</p>
+     */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
-    // The domain names that you want to add to Alibaba Cloud CDN.
-    // 
-    // Wildcard domain names are supported.A wildcard domain name must start with a period (.), such as .example.com.
+    /**
+     * <p>The domain name that you want to add to Alibaba Cloud CDN.</p>
+     * <br>
+     * <p>A wildcard domain that starts with a period (.) is supported, such as .example.com.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -28,34 +34,42 @@ public class AddCdnDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The ID of the resource group.
-    // 
-    // If you do not set this parameter, the system uses the ID of the default resource group.
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>If you do not set this parameter, the system uses the ID of the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // The accelerated region. Valid values:
-    // 
-    // *   **domestic**: regions in mainland China.
-    // *   **overseas**: regions outside mainland China.
-    // *   **global**: regions inside and outside mainland China.
-    // 
-    // Default value: **domestic**.
+    /**
+     * <p>The acceleration region. Default value: domestic. Valid values:</p>
+     * <br>
+     * <p>*   **domestic**: Chinese mainland</p>
+     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
+     * <p>*   **global**: global</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The information about the origin address.
+    /**
+     * <p>The information about the addresses of origin servers.</p>
+     */
     @NameInMap("Sources")
     public String sources;
 
-    // The tags.
+    /**
+     * <p>Details about the tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<AddCdnDomainRequestTag> tag;
 
-    // The top-level domain name.
+    /**
+     * <p>The top-level domain.</p>
+     */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 
@@ -153,11 +167,15 @@ public class AddCdnDomainRequest extends TeaModel {
     }
 
     public static class AddCdnDomainRequestTag extends TeaModel {
-        // The key of tag.
+        /**
+         * <p>The key of a tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag.
+        /**
+         * <p>The value of a tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

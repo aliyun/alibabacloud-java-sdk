@@ -4,15 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsBySourceResponseBody extends TeaModel {
-    // The domain names corresponding to each origin server. The data is indicated by the DomainsData parameter. Data type: array.
+    /**
+     * <p>The domain names corresponding to each origin server. The data is indicated by the DomainsData parameter. Data type: array.</p>
+     */
     @NameInMap("DomainsList")
     public DescribeDomainsBySourceResponseBodyDomainsList domainsList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The origin servers.
+    /**
+     * <p>The origin servers.</p>
+     */
     @NameInMap("Sources")
     public String sources;
 
@@ -46,39 +52,51 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo extends TeaModel {
-        // The workload type of the accelerated domain name. Valid values:
-        // 
-        // *   **web**: images and small files.
-        // *   **download**: large files.
-        // *   **video**: on-demand video and audio streaming.
+        /**
+         * <p>The workload type of the accelerated domain name. Valid values:</p>
+         * <br>
+         * <p>*   **web**: images and small files.</p>
+         * <p>*   **download**: large files.</p>
+         * <p>*   **video**: on-demand video and audio streaming.</p>
+         */
         @NameInMap("CdnType")
         public String cdnType;
 
-        // The time when the domain name was added to Alibaba Cloud CDN.
+        /**
+         * <p>The time when the domain name was added to Alibaba Cloud CDN.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The CNAME assigned to the domain name.
+        /**
+         * <p>The CNAME assigned to the domain name.</p>
+         */
         @NameInMap("DomainCname")
         public String domainCname;
 
-        // The domain name.
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The status of the accelerated domain name. Valid values:
-        // 
-        // *   **applying**: The domain name is under review.
-        // *   **configure_failed**: The domain name failed the review.
-        // *   **configuring**: The domain name is being configured.
-        // *   **online**: The domain name is working as expected.
-        // *   **stopping**: The domain name is being stopped.
-        // *   **offline**: The domain name is disabled.
-        // *   **disabling**: The domain name is being disabled.
+        /**
+         * <p>The status of the accelerated domain name. Valid values:</p>
+         * <br>
+         * <p>*   **applying**: The domain name is under review.</p>
+         * <p>*   **configure_failed**: The domain name failed the review.</p>
+         * <p>*   **configuring**: The domain name is being configured.</p>
+         * <p>*   **online**: The domain name is working as expected.</p>
+         * <p>*   **stopping**: The domain name is being stopped.</p>
+         * <p>*   **offline**: The domain name is disabled.</p>
+         * <p>*   **disabling**: The domain name is being disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The time when the configuration was updated.
+        /**
+         * <p>The time when the configuration was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -176,15 +194,21 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsData extends TeaModel {
-        // The detailed information about the domain name. The data is indicated by the domainInfo parameter. Data type: array.
+        /**
+         * <p>The detailed information about the domain name. The data is indicated by the domainInfo parameter. Data type: array.</p>
+         */
         @NameInMap("DomainInfos")
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos domainInfos;
 
-        // The domain names that correspond to each origin server. The domain name is indicated by the domainNames parameter.
+        /**
+         * <p>The domain names that correspond to each origin server. The domain name is indicated by the domainNames parameter.</p>
+         */
         @NameInMap("Domains")
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains domains;
 
-        // An origin server.
+        /**
+         * <p>An origin server.</p>
+         */
         @NameInMap("Source")
         public String source;
 

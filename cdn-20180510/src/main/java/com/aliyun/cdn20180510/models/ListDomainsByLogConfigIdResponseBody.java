@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
-    // The list of domain names.
+    /**
+     * <p>The list of domain names.</p>
+     */
     @NameInMap("Domains")
     public ListDomainsByLogConfigIdResponseBodyDomains domains;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

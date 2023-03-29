@@ -4,9 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnCertificateListRequest extends TeaModel {
-    // The accelerated domain names. Separate multiple accelerated domain names with commas (,).
-    // 
-    // If you do not specify an ID, SSL certificates of all your accelerated domain names are queried.
+    /**
+     * <p>The accelerated domain names. Separate multiple accelerated domain names with commas (,).</p>
+     * <br>
+     * <p>If you do not specify an ID, SSL certificates of all your accelerated domain names are queried.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

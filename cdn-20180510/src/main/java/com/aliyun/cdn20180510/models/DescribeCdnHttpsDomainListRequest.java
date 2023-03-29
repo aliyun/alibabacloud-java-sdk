@@ -4,18 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnHttpsDomainListRequest extends TeaModel {
-    // The keyword used for search.
+    /**
+     * <p>The keyword used for search.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The number of the page to return. Valid values: **1** to **100000**.
+    /**
+     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The maximum number of entries to return on each page. Default value: **20**.
+    /**
+     * <p>The maximum number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -30,14 +33,6 @@ public class DescribeCdnHttpsDomainListRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
-    }
-
-    public DescribeCdnHttpsDomainListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeCdnHttpsDomainListRequest setPageNumber(Integer pageNumber) {

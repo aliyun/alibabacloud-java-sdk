@@ -4,35 +4,51 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainPathDataResponseBody extends TeaModel {
-    // The time interval between the data entries. Unit: seconds.
+    /**
+     * <p>The time interval between the data entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The accelerated domain name.
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range that was queried.
+    /**
+     * <p>The end of the time range that was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The page number of the returned page. Pages start from page **1**.
+    /**
+     * <p>The page number of the returned page. Pages start from page **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    // The number of entries returned on each page.
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // A list of bandwidth values collected at each time interval.
+    /**
+     * <p>A list of bandwidth values collected at each time interval.</p>
+     */
     @NameInMap("PathDataPerInterval")
     public DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval;
 
-    // The start of the time range that was queried.
+    /**
+     * <p>The start of the time range that was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
-    // The total count.
+    /**
+     * <p>The total count.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -106,19 +122,27 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData extends TeaModel {
-        // The number of visits to the specified path.
+        /**
+         * <p>The number of visits to the specified path.</p>
+         */
         @NameInMap("Acc")
         public Integer acc;
 
-        // The path.
+        /**
+         * <p>The path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
-        // The point in time.
+        /**
+         * <p>The point in time.</p>
+         */
         @NameInMap("Time")
         public String time;
 
-        // The amount of network traffic. Unit: bytes.
+        /**
+         * <p>The amount of network traffic. Unit: bytes.</p>
+         */
         @NameInMap("Traffic")
         public Integer traffic;
 

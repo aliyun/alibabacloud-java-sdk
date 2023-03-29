@@ -4,15 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeL2VipsByDomainResponseBody extends TeaModel {
-    // The accelerated domain name.
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // A list of virtual IP addresses.
+    /**
+     * <p>The list of VIPs.</p>
+     */
     @NameInMap("Vips")
     public DescribeL2VipsByDomainResponseBodyVips vips;
 

@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The details about each resource plan. The details are organized in an array. The array consists of the subparameter values of the ResourcePackageInfo parameter.
+    /**
+     * <p>The details about each resource plan. The details are organized in an array. The array consists of the subparameter values of the ResourcePackageInfo parameter.</p>
+     */
     @NameInMap("ResourcePackageInfos")
     public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfos resourcePackageInfos;
 
@@ -34,48 +38,66 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo extends TeaModel {
-        // The ID of the resource plan.
+        /**
+         * <p>The ID of the resource plan.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        // The remaining quota of the resource plan.
-        // 
-        // *   The total amount of data transfer provided by the resource plan. Unit: bytes.
-        // *   The remaining number of requests provided by the resource plan.
+        /**
+         * <p>The remaining quota of the resource plan.</p>
+         * <br>
+         * <p>*   The total amount of data transfer provided by the resource plan. Unit: bytes.</p>
+         * <p>*   The remaining number of requests provided by the resource plan.</p>
+         */
         @NameInMap("CurrCapacity")
         public String currCapacity;
 
-        // The name of the resource plan.
+        /**
+         * <p>The name of the resource plan.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        // The time when the resource plan expires.
+        /**
+         * <p>The time when the resource plan expires.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
-        // The total quota of the resource plan.
-        // 
-        // *   The total amount of data transfer provided by the resource plan. Unit: bytes.
-        // *   The total number of requests provided by the resource plan.
+        /**
+         * <p>The total quota of the resource plan.</p>
+         * <br>
+         * <p>*   The total amount of data transfer provided by the resource plan. Unit: bytes.</p>
+         * <p>*   The total number of requests provided by the resource plan.</p>
+         */
         @NameInMap("InitCapacity")
         public String initCapacity;
 
-        // The ID of the instance.
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // The time when the resource plan took effect.
+        /**
+         * <p>The time when the resource plan took effect.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
-        // The status of the data transfer plan. Valid values:
-        // 
-        // *   **valid**: valid
-        // *   **closed**: invalid
+        /**
+         * <p>The status of the data transfer plan. Valid values:</p>
+         * <br>
+         * <p>*   **valid**: valid</p>
+         * <p>*   **closed**: invalid</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The name of the template.
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

@@ -4,46 +4,62 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
-    // The name of the certificate.
+    /**
+     * <p>The name of the certificate.</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
-    // The type of the SSL certificate. Valid values:
-    // 
-    // *   **upload**: a user-uploaded SSL certificate.
-    // *   **cas**: a certificate that is issued by SSL Certificates Service.
+    /**
+     * <p>The type of the SSL certificate. Valid values:</p>
+     * <br>
+     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
+     * <p>*   **cas**: a certificate that is issued by SSL Certificates Service.</p>
+     */
     @NameInMap("CertType")
     public String certType;
 
-    // The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).
-    // 
-    // >  You can manage the SSL certificates of up to 50 accelerated domain names in each call.
+    /**
+     * <p>The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).</p>
+     * <br>
+     * <p>>  You can manage the SSL certificates of up to 50 accelerated domain names in each call.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.
+    /**
+     * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.</p>
+     */
     @NameInMap("ForceSet")
     public String forceSet;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The region.
+    /**
+     * <p>The region.</p>
+     */
     @NameInMap("Region")
     public String region;
 
-    // The private key. Specify the private key only if you enable the SSL certificate.
+    /**
+     * <p>The private key. Specify the private key only if you enable the SSL certificate.</p>
+     */
     @NameInMap("SSLPri")
     public String SSLPri;
 
-    // Specifies whether to enable the SSL certificate. Valid values:
-    // 
-    // *   **on**: enables the SSL certificate.
-    // *   **off**: disables the SSL certificate. This is the default value.
+    /**
+     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+     * <br>
+     * <p>*   **on**: enables the SSL certificate.</p>
+     * <p>*   **off**: disables the SSL certificate. This is the default value.</p>
+     */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
-    // The content of the SSL certificate. Specify the content of the certificate only if you want to enable the SSL certificate.
+    /**
+     * <p>The content of the SSL certificate. Specify the content of the certificate only if you want to enable the SSL certificate.</p>
+     */
     @NameInMap("SSLPub")
     public String SSLPub;
 

@@ -4,48 +4,62 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetDomainServerCertificateRequest extends TeaModel {
-    // The name of the SSL certificate. You can specify only one name.
+    /**
+     * <p>The name of the SSL certificate. You can specify only one name.</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
-    // The type of the SSL certificate. Valid values:
-    // 
-    // *   **upload**: a user-uploaded SSL certificate.
-    // *   **cas**: an SSL certificate that is issued by Alibaba Cloud SSL Certificates Service.
-    // *   **free**: a free SSL certificate.
-    // 
-    // >  If this parameter is set to **cas**, the **PrivateKey** parameter is optional.
+    /**
+     * <p>The type of the SSL certificate. Valid values:</p>
+     * <br>
+     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
+     * <p>*   **cas**: an SSL certificate that is issued by Alibaba Cloud SSL Certificates Service.</p>
+     * <p>*   **free**: a free SSL certificate.</p>
+     * <br>
+     * <p>>  If this parameter is set to **cas**, the **PrivateKey** parameter is optional.</p>
+     */
     @NameInMap("CertType")
     public String certType;
 
-    // The accelerated domain name for which you want to configure the SSL certificate. The type of request supported by the domain name must be HTTPS.
-    // 
-    // You can specify one domain name in each call.
+    /**
+     * <p>The accelerated domain name for which you want to configure the SSL certificate. The type of request supported by the domain name must be HTTPS.</p>
+     * <br>
+     * <p>You can specify one domain name in each call.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information of the existing certificate that uses the same name.
+    /**
+     * <p>Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information of the existing certificate that uses the same name.</p>
+     */
     @NameInMap("ForceSet")
     public String forceSet;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    // The private key. Specify the private key only if you want to enable the SSL certificate.
+    /**
+     * <p>The private key. Specify the private key only if you want to enable the SSL certificate.</p>
+     */
     @NameInMap("PrivateKey")
     public String privateKey;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.
+    /**
+     * <p>The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.</p>
+     */
     @NameInMap("ServerCertificate")
     public String serverCertificate;
 
-    // Specifies whether to enable the SSL certificate. Valid values:
-    // 
-    // *   **on**: enables the SSL certificate.
-    // *   **off**: disables the SSL certificate. This is the default value.
+    /**
+     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+     * <br>
+     * <p>*   **on**: enables the SSL certificate.</p>
+     * <p>*   **off**: disables the SSL certificate. This is the default value.</p>
+     */
     @NameInMap("ServerCertificateStatus")
     public String serverCertificateStatus;
 

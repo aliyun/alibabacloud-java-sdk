@@ -4,11 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
-    // The information about the SSL certificate.
+    /**
+     * <p>The information about the SSL certificate.</p>
+     */
     @NameInMap("CertInfos")
     public DescribeDomainCertificateInfoResponseBodyCertInfos certInfos;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,82 +38,114 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
-        // The domain name that matches the SSL certificate.
+        /**
+         * <p>The domain name that matches the SSL certificate.</p>
+         */
         @NameInMap("CertDomainName")
         public String certDomainName;
 
-        // The time when the SSL certificate expires.
+        /**
+         * <p>The time when the SSL certificate expires.</p>
+         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        // The unit of the validity period of the SSL certificate.
-        // 
-        // *   **months**: The validity period is measured in months.
-        // *   **years**: The validity period is measured in years.
+        @NameInMap("CertId")
+        public String certId;
+
+        /**
+         * <p>The unit of the validity period of the SSL certificate.</p>
+         * <br>
+         * <p>*   **months**: The validity period is measured in months.</p>
+         * <p>*   **years**: The validity period is measured in years.</p>
+         */
         @NameInMap("CertLife")
         public String certLife;
 
-        // The name of the SSL certificate.
+        /**
+         * <p>The name of the SSL certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
-        // The name of the certificate authority (CA) that issued the SSL certificate.
+        /**
+         * <p>The name of the certificate authority (CA) that issued the SSL certificate.</p>
+         */
         @NameInMap("CertOrg")
         public String certOrg;
 
-        // The time when the SSL certificate became effective.
+        @NameInMap("CertRegion")
+        public String certRegion;
+
+        /**
+         * <p>The time when the SSL certificate became effective.</p>
+         */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
-        // The type of the SSL certificate. Valid values:
-        // 
-        // *   **free**: a free SSL certificate.
-        // *   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.
-        // *   **upload**: a user-uploaded SSL certificate.
+        /**
+         * <p>The type of the SSL certificate. Valid values:</p>
+         * <br>
+         * <p>*   **free**: a free SSL certificate.</p>
+         * <p>*   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.</p>
+         * <p>*   **upload**: a user-uploaded SSL certificate.</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
-        // The time when the certificate was renewed.
+        /**
+         * <p>The time when the certificate was renewed.</p>
+         */
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
-        // The status of the CNAME of the domain name.
-        // 
-        // *   **ok**: The domain name points to the CNAME assigned from Alibaba Cloud Content Delivery Network (CDN).
-        // *   **cname_error**: An error occurred and the domain name cannot point to the CNAME.
-        // *   **top_domain_cname_error**: An error occurred to the CNAME of the top-level domain name. The domain name cannot point to the CNAME.
-        // *   **unsupport_wildcard**: Wildcard domain names are not supported.
+        /**
+         * <p>The status of the CNAME of the domain name.</p>
+         * <br>
+         * <p>*   **ok**: The domain name points to the CNAME assigned from Alibaba Cloud Content Delivery Network (CDN).</p>
+         * <p>*   **cname_error**: An error occurred and the domain name cannot point to the CNAME.</p>
+         * <p>*   **top_domain_cname_error**: An error occurred to the CNAME of the top-level domain name. The domain name cannot point to the CNAME.</p>
+         * <p>*   **unsupport_wildcard**: Wildcard domain names are not supported.</p>
+         */
         @NameInMap("DomainCnameStatus")
         public String domainCnameStatus;
 
-        // The accelerated domain name.
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The public key of the SSL certificate.
+        /**
+         * <p>The public key of the SSL certificate.</p>
+         */
         @NameInMap("ServerCertificate")
         public String serverCertificate;
 
-        // The status of HTTPS.
-        // 
-        // *   **on**: enabled.
-        // *   **off**: disabled.
+        /**
+         * <p>The status of HTTPS.</p>
+         * <br>
+         * <p>*   **on**: enabled.</p>
+         * <p>*   **off**: disabled.</p>
+         */
         @NameInMap("ServerCertificateStatus")
         public String serverCertificateStatus;
 
-        // The status of the SSL certificate.
-        // 
-        // *   **success**: The SSL certificate is effective.
-        // *   **checking**: The system is checking whether the domain name is accelerated by Alibaba Cloud CDN.
-        // *   **cname_error**: The domain name is not accelerated by Alibaba Cloud CDN.
-        // *   **top_domain_cname_error**: The top-level domain name is not an accelerated domain name.
-        // *   **domain_invalid**: The domain name contains invalid characters.
-        // *   **unsupport_wildcard**: Wildcard domain names are not supported.
-        // *   **applying**: The application for a certificate is in progress.
-        // *   **fget_token_timeout**: The application for a certificate timed out.
-        // *   **check_token_timeout**: The verification timed out.
-        // *   **get_cert_timeout**: The request to obtain the certificate timed out.
-        // *   **failed**: The application for a certificate failed.
+        /**
+         * <p>The status of the SSL certificate.</p>
+         * <br>
+         * <p>*   **success**: The SSL certificate is effective.</p>
+         * <p>*   **checking**: The system is checking whether the domain name is accelerated by Alibaba Cloud CDN.</p>
+         * <p>*   **cname_error**: The domain name is not accelerated by Alibaba Cloud CDN.</p>
+         * <p>*   **top_domain_cname_error**: The top-level domain name is not an accelerated domain name.</p>
+         * <p>*   **domain_invalid**: The domain name contains invalid characters.</p>
+         * <p>*   **unsupport_wildcard**: Wildcard domain names are not supported.</p>
+         * <p>*   **applying**: The application for a certificate is in progress.</p>
+         * <p>*   **fget_token_timeout**: The application for a certificate timed out.</p>
+         * <p>*   **check_token_timeout**: The verification timed out.</p>
+         * <p>*   **get_cert_timeout**: The request to obtain the certificate timed out.</p>
+         * <p>*   **failed**: The application for a certificate failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -134,6 +170,14 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             return this.certExpireTime;
         }
 
+        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertId(String certId) {
+            this.certId = certId;
+            return this;
+        }
+        public String getCertId() {
+            return this.certId;
+        }
+
         public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertLife(String certLife) {
             this.certLife = certLife;
             return this;
@@ -156,6 +200,14 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
         }
         public String getCertOrg() {
             return this.certOrg;
+        }
+
+        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertRegion(String certRegion) {
+            this.certRegion = certRegion;
+            return this;
+        }
+        public String getCertRegion() {
+            return this.certRegion;
         }
 
         public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertStartTime(String certStartTime) {

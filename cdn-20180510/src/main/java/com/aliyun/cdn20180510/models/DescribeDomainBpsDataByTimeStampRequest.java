@@ -4,28 +4,33 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByTimeStampRequest extends TeaModel {
-    // The accelerated domain name. You can specify only one domain name in each query.
+    /**
+     * <p>The accelerated domain name. You can specify only one domain name in each query.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The names of the Internet service providers (ISPs). Separate multiple ISP names with commas (,).
-    // 
-    // You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+    /**
+     * <p>The names of the Internet service providers (ISPs). Separate multiple ISP names with commas (,).</p>
+     * <br>
+     * <p>You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
+     */
     @NameInMap("IspNames")
     public String ispNames;
 
-    // The names of the regions. Separate multiple regions with commas (,).
-    // 
-    // You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+    /**
+     * <p>The names of the regions. Separate multiple regions with commas (,).</p>
+     * <br>
+     * <p>You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.</p>
+     */
     @NameInMap("LocationNames")
     public String locationNames;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The beginning of the time range that was queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
-    // 
-    // The data is collected at an interval of five minutes.
+    /**
+     * <p>The beginning of the time range that was queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+     * <br>
+     * <p>The data is collected at an interval of five minutes.</p>
+     */
     @NameInMap("TimePoint")
     public String timePoint;
 
@@ -56,14 +61,6 @@ public class DescribeDomainBpsDataByTimeStampRequest extends TeaModel {
     }
     public String getLocationNames() {
         return this.locationNames;
-    }
-
-    public DescribeDomainBpsDataByTimeStampRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainBpsDataByTimeStampRequest setTimePoint(String timePoint) {

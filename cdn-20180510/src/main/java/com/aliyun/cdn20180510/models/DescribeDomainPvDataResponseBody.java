@@ -4,27 +4,39 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainPvDataResponseBody extends TeaModel {
-    // The time interval between the data entries. Unit: seconds.
+    /**
+     * <p>The time interval between the data entries. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The accelerated domain name.
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range during which data was queried.
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The number of PVs at each interval.
+    /**
+     * <p>The number of PVs at each interval.</p>
+     */
     @NameInMap("PvDataInterval")
     public DescribeDomainPvDataResponseBodyPvDataInterval pvDataInterval;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range during which data was queried.
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -82,11 +94,15 @@ public class DescribeDomainPvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainPvDataResponseBodyPvDataIntervalUsageData extends TeaModel {
-        // The timestamp of the returned data.
+        /**
+         * <p>The timestamp of the returned data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The number of PVs.
+        /**
+         * <p>The number of PVs.</p>
+         */
         @NameInMap("Value")
         public String value;
 

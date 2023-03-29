@@ -4,18 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DeleteRealTimeLogLogstoreRequest extends TeaModel {
-    // The name of the Logstore to which log entries are delivered.
+    /**
+     * <p>The name of the Logstore to which log entries are delivered.</p>
+     */
     @NameInMap("Logstore")
     public String logstore;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    // The name of the Log Service project that is used for real-time log delivery.
+    /**
+     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     */
     @NameInMap("Project")
     public String project;
 
-    // The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).
+    /**
+     * <p>The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).</p>
+     */
     @NameInMap("Region")
     public String region;
 
@@ -30,14 +33,6 @@ public class DeleteRealTimeLogLogstoreRequest extends TeaModel {
     }
     public String getLogstore() {
         return this.logstore;
-    }
-
-    public DeleteRealTimeLogLogstoreRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DeleteRealTimeLogLogstoreRequest setProject(String project) {

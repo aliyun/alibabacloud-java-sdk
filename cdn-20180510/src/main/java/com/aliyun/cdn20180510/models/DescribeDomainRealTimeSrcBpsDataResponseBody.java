@@ -4,29 +4,41 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
-    // The time interval between the data entries returned. Unit: seconds.
-    // 
-    // The time granularity varies with the time range to query. Supported values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see **Usage notes**.
+    /**
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <br>
+     * <p>The time granularity varies with the time range to query. Supported values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see **Usage notes**.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    // The accelerated domain name.
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The end of the time range to query.
+    /**
+     * <p>The end of the time range to query.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The back-to-origin bandwidth information at each interval.
+    /**
+     * <p>The back-to-origin bandwidth information at each interval.</p>
+     */
     @NameInMap("RealTimeSrcBpsDataPerInterval")
     public DescribeDomainRealTimeSrcBpsDataResponseBodyRealTimeSrcBpsDataPerInterval realTimeSrcBpsDataPerInterval;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The beginning of the time range to query.
+    /**
+     * <p>The beginning of the time range to query.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -84,11 +96,15 @@ public class DescribeDomainRealTimeSrcBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRealTimeSrcBpsDataResponseBodyRealTimeSrcBpsDataPerIntervalDataModule extends TeaModel {
-        // The timestamp of the data returned.
+        /**
+         * <p>The timestamp of the data returned.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        // The bandwidth during back-to-origin routing. Unit: bit/s.
+        /**
+         * <p>The bandwidth during back-to-origin routing. Unit: bit/s.</p>
+         */
         @NameInMap("Value")
         public String value;
 
