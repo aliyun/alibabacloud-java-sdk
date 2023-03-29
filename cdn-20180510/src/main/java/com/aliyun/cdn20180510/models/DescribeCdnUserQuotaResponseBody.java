@@ -22,6 +22,12 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
     @NameInMap("DomainQuota")
     public Integer domainQuota;
 
+    @NameInMap("IgnoreParamsQuota")
+    public Integer ignoreParamsQuota;
+
+    @NameInMap("IgnoreParamsRemain")
+    public Integer ignoreParamsRemain;
+
     /**
      * <p>The maximum number of URLs that can be prefetched.</p>
      */
@@ -91,6 +97,22 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
     }
     public Integer getDomainQuota() {
         return this.domainQuota;
+    }
+
+    public DescribeCdnUserQuotaResponseBody setIgnoreParamsQuota(Integer ignoreParamsQuota) {
+        this.ignoreParamsQuota = ignoreParamsQuota;
+        return this;
+    }
+    public Integer getIgnoreParamsQuota() {
+        return this.ignoreParamsQuota;
+    }
+
+    public DescribeCdnUserQuotaResponseBody setIgnoreParamsRemain(Integer ignoreParamsRemain) {
+        this.ignoreParamsRemain = ignoreParamsRemain;
+        return this;
+    }
+    public Integer getIgnoreParamsRemain() {
+        return this.ignoreParamsRemain;
     }
 
     public DescribeCdnUserQuotaResponseBody setPreloadQuota(Integer preloadQuota) {
