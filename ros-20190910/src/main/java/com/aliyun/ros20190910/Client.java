@@ -915,6 +915,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteStackResponse deleteStackWithOptions(DeleteStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteOptions)) {
+            query.put("DeleteOptions", request.deleteOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ramRoleName)) {
             query.put("RamRoleName", request.ramRoleName);
         }

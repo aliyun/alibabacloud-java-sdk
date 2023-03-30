@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetFeatureDetailsResponseBody extends TeaModel {
+    @NameInMap("DriftDetection")
+    public GetFeatureDetailsResponseBodyDriftDetection driftDetection;
+
     /**
      * <p>The ID of the request.</p>
      */
@@ -15,6 +18,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
      */
     @NameInMap("ResourceCleaner")
     public GetFeatureDetailsResponseBodyResourceCleaner resourceCleaner;
+
+    @NameInMap("ResourceImport")
+    public GetFeatureDetailsResponseBodyResourceImport resourceImport;
 
     /**
      * <p>Details of the template parameter constraint feature.</p>
@@ -39,6 +45,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetFeatureDetailsResponseBody setDriftDetection(GetFeatureDetailsResponseBodyDriftDetection driftDetection) {
+        this.driftDetection = driftDetection;
+        return this;
+    }
+    public GetFeatureDetailsResponseBodyDriftDetection getDriftDetection() {
+        return this.driftDetection;
+    }
+
     public GetFeatureDetailsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -53,6 +67,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
     public GetFeatureDetailsResponseBodyResourceCleaner getResourceCleaner() {
         return this.resourceCleaner;
+    }
+
+    public GetFeatureDetailsResponseBody setResourceImport(GetFeatureDetailsResponseBodyResourceImport resourceImport) {
+        this.resourceImport = resourceImport;
+        return this;
+    }
+    public GetFeatureDetailsResponseBodyResourceImport getResourceImport() {
+        return this.resourceImport;
     }
 
     public GetFeatureDetailsResponseBody setTemplateParameterConstraints(GetFeatureDetailsResponseBodyTemplateParameterConstraints templateParameterConstraints) {
@@ -77,6 +99,25 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
     public GetFeatureDetailsResponseBodyTerraform getTerraform() {
         return this.terraform;
+    }
+
+    public static class GetFeatureDetailsResponseBodyDriftDetection extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        public java.util.List<String> supportedResourceTypes;
+
+        public static GetFeatureDetailsResponseBodyDriftDetection build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyDriftDetection self = new GetFeatureDetailsResponseBodyDriftDetection();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyDriftDetection setSupportedResourceTypes(java.util.List<String> supportedResourceTypes) {
+            this.supportedResourceTypes = supportedResourceTypes;
+            return this;
+        }
+        public java.util.List<String> getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
     }
 
     public static class GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes extends TeaModel {
@@ -153,6 +194,55 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             return this;
         }
         public java.util.List<GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes> getSupportedResourceTypes() {
+            return this.supportedResourceTypes;
+        }
+
+    }
+
+    public static class GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes extends TeaModel {
+        @NameInMap("ResourceIdentifiers")
+        public java.util.List<String> resourceIdentifiers;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes self = new GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes setResourceIdentifiers(java.util.List<String> resourceIdentifiers) {
+            this.resourceIdentifiers = resourceIdentifiers;
+            return this;
+        }
+        public java.util.List<String> getResourceIdentifiers() {
+            return this.resourceIdentifiers;
+        }
+
+        public GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
+    public static class GetFeatureDetailsResponseBodyResourceImport extends TeaModel {
+        @NameInMap("SupportedResourceTypes")
+        public java.util.List<GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes> supportedResourceTypes;
+
+        public static GetFeatureDetailsResponseBodyResourceImport build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureDetailsResponseBodyResourceImport self = new GetFeatureDetailsResponseBodyResourceImport();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureDetailsResponseBodyResourceImport setSupportedResourceTypes(java.util.List<GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes> supportedResourceTypes) {
+            this.supportedResourceTypes = supportedResourceTypes;
+            return this;
+        }
+        public java.util.List<GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes> getSupportedResourceTypes() {
             return this.supportedResourceTypes;
         }
 
