@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DeleteStackRequest extends TeaModel {
+    @NameInMap("DeleteOptions")
+    public java.util.List<String> deleteOptions;
+
     /**
      * <p>The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses credentials of the role to call the APIs of Alibaba Cloud services.</p>
      * <br>
@@ -48,6 +51,14 @@ public class DeleteStackRequest extends TeaModel {
     public static DeleteStackRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStackRequest self = new DeleteStackRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteStackRequest setDeleteOptions(java.util.List<String> deleteOptions) {
+        this.deleteOptions = deleteOptions;
+        return this;
+    }
+    public java.util.List<String> getDeleteOptions() {
+        return this.deleteOptions;
     }
 
     public DeleteStackRequest setRamRoleName(String ramRoleName) {
