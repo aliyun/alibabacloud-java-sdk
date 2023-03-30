@@ -4,9 +4,6 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListNetworkInterfacesRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("EnablePage")
     public Boolean enablePage;
 
@@ -37,14 +34,6 @@ public class ListNetworkInterfacesRequest extends TeaModel {
     public static ListNetworkInterfacesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNetworkInterfacesRequest self = new ListNetworkInterfacesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListNetworkInterfacesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public ListNetworkInterfacesRequest setEnablePage(Boolean enablePage) {

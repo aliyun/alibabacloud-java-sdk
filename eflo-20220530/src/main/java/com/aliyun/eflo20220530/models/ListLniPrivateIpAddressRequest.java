@@ -4,20 +4,17 @@ package com.aliyun.eflo20220530.models;
 import com.aliyun.tea.*;
 
 public class ListLniPrivateIpAddressRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("EnablePage")
     public Boolean enablePage;
 
     @NameInMap("Ip")
     public String ip;
 
+    @NameInMap("IpName")
+    public String ipName;
+
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
-
-    @NameInMap("NodeId")
-    public String nodeId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -28,23 +25,9 @@ public class ListLniPrivateIpAddressRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("SubnetId")
-    public String subnetId;
-
-    @NameInMap("VpdId")
-    public String vpdId;
-
     public static ListLniPrivateIpAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLniPrivateIpAddressRequest self = new ListLniPrivateIpAddressRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListLniPrivateIpAddressRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public ListLniPrivateIpAddressRequest setEnablePage(Boolean enablePage) {
@@ -63,20 +46,20 @@ public class ListLniPrivateIpAddressRequest extends TeaModel {
         return this.ip;
     }
 
+    public ListLniPrivateIpAddressRequest setIpName(String ipName) {
+        this.ipName = ipName;
+        return this;
+    }
+    public String getIpName() {
+        return this.ipName;
+    }
+
     public ListLniPrivateIpAddressRequest setNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
-    }
-
-    public ListLniPrivateIpAddressRequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
     }
 
     public ListLniPrivateIpAddressRequest setPageNumber(Integer pageNumber) {
@@ -101,22 +84,6 @@ public class ListLniPrivateIpAddressRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ListLniPrivateIpAddressRequest setSubnetId(String subnetId) {
-        this.subnetId = subnetId;
-        return this;
-    }
-    public String getSubnetId() {
-        return this.subnetId;
-    }
-
-    public ListLniPrivateIpAddressRequest setVpdId(String vpdId) {
-        this.vpdId = vpdId;
-        return this;
-    }
-    public String getVpdId() {
-        return this.vpdId;
     }
 
 }
