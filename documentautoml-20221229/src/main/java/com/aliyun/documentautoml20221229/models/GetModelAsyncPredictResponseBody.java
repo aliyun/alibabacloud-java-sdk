@@ -3,12 +3,12 @@ package com.aliyun.documentautoml20221229.models;
 
 import com.aliyun.tea.*;
 
-public class PredictClassifierModelResponseBody extends TeaModel {
+public class GetModelAsyncPredictResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
-    public java.util.Map<String, ?> data;
+    public String data;
 
     @NameInMap("Message")
     public String message;
@@ -19,12 +19,12 @@ public class PredictClassifierModelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static PredictClassifierModelResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        PredictClassifierModelResponseBody self = new PredictClassifierModelResponseBody();
+    public static GetModelAsyncPredictResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetModelAsyncPredictResponseBody self = new GetModelAsyncPredictResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public PredictClassifierModelResponseBody setCode(Integer code) {
+    public GetModelAsyncPredictResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -32,15 +32,15 @@ public class PredictClassifierModelResponseBody extends TeaModel {
         return this.code;
     }
 
-    public PredictClassifierModelResponseBody setData(java.util.Map<String, ?> data) {
+    public GetModelAsyncPredictResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public java.util.Map<String, ?> getData() {
+    public String getData() {
         return this.data;
     }
 
-    public PredictClassifierModelResponseBody setMessage(String message) {
+    public GetModelAsyncPredictResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class PredictClassifierModelResponseBody extends TeaModel {
         return this.message;
     }
 
-    public PredictClassifierModelResponseBody setRequestId(String requestId) {
+    public GetModelAsyncPredictResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
