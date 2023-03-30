@@ -11,7 +11,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
@@ -56,7 +56,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of instances.</p>
+     * <p>The total number of returned instances.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

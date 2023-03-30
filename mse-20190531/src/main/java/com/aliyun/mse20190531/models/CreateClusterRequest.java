@@ -18,16 +18,16 @@ public class CreateClusterRequest extends TeaModel {
      * <br>
      * <p>\[Professional Edition]</p>
      * <br>
-     * <p>*   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory</p>
-     * <p>*   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory</p>
-     * <p>*   `MSE_SC_4_8_60_c`: 4 CPU cores and 8 GB of memory</p>
-     * <p>*   `MSE_SC_8_16_60_c`: 8 CPU cores and 16 GB of memory</p>
-     * <p>*   `MSE_SC_16_32_60_c`: 16 CPU cores and 32 GB of memory</p>
+     * <p>*   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory</p>
+     * <p>*   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory</p>
+     * <p>*   `MSE_SC_4_8_60_c`: 4 vCPUs and 8 GB of memory</p>
+     * <p>*   `MSE_SC_8_16_60_c`: 8 vCPUs and 16 GB of memory</p>
+     * <p>*   `MSE_SC_16_32_60_c`: 16 vCPUs and 32 GB of memory</p>
      * <br>
      * <p>\[Developer Edition]</p>
      * <br>
-     * <p>*   `MSE_SC_1_2_60_c`: 1 CPU core and 2 GB of memory</p>
-     * <p>*   `MSE_SC_2_4_60_c`: 2 CPU cores and 4 GB of memory</p>
+     * <p>*   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory</p>
+     * <p>*   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory</p>
      */
     @NameInMap("ClusterSpecification")
     public String clusterSpecification;
@@ -64,7 +64,7 @@ public class CreateClusterRequest extends TeaModel {
     public String connectionType;
 
     /**
-     * <p>The disk type of the MSE instance. Valid values:</p>
+     * <p>The disk type. Valid values:</p>
      * <br>
      * <p>*   alicloud-disk-ssd</p>
      * <p>*   alicloud-disk-essd-pl1</p>
@@ -87,13 +87,13 @@ public class CreateClusterRequest extends TeaModel {
     public Integer instanceCount;
 
     /**
-     * <p>The name of the MSE instance.</p>
+     * <p>The name of the instance.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>Configure this parameter unless otherwise specified. Valid values:</p>
+     * <p>Set this parameter unless otherwise specified. Valid values:</p>
      * <br>
      * <p>*   `mse_pro`: Professional Edition</p>
      * <p>*   `mse_dev`: Developer Edition</p>
@@ -154,7 +154,7 @@ public class CreateClusterRequest extends TeaModel {
     public String requestPars;
 
     /**
-     * <p>The ID of the resource group. For more information, see [View basic information of a resource group](~~457230~~).</p>
+     * <p>The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](~~457230~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

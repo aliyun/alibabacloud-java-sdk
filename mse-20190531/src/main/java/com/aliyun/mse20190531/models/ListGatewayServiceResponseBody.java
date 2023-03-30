@@ -11,7 +11,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public ListGatewayServiceResponseBodyData data;
@@ -23,7 +23,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -579,19 +579,19 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>The time when the service was created.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The time when the service was last modified.</p>
+         * <p>The modification time.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The group.</p>
+         * <p>The name of the group.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -635,7 +635,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The IP addresses of the service.</p>
+         * <p>The IP addresses.</p>
          */
         @NameInMap("Ips")
         public java.util.List<String> ips;
@@ -665,7 +665,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public java.util.List<Integer> ports;
 
         /**
-         * <p>The name of the service registered with the service registry.</p>
+         * <p>The name of the service that is registered with the service registry.</p>
          */
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
@@ -899,7 +899,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     public static class ListGatewayServiceResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The number of the returned page.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;

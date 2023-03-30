@@ -108,13 +108,13 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The time when the migration task was created.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The time when the migration task was updated.</p>
+         * <p>The modification time.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

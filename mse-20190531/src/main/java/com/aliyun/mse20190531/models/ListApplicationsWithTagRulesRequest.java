@@ -17,6 +17,7 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
      * <p>The ID of the application.</p>
      */
     @NameInMap("AppId")
+    @Deprecated
     public String appId;
 
     /**
@@ -24,6 +25,9 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
      */
     @NameInMap("AppName")
     public String appName;
+
+    @NameInMap("Namespace")
+    public String namespace;
 
     /**
      * <p>The number of the page to return.</p>
@@ -76,6 +80,14 @@ public class ListApplicationsWithTagRulesRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public ListApplicationsWithTagRulesRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public ListApplicationsWithTagRulesRequest setPageNumber(Integer pageNumber) {

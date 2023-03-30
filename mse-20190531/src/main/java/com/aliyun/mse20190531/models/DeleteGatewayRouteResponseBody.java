@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewayRouteResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public DeleteGatewayRouteResponseBodyData data;
@@ -122,7 +122,7 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The modification time.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

@@ -19,6 +19,12 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("AppName")
+    public String appName;
+
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The region where the instance resides. Examples:</p>
      * <br>
@@ -50,6 +56,22 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public GetAppMessageQueueRouteRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public GetAppMessageQueueRouteRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public GetAppMessageQueueRouteRequest setRegion(String region) {

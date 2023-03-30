@@ -23,7 +23,7 @@ public class DeleteNacosServiceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;

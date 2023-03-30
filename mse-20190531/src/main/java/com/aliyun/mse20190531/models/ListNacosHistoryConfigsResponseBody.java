@@ -140,7 +140,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
 
     public static class ListNacosHistoryConfigsResponseBodyHistoryItems extends TeaModel {
         /**
-         * <p>The tags of the application.</p>
+         * <p>The application tag.</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -170,7 +170,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         public Long lastModifiedTime;
 
         /**
-         * <p>The type of the configuration file.</p>
+         * <p>The format of the configuration file.</p>
          */
         @NameInMap("OpType")
         public String opType;

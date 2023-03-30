@@ -11,7 +11,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public Long data;

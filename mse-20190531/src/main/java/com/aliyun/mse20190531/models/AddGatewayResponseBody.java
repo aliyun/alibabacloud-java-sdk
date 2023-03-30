@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddGatewayResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return value.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public AddGatewayResponseBodyData data;

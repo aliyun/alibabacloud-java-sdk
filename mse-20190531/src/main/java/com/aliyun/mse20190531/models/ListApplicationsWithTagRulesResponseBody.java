@@ -277,6 +277,9 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         /**
          * <p>The information about the rules.</p>
          */
@@ -308,6 +311,14 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResult setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public ListApplicationsWithTagRulesResponseBodyDataResult setRouteRules(java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> routeRules) {

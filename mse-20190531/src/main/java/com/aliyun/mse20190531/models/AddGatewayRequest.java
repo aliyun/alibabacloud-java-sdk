@@ -117,13 +117,13 @@ public class AddGatewayRequest extends TeaModel {
     public String vSwitchId2;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) in which the instances reside.</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      */
     @NameInMap("Vpc")
     public String vpc;
 
     /**
-     * <p>The sample rate of Tracing Analysis. Valid values: \[1,100].</p>
+     * <p>The sampling rate of Tracing Analysis. Valid values: \[1,100].</p>
      */
     @NameInMap("XtraceRatio")
     public String xtraceRatio;
