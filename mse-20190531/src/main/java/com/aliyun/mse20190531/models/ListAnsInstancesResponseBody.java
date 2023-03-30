@@ -29,7 +29,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -173,7 +173,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>Indicates whether the information about the temporary node is obtained. Valid values:</p>
+         * <p>Indicates whether the information about the ephemeral node is obtained. Valid values:</p>
          * <br>
          * <p>*   `true`: yes</p>
          * <p>*   `false`: no</p>
@@ -182,7 +182,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         public Boolean ephemeral;
 
         /**
-         * <p>The number of failed checks.</p>
+         * <p>The number of counted failures.</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
@@ -248,7 +248,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
-         * <p>The number of successful checks.</p>
+         * <p>The number of counted successes.</p>
          */
         @NameInMap("OkCount")
         public Integer okCount;

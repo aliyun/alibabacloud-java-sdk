@@ -19,6 +19,9 @@ public class QuerySwimmingLaneByIdRequest extends TeaModel {
     @NameInMap("LaneId")
     public Long laneId;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     public static QuerySwimmingLaneByIdRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySwimmingLaneByIdRequest self = new QuerySwimmingLaneByIdRequest();
         return TeaModel.build(map, self);
@@ -38,6 +41,14 @@ public class QuerySwimmingLaneByIdRequest extends TeaModel {
     }
     public Long getLaneId() {
         return this.laneId;
+    }
+
+    public QuerySwimmingLaneByIdRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
 }

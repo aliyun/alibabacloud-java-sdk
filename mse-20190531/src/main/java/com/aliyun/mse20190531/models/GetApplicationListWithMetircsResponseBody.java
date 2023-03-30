@@ -104,7 +104,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         public Double blockQps;
 
         /**
-         * <p>The number of abnormal QPS.</p>
+         * <p>The abnormal QPS.</p>
          */
         @NameInMap("ExpQps")
         public Double expQps;
@@ -116,7 +116,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         public Double passQps;
 
         /**
-         * <p>The number of queries per second (QPS).</p>
+         * <p>The queries per second (QPS).</p>
          */
         @NameInMap("Qps")
         public Double qps;
@@ -210,7 +210,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         public Double blockQps;
 
         /**
-         * <p>The number of abnormal QPS.</p>
+         * <p>The abnormal QPS.</p>
          */
         @NameInMap("ExpQps")
         public Double expQps;
@@ -322,7 +322,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The metric about the application.</p>
+         * <p>The current metrics.</p>
          */
         @NameInMap("CurMetrics")
         public java.util.List<GetApplicationListWithMetircsResponseBodyDataResultCurMetrics> curMetrics;
@@ -361,13 +361,13 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The service source.</p>
+         * <p>The source.</p>
          */
         @NameInMap("Source")
         public String source;
@@ -511,7 +511,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
 
     public static class GetApplicationListWithMetircsResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The number of the page to return.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;

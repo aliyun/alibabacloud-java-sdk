@@ -17,7 +17,7 @@ public class DeleteMigrationTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;

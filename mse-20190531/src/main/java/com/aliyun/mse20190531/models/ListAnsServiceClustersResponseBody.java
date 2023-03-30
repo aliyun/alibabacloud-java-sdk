@@ -96,7 +96,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         public Integer defaultPort;
 
         /**
-         * <p>The type of health checks.</p>
+         * <p>The type of health check.</p>
          */
         @NameInMap("HealthCheckerType")
         public String healthCheckerType;
@@ -114,13 +114,13 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The complete name of the service.</p>
+         * <p>The full name of the service.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
-         * <p>Indicates whether the health check is initiated by the server. This parameter is valid only when the service is a temporary service.</p>
+         * <p>Indicates whether an end-to-end health check is initiated by the server. This parameter is valid only if the service is a temporary service.</p>
          */
         @NameInMap("UseIPPort4Check")
         public Boolean useIPPort4Check;
@@ -198,8 +198,8 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the service is a temporary service. Valid values:</p>
          * <br>
-         * <p>*   `true`: The service is a temporary service.</p>
-         * <p>*   `false`: The service is not a temporary service.</p>
+         * <p>*   `true`: yes</p>
+         * <p>*   `false`: no</p>
          */
         @NameInMap("Ephemeral")
         public Boolean ephemeral;

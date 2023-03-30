@@ -56,7 +56,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -162,7 +162,7 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The ID of the job.</p>
          */
         @NameInMap("Id")
         public Long id;

@@ -32,7 +32,7 @@ public class AddGatewayRouteRequest extends TeaModel {
     public Long domainId;
 
     /**
-     * <p>The IDs of domains.</p>
+     * <p>The list of domain IDs.</p>
      */
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
@@ -73,6 +73,9 @@ public class AddGatewayRouteRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Routing policy Json string.</p>
+     */
     @NameInMap("Policies")
     public String policies;
 
@@ -89,16 +92,21 @@ public class AddGatewayRouteRequest extends TeaModel {
     public AddGatewayRouteRequestRedirectJSON redirectJSON;
 
     /**
-     * <p>The sequence number of the route. (A small value indicates a high priority.)</p>
+     * <p>The sequence number of the route. A small value indicates a high priority.</p>
      */
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
+    /**
+     * <p>RouteType: </p>
+     * <br>
+     * <p>Op: Control routing.</p>
+     */
     @NameInMap("RouteType")
     public String routeType;
 
     /**
-     * <p>The information about services.</p>
+     * <p>The services.</p>
      */
     @NameInMap("Services")
     public java.util.List<AddGatewayRouteRequestServices> services;
@@ -282,7 +290,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestFallbackServices extends TeaModel {
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The type of the protocol. Valid values:</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
@@ -854,7 +862,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestServicesHttpDubboTranscoder extends TeaModel {
         /**
-         * <p>The name of the service group.</p>
+         * <p>The service group.</p>
          */
         @NameInMap("DubboServiceGroup")
         public String dubboServiceGroup;
@@ -918,7 +926,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestServices extends TeaModel {
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The type of the protocol. Valid values:</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;

@@ -126,7 +126,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The MD5 value of the configuration.</p>
+         * <p>The message digest of the configuration.</p>
          */
         @NameInMap("Md5")
         public String md5;

@@ -14,7 +14,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the Nacos instance.</p>
      * <br>
      * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
      */
@@ -22,7 +22,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The alias of the cluster.</p>
+     * <p>The alias of the Nacos instance.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
@@ -36,7 +36,7 @@ public class ListAnsInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

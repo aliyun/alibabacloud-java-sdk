@@ -131,12 +131,6 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("AppIds")
         public String appIds;
 
-        @NameInMap("DbGrayEnable")
-        public String dbGrayEnable;
-
-        @NameInMap("Enable")
-        public String enable;
-
         @NameInMap("EntryApp")
         public String entryApp;
 
@@ -161,12 +155,6 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
-        @NameInMap("Source")
-        public String source;
-
-        @NameInMap("Status")
-        public Integer status;
-
         @NameInMap("UserId")
         public String userId;
 
@@ -181,22 +169,6 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
         public String getAppIds() {
             return this.appIds;
-        }
-
-        public QueryAllSwimmingLaneGroupResponseBodyData setDbGrayEnable(String dbGrayEnable) {
-            this.dbGrayEnable = dbGrayEnable;
-            return this;
-        }
-        public String getDbGrayEnable() {
-            return this.dbGrayEnable;
-        }
-
-        public QueryAllSwimmingLaneGroupResponseBodyData setEnable(String enable) {
-            this.enable = enable;
-            return this;
-        }
-        public String getEnable() {
-            return this.enable;
         }
 
         public QueryAllSwimmingLaneGroupResponseBodyData setEntryApp(String entryApp) {
@@ -261,22 +233,6 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
-        }
-
-        public QueryAllSwimmingLaneGroupResponseBodyData setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
-        }
-
-        public QueryAllSwimmingLaneGroupResponseBodyData setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
         }
 
         public QueryAllSwimmingLaneGroupResponseBodyData setUserId(String userId) {

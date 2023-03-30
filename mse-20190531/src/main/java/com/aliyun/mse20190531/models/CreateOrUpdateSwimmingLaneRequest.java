@@ -78,6 +78,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The region ID.</p>
      */
@@ -207,6 +210,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateOrUpdateSwimmingLaneRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public CreateOrUpdateSwimmingLaneRequest setRegionId(String regionId) {

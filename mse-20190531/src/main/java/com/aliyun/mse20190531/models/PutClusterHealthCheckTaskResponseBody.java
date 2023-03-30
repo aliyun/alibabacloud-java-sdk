@@ -31,7 +31,7 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

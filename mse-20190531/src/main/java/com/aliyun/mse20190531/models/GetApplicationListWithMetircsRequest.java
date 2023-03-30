@@ -35,13 +35,13 @@ public class GetApplicationListWithMetircsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Default value: 10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the instance resides. Examples:</p>
+     * <p>The ID of the region where the Microservices Engine (MSE) instance resides. Examples:</p>
      * <br>
      * <p>*   cn-hangzhou: China (Hangzhou)</p>
      * <p>*   cn-beijing: China (Beijing)</p>

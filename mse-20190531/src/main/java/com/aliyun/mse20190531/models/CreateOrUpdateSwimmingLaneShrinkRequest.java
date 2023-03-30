@@ -78,6 +78,9 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The region ID.</p>
      */
@@ -207,6 +210,14 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateOrUpdateSwimmingLaneShrinkRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public CreateOrUpdateSwimmingLaneShrinkRequest setRegionId(String regionId) {

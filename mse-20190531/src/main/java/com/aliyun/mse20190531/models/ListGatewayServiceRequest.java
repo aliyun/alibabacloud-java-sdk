@@ -134,7 +134,7 @@ public class ListGatewayServiceRequest extends TeaModel {
         public String serviceProtocol;
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The source type.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;

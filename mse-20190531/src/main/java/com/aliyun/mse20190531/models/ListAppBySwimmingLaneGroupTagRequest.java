@@ -19,6 +19,9 @@ public class ListAppBySwimmingLaneGroupTagRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The tag.</p>
      */
@@ -44,6 +47,14 @@ public class ListAppBySwimmingLaneGroupTagRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public ListAppBySwimmingLaneGroupTagRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public ListAppBySwimmingLaneGroupTagRequest setTag(String tag) {

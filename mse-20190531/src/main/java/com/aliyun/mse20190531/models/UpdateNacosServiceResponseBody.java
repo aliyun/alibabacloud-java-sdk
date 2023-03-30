@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNacosServiceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -23,7 +23,7 @@ public class UpdateNacosServiceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;

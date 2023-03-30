@@ -50,7 +50,7 @@ public class ListNacosHistoryConfigsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
+     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

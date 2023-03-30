@@ -32,7 +32,7 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public Long domainId;
 
     /**
-     * <p>The IDs of domains.</p>
+     * <p>The list of domain IDs.</p>
      */
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
@@ -73,6 +73,9 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Routing policy Json string.</p>
+     */
     @NameInMap("Policies")
     public String policies;
 
@@ -89,16 +92,21 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String redirectJSONShrink;
 
     /**
-     * <p>The sequence number of the route. (A small value indicates a high priority.)</p>
+     * <p>The sequence number of the route. A small value indicates a high priority.</p>
      */
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
+    /**
+     * <p>RouteType: </p>
+     * <br>
+     * <p>Op: Control routing.</p>
+     */
     @NameInMap("RouteType")
     public String routeType;
 
     /**
-     * <p>The information about services.</p>
+     * <p>The services.</p>
      */
     @NameInMap("Services")
     public String servicesShrink;

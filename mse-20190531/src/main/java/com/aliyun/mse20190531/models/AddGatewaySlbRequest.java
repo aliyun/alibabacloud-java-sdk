@@ -52,8 +52,8 @@ public class AddGatewaySlbRequest extends TeaModel {
     /**
      * <p>The type of the service source. Valid values:</p>
      * <br>
-     * <p>*   PUB_NET: public network</p>
-     * <p>*   PRIVATE_NET: private network</p>
+     * <p>*   PUB_NET: Internet</p>
+     * <p>*   PRIVATE_NET: VPC</p>
      */
     @NameInMap("Type")
     public String type;

@@ -19,6 +19,9 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     public static GetTagsBySwimmingLaneGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTagsBySwimmingLaneGroupIdRequest self = new GetTagsBySwimmingLaneGroupIdRequest();
         return TeaModel.build(map, self);
@@ -38,6 +41,14 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public GetTagsBySwimmingLaneGroupIdRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
 }

@@ -20,7 +20,7 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to disable the risk item notification feature.</p>
+     * <p>Specifies whether to disable the notification feature if the risk item occurs.</p>
      * <br>
      * <p>*   true: disabled</p>
      * <p>*   false: enabled</p>
@@ -47,7 +47,7 @@ public class OrderClusterHealthCheckRiskNoticeRequest extends TeaModel {
     public String requestPars;
 
     /**
-     * <p>The code of the risk.</p>
+     * <p>The ID of the risk item.</p>
      */
     @NameInMap("RiskCode")
     public String riskCode;

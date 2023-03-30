@@ -17,13 +17,20 @@ public class ApplyTagPoliciesRequest extends TeaModel {
      * <p>The ID of the application.</p>
      */
     @NameInMap("AppId")
+    @Deprecated
     public String appId;
+
+    @NameInMap("AppName")
+    public String appName;
 
     /**
      * <p>Specifies whether to enable the routing rule.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
+
+    @NameInMap("Namespace")
+    public String namespace;
 
     /**
      * <p>Optional. The ID of the namespace.</p>
@@ -70,12 +77,28 @@ public class ApplyTagPoliciesRequest extends TeaModel {
         return this.appId;
     }
 
+    public ApplyTagPoliciesRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
     public ApplyTagPoliciesRequest setEnable(Boolean enable) {
         this.enable = enable;
         return this;
     }
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    public ApplyTagPoliciesRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public ApplyTagPoliciesRequest setNamespaceId(String namespaceId) {

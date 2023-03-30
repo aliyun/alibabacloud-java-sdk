@@ -19,6 +19,9 @@ public class DeleteSwimmingLaneRequest extends TeaModel {
     @NameInMap("LaneId")
     public Long laneId;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     public static DeleteSwimmingLaneRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSwimmingLaneRequest self = new DeleteSwimmingLaneRequest();
         return TeaModel.build(map, self);
@@ -38,6 +41,14 @@ public class DeleteSwimmingLaneRequest extends TeaModel {
     }
     public Long getLaneId() {
         return this.laneId;
+    }
+
+    public DeleteSwimmingLaneRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
 }

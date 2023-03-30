@@ -32,7 +32,7 @@ public class UpdateNacosConfigRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The ID of the configuration file.</p>
+     * <p>The ID of the configuration.</p>
      */
     @NameInMap("DataId")
     public String dataId;
