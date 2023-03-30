@@ -172,14 +172,14 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("Cidr")
         public String cidr;
 
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("VpdId")
         public String vpdId;
+
+        @NameInMap("VpdName")
+        public String vpdName;
 
         public static ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo build(java.util.Map<String, ?> map) throws Exception {
             ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo self = new ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo();
@@ -194,20 +194,12 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             return this.cidr;
         }
 
-        public ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
+        public ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo setVpdId(String vpdId) {
@@ -218,20 +210,31 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             return this.vpdId;
         }
 
+        public ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo setVpdName(String vpdName) {
+            this.vpdName = vpdName;
+            return this;
+        }
+        public String getVpdName() {
+            return this.vpdName;
+        }
+
     }
 
     public static class ListNetworkInterfacesResponseBodyContentData extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("Ethernet")
         public java.util.List<String> ethernet;
 
         @NameInMap("Gateway")
         public String gateway;
 
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
         @NameInMap("Ip")
         public String ip;
+
+        @NameInMap("NcType")
+        public String ncType;
 
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
@@ -271,6 +274,14 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListNetworkInterfacesResponseBodyContentData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
         public ListNetworkInterfacesResponseBodyContentData setEthernet(java.util.List<String> ethernet) {
             this.ethernet = ethernet;
             return this;
@@ -287,20 +298,20 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             return this.gateway;
         }
 
-        public ListNetworkInterfacesResponseBodyContentData setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
         public ListNetworkInterfacesResponseBodyContentData setIp(String ip) {
             this.ip = ip;
             return this;
         }
         public String getIp() {
             return this.ip;
+        }
+
+        public ListNetworkInterfacesResponseBodyContentData setNcType(String ncType) {
+            this.ncType = ncType;
+            return this;
+        }
+        public String getNcType() {
+            return this.ncType;
         }
 
         public ListNetworkInterfacesResponseBodyContentData setNetworkInterfaceId(String networkInterfaceId) {

@@ -3,7 +3,7 @@ package com.aliyun.eflo20220530.models;
 
 import com.aliyun.tea.*;
 
-public class GetNetworkInterfaceResponse extends TeaModel {
+public class ListVpdsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetNetworkInterfaceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetNetworkInterfaceResponseBody body;
+    public ListVpdsResponseBody body;
 
-    public static GetNetworkInterfaceResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetNetworkInterfaceResponse self = new GetNetworkInterfaceResponse();
+    public static ListVpdsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListVpdsResponse self = new ListVpdsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetNetworkInterfaceResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListVpdsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetNetworkInterfaceResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetNetworkInterfaceResponse setStatusCode(Integer statusCode) {
+    public ListVpdsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetNetworkInterfaceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetNetworkInterfaceResponse setBody(GetNetworkInterfaceResponseBody body) {
+    public ListVpdsResponse setBody(ListVpdsResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetNetworkInterfaceResponseBody getBody() {
+    public ListVpdsResponseBody getBody() {
         return this.body;
     }
 
