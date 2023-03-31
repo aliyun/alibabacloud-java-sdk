@@ -26,6 +26,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("NewConnectionString")
     public String newConnectionString;
 
+    @NameInMap("NewPort")
+    public Integer newPort;
+
     /**
      * <p>The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.</p>
      * <br>
@@ -76,6 +79,14 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     }
     public String getNewConnectionString() {
         return this.newConnectionString;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setNewPort(Integer newPort) {
+        this.newPort = newPort;
+        return this;
+    }
+    public Integer getNewPort() {
+        return this.newPort;
     }
 
     public ModifyDBInstanceConnectionStringRequest setNodeId(String nodeId) {

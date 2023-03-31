@@ -120,6 +120,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("GlobalSecurityGroupIds")
+    public String globalSecurityGroupIds;
+
     /**
      * <p>The zone where the hidden node is deployed for multi-zone deployment. Valid values:</p>
      * <br>
@@ -433,6 +436,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public CreateDBInstanceRequest setGlobalSecurityGroupIds(String globalSecurityGroupIds) {
+        this.globalSecurityGroupIds = globalSecurityGroupIds;
+        return this;
+    }
+    public String getGlobalSecurityGroupIds() {
+        return this.globalSecurityGroupIds;
     }
 
     public CreateDBInstanceRequest setHiddenZoneId(String hiddenZoneId) {

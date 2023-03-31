@@ -19,6 +19,9 @@ public class ResetAccountPasswordRequest extends TeaModel {
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    @NameInMap("CharacterType")
+    public String characterType;
+
     /**
      * <p>The ID of the instance.</p>
      */
@@ -59,6 +62,14 @@ public class ResetAccountPasswordRequest extends TeaModel {
     }
     public String getAccountPassword() {
         return this.accountPassword;
+    }
+
+    public ResetAccountPasswordRequest setCharacterType(String characterType) {
+        this.characterType = characterType;
+        return this;
+    }
+    public String getCharacterType() {
+        return this.characterType;
     }
 
     public ResetAccountPasswordRequest setDBInstanceId(String DBInstanceId) {
