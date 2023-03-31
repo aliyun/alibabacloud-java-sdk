@@ -833,6 +833,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RegistrationDetails", request.registrationDetails);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.requestContentType)) {
+            body.put("RequestContentType", request.requestContentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.requestMethod)) {
             body.put("RequestMethod", request.requestMethod);
         }

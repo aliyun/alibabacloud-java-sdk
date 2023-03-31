@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class TestDataServiceApiResponseBody extends TeaModel {
+    /**
+     * <p>The information about the test.</p>
+     */
     @NameInMap("Data")
     public TestDataServiceApiResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class TestDataServiceApiResponseBody extends TeaModel {
     }
 
     public static class TestDataServiceApiResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the test.</p>
+         */
         @NameInMap("TestId")
         public String testId;
 

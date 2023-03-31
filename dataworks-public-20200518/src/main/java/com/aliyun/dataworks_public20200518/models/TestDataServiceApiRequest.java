@@ -5,23 +5,38 @@ import com.aliyun.tea.*;
 
 public class TestDataServiceApiRequest extends TeaModel {
     /**
-     * <p>API Id</p>
+     * <p>The ID of the DataService Studio API on which the test is performed.</p>
      */
     @NameInMap("ApiId")
     public Long apiId;
 
+    /**
+     * <p>The data of the request body.</p>
+     */
     @NameInMap("BodyContent")
     public String bodyContent;
 
+    /**
+     * <p>The request parameters that are contained in the request body.</p>
+     */
     @NameInMap("BodyParams")
     public java.util.List<TestDataServiceApiRequestBodyParams> bodyParams;
 
+    /**
+     * <p>The request parameters that are contained in the request header.</p>
+     */
     @NameInMap("HeadParams")
     public java.util.List<TestDataServiceApiRequestHeadParams> headParams;
 
+    /**
+     * <p>The request parameters that are contained in the request path.</p>
+     */
     @NameInMap("PathParams")
     public java.util.List<TestDataServiceApiRequestPathParams> pathParams;
 
+    /**
+     * <p>The request parameters that are contained in the query.</p>
+     */
     @NameInMap("QueryParam")
     public java.util.List<TestDataServiceApiRequestQueryParam> queryParam;
 
@@ -79,9 +94,15 @@ public class TestDataServiceApiRequest extends TeaModel {
     }
 
     public static class TestDataServiceApiRequestBodyParams extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParamKey")
         public String paramKey;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 
@@ -109,9 +130,15 @@ public class TestDataServiceApiRequest extends TeaModel {
     }
 
     public static class TestDataServiceApiRequestHeadParams extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParamKey")
         public String paramKey;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 
@@ -139,9 +166,15 @@ public class TestDataServiceApiRequest extends TeaModel {
     }
 
     public static class TestDataServiceApiRequestPathParams extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParamKey")
         public String paramKey;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 
@@ -169,9 +202,15 @@ public class TestDataServiceApiRequest extends TeaModel {
     }
 
     public static class TestDataServiceApiRequestQueryParam extends TeaModel {
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParamKey")
         public String paramKey;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 

@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDataServiceApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The details of the application.</p>
+     */
     @NameInMap("Data")
     public GetDataServiceApplicationResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +94,39 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
     }
 
     public static class GetDataServiceApplicationResponseBodyData extends TeaModel {
+        /**
+         * <p>The AppCode for simple authentication. You can select simple authentication or signature authentication when you call an API operation.</p>
+         */
         @NameInMap("ApplicationCode")
         public String applicationCode;
 
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("ApplicationId")
         public Long applicationId;
 
+        /**
+         * <p>The AppKey for signature authentication. You can select simple authentication or signature authentication when you call an API operation.</p>
+         */
         @NameInMap("ApplicationKey")
         public String applicationKey;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The AppSecret for signature authentication. You can select simple authentication or signature authentication when you call an API operation.</p>
+         */
         @NameInMap("ApplicationSecret")
         public String applicationSecret;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 

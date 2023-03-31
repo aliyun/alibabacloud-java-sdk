@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataServiceApiRequest extends TeaModel {
+    /**
+     * <p>The ID of the API in DataService Studio.</p>
+     */
     @NameInMap("ApiId")
     public Long apiId;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 
