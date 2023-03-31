@@ -13,6 +13,9 @@ public class PredictClassifierModelRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("body")
+    public String body;
+
     public static PredictClassifierModelRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictClassifierModelRequest self = new PredictClassifierModelRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class PredictClassifierModelRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public PredictClassifierModelRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

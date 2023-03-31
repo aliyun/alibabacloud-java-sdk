@@ -13,6 +13,9 @@ public class PredictTemplateModelRequest extends TeaModel {
     @NameInMap("TaskId")
     public Long taskId;
 
+    @NameInMap("body")
+    public String body;
+
     public static PredictTemplateModelRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictTemplateModelRequest self = new PredictTemplateModelRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class PredictTemplateModelRequest extends TeaModel {
     }
     public Long getTaskId() {
         return this.taskId;
+    }
+
+    public PredictTemplateModelRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }
