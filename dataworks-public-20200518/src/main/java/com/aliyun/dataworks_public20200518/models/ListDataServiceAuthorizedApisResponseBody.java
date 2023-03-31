@@ -4,21 +4,39 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
+    /**
+     * <p>The information about the APIs that you are authorized to access.</p>
+     */
     @NameInMap("Data")
     public ListDataServiceAuthorizedApisResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,42 +94,81 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceAuthorizedApisResponseBodyDataApiAuthorizedList extends TeaModel {
+        /**
+         * <p>The ID of the API.</p>
+         */
         @NameInMap("ApiId")
         public Long apiId;
 
+        /**
+         * <p>The name of the API.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The path of the API.</p>
+         */
         @NameInMap("ApiPath")
         public String apiPath;
 
+        /**
+         * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+         */
         @NameInMap("ApiStatus")
         public Integer apiStatus;
 
+        /**
+         * <p>The time when the API was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The time when the access permissions of the API were granted.</p>
+         */
         @NameInMap("GrantCreatedTime")
         public String grantCreatedTime;
 
+        /**
+         * <p>The expiration time for the granted access permissions of the API.</p>
+         */
         @NameInMap("GrantEndTime")
         public String grantEndTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the user who granted the access permissions of the API.</p>
+         */
         @NameInMap("GrantOperatorId")
         public String grantOperatorId;
 
+        /**
+         * <p>The ID of the API group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The time when the API was last updated.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 
@@ -227,15 +284,27 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceAuthorizedApisResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of APIs that you are authorized to access.</p>
+         */
         @NameInMap("ApiAuthorizedList")
         public java.util.List<ListDataServiceAuthorizedApisResponseBodyDataApiAuthorizedList> apiAuthorizedList;
 
+        /**
+         * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

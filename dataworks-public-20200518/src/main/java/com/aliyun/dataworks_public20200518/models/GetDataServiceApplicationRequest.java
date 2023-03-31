@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDataServiceApplicationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can view the information about the application in the API Gateway console.</p>
+     */
     @NameInMap("ApplicationId")
     public Long applicationId;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 

@@ -4,9 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceApiTestResponseBody extends TeaModel {
+    /**
+     * <p>The list of test records.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDataServiceApiTestResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,51 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApiTestResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the DataService Studio API on which the test is performed.</p>
+         */
         @NameInMap("ApiId")
         public Long apiId;
 
+        /**
+         * <p>The time that is consumed to complete the test.</p>
+         */
         @NameInMap("CostTime")
         public Integer costTime;
 
+        /**
+         * <p>The time when the test was initiated.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The request parameters configured for the test.</p>
+         */
         @NameInMap("ParamMap")
         public String paramMap;
 
+        /**
+         * <p>The status code returned for the test. If the test is not complete, this parameter is not returned.</p>
+         */
         @NameInMap("RetCode")
         public Long retCode;
 
+        /**
+         * <p>The result returned for the test.</p>
+         */
         @NameInMap("RetResult")
         public String retResult;
 
+        /**
+         * <p>The status of the test. Valid values: RUNNING and FINISHED.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the test.</p>
+         */
         @NameInMap("TestId")
         public Long testId;
 
