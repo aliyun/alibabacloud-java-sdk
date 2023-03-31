@@ -16,6 +16,9 @@ public class PredictModelRequest extends TeaModel {
     @NameInMap("ModelVersion")
     public String modelVersion;
 
+    @NameInMap("body")
+    public String body;
+
     public static PredictModelRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictModelRequest self = new PredictModelRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class PredictModelRequest extends TeaModel {
     }
     public String getModelVersion() {
         return this.modelVersion;
+    }
+
+    public PredictModelRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }
