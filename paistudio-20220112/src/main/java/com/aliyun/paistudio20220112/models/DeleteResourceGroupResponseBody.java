@@ -4,7 +4,6 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class DeleteResourceGroupResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

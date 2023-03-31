@@ -4,23 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class HyperParameterDefinition extends TeaModel {
-    // Default value for the parameter.
     @NameInMap("DefaultValue")
     public String defaultValue;
 
-    // Description for the parameter.
     @NameInMap("Description")
     public String description;
 
-    // Name of the parameter.
     @NameInMap("Name")
     public String name;
 
-    // Indicates whether the parameter is required
     @NameInMap("Required")
     public Boolean required;
 
-    // Type of the parameter.
     @NameInMap("Type")
     public String type;
 

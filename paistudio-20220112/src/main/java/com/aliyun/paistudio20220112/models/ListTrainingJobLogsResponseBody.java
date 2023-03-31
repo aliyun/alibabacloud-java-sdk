@@ -4,15 +4,12 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobLogsResponseBody extends TeaModel {
-    // 日志列表
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 符合过滤条件的日志数量
     @NameInMap("TotalCount")
     public String totalCount;
 

@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
+    @NameInMap("Cpu")
+    public String cpu;
+
     @NameInMap("EcsCount")
     public Long ecsCount;
 
@@ -22,8 +25,17 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     @NameInMap("GmtStartedTime")
     public String gmtStartedTime;
 
+    @NameInMap("Gpu")
+    public String gpu;
+
+    @NameInMap("GpuType")
+    public String gpuType;
+
     @NameInMap("MachineGroupID")
     public String machineGroupID;
+
+    @NameInMap("Memory")
+    public String memory;
 
     @NameInMap("PaymentDuration")
     public String paymentDuration;
@@ -46,6 +58,14 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public static GetResourceGroupMachineGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResourceGroupMachineGroupResponseBody self = new GetResourceGroupMachineGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setCpu(String cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public String getCpu() {
+        return this.cpu;
     }
 
     public GetResourceGroupMachineGroupResponseBody setEcsCount(Long ecsCount) {
@@ -96,12 +116,36 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         return this.gmtStartedTime;
     }
 
+    public GetResourceGroupMachineGroupResponseBody setGpu(String gpu) {
+        this.gpu = gpu;
+        return this;
+    }
+    public String getGpu() {
+        return this.gpu;
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setGpuType(String gpuType) {
+        this.gpuType = gpuType;
+        return this;
+    }
+    public String getGpuType() {
+        return this.gpuType;
+    }
+
     public GetResourceGroupMachineGroupResponseBody setMachineGroupID(String machineGroupID) {
         this.machineGroupID = machineGroupID;
         return this;
     }
     public String getMachineGroupID() {
         return this.machineGroupID;
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setMemory(String memory) {
+        this.memory = memory;
+        return this;
+    }
+    public String getMemory() {
+        return this.memory;
     }
 
     public GetResourceGroupMachineGroupResponseBody setPaymentDuration(String paymentDuration) {

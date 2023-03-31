@@ -4,11 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ChannelProperty extends TeaModel {
-    // The key of the property.
     @NameInMap("Name")
     public String name;
 
-    // The value of the property.
     @NameInMap("Value")
     public String value;
 

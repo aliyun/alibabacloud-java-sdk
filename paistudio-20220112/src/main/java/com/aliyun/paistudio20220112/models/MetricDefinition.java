@@ -4,15 +4,12 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class MetricDefinition extends TeaModel {
-    // A brief description for the metric.
     @NameInMap("Description")
     public String description;
 
-    // The name of the metric.
     @NameInMap("Name")
     public String name;
 
-    // Regex use to match the metrics from job log.
     @NameInMap("Regex")
     public String regex;
 

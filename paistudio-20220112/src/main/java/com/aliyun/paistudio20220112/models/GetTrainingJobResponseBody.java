@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetTrainingJobResponseBody extends TeaModel {
+    @NameInMap("AlgorithmId")
+    public String algorithmId;
+
     @NameInMap("AlgorithmName")
     public String algorithmName;
 
@@ -27,6 +30,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     @NameInMap("InputChannels")
     public java.util.List<GetTrainingJobResponseBodyInputChannels> inputChannels;
+
+    @NameInMap("Instances")
+    public java.util.List<GetTrainingJobResponseBodyInstances> instances;
 
     @NameInMap("Labels")
     public java.util.List<GetTrainingJobResponseBodyLabels> labels;
@@ -64,6 +70,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("TrainingJobName")
     public String trainingJobName;
 
+    @NameInMap("TrainingJobUrl")
+    public String trainingJobUrl;
+
     @NameInMap("UserId")
     public String userId;
 
@@ -73,6 +82,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public static GetTrainingJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTrainingJobResponseBody self = new GetTrainingJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTrainingJobResponseBody setAlgorithmId(String algorithmId) {
+        this.algorithmId = algorithmId;
+        return this;
+    }
+    public String getAlgorithmId() {
+        return this.algorithmId;
     }
 
     public GetTrainingJobResponseBody setAlgorithmName(String algorithmName) {
@@ -137,6 +154,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public java.util.List<GetTrainingJobResponseBodyInputChannels> getInputChannels() {
         return this.inputChannels;
+    }
+
+    public GetTrainingJobResponseBody setInstances(java.util.List<GetTrainingJobResponseBodyInstances> instances) {
+        this.instances = instances;
+        return this;
+    }
+    public java.util.List<GetTrainingJobResponseBodyInstances> getInstances() {
+        return this.instances;
     }
 
     public GetTrainingJobResponseBody setLabels(java.util.List<GetTrainingJobResponseBodyLabels> labels) {
@@ -233,6 +258,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public String getTrainingJobName() {
         return this.trainingJobName;
+    }
+
+    public GetTrainingJobResponseBody setTrainingJobUrl(String trainingJobUrl) {
+        this.trainingJobUrl = trainingJobUrl;
+        return this;
+    }
+    public String getTrainingJobUrl() {
+        return this.trainingJobUrl;
     }
 
     public GetTrainingJobResponseBody setUserId(String userId) {
@@ -348,6 +381,47 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class GetTrainingJobResponseBodyInstances extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static GetTrainingJobResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodyInstances self = new GetTrainingJobResponseBodyInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodyInstances setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetTrainingJobResponseBodyInstances setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public GetTrainingJobResponseBodyInstances setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

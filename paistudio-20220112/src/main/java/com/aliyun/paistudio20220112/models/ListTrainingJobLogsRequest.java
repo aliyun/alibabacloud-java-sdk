@@ -4,7 +4,6 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobLogsRequest extends TeaModel {
-    // 截止UTC时间，格式 iso8601，假如为空是当前时间
     @NameInMap("EndTime")
     public String endTime;
 
@@ -14,7 +13,6 @@ public class ListTrainingJobLogsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 起始UTC时间，格式 iso8601，假如为空是任务开始时间
     @NameInMap("StartTime")
     public String startTime;
 

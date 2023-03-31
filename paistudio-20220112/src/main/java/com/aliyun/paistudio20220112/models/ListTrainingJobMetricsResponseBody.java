@@ -4,11 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobMetricsResponseBody extends TeaModel {
-    // 符合过滤条件的Metrics数量
     @NameInMap("Metrics")
     public java.util.List<ListTrainingJobMetricsResponseBodyMetrics> metrics;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,7 +32,6 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobMetricsResponseBodyMetrics extends TeaModel {
-        // Metrics名称
         @NameInMap("Name")
         public String name;
 

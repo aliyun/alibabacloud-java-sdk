@@ -10,8 +10,14 @@ public class CreateTrainingJobRequest extends TeaModel {
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
+    @NameInMap("AlgorithmSpec")
+    public AlgorithmSpec algorithmSpec;
+
     @NameInMap("AlgorithmVersion")
     public String algorithmVersion;
+
+    @NameInMap("CodeDir")
+    public CreateTrainingJobRequestCodeDir codeDir;
 
     @NameInMap("ComputeResource")
     public CreateTrainingJobRequestComputeResource computeResource;
@@ -61,12 +67,28 @@ public class CreateTrainingJobRequest extends TeaModel {
         return this.algorithmProvider;
     }
 
+    public CreateTrainingJobRequest setAlgorithmSpec(AlgorithmSpec algorithmSpec) {
+        this.algorithmSpec = algorithmSpec;
+        return this;
+    }
+    public AlgorithmSpec getAlgorithmSpec() {
+        return this.algorithmSpec;
+    }
+
     public CreateTrainingJobRequest setAlgorithmVersion(String algorithmVersion) {
         this.algorithmVersion = algorithmVersion;
         return this;
     }
     public String getAlgorithmVersion() {
         return this.algorithmVersion;
+    }
+
+    public CreateTrainingJobRequest setCodeDir(CreateTrainingJobRequestCodeDir codeDir) {
+        this.codeDir = codeDir;
+        return this;
+    }
+    public CreateTrainingJobRequestCodeDir getCodeDir() {
+        return this.codeDir;
     }
 
     public CreateTrainingJobRequest setComputeResource(CreateTrainingJobRequestComputeResource computeResource) {
@@ -139,6 +161,36 @@ public class CreateTrainingJobRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class CreateTrainingJobRequestCodeDir extends TeaModel {
+        @NameInMap("LocationType")
+        public String locationType;
+
+        @NameInMap("LocationValue")
+        public java.util.Map<String, ?> locationValue;
+
+        public static CreateTrainingJobRequestCodeDir build(java.util.Map<String, ?> map) throws Exception {
+            CreateTrainingJobRequestCodeDir self = new CreateTrainingJobRequestCodeDir();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTrainingJobRequestCodeDir setLocationType(String locationType) {
+            this.locationType = locationType;
+            return this;
+        }
+        public String getLocationType() {
+            return this.locationType;
+        }
+
+        public CreateTrainingJobRequestCodeDir setLocationValue(java.util.Map<String, ?> locationValue) {
+            this.locationValue = locationValue;
+            return this;
+        }
+        public java.util.Map<String, ?> getLocationValue() {
+            return this.locationValue;
+        }
+
     }
 
     public static class CreateTrainingJobRequestComputeResource extends TeaModel {
