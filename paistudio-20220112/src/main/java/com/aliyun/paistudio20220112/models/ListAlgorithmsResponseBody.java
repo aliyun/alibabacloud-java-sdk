@@ -10,8 +10,8 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotoalCount")
-    public Long totoalCount;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListAlgorithmsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAlgorithmsResponseBody self = new ListAlgorithmsResponseBody();
@@ -34,12 +34,12 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAlgorithmsResponseBody setTotoalCount(Long totoalCount) {
-        this.totoalCount = totoalCount;
+    public ListAlgorithmsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getTotoalCount() {
-        return this.totoalCount;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListAlgorithmsResponseBodyAlgorithms extends TeaModel {

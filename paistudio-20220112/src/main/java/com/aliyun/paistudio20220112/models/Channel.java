@@ -4,21 +4,20 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Channel extends TeaModel {
-    // A brief description for the channel.
     @NameInMap("Description")
     public String description;
 
-    // The name of channel.
     @NameInMap("Name")
     public String name;
 
-    // The properties of channel.
     @NameInMap("Properties")
     public java.util.List<ChannelProperty> properties;
 
-    // Indicates whethe the channels is required.
     @NameInMap("Required")
     public Boolean required;
+
+    @NameInMap("SupportedChannelTypes")
+    public java.util.List<String> supportedChannelTypes;
 
     public static Channel build(java.util.Map<String, ?> map) throws Exception {
         Channel self = new Channel();
@@ -55,6 +54,14 @@ public class Channel extends TeaModel {
     }
     public Boolean getRequired() {
         return this.required;
+    }
+
+    public Channel setSupportedChannelTypes(java.util.List<String> supportedChannelTypes) {
+        this.supportedChannelTypes = supportedChannelTypes;
+        return this;
+    }
+    public java.util.List<String> getSupportedChannelTypes() {
+        return this.supportedChannelTypes;
     }
 
 }

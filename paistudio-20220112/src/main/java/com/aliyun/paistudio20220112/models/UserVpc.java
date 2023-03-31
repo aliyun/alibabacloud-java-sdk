@@ -4,21 +4,20 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UserVpc extends TeaModel {
-    // ExtendedCIDRs
     @NameInMap("ExtendedCIDRs")
     public java.util.List<String> extendedCIDRs;
 
-    // SecurityGroupID
-    @NameInMap("SecurityGroupID")
-    public String securityGroupID;
+    @NameInMap("RoleArn")
+    public String roleArn;
 
-    // VSW ID
-    @NameInMap("SwitchID")
-    public String switchID;
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
 
-    // VPC ID
-    @NameInMap("VpcID")
-    public String vpcID;
+    @NameInMap("SwitchId")
+    public String switchId;
+
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static UserVpc build(java.util.Map<String, ?> map) throws Exception {
         UserVpc self = new UserVpc();
@@ -33,28 +32,36 @@ public class UserVpc extends TeaModel {
         return this.extendedCIDRs;
     }
 
-    public UserVpc setSecurityGroupID(String securityGroupID) {
-        this.securityGroupID = securityGroupID;
+    public UserVpc setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
         return this;
     }
-    public String getSecurityGroupID() {
-        return this.securityGroupID;
+    public String getRoleArn() {
+        return this.roleArn;
     }
 
-    public UserVpc setSwitchID(String switchID) {
-        this.switchID = switchID;
+    public UserVpc setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
         return this;
     }
-    public String getSwitchID() {
-        return this.switchID;
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
-    public UserVpc setVpcID(String vpcID) {
-        this.vpcID = vpcID;
+    public UserVpc setSwitchId(String switchId) {
+        this.switchId = switchId;
         return this;
     }
-    public String getVpcID() {
-        return this.vpcID;
+    public String getSwitchId() {
+        return this.switchId;
+    }
+
+    public UserVpc setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

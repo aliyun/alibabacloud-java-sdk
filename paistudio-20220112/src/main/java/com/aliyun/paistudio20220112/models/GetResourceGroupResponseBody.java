@@ -7,25 +7,21 @@ public class GetResourceGroupResponseBody extends TeaModel {
     @NameInMap("CreatorID")
     public String creatorID;
 
-    // pai resource created time
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
-    // pai resource group modified time
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     @NameInMap("Name")
     public String name;
 
-    // request id
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Status")
     public String status;
 
-    // UserVpc
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 

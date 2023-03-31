@@ -4,63 +4,48 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class MachineGroup extends TeaModel {
-    // 机器组创建者ID
     @NameInMap("CreatorID")
     public String creatorID;
 
-    // 资源数量
     @NameInMap("EcsCount")
     public Long ecsCount;
 
-    // ecs规格
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
-    // 创建时间
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
-    // 过期时间
     @NameInMap("GmtExpiredTime")
     public String gmtExpiredTime;
 
-    // 更新时间
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // 启动时间
     @NameInMap("GmtStartedTime")
     public String gmtStartedTime;
 
-    // 机器组ID
     @NameInMap("MachineGroupID")
     public String machineGroupID;
 
-    // 持续时长
     @NameInMap("PaymentDuration")
     public String paymentDuration;
 
-    // region ID
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
-    // 付费类型
     @NameInMap("PaymentType")
     public String paymentType;
 
-    // 机器组错误码
     @NameInMap("ReasonCode")
     public String reasonCode;
 
-    // 机器组错误消息
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
-    // 资源组ID
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
-    // 机器组状态
     @NameInMap("Status")
     public String status;
 

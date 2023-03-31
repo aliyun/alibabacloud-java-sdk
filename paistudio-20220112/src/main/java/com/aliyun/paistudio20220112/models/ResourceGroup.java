@@ -4,31 +4,24 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ResourceGroup extends TeaModel {
-    // CreatorID
     @NameInMap("CreatorID")
     public String creatorID;
 
-    // pai resource created time
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
-    // GmtModified
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // pai resource group name
     @NameInMap("Name")
     public String name;
 
-    // pai resource group id
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
-    // UserVpc
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
-    // pworkspace id
     @NameInMap("WorkspaceID")
     public String workspaceID;
 

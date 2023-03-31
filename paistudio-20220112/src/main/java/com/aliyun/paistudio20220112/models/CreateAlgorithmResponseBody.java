@@ -7,7 +7,6 @@ public class CreateAlgorithmResponseBody extends TeaModel {
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

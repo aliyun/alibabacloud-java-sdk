@@ -4,27 +4,24 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupsRequest extends TeaModel {
-    // pai resource group display name
     @NameInMap("Name")
     public String name;
 
-    // 排序顺序, 枚举值 desc 或者 asc
     @NameInMap("Order")
     public String order;
 
-    // 分页数
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 页面容量
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 用于排序的字段名，可选字段名：DisplayName, GmtCreated, GmtModified,RegionID Duration PricingCycle PayType
+    @NameInMap("ShowAll")
+    public Boolean showAll;
+
     @NameInMap("SortBy")
     public String sortBy;
 
-    // resource group的状态
     @NameInMap("Status")
     public String status;
 
@@ -63,6 +60,14 @@ public class ListResourceGroupsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListResourceGroupsRequest setShowAll(Boolean showAll) {
+        this.showAll = showAll;
+        return this;
+    }
+    public Boolean getShowAll() {
+        return this.showAll;
     }
 
     public ListResourceGroupsRequest setSortBy(String sortBy) {

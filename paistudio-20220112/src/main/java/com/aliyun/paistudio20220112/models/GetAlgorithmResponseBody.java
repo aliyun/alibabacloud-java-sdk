@@ -22,7 +22,6 @@ public class GetAlgorithmResponseBody extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,12 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupsResponseBody extends TeaModel {
-    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // pai resource groups
     @NameInMap("ResourceGroups")
     public java.util.List<ResourceGroup> resourceGroups;
 
-    // list到的资源组的数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
