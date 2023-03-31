@@ -4,21 +4,39 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details about templates.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListTemplateResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("NextToken")
     public Integer nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,27 +94,51 @@ public class ListTemplateResponseBody extends TeaModel {
     }
 
     public static class ListTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the template was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The URL of the architecture image.</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the tag that is added to the template.</p>
+         */
         @NameInMap("TagId")
         public Integer tagId;
 
+        /**
+         * <p>The name of the tag that is added to the template.</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The URL of the template topology image.</p>
+         */
         @NameInMap("TopoURL")
         public String topoURL;
 

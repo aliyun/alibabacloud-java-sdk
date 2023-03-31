@@ -4,21 +4,39 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the applications.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListApplicationResponseBodyData> data;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number of the next page.</p>
+     */
     @NameInMap("NextToken")
     public Integer nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned applications.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,24 +94,45 @@ public class ListApplicationResponseBody extends TeaModel {
     }
 
     public static class ListApplicationResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <p>The time when the application was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The URL of the application architecture image.</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the resource group to which the application belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The status of the application.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The URL of the application topology image.</p>
+         */
         @NameInMap("TopoURL")
         public String topoURL;
 

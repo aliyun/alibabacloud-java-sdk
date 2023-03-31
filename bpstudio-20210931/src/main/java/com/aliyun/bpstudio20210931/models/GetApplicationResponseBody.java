@@ -4,15 +4,27 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the application.</p>
+     */
     @NameInMap("Data")
     public GetApplicationResponseBodyData data;
 
+    /**
+     * <p>The message returned for the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +66,45 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataChecklist extends TeaModel {
+        /**
+         * <p>The resource tag.</p>
+         */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The message returned for verification.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The verification result.</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The resource specification.</p>
+         */
         @NameInMap("Specification")
         public String specification;
 
@@ -139,42 +172,81 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataPriceList extends TeaModel {
+        /**
+         * <p>The billing method.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The quantity.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The resource tag.</p>
+         */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
+        /**
+         * <p>The unit price.</p>
+         */
         @NameInMap("OnePrice")
         public Float onePrice;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The service duration.</p>
+         */
         @NameInMap("Period")
         public Float period;
 
+        /**
+         * <p>The total price.</p>
+         */
         @NameInMap("Price")
         public Float price;
 
+        /**
+         * <p>The price unit.</p>
+         */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The error message that is returned when a price query fails.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("Specification")
         public String specification;
 
@@ -290,27 +362,51 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyDataResourceList extends TeaModel {
+        /**
+         * <p>The billing method.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The resource tag.</p>
+         */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
+        /**
+         * <p>The deployment result.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The resource deployment result.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -386,42 +482,81 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <p>The verification results returned.</p>
+         */
         @NameInMap("Checklist")
         public java.util.List<GetApplicationResponseBodyDataChecklist> checklist;
 
+        /**
+         * <p>The time when the application was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the application.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The message returned for deployment.</p>
+         */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <p>The URL of the image in the database.</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The billing results.</p>
+         */
         @NameInMap("PriceList")
         public java.util.List<GetApplicationResponseBodyDataPriceList> priceList;
 
+        /**
+         * <p>The ID of the resource group to which the application belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The resources.</p>
+         */
         @NameInMap("ResourceList")
         public java.util.List<GetApplicationResponseBodyDataResourceList> resourceList;
 
+        /**
+         * <p>The status of the application.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the template associated with the application.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The URL of the application topology image.</p>
+         */
         @NameInMap("TopoURL")
         public String topoURL;
 

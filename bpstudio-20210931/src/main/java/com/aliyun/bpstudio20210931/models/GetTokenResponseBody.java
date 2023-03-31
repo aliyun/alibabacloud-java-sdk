@@ -4,15 +4,27 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetTokenResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the token.</p>
+     */
     @NameInMap("Data")
     public GetTokenResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,39 @@ public class GetTokenResponseBody extends TeaModel {
     }
 
     public static class GetTokenResponseBodyData extends TeaModel {
+        /**
+         * <p>The AccessKey ID that is used to access OSS.</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <p>The AccessKey secret that is used to access OSS.</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <p>The OSS bucket that is used to store the architecture image.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The OSS endpoint.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The token that is used to access the Object Storage Service (OSS) bucket that stores the architecture image.</p>
+         */
         @NameInMap("SecurityToken")
         public String securityToken;
 
+        /**
+         * <p>The OSS bucket that is used to save data snapshots.</p>
+         */
         @NameInMap("SnapshotBucket")
         public String snapshotBucket;
 
