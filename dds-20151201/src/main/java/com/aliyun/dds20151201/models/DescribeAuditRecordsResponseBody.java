@@ -11,7 +11,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public DescribeAuditRecordsResponseBodyItems items;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -29,7 +29,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -99,7 +99,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         public String executeTime;
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The IP addresses of the client.</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
@@ -123,13 +123,13 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The ID of the thread that is recorded in the SQL audit log entry.</p>
+         * <p>The ID of the thread.</p>
          */
         @NameInMap("ThreadID")
         public String threadID;
 
         /**
-         * <p>The duration of the statement execution. Unit: microseconds.</p>
+         * <p>The execution time of the statement. Unit: microseconds.</p>
          */
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;

@@ -11,7 +11,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>Details about the slow query logs.</p>
+     * <p>Details of the slow query logs.</p>
      */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
@@ -35,7 +35,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -125,7 +125,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String hostAddress;
 
         /**
-         * <p>The data entries that are scanned during indexing.</p>
+         * <p>The number of rows involved in index scans.</p>
          */
         @NameInMap("KeysExamined")
         public Long keysExamined;
@@ -137,7 +137,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String queryTimes;
 
         /**
-         * <p>The number of entries returned.</p>
+         * <p>The number of rows returned by the SQL statement.</p>
          */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;

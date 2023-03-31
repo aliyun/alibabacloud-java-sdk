@@ -80,6 +80,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("GlobalSecurityGroupIds")
+    public String globalSecurityGroupIds;
+
     /**
      * <p>The secondary zone 2 for multi-zone deployment. Valid values:</p>
      * <br>
@@ -347,6 +350,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public CreateShardingDBInstanceRequest setGlobalSecurityGroupIds(String globalSecurityGroupIds) {
+        this.globalSecurityGroupIds = globalSecurityGroupIds;
+        return this;
+    }
+    public String getGlobalSecurityGroupIds() {
+        return this.globalSecurityGroupIds;
     }
 
     public CreateShardingDBInstanceRequest setHiddenZoneId(String hiddenZoneId) {

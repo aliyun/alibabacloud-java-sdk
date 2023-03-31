@@ -197,6 +197,9 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyRunningParametersParameter extends TeaModel {
+        @NameInMap("CharacterType")
+        public String characterType;
+
         /**
          * <p>The valid values of the parameter.</p>
          */
@@ -242,6 +245,14 @@ public class DescribeParametersResponseBody extends TeaModel {
         public static DescribeParametersResponseBodyRunningParametersParameter build(java.util.Map<String, ?> map) throws Exception {
             DescribeParametersResponseBodyRunningParametersParameter self = new DescribeParametersResponseBodyRunningParametersParameter();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeParametersResponseBodyRunningParametersParameter setCharacterType(String characterType) {
+            this.characterType = characterType;
+            return this;
+        }
+        public String getCharacterType() {
+            return this.characterType;
         }
 
         public DescribeParametersResponseBodyRunningParametersParameter setCheckingCode(String checkingCode) {
