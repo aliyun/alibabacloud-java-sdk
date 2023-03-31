@@ -4,15 +4,27 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ExecuteOperationASyncResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. A value of 200 indicates that the request is successful, and other values indicate that the request fails.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The ID of the operation.</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, String> data;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

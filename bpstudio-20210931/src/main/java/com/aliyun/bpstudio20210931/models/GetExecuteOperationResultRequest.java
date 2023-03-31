@@ -4,9 +4,15 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetExecuteOperationResultRequest extends TeaModel {
+    /**
+     * <p>The ID of the operation.</p>
+     */
     @NameInMap("OperationId")
     public String operationId;
 
+    /**
+     * <p>The ID of the resource group. This parameter is specified to verify the permissions on the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

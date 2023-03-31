@@ -4,18 +4,27 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetExecuteOperationResultResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. A value of 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>Status</p>
+     * <p>The details of the operation.</p>
      */
     @NameInMap("Data")
     public GetExecuteOperationResultResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,15 +66,27 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
     }
 
     public static class GetExecuteOperationResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The output of the operation.</p>
+         */
         @NameInMap("Arguments")
         public String arguments;
 
+        /**
+         * <p>The returned message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the operation.</p>
+         */
         @NameInMap("OperationId")
         public String operationId;
 
+        /**
+         * <p>The status of the operation.</p>
+         */
         @NameInMap("Status")
         public String status;
 

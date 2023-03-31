@@ -4,27 +4,51 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("AreaId")
     public String areaId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The parameters that are used to configure the application you want to create. For example, enableMonitor specifies whether to automatically create a CloudMonitor task for the application, and enableReport specifies whether to generate reports.</p>
+     */
     @NameInMap("Configuration")
     public String configurationShrink;
 
+    /**
+     * <p>The instances in which you want to create the application. You can create applications in an existing virtual private cloud (VPC).</p>
+     */
     @NameInMap("Instances")
     public String instancesShrink;
 
+    /**
+     * <p>The name of the application that you want to create.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the resource group to which the application you want to create belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the template.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.</p>
+     */
     @NameInMap("Variables")
     public String variablesShrink;
 

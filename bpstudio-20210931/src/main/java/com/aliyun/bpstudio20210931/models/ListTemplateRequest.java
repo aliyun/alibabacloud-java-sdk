@@ -4,24 +4,48 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateRequest extends TeaModel {
+    /**
+     * <p>The keyword that is used to search for templates.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("NextToken")
     public Integer nextToken;
 
+    /**
+     * <p>The criterion by which the templates are sorted. Valid values:</p>
+     * <br>
+     * <p>*   1: modification time</p>
+     * <p>*   2: creation time</p>
+     */
     @NameInMap("OrderType")
     public Long orderType;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tag of the template.</p>
+     */
     @NameInMap("TagList")
     public Integer tagList;
 
+    /**
+     * <p>The type of the template.</p>
+     */
     @NameInMap("Type")
     public String type;
 
