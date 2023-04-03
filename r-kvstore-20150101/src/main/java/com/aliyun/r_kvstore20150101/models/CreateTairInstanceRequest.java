@@ -83,6 +83,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
 
+    @NameInMap("GlobalSecurityGroupIds")
+    public String globalSecurityGroupIds;
+
     /**
      * <p>The instance series. For more information, see the following topics:</p>
      * <br>
@@ -357,6 +360,14 @@ public class CreateTairInstanceRequest extends TeaModel {
     }
     public String getGlobalInstanceId() {
         return this.globalInstanceId;
+    }
+
+    public CreateTairInstanceRequest setGlobalSecurityGroupIds(String globalSecurityGroupIds) {
+        this.globalSecurityGroupIds = globalSecurityGroupIds;
+        return this;
+    }
+    public String getGlobalSecurityGroupIds() {
+        return this.globalSecurityGroupIds;
     }
 
     public CreateTairInstanceRequest setInstanceClass(String instanceClass) {
