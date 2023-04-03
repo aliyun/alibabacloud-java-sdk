@@ -11,23 +11,23 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public String DBVersionRelease;
 
     /**
-     * <p>Indicates whether the major version can be upgraded for the instance. Valid values:</p>
+     * <p>Indicates whether the instance major version can be upgraded. Valid values:</p>
      * <br>
      * <p>*   **true**: The major version can be upgraded.</p>
      * <p>*   **false**: The major version is the latest version and cannot be upgraded.</p>
      * <br>
-     * <p>>  To upgrade the major version, call the [ModifyInstanceMajorVersion](~~95259~~) operation.</p>
+     * <p>> To upgrade the major version, call the [ModifyInstanceMajorVersion](~~95259~~) operation.</p>
      */
     @NameInMap("EnableUpgradeMajorVersion")
     public Boolean enableUpgradeMajorVersion;
 
     /**
-     * <p>Indicates whether the minor version can be updated for the instance. Valid values:</p>
+     * <p>Indicates whether the instance minor version can be updated. Valid values:</p>
      * <br>
      * <p>*   **true**: The minor version can be updated.</p>
      * <p>*   **false**: The minor version is the latest version and cannot be updated.</p>
      * <br>
-     * <p>>  To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.</p>
+     * <p>> To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.</p>
      */
     @NameInMap("EnableUpgradeMinorVersion")
     public Boolean enableUpgradeMinorVersion;
@@ -39,23 +39,29 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>Indicates whether the instance minor version is the latest version. Valid values:</p>
+     * <p>Indicates whether the instance uses the latest minor version. Valid values:</p>
      * <br>
-     * <p>*   **true**: The instance minor version is the latest version.</p>
-     * <p>*   **false**: The instance minor version is not the latest version.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IsLatestVersion")
     public Boolean isLatestVersion;
 
+    /**
+     * <p>Indicates whether the instance supports the new SSL encryption feature.</p>
+     */
     @NameInMap("IsNewSSLMode")
     public String isNewSSLMode;
 
     /**
-     * <p>Indicates whether the instance supports the new SSL encryption feature.</p>
+     * <p>Indicates whether the instance runs a Redis version.</p>
      */
     @NameInMap("IsRedisCompatibleVersion")
     public String isRedisCompatibleVersion;
 
+    /**
+     * <p>Indicate whether the instance has the SSL encryption feature enabled.</p>
+     */
     @NameInMap("IsSSLEnable")
     public String isSSLEnable;
 
@@ -74,7 +80,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     /**
      * <p>The minor version of proxy nodes.</p>
      * <br>
-     * <p>>  This parameter is returned only for cluster and read/write splitting instances.</p>
+     * <p>> This parameter is returned only for cluster instances and read/write splitting instances.</p>
      */
     @NameInMap("ProxyMinorVersion")
     public String proxyMinorVersion;
@@ -82,7 +88,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     /**
      * <p>The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.</p>
      * <br>
-     * <p>>  This parameter is returned only for cluster and read/write splitting instances.</p>
+     * <p>> This parameter is returned only for cluster instances and read/write splitting instances.</p>
      */
     @NameInMap("ProxyVersionRelease")
     public String proxyVersionRelease;

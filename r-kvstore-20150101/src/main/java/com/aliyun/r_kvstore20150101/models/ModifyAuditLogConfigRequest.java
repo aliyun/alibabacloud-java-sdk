@@ -10,7 +10,7 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
      * <p>*   **true**: enables the audit log feature.</p>
      * <p>*   **false**: disables the audit log feature.</p>
      * <br>
-     * <p>>  If the instance runs in the cluster architecture or read/write splitting architecture, the audit logs of data nodes and proxy nodes are both enabled or disabled at the same time. You cannot separately enable the audit logs of data nodes or proxy nodes. For more information, see [Cluster master-replica instances](~~52228~~) or [Read/write splitting instances](~~62870~~).</p>
+     * <p>> If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.</p>
      */
     @NameInMap("DbAudit")
     public Boolean dbAudit;
@@ -36,8 +36,11 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     /**
      * <p>The retention period of audit logs. Valid values: **1** to **365**. Unit: days.</p>
      * <br>
-     * <p>> * This parameter is required only when the **DbAudit** parameter is set to **true**.</p>
-     * <p>> * The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is required only if the **DbAudit** parameter is set to **true**.</p>
+     * <br>
+     * <p>*   The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.</p>
      */
     @NameInMap("Retention")
     public Integer retention;

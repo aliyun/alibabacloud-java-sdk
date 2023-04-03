@@ -117,6 +117,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
 
+    @NameInMap("GlobalSecurityGroupIds")
+    public String globalSecurityGroupIds;
+
     /**
      * <p>The instance type of the instance. Example: redis.master.small.default. A redis.master.small.default instance is a 1 GB standard master-replica instance of the Community Edition that uses local disks. For more information, see [Overview](~~26350~~).</p>
      * <br>
@@ -376,6 +379,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getGlobalInstanceId() {
         return this.globalInstanceId;
+    }
+
+    public CreateInstanceRequest setGlobalSecurityGroupIds(String globalSecurityGroupIds) {
+        this.globalSecurityGroupIds = globalSecurityGroupIds;
+        return this;
+    }
+    public String getGlobalSecurityGroupIds() {
+        return this.globalSecurityGroupIds;
     }
 
     public CreateInstanceRequest setInstanceClass(String instanceClass) {
