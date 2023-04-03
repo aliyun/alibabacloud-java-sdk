@@ -4,21 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
+    /**
+     * <p>The returned list of address pools of the GTM instance.</p>
+     */
     @NameInMap("AddrPools")
     public DescribeGtmInstanceAddressPoolsResponseBodyAddrPools addrPools;
 
+    /**
+     * <p>The number of the page returned.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned on all pages.</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,39 +94,82 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool extends TeaModel {
+        /**
+         * <p>The number of addresses in the address pool.</p>
+         */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
+        /**
+         * <p>The ID of the address pool.</p>
+         */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
+        /**
+         * <p>The time when this address pool was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The minimum number of available addresses in the address pool.</p>
+         */
         @NameInMap("MinAvailableAddrNum")
         public Integer minAvailableAddrNum;
 
+        /**
+         * <p>The health check ID of the address pool.</p>
+         */
         @NameInMap("MonitorConfigId")
         public String monitorConfigId;
 
+        /**
+         * <p>Indicates whether health check was enabled for the address pool. Valid values:</p>
+         * <br>
+         * <p>*   **OPEN**: Enabled</p>
+         * <p>*   **CLOSE**: Disabled</p>
+         * <p>*   **UNCONFIGURED**: Not configured</p>
+         */
         @NameInMap("MonitorStatus")
         public String monitorStatus;
 
+        /**
+         * <p>The name of the address pool.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The availability status of the address pool. Valid values:</p>
+         * <br>
+         * <p>*   **AVAILABLE**: Available</p>
+         * <p>*   **NOT_AVAILABLE**: Unavailable</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the address pool. Valid values:</p>
+         * <br>
+         * <p>*   **IP**: IP address</p>
+         * <p>*   **DOMAIN**: Domain name</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The last time when the address pool was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>A timestamp that indicates the last time the address pool was updated.</p>
+         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 

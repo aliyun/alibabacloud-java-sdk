@@ -4,12 +4,24 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SwitchDnsGtmInstanceStrategyModeRequest extends TeaModel {
+    /**
+     * <p>The ID of the GTM instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The access policy type. Valid values:</p>
+     * <br>
+     * <p>*   GEO: geographical location-based</p>
+     * <p>*   LATENCY: latency-based</p>
+     */
     @NameInMap("StrategyMode")
     public String strategyMode;
 

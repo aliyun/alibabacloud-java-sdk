@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransferDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The list of domain names that were transferred between accounts.</p>
+     */
     @NameInMap("DomainTransfers")
     public DescribeTransferDomainsResponseBodyDomainTransfers domainTransfers;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of domain names.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,21 +80,39 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer extends TeaModel {
+        /**
+         * <p>The time when the task for transferring domain names was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The UNIX timestamp representing when the task for transferring domain names was created.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The ID of the user from which the domain name was transferred.</p>
+         */
         @NameInMap("FromUserId")
         public Long fromUserId;
 
+        /**
+         * <p>The ID of the domain name that was transferred.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the user to which the domain name was transferred.</p>
+         */
         @NameInMap("TargetUserId")
         public Long targetUserId;
 

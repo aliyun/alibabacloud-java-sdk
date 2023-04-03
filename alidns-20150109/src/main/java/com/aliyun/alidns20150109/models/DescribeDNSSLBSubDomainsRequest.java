@@ -4,21 +4,36 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
+    /**
+     * <p>The domain name whose subdomains you want to query.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The language of the domain name.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     @NameInMap("Rr")
     public String rr;
 
+    /**
+     * <p>The IP address of the client that you use to query subdomains.</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

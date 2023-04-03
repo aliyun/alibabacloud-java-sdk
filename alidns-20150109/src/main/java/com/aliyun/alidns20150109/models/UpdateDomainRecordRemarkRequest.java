@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainRecordRemarkRequest extends TeaModel {
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the DNS record.</p>
+     */
     @NameInMap("RecordId")
     public String recordId;
 
+    /**
+     * <p>The description of your DNS record.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The IP address of the client.</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

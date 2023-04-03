@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainBackupResponseBody extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The backup cycle.</p>
+     */
     @NameInMap("PeriodType")
     public String periodType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,14 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaModel {
+    /**
+     * <p>The returned list of address pools.</p>
+     */
     @NameInMap("AddrPools")
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyAddrPools addrPools;
 
+    /**
+     * <p>The returned lines of access regions.</p>
+     */
     @NameInMap("Lines")
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyLines lines;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SuggestSetDefaultLine")
+    public Boolean suggestSetDefaultLine;
 
     public static DescribeGtmAccessStrategyAvailableConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmAccessStrategyAvailableConfigResponseBody self = new DescribeGtmAccessStrategyAvailableConfigResponseBody();
@@ -42,10 +54,24 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         return this.requestId;
     }
 
+    public DescribeGtmAccessStrategyAvailableConfigResponseBody setSuggestSetDefaultLine(Boolean suggestSetDefaultLine) {
+        this.suggestSetDefaultLine = suggestSetDefaultLine;
+        return this;
+    }
+    public Boolean getSuggestSetDefaultLine() {
+        return this.suggestSetDefaultLine;
+    }
+
     public static class DescribeGtmAccessStrategyAvailableConfigResponseBodyAddrPoolsAddrPool extends TeaModel {
+        /**
+         * <p>The ID of the address pool.</p>
+         */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
+        /**
+         * <p>The name of the address pool.</p>
+         */
         @NameInMap("AddrPoolName")
         public String addrPoolName;
 
@@ -92,21 +118,42 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
     }
 
     public static class DescribeGtmAccessStrategyAvailableConfigResponseBodyLinesLine extends TeaModel {
+        /**
+         * <p>The code of the parent line for the access region. If no parent line exists, leave this parameter blank.</p>
+         */
         @NameInMap("FatherCode")
         public String fatherCode;
 
+        /**
+         * <p>The code of the access region group.</p>
+         */
         @NameInMap("GroupCode")
         public String groupCode;
 
+        /**
+         * <p>The name of the access region group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The code for the line of the access region.</p>
+         */
         @NameInMap("LineCode")
         public String lineCode;
 
+        /**
+         * <p>The name for the line of the access region.</p>
+         */
         @NameInMap("LineName")
         public String lineName;
 
+        /**
+         * <p>The current status of the line. Valid values:</p>
+         * <br>
+         * <p>- **FORBIDDEN**: Unavailable</p>
+         * <p>- **OPTIONAL**: Availabe</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the domain name group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The new name of the domain name group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

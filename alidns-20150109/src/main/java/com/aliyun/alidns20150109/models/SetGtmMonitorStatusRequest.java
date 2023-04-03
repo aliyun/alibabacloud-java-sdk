@@ -4,12 +4,24 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetGtmMonitorStatusRequest extends TeaModel {
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The health check ID.</p>
+     */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
+    /**
+     * <p>Specifies whether health check is enabled for the address pool. Valid values:</p>
+     * <br>
+     * <p>*   **OPEN**: Enabled</p>
+     * <p>*   **CLOSE**: Disabled</p>
+     */
     @NameInMap("Status")
     public String status;
 

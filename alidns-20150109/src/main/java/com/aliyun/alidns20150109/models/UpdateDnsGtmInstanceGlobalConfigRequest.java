@@ -7,36 +7,79 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends TeaModel {
     @NameInMap("AlertConfig")
     public java.util.List<UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig> alertConfig;
 
+    /**
+     * <p>The name of the alert group in the JSON format.</p>
+     */
     @NameInMap("AlertGroup")
     public String alertGroup;
 
+    /**
+     * <p>The type of the CNAME domain name that is used to access the instance. Valid value:</p>
+     * <br>
+     * <p>*   PUBLIC: The CNAME domain name is used to access the instance over the Internet.</p>
+     */
     @NameInMap("CnameType")
     public String cnameType;
 
+    /**
+     * <p>Specifies whether to enable force updates. Valid values:</p>
+     * <br>
+     * <p>*   true: enables force update without a conflict alert.</p>
+     * <p>*   false: disables force update. If a conflict occurs, the system displays an alert. null: This valid value of ForceUpdate provides the same information as the false value.</p>
+     */
     @NameInMap("ForceUpdate")
     public Boolean forceUpdate;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the instance. This parameter is required only for the first update.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Specifies whether to use a custom CNAME domain name or a CNAME domain name assigned by the system to access the instance over the Internet. Valid values:</p>
+     * <br>
+     * <p>*   SYSTEM_ASSIGN: a CNAME domain name assigned by the system</p>
+     * <p>*   CUSTOM: a custom CNAME domain name</p>
+     */
     @NameInMap("PublicCnameMode")
     public String publicCnameMode;
 
+    /**
+     * <p>The hostname corresponding to the CNAME domain name that is used to access the instance over the Internet.</p>
+     */
     @NameInMap("PublicRr")
     public String publicRr;
 
+    /**
+     * <p>The service domain name that is used over the Internet.</p>
+     */
     @NameInMap("PublicUserDomainName")
     public String publicUserDomainName;
 
+    /**
+     * <p>The CNAME domain name that is used to access the instance over the Internet, which is the primary domain name. This parameter is required when the PublicCnameMode parameter is set to CUSTOM.</p>
+     * <br>
+     * <p>>  You must use the primary domain name. Do not include the hostname specified by the PublicRr parameter.</p>
+     */
     @NameInMap("PublicZoneName")
     public String publicZoneName;
 
+    /**
+     * <p>The global time to live (TTL).</p>
+     */
     @NameInMap("Ttl")
     public Integer ttl;
 

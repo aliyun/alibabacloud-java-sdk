@@ -4,24 +4,45 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDNSSLBStatusRequest extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The language of the subdomain.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("Line")
     public String line;
 
+    /**
+     * <p>Specifies whether to enable or disable weighted round-robin. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables weighted round-robin. This is the default value.</p>
+     * <p>*   **false**: disables weighted round-robin.</p>
+     */
     @NameInMap("Open")
     public Boolean open;
 
+    /**
+     * <p>The subdomain for which you want to configure weighted round-robin. Do not set the value to a string such as aliyun.com. Instead, set the value to @.aliyun.com.</p>
+     */
     @NameInMap("SubDomain")
     public String subDomain;
 
+    /**
+     * <p>The type of the DNS record. Valid values: A and AAAA. Default value: A.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The IP address of the client that you use to configure weighted round-robin.</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

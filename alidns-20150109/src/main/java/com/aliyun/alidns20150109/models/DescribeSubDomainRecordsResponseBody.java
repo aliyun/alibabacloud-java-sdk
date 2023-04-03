@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubDomainRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The list of DNS records returned.</p>
+     */
     @NameInMap("DomainRecords")
     public DescribeSubDomainRecordsResponseBodyDomainRecords domainRecords;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of DNS records returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,39 +80,75 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSubDomainRecordsResponseBodyDomainRecordsRecord extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The resolution line.</p>
+         */
         @NameInMap("Line")
         public String line;
 
+        /**
+         * <p>Indicates whether the DNS record is locked.</p>
+         */
         @NameInMap("Locked")
         public Boolean locked;
 
+        /**
+         * <p>The priority of the MX record.</p>
+         */
         @NameInMap("Priority")
         public Long priority;
 
+        /**
+         * <p>The hostname.</p>
+         */
         @NameInMap("RR")
         public String RR;
 
+        /**
+         * <p>The ID of the DNS record.</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <p>The description of the DNS record.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The status of the DNS record.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The Time-to-Live (TTL) of the DNS record.</p>
+         */
         @NameInMap("TTL")
         public Long TTL;
 
+        /**
+         * <p>The type of the DNS record.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The record value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The weight of the DNS record.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

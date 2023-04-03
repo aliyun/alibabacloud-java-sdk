@@ -10,12 +10,24 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>Resource Type</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>Specifies whether to remove all tags from the specified resource. Default value: false. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

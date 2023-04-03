@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordLogsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The list of the operation logs of the domain name.</p>
+     */
     @NameInMap("RecordLogs")
     public DescribeRecordLogsResponseBodyRecordLogs recordLogs;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of operation logs.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,18 +80,33 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordLogsResponseBodyRecordLogsRecordLog extends TeaModel {
+        /**
+         * <p>The operation that you performed.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The time when the operation was performed.</p>
+         */
         @NameInMap("ActionTime")
         public String actionTime;
 
+        /**
+         * <p>The UNIX timestamp representing the time of the operation.</p>
+         */
         @NameInMap("ActionTimestamp")
         public Long actionTimestamp;
 
+        /**
+         * <p>The IP address of the operator.</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The returned operation message.</p>
+         */
         @NameInMap("Message")
         public String message;
 

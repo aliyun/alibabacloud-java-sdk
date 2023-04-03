@@ -4,18 +4,36 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAccessStrategiesRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the access policy. Valid values:</p>
+     * <br>
+     * <p>*   GEO: geographical location-based</p>
+     * <p>*   LATENCY: latency-based</p>
+     */
     @NameInMap("StrategyMode")
     public String strategyMode;
 

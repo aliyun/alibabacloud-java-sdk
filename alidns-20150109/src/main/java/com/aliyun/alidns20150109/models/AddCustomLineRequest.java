@@ -4,15 +4,24 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddCustomLineRequest extends TeaModel {
+    /**
+     * <p>The domain name for which you configure the custom line.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("IpSegment")
     public java.util.List<AddCustomLineRequestIpSegment> ipSegment;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The name of the custom line.</p>
+     */
     @NameInMap("LineName")
     public String lineName;
 
@@ -54,9 +63,15 @@ public class AddCustomLineRequest extends TeaModel {
     }
 
     public static class AddCustomLineRequestIpSegment extends TeaModel {
+        /**
+         * <p>The end IP address of the CIDR block.</p>
+         */
         @NameInMap("EndIp")
         public String endIp;
 
+        /**
+         * <p>The start IP address of the CIDR block.</p>
+         */
         @NameInMap("StartIp")
         public String startIp;
 

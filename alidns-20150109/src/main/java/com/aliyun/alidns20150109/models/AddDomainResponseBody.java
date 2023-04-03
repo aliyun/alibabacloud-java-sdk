@@ -4,24 +4,45 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainResponseBody extends TeaModel {
+    /**
+     * <p>The Domain Name System (DNS) servers that resolve the domain name.</p>
+     */
     @NameInMap("DnsServers")
     public AddDomainResponseBodyDnsServers dnsServers;
 
+    /**
+     * <p>The ID of the domain name.</p>
+     */
     @NameInMap("DomainId")
     public String domainId;
 
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The ID of the domain name group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The name of the domain name group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+     */
     @NameInMap("PunyCode")
     public String punyCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

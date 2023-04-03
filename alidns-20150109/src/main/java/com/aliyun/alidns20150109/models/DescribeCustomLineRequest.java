@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomLineRequest extends TeaModel {
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The unique ID of the custom line.</p>
+     */
     @NameInMap("LineId")
     public Long lineId;
 

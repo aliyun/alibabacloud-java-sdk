@@ -7,6 +7,9 @@ public class DescribeDnsGtmInstanceSystemCnameResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The CNAME domain name assigned by the system.</p>
+     */
     @NameInMap("SystemCname")
     public String systemCname;
 

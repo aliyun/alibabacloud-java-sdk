@@ -4,27 +4,54 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsRequest extends TeaModel {
+    /**
+     * <p>The ID of the domain name group. If you do not specify this parameter, all domain names are queried by default.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The search mode. Valid values:</p>
+     * <br>
+     * <p>*   **LIKE**: fuzzy match.</p>
+     * <p>*   **EXACT**: exact match.</p>
+     */
     @NameInMap("SearchMode")
     public String searchMode;
 
+    /**
+     * <p>Specifies whether to query the starmark of the domain name.</p>
+     */
     @NameInMap("Starmark")
     public Boolean starmark;
 

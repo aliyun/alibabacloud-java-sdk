@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
+    /**
+     * <p>The addresses that were queried.</p>
+     */
     @NameInMap("Addr")
     public DescribeDnsGtmAddrAttributeInfoResponseBodyAddr addr;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo extends TeaModel {
+        /**
+         * <p>The parent line code of the source region.</p>
+         */
         @NameInMap("FatherCode")
         public String fatherCode;
 
+        /**
+         * <p>The code of the source region group.</p>
+         */
         @NameInMap("GroupCode")
         public String groupCode;
 
+        /**
+         * <p>The name of the source region group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The line code of the source region.</p>
+         */
         @NameInMap("LineCode")
         public String lineCode;
 
+        /**
+         * <p>The line name of the source region.</p>
+         */
         @NameInMap("LineName")
         public String lineName;
 
@@ -95,9 +116,15 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddr extends TeaModel {
+        /**
+         * <p>The address that was queried.</p>
+         */
         @NameInMap("Addr")
         public String addr;
 
+        /**
+         * <p>The source region of the address.</p>
+         */
         @NameInMap("AttributeInfo")
         public DescribeDnsGtmAddrAttributeInfoResponseBodyAddrAddrAttributeInfo attributeInfo;
 

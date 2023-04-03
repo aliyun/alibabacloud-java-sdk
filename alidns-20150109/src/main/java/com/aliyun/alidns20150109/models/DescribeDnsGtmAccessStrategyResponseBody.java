@@ -4,81 +4,195 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
+    /**
+     * <p>The primary/secondary switchover policy for address pool groups. Valid values:</p>
+     * <br>
+     * <p>*   AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.</p>
+     * <p>*   DEFAULT: uses the primary address pool group.</p>
+     * <p>*   FAILOVER: uses the secondary address pool group.</p>
+     */
     @NameInMap("AccessMode")
     public String accessMode;
 
+    /**
+     * <p>The time when the access policy was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The timestamp that indicates when the access policy was created.</p>
+     */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The status of the primary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   AVAILABLE: available</p>
+     * <p>*   NOT_AVAILABLE: unavailable</p>
+     */
     @NameInMap("DefaultAddrPoolGroupStatus")
     public String defaultAddrPoolGroupStatus;
 
+    /**
+     * <p>The type of the primary address pool. Valid values:</p>
+     * <br>
+     * <p>*   IPV4</p>
+     * <p>*   IPV6</p>
+     * <p>*   DOMAIN</p>
+     */
     @NameInMap("DefaultAddrPoolType")
     public String defaultAddrPoolType;
 
+    /**
+     * <p>The address pools in the primary address pool group.</p>
+     */
     @NameInMap("DefaultAddrPools")
     public DescribeDnsGtmAccessStrategyResponseBodyDefaultAddrPools defaultAddrPools;
 
+    /**
+     * <p>The number of available addresses in the primary address pool.</p>
+     */
     @NameInMap("DefaultAvailableAddrNum")
     public Integer defaultAvailableAddrNum;
 
+    /**
+     * <p>Indicates whether scheduling optimization for latency resolution was enabled for the primary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   OPEN: enabled</p>
+     * <p>*   CLOSE: disabled</p>
+     */
     @NameInMap("DefaultLatencyOptimization")
     public String defaultLatencyOptimization;
 
+    /**
+     * <p>The load balancing policy of the primary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   ALL_RR: returns all addresses.</p>
+     * <p>*   RATIO: returns addresses by weight.</p>
+     */
     @NameInMap("DefaultLbaStrategy")
     public String defaultLbaStrategy;
 
+    /**
+     * <p>The maximum number of addresses returned from the primary address pool group.</p>
+     */
     @NameInMap("DefaultMaxReturnAddrNum")
     public Integer defaultMaxReturnAddrNum;
 
+    /**
+     * <p>The minimum number of available addresses in the primary address pool group.</p>
+     */
     @NameInMap("DefaultMinAvailableAddrNum")
     public Integer defaultMinAvailableAddrNum;
 
+    /**
+     * <p>The type of the active address pool group. Valid values:</p>
+     * <br>
+     * <p>*   DEFAULT: the primary address pool group</p>
+     * <p>*   FAILOVER: the secondary address pool group</p>
+     */
     @NameInMap("EffectiveAddrPoolGroupType")
     public String effectiveAddrPoolGroupType;
 
+    /**
+     * <p>The status of the secondary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   AVAILABLE: available</p>
+     * <p>*   NOT_AVAILABLE: unavailable</p>
+     */
     @NameInMap("FailoverAddrPoolGroupStatus")
     public String failoverAddrPoolGroupStatus;
 
+    /**
+     * <p>The type of the secondary address pool. Valid values:</p>
+     * <br>
+     * <p>*   IPV4</p>
+     * <p>*   IPV6</p>
+     * <p>*   DOMAIN</p>
+     */
     @NameInMap("FailoverAddrPoolType")
     public String failoverAddrPoolType;
 
+    /**
+     * <p>The address pools in the secondary address pool group.</p>
+     */
     @NameInMap("FailoverAddrPools")
     public DescribeDnsGtmAccessStrategyResponseBodyFailoverAddrPools failoverAddrPools;
 
+    /**
+     * <p>The number of available addresses in the secondary address pool.</p>
+     */
     @NameInMap("FailoverAvailableAddrNum")
     public Integer failoverAvailableAddrNum;
 
+    /**
+     * <p>Indicates whether scheduling optimization for latency resolution was enabled for the secondary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   OPEN: enabled</p>
+     * <p>*   CLOSE: disabled</p>
+     */
     @NameInMap("FailoverLatencyOptimization")
     public String failoverLatencyOptimization;
 
+    /**
+     * <p>The load balancing policy of the secondary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   ALL_RR: returns all addresses.</p>
+     * <p>*   RATIO: returns addresses by weight.</p>
+     */
     @NameInMap("FailoverLbaStrategy")
     public String failoverLbaStrategy;
 
+    /**
+     * <p>The maximum number of addresses returned from the secondary address pool group.</p>
+     */
     @NameInMap("FailoverMaxReturnAddrNum")
     public Integer failoverMaxReturnAddrNum;
 
+    /**
+     * <p>The minimum number of available addresses in the secondary address pool group.</p>
+     */
     @NameInMap("FailoverMinAvailableAddrNum")
     public Integer failoverMinAvailableAddrNum;
 
+    /**
+     * <p>The ID of the associated instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The source regions.</p>
+     */
     @NameInMap("Lines")
     public DescribeDnsGtmAccessStrategyResponseBodyLines lines;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the access policy.</p>
+     */
     @NameInMap("StrategyId")
     public String strategyId;
 
+    /**
+     * <p>The type of the access policy. Valid values:</p>
+     * <br>
+     * <p>*   GEO: geographical location-based</p>
+     * <p>*   LATENCY: latency-based</p>
+     */
     @NameInMap("StrategyMode")
     public String strategyMode;
 
+    /**
+     * <p>The name of the access policy.</p>
+     */
     @NameInMap("StrategyName")
     public String strategyName;
 
@@ -296,15 +410,27 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAccessStrategyResponseBodyDefaultAddrPoolsDefaultAddrPool extends TeaModel {
+        /**
+         * <p>The number of addresses in the address pool.</p>
+         */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
+        /**
+         * <p>The ID of the address pool.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The weight of the address pool.</p>
+         */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
+        /**
+         * <p>The name of the address pool.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -367,15 +493,27 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAccessStrategyResponseBodyFailoverAddrPoolsFailoverAddrPool extends TeaModel {
+        /**
+         * <p>The number of addresses in the address pool.</p>
+         */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
+        /**
+         * <p>The ID of the address pool.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The weight of the address pool.</p>
+         */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
+        /**
+         * <p>The name of the address pool.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -438,15 +576,27 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAccessStrategyResponseBodyLinesLine extends TeaModel {
+        /**
+         * <p>The code of the source region group.</p>
+         */
         @NameInMap("GroupCode")
         public String groupCode;
 
+        /**
+         * <p>The name of the source region group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The line code of the source region.</p>
+         */
         @NameInMap("LineCode")
         public String lineCode;
 
+        /**
+         * <p>The line name of the source region.</p>
+         */
         @NameInMap("LineName")
         public String lineName;
 

@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceDomainsRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The page number to return. The page number starts from 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Maximum value: 100. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

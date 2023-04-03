@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmMonitorConfigRequest extends TeaModel {
+    /**
+     * <p>The language of the values of specific response parameters.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the health check configuration.</p>
+     */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 

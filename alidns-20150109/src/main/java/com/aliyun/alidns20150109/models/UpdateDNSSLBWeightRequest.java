@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDNSSLBWeightRequest extends TeaModel {
+    /**
+     * <p>The language of the domain name.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the DNS record.</p>
+     */
     @NameInMap("RecordId")
     public String recordId;
 
+    /**
+     * <p>The IP address of the client that you use to change the weight.</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>The updated weight of the DNS record. Valid values: `1 to 100`.</p>
+     */
     @NameInMap("Weight")
     public Integer weight;
 

@@ -4,21 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmLogsResponseBody extends TeaModel {
+    /**
+     * <p>The list of logs returned.</p>
+     */
     @NameInMap("Logs")
     public DescribeGtmLogsResponseBodyLogs logs;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned on all pages.</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,30 +94,57 @@ public class DescribeGtmLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmLogsResponseBodyLogsLog extends TeaModel {
+        /**
+         * <p>The formatted message content.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The ID of the object that was operated on.</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <p>The name of the object that was operated on.</p>
+         */
         @NameInMap("EntityName")
         public String entityName;
 
+        /**
+         * <p>The type of the object that was operated on.</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The ID of the log record.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The operation performed.</p>
+         */
         @NameInMap("OperAction")
         public String operAction;
 
+        /**
+         * <p>The IP address subject to the operation.</p>
+         */
         @NameInMap("OperIp")
         public String operIp;
 
+        /**
+         * <p>The time when the operation was performed.</p>
+         */
         @NameInMap("OperTime")
         public String operTime;
 
+        /**
+         * <p>A timestamp that indicates the time when the operation was performed.</p>
+         */
         @NameInMap("OperTimestamp")
         public Long operTimestamp;
 

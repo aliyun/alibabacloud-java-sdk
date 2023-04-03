@@ -4,27 +4,51 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordLogsRequest extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The keyword for searches in %KeyWord% mode. The value is not case-sensitive.</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format.</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>The IP address of the client.</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format.</p>
+     */
     @NameInMap("endDate")
     public String endDate;
 

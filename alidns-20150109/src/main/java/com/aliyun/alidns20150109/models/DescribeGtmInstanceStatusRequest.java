@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

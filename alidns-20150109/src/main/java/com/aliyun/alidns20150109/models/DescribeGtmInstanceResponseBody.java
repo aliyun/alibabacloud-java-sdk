@@ -4,54 +4,111 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The number of access policies of the GTM instance.</p>
+     */
     @NameInMap("AccessStrategyNum")
     public Integer accessStrategyNum;
 
+    /**
+     * <p>The number of address pools of the GTM instance.</p>
+     */
     @NameInMap("AddressPoolNum")
     public Integer addressPoolNum;
 
+    /**
+     * <p>The alert group of the GTM instance.</p>
+     */
     @NameInMap("AlertGroup")
     public String alertGroup;
 
+    /**
+     * <p>The domain name of the GTM instance to which the service domain name is mapped by using a CNAME record.</p>
+     */
     @NameInMap("Cname")
     public String cname;
 
+    /**
+     * <p>Indicates whether the CNAME is a custom domain name or is assigned by the system. Valid values:</p>
+     * <br>
+     * <p>*   **SYSTEM_ASSIGN**</p>
+     * <p>*   **CUSTOM**</p>
+     */
     @NameInMap("CnameMode")
     public String cnameMode;
 
+    /**
+     * <p>The time when the GTM instance was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The timestamp that indicates the time when the GTM instance was created.</p>
+     */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The time when the GTM instance expires.</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <p>The timestamp that indicates the time when the GTM instance expires.</p>
+     */
     @NameInMap("ExpireTimestamp")
     public Long expireTimestamp;
 
+    /**
+     * <p>The ID of the GTM instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the GTM instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The load balancing policy. Valid values:</p>
+     * <br>
+     * <p>*   **ALL_RR**: round robin</p>
+     * <p>*   **RATIO**: weighted round-robin</p>
+     */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The global time to live (TTL).</p>
+     */
     @NameInMap("Ttl")
     public Integer ttl;
 
+    /**
+     * <p>The domain name of the application.</p>
+     */
     @NameInMap("UserDomainName")
     public String userDomainName;
 
+    /**
+     * <p>The version code.</p>
+     */
     @NameInMap("VersionCode")
     public String versionCode;
 

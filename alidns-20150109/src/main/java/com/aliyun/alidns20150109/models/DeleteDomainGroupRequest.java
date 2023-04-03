@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteDomainGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the domain name group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

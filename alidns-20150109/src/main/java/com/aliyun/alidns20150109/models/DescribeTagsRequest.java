@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
+    /**
+     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The page number to return. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Default value: 200.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The type of the resources from which you want to query tags. Set the value to DOMAIN.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

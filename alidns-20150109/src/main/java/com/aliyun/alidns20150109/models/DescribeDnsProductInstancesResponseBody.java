@@ -4,21 +4,36 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of Alibaba Cloud DNS instances obtained by this operation.</p>
+     */
     @NameInMap("DnsProducts")
     public DescribeDnsProductInstancesResponseBodyDnsProducts dnsProducts;
 
     @NameInMap("DomainType")
     public String domainType;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of domain names.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,99 +91,196 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsProductInstancesResponseBodyDnsProductsDnsProduct extends TeaModel {
+        /**
+         * <p>The number of times you can change domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.</p>
+         */
         @NameInMap("BindCount")
         public Long bindCount;
 
+        /**
+         * <p>The number of domain names that can be bound to the DNS instance.</p>
+         */
         @NameInMap("BindDomainCount")
         public Long bindDomainCount;
 
+        /**
+         * <p>The number of domain names that have been bound to the DNS instance.</p>
+         */
         @NameInMap("BindDomainUsedCount")
         public Long bindDomainUsedCount;
 
+        /**
+         * <p>The number of times you have changed domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.</p>
+         */
         @NameInMap("BindUsedCount")
         public Long bindUsedCount;
 
+        /**
+         * <p>The DDoS protection traffic. Unit: GB.</p>
+         */
         @NameInMap("DDosDefendFlow")
         public Long DDosDefendFlow;
 
+        /**
+         * <p>The DDoS protection frequency. Unit: 10,000 QPS.</p>
+         */
         @NameInMap("DDosDefendQuery")
         public Long DDosDefendQuery;
 
+        /**
+         * <p>The number of IP addresses supported by a domain name or line.</p>
+         */
         @NameInMap("DnsSLBCount")
         public Long dnsSLBCount;
 
+        /**
+         * <p>The DNS security policy. Valid values:</p>
+         * <br>
+         * <p>*   **no**: not required.</p>
+         * <p>*   **basic**: anti-DDoS basic.</p>
+         * <p>*   **advanced**: anti-DDoS advanced.</p>
+         */
         @NameInMap("DnsSecurity")
         public String dnsSecurity;
 
+        /**
+         * <p>The bound domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The time at which the instance expired.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The UNIX timestamp representing the expiration time of the instance.</p>
+         */
         @NameInMap("EndTimestamp")
         public Long endTimestamp;
 
+        /**
+         * <p>Indicates whether global server load balancing (GSLB) was allowed.</p>
+         */
         @NameInMap("Gslb")
         public Boolean gslb;
 
+        /**
+         * <p>The list of ISP lines.</p>
+         */
         @NameInMap("ISPLines")
         public String ISPLines;
 
+        /**
+         * <p>The list of ISP line subdivisions.</p>
+         */
         @NameInMap("ISPRegionLines")
         public String ISPRegionLines;
 
+        /**
+         * <p>Indicates whether the request for domain name resolution was in the black hole.</p>
+         */
         @NameInMap("InBlackHole")
         public Boolean inBlackHole;
 
+        /**
+         * <p>Indicates whether the request for domain name resolution was being cleared.</p>
+         */
         @NameInMap("InClean")
         public Boolean inClean;
 
+        /**
+         * <p>The ID of the Alibaba Cloud DNS instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The monitoring frequency. Unit: minutes.</p>
+         */
         @NameInMap("MonitorFrequency")
         public Long monitorFrequency;
 
+        /**
+         * <p>The number of monitored nodes.</p>
+         */
         @NameInMap("MonitorNodeCount")
         public Long monitorNodeCount;
 
+        /**
+         * <p>The number of monitoring tasks.</p>
+         */
         @NameInMap("MonitorTaskCount")
         public Long monitorTaskCount;
 
+        /**
+         * <p>DDoS protection traffic outside China. Unit: GB.</p>
+         */
         @NameInMap("OverseaDDosDefendFlow")
         public Long overseaDDosDefendFlow;
 
+        /**
+         * <p>The type of the overseas line.</p>
+         */
         @NameInMap("OverseaLine")
         public String overseaLine;
 
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <p>Indicates whether regional lines were allowed.</p>
+         */
         @NameInMap("RegionLines")
         public Boolean regionLines;
 
+        /**
+         * <p>The list of search engine lines.</p>
+         */
         @NameInMap("SearchEngineLines")
         public String searchEngineLines;
 
+        /**
+         * <p>The time when the DNS instance was purchased.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The UNIX timestamp representing when the DNS instance was purchased.</p>
+         */
         @NameInMap("StartTimestamp")
         public Long startTimestamp;
 
+        /**
+         * <p>The number of subdomain name levels.</p>
+         */
         @NameInMap("SubDomainLevel")
         public Long subDomainLevel;
 
+        /**
+         * <p>The minimum TTL. Unit: seconds.</p>
+         */
         @NameInMap("TTLMinValue")
         public Long TTLMinValue;
 
+        /**
+         * <p>The URL forwarding quantity.</p>
+         */
         @NameInMap("URLForwardCount")
         public Long URLForwardCount;
 
+        /**
+         * <p>The version code of the Alibaba Cloud DNS instance.</p>
+         */
         @NameInMap("VersionCode")
         public String versionCode;
 
+        /**
+         * <p>The version name of the Alibaba Cloud DNS instance.</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 

@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
+    /**
+     * <p>The monitored nodes.</p>
+     */
     @NameInMap("IspCityNodes")
     public DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodes ispCityNodes;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,58 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode extends TeaModel {
+        /**
+         * <p>The code of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>The display name of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <p>Indicates whether the monitored node is selected for the health check by default.</p>
+         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
+        /**
+         * <p>The name of the group to which the monitored node belongs.</p>
+         * <br>
+         * <p>Valid values: Overseas Nodes, BGP Nodes, and ISP Nodes.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the group to which the monitored node belongs.</p>
+         * <br>
+         * <p>Valid values: BGP, OVERSEAS, and ISP.</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
+        /**
+         * <p>The code of the Internet service provider (ISP) to which the monitored node belongs.</p>
+         * <br>
+         * <p>*   If the value of the GroupType parameter is BGP or OVERSEAS, the value of IspCode is 465 by default.</p>
+         * <p>*   If the value of the GroupType parameter is not BGP or OVERSEAS, valid values of IspCode are 232, 132, and 5. and is used together with CityCode.</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
+        /**
+         * <p>The display name of the ISP to which the monitored node belongs.</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
+        /**
+         * <p>Indicates whether the monitored node is deployed in the Chinese mainland.</p>
+         */
         @NameInMap("Mainland")
         public Boolean mainland;
 

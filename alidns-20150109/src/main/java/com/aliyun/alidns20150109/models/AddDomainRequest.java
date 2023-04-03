@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainRequest extends TeaModel {
+    /**
+     * <p>The domain name to be added.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The ID of the domain name group. The default value is the ID of the default domain name group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The language of the domain name.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

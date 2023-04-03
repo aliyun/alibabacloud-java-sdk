@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAvailableAlertGroupResponseBody extends TeaModel {
+    /**
+     * <p>The returned available alert groups.</p>
+     */
     @NameInMap("AvailableAlertGroup")
     public String availableAlertGroup;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

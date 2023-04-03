@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class MoveDomainResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The language of some returned parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 

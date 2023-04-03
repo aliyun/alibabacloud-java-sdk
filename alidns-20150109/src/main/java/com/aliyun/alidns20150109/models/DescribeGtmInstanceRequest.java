@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the GTM instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language of the values of specific response parameters.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Specifies whether additional information is required. Default value: **false**. If the value is **true**, the AccessStrategyNum and AddressPoolNum parameters are returned.</p>
+     */
     @NameInMap("NeedDetailAttributes")
     public Boolean needDetailAttributes;
 

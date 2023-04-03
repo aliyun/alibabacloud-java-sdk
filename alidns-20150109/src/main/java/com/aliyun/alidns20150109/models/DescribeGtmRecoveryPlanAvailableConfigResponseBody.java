@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel {
+    /**
+     * <p>The list of GTM instances involved in the disaster recovery plan.</p>
+     */
     @NameInMap("Instances")
     public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstances instances;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
     }
 
     public static class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPoolsAddrPool extends TeaModel {
+        /**
+         * <p>The ID of the address pool.</p>
+         */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
+        /**
+         * <p>The name of the address pool.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -81,12 +93,21 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
     }
 
     public static class DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstance extends TeaModel {
+        /**
+         * <p>The list of address pools for the GTM instance.</p>
+         */
         @NameInMap("AddrPools")
         public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstancesInstanceAddrPools addrPools;
 
+        /**
+         * <p>The ID of the GTM instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the GTM instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 

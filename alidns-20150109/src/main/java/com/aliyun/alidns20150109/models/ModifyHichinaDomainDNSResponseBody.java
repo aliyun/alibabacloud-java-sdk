@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
+    /**
+     * <p>The list of DNS servers after the domain name is changed.</p>
+     */
     @NameInMap("NewDnsServers")
     public ModifyHichinaDomainDNSResponseBodyNewDnsServers newDnsServers;
 
+    /**
+     * <p>The list of DNS servers before the domain name is changed.</p>
+     */
     @NameInMap("OriginalDnsServers")
     public ModifyHichinaDomainDNSResponseBodyOriginalDnsServers originalDnsServers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

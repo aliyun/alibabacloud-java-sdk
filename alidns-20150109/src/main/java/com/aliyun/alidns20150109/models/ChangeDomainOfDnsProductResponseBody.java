@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
+    /**
+     * <p>The original domain name that was bound to the instance. If the value of this parameter is empty, the instance is bound with a domain name for the first time.</p>
+     */
     @NameInMap("OriginalDomain")
     public String originalDomain;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

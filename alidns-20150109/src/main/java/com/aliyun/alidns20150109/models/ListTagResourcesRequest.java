@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The language.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the resource.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The key-value pairs of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -65,9 +80,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

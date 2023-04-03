@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainRemarkRequest extends TeaModel {
+    /**
+     * <p>The domain name in Alibaba Cloud DNS.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The description of your domain name.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategyAvailableConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the GTM instance for which you want to query the available configurations of the current access policy.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

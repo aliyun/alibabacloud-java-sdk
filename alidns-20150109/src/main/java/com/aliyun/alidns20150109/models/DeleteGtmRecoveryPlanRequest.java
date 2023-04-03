@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteGtmRecoveryPlanRequest extends TeaModel {
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the disaster recovery plan that you want to delete.</p>
+     */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;
 

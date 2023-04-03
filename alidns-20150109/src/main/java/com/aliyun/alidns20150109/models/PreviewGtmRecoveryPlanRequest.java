@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class PreviewGtmRecoveryPlanRequest extends TeaModel {
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on per page. Maximum value: **20**. Default value: **5**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the disaster recovery plan that you want to preview.</p>
+     */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;
 
