@@ -4,39 +4,94 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
+    /**
+     * <p>The time when the health check configuration was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The timestamp that indicates the time when the health check configuration was created.</p>
+     */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+     */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
+    /**
+     * <p>The health check interval. Unit: seconds. The value is 60.</p>
+     */
     @NameInMap("Interval")
     public Integer interval;
 
+    /**
+     * <p>The monitored nodes.</p>
+     */
     @NameInMap("IspCityNodes")
     public DescribeGtmMonitorConfigResponseBodyIspCityNodes ispCityNodes;
 
+    /**
+     * <p>The ID of the health check configuration.</p>
+     */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
+    /**
+     * <p>The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:</p>
+     * <br>
+     * <p>HTTP or HTTPS:</p>
+     * <br>
+     * <p>*   port: the port to check.</p>
+     * <p>*   failureRate: the failure rate.</p>
+     * <p>*   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.</p>
+     * <p>*   host: the host configuration.</p>
+     * <p>*   path: the health check URL.</p>
+     * <br>
+     * <p>PING:</p>
+     * <br>
+     * <p>*   packetNum: the number of ping packets.</p>
+     * <p>*   packetLossRate: the loss rate of ping packets.</p>
+     * <p>*   failureRate: the failure rate.</p>
+     * <br>
+     * <p>TCP:</p>
+     * <br>
+     * <p>*   port: the port to check.</p>
+     * <p>*   failureRate: the failure rate.</p>
+     */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
 
+    /**
+     * <p>The protocol used for the health check.</p>
+     */
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 
+    /**
+     * <p>The time when the health check configuration was last updated.</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The timestamp that indicates the time when the health check configuration was last updated.</p>
+     */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
 
@@ -142,21 +197,39 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmMonitorConfigResponseBodyIspCityNodesIspCityNode extends TeaModel {
+        /**
+         * <p>The code of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>The display name of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <p>The code of the country where the monitored node is deployed.</p>
+         */
         @NameInMap("CountryCode")
         public String countryCode;
 
+        /**
+         * <p>The display name of the country where the monitored node is deployed.</p>
+         */
         @NameInMap("CountryName")
         public String countryName;
 
+        /**
+         * <p>The code of the Internet service provider (ISP) to which the monitored node belongs.</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
+        /**
+         * <p>The display name of the ISP to which the monitored node belongs.</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 

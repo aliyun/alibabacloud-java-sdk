@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaModel {
+    /**
+     * <p>The supported source regions.</p>
+     */
     @NameInMap("AttributeInfos")
     public DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfos attributeInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
     }
 
     public static class DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo extends TeaModel {
+        /**
+         * <p>The parent line code of the source region.</p>
+         */
         @NameInMap("FatherCode")
         public String fatherCode;
 
+        /**
+         * <p>The code of the source region group.</p>
+         */
         @NameInMap("GroupCode")
         public String groupCode;
 
+        /**
+         * <p>The name of the request source group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The line code of the source region.</p>
+         */
         @NameInMap("LineCode")
         public String lineCode;
 
+        /**
+         * <p>The line name of the source region.</p>
+         */
         @NameInMap("LineName")
         public String lineName;
 

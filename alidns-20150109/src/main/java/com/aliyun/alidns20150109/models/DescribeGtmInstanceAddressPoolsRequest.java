@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceAddressPoolsRequest extends TeaModel {
+    /**
+     * <p>The ID of the GTM instance that you want to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Maximum value: **100**. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

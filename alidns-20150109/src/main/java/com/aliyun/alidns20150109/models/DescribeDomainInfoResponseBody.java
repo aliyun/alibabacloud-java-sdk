@@ -4,72 +4,141 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainInfoResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the domain name is an Alibaba Cloud HiChina domain name.</p>
+     */
     @NameInMap("AliDomain")
     public Boolean aliDomain;
 
+    /**
+     * <p>The available time to live (TTL) values.</p>
+     */
     @NameInMap("AvailableTtls")
     public DescribeDomainInfoResponseBodyAvailableTtls availableTtls;
 
+    /**
+     * <p>The time when the domain name was added to Alibaba Cloud CDN.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The information about DNS servers.</p>
+     */
     @NameInMap("DnsServers")
     public DescribeDomainInfoResponseBodyDnsServers dnsServers;
 
+    /**
+     * <p>The ID of the domain name.</p>
+     */
     @NameInMap("DomainId")
     public String domainId;
 
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The ID of the domain name group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The name of the domain name group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>Indicates whether blackhole filtering was triggered.</p>
+     */
     @NameInMap("InBlackHole")
     public Boolean inBlackHole;
 
+    /**
+     * <p>Indicates whether traffic scrubbing was started.</p>
+     */
     @NameInMap("InClean")
     public Boolean inClean;
 
+    /**
+     * <p>The ID of the Alibaba Cloud DNS instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of line.</p>
+     */
     @NameInMap("LineType")
     public String lineType;
 
+    /**
+     * <p>The minimum TTL.</p>
+     */
     @NameInMap("MinTtl")
     public Long minTtl;
 
+    /**
+     * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+     */
     @NameInMap("PunyCode")
     public String punyCode;
 
+    /**
+     * <p>The tree-based lines.</p>
+     */
     @NameInMap("RecordLineTreeJson")
     public String recordLineTreeJson;
 
+    /**
+     * <p>The information about lines.</p>
+     */
     @NameInMap("RecordLines")
     public DescribeDomainInfoResponseBodyRecordLines recordLines;
 
+    /**
+     * <p>Indicates whether the lines are regional lines.</p>
+     */
     @NameInMap("RegionLines")
     public Boolean regionLines;
 
+    /**
+     * <p>The description of the domain name.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Indicates whether secondary DNS is allowed.</p>
+     */
     @NameInMap("SlaveDns")
     public Boolean slaveDns;
 
+    /**
+     * <p>The version of the Alibaba Cloud DNS instance.</p>
+     */
     @NameInMap("VersionCode")
     public String versionCode;
 
+    /**
+     * <p>The edition of the Alibaba Cloud DNS instance.</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 
@@ -301,15 +370,27 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainInfoResponseBodyRecordLinesRecordLine extends TeaModel {
+        /**
+         * <p>The code of the parent line. This parameter is left empty if the line has no parent line.</p>
+         */
         @NameInMap("FatherCode")
         public String fatherCode;
 
+        /**
+         * <p>The code of the line.</p>
+         */
         @NameInMap("LineCode")
         public String lineCode;
 
+        /**
+         * <p>The name of the parent line.</p>
+         */
         @NameInMap("LineDisplayName")
         public String lineDisplayName;
 
+        /**
+         * <p>The name of the line.</p>
+         */
         @NameInMap("LineName")
         public String lineName;
 

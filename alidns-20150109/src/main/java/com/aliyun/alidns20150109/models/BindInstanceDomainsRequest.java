@@ -4,12 +4,23 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class BindInstanceDomainsRequest extends TeaModel {
+    /**
+     * <p>The list of domain names.</p>
+     * <br>
+     * <p>>  Separate multiple domain names with commas (,). A maximum of 100 domain names can be entered.</p>
+     */
     @NameInMap("DomainNames")
     public String domainNames;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

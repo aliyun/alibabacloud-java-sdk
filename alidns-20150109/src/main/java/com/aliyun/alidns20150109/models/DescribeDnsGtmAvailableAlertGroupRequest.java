@@ -4,6 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAvailableAlertGroupRequest extends TeaModel {
+    /**
+     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

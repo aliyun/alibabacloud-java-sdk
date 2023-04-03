@@ -4,21 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The returned instances.</p>
+     */
     @NameInMap("GtmInstances")
     public java.util.List<DescribeDnsGtmInstancesResponseBodyGtmInstances> gtmInstances;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned on all pages.</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>The total number of returned pages.</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -79,12 +97,33 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         @NameInMap("DingtalkNotice")
         public String dingtalkNotice;
 
+        /**
+         * <p>Indicates whether email notifications were configured. Valid values:</p>
+         * <br>
+         * <p>*   true: configured</p>
+         * <p>*   false | null: not configured</p>
+         */
         @NameInMap("EmailNotice")
         public String emailNotice;
 
+        /**
+         * <p>The type of the alert event. Valid values:</p>
+         * <br>
+         * <p>*   ADDR_ALERT: The address is unavailable.</p>
+         * <p>*   ADDR_RESUME: The address is restored and becomes available.</p>
+         * <p>*   ADDR_POOL_GROUP_UNAVAILABLE: The address pool group is unavailable.</p>
+         * <p>*   ADDR_POOL_GROUP_AVAILABLE: The address pool group is restored and becomes available.</p>
+         * <p>*   ACCESS_STRATEGY_POOL_GROUP_SWITCH: Switchover is triggered between the primary and secondary address pools.</p>
+         */
         @NameInMap("NoticeType")
         public String noticeType;
 
+        /**
+         * <p>Indicates whether SMS notifications were configured. Valid values:</p>
+         * <br>
+         * <p>*   true: configured</p>
+         * <p>*   false | null: not configured</p>
+         */
         @NameInMap("SmsNotice")
         public String smsNotice;
 
@@ -128,33 +167,68 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmInstancesResponseBodyGtmInstancesConfig extends TeaModel {
+        /**
+         * <p>The alert notification methods.</p>
+         */
         @NameInMap("AlertConfig")
         public java.util.List<DescribeDnsGtmInstancesResponseBodyGtmInstancesConfigAlertConfig> alertConfig;
 
+        /**
+         * <p>The alert group.</p>
+         */
         @NameInMap("AlertGroup")
         public String alertGroup;
 
+        /**
+         * <p>The access type of the CNAME domain name.</p>
+         * <br>
+         * <p>*   The value was set to PUBLIC, which indicates Internet access.</p>
+         */
         @NameInMap("CnameType")
         public String cnameType;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>Indicates whether a custom CNAME domain name or a CNAME domain name assigned by the system is used to access GTM over the Internet. Valid values:</p>
+         * <br>
+         * <p>*   CUSTOM: a custom CNAME domain name</p>
+         * <p>*   SYSTEM_ASSIGN: a CNAME domain name assigned by the system</p>
+         */
         @NameInMap("PublicCnameMode")
         public String publicCnameMode;
 
         @NameInMap("PublicRr")
         public String publicRr;
 
+        /**
+         * <p>The website domain name that the user uses on the Internet.</p>
+         */
         @NameInMap("PublicUserDomainName")
         public String publicUserDomainName;
 
+        /**
+         * <p>The domain name that is used to access GTM over the Internet.</p>
+         */
         @NameInMap("PublicZoneName")
         public String publicZoneName;
 
+        /**
+         * <p>The type of the access policy. Valid values:</p>
+         * <br>
+         * <p>*   LATENCY: latency-based</p>
+         * <p>*   GEO: geographical location-based</p>
+         */
         @NameInMap("StrategyMode")
         public String strategyMode;
 
+        /**
+         * <p>The global time to live (TTL).</p>
+         */
         @NameInMap("Ttl")
         public Integer ttl;
 
@@ -249,12 +323,21 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         @NameInMap("DingtalkUsedCount")
         public Integer dingtalkUsedCount;
 
+        /**
+         * <p>The total number of email notifications that were sent.</p>
+         */
         @NameInMap("EmailUsedCount")
         public Integer emailUsedCount;
 
+        /**
+         * <p>The total number of SMS notifications that were sent.</p>
+         */
         @NameInMap("SmsUsedCount")
         public Integer smsUsedCount;
 
+        /**
+         * <p>The number of detection tasks that were created.</p>
+         */
         @NameInMap("TaskUsedCount")
         public Integer taskUsedCount;
 
@@ -298,39 +381,77 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmInstancesResponseBodyGtmInstances extends TeaModel {
+        /**
+         * <p>The configurations of the instance.</p>
+         */
         @NameInMap("Config")
         public DescribeDnsGtmInstancesResponseBodyGtmInstancesConfig config;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The timestamp that indicates when the instance was created.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The time when the instance expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The timestamp that indicates when the instance expires.</p>
+         */
         @NameInMap("ExpireTimestamp")
         public Long expireTimestamp;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The billing method of the instance.</p>
+         * <br>
+         * <p>*   The value is set to Subscription.</p>
+         */
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The total number of SMS notifications.</p>
+         */
         @NameInMap("SmsQuota")
         public Integer smsQuota;
 
+        /**
+         * <p>The total number of detection tasks.</p>
+         */
         @NameInMap("TaskQuota")
         public Integer taskQuota;
 
+        /**
+         * <p>The used quota.</p>
+         */
         @NameInMap("UsedQuota")
         public DescribeDnsGtmInstancesResponseBodyGtmInstancesUsedQuota usedQuota;
 
+        /**
+         * <p>The version of the instance.</p>
+         */
         @NameInMap("VersionCode")
         public String versionCode;
 

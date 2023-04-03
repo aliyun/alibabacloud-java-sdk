@@ -4,21 +4,41 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddGtmAccessStrategyRequest extends TeaModel {
+    /**
+     * <p>The line codes of access regions.</p>
+     */
     @NameInMap("AccessLines")
     public String accessLines;
 
+    /**
+     * <p>The ID of the default address pool.</p>
+     */
     @NameInMap("DefaultAddrPoolId")
     public String defaultAddrPoolId;
 
+    /**
+     * <p>The ID of the failover address pool.</p>
+     * <br>
+     * <p>If the failover address pool is not set, pass the **Empty** value.</p>
+     */
     @NameInMap("FailoverAddrPoolId")
     public String failoverAddrPoolId;
 
+    /**
+     * <p>The ID of the GTM instance for which you want to create an access policy.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The name of the access policy.</p>
+     */
     @NameInMap("StrategyName")
     public String strategyName;
 

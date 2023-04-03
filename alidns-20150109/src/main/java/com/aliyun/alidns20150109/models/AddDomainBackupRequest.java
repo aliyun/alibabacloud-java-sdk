@@ -4,12 +4,24 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainBackupRequest extends TeaModel {
+    /**
+     * <p>The domain name for which you want to create a backup task.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The backup cycle. Valid values:</p>
+     * <br>
+     * <p>*   **DAY**: Backs up data once every day.</p>
+     * <p>*   **HOUR**: Backs up data once every hour.</p>
+     */
     @NameInMap("PeriodType")
     public String periodType;
 

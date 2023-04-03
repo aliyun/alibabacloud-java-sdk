@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class GetMainDomainNameRequest extends TeaModel {
+    /**
+     * <p>The input string. The string can be up to 128 characters in length.</p>
+     */
     @NameInMap("InputString")
     public String inputString;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

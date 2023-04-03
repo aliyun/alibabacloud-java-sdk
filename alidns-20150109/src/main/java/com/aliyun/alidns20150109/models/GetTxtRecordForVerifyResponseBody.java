@@ -4,15 +4,31 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class GetTxtRecordForVerifyResponseBody extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, it is not returned.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The host record.</p>
+     */
     @NameInMap("RR")
     public String RR;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The value of the DNS record.</p>
+     * <br>
+     * <p>>  The validity period is three days.</p>
+     */
     @NameInMap("Value")
     public String value;
 

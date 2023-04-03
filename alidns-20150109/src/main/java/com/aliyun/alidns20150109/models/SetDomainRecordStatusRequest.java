@@ -4,15 +4,30 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDomainRecordStatusRequest extends TeaModel {
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the DNS record.</p>
+     */
     @NameInMap("RecordId")
     public String recordId;
 
+    /**
+     * <p>The status of the DNS record. Valid values:</p>
+     * <br>
+     * <p>*   **Enable**: enables resolution.</p>
+     * <p>*   **Disable**: suspends resolution.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The IP address of the client.</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

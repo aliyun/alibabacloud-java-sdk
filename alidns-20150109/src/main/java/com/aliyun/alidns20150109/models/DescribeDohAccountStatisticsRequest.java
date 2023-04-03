@@ -4,12 +4,25 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDohAccountStatisticsRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+     * <br>
+     * <p>The default value is the day when you perform the operation.</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+     * <br>
+     * <p>You can query only the DNS records of the latest 90 days.`The value of StartDate must be greater than or equal to the difference between the current date and 90`.</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 

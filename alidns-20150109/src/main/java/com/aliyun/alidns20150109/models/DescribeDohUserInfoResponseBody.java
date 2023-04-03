@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDohUserInfoResponseBody extends TeaModel {
+    /**
+     * <p>The number of accessed domains.</p>
+     */
     @NameInMap("DomainCount")
     public Integer domainCount;
 
+    /**
+     * <p>The ID of the Alibaba Cloud public DNS user.</p>
+     */
     @NameInMap("PdnsId")
     public Long pdnsId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of accessed subdomains.</p>
+     */
     @NameInMap("SubDomainCount")
     public Integer subDomainCount;
 

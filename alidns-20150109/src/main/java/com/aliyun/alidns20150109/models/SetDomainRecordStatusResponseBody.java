@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDomainRecordStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the DNS record.</p>
+     */
     @NameInMap("RecordId")
     public String recordId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the DNS record.</p>
+     */
     @NameInMap("Status")
     public String status;
 

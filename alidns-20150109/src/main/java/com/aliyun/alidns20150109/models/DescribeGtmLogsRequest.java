@@ -7,21 +7,39 @@ public class DescribeGtmLogsRequest extends TeaModel {
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
+    /**
+     * <p>The ID of the GTM instance whose logs you want to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The keyword for searching logs, in case-insensitive "%Keyword%" format.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on per page. Maximum value: **100**. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The beginning of the time range to query.</p>
+     */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 

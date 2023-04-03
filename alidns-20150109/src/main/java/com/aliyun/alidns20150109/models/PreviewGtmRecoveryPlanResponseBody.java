@@ -4,21 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The returned preview information of the disaster recovery plan.</p>
+     */
     @NameInMap("Previews")
     public PreviewGtmRecoveryPlanResponseBodyPreviews previews;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned on all pages.</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,9 +94,15 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     }
 
     public static class PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfosSwitchInfo extends TeaModel {
+        /**
+         * <p>The formatted message content.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The name of the switching policy for address pools.</p>
+         */
         @NameInMap("StrategyName")
         public String strategyName;
 
@@ -125,15 +149,27 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     }
 
     public static class PreviewGtmRecoveryPlanResponseBodyPreviewsPreview extends TeaModel {
+        /**
+         * <p>The ID of the GTM instance to which the previewed disaster recovery plan belongs.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the GTM instance to which the previewed disaster recovery plan belongs.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The returned information of the switching policies for address pools.</p>
+         */
         @NameInMap("SwitchInfos")
         public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos switchInfos;
 
+        /**
+         * <p>The user\"s domain name or domain name list.</p>
+         */
         @NameInMap("UserDomainName")
         public String userDomainName;
 

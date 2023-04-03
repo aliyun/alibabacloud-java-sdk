@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of query volume records.</p>
+     */
     @NameInMap("Statistics")
     public DescribeRecordStatisticsResponseBodyStatistics statistics;
 
@@ -32,9 +38,15 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordStatisticsResponseBodyStatisticsStatistic extends TeaModel {
+        /**
+         * <p>The number of queries.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The UNIX timestamp representing the collection time.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

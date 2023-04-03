@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The list of domain name groups.</p>
+     */
     @NameInMap("DomainGroups")
     public DescribeDomainGroupsResponseBodyDomainGroups domainGroups;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of domain name groups.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,12 +80,21 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup extends TeaModel {
+        /**
+         * <p>The number of domain name groups.</p>
+         */
         @NameInMap("DomainCount")
         public Long domainCount;
 
+        /**
+         * <p>The ID of the domain name group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the domain name group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 

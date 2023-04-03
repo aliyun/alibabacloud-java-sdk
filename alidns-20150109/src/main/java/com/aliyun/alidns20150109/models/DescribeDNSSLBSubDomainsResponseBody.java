@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The total number of subdomains returned.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the subdomains.</p>
+     */
     @NameInMap("SlbSubDomains")
     public DescribeDNSSLBSubDomainsResponseBodySlbSubDomains slbSubDomains;
 
+    /**
+     * <p>The number of domain name groups.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -117,15 +132,27 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         @NameInMap("LineAlgorithms")
         public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms lineAlgorithms;
 
+        /**
+         * <p>Indicates whether weighted round-robin is enabled for the subdomain.</p>
+         */
         @NameInMap("Open")
         public Boolean open;
 
+        /**
+         * <p>The number of DNS records added for the subdomain.</p>
+         */
         @NameInMap("RecordCount")
         public Long recordCount;
 
+        /**
+         * <p>The subdomain.</p>
+         */
         @NameInMap("SubDomain")
         public String subDomain;
 
+        /**
+         * <p>The type of the DNS record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.</p>
+         */
         @NameInMap("Type")
         public String type;
 

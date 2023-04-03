@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics list.</p>
+     */
     @NameInMap("Statistics")
     public java.util.List<DescribeDohSubDomainStatisticsResponseBodyStatistics> statistics;
 
@@ -32,21 +38,39 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeDohSubDomainStatisticsResponseBodyStatistics extends TeaModel {
+        /**
+         * <p>The timestamp.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The total number of requests.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The number of IPv4-based HTTP requests.</p>
+         */
         @NameInMap("V4HttpCount")
         public Long v4HttpCount;
 
+        /**
+         * <p>The number of IPv4-based HTTPS requests.</p>
+         */
         @NameInMap("V4HttpsCount")
         public Long v4HttpsCount;
 
+        /**
+         * <p>The number of IPv6-based HTTP requests.</p>
+         */
         @NameInMap("V6HttpCount")
         public Long v6HttpCount;
 
+        /**
+         * <p>The number of IPv6-based HTTPS requests.</p>
+         */
         @NameInMap("V6HttpsCount")
         public Long v6HttpsCount;
 

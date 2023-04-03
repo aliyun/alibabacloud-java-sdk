@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class BindInstanceDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The number of domain names that failed to be bound.</p>
+     */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of domain names that have been bound.</p>
+     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 

@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddGtmRecoveryPlanRequest extends TeaModel {
+    /**
+     * <p>The list of IDs of faulty address pools.</p>
+     */
     @NameInMap("FaultAddrPool")
     public String faultAddrPool;
 
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The name of the disaster recovery plan that you want to create.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The remarks on the disaster recovery plan.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomLinesRequest extends TeaModel {
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,).</p>
+     */
     @NameInMap("LineIds")
     public String lineIds;
 

@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddGtmRecoveryPlanResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the disaster recovery plan created.</p>
+     */
     @NameInMap("RecoveryPlanId")
     public String recoveryPlanId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

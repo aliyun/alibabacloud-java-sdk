@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchResultDetailResponseBody extends TeaModel {
+    /**
+     * <p>Detailed information about the batch operation result.</p>
+     */
     @NameInMap("BatchResultDetails")
     public DescribeBatchResultDetailResponseBodyBatchResultDetails batchResultDetails;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,51 +80,99 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail extends TeaModel {
+        /**
+         * <p>The type of the batch operation.</p>
+         */
         @NameInMap("BatchType")
         public String batchType;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The line code.</p>
+         */
         @NameInMap("Line")
         public String line;
 
+        /**
+         * <p>The new host record.</p>
+         */
         @NameInMap("NewRr")
         public String newRr;
 
+        /**
+         * <p>The new record value.</p>
+         */
         @NameInMap("NewValue")
         public String newValue;
 
+        /**
+         * <p>The time when the operation was performed.</p>
+         */
         @NameInMap("OperateDateStr")
         public String operateDateStr;
 
+        /**
+         * <p>The priority of an MX-type DNS record.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The cause of the execution failure.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The ID of the DNS record.</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <p>The description of the DNS record.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The host record.</p>
+         */
         @NameInMap("Rr")
         public String rr;
 
+        /**
+         * <p>The status of the DNS record.</p>
+         */
         @NameInMap("RrStatus")
         public String rrStatus;
 
+        /**
+         * <p>The execution result. Valid values:**true**: The execution succeeded.**false**: The execution failed.</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 
+        /**
+         * <p>The TTL of the DNS record.</p>
+         */
         @NameInMap("Ttl")
         public String ttl;
 
+        /**
+         * <p>The type of the DNS record.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the DNS record.</p>
+         */
         @NameInMap("Value")
         public String value;
 

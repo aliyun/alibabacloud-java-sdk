@@ -7,18 +7,33 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
     @NameInMap("Addr")
     public java.util.List<UpdateGtmAddressPoolRequestAddr> addr;
 
+    /**
+     * <p>The ID of the address pool that you want to modify.</p>
+     */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The minimum number of available addresses in the address pool.</p>
+     */
     @NameInMap("MinAvailableAddrNum")
     public Integer minAvailableAddrNum;
 
+    /**
+     * <p>The name of the address pool that you want to modify.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The type of the address pool that you want to modify.</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -76,12 +91,25 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
     }
 
     public static class UpdateGtmAddressPoolRequestAddr extends TeaModel {
+        /**
+         * <p>The weight of the address pool that you want to modify.</p>
+         */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
+        /**
+         * <p>The mode of the address pool that you want to modify.</p>
+         * <br>
+         * <p>*   **SMART**: Intelligent return</p>
+         * <p>*   **ONLINE**: Always online</p>
+         * <p>*   **OFFLINE**: Always offline</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The addresses in the address pool.</p>
+         */
         @NameInMap("Value")
         public String value;
 

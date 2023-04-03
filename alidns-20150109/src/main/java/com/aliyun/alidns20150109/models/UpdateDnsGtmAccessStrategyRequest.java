@@ -10,48 +10,110 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     @NameInMap("DefaultAddrPool")
     public java.util.List<UpdateDnsGtmAccessStrategyRequestDefaultAddrPool> defaultAddrPool;
 
+    /**
+     * <p>The type of the primary address pool. Valid values:</p>
+     * <br>
+     * <p>*   IPV4</p>
+     * <p>*   IPV6</p>
+     * <p>*   DOMAIN</p>
+     */
     @NameInMap("DefaultAddrPoolType")
     public String defaultAddrPoolType;
 
+    /**
+     * <p>Specifies whether to enable scheduling optimization for latency resolution for the primary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   OPEN: enable</p>
+     * <p>*   CLOSE: disable</p>
+     */
     @NameInMap("DefaultLatencyOptimization")
     public String defaultLatencyOptimization;
 
+    /**
+     * <p>The load balancing policy of the primary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   ALL_RR: returns all addresses.</p>
+     * <p>*   RATIO: returns addresses by weight.</p>
+     */
     @NameInMap("DefaultLbaStrategy")
     public String defaultLbaStrategy;
 
+    /**
+     * <p>The maximum number of addresses returned from the primary address pool group.</p>
+     */
     @NameInMap("DefaultMaxReturnAddrNum")
     public Integer defaultMaxReturnAddrNum;
 
+    /**
+     * <p>The minimum number of available addresses in the primary address pool group.</p>
+     */
     @NameInMap("DefaultMinAvailableAddrNum")
     public Integer defaultMinAvailableAddrNum;
 
     @NameInMap("FailoverAddrPool")
     public java.util.List<UpdateDnsGtmAccessStrategyRequestFailoverAddrPool> failoverAddrPool;
 
+    /**
+     * <p>The type of the secondary address pool. Valid values:</p>
+     * <br>
+     * <p>*   IPV4</p>
+     * <p>*   IPV6</p>
+     * <p>*   DOMAIN</p>
+     */
     @NameInMap("FailoverAddrPoolType")
     public String failoverAddrPoolType;
 
+    /**
+     * <p>Specifies whether to enable scheduling optimization for latency resolution for the secondary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   OPEN: enable</p>
+     * <p>*   CLOSE: disable</p>
+     */
     @NameInMap("FailoverLatencyOptimization")
     public String failoverLatencyOptimization;
 
+    /**
+     * <p>The load balancing policy of the secondary address pool group. Valid values:</p>
+     * <br>
+     * <p>*   ALL_RR: returns all addresses.</p>
+     * <p>*   RATIO: returns addresses by weight.</p>
+     */
     @NameInMap("FailoverLbaStrategy")
     public String failoverLbaStrategy;
 
+    /**
+     * <p>The maximum number of addresses returned from the secondary address pool group.</p>
+     */
     @NameInMap("FailoverMaxReturnAddrNum")
     public Integer failoverMaxReturnAddrNum;
 
+    /**
+     * <p>The minimum number of available addresses in the secondary address pool group.</p>
+     */
     @NameInMap("FailoverMinAvailableAddrNum")
     public Integer failoverMinAvailableAddrNum;
 
+    /**
+     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The line codes of source regions. For example: `["default", "drpeng"]` indicates Global and Dr. Peng Telecom & Media Group.</p>
+     */
     @NameInMap("Lines")
     public String lines;
 
+    /**
+     * <p>The ID of the access policy.</p>
+     */
     @NameInMap("StrategyId")
     public String strategyId;
 
+    /**
+     * <p>The name of the access policy.</p>
+     */
     @NameInMap("StrategyName")
     public String strategyName;
 
@@ -197,9 +259,15 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     }
 
     public static class UpdateDnsGtmAccessStrategyRequestDefaultAddrPool extends TeaModel {
+        /**
+         * <p>The ID of the address pool in the primary address pool group.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The weight of the address pool in the primary address pool group.</p>
+         */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
@@ -227,9 +295,15 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     }
 
     public static class UpdateDnsGtmAccessStrategyRequestFailoverAddrPool extends TeaModel {
+        /**
+         * <p>The ID of the address pool in the secondary address pool group.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The weight of the address pool in the secondary address pool group.</p>
+         */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 

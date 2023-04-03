@@ -4,42 +4,92 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
+    /**
+     * <p>The number of addresses in the address pool.</p>
+     */
     @NameInMap("AddrCount")
     public Integer addrCount;
 
+    /**
+     * <p>The ID of the address pool.</p>
+     */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
+    /**
+     * <p>The addresses in the address pool.</p>
+     */
     @NameInMap("Addrs")
     public DescribeDnsGtmInstanceAddressPoolResponseBodyAddrs addrs;
 
+    /**
+     * <p>The time when the address pool was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The timestamp that indicates the time when the address pool was created.</p>
+     */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The load balancing policy for the address pool. Valid values:</p>
+     * <br>
+     * <p>*   ALL_RR: returns all addresses.</p>
+     * <p>*   RATIO: returns addresses by weight.</p>
+     */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
 
+    /**
+     * <p>The ID of the health check configuration.</p>
+     */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
+    /**
+     * <p>Indicates the status of the health check. Valid values:</p>
+     * <br>
+     * <p>*   OPEN: The health check is enabled.</p>
+     * <p>*   CLOSE: The health check is disabled.</p>
+     * <p>*   UNCONFIGURED: The health check is not configured.</p>
+     */
     @NameInMap("MonitorStatus")
     public String monitorStatus;
 
+    /**
+     * <p>The name of the address pool.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The type of the address pool. Valid values:</p>
+     * <br>
+     * <p>*   IPV4: IPv4 address</p>
+     * <p>*   IPV6: IPv6 address</p>
+     * <p>*   DOMAIN: domain name</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The time when the address pool was last updated.</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The timestamp that indicates the time when the address pool was last updated.</p>
+     */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
 
@@ -153,33 +203,74 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmInstanceAddressPoolResponseBodyAddrsAddr extends TeaModel {
+        /**
+         * <p>The address.</p>
+         */
         @NameInMap("Addr")
         public String addr;
 
+        /**
+         * <p>The status of the last health check on the address. Valid values:</p>
+         * <br>
+         * <p>*   OK: No active alerts are triggered.</p>
+         * <p>*   ALERT: Alerts are triggered based on the alert rules.</p>
+         */
         @NameInMap("AlertStatus")
         public String alertStatus;
 
+        /**
+         * <p>The source region of the address.</p>
+         * <br>
+         * <p>*   lineCode: the line code of the source region of the address. This parameter is deprecated, and lineCodes prevails.</p>
+         * <p>*   lineName: the line name of the source region of the address. This parameter is deprecated.</p>
+         * <p>*   lineCodes: the line codes of the source regions of the address.</p>
+         */
         @NameInMap("AttributeInfo")
         public String attributeInfo;
 
+        /**
+         * <p>The time when the address was added into the address pool.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The timestamp that indicates the time when the address was added into the address pool.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The weight of the address.</p>
+         */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
+        /**
+         * <p>The mode of the address. Valid values:</p>
+         * <br>
+         * <p>*   SMART: smart return</p>
+         * <p>*   ONLINE: always online</p>
+         * <p>*   OFFLINE: always offline</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The description of the address.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The time when the address was last updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The timestamp that indicates the time when the address was last updated.</p>
+         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 

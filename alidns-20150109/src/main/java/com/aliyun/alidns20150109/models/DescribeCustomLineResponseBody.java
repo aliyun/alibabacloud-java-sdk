@@ -4,21 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomLineResponseBody extends TeaModel {
+    /**
+     * <p>The code of the custom line. The code is used when you configure a resolution record.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The domain name for which the custom line is configured.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The unique ID of the custom line.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The list of CIDR blocks.</p>
+     */
     @NameInMap("IpSegmentList")
     public java.util.List<DescribeCustomLineResponseBodyIpSegmentList> ipSegmentList;
 
+    /**
+     * <p>The name of the custom line.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,9 +94,15 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomLineResponseBodyIpSegmentList extends TeaModel {
+        /**
+         * <p>The end IP address.</p>
+         */
         @NameInMap("EndIp")
         public String endIp;
 
+        /**
+         * <p>The start IP address.</p>
+         */
         @NameInMap("StartIp")
         public String startIp;
 

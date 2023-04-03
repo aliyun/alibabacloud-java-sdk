@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteGtmAddressPoolRequest extends TeaModel {
+    /**
+     * <p>The ID of the address pool that you want to delete.</p>
+     */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

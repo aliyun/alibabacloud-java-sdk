@@ -4,48 +4,90 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
+    /**
+     * <p>The time when the disaster recovery plan was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The number of faulty address pools.</p>
+     */
     @NameInMap("FaultAddrPoolNum")
     public Integer faultAddrPoolNum;
 
+    /**
+     * <p>The list of faulty address pools.</p>
+     */
     @NameInMap("FaultAddrPools")
     public DescribeGtmRecoveryPlanResponseBodyFaultAddrPools faultAddrPools;
 
+    /**
+     * <p>The last time when the recovery plan was executed.</p>
+     */
     @NameInMap("LastExecuteTime")
     public String lastExecuteTime;
 
+    /**
+     * <p>A timestamp that indicates the last time when the recovery plan was executed.</p>
+     */
     @NameInMap("LastExecuteTimestamp")
     public Long lastExecuteTimestamp;
 
+    /**
+     * <p>The last time when the disaster recovery plan was rolled back.</p>
+     */
     @NameInMap("LastRollbackTime")
     public String lastRollbackTime;
 
+    /**
+     * <p>A timestamp that indicates the last time when the disaster recovery plan was rolled back.</p>
+     */
     @NameInMap("LastRollbackTimestamp")
     public Long lastRollbackTimestamp;
 
+    /**
+     * <p>The name of the disaster recovery plan queried.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the disaster recovery plan queried.</p>
+     */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;
 
+    /**
+     * <p>The remarks on the disaster recovery plan.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the disaster recovery plan queried.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The last time when the disaster recovery plan was updated.</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>A timestamp that indicates the last time when the disaster recovery plan was updated.</p>
+     */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
 
@@ -175,12 +217,21 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr extends TeaModel {
+        /**
+         * <p>The ID of the address.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The address work mode. It is the mode that was set for the IP address to work.</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The address value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -235,15 +286,27 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool extends TeaModel {
+        /**
+         * <p>The ID of the address pool.</p>
+         */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
+        /**
+         * <p>The name of the address pool.</p>
+         */
         @NameInMap("AddrPoolName")
         public String addrPoolName;
 
+        /**
+         * <p>The list of addresses in the address pool.</p>
+         */
         @NameInMap("Addrs")
         public DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrs addrs;
 
+        /**
+         * <p>The ID of the GTM instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

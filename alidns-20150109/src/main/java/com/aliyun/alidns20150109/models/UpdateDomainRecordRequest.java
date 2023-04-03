@@ -4,30 +4,61 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainRecordRequest extends TeaModel {
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The resolution line. Default value: **default**.</p>
+     */
     @NameInMap("Line")
     public String line;
 
+    /**
+     * <p>The priority of an MX-type DNS record. Valid values: `[1,50]`.</p>
+     * <br>
+     * <p>This parameter must be specified if the type of the DNS record is MX.</p>
+     */
     @NameInMap("Priority")
     public Long priority;
 
+    /**
+     * <p>The host record.</p>
+     * <br>
+     * <p>For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.</p>
+     */
     @NameInMap("RR")
     public String RR;
 
+    /**
+     * <p>The ID of the DNS record.</p>
+     */
     @NameInMap("RecordId")
     public String recordId;
 
+    /**
+     * <p>The TTL of the resolution. Default value: 600. Unit: seconds.</p>
+     */
     @NameInMap("TTL")
     public Long TTL;
 
+    /**
+     * <p>The type of the DNS record.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The IP address of the client.</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>The value of the DNS record.</p>
+     */
     @NameInMap("Value")
     public String value;
 

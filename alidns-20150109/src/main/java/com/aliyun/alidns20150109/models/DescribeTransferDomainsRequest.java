@@ -10,18 +10,33 @@ public class DescribeTransferDomainsRequest extends TeaModel {
     @NameInMap("FromUserId")
     public Long fromUserId;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     @NameInMap("TargetUserId")
     public Long targetUserId;
 
+    /**
+     * <p>The transfer type. Valid values:</p>
+     * <br>
+     * <p>*   IN: transferred to this account.</p>
+     * <p>*   OUT: transferred from this account.</p>
+     */
     @NameInMap("TransferType")
     public String transferType;
 

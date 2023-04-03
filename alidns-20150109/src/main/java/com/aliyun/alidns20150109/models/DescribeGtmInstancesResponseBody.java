@@ -4,21 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of queried instances.</p>
+     */
     @NameInMap("GtmInstances")
     public DescribeGtmInstancesResponseBodyGtmInstances gtmInstances;
 
+    /**
+     * <p>The returned page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,51 +94,105 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmInstancesResponseBodyGtmInstancesGtmInstance extends TeaModel {
+        /**
+         * <p>The number of access policies.</p>
+         */
         @NameInMap("AccessStrategyNum")
         public Integer accessStrategyNum;
 
+        /**
+         * <p>The number of address pools.</p>
+         */
         @NameInMap("AddressPoolNum")
         public Integer addressPoolNum;
 
+        /**
+         * <p>The name of the alert group.</p>
+         */
         @NameInMap("AlertGroup")
         public String alertGroup;
 
+        /**
+         * <p>The CNAME domain name that is used to access the instance.</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The CNAME domain name used to access the instance. Valid values:</p>
+         * <br>
+         * <p>*   **SYSTEM_ASSIGN**: A CNAME domain name assigned by the system is used.</p>
+         * <p>*   **CUSTOM**: A custom CNAME domain name is used.</p>
+         */
         @NameInMap("CnameMode")
         public String cnameMode;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The UNIX timestamp that indicates when the instance was created.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The time when the instance expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The UNIX timestamp that indicates when the instance expires.</p>
+         */
         @NameInMap("ExpireTimestamp")
         public Long expireTimestamp;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The load balancing policy that is used. Valid values:</p>
+         * <br>
+         * <p>*   **ALL_RR**: Load balancing</p>
+         * <p>*   **RATIO**: Weighted round-robin</p>
+         */
         @NameInMap("LbaStrategy")
         public String lbaStrategy;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The global time to live (TTL).</p>
+         */
         @NameInMap("Ttl")
         public Integer ttl;
 
+        /**
+         * <p>The domain name of the user.</p>
+         */
         @NameInMap("UserDomainName")
         public String userDomainName;
 
+        /**
+         * <p>The version code of the instance.</p>
+         */
         @NameInMap("VersionCode")
         public String versionCode;
 

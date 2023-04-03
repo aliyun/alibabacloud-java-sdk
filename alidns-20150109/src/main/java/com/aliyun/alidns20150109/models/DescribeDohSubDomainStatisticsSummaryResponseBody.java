@@ -4,21 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics list.</p>
+     */
     @NameInMap("Statistics")
     public java.util.List<DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics> statistics;
 
+    /**
+     * <p>Total number of entries returned.</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>Total number of pages returned.</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,30 +94,57 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
     }
 
     public static class DescribeDohSubDomainStatisticsSummaryResponseBodyStatistics extends TeaModel {
+        /**
+         * <p>The number of HTTP requests.</p>
+         */
         @NameInMap("HttpCount")
         public Long httpCount;
 
+        /**
+         * <p>The number of HTTPS requests.</p>
+         */
         @NameInMap("HttpsCount")
         public Long httpsCount;
 
+        /**
+         * <p>The number of IP addresses.</p>
+         */
         @NameInMap("IpCount")
         public Long ipCount;
 
+        /**
+         * <p>The subdomain.</p>
+         */
         @NameInMap("SubDomain")
         public String subDomain;
 
+        /**
+         * <p>Total number of requests.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The number of IPv4-based HTTP requests.</p>
+         */
         @NameInMap("V4HttpCount")
         public Long v4HttpCount;
 
+        /**
+         * <p>The number of IPv4-based HTTPS requests.</p>
+         */
         @NameInMap("V4HttpsCount")
         public Long v4HttpsCount;
 
+        /**
+         * <p>The number of IPv6-based HTTP requests.</p>
+         */
         @NameInMap("V6HttpCount")
         public Long v6HttpCount;
 
+        /**
+         * <p>The number of IPv6-based HTTPS requests.</p>
+         */
         @NameInMap("V6HttpsCount")
         public Long v6HttpsCount;
 

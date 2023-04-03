@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
+    /**
+     * <p>The monitored nodes that can be used to perform health checks on address pools that contain public domain names that are resolved to IPv4 addresses.</p>
+     */
     @NameInMap("DomainIpv4IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodes domainIpv4IspCityNodes;
 
+    /**
+     * <p>The monitored nodes that can be used to perform health checks on address pools that contain public domain names that are resolved to IPv6 addresses.</p>
+     */
     @NameInMap("DomainIpv6IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodes domainIpv6IspCityNodes;
 
+    /**
+     * <p>The monitored nodes that can be used to perform health checks on address pools that contain public IPv4 addresses.</p>
+     */
     @NameInMap("Ipv4IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodes ipv4IspCityNodes;
 
+    /**
+     * <p>The monitored nodes that can be used to perform health checks on address pools that contain public IPv6 addresses.</p>
+     */
     @NameInMap("Ipv6IspCityNodes")
     public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodes ipv6IspCityNodes;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -84,27 +99,52 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNode extends TeaModel {
+        /**
+         * <p>The code of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>The display name of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <p>Indicates whether the monitored node is selected for the health check by default.</p>
+         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
+        /**
+         * <p>The name of the group to which the monitored node belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the group to which the monitored node belongs. Valid values:</p>
+         * <br>
+         * <p>*   BGP: BGP nodes</p>
+         * <p>*   OVERSEAS: nodes outside the Chinese mainland</p>
+         * <p>*   ISP: ISP nodes</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
         @NameInMap("Ips")
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv4IspCityNodesDomainIpv4IspCityNodeIps ips;
 
+        /**
+         * <p>The code of the ISP to which the monitored node belongs.</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
+        /**
+         * <p>The display name of the ISP to which the monitored node belongs.</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
@@ -218,27 +258,52 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNode extends TeaModel {
+        /**
+         * <p>The code of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>The display name of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <p>Indicates whether the monitored node is selected for the health check by default.</p>
+         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
+        /**
+         * <p>The name of the group to which the monitored node belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the group to which the monitored node belongs. Valid values:</p>
+         * <br>
+         * <p>*   BGP: BGP nodes</p>
+         * <p>*   OVERSEAS: nodes outside the Chinese mainland</p>
+         * <p>*   ISP: ISP nodes</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
         @NameInMap("Ips")
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyDomainIpv6IspCityNodesDomainIpv6IspCityNodeIps ips;
 
+        /**
+         * <p>The code of the ISP to which the monitored node belongs.</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
+        /**
+         * <p>The display name of the ISP to which the monitored node belongs.</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
@@ -352,27 +417,52 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNode extends TeaModel {
+        /**
+         * <p>The code of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>The display name of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <p>Indicates whether the monitored node is selected for the health check by default.</p>
+         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
+        /**
+         * <p>The name of the group to which the monitored node belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the group to which the monitored node belongs. Valid values:</p>
+         * <br>
+         * <p>*   BGP: Border Gateway Protocol (BGP) nodes</p>
+         * <p>*   OVERSEAS: nodes outside the Chinese mainland</p>
+         * <p>*   ISP: ISP nodes</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
         @NameInMap("Ips")
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps ips;
 
+        /**
+         * <p>The code of the Internet service provider (ISP) to which the monitored node belongs.</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
+        /**
+         * <p>The display name of the ISP to which the monitored node belongs.</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
@@ -486,27 +576,52 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNode extends TeaModel {
+        /**
+         * <p>The code of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>The display name of the city where the monitored node is deployed.</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <p>Indicates whether the monitored node is selected for the health check by default.</p>
+         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
+        /**
+         * <p>The name of the group to which the monitored node belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the group to which the monitored node belongs. Valid values:</p>
+         * <br>
+         * <p>*   BGP: BGP nodes</p>
+         * <p>*   OVERSEAS: nodes outside the Chinese mainland</p>
+         * <p>*   ISP: ISP nodes</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
         @NameInMap("Ips")
         public DescribeDnsGtmMonitorAvailableConfigResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps ips;
 
+        /**
+         * <p>The code of the ISP to which the monitored node belongs.</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
+        /**
+         * <p>The display name of the ISP to which the monitored node belongs.</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 

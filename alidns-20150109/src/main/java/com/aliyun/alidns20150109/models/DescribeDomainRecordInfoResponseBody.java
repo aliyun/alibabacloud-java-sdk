@@ -4,48 +4,96 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRecordInfoResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the domain name.</p>
+     */
     @NameInMap("DomainId")
     public String domainId;
 
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The ID of the domain name group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The name of the domain name group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The resolution line.</p>
+     */
     @NameInMap("Line")
     public String line;
 
+    /**
+     * <p>The lock status of the DNS record. Valid values: true and false.</p>
+     */
     @NameInMap("Locked")
     public Boolean locked;
 
+    /**
+     * <p>The priority of the MX-type DNS record.</p>
+     */
     @NameInMap("Priority")
     public Long priority;
 
+    /**
+     * <p>The punycode is only returned for Chinese domain names.</p>
+     */
     @NameInMap("PunyCode")
     public String punyCode;
 
+    /**
+     * <p>The host record.</p>
+     */
     @NameInMap("RR")
     public String RR;
 
+    /**
+     * <p>The ID of the DNS record.</p>
+     */
     @NameInMap("RecordId")
     public String recordId;
 
+    @NameInMap("Remark")
+    public String remark;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the DNS record. Valid values: Enable and Disable.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The TTL of the resolution.</p>
+     */
     @NameInMap("TTL")
     public Long TTL;
 
+    /**
+     * <p>The type of the DNS record.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The value of the DNS record.</p>
+     */
     @NameInMap("Value")
     public String value;
 
@@ -132,6 +180,14 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     }
     public String getRecordId() {
         return this.recordId;
+    }
+
+    public DescribeDomainRecordInfoResponseBody setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public DescribeDomainRecordInfoResponseBody setRequestId(String requestId) {

@@ -4,12 +4,25 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAddrAttributeInfoRequest extends TeaModel {
+    /**
+     * <p>The addresses whose source regions you want to query.</p>
+     */
     @NameInMap("Addrs")
     public String addrs;
 
+    /**
+     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The type of the addresses. Valid values:</p>
+     * <br>
+     * <p>*   IPV4: IPv4 address</p>
+     * <p>*   IPV6: IPv6 address</p>
+     * <p>*   DOMAIN: domain name</p>
+     */
     @NameInMap("Type")
     public String type;
 

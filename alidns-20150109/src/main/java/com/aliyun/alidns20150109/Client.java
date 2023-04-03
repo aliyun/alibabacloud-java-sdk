@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      *
+      * @param request AddCustomLineRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddCustomLineResponse
+     */
     public AddCustomLineResponse addCustomLineWithOptions(AddCustomLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -62,6 +70,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomLineResponse());
     }
 
+    /**
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      *
+      * @param request AddCustomLineRequest
+      * @return AddCustomLineResponse
+     */
     public AddCustomLineResponse addCustomLine(AddCustomLineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addCustomLineWithOptions(request, runtime);
@@ -298,6 +313,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addDnsGtmAddressPoolWithOptions(request, runtime);
     }
 
+    /**
+      * ***
+      *
+      * @param request AddDnsGtmMonitorRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddDnsGtmMonitorResponse
+     */
     public AddDnsGtmMonitorResponse addDnsGtmMonitorWithOptions(AddDnsGtmMonitorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -350,11 +372,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddDnsGtmMonitorResponse());
     }
 
+    /**
+      * ***
+      *
+      * @param request AddDnsGtmMonitorRequest
+      * @return AddDnsGtmMonitorResponse
+     */
     public AddDnsGtmMonitorResponse addDnsGtmMonitor(AddDnsGtmMonitorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addDnsGtmMonitorWithOptions(request, runtime);
     }
 
+    /**
+      * You can check whether a domain name is valid based on the following topic:
+      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+      *
+      * @param request AddDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddDomainResponse
+     */
     public AddDomainResponse addDomainWithOptions(AddDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -391,6 +427,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddDomainResponse());
     }
 
+    /**
+      * You can check whether a domain name is valid based on the following topic:
+      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+      *
+      * @param request AddDomainRequest
+      * @return AddDomainResponse
+     */
     public AddDomainResponse addDomain(AddDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addDomainWithOptions(request, runtime);
@@ -825,6 +868,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.changeDomainGroupWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation to change the domain name for an Alibaba Cloud DNS instance to which a domain name is bound. You can also call this operation to bind a domain name to an Alibaba Cloud DNS instance to which no domain name is bound. If you need to unbind a domain name from an Alibaba Cloud DNS instance, you can call this operation. In this case, the NewDomain parameter must not be specified.
+      *
+      * @param request ChangeDomainOfDnsProductRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ChangeDomainOfDnsProductResponse
+     */
     public ChangeDomainOfDnsProductResponse changeDomainOfDnsProductWithOptions(ChangeDomainOfDnsProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -865,6 +915,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeDomainOfDnsProductResponse());
     }
 
+    /**
+      * >  You can call this operation to change the domain name for an Alibaba Cloud DNS instance to which a domain name is bound. You can also call this operation to bind a domain name to an Alibaba Cloud DNS instance to which no domain name is bound. If you need to unbind a domain name from an Alibaba Cloud DNS instance, you can call this operation. In this case, the NewDomain parameter must not be specified.
+      *
+      * @param request ChangeDomainOfDnsProductRequest
+      * @return ChangeDomainOfDnsProductResponse
+     */
     public ChangeDomainOfDnsProductResponse changeDomainOfDnsProduct(ChangeDomainOfDnsProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeDomainOfDnsProductWithOptions(request, runtime);
@@ -1109,6 +1165,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDnsGtmAddressPoolWithOptions(request, runtime);
     }
 
+    /**
+      * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
+      * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
+      *
+      * @param request DeleteDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDomainResponse
+     */
     public DeleteDomainResponse deleteDomainWithOptions(DeleteDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1137,11 +1201,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDomainResponse());
     }
 
+    /**
+      * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
+      * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
+      *
+      * @param request DeleteDomainRequest
+      * @return DeleteDomainResponse
+     */
     public DeleteDomainResponse deleteDomain(DeleteDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDomainWithOptions(request, runtime);
     }
 
+    /**
+      * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+      *
+      * @param request DeleteDomainGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDomainGroupResponse
+     */
     public DeleteDomainGroupResponse deleteDomainGroupWithOptions(DeleteDomainGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1170,6 +1248,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDomainGroupResponse());
     }
 
+    /**
+      * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+      *
+      * @param request DeleteDomainGroupRequest
+      * @return DeleteDomainGroupResponse
+     */
     public DeleteDomainGroupResponse deleteDomainGroup(DeleteDomainGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDomainGroupWithOptions(request, runtime);
@@ -1311,6 +1395,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteGtmRecoveryPlanWithOptions(request, runtime);
     }
 
+    /**
+      * If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.
+      *
+      * @param request DeleteSubDomainRecordsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteSubDomainRecordsResponse
+     */
     public DeleteSubDomainRecordsResponse deleteSubDomainRecordsWithOptions(DeleteSubDomainRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1351,6 +1442,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSubDomainRecordsResponse());
     }
 
+    /**
+      * If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.
+      *
+      * @param request DeleteSubDomainRecordsRequest
+      * @return DeleteSubDomainRecordsResponse
+     */
     public DeleteSubDomainRecordsResponse deleteSubDomainRecords(DeleteSubDomainRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSubDomainRecordsWithOptions(request, runtime);
@@ -1393,6 +1490,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeBatchResultCountWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that the batch tasks have been executed.
+      *
+      * @param request DescribeBatchResultDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeBatchResultDetailResponse
+     */
     public DescribeBatchResultDetailResponse describeBatchResultDetailWithOptions(DescribeBatchResultDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1437,6 +1541,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBatchResultDetailResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that the batch tasks have been executed.
+      *
+      * @param request DescribeBatchResultDetailRequest
+      * @return DescribeBatchResultDetailResponse
+     */
     public DescribeBatchResultDetailResponse describeBatchResultDetail(DescribeBatchResultDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBatchResultDetailWithOptions(request, runtime);
@@ -2190,6 +2300,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDnsProductInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+      *
+      * @param request DescribeDnsProductInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDnsProductInstancesResponse
+     */
     public DescribeDnsProductInstancesResponse describeDnsProductInstancesWithOptions(DescribeDnsProductInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2234,6 +2351,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDnsProductInstancesResponse());
     }
 
+    /**
+      * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
+      *
+      * @param request DescribeDnsProductInstancesRequest
+      * @return DescribeDnsProductInstancesResponse
+     */
     public DescribeDnsProductInstancesResponse describeDnsProductInstances(DescribeDnsProductInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDnsProductInstancesWithOptions(request, runtime);
@@ -2571,6 +2694,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainGroupsWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+      *
+      * @param request DescribeDomainInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainInfoResponse
+     */
     public DescribeDomainInfoResponse describeDomainInfoWithOptions(DescribeDomainInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2603,6 +2733,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainInfoResponse());
     }
 
+    /**
+      * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+      *
+      * @param request DescribeDomainInfoRequest
+      * @return DescribeDomainInfoResponse
+     */
     public DescribeDomainInfoResponse describeDomainInfo(DescribeDomainInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainInfoWithOptions(request, runtime);
@@ -2665,6 +2801,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainLogsWithOptions(request, runtime);
     }
 
+    /**
+      * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
+      *
+      * @param request DescribeDomainNsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainNsResponse
+     */
     public DescribeDomainNsResponse describeDomainNsWithOptions(DescribeDomainNsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2693,6 +2836,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainNsResponse());
     }
 
+    /**
+      * >  This operation queries the authoritative server of the registry to obtain the name servers of a domain name. If the domain name is in the serverHold or clientHold state, an exception may occur.
+      *
+      * @param request DescribeDomainNsRequest
+      * @return DescribeDomainNsResponse
+     */
     public DescribeDomainNsResponse describeDomainNs(DescribeDomainNsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainNsWithOptions(request, runtime);
@@ -2735,6 +2884,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainRecordInfoWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
+      * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+      * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+      *
+      * @param request DescribeDomainRecordsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainRecordsResponse
+     */
     public DescribeDomainRecordsResponse describeDomainRecordsWithOptions(DescribeDomainRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2815,11 +2973,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainRecordsResponse());
     }
 
+    /**
+      * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
+      * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+      * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+      *
+      * @param request DescribeDomainRecordsRequest
+      * @return DescribeDomainRecordsResponse
+     */
     public DescribeDomainRecordsResponse describeDomainRecords(DescribeDomainRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainRecordsWithOptions(request, runtime);
     }
 
+    public DescribeDomainResolveStatisticsSummaryResponse describeDomainResolveStatisticsSummaryWithOptions(DescribeDomainResolveStatisticsSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchMode)) {
+            query.put("SearchMode", request.searchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
+            query.put("Threshold", request.threshold);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDomainResolveStatisticsSummary"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainResolveStatisticsSummaryResponse());
+    }
+
+    public DescribeDomainResolveStatisticsSummaryResponse describeDomainResolveStatisticsSummary(DescribeDomainResolveStatisticsSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDomainResolveStatisticsSummaryWithOptions(request, runtime);
+    }
+
+    /**
+      * Real-time data is collected per hour.
+      *
+      * @param request DescribeDomainStatisticsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainStatisticsResponse
+     */
     public DescribeDomainStatisticsResponse describeDomainStatisticsWithOptions(DescribeDomainStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2860,6 +3094,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainStatisticsResponse());
     }
 
+    /**
+      * Real-time data is collected per hour.
+      *
+      * @param request DescribeDomainStatisticsRequest
+      * @return DescribeDomainStatisticsResponse
+     */
     public DescribeDomainStatisticsResponse describeDomainStatistics(DescribeDomainStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainStatisticsWithOptions(request, runtime);
@@ -2922,6 +3162,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainStatisticsSummaryWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can specify the PageNumber and PageSize parameters to query domain names.
+      * *   You can specify the KeyWord parameter to query domain names that contain the specified keyword.
+      * *   By default, the domain names in a list are sorted in descending order of the time they were added.
+      * *   You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.
+      *
+      * @param request DescribeDomainsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainsResponse
+     */
     public DescribeDomainsResponse describeDomainsWithOptions(DescribeDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2974,6 +3224,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainsResponse());
     }
 
+    /**
+      * *   You can specify the PageNumber and PageSize parameters to query domain names.
+      * *   You can specify the KeyWord parameter to query domain names that contain the specified keyword.
+      * *   By default, the domain names in a list are sorted in descending order of the time they were added.
+      * *   You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.
+      *
+      * @param request DescribeDomainsRequest
+      * @return DescribeDomainsResponse
+     */
     public DescribeDomainsResponse describeDomains(DescribeDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainsWithOptions(request, runtime);
@@ -4332,6 +4591,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRecordLogsWithOptions(request, runtime);
     }
 
+    public DescribeRecordResolveStatisticsSummaryResponse describeRecordResolveStatisticsSummaryWithOptions(DescribeRecordResolveStatisticsSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainType)) {
+            query.put("DomainType", request.domainType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("EndDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchMode)) {
+            query.put("SearchMode", request.searchMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
+            query.put("Threshold", request.threshold);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRecordResolveStatisticsSummary"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRecordResolveStatisticsSummaryResponse());
+    }
+
+    public DescribeRecordResolveStatisticsSummaryResponse describeRecordResolveStatisticsSummary(DescribeRecordResolveStatisticsSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRecordResolveStatisticsSummaryWithOptions(request, runtime);
+    }
+
+    /**
+      * Real-time data is collected per hour.
+      *
+      * @param request DescribeRecordStatisticsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRecordStatisticsResponse
+     */
     public DescribeRecordStatisticsResponse describeRecordStatisticsWithOptions(DescribeRecordStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4376,6 +4711,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRecordStatisticsResponse());
     }
 
+    /**
+      * Real-time data is collected per hour.
+      *
+      * @param request DescribeRecordStatisticsRequest
+      * @return DescribeRecordStatisticsResponse
+     */
     public DescribeRecordStatisticsResponse describeRecordStatistics(DescribeRecordStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRecordStatisticsWithOptions(request, runtime);
@@ -4737,6 +5078,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTxtRecordForVerifyWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+      * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
+      * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+      *
+      * @param request ListTagResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4777,11 +5128,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+      * *   You can specify ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
+      * *   Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you specify only Tag.N.Value, an error message is returned.
+      * *   If you specify Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
+      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
+      *
+      * @param request ListTagResourcesRequest
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * If the operation succeeds, the name of the DNS server changes to that of an Alibaba Cloud DNS server (ending with hichina.com).
+      * >  Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS server in use is not an Alibaba Cloud DNS server.
+      *
+      * @param request ModifyHichinaDomainDNSRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyHichinaDomainDNSResponse
+     */
     public ModifyHichinaDomainDNSResponse modifyHichinaDomainDNSWithOptions(ModifyHichinaDomainDNSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4814,6 +5182,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHichinaDomainDNSResponse());
     }
 
+    /**
+      * If the operation succeeds, the name of the DNS server changes to that of an Alibaba Cloud DNS server (ending with hichina.com).
+      * >  Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS server in use is not an Alibaba Cloud DNS server.
+      *
+      * @param request ModifyHichinaDomainDNSRequest
+      * @return ModifyHichinaDomainDNSResponse
+     */
     public ModifyHichinaDomainDNSResponse modifyHichinaDomainDNS(ModifyHichinaDomainDNSRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyHichinaDomainDNSWithOptions(request, runtime);
@@ -5222,6 +5597,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setDNSSLBStatusWithOptions(request, runtime);
     }
 
+    /**
+      * ****
+      *
+      * @param request SetDnsGtmAccessModeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetDnsGtmAccessModeResponse
+     */
     public SetDnsGtmAccessModeResponse setDnsGtmAccessModeWithOptions(SetDnsGtmAccessModeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5254,6 +5636,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetDnsGtmAccessModeResponse());
     }
 
+    /**
+      * ****
+      *
+      * @param request SetDnsGtmAccessModeRequest
+      * @return SetDnsGtmAccessModeResponse
+     */
     public SetDnsGtmAccessModeResponse setDnsGtmAccessMode(SetDnsGtmAccessModeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDnsGtmAccessModeWithOptions(request, runtime);
@@ -5727,6 +6115,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateAppKeyStateWithOptions(request, runtime);
     }
 
+    /**
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      *
+      * @param request UpdateCustomLineRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateCustomLineResponse
+     */
     public UpdateCustomLineResponse updateCustomLineWithOptions(UpdateCustomLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5763,6 +6159,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomLineResponse());
     }
 
+    /**
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      *
+      * @param request UpdateCustomLineRequest
+      * @return UpdateCustomLineResponse
+     */
     public UpdateCustomLineResponse updateCustomLine(UpdateCustomLineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCustomLineWithOptions(request, runtime);

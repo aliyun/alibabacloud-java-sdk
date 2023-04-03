@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteSubDomainRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The host record.</p>
+     */
     @NameInMap("RR")
     public String RR;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of deleted DNS records.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 

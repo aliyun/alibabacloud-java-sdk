@@ -4,21 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The access policies.</p>
+     */
     @NameInMap("Strategies")
     public DescribeDnsGtmAccessStrategiesResponseBodyStrategies strategies;
 
+    /**
+     * <p>The total number of entries returned on all pages.</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,15 +94,27 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategyEffectiveAddrPoolsEffectiveAddrPool extends TeaModel {
+        /**
+         * <p>The number of addresses in the address pool.</p>
+         */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
+        /**
+         * <p>The ID of the address pool.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The weight of the address pool.</p>
+         */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
+        /**
+         * <p>The name of the address pool.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -147,15 +177,27 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine extends TeaModel {
+        /**
+         * <p>The code of the source region group.</p>
+         */
         @NameInMap("GroupCode")
         public String groupCode;
 
+        /**
+         * <p>The name of the source region group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The line code of the source region.</p>
+         */
         @NameInMap("LineCode")
         public String lineCode;
 
+        /**
+         * <p>The line name of the source region.</p>
+         */
         @NameInMap("LineName")
         public String lineName;
 
@@ -218,30 +260,67 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategy extends TeaModel {
+        /**
+         * <p>The time when the access policy was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The timestamp that indicates when the access policy was created.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The type of the active address pool group. Valid values:</p>
+         * <br>
+         * <p>*   DEFAULT: the primary address pool group</p>
+         * <p>*   FAILOVER: the secondary address pool group</p>
+         */
         @NameInMap("EffectiveAddrPoolGroupType")
         public String effectiveAddrPoolGroupType;
 
+        /**
+         * <p>The type of the active address pools. Valid values:</p>
+         * <br>
+         * <p>*   IPV4</p>
+         * <p>*   IPV6</p>
+         * <p>*   DOMAIN</p>
+         */
         @NameInMap("EffectiveAddrPoolType")
         public String effectiveAddrPoolType;
 
+        /**
+         * <p>The active address pool groups.</p>
+         */
         @NameInMap("EffectiveAddrPools")
         public DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategyEffectiveAddrPools effectiveAddrPools;
 
+        /**
+         * <p>The load balancing policy of the active address pool group. Data is returned when StrategyMode is set to GEO. Valid values: </p>
+         * <br>
+         * <p>- ALL_RR: returns all addresses.</p>
+         * <p>- RATIO: returns addresses by weight.</p>
+         */
         @NameInMap("EffectiveLbaStrategy")
         public String effectiveLbaStrategy;
 
+        /**
+         * <p>The source regions. Data is returned when StrategyMode is set to GEO. Valid values:</p>
+         */
         @NameInMap("Lines")
         public DescribeDnsGtmAccessStrategiesResponseBodyStrategiesStrategyLines lines;
 
+        /**
+         * <p>The ID of the access policy.</p>
+         */
         @NameInMap("StrategyId")
         public String strategyId;
 
+        /**
+         * <p>The name of the access policy.</p>
+         */
         @NameInMap("StrategyName")
         public String strategyName;
 

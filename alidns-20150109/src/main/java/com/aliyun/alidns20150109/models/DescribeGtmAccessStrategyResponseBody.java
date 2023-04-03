@@ -4,51 +4,102 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
+    /**
+     * <p>The access policy.</p>
+     */
     @NameInMap("AccessMode")
     public String accessMode;
 
+    /**
+     * <p>The access status. Valid values:</p>
+     * <br>
+     * <p>*   **DEFAULT**: Indicates normal when the default address pool is accessed.</p>
+     * <p>*   **FAILOVER**: Indicates an exception when a failover address pool is accessed.</p>
+     */
     @NameInMap("AccessStatus")
     public String accessStatus;
 
+    /**
+     * <p>Indicates whether health check is enabled for the default address pool.</p>
+     */
     @NameInMap("DefaultAddrPoolMonitorStatus")
     public String defaultAddrPoolMonitorStatus;
 
+    /**
+     * <p>The name of the default address pool.</p>
+     */
     @NameInMap("DefaultAddrPoolName")
     public String defaultAddrPoolName;
 
+    /**
+     * <p>The availability status of the default address pool.</p>
+     */
     @NameInMap("DefaultAddrPoolStatus")
     public String defaultAddrPoolStatus;
 
+    /**
+     * <p>The ID of the default address pool.</p>
+     */
     @NameInMap("DefultAddrPoolId")
     public String defultAddrPoolId;
 
+    /**
+     * <p>The ID of the failover address pool.</p>
+     */
     @NameInMap("FailoverAddrPoolId")
     public String failoverAddrPoolId;
 
+    /**
+     * <p>Indicates whether health check is enabled for the failover address pool.</p>
+     */
     @NameInMap("FailoverAddrPoolMonitorStatus")
     public String failoverAddrPoolMonitorStatus;
 
+    /**
+     * <p>The name of the failover address pool.</p>
+     */
     @NameInMap("FailoverAddrPoolName")
     public String failoverAddrPoolName;
 
+    /**
+     * <p>The availability status of the failover address pool.</p>
+     */
     @NameInMap("FailoverAddrPoolStatus")
     public String failoverAddrPoolStatus;
 
+    /**
+     * <p>The ID of the GTM instance whose access policy details you want to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The returned lines of access regions.</p>
+     */
     @NameInMap("Lines")
     public DescribeGtmAccessStrategyResponseBodyLines lines;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the access policy queried.</p>
+     */
     @NameInMap("StrategyId")
     public String strategyId;
 
+    /**
+     * <p>The mode of traffic scheduling.</p>
+     */
     @NameInMap("StrategyMode")
     public String strategyMode;
 
+    /**
+     * <p>The name of the access policy queried.</p>
+     */
     @NameInMap("StrategyName")
     public String strategyName;
 
@@ -186,15 +237,27 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeGtmAccessStrategyResponseBodyLinesLine extends TeaModel {
+        /**
+         * <p>The code of the access region group.</p>
+         */
         @NameInMap("GroupCode")
         public String groupCode;
 
+        /**
+         * <p>The name of the access region group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The code for the line of the access region.</p>
+         */
         @NameInMap("LineCode")
         public String lineCode;
 
+        /**
+         * <p>The name for the line of the access region.</p>
+         */
         @NameInMap("LineName")
         public String lineName;
 

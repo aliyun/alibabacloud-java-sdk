@@ -4,27 +4,56 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchResultCountResponseBody extends TeaModel {
+    /**
+     * <p>The type of the batch operation.</p>
+     */
     @NameInMap("BatchType")
     public String batchType;
 
+    /**
+     * <p>The total number of domain names or DNS records that failed to be processed.</p>
+     */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
+    /**
+     * <p>The cause of the execution failure.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the task. Valid values:</p>
+     * <br>
+     * <p>*   **-1**: No task for importing domain names or DNS records is submitted.</p>
+     * <p>*   **0**: The task is being processed.</p>
+     * <p>*   **1**: The task is completed.</p>
+     * <p>*   **2**: The task failed.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The total number of successfully processed domain names or DNS records.</p>
+     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
+    /**
+     * <p>The ID of the last task.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 
+    /**
+     * <p>The total number of DNS records that were processed in batches.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

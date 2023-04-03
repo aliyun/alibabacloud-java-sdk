@@ -4,12 +4,24 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class GetTxtRecordForVerifyRequest extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The function verified by using the TXT record. Valid values:</p>
+     * <br>
+     * <p>*   ADD_SUBDOMAIN</p>
+     * <p>*   RETRIEVAL</p>
+     */
     @NameInMap("Type")
     public String type;
 

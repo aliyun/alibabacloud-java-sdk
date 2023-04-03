@@ -4,6 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>"dns-example.com","dns-test.com"</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

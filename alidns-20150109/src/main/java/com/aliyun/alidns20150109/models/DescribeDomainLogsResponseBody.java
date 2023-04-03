@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainLogsResponseBody extends TeaModel {
+    /**
+     * <p>The details about the operation logs that are queried.</p>
+     */
     @NameInMap("DomainLogs")
     public DescribeDomainLogsResponseBodyDomainLogs domainLogs;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of operation logs returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of operation logs returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,24 +80,45 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainLogsResponseBodyDomainLogsDomainLog extends TeaModel {
+        /**
+         * <p>The operation performed.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The time when the operation was performed.</p>
+         */
         @NameInMap("ActionTime")
         public String actionTime;
 
+        /**
+         * <p>The UNIX timestamp that indicates when the operation was performed.</p>
+         */
         @NameInMap("ActionTimestamp")
         public Long actionTimestamp;
 
+        /**
+         * <p>The IP address from which the operation was performed.</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The message for the operation.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

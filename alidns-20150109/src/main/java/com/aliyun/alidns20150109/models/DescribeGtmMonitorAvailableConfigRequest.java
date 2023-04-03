@@ -4,6 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmMonitorAvailableConfigRequest extends TeaModel {
+    /**
+     * <p>The language of the values of specific response parameters.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

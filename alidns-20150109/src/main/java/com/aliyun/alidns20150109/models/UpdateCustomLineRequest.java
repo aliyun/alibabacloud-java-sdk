@@ -7,12 +7,21 @@ public class UpdateCustomLineRequest extends TeaModel {
     @NameInMap("IpSegment")
     public java.util.List<UpdateCustomLineRequestIpSegment> ipSegment;
 
+    /**
+     * <p>The language type.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The unique ID of the custom line.</p>
+     */
     @NameInMap("LineId")
     public Long lineId;
 
+    /**
+     * <p>The new name of the custom line.</p>
+     */
     @NameInMap("LineName")
     public String lineName;
 
@@ -54,9 +63,15 @@ public class UpdateCustomLineRequest extends TeaModel {
     }
 
     public static class UpdateCustomLineRequestIpSegment extends TeaModel {
+        /**
+         * <p>The end IP address of the CIDR block.</p>
+         */
         @NameInMap("EndIp")
         public String endIp;
 
+        /**
+         * <p>The start IP address of the CIDR block.</p>
+         */
         @NameInMap("StartIp")
         public String startIp;
 

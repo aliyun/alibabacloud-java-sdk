@@ -4,21 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateGtmAccessStrategyRequest extends TeaModel {
+    /**
+     * <p>The line codes of access regions.</p>
+     */
     @NameInMap("AccessLines")
     public String accessLines;
 
+    /**
+     * <p>The ID of the default address pool.</p>
+     */
     @NameInMap("DefaultAddrPoolId")
     public String defaultAddrPoolId;
 
+    /**
+     * <p>The ID of the failover address pool.</p>
+     */
     @NameInMap("FailoverAddrPoolId")
     public String failoverAddrPoolId;
 
+    /**
+     * <p>The language used by the user.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the access policy that you want to query for the GTM instance.</p>
+     */
     @NameInMap("StrategyId")
     public String strategyId;
 
+    /**
+     * <p>The name of the access policy.</p>
+     */
     @NameInMap("StrategyName")
     public String strategyName;
 
