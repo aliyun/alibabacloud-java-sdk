@@ -412,6 +412,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppInstanceType")
         public String appInstanceType;
 
+        @NameInMap("AppPolicyId")
+        public String appPolicyId;
+
         @NameInMap("Apps")
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
 
@@ -502,6 +505,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getAppInstanceType() {
             return this.appInstanceType;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setAppPolicyId(String appPolicyId) {
+            this.appPolicyId = appPolicyId;
+            return this;
+        }
+        public String getAppPolicyId() {
+            return this.appPolicyId;
         }
 
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setApps(java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps) {

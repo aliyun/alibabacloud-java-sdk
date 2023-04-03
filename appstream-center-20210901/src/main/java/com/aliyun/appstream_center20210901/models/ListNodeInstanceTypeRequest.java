@@ -10,6 +10,9 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("NodeInstanceType")
+    public String nodeInstanceType;
+
     @NameInMap("OsType")
     public String osType;
 
@@ -41,6 +44,14 @@ public class ListNodeInstanceTypeRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public ListNodeInstanceTypeRequest setNodeInstanceType(String nodeInstanceType) {
+        this.nodeInstanceType = nodeInstanceType;
+        return this;
+    }
+    public String getNodeInstanceType() {
+        return this.nodeInstanceType;
     }
 
     public ListNodeInstanceTypeRequest setOsType(String osType) {
