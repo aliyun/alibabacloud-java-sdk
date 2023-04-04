@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>avatar20220130</artifactId>
-  <version>1.0.16</version>
+  <version>1.0.17</version>
   <packaging>jar</packaging>
   <name>avatar20220130</name>
   <description>Alibaba Cloud avatar (20220130) SDK for Java
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
