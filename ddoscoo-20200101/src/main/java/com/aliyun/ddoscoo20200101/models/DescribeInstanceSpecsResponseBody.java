@@ -127,6 +127,9 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("QpsLimit")
         public Integer qpsLimit;
 
+        @NameInMap("RealLimitBw")
+        public Long realLimitBw;
+
         /**
          * <p>The number of sites that can be protected by the instance.</p>
          */
@@ -240,6 +243,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
         public Integer getQpsLimit() {
             return this.qpsLimit;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setRealLimitBw(Long realLimitBw) {
+            this.realLimitBw = realLimitBw;
+            return this;
+        }
+        public Long getRealLimitBw() {
+            return this.realLimitBw;
         }
 
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setSiteLimit(Integer siteLimit) {
