@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class GetVideoPlaylistResponse extends TeaModel {
+public class BatchGetFigureClusterResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetVideoPlaylistResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetVideoPlaylistResponseBody body;
+    public BatchGetFigureClusterResponseBody body;
 
-    public static GetVideoPlaylistResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetVideoPlaylistResponse self = new GetVideoPlaylistResponse();
+    public static BatchGetFigureClusterResponse build(java.util.Map<String, ?> map) throws Exception {
+        BatchGetFigureClusterResponse self = new BatchGetFigureClusterResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetVideoPlaylistResponse setHeaders(java.util.Map<String, String> headers) {
+    public BatchGetFigureClusterResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetVideoPlaylistResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetVideoPlaylistResponse setStatusCode(Integer statusCode) {
+    public BatchGetFigureClusterResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetVideoPlaylistResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetVideoPlaylistResponse setBody(GetVideoPlaylistResponseBody body) {
+    public BatchGetFigureClusterResponse setBody(BatchGetFigureClusterResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetVideoPlaylistResponseBody getBody() {
+    public BatchGetFigureClusterResponseBody getBody() {
         return this.body;
     }
 

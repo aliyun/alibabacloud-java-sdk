@@ -151,9 +151,6 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
         @NameInMap("InitialTranscode")
         public Float initialTranscode;
 
-        @NameInMap("PresetId")
-        public PresetReference presetId;
-
         @NameInMap("Speed")
         public Float speed;
 
@@ -204,14 +201,6 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
         }
         public Float getInitialTranscode() {
             return this.initialTranscode;
-        }
-
-        public GenerateVideoPlaylistRequestTargets setPresetId(PresetReference presetId) {
-            this.presetId = presetId;
-            return this;
-        }
-        public PresetReference getPresetId() {
-            return this.presetId;
         }
 
         public GenerateVideoPlaylistRequestTargets setSpeed(Float speed) {

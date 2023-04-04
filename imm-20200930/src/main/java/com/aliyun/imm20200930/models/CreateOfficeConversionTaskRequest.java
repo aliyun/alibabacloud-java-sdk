@@ -40,9 +40,6 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("Pages")
     public String pages;
 
@@ -199,14 +196,6 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     }
     public Notification getNotification() {
         return this.notification;
-    }
-
-    public CreateOfficeConversionTaskRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public CreateOfficeConversionTaskRequest setPages(String pages) {
