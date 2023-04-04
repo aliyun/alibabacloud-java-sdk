@@ -88,6 +88,9 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
         @NameInMap("DomainType")
         public String domainType;
 
+        @NameInMap("SubDomain")
+        public String subDomain;
+
         public static DescribeRecordResolveStatisticsSummaryResponseBodyStatistics build(java.util.Map<String, ?> map) throws Exception {
             DescribeRecordResolveStatisticsSummaryResponseBodyStatistics self = new DescribeRecordResolveStatisticsSummaryResponseBodyStatistics();
             return TeaModel.build(map, self);
@@ -115,6 +118,14 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
         }
         public String getDomainType() {
             return this.domainType;
+        }
+
+        public DescribeRecordResolveStatisticsSummaryResponseBodyStatistics setSubDomain(String subDomain) {
+            this.subDomain = subDomain;
+            return this;
+        }
+        public String getSubDomain() {
+            return this.subDomain;
         }
 
     }
