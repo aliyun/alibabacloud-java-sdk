@@ -13,9 +13,6 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     @NameInMap("Notification")
     public String notificationShrink;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("Password")
     public String password;
 
@@ -61,14 +58,6 @@ public class CreateFileCompressionTaskShrinkRequest extends TeaModel {
     }
     public String getNotificationShrink() {
         return this.notificationShrink;
-    }
-
-    public CreateFileCompressionTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public CreateFileCompressionTaskShrinkRequest setPassword(String password) {

@@ -10,9 +10,6 @@ public class CreateImageToPDFTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -47,14 +44,6 @@ public class CreateImageToPDFTaskRequest extends TeaModel {
     }
     public Notification getNotification() {
         return this.notification;
-    }
-
-    public CreateImageToPDFTaskRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public CreateImageToPDFTaskRequest setProjectName(String projectName) {

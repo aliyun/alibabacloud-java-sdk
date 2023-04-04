@@ -10,9 +10,6 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -47,14 +44,6 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
     public Notification getNotification() {
         return this.notification;
-    }
-
-    public CreateMediaConvertTaskRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public CreateMediaConvertTaskRequest setProjectName(String projectName) {
@@ -241,9 +230,6 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         @NameInMap("Image")
         public TargetImage image;
 
-        @NameInMap("Preset")
-        public PresetReference preset;
-
         @NameInMap("Segment")
         public CreateMediaConvertTaskRequestTargetsSegment segment;
 
@@ -289,14 +275,6 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         }
         public TargetImage getImage() {
             return this.image;
-        }
-
-        public CreateMediaConvertTaskRequestTargets setPreset(PresetReference preset) {
-            this.preset = preset;
-            return this;
-        }
-        public PresetReference getPreset() {
-            return this.preset;
         }
 
         public CreateMediaConvertTaskRequestTargets setSegment(CreateMediaConvertTaskRequestTargetsSegment segment) {

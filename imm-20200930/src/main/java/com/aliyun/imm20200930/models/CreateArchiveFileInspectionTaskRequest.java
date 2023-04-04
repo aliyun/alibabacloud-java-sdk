@@ -10,9 +10,6 @@ public class CreateArchiveFileInspectionTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("Password")
     public String password;
 
@@ -47,14 +44,6 @@ public class CreateArchiveFileInspectionTaskRequest extends TeaModel {
     }
     public Notification getNotification() {
         return this.notification;
-    }
-
-    public CreateArchiveFileInspectionTaskRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public CreateArchiveFileInspectionTaskRequest setPassword(String password) {

@@ -40,9 +40,6 @@ public class CreateOfficeConversionTaskShrinkRequest extends TeaModel {
     @NameInMap("Notification")
     public String notificationShrink;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("Pages")
     public String pages;
 
@@ -199,14 +196,6 @@ public class CreateOfficeConversionTaskShrinkRequest extends TeaModel {
     }
     public String getNotificationShrink() {
         return this.notificationShrink;
-    }
-
-    public CreateOfficeConversionTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public CreateOfficeConversionTaskShrinkRequest setPages(String pages) {

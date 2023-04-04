@@ -13,9 +13,6 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     @NameInMap("Notification")
     public String notificationShrink;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -55,14 +52,6 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     }
     public String getNotificationShrink() {
         return this.notificationShrink;
-    }
-
-    public CreateFacesSearchingTaskShrinkRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public CreateFacesSearchingTaskShrinkRequest setProjectName(String projectName) {

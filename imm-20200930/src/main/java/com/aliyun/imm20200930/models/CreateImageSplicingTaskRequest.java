@@ -25,9 +25,6 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("Padding")
     public Long padding;
 
@@ -111,14 +108,6 @@ public class CreateImageSplicingTaskRequest extends TeaModel {
     }
     public Notification getNotification() {
         return this.notification;
-    }
-
-    public CreateImageSplicingTaskRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public CreateImageSplicingTaskRequest setPadding(Long padding) {

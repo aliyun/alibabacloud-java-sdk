@@ -10,9 +10,6 @@ public class CreateVideoLabelClassificationTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -44,14 +41,6 @@ public class CreateVideoLabelClassificationTaskRequest extends TeaModel {
     }
     public Notification getNotification() {
         return this.notification;
-    }
-
-    public CreateVideoLabelClassificationTaskRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public CreateVideoLabelClassificationTaskRequest setProjectName(String projectName) {

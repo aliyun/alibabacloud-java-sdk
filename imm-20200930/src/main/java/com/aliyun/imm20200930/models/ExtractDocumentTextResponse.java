@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDetectVideoLabelsTaskResponse extends TeaModel {
+public class ExtractDocumentTextResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateDetectVideoLabelsTaskResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateDetectVideoLabelsTaskResponseBody body;
+    public ExtractDocumentTextResponseBody body;
 
-    public static CreateDetectVideoLabelsTaskResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateDetectVideoLabelsTaskResponse self = new CreateDetectVideoLabelsTaskResponse();
+    public static ExtractDocumentTextResponse build(java.util.Map<String, ?> map) throws Exception {
+        ExtractDocumentTextResponse self = new ExtractDocumentTextResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDetectVideoLabelsTaskResponse setHeaders(java.util.Map<String, String> headers) {
+    public ExtractDocumentTextResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateDetectVideoLabelsTaskResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateDetectVideoLabelsTaskResponse setStatusCode(Integer statusCode) {
+    public ExtractDocumentTextResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateDetectVideoLabelsTaskResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateDetectVideoLabelsTaskResponse setBody(CreateDetectVideoLabelsTaskResponseBody body) {
+    public ExtractDocumentTextResponse setBody(ExtractDocumentTextResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateDetectVideoLabelsTaskResponseBody getBody() {
+    public ExtractDocumentTextResponseBody getBody() {
         return this.body;
     }
 

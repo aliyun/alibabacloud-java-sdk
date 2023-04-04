@@ -13,9 +13,6 @@ public class IndexFileMetaRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -46,14 +43,6 @@ public class IndexFileMetaRequest extends TeaModel {
     }
     public Notification getNotification() {
         return this.notification;
-    }
-
-    public IndexFileMetaRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
     }
 
     public IndexFileMetaRequest setProjectName(String projectName) {
