@@ -7,19 +7,26 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>> If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request is different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the endpoint for which you want to create the access policies of traffic.</p>
+     * <p>The ID of the endpoint for which you want to create the traffic destinations.</p>
+     * <br>
+     * <p>> This parameter is required.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The configurations of the traffic destinations.</p>
+     * <br>
+     * <p>You can specify up to 500 traffic destinations for each endpoint.</p>
+     */
     @NameInMap("PolicyConfigurations")
     public java.util.List<CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurations> policyConfigurations;
 
@@ -68,25 +75,25 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
 
     public static class CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurationsPortRanges extends TeaModel {
         /**
-         * <p>The start port of the port range in the destination to which to allow traffic. The specified port must fall within the port range of the specified endpoint group.</p>
+         * <p>The first port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</p>
          * <br>
          * <p>This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
          * <br>
-         * <p>If the start port and end port values are empty, traffic on all ports in destinations are allowed.</p>
+         * <p>If the first port and the last port are not specified, traffic on all ports of the destination is allowed.</p>
          * <br>
-         * <p>You can specify port ranges for up to 500 destinations for each endpoint and specify up to 10 start ports for each destination.</p>
+         * <p>You can specify port ranges for up to 500 destinations in each endpoint and specify up to 10 first ports for each destination.</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
-         * <p>The end port of the port range in the destination to which to allow traffic. The specified port must fall within the port range of the specified endpoint group.</p>
+         * <p>The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</p>
          * <br>
          * <p>This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
          * <br>
-         * <p>If the start port and end port values are empty, traffic on all ports in destinations are allowed.</p>
+         * <p>If the first port and the last port are not specified, traffic on all ports of the destination is allowed.</p>
          * <br>
-         * <p>You can specify port ranges for up to 500 destinations for each endpoint and specify up to 10 end ports for each destination.</p>
+         * <p>You can specify port ranges for up to 500 destinations in each endpoint and specify up to 10 last ports for each destination.</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -116,15 +123,26 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel 
 
     public static class CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurations extends TeaModel {
         /**
-         * <p>The IP address of the destination to which to allow traffic.</p>
+         * <p>The IP address of the destination to which traffic is forwarded.</p>
          * <br>
          * <p>This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
          * <br>
          * <p>You can specify up to 500 destination IP addresses for each endpoint.</p>
+         * <br>
+         * <p>> This parameter is required.</p>
          */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</p>
+         * <br>
+         * <p>If you leave this parameter empty, traffic is forwarded to all destination ports.</p>
+         * <br>
+         * <p>This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
+         * <br>
+         * <p>You can specify port ranges for up to 500 traffic destinations in each endpoint and specify up to 10 port ranges for each traffic destination.</p>
+         */
         @NameInMap("PortRanges")
         public java.util.List<CreateCustomRoutingEndpointTrafficPoliciesRequestPolicyConfigurationsPortRanges> portRanges;
 

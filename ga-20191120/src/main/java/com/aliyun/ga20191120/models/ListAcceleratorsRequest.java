@@ -28,11 +28,14 @@ public class ListAcceleratorsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The state of the GA instance. Valid values:</p>
+     * <p>The status of the GA instance. Valid values:</p>
      * <br>
      * <p>*   **init**: The GA instance is being initialized.</p>
      * <p>*   **active**: The GA instance is available.</p>
@@ -45,6 +48,9 @@ public class ListAcceleratorsRequest extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The tags of the GA instance.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListAcceleratorsRequestTag> tag;
 
@@ -110,9 +116,23 @@ public class ListAcceleratorsRequest extends TeaModel {
     }
 
     public static class ListAcceleratorsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the GA resource. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the GA resource. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag values.</p>
+         */
         @NameInMap("Value")
         public String value;
 

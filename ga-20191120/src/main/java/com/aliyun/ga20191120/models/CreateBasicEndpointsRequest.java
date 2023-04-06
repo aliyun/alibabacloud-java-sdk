@@ -13,19 +13,22 @@ public class CreateBasicEndpointsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the endpoint group that is associated with the basic GA instance.</p>
+     * <p>The ID of the endpoint group.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
+    /**
+     * <p>The endpoints that are associated with the basic GA instance.</p>
+     */
     @NameInMap("Endpoints")
     public java.util.List<CreateBasicEndpointsRequestEndpoints> endpoints;
 
@@ -90,30 +93,52 @@ public class CreateBasicEndpointsRequest extends TeaModel {
         /**
          * <p>The secondary address of the endpoint.</p>
          * <br>
-         * <p>This parameter is required when the accelerated IP address is associated with the secondary private IP address of an ECS instance or ENI.</p>
+         * <p>This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
          * <br>
-         * <p>*   When the endpoint type is **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</p>
-         * <p>*   When the endpoint type is **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</p>
+         * <p>*   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</p>
+         * <p>*   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</p>
+         * <p>*   This parameter is required if the endpoint type is **NLB**. **EndpointSubAddress** is the primary private IP address of the NLB backend server.</p>
          */
         @NameInMap("EndpointSubAddress")
         public String endpointSubAddress;
 
+        /**
+         * <p>The type of the secondary address of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **primary**: a primary private IP address.</p>
+         * <p>*   **secondary**: a secondary private IP address.</p>
+         * <br>
+         * <p>This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is **NLB**, only **primary** is supported.</p>
+         */
         @NameInMap("EndpointSubAddressType")
         public String endpointSubAddressType;
 
         /**
-         * <p>The type of endpoint. Valid values:</p>
+         * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **ENI**: elastic network interface (ENI)</p>
-         * <p>*   **SLB**: Classic Load Balancer (CLB)</p>
-         * <p>*   **ECS**: Elastic Compute Service (ECS)</p>
+         * <p>*   **ENI**: elastic network interface (ENI).</p>
+         * <p>*   **SLB**: Classic Load Balancer (CLB) instance.</p>
+         * <p>*   **ECS**: Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **NLB**: Network Load Balancer (NLB) instance.</p>
+         * <br>
+         * <p>>  This parameter is required.</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The ID of the zone where the endpoint resides.</p>
+         * <br>
+         * <p>This parameter is required only if the endpoint type is **NLB**.</p>
+         */
         @NameInMap("EndpointZoneId")
         public String endpointZoneId;
 
+        /**
+         * <p>The name of the endpoint.</p>
+         * <br>
+         * <p>The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         */
         @NameInMap("Name")
         public String name;
 

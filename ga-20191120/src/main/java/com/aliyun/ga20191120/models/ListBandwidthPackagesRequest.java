@@ -23,29 +23,35 @@ public class ListBandwidthPackagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The state of the bandwidth plan. Valid values:</p>
+     * <p>The status of the bandwidth plan. Valid values:</p>
      * <br>
      * <p>*   **init**: The bandwidth plan is being initialized.</p>
      * <p>*   **active**: The bandwidth plan is available.</p>
-     * <p>*   **binded**: The bandwidth plan is associated with a GA instance.</p>
+     * <p>*   **binded**: The bandwidth plan is associated.</p>
      * <p>*   **binding**: The bandwidth plan is being associated.</p>
      * <p>*   **unbinding**: The bandwidth plan is being disassociated.</p>
      * <p>*   **updating**: The bandwidth plan is being updated.</p>
      * <p>*   **finacialLocked**: The bandwidth plan is locked due to overdue payments.</p>
-     * <p>*   **Locked**: The bandwidth plan is locked.</p>
+     * <p>*   **locked**: The bandwidth plan is locked.</p>
      */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The tag of the bandwidth plan.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListBandwidthPackagesRequestTag> tag;
 
@@ -53,9 +59,9 @@ public class ListBandwidthPackagesRequest extends TeaModel {
      * <p>The type of the bandwidth plan. Valid values:</p>
      * <br>
      * <p>*   **Basic**: a basic bandwidth plan</p>
-     * <p>*   **CrossDomain**: a cross-region acceleration bandwidth plan</p>
+     * <p>*   **CrossDomain**: a cross-border acceleration bandwidth plan</p>
      * <br>
-     * <p>If you call this operation on the Alibaba Cloud China Site (aliyun.com), you can only set Type to **Basic**.</p>
+     * <p>If you call this operation on the China site (aliyun.com), you can set Type only to **Basic**.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -130,9 +136,23 @@ public class ListBandwidthPackagesRequest extends TeaModel {
     }
 
     public static class ListBandwidthPackagesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the bandwidth plan. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the bandwidth plan. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag values.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the accelerated IP address of the basic GA instance.</p>
+     * <p>The ID of the accelerated IP address.</p>
      */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
@@ -23,13 +23,13 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String endpointAddress;
 
     /**
-     * <p>The ID of the endpoint that is associated with the basic GA instance.</p>
+     * <p>The ID of the endpoint.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The name of the endpoint that is associated with the basic GA instance.</p>
+     * <p>The name of the endpoint.</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
@@ -39,20 +39,20 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
      * <br>
      * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
      * <br>
-     * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the secondary private IP address of the primary ENI. If the parameter is empty, the primary private IP address of the primary ENI is returned.</p>
-     * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the secondary private IP address of the secondary ENI. If the parameter is empty, the primary private IP address of the secondary ENI is returned.</p>
+     * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.</p>
+     * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.</p>
      * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
      */
     @NameInMap("EndpointSubAddress")
     public String endpointSubAddress;
 
     /**
-     * <p>The type of secondary address of the endpoint. Valid values:</p>
+     * <p>The type of the secondary address of the endpoint.</p>
      * <br>
      * <p>*   **primary**: a primary private IP address.</p>
      * <p>*   **secondary**: a secondary private IP address.</p>
      * <br>
-     * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is **NLB**, only **primary** is returned.</p>
+     * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary** is returned.</p>
      */
     @NameInMap("EndpointSubAddressType")
     public String endpointSubAddressType;
@@ -60,16 +60,16 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     /**
      * <p>The type of endpoint. Valid values:</p>
      * <br>
-     * <p>*   **ENI**: Elastic Network Interface (ENI)</p>
-     * <p>*   **SLB**: Classic Load Balancer (CLB)</p>
-     * <p>*   **ECS**: Elastic Compute Service (ECS)</p>
-     * <p>*   **NLB**: Network Load Balancer (NLB)</p>
+     * <p>*   **ENI**: elastic network interface (ENI).</p>
+     * <p>*   **SLB**: Classic Load Balancer (CLB) instance.</p>
+     * <p>*   **ECS**: Elastic Compute Service (ECS) instance.</p>
+     * <p>*   **NLB**: Network Load Balancer (NLB) instance.</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
-     * <p>The zone ID of the endpoint.</p>
+     * <p>The ID of the zone where the endpoint is created.</p>
      * <br>
      * <p>This parameter is returned only when the endpoint type is **NLB**.</p>
      */
@@ -89,7 +89,7 @@ public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the mapping between the accelerated IP address and endpoint.</p>
+     * <p>The association status between the accelerated IP address and endpoint.</p>
      * <br>
      * <p>A value of **active** indicates that the accelerated IP address is associated with the endpoint.</p>
      */

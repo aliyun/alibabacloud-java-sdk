@@ -17,7 +17,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -87,7 +87,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The type of the bandwidth that is provided by the basic bandwidth plan. Valid values:</p>
+         * <p>The type of the bandwidth that is provided by the basic bandwidth plan.</p>
          * <br>
          * <p>*   **Basic**: basic</p>
          * <p>*   **Enhanced**: enhanced</p>
@@ -170,9 +170,15 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListBasicAcceleratorsResponseBodyAcceleratorsTags extends TeaModel {
+        /**
+         * <p>The tag key of the basic GA instance.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the basic GA instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -206,6 +212,13 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The bandwidth billing method.</p>
+         * <br>
+         * <p>*   **BandwidthPackage**: billed based on bandwidth plans.</p>
+         * <p>*   **CDT**: billed through Cloud Data Transfer (CDT) and based on data transfer.</p>
+         * <p>*   **CDT95**: billed through CDT and based on the 95th percentile bandwidth. This bandwidth billing method is available only for users that are included in the whitelist.</p>
+         */
         @NameInMap("BandwidthBillingType")
         public String bandwidthBillingType;
 
@@ -216,7 +229,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         public ListBasicAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage basicBandwidthPackage;
 
         /**
-         * <p>The ID of the endpoint group that is associated with the basic GA instance.</p>
+         * <p>The ID of the endpoint group.</p>
          */
         @NameInMap("BasicEndpointGroupId")
         public String basicEndpointGroupId;
@@ -229,14 +242,19 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp that indicates when the basic GA instance was created.</p>
+         * <br>
+         * <p>The time follows the UNIX time format. It is the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("CrossBorderStatus")
+        public Boolean crossBorderStatus;
+
         /**
          * <p>The details about the cross-region acceleration bandwidth plan that is associated with the GA instance.</p>
          * <br>
-         * <p>This array is returned only for GA instances that are created on the International site (alibabacloud.com).</p>
+         * <p>This array is returned only for GA instances that are created on the international site (alibabacloud.com).</p>
          */
         @NameInMap("CrossDomainBandwidthPackage")
         public ListBasicAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage;
@@ -249,6 +267,8 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp that indicates when the basic GA instance expires.</p>
+         * <br>
+         * <p>The time follows the UNIX time format. It is the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
@@ -271,28 +291,34 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the basic GA instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The status of the basic GA instance. Valid values:</p>
+         * <p>The status of the basic GA instance.</p>
          * <br>
-         * <p>*   **init**: initializing</p>
-         * <p>*   **active**: available</p>
-         * <p>*   **configuring**: being configured</p>
-         * <p>*   **binding**: being associated</p>
-         * <p>*   **unbinding**: being disassociated</p>
-         * <p>*   **Deleting**: being deleted</p>
-         * <p>*   **finacialLocked**: locked due to overdue payments</p>
+         * <p>*   **init**: The GA instance is being initialized.</p>
+         * <p>*   **active**: The GA instance is available.</p>
+         * <p>*   **configuring**: The GA instance is being configured.</p>
+         * <p>*   **binding**: The GA instance is being associated.</p>
+         * <p>*   **unbinding**: The GA instance is being disassociated.</p>
+         * <p>*   **deleting**: The GA instance is being deleted.</p>
+         * <p>*   **finacialLocked**: The GA instance is locked due to overdue payments.</p>
          */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The tags of the basic GA instance.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListBasicAcceleratorsResponseBodyAcceleratorsTags> tags;
 
         /**
-         * <p>Ignore this parameter.</p>
+         * <p>An invalid parameter.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -348,6 +374,14 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListBasicAcceleratorsResponseBodyAccelerators setCrossBorderStatus(Boolean crossBorderStatus) {
+            this.crossBorderStatus = crossBorderStatus;
+            return this;
+        }
+        public Boolean getCrossBorderStatus() {
+            return this.crossBorderStatus;
         }
 
         public ListBasicAcceleratorsResponseBodyAccelerators setCrossDomainBandwidthPackage(ListBasicAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage) {

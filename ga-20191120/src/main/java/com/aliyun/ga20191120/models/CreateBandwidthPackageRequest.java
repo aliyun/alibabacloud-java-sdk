@@ -5,56 +5,54 @@ import com.aliyun.tea.*;
 
 public class CreateBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
-     * <p>*   **false**: disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
+     * <p>*   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
      * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the bandwidth plan. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <br>
      * <p>*   **true**: enables auto-renewal.</p>
-     * <p>*   **false** disables auto-renewal.</p>
+     * <p>*   **false** (default): disables auto-renewal.</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period. Unit: months.</p>
+     * <p>The auto-renewal duration. Unit: months.</p>
      * <br>
      * <p>Valid values: **1** to **12**. Default value: **1**.</p>
      * <br>
-     * <p>>  This parameter is required only if **AutoRenew** is set to **true**.</p>
+     * <p>>  This parameter takes effect only if **AutoRenew** is set to **true**.</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
     /**
-     * <p>Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:</p>
+     * <p>Specifies whether to automatically pay bills by using coupons. Valid values:</p>
      * <br>
      * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **false** (default): no</p>
      * <br>
-     * <p>>  This parameter is required only if **AutoPay** is set to **true**.</p>
+     * <p>>  This parameter takes effect only if **AutoPay** is set to **true**.</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
     /**
-     * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **2** to **2000**.</p>
+     * <p>The bandwidth value of the bandwidth plan. Unit: Mbit/s. Valid values: **2** to **2000**.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
-     * <p>The type of the bandwidth. Valid values:</p>
+     * <p>The type of bandwidth. Valid values:</p>
      * <br>
-     * <p>*   **Basic**: basic</p>
+     * <p>*   **Basic**: standard</p>
      * <p>*   **Enhanced**: enhanced</p>
      * <p>*   **Advanced**: premium</p>
      * <br>
@@ -64,12 +62,10 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String bandwidthType;
 
     /**
-     * <p>The metering method that is used when you use the pay-as-you-go billing method. Default value: PayByTraffic. Valid values:</p>
+     * <p>The metering method that is used when you use the pay-as-you-go billing method. Valid values:</p>
      * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <p>*   **PayBY95**: pay-by-95th-percentile</p>
-     * <br>
-     * <p>The pay-by-95th-percentile metering method is available only for users that are added to the whitelist. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).</p>
+     * <p>*   **PayByTraffic** (default): pay-by-data-transfer</p>
+     * <p>*   **PayBY95**: pay-by-95th-percentile By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.</p>
      */
     @NameInMap("BillingType")
     public String billingType;
@@ -77,7 +73,7 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>Area A to be connected. Set the value to **China-mainland**.</p>
      * <br>
-     * <p>You can set this parameter only if you call this operation on the Alibaba Cloud International site.</p>
+     * <p>You can set this parameter only if you call this operation on the international site (alibabacloud.com).</p>
      */
     @NameInMap("CbnGeographicRegionIdA")
     public String cbnGeographicRegionIdA;
@@ -85,18 +81,16 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>Area B to be connected. Set the value to **Global**.</p>
      * <br>
-     * <p>You can set this parameter only if you call this operation on the Alibaba Cloud International site.</p>
+     * <p>You can set this parameter only if you call this operation on the international site (alibabacloud.com).</p>
      */
     @NameInMap("CbnGeographicRegionIdB")
     public String cbnGeographicRegionIdB;
 
     /**
-     * <p>The billing method of the bandwidth plan. Default value: PREPAY. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <br>
-     * <p>*   **PREPAY**: subscription</p>
-     * <p>*   **POSTPAY**: pay-as-you-go</p>
-     * <br>
-     * <p>The pay-as-you-go billing method is available only for users that are added to the whitelist. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).</p>
+     * <p>*   **PREPAY** (default): subscription</p>
+     * <p>*   **POSTPAY**: pay-as-you-go By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -104,9 +98,9 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -114,8 +108,8 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The subscription duration.</p>
      * <br>
-     * <p>*   If the **PricingCycle** parameter is set to **Month**, the valid values for the **Duration** parameter are **1** to **9**.</p>
-     * <p>*   If the **PricingCycle** parameter is set to **Year**, the valid values for the **Duration** parameter are **1** to **3**.</p>
+     * <p>*   If the **PricingCycle** parameter is set to **Month**, the valid values of the **Duration** parameter are **1** to **9**.</p>
+     * <p>*   If the **PricingCycle** parameter is set to **Year**, the valid values of the **Duration** parameter are **1** to **3**.</p>
      * <br>
      * <p>If **ChargeType** is set to **PREPAY**, this parameter is required.</p>
      */
@@ -133,13 +127,18 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>The coupon code.</p>
+     * <br>
+     * <p>>  This parameter is available only on the international site.</p>
+     */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
     /**
      * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: **30** to **100**.</p>
      * <br>
-     * <p>>  This parameter is required only if **BillingType** is set to **PayBY95**.</p>
+     * <p>>  This parameter takes effect only if **BillingType** is set to **PayBY95**.</p>
      */
     @NameInMap("Ratio")
     public Integer ratio;
@@ -150,11 +149,17 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the bandwidth plan belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateBandwidthPackageRequestTag> tag;
+
     /**
-     * <p>The type of the bandwidth plan. Valid values:</p>
+     * <p>The type of bandwidth plan. Valid values:</p>
      * <br>
      * <p>*   **Basic**: a basic bandwidth plan</p>
      * <p>*   **CrossDomain**: a cross-region acceleration bandwidth plan</p>
@@ -305,12 +310,50 @@ public class CreateBandwidthPackageRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public CreateBandwidthPackageRequest setTag(java.util.List<CreateBandwidthPackageRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateBandwidthPackageRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateBandwidthPackageRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class CreateBandwidthPackageRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateBandwidthPackageRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateBandwidthPackageRequestTag self = new CreateBandwidthPackageRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateBandwidthPackageRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateBandwidthPackageRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -11,7 +11,7 @@ public class CreateIpSetsResponseBody extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>Details about the acceleration regions.</p>
+     * <p>The details about the acceleration regions.</p>
      */
     @NameInMap("IpSets")
     public java.util.List<CreateIpSetsResponseBodyIpSets> ipSets;
@@ -70,6 +70,9 @@ public class CreateIpSetsResponseBody extends TeaModel {
         @NameInMap("IpSetId")
         public String ipSetId;
 
+        /**
+         * <p>The line type of the EIP in the acceleration region.</p>
+         */
         @NameInMap("IspType")
         public String ispType;
 

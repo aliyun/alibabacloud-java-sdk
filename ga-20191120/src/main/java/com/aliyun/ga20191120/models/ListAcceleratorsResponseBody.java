@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAcceleratorsResponseBody extends TeaModel {
     /**
-     * <p>Details about the GA instances.</p>
+     * <p>The information about the GA instances.</p>
      */
     @NameInMap("Accelerators")
     public java.util.List<ListAcceleratorsResponseBodyAccelerators> accelerators;
@@ -29,7 +29,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -89,9 +89,9 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         /**
          * <p>The type of the bandwidth that is provided by the basic bandwidth plan. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: standard bandwidth plans</p>
-         * <p>*   **Enhanced**: enhanced bandwidth plans</p>
-         * <p>*   **Advanced**: premium bandwidth plans</p>
+         * <p>*   **Basic**: basic</p>
+         * <p>*   **Enhanced**: enhanced</p>
+         * <p>*   **Advanced**: premium</p>
          */
         @NameInMap("BandwidthType")
         public String bandwidthType;
@@ -135,13 +135,13 @@ public class ListAcceleratorsResponseBody extends TeaModel {
 
     public static class ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage extends TeaModel {
         /**
-         * <p>The bandwidth that is provided by the cross-region acceleration bandwidth plan. Unit: Mbit /s.</p>
+         * <p>The bandwidth that is provided by the cross-border acceleration bandwidth plan. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
-         * <p>The ID of the cross-region acceleration bandwidth plan.</p>
+         * <p>The ID of the cross-border acceleration bandwidth plan.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -195,9 +195,15 @@ public class ListAcceleratorsResponseBody extends TeaModel {
     }
 
     public static class ListAcceleratorsResponseBodyAcceleratorsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -237,11 +243,17 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The bandwidth metering method.</p>
+         * <br>
+         * <p>*   **BandwidthPackage**: billed based on bandwidth plans.</p>
+         * <p>*   **CDT**: billed based on data transfer.</p>
+         */
         @NameInMap("BandwidthBillingType")
         public String bandwidthBillingType;
 
         /**
-         * <p>Details about the basic bandwidth plan that is associated with the GA instance.</p>
+         * <p>The details about the basic bandwidth plan that is associated with the GA instance.</p>
          */
         @NameInMap("BasicBandwidthPackage")
         public ListAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage basicBandwidthPackage;
@@ -253,24 +265,32 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The timestamp that indicates the time when the GA instance was created.</p>
+         * <p>The timestamp that indicates when the GA instance is created.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer.</p>
+         * <br>
+         * <p>**bpgPro** is returned, which indicates BGP (Multi-ISP) Pro lines.</p>
+         */
         @NameInMap("CrossBorderMode")
         public String crossBorderMode;
 
+        @NameInMap("CrossBorderStatus")
+        public Boolean crossBorderStatus;
+
         /**
-         * <p>Details about the cross-region acceleration bandwidth plan that is associated with the GA instance.</p>
+         * <p>The details about the cross-border acceleration bandwidth plan that is associated with the GA instance.</p>
          * <br>
-         * <p>This array is returned only for GA instances that are created on the International site (alibabacloud.com).</p>
+         * <p>This array is returned only for GA instances that are created on the international site (alibabacloud.com).</p>
          */
         @NameInMap("CrossDomainBandwidthPackage")
         public ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
         /**
-         * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance that is associated with the GA instance.</p>
+         * <p>The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.</p>
          */
         @NameInMap("DdosId")
         public String ddosId;
@@ -288,7 +308,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         public String dnsName;
 
         /**
-         * <p>The timestamp that indicates the time when the GA instance expires.</p>
+         * <p>The timestamp that indicates when the GA instance expires.</p>
          */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
@@ -317,11 +337,14 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The CNAME that is used to associate the GA instance with an Anti-DDoS Pro instance or an Anti-DDoS Premium instance.</p>
+         * <p>The CNAME that is used to associate the GA instance with an Anti-DDoS Pro/Premium instance.</p>
          */
         @NameInMap("SecondDnsName")
         public String secondDnsName;
@@ -345,17 +368,16 @@ public class ListAcceleratorsResponseBody extends TeaModel {
          * <p>*   **90**: Large VⅢ</p>
          * <p>*   **100**: Super Large Ⅰ</p>
          * <p>*   **200**: Super Large Ⅱ</p>
-         * <p>*   **300**: Super Large Ⅲ</p>
          * <br>
-         * <p>>  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use other specifications of GA instances, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).</p>
+         * <p>>  The Large Ⅲ specification and higher specifications are available only to users that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
          * <br>
-         * <p>Each instance specification provides different capabilities. For more information, see the "Specifications of standard GA instances" section in [Overview](~~153127~~).</p>
+         * <p>Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
          */
         @NameInMap("Spec")
         public String spec;
 
         /**
-         * <p>The state of the GA instance. Valid values:</p>
+         * <p>The status of the GA instance. Valid values:</p>
          * <br>
          * <p>*   **init**: The GA instance is being initialized.</p>
          * <p>*   **active**: The GA instance is available.</p>
@@ -368,6 +390,9 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The tags of the GA instance.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListAcceleratorsResponseBodyAcceleratorsTags> tags;
 
@@ -436,6 +461,14 @@ public class ListAcceleratorsResponseBody extends TeaModel {
         }
         public String getCrossBorderMode() {
             return this.crossBorderMode;
+        }
+
+        public ListAcceleratorsResponseBodyAccelerators setCrossBorderStatus(Boolean crossBorderStatus) {
+            this.crossBorderStatus = crossBorderStatus;
+            return this;
+        }
+        public Boolean getCrossBorderStatus() {
+            return this.crossBorderStatus;
         }
 
         public ListAcceleratorsResponseBodyAccelerators setCrossDomainBandwidthPackage(ListAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage) {

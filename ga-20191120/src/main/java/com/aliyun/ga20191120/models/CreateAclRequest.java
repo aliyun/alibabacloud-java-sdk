@@ -50,6 +50,9 @@ public class CreateAclRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateAclRequestTag> tag;
+
     public static CreateAclRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAclRequest self = new CreateAclRequest();
         return TeaModel.build(map, self);
@@ -111,6 +114,14 @@ public class CreateAclRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public CreateAclRequest setTag(java.util.List<CreateAclRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateAclRequestTag> getTag() {
+        return this.tag;
+    }
+
     public static class CreateAclRequestAclEntries extends TeaModel {
         /**
          * <p>The IP address or CIDR block that you want to add to the ACL.</p>
@@ -149,6 +160,36 @@ public class CreateAclRequest extends TeaModel {
         }
         public String getEntryDescription() {
             return this.entryDescription;
+        }
+
+    }
+
+    public static class CreateAclRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAclRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAclRequestTag self = new CreateAclRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAclRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAclRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

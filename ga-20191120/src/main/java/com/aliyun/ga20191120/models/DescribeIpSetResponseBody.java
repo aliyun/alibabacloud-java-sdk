@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIpSetResponseBody extends TeaModel {
     /**
-     * <p>The ID of the region that is accelerated.</p>
+     * <p>The ID of the acceleration region.</p>
      */
     @NameInMap("AccelerateRegionId")
     public String accelerateRegionId;
@@ -35,7 +35,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
     public String ipSetId;
 
     /**
-     * <p>The version of the accelerated IP address. Valid values:</p>
+     * <p>The version of the IP protocol. Valid values:</p>
      * <br>
      * <p>*   **IPv4**</p>
      * <p>*   **IPv6**</p>
@@ -43,6 +43,23 @@ public class DescribeIpSetResponseBody extends TeaModel {
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <p>The line type of the elastic IP address (EIP) in the acceleration region.</p>
+     * <br>
+     * <p>*   **BGP**: BGP (Multi-ISP) lines.</p>
+     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines</p>
+     * <br>
+     * <p>If you are allowed to use single-ISP bandwidth, one of the following values is returned:</p>
+     * <br>
+     * <p>*   **ChinaTelecom**: China Telecom (single ISP).</p>
+     * <p>*   **ChinaUnicom**: China Unicom (single ISP).</p>
+     * <p>*   **ChinaMobile**: China Mobile (single ISP).</p>
+     * <p>*   **ChinaTelecom_L2**: China Telecom (single ISP)\_L2.</p>
+     * <p>*   **ChinaUnicom_L2**: China Unicom (single ISP)\_L2.</p>
+     * <p>*   **ChinaMobile_L2**: China Mobile (single ISP)\_L2.</p>
+     * <br>
+     * <p>>  The supported single-ISP line types vary based on the acceleration region.</p>
+     */
     @NameInMap("IspType")
     public String ispType;
 
@@ -58,7 +75,7 @@ public class DescribeIpSetResponseBody extends TeaModel {
      * <p>*   **init**: The acceleration region is being initialized.</p>
      * <p>*   **active**: The acceleration region is in the running state.</p>
      * <p>*   **updating**: The acceleration region is being configured.</p>
-     * <p>*   **Deleting**: The acceleration region is being deleted.</p>
+     * <p>*   **deleting:** The VPN gateway is being deleted.</p>
      */
     @NameInMap("State")
     public String state;

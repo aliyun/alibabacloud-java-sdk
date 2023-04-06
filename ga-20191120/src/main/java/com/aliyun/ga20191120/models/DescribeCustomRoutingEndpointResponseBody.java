@@ -40,15 +40,18 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>终端节点当前状态。</p>
+     */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>The access policy of traffic for the specified endpoint. Valid values:</p>
      * <br>
-     * <p>*   **AllowAll**: allows all traffic to the endpoint.</p>
-     * <p>*   **DenyAll**: denies all traffic to the endpoint.</p>
-     * <p>*   **AllowCustom**: allows traffic only to specified destinations.</p>
+     * <p>*   **AllowAll:** allows all traffic to the endpoint.</p>
+     * <p>*   **DenyAll:** denies all traffic to the endpoint.</p>
+     * <p>*   **AllowCustom:** allows traffic only to specified destinations in the endpoint</p>
      */
     @NameInMap("TrafficToEndpointPolicy")
     public String trafficToEndpointPolicy;

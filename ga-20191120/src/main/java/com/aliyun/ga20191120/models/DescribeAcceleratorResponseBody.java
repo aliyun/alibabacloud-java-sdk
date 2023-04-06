@@ -10,11 +10,17 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The bandwidth metering method. Valid values:</p>
+     * <br>
+     * <p>*   **BandwidthPackage:** billed based on bandwidth plans.</p>
+     * <p>*   **CDT**: billed based on data transfer.</p>
+     */
     @NameInMap("BandwidthBillingType")
     public String bandwidthBillingType;
 
     /**
-     * <p>Details about the basic bandwidth plan that is associated with the GA instance.</p>
+     * <p>The details about the basic bandwidth plan that is associated with the GA instance.</p>
      */
     @NameInMap("BasicBandwidthPackage")
     public DescribeAcceleratorResponseBodyBasicBandwidthPackage basicBandwidthPackage;
@@ -26,27 +32,41 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The timestamp that indicates the time when the GA instance was created.</p>
+     * <p>The timestamp that indicates when the GA instance is created.</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer.</p>
+     * <br>
+     * <p>**bpgPro** is returned, which indicates BGP (Multi-ISP) Pro lines.</p>
+     */
     @NameInMap("CrossBorderMode")
     public String crossBorderMode;
 
+    @NameInMap("CrossBorderStatus")
+    public Boolean crossBorderStatus;
+
     /**
-     * <p>Details about the cross-region acceleration bandwidth plan that is associated with the GA instance.</p>
+     * <p>The details about the cross-border acceleration bandwidth plan that is associated with the GA instance.</p>
      * <br>
-     * <p>This array is returned only for GA instances that are created on the International site (alibabacloud.com).</p>
+     * <p>This array is returned only for GA instances that are created on the international site (alibabacloud.com).</p>
      */
     @NameInMap("CrossDomainBandwidthPackage")
     public DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
+    /**
+     * <p>Indicates whether cross-border acceleration is enabled.</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("CrossPrivateState")
     public String crossPrivateState;
 
     /**
-     * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance that is associated with the GA instance.</p>
+     * <p>The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.</p>
      */
     @NameInMap("DdosId")
     public String ddosId;
@@ -64,13 +84,13 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public String dnsName;
 
     /**
-     * <p>The timestamp that indicates the time when the GA instance expires.</p>
+     * <p>The timestamp that indicates when the GA instance expires.</p>
      */
     @NameInMap("ExpiredTime")
     public Long expiredTime;
 
     /**
-     * <p>The billing method of the GA instance.</p>
+     * <p>The billing method of the GA instance. Only **PREPAY** is returned. This value indicates the subscription billing method.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -99,6 +119,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -127,17 +150,16 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
      * <p>*   **90**: Large VⅢ</p>
      * <p>*   **100**: Super Large Ⅰ</p>
      * <p>*   **200**: Super Large Ⅱ</p>
-     * <p>*   **300**: Super Large Ⅲ</p>
      * <br>
-     * <p>>  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use other specifications of GA instances, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).</p>
+     * <p>>  The Large Ⅲ specification and higher specifications are available only to users that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
      * <br>
-     * <p>Each instance specification provides different capabilities. For more information, see the "Specifications of standard GA instances" section in [Overview](~~153127~~).</p>
+     * <p>Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
      */
     @NameInMap("Spec")
     public String spec;
 
     /**
-     * <p>The state of the GA instance. Valid values:</p>
+     * <p>The status of the GA instance. Valid values:</p>
      * <br>
      * <p>*   **init**: The GA instance is being initialized.</p>
      * <p>*   **active**: The GA instance is available.</p>
@@ -150,6 +172,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The tags of the GA instance.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeAcceleratorResponseBodyTags> tags;
 
@@ -204,6 +229,14 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     }
     public String getCrossBorderMode() {
         return this.crossBorderMode;
+    }
+
+    public DescribeAcceleratorResponseBody setCrossBorderStatus(Boolean crossBorderStatus) {
+        this.crossBorderStatus = crossBorderStatus;
+        return this;
+    }
+    public Boolean getCrossBorderStatus() {
+        return this.crossBorderStatus;
     }
 
     public DescribeAcceleratorResponseBody setCrossDomainBandwidthPackage(DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage crossDomainBandwidthPackage) {
@@ -344,9 +377,9 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         /**
          * <p>The type of the bandwidth that is provided by the basic bandwidth plan. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: standard bandwidth plans</p>
-         * <p>*   **Enhanced**: enhanced bandwidth plans</p>
-         * <p>*   **Advanced**: premium bandwidth plans</p>
+         * <p>*   **Basic**: basic</p>
+         * <p>*   **Enhanced**: enhanced</p>
+         * <p>*   **Advanced**: premium</p>
          */
         @NameInMap("BandwidthType")
         public String bandwidthType;
@@ -390,13 +423,13 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     public static class DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage extends TeaModel {
         /**
-         * <p>The bandwidth that is provided by the cross-region acceleration bandwidth plan. Unit: Mbit /s.</p>
+         * <p>The bandwidth that is provided by the cross-border acceleration bandwidth plan. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
-         * <p>The ID of the cross-region acceleration bandwidth plan.</p>
+         * <p>The ID of the cross-border acceleration bandwidth plan.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -450,9 +483,15 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     }
 
     public static class DescribeAcceleratorResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

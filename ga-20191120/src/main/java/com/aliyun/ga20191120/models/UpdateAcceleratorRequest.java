@@ -11,9 +11,9 @@ public class UpdateAcceleratorRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
-     * <p>*   **false**: disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
+     * <p>*   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
      * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
      */
     @NameInMap("AutoPay")
@@ -22,10 +22,10 @@ public class UpdateAcceleratorRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**: automatically pays bills by using coupons.</p>
+     * <p>*   **false**: does not automatically pay bills by using coupons.</p>
      * <br>
-     * <p>>  This parameter is required only if **AutoPay** is set to **true**.</p>
+     * <p>>  This parameter takes effect only if the **AutoPay** parameter is set to **true**.</p>
      */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
@@ -33,9 +33,9 @@ public class UpdateAcceleratorRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -79,11 +79,10 @@ public class UpdateAcceleratorRequest extends TeaModel {
      * <p>*   **90**: Large VⅢ</p>
      * <p>*   **100**: Super Large Ⅰ</p>
      * <p>*   **200**: Super Large Ⅱ</p>
-     * <p>*   **300**: Super Large Ⅲ</p>
      * <br>
-     * <p>>  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use other specifications of GA instances, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).</p>
+     * <p>>  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
      * <br>
-     * <p>Each instance specification provides different capabilities. For more information, see the "Specifications of standard GA instances" section in [Overview](~~153127~~).</p>
+     * <p>Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
      */
     @NameInMap("Spec")
     public String spec;

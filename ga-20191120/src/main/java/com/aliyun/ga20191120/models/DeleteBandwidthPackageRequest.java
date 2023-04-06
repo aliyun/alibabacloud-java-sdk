@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>The ID of the bandwidth plan that you want to delete.</p>
+     * <p>The ID of the bandwidth plan.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
@@ -13,9 +13,9 @@ public class DeleteBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, the value of the **ClientToken** parameter is set to the value of the **RequestId** parameter. The value of the **RequestId** parameter for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

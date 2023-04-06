@@ -4,27 +4,56 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCommodityPriceResponseBody extends TeaModel {
+    /**
+     * <p>The currency unit.</p>
+     * <br>
+     * <p>*   China site: **CNY**.</p>
+     * <p>*   International site: **USD**.</p>
+     */
     @NameInMap("Currency")
     public String currency;
 
+    /**
+     * <p>The discount.</p>
+     */
     @NameInMap("DiscountPrice")
     public Double discountPrice;
 
+    /**
+     * <p>The details of the commodity module.</p>
+     */
     @NameInMap("OrderDetails")
     public java.util.List<DescribeCommodityPriceResponseBodyOrderDetails> orderDetails;
 
+    /**
+     * <p>The original price.</p>
+     */
     @NameInMap("OriginalPrice")
     public Double originalPrice;
 
+    /**
+     * <p>The list of coupons.</p>
+     * <br>
+     * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+     */
     @NameInMap("Promotions")
     public java.util.List<DescribeCommodityPriceResponseBodyPromotions> promotions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details about the discount rules.</p>
+     */
     @NameInMap("RuleDetails")
     public java.util.List<DescribeCommodityPriceResponseBodyRuleDetails> ruleDetails;
 
+    /**
+     * <p>The transaction price, which is equal to the original price minus the discount.</p>
+     */
     @NameInMap("TradePrice")
     public Double tradePrice;
 
@@ -98,18 +127,33 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeCommodityPriceResponseBodyOrderDetailsModuleDetails extends TeaModel {
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Double discountPrice;
 
+        /**
+         * <p>The code of the commodity module.</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>The name of the commodity module.</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Double originalPrice;
 
+        /**
+         * <p>The discounted price.</p>
+         */
         @NameInMap("TradePrice")
         public Double tradePrice;
 
@@ -161,18 +205,43 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeCommodityPriceResponseBodyOrderDetailsPromDetails extends TeaModel {
+        /**
+         * <p>The discounted price.</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("FinalPromFee")
         public Double finalPromFee;
 
+        /**
+         * <p>The code of the discount option.</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The sub-type of the discount.</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("PromType")
         public String promType;
 
+        /**
+         * <p>The ID of the discount item.</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("PromotionId")
         public String promotionId;
 
+        /**
+         * <p>The name of the discount item.</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
@@ -224,30 +293,59 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeCommodityPriceResponseBodyOrderDetails extends TeaModel {
+        /**
+         * <p>The code of the commodity.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The name of the commodity.</p>
+         */
         @NameInMap("CommodityName")
         public String commodityName;
 
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Double discountPrice;
 
+        /**
+         * <p>The information about the commodity module.</p>
+         */
         @NameInMap("ModuleDetails")
         public java.util.List<DescribeCommodityPriceResponseBodyOrderDetailsModuleDetails> moduleDetails;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Double originalPrice;
 
+        /**
+         * <p>The details about the discount.</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("PromDetails")
         public java.util.List<DescribeCommodityPriceResponseBodyOrderDetailsPromDetails> promDetails;
 
+        /**
+         * <p>The number of instances that are purchased.</p>
+         */
         @NameInMap("Quantity")
         public Long quantity;
 
+        /**
+         * <p>The IDs of the discount rules.</p>
+         */
         @NameInMap("RuleIds")
         public java.util.List<Long> ruleIds;
 
+        /**
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         */
         @NameInMap("TradePrice")
         public Double tradePrice;
 
@@ -331,18 +429,50 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeCommodityPriceResponseBodyPromotions extends TeaModel {
+        /**
+         * <p>The discounted amount.</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("CanPromFee")
         public Double canPromFee;
 
+        /**
+         * <p>The code of the commodity to which the coupon applies.</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The name of the coupon.</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
+        /**
+         * <p>The coupon code.</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   `youhuiquan_promotion_option_id_for_blank` indicates coupons that do not apply.</p>
+         * <br>
+         * <p>*   This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("PromotionOptionNo")
         public String promotionOptionNo;
 
+        /**
+         * <p>Indicates whether an item is selected. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
@@ -394,9 +524,15 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeCommodityPriceResponseBodyRuleDetails extends TeaModel {
+        /**
+         * <p>The ID of the discount rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the discount rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

@@ -4,18 +4,33 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The list of accelerated domain names.</p>
+     */
     @NameInMap("Domains")
     public java.util.List<ListDomainsResponseBodyDomains> domains;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListDomainsResponseBody extends TeaModel {
     }
 
     public static class ListDomainsResponseBodyDomainsAccelerators extends TeaModel {
+        /**
+         * <p>The ID of the GA instance.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
+        /**
+         * <p>The name of the GA instance.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -95,12 +116,26 @@ public class ListDomainsResponseBody extends TeaModel {
     }
 
     public static class ListDomainsResponseBodyDomains extends TeaModel {
+        /**
+         * <p>The list of GA instances.</p>
+         */
         @NameInMap("Accelerators")
         public java.util.List<ListDomainsResponseBodyDomainsAccelerators> accelerators;
 
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The ICP filing status of the accelerated domain name.</p>
+         * <br>
+         * <p>*   **illegal:** The domain name is illegal.</p>
+         * <p>*   **inactive:** The domain name has not completed ICP filing.</p>
+         * <p>*   **active:** The domain name has a valid ICP filing.</p>
+         * <p>*   **unknown:** The ICP filing status is unknown.</p>
+         */
         @NameInMap("State")
         public String state;
 

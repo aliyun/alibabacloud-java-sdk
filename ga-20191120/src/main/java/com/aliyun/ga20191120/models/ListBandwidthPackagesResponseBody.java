@@ -80,9 +80,15 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
     }
 
     public static class ListBandwidthPackagesResponseBodyBandwidthPackagesTags extends TeaModel {
+        /**
+         * <p>The tag key of the bandwidth plan.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the bandwidth plan.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -131,9 +137,9 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         /**
          * <p>The type of the bandwidth. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: basic bandwidth</p>
-         * <p>*   **Enhanced**: enhanced bandwidth</p>
-         * <p>*   **Advanced**: premium bandwidth</p>
+         * <p>*   **Basic**: standard</p>
+         * <p>*   **Enhanced**: enhanced</p>
+         * <p>*   **Advanced**: premium</p>
          */
         @NameInMap("BandwidthType")
         public String bandwidthType;
@@ -148,17 +154,17 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         public String billingType;
 
         /**
-         * <p>Area A specified in the cross-region acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.</p>
+         * <p>Area A of the cross-border acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.</p>
          * <br>
-         * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
+         * <p>This parameter is returned only if you call this operation on the international site (alibabacloud.com).</p>
          */
         @NameInMap("CbnGeographicRegionIdA")
         public String cbnGeographicRegionIdA;
 
         /**
-         * <p>Area B specified in the cross-region acceleration bandwidth plan. Only **Global** (global) is returned.</p>
+         * <p>Area B of the cross-border acceleration bandwidth plan. Only **Global** (global) is returned.</p>
          * <br>
-         * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
+         * <p>This parameter is returned only if you call this operation on the international site (alibabacloud.com).</p>
          */
         @NameInMap("CbnGeographicRegionIdB")
         public String cbnGeographicRegionIdB;
@@ -194,7 +200,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used.</p>
+         * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile metering method is used.</p>
          */
         @NameInMap("Ratio")
         public Integer ratio;
@@ -205,24 +211,30 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The state of the bandwidth plan. Valid values:</p>
+         * <p>The status of the bandwidth plan. Valid values:</p>
          * <br>
          * <p>*   **init**: The bandwidth plan is being initialized.</p>
          * <p>*   **active**: The bandwidth plan is available.</p>
-         * <p>*   **binded**: The bandwidth plan is associated with a GA instance.</p>
+         * <p>*   **binded**: The bandwidth plan is associated.</p>
          * <p>*   **binding**: The bandwidth plan is being associated.</p>
          * <p>*   **unbinding**: The bandwidth plan is being disassociated.</p>
          * <p>*   **updating**: The bandwidth plan is being updated.</p>
          * <p>*   **finacialLocked**: The bandwidth plan is locked due to overdue payments.</p>
-         * <p>*   **Locked**: The bandwidth plan is locked.</p>
+         * <p>*   **locked**: The bandwidth plan is locked.</p>
          */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The tag of the bandwidth plan.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackagesTags> tags;
 
@@ -230,9 +242,9 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
          * <p>The type of the bandwidth plan. Valid values:</p>
          * <br>
          * <p>*   **Basic**: a basic bandwidth plan</p>
-         * <p>*   **CrossDomain**: a cross-region acceleration bandwidth plan</p>
+         * <p>*   **CrossDomain**: a cross-border acceleration bandwidth plan</p>
          * <br>
-         * <p>If you call this operation on the Alibaba Cloud China Site (aliyun.com), only **Basic** is returned.</p>
+         * <p>If you call this operation on the China site (aliyun.com), only **Basic** is returned.</p>
          */
         @NameInMap("Type")
         public String type;

@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetInvalidDomainCountResponseBody extends TeaModel {
+    /**
+     * <p>The number of invalid domain names.</p>
+     */
     @NameInMap("InvalidDomainCount")
     public String invalidDomainCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

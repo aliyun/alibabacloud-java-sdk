@@ -7,21 +7,28 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends TeaMode
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the value of **RequestId**as the value of **ClientToken**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The mapping configurations of endpoint group.</p>
+     * <br>
+     * <p>You must specify the backend service port range and protocol of the endpoint group. The specified information is used to map the port range of the associated listener.</p>
+     * <br>
+     * <p>You can specify at most 20 mapping configurations, which include port ranges and protocol types.</p>
+     */
     @NameInMap("DestinationConfigurations")
     public java.util.List<UpdateCustomRoutingEndpointGroupDestinationsRequestDestinationConfigurations> destinationConfigurations;
 
     /**
-     * <p>Specifies whether to only precheck the request. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -95,11 +102,20 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends TeaMode
          * <br>
          * <p>Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.</p>
          * <br>
-         * <p>You can specify up to 20 start ports of backend service port ranges in each request.</p>
+         * <p>You can specify up to 20 start ports in each request.</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
+        /**
+         * <p>The backend service protocol of the endpoint group. Valid values:</p>
+         * <br>
+         * <p>*   **tcp**: TCP</p>
+         * <p>*   **udp**: UDP</p>
+         * <p>*   **tcp,udp**: TCP and UDP</p>
+         * <br>
+         * <p>You can specify up to four backend service protocols in each configuration.</p>
+         */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
@@ -108,7 +124,7 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends TeaMode
          * <br>
          * <p>Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.</p>
          * <br>
-         * <p>You can specify up to 20 end ports of backend service port ranges in each request.</p>
+         * <p>You can specify up to 20 end ports in each request.</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
