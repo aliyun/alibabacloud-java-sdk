@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateBasicEndpointsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the endpoint group that is associated with the basic GA instance.</p>
+     * <p>The ID of the endpoint group.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
-     * <p>The endpoints in the endpoint group.</p>
+     * <p>The endpoints that are associated with the basic GA instance.</p>
      */
     @NameInMap("Endpoints")
     public java.util.List<CreateBasicEndpointsResponseBodyEndpoints> endpoints;
@@ -67,10 +67,11 @@ public class CreateBasicEndpointsResponseBody extends TeaModel {
         /**
          * <p>The secondary address of the endpoint.</p>
          * <br>
-         * <p>This parameter is returned when the accelerated IP address is associated with the secondary private IP address of an ECS instance or ENI.</p>
+         * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
          * <br>
-         * <p>*   When the endpoint type is **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</p>
-         * <p>*   When the endpoint type is **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</p>
+         * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.</p>
+         * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.</p>
+         * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
          */
         @NameInMap("EndpointSubAddress")
         public String endpointSubAddress;
@@ -78,9 +79,10 @@ public class CreateBasicEndpointsResponseBody extends TeaModel {
         /**
          * <p>The type of endpoint. Valid values:</p>
          * <br>
-         * <p>*   **ENI**: ENI</p>
-         * <p>*   **SLB**: CLB</p>
-         * <p>*   **ECS**: ECS</p>
+         * <p>*   **ENI**: ENI.</p>
+         * <p>*   **SLB**: CLB instance.</p>
+         * <p>*   **ECS**: ECS instance.</p>
+         * <p>*   **NLB**: NLB instance.</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;

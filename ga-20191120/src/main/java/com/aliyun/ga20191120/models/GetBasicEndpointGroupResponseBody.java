@@ -11,7 +11,7 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The description of the endpoint group that is associated with the basic GA instance.</p>
+     * <p>The description of the endpoint group.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -23,7 +23,7 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
     public String endpointAddress;
 
     /**
-     * <p>The ID of the endpoint group that is associated with the basic GA instance.</p>
+     * <p>The ID of the endpoint group.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
@@ -34,20 +34,31 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;
 
+    /**
+     * <p>The secondary address of the endpoint.</p>
+     * <br>
+     * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
+     * <br>
+     * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.</p>
+     * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.</p>
+     * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
+     */
     @NameInMap("EndpointSubAddress")
     public String endpointSubAddress;
 
     /**
      * <p>The type of endpoint. Valid values:</p>
      * <br>
-     * <p>*   **ENI**: elastic network interface (ENI)</p>
-     * <p>*   **SLB**: Server Load Balancer (SLB) instance</p>
+     * <p>*   **ENI**: elastic network interface (ENI).</p>
+     * <p>*   **SLB**: Classic Load Balancer (CLB) instance.</p>
+     * <p>*   **ECS**: Elastic Compute Service (ECS) instance.</p>
+     * <p>*   **NLB**: Network Load Balancer (NLB) instance</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
-     * <p>The name of the endpoint group that is associated with the basic GA instance.</p>
+     * <p>The name of the endpoint group.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -59,12 +70,12 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the endpoint group.</p>
+     * <p>The status of the endpoint group. Valid values:</p>
      * <br>
-     * <p>*   **init**: The endpoint group is being initialized.</p>
-     * <p>*   **active**: The endpoint group is running as expected.</p>
-     * <p>*   **updating**: The endpoint group is being updated.</p>
-     * <p>*   **deleting**: The endpoint group is being deleted.</p>
+     * <p>*   **init**: being initialized.</p>
+     * <p>*   **active**: running as expected.</p>
+     * <p>*   **updating**: being updated.</p>
+     * <p>*   **deleting**: being deleted.</p>
      */
     @NameInMap("State")
     public String state;

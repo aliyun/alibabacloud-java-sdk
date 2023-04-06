@@ -4,15 +4,30 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, it indicates that no subsequent query is to be sent.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of information about the resources to which tags are added.</p>
+     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,15 +69,32 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         * <br>
+         * <p>*   **accelerator:** a standard GA instance.</p>
+         * <p>*   **basicaccelerator:** a basic GA instance.</p>
+         * <p>*   **bandwidthpackage:** a bandwidth plan.</p>
+         * <p>*   **acl:** an ACL.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

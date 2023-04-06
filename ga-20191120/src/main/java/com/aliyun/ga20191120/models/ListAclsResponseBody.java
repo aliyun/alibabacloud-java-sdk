@@ -17,10 +17,10 @@ public class ListAclsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <br>
-     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -83,9 +83,15 @@ public class ListAclsResponseBody extends TeaModel {
     }
 
     public static class ListAclsResponseBodyAclsTags extends TeaModel {
+        /**
+         * <p>The tag key of the network ACL.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the network ACL.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -126,13 +132,13 @@ public class ListAclsResponseBody extends TeaModel {
         public String aclName;
 
         /**
-         * <p>The state of the network ACL. Valid values:</p>
+         * <p>The status of the network ACL. Valid values:</p>
          * <br>
          * <p>*   **init**: The network ACL is being initialized.</p>
          * <p>*   **active**: The network ACL is available.</p>
          * <p>*   **configuring**: The network ACL is being configured.</p>
          * <p>*   **updating**: The network ACL is being updated.</p>
-         * <p>*   **deleting**: The GA instance is being deleted.</p>
+         * <p>*   **deleting:** The network ACL is being deleted.</p>
          */
         @NameInMap("AclStatus")
         public String aclStatus;
@@ -146,9 +152,15 @@ public class ListAclsResponseBody extends TeaModel {
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The tags of the network ACL.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListAclsResponseBodyAclsTags> tags;
 

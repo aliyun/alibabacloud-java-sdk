@@ -4,12 +4,24 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetIpsetsBandwidthLimitResponseBody extends TeaModel {
+    /**
+     * <p>The type of the bandwidth that is allocated.</p>
+     * <br>
+     * <p>*   **ShareBandwidth:** shared bandwidth.</p>
+     * <p>*   **ExclusiveBandwidth:** dedicated bandwidth.</p>
+     */
     @NameInMap("BandwidthAllocationType")
     public String bandwidthAllocationType;
 
+    /**
+     * <p>The maximum bandwidth of the acceleration area. Unit: Mbit/s.</p>
+     */
     @NameInMap("BandwidthLimit")
     public Long bandwidthLimit;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

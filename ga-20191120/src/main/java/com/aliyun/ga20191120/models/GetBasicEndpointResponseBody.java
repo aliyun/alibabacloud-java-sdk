@@ -31,11 +31,11 @@ public class GetBasicEndpointResponseBody extends TeaModel {
     /**
      * <p>The secondary address of the endpoint.</p>
      * <br>
-     * <p>This parameter is returned if the endpoint type is set to **ECS**, **ENI**, or **NLB**.</p>
+     * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
      * <br>
-     * <p>*   If the endpoint type is set to **ECS**, **EndpointSubAddress** returns the secondary private IP address of the primary ENI or the primary private IP address of the primary ENI.</p>
-     * <p>*   If the endpoint type is set to **ENI**, **EndpointSubAddress** returns the secondary private IP address of the secondary ENI or the primary private IP address of the secondary ENI is used.</p>
-     * <p>*   If the endpoint type is set to **NLB**, **EndpointSubAddress** returns the primary private IP address of the backend server of the NLB instance.</p>
+     * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.</p>
+     * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.</p>
+     * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
      */
     @NameInMap("EndpointSubAddress")
     public String endpointSubAddress;
@@ -43,10 +43,10 @@ public class GetBasicEndpointResponseBody extends TeaModel {
     /**
      * <p>The type of the secondary address of the endpoint.</p>
      * <br>
-     * <p>*   **primary:** primary private IP address</p>
-     * <p>*   **secondary:** secondary private IP address</p>
+     * <p>*   **primary**: a primary private IP address.</p>
+     * <p>*   **secondary**: a secondary private IP address.</p>
      * <br>
-     * <p>This parameter is returned if the type of the endpoint is set to **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary**is returned.</p>
+     * <p>This parameter is returned if the type of the endpoint is set to **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary** is returned.</p>
      */
     @NameInMap("EndpointSubAddressType")
     public String endpointSubAddressType;
@@ -71,7 +71,7 @@ public class GetBasicEndpointResponseBody extends TeaModel {
     public String endpointZoneId;
 
     /**
-     * <p>The name of the endpoint that is associated with the basic GA instance.</p>
+     * <p>The name of the endpoint.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -85,13 +85,13 @@ public class GetBasicEndpointResponseBody extends TeaModel {
     /**
      * <p>The status of the endpoint. Valid values:</p>
      * <br>
-     * <p>*   **init:** The endpoint is being initialized.</p>
-     * <p>*   **active:** The endpoint is available.</p>
-     * <p>*   **updating:** The endpoint is being configured.</p>
-     * <p>*   **binding:** The endpoint is being associated.</p>
-     * <p>*   **unbinding:** The endpoint is being disassociated.</p>
-     * <p>*   **deleting:** The endpoint is being deleted.</p>
-     * <p>*   **bound:** The endpoint is associated.</p>
+     * <p>*   **init**: The endpoint is being initialized.</p>
+     * <p>*   **active**: The endpoint is available.</p>
+     * <p>*   **updating**: The endpoint is being configured.</p>
+     * <p>*   **binding**: The endpoint is being associated.</p>
+     * <p>*   **unbinding**: The endpoint is being disassociated.</p>
+     * <p>*   **deleting**: The endpoint is being deleted.</p>
+     * <p>*   **bound**: The endpoint is associated.</p>
      */
     @NameInMap("State")
     public String state;

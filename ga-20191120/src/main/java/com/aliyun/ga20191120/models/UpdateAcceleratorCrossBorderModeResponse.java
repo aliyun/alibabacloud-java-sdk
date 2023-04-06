@@ -3,7 +3,7 @@ package com.aliyun.ga20191120.models;
 
 import com.aliyun.tea.*;
 
-public class QueryCrossPrivatePermissionResponse extends TeaModel {
+public class UpdateAcceleratorCrossBorderModeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class QueryCrossPrivatePermissionResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public QueryCrossPrivatePermissionResponseBody body;
+    public UpdateAcceleratorCrossBorderModeResponseBody body;
 
-    public static QueryCrossPrivatePermissionResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryCrossPrivatePermissionResponse self = new QueryCrossPrivatePermissionResponse();
+    public static UpdateAcceleratorCrossBorderModeResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAcceleratorCrossBorderModeResponse self = new UpdateAcceleratorCrossBorderModeResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryCrossPrivatePermissionResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateAcceleratorCrossBorderModeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class QueryCrossPrivatePermissionResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryCrossPrivatePermissionResponse setStatusCode(Integer statusCode) {
+    public UpdateAcceleratorCrossBorderModeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class QueryCrossPrivatePermissionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryCrossPrivatePermissionResponse setBody(QueryCrossPrivatePermissionResponseBody body) {
+    public UpdateAcceleratorCrossBorderModeResponse setBody(UpdateAcceleratorCrossBorderModeResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryCrossPrivatePermissionResponseBody getBody() {
+    public UpdateAcceleratorCrossBorderModeResponseBody getBody() {
         return this.body;
     }
 

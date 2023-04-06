@@ -4,12 +4,30 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListCommonAreasRequest extends TeaModel {
+    /**
+     * <p>The IP version used to connect to the GA instance. Valid values:</p>
+     * <br>
+     * <p>*   **IPv4** (default): queries regions that support IPv4.</p>
+     * <p>*   **IPv6** :queries regions that support IPv6.</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <p>Specifies whether to query regions where endpoint groups can be deployed.</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     */
     @NameInMap("IsEpg")
     public Boolean isEpg;
 
+    /**
+     * <p>Specifies whether to query regions supported by GA.</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     */
     @NameInMap("IsIpSet")
     public Boolean isIpSet;
 

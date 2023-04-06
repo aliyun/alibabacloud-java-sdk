@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ga20191120</artifactId>
-  <version>1.1.18</version>
+  <version>1.1.19</version>
   <packaging>jar</packaging>
   <name>ga20191120</name>
   <description>Alibaba Cloud Global Acceleration (20191120) SDK for Java
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
   </dependencies>
   <build>

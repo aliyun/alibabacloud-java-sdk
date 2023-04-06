@@ -13,9 +13,9 @@ public class ListForwardingRulesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -39,16 +39,16 @@ public class ListForwardingRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
+     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
      * <p>*   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

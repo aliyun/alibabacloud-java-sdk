@@ -4,6 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListAclsRequest extends TeaModel {
+    /**
+     * <p>The ID of the network ACL. You can specify up to 20 network ACL IDs in each request.</p>
+     */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
@@ -18,9 +21,9 @@ public class ListAclsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -32,10 +35,10 @@ public class ListAclsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</p>
+     * <p>*   If this is your first and only query, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be performed, set the parameter to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -46,9 +49,15 @@ public class ListAclsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags of the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListAclsRequestTag> tag;
 
@@ -122,9 +131,23 @@ public class ListAclsRequest extends TeaModel {
     }
 
     public static class ListAclsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the network ACL. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the network ACL. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag values.</p>
+         */
         @NameInMap("Value")
         public String value;
 

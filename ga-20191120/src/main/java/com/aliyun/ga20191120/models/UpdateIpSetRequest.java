@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIpSetRequest extends TeaModel {
     /**
-     * <p>The new bandwidth to be allocated to the acceleration region.</p>
+     * <p>The new bandwidth to be allocated to the acceleration region. Unit: Mbit/s.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -13,9 +13,9 @@ public class UpdateIpSetRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

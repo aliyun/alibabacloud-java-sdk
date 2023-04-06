@@ -17,7 +17,7 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,7 +29,7 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -99,13 +99,13 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
         public String endpointGroupId;
 
         /**
-         * <p>The list of endpoint group IP addresses.</p>
+         * <p>A list of endpoint group IP addresses.</p>
          */
         @NameInMap("EndpointGroupIpList")
         public java.util.List<String> endpointGroupIpList;
 
         /**
-         * <p>The ID of the region where the endpoint group is created.</p>
+         * <p>The ID of the region where the endpoint group is deployed.</p>
          */
         @NameInMap("EndpointGroupRegion")
         public String endpointGroupRegion;
@@ -129,12 +129,12 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the endpoint group.</p>
+         * <p>The status of the endpoint group. Valid values:</p>
          * <br>
-         * <p>*   **init**: being initialized</p>
-         * <p>*   **active**: running as expected</p>
-         * <p>*   **updating**: being updated</p>
-         * <p>*   **deleting**: being deleted</p>
+         * <p>*   **init**: The endpoint group is being initialized.</p>
+         * <p>*   **active**: The endpoint group is running as expected.</p>
+         * <p>*   **updating**: The endpoint group is being updated.</p>
+         * <p>*   **deleting**: The endpoint group is being deleted.</p>
          */
         @NameInMap("State")
         public String state;

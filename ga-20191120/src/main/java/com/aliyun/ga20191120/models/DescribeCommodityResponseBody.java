@@ -4,15 +4,39 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCommodityResponseBody extends TeaModel {
+    /**
+     * <p>The commodity code.</p>
+     * <br>
+     * <p>Examples for the China site (aliyun.com):</p>
+     * <br>
+     * <p>*   **ga_gapluspre_public_cn**: GA instance.</p>
+     * <p>*   **ga_plusbwppre_public_cn**: basic bandwidth plan.</p>
+     * <br>
+     * <p>Examples for the international site (alibabacloud.com):</p>
+     * <br>
+     * <p>*   **ga_pluspre_public_intl**: GA instance.</p>
+     * <p>*   **ga_bwppreintl_public_intl**: basic bandwidth plan.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The name of the commodity.</p>
+     */
     @NameInMap("CommodityName")
     public String commodityName;
 
+    /**
+     * <p>The information about the commodity modules.</p>
+     * <br>
+     * <p>The returned information varies based on the commodity.</p>
+     */
     @NameInMap("Components")
     public java.util.List<DescribeCommodityResponseBodyComponents> components;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +78,35 @@ public class DescribeCommodityResponseBody extends TeaModel {
     }
 
     public static class DescribeCommodityResponseBodyComponentsPropertiesPropertyValueList extends TeaModel {
+        /**
+         * <p>The sequence number of the attribute.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("OrderIndex")
         public Long orderIndex;
 
+        /**
+         * <p>The content of the attribute.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The message of the attribute.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("Tips")
         public String tips;
 
+        /**
+         * <p>The value of the attribute.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -106,12 +150,27 @@ public class DescribeCommodityResponseBody extends TeaModel {
     }
 
     public static class DescribeCommodityResponseBodyComponentsProperties extends TeaModel {
+        /**
+         * <p>The code of the attribute.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The name of the attribute.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of attribute values of the commodity module.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("PropertyValueList")
         public java.util.List<DescribeCommodityResponseBodyComponentsPropertiesPropertyValueList> propertyValueList;
 
@@ -147,12 +206,27 @@ public class DescribeCommodityResponseBody extends TeaModel {
     }
 
     public static class DescribeCommodityResponseBodyComponents extends TeaModel {
+        /**
+         * <p>The code of the commodity module.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("ComponentCode")
         public String componentCode;
 
+        /**
+         * <p>The name of the commodity module.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("ComponentName")
         public String componentName;
 
+        /**
+         * <p>The attributes of the commodity module.</p>
+         * <br>
+         * <p>The returned information varies based on the commodity module.</p>
+         */
         @NameInMap("Properties")
         public java.util.List<DescribeCommodityResponseBodyComponentsProperties> properties;
 

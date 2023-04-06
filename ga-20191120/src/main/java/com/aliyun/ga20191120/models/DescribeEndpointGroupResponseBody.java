@@ -190,12 +190,6 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public Integer thresholdCount;
 
     /**
-     * <p>The total number of entries returned.</p>
-     */
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    /**
      * <p>The weight of the endpoint group. If the listener is associated with multiple endpoint groups, this parameter indicates the weight of the current endpoint group.</p>
      */
     @NameInMap("TrafficPercentage")
@@ -422,14 +416,6 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         return this.thresholdCount;
     }
 
-    public DescribeEndpointGroupResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public DescribeEndpointGroupResponseBody setTrafficPercentage(Integer trafficPercentage) {
         this.trafficPercentage = trafficPercentage;
         return this;
@@ -447,6 +433,9 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
          */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
+
+        @NameInMap("EnableProxyProtocol")
+        public Boolean enableProxyProtocol;
 
         /**
          * <p>The IP address or domain name of the endpoint.</p>
@@ -500,6 +489,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
         public Boolean getEnableClientIPPreservation() {
             return this.enableClientIPPreservation;
+        }
+
+        public DescribeEndpointGroupResponseBodyEndpointConfigurations setEnableProxyProtocol(Boolean enableProxyProtocol) {
+            this.enableProxyProtocol = enableProxyProtocol;
+            return this;
+        }
+        public Boolean getEnableProxyProtocol() {
+            return this.enableProxyProtocol;
         }
 
         public DescribeEndpointGroupResponseBodyEndpointConfigurations setEndpoint(String endpoint) {

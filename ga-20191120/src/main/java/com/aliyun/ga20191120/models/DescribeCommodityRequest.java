@@ -4,12 +4,35 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCommodityRequest extends TeaModel {
+    /**
+     * <p>The commodity code.</p>
+     * <br>
+     * <p>Examples for the China site (aliyun.com):</p>
+     * <br>
+     * <p>*   **ga_gapluspre_public_cn**: GA instance.</p>
+     * <p>*   **ga_plusbwppre_public_cn**: basic bandwidth plan.</p>
+     * <br>
+     * <p>Examples for the international site (alibabacloud.com):</p>
+     * <br>
+     * <p>*   **ga_pluspre_public_intl**: GA instance.</p>
+     * <p>*   **ga_bwppreintl_public_intl**: basic bandwidth plan.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The type of the order. Valid values:</p>
+     * <br>
+     * <p>*   **BUY**: purchase</p>
+     * <p>*   **RENEW**: renewal</p>
+     * <p>*   **UPGRADE**: upgrade</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
+    /**
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -13,9 +13,9 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -42,14 +42,23 @@ public class CreateBasicEndpointGroupRequest extends TeaModel {
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;
 
+    /**
+     * <p>The secondary address of the endpoint.</p>
+     * <br>
+     * <p>This parameter is required when the accelerated IP address is associated with the secondary private IP address of an ECS instance or an ENI.</p>
+     * <br>
+     * <p>*   If the endpoint type is **ECS**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</p>
+     * <p>*   If the endpoint type is **ENI**, you can set the **EndpointSubAddress** parameter to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</p>
+     */
     @NameInMap("EndpointSubAddress")
     public String endpointSubAddress;
 
     /**
-     * <p>The type of the endpoint. Valid values:</p>
+     * <p>The type of endpoint. Valid values:</p>
      * <br>
-     * <p>*   **ENI**: an ENI</p>
-     * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
+     * <p>*   **ENI**: elastic network interface (ENI)</p>
+     * <p>*   **SLB**: Classic Load Balancer (CLB) instance</p>
+     * <p>*   **ECS**: Elastic Compute Service (ECS) instance</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;

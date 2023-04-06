@@ -121,6 +121,9 @@ public class CreateEndpointGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateEndpointGroupRequestTag> tag;
+
     /**
      * <p>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.</p>
      * <br>
@@ -270,6 +273,14 @@ public class CreateEndpointGroupRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateEndpointGroupRequest setTag(java.util.List<CreateEndpointGroupRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateEndpointGroupRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateEndpointGroupRequest setThresholdCount(Integer thresholdCount) {
         this.thresholdCount = thresholdCount;
         return this;
@@ -408,6 +419,36 @@ public class CreateEndpointGroupRequest extends TeaModel {
         }
         public Integer getListenerPort() {
             return this.listenerPort;
+        }
+
+    }
+
+    public static class CreateEndpointGroupRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEndpointGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateEndpointGroupRequestTag self = new CreateEndpointGroupRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEndpointGroupRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEndpointGroupRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

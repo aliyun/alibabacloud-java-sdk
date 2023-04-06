@@ -23,12 +23,12 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the GA resource.</p>
      * <br>
-     * <p>*   If **ResourceType** is set to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.</p>
-     * <p>*   If **ResourceType** is set to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
-     * <p>*   If **ResourceType** is set to**bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
-     * <p>*   If **ResourceType** is set to **acl**, set the value of ResourceId to the ID of an ACL.</p>
+     * <p>*   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.</p>
+     * <p>*   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
+     * <p>*   If you set the **ResourceType** parameter to**bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
+     * <p>*   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an ACL.</p>
      * <br>
-     * <p>You can specify up to 50 GA resource IDs.</p>
+     * <p>You can specify 1 to 50 GA resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -101,7 +101,7 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The tag key of the GA resource. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          * <br>
          * <p>You can specify up to 20 tag keys.</p>
          */
@@ -111,7 +111,7 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The tag value of the GA resource. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          * <br>
          * <p>You can specify up to 20 tag values.</p>
          */

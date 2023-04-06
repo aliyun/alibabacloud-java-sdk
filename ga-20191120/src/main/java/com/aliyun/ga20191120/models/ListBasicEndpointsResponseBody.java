@@ -11,7 +11,7 @@ public class ListBasicEndpointsResponseBody extends TeaModel {
     public java.util.List<ListBasicEndpointsResponseBodyEndpoints> endpoints;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
@@ -20,7 +20,7 @@ public class ListBasicEndpointsResponseBody extends TeaModel {
      * <p>The token that determines the start point of the query. Valid values:</p>
      * <br>
      * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -83,6 +83,9 @@ public class ListBasicEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListBasicEndpointsResponseBodyEndpoints extends TeaModel {
+        /**
+         * <p>The ID of the basic GA instance.</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
@@ -93,7 +96,7 @@ public class ListBasicEndpointsResponseBody extends TeaModel {
         public String endpointAddress;
 
         /**
-         * <p>The ID of the endpoint group to which the endpoints belong.</p>
+         * <p>The ID of the endpoint group to which the endpoint belongs.</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
@@ -107,30 +110,48 @@ public class ListBasicEndpointsResponseBody extends TeaModel {
         /**
          * <p>The secondary address of the endpoint.</p>
          * <br>
-         * <p>This parameter is returned when the accelerated IP address is associated with the secondary private IP address of an ECS instance or ENI.</p>
+         * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
          * <br>
-         * <p>*   When the endpoint type is **ECS**, **EndpointSubAddress** returns the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is returned.</p>
-         * <p>*   When the endpoint type is **ENI**, **EndpointSubAddress** returns the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is returned.</p>
+         * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.</p>
+         * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.</p>
+         * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
          */
         @NameInMap("EndpointSubAddress")
         public String endpointSubAddress;
 
+        /**
+         * <p>The secondary address type of the endpoint.</p>
+         * <br>
+         * <p>*   **primary**: a primary private IP address.</p>
+         * <p>*   **secondary**: a secondary private IP address.</p>
+         * <br>
+         * <p>This parameter is returned if the type of the endpoint is set to **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary** is returned.</p>
+         */
         @NameInMap("EndpointSubAddressType")
         public String endpointSubAddressType;
 
         /**
          * <p>The type of endpoint. Valid values:</p>
          * <br>
-         * <p>*   **ENI**: ENI</p>
-         * <p>*   **SLB**: CLB</p>
-         * <p>*   **ECS**: ECS</p>
+         * <p>*   **ENI**: ENI.</p>
+         * <p>*   **SLB**: CLB instance.</p>
+         * <p>*   **ECS**: ECS instance.</p>
+         * <p>*   **NLB**: NLB instance.</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The zone ID of the endpoint.</p>
+         * <br>
+         * <p>This parameter is returned only when the endpoint type is set to **NLB**.</p>
+         */
         @NameInMap("EndpointZoneId")
         public String endpointZoneId;
 
+        /**
+         * <p>The name of the endpoint.</p>
+         */
         @NameInMap("Name")
         public String name;
 

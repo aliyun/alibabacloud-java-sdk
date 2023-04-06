@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the GA instance to which the endpoint belongs.</p>
+     * <p>The ID of the GA instance with which the endpoint is associated.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
-     * <p>The IP address of the traffic policy.</p>
+     * <p>The IP address of the traffic destination.</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>The name of the vSwitch to which the traffic policy belongs.</p>
+     * <p>The name of the vSwitch to which the traffic destination belongs.</p>
      */
     @NameInMap("Endpoint")
     public String endpoint;
@@ -29,25 +29,25 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the endpoint to which the traffic policy belongs.</p>
+     * <p>The ID of the endpoint to which the traffic destination belongs.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The ID of the listener to which the endpoint belongs.</p>
+     * <p>The ID of the listener with which the endpoint is associated.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The ID of the traffic policy.</p>
+     * <p>The ID of the traffic destination.</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
-     * <p>The port range of the traffic policy.</p>
+     * <p>The port range of the traffic destination.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<DescribeCustomRoutingEndPointTrafficPolicyResponseBodyPortRanges> portRanges;
@@ -58,6 +58,14 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the traffic destination.</p>
+     * <br>
+     * <p>*   **init**: being initialized.</p>
+     * <p>*   **active**: running as expected.</p>
+     * <p>*   **updating**: being updated.</p>
+     * <p>*   **deleting**: being deleted.</p>
+     */
     @NameInMap("State")
     public String state;
 
@@ -148,13 +156,13 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
 
     public static class DescribeCustomRoutingEndPointTrafficPolicyResponseBodyPortRanges extends TeaModel {
         /**
-         * <p>The first port of the port range.</p>
+         * <p>The first port of the port range used by the traffic destination to process requests.</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
-         * <p>The last port of the port range.</p>
+         * <p>The last port of the port range used by the traffic destination to process requests.</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;

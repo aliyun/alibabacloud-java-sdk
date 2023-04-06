@@ -4,11 +4,14 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomRoutingEndPointTrafficPolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the endpoint to which the traffic destination belongs.</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The ID of the traffic policy to be queried.</p>
+     * <p>The ID of the traffic destination to be queried.</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
