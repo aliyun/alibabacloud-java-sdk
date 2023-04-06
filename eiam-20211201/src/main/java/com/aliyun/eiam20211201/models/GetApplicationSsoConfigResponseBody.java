@@ -32,11 +32,15 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfigCustomClaims extends TeaModel {
-        // 返回的claim名称
+        /**
+         * <p>返回的claim名称</p>
+         */
         @NameInMap("ClaimName")
         public String claimName;
 
-        // 返回的claim取值表达式
+        /**
+         * <p>返回的claim取值表达式</p>
+         */
         @NameInMap("ClaimValueExpression")
         public String claimValueExpression;
 
@@ -64,63 +68,93 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfig extends TeaModel {
-        // 返回的access token有效时间，单位为Second
+        /**
+         * <p>返回的access token有效时间，单位为Second</p>
+         */
         @NameInMap("AccessTokenEffectiveTime")
         public Long accessTokenEffectiveTime;
 
-        // Authorization code流中code的有效时间，单位为Second
+        /**
+         * <p>Authorization code流中code的有效时间，单位为Second</p>
+         */
         @NameInMap("CodeEffectiveTime")
         public Long codeEffectiveTime;
 
-        // 自定义id token返回信息
+        /**
+         * <p>自定义id token返回信息</p>
+         */
         @NameInMap("CustomClaims")
         public java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfigCustomClaims> customClaims;
 
-        // OIDC标准参数，如profile、email等
+        /**
+         * <p>OIDC标准参数，如profile、email等</p>
+         */
         @NameInMap("GrantScopes")
         public java.util.List<String> grantScopes;
 
-        // 应用支持的授权类型，OIDC标准参数
+        /**
+         * <p>应用支持的授权类型，OIDC标准参数</p>
+         */
         @NameInMap("GrantTypes")
         public java.util.List<String> grantTypes;
 
-        // id token有效时间，单位为Second
+        /**
+         * <p>id token有效时间，单位为Second</p>
+         */
         @NameInMap("IdTokenEffectiveTime")
         public Long idTokenEffectiveTime;
 
-        // 密码模式使用的身份认证来源id，仅对password模式生效
+        /**
+         * <p>密码模式使用的身份认证来源id，仅对password模式生效</p>
+         */
         @NameInMap("PasswordAuthenticationSourceId")
         public String passwordAuthenticationSourceId;
 
-        // 是否强制需要TOTP二次认证，仅对password模式生效
+        /**
+         * <p>是否强制需要TOTP二次认证，仅对password模式生效</p>
+         */
         @NameInMap("PasswordTotpMfaRequired")
         public Boolean passwordTotpMfaRequired;
 
-        // 支持的PKCE算法类型
+        /**
+         * <p>支持的PKCE算法类型</p>
+         */
         @NameInMap("PkceChallengeMethods")
         public java.util.List<String> pkceChallengeMethods;
 
-        // 是否强制PKCE,authorization_code强制必须指定PKCE参数
+        /**
+         * <p>是否强制PKCE,authorization_code强制必须指定PKCE参数</p>
+         */
         @NameInMap("PkceRequired")
         public Boolean pkceRequired;
 
-        // Logout回调支持的Uri列表，OIDC协议标准参数。
+        /**
+         * <p>Logout回调支持的Uri列表，OIDC协议标准参数。</p>
+         */
         @NameInMap("PostLogoutRedirectUris")
         public java.util.List<String> postLogoutRedirectUris;
 
-        // 应用SSO支持的回调的uri列表，OIDC标准参数。
+        /**
+         * <p>应用SSO支持的回调的uri列表，OIDC标准参数。</p>
+         */
         @NameInMap("RedirectUris")
         public java.util.List<String> redirectUris;
 
-        // refresh token有效时间，单位为Second
+        /**
+         * <p>refresh token有效时间，单位为Second</p>
+         */
         @NameInMap("RefreshTokenEffective")
         public Long refreshTokenEffective;
 
-        // 隐式流支持的返回类型，OIDC标准参数，如token id_token
+        /**
+         * <p>隐式流支持的返回类型，OIDC标准参数，如token id_token</p>
+         */
         @NameInMap("ResponseTypes")
         public java.util.List<String> responseTypes;
 
-        // 自定义id token返回信息
+        /**
+         * <p>自定义id token返回信息</p>
+         */
         @NameInMap("SubjectIdExpression")
         public String subjectIdExpression;
 
@@ -252,43 +286,63 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain extends TeaModel {
-        // 单点登录地址，接受认证请求
+        /**
+         * <p>单点登录地址，接受认证请求</p>
+         */
         @NameInMap("Oauth2AuthorizationEndpoint")
         public String oauth2AuthorizationEndpoint;
 
-        // oauth2设备模式授权端点
+        /**
+         * <p>oauth2设备模式授权端点</p>
+         */
         @NameInMap("Oauth2DeviceAuthorizationEndpoint")
         public String oauth2DeviceAuthorizationEndpoint;
 
-        // 吊销 access token 端点
+        /**
+         * <p>吊销 access token 端点</p>
+         */
         @NameInMap("Oauth2RevokeEndpoint")
         public String oauth2RevokeEndpoint;
 
-        // 换取access token 端点
+        /**
+         * <p>换取access token 端点</p>
+         */
         @NameInMap("Oauth2TokenEndpoint")
         public String oauth2TokenEndpoint;
 
-        // 获取用户信息端点
+        /**
+         * <p>获取用户信息端点</p>
+         */
         @NameInMap("Oauth2UserinfoEndpoint")
         public String oauth2UserinfoEndpoint;
 
-        // OIDC issuer地址，类似于SAML Entity ID
+        /**
+         * <p>OIDC issuer地址，类似于SAML Entity ID</p>
+         */
         @NameInMap("OidcIssuer")
         public String oidcIssuer;
 
-        // 获取公钥信息端点
+        /**
+         * <p>获取公钥信息端点</p>
+         */
         @NameInMap("OidcJwksEndpoint")
         public String oidcJwksEndpoint;
 
-        // OIDC RP-initial Logout端点
+        /**
+         * <p>OIDC RP-initial Logout端点</p>
+         */
         @NameInMap("OidcLogoutEndpoint")
         public String oidcLogoutEndpoint;
 
-        // IdP 单点登录地址 SSO URL
+        /**
+         * <p>IdP 单点登录地址 SSO URL</p>
+         */
         @NameInMap("SamlMetaEndpoint")
         public String samlMetaEndpoint;
 
-        // saml SSO URL 单点登录地址
+        /**
+         * <p>saml SSO URL 单点登录地址</p>
+         */
         @NameInMap("SamlSsoEndpoint")
         public String samlSsoEndpoint;
 
@@ -380,11 +434,15 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigAttributeStatements extends TeaModel {
-        // SAML属性的Name
+        /**
+         * <p>SAML属性的Name</p>
+         */
         @NameInMap("AttributeName")
         public String attributeName;
 
-        // SAML属性取值表达式
+        /**
+         * <p>SAML属性取值表达式</p>
+         */
         @NameInMap("AttributeValueExpression")
         public String attributeValueExpression;
 
@@ -412,31 +470,45 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig extends TeaModel {
-        // SAML断言的属性配置
+        /**
+         * <p>SAML断言的属性配置</p>
+         */
         @NameInMap("AttributeStatements")
         public java.util.List<GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigAttributeStatements> attributeStatements;
 
-        // 默认RelayState取值，可空
+        /**
+         * <p>默认RelayState取值，可空</p>
+         */
         @NameInMap("DefaultRelayState")
         public String defaultRelayState;
 
-        // SAML标准协议中的NameID格式
+        /**
+         * <p>SAML标准协议中的NameID格式</p>
+         */
         @NameInMap("NameIdFormat")
         public String nameIdFormat;
 
-        // 返回的claim名称
+        /**
+         * <p>返回的claim名称</p>
+         */
         @NameInMap("NameIdValueExpression")
         public String nameIdValueExpression;
 
-        // IDaaS签发SAML断言时使用的签名算法
+        /**
+         * <p>IDaaS签发SAML断言时使用的签名算法</p>
+         */
         @NameInMap("SignatureAlgorithm")
         public String signatureAlgorithm;
 
-        // SP的EntityId，用于唯一标识SP身份
+        /**
+         * <p>SP的EntityId，用于唯一标识SP身份</p>
+         */
         @NameInMap("SpEntityId")
         public String spEntityId;
 
-        // SP的SSO地址，用于接受IDaaS签发的SAML断言
+        /**
+         * <p>SP的SSO地址，用于接受IDaaS签发的SAML断言</p>
+         */
         @NameInMap("SpSsoAcsUrl")
         public String spSsoAcsUrl;
 
@@ -504,27 +576,39 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfig extends TeaModel {
-        // 初始化登录方式，idp_init or sp_init or idp_or_sp_init
+        /**
+         * <p>初始化登录方式，idp_init or sp_init or idp_or_sp_init</p>
+         */
         @NameInMap("InitLoginType")
         public String initLoginType;
 
-        // 仅SP-init情况下，SP指定的登录地址
+        /**
+         * <p>仅SP-init情况下，SP指定的登录地址</p>
+         */
         @NameInMap("InitLoginUrl")
         public String initLoginUrl;
 
-        // IDaaS OIDC SSO配置，单点登录类型为Oidc时可以配置
+        /**
+         * <p>IDaaS OIDC SSO配置，单点登录类型为Oidc时可以配置</p>
+         */
         @NameInMap("OidcSsoConfig")
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfig oidcSsoConfig;
 
-        // IDaaS metadata 端点配置信息
+        /**
+         * <p>IDaaS metadata 端点配置信息</p>
+         */
         @NameInMap("ProtocolEndpointDomain")
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain protocolEndpointDomain;
 
-        // IDaaS SAML SSO配置，单点登录类型为saml2时可以配置
+        /**
+         * <p>IDaaS SAML SSO配置，单点登录类型为saml2时可以配置</p>
+         */
         @NameInMap("SamlSsoConfig")
         public GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig samlSsoConfig;
 
-        // 应用 SSO 启用状态
+        /**
+         * <p>应用 SSO 启用状态</p>
+         */
         @NameInMap("SsoStatus")
         public String ssoStatus;
 

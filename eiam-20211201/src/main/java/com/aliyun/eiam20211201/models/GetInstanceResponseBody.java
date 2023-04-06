@@ -32,11 +32,15 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyInstanceDefaultEndpoint extends TeaModel {
-        // 用户portal和应用开发集成的端点地址
+        /**
+         * <p>用户portal和应用开发集成的端点地址</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
-        // 实例域名状态，Unresolved(未解析)、Resolved(已解析)
+        /**
+         * <p>实例域名状态，Unresolved(未解析)、Resolved(已解析)</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -64,27 +68,39 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyInstance extends TeaModel {
-        // 实例的创建时间
+        /**
+         * <p>实例的创建时间</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 实例默认域名,用户portal和应用开发集成的端点地址
+        /**
+         * <p>实例默认域名,用户portal和应用开发集成的端点地址</p>
+         */
         @NameInMap("DefaultEndpoint")
         public GetInstanceResponseBodyInstanceDefaultEndpoint defaultEndpoint;
 
-        // 实例描述信息
+        /**
+         * <p>实例描述信息</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // IDaaS实例出口公网地址段
+        /**
+         * <p>IDaaS实例出口公网地址段</p>
+         */
         @NameInMap("EgressAddresses")
         public java.util.List<String> egressAddresses;
 
-        // 实例id
+        /**
+         * <p>实例id</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)
+        /**
+         * <p>实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)</p>
+         */
         @NameInMap("Status")
         public String status;
 

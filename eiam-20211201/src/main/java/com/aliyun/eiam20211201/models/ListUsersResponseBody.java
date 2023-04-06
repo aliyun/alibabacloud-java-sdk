@@ -43,83 +43,129 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsers extends TeaModel {
-        // 账户过期时间
+        /**
+         * <p>账户过期时间</p>
+         */
         @NameInMap("AccountExpireTime")
         public Long accountExpireTime;
 
-        // 创建时间
+        /**
+         * <p>创建时间</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 账号描述
+        /**
+         * <p>账号描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // 账户显示名
+        /**
+         * <p>账户显示名</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        // 邮箱
+        /**
+         * <p>邮箱</p>
+         */
         @NameInMap("Email")
         public String email;
 
-        // 邮箱是否已验证
+        /**
+         * <p>邮箱是否已验证</p>
+         */
         @NameInMap("EmailVerified")
         public Boolean emailVerified;
 
-        // 实例Id
+        /**
+         * <p>实例ID</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 锁定过期时间
+        /**
+         * <p>锁定过期时间</p>
+         */
         @NameInMap("LockExpireTime")
         public Long lockExpireTime;
 
-        // 密码是否已设置
+        /**
+         * <p>密码过期时间</p>
+         */
+        @NameInMap("PasswordExpireTime")
+        public Long passwordExpireTime;
+
+        /**
+         * <p>密码是否已设置</p>
+         */
         @NameInMap("PasswordSet")
         public Boolean passwordSet;
 
-        // 手机号码
+        /**
+         * <p>手机号码</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // 手机号是否已验证
+        /**
+         * <p>手机号是否已验证</p>
+         */
         @NameInMap("PhoneNumberVerified")
         public Boolean phoneNumberVerified;
 
-        // 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
+        /**
+         * <p>手机地区编号,示例：中国大陆手区号为86，不带 00 或 +</p>
+         */
         @NameInMap("PhoneRegion")
         public String phoneRegion;
 
-        // 账户注册时间
+        /**
+         * <p>账户注册时间</p>
+         */
         @NameInMap("RegisterTime")
         public Long registerTime;
 
-        // 账户状态, enabled:启用,disabled:禁用
+        /**
+         * <p>账户状态, enabled:启用,disabled:禁用</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // 最近一次更新时间
+        /**
+         * <p>最近一次更新时间</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // 外部ID
+        /**
+         * <p>外部ID</p>
+         */
         @NameInMap("UserExternalId")
         public String userExternalId;
 
-        // 账户ID
+        /**
+         * <p>账户ID</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
-        // 来源ID
+        /**
+         * <p>来源ID</p>
+         */
         @NameInMap("UserSourceId")
         public String userSourceId;
 
-        // 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
+        /**
+         * <p>来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]</p>
+         */
         @NameInMap("UserSourceType")
         public String userSourceType;
 
-        // 账户名
+        /**
+         * <p>账户名</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -190,6 +236,14 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public Long getLockExpireTime() {
             return this.lockExpireTime;
+        }
+
+        public ListUsersResponseBodyUsers setPasswordExpireTime(Long passwordExpireTime) {
+            this.passwordExpireTime = passwordExpireTime;
+            return this;
+        }
+        public Long getPasswordExpireTime() {
+            return this.passwordExpireTime;
         }
 
         public ListUsersResponseBodyUsers setPasswordSet(Boolean passwordSet) {

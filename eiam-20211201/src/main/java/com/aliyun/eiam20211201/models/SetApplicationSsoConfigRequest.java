@@ -4,27 +4,39 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class SetApplicationSsoConfigRequest extends TeaModel {
-    // IDaaS的应用资源ID。
+    /**
+     * <p>IDaaS的应用资源ID。</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
-    // 初始化登录方式，only_app_init_sso or idaas_or_app_init_sso
+    /**
+     * <p>初始化登录方式，only_app_init_sso or idaas_or_app_init_sso</p>
+     */
     @NameInMap("InitLoginType")
     public String initLoginType;
 
-    // 仅only_app_init_sso情况下，SP指定的登录地址
+    /**
+     * <p>仅only_app_init_sso情况下，SP指定的登录地址</p>
+     */
     @NameInMap("InitLoginUrl")
     public String initLoginUrl;
 
-    // IDaaS EIAM的实例id
+    /**
+     * <p>IDaaS EIAM的实例id</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 单点登录类型为Oidc时可以配置
+    /**
+     * <p>单点登录类型为Oidc时可以配置</p>
+     */
     @NameInMap("OidcSsoConfig")
     public SetApplicationSsoConfigRequestOidcSsoConfig oidcSsoConfig;
 
-    // 单点登录类型为saml2时可以配置
+    /**
+     * <p>单点登录类型为saml2时可以配置</p>
+     */
     @NameInMap("SamlSsoConfig")
     public SetApplicationSsoConfigRequestSamlSsoConfig samlSsoConfig;
 
@@ -82,11 +94,15 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     }
 
     public static class SetApplicationSsoConfigRequestOidcSsoConfigCustomClaims extends TeaModel {
-        // 返回的claim名称
+        /**
+         * <p>返回的claim名称</p>
+         */
         @NameInMap("ClaimName")
         public String claimName;
 
-        // 返回的claim取值表达式
+        /**
+         * <p>返回的claim取值表达式</p>
+         */
         @NameInMap("ClaimValueExpression")
         public String claimValueExpression;
 
@@ -114,63 +130,93 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     }
 
     public static class SetApplicationSsoConfigRequestOidcSsoConfig extends TeaModel {
-        // 返回的access token有效时间，单位为Second
+        /**
+         * <p>返回的access token有效时间，单位为Second</p>
+         */
         @NameInMap("AccessTokenEffectiveTime")
         public Long accessTokenEffectiveTime;
 
-        // Authorization code流中code的有效时间，单位为Second
+        /**
+         * <p>Authorization code流中code的有效时间，单位为Second</p>
+         */
         @NameInMap("CodeEffectiveTime")
         public Long codeEffectiveTime;
 
-        // 自定义id token返回信息
+        /**
+         * <p>自定义id token返回信息</p>
+         */
         @NameInMap("CustomClaims")
         public java.util.List<SetApplicationSsoConfigRequestOidcSsoConfigCustomClaims> customClaims;
 
-        // OIDC标准参数，如profile、email等
+        /**
+         * <p>OIDC标准参数，如profile、email等</p>
+         */
         @NameInMap("GrantScopes")
         public java.util.List<String> grantScopes;
 
-        // 应用支持的授权类型，OIDC标准参数
+        /**
+         * <p>应用支持的授权类型，OIDC标准参数</p>
+         */
         @NameInMap("GrantTypes")
         public java.util.List<String> grantTypes;
 
-        // id token有效时间，单位为Second
+        /**
+         * <p>id token有效时间，单位为Second</p>
+         */
         @NameInMap("IdTokenEffectiveTime")
         public Long idTokenEffectiveTime;
 
-        // 密码模式使用的身份认证来源id，仅对password模式生效
+        /**
+         * <p>密码模式使用的身份认证来源id，仅对password模式生效</p>
+         */
         @NameInMap("PasswordAuthenticationSourceId")
         public String passwordAuthenticationSourceId;
 
-        // 是否强制需要TOTP二次认证，仅对password模式生效
+        /**
+         * <p>是否强制需要TOTP二次认证，仅对password模式生效</p>
+         */
         @NameInMap("PasswordTotpMfaRequired")
         public Boolean passwordTotpMfaRequired;
 
-        // 支持的PKCE算法类型
+        /**
+         * <p>支持的PKCE算法类型</p>
+         */
         @NameInMap("PkceChallengeMethods")
         public java.util.List<String> pkceChallengeMethods;
 
-        // 是否强制PKCE,authorization_code强制必须指定PKCE参数
+        /**
+         * <p>是否强制PKCE,authorization_code强制必须指定PKCE参数</p>
+         */
         @NameInMap("PkceRequired")
         public Boolean pkceRequired;
 
-        // Logout回调支持的Uri列表，OIDC协议标准参数。
+        /**
+         * <p>Logout回调支持的Uri列表，OIDC协议标准参数。</p>
+         */
         @NameInMap("PostLogoutRedirectUris")
         public java.util.List<String> postLogoutRedirectUris;
 
-        // 应用SSO支持的回调的uri列表，OIDC标准参数。
+        /**
+         * <p>应用SSO支持的回调的uri列表，OIDC标准参数。</p>
+         */
         @NameInMap("RedirectUris")
         public java.util.List<String> redirectUris;
 
-        // refresh token有效时间，单位为Second
+        /**
+         * <p>refresh token有效时间，单位为Second</p>
+         */
         @NameInMap("RefreshTokenEffective")
         public Long refreshTokenEffective;
 
-        // 隐式流支持的返回类型，OIDC标准参数，如token id_token
+        /**
+         * <p>隐式流支持的返回类型，OIDC标准参数，如token id_token</p>
+         */
         @NameInMap("ResponseTypes")
         public java.util.List<String> responseTypes;
 
-        // 自定义id token返回信息
+        /**
+         * <p>自定义id token返回信息</p>
+         */
         @NameInMap("SubjectIdExpression")
         public String subjectIdExpression;
 
@@ -302,11 +348,15 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     }
 
     public static class SetApplicationSsoConfigRequestSamlSsoConfigAttributeStatements extends TeaModel {
-        // SAML属性的Name
+        /**
+         * <p>SAML属性的Name</p>
+         */
         @NameInMap("AttributeName")
         public String attributeName;
 
-        // SAML属性取值表达式
+        /**
+         * <p>SAML属性取值表达式</p>
+         */
         @NameInMap("AttributeValueExpression")
         public String attributeValueExpression;
 
@@ -334,31 +384,45 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     }
 
     public static class SetApplicationSsoConfigRequestSamlSsoConfig extends TeaModel {
-        // SAML断言的属性配置
+        /**
+         * <p>SAML断言的属性配置</p>
+         */
         @NameInMap("AttributeStatements")
         public java.util.List<SetApplicationSsoConfigRequestSamlSsoConfigAttributeStatements> attributeStatements;
 
-        // 默认RelayState取值，可空
+        /**
+         * <p>默认RelayState取值，可空</p>
+         */
         @NameInMap("DefaultRelayState")
         public String defaultRelayState;
 
-        // SAML标准协议中的NameID格式
+        /**
+         * <p>SAML标准协议中的NameID格式</p>
+         */
         @NameInMap("NameIdFormat")
         public String nameIdFormat;
 
-        // 返回的claim名称
+        /**
+         * <p>返回的claim名称</p>
+         */
         @NameInMap("NameIdValueExpression")
         public String nameIdValueExpression;
 
-        // IDaaS签发SAML断言时使用的签名算法
+        /**
+         * <p>IDaaS签发SAML断言时使用的签名算法</p>
+         */
         @NameInMap("SignatureAlgorithm")
         public String signatureAlgorithm;
 
-        // SP的EntityId，用于唯一标识SP身份
+        /**
+         * <p>SP的EntityId，用于唯一标识SP身份</p>
+         */
         @NameInMap("SpEntityId")
         public String spEntityId;
 
-        // SP的SSO地址，用于接受IDaaS签发的SAML断言
+        /**
+         * <p>SP的SSO地址，用于接受IDaaS签发的SAML断言</p>
+         */
         @NameInMap("SpSsoAcsUrl")
         public String spSsoAcsUrl;
 

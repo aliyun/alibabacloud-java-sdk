@@ -4,23 +4,33 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsForOrganizationalUnitRequest extends TeaModel {
-    // 非必填，如果填写则可以基于应用ID进行过滤，列表中最多包含100个元素。
+    /**
+     * <p>非必填，如果填写则可以基于应用ID进行过滤，列表中最多包含100个元素。</p>
+     */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
-    // IDaaS EIAM实例的ID。
+    /**
+     * <p>IDaaS EIAM实例的ID。</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 组织的唯一标识。
+    /**
+     * <p>组织的唯一标识。</p>
+     */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 
-    // 当前查询的列表页码，默认为1。
+    /**
+     * <p>当前查询的列表页码，默认为1。</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 当前查询的列表页码，默认为20。
+    /**
+     * <p>当前查询的列表页码，默认为20。</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

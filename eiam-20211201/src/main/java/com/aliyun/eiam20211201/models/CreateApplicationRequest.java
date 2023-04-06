@@ -4,31 +4,45 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
-    // 应用的表示名称
+    /**
+     * <p>应用的表示名称</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
-    // 创建应用的来源类型，标准协议 or 模板应用 or 自建应用
+    /**
+     * <p>创建应用的来源类型，标准协议 or 模板应用 or 自建应用</p>
+     */
     @NameInMap("ApplicationSourceType")
     public String applicationSourceType;
 
-    // 应用创建来源为模板应用时必须指定
+    /**
+     * <p>应用创建来源为模板应用时必须指定</p>
+     */
     @NameInMap("ApplicationTemplateId")
     public String applicationTemplateId;
 
-    // 应用的描述信息
+    /**
+     * <p>应用的描述信息</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // IDaaS EIAM的实例id
+    /**
+     * <p>IDaaS EIAM的实例id</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 应用Logo地址
+    /**
+     * <p>应用Logo地址</p>
+     */
     @NameInMap("LogoUrl")
     public String logoUrl;
 
-    // 单点登录类型，saml2 or oidc
+    /**
+     * <p>单点登录类型，saml2 or oidc</p>
+     */
     @NameInMap("SsoType")
     public String ssoType;
 

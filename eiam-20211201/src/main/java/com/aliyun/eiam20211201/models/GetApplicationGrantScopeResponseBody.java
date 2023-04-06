@@ -32,7 +32,9 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
     }
 
     public static class GetApplicationGrantScopeResponseBodyApplicationGrantScope extends TeaModel {
-        // 应用授权的api权限scope列表
+        /**
+         * <p>应用授权的api权限scope列表</p>
+         */
         @NameInMap("GrantScopes")
         public java.util.List<String> grantScopes;
 

@@ -43,15 +43,21 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsForUserResponseBodyApplications extends TeaModel {
-        // 应用的唯一标识。
+        /**
+         * <p>应用的唯一标识。</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
-        // 直接分配给当前用户的权限，视为直接授权。
+        /**
+         * <p>直接分配给当前用户的权限，视为直接授权。</p>
+         */
         @NameInMap("HasDirectAuthorization")
         public Boolean hasDirectAuthorization;
 
-        // 通过用户隶属的组织、组获取的权限，视为继承权限。
+        /**
+         * <p>通过用户隶属的组织、组获取的权限，视为继承权限。</p>
+         */
         @NameInMap("HasInheritAuthorization")
         public Boolean hasInheritAuthorization;
 
