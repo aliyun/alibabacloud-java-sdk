@@ -4,11 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationClientSecretRequest extends TeaModel {
-    // IDaaS的应用主键id
+    /**
+     * <p>IDaaS的应用主键id</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
-    // IDaaS EIAM的实例id
+    /**
+     * <p>IDaaS EIAM的实例id</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

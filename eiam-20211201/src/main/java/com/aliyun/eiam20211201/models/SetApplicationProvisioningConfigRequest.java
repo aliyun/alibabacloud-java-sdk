@@ -4,27 +4,45 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class SetApplicationProvisioningConfigRequest extends TeaModel {
-    // IDaaS的应用资源ID。
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
-    // IDaaS 事件回调同步配置，当provisionProtocolType为idaas_callback时填写该配置
+    /**
+     * <p>The configuration of event callback synchronization. This parameter is required when the ProvisionProtocolType parameter is set to idaas_callback.</p>
+     */
     @NameInMap("CallbackProvisioningConfig")
     public SetApplicationProvisioningConfigRequestCallbackProvisioningConfig callbackProvisioningConfig;
 
-    // IDaaS EIAM的实例id
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 同步信息是否包含密码
+    /**
+     * <p>Specifies whether to synchronize the password in IDaaS user event callbacks. Valid values:</p>
+     * <br>
+     * <p>*   true: synchronize the password.</p>
+     * <p>*   false: do not synchronize the password.</p>
+     */
     @NameInMap("ProvisionPassword")
     public Boolean provisionPassword;
 
-    // 同步协议类型
+    /**
+     * <p>The synchronization protocol type of the application. Valid values:</p>
+     * <br>
+     * <p>*   idaas_callback: custom event callback protocol of IDaaS.</p>
+     * <p>*   scim2: System for Cross-domain Identity Management (SCIM) protocol.</p>
+     */
     @NameInMap("ProvisionProtocolType")
     public String provisionProtocolType;
 
-    // IDaaS SCIM同步配置，当provisionProtocolType为scim2时填写该配置
+    /**
+     * <p>The configuration of SCIM-based IDaaS synchronization. This parameter is required when the ProvisionProtocolType parameter is set to scim2.</p>
+     */
     @NameInMap("ScimProvisioningConfig")
     public SetApplicationProvisioningConfigRequestScimProvisioningConfig scimProvisioningConfig;
 
@@ -82,19 +100,30 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     }
 
     public static class SetApplicationProvisioningConfigRequestCallbackProvisioningConfig extends TeaModel {
-        // IDaaS回调SP地址，当provisionProtocolType为idaas_callback时必填
+        /**
+         * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
+         */
         @NameInMap("CallbackUrl")
         public String callbackUrl;
 
-        // IDaaS回调对称加密秘钥
+        /**
+         * <p>The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.</p>
+         */
         @NameInMap("EncryptKey")
         public String encryptKey;
 
-        // IDaaS回调是否加密
+        /**
+         * <p>Specifies whether to encrypt IDaaS event callback messages. Valid values:</p>
+         * <br>
+         * <p>*   true: encrypt the messages.</p>
+         * <p>*   false: transmit the messages in plaintext.</p>
+         */
         @NameInMap("EncryptRequired")
         public Boolean encryptRequired;
 
-        // IDaaS回调事件监听范围
+        /**
+         * <p>The list of types of IDaaS event callback messages that are supported by the listener.</p>
+         */
         @NameInMap("ListenEventScopes")
         public java.util.List<String> listenEventScopes;
 
@@ -138,23 +167,36 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     }
 
     public static class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam extends TeaModel {
-        // accessToken
+        /**
+         * <p>The access token. If the GrantType parameter is set to bearer_token, you can set this parameter.</p>
+         */
         @NameInMap("AccessToken")
         public String accessToken;
 
-        // oauth2 authentication method
+        /**
+         * <p>The authentication mode of the SCIM protocol. Valid values:</p>
+         * <br>
+         * <p>*   client_secret_basic: The client secret is passed in the request header.</p>
+         * <p>*   client_secret_post: The client secret is passed in the request body.</p>
+         */
         @NameInMap("AuthnMethod")
         public String authnMethod;
 
-        // oauth2 client id
+        /**
+         * <p>The client ID of the application.</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
-        // oauth2 client secret
+        /**
+         * <p>The client secret of the application.</p>
+         */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
-        // oauth2 token端点
+        /**
+         * <p>The token endpoint.</p>
+         */
         @NameInMap("TokenEndpoint")
         public String tokenEndpoint;
 
@@ -206,15 +248,29 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     }
 
     public static class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration extends TeaModel {
-        // 认证类型
+        /**
+         * <p>The authentication mode of the SCIM protocol. Valid value:</p>
+         * <br>
+         * <p>*   oauth2: OAuth2.0 mode.</p>
+         */
         @NameInMap("AuthnMode")
         public String authnMode;
 
-        // 授权相关配置
+        /**
+         * <p>The configuration parameters related to authorization.</p>
+         * <br>
+         * <p>*   If the GrantType parameter is set to client_credentials, you can set the configuration parameters ClientId, ClientSecret, and AuthnMethod.</p>
+         * <p>*   If the GrantType parameter is set to bearer_token, you can set the configuration parameter AccessToken.</p>
+         */
         @NameInMap("AuthnParam")
         public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam authnParam;
 
-        // 授权模式
+        /**
+         * <p>The grant type of the SCIM protocol. Valid values:</p>
+         * <br>
+         * <p>*   client_credentials: client mode.</p>
+         * <p>*   bearer_token: key mode.</p>
+         */
         @NameInMap("GrantType")
         public String grantType;
 
@@ -250,19 +306,33 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     }
 
     public static class SetApplicationProvisioningConfigRequestScimProvisioningConfig extends TeaModel {
-        // scim同步相关配置
+        /**
+         * <p>The configuration parameters related to SCIM-based synchronization.</p>
+         */
         @NameInMap("AuthnConfiguration")
         public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration authnConfiguration;
 
-        // 全量推送范围
+        /**
+         * <p>The full synchronization scope of the SCIM protocol. Valid value:</p>
+         * <br>
+         * <p>*   urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</p>
+         */
         @NameInMap("FullPushScopes")
         public java.util.List<String> fullPushScopes;
 
-        // 目标资源操作行为
+        /**
+         * <p>The resource operations of the SCIM protocol. Valid values:</p>
+         * <br>
+         * <p>*   urn:alibaba:idaas:app:scim:User:CREATE: account creation.</p>
+         * <p>*   urn:alibaba:idaas:app:scim:User:UPDATE: account update.</p>
+         * <p>*   urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</p>
+         */
         @NameInMap("ProvisioningActions")
         public java.util.List<String> provisioningActions;
 
-        // scim同步端点
+        /**
+         * <p>The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.</p>
+         */
         @NameInMap("ScimBaseUrl")
         public String scimBaseUrl;
 

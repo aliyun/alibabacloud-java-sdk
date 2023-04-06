@@ -32,15 +32,21 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationClientSecretResponseBodyApplicationClientSecret extends TeaModel {
-        // IDaaS EIAM 客户端ID
+        /**
+         * <p>IDaaS EIAM 客户端ID</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
-        // IDaaS EIAM 客户端密钥
+        /**
+         * <p>IDaaS EIAM 客户端密钥</p>
+         */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
-        // IDaaS EIAM 客户端密钥Id
+        /**
+         * <p>IDaaS EIAM 客户端密钥Id</p>
+         */
         @NameInMap("SecretId")
         public String secretId;
 

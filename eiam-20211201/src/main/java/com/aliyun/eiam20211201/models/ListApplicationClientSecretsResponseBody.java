@@ -43,31 +43,45 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
     }
 
     public static class ListApplicationClientSecretsResponseBodyApplicationClientSecrets extends TeaModel {
-        // IDaaS EIAM 应用Id
+        /**
+         * <p>IDaaS EIAM 应用Id</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
-        // IDaaS EIAM 客户端ID
+        /**
+         * <p>IDaaS EIAM 客户端ID</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
-        // 客户端密钥（已脱敏）
+        /**
+         * <p>客户端密钥（已脱敏）</p>
+         */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
-        // IDaaS EIAM 实例Id
+        /**
+         * <p>IDaaS EIAM 实例Id</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // IDaaS EIAM 客户端密钥最近使用时间
+        /**
+         * <p>IDaaS EIAM 客户端密钥最近使用时间</p>
+         */
         @NameInMap("LastUsedTime")
         public Long lastUsedTime;
 
-        // IDaaS EIAM 客户端密钥Id
+        /**
+         * <p>IDaaS EIAM 客户端密钥Id</p>
+         */
         @NameInMap("SecretId")
         public String secretId;
 
-        // IDaaS EIAM 客户端密钥状态
+        /**
+         * <p>IDaaS EIAM 客户端密钥状态</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,47 +4,69 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
-    // 邮箱
+    /**
+     * <p>邮箱</p>
+     */
     @NameInMap("Email")
     public String email;
 
-    // IDaaS EIAM实例的ID。
+    /**
+     * <p>IDaaS EIAM实例的ID。</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 机构ID
+    /**
+     * <p>组织ID</p>
+     */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 
-    // 当前查询的列表页码，默认为1。
+    /**
+     * <p>当前查询的列表页码，默认为1。</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 当前查询的列表页码，默认为20。
+    /**
+     * <p>当前查询的列表页码，默认为20。</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 手机区号
+    /**
+     * <p>手机区号</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
-    // 手机区号
+    /**
+     * <p>手机区号</p>
+     */
     @NameInMap("PhoneRegion")
     public String phoneRegion;
 
-    // 账户状态
+    /**
+     * <p>账户状态</p>
+     */
     @NameInMap("Status")
     public String status;
 
-    // 外部关联ID
+    /**
+     * <p>外部关联ID</p>
+     */
     @NameInMap("UserExternalId")
     public String userExternalId;
 
-    // 自建类型为实例ID，非自建类型，为对应企业ID，比如钉钉，对应的corpId
+    /**
+     * <p>自建类型为实例ID，非自建类型，为对应企业ID，比如钉钉，对应的corpId</p>
+     */
     @NameInMap("UserSourceId")
     public String userSourceId;
 
-    // build_in(自建),ding_talk(钉钉导入),ad(AD导入),ldap(LDAP导入)
+    /**
+     * <p>build_in(自建),ding_talk(钉钉导入),ad(AD导入),ldap(LDAP导入)</p>
+     */
     @NameInMap("UserSourceType")
     public String userSourceType;
 

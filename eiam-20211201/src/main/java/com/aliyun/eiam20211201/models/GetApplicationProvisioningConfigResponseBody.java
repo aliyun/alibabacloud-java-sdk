@@ -32,19 +32,27 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigCallbackProvisioningConfig extends TeaModel {
-        // IDaaS回调SP地址，当provisionProtocolType为idaas_callback时必填
+        /**
+         * <p>IDaaS回调SP地址，当provisionProtocolType为idaas_callback时必填</p>
+         */
         @NameInMap("CallbackUrl")
         public String callbackUrl;
 
-        // IDaaS回调对称加密秘钥, AES 256格式
+        /**
+         * <p>IDaaS回调对称加密秘钥, AES 256格式</p>
+         */
         @NameInMap("EncryptKey")
         public String encryptKey;
 
-        // IDaaS回调是否加密
+        /**
+         * <p>IDaaS回调是否加密</p>
+         */
         @NameInMap("EncryptRequired")
         public Boolean encryptRequired;
 
-        // IDaaS回调事件监听范围
+        /**
+         * <p>IDaaS回调事件监听范围</p>
+         */
         @NameInMap("ListenEventScopes")
         public java.util.List<String> listenEventScopes;
 
@@ -88,23 +96,33 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfigurationAuthnParam extends TeaModel {
-        // accessToken
+        /**
+         * <p>accessToken</p>
+         */
         @NameInMap("AccessToken")
         public String accessToken;
 
-        // oauth2 authentication method
+        /**
+         * <p>oauth2 authentication method</p>
+         */
         @NameInMap("AuthnMethod")
         public String authnMethod;
 
-        // oauth2 client id
+        /**
+         * <p>oauth2 client id</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
-        // oauth2 client secret
+        /**
+         * <p>oauth2 client secret</p>
+         */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
-        // oauth2 token端点
+        /**
+         * <p>oauth2 token端点</p>
+         */
         @NameInMap("TokenEndpoint")
         public String tokenEndpoint;
 
@@ -156,15 +174,21 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfiguration extends TeaModel {
-        // 认证类型
+        /**
+         * <p>认证类型</p>
+         */
         @NameInMap("AuthnMode")
         public String authnMode;
 
-        // 授权相关配置
+        /**
+         * <p>授权相关配置</p>
+         */
         @NameInMap("AuthnParam")
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfigurationAuthnParam authnParam;
 
-        // 授权模式
+        /**
+         * <p>授权模式</p>
+         */
         @NameInMap("GrantType")
         public String grantType;
 
@@ -200,19 +224,27 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfig extends TeaModel {
-        // scim同步相关配置
+        /**
+         * <p>scim同步相关配置</p>
+         */
         @NameInMap("AuthnConfiguration")
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfiguration authnConfiguration;
 
-        // 全量推送范围
+        /**
+         * <p>全量推送范围</p>
+         */
         @NameInMap("FullPushScopes")
         public java.util.List<String> fullPushScopes;
 
-        // 目标资源操作行为
+        /**
+         * <p>目标资源操作行为</p>
+         */
         @NameInMap("ProvisioningActions")
         public java.util.List<String> provisioningActions;
 
-        // scim同步端点
+        /**
+         * <p>scim同步端点</p>
+         */
         @NameInMap("ScimBaseUrl")
         public String scimBaseUrl;
 
@@ -256,35 +288,57 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     }
 
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfig extends TeaModel {
-        // IDaaS EIAM 应用Id
+        /**
+         * <p>IDaaS EIAM 应用Id</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
-        // IDaaS回调同步配置，当provisionProtocolType为idaas_callback时必填
+        /**
+         * <p>IDaaS回调同步配置，当provisionProtocolType为idaas_callback时必填</p>
+         */
         @NameInMap("CallbackProvisioningConfig")
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigCallbackProvisioningConfig callbackProvisioningConfig;
 
-        // IDaaS EIAM 实例Id
+        /**
+         * <p>账户同步页面渲染方式</p>
+         */
+        @NameInMap("ConfigOperateMode")
+        public String configOperateMode;
+
+        /**
+         * <p>IDaaS EIAM 实例Id</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 应用同步验签公钥端点
+        /**
+         * <p>应用同步验签公钥端点</p>
+         */
         @NameInMap("ProvisionJwksEndpoint")
         public String provisionJwksEndpoint;
 
-        // 同步信息是否包含密码
+        /**
+         * <p>同步信息是否包含密码</p>
+         */
         @NameInMap("ProvisionPassword")
         public Boolean provisionPassword;
 
-        // IDaaS EIAM 应用同步协议，scim2 or custom or idaas_callback
+        /**
+         * <p>IDaaS EIAM 应用同步协议，scim2 or custom or idaas_callback</p>
+         */
         @NameInMap("ProvisionProtocolType")
         public String provisionProtocolType;
 
-        // IDaaS SCIM同步配置，当provisionProtocolType为scim2时填写该配置
+        /**
+         * <p>IDaaS SCIM同步配置，当provisionProtocolType为scim2时填写该配置</p>
+         */
         @NameInMap("ScimProvisioningConfig")
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfig scimProvisioningConfig;
 
-        // IDaaS 应用同步启用状态
+        /**
+         * <p>IDaaS 应用同步启用状态</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -307,6 +361,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         }
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigCallbackProvisioningConfig getCallbackProvisioningConfig() {
             return this.callbackProvisioningConfig;
+        }
+
+        public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfig setConfigOperateMode(String configOperateMode) {
+            this.configOperateMode = configOperateMode;
+            return this;
+        }
+        public String getConfigOperateMode() {
+            return this.configOperateMode;
         }
 
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfig setInstanceId(String instanceId) {

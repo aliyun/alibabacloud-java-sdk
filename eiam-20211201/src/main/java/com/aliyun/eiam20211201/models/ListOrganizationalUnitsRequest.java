@@ -4,23 +4,39 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsRequest extends TeaModel {
-    // IDaaS EIAM实例的ID。
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 机构名称
+    /**
+     * <p>The name of the organizational unit.</p>
+     */
     @NameInMap("OrganizationalUnitName")
     public String organizationalUnitName;
 
-    // 当前查询的列表页码，默认为1。
+    /**
+     * <p>组织名称，左匹配</p>
+     */
+    @NameInMap("OrganizationalUnitNameStartsWith")
+    public String organizationalUnitNameStartsWith;
+
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 当前查询的列表页码，默认为20。
+    /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 父机构ID
+    /**
+     * <p>The ID of the parent organizational unit.</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
@@ -43,6 +59,14 @@ public class ListOrganizationalUnitsRequest extends TeaModel {
     }
     public String getOrganizationalUnitName() {
         return this.organizationalUnitName;
+    }
+
+    public ListOrganizationalUnitsRequest setOrganizationalUnitNameStartsWith(String organizationalUnitNameStartsWith) {
+        this.organizationalUnitNameStartsWith = organizationalUnitNameStartsWith;
+        return this;
+    }
+    public String getOrganizationalUnitNameStartsWith() {
+        return this.organizationalUnitNameStartsWith;
     }
 
     public ListOrganizationalUnitsRequest setPageNumber(Long pageNumber) {

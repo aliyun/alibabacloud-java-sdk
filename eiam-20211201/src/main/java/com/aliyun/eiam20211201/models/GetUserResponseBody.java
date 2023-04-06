@@ -32,11 +32,15 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUserCustomFields extends TeaModel {
-        // 字段标识
+        /**
+         * <p>字段标识</p>
+         */
         @NameInMap("FieldName")
         public String fieldName;
 
-        // 字段数据值
+        /**
+         * <p>字段数据值</p>
+         */
         @NameInMap("FieldValue")
         public String fieldValue;
 
@@ -63,16 +67,72 @@ public class GetUserResponseBody extends TeaModel {
 
     }
 
+    public static class GetUserResponseBodyUserGroups extends TeaModel {
+        /**
+         * <p>组描述。</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>组ID。</p>
+         */
+        @NameInMap("GroupId")
+        public String groupId;
+
+        /**
+         * <p>组名称。</p>
+         */
+        @NameInMap("GroupName")
+        public String groupName;
+
+        public static GetUserResponseBodyUserGroups build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyUserGroups self = new GetUserResponseBodyUserGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyUserGroups setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetUserResponseBodyUserGroups setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public GetUserResponseBodyUserGroups setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+    }
+
     public static class GetUserResponseBodyUserOrganizationalUnits extends TeaModel {
-        // 机构ID
+        /**
+         * <p>机构ID</p>
+         */
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;
 
-        // 机构名称
+        /**
+         * <p>机构名称</p>
+         */
         @NameInMap("OrganizationalUnitName")
         public String organizationalUnitName;
 
-        // 是否主机构
+        /**
+         * <p>是否主机构</p>
+         */
         @NameInMap("Primary")
         public Boolean primary;
 
@@ -108,98 +168,153 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUser extends TeaModel {
-        // 账户过期时间
+        /**
+         * <p>账户过期时间</p>
+         */
         @NameInMap("AccountExpireTime")
         public Long accountExpireTime;
 
-        // 创建时间
+        /**
+         * <p>创建时间</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 账户扩展字段列表
+        /**
+         * <p>账户扩展字段列表</p>
+         */
         @NameInMap("CustomFields")
         public java.util.List<GetUserResponseBodyUserCustomFields> customFields;
 
-        // 账号描述
+        /**
+         * <p>账号描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // 账户显示名
+        /**
+         * <p>账户显示名</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        // 邮箱
+        /**
+         * <p>邮箱</p>
+         */
         @NameInMap("Email")
         public String email;
 
-        // 邮箱是否已验证
+        /**
+         * <p>邮箱是否已验证</p>
+         */
         @NameInMap("EmailVerified")
         public Boolean emailVerified;
 
-        // 实例Id
+        /**
+         * <p>账户所属组列表</p>
+         */
+        @NameInMap("Groups")
+        public java.util.List<GetUserResponseBodyUserGroups> groups;
+
+        /**
+         * <p>实例ID</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 锁定过期时间
+        /**
+         * <p>锁定过期时间</p>
+         */
         @NameInMap("LockExpireTime")
         public Long lockExpireTime;
 
-        // 账户所属组织列表
+        /**
+         * <p>账户所属组织列表</p>
+         */
         @NameInMap("OrganizationalUnits")
         public java.util.List<GetUserResponseBodyUserOrganizationalUnits> organizationalUnits;
 
+        /**
+         * <p>密码过期时间</p>
+         */
         @NameInMap("PasswordExpireTime")
         public Long passwordExpireTime;
 
-        // 密码是否已设置
+        /**
+         * <p>密码是否已设置</p>
+         */
         @NameInMap("PasswordSet")
         public Boolean passwordSet;
 
-        // 手机号码
+        /**
+         * <p>手机号码</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
-        // 手机号是否已验证
+        /**
+         * <p>手机号是否已验证</p>
+         */
         @NameInMap("PhoneNumberVerified")
         public Boolean phoneNumberVerified;
 
-        // 手机地区编号,示例：中国大陆手区号为86，不带 00 或 +
+        /**
+         * <p>手机地区编号,示例：中国大陆手区号为86，不带 00 或 +</p>
+         */
         @NameInMap("PhoneRegion")
         public String phoneRegion;
 
-        // 账户主机构ID
+        /**
+         * <p>账户主机构ID</p>
+         */
         @NameInMap("PrimaryOrganizationalUnitId")
         public String primaryOrganizationalUnitId;
 
-        // 账户注册时间
+        /**
+         * <p>账户注册时间</p>
+         */
         @NameInMap("RegisterTime")
         public Long registerTime;
 
-        // 账户状态, enabled:启用,disabled:禁用
+        /**
+         * <p>账户状态, enabled:启用,disabled:禁用</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // 最近一次更新时间
+        /**
+         * <p>最近一次更新时间</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        // 外部ID
+        /**
+         * <p>外部ID</p>
+         */
         @NameInMap("UserExternalId")
         public String userExternalId;
 
-        // 账户ID
+        /**
+         * <p>账户ID</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
-        // 来源ID
+        /**
+         * <p>来源ID</p>
+         */
         @NameInMap("UserSourceId")
         public String userSourceId;
 
-        // 来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]
+        /**
+         * <p>来源类型，build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导入]</p>
+         */
         @NameInMap("UserSourceType")
         public String userSourceType;
 
-        // 账户名
+        /**
+         * <p>账户名</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -262,6 +377,14 @@ public class GetUserResponseBody extends TeaModel {
         }
         public Boolean getEmailVerified() {
             return this.emailVerified;
+        }
+
+        public GetUserResponseBodyUser setGroups(java.util.List<GetUserResponseBodyUserGroups> groups) {
+            this.groups = groups;
+            return this;
+        }
+        public java.util.List<GetUserResponseBodyUserGroups> getGroups() {
+            return this.groups;
         }
 
         public GetUserResponseBodyUser setInstanceId(String instanceId) {

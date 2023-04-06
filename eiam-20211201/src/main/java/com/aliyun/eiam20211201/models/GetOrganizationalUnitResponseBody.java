@@ -4,9 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetOrganizationalUnitResponseBody extends TeaModel {
+    /**
+     * <p>The data object of the organizational unit.</p>
+     */
     @NameInMap("OrganizationalUnit")
     public GetOrganizationalUnitResponseBodyOrganizationalUnit organizationalUnit;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,43 +38,78 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
     }
 
     public static class GetOrganizationalUnitResponseBodyOrganizationalUnit extends TeaModel {
-        // 创建时间
+        /**
+         * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 描述
+        /**
+         * <p>The description of the organizational unit.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // 实例Id
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 外部ID
+        /**
+         * <p>Indicates whether the node is a leaf node.</p>
+         */
+        @NameInMap("Leaf")
+        public Boolean leaf;
+
+        /**
+         * <p>The external ID of the organizational unit. The external ID can be used by external data to map the data of the organizational unit in IDaaS EIAM. By default, the external ID is the organizational unit ID.</p>
+         * <br>
+         * <p>For organizational units with the same source type and source ID, each organizational unit has a unique external ID.</p>
+         */
         @NameInMap("OrganizationalUnitExternalId")
         public String organizationalUnitExternalId;
 
-        // 机构ID
+        /**
+         * <p>The ID of the organizational unit.</p>
+         */
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;
 
-        // 机构名称
+        /**
+         * <p>机构名称</p>
+         */
         @NameInMap("OrganizationalUnitName")
         public String organizationalUnitName;
 
-        // 来源ID
+        /**
+         * <p>The source ID of the organizational unit.</p>
+         * <br>
+         * <p>If the organizational unit was created in IDaaS, its source ID is the ID of the IDaaS instance. If the organizational unit was imported, its source ID is the enterprise ID in the source. For example, if the organizational unit was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+         */
         @NameInMap("OrganizationalUnitSourceId")
         public String organizationalUnitSourceId;
 
-        // 来源类型, build_in[自建],ding_talk[钉钉导入],ad[AD导入],ldap[LDAP导]
+        /**
+         * <p>The source type of the organizational unit. Valid values:</p>
+         * <br>
+         * <p>*   build_in: The organizational unit was created in IDaaS.</p>
+         * <p>*   ding_talk: The organizational unit was imported from DingTalk.</p>
+         * <p>*   ad: The organizational unit was imported from Microsoft Active Directory (AD).</p>
+         * <p>*   ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
+         */
         @NameInMap("OrganizationalUnitSourceType")
         public String organizationalUnitSourceType;
 
-        // 父机构ID
+        /**
+         * <p>The ID of the parent organizational unit.</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 
-        // 最近一次更新时间
+        /**
+         * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -99,6 +140,14 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetOrganizationalUnitResponseBodyOrganizationalUnit setLeaf(Boolean leaf) {
+            this.leaf = leaf;
+            return this;
+        }
+        public Boolean getLeaf() {
+            return this.leaf;
         }
 
         public GetOrganizationalUnitResponseBodyOrganizationalUnit setOrganizationalUnitExternalId(String organizationalUnitExternalId) {
