@@ -3,7 +3,7 @@ package com.aliyun.pds20220301.models;
 
 import com.aliyun.tea.*;
 
-public class WalkFileResponse extends TeaModel {
+public class UpdateDomainResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class WalkFileResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public WalkFileResponseBody body;
+    public Domain body;
 
-    public static WalkFileResponse build(java.util.Map<String, ?> map) throws Exception {
-        WalkFileResponse self = new WalkFileResponse();
+    public static UpdateDomainResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateDomainResponse self = new UpdateDomainResponse();
         return TeaModel.build(map, self);
     }
 
-    public WalkFileResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateDomainResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class WalkFileResponse extends TeaModel {
         return this.headers;
     }
 
-    public WalkFileResponse setStatusCode(Integer statusCode) {
+    public UpdateDomainResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class WalkFileResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public WalkFileResponse setBody(WalkFileResponseBody body) {
+    public UpdateDomainResponse setBody(Domain body) {
         this.body = body;
         return this;
     }
-    public WalkFileResponseBody getBody() {
+    public Domain getBody() {
         return this.body;
     }
 

@@ -16,10 +16,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
 
-    public AuthorizeResponse authorize(AuthorizeRequest request) throws Exception {
+    public AddGroupMemberResponse addGroupMemberWithOptions(String domainId, AddGroupMemberRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("domain_id", domainId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("group_id", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            body.put("member_id", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberType)) {
+            body.put("member_type", request.memberType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddGroupMember"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/group/add_member"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new AddGroupMemberResponse());
+    }
+
+    public AddGroupMemberResponse addGroupMember(String domainId, AddGroupMemberRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.authorizeWithOptions(request, headers, runtime);
+        return this.addGroupMemberWithOptions(domainId, request, headers, runtime);
     }
 
     public AuthorizeResponse authorizeWithOptions(AuthorizeRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -77,10 +113,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new AuthorizeResponse());
     }
 
-    public BatchResponse batch(BatchRequest request) throws Exception {
+    public AuthorizeResponse authorize(AuthorizeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.batchWithOptions(request, headers, runtime);
+        return this.authorizeWithOptions(request, headers, runtime);
     }
 
     public BatchResponse batchWithOptions(BatchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -112,10 +148,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new BatchResponse());
     }
 
-    public CancelShareLinkResponse cancelShareLink(CancelShareLinkRequest request) throws Exception {
+    public BatchResponse batch(BatchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.cancelShareLinkWithOptions(request, headers, runtime);
+        return this.batchWithOptions(request, headers, runtime);
     }
 
     public CancelShareLinkResponse cancelShareLinkWithOptions(CancelShareLinkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -143,10 +179,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CancelShareLinkResponse());
     }
 
-    public ClearRecyclebinResponse clearRecyclebin(ClearRecyclebinRequest request) throws Exception {
+    public CancelShareLinkResponse cancelShareLink(CancelShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.clearRecyclebinWithOptions(request, headers, runtime);
+        return this.cancelShareLinkWithOptions(request, headers, runtime);
     }
 
     public ClearRecyclebinResponse clearRecyclebinWithOptions(ClearRecyclebinRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -174,10 +210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ClearRecyclebinResponse());
     }
 
-    public CompleteFileResponse completeFile(CompleteFileRequest request) throws Exception {
+    public ClearRecyclebinResponse clearRecyclebin(ClearRecyclebinRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.completeFileWithOptions(request, headers, runtime);
+        return this.clearRecyclebinWithOptions(request, headers, runtime);
     }
 
     public CompleteFileResponse completeFileWithOptions(CompleteFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -213,10 +249,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CompleteFileResponse());
     }
 
-    public CopyFileResponse copyFile(CopyFileRequest request) throws Exception {
+    public CompleteFileResponse completeFile(CompleteFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.copyFileWithOptions(request, headers, runtime);
+        return this.completeFileWithOptions(request, headers, runtime);
     }
 
     public CopyFileResponse copyFileWithOptions(CopyFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -256,10 +292,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CopyFileResponse());
     }
 
-    public CreateDriveResponse createDrive(CreateDriveRequest request) throws Exception {
+    public CopyFileResponse copyFile(CopyFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createDriveWithOptions(request, headers, runtime);
+        return this.copyFileWithOptions(request, headers, runtime);
+    }
+
+    public CreateDomainResponse createDomainWithOptions(CreateDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            body.put("domain_name", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initDriveEnable)) {
+            body.put("init_drive_enable", request.initDriveEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initDriveSize)) {
+            body.put("init_drive_size", request.initDriveSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentDomainId)) {
+            body.put("parent_domain_id", request.parentDomainId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sizeQuota)) {
+            body.put("size_quota", request.sizeQuota);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userCountQuota)) {
+            body.put("user_count_quota", request.userCountQuota);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDomain"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/domain/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateDomainResponse());
+    }
+
+    public CreateDomainResponse createDomain(CreateDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDomainWithOptions(request, headers, runtime);
     }
 
     public CreateDriveResponse createDriveWithOptions(CreateDriveRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -315,10 +406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateDriveResponse());
     }
 
-    public CreateFileResponse createFile(CreateFileRequest request) throws Exception {
+    public CreateDriveResponse createDrive(CreateDriveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createFileWithOptions(request, headers, runtime);
+        return this.createDriveWithOptions(request, headers, runtime);
     }
 
     public CreateFileResponse createFileWithOptions(CreateFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -356,7 +447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("hidden", request.hidden);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.imageMediaMetadata))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.imageMediaMetadata)) {
             body.put("image_media_metadata", request.imageMediaMetadata);
         }
 
@@ -404,7 +495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("user_tags", request.userTags);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.videoMediaMetadata))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.videoMediaMetadata)) {
             body.put("video_media_metadata", request.videoMediaMetadata);
         }
 
@@ -426,10 +517,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateFileResponse());
     }
 
-    public CreateGroupResponse createGroup(CreateGroupRequest request) throws Exception {
+    public CreateFileResponse createFile(CreateFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createGroupWithOptions(request, headers, runtime);
+        return this.createFileWithOptions(request, headers, runtime);
     }
 
     public CreateGroupResponse createGroupWithOptions(CreateGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -469,10 +560,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateGroupResponse());
     }
 
-    public CreateShareLinkResponse createShareLink(CreateShareLinkRequest request) throws Exception {
+    public CreateGroupResponse createGroup(CreateGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createShareLinkWithOptions(request, headers, runtime);
+        return this.createGroupWithOptions(request, headers, runtime);
     }
 
     public CreateShareLinkResponse createShareLinkWithOptions(CreateShareLinkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -548,10 +639,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateShareLinkResponse());
     }
 
-    public CreateUserResponse createUser(CreateUserRequest request) throws Exception {
+    public CreateShareLinkResponse createShareLink(CreateShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createUserWithOptions(request, headers, runtime);
+        return this.createShareLinkWithOptions(request, headers, runtime);
     }
 
     public CreateUserResponse createUserWithOptions(CreateUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -619,10 +710,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateUserResponse());
     }
 
-    public DeleteDriveResponse deleteDrive(DeleteDriveRequest request) throws Exception {
+    public CreateUserResponse createUser(CreateUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteDriveWithOptions(request, headers, runtime);
+        return this.createUserWithOptions(request, headers, runtime);
+    }
+
+    public DeleteDomainResponse deleteDomainWithOptions(DeleteDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainId)) {
+            body.put("domain_id", request.domainId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDomain"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/domain/delete"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDomainResponse());
+    }
+
+    public DeleteDomainResponse deleteDomain(DeleteDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDomainWithOptions(request, headers, runtime);
     }
 
     public DeleteDriveResponse deleteDriveWithOptions(DeleteDriveRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -650,10 +772,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDriveResponse());
     }
 
-    public DeleteFileResponse deleteFile(DeleteFileRequest request) throws Exception {
+    public DeleteDriveResponse deleteDrive(DeleteDriveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteFileWithOptions(request, headers, runtime);
+        return this.deleteDriveWithOptions(request, headers, runtime);
     }
 
     public DeleteFileResponse deleteFileWithOptions(DeleteFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -685,10 +807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteFileResponse());
     }
 
-    public DeleteGroupResponse deleteGroup(DeleteGroupRequest request) throws Exception {
+    public DeleteFileResponse deleteFile(DeleteFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteGroupWithOptions(request, headers, runtime);
+        return this.deleteFileWithOptions(request, headers, runtime);
     }
 
     public DeleteGroupResponse deleteGroupWithOptions(DeleteGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -716,10 +838,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteGroupResponse());
     }
 
-    public DeleteRevisionResponse deleteRevision(DeleteRevisionRequest request) throws Exception {
+    public DeleteGroupResponse deleteGroup(DeleteGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteRevisionWithOptions(request, headers, runtime);
+        return this.deleteGroupWithOptions(request, headers, runtime);
     }
 
     public DeleteRevisionResponse deleteRevisionWithOptions(DeleteRevisionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -755,10 +877,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteRevisionResponse());
     }
 
-    public DeleteUserResponse deleteUser(DeleteUserRequest request) throws Exception {
+    public DeleteRevisionResponse deleteRevision(DeleteRevisionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteUserWithOptions(request, headers, runtime);
+        return this.deleteRevisionWithOptions(request, headers, runtime);
     }
 
     public DeleteUserResponse deleteUserWithOptions(DeleteUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -786,10 +908,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteUserResponse());
     }
 
-    public DeltaGetLastCursorResponse deltaGetLastCursor(DeltaGetLastCursorRequest request) throws Exception {
+    public DeleteUserResponse deleteUser(DeleteUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deltaGetLastCursorWithOptions(request, headers, runtime);
+        return this.deleteUserWithOptions(request, headers, runtime);
     }
 
     public DeltaGetLastCursorResponse deltaGetLastCursorWithOptions(DeltaGetLastCursorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -821,10 +943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeltaGetLastCursorResponse());
     }
 
-    public DownloadFileResponse downloadFile(DownloadFileRequest request) throws Exception {
+    public DeltaGetLastCursorResponse deltaGetLastCursor(DeltaGetLastCursorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.downloadFileWithOptions(request, headers, runtime);
+        return this.deltaGetLastCursorWithOptions(request, headers, runtime);
     }
 
     public DownloadFileResponse downloadFileWithOptions(DownloadFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -868,10 +990,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DownloadFileResponse());
     }
 
-    public FileAddPermissionResponse fileAddPermission(FileAddPermissionRequest request) throws Exception {
+    public DownloadFileResponse downloadFile(DownloadFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.fileAddPermissionWithOptions(request, headers, runtime);
+        return this.downloadFileWithOptions(request, headers, runtime);
     }
 
     public FileAddPermissionResponse fileAddPermissionWithOptions(FileAddPermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -907,10 +1029,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new FileAddPermissionResponse());
     }
 
-    public FileDeleteUserTagsResponse fileDeleteUserTags(FileDeleteUserTagsRequest request) throws Exception {
+    public FileAddPermissionResponse fileAddPermission(FileAddPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.fileDeleteUserTagsWithOptions(request, headers, runtime);
+        return this.fileAddPermissionWithOptions(request, headers, runtime);
     }
 
     public FileDeleteUserTagsResponse fileDeleteUserTagsWithOptions(FileDeleteUserTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -946,10 +1068,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new FileDeleteUserTagsResponse());
     }
 
-    public FileListPermissionResponse fileListPermission(FileListPermissionRequest request) throws Exception {
+    public FileDeleteUserTagsResponse fileDeleteUserTags(FileDeleteUserTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.fileListPermissionWithOptions(request, headers, runtime);
+        return this.fileDeleteUserTagsWithOptions(request, headers, runtime);
     }
 
     public FileListPermissionResponse fileListPermissionWithOptions(FileListPermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -981,10 +1103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new FileListPermissionResponse());
     }
 
-    public FilePutUserTagsResponse filePutUserTags(FilePutUserTagsRequest request) throws Exception {
+    public FileListPermissionResponse fileListPermission(FileListPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.filePutUserTagsWithOptions(request, headers, runtime);
+        return this.fileListPermissionWithOptions(request, headers, runtime);
     }
 
     public FilePutUserTagsResponse filePutUserTagsWithOptions(FilePutUserTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1020,10 +1142,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new FilePutUserTagsResponse());
     }
 
-    public FileRemovePermissionResponse fileRemovePermission(FileRemovePermissionRequest request) throws Exception {
+    public FilePutUserTagsResponse filePutUserTags(FilePutUserTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.fileRemovePermissionWithOptions(request, headers, runtime);
+        return this.filePutUserTagsWithOptions(request, headers, runtime);
     }
 
     public FileRemovePermissionResponse fileRemovePermissionWithOptions(FileRemovePermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1059,10 +1181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new FileRemovePermissionResponse());
     }
 
-    public GetAsyncTaskResponse getAsyncTask(GetAsyncTaskRequest request) throws Exception {
+    public FileRemovePermissionResponse fileRemovePermission(FileRemovePermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getAsyncTaskWithOptions(request, headers, runtime);
+        return this.fileRemovePermissionWithOptions(request, headers, runtime);
     }
 
     public GetAsyncTaskResponse getAsyncTaskWithOptions(GetAsyncTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1090,10 +1212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetAsyncTaskResponse());
     }
 
-    public GetDefaultDriveResponse getDefaultDrive(GetDefaultDriveRequest request) throws Exception {
+    public GetAsyncTaskResponse getAsyncTask(GetAsyncTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getDefaultDriveWithOptions(request, headers, runtime);
+        return this.getAsyncTaskWithOptions(request, headers, runtime);
     }
 
     public GetDefaultDriveResponse getDefaultDriveWithOptions(GetDefaultDriveRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1121,10 +1243,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetDefaultDriveResponse());
     }
 
-    public GetDownloadUrlResponse getDownloadUrl(GetDownloadUrlRequest request) throws Exception {
+    public GetDefaultDriveResponse getDefaultDrive(GetDefaultDriveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getDownloadUrlWithOptions(request, headers, runtime);
+        return this.getDefaultDriveWithOptions(request, headers, runtime);
+    }
+
+    public GetDomainResponse getDomainWithOptions(GetDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainId)) {
+            body.put("domain_id", request.domainId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.getQuotaUsed)) {
+            body.put("get_quota_used", request.getQuotaUsed);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDomain"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/domain/get"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetDomainResponse());
+    }
+
+    public GetDomainResponse getDomain(GetDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDomainWithOptions(request, headers, runtime);
     }
 
     public GetDownloadUrlResponse getDownloadUrlWithOptions(GetDownloadUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1164,10 +1321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetDownloadUrlResponse());
     }
 
-    public GetDriveResponse getDrive(GetDriveRequest request) throws Exception {
+    public GetDownloadUrlResponse getDownloadUrl(GetDownloadUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getDriveWithOptions(request, headers, runtime);
+        return this.getDownloadUrlWithOptions(request, headers, runtime);
     }
 
     public GetDriveResponse getDriveWithOptions(GetDriveRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1195,10 +1352,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetDriveResponse());
     }
 
-    public GetFileResponse getFile(GetFileRequest request) throws Exception {
+    public GetDriveResponse getDrive(GetDriveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getFileWithOptions(request, headers, runtime);
+        return this.getDriveWithOptions(request, headers, runtime);
     }
 
     public GetFileResponse getFileWithOptions(GetFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1238,10 +1395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetFileResponse());
     }
 
-    public GetGroupResponse getGroup(GetGroupRequest request) throws Exception {
+    public GetFileResponse getFile(GetFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getGroupWithOptions(request, headers, runtime);
+        return this.getFileWithOptions(request, headers, runtime);
     }
 
     public GetGroupResponse getGroupWithOptions(GetGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1269,10 +1426,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetGroupResponse());
     }
 
-    public GetLinkInfoResponse getLinkInfo(GetLinkInfoRequest request) throws Exception {
+    public GetGroupResponse getGroup(GetGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getLinkInfoWithOptions(request, headers, runtime);
+        return this.getGroupWithOptions(request, headers, runtime);
     }
 
     public GetLinkInfoResponse getLinkInfoWithOptions(GetLinkInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1308,10 +1465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLinkInfoResponse());
     }
 
-    public GetLinkInfoByUserIdResponse getLinkInfoByUserId(GetLinkInfoByUserIdRequest request) throws Exception {
+    public GetLinkInfoResponse getLinkInfo(GetLinkInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getLinkInfoByUserIdWithOptions(request, headers, runtime);
+        return this.getLinkInfoWithOptions(request, headers, runtime);
     }
 
     public GetLinkInfoByUserIdResponse getLinkInfoByUserIdWithOptions(GetLinkInfoByUserIdRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1339,10 +1496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLinkInfoByUserIdResponse());
     }
 
-    public GetRevisionResponse getRevision(GetRevisionRequest request) throws Exception {
+    public GetLinkInfoByUserIdResponse getLinkInfoByUserId(GetLinkInfoByUserIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getRevisionWithOptions(request, headers, runtime);
+        return this.getLinkInfoByUserIdWithOptions(request, headers, runtime);
     }
 
     public GetRevisionResponse getRevisionWithOptions(GetRevisionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1386,10 +1543,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetRevisionResponse());
     }
 
-    public GetShareLinkResponse getShareLink(GetShareLinkRequest request) throws Exception {
+    public GetRevisionResponse getRevision(GetRevisionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getShareLinkWithOptions(request, headers, runtime);
+        return this.getRevisionWithOptions(request, headers, runtime);
     }
 
     public GetShareLinkResponse getShareLinkWithOptions(GetShareLinkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1417,10 +1574,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetShareLinkResponse());
     }
 
-    public GetShareLinkByAnonymousResponse getShareLinkByAnonymous(GetShareLinkByAnonymousRequest request) throws Exception {
+    public GetShareLinkResponse getShareLink(GetShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getShareLinkByAnonymousWithOptions(request, headers, runtime);
+        return this.getShareLinkWithOptions(request, headers, runtime);
     }
 
     public GetShareLinkByAnonymousResponse getShareLinkByAnonymousWithOptions(GetShareLinkByAnonymousRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1448,10 +1605,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetShareLinkByAnonymousResponse());
     }
 
-    public GetShareLinkTokenResponse getShareLinkToken(GetShareLinkTokenRequest request) throws Exception {
+    public GetShareLinkByAnonymousResponse getShareLinkByAnonymous(GetShareLinkByAnonymousRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getShareLinkTokenWithOptions(request, headers, runtime);
+        return this.getShareLinkByAnonymousWithOptions(request, headers, runtime);
     }
 
     public GetShareLinkTokenResponse getShareLinkTokenWithOptions(GetShareLinkTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1487,10 +1644,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetShareLinkTokenResponse());
     }
 
-    public GetUploadUrlResponse getUploadUrl(GetUploadUrlRequest request) throws Exception {
+    public GetShareLinkTokenResponse getShareLinkToken(GetShareLinkTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getUploadUrlWithOptions(request, headers, runtime);
+        return this.getShareLinkTokenWithOptions(request, headers, runtime);
     }
 
     public GetUploadUrlResponse getUploadUrlWithOptions(GetUploadUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1534,10 +1691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetUploadUrlResponse());
     }
 
-    public GetUserResponse getUser(GetUserRequest request) throws Exception {
+    public GetUploadUrlResponse getUploadUrl(GetUploadUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getUserWithOptions(request, headers, runtime);
+        return this.getUploadUrlWithOptions(request, headers, runtime);
     }
 
     public GetUserResponse getUserWithOptions(GetUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1565,10 +1722,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetUserResponse());
     }
 
-    public GetVideoPreviewPlayInfoResponse getVideoPreviewPlayInfo(GetVideoPreviewPlayInfoRequest request) throws Exception {
+    public GetUserResponse getUser(GetUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getVideoPreviewPlayInfoWithOptions(request, headers, runtime);
+        return this.getUserWithOptions(request, headers, runtime);
     }
 
     public GetVideoPreviewPlayInfoResponse getVideoPreviewPlayInfoWithOptions(GetVideoPreviewPlayInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1598,6 +1755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("template_id", request.templateId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.urlExpireSec)) {
+            body.put("url_expire_sec", request.urlExpireSec);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -1616,10 +1777,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetVideoPreviewPlayInfoResponse());
     }
 
-    public GetVideoPreviewPlayMetaResponse getVideoPreviewPlayMeta(GetVideoPreviewPlayMetaRequest request) throws Exception {
+    public GetVideoPreviewPlayInfoResponse getVideoPreviewPlayInfo(GetVideoPreviewPlayInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getVideoPreviewPlayMetaWithOptions(request, headers, runtime);
+        return this.getVideoPreviewPlayInfoWithOptions(request, headers, runtime);
     }
 
     public GetVideoPreviewPlayMetaResponse getVideoPreviewPlayMetaWithOptions(GetVideoPreviewPlayMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1659,10 +1820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetVideoPreviewPlayMetaResponse());
     }
 
-    public ImportUserResponse importUser(ImportUserRequest request) throws Exception {
+    public GetVideoPreviewPlayMetaResponse getVideoPreviewPlayMeta(GetVideoPreviewPlayMetaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.importUserWithOptions(request, headers, runtime);
+        return this.getVideoPreviewPlayMetaWithOptions(request, headers, runtime);
     }
 
     public ImportUserResponse importUserWithOptions(ImportUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1718,10 +1879,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ImportUserResponse());
     }
 
-    public LinkAccountResponse linkAccount(LinkAccountRequest request) throws Exception {
+    public ImportUserResponse importUser(ImportUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.linkAccountWithOptions(request, headers, runtime);
+        return this.importUserWithOptions(request, headers, runtime);
     }
 
     public LinkAccountResponse linkAccountWithOptions(LinkAccountRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1761,10 +1922,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new LinkAccountResponse());
     }
 
-    public ListAddressGroupsResponse listAddressGroups(ListAddressGroupsRequest request) throws Exception {
+    public LinkAccountResponse linkAccount(LinkAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listAddressGroupsWithOptions(request, headers, runtime);
+        return this.linkAccountWithOptions(request, headers, runtime);
     }
 
     public ListAddressGroupsResponse listAddressGroupsWithOptions(ListAddressGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1808,10 +1969,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListAddressGroupsResponse());
     }
 
-    public ListDeltaResponse listDelta(ListDeltaRequest request) throws Exception {
+    public ListAddressGroupsResponse listAddressGroups(ListAddressGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listDeltaWithOptions(request, headers, runtime);
+        return this.listAddressGroupsWithOptions(request, headers, runtime);
     }
 
     public ListDeltaResponse listDeltaWithOptions(ListDeltaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1851,10 +2012,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListDeltaResponse());
     }
 
-    public ListDriveResponse listDrive(ListDriveRequest request) throws Exception {
+    public ListDeltaResponse listDelta(ListDeltaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listDriveWithOptions(request, headers, runtime);
+        return this.listDeltaWithOptions(request, headers, runtime);
+    }
+
+    public ListDomainsResponse listDomainsWithOptions(ListDomainsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            body.put("marker", request.marker);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentDomainId)) {
+            body.put("parent_domain_id", request.parentDomainId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDomains"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/domain/list"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListDomainsResponse());
+    }
+
+    public ListDomainsResponse listDomains(ListDomainsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDomainsWithOptions(request, headers, runtime);
     }
 
     public ListDriveResponse listDriveWithOptions(ListDriveRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1894,10 +2094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListDriveResponse());
     }
 
-    public ListFacegroupsResponse listFacegroups(ListFacegroupsRequest request) throws Exception {
+    public ListDriveResponse listDrive(ListDriveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listFacegroupsWithOptions(request, headers, runtime);
+        return this.listDriveWithOptions(request, headers, runtime);
     }
 
     public ListFacegroupsResponse listFacegroupsWithOptions(ListFacegroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1937,10 +2137,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListFacegroupsResponse());
     }
 
-    public ListFileResponse listFile(ListFileRequest request) throws Exception {
+    public ListFacegroupsResponse listFacegroups(ListFacegroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listFileWithOptions(request, headers, runtime);
+        return this.listFacegroupsWithOptions(request, headers, runtime);
     }
 
     public ListFileResponse listFileWithOptions(ListFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2004,10 +2204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListFileResponse());
     }
 
-    public ListGroupResponse listGroup(ListGroupRequest request) throws Exception {
+    public ListFileResponse listFile(ListFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listGroupWithOptions(request, headers, runtime);
+        return this.listFileWithOptions(request, headers, runtime);
     }
 
     public ListGroupResponse listGroupWithOptions(ListGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2039,10 +2239,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListGroupResponse());
     }
 
-    public ListMyDrivesResponse listMyDrives(ListMyDrivesRequest request) throws Exception {
+    public ListGroupResponse listGroup(ListGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listMyDrivesWithOptions(request, headers, runtime);
+        return this.listGroupWithOptions(request, headers, runtime);
+    }
+
+    public ListGroupMemberResponse listGroupMemberWithOptions(String domainId, ListGroupMemberRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("domain_id", domainId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("group_id", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            body.put("marker", request.marker);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberType)) {
+            body.put("member_type", request.memberType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGroupMember"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/group/list_member"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListGroupMemberResponse());
+    }
+
+    public ListGroupMemberResponse listGroupMember(String domainId, ListGroupMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listGroupMemberWithOptions(domainId, request, headers, runtime);
     }
 
     public ListMyDrivesResponse listMyDrivesWithOptions(ListMyDrivesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2074,10 +2320,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListMyDrivesResponse());
     }
 
-    public ListRecyclebinResponse listRecyclebin(ListRecyclebinRequest request) throws Exception {
+    public ListMyDrivesResponse listMyDrives(ListMyDrivesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listRecyclebinWithOptions(request, headers, runtime);
+        return this.listMyDrivesWithOptions(request, headers, runtime);
+    }
+
+    public ListMyGroupDriveResponse listMyGroupDriveWithOptions(String domainId, ListMyGroupDriveRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("domain_id", domainId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            body.put("marker", request.marker);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMyGroupDrive"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/drive/list_my_group_drive"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListMyGroupDriveResponse());
+    }
+
+    public ListMyGroupDriveResponse listMyGroupDrive(String domainId, ListMyGroupDriveRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMyGroupDriveWithOptions(domainId, request, headers, runtime);
+    }
+
+    public ListReceivedFileResponse listReceivedFileWithOptions(ListReceivedFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            body.put("marker", request.marker);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListReceivedFile"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/file/list_received_file"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListReceivedFileResponse());
+    }
+
+    public ListReceivedFileResponse listReceivedFile(ListReceivedFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listReceivedFileWithOptions(request, headers, runtime);
     }
 
     public ListRecyclebinResponse listRecyclebinWithOptions(ListRecyclebinRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2117,10 +2436,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListRecyclebinResponse());
     }
 
-    public ListRevisionResponse listRevision(ListRevisionRequest request) throws Exception {
+    public ListRecyclebinResponse listRecyclebin(ListRecyclebinRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listRevisionWithOptions(request, headers, runtime);
+        return this.listRecyclebinWithOptions(request, headers, runtime);
     }
 
     public ListRevisionResponse listRevisionWithOptions(ListRevisionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2164,10 +2483,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListRevisionResponse());
     }
 
-    public ListShareLinkResponse listShareLink(ListShareLinkRequest request) throws Exception {
+    public ListRevisionResponse listRevision(ListRevisionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listShareLinkWithOptions(request, headers, runtime);
+        return this.listRevisionWithOptions(request, headers, runtime);
     }
 
     public ListShareLinkResponse listShareLinkWithOptions(ListShareLinkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2215,10 +2534,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListShareLinkResponse());
     }
 
-    public ListTagsResponse listTags(ListTagsRequest request) throws Exception {
+    public ListShareLinkResponse listShareLink(ListShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listTagsWithOptions(request, headers, runtime);
+        return this.listShareLinkWithOptions(request, headers, runtime);
     }
 
     public ListTagsResponse listTagsWithOptions(ListTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2254,10 +2573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListTagsResponse());
     }
 
-    public ListUploadedPartsResponse listUploadedParts(ListUploadedPartsRequest request) throws Exception {
+    public ListTagsResponse listTags(ListTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listUploadedPartsWithOptions(request, headers, runtime);
+        return this.listTagsWithOptions(request, headers, runtime);
     }
 
     public ListUploadedPartsResponse listUploadedPartsWithOptions(ListUploadedPartsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2305,10 +2624,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListUploadedPartsResponse());
     }
 
-    public ListUserResponse listUser(ListUserRequest request) throws Exception {
+    public ListUploadedPartsResponse listUploadedParts(ListUploadedPartsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listUserWithOptions(request, headers, runtime);
+        return this.listUploadedPartsWithOptions(request, headers, runtime);
     }
 
     public ListUserResponse listUserWithOptions(ListUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2340,10 +2659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListUserResponse());
     }
 
-    public MoveFileResponse moveFile(MoveFileRequest request) throws Exception {
+    public ListUserResponse listUser(ListUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.moveFileWithOptions(request, headers, runtime);
+        return this.listUserWithOptions(request, headers, runtime);
     }
 
     public MoveFileResponse moveFileWithOptions(MoveFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2383,10 +2702,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new MoveFileResponse());
     }
 
-    public ParseKeywordsResponse parseKeywords(ParseKeywordsRequest request) throws Exception {
+    public MoveFileResponse moveFile(MoveFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.parseKeywordsWithOptions(request, headers, runtime);
+        return this.moveFileWithOptions(request, headers, runtime);
     }
 
     public ParseKeywordsResponse parseKeywordsWithOptions(ParseKeywordsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2414,10 +2733,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ParseKeywordsResponse());
     }
 
-    public RemoveFaceGroupFileResponse removeFaceGroupFile(RemoveFaceGroupFileRequest request) throws Exception {
+    public ParseKeywordsResponse parseKeywords(ParseKeywordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeFaceGroupFileWithOptions(request, headers, runtime);
+        return this.parseKeywordsWithOptions(request, headers, runtime);
     }
 
     public RemoveFaceGroupFileResponse removeFaceGroupFileWithOptions(RemoveFaceGroupFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2453,10 +2772,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new RemoveFaceGroupFileResponse());
     }
 
-    public RestoreFileResponse restoreFile(RestoreFileRequest request) throws Exception {
+    public RemoveFaceGroupFileResponse removeFaceGroupFile(RemoveFaceGroupFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.restoreFileWithOptions(request, headers, runtime);
+        return this.removeFaceGroupFileWithOptions(request, headers, runtime);
+    }
+
+    public RemoveGroupMemberResponse removeGroupMemberWithOptions(String domainId, RemoveGroupMemberRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("domain_id", domainId);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("group_id", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            body.put("member_id", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberType)) {
+            body.put("member_type", request.memberType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveGroupMember"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/group/remove_member"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new RemoveGroupMemberResponse());
+    }
+
+    public RemoveGroupMemberResponse removeGroupMember(String domainId, RemoveGroupMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.removeGroupMemberWithOptions(domainId, request, headers, runtime);
     }
 
     public RestoreFileResponse restoreFileWithOptions(RestoreFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2488,10 +2849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new RestoreFileResponse());
     }
 
-    public RestoreRevisionResponse restoreRevision(RestoreRevisionRequest request) throws Exception {
+    public RestoreFileResponse restoreFile(RestoreFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.restoreRevisionWithOptions(request, headers, runtime);
+        return this.restoreFileWithOptions(request, headers, runtime);
     }
 
     public RestoreRevisionResponse restoreRevisionWithOptions(RestoreRevisionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2527,10 +2888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new RestoreRevisionResponse());
     }
 
-    public ScanFileResponse scanFile(ScanFileRequest request) throws Exception {
+    public RestoreRevisionResponse restoreRevision(RestoreRevisionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.scanFileWithOptions(request, headers, runtime);
+        return this.restoreRevisionWithOptions(request, headers, runtime);
     }
 
     public ScanFileResponse scanFileWithOptions(ScanFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2570,10 +2931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ScanFileResponse());
     }
 
-    public SearchAddressGroupsResponse searchAddressGroups(SearchAddressGroupsRequest request) throws Exception {
+    public ScanFileResponse scanFile(ScanFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.searchAddressGroupsWithOptions(request, headers, runtime);
+        return this.scanFileWithOptions(request, headers, runtime);
     }
 
     public SearchAddressGroupsResponse searchAddressGroupsWithOptions(SearchAddressGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2625,10 +2986,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new SearchAddressGroupsResponse());
     }
 
-    public SearchDriveResponse searchDrive(SearchDriveRequest request) throws Exception {
+    public SearchAddressGroupsResponse searchAddressGroups(SearchAddressGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.searchDriveWithOptions(request, headers, runtime);
+        return this.searchAddressGroupsWithOptions(request, headers, runtime);
+    }
+
+    public SearchDomainsResponse searchDomainsWithOptions(SearchDomainsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
+            body.put("marker", request.marker);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            body.put("order_by", request.orderBy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchDomains"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/domain/search"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new SearchDomainsResponse());
+    }
+
+    public SearchDomainsResponse searchDomains(SearchDomainsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.searchDomainsWithOptions(request, headers, runtime);
     }
 
     public SearchDriveResponse searchDriveWithOptions(SearchDriveRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2672,10 +3076,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new SearchDriveResponse());
     }
 
-    public SearchFileResponse searchFile(SearchFileRequest request) throws Exception {
+    public SearchDriveResponse searchDrive(SearchDriveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.searchFileWithOptions(request, headers, runtime);
+        return this.searchDriveWithOptions(request, headers, runtime);
     }
 
     public SearchFileResponse searchFileWithOptions(SearchFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2723,10 +3127,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new SearchFileResponse());
     }
 
-    public SearchShareLinkResponse searchShareLink(SearchShareLinkRequest request) throws Exception {
+    public SearchFileResponse searchFile(SearchFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.searchShareLinkWithOptions(request, headers, runtime);
+        return this.searchFileWithOptions(request, headers, runtime);
     }
 
     public SearchShareLinkResponse searchShareLinkWithOptions(SearchShareLinkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2778,10 +3182,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new SearchShareLinkResponse());
     }
 
-    public SearchUserResponse searchUser(SearchUserRequest request) throws Exception {
+    public SearchShareLinkResponse searchShareLink(SearchShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.searchUserWithOptions(request, headers, runtime);
+        return this.searchShareLinkWithOptions(request, headers, runtime);
     }
 
     public SearchUserResponse searchUserWithOptions(SearchUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2841,10 +3245,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new SearchUserResponse());
     }
 
-    public TokenResponse token(TokenRequest request) throws Exception {
+    public SearchUserResponse searchUser(SearchUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.tokenWithOptions(request, headers, runtime);
+        return this.searchUserWithOptions(request, headers, runtime);
     }
 
     public TokenResponse tokenWithOptions(TokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2896,10 +3300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new TokenResponse());
     }
 
-    public TrashFileResponse trashFile(TrashFileRequest request) throws Exception {
+    public TokenResponse token(TokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.trashFileWithOptions(request, headers, runtime);
+        return this.tokenWithOptions(request, headers, runtime);
     }
 
     public TrashFileResponse trashFileWithOptions(TrashFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2931,10 +3335,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new TrashFileResponse());
     }
 
-    public UpdateDriveResponse updateDrive(UpdateDriveRequest request) throws Exception {
+    public TrashFileResponse trashFile(TrashFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateDriveWithOptions(request, headers, runtime);
+        return this.trashFileWithOptions(request, headers, runtime);
+    }
+
+    public UpdateDomainResponse updateDomainWithOptions(UpdateDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainId)) {
+            body.put("domain_id", request.domainId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            body.put("domain_name", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initDriveEnable)) {
+            body.put("init_drive_enable", request.initDriveEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initDriveSize)) {
+            body.put("init_drive_size", request.initDriveSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sizeQuota)) {
+            body.put("size_quota", request.sizeQuota);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userCountQuota)) {
+            body.put("user_count_quota", request.userCountQuota);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDomain"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/domain/update"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateDomainResponse());
+    }
+
+    public UpdateDomainResponse updateDomain(UpdateDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateDomainWithOptions(request, headers, runtime);
     }
 
     public UpdateDriveResponse updateDriveWithOptions(UpdateDriveRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2978,10 +3437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateDriveResponse());
     }
 
-    public UpdateFacegroupResponse updateFacegroup(UpdateFacegroupRequest request) throws Exception {
+    public UpdateDriveResponse updateDrive(UpdateDriveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateFacegroupWithOptions(request, headers, runtime);
+        return this.updateDriveWithOptions(request, headers, runtime);
     }
 
     public UpdateFacegroupResponse updateFacegroupWithOptions(UpdateFacegroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3025,10 +3484,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateFacegroupResponse());
     }
 
-    public UpdateFileResponse updateFile(UpdateFileRequest request) throws Exception {
+    public UpdateFacegroupResponse updateFacegroup(UpdateFacegroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateFileWithOptions(request, headers, runtime);
+        return this.updateFacegroupWithOptions(request, headers, runtime);
     }
 
     public UpdateFileResponse updateFileWithOptions(UpdateFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3088,10 +3547,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateFileResponse());
     }
 
-    public UpdateGroupResponse updateGroup(UpdateGroupRequest request) throws Exception {
+    public UpdateFileResponse updateFile(UpdateFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateGroupWithOptions(request, headers, runtime);
+        return this.updateFileWithOptions(request, headers, runtime);
     }
 
     public UpdateGroupResponse updateGroupWithOptions(UpdateGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3127,10 +3586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateGroupResponse());
     }
 
-    public UpdateRevisionResponse updateRevision(UpdateRevisionRequest request) throws Exception {
+    public UpdateGroupResponse updateGroup(UpdateGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateRevisionWithOptions(request, headers, runtime);
+        return this.updateGroupWithOptions(request, headers, runtime);
     }
 
     public UpdateRevisionResponse updateRevisionWithOptions(UpdateRevisionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3174,10 +3633,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRevisionResponse());
     }
 
-    public UpdateShareLinkResponse updateShareLink(UpdateShareLinkRequest request) throws Exception {
+    public UpdateRevisionResponse updateRevision(UpdateRevisionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateShareLinkWithOptions(request, headers, runtime);
+        return this.updateRevisionWithOptions(request, headers, runtime);
     }
 
     public UpdateShareLinkResponse updateShareLinkWithOptions(UpdateShareLinkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3269,10 +3728,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateShareLinkResponse());
     }
 
-    public UpdateUserResponse updateUser(UpdateUserRequest request) throws Exception {
+    public UpdateShareLinkResponse updateShareLink(UpdateShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateUserWithOptions(request, headers, runtime);
+        return this.updateShareLinkWithOptions(request, headers, runtime);
     }
 
     public UpdateUserResponse updateUserWithOptions(UpdateUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3334,5 +3793,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateUserResponse());
+    }
+
+    public UpdateUserResponse updateUser(UpdateUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateUserWithOptions(request, headers, runtime);
     }
 }

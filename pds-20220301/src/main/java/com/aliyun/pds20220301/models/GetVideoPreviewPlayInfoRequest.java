@@ -22,6 +22,9 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     @NameInMap("template_id")
     public String templateId;
 
+    @NameInMap("url_expire_sec")
+    public Long urlExpireSec;
+
     public static GetVideoPreviewPlayInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetVideoPreviewPlayInfoRequest self = new GetVideoPreviewPlayInfoRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public GetVideoPreviewPlayInfoRequest setUrlExpireSec(Long urlExpireSec) {
+        this.urlExpireSec = urlExpireSec;
+        return this;
+    }
+    public Long getUrlExpireSec() {
+        return this.urlExpireSec;
     }
 
 }
