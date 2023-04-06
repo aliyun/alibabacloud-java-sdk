@@ -3,27 +3,27 @@ package com.aliyun.pds20220301.models;
 
 import com.aliyun.tea.*;
 
-public class WalkFileResponseBody extends TeaModel {
+public class ListDomainsResponseBody extends TeaModel {
     @NameInMap("items")
-    public java.util.List<File> items;
+    public java.util.List<Domain> items;
 
     @NameInMap("next_marker")
     public String nextMarker;
 
-    public static WalkFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        WalkFileResponseBody self = new WalkFileResponseBody();
+    public static ListDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListDomainsResponseBody self = new ListDomainsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public WalkFileResponseBody setItems(java.util.List<File> items) {
+    public ListDomainsResponseBody setItems(java.util.List<Domain> items) {
         this.items = items;
         return this;
     }
-    public java.util.List<File> getItems() {
+    public java.util.List<Domain> getItems() {
         return this.items;
     }
 
-    public WalkFileResponseBody setNextMarker(String nextMarker) {
+    public ListDomainsResponseBody setNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }

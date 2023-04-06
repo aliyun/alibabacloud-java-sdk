@@ -3,19 +3,19 @@ package com.aliyun.pds20220301.models;
 
 import com.aliyun.tea.*;
 
-public class ListGroupRequest extends TeaModel {
+public class ListMyGroupDriveRequest extends TeaModel {
     @NameInMap("limit")
     public Integer limit;
 
     @NameInMap("marker")
     public String marker;
 
-    public static ListGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListGroupRequest self = new ListGroupRequest();
+    public static ListMyGroupDriveRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListMyGroupDriveRequest self = new ListMyGroupDriveRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListGroupRequest setLimit(Integer limit) {
+    public ListMyGroupDriveRequest setLimit(Integer limit) {
         this.limit = limit;
         return this;
     }
@@ -23,7 +23,7 @@ public class ListGroupRequest extends TeaModel {
         return this.limit;
     }
 
-    public ListGroupRequest setMarker(String marker) {
+    public ListMyGroupDriveRequest setMarker(String marker) {
         this.marker = marker;
         return this;
     }
