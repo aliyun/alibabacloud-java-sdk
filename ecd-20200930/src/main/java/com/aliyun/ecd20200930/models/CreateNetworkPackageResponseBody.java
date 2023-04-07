@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkPackageResponseBody extends TeaModel {
-    // The ID of the Internet access package.
+    /**
+     * <p>The ID of the Internet access package.</p>
+     */
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
-    // The ID of the bill.
+    /**
+     * <p>The ID of the bill.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

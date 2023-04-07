@@ -4,31 +4,43 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListOfficeSiteUsersRequest extends TeaModel {
-    // The character string for fuzzy search.
+    /**
+     * <p>The character string for fuzzy search.</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100
-    // 
-    // Default value: 10
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100</p>
+     * <br>
+     * <p>Default value: 10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that specifies the start point of the next query.
+    /**
+     * <p>The token that specifies the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The organizational unit (OU) in the specified AD domain.
+    /**
+     * <p>The organizational unit (OU) in the specified AD domain.</p>
+     */
     @NameInMap("OUPath")
     public String OUPath;
 
-    // The ID of the workspace. Only workspaces of the enterprise AD account type are supported.
+    /**
+     * <p>The ID of the workspace. Only workspaces of the enterprise AD account type are supported.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

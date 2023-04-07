@@ -4,15 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteDevicesRequest extends TeaModel {
+    /**
+     * <p>The type of the device.</p>
+     * <br>
+     * <p>*   1: the hardware client device</p>
+     * <p>*   2: the software client device</p>
+     */
     @NameInMap("ClientType")
     public Integer clientType;
 
+    /**
+     * <p>The list of universally unique identifiers (UUIDs) of devices.</p>
+     */
     @NameInMap("DeviceIds")
     public java.util.List<String> deviceIds;
 
+    /**
+     * <p>Specifies whether to forcefully delete the device.</p>
+     * <br>
+     * <p>*   1: forcefully deletes the device.</p>
+     * <p>*   0: does not forcefully delete the device. (You cannot delete a device to which a user is bound.)</p>
+     */
     @NameInMap("Force")
     public Integer force;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

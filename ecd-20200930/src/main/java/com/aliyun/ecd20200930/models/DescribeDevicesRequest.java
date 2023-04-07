@@ -4,30 +4,63 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDevicesRequest extends TeaModel {
+    /**
+     * <p>The address of the Active Directory (AD) workspace.</p>
+     */
     @NameInMap("AdDomain")
     public String adDomain;
 
+    /**
+     * <p>The type of client.</p>
+     * <br>
+     * <p>*   1: the hardware client</p>
+     * <p>*   2: the software client</p>
+     */
     @NameInMap("ClientType")
     public String clientType;
 
+    /**
+     * <p>The ID of the device.</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the convenience user to which you want to bind the device.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The number of entries to return per page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of pages to return.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The type of the user account.</p>
+     * <br>
+     * <p>*   SIMPLE: the convenience account</p>
+     * <p>*   AD: the AD account</p>
+     */
     @NameInMap("UserType")
     public String userType;
 

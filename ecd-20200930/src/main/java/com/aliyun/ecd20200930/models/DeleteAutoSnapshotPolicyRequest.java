@@ -4,9 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the policy template that you want to manage.</p>
+     * <br>
+     * <p>> You can call the [ListDefensePolicies](~~195814~~) operation to query the IDs of all policy templates.</p>
+     */
     @NameInMap("PolicyId")
     public java.util.List<String> policyId;
 
+    /**
+     * <p>The ID of the region where the automatic snapshot policy is created.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

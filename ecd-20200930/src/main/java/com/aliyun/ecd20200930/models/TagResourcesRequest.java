@@ -4,19 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
-    // The region ID of the resource.
+    /**
+     * <p>The region ID of the resource.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.
+    /**
+     * <p>The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.
+    /**
+     * <p>The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The list of the resource.
+    /**
+     * <p>The list of the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -57,48 +65,20 @@ public class TagResourcesRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class ListTagResourcesRequestTag extends TeaModel {
-        // The key of tag N. Valid values of N: 1 to 20.
-        @NameInMap("Key")
-        public String key;
-
-        // The value of tag N. Valid values of N: 1 to 20.
-        @NameInMap("Value")
-        public String value;
-
-        public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesRequestTag self = new ListTagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class TagResourcesRequestTag extends TeaModel {
-        // The key of tag.
-        // Valid values of N: 1 to 20.
-        // The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+        /**
+         * <p>The key of tag.</p>
+         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag.
-        // Valid values of N: 1 to 20.
-        // The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
+        /**
+         * <p>The value of tag.</p>
+         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

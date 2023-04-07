@@ -4,29 +4,28 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class HandleSecurityEventsRequest extends TeaModel {
-    // The operation to handle multiple alerts of the same type at a time. Valid values:
-    // 
-    // *   deal: quarantines the webshell file of the malicious process.
-    // *   kill_and_quara: terminates the malicious process for which the alert is generated and quarantines the source file of the malicious process.
-    // *   kill_virus: removes persistent virus by using the deep cleanup method.
-    // *   block_ip: blocks access requests from malicious IP addresses.
-    // *   ignore: ignores the alerts.
-    // *   mark_mis_info: marks the alerts as false positives by adding the alerts to the whitelist.
-    // *   rm_mark_mis_info: cancels false positives by removing the alerts from the whitelist.
-    // *   offline_handled: marks the alerts as handled.
+    /**
+     * <p>The operation to handle multiple alerts of the same type at a time.</p>
+     */
     @NameInMap("OperationCode")
     public String operationCode;
 
-    // The return value from the operation to handle multiple alerts of the same type at a time.
-    // 
-    // This parameter is required only if the OperationCode parameter is set to `kill_and_quara` or `block_ip`. This parameter is not required if the OperationCode parameter is set to other values.
+    /**
+     * <p>The return value from the operation to handle multiple alerts of the same type at a time.\</p>
+     * <p>This parameter is required only if you set the OperationCode parameter to `kill_and_quara` or `block_ip`. This parameter is not required if you set the OperationCode parameter to other values.</p>
+     */
     @NameInMap("OperationParams")
     public String operationParams;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The alerts.</p>
+     */
     @NameInMap("SecurityEvent")
     public java.util.List<HandleSecurityEventsRequestSecurityEvent> securityEvent;
 
@@ -68,11 +67,15 @@ public class HandleSecurityEventsRequest extends TeaModel {
     }
 
     public static class HandleSecurityEventsRequestSecurityEvent extends TeaModel {
-        // The ID of the cloud desktop.
+        /**
+         * <p>The ID of the cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The ID of the alert.
+        /**
+         * <p>The ID of the alert.</p>
+         */
         @NameInMap("SecurityEventId")
         public String securityEventId;
 

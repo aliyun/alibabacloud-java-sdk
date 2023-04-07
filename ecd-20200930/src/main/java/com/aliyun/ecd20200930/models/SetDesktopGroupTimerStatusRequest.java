@@ -4,15 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class SetDesktopGroupTimerStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The status of the scheduled task.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The type of the scheduled task.</p>
+     */
     @NameInMap("TimerType")
     public Integer timerType;
 

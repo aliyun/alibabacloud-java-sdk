@@ -4,47 +4,58 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
-    // The plaintext content or the Base64-encoded content of the command.
-    // 
-    // The Base64-encoded command content cannot exceed 16 KB in size.
-    // 
-    // >  If the command content is Base64-encoded, you must set ContentEncoding to Base64.
+    /**
+     * <p>The content of the command. The command content can be plaintext or Base64-encoded.\</p>
+     * <p>The Base64-encoded command content cannot exceed 16 KB in size.</p>
+     * <br>
+     * <p>> If the command content is Base64-encoded, you must set the ContentEncoding parameter to Base64.</p>
+     */
     @NameInMap("CommandContent")
     public String commandContent;
 
-    // The encoding mode of the command content. Valid values:
-    // 
-    // *   PlainText: The content of the command is not encoded and is transmitted in plaintext.
-    // *   Base64: The content of the command is encoded in Base64.
-    // 
-    // Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.
+    /**
+     * <p>The encoding mode of the command content. Valid values:</p>
+     * <br>
+     * <p>*   PlainText: The command content is not encoded.</p>
+     * <p>*   Base64: The command content is Base64-encoded.</p>
+     * <br>
+     * <p>Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.</p>
+     */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
-    // The IDs of cloud desktops. You can specify 1 to 50 cloud desktop IDs.
-    // 
-    // If multiple cloud desktops are specified and the command succeeds for one or more of these cloud desktops, the operation is considered successful. If multiple cloud desktops are specified and the command fails for all of these cloud desktops, verify the values of the parameter and try again.
+    /**
+     * <p>The ID of cloud desktop N. Valid values of N: 1 to 50.\</p>
+     * <p>If multiple cloud desktops are specified and the command execution succeeds on at least one of the cloud desktops, the operation is considered successful. If multiple cloud desktops are specified and the command execution fails on all the cloud desktops, verify the value of the parameter and try again.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
-    // The ID of the end user.
+    /**
+     * <p>The ID of the end user.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The timeout period for the command to run. Unit: seconds. Default value: 60.
-    // 
-    // A timeout error occurs when the command cannot be executed because the process slows down or because a specific module or the Cloud Assistant client does not exist. When a timeout error occurs, the command process is forcibly terminated.
+    /**
+     * <p>The timeout period for the command to run. Unit: seconds. Default value: 60.\</p>
+     * <p>A timeout error occurs if the command cannot be run because the process slows down or because a specific module or the Cloud Assistant client does not exist. When a timeout error occurs, the command process is forcibly terminated.</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 
-    // The language of the O&M command. Valid values:
-    // 
-    // - RunBatScript
-    // - RunPowerShellScript
+    /**
+     * <p>The language of the O\&M command. Valid values:</p>
+     * <br>
+     * <p>*   RunBatScript</p>
+     * <p>*   RunPowerShellScript</p>
+     */
     @NameInMap("Type")
     public String type;
 

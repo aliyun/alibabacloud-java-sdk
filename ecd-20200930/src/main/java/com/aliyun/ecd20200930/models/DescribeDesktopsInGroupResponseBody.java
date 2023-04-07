@@ -4,43 +4,63 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsInGroupResponseBody extends TeaModel {
-    // The token that determines the start point of the next query.
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The number of subscription cloud desktops that are connected.
+    /**
+     * <p>The number of subscription cloud desktops that are connected.</p>
+     */
     @NameInMap("OnlinePrePaidDesktopsCount")
     public Integer onlinePrePaidDesktopsCount;
 
-    // Details about the subscription cloud desktops.
+    /**
+     * <p>Details of the subscription cloud desktops.</p>
+     */
     @NameInMap("PaidDesktops")
     public java.util.List<DescribeDesktopsInGroupResponseBodyPaidDesktops> paidDesktops;
 
-    // The total number of subscription cloud desktops.
+    /**
+     * <p>The total number of subscription cloud desktops.</p>
+     */
     @NameInMap("PaidDesktopsCount")
     public Integer paidDesktopsCount;
 
-    // Details of the pay-as-you-go cloud desktops.
+    /**
+     * <p>Details of the pay-as-you-go cloud desktops.</p>
+     */
     @NameInMap("PostPaidDesktops")
     public java.util.List<DescribeDesktopsInGroupResponseBodyPostPaidDesktops> postPaidDesktops;
 
-    // The total number of pay-as-you-go cloud desktops.
+    /**
+     * <p>The total number of pay-as-you-go cloud desktops.</p>
+     */
     @NameInMap("PostPaidDesktopsCount")
     public Integer postPaidDesktopsCount;
 
-    // The total bill for pay-as-you-go cloud desktops.
+    /**
+     * <p>The total bill amount for the pay-as-you-go cloud desktops.</p>
+     */
     @NameInMap("PostPaidDesktopsTotalAmount")
     public Integer postPaidDesktopsTotalAmount;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The number of subscription desktops that are running.
+    /**
+     * <p>The number of subscription cloud desktops that are running.</p>
+     */
     @NameInMap("RunningPrePaidDesktopsCount")
     public Integer runningPrePaidDesktopsCount;
 
-    // The number of subscription cloud desktops that are stopped.
+    /**
+     * <p>The number of subscription cloud desktops that are stopped.</p>
+     */
     @NameInMap("StopedPrePaidDesktopsCount")
     public Integer stopedPrePaidDesktopsCount;
 
@@ -130,76 +150,132 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsInGroupResponseBodyPaidDesktops extends TeaModel {
-        // The connection status of the cloud desktop.
+        /**
+         * <p>The connection status of the cloud desktop.</p>
+         */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
-        // The ID of the cloud desktop.
+        /**
+         * <p>The ID of the cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the cloud desktop.
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        // The state of the cloud desktop.
+        /**
+         * <p>The state of the cloud desktop.</p>
+         */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
-        // The type of the disk.
+        /**
+         * <p>The type of the disk.</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
-        // The ID of the authorized user.
+        /**
+         * <p>The authorized user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
-        // Details of the IDs of users that are connected to cloud desktops. If no users are connected, no values are returned.
+        /**
+         * <p>Details of the IDs of users that are connected to cloud desktops. If no users are connected, no values are returned.</p>
+         */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
-        // The username of the authorized user.
+        /**
+         * <p>The username of the authorized user.</p>
+         */
         @NameInMap("EndUserName")
         public String endUserName;
 
-        // Details of the names of users that are connected to cloud desktops. If no users are connected, no values are returned.
+        /**
+         * <p>Details of the names of users that are connected to cloud desktops. If no users are connected, no values are returned.</p>
+         */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
 
-        // The version of the GPU driver.
+        /**
+         * <p>The version of the image.</p>
+         */
+        @NameInMap("FotaVersion")
+        public String fotaVersion;
+
+        /**
+         * <p>The version of the GPU driver.</p>
+         */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
-        // The ID of the image.
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The name of the image.
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
-        // The flag that is used for management.
+        /**
+         * <p>The flag that is used for management.</p>
+         */
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
+        /**
+         * <p>The flags that are used for management.</p>
+         */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
+        /**
+         * <p>The IP address of the member Elastic Network Interface (ENI).</p>
+         */
         @NameInMap("MemberEniIp")
         public String memberEniIp;
 
-        // The type of the OS.
+        /**
+         * <p>The OS.</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
+        /**
+         * <p>The IP address of the primary ENI.</p>
+         */
         @NameInMap("PrimaryEniIp")
         public String primaryEniIp;
 
-        // The point of time when the cloud desktop was reset.
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <br>
+         * <p>*   ASP</p>
+         * <p>*   HDX</p>
+         */
+        @NameInMap("ProtocolType")
+        public String protocolType;
+
+        /**
+         * <p>The point in time when the cloud desktop was reset.</p>
+         */
         @NameInMap("ResetTime")
         public String resetTime;
 
-        // The size of the system disk. Unit: GiB.
+        /**
+         * <p>The size of the system disk. Unit: GiB.</p>
+         */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
@@ -280,6 +356,14 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             return this.endUserNames;
         }
 
+        public DescribeDesktopsInGroupResponseBodyPaidDesktops setFotaVersion(String fotaVersion) {
+            this.fotaVersion = fotaVersion;
+            return this;
+        }
+        public String getFotaVersion() {
+            return this.fotaVersion;
+        }
+
         public DescribeDesktopsInGroupResponseBodyPaidDesktops setGpuDriverVersion(String gpuDriverVersion) {
             this.gpuDriverVersion = gpuDriverVersion;
             return this;
@@ -344,6 +428,14 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             return this.primaryEniIp;
         }
 
+        public DescribeDesktopsInGroupResponseBodyPaidDesktops setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
+        }
+
         public DescribeDesktopsInGroupResponseBodyPaidDesktops setResetTime(String resetTime) {
             this.resetTime = resetTime;
             return this;
@@ -363,88 +455,150 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsInGroupResponseBodyPostPaidDesktops extends TeaModel {
-        // The connection status of the cloud desktop.
+        /**
+         * <p>The connection status of the cloud desktop.</p>
+         */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
-        // The retention period.
+        /**
+         * <p>The retention period.</p>
+         */
         @NameInMap("CreateDuration")
         public String createDuration;
 
-        // The time when the cloud desktop was created.
+        /**
+         * <p>The time when the cloud desktop was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The ID of the cloud desktop.
+        /**
+         * <p>The ID of the cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the cloud desktop.
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        // The state of the cloud desktop.
+        /**
+         * <p>The state of the cloud desktop.</p>
+         */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
-        // The type of the disk.
+        /**
+         * <p>The type of the disk.</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
-        // The ID of the authorized user.
+        /**
+         * <p>The authorized user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
-        // Details of the IDs of users that are connected to cloud desktops. If no users are connected, no values are returned.
+        /**
+         * <p>Details of the IDs of users that are connected to cloud desktops. If no users are connected, no values are returned.</p>
+         */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
-        // The username of the authorized user.
+        /**
+         * <p>The username of the authorized user.</p>
+         */
         @NameInMap("EndUserName")
         public String endUserName;
 
-        // Details of the names of users that are connected to cloud desktops. If no users are connected, no values are returned.
+        /**
+         * <p>Details of the names of users that are connected to cloud desktops. If no users are connected, no values are returned.</p>
+         */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
 
-        // The version of the GPU driver.
+        /**
+         * <p>The version of the image.</p>
+         */
+        @NameInMap("FotaVersion")
+        public String fotaVersion;
+
+        /**
+         * <p>The version of the GPU driver.</p>
+         */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
-        // The ID of the image.
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The name of the image.
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
-        // The flag that is used for management.
+        /**
+         * <p>The flag that is used for management.</p>
+         */
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
+        /**
+         * <p>The flags that are used for management.</p>
+         */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
+        /**
+         * <p>The IP address of the member ENI.</p>
+         */
         @NameInMap("MemberEniIp")
         public String memberEniIp;
 
-        // The type of the OS.
+        /**
+         * <p>The OS.</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
+        /**
+         * <p>The IP address of the primary ENI.</p>
+         */
         @NameInMap("PrimaryEniIp")
         public String primaryEniIp;
 
-        // The time when the cloud desktop was released.
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <br>
+         * <p>*   ASP</p>
+         * <p>*   HDX</p>
+         */
+        @NameInMap("ProtocolType")
+        public String protocolType;
+
+        /**
+         * <p>The time when the cloud desktop was released.</p>
+         */
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
-        // The point of time when the cloud desktop was reset.
+        /**
+         * <p>The point in time when the cloud desktop was reset.</p>
+         */
         @NameInMap("ResetTime")
         public String resetTime;
 
-        // The size of the system disk. Unit: GiB.
+        /**
+         * <p>The size of the system disk. Unit: GiB.</p>
+         */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
@@ -541,6 +695,14 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             return this.endUserNames;
         }
 
+        public DescribeDesktopsInGroupResponseBodyPostPaidDesktops setFotaVersion(String fotaVersion) {
+            this.fotaVersion = fotaVersion;
+            return this;
+        }
+        public String getFotaVersion() {
+            return this.fotaVersion;
+        }
+
         public DescribeDesktopsInGroupResponseBodyPostPaidDesktops setGpuDriverVersion(String gpuDriverVersion) {
             this.gpuDriverVersion = gpuDriverVersion;
             return this;
@@ -603,6 +765,14 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
         public String getPrimaryEniIp() {
             return this.primaryEniIp;
+        }
+
+        public DescribeDesktopsInGroupResponseBodyPostPaidDesktops setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
         }
 
         public DescribeDesktopsInGroupResponseBodyPostPaidDesktops setReleaseTime(String releaseTime) {

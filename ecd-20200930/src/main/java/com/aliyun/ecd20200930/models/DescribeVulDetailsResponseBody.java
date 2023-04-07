@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulDetailsResponseBody extends TeaModel {
-    // Details about the vulnerability.
+    /**
+     * <p>Details about the vulnerability.</p>
+     */
     @NameInMap("Cves")
     public java.util.List<DescribeVulDetailsResponseBodyCves> cves;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,19 +38,27 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeVulDetailsResponseBodyCves extends TeaModel {
-        // The ID of the vulnerability.
+        /**
+         * <p>The ID of the vulnerability.</p>
+         */
         @NameInMap("CveId")
         public String cveId;
 
-        // The Common Vulnerability Scoring System (CVSS) score of the vulnerability, which indicates the severity of the vulnerability. A larger value indicates a higher severity. Valid values: 0 to 10.
+        /**
+         * <p>The Common Vulnerability Scoring System (CVSS) score of the vulnerability, which indicates the severity of the vulnerability. A larger value indicates a higher severity. Valid values: 0 to 10.</p>
+         */
         @NameInMap("CvssScore")
         public String cvssScore;
 
-        // The description of the vulnerability.
+        /**
+         * <p>The description of the vulnerability.</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
-        // The name of the vulnerability.
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("Title")
         public String title;
 

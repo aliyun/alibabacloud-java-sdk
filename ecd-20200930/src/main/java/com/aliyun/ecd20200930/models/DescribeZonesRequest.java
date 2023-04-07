@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the zone. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.
+    /**
+     * <p>The type of the zone. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.</p>
+     */
     @NameInMap("ZoneType")
     public String zoneType;
 

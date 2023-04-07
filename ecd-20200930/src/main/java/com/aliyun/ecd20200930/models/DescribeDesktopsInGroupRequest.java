@@ -4,27 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsInGroupRequest extends TeaModel {
-    // The ID of the desktop group.
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
-    // Specifies whether to ignore the deleted cloud desktops.
+    /**
+     * <p>Specifies whether to ignore the deleted cloud desktops.</p>
+     */
     @NameInMap("IgnoreDeleted")
     public Boolean ignoreDeleted;
 
-    // The number of entries to return on each page. Maximum value: 100. Default value: 10.
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+    /**
+     * <p>The token that determines the start point of the next query. If you do not specify this parameter, null is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The billing method of the desktop group.
+    /**
+     * <p>The billing method of the desktop group.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

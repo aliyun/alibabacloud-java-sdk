@@ -4,76 +4,111 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeBundlesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the desktop templates. You can specify 1 to 100 desktop templates.</p>
+     */
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
-    // The type of the cloud desktop template. Valid values:
-    // 
-    // *   SYSTEM: the system template
-    // *   CUSTOM: the custom template
+    /**
+     * <p>The type of the desktop template.</p>
+     */
     @NameInMap("BundleType")
     public String bundleType;
 
-    // Specifies whether to query the inventory status of the cloud desktop type.
+    /**
+     * <p>Specifies whether to query the inventory status of the desktop type.</p>
+     */
     @NameInMap("CheckStock")
     public Boolean checkStock;
 
-    // The number of vCPUs that is defined in the cloud desktop type.
+    /**
+     * <p>The number of vCPUs of the desktop type.</p>
+     */
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
-    // The family of the cloud desktop type. Valid values:
-    // 
-    // *   eds.general: General Office
-    // *   eds.hf: High Frequency
-    // *   eds.graphics: Graphics
+    /**
+     * <p>The family of the desktop type.</p>
+     */
     @NameInMap("DesktopTypeFamily")
     public String desktopTypeFamily;
 
+    /**
+     * <p>This parameter is now in invitational preview and unavailable.</p>
+     */
     @NameInMap("FotaChannel")
     public String fotaChannel;
 
-    // Specifies whether the cloud desktop template belongs to a desktop group. Default value: false.
+    /**
+     * <p>Specifies whether the cloud desktop that uses the desktop template belongs to the desktop group. Default value: `false`.</p>
+     */
     @NameInMap("FromDesktopGroup")
     public Boolean fromDesktopGroup;
 
-    // The number of GPUs that is defined in the cloud desktop type.
+    /**
+     * <p>The number of GPUs of the desktop type.</p>
+     */
     @NameInMap("GpuCount")
     public Float gpuCount;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    @NameInMap("ImageId")
+    public java.util.List<String> imageId;
+
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Maximum value: 100.</p>
+     * <p>*   Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The memory size that is defined in the cloud desktop type. Unit: GiB.
+    /**
+     * <p>The memory size of the desktop type. Unit: GiB.</p>
+     */
     @NameInMap("MemorySize")
     public Integer memorySize;
 
-    // The token that is used to start the next query.
+    /**
+     * <p>The token that determines the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The protocol type.
-    // 
-    // *   HDX
-    // *   ASP (Recommend)
+    /**
+     * <p>The type of the protocol.</p>
+     */
     @NameInMap("ProtocolType")
     public String protocolType;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The desktop template that is selected based on specific criteria.</p>
+     */
     @NameInMap("SelectedBundle")
     public Boolean selectedBundle;
 
+    /**
+     * <p>The type of the session.</p>
+     */
+    @NameInMap("SessionType")
+    public String sessionType;
+
+    /**
+     * <p>Specifies whether to return multi-session desktop templates in this call. Default value: false.</p>
+     */
     @NameInMap("SupportMultiSession")
     public Boolean supportMultiSession;
 
+    /**
+     * <p>Specifies whether to enable disk encryption.</p>
+     */
     @NameInMap("VolumeEncryptionEnabled")
     public Boolean volumeEncryptionEnabled;
 
@@ -146,6 +181,14 @@ public class DescribeBundlesRequest extends TeaModel {
         return this.gpuCount;
     }
 
+    public DescribeBundlesRequest setImageId(java.util.List<String> imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public java.util.List<String> getImageId() {
+        return this.imageId;
+    }
+
     public DescribeBundlesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -192,6 +235,14 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public Boolean getSelectedBundle() {
         return this.selectedBundle;
+    }
+
+    public DescribeBundlesRequest setSessionType(String sessionType) {
+        this.sessionType = sessionType;
+        return this;
+    }
+    public String getSessionType() {
+        return this.sessionType;
     }
 
     public DescribeBundlesRequest setSupportMultiSession(Boolean supportMultiSession) {

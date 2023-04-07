@@ -4,101 +4,137 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateADConnectorOfficeSiteRequest extends TeaModel {
-    // Host name. The host name must comply with the Windows host convention.
+    /**
+     * <p>Host name. The host name must comply with the Windows host convention.</p>
+     */
     @NameInMap("AdHostname")
     public String adHostname;
 
-    // The maximum public bandwidth value. Valid values: 0 to 200.
-    // 
-    // If you do not specify this parameter or you set this parameter to 0, Internet access is disabled.
+    /**
+     * <p>The maximum public bandwidth value. Valid values: 0 to 200.</p>
+     * <br>
+     * <p>If you do not specify this parameter or you set this parameter to 0, Internet access is disabled.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    // The ID of the CEN instance.
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
-    // The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.
-    // 
-    // *   If you do not specify the CenId parameter, or the CEN instance that you specify for the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.
-    // *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account.
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.</p>
+     * <br>
+     * <p>*   If you do not specify the CenId parameter, or the CEN instance that you specify for the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</p>
+     * <p>*   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account.</p>
+     */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
-    // The IPv4 CIDR block in the secure office network of the workspace. The system creates a virtual private cloud (VPC) based on the IPv4 CIDR block that you specify. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 12 to 24 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 16 to 24 bits in length.
+    /**
+     * <p>The IPv4 CIDR block in the secure office network of the workspace. The system creates a virtual private cloud (VPC) based on the IPv4 CIDR block that you specify. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 12 to 24 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 16 to 24 bits in length.</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
-    // The method that you use to connect to cloud desktops. Valid values:
-    // 
-    // *   Internet: connects clients to cloud desktops only over the Internet.
-    // *   VPC: connects clients to cloud desktops only over a VPC.
-    // *   Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method when you use a client to connect to the cloud desktop.
-    // 
-    // Default value: Internet.
-    // 
-    // >  The VPC connection method is provided by Alibaba Cloud PrivateLink. You are not charged for PrivateLink. When you set this parameter to VPC or Any, PrivateLink is automatically activated.
+    /**
+     * <p>The method that you use to connect to cloud desktops. Valid values:</p>
+     * <br>
+     * <p>*   Internet: connects clients to cloud desktops only over the Internet.</p>
+     * <p>*   VPC: connects clients to cloud desktops only over a VPC.</p>
+     * <p>*   Any: connects clients to cloud desktops over the Internet or a VPC. You can select a connection method when you use a client to connect to the cloud desktop.</p>
+     * <br>
+     * <p>Default value: Internet.</p>
+     * <br>
+     * <p>>  The VPC connection method is provided by Alibaba Cloud PrivateLink. You are not charged for PrivateLink. When you set this parameter to VPC or Any, PrivateLink is automatically activated.</p>
+     */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
     @NameInMap("DnsAddress")
     public java.util.List<String> dnsAddress;
 
-    // The domain name of the enterprise AD system. You can register each domain name only once.
+    /**
+     * <p>The domain name of the enterprise AD system. You can register each domain name only once.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
-    // The password of the domain administrator. The password can be up to 64 characters in length.
+    /**
+     * <p>The password of the domain administrator. The password can be up to 64 characters in length.</p>
+     */
     @NameInMap("DomainPassword")
     public String domainPassword;
 
-    // The username of the domain administrator. The username can be up to 64 characters in length.
-    // 
-    // >  Specify the value of the sAMAccountName parameter instead of the value of the userPrincipalName parameter as the username.
+    /**
+     * <p>The username of the domain administrator. The username can be up to 64 characters in length.</p>
+     * <br>
+     * <p>>  Specify the value of the sAMAccountName parameter instead of the value of the userPrincipalName parameter as the username.</p>
+     */
     @NameInMap("DomainUserName")
     public String domainUserName;
 
-    // Specifies whether to grant the permissions of the local administrator to the desktop users. Default value: true.
+    /**
+     * <p>Specifies whether to grant the permissions of the local administrator to the desktop users. Default value: true.</p>
+     */
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;
 
-    // Specifies whether to enable Internet access.
+    /**
+     * <p>Specifies whether to enable Internet access.</p>
+     */
     @NameInMap("EnableInternetAccess")
     public Boolean enableInternetAccess;
 
-    // Specifies whether to enable multi-factor authentication (MFA).
+    /**
+     * <p>Specifies whether to enable multi-factor authentication (MFA).</p>
+     */
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
 
-    // The name of the workspace. The name must be 2 to 255 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain digits, colons (:), underscores (\_), and hyphens (-).
-    // 
-    // Default value: null.
+    /**
+     * <p>The name of the workspace. The name must be 2 to 255 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <br>
+     * <p>Default value: null.</p>
+     */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
-    // Protocol Type. Valid values: ASP.
+    /**
+     * <p>Protocol Type. Valid values: ASP.</p>
+     */
     @NameInMap("ProtocolType")
     public String protocolType;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // Specification of AD Connector.
-    // 
-    // *   1: General.
-    // *   2: High.
+    /**
+     * <p>Specification of AD Connector.</p>
+     * <br>
+     * <p>*   1: General.</p>
+     * <p>*   2: High.</p>
+     */
     @NameInMap("Specification")
     public Long specification;
 
     @NameInMap("SubDomainDnsAddress")
     public java.util.List<String> subDomainDnsAddress;
 
-    // The domain name of the enterprise AD subdomain.
+    /**
+     * <p>The domain name of the enterprise AD subdomain.</p>
+     */
     @NameInMap("SubDomainName")
     public String subDomainName;
 
-    // The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.
+    /**
+     * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.</p>
+     */
     @NameInMap("VerifyCode")
     public String verifyCode;
 

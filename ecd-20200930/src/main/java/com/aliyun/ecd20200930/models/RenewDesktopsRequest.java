@@ -4,44 +4,56 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RenewDesktopsRequest extends TeaModel {
-    // Specifies whether to enable automatic payment. Valid values:
-    // 
-    // *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
-    // *   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.
-    // 
-    // Default value: true.
+    /**
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <br>
+     * <p>*   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.</p>
+     * <p>*   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.</p>
+     * <br>
+     * <p>Default value: true.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    // The IDs of cloud desktops.
-    // 
-    // Only subscription cloud desktops can be renewed by calling this operation.
+    /**
+     * <p>The IDs of cloud desktops.</p>
+     * <br>
+     * <p>Only subscription cloud desktops can be renewed by calling this operation.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
-    // The renewal duration. The valid values of this parameter are determined by the PeriodUnit value.
-    // 
-    // *   If PeriodUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, and 6.
-    // *   If PeriodUnit is set to Year, the valid values of the Period parameter are 1, 2, 3, 4, and 5.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The renewal duration. The valid values of this parameter are determined by the PeriodUnit value.</p>
+     * <br>
+     * <p>*   If PeriodUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, and 6.</p>
+     * <p>*   If PeriodUnit is set to Year, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
-    // The unit of the renewal duration specified by the Period parameter. Valid values:
-    // 
-    // *   Month
-    // *   Year
-    // 
-    // Default value: Month.
+    /**
+     * <p>The unit of the renewal duration specified by the Period parameter. Valid values:</p>
+     * <br>
+     * <p>*   Month</p>
+     * <p>*   Year</p>
+     * <br>
+     * <p>Default value: Month.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    // The ID of the sales promotion.
+    /**
+     * <p>The ID of the sales promotion.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
-    // The region ID of the cloud desktop.
+    /**
+     * <p>The region ID of the cloud desktop.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

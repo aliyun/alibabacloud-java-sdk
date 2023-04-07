@@ -4,23 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
+    /**
+     * <p>The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started.</p>
+     * <br>
+     * <p>*   appPath: the path of the application startup file. Example: C:\\\Program Files (x86)\\\000\\\000.exe. Use double slashes as the delimiter.</p>
+     * <p>*   appParameter: the startup parameters of the application. The value must be of the String type. Separate multiple parameters with spaces. Example: meetingid 000 meetingname aaa.</p>
+     */
     @NameInMap("CommandContent")
     public String commandContent;
 
-    // The ID of the cloud desktop.
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>The ID of the end user.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The password.</p>
+     */
     @NameInMap("Password")
     public String password;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -30,11 +46,15 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    // The ID of the desktop connection task.
+    /**
+     * <p>The ID of the desktop connection task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
-    // The unique identifier of the client. When you use an Alibaba Cloud Workspace client, you can view the client version in the **About** dialog box on the client logon page.
+    /**
+     * <p>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click **About** on the client logon page to view the identifier of the client.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

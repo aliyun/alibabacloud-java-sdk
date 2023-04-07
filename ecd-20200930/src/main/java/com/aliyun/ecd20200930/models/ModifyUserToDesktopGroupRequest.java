@@ -4,19 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserToDesktopGroupRequest extends TeaModel {
-    // The ID of the desktop group that you want to assign to users.
+    /**
+     * <p>The ID of the desktop group that you want to assign to users.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
-    // The IDs of the regular users to whom you want to grant the permissions on the cloud desktop.
+    /**
+     * <p>The IDs of the regular users to whom you want to grant the permissions on the cloud desktop.</p>
+     */
     @NameInMap("NewEndUserIds")
     public java.util.List<String> newEndUserIds;
 
-    // The IDs of the original regular users who have the permissions on the cloud desktop.
+    /**
+     * <p>The IDs of the original regular users who have the permissions on the cloud desktop.</p>
+     */
     @NameInMap("OldEndUserIds")
     public java.util.List<String> oldEndUserIds;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

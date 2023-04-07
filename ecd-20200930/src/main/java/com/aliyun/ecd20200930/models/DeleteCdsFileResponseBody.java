@@ -3,12 +3,12 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteDriveResponseBody extends TeaModel {
+public class DeleteCdsFileResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public Boolean data;
+    public String data;
 
     @NameInMap("Message")
     public String message;
@@ -19,12 +19,12 @@ public class DeleteDriveResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static DeleteDriveResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteDriveResponseBody self = new DeleteDriveResponseBody();
+    public static DeleteCdsFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteCdsFileResponseBody self = new DeleteCdsFileResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDriveResponseBody setCode(String code) {
+    public DeleteCdsFileResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,15 +32,15 @@ public class DeleteDriveResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteDriveResponseBody setData(Boolean data) {
+    public DeleteCdsFileResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public Boolean getData() {
+    public String getData() {
         return this.data;
     }
 
-    public DeleteDriveResponseBody setMessage(String message) {
+    public DeleteCdsFileResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class DeleteDriveResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteDriveResponseBody setRequestId(String requestId) {
+    public DeleteCdsFileResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class DeleteDriveResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteDriveResponseBody setSuccess(Boolean success) {
+    public DeleteCdsFileResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

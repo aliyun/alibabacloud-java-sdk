@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyEntitlementRequest extends TeaModel {
-    // The ID of the cloud desktop.
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
-    // The usernames of users. You can specify up to 100 usernames.
+    /**
+     * <p>The usernames of users. You can specify up to 100 usernames.</p>
+     */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

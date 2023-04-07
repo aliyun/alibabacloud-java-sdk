@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsResponseBody extends TeaModel {
-    // Details about the NAS file systems.
+    /**
+     * <p>Details of the NAS file systems.</p>
+     */
     @NameInMap("FileSystems")
     public java.util.List<DescribeNASFileSystemsResponseBodyFileSystems> fileSystems;
 
-    // The token that determines the start point of the next query. This parameter is empty if no additional results exist.
+    /**
+     * <p>The token that is used for the next query. If this parameter is left empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,11 +52,15 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     }
 
     public static class DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups extends TeaModel {
-        // The ID of the desktop group.
+        /**
+         * <p>The ID of the desktop group.</p>
+         */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
-        // The name of the desktop group.
+        /**
+         * <p>The name of the desktop group.</p>
+         */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
@@ -78,95 +88,120 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     }
 
     public static class DescribeNASFileSystemsResponseBodyFileSystems extends TeaModel {
-        // The total capacity of the NAS file system. Unit: GiB.
-        // 
-        // *   The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.
-        // *   The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.
+        /**
+         * <p>The total capacity of the NAS file system. Unit: GiB.</p>
+         * <br>
+         * <p>*   The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.</p>
+         * <p>*   The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.</p>
+         */
         @NameInMap("Capacity")
         public Long capacity;
 
-        // The time when the NAS file system was created.
+        /**
+         * <p>The time when the NAS file system was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The description of the NAS file system.
+        /**
+         * <p>The description of the NAS file system.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The desktop groups that are associated with the NAS file systems that support the UPM feature.</p>
+         */
         @NameInMap("DesktopGroups")
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups> desktopGroups;
 
+        /**
+         * <p>Indicates whether disk encryption is enabled.</p>
+         */
         @NameInMap("EncryptionEnabled")
         public Boolean encryptionEnabled;
 
-        // The ID of the NAS file system.
+        /**
+         * <p>The ID of the NAS file system.</p>
+         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
-        // The name of the NAS file system.
+        /**
+         * <p>The name of the NAS file system.</p>
+         */
         @NameInMap("FileSystemName")
         public String fileSystemName;
 
-        // The status of the NAS file system. The possible values include:
-        // 
-        // *   Pending: The NAS file system is being created.
-        // *   Running: The NAS file system is running.
-        // *   Stopped: The NAS file system is stopped.
-        // *   Deleting: The NAS file system is being deleted.
-        // *   Deleted: The NAS file system is deleted.
-        // *   Invalid: The NAS file system is invalid.
+        /**
+         * <p>The status of the NAS file system.</p>
+         */
         @NameInMap("FileSystemStatus")
         public String fileSystemStatus;
 
-        // The type of the NAS file system. Valid value: Universal NAS. This value indicates that the NAS file system is a General-purpose one.
+        /**
+         * <p>The type of the NAS file system. Valid value: `standard`.</p>
+         */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
-        // The used storage of the NAS file system. Unit: byte.
+        /**
+         * <p>The used storage of the NAS file system. Unit: byte.</p>
+         */
         @NameInMap("MeteredSize")
         public Long meteredSize;
 
-        // The domain name of the mount target.
+        /**
+         * <p>The domain name of the mount target.</p>
+         */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
-        // The status of the mount target. The possible values include:
-        // 
-        // *   Pending: The mount target is being created.
-        // *   Active: The mount target is enabled.
-        // *   Inactive: The mount target is disabled.
-        // *   Deleting: The mount target is being deleted.
-        // *   Invalid: The mount target is invalid.
+        /**
+         * <p>The status of the mount target.</p>
+         */
         @NameInMap("MountTargetStatus")
         public String mountTargetStatus;
 
-        // The ID of the workspace.
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
-        // The name of the workspace.
+        /**
+         * <p>The name of the workspace.</p>
+         */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        /**
+         * <p>Indicates whether the UPM feature is supported.</p>
+         */
         @NameInMap("ProfileCompatible")
         public Boolean profileCompatible;
 
-        // The ID of the region.
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The storage type of the NAS file system. Valid values:
-        // 
-        // *   Capacity
-        // *   Performance
+        /**
+         * <p>The storage type of the NAS file system.</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
-        // Indicates whether the Server Message Block (SMB) access control list (ACL) feature was enabled.
+        /**
+         * <p>Indicates whether the Server Message Block (SMB) access control list (ACL) feature is enabled.</p>
+         */
         @NameInMap("SupportAcl")
         public Boolean supportAcl;
 
-        // The ID of the zone where the NAS file system resides.
+        /**
+         * <p>The zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

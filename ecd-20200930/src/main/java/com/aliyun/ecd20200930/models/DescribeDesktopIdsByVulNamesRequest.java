@@ -4,26 +4,34 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopIdsByVulNamesRequest extends TeaModel {
-    // The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:
-    // 
-    // *   asap: high
-    // *   later: medium
-    // *   nntf: low
+    /**
+     * <p>The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   asap: high</p>
+     * <p>*   later: medium</p>
+     * <p>*   nntf: low</p>
+     */
     @NameInMap("Necessity")
     public String necessity;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the vulnerability. Valid values:
-    // 
-    // *   cve: Linux software vulnerability
-    // *   sys: Windows system vulnerability
+    /**
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   cve: Linux software vulnerability</p>
+     * <p>*   sys: Windows system vulnerability</p>
+     */
     @NameInMap("Type")
     public String type;
 

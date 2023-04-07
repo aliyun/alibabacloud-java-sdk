@@ -4,23 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersInGroupResponseBody extends TeaModel {
-    // Details about the end users.
+    /**
+     * <p>Details about the end users.</p>
+     */
     @NameInMap("EndUsers")
     public java.util.List<DescribeUsersInGroupResponseBodyEndUsers> endUsers;
 
-    // The token that is used to start the next query.
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The number of authorized users that are connecting to cloud desktops.
+    /**
+     * <p>The number of authorized users that are connecting to cloud desktops.</p>
+     */
     @NameInMap("OnlineUsersCount")
     public Integer onlineUsersCount;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of authorized users of the desktop group.
+    /**
+     * <p>The total number of authorized users of the desktop group.</p>
+     */
     @NameInMap("UsersCount")
     public Integer usersCount;
 
@@ -70,11 +80,15 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersInGroupResponseBodyEndUsersExternalInfo extends TeaModel {
-        // The external name.
+        /**
+         * <p>The external name.</p>
+         */
         @NameInMap("ExternalName")
         public String externalName;
 
-        // The employee ID.
+        /**
+         * <p>The employee ID.</p>
+         */
         @NameInMap("JobNumber")
         public String jobNumber;
 
@@ -102,11 +116,15 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues extends TeaModel {
-        // The property value.
+        /**
+         * <p>The property value.</p>
+         */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
-        // The ID of the property value.
+        /**
+         * <p>The ID of the property value.</p>
+         */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
 
@@ -134,27 +152,39 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels extends TeaModel {
-        // The ID of the property.
+        /**
+         * <p>The ID of the property.</p>
+         */
         @NameInMap("PropertyId")
         public Long propertyId;
 
-        // The name of the property.
+        /**
+         * <p>The name of the property.</p>
+         */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
-        // The type of the property.
+        /**
+         * <p>The type of the property.</p>
+         */
         @NameInMap("PropertyType")
         public Integer propertyType;
 
-        // Details about property values.
+        /**
+         * <p>Details about property values.</p>
+         */
         @NameInMap("PropertyValues")
         public java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues> propertyValues;
 
-        // The ID of the end user.
+        /**
+         * <p>The ID of the end user.</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
-        // The name of the end user.
+        /**
+         * <p>The name of the end user.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -214,55 +244,81 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersInGroupResponseBodyEndUsers extends TeaModel {
-        // The status of the desktop connection for the end user.
+        /**
+         * <p>The status of the desktop connection for the end user.</p>
+         */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
-        // The ID of the cloud desktop.
+        /**
+         * <p>The ID of the cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the cloud desktop.
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        // The display name of the enterprise AD account.
+        /**
+         * <p>The display name of the enterprise AD account.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
-        // The email address of the end user.
+        /**
+         * <p>The email address of the end user.</p>
+         */
         @NameInMap("EndUserEmail")
         public String endUserEmail;
 
-        // The name of the end user.
+        /**
+         * <p>The name of the end user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
-        // The name of the end user.
+        /**
+         * <p>The name of the end user.</p>
+         */
         @NameInMap("EndUserName")
         public String endUserName;
 
-        // The mobile number of the end user.
+        /**
+         * <p>The mobile number of the end user.</p>
+         */
         @NameInMap("EndUserPhone")
         public String endUserPhone;
 
-        // The remarks of the end user.
+        /**
+         * <p>The remarks of the end user.</p>
+         */
         @NameInMap("EndUserRemark")
         public String endUserRemark;
 
-        // The account type of the end user.
+        /**
+         * <p>The account type of the end user.</p>
+         */
         @NameInMap("EndUserType")
         public String endUserType;
 
-        // The appended information.
+        /**
+         * <p>The appended information.</p>
+         */
         @NameInMap("ExternalInfo")
         public DescribeUsersInGroupResponseBodyEndUsersExternalInfo externalInfo;
 
-        // The ID of the desktop of the end user.
+        /**
+         * <p>The ID of the desktop of the end user.</p>
+         */
         @NameInMap("UserDesktopId")
         public String userDesktopId;
 
-        // Details about the seats of end users.
+        /**
+         * <p>Details about the seats of end users.</p>
+         */
         @NameInMap("UserSetPropertiesModels")
         public java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels> userSetPropertiesModels;
 

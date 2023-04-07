@@ -4,15 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyImagePermissionRequest extends TeaModel {
+    /**
+     * <p>The IDs of the recipient Alibaba Cloud accounts. You can share an image with up to 50 Alibaba Cloud accounts.</p>
+     */
     @NameInMap("AddAccount")
     public java.util.List<Long> addAccount;
 
+    /**
+     * <p>The ID of the image that you want to share.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the recipient Alibaba Cloud accounts from which you want to unshare the image. You can unshare an image from up to 50 Alibaba Cloud accounts.</p>
+     */
     @NameInMap("RemoveAccount")
     public java.util.List<Long> removeAccount;
 

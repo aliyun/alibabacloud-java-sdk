@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsResponseBody extends TeaModel {
-    // Details about desktop groups.
+    /**
+     * <p>Details about desktop groups.</p>
+     */
     @NameInMap("DesktopGroups")
     public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroups> desktopGroups;
 
-    // The token that determines the start point of the next query.
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,154 +52,261 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopGroupsResponseBodyDesktopGroups extends TeaModel {
-        // The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.
+        /**
+         * <p>The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.</p>
+         */
         @NameInMap("BindAmount")
         public Long bindAmount;
 
-        // The remarks on the desktop group.
+        /**
+         * <p>The number of purchased cloud desktops. Valid values: 0 to 200.</p>
+         */
+        @NameInMap("BuyDesktopsCount")
+        public Integer buyDesktopsCount;
+
+        /**
+         * <p>The remarks on the desktop group.</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The maximum period of time during which the session is connected. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops of the same desktop group.</p>
+         */
         @NameInMap("ConnectDuration")
         public Long connectDuration;
 
-        // The number of vCPUs.
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
-        // The time when the desktop group was created.
+        /**
+         * <p>The time when the desktop group was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The ID of the Alibaba Cloud account that is used to create the desktop group.
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to create the desktop group.</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
-        // The type of the data disk.
+        /**
+         * <p>The category of the data disk.</p>
+         */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
-        // The size of the data disk. Unit: GiB.
+        /**
+         * <p>The size of the data disk. Unit: GiB.</p>
+         */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
-        // The ID of the desktop group.
+        /**
+         * <p>The ID of the desktop group.</p>
+         */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
-        // The name of the desktop group.
+        /**
+         * <p>The name of the desktop group.</p>
+         */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
-        // The number of users that are authorized to use the desktop group.
+        /**
+         * <p>The number of users that are authorized to use the desktop group.</p>
+         */
         @NameInMap("EndUserCount")
         public Integer endUserCount;
 
-        // The time when the subscription cloud desktop expires.
+        /**
+         * <p>The time when the subscription cloud desktop expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The number of GPUs.
+        /**
+         * <p>The number of GPUs.</p>
+         */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
-        // The GPU memory.
+        /**
+         * <p>The GPU memory.</p>
+         */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
+        /**
+         * <p>The maximum period of time during which the session is idle. When a session is idle, no operations performed by using keyboards or mouses are detected. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops of the same desktop group.</p>
+         */
         @NameInMap("IdleDisconnectDuration")
         public Long idleDisconnectDuration;
 
-        // The ID of the image.
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The retention period during which the cloud desktop remains connected after the regular user disconnects from the cloud desktop. Unit: ms.
+        /**
+         * <p>The keep-alive duration of the cloud desktop after the end user disconnects from the cloud desktop. Unit: ms.</p>
+         */
         @NameInMap("KeepDuration")
         public Long keepDuration;
 
-        // The load balancing policy of the multi-session desktop group.
+        /**
+         * <p>The load balancing policy for the multi-session desktop group.</p>
+         */
         @NameInMap("LoadPolicy")
         public Long loadPolicy;
 
-        // The maximum number of cloud desktops that the desktop group can hold.
+        /**
+         * <p>The maximum number of cloud desktops that the desktop group can contain.</p>
+         */
         @NameInMap("MaxDesktopsCount")
         public Integer maxDesktopsCount;
 
-        // The size of the memory. Unit: MiB.
+        /**
+         * <p>The memory size. Unit: MiB.</p>
+         */
         @NameInMap("Memory")
         public Long memory;
 
-        // The minimum number of desktops that the desktop group must retain.
+        /**
+         * <p>The minimum number of desktops that the desktop group must contain.</p>
+         */
         @NameInMap("MinDesktopsCount")
         public Integer minDesktopsCount;
 
-        // The ID of the workspace.
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
-        // The name of the workspace.
+        /**
+         * <p>The name of the workspace.</p>
+         */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
-        // The account type of the workspace.
+        /**
+         * <p>The account type of the workspace. Valid values: -simple: convenience account type. -ad_connector: enterprise Active Directory (AD) account.</p>
+         */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
-        // The ID of the desktop template.
+        /**
+         * <p>The OS. Valid values:</p>
+         * <br>
+         * <p>*   Windows</p>
+         * <p>*   Linux</p>
+         */
+        @NameInMap("OsType")
+        public String osType;
+
+        /**
+         * <p>The ID of the desktop template.</p>
+         */
         @NameInMap("OwnBundleId")
         public String ownBundleId;
 
-        // The name of the desktop template.
+        /**
+         * <p>The name of the desktop template.</p>
+         */
         @NameInMap("OwnBundleName")
         public String ownBundleName;
 
-        // The type of the desktop group.
+        /**
+         * <p>The type of the desktop group.</p>
+         */
         @NameInMap("OwnType")
         public Long ownType;
 
-        // The billing method of the desktop group.
+        /**
+         * <p>The billing method of the desktop group.</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
-        // The ID of the policy.
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
-        // The name of the policy.
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <br>
+         * <p>*   Adaptive Streaming Protocol (ASP)</p>
+         * <p>*   High-definition Experience (HDX)</p>
+         */
+        @NameInMap("ProtocolType")
+        public String protocolType;
+
+        /**
+         * <p>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions allowed for each cloud desktop) × 100%`. When the specified threshold is reached, new cloud desktops are automatically created. When the specified threshold is not reached, idle cloud desktops are released.</p>
+         */
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;
 
-        // Indicates which type of disk used by cloud desktops in the desktop group is reset.
+        /**
+         * <p>Indicates which type of disk that is used by cloud desktops in the desktop group is reset.</p>
+         */
         @NameInMap("ResetType")
         public Long resetType;
 
-        // The payment status of the desktop group.
+        /**
+         * <p>The status of the desktop group.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The period of time before the idle cloud desktop stops. When the specified period of time is reached, the idle cloud desktop automatically stops. If an end user connects to a cloud desktop that is in the Stopped state, the cloud desktop automatically restarts. Unit: milliseconds.</p>
+         */
         @NameInMap("StopDuration")
         public Long stopDuration;
 
-        // The type of the system disk.
+        /**
+         * <p>The category of the system disk.</p>
+         */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
-        // The size of the system disk. Unit: GiB.
+        /**
+         * <p>The size of the system disk. Unit: GiB.</p>
+         */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
+        /**
+         * <p>The version number of the desktop group.</p>
+         */
         @NameInMap("Version")
         public Integer version;
 
-        // Indicates whether disk encryption is enabled.
+        /**
+         * <p>Indicates whether disk encryption is enabled.</p>
+         */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
-        // The ID of the Key Management Service (KMS) key for the disk.
+        /**
+         * <p>The ID of the Key Management Service (KMS) key for the disk.</p>
+         */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 
@@ -208,6 +321,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public Long getBindAmount() {
             return this.bindAmount;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setBuyDesktopsCount(Integer buyDesktopsCount) {
+            this.buyDesktopsCount = buyDesktopsCount;
+            return this;
+        }
+        public Integer getBuyDesktopsCount() {
+            return this.buyDesktopsCount;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setComments(String comments) {
@@ -394,6 +515,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             return this.officeSiteType;
         }
 
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setOsType(String osType) {
+            this.osType = osType;
+            return this;
+        }
+        public String getOsType() {
+            return this.osType;
+        }
+
         public DescribeDesktopGroupsResponseBodyDesktopGroups setOwnBundleId(String ownBundleId) {
             this.ownBundleId = ownBundleId;
             return this;
@@ -440,6 +569,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public String getPolicyGroupName() {
             return this.policyGroupName;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setRatioThreshold(Float ratioThreshold) {

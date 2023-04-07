@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopTypesResponseBody extends TeaModel {
-    // Details of cloud desktop types.
+    /**
+     * <p>Details of the desktop types.</p>
+     */
     @NameInMap("DesktopTypes")
     public java.util.List<DescribeDesktopTypesResponseBodyDesktopTypes> desktopTypes;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,39 +38,57 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopTypesResponseBodyDesktopTypes extends TeaModel {
-        // The number of vCPUs.
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("CpuCount")
         public String cpuCount;
 
-        // The size of the data disk. Unit: GiB.
+        /**
+         * <p>The size of the data disk. Unit: GiB.</p>
+         */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
-        // The ID of the cloud desktop type.
+        /**
+         * <p>The ID of the desktop type.</p>
+         */
         @NameInMap("DesktopTypeId")
         public String desktopTypeId;
 
-        // The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.
+        /**
+         * <p>The status of the desktop type. If `SUFFICIENT` is returned, the number of cloud desktops of the specified desktop type is sufficient.</p>
+         */
         @NameInMap("DesktopTypeStatus")
         public String desktopTypeStatus;
 
-        // The number of GPUs.
+        /**
+         * <p>The number of GPUs.</p>
+         */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
-        // The GPU memory.
+        /**
+         * <p>The GPU memory.</p>
+         */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
-        // The family of the cloud desktop type.
+        /**
+         * <p>The family of the desktop type.</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
-        // The memory size. Unit: MiB.
+        /**
+         * <p>The size of the memory. Unit: MiB.</p>
+         */
         @NameInMap("MemorySize")
         public String memorySize;
 
-        // The size of the system disk. Unit: GiB.
+        /**
+         * <p>The size of the system disk. Unit: GiB.</p>
+         */
         @NameInMap("SystemDiskSize")
         public String systemDiskSize;
 

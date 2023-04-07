@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ApproveFotaUpdateRequest extends TeaModel {
+    /**
+     * <p>The version of the custom image. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

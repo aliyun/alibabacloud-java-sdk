@@ -4,35 +4,49 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesRequest extends TeaModel {
-    // Details of directory IDs. You can specify one or more directory IDs.
+    /**
+     * <p>Details of directory IDs. You can specify one or more directory IDs.</p>
+     */
     @NameInMap("DirectoryId")
     public java.util.List<String> directoryId;
 
-    // The status of the directory. The value of this parameter is the same as the value of the `Status` parameter.
+    /**
+     * <p>The status of the directory. The value of this parameter is the same as the value of the `Status` parameter.</p>
+     */
     @NameInMap("DirectoryStatus")
     public String directoryStatus;
 
-    // The type of the directory.
+    /**
+     * <p>The type of the directory.</p>
+     */
     @NameInMap("DirectoryType")
     public String directoryType;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The status of the workspace.
+    /**
+     * <p>The status of the workspace.</p>
+     */
     @NameInMap("Status")
     public String status;
 

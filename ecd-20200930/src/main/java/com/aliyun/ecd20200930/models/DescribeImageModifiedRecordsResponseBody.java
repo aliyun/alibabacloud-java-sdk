@@ -4,15 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The image change records.</p>
+     */
     @NameInMap("ImageModifiedRecords")
     public java.util.List<DescribeImageModifiedRecordsResponseBodyImageModifiedRecords> imageModifiedRecords;
 
+    /**
+     * <p>The token that is used for the next query. If this parameter is left empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of image change records.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,21 +66,39 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeImageModifiedRecordsResponseBodyImageModifiedRecords extends TeaModel {
+        /**
+         * <p>The ID of the original image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the original image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The ID of the new image.</p>
+         */
         @NameInMap("NewImageId")
         public String newImageId;
 
+        /**
+         * <p>The name of the new image.</p>
+         */
         @NameInMap("NewImageName")
         public String newImageName;
 
+        /**
+         * <p>The status of the image.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The time when the image was last changed.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

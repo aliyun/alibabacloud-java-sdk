@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    // The token that is used to start the next query. If this parameter is empty, all results are returned.
+    /**
+     * <p>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details of the snapshots.
+    /**
+     * <p>Details of the snapshots.</p>
+     */
     @NameInMap("Snapshots")
     public java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots;
 
@@ -46,90 +52,135 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
-        // The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The user that creates the snapshot.</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The time when the snapshot was deleted. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.</p>
+         */
         @NameInMap("DeletionTime")
         public String deletionTime;
 
-        // The description of the snapshot.
+        /**
+         * <p>The description of the snapshot.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The ID of the cloud desktop to which the snapshot belongs.
+        /**
+         * <p>The ID of the cloud desktop to which the snapshot belongs.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the cloud desktop.
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        // The status of the cloud desktop. Valid values:
-        // 
-        // *   Pending
-        // *   Starting
-        // *   Running
-        // *   Stopping
-        // *   Rebuilding
-        // *   Stopped
-        // *   Expired
-        // *   Deleted
+        /**
+         * <p>The state of the cloud desktop. Valid values:</p>
+         * <br>
+         * <p>*   Pending: The cloud desktop is pending.</p>
+         * <p>*   Starting: The cloud desktop is being started.</p>
+         * <p>*   Running: The cloud desktop is running.</p>
+         * <p>*   Stopping: The cloud desktop is being stopped.</p>
+         * <p>*   Rebuilding: The cloud desktop is being recreated.</p>
+         * <p>*   Stopped: The cloud desktop is stopped.</p>
+         * <p>*   Expired: The cloud desktop expired.</p>
+         * <p>*   Deleted: The cloud desktop is deleted.</p>
+         */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
-        // The progress of creating the snapshot. Unit: percentage (%).
+        /**
+         * <p>The progress of the snapshot creation. Unit: percentage (%).</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
-        // The protocol type.
-        // 
-        // *   HDX
-        // *   ASP (Recommend)
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <br>
+         * <p>*   ASP</p>
+         * <p>*   HDX</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
-        // The remaining time that is required to complete the snapshot creation. Unit: seconds.
-        // 
-        // > If the value of the `RemainTime` parameter is `-1` and the value of the `Status` parameter is `PROGRESSING`, the system is calculating the remaining time.
+        /**
+         * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
+         * <br>
+         * <p>> If the value of the `Status` parameter is `PROGRESSING` and the value of the `RemainTime` parameter is `-1`, the system is calculating the remaining time required to create the snapshot.</p>
+         */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
-        // The ID of the snapshot.
+        /**
+         * <p>The ID of the snapshot.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
-        // The name of the snapshot.
+        /**
+         * <p>The name of the snapshot.</p>
+         */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
-        // Indicates how the snapshot is created.
+        /**
+         * <p>The type of snapshot. Valid values:</p>
+         * <br>
+         * <p>*   AUTO: auto snapshot</p>
+         * <p>*   USER: manual snapshot</p>
+         */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
-        // The size of the source disk. Unit: GiB.
+        /**
+         * <p>The size of the source disk. Unit: GiB.</p>
+         */
         @NameInMap("SourceDiskSize")
         public String sourceDiskSize;
 
-        // The type of the source disk. Valid values:
-        // 
-        // *   SYSTEM: the system disk
-        // *   DATA: the data disk
+        /**
+         * <p>The type of the source disk. Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM: system disk</p>
+         * <p>*   DATA: data disk</p>
+         */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
-        // The state of the snapshot.
+        /**
+         * <p>The state of the snapshot. Valid values:</p>
+         * <br>
+         * <p>*   PROGRESSING: The snapshot is being created.</p>
+         * <p>*   FAILED: The snapshot failed to be created.</p>
+         * <p>*   ACCOMPLISHED: The snapshot is created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // Indicates whether disk encryption is enabled.
+        /**
+         * <p>Indicates whether disk encryption is enabled.</p>
+         */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
-        // The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+        /**
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+         */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 

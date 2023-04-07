@@ -4,151 +4,187 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDesktopsRequest extends TeaModel {
-    // The number of cloud desktops that you want to create. Valid values: 1 to 300. Default value: 1.
+    /**
+     * <p>The number of cloud desktops that you want to create. Valid values: 1 to 300. Default value: 1.</p>
+     */
     @NameInMap("Amount")
     public Integer amount;
 
-    // Specifies whether to enable automatic payment. Valid values:
-    // 
-    // *   true: enables automatic payment. You must make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.
-    // *   false: disables automatic payment. In this case, an order is generated, and no payment is automatically made. You can log on to the EDS console and complete the payment based on the order ID on the **Orders** page.
-    // 
-    // Default value: true.
+    /**
+     * <p>Specifies whether to enable automatic payment.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    // Specifies whether to enable auto-renewal for the cloud desktop. This parameter takes effect only when the ChargeType parameter is set to PrePaid.
-    // 
-    // Valid values:
-    // 
-    // *   true: enables auto-renewal. The renewal duration is the same as the subscription duration that you specified for the Period parameter when you purchased the cloud desktop.
-    // *   false: does not enable auto-renewal.
-    // 
-    // Default value: false.
+    /**
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the ChargeType parameter is set to PrePaid.````</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    // The ID of the cloud desktop template.
+    /**
+     * <p>The ID of the desktop template.</p>
+     */
     @NameInMap("BundleId")
     public String bundleId;
 
+    /**
+     * <p>The desktop templates that you want to use.</p>
+     */
     @NameInMap("BundleModels")
     public java.util.List<CreateDesktopsRequestBundleModels> bundleModels;
 
-    // The billing method of the cloud desktop. Valid values:
-    // 
-    // *   PostPaid: pay-as-you-go
-    // *   PrePaid: subscription
-    // 
-    // Default value: PostPaid.
+    /**
+     * <p>The billing method of the cloud desktop.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
-    // The name of the cloud desktop.
+    /**
+     * <p>The name of the cloud desktop. The name must meet the following requirements:</p>
+     * <br>
+     * <p>*   The name must be 1 to 64 characters in length.</p>
+     * <p>*   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter but cannot start with http:// or https://.</p>
+     */
     @NameInMap("DesktopName")
     public String desktopName;
 
-    // Specifies whether to automatically add a suffix to the cloud desktop name when you create multiple cloud desktops at a time.
-    // 
-    // *   True: automatically adds a suffix.
-    // *   False: does not add a suffix.
+    /**
+     * <p>Specifies whether to automatically add a suffix to the cloud desktop name when you create multiple cloud desktops at a time.</p>
+     */
     @NameInMap("DesktopNameSuffix")
     public Boolean desktopNameSuffix;
 
+    /**
+     * <p>This parameter is not available.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The IDs of the users that you want to authorize to use the cloud desktop. The cloud desktop is assigned to the users. You can specify IDs of 1 to 100 users.</p>
+     * <br>
+     * <p>*   Only one user can use the cloud desktop at a time.</p>
+     * <p>*   If you do not specify the `EndUserId` parameter, the cloud desktop that you create is not assigned to users.</p>
+     */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
-    // The custom hostname that you specify for the cloud desktop. You can only specify the hostname of a Windows cloud desktop in the workspace of the enterprise AD account type.
-    // 
-    // The hostname must meet the following requirements:
-    // 
-    // *   The hostname must be 2 to 15 characters in length.
-    // *   The hostname can contain letters, digits, and hyphens (-). It cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
-    // 
-    // If you create multiple cloud desktops, you can specify the names of the cloud desktops in the `name_prefix[begin_number,bits]name_suffix` format. For example, if you set Hostname to ecd--1,4-test, the hostname of the first cloud desktop is ecd-0001-test and the hostname of the second cloud desktop is ecd-0002-test. The rest may be deduced by analogy.
-    // 
-    // *   `name_prefix`: the prefix of the hostname.
-    // *   `[begin_number,bits]`: the ordered numbers in the hostname. begin_number: the start number. Valid values: 0 to 999999. Default value: 0. bits: the digit. Valid values: 1 to 6. Default value: 6.
-    // *   `name_suffix`: the suffix of the hostname.
+    /**
+     * <p>The hostname that you specify for the cloud desktop. You can specify only the hostname of a Windows cloud desktop in the workspace of the enterprise AD account type.</p>
+     * <br>
+     * <p>The hostname must meet the following requirements:</p>
+     * <br>
+     * <p>*   It must be 2 to 15 characters in length.</p>
+     * <p>*   It can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
+     * <br>
+     * <p>If you create multiple cloud desktops, you can use the`  name_prefix[begin_number,bits]name_suffix ` format to determine the hostnames of the cloud desktops. For example, if you set Hostname to ecd-\[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test and the hostname of the second cloud desktop is ecd-0002-test. Other hostnames follow the same rule.</p>
+     * <br>
+     * <p>*   `name_prefix`: the prefix of the hostname.</p>
+     * <p>*   `[begin_number,bits]`: the ordered numbers in the hostname. begin_number: the start number. Valid values: 0 to 999999. Default value: 0. bits: the digit. Valid values: 1 to 6. Default value: 6.</p>
+     * <p>*   `name_suffix`: the suffix of the hostname.</p>
+     */
     @NameInMap("Hostname")
     public String hostname;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The subscription duration. The unit of the value is specified by the `PeriodUnit` parameter. This parameter takes effect and is required only when the `ChargeType` parameter is set to `PrePaid`.
-    // 
-    // *   Valid values if the `PeriodUnit` parameter is set to `Month`:
-    // 
-    //     *   1
-    // 
-    //     <!---->
-    // 
-    //     *   2
-    //     *   3
-    //     *   6
-    // 
-    // *   Valid values if the `PeriodUnit` parameter is set to `Year`:
-    // 
-    //     *   1
-    //     *   2
-    //     *   3
-    //     *   4
-    //     *   5
+    /**
+     * <p>The subscription duration of the cloud desktop that you want to create. The unit is specified by the `PeriodUnit` parameter. This parameter takes effect and is required only when the `ChargeType` parameter is set to `PrePaid`.</p>
+     * <br>
+     * <p>*   Valid values if the `PeriodUnit` parameter is set to `Month`:</p>
+     * <br>
+     * <p>    *   1</p>
+     * <p>    *   2</p>
+     * <p>    *   3</p>
+     * <p>    *   6</p>
+     * <br>
+     * <p>*   Valid values if the `PeriodUnit` parameter is set to `Year`:</p>
+     * <br>
+     * <p>    *   1</p>
+     * <p>    *   2</p>
+     * <p>    *   3</p>
+     * <p>    *   4</p>
+     * <p>    *   5</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
-    // The unit of the subscription duration. Valid values:
-    // 
-    // *   Month
-    // *   Year
-    // 
-    // Default value: Month.
+    /**
+     * <p>The unit of the subscription duration.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    // The ID of the policy.
+    /**
+     * <p>The ID of the policy.</p>
+     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    /**
+     * <p>The ID of the sales promotion.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
-    // The ID of the region.
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tags that you want to add to the cloud desktop.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateDesktopsRequestTag> tag;
 
-    // The assignment mode of the cloud desktop. Default value: ALL.
-    // 
-    // *   ALL: If you specify the EndUserId parameter, the cloud desktops that you create are assigned to each regular user that you specify.
-    // *   PER_USER: If you specify the EndUserId parameter, the cloud desktops that you create are evenly assigned to all regular users that you specify. In this case, you must make sure that the value of the Amount parameter can be divided by the N value of the EndUserId.N parameter that you specify.
-    // 
-    // >  If you do not specify the EndUserId parameter, the cloud desktop that you create is not assigned to regular users.
+    /**
+     * <p>The assignment mode of the cloud desktop.</p>
+     * <br>
+     * <p>> If you do not specify the `EndUserId` parameter, the cloud desktop that you create is not assigned to users.</p>
+     */
     @NameInMap("UserAssignMode")
     public String userAssignMode;
 
+    /**
+     * <p>The custom command scripts of the user.</p>
+     */
     @NameInMap("UserCommands")
     public java.util.List<CreateDesktopsRequestUserCommands> userCommands;
 
+    /**
+     * <p>This parameter is not available.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>Specifies whether to enable disk encryption.</p>
+     */
     @NameInMap("VolumeEncryptionEnabled")
     public Boolean volumeEncryptionEnabled;
 
+    /**
+     * <p>The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+     */
     @NameInMap("VolumeEncryptionKey")
     public String volumeEncryptionKey;
 
+    /**
+     * <p>This parameter is not available.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -358,24 +394,56 @@ public class CreateDesktopsRequest extends TeaModel {
     }
 
     public static class CreateDesktopsRequestBundleModels extends TeaModel {
+        /**
+         * <p>The number of cloud desktops that you want to create. Valid values: 1 to 300. Default value: 0.</p>
+         */
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <p>The ID of the desktop template.</p>
+         */
         @NameInMap("BundleId")
         public String bundleId;
 
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
+        /**
+         * <p>The users to whom you want to assign the cloud desktops.</p>
+         */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
+        /**
+         * <p>The hostname that you specify for the cloud desktop. You can only specify the hostname of a Windows cloud desktop in the workspace of the enterprise AD account type.</p>
+         * <br>
+         * <p>The hostname must meet the following requirements:</p>
+         * <br>
+         * <p>*   It must be 2 to 15 characters in length.</p>
+         * <p>*   It can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
+         * <br>
+         * <p>If you create multiple cloud desktops, you can use the`  name_prefix[begin_number,bits]name_suffix ` format to determine the hostnames of the cloud desktops. For example, if you set Hostname to ecd-\[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test and the hostname of the second cloud desktop is ecd-0002-test. Other hostnames follow the same rule.</p>
+         * <br>
+         * <p>*   `name_prefix`: the prefix of the hostname.</p>
+         * <p>*   `[begin_number,bits]`: the ordered numbers in the hostname. begin_number: the start number. Valid values: 0 to 999999. Default value: 0. bits: the digit. Valid values: 1 to 6. Default value: 6.</p>
+         * <p>*   `name_suffix`: the suffix of the hostname.</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <p>Specifies whether to enable disk encryption.</p>
+         */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
+        /**
+         * <p>The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+         */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 
@@ -443,11 +511,15 @@ public class CreateDesktopsRequest extends TeaModel {
     }
 
     public static class CreateDesktopsRequestTag extends TeaModel {
-        // The key of tag N. Valid values of N: 1 to 20.
+        /**
+         * <p>The key of the tag. You can specify 1 to 20 keys for a tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N. Valid values of N: 1 to 20.
+        /**
+         * <p>The value of the tag. You can specify 1 to 20 values for a tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -475,12 +547,21 @@ public class CreateDesktopsRequest extends TeaModel {
     }
 
     public static class CreateDesktopsRequestUserCommands extends TeaModel {
+        /**
+         * <p>The content of the command.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The encoding mode of the command content (CommandContent).</p>
+         */
         @NameInMap("ContentEncoding")
         public String contentEncoding;
 
+        /**
+         * <p>The language type of the command.</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 

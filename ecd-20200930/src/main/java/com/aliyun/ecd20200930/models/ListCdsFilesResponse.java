@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDriveResponse extends TeaModel {
+public class ListCdsFilesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class CreateDriveResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateDriveResponseBody body;
+    public ListCdsFilesResponseBody body;
 
-    public static CreateDriveResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateDriveResponse self = new CreateDriveResponse();
+    public static ListCdsFilesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListCdsFilesResponse self = new ListCdsFilesResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDriveResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListCdsFilesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateDriveResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateDriveResponse setStatusCode(Integer statusCode) {
+    public ListCdsFilesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class CreateDriveResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateDriveResponse setBody(CreateDriveResponseBody body) {
+    public ListCdsFilesResponse setBody(ListCdsFilesResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateDriveResponseBody getBody() {
+    public ListCdsFilesResponseBody getBody() {
         return this.body;
     }
 

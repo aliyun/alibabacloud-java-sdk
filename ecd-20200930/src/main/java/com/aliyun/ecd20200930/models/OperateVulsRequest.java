@@ -4,40 +4,57 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class OperateVulsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud desktops.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
-    // The operation to perform on the vulnerability. Valid values:
-    // 
-    // *   vul_fix: fixes the vulnerability. The system fixes the vulnerability.
-    // *   vul_verify: verifies whether the vulnerability is fixed. Perform this operation after the vulnerability is fixed and the cloud desktop is restarted.
-    // *   vul_ignore: ignores the vulnerability. After you ignore the vulnerability, the system gives no more prompts about the vulnerability.
-    // *   vul_undo_ignore: cancels the ignore operation on the vulnerability. After you cancel the ignore operation on the vulnerability, the system gives prompts about the vulnerability again.
+    /**
+     * <p>The action that you want to perform on the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   vul_fix: fixes the vulnerability.</p>
+     * <p>*   vul_verify: verifies whether the vulnerability is fixed. You must perform this action after the vulnerability is fixed and the cloud desktop is restarted.</p>
+     * <p>*   vul_ignore: ignores the vulnerability. After the vulnerability is ignored, the system provides no more prompts about the vulnerability.</p>
+     * <p>*   vul_undo_ignore: cancels the ignore action on the vulnerability. After you cancel the ignore action on the vulnerability, the system provides prompts about the vulnerability again.</p>
+     */
     @NameInMap("OperateType")
     public String operateType;
 
-    // Specifies whether to record the previous state of the vulnerability. Valid values:
-    // 
-    // *   0: The previous state of the vulnerability is not recorded.
-    // *   1: The previous state of the vulnerability is recorded.
+    /**
+     * <p>Specifies whether to record the previous state of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   0: records the previous state of the vulnerability.</p>
+     * <p>*   1: does not record the previous state of the vulnerability.</p>
+     */
     @NameInMap("Precondition")
     public Integer precondition;
 
-    // The reason why the vulnerability is fixed.
+    /**
+     * <p>The reason why the vulnerability is ignored.\</p>
+     * <p>This parameter is required only when `OperateType` is set to `vul_ignore`.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the vulnerability. Valid values:
-    // 
-    // *   cve: Linux software vulnerability
-    // *   sys: Windows system vulnerability
+    /**
+     * <p>The type of the detected vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   cve: the Linux software vulnerability</p>
+     * <p>*   sys: the Windows system vulnerability</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The names of the vulnerabilities.</p>
+     */
     @NameInMap("VulName")
     public java.util.List<String> vulName;
 

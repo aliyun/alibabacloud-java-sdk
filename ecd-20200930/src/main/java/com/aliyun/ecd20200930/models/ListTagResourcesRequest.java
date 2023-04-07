@@ -4,27 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    // The number of entries to return on each page.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token used to start the next query.
+    /**
+     * <p>The token used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The region ID of the resource.
+    /**
+     * <p>The region ID of the resource.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.
+    /**
+     * <p>The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
-    // The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.
+    /**
+     * <p>The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // The list of the resource.
+    /**
+     * <p>The list of the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -82,11 +94,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
-        // The key of tag N. Valid values of N: 1 to 20.
+        /**
+         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of tag N. Valid values of N: 1 to 20.
+        /**
+         * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,26 +4,36 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmEventStackInfoRequest extends TeaModel {
-    // The ID of the cloud desktop.
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
-    // The name of the alert event.
+    /**
+     * <p>The name of the alert event.</p>
+     */
     @NameInMap("EventName")
     public String eventName;
 
-    // The natural language of the request and response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The natural language of the request and response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the alert event.
+    /**
+     * <p>The ID of the alert event.</p>
+     */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 

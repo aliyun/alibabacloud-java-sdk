@@ -4,61 +4,67 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulListRequest extends TeaModel {
-    // The alias of the vulnerability.
+    /**
+     * <p>The alias of the vulnerability.</p>
+     */
     @NameInMap("AliasName")
     public String aliasName;
 
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>*   Pages start from page 1.</p>
+     * <p>*   Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The status of the vulnerability. Valid values:
-    // 
-    // *   y: processed
-    // *   n: not processed
+    /**
+     * <p>The processing status of the vulnerability.</p>
+     */
     @NameInMap("Dealed")
     public String dealed;
 
-    // The natural language of the request and response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the content within the request and response.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The name of the vulnerability.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:
-    // 
-    // *   asap: high
-    // *   later: medium
-    // *   nntf: low
+    /**
+     * <p>The priority to fix the detected vulnerability or the risk level of the vulnerability.</p>
+     */
     @NameInMap("Necessity")
     public String necessity;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The maximum number of entries to return on each page.
-    // 
-    // Default value: 20.
+    /**
+     * <p>The number of entries to return on each page.\</p>
+     * <p>Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the vulnerability. Valid values:
-    // 
-    // *   cve: Linux software vulnerability
-    // *   sys: Windows system vulnerability
+    /**
+     * <p>The type of the detected vulnerability.</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,18 +4,36 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
+    /**
+     * <p>The CRON expression.</p>
+     */
     @NameInMap("CronExpression")
     public String cronExpression;
 
+    /**
+     * <p>The ID of the automatic snapshot policy.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with [http:// or https://. Default value: null.](http://https://。、（:）、（\_）（-）。：。)</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The ID of the region where the automatic snapshot policy is created.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The retention period of automatic snapshots. Unit: days. Default value: 1. Valid values:</p>
+     * <br>
+     * <p>*   1: The automatic snapshots are permanently retained.</p>
+     * <p>*   1 to 65536: The automatic snapshots are retained for the specified number of days.</p>
+     */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 

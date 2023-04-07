@@ -4,23 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class AddUserToDesktopGroupRequest extends TeaModel {
-    // The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // The ID of the desktop group that you want to assign to more regular users.
+    /**
+     * <p>The ID of the desktop group that you want to assign to more regular users.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
-    // The IDs of the desktop groups.
+    /**
+     * <p>The IDs of the desktop groups.</p>
+     */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
-    // The regular users to whom you want to assign the desktop group.
+    /**
+     * <p>The regular users to whom you want to assign the desktop group.</p>
+     */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
-    // The ID of the region
+    /**
+     * <p>The ID of the region</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

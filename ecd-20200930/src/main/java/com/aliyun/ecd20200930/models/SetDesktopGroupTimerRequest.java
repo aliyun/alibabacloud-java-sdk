@@ -4,21 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class SetDesktopGroupTimerRequest extends TeaModel {
+    /**
+     * <p>The CRON expression for the scheduled task.</p>
+     */
     @NameInMap("CronExpression")
     public String cronExpression;
 
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    /**
+     * <p>Specifies whether to forcefully execute the scheduled task.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the disk that you want to reset.</p>
+     */
     @NameInMap("ResetType")
     public Integer resetType;
 
+    /**
+     * <p>The type of the scheduled task. Valid values:</p>
+     */
     @NameInMap("TimerType")
     public Integer timerType;
 

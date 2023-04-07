@@ -4,21 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DetachEndUserRequest extends TeaModel {
+    /**
+     * <p>The address of the Active Directory (AD) workspace.</p>
+     */
     @NameInMap("AdDomain")
     public String adDomain;
 
+    /**
+     * <p>The type of the Alibaba Cloud Workspace client. 1: the hardware client 2: the software client</p>
+     */
     @NameInMap("ClientType")
     public String clientType;
 
+    /**
+     * <p>The ID of the device.</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the user that is bound to the client.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("Region")
     public String region;
 

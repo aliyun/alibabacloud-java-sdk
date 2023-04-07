@@ -4,26 +4,36 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class AttachCenRequest extends TeaModel {
-    // The ID of the CEN instance.
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
-    // The ID of the Alibaba Cloud account to which the CEN instance belongs.
-    // 
-    // *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to the Alibaba Cloud account, skip this parameter.
-    // *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account.
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * <br>
+     * <p>*   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to the Alibaba Cloud account, skip this parameter.</p>
+     * <p>*   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account.</p>
+     */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.
+    /**
+     * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.</p>
+     */
     @NameInMap("VerifyCode")
     public String verifyCode;
 

@@ -4,21 +4,54 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskSpecRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+     * <br>
+     * <p>*   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.</p>
+     * <p>*   `false`: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the **Orders** page.</p>
+     * <br>
+     * <p>Default value: `true`.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>The ID of the sales promotion activity. You can call the DescribePrice operation to obtain the IDs of matching sales promotion activities.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:</p>
+     * <br>
+     * <p>*   PL0</p>
+     * <p>*   PL1</p>
+     * <p>*   PL2</p>
+     * <p>*   PL3</p>
+     */
     @NameInMap("RootDiskPerformanceLevel")
     public String rootDiskPerformanceLevel;
 
+    /**
+     * <p>The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:</p>
+     * <br>
+     * <p>*   PL0</p>
+     * <p>*   PL1</p>
+     * <p>*   PL2</p>
+     * <p>*   PL3</p>
+     */
     @NameInMap("UserDiskPerformanceLevel")
     public String userDiskPerformanceLevel;
 

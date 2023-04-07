@@ -4,23 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulListResponseBody extends TeaModel {
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The maximum number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // Details about vulnerabilities.
+    /**
+     * <p>The vulnerabilities.</p>
+     */
     @NameInMap("VulRecords")
     public java.util.List<DescribeVulListResponseBodyVulRecords> vulRecords;
 
@@ -70,23 +80,33 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
-        // The complete version number of the RPM package.
+        /**
+         * <p>The complete version number.</p>
+         */
         @NameInMap("FullVersion")
         public String fullVersion;
 
-        // The detailed matching information of the vulnerability.
+        /**
+         * <p>The reason why the vulnerability is detected.</p>
+         */
         @NameInMap("MatchDetail")
         public String matchDetail;
 
-        // The name of the RPM package.
+        /**
+         * <p>The name of the RPM package.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The path of the software that has the vulnerability.
+        /**
+         * <p>The path of the software that has the vulnerability.</p>
+         */
         @NameInMap("Path")
         public String path;
 
-        // The command used to fix the vulnerability.
+        /**
+         * <p>The command that is used to fix the vulnerability.</p>
+         */
         @NameInMap("UpdateCmd")
         public String updateCmd;
 
@@ -138,7 +158,9 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJson extends TeaModel {
-        // Details about RPM packages.
+        /**
+         * <p>The RPM Package Manager (RPM) packages.</p>
+         */
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
 
@@ -158,98 +180,111 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeVulListResponseBodyVulRecords extends TeaModel {
-        // The name of the vulnerability.
+        /**
+         * <p>The alias of the vulnerability.</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
-        // The ID of the affected cloud desktop.
+        /**
+         * <p>The ID of the affected cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the affected cloud desktop.
+        /**
+         * <p>The name of the affected cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        // The extended information of the vulnerability.
+        /**
+         * <p>The extended information about the vulnerability.</p>
+         */
         @NameInMap("ExtendContentJson")
         public DescribeVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
+        /**
+         * <p>The UNIX timestamp when the vulnerability was first detected. Unit: milliseconds.</p>
+         */
         @NameInMap("FirstTs")
         public Long firstTs;
 
-        // The timestamp when the vulnerability was last detected. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.
+        /**
+         * <p>The UNIX timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+         */
         @NameInMap("LastTs")
         public Long lastTs;
 
-        // The timestamp when the vulnerability status was modified. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.
+        /**
+         * <p>The timestamp when the vulnerability status was changed. Unit: milliseconds.</p>
+         */
         @NameInMap("ModifyTs")
         public Long modifyTs;
 
-        // The name of the vulnerability.
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The priority to fix the vulnerability or the risk level of the vulnerability. Valid values:
-        // 
-        // *   asap: high
-        // *   later: medium
-        // *   nntf: low
+        /**
+         * <p>The priority to fix the vulnerability or the risk level of the vulnerability.</p>
+         */
         @NameInMap("Necessity")
         public String necessity;
 
-        // Indicates whether the Security Center agent on the cloud desktops is online. Valid values:
-        // 
-        // *   true: online
-        // *   false: offline
+        /**
+         * <p>Indicates whether the Security Center agent on the cloud desktop is online.</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 
-        // The name of the operating system of the cloud desktop.
+        /**
+         * <p>The version of the OS of the cloud desktop.</p>
+         */
         @NameInMap("OsVersion")
         public String osVersion;
 
-        // The IDs of Common Vulnerabilities and Exposures (CVEs) related to the vulnerability.
+        /**
+         * <p>The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.</p>
+         */
         @NameInMap("Related")
         public String related;
 
-        // The timestamp when the vulnerability was fixed. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.
+        /**
+         * <p>The UNIX timestamp when the vulnerability was fixed. Unit: milliseconds.</p>
+         */
         @NameInMap("RepairTs")
         public Long repairTs;
 
-        // The code returned after the vulnerability is fixed.
+        /**
+         * <p>The code returned after the vulnerability is fixed.</p>
+         */
         @NameInMap("ResultCode")
         public String resultCode;
 
-        // The message returned after the vulnerability is fixed.
+        /**
+         * <p>The message returned after the vulnerability is fixed.</p>
+         */
         @NameInMap("ResultMessage")
         public String resultMessage;
 
-        // The status of the vulnerability. Valid values:
-        // 
-        // *   1: unfixed
-        // *   2: fix failed
-        // *   3: rollback failed
-        // *   4: fixing
-        // *   5: rolling back
-        // *   6: verifying
-        // *   7: fixed
-        // *   8: fixed and pending restart
-        // *   9: rolled back
-        // *   10: ignored
-        // *   11: rolled back and pending restart
-        // *   12: not found
-        // *   20: expired
+        /**
+         * <p>The status of the vulnerability.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
-        // The tag of the vulnerability.
+        /**
+         * <p>The tag that is added to the vulnerability.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
-        // The type of the vulnerability. Valid values:
-        // 
-        // *   cve: Linux software vulnerability
-        // *   sys: Windows system vulnerability
+        /**
+         * <p>The type of the vulnerability.</p>
+         */
         @NameInMap("Type")
         public String type;
 

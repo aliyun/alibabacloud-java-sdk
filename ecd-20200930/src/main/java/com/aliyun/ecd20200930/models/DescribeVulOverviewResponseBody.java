@@ -4,19 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulOverviewResponseBody extends TeaModel {
-    // The number of high-risk vulnerabilities.
+    /**
+     * <p>The number of high-risk vulnerabilities.</p>
+     */
     @NameInMap("AsapCount")
     public Integer asapCount;
 
-    // The number of medium-risk vulnerabilities.
+    /**
+     * <p>The number of medium-risk vulnerabilities.</p>
+     */
     @NameInMap("LaterCount")
     public Integer laterCount;
 
-    // The number of low-risk vulnerabilities.
+    /**
+     * <p>The number of low-risk vulnerabilities.</p>
+     */
     @NameInMap("NntfCount")
     public Integer nntfCount;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

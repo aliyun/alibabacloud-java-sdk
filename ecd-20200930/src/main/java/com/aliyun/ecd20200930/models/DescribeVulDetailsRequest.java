@@ -4,31 +4,41 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulDetailsRequest extends TeaModel {
-    // The alias of the vulnerability.
+    /**
+     * <p>The alias of the vulnerability.</p>
+     */
     @NameInMap("AliasName")
     public String aliasName;
 
-    // The natural language of the request and response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The natural language of the request and response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The name of the Redhat Package Manager (RPM) package.
-    // 
-    // You can call the [DescribeVulList](~~223907~~) operation to obtain the names of RPM packages.
+    /**
+     * <p>The name of the Redhat Package Manager (RPM) package.</p>
+     * <br>
+     * <p>You can call the [DescribeVulList](~~223907~~) operation to obtain the names of RPM packages.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the vulnerability. Valid values:
-    // 
-    // *   cve: Linux software vulnerability
-    // *   sys: Windows system vulnerability
+    /**
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   cve: Linux software vulnerability</p>
+     * <p>*   sys: Windows system vulnerability</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,62 +4,102 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsRequest extends TeaModel {
-    // The ID of the cloud desktop.
+    @NameInMap("Creator")
+    public String creator;
+
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
-    // The name of the cloud desktop.
+    /**
+     * <p>The name of the cloud desktop.</p>
+     */
     @NameInMap("DesktopName")
     public String desktopName;
 
-    // The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
-    // 
-    // If you do not specify a value for this parameter, the current time is used.
+    /**
+     * <p>The time when you want to stop creating the snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
-    // The number of entries to return on each page.
-    // 
-    // *   Maximum value: 100
-    // *   Default value: 10.
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Maximum value: 100</p>
+     * <p>*   Default value: 10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that determines the start point of the query. Set the value to the NextToken value that is returned from the last call.
+    /**
+     * <p>The token that determines the start point of the query. Set the value to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the snapshot.
+    /**
+     * <p>The ID of the snapshot.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
-    // The name of the snapshot.
+    /**
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <br>
+     * <p>It cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
+    /**
+     * <p>The type of the snapshot. Default value: all.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   auto: auto snapshot</p>
+     * <p>*   user: manual snapshot</p>
+     * <p>*   all: all types of snapshots</p>
+     */
     @NameInMap("SnapshotType")
     public String snapshotType;
 
-    // The type of the disk for which to create a snapshot. Valid values:
-    // 
-    // *   system: system disk
-    // *   data: data disk
+    /**
+     * <p>The type of the source disk for which you want to create the snapshot. Valid values:</p>
+     * <br>
+     * <p>*   System: system disk</p>
+     * <p>*   Data: data disk</p>
+     * <br>
+     * <p>> The value of this parameter is not case-sensitive.</p>
+     */
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
 
-    // The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
-    // 
-    // If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for `EndTime` are queried.
+    /**
+     * <p>The time when you want to create the snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
     public static DescribeSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsRequest self = new DescribeSnapshotsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSnapshotsRequest setCreator(String creator) {
+        this.creator = creator;
+        return this;
+    }
+    public String getCreator() {
+        return this.creator;
     }
 
     public DescribeSnapshotsRequest setDesktopId(String desktopId) {

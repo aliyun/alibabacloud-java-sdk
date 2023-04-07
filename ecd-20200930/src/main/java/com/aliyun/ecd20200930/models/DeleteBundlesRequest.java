@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteBundlesRequest extends TeaModel {
-    // The desktop bundles that you want to delete.
+    /**
+     * <p>The desktop bundles that you want to delete.</p>
+     */
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
-    // The ID of the region where the desktop bundles to delete are located.
+    /**
+     * <p>The ID of the region where the desktop bundles to delete are located.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,21 +4,30 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFrontVulPatchListRequest extends TeaModel {
-    // The type of the action that you want to perform on the vulnerability. Valid value: vul_fix.
+    /**
+     * <p>The type of the action that you want to perform on the vulnerability. Valid value: vul_fix.</p>
+     */
     @NameInMap("OperateType")
     public String operateType;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the vulnerability. Valid values:
-    // 
-    // *   cve: a Linux software vulnerability
-    // *   sys: a Windows system vulnerability
+    /**
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   cve: the Linux software vulnerability</p>
+     * <p>*   sys: the Windows system vulnerability</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>Details of the vulnerabilities. You can enter a maximum of 50 vulnerabilities.</p>
+     */
     @NameInMap("VulInfo")
     public java.util.List<DescribeFrontVulPatchListRequestVulInfo> vulInfo;
 
@@ -60,15 +69,21 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
     }
 
     public static class DescribeFrontVulPatchListRequestVulInfo extends TeaModel {
-        // The ID of the cloud desktop that is affected by vulnerability N. Valid values of N: 1 to 50.
+        /**
+         * <p>The ID of the cloud desktop that is affected by the vulnerability.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of vulnerability N. Valid values of N: 1 to 50.
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The tag of vulnerability N. Valid values of N: 1 to 50.
+        /**
+         * <p>The tag that you want to add to the vulnerability.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

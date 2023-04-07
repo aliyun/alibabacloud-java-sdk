@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The list of snapshot IDs. You can specify up to 100 snapshot IDs.
+    /**
+     * <p>The IDs of the snapshots. You can specify 1 to 100 IDs of snapshots.</p>
+     */
     @NameInMap("SnapshotId")
     public java.util.List<String> snapshotId;
 

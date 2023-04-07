@@ -4,18 +4,24 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopHostNameRequest extends TeaModel {
-    // The ID of the cloud desktop.
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
-    // The new hostname of the cloud desktop. The hostname must meet the following requirements:
-    // 
-    // *   Must be 2 to 15 characters in length.
-    // *   Contain letters, digits, and hyphens (-). It cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
+    /**
+     * <p>The new hostname of the cloud desktop. The hostname must meet the following requirements:</p>
+     * <br>
+     * <p>*   Must be 2 to 15 characters in length.</p>
+     * <p>*   Contain letters, digits, and hyphens (-). It cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
+     */
     @NameInMap("NewHostName")
     public String newHostName;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,31 +4,46 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateNASFileSystemRequest extends TeaModel {
-    // The description of the NAS file system.
+    /**
+     * <p>The description of the NAS file system.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to encrypt the data in the NAS file system. You can use keys that are managed by Key Management Service (KMS) to encrypt the data that is stored in a NAS file system. When you read and write the encrypted data, the data is automatically decrypted. Valid values:</p>
+     * <br>
+     * <p>*   0: does not encrypt the data in the NAS file system.</p>
+     * <p>*   1: encrypts the data in the NAS file system by using NAS-managed keys.</p>
+     * <br>
+     * <p>Default value: 0.</p>
+     */
     @NameInMap("EncryptType")
     public String encryptType;
 
-    // The name of the NAS file system.
     @NameInMap("Name")
     public String name;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The storage type of the NAS file system. Valid values:
-    // 
-    // *   Capacity
-    // *   Performance
-    // 
-    // Default value: Capacity.
+    /**
+     * <p>The storage type of the NAS file system. Valid values:</p>
+     * <br>
+     * <p>*   Capacity</p>
+     * <p>*   Performance</p>
+     * <br>
+     * <p>Default value: Capacity.</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 

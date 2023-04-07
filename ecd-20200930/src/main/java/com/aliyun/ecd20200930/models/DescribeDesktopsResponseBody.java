@@ -4,19 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsResponseBody extends TeaModel {
-    // Details about the cloud desktops.
+    /**
+     * <p>Details of the cloud desktops.</p>
+     */
     @NameInMap("Desktops")
     public java.util.List<DescribeDesktopsResponseBodyDesktops> desktops;
 
-    // The token that is used for the next query. If this parameter is empty, all results have been returned.
+    /**
+     * <p>The token that is used for the next query. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of cloud desktops.
+    /**
+     * <p>The total number of cloud desktops.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -58,29 +66,34 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsResponseBodyDesktopsDisks extends TeaModel {
-        // The ID of the disk.
+        /**
+         * <p>The ID of the disk.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
-        // The size of the disk. Unit: GiB.
+        /**
+         * <p>The size of the disk. Unit: GiB.</p>
+         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
-        // The disk type. Valid values:
-        // 
-        // *   SYSTEM: the system disk
-        // *   DATA: the data disk
+        /**
+         * <p>The type of the disk.</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
-        // The performance level (PL) of the disk when an enhanced SSD (ESSD) is used. Valid values:
-        // 
-        // *   PL0
-        // *   PL1
-        // *   PL2
-        // *   PL3
-        // 
-        // For more information about the differences among disks at different PLs, see [Enhanced SSDs](~~122389~~).
+        /**
+         * <p>The performance level (PL) of the disk that is an enhanced SSD (ESSD). Valid values:</p>
+         * <br>
+         * <p>*   PL0</p>
+         * <p>*   PL1</p>
+         * <p>*   PL2</p>
+         * <p>*   PL3</p>
+         * <br>
+         * <p>For more information about the differences between disks of different PLs, see [Enhanced SSDs](~~122389~~).</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
@@ -124,19 +137,27 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsResponseBodyDesktopsFotaUpdate extends TeaModel {
-        // The current version of the cloud desktop.
+        /**
+         * <p>The current version of the cloud desktop.</p>
+         */
         @NameInMap("CurrentAppVersion")
         public String currentAppVersion;
 
-        // The version to which the cloud desktop can be upgraded.
+        /**
+         * <p>The version to which the cloud desktop can be updated.</p>
+         */
         @NameInMap("NewAppVersion")
         public String newAppVersion;
 
-        // The description of the version to which the cloud desktop can be upgraded.
+        /**
+         * <p>The description of the version to which the cloud desktop can be updated.</p>
+         */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
-        // The size of a new version of the installation package. The cloud desktop can be upgraded to this version.
+        /**
+         * <p>The size of the installation package for the version to which the cloud desktop can be updated. Unit: KB.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
@@ -180,15 +201,21 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsResponseBodyDesktopsSessions extends TeaModel {
-        // The ID of the regular user that logged on to the cloud desktop.
+        /**
+         * <p>The ID of the user that logged on to the cloud desktop.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
-        // The time when the desktop session was established.
+        /**
+         * <p>The time when the desktop session was established.</p>
+         */
         @NameInMap("EstablishmentTime")
         public String establishmentTime;
 
-        // The name of the external user.
+        /**
+         * <p>The name of the external user.</p>
+         */
         @NameInMap("ExternalUserName")
         public String externalUserName;
 
@@ -224,11 +251,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsResponseBodyDesktopsTags extends TeaModel {
-        // The tag key.
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The tag value.
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -256,250 +287,351 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopsResponseBodyDesktops extends TeaModel {
+        /**
+         * <p>The number of sessions allowed for each cloud desktop in the multi-session desktop group.</p>
+         */
         @NameInMap("BindAmount")
         public Integer bindAmount;
 
-        // The ID of the desktop template that is used to create the cloud desktop.
+        /**
+         * <p>The ID of the desktop template that is used to create the cloud desktop.</p>
+         */
         @NameInMap("BundleId")
         public String bundleId;
 
-        // The name of the desktop template that is used to create the cloud desktop.
+        /**
+         * <p>The name of the desktop template that is used to create the cloud desktop.</p>
+         */
         @NameInMap("BundleName")
         public String bundleName;
 
-        // The billing method of the cloud desktop. Valid values:
-        // 
-        // *   PostPaid: pay-as-you-go
-        // *   PrePaid: subscription
-        // 
-        // Default value: PostPaid.
+        /**
+         * <p>The billing method of the cloud desktop.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        // The connection status of the regular user. Valid values:
-        // 
-        // *   Connected
-        // *   Disconnected
-        // *   Unknown
+        /**
+         * <p>The connection status of the user.</p>
+         */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
-        // The number of vCPUs.
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
-        // The time when the cloud desktop was created.
+        /**
+         * <p>The time when the cloud desktop was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // >  This parameter is in invitational preview and unavailable for public use.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
-        // >  This parameter is in invitational preview and unavailable for public use.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
-        // The ID of the group to which the cloud desktop belongs. Default value: null.
-        // 
-        // >  This parameter is in invitational preview and unavailable for public use.
+        /**
+         * <p>The ID of the group to which the cloud desktop belongs. Default value: null.</p>
+         */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
-        // The ID of the cloud desktop.
+        /**
+         * <p>The ID of the cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the cloud desktop.
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        // The status of the cloud desktop.
+        /**
+         * <p>The state of the cloud desktop.</p>
+         */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
-        // The type of the cloud desktop.
+        /**
+         * <p>The desktop type.</p>
+         */
         @NameInMap("DesktopType")
         public String desktopType;
 
-        // This parameter is in invitational preview and unavailable for public use.
+        /**
+         * <p>The ID is the same as the workspace ID that is indicated by the value of the OfficeSiteId parameter.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
-        // This parameter is in invitational preview and unavailable for public use.
+        /**
+         * <p>This parameter is in invitational preview and unavailable for general users.</p>
+         */
         @NameInMap("DirectoryType")
         public String directoryType;
 
-        // Details about the disks.
+        /**
+         * <p>Details of the disks.</p>
+         */
         @NameInMap("Disks")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsDisks> disks;
 
-        // The times for which the cloud desktop can be downgraded.
+        /**
+         * <p>The number of times for which the cloud desktop can be downgraded.</p>
+         */
         @NameInMap("DowngradeQuota")
         public Long downgradeQuota;
 
-        // The times for which the cloud desktop is downgraded.
+        /**
+         * <p>The number of times for which the cloud desktop is downgraded.</p>
+         */
         @NameInMap("DowngradedTimes")
         public Long downgradedTimes;
 
-        // The IDs of regular users that are authorized to log on to the cloud desktop.
+        /**
+         * <p>The IDs of the users that have the permissions to connect to the cloud desktops.</p>
+         */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
-        // The time when the subscription cloud desktop expired.
+        /**
+         * <p>The time when the subscription cloud desktop expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The information about the desktop upgrade.
+        /**
+         * <p>The information about the image version that the cloud desktop uses.</p>
+         */
         @NameInMap("FotaUpdate")
         public DescribeDesktopsResponseBodyDesktopsFotaUpdate fotaUpdate;
 
-        // Indicates whether the cloud desktop is of the GPU-accelerated type.
+        /**
+         * <p>Indicates whether the cloud desktop is of the GPU-accelerated type.</p>
+         */
         @NameInMap("GpuCategory")
         public Long gpuCategory;
 
-        // The number of GPUs.
+        /**
+         * <p>The number of GPUs.</p>
+         */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
-        // The version of the GPU driver with which the cloud desktop is equipped.
+        /**
+         * <p>The version of the GPU driver with which the cloud desktop is equipped.</p>
+         */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
-        // The GPU type.
+        /**
+         * <p>The GPU model.</p>
+         */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         */
         @NameInMap("HibernationOptionsConfigured")
         public Boolean hibernationOptionsConfigured;
 
-        // The hostname.
+        /**
+         * <p>The hostname of the cloud desktop.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
-        // The ID of the image.
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The flag that is used to manage the cloud desktop. Valid values:
-        // 
-        // *   NoFlag: No flag exists for the cloud desktop.
-        // *   Updating: The configurations of the cloud desktop are being changed.
+        /**
+         * <p>The flag that is used for management.</p>
+         */
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
-        // The memory size. Unit: MiB.
+        /**
+         * <p>The memory size. Unit: MiB.</p>
+         */
         @NameInMap("Memory")
         public Long memory;
 
-        // The ID of the secondary network interface controller (NIC) created by the RAM or Active Directory (AD) user in EDS. You do not have permissions to modify this parameter.
+        /**
+         * <p>The ID of the secondary network interface controller (NIC) created by the RAM user or Active Directory (AD) user in EDS. You do not have the permissions to modify this ID.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        // The IP address of the secondary NIC that is created by the RAM or AD user in EDS.
+        /**
+         * <p>The IP address of the secondary NIC that is created by the RAM user or AD user in EDS.</p>
+         */
         @NameInMap("NetworkInterfaceIp")
         public String networkInterfaceIp;
 
-        // The ID of the workspace.
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
-        // The name of the workspace.
+        /**
+         * <p>The name of the workspace.</p>
+         */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
-        // The workspace type. Valid values:
-        // 
-        // *   SIMPLE: the convenience account type
-        // *   AD_CONNECTOR: the enterprise AD account type
+        /**
+         * <p>The account type of the workspace.</p>
+         */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
-        // The virtual private cloud (VPC) type of the workspace. Valid values:
-        // 
-        // basic
-        // 
-        // standard
-        // 
-        // customized
+        /**
+         * <p>The virtual private cloud (VPC) type of the workspace.</p>
+         */
         @NameInMap("OfficeSiteVpcType")
         public String officeSiteVpcType;
 
-        // The OS type.
+        /**
+         * <p>The type of the OS.</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
-        // The information about the OS platform. Valid values:
-        // 
-        // *   CentOS
-        // *   Ubuntu
-        // *   Windows Server 2016
-        // *   Windows Server 2019
-        // *   UOS
+        /**
+         * <p>The information about the OS platform. Valid values:</p>
+         * <br>
+         * <p>*   CentOS</p>
+         * <p>*   Ubuntu</p>
+         * <p>*   Windows Server 2016</p>
+         * <p>*   Windows Server 2019</p>
+         * <p>*   UOS</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
-        // The ID of the policy.
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        /**
+         * <p>The IDs of the policies.</p>
+         */
         @NameInMap("PolicyGroupIdList")
         public java.util.List<String> policyGroupIdList;
 
-        // The name of the policy.
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
+        /**
+         * <p>The names of the policies.</p>
+         */
         @NameInMap("PolicyGroupNameList")
         public java.util.List<String> policyGroupNameList;
 
-        // The progress when the desktop was created.
+        /**
+         * <p>The progress when the cloud desktop was created.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
-        // The protocol type.
-        // 
-        // *   HDX
-        // *   ASP (Recommend)
+        /**
+         * <p>The type of the protocol.</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <p>The type of the session.</p>
+         */
         @NameInMap("SessionType")
         public String sessionType;
 
-        // Details about desktop sessions that regular users hold.
+        /**
+         * <p>Details of the desktop sessions that users hold.</p>
+         */
         @NameInMap("Sessions")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsSessions> sessions;
 
+        /**
+         * <p>The ID of the snapshot policy.</p>
+         */
         @NameInMap("SnapshotPolicyId")
         public String snapshotPolicyId;
 
+        /**
+         * <p>The name of the snapshot policy.</p>
+         */
         @NameInMap("SnapshotPolicyName")
         public String snapshotPolicyName;
 
-        // The first time when the cloud desktop was started.
+        /**
+         * <p>The first time when the cloud desktop was started.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
-        // This parameter is in invitational preview and unavailable for public use.
+        /**
+         * <p>Indicates whether hibernation is supported for the cloud desktop.</p>
+         */
+        @NameInMap("SupportHibernation")
+        public Boolean supportHibernation;
+
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
-        // This parameter is in invitational preview and unavailable for public use.
+        /**
+         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
-        // Details about the tags.
+        /**
+         * <p>Details of the tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsTags> tags;
 
+        /**
+         * <p>Indicates whether disk encryption is enabled.</p>
+         */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
+        /**
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+         */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 
-        // The zone type. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.
+        /**
+         * <p>The type of the zone. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.</p>
+         */
         @NameInMap("ZoneType")
         public String zoneType;
 
@@ -906,6 +1038,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setSupportHibernation(Boolean supportHibernation) {
+            this.supportHibernation = supportHibernation;
+            return this;
+        }
+        public Boolean getSupportHibernation() {
+            return this.supportHibernation;
         }
 
         public DescribeDesktopsResponseBodyDesktops setSystemDiskCategory(String systemDiskCategory) {

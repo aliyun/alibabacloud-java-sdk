@@ -4,61 +4,110 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsRequest extends TeaModel {
-    // The ID of the desktop group.
+    @NameInMap("BundleId")
+    public java.util.List<String> bundleId;
+
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
-    // The name of the desktop group that you want to query. Fuzzy search is supported.
+    /**
+     * <p>The name of the desktop group that you want to query. Fuzzy search is supported.</p>
+     */
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
-    // The authorized user.
+    /**
+     * <p>The authorized users.</p>
+     */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
-    // The authorized user that you want to exclude.
+    /**
+     * <p>The authorized users that you want to exclude.</p>
+     */
     @NameInMap("ExcludedEndUserIds")
     public java.util.List<String> excludedEndUserIds;
 
-    // The number of entries to return on each page. Maximum value: 100 Default value: 10.
+    @NameInMap("ImageId")
+    public java.util.List<String> imageId;
+
+    /**
+     * <p>The maximum number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the workspace to which the desktop group belongs.
+    /**
+     * <p>The ID of the workspace to which the desktop group belongs.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The type of the desktop group.
+    /**
+     * <p>The type of the desktop group.</p>
+     */
     @NameInMap("OwnType")
     public Long ownType;
 
-    // The duration during which the desktop group is valid. The unit is specified by the PeriodUnit parameter.
+    /**
+     * <p>The duration during which the desktop group is valid. The unit is specified by the PeriodUnit parameter.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
-    // The unit of the duration.
+    /**
+     * <p>The unit of the duration.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    // The ID of the policy with which the desktop group is associated.
+    /**
+     * <p>The ID of the policy with which you want to associate the desktop group.</p>
+     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
-    // The ID of the region.
+    /**
+     * <p>The type of the protocol. Valid values:</p>
+     * <br>
+     * <p>*   Adaptive Streaming Protocol (ASP)</p>
+     * <p>*   High-definition Experience (HDX)</p>
+     */
+    @NameInMap("ProtocolType")
+    public String protocolType;
+
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The payment status of the desktop group.
+    /**
+     * <p>The status of the desktop group.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
     public static DescribeDesktopGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopGroupsRequest self = new DescribeDesktopGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDesktopGroupsRequest setBundleId(java.util.List<String> bundleId) {
+        this.bundleId = bundleId;
+        return this;
+    }
+    public java.util.List<String> getBundleId() {
+        return this.bundleId;
     }
 
     public DescribeDesktopGroupsRequest setDesktopGroupId(String desktopGroupId) {
@@ -91,6 +140,14 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     }
     public java.util.List<String> getExcludedEndUserIds() {
         return this.excludedEndUserIds;
+    }
+
+    public DescribeDesktopGroupsRequest setImageId(java.util.List<String> imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public java.util.List<String> getImageId() {
+        return this.imageId;
     }
 
     public DescribeDesktopGroupsRequest setMaxResults(Integer maxResults) {
@@ -147,6 +204,14 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public DescribeDesktopGroupsRequest setProtocolType(String protocolType) {
+        this.protocolType = protocolType;
+        return this;
+    }
+    public String getProtocolType() {
+        return this.protocolType;
     }
 
     public DescribeDesktopGroupsRequest setRegionId(String regionId) {
