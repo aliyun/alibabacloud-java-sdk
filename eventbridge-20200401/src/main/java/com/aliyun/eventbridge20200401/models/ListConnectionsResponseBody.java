@@ -606,9 +606,6 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnections extends TeaModel {
-        @NameInMap("ApiDestinationName")
-        public String apiDestinationName;
-
         @NameInMap("AuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParameters authParameters;
 
@@ -630,14 +627,6 @@ public class ListConnectionsResponseBody extends TeaModel {
         public static ListConnectionsResponseBodyDataConnections build(java.util.Map<String, ?> map) throws Exception {
             ListConnectionsResponseBodyDataConnections self = new ListConnectionsResponseBodyDataConnections();
             return TeaModel.build(map, self);
-        }
-
-        public ListConnectionsResponseBodyDataConnections setApiDestinationName(String apiDestinationName) {
-            this.apiDestinationName = apiDestinationName;
-            return this;
-        }
-        public String getApiDestinationName() {
-            return this.apiDestinationName;
         }
 
         public ListConnectionsResponseBodyDataConnections setAuthParameters(ListConnectionsResponseBodyDataConnectionsAuthParameters authParameters) {
