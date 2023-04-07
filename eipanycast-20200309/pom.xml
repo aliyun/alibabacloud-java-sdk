@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>eipanycast20200309</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>eipanycast20200309</name>
   <description>Alibaba Cloud Eipanycast (20200309) SDK for Java
@@ -41,17 +41,17 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.14</version>
+      <version>0.2.16</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.5</version>
+      <version>0.2.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.14</version>
+      <version>0.2.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -149,6 +149,10 @@
                 <relocation>
                   <pattern>org.apache</pattern>
                   <shadedPattern>com.aliyun.eipanycast20200309.external.org.apache</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.slf4j</pattern>
+                  <shadedPattern>com.aliyun.eipanycast20200309.external.org.slf4j</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>

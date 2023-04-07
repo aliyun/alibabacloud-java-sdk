@@ -105,6 +105,36 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
 
     }
 
+    public static class ListAnycastEipAddressesResponseBodyAnycastListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAnycastEipAddressesResponseBodyAnycastListTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAnycastEipAddressesResponseBodyAnycastListTags self = new ListAnycastEipAddressesResponseBodyAnycastListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAnycastEipAddressesResponseBodyAnycastListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAnycastEipAddressesResponseBodyAnycastListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListAnycastEipAddressesResponseBodyAnycastList extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
@@ -147,6 +177,9 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListAnycastEipAddressesResponseBodyAnycastListTags> tags;
 
         public static ListAnycastEipAddressesResponseBodyAnycastList build(java.util.Map<String, ?> map) throws Exception {
             ListAnycastEipAddressesResponseBodyAnycastList self = new ListAnycastEipAddressesResponseBodyAnycastList();
@@ -263,6 +296,14 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListAnycastEipAddressesResponseBodyAnycastList setTags(java.util.List<ListAnycastEipAddressesResponseBodyAnycastListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListAnycastEipAddressesResponseBodyAnycastListTags> getTags() {
+            return this.tags;
         }
 
     }

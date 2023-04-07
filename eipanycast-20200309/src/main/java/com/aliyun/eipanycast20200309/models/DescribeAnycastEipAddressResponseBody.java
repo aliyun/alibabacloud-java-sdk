@@ -49,6 +49,9 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeAnycastEipAddressResponseBodyTags> tags;
+
     public static DescribeAnycastEipAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAnycastEipAddressResponseBody self = new DescribeAnycastEipAddressResponseBody();
         return TeaModel.build(map, self);
@@ -174,6 +177,14 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         return this.status;
     }
 
+    public DescribeAnycastEipAddressResponseBody setTags(java.util.List<DescribeAnycastEipAddressResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeAnycastEipAddressResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public static class DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoListPopLocations extends TeaModel {
         @NameInMap("PopLocation")
         public String popLocation;
@@ -285,6 +296,36 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class DescribeAnycastEipAddressResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAnycastEipAddressResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAnycastEipAddressResponseBodyTags self = new DescribeAnycastEipAddressResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAnycastEipAddressResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAnycastEipAddressResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
