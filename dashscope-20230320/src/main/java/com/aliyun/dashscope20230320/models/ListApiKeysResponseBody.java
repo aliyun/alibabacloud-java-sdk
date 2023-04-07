@@ -7,17 +7,8 @@ public class ListApiKeysResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Data")
     public ListApiKeysResponseBodyData data;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -35,36 +26,12 @@ public class ListApiKeysResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public ListApiKeysResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListApiKeysResponseBody setData(ListApiKeysResponseBodyData data) {
         this.data = data;
         return this;
     }
     public ListApiKeysResponseBodyData getData() {
         return this.data;
-    }
-
-    public ListApiKeysResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListApiKeysResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public ListApiKeysResponseBody setRequestId(String requestId) {
