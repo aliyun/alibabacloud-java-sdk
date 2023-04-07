@@ -7,9 +7,6 @@ public class GetApiDestinationRequest extends TeaModel {
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static GetApiDestinationRequest build(java.util.Map<String, ?> map) throws Exception {
         GetApiDestinationRequest self = new GetApiDestinationRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class GetApiDestinationRequest extends TeaModel {
     }
     public String getApiDestinationName() {
         return this.apiDestinationName;
-    }
-
-    public GetApiDestinationRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

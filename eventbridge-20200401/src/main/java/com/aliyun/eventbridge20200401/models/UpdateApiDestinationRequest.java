@@ -7,9 +7,6 @@ public class UpdateApiDestinationRequest extends TeaModel {
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("ConnectionName")
     public String connectionName;
 
@@ -30,14 +27,6 @@ public class UpdateApiDestinationRequest extends TeaModel {
     }
     public String getApiDestinationName() {
         return this.apiDestinationName;
-    }
-
-    public UpdateApiDestinationRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public UpdateApiDestinationRequest setConnectionName(String connectionName) {

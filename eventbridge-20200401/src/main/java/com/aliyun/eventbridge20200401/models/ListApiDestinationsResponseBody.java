@@ -150,6 +150,15 @@ public class ListApiDestinationsResponseBody extends TeaModel {
         @NameInMap("ApiDestinations")
         public java.util.List<ListApiDestinationsResponseBodyDataApiDestinations> apiDestinations;
 
+        @NameInMap("MaxResults")
+        public Float maxResults;
+
+        @NameInMap("NextToken")
+        public String nextToken;
+
+        @NameInMap("Total")
+        public Float total;
+
         public static ListApiDestinationsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListApiDestinationsResponseBodyData self = new ListApiDestinationsResponseBodyData();
             return TeaModel.build(map, self);
@@ -161,6 +170,30 @@ public class ListApiDestinationsResponseBody extends TeaModel {
         }
         public java.util.List<ListApiDestinationsResponseBodyDataApiDestinations> getApiDestinations() {
             return this.apiDestinations;
+        }
+
+        public ListApiDestinationsResponseBodyData setMaxResults(Float maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+        public Float getMaxResults() {
+            return this.maxResults;
+        }
+
+        public ListApiDestinationsResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        public ListApiDestinationsResponseBodyData setTotal(Float total) {
+            this.total = total;
+            return this;
+        }
+        public Float getTotal() {
+            return this.total;
         }
 
     }

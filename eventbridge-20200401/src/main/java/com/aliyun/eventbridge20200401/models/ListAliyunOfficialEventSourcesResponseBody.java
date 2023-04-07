@@ -132,6 +132,9 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         @NameInMap("EventTypes")
         public java.util.List<ListAliyunOfficialEventSourcesResponseBodyDataEventSourceListEventTypes> eventTypes;
 
+        @NameInMap("FullName")
+        public String fullName;
+
         @NameInMap("Name")
         public String name;
 
@@ -184,6 +187,14 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         }
         public java.util.List<ListAliyunOfficialEventSourcesResponseBodyDataEventSourceListEventTypes> getEventTypes() {
             return this.eventTypes;
+        }
+
+        public ListAliyunOfficialEventSourcesResponseBodyDataEventSourceList setFullName(String fullName) {
+            this.fullName = fullName;
+            return this;
+        }
+        public String getFullName() {
+            return this.fullName;
         }
 
         public ListAliyunOfficialEventSourcesResponseBodyDataEventSourceList setName(String name) {

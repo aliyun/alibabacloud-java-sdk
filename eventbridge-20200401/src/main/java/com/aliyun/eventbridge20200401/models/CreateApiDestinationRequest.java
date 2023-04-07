@@ -16,9 +16,6 @@ public class CreateApiDestinationRequest extends TeaModel {
     @NameInMap("HttpApiParameters")
     public CreateApiDestinationRequestHttpApiParameters httpApiParameters;
 
-    @NameInMap("InvocationRateLimitPerSecond")
-    public Long invocationRateLimitPerSecond;
-
     public static CreateApiDestinationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApiDestinationRequest self = new CreateApiDestinationRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class CreateApiDestinationRequest extends TeaModel {
     }
     public CreateApiDestinationRequestHttpApiParameters getHttpApiParameters() {
         return this.httpApiParameters;
-    }
-
-    public CreateApiDestinationRequest setInvocationRateLimitPerSecond(Long invocationRateLimitPerSecond) {
-        this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
-        return this;
-    }
-    public Long getInvocationRateLimitPerSecond() {
-        return this.invocationRateLimitPerSecond;
     }
 
     public static class CreateApiDestinationRequestHttpApiParameters extends TeaModel {

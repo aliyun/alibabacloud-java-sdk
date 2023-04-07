@@ -113,137 +113,6 @@ public class CreateConnectionRequest extends TeaModel {
 
     }
 
-    public static class CreateConnectionRequestAuthParametersInvocationHttpParametersBodyParameters extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateConnectionRequestAuthParametersInvocationHttpParametersBodyParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateConnectionRequestAuthParametersInvocationHttpParametersBodyParameters self = new CreateConnectionRequestAuthParametersInvocationHttpParametersBodyParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateConnectionRequestAuthParametersInvocationHttpParametersBodyParameters setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateConnectionRequestAuthParametersInvocationHttpParametersBodyParameters setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class CreateConnectionRequestAuthParametersInvocationHttpParametersHeaderParameters extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateConnectionRequestAuthParametersInvocationHttpParametersHeaderParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateConnectionRequestAuthParametersInvocationHttpParametersHeaderParameters self = new CreateConnectionRequestAuthParametersInvocationHttpParametersHeaderParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateConnectionRequestAuthParametersInvocationHttpParametersHeaderParameters setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateConnectionRequestAuthParametersInvocationHttpParametersHeaderParameters setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class CreateConnectionRequestAuthParametersInvocationHttpParametersQueryStringParameters extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateConnectionRequestAuthParametersInvocationHttpParametersQueryStringParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateConnectionRequestAuthParametersInvocationHttpParametersQueryStringParameters self = new CreateConnectionRequestAuthParametersInvocationHttpParametersQueryStringParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateConnectionRequestAuthParametersInvocationHttpParametersQueryStringParameters setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateConnectionRequestAuthParametersInvocationHttpParametersQueryStringParameters setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class CreateConnectionRequestAuthParametersInvocationHttpParameters extends TeaModel {
-        @NameInMap("BodyParameters")
-        public java.util.List<CreateConnectionRequestAuthParametersInvocationHttpParametersBodyParameters> bodyParameters;
-
-        @NameInMap("HeaderParameters")
-        public java.util.List<CreateConnectionRequestAuthParametersInvocationHttpParametersHeaderParameters> headerParameters;
-
-        @NameInMap("QueryStringParameters")
-        public java.util.List<CreateConnectionRequestAuthParametersInvocationHttpParametersQueryStringParameters> queryStringParameters;
-
-        public static CreateConnectionRequestAuthParametersInvocationHttpParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateConnectionRequestAuthParametersInvocationHttpParameters self = new CreateConnectionRequestAuthParametersInvocationHttpParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateConnectionRequestAuthParametersInvocationHttpParameters setBodyParameters(java.util.List<CreateConnectionRequestAuthParametersInvocationHttpParametersBodyParameters> bodyParameters) {
-            this.bodyParameters = bodyParameters;
-            return this;
-        }
-        public java.util.List<CreateConnectionRequestAuthParametersInvocationHttpParametersBodyParameters> getBodyParameters() {
-            return this.bodyParameters;
-        }
-
-        public CreateConnectionRequestAuthParametersInvocationHttpParameters setHeaderParameters(java.util.List<CreateConnectionRequestAuthParametersInvocationHttpParametersHeaderParameters> headerParameters) {
-            this.headerParameters = headerParameters;
-            return this;
-        }
-        public java.util.List<CreateConnectionRequestAuthParametersInvocationHttpParametersHeaderParameters> getHeaderParameters() {
-            return this.headerParameters;
-        }
-
-        public CreateConnectionRequestAuthParametersInvocationHttpParameters setQueryStringParameters(java.util.List<CreateConnectionRequestAuthParametersInvocationHttpParametersQueryStringParameters> queryStringParameters) {
-            this.queryStringParameters = queryStringParameters;
-            return this;
-        }
-        public java.util.List<CreateConnectionRequestAuthParametersInvocationHttpParametersQueryStringParameters> getQueryStringParameters() {
-            return this.queryStringParameters;
-        }
-
-    }
-
     public static class CreateConnectionRequestAuthParametersOAuthParametersClientParameters extends TeaModel {
         @NameInMap("ClientID")
         public String clientID;
@@ -500,9 +369,6 @@ public class CreateConnectionRequest extends TeaModel {
         @NameInMap("BasicAuthParameters")
         public CreateConnectionRequestAuthParametersBasicAuthParameters basicAuthParameters;
 
-        @NameInMap("InvocationHttpParameters")
-        public CreateConnectionRequestAuthParametersInvocationHttpParameters invocationHttpParameters;
-
         @NameInMap("OAuthParameters")
         public CreateConnectionRequestAuthParametersOAuthParameters OAuthParameters;
 
@@ -533,14 +399,6 @@ public class CreateConnectionRequest extends TeaModel {
         }
         public CreateConnectionRequestAuthParametersBasicAuthParameters getBasicAuthParameters() {
             return this.basicAuthParameters;
-        }
-
-        public CreateConnectionRequestAuthParameters setInvocationHttpParameters(CreateConnectionRequestAuthParametersInvocationHttpParameters invocationHttpParameters) {
-            this.invocationHttpParameters = invocationHttpParameters;
-            return this;
-        }
-        public CreateConnectionRequestAuthParametersInvocationHttpParameters getInvocationHttpParameters() {
-            return this.invocationHttpParameters;
         }
 
         public CreateConnectionRequestAuthParameters setOAuthParameters(CreateConnectionRequestAuthParametersOAuthParameters OAuthParameters) {

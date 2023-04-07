@@ -263,11 +263,26 @@ public class CreateEventSourceRequest extends TeaModel {
     }
 
     public static class CreateEventSourceRequestSourceRocketMQParameters extends TeaModel {
-        @NameInMap("GroupId")
-        public String groupId;
+        @NameInMap("GroupID")
+        public String groupID;
 
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceNetwork")
+        public String instanceNetwork;
+
+        @NameInMap("InstanceSecurityGroupId")
+        public String instanceSecurityGroupId;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("InstanceVSwitchIds")
+        public String instanceVSwitchIds;
+
+        @NameInMap("InstanceVpcId")
+        public String instanceVpcId;
 
         @NameInMap("Offset")
         public String offset;
@@ -289,12 +304,12 @@ public class CreateEventSourceRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateEventSourceRequestSourceRocketMQParameters setGroupId(String groupId) {
-            this.groupId = groupId;
+        public CreateEventSourceRequestSourceRocketMQParameters setGroupID(String groupID) {
+            this.groupID = groupID;
             return this;
         }
-        public String getGroupId() {
-            return this.groupId;
+        public String getGroupID() {
+            return this.groupID;
         }
 
         public CreateEventSourceRequestSourceRocketMQParameters setInstanceId(String instanceId) {
@@ -303,6 +318,46 @@ public class CreateEventSourceRequest extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public CreateEventSourceRequestSourceRocketMQParameters setInstanceNetwork(String instanceNetwork) {
+            this.instanceNetwork = instanceNetwork;
+            return this;
+        }
+        public String getInstanceNetwork() {
+            return this.instanceNetwork;
+        }
+
+        public CreateEventSourceRequestSourceRocketMQParameters setInstanceSecurityGroupId(String instanceSecurityGroupId) {
+            this.instanceSecurityGroupId = instanceSecurityGroupId;
+            return this;
+        }
+        public String getInstanceSecurityGroupId() {
+            return this.instanceSecurityGroupId;
+        }
+
+        public CreateEventSourceRequestSourceRocketMQParameters setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public CreateEventSourceRequestSourceRocketMQParameters setInstanceVSwitchIds(String instanceVSwitchIds) {
+            this.instanceVSwitchIds = instanceVSwitchIds;
+            return this;
+        }
+        public String getInstanceVSwitchIds() {
+            return this.instanceVSwitchIds;
+        }
+
+        public CreateEventSourceRequestSourceRocketMQParameters setInstanceVpcId(String instanceVpcId) {
+            this.instanceVpcId = instanceVpcId;
+            return this;
+        }
+        public String getInstanceVpcId() {
+            return this.instanceVpcId;
         }
 
         public CreateEventSourceRequestSourceRocketMQParameters setOffset(String offset) {

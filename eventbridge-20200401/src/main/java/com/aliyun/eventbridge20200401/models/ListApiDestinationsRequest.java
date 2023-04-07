@@ -7,11 +7,8 @@ public class ListApiDestinationsRequest extends TeaModel {
     @NameInMap("ApiDestinationNamePrefix")
     public String apiDestinationNamePrefix;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("ConnectionName")
+    public String connectionName;
 
     @NameInMap("MaxResults")
     public Long maxResults;
@@ -32,20 +29,12 @@ public class ListApiDestinationsRequest extends TeaModel {
         return this.apiDestinationNamePrefix;
     }
 
-    public ListApiDestinationsRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ListApiDestinationsRequest setConnectionName(String connectionName) {
+        this.connectionName = connectionName;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public ListApiDestinationsRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
+    public String getConnectionName() {
+        return this.connectionName;
     }
 
     public ListApiDestinationsRequest setMaxResults(Long maxResults) {
