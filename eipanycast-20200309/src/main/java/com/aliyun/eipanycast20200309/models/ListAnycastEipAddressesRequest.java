@@ -40,6 +40,9 @@ public class ListAnycastEipAddressesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tags")
+    public java.util.List<ListAnycastEipAddressesRequestTags> tags;
+
     public static ListAnycastEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAnycastEipAddressesRequest self = new ListAnycastEipAddressesRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,44 @@ public class ListAnycastEipAddressesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListAnycastEipAddressesRequest setTags(java.util.List<ListAnycastEipAddressesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListAnycastEipAddressesRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListAnycastEipAddressesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAnycastEipAddressesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAnycastEipAddressesRequestTags self = new ListAnycastEipAddressesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAnycastEipAddressesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAnycastEipAddressesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
