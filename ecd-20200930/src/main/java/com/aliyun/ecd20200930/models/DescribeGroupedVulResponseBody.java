@@ -4,23 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedVulResponseBody extends TeaModel {
-    // The maximum number of entries returned per page.
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // Details about vulnerabilities.
+    /**
+     * <p>Details about vulnerabilities.</p>
+     */
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems;
 
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of entries returned.
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,42 +80,60 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupedVulResponseBodyGroupedVulItems extends TeaModel {
-        // The alias of the vulnerability.
+        /**
+         * <p>The alias of the vulnerability.</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
-        // The number of high-risk vulnerabilities.
+        /**
+         * <p>The number of high-risk vulnerabilities.</p>
+         */
         @NameInMap("AsapCount")
         public Integer asapCount;
 
-        // The time when the vulnerability was last detected. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.
+        /**
+         * <p>The time when the vulnerability was last detected. The timestamp follows the UNIX time format. It is the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970.</p>
+         */
         @NameInMap("GmtLast")
         public String gmtLast;
 
-        // The number of vulnerabilities processed.
+        /**
+         * <p>The number of vulnerabilities processed.</p>
+         */
         @NameInMap("HandledCount")
         public Integer handledCount;
 
-        // The number of medium-risk vulnerabilities.
+        /**
+         * <p>The number of medium-risk vulnerabilities.</p>
+         */
         @NameInMap("LaterCount")
         public Integer laterCount;
 
-        // The name of the vulnerability.
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The number of low-risk vulnerabilities.
+        /**
+         * <p>The number of low-risk vulnerabilities.</p>
+         */
         @NameInMap("NntfCount")
         public Integer nntfCount;
 
-        // The tags of the vulnerability.
+        /**
+         * <p>The tags of the vulnerability.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
-        // The type of the vulnerability. Valid values:
-        // 
-        // *   cve: Linux software vulnerability
-        // *   sys: Windows system vulnerability
+        /**
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   cve: Linux software vulnerability</p>
+         * <p>*   sys: Windows system vulnerability</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,19 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class SetIdpMetadataRequest extends TeaModel {
-    // The ID of the directory.
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
-    // The metadata of the IdP.
+    /**
+     * <p>The metadata of the IdP.</p>
+     */
     @NameInMap("IdpMetadata")
     public String idpMetadata;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,12 +4,24 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class AddDevicesRequest extends TeaModel {
+    /**
+     * <p>The type of the Alibaba Cloud Workspace client that runs on the device.</p>
+     * <br>
+     * <p>*   1: the hardware client</p>
+     * <p>*   2: the software client</p>
+     */
     @NameInMap("ClientType")
     public Integer clientType;
 
+    /**
+     * <p>The list of devices.</p>
+     */
     @NameInMap("DeviceIds")
     public java.util.List<String> deviceIds;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

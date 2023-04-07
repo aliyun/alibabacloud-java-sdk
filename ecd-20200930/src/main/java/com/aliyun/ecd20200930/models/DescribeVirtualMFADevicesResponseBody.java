@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
-    // The token that determines the start point of the next query. This parameter is empty if no additional results exist.
+    /**
+     * <p>The token that determines the start point of the next query. This parameter is empty if no additional results exist.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details of the virtual MFA devices.
+    /**
+     * <p>Details of the virtual MFA devices.</p>
+     */
     @NameInMap("VirtualMFADevices")
     public java.util.List<DescribeVirtualMFADevicesResponseBodyVirtualMFADevices> virtualMFADevices;
 
@@ -46,39 +52,55 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualMFADevicesResponseBodyVirtualMFADevices extends TeaModel {
-        // The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.
+        /**
+         * <p>The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.</p>
+         */
         @NameInMap("ConsecutiveFails")
         public Integer consecutiveFails;
 
-        // >  This parameter is in invitational preview and unavailable for public use.
+        /**
+         * <p>>  This parameter is in invitational preview and unavailable for public use.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
-        // The name of the AD user who uses the virtual MFA device.
+        /**
+         * <p>The name of the AD user who uses the virtual MFA device.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
-        // The time when the virtual MFA device is enabled. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The time when the virtual MFA device is enabled. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtEnabled")
         public String gmtEnabled;
 
-        // The time when the virtual MFA device is automatically unlocked after being locked. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+        /**
+         * <p>The time when the virtual MFA device is automatically unlocked after being locked. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtUnlock")
         public String gmtUnlock;
 
-        // The ID of the workspace.
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
-        // The serial number of the virtual MFA device, which is a unique identifier.
+        /**
+         * <p>The serial number of the virtual MFA device, which is a unique identifier.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
-        // The status of the virtual MFA device. The valid values include:
-        // 
-        // *   UNBOUND: The virtual MFA device is not bound.
-        // *   NORMAL: The virtual MFA device is normal.
-        // *   LOCKED: The virtual MFA device is locked.
+        /**
+         * <p>The status of the virtual MFA device. The valid values include:</p>
+         * <br>
+         * <p>*   UNBOUND: The virtual MFA device is not bound.</p>
+         * <p>*   NORMAL: The virtual MFA device is normal.</p>
+         * <p>*   LOCKED: The virtual MFA device is locked.</p>
+         */
         @NameInMap("status")
         public String status;
 

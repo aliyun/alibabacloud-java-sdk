@@ -4,44 +4,49 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopChargeTypeRequest extends TeaModel {
-    // Specifies whether to enable automatic payment when you change a pay-as-you-go cloud desktop to a subscription cloud desktop. Valid values:
-    // 
-    // *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
-    // *   false: generates an order. However, no payment is completed. You can log on to the EDS console and complete the payment based on the order ID on the **Orders** page.
-    // 
-    // Default value: true.
+    /**
+     * <p>Specifies whether to enable automatic payment if you specify subscription as the new billing method for the cloud desktop.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    // The billing method that you want to change for the cloud desktop. You can change only a pay-as-you-go cloud desktop to a subscription cloud desktop. Valid value: PrePaid.
+    /**
+     * <p>The new billing method that you want to use for the desktop group.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The IDs of the cloud desktops. You can specify 1 to 20 IDs.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
-    // The subscription duration when you change a pay-as-you-go cloud desktop to a subscription cloud desktop. The unit is specified by the PeriodUnit parameter. The Period parameter takes effect and is required only when the ChargeType parameter is set to PrePaid.
-    // 
-    // *   If the PeriodUnit parameter is set to Week, the valid value of the Period parameter is 1.
-    // *   If the PeriodUnit parameter is set to Month, the valid values of the Period parameter are 1, 2, 3, and 6.
-    // *   If the PeriodUnit parameter is set to Year, the valid values of the Period parameter are 1, 2, 3, 4, and 5.
+    /**
+     * <p>The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the `PeriodUnit` parameter. This parameter takes effect only when the `ChargeType` parameter is set to `PrePaid`.</p>
+     * <br>
+     * <p>*   If the `PeriodUnit` parameter is set to `Week`, the valid value of the Period parameter is 1.</p>
+     * <p>*   If the `PeriodUnit` parameter is set to `Month`, the valid values of the Period parameter are 1, 2, 3, and 6.</p>
+     * <p>*   If the `PeriodUnit` parameter is set to `Year`, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
-    // The unit of the subscription duration when you change a pay-as-you-go cloud desktop to a subscription cloud desktop. Valid values:
-    // 
-    // *   Week
-    // *   Month
-    // *   Year
-    // 
-    // Default value: Month.
+    /**
+     * <p>The unit of the subscription duration if you specify subscription as the new billing method for the cloud desktop.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The ID of the sales promotion.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

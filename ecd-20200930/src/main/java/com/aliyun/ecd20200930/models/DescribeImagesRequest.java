@@ -4,56 +4,86 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
-    // The type of the cloud desktop. You can call the [DescribeBundles](~~188884~~) operation to obtain the type of the cloud desktop.
+    /**
+     * <p>The type of the cloud desktop. You can call the [DescribeBundles](~~188884~~) operation to query the available types of cloud desktops.</p>
+     */
     @NameInMap("DesktopInstanceType")
     public String desktopInstanceType;
 
-    // Specifies whether the image is a GPU-accelerated image.
+    /**
+     * <p>Specifies whether the image is a GPU-accelerated image.</p>
+     */
     @NameInMap("GpuCategory")
     public Boolean gpuCategory;
 
-    // The version of the GPU driver.
+    /**
+     * <p>The version of the GPU driver.</p>
+     */
     @NameInMap("GpuDriverVersion")
     public String gpuDriverVersion;
 
-    // The IDs of the images. You can specify one or more image IDs.
+    /**
+     * <p>The IDs of the images. You can specify the IDs of one or more images.</p>
+     */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
-    // The state of the image.
+    /**
+     * <p>The state of the image.</p>
+     */
     @NameInMap("ImageStatus")
     public String imageStatus;
 
-    // The type of the image.
+    /**
+     * <p>The type of the image.</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 
-    // The language of the OS.
+    /**
+     * <p>The language of the OS.</p>
+     */
     @NameInMap("LanguageType")
     public String languageType;
 
-    // The number of entries to return on each page.
-    // 
-    // *   Maximum value: 100.
-    // *   Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Maximum value: 100</p>
+     * <p>*   Default value: 10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The type of the OS. Default value: `null`.
+    /**
+     * <p>The OS of the image. Default value: `null`.</p>
+     */
     @NameInMap("OsType")
     public String osType;
 
-    // The type of the protocol. Recommended value: ASP.
+    /**
+     * <p>The protocol.</p>
+     */
     @NameInMap("ProtocolType")
     public String protocolType;
 
-    // The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <p>The type of the session.</p>
+     */
+    @NameInMap("SessionType")
+    public String sessionType;
 
     public static DescribeImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagesRequest self = new DescribeImagesRequest();
@@ -154,6 +184,14 @@ public class DescribeImagesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeImagesRequest setSessionType(String sessionType) {
+        this.sessionType = sessionType;
+        return this;
+    }
+    public String getSessionType() {
+        return this.sessionType;
     }
 
 }

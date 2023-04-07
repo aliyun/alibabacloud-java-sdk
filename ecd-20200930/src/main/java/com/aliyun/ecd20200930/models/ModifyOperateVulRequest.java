@@ -4,32 +4,42 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyOperateVulRequest extends TeaModel {
-    // The action that you want to perform on the vulnerability. Valid values:
-    // 
-    // *   vul_fix: fixes the vulnerability. The system fixes the vulnerability.
-    // *   vul_verify: verifies whether the vulnerability is fixed. The system performs this action and the cloud desktop is restarted.
-    // *   vul_ignore: ignores the vulnerability. After the vulnerability is ignored, the system provides no more prompts about the vulnerability.
-    // *   vul_undo_ignore: cancels the ignore action on the vulnerability. After you cancel the ignore action on the vulnerability, the system provides prompts about the vulnerability again.
+    /**
+     * <p>The action that you want to perform on the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   vul_fix: fixes the vulnerability. The system fixes the vulnerability.</p>
+     * <p>*   vul_verify: verifies whether the vulnerability is fixed. You must perform this action after the vulnerability is fixed, and the cloud desktop is restarted.</p>
+     * <p>*   vul_ignore: ignores the vulnerability. After the vulnerability is ignored, the system provides no more prompts about the vulnerability.</p>
+     * <p>*   vul_undo_ignore: cancels the ignore action on the vulnerability. After you cancel the ignore action on the vulnerability, the system provides prompts about the vulnerability again.</p>
+     */
     @NameInMap("OperateType")
     public String operateType;
 
-    // The reason why the vulnerability is ignored.
-    // 
-    // This parameter is required only when `OperateType` is set to `vul_ignore`.
+    /**
+     * <p>The reason why the vulnerability is ignored.\</p>
+     * <p>This parameter is required only when `OperateType` is set to `vul_ignore`.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The type of the vulnerability. Valid values:
-    // 
-    // *   cve: Linux software vulnerabilities
-    // *   sys: Windows system vulnerabilities
+    /**
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   cve: the Linux software vulnerability</p>
+     * <p>*   sys: the Windows system vulnerability</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>Details of the vulnerabilities.</p>
+     */
     @NameInMap("VulInfo")
     public java.util.List<ModifyOperateVulRequestVulInfo> vulInfo;
 
@@ -79,15 +89,21 @@ public class ModifyOperateVulRequest extends TeaModel {
     }
 
     public static class ModifyOperateVulRequestVulInfo extends TeaModel {
-        // The ID of cloud desktop in which vulnerability N is detected.
+        /**
+         * <p>The ID of cloud desktop in which the vulnerability is detected.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of vulnerability N.
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The tag of vulnerability N.
+        /**
+         * <p>The tag that you want to add to the vulnerability.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

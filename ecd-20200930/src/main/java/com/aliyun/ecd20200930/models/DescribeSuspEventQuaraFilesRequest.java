@@ -4,36 +4,46 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
-    // The number of the page to return.
-    // 
-    // Pages start from page 1.
-    // 
-    // Default value: 1.
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The maximum number of entries to return on each page.
-    // 
-    // Default value: 20.
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The status of the quarantined file. Valid values:
-    // 
-    // *   quaraFailed: The file failed to be quarantined.
-    // *   quaraDone: The file is quarantined.
-    // *   quaraing: The file is being quarantined.
-    // *   rollbackFailed: Quarantine for the file failed to be canceled.
-    // *   rollbackDone: Quarantine for the file is canceled.
-    // *   rollbacking: Quarantine for the file is being canceled.
+    /**
+     * <p>The status of the quarantined file. Valid values:</p>
+     * <br>
+     * <p>*   quaraFailed: The file failed to be quarantined.</p>
+     * <p>*   quaraDone: The file is quarantined.</p>
+     * <p>*   quaraing: The file is being quarantined.</p>
+     * <p>*   rollbackFailed: Quarantine for the file failed to be canceled.</p>
+     * <p>*   rollbackDone: Quarantine for the file is canceled.</p>
+     * <p>*   rollbacking: Quarantine for the file is being canceled.</p>
+     */
     @NameInMap("Status")
     public String status;
 

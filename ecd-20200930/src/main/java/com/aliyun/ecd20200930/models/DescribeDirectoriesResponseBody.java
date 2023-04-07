@@ -4,19 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesResponseBody extends TeaModel {
-    // The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.
+    /**
+     * <p>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.</p>
+     */
     @NameInMap("AdHostname")
     public String adHostname;
 
-    // Details of the directories.
+    /**
+     * <p>Details of the directories.</p>
+     */
     @NameInMap("Directories")
     public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
 
-    // The token that is used for the next query. If this parameter is empty, all results are returned.
+    /**
+     * <p>The token that is used for the next query. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -58,27 +66,39 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDirectoriesResponseBodyDirectoriesADConnectors extends TeaModel {
-        // The address of the AD connector.
+        /**
+         * <p>The address of the AD connector.</p>
+         */
         @NameInMap("ADConnectorAddress")
         public String ADConnectorAddress;
 
-        // The status of the AD connector.
+        /**
+         * <p>The status of the AD connector.</p>
+         */
         @NameInMap("ConnectorStatus")
         public String connectorStatus;
 
-        // The ID of the network interface controller (NIC) with which the AD connector is associated.
+        /**
+         * <p>The ID of the network interface controller (NIC) with which the AD connector is associated.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        // The type of the AD connector.
+        /**
+         * <p>The type of the AD connector.</p>
+         */
         @NameInMap("Specification")
         public String specification;
 
-        // The trust password of the AD domain controller.
+        /**
+         * <p>The trust password of the AD domain controller.</p>
+         */
         @NameInMap("TrustKey")
         public String trustKey;
 
-        // The ID of the vSwitch with which the AD connector is associated.
+        /**
+         * <p>The ID of the vSwitch with which the AD connector is associated.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -138,19 +158,27 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDirectoriesResponseBodyDirectoriesLogs extends TeaModel {
-        // The level of the log entry.
+        /**
+         * <p>The level of the log entry.</p>
+         */
         @NameInMap("Level")
         public String level;
 
-        // Details of the log entry.
+        /**
+         * <p>Details of the log entry.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // The step that corresponds to the log entry.
+        /**
+         * <p>The step that corresponds to the log entry.</p>
+         */
         @NameInMap("Step")
         public String step;
 
-        // The time when the log entry was printed.
+        /**
+         * <p>The time when the log entry was printed.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
@@ -194,123 +222,179 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDirectoriesResponseBodyDirectories extends TeaModel {
-        // Details of the AD connectors.
+        /**
+         * <p>Details of the AD connectors.</p>
+         */
         @NameInMap("ADConnectors")
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesADConnectors> ADConnectors;
 
-        // The time when the directory was created.
+        /**
+         * <p>The time when the directory was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The ID of the security group.
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("CustomSecurityGroupId")
         public String customSecurityGroupId;
 
-        // The method that is used to connect the client to cloud desktops.
+        /**
+         * <p>The method that is used to connect the client to cloud desktops.</p>
+         */
         @NameInMap("DesktopAccessType")
         public String desktopAccessType;
 
-        // The endpoint that is used to connect to cloud desktops over a VPC.
+        /**
+         * <p>The endpoint that is used to connect to cloud desktops over a VPC.</p>
+         */
         @NameInMap("DesktopVpcEndpoint")
         public String desktopVpcEndpoint;
 
-        // The ID of the directory.
+        /**
+         * <p>The ID of the directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
-        // The type of the directory.
+        /**
+         * <p>The type of the directory.</p>
+         */
         @NameInMap("DirectoryType")
         public String directoryType;
 
-        // Details of the DNS addresses of the directory.
+        /**
+         * <p>Details of the DNS addresses of the directory.</p>
+         */
         @NameInMap("DnsAddress")
         public java.util.List<String> dnsAddress;
 
-        // The username of the Domain Name System (DNS) user.
+        /**
+         * <p>The username of the Domain Name System (DNS) user.</p>
+         */
         @NameInMap("DnsUserName")
         public String dnsUserName;
 
-        // The name of the domain.
+        /**
+         * <p>The name of the domain.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The password of the domain administrator.
+        /**
+         * <p>The password of the domain administrator.</p>
+         */
         @NameInMap("DomainPassword")
         public String domainPassword;
 
-        // The username of the domain administrator.
+        /**
+         * <p>The username of the domain administrator.</p>
+         */
         @NameInMap("DomainUserName")
         public String domainUserName;
 
-        // Indicates whether the permissions of the local administrator are granted to the regular user of the cloud desktop.
+        /**
+         * <p>Indicates whether the permissions of the local administrator are granted to the regular user of the cloud desktop.</p>
+         */
         @NameInMap("EnableAdminAccess")
         public Boolean enableAdminAccess;
 
-        // Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace.
-        // 
-        // If the feature is enabled, the cloud desktops in the same workspace can access each other.
+        /**
+         * <p>Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace.</p>
+         * <br>
+         * <p>If the feature is enabled, the cloud desktops in the same workspace can access each other.</p>
+         */
         @NameInMap("EnableCrossDesktopAccess")
         public Boolean enableCrossDesktopAccess;
 
-        // Indicates whether access over the Internet is allowed.
-        // 
-        // >  This parameter is unavailable.
+        /**
+         * <p>Indicates whether access over the Internet is allowed.</p>
+         * <br>
+         * <p>>  This parameter is unavailable.</p>
+         */
         @NameInMap("EnableInternetAccess")
         public Boolean enableInternetAccess;
 
-        // Details of the IDs of the Apsara File Storage NAS (NAS) file systems.
+        /**
+         * <p>Details of the IDs of the Apsara File Storage NAS (NAS) file systems.</p>
+         */
         @NameInMap("FileSystemIds")
         public java.util.List<String> fileSystemIds;
 
-        // Details of the registration logs.
+        /**
+         * <p>Details of the registration logs.</p>
+         */
         @NameInMap("Logs")
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesLogs> logs;
 
-        // Indicates whether multi-factor authentication (MFA) is enabled.
+        /**
+         * <p>Indicates whether multi-factor authentication (MFA) is enabled.</p>
+         */
         @NameInMap("MfaEnabled")
         public Boolean mfaEnabled;
 
-        // The name of the directory.
+        /**
+         * <p>The name of the directory.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
-        // If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the Elastic Desktop Service (EDS) client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
+        /**
+         * <p>Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\</p>
+         * <p>If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the Elastic Desktop Service (EDS) client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.</p>
+         */
         @NameInMap("NeedVerifyLoginRisk")
         public Boolean needVerifyLoginRisk;
 
-        // The name of the organizational unit (OU) that you specified when you add cloud desktops to domains.
+        /**
+         * <p>The name of the organizational unit (OU) that you specified when you add cloud desktops to domains.</p>
+         */
         @NameInMap("OuName")
         public String ouName;
 
-        // Indicates whether single sign-on (SSO) is enabled.
+        /**
+         * <p>Indicates whether single sign-on (SSO) is enabled.</p>
+         */
         @NameInMap("SsoEnabled")
         public Boolean ssoEnabled;
 
-        // The status of the AD directory. Valid values:
-        // 
-        // *   REGISTERING
-        // *   REGISTERED
+        /**
+         * <p>The status of the AD directory. Valid values:</p>
+         * <br>
+         * <p>*   REGISTERING</p>
+         * <p>*   REGISTERED</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // Details of the DNS addresses of the AD subdomain.
+        /**
+         * <p>Details of the DNS addresses of the AD subdomain.</p>
+         */
         @NameInMap("SubDnsAddress")
         public java.util.List<String> subDnsAddress;
 
-        // The fully qualified domain name (FQDN) of the enterprise AD subdomain. The value must contain the hostname and the subdomain name. Example: child.example.com.
+        /**
+         * <p>The fully qualified domain name (FQDN) of the enterprise AD subdomain. The value must contain the hostname and the subdomain name. Example: child.example.com.</p>
+         */
         @NameInMap("SubDomainName")
         public String subDomainName;
 
-        // The AD trust password.
+        /**
+         * <p>The AD trust password.</p>
+         */
         @NameInMap("TrustPassword")
         public String trustPassword;
 
-        // Details of vSwitch IDs that are specified when the directory is being created.
+        /**
+         * <p>Details of vSwitch IDs that are specified when the directory is being created.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
-        // The ID of the virtual private cloud (VPC) to which the vSwitch belongs.
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the vSwitch belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

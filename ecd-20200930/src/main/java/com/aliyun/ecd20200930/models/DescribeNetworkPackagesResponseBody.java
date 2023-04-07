@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkPackagesResponseBody extends TeaModel {
-    // Details about the Internet access packages.
+    /**
+     * <p>Details of the Internet access packages.</p>
+     */
     @NameInMap("NetworkPackages")
     public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> networkPackages;
 
-    // The token that determines the start point of the next query. This parameter is empty if no additional results exist.
+    /**
+     * <p>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,65 +52,108 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkPackagesResponseBodyNetworkPackages extends TeaModel {
-        // The peak public bandwidth value. Unit: Mbit/s.
+        /**
+         * <p>The maximum public bandwidth of the Internet access package. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
-        // The time when the Internet access package was created.
+        /**
+         * <p>The time when the Internet access package was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // >  This parameter is in invitational preview and unavailable for public use.
+        /**
+         * <p>The elastic IP addresses (EIPs) of the Internet access package for outbound traffic.</p>
+         */
         @NameInMap("EipAddresses")
         public java.util.List<String> eipAddresses;
 
-        // The time when the Internet access package expires.
-        // 
-        // *   If the Internet access package uses the pay-by-bandwidth billing method, the actual expiration time is returned.
-        // *   If the Internet access package uses the pay-by-data-transfer billing method, 2099-12-31T15:59:59Z is returned.
+        /**
+         * <p>The time when the Internet access package expires.</p>
+         * <br>
+         * <p>*   If the Internet access package is metered on a pay-by-bandwidth basis, the actual expiration time is returned.</p>
+         * <p>*   If the Internet access package is metered on a pay-by-data-transfer basis, 2099-12-31T15:59:59Z is returned.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        // The billing method of the Internet access package.
-        // 
-        // *   PayByTraffic: pay-by-data-transfer
-        // *   PayByBandwidth: pay-by-bandwidth
+        /**
+         * <p>The billing method of the network bandwidth.</p>
+         * <br>
+         * <p>*   PayByTraffic: pay-by-data-transfer</p>
+         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
-        // The ID of the Internet access package.
+        /**
+         * <p>The ID of the Internet access package.</p>
+         */
         @NameInMap("NetworkPackageId")
         public String networkPackageId;
 
-        // The status of the Internet access package. The valid values include:
-        // 
-        // *   Creating: The Internet access package is being created.
-        // *   InUse: The Internet access package is in use.
-        // *   Releasing: The Internet access package is being released.
-        // *   Released: The Internet access package is released.
+        /**
+         * <p>The state of the Internet access package. Valid values:</p>
+         * <br>
+         * <p>*   Creating</p>
+         * <p>*   InUse</p>
+         * <p>*   Releasing</p>
+         * <p>*   Released</p>
+         */
         @NameInMap("NetworkPackageStatus")
         public String networkPackageStatus;
 
-        // The ID of the workspace.
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
-        // The name of the workspace.
+        /**
+         * <p>The name of the workspace.</p>
+         */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        /**
+         * <p>The type of the workspace. Valid values:</p>
+         * <br>
+         * <p>*   basic</p>
+         * <p>*   standard</p>
+         * <p>*   customized</p>
+         */
         @NameInMap("OfficeSiteVpcType")
         public String officeSiteVpcType;
 
+        /**
+         * <p>The billing method for the network.</p>
+         * <br>
+         * <p>*   PrePaid: subscription</p>
+         * <p>*   PostPaid: pay-as-you-go</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The time when the reserved network bandwidth takes effect.</p>
+         */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
 
+        /**
+         * <p>The peak bandwidth of the reserved network bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("ReservationBandwidth")
         public Integer reservationBandwidth;
 
+        /**
+         * <p>The billing method of the reserved network bandwidth.</p>
+         * <br>
+         * <p>*   PayByTraffic: pay-by-data-transfer</p>
+         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
+         */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
 

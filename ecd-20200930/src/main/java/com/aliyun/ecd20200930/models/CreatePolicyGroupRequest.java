@@ -4,151 +4,288 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyGroupRequest extends TeaModel {
-    // Specifies whether to enable the anti-screenshot feature.
+    /**
+     * <p>Specifies whether to enable the anti-screenshot feature.</p>
+     */
     @NameInMap("AppContentProtection")
     public String appContentProtection;
 
-    // The client IP address whitelists. After this parameter is configured, only the IP addresses specified in the whitelist of the CIDR block can access the cloud desktop.
+    /**
+     * <p>The client IP address whitelists. Only the client IP addresses in whitelists can access the cloud desktop.</p>
+     */
     @NameInMap("AuthorizeAccessPolicyRule")
     public java.util.List<CreatePolicyGroupRequestAuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
 
-    // The security group rules.
+    /**
+     * <p>The security group rules.</p>
+     */
     @NameInMap("AuthorizeSecurityPolicyRule")
     public java.util.List<CreatePolicyGroupRequestAuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
-    // Specifies whether to enable the webcam redirection feature.
+    /**
+     * <p>Specifies whether to enable the webcam redirection feature.</p>
+     */
     @NameInMap("CameraRedirect")
     public String cameraRedirect;
 
-    // The logon methods. This parameter is used to specify the clients from which you can access the cloud desktop.
+    /**
+     * <p>The logon methods. You can use this parameter to determine which clients can be used to connect to the cloud desktop.</p>
+     */
     @NameInMap("ClientType")
     public java.util.List<CreatePolicyGroupRequestClientType> clientType;
 
-    // The permissions on the clipboard.
+    /**
+     * <p>The permissions on the clipboard.</p>
+     */
     @NameInMap("Clipboard")
     public String clipboard;
 
-    // The blacklist or whitelist of domain names. Domain names support the asterisk (\*) wildcard. Separate multiple domain names with commas (,). Valid values:
-    // 
-    // *   \[black:],example1.com,example2.com: the domain name blacklist. The cloud desktop cannot access the domain names specified in the blacklist.
-    // *   \[white:],example1.com,example2.com: the domain name whitelist. The cloud desktop can access only the domain names specified in the whitelist.
+    /**
+     * <p>The blacklist or whitelist of domain names. You can use asterisks (\*) as wildcard characters for domain names. Separate multiple domain names with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   \[black:],example1.com,example2.com: domain name blacklist. The cloud desktop is not allowed to access the domain names that are specified in the blacklist.</p>
+     * <p>*   \[white:],example1.com,example2.com: domain name whitelist. The cloud desktop is allowed to access only the domain names that are specified in the whitelist.</p>
+     */
     @NameInMap("DomainList")
     public String domainList;
 
-    // Specifies whether to enable the image quality policy for the Graphics desktop. We recommend that you enable this policy if you have high requirements on desktop performance and user experience. For example, you can enable this policy in professional design scenarios.
+    @NameInMap("EndUserApplyAdminCoordinate")
+    public String endUserApplyAdminCoordinate;
+
+    @NameInMap("EndUserGroupCoordinate")
+    public String endUserGroupCoordinate;
+
+    /**
+     * <p>Specifies whether to enable the image display quality feature for the Graphics cloud desktop. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional design scenarios.</p>
+     */
     @NameInMap("GpuAcceleration")
     public String gpuAcceleration;
 
-    // The access policy for HTML5 clients.
-    // 
-    // > We recommend that you use the ClientType-related parameters to control the EDS client type for cloud desktop logon.
+    /**
+     * <p>The policy for HTML5 client access.</p>
+     * <br>
+     * <p>> To manage the type of Alibaba Cloud Workspace client for desktop connection, we recommend that you use the ClientType parameter.</p>
+     */
     @NameInMap("Html5Access")
     public String html5Access;
 
-    // The file transfer policy for HTML5 clients.
+    /**
+     * <p>The file transfer policy for HTML5 clients.</p>
+     */
     @NameInMap("Html5FileTransfer")
     public String html5FileTransfer;
 
+    /**
+     * <p>The protocol that you want to use for network communication. Valid values: -TCP: Only TCP is allowed. -BOTH: Automatic switch between TCP and UDP is allowed. Default value: TCP.</p>
+     */
     @NameInMap("InternetCommunicationProtocol")
     public String internetCommunicationProtocol;
 
-    // The permissions on local disk mapping.
+    /**
+     * <p>The permissions on local disk mapping.</p>
+     */
     @NameInMap("LocalDrive")
     public String localDrive;
 
-    // The name of the policy.
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // Specifies whether to enable network redirection.
+    /**
+     * <p>Specifies whether to enable the network redirection feature.</p>
+     */
     @NameInMap("NetRedirect")
     public String netRedirect;
 
-    // Specifies whether to allow user preemption.
-    // 
-    // > To improve user experience and ensure data security, multiple regular users cannot connect to the same cloud desktop at the same time. The default value of this parameter is `off`, and the value cannot be modified.
+    /**
+     * <p>Specifies whether to allow user preemption.</p>
+     * <br>
+     * <p>> To improve user experience and ensure data security, multiple end users cannot connect to the same cloud desktop at the same time. The default value of this parameter is `off`, and the value cannot be changed.</p>
+     */
     @NameInMap("PreemptLogin")
     public String preemptLogin;
 
-    // The names of the users that are allowed to connect to the same cloud desktop at the same time. You can specify up to five usernames.
-    // 
-    // > To improve user experience and ensure data security, multiple regular users cannot connect to the same cloud desktop at the same time.
+    /**
+     * <p>The names of the end users that are allowed to connect to a cloud desktop to which another end user is connecting. You can specify up to five usernames.</p>
+     * <br>
+     * <p>> To improve user experience and ensure data security, we recommend that you disable the user preemption feature.</p>
+     */
     @NameInMap("PreemptLoginUser")
     public java.util.List<String> preemptLoginUser;
 
-    // The policy for printer redirection.
+    /**
+     * <p>The policy for printer redirection.</p>
+     */
     @NameInMap("PrinterRedirection")
     public String printerRedirection;
 
-    // Specifies whether to enable the custom screen recording feature.
+    /**
+     * <p>Specifies whether to enable the custom screen recording feature.</p>
+     */
     @NameInMap("RecordContent")
     public String recordContent;
 
-    // The time when the custom screen recording expires. Default value: 30 days.
+    /**
+     * <p>The duration in which the custom screen recording is valid. Default value: 30. Unit: days.</p>
+     */
     @NameInMap("RecordContentExpires")
     public Long recordContentExpires;
 
-    // Specifies whether to enable screen recording.
+    /**
+     * <p>Specifies whether to enable screen recording.</p>
+     */
     @NameInMap("Recording")
     public String recording;
 
+    /**
+     * <p>Specifies whether to record audio data during the screen recording. Valid values:</p>
+     * <br>
+     * <p>*   on: records audio and video data.</p>
+     * <p>*   off: records only video data.</p>
+     */
     @NameInMap("RecordingAudio")
     public String recordingAudio;
 
+    /**
+     * <p>The duration from the time when the screen recording starts to the time when the screen recording stops. If you specify the Recording parameter, you must also specify the RecordingDuration parameter. When the specified duration ends, a recording file is generated.</p>
+     */
     @NameInMap("RecordingDuration")
     public Integer recordingDuration;
 
-    // The end time for screen recording. The value is in the format of HH:MM:SS. The value takes effect only when you set the Recording parameter to PERIOD.
+    /**
+     * <p>The time when the screen recording stops. Specify the value in the HH:MM:SS format. The value of this parameter is valid only if you set the Recording parameter to PERIOD.</p>
+     */
     @NameInMap("RecordingEndTime")
     public String recordingEndTime;
 
-    // The duration in which the screen recording is valid. Unit: days.
+    /**
+     * <p>The duration in which the screen recording is valid. Unit: days.</p>
+     */
     @NameInMap("RecordingExpires")
     public Long recordingExpires;
 
-    // The frame rate of screen recording.
+    /**
+     * <p>The frame rate of screen recording.</p>
+     */
     @NameInMap("RecordingFps")
     public Long recordingFps;
 
-    // The start time for screen recording. The value is in the format of HH:MM:SS. The value takes effect only when you set the Recording parameter to PERIOD.
+    /**
+     * <p>The time when the screen recording starts. Specify the value in the HH:MM:SS format. The value of this parameter is valid only if you set the Recording parameter to PERIOD.</p>
+     */
     @NameInMap("RecordingStartTime")
     public String recordingStartTime;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The permissions to control the keyboard and the mouse during remote assistance.
+    /**
+     * <p>The permissions to control the keyboard and the mouse during remote assistance.</p>
+     */
     @NameInMap("RemoteCoordinate")
     public String remoteCoordinate;
 
+    /**
+     * <p>The effective scope of the policy. Valid values:</p>
+     * <br>
+     * <p>*   GLOBAL: takes effect globally.</p>
+     * <p>*   IP: takes effect based on the IP address.</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <p>The effective CIDR block range. If you set the Scope parameter to IP, you must specify this parameter.</p>
+     */
     @NameInMap("ScopeValue")
     public java.util.List<String> scopeValue;
 
-    // Specifies whether to enable USB redirection.
+    /**
+     * <p>Specifies whether to enable USB redirection.</p>
+     */
     @NameInMap("UsbRedirect")
     public String usbRedirect;
 
-    // The USB redirection rules.
+    /**
+     * <p>The USB redirection rule.</p>
+     */
     @NameInMap("UsbSupplyRedirectRule")
     public java.util.List<CreatePolicyGroupRequestUsbSupplyRedirectRule> usbSupplyRedirectRule;
 
-    // The policy for image display quality.
+    /**
+     * <p>Specifies whether to enable the multimedia redirection. Valid values:</p>
+     * <br>
+     * <p>*   on: enables the multimedia redirection.</p>
+     * <p>*   off: disables the multimedia redirection.</p>
+     */
+    @NameInMap("VideoRedirect")
+    public String videoRedirect;
+
+    /**
+     * <p>The policy for image display quality.</p>
+     */
     @NameInMap("VisualQuality")
     public String visualQuality;
 
-    // Specifies whether to enable watermarking.
+    /**
+     * <p>Specifies whether to enable watermarking.</p>
+     */
     @NameInMap("Watermark")
     public String watermark;
 
-    // The transparency of the watermark.
+    /**
+     * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+     */
+    @NameInMap("WatermarkColor")
+    public Integer watermarkColor;
+
+    /**
+     * <p>The inclination angle of the watermark. Valid values: -10 to -30.</p>
+     */
+    @NameInMap("WatermarkDegree")
+    public Double watermarkDegree;
+
+    /**
+     * <p>The font size of the watermark. Valid values: 10 to 20.</p>
+     */
+    @NameInMap("WatermarkFontSize")
+    public Integer watermarkFontSize;
+
+    /**
+     * <p>The font style of the watermark. Valid values:</p>
+     * <br>
+     * <p>*   plain</p>
+     * <p>*   bold</p>
+     */
+    @NameInMap("WatermarkFontStyle")
+    public String watermarkFontStyle;
+
+    /**
+     * <p>The number of watermark rows. This parameter is not supported.</p>
+     */
+    @NameInMap("WatermarkRowAmount")
+    public Integer watermarkRowAmount;
+
+    /**
+     * <p>The transparency of the watermark.</p>
+     */
     @NameInMap("WatermarkTransparency")
     public String watermarkTransparency;
 
-    // The type of the watermark. You can specify multiple watermark types at a time. Separate the watermark types with commas (,).
+    /**
+     * <p>The transparency of the watermark. A larger value specifies that the watermark is less transparent. Valid values: 10 to 1000.</p>
+     */
+    @NameInMap("WatermarkTransparencyValue")
+    public Integer watermarkTransparencyValue;
+
+    /**
+     * <p>The type of the watermark. You can specify multiple types of watermarks at the same time. Separate multiple watermark types with commas (,).</p>
+     */
     @NameInMap("WatermarkType")
     public String watermarkType;
 
@@ -211,6 +348,22 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public String getDomainList() {
         return this.domainList;
+    }
+
+    public CreatePolicyGroupRequest setEndUserApplyAdminCoordinate(String endUserApplyAdminCoordinate) {
+        this.endUserApplyAdminCoordinate = endUserApplyAdminCoordinate;
+        return this;
+    }
+    public String getEndUserApplyAdminCoordinate() {
+        return this.endUserApplyAdminCoordinate;
+    }
+
+    public CreatePolicyGroupRequest setEndUserGroupCoordinate(String endUserGroupCoordinate) {
+        this.endUserGroupCoordinate = endUserGroupCoordinate;
+        return this;
+    }
+    public String getEndUserGroupCoordinate() {
+        return this.endUserGroupCoordinate;
     }
 
     public CreatePolicyGroupRequest setGpuAcceleration(String gpuAcceleration) {
@@ -413,6 +566,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
         return this.usbSupplyRedirectRule;
     }
 
+    public CreatePolicyGroupRequest setVideoRedirect(String videoRedirect) {
+        this.videoRedirect = videoRedirect;
+        return this;
+    }
+    public String getVideoRedirect() {
+        return this.videoRedirect;
+    }
+
     public CreatePolicyGroupRequest setVisualQuality(String visualQuality) {
         this.visualQuality = visualQuality;
         return this;
@@ -429,12 +590,60 @@ public class CreatePolicyGroupRequest extends TeaModel {
         return this.watermark;
     }
 
+    public CreatePolicyGroupRequest setWatermarkColor(Integer watermarkColor) {
+        this.watermarkColor = watermarkColor;
+        return this;
+    }
+    public Integer getWatermarkColor() {
+        return this.watermarkColor;
+    }
+
+    public CreatePolicyGroupRequest setWatermarkDegree(Double watermarkDegree) {
+        this.watermarkDegree = watermarkDegree;
+        return this;
+    }
+    public Double getWatermarkDegree() {
+        return this.watermarkDegree;
+    }
+
+    public CreatePolicyGroupRequest setWatermarkFontSize(Integer watermarkFontSize) {
+        this.watermarkFontSize = watermarkFontSize;
+        return this;
+    }
+    public Integer getWatermarkFontSize() {
+        return this.watermarkFontSize;
+    }
+
+    public CreatePolicyGroupRequest setWatermarkFontStyle(String watermarkFontStyle) {
+        this.watermarkFontStyle = watermarkFontStyle;
+        return this;
+    }
+    public String getWatermarkFontStyle() {
+        return this.watermarkFontStyle;
+    }
+
+    public CreatePolicyGroupRequest setWatermarkRowAmount(Integer watermarkRowAmount) {
+        this.watermarkRowAmount = watermarkRowAmount;
+        return this;
+    }
+    public Integer getWatermarkRowAmount() {
+        return this.watermarkRowAmount;
+    }
+
     public CreatePolicyGroupRequest setWatermarkTransparency(String watermarkTransparency) {
         this.watermarkTransparency = watermarkTransparency;
         return this;
     }
     public String getWatermarkTransparency() {
         return this.watermarkTransparency;
+    }
+
+    public CreatePolicyGroupRequest setWatermarkTransparencyValue(Integer watermarkTransparencyValue) {
+        this.watermarkTransparencyValue = watermarkTransparencyValue;
+        return this;
+    }
+    public Integer getWatermarkTransparencyValue() {
+        return this.watermarkTransparencyValue;
     }
 
     public CreatePolicyGroupRequest setWatermarkType(String watermarkType) {
@@ -446,11 +655,15 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
 
     public static class CreatePolicyGroupRequestAuthorizeAccessPolicyRule extends TeaModel {
-        // The IPv4 CIDR block that can be accessed from the client. The value is an IPv4 CIDR block.
+        /**
+         * <p>The IPv4 CIDR block that you want to access from the client.</p>
+         */
         @NameInMap("CidrIp")
         public String cidrIp;
 
-        // The description of the client IP address whitelist.
+        /**
+         * <p>The description of the client IP address whitelist.</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -478,40 +691,54 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
 
     public static class CreatePolicyGroupRequestAuthorizeSecurityPolicyRule extends TeaModel {
-        // The IPv4 CIDR block of the security group rule.
+        /**
+         * <p>The IPv4 CIDR block of the security group rule.</p>
+         */
         @NameInMap("CidrIp")
         public String cidrIp;
 
-        // The description of the security group rule.
+        /**
+         * <p>The description of the security group rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The protocol type of the security group rule.
+        /**
+         * <p>The protocol type of the security group rule.</p>
+         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
-        // The authorization policy of the security group rule.
+        /**
+         * <p>The authorization policy of the security group rule.</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
-        // The port range of the security group rule. The value of the port range is determined by the protocol type specified by the AuthorizeSecurityPolicyRule.IpProtocol parameter.
-        // 
-        // *   If the AuthorizeSecurityPolicyRule.IpProtocol parameter is set to tcp or udp, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-        // *   If the AuthorizeSecurityPolicyRule.IpProtocol parameter is set to icmp, set the value to -1/-1.
-        // *   If the AuthorizeSecurityPolicyRule.IpProtocol parameter is set to gre, set the value to -1/-1.
-        // *   If the AuthorizeSecurityPolicyRule.IpProtocol parameter is set to all, set the value to -1/-1.
-        // 
-        // For information about the common ports of typical applications, see [Common ports](~~40724~~).
+        /**
+         * <p>The port range of the security group rule. The value range of this parameter varies based on the value of the IpProtocol parameter.</p>
+         * <br>
+         * <p>*   If you set the IpProtocol parameter to TCP or UDP, the value range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
+         * <p>*   If you set the IpProtocol parameter to ICMP, the start port number and the end port number are -1/-1.</p>
+         * <p>*   If you set the IpProtocol parameter to GRE, the start port number and the end port number are -1/-1.</p>
+         * <p>*   If you set the IpProtocol parameter to ALL, the start port number and the end port number are -1/-1.</p>
+         * <br>
+         * <p>For more information about the common ports of applications, see [Common ports](~~40724~~).</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
-        // The priority of the security group rule. A smaller value indicates a higher priority.
-        // - Valid values: 1 to 60. 
-        // - Default value: 1.
+        /**
+         * <p>The priority of the security group rule. A smaller value specifies a higher priority.\</p>
+         * <p>Valid values: 1 to 60.\</p>
+         * <p>Default value: 1.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
-        // The direction of the security group rule.
+        /**
+         * <p>The direction of the security group rule.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -579,15 +806,19 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
 
     public static class CreatePolicyGroupRequestClientType extends TeaModel {
-        // The client type that is allowed to log on to cloud desktops.
-        // 
-        // > By default, if you do not set the ClientType-related parameters, all types of clients are allowed to log on to cloud desktops.
+        /**
+         * <p>The type of the client.</p>
+         * <br>
+         * <p>> By default, if you do not specify the ClientType parameter, all types of clients can be used to connect to cloud desktops.</p>
+         */
         @NameInMap("ClientType")
         public String clientType;
 
-        // Specifies whether a specific client type is allowed to log on to the cloud desktop.
-        // 
-        // > By default, if you do not set the ClientType-related parameters, all types of clients are allowed to log on to cloud desktops.
+        /**
+         * <p>Specifies whether a specific client type can be used to connect to the cloud desktop.</p>
+         * <br>
+         * <p>> By default, if you do not specify the ClientType parameter, all types of clients can be used to connect to cloud desktops.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -615,31 +846,45 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
 
     public static class CreatePolicyGroupRequestUsbSupplyRedirectRule extends TeaModel {
-        // The description of the rule.
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // The device class. This parameter is required when you set the `usbRuleType` parameter to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
+        /**
+         * <p>The class of the device. If you set the `usbRuleType` parameter to 1, you must specify this parameter. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).</p>
+         */
         @NameInMap("DeviceClass")
         public String deviceClass;
 
-        // The subclass of the device. This parameter is required when you set the `usbRuleType` parameter to 1. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).
+        /**
+         * <p>The subclass of the device. If you set the `usbRuleType` parameter to 1, you must specify this parameter. For more information, see [Defined Class Codes](https://www.usb.org/defined-class-codes).</p>
+         */
         @NameInMap("DeviceSubclass")
         public String deviceSubclass;
 
-        // The ID of the service.
+        /**
+         * <p>The ID of the product.</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
-        // The type of USB redirection.
+        /**
+         * <p>The type of USB redirection.</p>
+         */
         @NameInMap("UsbRedirectType")
         public Long usbRedirectType;
 
-        // The type of the USB redirection rule.
+        /**
+         * <p>The type of the USB redirection rule.</p>
+         */
         @NameInMap("UsbRuleType")
         public Long usbRuleType;
 
-        // The ID of the vendor. For more information, see [Valid USB Vendor IDs (VIDs)](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).
+        /**
+         * <p>The ID of the vendor. For more information, see [Valid USB Vendor IDs (VIDs)](https://www.usb.org/sites/default/files/vendor_ids032322.pdf\_1.pdf).</p>
+         */
         @NameInMap("VendorId")
         public String vendorId;
 

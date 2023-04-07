@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersPasswordResponseBody extends TeaModel {
+    /**
+     * <p>The users that are associated with cloud desktop.</p>
+     */
     @NameInMap("DesktopUsers")
     public java.util.List<DescribeUsersPasswordResponseBodyDesktopUsers> desktopUsers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersPasswordResponseBodyDesktopUsers extends TeaModel {
+        /**
+         * <p>The display name of the user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the end user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The password of the user.</p>
+         */
         @NameInMap("Password")
         public String password;
 

@@ -4,62 +4,80 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateBundleRequest extends TeaModel {
-    // The name of the desktop template.
+    /**
+     * <p>The name of the desktop template.</p>
+     */
     @NameInMap("BundleName")
     public String bundleName;
 
-    // The description of the desktop template.
+    /**
+     * <p>The description of the desktop template.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The type of the cloud desktop. You can call the DescribeBundles operation to query the cloud desktop templates and obtain the supported desktop type from the value of the DesktopType parameter.
-    // 
-    // >  You can select GPU-accelerated desktop types only when you use GPU-accelerated images.
+    /**
+     * <p>The type of the cloud desktop. You can call the DescribeBundles operation to query the cloud desktop templates and obtain the supported desktop type from the value of the DesktopType parameter.</p>
+     * <br>
+     * <p>>  You can select GPU-accelerated desktop types only when you use GPU-accelerated images.</p>
+     */
     @NameInMap("DesktopType")
     public String desktopType;
 
-    // The ID of the image.
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
-    // The language of the OS. This parameter is available only for system images. Valid values:
-    // 
-    // *   zh-CN: Simplified Chinese
-    // *   zh-HK: Traditional Chinese (Hong Kong)
-    // *   en-US: English
-    // *   ja-JP: Japanese
+    /**
+     * <p>The language of the OS. This parameter is available only for system images. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN: Simplified Chinese</p>
+     * <p>*   zh-HK: Traditional Chinese (Hong Kong)</p>
+     * <p>*   en-US: English</p>
+     * <p>*   ja-JP: Japanese</p>
+     */
     @NameInMap("Language")
     public String language;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:
-    // 
-    // *   PL0
-    // *   PL1
-    // *   PL2
-    // *   PL3
-    // 
-    // For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).
+    /**
+     * <p>The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:</p>
+     * <br>
+     * <p>*   PL0</p>
+     * <p>*   PL1</p>
+     * <p>*   PL2</p>
+     * <p>*   PL3</p>
+     * <br>
+     * <p>For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).</p>
+     */
     @NameInMap("RootDiskPerformanceLevel")
     public String rootDiskPerformanceLevel;
 
-    // The size of the system disk. Unit: GiB.
-    // 
-    // The value of this parameter must be consistent with the system disk size supported by the cloud desktop type. For more information, see [Cloud desktop types](~~188609~~).
+    /**
+     * <p>The size of the system disk. Unit: GiB.</p>
+     * <br>
+     * <p>The value of this parameter must be consistent with the system disk size supported by the cloud desktop type. For more information, see [Cloud desktop types](~~188609~~).</p>
+     */
     @NameInMap("RootDiskSizeGib")
     public Integer rootDiskSizeGib;
 
-    // The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:
-    // 
-    // *   PL0
-    // *   PL1
-    // *   PL2
-    // *   PL3
-    // 
-    // For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).
+    /**
+     * <p>The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:</p>
+     * <br>
+     * <p>*   PL0</p>
+     * <p>*   PL1</p>
+     * <p>*   PL2</p>
+     * <p>*   PL3</p>
+     * <br>
+     * <p>For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).</p>
+     */
     @NameInMap("UserDiskPerformanceLevel")
     public String userDiskPerformanceLevel;
 

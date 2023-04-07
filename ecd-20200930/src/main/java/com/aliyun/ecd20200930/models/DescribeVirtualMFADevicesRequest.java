@@ -4,23 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesRequest extends TeaModel {
-    // The list of the AD users.
+    /**
+     * <p>The list of the AD users.</p>
+     */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
-    // The maximum number of results to return. Valid values: 1 to 500. Default value: 100.
+    /**
+     * <p>The maximum number of results to return. Valid values: 1 to 500. Default value: 100.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that determines the start point of the query. Set the value to the NextToken value returned in the last call.
+    /**
+     * <p>The token that determines the start point of the query. Set the value to the NextToken value returned in the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

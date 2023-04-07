@@ -4,128 +4,170 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsRequest extends TeaModel {
-    // The billing method of the cloud desktop. Valid values:
-    // 
-    // *   PostPaid: pay-as-you-go
-    // *   PrePaid: subscription
-    // 
-    // Default value: PostPaid.
+    /**
+     * <p>The billing method of the cloud desktop.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.``</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    /**
+     * <p>The IDs of the cloud desktops. You can specify 1 to 100 IDs of cloud desktops.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
-    // The name of the cloud desktop.
+    /**
+     * <p>The name of the cloud desktop.</p>
+     */
     @NameInMap("DesktopName")
     public String desktopName;
 
-    // The status of the cloud desktop. Valid values:
-    // 
-    // *   Pending
-    // *   Starting
-    // *   Running
-    // *   Stopping
-    // *   Rebuilding
-    // *   Stopped
-    // *   Expired
-    // *   Deleted
+    /**
+     * <p>The state of the cloud desktop.</p>
+     */
     @NameInMap("DesktopStatus")
     public String desktopStatus;
 
-    // The ID of the directory, which is the same as the workspace ID.
+    /**
+     * <p>The new desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported desktop types.</p>
+     */
+    @NameInMap("DesktopType")
+    public String desktopType;
+
+    /**
+     * <p>The ID of the directory. The ID is the same as the workspace ID.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The IDs of the users that are assigned the cloud desktop. You can specify IDs of 1 to 100 users.</p>
+     * <br>
+     * <p>> Only one user can use the cloud desktop at a time.</p>
+     */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    /**
+     * <p>The IDs of the users that are excluded from the users that are assigned the cloud desktop. You can specify IDs of 1 to 100 users.</p>
+     */
     @NameInMap("ExcludedEndUserId")
     public java.util.List<String> excludedEndUserId;
 
-    // The time when the subscription cloud desktop expires.
+    /**
+     * <p>The time when the subscription cloud desktop expires.</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
-    // Specifies whether to filter cloud desktops in the desktop group. Default value: true.
-    // 
-    // *   true: filters cloud desktops in the desktop group.
-    // *   false: does not filter cloud desktops in the desktop group.
+    /**
+     * <p>Specifies whether to filter cloud desktops in the desktop group.</p>
+     */
     @NameInMap("FilterDesktopGroup")
     public Boolean filterDesktopGroup;
 
-    // The ID of the cloud desktop group.
-    // 
-    // >  The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
-    // The flag that is used to manage the cloud desktop. Valid values:
-    // 
-    // *   NoFlag: No flag exists for the cloud desktop.
-    // *   Updating: The configurations of the cloud desktop are being changed.
-    // *   Migrating: The cloud desktop is being migrated.
+    /**
+     * <p>镜像ID列表。</p>
+     */
+    @NameInMap("ImageId")
+    public java.util.List<String> imageId;
+
+    /**
+     * <p>The flag that is used for management.</p>
+     */
     @NameInMap("ManagementFlag")
     public String managementFlag;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Maximum value: 100</p>
+     * <p>*   Default value: 10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used for the next query. If this parameter is empty, all results are returned.
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The name of the workspace.
+    /**
+     * <p>The name of the workspace.</p>
+     */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
+    /**
+     * <p>Specifies whether to query cloud desktops in the desktop group.</p>
+     */
     @NameInMap("OnlyDesktopGroup")
     public Boolean onlyDesktopGroup;
 
+    /**
+     * <p>The types of the OSs.</p>
+     */
     @NameInMap("OsTypes")
     public java.util.List<String> osTypes;
 
-    // The ID of the policy.
+    /**
+     * <p>The ID of the policy.</p>
+     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
-    // The protocol type.
-    // 
-    // *   HDX
-    // *   ASP (Recommend)
+    /**
+     * <p>The type of the protocol.</p>
+     */
     @NameInMap("ProtocolType")
     public String protocolType;
 
-    // Specifies whether to query the information about desktop upgrade. Default value: false.
-    // 
-    // *   true: queries the information about desktop upgrade.
-    // *   false: does not query the information about desktop upgrade.
+    /**
+     * <p>Specifies whether to query the information about image version of the cloud desktop.</p>
+     */
     @NameInMap("QueryFotaUpdate")
     public Boolean queryFotaUpdate;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the automatic snapshot policy.</p>
+     */
     @NameInMap("SnapshotPolicyId")
     public String snapshotPolicyId;
 
+    /**
+     * <p>The tags that you want to add. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDesktopsRequestTag> tag;
 
-    // The name of the regular user.
+    /**
+     * <p>The name of the user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
@@ -174,6 +216,14 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.desktopStatus;
     }
 
+    public DescribeDesktopsRequest setDesktopType(String desktopType) {
+        this.desktopType = desktopType;
+        return this;
+    }
+    public String getDesktopType() {
+        return this.desktopType;
+    }
+
     public DescribeDesktopsRequest setDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -220,6 +270,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeDesktopsRequest setImageId(java.util.List<String> imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public java.util.List<String> getImageId() {
+        return this.imageId;
     }
 
     public DescribeDesktopsRequest setManagementFlag(String managementFlag) {
@@ -335,9 +393,15 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
 
     public static class DescribeDesktopsRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

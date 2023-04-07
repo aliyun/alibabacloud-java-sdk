@@ -4,43 +4,64 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkPackageRequest extends TeaModel {
-    // Specifies whether to enable automatic payment.
+    /**
+     * <p>Specifies whether to enable automatic payment.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    // Specifies whether to enable auto-renewal.
+    /**
+     * <p>Specifies whether to enable auto-renewal.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
-    // The maximum public bandwidth of the Internet access package. Unit: Mbit/s.\
-    // Valid values for the pay-by-data-transfer type (PayByTraffic): 10 to 200 Valid values for the pay-by-bandwith type (PayByBandwidth): 10 to 1000
+    /**
+     * <p>The maximum public bandwidth. Unit: Mbit/s.\</p>
+     * <p>Valid values for the pay-by-data-transfer type (PayByTraffic): 10 to 200. Valid values for the pay-by-bandwith type (PayByBandwidth): 10 to 1000.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    // The billing method of the Internet access package. Valid values: PayByTraffic: pay-by-data-transfer PayByBandwidth: pay-by-bandwidth Default value: PayByTraffic.
+    /**
+     * <p>The metering method of the pay-as-you-go Internet access package. Valid values: PayByTraffic: pay-by-data-transfer. PayByBandwidth: pay-by-bandwidth. Default value: PayByTraffic.</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>The billing method of the Internet access package.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
-    // The duration that you want to use the Internet access package of the pay-by-bandwidth type.
+    /**
+     * <p>The duration of the Internet access package.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
-    // The unit of duration that you want to use for the Internet access package of the pay-by-bandwidth type.
+    /**
+     * <p>The unit of duration that you want to use for the Internet access package.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    // The ID of the sales promotion.
+    /**
+     * <p>The ID of the sales promotion.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

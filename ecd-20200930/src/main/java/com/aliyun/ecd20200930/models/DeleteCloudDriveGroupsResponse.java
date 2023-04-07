@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDesktopMetricListResponse extends TeaModel {
+public class DeleteCloudDriveGroupsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeDesktopMetricListResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeDesktopMetricListResponseBody body;
+    public DeleteCloudDriveGroupsResponseBody body;
 
-    public static DescribeDesktopMetricListResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDesktopMetricListResponse self = new DescribeDesktopMetricListResponse();
+    public static DeleteCloudDriveGroupsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteCloudDriveGroupsResponse self = new DeleteCloudDriveGroupsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDesktopMetricListResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteCloudDriveGroupsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeDesktopMetricListResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDesktopMetricListResponse setStatusCode(Integer statusCode) {
+    public DeleteCloudDriveGroupsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeDesktopMetricListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDesktopMetricListResponse setBody(DescribeDesktopMetricListResponseBody body) {
+    public DeleteCloudDriveGroupsResponse setBody(DeleteCloudDriveGroupsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDesktopMetricListResponseBody getBody() {
+    public DeleteCloudDriveGroupsResponseBody getBody() {
         return this.body;
     }
 

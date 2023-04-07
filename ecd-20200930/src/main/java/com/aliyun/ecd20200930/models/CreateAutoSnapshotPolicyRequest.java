@@ -4,15 +4,30 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyRequest extends TeaModel {
+    /**
+     * <p>The CRON expression for periodic scheduling.</p>
+     */
     @NameInMap("CronExpression")
     public String cronExpression;
 
+    /**
+     * <p>The name of the automatic snapshot policy.</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The ID of the region where the automatic snapshot policy is created. You can call the [DescribeRegions](~~25609~~) operation to query the latest region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
+     * <br>
+     * <p>*   \-1: Automatic snapshots are retained until they are deleted.</p>
+     * <p>*   1 to 65536: Automatic snapshots are retained for the specified number of days.</p>
+     */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 

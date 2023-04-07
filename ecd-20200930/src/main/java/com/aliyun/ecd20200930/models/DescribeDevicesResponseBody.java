@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDevicesResponseBody extends TeaModel {
+    /**
+     * <p>The devices that are returned.</p>
+     */
     @NameInMap("Devices")
     public java.util.List<DescribeDevicesResponseBodyDevices> devices;
 
+    /**
+     * <p>The ID that is returned.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class DescribeDevicesResponseBody extends TeaModel {
     }
 
     public static class DescribeDevicesResponseBodyDevicesEndUserList extends TeaModel {
+        /**
+         * <p>The address of the AD workspace.</p>
+         */
         @NameInMap("AdDomain")
         public String adDomain;
 
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The type of the account.</p>
+         */
         @NameInMap("UserType")
         public String userType;
 
@@ -84,9 +102,15 @@ public class DescribeDevicesResponseBody extends TeaModel {
     }
 
     public static class DescribeDevicesResponseBodyDevices extends TeaModel {
+        /**
+         * <p>The ID of the device.</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <p>The users that are bound.</p>
+         */
         @NameInMap("EndUserList")
         public java.util.List<DescribeDevicesResponseBodyDevicesEndUserList> endUserList;
 

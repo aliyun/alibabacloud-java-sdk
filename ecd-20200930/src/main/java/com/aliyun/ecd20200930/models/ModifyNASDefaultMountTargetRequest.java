@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyNASDefaultMountTargetRequest extends TeaModel {
-    // The ID of the NAS file system.
+    /**
+     * <p>The ID of the NAS file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
-    // The domain name of the mount target.
+    /**
+     * <p>The domain name of the mount target.</p>
+     */
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

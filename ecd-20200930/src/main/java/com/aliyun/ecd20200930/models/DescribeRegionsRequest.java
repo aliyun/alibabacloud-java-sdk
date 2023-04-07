@@ -4,14 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
-    // The language of the response. Valid values:
-    // 
-    // - zh: Chinese
-    // - en: English
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>- zh: Chinese</p>
+     * <p>- en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

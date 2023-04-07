@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteDriveResponse extends TeaModel {
+public class ModifyCloudDriveGroupsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteDriveResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteDriveResponseBody body;
+    public ModifyCloudDriveGroupsResponseBody body;
 
-    public static DeleteDriveResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteDriveResponse self = new DeleteDriveResponse();
+    public static ModifyCloudDriveGroupsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyCloudDriveGroupsResponse self = new ModifyCloudDriveGroupsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDriveResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyCloudDriveGroupsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteDriveResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteDriveResponse setStatusCode(Integer statusCode) {
+    public ModifyCloudDriveGroupsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteDriveResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteDriveResponse setBody(DeleteDriveResponseBody body) {
+    public ModifyCloudDriveGroupsResponse setBody(ModifyCloudDriveGroupsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteDriveResponseBody getBody() {
+    public ModifyCloudDriveGroupsResponseBody getBody() {
         return this.body;
     }
 

@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeOfficeSitesResponseBody extends TeaModel {
-    // The token that is used for the next query. If this parameter is empty, all results are returned.
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Details of the workspaces.
+    /**
+     * <p>Details of the workspaces.</p>
+     */
     @NameInMap("OfficeSites")
     public java.util.List<DescribeOfficeSitesResponseBodyOfficeSites> officeSites;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,27 +52,39 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     }
 
     public static class DescribeOfficeSitesResponseBodyOfficeSitesADConnectors extends TeaModel {
-        // The IP address of the AD connector.
+        /**
+         * <p>The IP address of the AD connector.</p>
+         */
         @NameInMap("ADConnectorAddress")
         public String ADConnectorAddress;
 
-        // The status of the AD connector.
+        /**
+         * <p>The state of the AD connector.</p>
+         */
         @NameInMap("ConnectorStatus")
         public String connectorStatus;
 
-        // The ID of the network interface controller (NIC) that is associated with the AD connector.
+        /**
+         * <p>The ID of the network interface controller (NIC) that is associated with the AD connector.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
-        // The type of the AD connector.
+        /**
+         * <p>The type of the AD connector.</p>
+         */
         @NameInMap("Specification")
         public String specification;
 
-        // The trust password that is specified when you configured the AD trust relationship.
+        /**
+         * <p>The trust password that is specified when you configured the AD trust relationship.</p>
+         */
         @NameInMap("TrustKey")
         public String trustKey;
 
-        // The ID of the vSwitch that corresponds to the network of the AD connector.
+        /**
+         * <p>The ID of the vSwitch that corresponds to the network of the AD connector.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -126,19 +144,27 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     }
 
     public static class DescribeOfficeSitesResponseBodyOfficeSitesLogs extends TeaModel {
-        // The level of the log entry.
+        /**
+         * <p>The log level.</p>
+         */
         @NameInMap("Level")
         public String level;
 
-        // Details of the log entry.
+        /**
+         * <p>Details of the log entry.</p>
+         */
         @NameInMap("Message")
         public String message;
 
-        // The step that corresponds to the log entry.
+        /**
+         * <p>The step that corresponds to the log entry.</p>
+         */
         @NameInMap("Step")
         public String step;
 
-        // The time when the log entry was printed.
+        /**
+         * <p>The time when the log entry was printed.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
@@ -182,161 +208,239 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     }
 
     public static class DescribeOfficeSitesResponseBodyOfficeSites extends TeaModel {
-        // Details of the AD connectors.
+        /**
+         * <p>Details of the AD connectors.</p>
+         */
         @NameInMap("ADConnectors")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> ADConnectors;
 
-        // The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.
+        /**
+         * <p>The hostname of the domain controller. The hostname must comply with the naming conventions for hostnames in Windows.</p>
+         */
         @NameInMap("AdHostname")
         public String adHostname;
 
-        // The maximum public bandwidth. Valid values: 0 to 200.\
-        // If the value of this parameter is 0, Internet access is disabled.
+        /**
+         * <p>The maximum public bandwidth of the Internet access package. Valid values: 0 to 1000.\</p>
+         * <p>If the value of this parameter is 0, Internet access is disabled.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
-        // The ID of the Cloud Enterprise Network (CEN) instance.
+        /**
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
-        // The IPv4 CIDR block that is included in the secure office network of the workspace.
+        /**
+         * <p>The IPv4 CIDR block that is included in the secure office network of the workspace.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
-        // Indicates whether the workspace is created for cloud desktops on a cloud box.
+        /**
+         * <p>Indicates whether the workspace is created for cloud desktops on a cloud box.</p>
+         */
         @NameInMap("CloudBoxOfficeSite")
         public Boolean cloudBoxOfficeSite;
 
-        // The time when the workspace was created.
+        /**
+         * <p>The time when the workspace was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The ID of the security group.
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("CustomSecurityGroupId")
         public String customSecurityGroupId;
 
-        // The method that is used to connect the client to cloud desktops.
+        /**
+         * <p>The method used to connect the Alibaba Cloud Workspace client to cloud desktops.</p>
+         */
         @NameInMap("DesktopAccessType")
         public String desktopAccessType;
 
-        // The number of cloud desktops that are created.
+        /**
+         * <p>The number of cloud desktops that are created.</p>
+         */
         @NameInMap("DesktopCount")
         public Long desktopCount;
 
-        // The endpoint that is used to connect to cloud desktops over a VPC.
+        /**
+         * <p>The endpoint that is used to connect to cloud desktops over a VPC.</p>
+         */
         @NameInMap("DesktopVpcEndpoint")
         public String desktopVpcEndpoint;
 
-        // The DNS addresses of the AD domains.
+        /**
+         * <p>The DNS addresses of the AD domains.</p>
+         */
         @NameInMap("DnsAddress")
         public java.util.List<String> dnsAddress;
 
-        // The username of the DNS account.
+        /**
+         * <p>The username of the DNS account.</p>
+         */
         @NameInMap("DnsUserName")
         public String dnsUserName;
 
-        // The domain name of the enterprise AD system.
+        /**
+         * <p>The domain name of the enterprise Active Directory (AD) system.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
-        // The password of the domain administrator.
+        /**
+         * <p>The password of the domain administrator.</p>
+         */
         @NameInMap("DomainPassword")
         public String domainPassword;
 
-        // The username of the domain administrator.
+        /**
+         * <p>The username of the domain administrator.</p>
+         */
         @NameInMap("DomainUserName")
         public String domainUserName;
 
-        // Indicates whether the permissions of the local administrator are granted to the regular user of the cloud desktop.
+        /**
+         * <p>Indicates whether the permissions of the desktop administrator are granted to the user of the cloud desktop.</p>
+         */
         @NameInMap("EnableAdminAccess")
         public Boolean enableAdminAccess;
 
-        // Indicates whether the desktop communication feature is enabled in the workspace. If the feature is enabled, the cloud desktops in the same workspace can access each other.
+        /**
+         * <p>Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace. If the feature is enabled, cloud desktops in the same workspace can access each other.</p>
+         */
         @NameInMap("EnableCrossDesktopAccess")
         public Boolean enableCrossDesktopAccess;
 
-        // Indicates whether Internet access is enabled.
+        /**
+         * <p>Indicates whether Internet access is enabled.</p>
+         */
         @NameInMap("EnableInternetAccess")
         public Boolean enableInternetAccess;
 
-        // The IDs of the Apsara File Storage NAS (NAS) file systems.
+        /**
+         * <p>The IDs of the Apsara File Storage NAS (NAS) file systems.</p>
+         */
         @NameInMap("FileSystemIds")
         public java.util.List<String> fileSystemIds;
 
-        // Details of the registration logs.
+        /**
+         * <p>Details of the registration logs.</p>
+         */
         @NameInMap("Logs")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesLogs> logs;
 
-        // Indicates whether multi-factor authentication (MFA) is enabled.
+        /**
+         * <p>Indicates whether multi-factor authentication (MFA) is enabled.</p>
+         */
         @NameInMap("MfaEnabled")
         public Boolean mfaEnabled;
 
-        // The name of the workspace. The name is unique in the same region.
+        /**
+         * <p>The name of the workspace. The name is unique in the same region.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
-        // If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the EDS client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
+        /**
+         * <p>Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\</p>
+         * <p>If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.</p>
+         */
         @NameInMap("NeedVerifyLoginRisk")
         public Boolean needVerifyLoginRisk;
 
-        // Indicates whether trusted device verification is enabled.
+        /**
+         * <p>Indicates whether trusted device verification is enabled.</p>
+         */
         @NameInMap("NeedVerifyZeroDevice")
         public Boolean needVerifyZeroDevice;
 
-        // The ID of the Internet access package.
+        /**
+         * <p>The ID of the Internet access package.</p>
+         */
         @NameInMap("NetworkPackageId")
         public String networkPackageId;
 
-        // The ID of the workspace.
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
-        // The account type of the workspace.
+        /**
+         * <p>The account type of the workspace.</p>
+         */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
-        // The name of the organizational unit (OU) that is connected to the AD domain.
+        /**
+         * <p>The name of the organizational unit (OU) that is connected to the AD domain.</p>
+         */
         @NameInMap("OuName")
         public String ouName;
 
-        // The type of the protocol.
+        /**
+         * <p>The type of the protocol.</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
-        // Indicates whether single sign-on (SSO) is enabled.
+        /**
+         * <p>Indicates whether single sign-on (SSO) is enabled.</p>
+         */
         @NameInMap("SsoEnabled")
         public Boolean ssoEnabled;
 
-        // The type of SSO.
+        /**
+         * <p>The type of SSO.</p>
+         */
         @NameInMap("SsoType")
         public String ssoType;
 
-        // The status of the workspace.
+        /**
+         * <p>The state of the workspace.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The DNS addresses of the AD subdomains.
+        /**
+         * <p>The DNS addresses of the AD subdomains.</p>
+         */
         @NameInMap("SubDnsAddress")
         public java.util.List<String> subDnsAddress;
 
-        // The username of a Domain Name System (DNS) account in the AD subdomain.
+        /**
+         * <p>The username of a Domain Name System (DNS) account in the AD subdomain.</p>
+         */
         @NameInMap("SubDomainName")
         public String subDomainName;
 
-        // > This parameter is unavailable.
+        /**
+         * <p>> This parameter is unavailable.</p>
+         */
         @NameInMap("TrustPassword")
         public String trustPassword;
 
-        // The IDs of the vSwitches.
+        /**
+         * <p>The IDs of the vSwitches.</p>
+         */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
-        // The ID of the secure office network of the workspace. The ID is also the ID of the virtual private cloud (VPC) used by the workspace.
+        /**
+         * <p>The ID of the secure office network of the workspace. The ID is also the ID of the virtual private cloud (VPC) used by the workspace.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        // The VPC type.
+        /**
+         * <p>The VPC type.</p>
+         */
         @NameInMap("VpcType")
         public String vpcType;
 

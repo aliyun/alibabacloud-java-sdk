@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
-    // Details about cloud desktops.
+    /**
+     * <p>Details about cloud desktops.</p>
+     */
     @NameInMap("DesktopItems")
     public java.util.List<DescribeDesktopIdsByVulNamesResponseBodyDesktopItems> desktopItems;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class DescribeDesktopIdsByVulNamesResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopIdsByVulNamesResponseBodyDesktopItems extends TeaModel {
-        // The ID of the cloud desktop.
+        /**
+         * <p>The ID of the cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the cloud desktop.
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 

@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
+    /**
+     * <p>The headers.</p>
+     */
     @NameInMap("Headers")
     public java.util.List<DescribeCustomizedListHeadersResponseBodyHeaders> headers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomizedListHeadersResponseBodyHeaders extends TeaModel {
+        /**
+         * <p>The display type of the header. You can call the `ModifyCustomizedListHeaders` operation to modify the display type of the header.</p>
+         */
         @NameInMap("DisplayType")
         public String displayType;
 
+        /**
+         * <p>The key of the header.</p>
+         */
         @NameInMap("HeaderKey")
         public String headerKey;
 
+        /**
+         * <p>The name of the header.</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 

@@ -4,25 +4,35 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ConfigADConnectorUserRequest extends TeaModel {
-    // The password of the AD user that has the permissions to join computers to domains.
+    /**
+     * <p>The password of the AD user that has the permissions to join computers to domains.</p>
+     */
     @NameInMap("DomainPassword")
     public String domainPassword;
 
-    // The username of the AD user that has the permissions to join computers to domains.
-    // 
-    // After the username is configured, the cloud desktops in the same AD workspace are joined to the specified OU.
+    /**
+     * <p>The username of the AD user that has the permissions to join computers to domains.</p>
+     * <br>
+     * <p>After the username is configured, the cloud desktops in the same AD workspace are joined to the specified OU.</p>
+     */
     @NameInMap("DomainUserName")
     public String domainUserName;
 
-    // The name of the OU in the AD domain. You can call the [ListUserAdOrganizationUnits](~~311259~~) to obtain the OU name.
+    /**
+     * <p>The name of the OU in the AD domain. You can call the [ListUserAdOrganizationUnits](~~311259~~) to obtain the OU name.</p>
+     */
     @NameInMap("OUName")
     public String OUName;
 
-    // The ID of the AD workspace.
+    /**
+     * <p>The ID of the AD workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

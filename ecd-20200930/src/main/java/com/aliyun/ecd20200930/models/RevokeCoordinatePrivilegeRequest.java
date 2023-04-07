@@ -4,18 +4,35 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RevokeCoordinatePrivilegeRequest extends TeaModel {
+    /**
+     * <p>The ID of the stream coordination task.</p>
+     */
     @NameInMap("CoId")
     public String coId;
 
+    /**
+     * <p>The ID of the end user.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of user who requires the coordinate permissions.</p>
+     * <br>
+     * <p>Set the value to TENANT_ADMIN. Only tenant administrators can be granted with the coordinate permissions.</p>
+     */
     @NameInMap("UserType")
     public String userType;
 
+    /**
+     * <p>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click **About** on the client logon page to view the identifier of the client.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

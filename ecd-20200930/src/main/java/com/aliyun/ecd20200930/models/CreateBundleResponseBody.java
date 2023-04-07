@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateBundleResponseBody extends TeaModel {
-    // The ID of the desktop template.
+    /**
+     * <p>The ID of the desktop template.</p>
+     */
     @NameInMap("BundleId")
     public String bundleId;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

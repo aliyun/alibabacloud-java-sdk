@@ -4,19 +4,25 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopNameRequest extends TeaModel {
-    // The ID of the cloud desktop.
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
-    // The new name of the cloud desktop. The name of the cloud desktop must meet the following requirements:
-    // 
-    // *   The name must be 1 to 64 characters in length.
-    // *   The name must start with a letter and cannot start with `http://` or `https://`.
-    // *   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+    /**
+     * <p>The new name of the cloud desktop. The name of the cloud desktop must meet the following requirements:</p>
+     * <br>
+     * <p>*   The name must be 1 to 64 characters in length.</p>
+     * <p>*   The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>*   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     */
     @NameInMap("NewDesktopName")
     public String newDesktopName;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

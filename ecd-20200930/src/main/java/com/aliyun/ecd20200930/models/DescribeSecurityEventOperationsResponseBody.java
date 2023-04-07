@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The operations performed on the alert.
+    /**
+     * <p>The operations performed on the alert.</p>
+     */
     @NameInMap("SecurityEventOperations")
     public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperations> securityEventOperations;
 
@@ -34,29 +38,35 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperations extends TeaModel {
-        // The code of the operation performed on the alert. Valid values:
-        // 
-        // *   mark_mis_info: adds the alert to the whitelist without configuring rules. This operation is triggered by adding multiple alerts to the whitelist at a time.
-        // *   advance_mark_mis_inf: adds the alert to the whitelist by configuring advanced rules.
-        // *   defense_mark_mis_info: adds the alert to the whitelist by configuring precise defense rules.
-        // *   rm_mark_mis_info: removes the alert from the whitelist.
-        // *   rm_defense_mark_mis_info: removes the alert from the whitelist configured with precise defense rules.
-        // *   manual_handled: manually handles the alert.
-        // *   ignore: ignores the alert.
-        // *   quara: quarantines the source file of the malicious process.
-        // *   block_ip: blocks access from the source IP address.
-        // *   kill_and_quara: terminates the malicious process and quarantines the source file.
+        /**
+         * <p>The code of the operation performed on the alert. Valid values:</p>
+         * <br>
+         * <p>*   mark_mis_info: adds the alert to the whitelist without configuring rules. This operation is triggered by adding multiple alerts to the whitelist at a time.</p>
+         * <p>*   advance_mark_mis_inf: adds the alert to the whitelist by configuring advanced rules.</p>
+         * <p>*   defense_mark_mis_info: adds the alert to the whitelist by configuring precise defense rules.</p>
+         * <p>*   rm_mark_mis_info: removes the alert from the whitelist.</p>
+         * <p>*   rm_defense_mark_mis_info: removes the alert from the whitelist configured with precise defense rules.</p>
+         * <p>*   manual_handled: manually handles the alert.</p>
+         * <p>*   ignore: ignores the alert.</p>
+         * <p>*   quara: quarantines the source file of the malicious process.</p>
+         * <p>*   block_ip: blocks access from the source IP address.</p>
+         * <p>*   kill_and_quara: terminates the malicious process and quarantines the source file.</p>
+         */
         @NameInMap("OperationCode")
         public String operationCode;
 
-        // The parameters of the operation.
+        /**
+         * <p>The parameters of the operation.</p>
+         */
         @NameInMap("OperationParams")
         public String operationParams;
 
-        // Indicates whether the alert can be handled. Valid values:
-        // 
-        // *   true: The alert can be handled.
-        // *   false: The alert cannot be handled.
+        /**
+         * <p>Indicates whether the alert can be handled. Valid values:</p>
+         * <br>
+         * <p>*   true: The alert can be handled.</p>
+         * <p>*   false: The alert cannot be handled.</p>
+         */
         @NameInMap("UserCanOperate")
         public Boolean userCanOperate;
 

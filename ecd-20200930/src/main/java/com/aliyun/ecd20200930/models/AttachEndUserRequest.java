@@ -4,24 +4,51 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class AttachEndUserRequest extends TeaModel {
+    /**
+     * <p>The address of the Active Directory (AD) workspace.</p>
+     */
     @NameInMap("AdDomain")
     public String adDomain;
 
+    /**
+     * <p>The type of the Alibaba Cloud Workspace client that runs on the device.</p>
+     * <br>
+     * <p>*   1: the hardware client</p>
+     * <p>*   2: the software client</p>
+     */
     @NameInMap("ClientType")
     public Integer clientType;
 
+    /**
+     * <p>The ID of the device.</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the user.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The account type of the user.</p>
+     * <br>
+     * <p>*   SIMPLE: the convenience user</p>
+     * <p>*   AD: the AD user</p>
+     */
     @NameInMap("UserType")
     public String userType;
 

@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFrontVulPatchListResponseBody extends TeaModel {
-    // Details about patches of one or more vulnerabilities before you fix the current vulnerability.
+    /**
+     * <p>Details about patches of one or more vulnerabilities before you fix the current vulnerability.</p>
+     */
     @NameInMap("FrontPatchList")
     public java.util.List<DescribeFrontVulPatchListResponseBodyFrontPatchList> frontPatchList;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     }
 
     public static class DescribeFrontVulPatchListResponseBodyFrontPatchListPatchList extends TeaModel {
-        // The alias of the vulnerability.
+        /**
+         * <p>The alias of the vulnerability.</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
-        // The name of the vulnerability.
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -66,11 +74,15 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     }
 
     public static class DescribeFrontVulPatchListResponseBodyFrontPatchList extends TeaModel {
-        // The ID of the cloud desktop.
+        /**
+         * <p>The ID of the cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // Details about patches.
+        /**
+         * <p>Details about patches.</p>
+         */
         @NameInMap("PatchList")
         public java.util.List<DescribeFrontVulPatchListResponseBodyFrontPatchListPatchList> patchList;
 

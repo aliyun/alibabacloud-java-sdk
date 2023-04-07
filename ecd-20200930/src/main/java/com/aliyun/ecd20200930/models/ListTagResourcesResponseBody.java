@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    // The token used to start the next query.
+    /**
+     * <p>The token used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The resources and their tags.
+    /**
+     * <p>The resources and their tags.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -46,19 +52,27 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        // The ID of the resource, which is the ID of the cloud desktop.
+        /**
+         * <p>The ID of the resource, which is the ID of the cloud desktop.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // The type of the resource. Valid value: ALIYUN::GWS::INSTANCE.
+        /**
+         * <p>The type of the resource. Valid value: ALIYUN::GWS::INSTANCE.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // The tag key of the resource.
+        /**
+         * <p>The tag key of the resource.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // The tag value of the resource.
+        /**
+         * <p>The tag value of the resource.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

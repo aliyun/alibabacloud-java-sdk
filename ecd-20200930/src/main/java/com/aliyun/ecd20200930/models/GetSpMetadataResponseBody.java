@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetSpMetadataResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The metadata of the SP.
+    /**
+     * <p>The metadata of the SP.</p>
+     */
     @NameInMap("SpMetadata")
     public String spMetadata;
 

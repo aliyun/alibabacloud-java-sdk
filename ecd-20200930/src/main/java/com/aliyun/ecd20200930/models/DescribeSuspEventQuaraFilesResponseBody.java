@@ -4,23 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The maximum number of entries returned per page.
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The quarantined files.
+    /**
+     * <p>The quarantined files.</p>
+     */
     @NameInMap("QuaraFiles")
     public java.util.List<DescribeSuspEventQuaraFilesResponseBodyQuaraFiles> quaraFiles;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of quarantined files.
+    /**
+     * <p>The total number of quarantined files.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,50 +80,70 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventQuaraFilesResponseBodyQuaraFiles extends TeaModel {
-        // The ID of the cloud desktop.
+        /**
+         * <p>The ID of the cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the cloud desktop.
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        // The name of the alert.
+        /**
+         * <p>The name of the alert.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
-        // The type of the alert.
+        /**
+         * <p>The type of the alert.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
-        // The ID of the quarantined file.
+        /**
+         * <p>The ID of the quarantined file.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
-        // The message-digest algorithm 5 (MD5) value of the quarantined file.
+        /**
+         * <p>The message-digest algorithm 5 (MD5) value of the quarantined file.</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
-        // The time when the quarantined file was updated.
+        /**
+         * <p>The time when the quarantined file was updated.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        // The path where the quarantined file is stored on the cloud desktop.
+        /**
+         * <p>The path where the quarantined file is stored on the cloud desktop.</p>
+         */
         @NameInMap("Path")
         public String path;
 
-        // The status of the quarantined file. Valid values:
-        // 
-        // *   quaraFailed: The file failed to be quarantined.
-        // *   quaraDone: The file is quarantined.
-        // *   quaraing: The file is being quarantined.
-        // *   rollbackFailed: Quarantine for the file failed to be canceled.
-        // *   rollbackDone: Quarantine for the file is canceled.
-        // *   rollbacking: Quarantine for the file is being canceled.
+        /**
+         * <p>The status of the quarantined file. Valid values:</p>
+         * <br>
+         * <p>*   quaraFailed: The file failed to be quarantined.</p>
+         * <p>*   quaraDone: The file is quarantined.</p>
+         * <p>*   quaraing: The file is being quarantined.</p>
+         * <p>*   rollbackFailed: Quarantine for the file failed to be canceled.</p>
+         * <p>*   rollbackDone: Quarantine for the file is canceled.</p>
+         * <p>*   rollbacking: Quarantine for the file is being canceled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The tag of the alert.
+        /**
+         * <p>The tag of the alert.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

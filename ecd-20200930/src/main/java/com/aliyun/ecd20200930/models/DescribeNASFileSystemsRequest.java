@@ -4,29 +4,42 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the NAS file systems.</p>
+     */
     @NameInMap("FileSystemId")
     public java.util.List<String> fileSystemId;
 
+    /**
+     * <p>Specifies whether to filter NAS file systems that only support the user profile management (UPM) feature.</p>
+     */
     @NameInMap("MatchCompatibleProfile")
     public Boolean matchCompatibleProfile;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100.
-    // 
-    // Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Maximum value: 100.</p>
+     * <p>*   Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that determines the start point of the query.
+    /**
+     * <p>The token that determines the start point of the query. Set the value to the NextToken value that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

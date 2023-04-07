@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DisableDesktopsInGroupRequest extends TeaModel {
-    // The ID of the desktop group.
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
-    // The IDs of the cloud desktops.
+    /**
+     * <p>The IDs of the cloud desktops.</p>
+     */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

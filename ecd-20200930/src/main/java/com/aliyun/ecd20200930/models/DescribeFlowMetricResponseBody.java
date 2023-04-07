@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowMetricResponseBody extends TeaModel {
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,49 +4,67 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventsRequest extends TeaModel {
-    // The ID of the alert event to which the exception is related.
+    /**
+     * <p>The ID of the alert event to which the exception belongs.</p>
+     */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;
 
-    // The number of the page to return. Pages start from page 1. Default value: 1.
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The processing status of the exception. Valid values:
-    // 
-    // *   N: not processed
-    // *   Y: processed
+    /**
+     * <p>The processing status of the exception. Valid values:</p>
+     * <br>
+     * <p>*   N: not processed</p>
+     * <p>*   Y: processed</p>
+     */
     @NameInMap("Dealed")
     public String dealed;
 
-    // The natural language of the request and response. Valid values:
-    // 
-    // *   zh: Chinese
-    // *   en: English
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
-    // The severity level of the exception. Valid values:
-    // 
-    // *   serious
-    // *   suspicious
-    // *   remind
+    /**
+     * <p>The severity of the exception. Valid values:</p>
+     * <br>
+     * <p>*   serious: The exception is urgent.</p>
+     * <p>*   suspicious: The exception is a warning</p>
+     * <p>*   remind: The exception is a suggestion.</p>
+     */
     @NameInMap("Levels")
     public String levels;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The maximum number of entries to return on each page. Default value: 20.
+    /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // The type of the alert event to which the exception is related.
+    /**
+     * <p>The type of the alert event to which the exception belongs.</p>
+     */
     @NameInMap("ParentEventType")
     public String parentEventType;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

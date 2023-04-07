@@ -4,37 +4,57 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to clear private data of users. If you set AutoCleanUserdata to `true`, the custom image clears the data directories, excluding the `Administrator` and `Public` directories, in the `C:\Users` directory.</p>
+     */
     @NameInMap("AutoCleanUserdata")
     public Boolean autoCleanUserdata;
 
-    // The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+    /**
+     * <p>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The ID of the cloud desktop.
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>The disk data that is contained in the custom image.</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
-    // The name of the image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
+    /**
+     * <p>The name of the custom image. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
-    // This parameter is not available to the public.
+    /**
+     * <p>This parameter is not available to the public.</p>
+     */
     @NameInMap("ImageResourceType")
     public String imageResourceType;
 
-    // The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The ID of the snapshot.
+    /**
+     * <p>The ID of the snapshot.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
-    // The IDs of the snapshots.
+    /**
+     * <p>The ID of the snapshot.</p>
+     */
     @NameInMap("SnapshotIds")
     public java.util.List<String> snapshotIds;
 

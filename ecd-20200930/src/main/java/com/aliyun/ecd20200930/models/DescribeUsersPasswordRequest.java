@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersPasswordRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

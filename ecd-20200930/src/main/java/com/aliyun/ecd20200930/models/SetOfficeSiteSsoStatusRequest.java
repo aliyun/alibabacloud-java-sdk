@@ -4,18 +4,24 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class SetOfficeSiteSsoStatusRequest extends TeaModel {
-    // Specifies whether to enable SSO. Valid values:
-    // 
-    // *   true: enables SSO
-    // *   false: disables SSO
+    /**
+     * <p>Specifies whether to enable SSO. Valid values:</p>
+     * <br>
+     * <p>*   true: enables SSO</p>
+     * <p>*   false: disables SSO</p>
+     */
     @NameInMap("EnableSso")
     public Boolean enableSso;
 
-    // The ID of the workspace.
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

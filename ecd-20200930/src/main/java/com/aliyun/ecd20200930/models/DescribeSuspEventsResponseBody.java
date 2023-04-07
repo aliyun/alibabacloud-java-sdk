@@ -4,23 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventsResponseBody extends TeaModel {
-    // The page number of the returned page.
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    // The maximum number of entries returned per page.
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // Details about exceptions.
+    /**
+     * <p>Details of the exceptions.</p>
+     */
     @NameInMap("SuspEvents")
     public java.util.List<DescribeSuspEventsResponseBodySuspEvents> suspEvents;
 
-    // The total number of exceptions returned.
+    /**
+     * <p>The total number of exceptions returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,23 +80,33 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodySuspEventsDetails extends TeaModel {
-        // The original property name.
+        /**
+         * <p>The original property name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The property name displayed after the Name parameter was translated.
+        /**
+         * <p>The property name that is displayed after the Name parameter was translated.</p>
+         */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
-        // The way in which the property value is displayed. The property value can be a string or displayed in the HTML or Markdown format.
+        /**
+         * <p>The format in which the property value is displayed. The property value can be a string or displayed in the HTML or Markdown format.</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The property value.
+        /**
+         * <p>The property value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
-        // The property value displayed after the Value parameter was translated.
+        /**
+         * <p>The property value that is displayed after the Value parameter was translated.</p>
+         */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
 
@@ -138,109 +158,153 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodySuspEvents extends TeaModel {
-        // The name of the alert event to which the exception is related.
+        /**
+         * <p>The name of the alert event to which the exception belongs.</p>
+         */
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
-        // The description of the alert event to which the exception is related.
+        /**
+         * <p>The description of the alert event with which the exception is associated.</p>
+         */
         @NameInMap("AlarmEventNameDisplay")
         public String alarmEventNameDisplay;
 
-        // The type of the alert event to which the exception is related.
+        /**
+         * <p>The type of the alert event to which the exception belongs.</p>
+         */
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
-        // The description of the alert event type to which the exception is related.
+        /**
+         * <p>The description of the alert event to which the exception belongs.</p>
+         */
         @NameInMap("AlarmEventTypeDisplay")
         public String alarmEventTypeDisplay;
 
-        // The ID of the alert event to which the exception is related.
+        /**
+         * <p>The ID of the alert event to which the exception belongs.</p>
+         */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
-        // Indicates whether the exception can be processed online. Valid values:
-        // 
-        // *   true: The exception can be processed online.
-        // *   false: The exception cannot be processed online.
+        /**
+         * <p>Indicates whether the exception can be processed online. Valid values:</p>
+         * <br>
+         * <p>*   true: The exception can be processed online.</p>
+         * <p>*   false: The exception cannot be processed online.</p>
+         */
         @NameInMap("CanBeDealOnLine")
         public String canBeDealOnLine;
 
-        // Indicates whether the exception can be ignored. Valid values:
-        // 
-        // *   true: The exception can be ignored.
-        // *   false: The exception cannot be ignored.
+        /**
+         * <p>Indicates whether the exception can be ignored. Valid values:</p>
+         * <br>
+         * <p>*   true: The exception can be ignored.</p>
+         * <p>*   false: The exception cannot be ignored.</p>
+         */
         @NameInMap("CanCancelFault")
         public Boolean canCancelFault;
 
-        // The source of data. This parameter can be ignored.
+        /**
+         * <p>The source of data. This parameter can be ignored.</p>
+         */
         @NameInMap("DataSource")
         public String dataSource;
 
-        // The impact of the exception.
+        /**
+         * <p>The impact of the exception.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
-        // The ID of the affected cloud desktop.
+        /**
+         * <p>The ID of the affected cloud desktop.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the affected cloud desktop.
+        /**
+         * <p>The name of the affected cloud desktop.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
-        // Details about exceptions.
+        /**
+         * <p>Details of the exceptions.</p>
+         */
         @NameInMap("Details")
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> details;
 
-        // The status of the exception. Valid values:
-        // 
-        // *   1: PENDING
-        // *   2: IGNORE
-        // *   4: HANDLED
-        // *   8: FAULT
-        // *   16: DEALING
-        // *   32: DONE
-        // *   64: EXPIRE
+        /**
+         * <p>The state of the exception. Valid values:</p>
+         * <br>
+         * <p>*   1: PENDING</p>
+         * <p>*   2: IGNORE</p>
+         * <p>*   4: HANDLED</p>
+         * <p>*   8: FAULT</p>
+         * <p>*   16: DEALING</p>
+         * <p>*   32: DONE</p>
+         * <p>*   64: EXPIRE</p>
+         */
         @NameInMap("EventStatus")
         public Integer eventStatus;
 
-        // The name of the exception.
+        /**
+         * <p>The name of the exception.</p>
+         */
         @NameInMap("EventSubType")
         public String eventSubType;
 
-        // The ID of the exception.
+        /**
+         * <p>The ID of the exception.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
-        // The time when the exception last occurred.
+        /**
+         * <p>The time when the last exception occurred.</p>
+         */
         @NameInMap("LastTime")
         public String lastTime;
 
-        // The severity level of the exception. Valid values:
-        // 
-        // *   serious
-        // *   suspicious
-        // *   remind
+        /**
+         * <p>The severity of the exception. Valid values:</p>
+         * <br>
+         * <p>*   serious: The exception is urgent.</p>
+         * <p>*   suspicious: The exception is a warning</p>
+         * <p>*   remind: The exception is a suggestion.</p>
+         */
         @NameInMap("Level")
         public String level;
 
-        // The complete name of the exception.
+        /**
+         * <p>The full name of the exception.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The time when the exception first occurred.
+        /**
+         * <p>The time when the exception first occurred.</p>
+         */
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
-        // The error code of the exception operation.
+        /**
+         * <p>The handling result code of the exception.</p>
+         */
         @NameInMap("OperateErrorCode")
         public String operateErrorCode;
 
-        // The remarks of the exception operation.
+        /**
+         * <p>The handling remarks on the exception.</p>
+         */
         @NameInMap("OperateMsg")
         public String operateMsg;
 
-        // The ID of the exception.
+        /**
+         * <p>The ID of the exception.</p>
+         */
         @NameInMap("UniqueInfo")
         public String uniqueInfo;
 

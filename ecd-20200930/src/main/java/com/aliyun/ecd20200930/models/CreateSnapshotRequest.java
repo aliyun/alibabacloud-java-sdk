@@ -4,28 +4,37 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
-    // The description of the snapshot. The description can be up to 128 characters in length.
+    /**
+     * <p>The description of the snapshot. The description can be up to 128 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
-    // The ID of the cloud desktop.
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // The name of the snapshot. The name must be 2 to 128 characters in length.
-    // 
-    // It cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.
+    /**
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length.\</p>
+     * <p>It cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
-    // The type of the disk for which to create a snapshot. Valid values:
-    // 
-    // *   system: system disk
-    // *   data: data disk
+    /**
+     * <p>The type of the disk for which you want to create a snapshot. Valid values:</p>
+     * <br>
+     * <p>*   system: system disk</p>
+     * <p>*   data: data disk</p>
+     */
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
 

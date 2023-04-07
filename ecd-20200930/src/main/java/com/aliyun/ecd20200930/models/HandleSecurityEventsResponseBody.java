@@ -4,11 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class HandleSecurityEventsResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The ID of the task to handle alerts.
+    /**
+     * <p>The ID of the task to handle alerts.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

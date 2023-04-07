@@ -4,26 +4,34 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class VerifyCenResponseBody extends TeaModel {
-    // The three random IPv4 CIDR blocks that are recommended. If the returned value of the Status parameter is Conflict, this parameter is returned.
+    /**
+     * <p>The three random IPv4 CIDR blocks that are recommended. If the returned value of the Status parameter is Conflict, this parameter is returned.</p>
+     */
     @NameInMap("CidrBlocks")
     public java.util.List<String> cidrBlocks;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The information about the routes of the CEN instance.
+    /**
+     * <p>The information about the routes of the CEN instance.</p>
+     */
     @NameInMap("RouteEntries")
     public java.util.List<VerifyCenResponseBodyRouteEntries> routeEntries;
 
-    // The verification result for all routes. The valid values include:
-    // 
-    // *   Access: The route verification succeeds. If the verification result for all routes is Access, Access is returned for this parameter.
-    // *   Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.
-    // *   InvalidCen.ParameterCenInstanceId: The ID of the CEN instance and the ID of the Alibaba Cloud account are invalid. The CEN instance does not belong to the Alibaba Cloud account.
-    // *   InvalidCen.CenUidInvalid: The Alibaba Cloud account is invalid or the Alibaba Cloud account is not granted the required permissions to access Elastic Desktop Service (EDS).
-    // *   VerifyCode.InvalidTokenCode: The verification code is invalid.
-    // *   VerifyCode.ReachTokenRetryTime: The retries of entering the verification code reaches the upper limit.
+    /**
+     * <p>The verification result. Valid values:</p>
+     * <br>
+     * <p>*   Access: The route verification succeeds. If the verification result for all routes succeeds, Access is returned for this parameter.</p>
+     * <p>*   Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.</p>
+     * <p>*   InvalidCen.ParameterCenInstanceId: The ID of the CEN instance and the ID of the Alibaba Cloud account are invalid. The CEN instance does not belong to the Alibaba Cloud account.</p>
+     * <p>*   InvalidCen.CenUidInvalid: The ID of the Alibaba Cloud account is invalid or the Alibaba Cloud account is not granted the required permissions to access Elastic Desktop Service (EDS).</p>
+     * <p>*   VerifyCode.InvalidTokenCode: The verification code is invalid.</p>
+     * <p>*   VerifyCode.ReachTokenRetryTime: The retries of entering the verification code reaches the upper limit.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -65,22 +73,30 @@ public class VerifyCenResponseBody extends TeaModel {
     }
 
     public static class VerifyCenResponseBodyRouteEntries extends TeaModel {
-        // The CIDR block of the route.
+        /**
+         * <p>The CIDR block of the route.</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
-        // The ID of the network instance that is attached to the route.
+        /**
+         * <p>The ID of the network instance that is attached to the route.</p>
+         */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
 
-        // The ID of the region where the route resides.
+        /**
+         * <p>The ID of the region where the route resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The verification result for a route. The valid values include:
-        // 
-        // *   Access: The route verification succeeds.
-        // *   Conflict: A CIDR block conflict exists.
+        /**
+         * <p>The verification result for a route. Valid values:</p>
+         * <br>
+         * <p>*   Access: The route verification succeeds.</p>
+         * <p>*   Conflict: A CIDR block conflict exists.</p>
+         */
         @NameInMap("Status")
         public String status;
 

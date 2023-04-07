@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesResponseBody extends TeaModel {
-    // Details of the images.
+    /**
+     * <p>Details of the images.</p>
+     */
     @NameInMap("Images")
     public java.util.List<DescribeImagesResponseBodyImages> images;
 
-    // The token that is used to start the next query. If this parameter is empty, all results haven been returned.
+    /**
+     * <p>The token that is used for the next query. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,78 +52,132 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImages extends TeaModel {
-        // The version of the image.
+        /**
+         * <p>The version of the image.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
-        // The time when the image was created.
+        /**
+         * <p>The time when the image was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
-        // The size of the data disk. Unit: GiB.
+        /**
+         * <p>The size of the data disk. Unit: GiB.</p>
+         */
         @NameInMap("DataDiskSize")
         public Integer dataDiskSize;
 
-        // The description of the image.
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
-        // Indicates whether the image is a GPU-accelerated image.
+        /**
+         * <p>Indicates whether the image is a GPU-accelerated image.</p>
+         */
         @NameInMap("GpuCategory")
         public Boolean gpuCategory;
 
-        // The version of the GPU driver.
+        /**
+         * <p>The version of the GPU driver.</p>
+         */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
-        // The ID of the image.
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
-        // The type of the image.
+        /**
+         * <p>The type of the image.</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 
-        // The name of the image.
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The type of the OS.
+        /**
+         * <p>The OS of the image.</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
-        // The progress of image creation. Unit: percentage (%).
+        /**
+         * <p>The operating system type of the image.</p>
+         */
+        @NameInMap("Platform")
+        public String platform;
+
+        /**
+         * <p>The progress of image creation. Unit: percentage (%).</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
-        // The type of the protocol. Recommended value: ASP.
+        /**
+         * <p>The protocol.</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <p>The session type of the image. Valid values:</p>
+         * <br>
+         * <p>*   SINGLE_SESSION: single-session image</p>
+         * <p>*   MULTIPLE_SESSION: multi-session image</p>
+         */
         @NameInMap("SessionType")
         public String sessionType;
 
-        // The number of shared images.
+        /**
+         * <p>The number of shared images.</p>
+         */
         @NameInMap("SharedCount")
         public Integer sharedCount;
 
-        // The size of the image. Unit: GiB.
+        /**
+         * <p>The size of the image. Unit: GiB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
-        // The state of the image.
+        /**
+         * <p>The state of the image.</p>
+         */
         @NameInMap("Status")
         public String status;
 
-        // The languages of the OS.
+        /**
+         * <p>The language of the OS.</p>
+         */
         @NameInMap("SupportedLanguages")
         public java.util.List<String> supportedLanguages;
 
-        // Indicates whether disk encryption is enabled.
+        /**
+         * <p>The time when the image was last modified.</p>
+         */
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        /**
+         * <p>Indicates whether disk encryption is enabled.</p>
+         */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
-        // The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+        /**
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+         */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 
@@ -206,6 +266,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.osType;
         }
 
+        public DescribeImagesResponseBodyImages setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
         public DescribeImagesResponseBodyImages setProgress(String progress) {
             this.progress = progress;
             return this;
@@ -260,6 +328,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public java.util.List<String> getSupportedLanguages() {
             return this.supportedLanguages;
+        }
+
+        public DescribeImagesResponseBodyImages setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
         public DescribeImagesResponseBodyImages setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {

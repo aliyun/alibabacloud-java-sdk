@@ -4,22 +4,30 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGroupsRequest extends TeaModel {
-    // The number of entries to return on each page.
-    // 
-    // *   Maximum value: 100.
-    // *   Default value: 10.
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Maximum value: 100.</p>
+     * <p>*   Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The query token. Set the value to the NextToken value queried in the previous call to the DescribeInstanceTypes operation. Leave this parameter empty the first time you call this operation.
+    /**
+     * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribePolicyGroups operation. Leave this parameter empty the first time you call this operation.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The policy IDs. You can specify one or more policy IDs.
+    /**
+     * <p>The IDs of the policies. You can specify one or more policy IDs.</p>
+     */
     @NameInMap("PolicyGroupId")
     public java.util.List<String> policyGroupId;
 
-    // The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

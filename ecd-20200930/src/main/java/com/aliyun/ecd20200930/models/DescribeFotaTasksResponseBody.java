@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFotaTasksResponseBody extends TeaModel {
+    /**
+     * <p>Details about the image update tasks.</p>
+     */
     @NameInMap("FotaTasks")
     public java.util.List<DescribeFotaTasksResponseBodyFotaTasks> fotaTasks;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,54 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeFotaTasksResponseBodyFotaTasks extends TeaModel {
+        /**
+         * <p>The version of the custom image. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>This parameter is not available to the public.</p>
+         */
         @NameInMap("FotaProject")
         public String fotaProject;
 
+        @NameInMap("PendingCustomImageCount")
+        public Integer pendingCustomImageCount;
+
+        /**
+         * <p>The number of cloud desktops for which the images can be updated to this version.</p>
+         */
         @NameInMap("PendingDesktopCount")
         public Integer pendingDesktopCount;
 
+        /**
+         * <p>The time when the updated image was published.</p>
+         */
         @NameInMap("PublishTime")
         public String publishTime;
 
+        /**
+         * <p>The description of the image version to which the original image is updated.</p>
+         */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
+        /**
+         * <p>The size of the image update package. Unit: KB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>Indicates whether the user can update the image of the cloud desktop.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the image update task.</p>
+         */
         @NameInMap("TaskUid")
         public String taskUid;
 
@@ -75,6 +108,14 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
         public String getFotaProject() {
             return this.fotaProject;
+        }
+
+        public DescribeFotaTasksResponseBodyFotaTasks setPendingCustomImageCount(Integer pendingCustomImageCount) {
+            this.pendingCustomImageCount = pendingCustomImageCount;
+            return this;
+        }
+        public Integer getPendingCustomImageCount() {
+            return this.pendingCustomImageCount;
         }
 
         public DescribeFotaTasksResponseBodyFotaTasks setPendingDesktopCount(Integer pendingDesktopCount) {

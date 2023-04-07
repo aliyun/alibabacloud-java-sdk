@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDrivesResponse extends TeaModel {
+public class AddFilePermissionResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeDrivesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeDrivesResponseBody body;
+    public AddFilePermissionResponseBody body;
 
-    public static DescribeDrivesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDrivesResponse self = new DescribeDrivesResponse();
+    public static AddFilePermissionResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddFilePermissionResponse self = new AddFilePermissionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrivesResponse setHeaders(java.util.Map<String, String> headers) {
+    public AddFilePermissionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeDrivesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDrivesResponse setStatusCode(Integer statusCode) {
+    public AddFilePermissionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeDrivesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDrivesResponse setBody(DescribeDrivesResponseBody body) {
+    public AddFilePermissionResponse setBody(AddFilePermissionResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDrivesResponseBody getBody() {
+    public AddFilePermissionResponseBody getBody() {
         return this.body;
     }
 

@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListOfficeSiteOverviewResponseBody extends TeaModel {
-    // The token that is used to start the next query. If this parameter is empty, all results are returned.
+    /**
+     * <p>The token that is used to start the next query. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Details of the workspaces.
+    /**
+     * <p>Details of the workspaces.</p>
+     */
     @NameInMap("OfficeSiteOverviewResults")
     public java.util.List<ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults> officeSiteOverviewResults;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,55 +52,81 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
     }
 
     public static class ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults extends TeaModel {
-        // The number of expired cloud desktops in the workspace.
+        /**
+         * <p>The number of expired cloud desktops in the workspace.</p>
+         */
         @NameInMap("HasExpiredEdsCount")
         public Integer hasExpiredEdsCount;
 
-        // The number of expired cloud desktops in the desktop group.
+        /**
+         * <p>The number of expired cloud desktops in the desktop group.</p>
+         */
         @NameInMap("HasExpiredEdsCountForGroup")
         public Integer hasExpiredEdsCountForGroup;
 
-        // The ID of the workspace.
+        /**
+         * <p>The ID of the workspace.</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
-        // The name of the workspace.
+        /**
+         * <p>The name of the workspace.</p>
+         */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
-        // The status of the workspace.
+        /**
+         * <p>The status of the workspace.</p>
+         */
         @NameInMap("OfficeSiteStatus")
         public String officeSiteStatus;
 
-        // The region ID of the workspace.
+        /**
+         * <p>The region ID of the workspace.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
-        // The number of running cloud desktops in the workspace.
+        /**
+         * <p>The number of running cloud desktops in the workspace.</p>
+         */
         @NameInMap("RunningEdsCount")
         public Integer runningEdsCount;
 
-        // The number of running cloud desktops in the desktop group.
+        /**
+         * <p>The number of running cloud desktops in the desktop group.</p>
+         */
         @NameInMap("RunningEdsCountForGroup")
         public Integer runningEdsCountForGroup;
 
-        // The total number of cloud desktops in the workspace.
+        /**
+         * <p>The total number of cloud desktops in the workspace.</p>
+         */
         @NameInMap("TotalEdsCount")
         public Integer totalEdsCount;
 
-        // The total number of cloud desktops in the desktop group.
+        /**
+         * <p>The total number of cloud desktops in the desktop group.</p>
+         */
         @NameInMap("TotalEdsCountForGroup")
         public Integer totalEdsCountForGroup;
 
-        // The virtual private cloud (VPC) type of the workspace.
+        /**
+         * <p>The virtual private cloud (VPC) type of the workspace.</p>
+         */
         @NameInMap("VpcType")
         public String vpcType;
 
-        // The number of cloud desktops that are about to expire in the workspace.
+        /**
+         * <p>The number of cloud desktops that are about to expire in the workspace.</p>
+         */
         @NameInMap("WillExpiredEdsCount")
         public Integer willExpiredEdsCount;
 
-        // The number of cloud desktops that are about to expire in the desktop group.
+        /**
+         * <p>The number of cloud desktops that are about to expire in the desktop group.</p>
+         */
         @NameInMap("WillExpiredEdsCountForGroup")
         public Integer willExpiredEdsCountForGroup;
 

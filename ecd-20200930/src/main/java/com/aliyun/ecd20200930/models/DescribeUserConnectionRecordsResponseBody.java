@@ -4,15 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
-    // Details about connection records.
+    /**
+     * <p>Details about connection records.</p>
+     */
     @NameInMap("ConnectionRecords")
     public java.util.List<DescribeUserConnectionRecordsResponseBodyConnectionRecords> connectionRecords;
 
-    // The token that is used to start the next query.
+    /**
+     * <p>The token that is used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,27 +52,39 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserConnectionRecordsResponseBodyConnectionRecords extends TeaModel {
-        // The duration of the desktop connection. Unit: seconds.
+        /**
+         * <p>The duration of the desktop connection. Unit: seconds.</p>
+         */
         @NameInMap("ConnectDuration")
         public String connectDuration;
 
-        // The time when the cloud desktop was disconnected.
+        /**
+         * <p>The time when the cloud desktop was disconnected.</p>
+         */
         @NameInMap("ConnectEndTime")
         public String connectEndTime;
 
-        // The time when the cloud desktop was connected.
+        /**
+         * <p>The time when the cloud desktop was connected.</p>
+         */
         @NameInMap("ConnectStartTime")
         public String connectStartTime;
 
-        // The ID of the connection record.
+        /**
+         * <p>The ID of the connection record.</p>
+         */
         @NameInMap("ConnectionRecordId")
         public String connectionRecordId;
 
-        // The ID of the cloud desktop that is connected.
+        /**
+         * <p>The ID of the cloud desktop that is connected.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
-        // The name of the cloud desktop that is connected.
+        /**
+         * <p>The name of the cloud desktop that is connected.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 

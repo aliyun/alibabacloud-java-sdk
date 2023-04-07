@@ -4,25 +4,39 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkPackagesRequest extends TeaModel {
+    /**
+     * <p>The billing method of the Internet access package. Valid values:</p>
+     * <br>
+     * <p>*   PayByTraffic: pay-by-data-transfer</p>
+     * <p>*   PayByBandwidth: pay-by-bandwidth</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    // The number of entries to return on each page.
-    // 
-    // Maximum value: 100
-    // 
-    // Default value: 10
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Maximum value: 100</p>
+     * <p>*   Default value: 10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The IDs of the Internet access packages. You can specify 1 to 100 IDs of Internet access packages.</p>
+     */
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
 
-    // The token that determines the start point of the next query.
+    /**
+     * <p>The token that determines the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the region.
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

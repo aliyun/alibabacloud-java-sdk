@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
+    /**
+     * <p>The IDs of cloud desktops. You can specify 1 to 20 cloud desktops.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>The ID of the automatic snapshot policy.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The region ID of the cloud desktop. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
