@@ -7,15 +7,6 @@ public class DeleteApiKeyResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,30 +24,6 @@ public class DeleteApiKeyResponseBody extends TeaModel {
     }
     public String getAccessDeniedDetail() {
         return this.accessDeniedDetail;
-    }
-
-    public DeleteApiKeyResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public DeleteApiKeyResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public DeleteApiKeyResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public DeleteApiKeyResponseBody setRequestId(String requestId) {

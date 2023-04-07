@@ -10,15 +10,6 @@ public class QueryOpenStatusResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryOpenStatusResponseBodyData data;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("HttpCode")
-    public String httpCode;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -44,30 +35,6 @@ public class QueryOpenStatusResponseBody extends TeaModel {
     }
     public QueryOpenStatusResponseBodyData getData() {
         return this.data;
-    }
-
-    public QueryOpenStatusResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public QueryOpenStatusResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryOpenStatusResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public String getHttpCode() {
-        return this.httpCode;
     }
 
     public QueryOpenStatusResponseBody setRequestId(String requestId) {

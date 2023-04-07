@@ -10,15 +10,6 @@ public class GetInvokeStatisticsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<GetInvokeStatisticsResponseBodyData> data;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("HttpCode")
-    public String httpCode;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -44,30 +35,6 @@ public class GetInvokeStatisticsResponseBody extends TeaModel {
     }
     public java.util.List<GetInvokeStatisticsResponseBodyData> getData() {
         return this.data;
-    }
-
-    public GetInvokeStatisticsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetInvokeStatisticsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetInvokeStatisticsResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public String getHttpCode() {
-        return this.httpCode;
     }
 
     public GetInvokeStatisticsResponseBody setRequestId(String requestId) {
@@ -140,6 +107,9 @@ public class GetInvokeStatisticsResponseBody extends TeaModel {
         @NameInMap("ModelName")
         public String modelName;
 
+        @NameInMap("NumUnit")
+        public String numUnit;
+
         @NameInMap("Region")
         public String region;
 
@@ -176,6 +146,14 @@ public class GetInvokeStatisticsResponseBody extends TeaModel {
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public GetInvokeStatisticsResponseBodyData setNumUnit(String numUnit) {
+            this.numUnit = numUnit;
+            return this;
+        }
+        public String getNumUnit() {
+            return this.numUnit;
         }
 
         public GetInvokeStatisticsResponseBodyData setRegion(String region) {

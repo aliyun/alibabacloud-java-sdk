@@ -10,15 +10,6 @@ public class ListModelNamesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListModelNamesResponseBodyData> data;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("HttpCode")
-    public String httpCode;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,30 +37,6 @@ public class ListModelNamesResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ListModelNamesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListModelNamesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListModelNamesResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public String getHttpCode() {
-        return this.httpCode;
-    }
-
     public ListModelNamesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -93,6 +60,9 @@ public class ListModelNamesResponseBody extends TeaModel {
         @NameInMap("ModelName")
         public String modelName;
 
+        @NameInMap("ModelUnit")
+        public String modelUnit;
+
         public static ListModelNamesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListModelNamesResponseBodyData self = new ListModelNamesResponseBodyData();
             return TeaModel.build(map, self);
@@ -112,6 +82,14 @@ public class ListModelNamesResponseBody extends TeaModel {
         }
         public String getModelName() {
             return this.modelName;
+        }
+
+        public ListModelNamesResponseBodyData setModelUnit(String modelUnit) {
+            this.modelUnit = modelUnit;
+            return this;
+        }
+        public String getModelUnit() {
+            return this.modelUnit;
         }
 
     }
