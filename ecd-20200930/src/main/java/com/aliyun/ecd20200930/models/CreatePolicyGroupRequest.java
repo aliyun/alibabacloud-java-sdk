@@ -6,6 +6,24 @@ import com.aliyun.tea.*;
 public class CreatePolicyGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the anti-screenshot feature.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   off: Anti-screenshot is disabled. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   on: Anti-screenshot is enabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("AppContentProtection")
     public String appContentProtection;
@@ -24,6 +42,24 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the webcam redirection feature.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   off: Webcam redirection is disabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   on: Webcam redirection is enabled. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("CameraRedirect")
     public String cameraRedirect;
@@ -36,27 +72,83 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     /**
      * <p>The permissions on the clipboard.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   read: specifies one-way transfer</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    You can copy data from your local computer to the cloud desktop, but cannot copy data from the cloud desktop to your local computer.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   readwrite: specifies two-way transfer</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    You can copy data between your local computer and the cloud desktop.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   off: disables both one-way and two-way transfer</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    You cannot copy data between your local computer and the cloud desktop. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Clipboard")
     public String clipboard;
 
     /**
-     * <p>The blacklist or whitelist of domain names. You can use asterisks (\*) as wildcard characters for domain names. Separate multiple domain names with commas (,). Valid values:</p>
+     * <p>Access control for domain names. The wildcard character (\*) is supported for domain names. Separate multiple domain names with commas (,). Valid values:</p>
      * <br>
-     * <p>*   \[black:],example1.com,example2.com: domain name blacklist. The cloud desktop is not allowed to access the domain names that are specified in the blacklist.</p>
-     * <p>*   \[white:],example1.com,example2.com: domain name whitelist. The cloud desktop is allowed to access only the domain names that are specified in the whitelist.</p>
+     * <p>*   off</p>
+     * <p>*   on</p>
      */
     @NameInMap("DomainList")
     public String domainList;
 
+    /**
+     * <p>Specifies whether to allow end users to seek assistance from the administrator. Valid values: ON OFF</p>
+     */
     @NameInMap("EndUserApplyAdminCoordinate")
     public String endUserApplyAdminCoordinate;
 
+    /**
+     * <p>The switch for collaboration between end users. Valid values: ON OFF</p>
+     */
     @NameInMap("EndUserGroupCoordinate")
     public String endUserGroupCoordinate;
 
     /**
      * <p>Specifies whether to enable the image display quality feature for the Graphics cloud desktop. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional design scenarios.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   off</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   on</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("GpuAcceleration")
     public String gpuAcceleration;
@@ -64,13 +156,65 @@ public class CreatePolicyGroupRequest extends TeaModel {
     /**
      * <p>The policy for HTML5 client access.</p>
      * <br>
-     * <p>> To manage the type of Alibaba Cloud Workspace client for desktop connection, we recommend that you use the ClientType parameter.</p>
+     * <p>> We recommend that you use the ClientType parameter to manage the type of Alibaba Cloud Workspace clients for desktop connection.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   off: HTML5 client access is disabled. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   on: HTML5 client access is enabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Html5Access")
     public String html5Access;
 
     /**
      * <p>The file transfer policy for HTML5 clients.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   all: Files can be uploaded and downloaded between your computer and HTML5 clients.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   download: Files on HTML5 clients can be downloaded to your computer.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   upload: Files on your computer can be uploaded to HTML5 clients.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   off: File transfer between HTML5 clients and your computer is disabled. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Html5FileTransfer")
     public String html5FileTransfer;
@@ -83,6 +227,38 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     /**
      * <p>The permissions on local disk mapping.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   read: read-only</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The disks on your local computer are mapped to the cloud desktop. You can only read (copy) files on the local computer.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   readwrite: read and write</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The disks on your local computer are mapped to the cloud desktop. You can read (copy) and modify files on your local computer.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   off:</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The disks on your local computer are not mapped to the cloud desktop. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("LocalDrive")
     public String localDrive;
@@ -95,6 +271,24 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the network redirection feature.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   off: Network redirection is disabled. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   on: Network redirection is enabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("NetRedirect")
     public String netRedirect;
@@ -108,7 +302,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String preemptLogin;
 
     /**
-     * <p>The names of the end users that are allowed to connect to a cloud desktop to which another end user is connecting. You can specify up to five usernames.</p>
+     * <p>The names of the users that are allowed to connect to the same cloud desktop at the same time. You can specify up to five usernames.</p>
      * <br>
      * <p>> To improve user experience and ensure data security, we recommend that you disable the user preemption feature.</p>
      */
@@ -117,12 +311,48 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     /**
      * <p>The policy for printer redirection.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   off: Printer redirection is disabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   on: Printer redirection is enabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("PrinterRedirection")
     public String printerRedirection;
 
     /**
      * <p>Specifies whether to enable the custom screen recording feature.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   off: Custom screen recording is disabled. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   on: Custom screen recording is enabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("RecordContent")
     public String recordContent;
@@ -135,6 +365,32 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable screen recording.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   ALLTIME: All operations that are performed by end users on cloud desktops are recorded. The recording starts immediately when end users connect to cloud desktops and ends when the end users disconnect from the cloud desktops.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   PERIOD: The operations that are performed by end users on cloud desktops during a specified period of time are recorded. You must set the start time and end time for the recording period.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   OFF: Screen recording is disabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Recording")
     public String recording;
@@ -142,8 +398,8 @@ public class CreatePolicyGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to record audio data during the screen recording. Valid values:</p>
      * <br>
-     * <p>*   on: records audio and video data.</p>
-     * <p>*   off: records only video data.</p>
+     * <p>*   on: records audio and video data</p>
+     * <p>*   off: records only video data</p>
      */
     @NameInMap("RecordingAudio")
     public String recordingAudio;
@@ -168,12 +424,44 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     /**
      * <p>The frame rate of screen recording.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   2</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   5</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   15</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("RecordingFps")
     public Long recordingFps;
 
     /**
-     * <p>The time when the screen recording starts. Specify the value in the HH:MM:SS format. The value of this parameter is valid only if you set the Recording parameter to PERIOD.</p>
+     * <p>The time when screen recording starts. Specify the value in the HH:MM:SS format. The value of this parameter is valid only if you set the Recording parameter to PERIOD.</p>
      */
     @NameInMap("RecordingStartTime")
     public String recordingStartTime;
@@ -185,7 +473,37 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The permissions to control the keyboard and the mouse during remote assistance.</p>
+     * <p>The permission to control the keyboard and the mouse during remote assistance.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   \-</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    optionalControl</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    : By default, this feature is disabled. You can enable it by applying permissions.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   fullControl: The permission is granted.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   disableControl: The permission is revoked.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("RemoteCoordinate")
     public String remoteCoordinate;
@@ -193,47 +511,117 @@ public class CreatePolicyGroupRequest extends TeaModel {
     /**
      * <p>The effective scope of the policy. Valid values:</p>
      * <br>
-     * <p>*   GLOBAL: takes effect globally.</p>
-     * <p>*   IP: takes effect based on the IP address.</p>
+     * <p>*   GLOBAL: The policy takes effect globally.</p>
+     * <p>*   IP: The policy takes effect for specified IP addresses.</p>
      */
     @NameInMap("Scope")
     public String scope;
 
     /**
-     * <p>The effective CIDR block range. If you set the Scope parameter to IP, you must specify this parameter.</p>
+     * <p>The effective CIDR block ranges. If you set the Scope parameter to IP, you must specify this parameter.</p>
      */
     @NameInMap("ScopeValue")
     public java.util.List<String> scopeValue;
 
     /**
      * <p>Specifies whether to enable USB redirection.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   off: USB redirection is disabled. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   on: USB redirection is enabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("UsbRedirect")
     public String usbRedirect;
 
     /**
-     * <p>The USB redirection rule.</p>
+     * <p>The USB redirection rules.</p>
      */
     @NameInMap("UsbSupplyRedirectRule")
     public java.util.List<CreatePolicyGroupRequestUsbSupplyRedirectRule> usbSupplyRedirectRule;
 
     /**
-     * <p>Specifies whether to enable the multimedia redirection. Valid values:</p>
+     * <p>Specifies whether to enable the multimedia redirection feature. Valid values:</p>
      * <br>
-     * <p>*   on: enables the multimedia redirection.</p>
-     * <p>*   off: disables the multimedia redirection.</p>
+     * <p>*   on: Multimedia redirection is enabled.</p>
+     * <p>*   off: Multimedia redirection is disabled.</p>
      */
     @NameInMap("VideoRedirect")
     public String videoRedirect;
 
     /**
      * <p>The policy for image display quality.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   high</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   low</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   lossless</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   medium: adaptive. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("VisualQuality")
     public String visualQuality;
 
     /**
      * <p>Specifies whether to enable watermarking.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   off: Watermarking is disabled. This value is the default value.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   on: Watermarking is enabled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Watermark")
     public String watermark;
@@ -266,25 +654,69 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String watermarkFontStyle;
 
     /**
-     * <p>The number of watermark rows. This parameter is not supported.</p>
+     * <p>The number of watermark rows. This parameter is now invalid.</p>
      */
     @NameInMap("WatermarkRowAmount")
     public Integer watermarkRowAmount;
 
     /**
      * <p>The transparency of the watermark.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   LIGHT</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   DARK</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   MIDDLE</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("WatermarkTransparency")
     public String watermarkTransparency;
 
     /**
-     * <p>The transparency of the watermark. A larger value specifies that the watermark is less transparent. Valid values: 10 to 1000.</p>
+     * <p>The transparency of the watermark. A larger value specifies that the watermark is less transparent. Valid values: 10 to 100.</p>
      */
     @NameInMap("WatermarkTransparencyValue")
     public Integer watermarkTransparencyValue;
 
     /**
      * <p>The type of the watermark. You can specify multiple types of watermarks at the same time. Separate multiple watermark types with commas (,).</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   EndUserId: The ID of the end user is displayed.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   HostName: The rightmost 15 characters of the cloud desktop ID are displayed.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("WatermarkType")
     public String watermarkType;
@@ -656,7 +1088,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
     public static class CreatePolicyGroupRequestAuthorizeAccessPolicyRule extends TeaModel {
         /**
-         * <p>The IPv4 CIDR block that you want to access from the client.</p>
+         * <p>The IPv4 CIDR block that you want to access from the client. The value is an IPv4 CIDR block.</p>
          */
         @NameInMap("CidrIp")
         public String cidrIp;
@@ -705,12 +1137,76 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
         /**
          * <p>The protocol type of the security group rule.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   TCP</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   UDP</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ALL: all protocols</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   GRE</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ICMP: ICMP (IPv4)</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
         /**
          * <p>The authorization policy of the security group rule.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   drop: denies all access requests</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    If no denied messages are returned, the requests timed out or failed.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   accept: accepts all access requests</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    This value is the default value.</p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Policy")
         public String policy;
@@ -738,6 +1234,24 @@ public class CreatePolicyGroupRequest extends TeaModel {
 
         /**
          * <p>The direction of the security group rule.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   outflow: outbound</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   inflow: inbound</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Type")
         public String type;
@@ -810,6 +1324,56 @@ public class CreatePolicyGroupRequest extends TeaModel {
          * <p>The type of the client.</p>
          * <br>
          * <p>> By default, if you do not specify the ClientType parameter, all types of clients can be used to connect to cloud desktops.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   html5: web clients</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   android: Android clients</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   linux: Alibaba Cloud Workspace clients</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ios: iOS clients</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   windows: Windows clients</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   macos: macOS clients</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ClientType")
         public String clientType;
@@ -818,6 +1382,24 @@ public class CreatePolicyGroupRequest extends TeaModel {
          * <p>Specifies whether a specific client type can be used to connect to the cloud desktop.</p>
          * <br>
          * <p>> By default, if you do not specify the ClientType parameter, all types of clients can be used to connect to cloud desktops.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   OFF: Clients of the specified type cannot be used to connect to cloud desktops.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ON: Clients of the specified type can be used to connect to cloud desktops.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Status")
         public String status;
@@ -865,19 +1447,55 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String deviceSubclass;
 
         /**
-         * <p>The ID of the product.</p>
+         * <p>The ID of the service.</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
          * <p>The type of USB redirection.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   1: allows USB redirection</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   2: forbids USB redirection</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("UsbRedirectType")
         public Long usbRedirectType;
 
         /**
          * <p>The type of the USB redirection rule.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   1: by device class</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   2: by device vendor</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("UsbRuleType")
         public Long usbRuleType;

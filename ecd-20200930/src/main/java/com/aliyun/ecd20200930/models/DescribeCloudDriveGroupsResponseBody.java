@@ -11,13 +11,13 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     public java.util.List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroups> cloudDriveGroups;
 
     /**
-     * <p>The total number of entries that is returned.</p>
+     * <p>The total number of team spaces that are returned.</p>
      */
     @NameInMap("Count")
     public Long count;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -29,7 +29,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -111,10 +111,12 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The status of the team space. Default value: enabled. Valid values:</p>
+         * <p>The status of the team space. Valid values:</p>
          * <br>
-         * <p>*   Enabled: available</p>
-         * <p>*   disabled: unavailable</p>
+         * <p>*   enabled</p>
+         * <p>*   disabled</p>
+         * <br>
+         * <p>Default value: enabled.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -126,7 +128,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         public Long totalSize;
 
         /**
-         * <p>The space that is used. Unit: bytes.</p>
+         * <p>The size of the used space. Unit: bytes.</p>
          */
         @NameInMap("UsedSize")
         public String usedSize;

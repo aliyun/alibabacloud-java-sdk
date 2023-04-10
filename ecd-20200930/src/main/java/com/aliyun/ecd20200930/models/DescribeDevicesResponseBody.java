@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDevicesResponseBody extends TeaModel {
     /**
-     * <p>The devices that are returned.</p>
+     * <p>Details of the devices that are returned.</p>
      */
     @NameInMap("Devices")
     public java.util.List<DescribeDevicesResponseBodyDevices> devices;
 
     /**
-     * <p>The ID that is returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -109,7 +109,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String deviceId;
 
         /**
-         * <p>The users that are bound.</p>
+         * <p>The users who are bound to the device.</p>
          */
         @NameInMap("EndUserList")
         public java.util.List<DescribeDevicesResponseBodyDevicesEndUserList> endUserList;

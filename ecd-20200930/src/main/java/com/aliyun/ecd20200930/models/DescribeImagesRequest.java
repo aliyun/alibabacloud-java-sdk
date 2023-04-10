@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
     /**
-     * <p>The type of the cloud desktop. You can call the [DescribeBundles](~~188884~~) operation to query the available types of cloud desktops.</p>
+     * <p>The cloud desktop type. You can call the [DescribeBundles](~~188884~~) operation to query the available cloud desktop types.</p>
      */
     @NameInMap("DesktopInstanceType")
     public String desktopInstanceType;
@@ -23,7 +23,7 @@ public class DescribeImagesRequest extends TeaModel {
     public String gpuDriverVersion;
 
     /**
-     * <p>The IDs of the images. You can specify the IDs of one or more images.</p>
+     * <p>The IDs of the images. You can specify one or more image IDs.</p>
      */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
@@ -47,40 +47,40 @@ public class DescribeImagesRequest extends TeaModel {
     public String languageType;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * <br>
-     * <p>*   Maximum value: 100</p>
-     * <p>*   Default value: 10</p>
+     * <p>*   Maximum value: 100.</p>
+     * <p>*   Default value: 10.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     * <p>The token that determines the start point of the next query. If you do not specify this parameter, all results are returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The OS of the image. Default value: `null`.</p>
+     * <p>The type of the OS. Default value: `null`.</p>
      */
     @NameInMap("OsType")
     public String osType;
 
     /**
-     * <p>The protocol.</p>
+     * <p>The type of the protocol.</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the session.</p>
+     * <p>The session type.</p>
      */
     @NameInMap("SessionType")
     public String sessionType;

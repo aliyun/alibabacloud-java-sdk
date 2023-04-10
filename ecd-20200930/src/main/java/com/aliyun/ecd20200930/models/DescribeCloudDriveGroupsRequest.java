@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     * <p>The ID of the cloud disk.</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
@@ -23,33 +23,35 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     public String directoryName;
 
     /**
-     * <p>The status of the team space. Default value: enabled. Valid values:</p>
+     * <p>The status of the team space. Valid values:</p>
      * <br>
-     * <p>*   Enabled: available</p>
-     * <p>*   disabled: unavailable</p>
+     * <p>*   enabled</p>
+     * <p>*   disabled</p>
+     * <br>
+     * <p>Default value: enabled.</p>
      */
     @NameInMap("DriveStatus")
     public String driveStatus;
 
     /**
-     * <p>Specifies whether one or more spaces are added.</p>
+     * <p>The type of the space.</p>
      * <br>
-     * <p>*   binding: One or more spaces are added.</p>
-     * <p>*   unbound: One or more spaces are not added.</p>
+     * <p>*   binding: bound space</p>
+     * <p>*   unbound: unbound space</p>
      * <br>
-     * <p>Default value: null. This value indicates that all results are queried.</p>
+     * <p>By default, this parameter is left empty. All spaces are queried.</p>
      */
     @NameInMap("DriveType")
     public String driveType;
 
     /**
-     * <p>The ID of the team.</p>
+     * <p>The IDs of the teams.</p>
      */
     @NameInMap("GroupId")
     public java.util.List<String> groupId;
 
     /**
-     * <p>The name of a team for fuzzy search.</p>
+     * <p>The team name that can be used for fuzzy search.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -60,7 +62,7 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
      * <p>*   org: organizational structure</p>
      * <p>*   directory: workspace</p>
      * <br>
-     * <p>Default value: null. This value indicates that all results are queried.</p>
+     * <p>By default, this parameter is left empty. All types of teams are queried.</p>
      */
     @NameInMap("GroupType")
     public String groupType;
@@ -68,26 +70,28 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return on each page.</p>
      * <br>
-     * <p>*   Maximum value: 100</p>
-     * <p>*   Default value: 20</p>
+     * <p>*   Maximum value: 100.</p>
+     * <p>*   Default value: 20.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the parent ID. If a parent node ID is specified, the subnode list is queried. If you set the value of this parameter to root, the root nodes are queried. Default value: null. This value indicates that all results are queried.</p>
+     * <p>The ID of the parent node. If you specify a parent node ID, the subnode list is queried. If you set this parameter to root, the parent node list is queried.</p>
+     * <br>
+     * <p>By default, this parameter is left empty. In this case, all nodes are queried.</p>
      */
     @NameInMap("ParentGroupId")
     public String parentGroupId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the team.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
