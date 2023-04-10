@@ -17,13 +17,57 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The state of the task. Valid values: running, finished, and failed.</p>
+     * <p>The status of the task.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   FAILED</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    Failed to obtain the token</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     * <br>
+     * <p>*   RUNNING</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The token is being obtained</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     * <br>
+     * <p>*   FINISHED</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The token-based logon is successful</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
     /**
-     * <p>The credential that is used to connect to the cloud desktop of the end user. Before you use the credential, decode the credential in Base64. Then, save the credential as a xxx.ica file and open the file. Sample Python code:</p>
+     * <p>The credentials that are used to connect to the cloud desktop. To use the credentials, you must decode the credentials in Base64, save the credentials as a xxx.ica file, and then open the file. Sample Python code:</p>
      * <br>
      * <p>    import base64</p>
      * <p>    response = {</p>

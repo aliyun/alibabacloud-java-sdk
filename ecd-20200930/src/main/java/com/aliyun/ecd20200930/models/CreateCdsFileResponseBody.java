@@ -4,8 +4,8 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateCdsFileResponseBody extends TeaModel {
-    @NameInMap("FileModels")
-    public java.util.List<CreateCdsFileResponseBodyFileModels> fileModels;
+    @NameInMap("FileModel")
+    public CreateCdsFileResponseBodyFileModel fileModel;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,12 +15,12 @@ public class CreateCdsFileResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateCdsFileResponseBody setFileModels(java.util.List<CreateCdsFileResponseBodyFileModels> fileModels) {
-        this.fileModels = fileModels;
+    public CreateCdsFileResponseBody setFileModel(CreateCdsFileResponseBodyFileModel fileModel) {
+        this.fileModel = fileModel;
         return this;
     }
-    public java.util.List<CreateCdsFileResponseBodyFileModels> getFileModels() {
-        return this.fileModels;
+    public CreateCdsFileResponseBodyFileModel getFileModel() {
+        return this.fileModel;
     }
 
     public CreateCdsFileResponseBody setRequestId(String requestId) {
@@ -31,7 +31,7 @@ public class CreateCdsFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class CreateCdsFileResponseBodyFileModels extends TeaModel {
+    public static class CreateCdsFileResponseBodyFileModel extends TeaModel {
         @NameInMap("FileId")
         public String fileId;
 
@@ -41,12 +41,12 @@ public class CreateCdsFileResponseBody extends TeaModel {
         @NameInMap("UploadUrl")
         public String uploadUrl;
 
-        public static CreateCdsFileResponseBodyFileModels build(java.util.Map<String, ?> map) throws Exception {
-            CreateCdsFileResponseBodyFileModels self = new CreateCdsFileResponseBodyFileModels();
+        public static CreateCdsFileResponseBodyFileModel build(java.util.Map<String, ?> map) throws Exception {
+            CreateCdsFileResponseBodyFileModel self = new CreateCdsFileResponseBodyFileModel();
             return TeaModel.build(map, self);
         }
 
-        public CreateCdsFileResponseBodyFileModels setFileId(String fileId) {
+        public CreateCdsFileResponseBodyFileModel setFileId(String fileId) {
             this.fileId = fileId;
             return this;
         }
@@ -54,7 +54,7 @@ public class CreateCdsFileResponseBody extends TeaModel {
             return this.fileId;
         }
 
-        public CreateCdsFileResponseBodyFileModels setUploadId(String uploadId) {
+        public CreateCdsFileResponseBodyFileModel setUploadId(String uploadId) {
             this.uploadId = uploadId;
             return this;
         }
@@ -62,7 +62,7 @@ public class CreateCdsFileResponseBody extends TeaModel {
             return this.uploadId;
         }
 
-        public CreateCdsFileResponseBodyFileModels setUploadUrl(String uploadUrl) {
+        public CreateCdsFileResponseBodyFileModel setUploadUrl(String uploadUrl) {
             this.uploadUrl = uploadUrl;
             return this;
         }

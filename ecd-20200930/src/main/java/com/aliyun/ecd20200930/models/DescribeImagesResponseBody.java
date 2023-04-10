@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeImagesResponseBody extends TeaModel {
     /**
-     * <p>Details of the images.</p>
+     * <p>The details of the images.</p>
      */
     @NameInMap("Images")
     public java.util.List<DescribeImagesResponseBodyImages> images;
 
     /**
-     * <p>The token that is used for the next query. If this parameter is empty, all results are returned.</p>
+     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -107,13 +107,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The OS of the image.</p>
+         * <p>The OS type of the image.</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
-         * <p>The operating system type of the image.</p>
+         * <p>The OS type of the image.</p>
          */
         @NameInMap("Platform")
         public String platform;
@@ -125,7 +125,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The protocol.</p>
+         * <p>The type of the protocol.</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
@@ -133,8 +133,8 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * <p>The session type of the image. Valid values:</p>
          * <br>
-         * <p>*   SINGLE_SESSION: single-session image</p>
-         * <p>*   MULTIPLE_SESSION: multi-session image</p>
+         * <p>*   SINGLE_SESSION: single-session images</p>
+         * <p>*   MULTIPLE_SESSION: multi-session images</p>
          */
         @NameInMap("SessionType")
         public String sessionType;
@@ -158,7 +158,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The language of the OS.</p>
+         * <p>The languages of the OS.</p>
          */
         @NameInMap("SupportedLanguages")
         public java.util.List<String> supportedLanguages;
@@ -176,7 +176,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain the list of KMS keys.</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;

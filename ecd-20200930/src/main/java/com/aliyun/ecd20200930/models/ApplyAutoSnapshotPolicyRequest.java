@@ -17,7 +17,7 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The region ID of the cloud desktop. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

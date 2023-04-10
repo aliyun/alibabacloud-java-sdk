@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDesktopGroupDetailResponseBody extends TeaModel {
     /**
-     * <p>The information about the desktop group.</p>
+     * <p>Details of the desktop group.</p>
      */
     @NameInMap("Desktops")
     public GetDesktopGroupDetailResponseBodyDesktops desktops;
@@ -69,19 +69,77 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer maxResAmount;
 
         /**
-         * <p>The minimum number of cloud desktops. Valid values: 0 to 200.</p>
+         * <p>The minimum number of cloud desktops that the system must scale. Valid values: 0 to 200.</p>
          */
         @NameInMap("MinResAmount")
         public Integer minResAmount;
 
         /**
-         * <p>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops x Maximum number of sessions allowed for each cloud desktop) x 100%`. When the specified threshold is reached, new cloud desktops are automatically created. If the specified threshold is not reached, idle cloud desktops are released.</p>
+         * <p>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions allowed for each cloud desktop) × 100%`. If the specified threshold is reached, new cloud desktops are automatically created. If the specified threshold is not reached, idle cloud desktops are released.</p>
          */
         @NameInMap("RatioThreshold")
         public Float ratioThreshold;
 
         /**
-         * <p>The type of the scheduled task. Valid values:</p>
+         * <p>The type of the scheduled task.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   drop</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    decline policy</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   normal</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    normal policy</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   peak</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    peak hour policy</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   rise</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    rise policy</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("Type")
         public String type;
@@ -159,7 +217,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
     public static class GetDesktopGroupDetailResponseBodyDesktopsTimerInfos extends TeaModel {
         /**
-         * <p>The CRON expression.</p>
+         * <p>The CRON expression of the scheduled task.</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;
@@ -172,12 +230,114 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         /**
          * <p>The status of the scheduled task.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   1</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The scheduled task is enabled</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   2</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The scheduled task is disabled</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   3</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The scheduled task is deleted</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The type of the scheduled task.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   1</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    scheduled reset</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   2</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    scheduled startup</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   3</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    scheduled stop</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   4</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    scheduled restart</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("TimerType")
         public Integer timerType;
@@ -223,7 +383,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
     public static class GetDesktopGroupDetailResponseBodyDesktops extends TeaModel {
         /**
-         * <p>Indicates whether the desktop group enables auto scale-out.</p>
+         * <p>Indicates whether the auto scale-out feature is enabled for the desktop group.</p>
          */
         @NameInMap("AllowAutoSetup")
         public Integer allowAutoSetup;
@@ -235,7 +395,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer allowBufferCount;
 
         /**
-         * <p>The number of sessions allowed for each cloud desktop in the multi-session desktop group.</p>
+         * <p>The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.</p>
          */
         @NameInMap("BindAmount")
         public Integer bindAmount;
@@ -253,7 +413,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String comments;
 
         /**
-         * <p>The maximum duration of the session. Unit: milliseconds.</p>
+         * <p>The maximum period of time for which a session is effective. Unit: milliseconds.</p>
          */
         @NameInMap("ConnectDuration")
         public Long connectDuration;
@@ -265,7 +425,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The time when the desktop group was created.</p>
+         * <p>The time when the desktop group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -331,13 +491,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The maximum duration of the idle session. Unit: milliseconds.</p>
+         * <p>The maximum period of time for which a session remains idle. Unit: milliseconds.</p>
          */
         @NameInMap("IdleDisconnectDuration")
         public Long idleDisconnectDuration;
 
         /**
-         * <p>The IDs of the images.</p>
+         * <p>The ID of the image.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -349,7 +509,37 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Long keepDuration;
 
         /**
-         * <p>The load balancing policy of the multi-session desktop group.</p>
+         * <p>The load balancing policy for the multi-session desktop group.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    depth first</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   1</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    breadth first</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("LoadPolicy")
         public Integer loadPolicy;
@@ -367,7 +557,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The minimum number of desktops that the desktop group must retain.</p>
+         * <p>The minimum number of cloud desktops that the desktop group must retain.</p>
          */
         @NameInMap("MinDesktopsCount")
         public Integer minDesktopsCount;
@@ -416,12 +606,72 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         /**
          * <p>The type of the desktop group.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    personal desktop group</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   1</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    shared desktop group (multi-session)</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("OwnType")
         public Integer ownType;
 
         /**
-         * <p>The billing method of the desktop group.</p>
+         * <p>The billing method.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PostPaid</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    pay-as-you-go</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   PrePaid</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    subscription</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -433,7 +683,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String policyGroupId;
 
         /**
-         * <p>The ID of the policy with which the desktop group is associated.</p>
+         * <p>The IDs of the policies with which the desktop group is associated.</p>
          */
         @NameInMap("PolicyGroupIds")
         public java.util.List<String> policyGroupIds;
@@ -445,7 +695,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public String policyGroupName;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The names of the policies.</p>
          */
         @NameInMap("PolicyGroupNames")
         public java.util.List<String> policyGroupNames;
@@ -463,31 +713,149 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Float ratioThreshold;
 
         /**
-         * <p>The type of the resource. Currently, only Elastic Compute Service (ECS) instances are supported.</p>
+         * <p>The type of the resource. Only Elastic Compute Service (ECS) instances are supported.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    ECS</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("ResType")
         public Integer resType;
 
         /**
-         * <p>Indicates which type of the disk used by cloud desktops in the desktop group is reset.</p>
+         * <p>Indicates which type of disk is reset for cloud desktops in the desktop group.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    No disks are reset</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   1</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Only the system disk is reset</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   2</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Only the data disk is reset</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   3</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Both the system disk and data disk are reset</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("ResetType")
         public Integer resetType;
 
         /**
-         * <p>The details of the scheduled task.</p>
+         * <p>Details of the scheduled tasks.</p>
          */
         @NameInMap("ScaleTimerInfos")
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsScaleTimerInfos> scaleTimerInfos;
 
         /**
          * <p>The status of the desktop group.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The desktop group is unpaid</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   1</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The desktop group is paid</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   2</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The desktop group has an overdue payment or expired</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The period of time before the idle cloud desktop enters the Stopped state. When the specified period of time is reached, the idle cloud desktop automatically enters the Stopped state. If an end user connects to a cloud desktop that is in the Stopped state, the cloud desktop automatically restarts. Unit: milliseconds.</p>
+         * <p>The period of time before an idle cloud desktop enters the Stopped state. When the specified period of time is reached, the idle cloud desktop automatically stops. If an end user connects to a stopped cloud desktop, the cloud desktop automatically starts. Unit: milliseconds.</p>
          */
         @NameInMap("StopDuration")
         public Long stopDuration;
@@ -505,13 +873,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>The list of scheduled time for desktop group tasks.</p>
+         * <p>The list of scheduled points in time for desktop group tasks.</p>
          */
         @NameInMap("TimerInfos")
         public java.util.List<GetDesktopGroupDetailResponseBodyDesktopsTimerInfos> timerInfos;
 
         /**
-         * <p>The information about the scheduled application.</p>
+         * <p>The information about the scheduling policy.</p>
          */
         @NameInMap("TimingStrategyInfo")
         public String timingStrategyInfo;

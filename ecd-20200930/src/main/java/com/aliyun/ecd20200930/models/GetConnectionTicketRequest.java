@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
     /**
-     * <p>The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started.</p>
+     * <p>The command that you want to run to configure a custom application in user mode. After you obtain the credentials, the application automatically starts.</p>
      * <br>
-     * <p>*   appPath: the path of the application startup file. Example: C:\\\Program Files (x86)\\\000\\\000.exe. Use double slashes as the delimiter.</p>
+     * <p>*   appPath: the path of the application startup file. Example: C:\\\Program Files (x86)\\\000\\\000.exe. Use double slashes as delimiters.</p>
      * <p>*   appParameter: the startup parameters of the application. The value must be of the String type. Separate multiple parameters with spaces. Example: meetingid 000 meetingname aaa.</p>
      */
     @NameInMap("CommandContent")
@@ -29,13 +29,13 @@ public class GetConnectionTicketRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password.</p>
+     * <p>The password for the username.</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the cloud desktop.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -11,10 +11,10 @@ public class DescribeDevicesRequest extends TeaModel {
     public String adDomain;
 
     /**
-     * <p>The type of client.</p>
+     * <p>The type of the Alibaba Cloud Workspace client.</p>
      * <br>
-     * <p>*   1: the hardware client</p>
-     * <p>*   2: the software client</p>
+     * <p>*   1: hardware client.</p>
+     * <p>*   2: software client.</p>
      */
     @NameInMap("ClientType")
     public String clientType;
@@ -32,19 +32,19 @@ public class DescribeDevicesRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The ID of the convenience user to which you want to bind the device.</p>
+     * <p>The ID of the convenience user to whom you want to bind the device.</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of pages to return.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -58,8 +58,8 @@ public class DescribeDevicesRequest extends TeaModel {
     /**
      * <p>The type of the user account.</p>
      * <br>
-     * <p>*   SIMPLE: the convenience account</p>
-     * <p>*   AD: the AD account</p>
+     * <p>*   SIMPLE: convenience account.</p>
+     * <p>*   AD: AD account.</p>
      */
     @NameInMap("UserType")
     public String userType;
