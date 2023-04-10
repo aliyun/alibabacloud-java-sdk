@@ -32,6 +32,7 @@ public class CreateIoTCloudConnectorRequest extends TeaModel {
     public String type;
 
     @NameInMap("WildcardDomainEnabled")
+    @Deprecated
     public Boolean wildcardDomainEnabled;
 
     public static CreateIoTCloudConnectorRequest build(java.util.Map<String, ?> map) throws Exception {

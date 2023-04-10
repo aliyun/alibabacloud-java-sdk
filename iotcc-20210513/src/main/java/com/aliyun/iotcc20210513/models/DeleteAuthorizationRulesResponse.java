@@ -3,7 +3,7 @@ package com.aliyun.iotcc20210513.models;
 
 import com.aliyun.tea.*;
 
-public class ListIoTCloudConnectorAccessSessionLogsResponse extends TeaModel {
+public class DeleteAuthorizationRulesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListIoTCloudConnectorAccessSessionLogsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListIoTCloudConnectorAccessSessionLogsResponseBody body;
+    public DeleteAuthorizationRulesResponseBody body;
 
-    public static ListIoTCloudConnectorAccessSessionLogsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListIoTCloudConnectorAccessSessionLogsResponse self = new ListIoTCloudConnectorAccessSessionLogsResponse();
+    public static DeleteAuthorizationRulesResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAuthorizationRulesResponse self = new DeleteAuthorizationRulesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListIoTCloudConnectorAccessSessionLogsResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteAuthorizationRulesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListIoTCloudConnectorAccessSessionLogsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListIoTCloudConnectorAccessSessionLogsResponse setStatusCode(Integer statusCode) {
+    public DeleteAuthorizationRulesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListIoTCloudConnectorAccessSessionLogsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListIoTCloudConnectorAccessSessionLogsResponse setBody(ListIoTCloudConnectorAccessSessionLogsResponseBody body) {
+    public DeleteAuthorizationRulesResponse setBody(DeleteAuthorizationRulesResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListIoTCloudConnectorAccessSessionLogsResponseBody getBody() {
+    public DeleteAuthorizationRulesResponseBody getBody() {
         return this.body;
     }
 
