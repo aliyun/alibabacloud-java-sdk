@@ -15,6 +15,42 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     /**
      * <p>The destination service type.</p>
+     * <br>
+     * <p>Valid values</p>
+     * <br>
+     * <p><!-- --></p>
+     * <br>
+     * <p>:</p>
+     * <br>
+     * <p>*   VersionOriented</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Multiple</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Single</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Mock\"\"</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Redirect</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -73,9 +109,6 @@ public class AddGatewayRouteRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>Routing policy Json string.</p>
-     */
     @NameInMap("Policies")
     public String policies;
 
@@ -92,21 +125,16 @@ public class AddGatewayRouteRequest extends TeaModel {
     public AddGatewayRouteRequestRedirectJSON redirectJSON;
 
     /**
-     * <p>The sequence number of the route. A small value indicates a high priority.</p>
+     * <p>The sequence number of the route. (A small value indicates a high priority.)</p>
      */
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
-    /**
-     * <p>RouteType: </p>
-     * <br>
-     * <p>Op: Control routing.</p>
-     */
     @NameInMap("RouteType")
     public String routeType;
 
     /**
-     * <p>The services.</p>
+     * <p>The list of services.</p>
      */
     @NameInMap("Services")
     public java.util.List<AddGatewayRouteRequestServices> services;
@@ -290,7 +318,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestFallbackServices extends TeaModel {
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The type of the protocol.</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
@@ -308,7 +336,7 @@ public class AddGatewayRouteRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace in which the service resides.</p>
+         * <p>The namespace to which the service belongs.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -774,13 +802,13 @@ public class AddGatewayRouteRequest extends TeaModel {
         public String httpMothed;
 
         /**
-         * <p>The path that is used to match a method.</p>
+         * <p>The path used for method matching.</p>
          */
         @NameInMap("Mothedpath")
         public String mothedpath;
 
         /**
-         * <p>The information of parameter mappings.</p>
+         * <p>The information about parameter mappings.</p>
          */
         @NameInMap("ParamMapsList")
         public java.util.List<AddGatewayRouteRequestServicesHttpDubboTranscoderMothedMapListParamMapsList> paramMapsList;
@@ -862,7 +890,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestServicesHttpDubboTranscoder extends TeaModel {
         /**
-         * <p>The service group.</p>
+         * <p>The name of the service group.</p>
          */
         @NameInMap("DubboServiceGroup")
         public String dubboServiceGroup;
@@ -926,7 +954,7 @@ public class AddGatewayRouteRequest extends TeaModel {
 
     public static class AddGatewayRouteRequestServices extends TeaModel {
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The type of the protocol.</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
@@ -950,7 +978,7 @@ public class AddGatewayRouteRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace in which the service resides.</p>
+         * <p>The namespace to which the service belongs.</p>
          */
         @NameInMap("Namespace")
         public String namespace;

@@ -24,12 +24,6 @@ public class AddMigrationTaskRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The ID of the task. You do not need to configure this parameter.</p>
-     */
-    @NameInMap("Id")
-    public String id;
-
-    /**
      * <p>The source instance node address.</p>
      */
     @NameInMap("OriginInstanceAddress")
@@ -96,14 +90,6 @@ public class AddMigrationTaskRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
-    }
-
-    public AddMigrationTaskRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
     }
 
     public AddMigrationTaskRequest setOriginInstanceAddress(String originInstanceAddress) {

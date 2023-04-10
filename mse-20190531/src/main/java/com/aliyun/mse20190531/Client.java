@@ -614,10 +614,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterType", request.clusterType);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            query.put("Id", request.id);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.originInstanceAddress)) {
             query.put("OriginInstanceAddress", request.originInstanceAddress);
         }

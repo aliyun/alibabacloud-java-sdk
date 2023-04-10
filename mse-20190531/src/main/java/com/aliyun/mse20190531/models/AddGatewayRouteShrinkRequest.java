@@ -15,6 +15,42 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
 
     /**
      * <p>The destination service type.</p>
+     * <br>
+     * <p>Valid values</p>
+     * <br>
+     * <p><!-- --></p>
+     * <br>
+     * <p>:</p>
+     * <br>
+     * <p>*   VersionOriented</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Multiple</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Single</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Mock\"\"</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Redirect</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -73,9 +109,6 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>Routing policy Json string.</p>
-     */
     @NameInMap("Policies")
     public String policies;
 
@@ -92,21 +125,16 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     public String redirectJSONShrink;
 
     /**
-     * <p>The sequence number of the route. A small value indicates a high priority.</p>
+     * <p>The sequence number of the route. (A small value indicates a high priority.)</p>
      */
     @NameInMap("RouteOrder")
     public Integer routeOrder;
 
-    /**
-     * <p>RouteType: </p>
-     * <br>
-     * <p>Op: Control routing.</p>
-     */
     @NameInMap("RouteType")
     public String routeType;
 
     /**
-     * <p>The services.</p>
+     * <p>The list of services.</p>
      */
     @NameInMap("Services")
     public String servicesShrink;
