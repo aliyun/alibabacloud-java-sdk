@@ -17,12 +17,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpCode")
-    public String httpCode;
-
-    /**
      * <p>The message returned.</p>
      */
     @NameInMap("Message")
@@ -64,14 +58,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public AddMigrationTaskResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public String getHttpCode() {
-        return this.httpCode;
-    }
-
     public AddMigrationTaskResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -106,18 +92,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
          */
         @NameInMap("ClusterType")
         public String clusterType;
-
-        /**
-         * <p>The creation time.</p>
-         */
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        /**
-         * <p>The update time.</p>
-         */
-        @NameInMap("GmtModified")
-        public String gmtModified;
 
         /**
          * <p>The ID of the task.</p>
@@ -184,22 +158,6 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         }
         public String getClusterType() {
             return this.clusterType;
-        }
-
-        public AddMigrationTaskResponseBodyData setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public AddMigrationTaskResponseBodyData setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
         }
 
         public AddMigrationTaskResponseBodyData setId(String id) {

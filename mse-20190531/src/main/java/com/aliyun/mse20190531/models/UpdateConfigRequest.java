@@ -26,18 +26,18 @@ public class UpdateConfigRequest extends TeaModel {
     public String autopurgeSnapRetainCount;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>Specifies whether to enable RAM authorization for a configuration center. This parameter is valid for Nacos instances. Valid values:</p>
+     * <p>Specifies whether to enable Resource Access Management (RAM) authentication for a configuration center. This parameter is valid for Nacos instances. Valid values:</p>
      * <br>
-     * <p>*   `true`: enabled</p>
-     * <p>*   `false`: disabled</p>
+     * <p>*   `true`: enabled.</p>
+     * <p>*   `false`: disabled.</p>
      * <br>
-     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports this feature.</p>
+     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigAuthSupported parameter value to check whether the instance supports the RAM authentication feature.</p>
      */
     @NameInMap("ConfigAuthEnabled")
     public Boolean configAuthEnabled;
@@ -45,10 +45,10 @@ public class UpdateConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable configuration encryption for a configuration center. This parameter is valid for Nacos instances. Valid values:</p>
      * <br>
-     * <p>*   `true`: enabled</p>
-     * <p>*   `false`: disabled</p>
+     * <p>*   `true`: enabled.</p>
+     * <p>*   `false`: disabled.</p>
      * <br>
-     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports this feature.</p>
+     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the ConfigSecretSupported parameter value to check whether the instance supports configuration encryption.</p>
      */
     @NameInMap("ConfigSecretEnabled")
     public Boolean configSecretEnabled;
@@ -63,7 +63,7 @@ public class UpdateConfigRequest extends TeaModel {
     public Boolean eurekaSupported;
 
     /**
-     * <p>Specifies whether to enable the time to live (TTL) configuration.</p>
+     * <p>Specifies whether to enable the time to live (TTL) configuration. This parameter is valid for ZooKeeper instances.</p>
      */
     @NameInMap("ExtendedTypesEnable")
     public String extendedTypesEnable;
@@ -89,10 +89,10 @@ public class UpdateConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Mesh Configuration Protocol (MCP). This parameter is valid for Nacos instances. Valid values:</p>
      * <br>
-     * <p>*   `true`: enabled</p>
-     * <p>*   `false`: disabled</p>
+     * <p>*   `true`: enabled.</p>
+     * <p>*   `false`: disabled.</p>
      * <br>
-     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports this feature.</p>
+     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the MCPSupported parameter value to check whether the instance supports MCP.</p>
      */
     @NameInMap("MCPEnabled")
     public Boolean MCPEnabled;
@@ -117,12 +117,12 @@ public class UpdateConfigRequest extends TeaModel {
     public String minSessionTimeout;
 
     /**
-     * <p>Specifies whether to enable RAM authorization for a registry. This parameter is valid for Nacos instances. Valid values:</p>
+     * <p>Specifies whether to enable RAM authentication for a registry. This parameter is valid for Nacos instances. Valid values:</p>
      * <br>
-     * <p>*   `true`: enabled</p>
-     * <p>*   `false`: disabled</p>
+     * <p>*   `true`: enabled.</p>
+     * <p>*   `false`: disabled.</p>
      * <br>
-     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupporte parameter value to check whether the instance supports this feature.</p>
+     * <p>> Before you configure this parameter, you must call the QueryConfig operation to obtain the NamingAuthSupporte parameter value to check whether the instance supports the RAM authentication feature.</p>
      */
     @NameInMap("NamingAuthEnabled")
     public Boolean namingAuthEnabled;
