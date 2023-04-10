@@ -10,6 +10,9 @@ public class CreateTenantUserRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EncryptionType")
+    public String encryptionType;
+
     /**
      * <p>The ID of the OceanBase cluster.</p>
      */
@@ -74,6 +77,14 @@ public class CreateTenantUserRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateTenantUserRequest setEncryptionType(String encryptionType) {
+        this.encryptionType = encryptionType;
+        return this;
+    }
+    public String getEncryptionType() {
+        return this.encryptionType;
     }
 
     public CreateTenantUserRequest setInstanceId(String instanceId) {
