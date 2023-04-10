@@ -7,14 +7,14 @@ public class PredictTemplateModelRequest extends TeaModel {
     @NameInMap("BinaryToText")
     public Boolean binaryToText;
 
+    @NameInMap("Body")
+    public String body;
+
     @NameInMap("Content")
     public String content;
 
     @NameInMap("TaskId")
     public Long taskId;
-
-    @NameInMap("body")
-    public String body;
 
     public static PredictTemplateModelRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictTemplateModelRequest self = new PredictTemplateModelRequest();
@@ -27,6 +27,14 @@ public class PredictTemplateModelRequest extends TeaModel {
     }
     public Boolean getBinaryToText() {
         return this.binaryToText;
+    }
+
+    public PredictTemplateModelRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public PredictTemplateModelRequest setContent(String content) {
@@ -43,14 +51,6 @@ public class PredictTemplateModelRequest extends TeaModel {
     }
     public Long getTaskId() {
         return this.taskId;
-    }
-
-    public PredictTemplateModelRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
 }
