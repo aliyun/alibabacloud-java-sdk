@@ -7,6 +7,9 @@ public class CreateModelAsyncPredictRequest extends TeaModel {
     @NameInMap("BinaryToText")
     public Boolean binaryToText;
 
+    @NameInMap("Body")
+    public String body;
+
     @NameInMap("Content")
     public String content;
 
@@ -22,9 +25,6 @@ public class CreateModelAsyncPredictRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
-    @NameInMap("body")
-    public String body;
-
     public static CreateModelAsyncPredictRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateModelAsyncPredictRequest self = new CreateModelAsyncPredictRequest();
         return TeaModel.build(map, self);
@@ -36,6 +36,14 @@ public class CreateModelAsyncPredictRequest extends TeaModel {
     }
     public Boolean getBinaryToText() {
         return this.binaryToText;
+    }
+
+    public CreateModelAsyncPredictRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public CreateModelAsyncPredictRequest setContent(String content) {
@@ -76,14 +84,6 @@ public class CreateModelAsyncPredictRequest extends TeaModel {
     }
     public String getServiceVersion() {
         return this.serviceVersion;
-    }
-
-    public CreateModelAsyncPredictRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
 }

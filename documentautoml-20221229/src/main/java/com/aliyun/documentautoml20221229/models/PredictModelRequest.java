@@ -7,6 +7,9 @@ public class PredictModelRequest extends TeaModel {
     @NameInMap("BinaryToText")
     public Boolean binaryToText;
 
+    @NameInMap("Body")
+    public String body;
+
     @NameInMap("Content")
     public String content;
 
@@ -15,9 +18,6 @@ public class PredictModelRequest extends TeaModel {
 
     @NameInMap("ModelVersion")
     public String modelVersion;
-
-    @NameInMap("body")
-    public String body;
 
     public static PredictModelRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictModelRequest self = new PredictModelRequest();
@@ -30,6 +30,14 @@ public class PredictModelRequest extends TeaModel {
     }
     public Boolean getBinaryToText() {
         return this.binaryToText;
+    }
+
+    public PredictModelRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public PredictModelRequest setContent(String content) {
@@ -54,14 +62,6 @@ public class PredictModelRequest extends TeaModel {
     }
     public String getModelVersion() {
         return this.modelVersion;
-    }
-
-    public PredictModelRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
 }

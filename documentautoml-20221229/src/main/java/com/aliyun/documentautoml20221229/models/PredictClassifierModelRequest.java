@@ -7,14 +7,14 @@ public class PredictClassifierModelRequest extends TeaModel {
     @NameInMap("AutoPrediction")
     public Boolean autoPrediction;
 
+    @NameInMap("Body")
+    public String body;
+
     @NameInMap("ClassifierId")
     public Long classifierId;
 
     @NameInMap("Content")
     public String content;
-
-    @NameInMap("body")
-    public String body;
 
     public static PredictClassifierModelRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictClassifierModelRequest self = new PredictClassifierModelRequest();
@@ -27,6 +27,14 @@ public class PredictClassifierModelRequest extends TeaModel {
     }
     public Boolean getAutoPrediction() {
         return this.autoPrediction;
+    }
+
+    public PredictClassifierModelRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
     public PredictClassifierModelRequest setClassifierId(Long classifierId) {
@@ -43,14 +51,6 @@ public class PredictClassifierModelRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
-    }
-
-    public PredictClassifierModelRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
 }

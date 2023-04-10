@@ -53,9 +53,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceVersion", request.serviceVersion);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("Body", request.body);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateModelAsyncPredict"),
@@ -120,9 +125,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Content", request.content);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("Body", request.body);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PredictClassifierModel"),
@@ -162,9 +172,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ModelVersion", request.modelVersion);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("Body", request.body);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PredictModel"),
@@ -200,9 +215,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskId", request.taskId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("Body", request.body);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PredictTemplateModel"),
