@@ -25,6 +25,12 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     @NameInMap("DestinationType")
     public java.util.List<String> destinationType;
 
+    @NameInMap("FuzzyAuthorizationRuleName")
+    public String fuzzyAuthorizationRuleName;
+
+    @NameInMap("FuzzyDestination")
+    public String fuzzyDestination;
+
     @NameInMap("IoTCloudConnectorId")
     public String ioTCloudConnectorId;
 
@@ -102,6 +108,22 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     }
     public java.util.List<String> getDestinationType() {
         return this.destinationType;
+    }
+
+    public ListAuthorizationRulesRequest setFuzzyAuthorizationRuleName(String fuzzyAuthorizationRuleName) {
+        this.fuzzyAuthorizationRuleName = fuzzyAuthorizationRuleName;
+        return this;
+    }
+    public String getFuzzyAuthorizationRuleName() {
+        return this.fuzzyAuthorizationRuleName;
+    }
+
+    public ListAuthorizationRulesRequest setFuzzyDestination(String fuzzyDestination) {
+        this.fuzzyDestination = fuzzyDestination;
+        return this;
+    }
+    public String getFuzzyDestination() {
+        return this.fuzzyDestination;
     }
 
     public ListAuthorizationRulesRequest setIoTCloudConnectorId(String ioTCloudConnectorId) {
