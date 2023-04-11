@@ -4,6 +4,9 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class TranslateGeneralRequest extends TeaModel {
+    @NameInMap("Context")
+    public String context;
+
     @NameInMap("FormatType")
     public String formatType;
 
@@ -22,6 +25,14 @@ public class TranslateGeneralRequest extends TeaModel {
     public static TranslateGeneralRequest build(java.util.Map<String, ?> map) throws Exception {
         TranslateGeneralRequest self = new TranslateGeneralRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TranslateGeneralRequest setContext(String context) {
+        this.context = context;
+        return this;
+    }
+    public String getContext() {
+        return this.context;
     }
 
     public TranslateGeneralRequest setFormatType(String formatType) {

@@ -1,3 +1,6 @@
+2023-04-11 Version: 1.0.4
+- Update Core .
+
 2021-11-05 Version: 1.0.3
 - Add Ext parameter to image translation API.
 
