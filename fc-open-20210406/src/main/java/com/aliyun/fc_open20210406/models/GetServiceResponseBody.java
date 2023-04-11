@@ -20,7 +20,7 @@ public class GetServiceResponseBody extends TeaModel {
      * <p>Specifies whether to allow functions to access the Internet. Valid values:</p>
      * <br>
      * <p>*   **true**: allows functions in the specified service to access the Internet.</p>
-     * <p>*   **false**: does not allow functions in the specified service to access the Internet.</p>
+     * <p>*   **false**: does not allow functions to access the Internet.</p>
      */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
@@ -38,7 +38,7 @@ public class GetServiceResponseBody extends TeaModel {
     public LogConfig logConfig;
 
     /**
-     * <p>The configuration of the NAS file system. The configuration allows functions in the specified service in Function Compute to access the NAS file system.</p>
+     * <p>The configurations of the NAS file system. The configuration allows functions in the specified service in Function Compute to access the NAS file system.</p>
      */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
@@ -71,7 +71,7 @@ public class GetServiceResponseBody extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The configurations of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).</p>
+     * <p>The configuration of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).</p>
      */
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;

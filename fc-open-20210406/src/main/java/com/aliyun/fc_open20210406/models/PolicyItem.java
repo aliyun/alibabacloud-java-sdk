@@ -5,51 +5,51 @@ import com.aliyun.tea.*;
 
 public class PolicyItem extends TeaModel {
     @NameInMap("key")
-    public byte[] key;
+    public String key;
 
     @NameInMap("operator")
-    public byte[] operator;
+    public String operator;
 
     @NameInMap("type")
-    public byte[] type;
+    public String type;
 
     @NameInMap("value")
-    public byte[] value;
+    public String value;
 
     public static PolicyItem build(java.util.Map<String, ?> map) throws Exception {
         PolicyItem self = new PolicyItem();
         return TeaModel.build(map, self);
     }
 
-    public PolicyItem setKey(byte[] key) {
+    public PolicyItem setKey(String key) {
         this.key = key;
         return this;
     }
-    public byte[] getKey() {
+    public String getKey() {
         return this.key;
     }
 
-    public PolicyItem setOperator(byte[] operator) {
+    public PolicyItem setOperator(String operator) {
         this.operator = operator;
         return this;
     }
-    public byte[] getOperator() {
+    public String getOperator() {
         return this.operator;
     }
 
-    public PolicyItem setType(byte[] type) {
+    public PolicyItem setType(String type) {
         this.type = type;
         return this;
     }
-    public byte[] getType() {
+    public String getType() {
         return this.type;
     }
 
-    public PolicyItem setValue(byte[] value) {
+    public PolicyItem setValue(String value) {
         this.value = value;
         return this;
     }
-    public byte[] getValue() {
+    public String getValue() {
         return this.value;
     }
 

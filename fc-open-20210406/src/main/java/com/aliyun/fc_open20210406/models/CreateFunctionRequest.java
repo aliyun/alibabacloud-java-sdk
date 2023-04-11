@@ -89,7 +89,7 @@ public class CreateFunctionRequest extends TeaModel {
     public Integer initializationTimeout;
 
     /**
-     * <p>The handler of the Initializer hook. For more information, see [Initializer hook](~~157704~~).</p>
+     * <p>The handler of the Initializer hook. For more information, see [Initializer hooks](~~157704~~).</p>
      */
     @NameInMap("initializer")
     public String initializer;
@@ -129,13 +129,13 @@ public class CreateFunctionRequest extends TeaModel {
     /**
      * <p>The information about layers.</p>
      * <br>
-     * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name as a layer with a larger subscript.</p>
+     * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.</p>
      */
     @NameInMap("layers")
     public java.util.List<String> layers;
 
     /**
-     * <p>The memory size for the function. Unit: MB. The memory size must be a multiple of 64 MB. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).</p>
+     * <p>The memory size for the function. Unit: MB. The value must be a multiple of 64. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).</p>
      */
     @NameInMap("memorySize")
     public Integer memorySize;
