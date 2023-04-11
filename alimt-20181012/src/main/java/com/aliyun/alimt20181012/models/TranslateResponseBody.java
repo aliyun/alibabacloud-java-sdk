@@ -53,47 +53,6 @@ public class TranslateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetImageTranslateResponseBodyData extends TeaModel {
-        @NameInMap("Orc")
-        public String orc;
-
-        @NameInMap("PictureEditor")
-        public String pictureEditor;
-
-        @NameInMap("Url")
-        public String url;
-
-        public static GetImageTranslateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetImageTranslateResponseBodyData self = new GetImageTranslateResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetImageTranslateResponseBodyData setOrc(String orc) {
-            this.orc = orc;
-            return this;
-        }
-        public String getOrc() {
-            return this.orc;
-        }
-
-        public GetImageTranslateResponseBodyData setPictureEditor(String pictureEditor) {
-            this.pictureEditor = pictureEditor;
-            return this;
-        }
-        public String getPictureEditor() {
-            return this.pictureEditor;
-        }
-
-        public GetImageTranslateResponseBodyData setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-    }
-
     public static class TranslateResponseBodyData extends TeaModel {
         @NameInMap("Translated")
         public String translated;

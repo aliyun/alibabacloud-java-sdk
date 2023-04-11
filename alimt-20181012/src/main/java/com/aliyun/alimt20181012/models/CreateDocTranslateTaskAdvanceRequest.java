@@ -4,15 +4,14 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class CreateDocTranslateTaskAdvanceRequest extends TeaModel {
-    @NameInMap("FileUrlObject")
-    @Validation(required = true)
-    public java.io.InputStream fileUrlObject;
-
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("FileUrl")
+    public java.io.InputStream fileUrlObject;
 
     @NameInMap("Scene")
     public String scene;
@@ -26,14 +25,6 @@ public class CreateDocTranslateTaskAdvanceRequest extends TeaModel {
     public static CreateDocTranslateTaskAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDocTranslateTaskAdvanceRequest self = new CreateDocTranslateTaskAdvanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDocTranslateTaskAdvanceRequest setFileUrlObject(java.io.InputStream fileUrlObject) {
-        this.fileUrlObject = fileUrlObject;
-        return this;
-    }
-    public java.io.InputStream getFileUrlObject() {
-        return this.fileUrlObject;
     }
 
     public CreateDocTranslateTaskAdvanceRequest setCallbackUrl(String callbackUrl) {
@@ -50,6 +41,14 @@ public class CreateDocTranslateTaskAdvanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDocTranslateTaskAdvanceRequest setFileUrlObject(java.io.InputStream fileUrlObject) {
+        this.fileUrlObject = fileUrlObject;
+        return this;
+    }
+    public java.io.InputStream getFileUrlObject() {
+        return this.fileUrlObject;
     }
 
     public CreateDocTranslateTaskAdvanceRequest setScene(String scene) {
