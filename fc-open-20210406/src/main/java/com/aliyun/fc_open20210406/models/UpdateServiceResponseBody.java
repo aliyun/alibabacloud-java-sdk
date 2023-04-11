@@ -20,7 +20,7 @@ public class UpdateServiceResponseBody extends TeaModel {
      * <p>Specifies whether to allow functions to access the Internet. Valid values:</p>
      * <br>
      * <p>*   **true**: allows functions in the specified service to access the Internet.</p>
-     * <p>*   **false**: does not allow functions in the specified service to access the Internet.</p>
+     * <p>*   **false**: does not allow functions to access the Internet.</p>
      */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
@@ -71,7 +71,7 @@ public class UpdateServiceResponseBody extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The configurations of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).</p>
+     * <p>The configuration of Tracing Analysis. After you configure Tracing Analysis for a service in Function Compute, you can record the execution duration of a request, view the amount of cold start time for a function, and record the execution duration of a function. For more information, see [Overview](~~189804~~).</p>
      */
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;

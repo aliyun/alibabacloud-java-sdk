@@ -14,7 +14,7 @@ public class UpdateServiceRequest extends TeaModel {
      * <p>Specifies whether to allow functions to access the Internet. Valid values:</p>
      * <br>
      * <p>*   **true**: allows functions in the specified service to access the Internet.</p>
-     * <p>*   **false**: does not allow functions in the specified service to access the Internet.</p>
+     * <p>*   **false**: does not allow functions to access the Internet.</p>
      */
     @NameInMap("internetAccess")
     public Boolean internetAccess;

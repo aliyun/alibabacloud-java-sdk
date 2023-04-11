@@ -29,7 +29,7 @@ public class ListFunctionsRequest extends TeaModel {
     public String qualifier;
 
     /**
-     * <p>The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.</p>
+     * <p>The starting position of the result list. The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.</p>
      */
     @NameInMap("startKey")
     public String startKey;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RoutePolicy extends TeaModel {
     @NameInMap("condition")
-    public byte[] condition;
+    public String condition;
 
     @NameInMap("policyItems")
     public java.util.List<PolicyItem> policyItems;
@@ -15,11 +15,11 @@ public class RoutePolicy extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RoutePolicy setCondition(byte[] condition) {
+    public RoutePolicy setCondition(String condition) {
         this.condition = condition;
         return this;
     }
-    public byte[] getCondition() {
+    public String getCondition() {
         return this.condition;
     }
 
