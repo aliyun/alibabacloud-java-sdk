@@ -4,21 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the SQL statements.</p>
+     */
     @NameInMap("StructSyncExecSqlDetail")
     public GetStructSyncExecSqlDetailResponseBodyStructSyncExecSqlDetail structSyncExecSqlDetail;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,9 +80,15 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncExecSqlDetailResponseBodyStructSyncExecSqlDetail extends TeaModel {
+        /**
+         * <p>The SQL statements that are executed.</p>
+         */
         @NameInMap("ExecSql")
         public String execSql;
 
+        /**
+         * <p>The total number of SQL statements.</p>
+         */
         @NameInMap("TotalSqlCount")
         public Long totalSqlCount;
 

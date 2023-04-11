@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -26,7 +26,7 @@ public class GetUserResponseBody extends TeaModel {
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <p>*   **false**: The request fails.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -136,8 +136,11 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The DingTalk chatbot URL that is used to receive notifications.</p>
          * <br>
-         * <p>> * The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
-         * <p>> * The system does not return this parameter if the user has not set a DingTalk chatbot URL.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   The system returns this parameter if the user has set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
+         * <br>
+         * <p>*   The system does not return this parameter if the user has not set a DingTalk chatbot URL.</p>
          */
         @NameInMap("DingRobot")
         public String dingRobot;
@@ -145,14 +148,17 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The email address that is used to receive notifications.</p>
          * <br>
-         * <p>> * The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
-         * <p>> * The system does not return this parameter if the user has not set an email address.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   The system returns this parameter if the user has set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
+         * <br>
+         * <p>*   The system does not return this parameter if the user has not set an email address.</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>The last time when the user logged on to the console.</p>
+         * <p>The last point in time when the user logged on to the console.</p>
          */
         @NameInMap("LastLoginTime")
         public String lastLoginTime;
@@ -170,10 +176,13 @@ public class GetUserResponseBody extends TeaModel {
         public Long maxResultCount;
 
         /**
-         * <p>The mobile phone number that is used to receive notifications.</p>
+         * <p>The mobile number of the user.</p>
          * <br>
-         * <p>> * The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
-         * <p>> * The system does not return this parameter if the user has not set a mobile phone number.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   The system returns this parameter if the user has set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
+         * <br>
+         * <p>*   The system does not return this parameter if the user has not set a mobile phone number.</p>
          */
         @NameInMap("Mobile")
         public String mobile;
@@ -187,9 +196,9 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The notification method. The system returns one or more values. Valid values:</p>
          * <br>
-         * <p>*   **SMS**: text message.</p>
+         * <p>*   **SMS**: text message</p>
          * <p>*   **EMAIL**: email.</p>
-         * <p>*   **DingTalk**: DingTalk.</p>
+         * <p>*   **DINGDING**: DingTalk.</p>
          * <p>*   **DINGROBOT**: DingTalk chatbot.</p>
          * <p>*   **WEBHOOK**: webhook.</p>
          */
@@ -199,31 +208,19 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The UID of the Alibaba Cloud account of the user.</p>
          * <br>
-         * <p>>  An Alibaba Cloud account can contain one or more RAM users.</p>
+         * <p>> An Alibaba Cloud account can contain one or more RAM users.</p>
          */
         @NameInMap("ParentUid")
         public Long parentUid;
 
         /**
-         * <p>The ID of the role that is assigned to the user. Valid values:</p>
-         * <br>
-         * <p>*   **1**: a regular user role.</p>
-         * <p>*   **2**: a database administrator (DBA) role.</p>
-         * <p>*   **3**: a DMS administrator role.</p>
-         * <p>*   **4**: a security administrator role.</p>
-         * <p>*   **6**: a schema read-only user role.</p>
+         * <p>The list of role IDs.</p>
          */
         @NameInMap("RoleIdList")
         public GetUserResponseBodyUserRoleIdList roleIdList;
 
         /**
-         * <p>The name of the role that is assigned to the user. Valid values:</p>
-         * <br>
-         * <p>*   **USER**: a regular user.</p>
-         * <p>*   **DBA** : a DBA.</p>
-         * <p>*   **ADMIN**: a DMS administrator.</p>
-         * <p>*   **SECURITY_ADMIN**: a security administrator.</p>
-         * <p>*   **STRUCT_READ_ONLY**: a schema read-only user.</p>
+         * <p>The list of role names.</p>
          */
         @NameInMap("RoleNameList")
         public GetUserResponseBodyUserRoleNameList roleNameList;
@@ -232,7 +229,7 @@ public class GetUserResponseBody extends TeaModel {
          * <p>The signature method that is used to secure connections when a webhook URL is used. Valid values:</p>
          * <br>
          * <p>*   **NONE**: no signature.</p>
-         * <p>*   **HMAC\_SHA1**: HMAC_SHA1.</p>
+         * <p>*   **HMAC_SHA1**: HMAC_SHA1.</p>
          */
         @NameInMap("SignatureMethod")
         public String signatureMethod;
@@ -262,8 +259,11 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The webhook URL that is used to receive notifications.</p>
          * <br>
-         * <p>> * If the user has set a webhook URL, DMS sends notifications to the specified URL.</p>
-         * <p>> * The system does not return this parameter if the user has not set a webhook URL.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   If the user has set a webhook URL, DMS sends notifications to the specified URL.</p>
+         * <br>
+         * <p>*   The system does not return this parameter if the user has not set a webhook URL.</p>
          */
         @NameInMap("Webhook")
         public String webhook;

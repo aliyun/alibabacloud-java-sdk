@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
     /**
-     * <p>The error code that is returned if the request fails.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -25,8 +25,8 @@ public class ListTablesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -166,13 +166,13 @@ public class ListTablesResponseBody extends TeaModel {
         public Long numRows;
 
         /**
-         * <p>The IDs of the owners of the table.</p>
+         * <p>The ID list of the table owners.</p>
          */
         @NameInMap("OwnerIdList")
         public ListTablesResponseBodyTableListTableOwnerIdList ownerIdList;
 
         /**
-         * <p>The nicknames of the owners of the table.</p>
+         * <p>The nickname list of the table owners.</p>
          */
         @NameInMap("OwnerNameList")
         public ListTablesResponseBodyTableListTableOwnerNameList ownerNameList;
@@ -196,7 +196,7 @@ public class ListTablesResponseBody extends TeaModel {
         public String tableId;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          */
         @NameInMap("TableName")
         public String tableName;

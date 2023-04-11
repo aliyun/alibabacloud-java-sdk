@@ -4,18 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListIndexesResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The details of indexes.</p>
+     */
     @NameInMap("IndexList")
     public ListIndexesResponseBodyIndexList indexList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +80,39 @@ public class ListIndexesResponseBody extends TeaModel {
     }
 
     public static class ListIndexesResponseBodyIndexListIndex extends TeaModel {
+        /**
+         * <p>The description of the index.</p>
+         */
         @NameInMap("IndexComment")
         public String indexComment;
 
+        /**
+         * <p>The ID of the index.</p>
+         */
         @NameInMap("IndexId")
         public String indexId;
 
+        /**
+         * <p>The name of the index.</p>
+         */
         @NameInMap("IndexName")
         public String indexName;
 
+        /**
+         * <p>The type of the index. Valid values:</p>
+         * <br>
+         * <p>*   Primary</p>
+         * <p>*   Unique</p>
+         * <p>*   Normal</p>
+         * <p>*   FullText</p>
+         * <p>*   Spatial</p>
+         */
         @NameInMap("IndexType")
         public String indexType;
 
+        /**
+         * <p>The ID of the table.</p>
+         */
         @NameInMap("TableId")
         public String tableId;
 

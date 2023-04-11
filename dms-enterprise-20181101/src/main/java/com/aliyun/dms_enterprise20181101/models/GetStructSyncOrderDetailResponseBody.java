@@ -4,18 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetStructSyncOrderDetailResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the schema synchronization ticket.</p>
+     */
     @NameInMap("StructSyncOrderDetail")
     public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail structSyncOrderDetail;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +80,36 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo extends TeaModel {
+        /**
+         * <p>The ID of the source database.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
+        /**
+         * <p>The type of the database engine.</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The type of the environment to which the database instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is not a logical database</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The name that is used to search for the database.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
@@ -128,6 +161,9 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceVersionInfo extends TeaModel {
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("VersionId")
         public String versionId;
 
@@ -147,9 +183,15 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList extends TeaModel {
+        /**
+         * <p>The name of the table whose schema you want to synchronize.</p>
+         */
         @NameInMap("SourceTableName")
         public String sourceTableName;
 
+        /**
+         * <p>The name of the table to which you want to synchronize the schema of a table.</p>
+         */
         @NameInMap("TargetTableName")
         public String targetTableName;
 
@@ -177,18 +219,36 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo extends TeaModel {
+        /**
+         * <p>The ID of the destination database.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
+        /**
+         * <p>The type of the database engine.</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The type of the environment to which the database instance belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: The database is not a logical database</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The name that is used to search for the database.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
@@ -240,6 +300,9 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo extends TeaModel {
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("VersionId")
         public String versionId;
 
@@ -259,27 +322,64 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail extends TeaModel {
+        /**
+         * <p>Indicates whether to skip errors. Valid values:</p>
+         * <br>
+         * <p>*   **true**: skips the error and continues to execute SQL statements.</p>
+         * <p>*   **false**: stops executing SQL statements.</p>
+         */
         @NameInMap("IgnoreError")
         public Boolean ignoreError;
 
+        /**
+         * <p>The information about the source database.</p>
+         */
         @NameInMap("SourceDatabaseInfo")
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo sourceDatabaseInfo;
 
+        /**
+         * <p>The schema version of the source database. Valid values:</p>
+         * <br>
+         * <p>*   **DATASOURCE**: the default latest version of the system</p>
+         * <p>*   **VERSION**: a previous schema version that you manually specify</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The version information about the source instance.</p>
+         * <br>
+         * <p>> This parameter is displayed only when the value of the **SourceType** parameter is **VERSION**.</p>
+         */
         @NameInMap("SourceVersionInfo")
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceVersionInfo sourceVersionInfo;
 
+        /**
+         * <p>The information about the table whose schema you want to synchronize.</p>
+         */
         @NameInMap("TableInfoList")
         public java.util.List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> tableInfoList;
 
+        /**
+         * <p>The information about the destination database.</p>
+         */
         @NameInMap("TargetDatabaseInfo")
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo targetDatabaseInfo;
 
+        /**
+         * <p>The schema version of the destination database. Valid values:</p>
+         * <br>
+         * <p>*   **DATASOURCE**: the default latest version of the system</p>
+         * <p>*   **VERSION**: a previous schema version that you manually specify</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The version information about the destination instance.</p>
+         * <br>
+         * <p>> This parameter is displayed only when the value of the **SourceType** parameter is **VERSION**.</p>
+         */
         @NameInMap("TargetVersionInfo")
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo targetVersionInfo;
 

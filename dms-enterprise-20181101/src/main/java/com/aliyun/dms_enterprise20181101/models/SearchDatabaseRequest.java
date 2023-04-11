@@ -11,7 +11,7 @@ public class SearchDatabaseRequest extends TeaModel {
     public String dbType;
 
     /**
-     * <p>The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+     * <p>The environment type of the database. For more information, see [Change the environment type of an instance](~~163309~~).</p>
      */
     @NameInMap("EnvType")
     public String envType;
@@ -56,7 +56,7 @@ public class SearchDatabaseRequest extends TeaModel {
     public String searchTarget;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

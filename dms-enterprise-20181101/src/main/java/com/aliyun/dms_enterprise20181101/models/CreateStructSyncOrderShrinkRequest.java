@@ -4,18 +4,35 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateStructSyncOrderShrinkRequest extends TeaModel {
+    /**
+     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](~~206069~~) operation to query the key of the attachment.</p>
+     */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
+    /**
+     * <p>The remarks of the ticket.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The parameters of the ticket.</p>
+     */
     @NameInMap("Param")
     public String paramShrink;
 
+    /**
+     * <p>The IDs of the stakeholders.</p>
+     */
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

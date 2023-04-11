@@ -13,7 +13,9 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>>  Valid values: 10, 20, 50, and 100. Default value: 10.</p>
+     * <p>**</p>
+     * <br>
+     * <p>Valid values: 10, 20, 50, and 100.**** Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -21,11 +23,11 @@ public class ListUsersRequest extends TeaModel {
     /**
      * <p>The role that is assigned to the user. Valid values:</p>
      * <br>
-     * <p>*   **USER**: a regular user role.</p>
-     * <p>*   **DBA**: a database administrator (DBA) role.</p>
-     * <p>*   **ADMIN**: a Data Management (DMS) administrator role.</p>
-     * <p>*   **SECURITY_ADMIN**: a security administrator role.</p>
-     * <p>*   **STRUCT\_READ\_ONLY**: a schema read-only user role.</p>
+     * <p>*   **USER**: a regular user.</p>
+     * <p>*   **DBA** : a database administrator (DBA).</p>
+     * <p>*   **ADMIN**: a Data Management (DMS) administrator.</p>
+     * <p>*   **SECURITY_ADMIN**: a security administrator.</p>
+     * <p>*   **STRUCT_READ_ONLY**: a schema read-only user.</p>
      * <br>
      * <p>>  To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.</p>
      */
@@ -39,7 +41,7 @@ public class ListUsersRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to obtain the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;

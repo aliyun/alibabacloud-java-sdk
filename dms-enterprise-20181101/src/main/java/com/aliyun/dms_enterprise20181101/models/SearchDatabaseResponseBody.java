@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchDatabaseResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -29,10 +29,10 @@ public class SearchDatabaseResponseBody extends TeaModel {
     public SearchDatabaseResponseBodySearchDatabaseList searchDatabaseList;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request fails.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -141,6 +141,11 @@ public class SearchDatabaseResponseBody extends TeaModel {
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The name of the catalog to which the database belongs.</p>
+         * <br>
+         * <p>> If the type of the database engine is PostgreSQL, the name of the database is displayed.</p>
+         */
         @NameInMap("CatalogName")
         public String catalogName;
 
@@ -157,7 +162,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         public String datalinkName;
 
         /**
-         * <p>The type of the database.</p>
+         * <p>The type of the database engine.</p>
          */
         @NameInMap("DbType")
         public String dbType;
@@ -175,7 +180,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         public String encoding;
 
         /**
-         * <p>The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+         * <p>The environment type of the database. For more information, see [Change the environment type of an instance](~~163309~~).</p>
          */
         @NameInMap("EnvType")
         public String envType;
@@ -196,7 +201,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         public Boolean logic;
 
         /**
-         * <p>The IDs of the owners of the database.</p>
+         * <p>The IDs of the owners of the databases.</p>
          */
         @NameInMap("OwnerIdList")
         public SearchDatabaseResponseBodySearchDatabaseListSearchDatabaseOwnerIdList ownerIdList;
@@ -208,7 +213,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         public SearchDatabaseResponseBodySearchDatabaseListSearchDatabaseOwnerNameList ownerNameList;
 
         /**
-         * <p>The port number of the instance in which the database resides.</p>
+         * <p>The port of the instance in which the database resides.</p>
          */
         @NameInMap("Port")
         public Integer port;
@@ -226,7 +231,7 @@ public class SearchDatabaseResponseBody extends TeaModel {
         public String searchName;
 
         /**
-         * <p>The system ID (Sid) of the instance in which the database resides.</p>
+         * <p>The system ID (SID) of the instance in which the database resides.</p>
          */
         @NameInMap("Sid")
         public String sid;

@@ -3,7 +3,7 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class ListServersResponse extends TeaModel {
+public class RevokeTemplateAuthorityResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListServersResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListServersResponseBody body;
+    public RevokeTemplateAuthorityResponseBody body;
 
-    public static ListServersResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListServersResponse self = new ListServersResponse();
+    public static RevokeTemplateAuthorityResponse build(java.util.Map<String, ?> map) throws Exception {
+        RevokeTemplateAuthorityResponse self = new RevokeTemplateAuthorityResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListServersResponse setHeaders(java.util.Map<String, String> headers) {
+    public RevokeTemplateAuthorityResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListServersResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListServersResponse setStatusCode(Integer statusCode) {
+    public RevokeTemplateAuthorityResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListServersResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListServersResponse setBody(ListServersResponseBody body) {
+    public RevokeTemplateAuthorityResponse setBody(RevokeTemplateAuthorityResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListServersResponseBody getBody() {
+    public RevokeTemplateAuthorityResponseBody getBody() {
         return this.body;
     }
 

@@ -4,18 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetOrderBaseInfoResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The basic information about the ticket.</p>
+     */
     @NameInMap("OrderBaseInfo")
     public GetOrderBaseInfoResponseBodyOrderBaseInfo orderBaseInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -103,42 +118,89 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
     }
 
     public static class GetOrderBaseInfoResponseBodyOrderBaseInfo extends TeaModel {
+        /**
+         * <p>The remarks of the ticket.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The applicant.</p>
+         */
         @NameInMap("Committer")
         public String committer;
 
+        /**
+         * <p>The ID of the applicant. Note: The ID is different from the Alibaba Cloud account ID of the applicant.</p>
+         */
         @NameInMap("CommitterId")
         public Long committerId;
 
+        /**
+         * <p>The time when the ticket was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the ticket was last modified.</p>
+         */
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
+        /**
+         * <p>The ID of the ticket.</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <p>The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](~~465865~~) operation.</p>
+         */
         @NameInMap("PluginType")
         public String pluginType;
 
+        /**
+         * <p>The IDs of the operators that are related to the ticket.</p>
+         */
         @NameInMap("RelatedUserList")
         public GetOrderBaseInfoResponseBodyOrderBaseInfoRelatedUserList relatedUserList;
 
+        /**
+         * <p>The nicknames of the operators that are related to the ticket.</p>
+         */
         @NameInMap("RelatedUserNickList")
         public GetOrderBaseInfoResponseBodyOrderBaseInfoRelatedUserNickList relatedUserNickList;
 
+        /**
+         * <p>The status code of the ticket. Valid values:</p>
+         * <br>
+         * <p>*   **new**: The ticket is created.</p>
+         * <p>*   **toaudit**: The ticket is being reviewed.</p>
+         * <p>*   **Approved**: The ticket is approved.</p>
+         * <p>*   **reject**: The ticket is rejected.</p>
+         * <p>*   **processing**: The ticket is being executed.</p>
+         * <p>*   **success**: The ticket is executed.</p>
+         * <p>*   **closed**: The ticket is closed.</p>
+         */
         @NameInMap("StatusCode")
         public String statusCode;
 
+        /**
+         * <p>The description of the status.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        /**
+         * <p>The ID of the approval process.</p>
+         */
         @NameInMap("WorkflowInstanceId")
         public Long workflowInstanceId;
 
+        /**
+         * <p>The description of the approval process.</p>
+         */
         @NameInMap("WorkflowStatusDesc")
         public String workflowStatusDesc;
 

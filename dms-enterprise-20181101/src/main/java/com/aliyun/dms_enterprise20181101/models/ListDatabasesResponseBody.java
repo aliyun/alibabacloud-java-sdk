@@ -4,21 +4,39 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDatabasesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the databases.</p>
+     */
     @NameInMap("DatabaseList")
     public ListDatabasesResponseBodyDatabaseList databaseList;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The number of databases that belong to an instance.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -114,51 +132,104 @@ public class ListDatabasesResponseBody extends TeaModel {
     }
 
     public static class ListDatabasesResponseBodyDatabaseListDatabase extends TeaModel {
+        /**
+         * <p>The name of the catalog to which the database belongs.</p>
+         */
         @NameInMap("CatalogName")
         public String catalogName;
 
+        /**
+         * <p>The ID of the database.</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>The type of the database engine.</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The ID of the DBA.</p>
+         */
         @NameInMap("DbaId")
         public String dbaId;
 
+        /**
+         * <p>The nickname of the Database administrator (DBA) to which the database belongs.</p>
+         */
         @NameInMap("DbaName")
         public String dbaName;
 
+        /**
+         * <p>The encoding format of the database.</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <p>The type of the environment to which the database belongs.</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>The endpoint of the instance to which the database belongs.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The ID of the instance to which the database belongs.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The IDs of the owners of the database.</p>
+         */
         @NameInMap("OwnerIdList")
         public ListDatabasesResponseBodyDatabaseListDatabaseOwnerIdList ownerIdList;
 
+        /**
+         * <p>The nicknames of the database owners.</p>
+         */
         @NameInMap("OwnerNameList")
         public ListDatabasesResponseBodyDatabaseListDatabaseOwnerNameList ownerNameList;
 
+        /**
+         * <p>The connection port of the instance to which the database belongs.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name that is used for searching the database.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
+        /**
+         * <p>The system ID (SID) of the instance to which the database belongs.</p>
+         */
         @NameInMap("Sid")
         public String sid;
 
+        /**
+         * <p>The state of the database. Valid values:</p>
+         * <br>
+         * <p>*   NORMAL: The database is normal.</p>
+         * <p>*   DISABLE: The database is disabled.</p>
+         * <p>*   OFFLINE: The database is unpublished.</p>
+         * <p>*   NOT_EXIST: The database does not exist.</p>
+         */
         @NameInMap("State")
         public String state;
 

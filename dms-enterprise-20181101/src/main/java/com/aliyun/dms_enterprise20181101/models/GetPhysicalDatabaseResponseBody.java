@@ -4,18 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetPhysicalDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The information about the physical database.</p>
+     */
     @NameInMap("Database")
     public GetPhysicalDatabaseResponseBodyDatabase database;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -103,51 +118,110 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
     }
 
     public static class GetPhysicalDatabaseResponseBodyDatabase extends TeaModel {
+        /**
+         * <p>The name of the catalog to which the database belongs.</p>
+         * <br>
+         * <p>> : If the database is a PostgreSQL database, the name of the database is displayed.</p>
+         */
         @NameInMap("CatalogName")
         public String catalogName;
 
+        /**
+         * <p>The ID of the physical database.</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>The type of the database engine.</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The user ID of the DBA in the destination database.</p>
+         */
         @NameInMap("DbaId")
         public String dbaId;
 
+        /**
+         * <p>The nickname of the database administrator (DBA) in the destination database.</p>
+         */
         @NameInMap("DbaName")
         public String dbaName;
 
+        /**
+         * <p>The encoding format of the database.</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <p>The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>The endpoint that is used to connect to the database.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The instance ID of the destination database.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The user IDs of the database owners.</p>
+         */
         @NameInMap("OwnerIdList")
         public GetPhysicalDatabaseResponseBodyDatabaseOwnerIdList ownerIdList;
 
+        /**
+         * <p>The nicknames of the database owners.</p>
+         */
         @NameInMap("OwnerNameList")
         public GetPhysicalDatabaseResponseBodyDatabaseOwnerNameList ownerNameList;
 
+        /**
+         * <p>The port that is used to connect to the database.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The name of the database.</p>
+         * <br>
+         * <p>> : If the database is a PostgreSQL database, the name of the mode is displayed.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name that is used for searching the database.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
+        /**
+         * <p>The system ID (SID) of the database.</p>
+         * <br>
+         * <p>> : The value of the parameter is returned only for Oracle databases.</p>
+         */
         @NameInMap("Sid")
         public String sid;
 
+        /**
+         * <p>The state of the database. Valid values:</p>
+         * <br>
+         * <p>*   **NORMAL**: The database is normal.</p>
+         * <p>*   **DISABLE**: The database is disabled.</p>
+         * <p>*   **OFFLINE**: The database is unpublished.</p>
+         * <p>*   **NOT_EXIST**: The database does not exist.</p>
+         */
         @NameInMap("State")
         public String state;
 

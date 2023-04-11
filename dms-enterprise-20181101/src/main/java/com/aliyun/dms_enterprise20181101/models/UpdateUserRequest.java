@@ -4,32 +4,47 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
+    /**
+     * <p>The maximum number of queries that can be performed each day.</p>
+     */
     @NameInMap("MaxExecuteCount")
     public Long maxExecuteCount;
 
+    /**
+     * <p>The maximum number of rows that can be queried each day.</p>
+     */
     @NameInMap("MaxResultCount")
     public Long maxResultCount;
 
+    /**
+     * <p>The DingTalk ID or mobile number of the user.</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <p>The roles that the user assumes. For more information about the valid values, see the Request parameters section in the [RegisterUser](~~141565~~) topic.</p>
+     */
     @NameInMap("RoleNames")
     public String roleNames;
 
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The UID of the user. You can view your UID by moving the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console.</p>
+     * <p>The Alibaba Cloud unique ID (UID) of the user to update.</p>
      */
     @NameInMap("Uid")
     public Long uid;
 
+    /**
+     * <p>The nickname of the user.</p>
+     */
     @NameInMap("UserNick")
     public String userNick;
 

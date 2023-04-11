@@ -4,9 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetPhysicalDatabaseRequest extends TeaModel {
+    /**
+     * <p>The ID of the physical database. You can call the [SearchDatabase](~~141876~~) operation to obtain the ID.</p>
+     */
     @NameInMap("DbId")
     public Long dbId;
 
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) operation to query the ID of the tenant.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

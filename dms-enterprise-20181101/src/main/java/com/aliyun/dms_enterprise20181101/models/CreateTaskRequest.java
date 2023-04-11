@@ -11,19 +11,19 @@ public class CreateTaskRequest extends TeaModel {
     public Long dagId;
 
     /**
-     * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
+     * <p>The position of the node on the directed acyclic graph (DAG).</p>
      */
     @NameInMap("GraphParam")
     public String graphParam;
 
     /**
-     * <p>The configuration for the node.</p>
+     * <p>The configuration of the node.</p>
      */
     @NameInMap("NodeContent")
     public String nodeContent;
 
     /**
-     * <p>The name of the node you want to create.</p>
+     * <p>The name of the node that you want to create.</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
@@ -35,7 +35,7 @@ public class CreateTaskRequest extends TeaModel {
     public String nodeOutput;
 
     /**
-     * <p>The type of the node you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).</p>
+     * <p>The type of the node that you want to create. For more information about the valid values for this parameter, see [NodeType parameter](~~424705~~).</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
@@ -43,13 +43,13 @@ public class CreateTaskRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
-     * <p>The time variables configured for the node.</p>
+     * <p>The time variables for the node.</p>
      */
     @NameInMap("TimeVariables")
     public String timeVariables;

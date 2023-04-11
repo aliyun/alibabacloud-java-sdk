@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetOpLogResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -29,10 +29,10 @@ public class GetOpLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>- **true**: The request is successful.</p>
-     * <p>- **false**: The request fails.</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -100,8 +100,11 @@ public class GetOpLogResponseBody extends TeaModel {
         /**
          * <p>The endpoint of the database instance.</p>
          * <br>
-         * <p>> * This parameter is valid only for database instances of the LocalInstance type.</p>
-         * <p>> * This parameter is valid only for operations on the functional modules related to tasks.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   This parameter is valid only for database instances of the LocalInstance type.</p>
+         * <br>
+         * <p>*   This parameter is valid only for operations on the functional modules related to tasks.</p>
          */
         @NameInMap("Database")
         public String database;
@@ -139,7 +142,7 @@ public class GetOpLogResponseBody extends TeaModel {
         public Long orderId;
 
         /**
-         * <p>The UID of the Alibaba Cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          */
         @NameInMap("UserId")
         public String userId;

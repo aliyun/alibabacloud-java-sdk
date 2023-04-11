@@ -17,31 +17,31 @@ public class GetProxyResponseBody extends TeaModel {
     public String creatorName;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The port that was used by HTTPS clients to connect to the database instance.</p>
+     * <p>The port number used by the HTTPS protocol.</p>
      */
     @NameInMap("HttpsPort")
     public Integer httpsPort;
 
     /**
-     * <p>The ID of the database instance.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
-     * <p>Indicates whether the internal endpoint is enabled. Default value: **true**.</p>
+     * <p>Indicates whether the internal endpoint was enabled. Default value: **true**.</p>
      */
     @NameInMap("PrivateEnable")
     public Boolean privateEnable;
@@ -52,9 +52,15 @@ public class GetProxyResponseBody extends TeaModel {
     @NameInMap("PrivateHost")
     public String privateHost;
 
+    /**
+     * <p>The port number used by the protocol.</p>
+     */
     @NameInMap("ProtocolPort")
     public Integer protocolPort;
 
+    /**
+     * <p>The protocol type of the database. Example: MYSQL.</p>
+     */
     @NameInMap("ProtocolType")
     public String protocolType;
 
@@ -65,23 +71,29 @@ public class GetProxyResponseBody extends TeaModel {
     public Long proxyId;
 
     /**
-     * <p>Indicates whether the public endpoint is enabled. Valid values:</p>
+     * <p>Indicates whether the public endpoint was enabled. Valid values:</p>
      * <br>
-     * <p>- **true**: The public endpoint is enabled.</p>
-     * <p>- **false**: The public endpoint is disabled.</p>
+     * <p>*   **true**: The public endpoint was enabled.</p>
+     * <p>*   **false**: The public endpoint was disabled.</p>
      */
     @NameInMap("PublicEnable")
     public Boolean publicEnable;
 
     /**
-     * <p>The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.  </p>
+     * <p>The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.</p>
      * <br>
-     * <p>> - If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.</p>
-     * <p>> - If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS is returned.</p>
+     * <br>
+     * <p>*   If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using Alibaba Cloud DNS is returned.</p>
      */
     @NameInMap("PublicHost")
     public String publicHost;
 
+    /**
+     * <p>The ID of the region in which the instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -94,8 +106,8 @@ public class GetProxyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

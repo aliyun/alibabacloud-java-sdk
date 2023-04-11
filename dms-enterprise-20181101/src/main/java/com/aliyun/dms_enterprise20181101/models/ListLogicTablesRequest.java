@@ -4,21 +4,41 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListLogicTablesRequest extends TeaModel {
+    /**
+     * <p>The ID of the logical database.</p>
+     */
     @NameInMap("DatabaseId")
     public String databaseId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Specifies whether to return the GUID of the table.</p>
+     */
     @NameInMap("ReturnGuid")
     public Boolean returnGuid;
 
+    /**
+     * <p>The keyword that is used to search for the logical tables. Prefix match is supported.</p>
+     */
     @NameInMap("SearchName")
     public String searchName;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

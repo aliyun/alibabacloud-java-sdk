@@ -4,21 +4,39 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SearchTableResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the tables.</p>
+     */
     @NameInMap("SearchTableList")
     public SearchTableResponseBodySearchTableList searchTableList;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -114,48 +132,105 @@ public class SearchTableResponseBody extends TeaModel {
     }
 
     public static class SearchTableResponseBodySearchTableListSearchTable extends TeaModel {
+        /**
+         * <p>The name that is used to search for the database to which the table belongs.</p>
+         */
         @NameInMap("DBSearchName")
         public String DBSearchName;
 
+        /**
+         * <p>The ID of the database to which the table belongs.</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The type of the database. Valid values:</p>
+         * <br>
+         * <p>*   **MySQL**</p>
+         * <p>*   **SQLServer**</p>
+         * <p>*   **PostgreSQL**</p>
+         * <p>*   **Oracle**</p>
+         * <p>*   **DRDS**</p>
+         * <p>*   **OceanBase**</p>
+         * <p>*   **Mongo**</p>
+         * <p>*   **Redis**</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The description of the table.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The encoding format of the table.</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <p>The engine of the table.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The type of the environment to which the database belongs.</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>Indicates whether the table is a logical table. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The table is a logical table.</p>
+         * <p>*   **false**: The table is not a logical table.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The IDs of the table owners.</p>
+         */
         @NameInMap("OwnerIdList")
         public SearchTableResponseBodySearchTableListSearchTableOwnerIdList ownerIdList;
 
+        /**
+         * <p>The nicknames of the table owners.</p>
+         */
         @NameInMap("OwnerNameList")
         public SearchTableResponseBodySearchTableListSearchTableOwnerNameList ownerNameList;
 
+        /**
+         * <p>The GUID of the table.</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        /**
+         * <p>The ID of the table.</p>
+         */
         @NameInMap("TableId")
         public String tableId;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The name of the database to which the table belongs.</p>
+         */
         @NameInMap("TableSchemaName")
         public String tableSchemaName;
 

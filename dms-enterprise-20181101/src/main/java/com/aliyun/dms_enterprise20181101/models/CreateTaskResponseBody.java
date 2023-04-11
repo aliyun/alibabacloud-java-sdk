@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the request fails.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the task node returned when the task was created.</p>
+     * <p>The ID of the task node returned if the node is created.</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;

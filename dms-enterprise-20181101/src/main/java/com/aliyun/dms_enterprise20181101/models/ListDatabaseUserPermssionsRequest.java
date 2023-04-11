@@ -4,24 +4,51 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDatabaseUserPermssionsRequest extends TeaModel {
+    /**
+     * <p>The ID of the database.</p>
+     */
     @NameInMap("DbId")
     public String dbId;
 
+    /**
+     * <p>Specifies whether the database is a logical database.</p>
+     */
     @NameInMap("Logic")
     public Boolean logic;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the permission. Valid values:</p>
+     * <br>
+     * <p>*   DATABASE: permissions on databases</p>
+     * <p>*   TABLE: permissions on tables</p>
+     * <p>*   COLUMN: permissions on fields</p>
+     */
     @NameInMap("PermType")
     public String permType;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <p>The nickname of the user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

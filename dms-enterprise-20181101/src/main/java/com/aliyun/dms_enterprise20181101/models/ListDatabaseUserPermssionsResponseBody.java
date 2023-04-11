@@ -4,21 +4,39 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The details of user permissions.</p>
+     */
     @NameInMap("UserPermissions")
     public ListDatabaseUserPermssionsResponseBodyUserPermissions userPermissions;
 
@@ -76,21 +94,43 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
     }
 
     public static class ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail extends TeaModel {
+        /**
+         * <p>The time when the permission was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The time when the permissions expire.</p>
+         */
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        /**
+         * <p>The extra information. This parameter is reserved.</p>
+         */
         @NameInMap("ExtraData")
         public String extraData;
 
+        /**
+         * <p>The description of the entity that authorizes the permission.</p>
+         */
         @NameInMap("OriginFrom")
         public String originFrom;
 
+        /**
+         * <p>The type of the permission. Valid values:</p>
+         * <br>
+         * <p>*   QUERY: the query permissions</p>
+         * <p>*   EXPORT: the export permissions</p>
+         * <p>*   CORRECT: the change permissions</p>
+         */
         @NameInMap("PermType")
         public String permType;
 
+        /**
+         * <p>The ID of the authorization record.</p>
+         */
         @NameInMap("UserAccessId")
         public String userAccessId;
 
@@ -169,48 +209,93 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
     }
 
     public static class ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission extends TeaModel {
+        /**
+         * <p>The alias of the database instance.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The name of a column.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The ID of the database.</p>
+         */
         @NameInMap("DbId")
         public String dbId;
 
+        /**
+         * <p>The type of the database engine.</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The type of resources on which the user has permissions.</p>
+         */
         @NameInMap("DsType")
         public String dsType;
 
+        /**
+         * <p>The type of the environment to which the database belongs.</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Indicates whether the database is a logical database.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The details of user permissions.</p>
+         */
         @NameInMap("PermDetails")
         public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name that is used to search for the database.</p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
+        /**
+         * <p>The ID of the table.</p>
+         */
         @NameInMap("TableId")
         public String tableId;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("UserNickName")
         public String userNickName;
 
