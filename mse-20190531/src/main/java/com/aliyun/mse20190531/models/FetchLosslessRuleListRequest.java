@@ -36,25 +36,19 @@ public class FetchLosslessRuleListRequest extends TeaModel {
      * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
-    public Long pageNumber;
+    public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10</p>
      */
     @NameInMap("PageSize")
-    public Long pageSize;
+    public Integer pageSize;
 
     /**
      * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
-
-    /**
-     * <p>The service source that the application accesses.</p>
-     */
-    @NameInMap("Source")
-    public String source;
 
     public static FetchLosslessRuleListRequest build(java.util.Map<String, ?> map) throws Exception {
         FetchLosslessRuleListRequest self = new FetchLosslessRuleListRequest();
@@ -93,19 +87,19 @@ public class FetchLosslessRuleListRequest extends TeaModel {
         return this.namespace;
     }
 
-    public FetchLosslessRuleListRequest setPageNumber(Long pageNumber) {
+    public FetchLosslessRuleListRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public FetchLosslessRuleListRequest setPageSize(Long pageSize) {
+    public FetchLosslessRuleListRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -115,14 +109,6 @@ public class FetchLosslessRuleListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public FetchLosslessRuleListRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
     }
 
 }
