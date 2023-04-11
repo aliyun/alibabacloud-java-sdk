@@ -4,17 +4,20 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ModifyLosslessRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public Object data;
+
     /**
      * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpCode")
-    public String httpCode;
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
@@ -42,6 +45,22 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyLosslessRuleResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ModifyLosslessRuleResponseBody setData(Object data) {
+        this.data = data;
+        return this;
+    }
+    public Object getData() {
+        return this.data;
+    }
+
     public ModifyLosslessRuleResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -50,12 +69,12 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ModifyLosslessRuleResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
+    public ModifyLosslessRuleResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public String getHttpCode() {
-        return this.httpCode;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ModifyLosslessRuleResponseBody setMessage(String message) {

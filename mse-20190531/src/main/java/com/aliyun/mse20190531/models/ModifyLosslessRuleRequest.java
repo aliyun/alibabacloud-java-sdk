@@ -35,7 +35,7 @@ public class ModifyLosslessRuleRequest extends TeaModel {
      * <p>The registration latency.</p>
      */
     @NameInMap("DelayTime")
-    public Long delayTime;
+    public Integer delayTime;
 
     /**
      * <p>Specifies whether to enable the alert rule. Valid values:</p>
@@ -50,7 +50,7 @@ public class ModifyLosslessRuleRequest extends TeaModel {
      * <p>The slope of the prefetching curve.</p>
      */
     @NameInMap("FuncType")
-    public Long funcType;
+    public Integer funcType;
 
     /**
      * <p>Specifies whether to display online and offline processing details.</p>
@@ -83,22 +83,10 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     public Boolean related;
 
     /**
-     * <p>The cooldown duration. Unit: seconds.</p>
-     */
-    @NameInMap("ShutdownWaitSeconds")
-    public Integer shutdownWaitSeconds;
-
-    /**
-     * <p>The service source.</p>
-     */
-    @NameInMap("Source")
-    public String source;
-
-    /**
      * <p>The prefetching duration.</p>
      */
     @NameInMap("WarmupTime")
-    public Long warmupTime;
+    public Integer warmupTime;
 
     public static ModifyLosslessRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyLosslessRuleRequest self = new ModifyLosslessRuleRequest();
@@ -137,11 +125,11 @@ public class ModifyLosslessRuleRequest extends TeaModel {
         return this.appName;
     }
 
-    public ModifyLosslessRuleRequest setDelayTime(Long delayTime) {
+    public ModifyLosslessRuleRequest setDelayTime(Integer delayTime) {
         this.delayTime = delayTime;
         return this;
     }
-    public Long getDelayTime() {
+    public Integer getDelayTime() {
         return this.delayTime;
     }
 
@@ -153,11 +141,11 @@ public class ModifyLosslessRuleRequest extends TeaModel {
         return this.enable;
     }
 
-    public ModifyLosslessRuleRequest setFuncType(Long funcType) {
+    public ModifyLosslessRuleRequest setFuncType(Integer funcType) {
         this.funcType = funcType;
         return this;
     }
-    public Long getFuncType() {
+    public Integer getFuncType() {
         return this.funcType;
     }
 
@@ -201,27 +189,11 @@ public class ModifyLosslessRuleRequest extends TeaModel {
         return this.related;
     }
 
-    public ModifyLosslessRuleRequest setShutdownWaitSeconds(Integer shutdownWaitSeconds) {
-        this.shutdownWaitSeconds = shutdownWaitSeconds;
-        return this;
-    }
-    public Integer getShutdownWaitSeconds() {
-        return this.shutdownWaitSeconds;
-    }
-
-    public ModifyLosslessRuleRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
-    }
-
-    public ModifyLosslessRuleRequest setWarmupTime(Long warmupTime) {
+    public ModifyLosslessRuleRequest setWarmupTime(Integer warmupTime) {
         this.warmupTime = warmupTime;
         return this;
     }
-    public Long getWarmupTime() {
+    public Integer getWarmupTime() {
         return this.warmupTime;
     }
 
