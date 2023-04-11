@@ -4,18 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetTableDBTopologyResponseBody extends TeaModel {
+    /**
+     * <p>The topology of the data table.</p>
+     */
     @NameInMap("DBTopology")
     public GetTableDBTopologyResponseBodyDBTopology DBTopology;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +80,21 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
     }
 
     public static class GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList extends TeaModel {
+        /**
+         * <p>The ID of the table.</p>
+         */
         @NameInMap("TableId")
         public String tableId;
 
+        /**
+         * <p>The name of the physical table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The type of the table. This is a reserved parameter.</p>
+         */
         @NameInMap("TableType")
         public String tableType;
 
@@ -106,18 +130,44 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
     }
 
     public static class GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList extends TeaModel {
+        /**
+         * <p>The ID of the database.</p>
+         */
         @NameInMap("DbId")
         public String dbId;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The type of the environment to which the database belongs. Valid values:</p>
+         * <br>
+         * <p>*   **product**: production environment</p>
+         * <p>*   **dev**: development environment</p>
+         * <p>*   **pre**: pre-release environment</p>
+         * <p>*   **test**: test environment</p>
+         * <p>*   **sit**: system integration testing (SIT) environment</p>
+         * <p>*   **uat**: user acceptance testing (UAT) environment</p>
+         * <p>*   **pet**: stress testing environment</p>
+         * <p>*   **stag**: staging environment</p>
+         * <br>
+         * <p>> For more information, see [Change the environment type of an instance](~~163309~~).</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>The physical tables.</p>
+         */
         @NameInMap("TableList")
         public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList> tableList;
 
@@ -169,18 +219,33 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
     }
 
     public static class GetTableDBTopologyResponseBodyDBTopologyDataSourceList extends TeaModel {
+        /**
+         * <p>The physical databases.</p>
+         */
         @NameInMap("DatabaseList")
         public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList> databaseList;
 
+        /**
+         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The endpoint of the data source.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The port that is used to connect to the data source.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The system ID (SID) of the data source.</p>
+         */
         @NameInMap("Sid")
         public String sid;
 
@@ -232,12 +297,27 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
     }
 
     public static class GetTableDBTopologyResponseBodyDBTopology extends TeaModel {
+        /**
+         * <p>The data sources.</p>
+         */
         @NameInMap("DataSourceList")
         public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceList> dataSourceList;
 
+        /**
+         * <p>The GUID of the table in DMS.</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        /**
+         * <p>The name of the table.</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   If a logical table is queried, the name of the logical table is returned.</p>
+         * <br>
+         * <p>*   If a physical table is queried, the name of the physical table is returned.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

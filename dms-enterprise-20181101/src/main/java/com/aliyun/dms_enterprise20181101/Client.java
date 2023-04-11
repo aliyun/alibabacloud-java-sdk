@@ -562,6 +562,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request CreateAuthorityTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateAuthorityTemplateResponse
+     */
+    public CreateAuthorityTemplateResponse createAuthorityTemplateWithOptions(CreateAuthorityTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAuthorityTemplate"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAuthorityTemplateResponse());
+    }
+
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request CreateAuthorityTemplateRequest
+      * @return CreateAuthorityTemplateResponse
+     */
+    public CreateAuthorityTemplateResponse createAuthorityTemplate(CreateAuthorityTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAuthorityTemplateWithOptions(request, runtime);
+    }
+
+    /**
       * For more information about the Normal Data Modify feature, see [Change regular data](~~58419~~).
       *
       * @param tmpReq CreateDataCorrectOrderRequest
@@ -1198,7 +1248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
       * @param tmpReq CreateSQLReviewOrderRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1251,7 +1301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more instructions on this feature, see [SQL audit](~~60374~~) .
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
       * @param request CreateSQLReviewOrderRequest
       * @return CreateSQLReviewOrderResponse
@@ -2380,8 +2430,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
-      * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+      * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+      * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
       *
       * @param request ExecuteStructSyncRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2416,8 +2466,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the security rules of the instance need to be approved for synchronization, call [SubmitStructSyncOrderApproval](~~206166~~) The interface initiates an approval process and completes the approval.
-      * >  You can call [GetStructSyncJobDetail](~~206160~~) You can call this operation to query whether the target instance requires an approval.
+      * If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](~~206166~~) operation to submit the ticket for approval.
+      * >  You can call the [GetStructSyncJobDetail](~~206160~~) operation to query whether you need to submit a ticket for approval.
       *
       * @param request ExecuteStructSyncRequest
       * @return ExecuteStructSyncResponse
@@ -2458,6 +2508,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetApprovalDetailResponse getApprovalDetail(GetApprovalDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getApprovalDetailWithOptions(request, runtime);
+    }
+
+    /**
+      * You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request GetAuthorityTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetAuthorityTemplateResponse
+     */
+    public GetAuthorityTemplateResponse getAuthorityTemplateWithOptions(GetAuthorityTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAuthorityTemplate"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAuthorityTemplateResponse());
+    }
+
+    /**
+      * You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request GetAuthorityTemplateRequest
+      * @return GetAuthorityTemplateResponse
+     */
+    public GetAuthorityTemplateResponse getAuthorityTemplate(GetAuthorityTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAuthorityTemplateWithOptions(request, runtime);
+    }
+
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request GetAuthorityTemplateItemRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetAuthorityTemplateItemResponse
+     */
+    public GetAuthorityTemplateItemResponse getAuthorityTemplateItemWithOptions(GetAuthorityTemplateItemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAuthorityTemplateItem"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAuthorityTemplateItemResponse());
+    }
+
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request GetAuthorityTemplateItemRequest
+      * @return GetAuthorityTemplateItemResponse
+     */
+    public GetAuthorityTemplateItemResponse getAuthorityTemplateItem(GetAuthorityTemplateItemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAuthorityTemplateItemWithOptions(request, runtime);
     }
 
     public GetDBTaskSQLJobLogResponse getDBTaskSQLJobLogWithOptions(GetDBTaskSQLJobLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2636,7 +2778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+      * This operation applies to [regular data change](~~58419~~) and [batch data import](~~144643~~).
       *
       * @param request GetDataCorrectSQLFileRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2671,7 +2813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This interface applies to: [Common data change](~~58419~~) and [Batch Data import](~~144643~~) .
+      * This operation applies to [regular data change](~~58419~~) and [batch data import](~~144643~~).
       *
       * @param request GetDataCorrectSQLFileRequest
       * @return GetDataCorrectSQLFileResponse
@@ -2854,6 +2996,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDataExportOrderDetailResponse getDataExportOrderDetail(GetDataExportOrderDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDataExportOrderDetailWithOptions(request, runtime);
+    }
+
+    public GetDataImportSQLResponse getDataImportSQLWithOptions(GetDataImportSQLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlId)) {
+            query.put("SqlId", request.sqlId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataImportSQL"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataImportSQLResponse());
+    }
+
+    public GetDataImportSQLResponse getDataImportSQL(GetDataImportSQLRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataImportSQLWithOptions(request, runtime);
     }
 
     public GetDatabaseResponse getDatabaseWithOptions(GetDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3067,6 +3246,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLogicDatabaseWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request GetMetaTableColumnRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetMetaTableColumnResponse
+     */
     public GetMetaTableColumnResponse getMetaTableColumnWithOptions(GetMetaTableColumnRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3095,11 +3281,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetaTableColumnResponse());
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request GetMetaTableColumnRequest
+      * @return GetMetaTableColumnResponse
+     */
     public GetMetaTableColumnResponse getMetaTableColumn(GetMetaTableColumnRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMetaTableColumnWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request GetMetaTableDetailInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetMetaTableDetailInfoResponse
+     */
     public GetMetaTableDetailInfoResponse getMetaTableDetailInfoWithOptions(GetMetaTableDetailInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3128,6 +3327,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetaTableDetailInfoResponse());
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request GetMetaTableDetailInfoRequest
+      * @return GetMetaTableDetailInfoResponse
+     */
     public GetMetaTableDetailInfoResponse getMetaTableDetailInfo(GetMetaTableDetailInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMetaTableDetailInfoWithOptions(request, runtime);
@@ -3328,7 +3533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+      * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
       *
       * @param request GetPermApplyOrderDetailRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3363,7 +3568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This interface is applicable to obtaining: **Database-permission** , **Table-permissions** , **sensitive column-permission** .
+      * You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
       *
       * @param request GetPermApplyOrderDetailRequest
       * @return GetPermApplyOrderDetailResponse
@@ -3409,10 +3614,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetProxyResponse getProxyWithOptions(GetProxyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.proxyId)) {
             query.put("ProxyId", request.proxyId);
         }
@@ -4054,6 +4255,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getUserUploadFileJobWithOptions(request, runtime);
     }
 
+    /**
+      * You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request GrantTemplateAuthorityRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GrantTemplateAuthorityResponse
+     */
+    public GrantTemplateAuthorityResponse grantTemplateAuthorityWithOptions(GrantTemplateAuthorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireDate)) {
+            query.put("ExpireDate", request.expireDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
+            query.put("UserIds", request.userIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GrantTemplateAuthority"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GrantTemplateAuthorityResponse());
+    }
+
+    /**
+      * You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request GrantTemplateAuthorityRequest
+      * @return GrantTemplateAuthorityResponse
+     */
+    public GrantTemplateAuthorityResponse grantTemplateAuthority(GrantTemplateAuthorityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.grantTemplateAuthorityWithOptions(request, runtime);
+    }
+
     public GrantUserPermissionResponse grantUserPermissionWithOptions(GrantUserPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4181,6 +4440,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listClassificationTemplatesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request ListColumnsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListColumnsResponse
+     */
     public ListColumnsResponse listColumnsWithOptions(ListColumnsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4213,6 +4479,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListColumnsResponse());
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request ListColumnsRequest
+      * @return ListColumnsResponse
+     */
     public ListColumnsResponse listColumns(ListColumnsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listColumnsWithOptions(request, runtime);
@@ -4484,6 +4756,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDataCorrectPreCheckSQLResponse listDataCorrectPreCheckSQL(ListDataCorrectPreCheckSQLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataCorrectPreCheckSQLWithOptions(request, runtime);
+    }
+
+    public ListDataImportSQLPreCheckDetailResponse listDataImportSQLPreCheckDetailWithOptions(ListDataImportSQLPreCheckDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumer)) {
+            query.put("PageNumer", request.pageNumer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlType)) {
+            query.put("SqlType", request.sqlType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusCode)) {
+            query.put("StatusCode", request.statusCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataImportSQLPreCheckDetail"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataImportSQLPreCheckDetailResponse());
+    }
+
+    public ListDataImportSQLPreCheckDetailResponse listDataImportSQLPreCheckDetail(ListDataImportSQLPreCheckDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataImportSQLPreCheckDetailWithOptions(request, runtime);
+    }
+
+    public ListDataImportSQLTypeResponse listDataImportSQLTypeWithOptions(ListDataImportSQLTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataImportSQLType"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataImportSQLTypeResponse());
+    }
+
+    public ListDataImportSQLTypeResponse listDataImportSQLType(ListDataImportSQLTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataImportSQLTypeWithOptions(request, runtime);
     }
 
     public ListDatabaseUserPermssionsResponse listDatabaseUserPermssionsWithOptions(ListDatabaseUserPermssionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5633,6 +5987,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listStandardGroupsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request ListTablesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTablesResponse
+     */
     public ListTablesResponse listTablesWithOptions(ListTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5677,6 +6038,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTablesResponse());
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request ListTablesRequest
+      * @return ListTablesResponse
+     */
     public ListTablesResponse listTables(ListTablesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTablesWithOptions(request, runtime);
@@ -6918,6 +7285,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.retryDataCorrectPreCheckWithOptions(request, runtime);
     }
 
+    /**
+      * You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request RevokeTemplateAuthorityRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RevokeTemplateAuthorityResponse
+     */
+    public RevokeTemplateAuthorityResponse revokeTemplateAuthorityWithOptions(RevokeTemplateAuthorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
+            query.put("UserIds", request.userIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeTemplateAuthority"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeTemplateAuthorityResponse());
+    }
+
+    /**
+      * You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request RevokeTemplateAuthorityRequest
+      * @return RevokeTemplateAuthorityResponse
+     */
+    public RevokeTemplateAuthorityResponse revokeTemplateAuthority(RevokeTemplateAuthorityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeTemplateAuthorityWithOptions(request, runtime);
+    }
+
     public RevokeUserPermissionResponse revokeUserPermissionWithOptions(RevokeUserPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7040,6 +7457,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.searchDatabaseWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
+      *
+      * @param request SearchTableRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SearchTableResponse
+     */
     public SearchTableResponse searchTableWithOptions(SearchTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7096,6 +7520,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SearchTableResponse());
     }
 
+    /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
+      *
+      * @param request SearchTableRequest
+      * @return SearchTableResponse
+     */
     public SearchTableResponse searchTable(SearchTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchTableWithOptions(request, runtime);
@@ -7319,6 +7749,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.syncDatabaseMetaWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request SyncInstanceMetaRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SyncInstanceMetaResponse
+     */
     public SyncInstanceMetaResponse syncInstanceMetaWithOptions(SyncInstanceMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7351,9 +7788,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SyncInstanceMetaResponse());
     }
 
+    /**
+      * You can call this operation only for database instances whose control mode is Security Collaboration.
+      *
+      * @param request SyncInstanceMetaRequest
+      * @return SyncInstanceMetaResponse
+     */
     public SyncInstanceMetaResponse syncInstanceMeta(SyncInstanceMetaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.syncInstanceMetaWithOptions(request, runtime);
+    }
+
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request UpdateAuthorityTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateAuthorityTemplateResponse
+     */
+    public UpdateAuthorityTemplateResponse updateAuthorityTemplateWithOptions(UpdateAuthorityTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAuthorityTemplate"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAuthorityTemplateResponse());
+    }
+
+    /**
+      * You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](~~324212~~).
+      *
+      * @param request UpdateAuthorityTemplateRequest
+      * @return UpdateAuthorityTemplateResponse
+     */
+    public UpdateAuthorityTemplateResponse updateAuthorityTemplate(UpdateAuthorityTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAuthorityTemplateWithOptions(request, runtime);
     }
 
     /**

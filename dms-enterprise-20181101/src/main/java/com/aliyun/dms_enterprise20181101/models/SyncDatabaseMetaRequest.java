@@ -4,12 +4,23 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SyncDatabaseMetaRequest extends TeaModel {
+    /**
+     * <p>The ID of the database.</p>
+     */
     @NameInMap("DbId")
     public String dbId;
 
+    /**
+     * <p>Specifies whether the database is a logical database.</p>
+     */
     @NameInMap("Logic")
     public Boolean logic;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

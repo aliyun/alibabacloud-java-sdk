@@ -4,18 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDDLPublishRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the publishing records.</p>
+     */
     @NameInMap("DDLPublishRecordList")
     public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordList> DDLPublishRecordList;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +80,43 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     }
 
     public static class ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList extends TeaModel {
+        /**
+         * <p>The ID of the SQL task group.</p>
+         */
         @NameInMap("DBTaskGroupId")
         public Long DBTaskGroupId;
 
+        /**
+         * <p>The number of SQL statements that are executed.</p>
+         */
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
+        /**
+         * <p>The script for data changes.</p>
+         */
         @NameInMap("Scripts")
         public String scripts;
 
+        /**
+         * <p>The description of the state.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        /**
+         * <p>The name of the table after the change.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The state of the publishing task. Valid values:</p>
+         * <br>
+         * <p>*   **NONE**: The state of the task is unknown.</p>
+         * <p>*   **SUCCESS**: The task is successful.</p>
+         * <p>*   **FAIL**: The task fails.</p>
+         */
         @NameInMap("TaskJobStatus")
         public String taskJobStatus;
 
@@ -139,24 +176,51 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     }
 
     public static class ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList extends TeaModel {
+        /**
+         * <p>The ID of the database.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
+        /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The database is a logical database.</p>
+         * <p>*   **false**: the database is not a logical database.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The time to publish the ticket.</p>
+         */
         @NameInMap("PlanTime")
         public String planTime;
 
+        /**
+         * <p>The list of the publishing tasks.</p>
+         */
         @NameInMap("PublishJobList")
         public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> publishJobList;
 
+        /**
+         * <p>The publishing policy. Valid values:</p>
+         * <br>
+         * <p>*   **IMMEDIATELY**: immediately publishes the ticket.</p>
+         * <p>*   **REGULARLY**: publishes the ticket at a scheduled time.</p>
+         */
         @NameInMap("PublishStrategy")
         public String publishStrategy;
 
+        /**
+         * <p>The description of the state.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        /**
+         * <p>The state of the task.</p>
+         */
         @NameInMap("TaskJobStatus")
         public String taskJobStatus;
 
@@ -224,33 +288,85 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     }
 
     public static class ListDDLPublishRecordsResponseBodyDDLPublishRecordList extends TeaModel {
+        /**
+         * <p>The time when the approval expires.</p>
+         */
         @NameInMap("AuditExpireTime")
         public String auditExpireTime;
 
+        /**
+         * <p>The approval state of the ticket. Valid values:</p>
+         * <br>
+         * <p>*   **EXEMPT_PASS**: The ticket passes without approval.</p>
+         * <p>*   **TO_AUDIT**: The ticket is pending for approval.</p>
+         * <p>*   **CANCEL**: The ticket is canceled.</p>
+         * <p>*   **SUCCESS**: The ticket is approved.</p>
+         * <p>*   **FAIL**: The ticket fails to pass the approval.</p>
+         */
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        /**
+         * <p>The ID of the user who creates the ticket. You can obtain the user ID by calling the [GetUser](~~147098~~) operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.</p>
+         */
         @NameInMap("CreatorId")
         public Long creatorId;
 
+        /**
+         * <p>Indicates whether the approval is terminated. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The approval is terminated.</p>
+         * <p>*   **false**: The approval is not terminated.</p>
+         * <br>
+         * <p>> Multiple reasons can terminate the approval. For example, you withdraw the application or your ticket is not approved before the specified time.</p>
+         */
         @NameInMap("Finality")
         public Boolean finality;
 
+        /**
+         * <p>The reason for the termination.</p>
+         */
         @NameInMap("FinalityReason")
         public String finalityReason;
 
+        /**
+         * <p>The publishing state of the ticket. Valid values:</p>
+         * <br>
+         * <p>*   **START**: The ticket is created.</p>
+         * <p>*   **ANALYZE**: The ticket is under analysis.</p>
+         * <p>*   **AUDIT**: The ticket is under approval.</p>
+         * <p>*   **DISPATCH**: A task is generated for the ticket.</p>
+         * <p>*   **SUCCESS**: The task is successful.</p>
+         */
         @NameInMap("PublishStatus")
         public String publishStatus;
 
+        /**
+         * <p>The list of publishing tasks.</p>
+         */
         @NameInMap("PublishTaskInfoList")
         public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList> publishTaskInfoList;
 
+        /**
+         * <p>The risk level of the operation. Valid values:</p>
+         * <br>
+         * <p>*   **NONE_RISK**: The operation does not have risks.</p>
+         * <p>*   **LOW_RISK**: The operation is at low risk.</p>
+         * <p>*   **MIDDLE_RISK**: The operation is at medium risk.</p>
+         * <p>*   **HIGH_RISK**: The operation is at high risk.</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The description of the publishing state.</p>
+         */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        /**
+         * <p>The ID of the approval process.</p>
+         */
         @NameInMap("WorkflowInstanceId")
         public Long workflowInstanceId;
 

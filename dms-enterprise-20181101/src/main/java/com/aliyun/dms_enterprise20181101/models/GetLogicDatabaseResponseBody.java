@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLogicDatabaseResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The status code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -17,7 +17,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The details about the logical database.</p>
+     * <p>The details of the logical database.</p>
      */
     @NameInMap("LogicDatabase")
     public GetLogicDatabaseResponseBodyLogicDatabase logicDatabase;
@@ -29,10 +29,10 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>- true: The request is successful.</p>
-     * <p>- false: The request fails.</p>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -152,11 +152,14 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>The IDs of database shards of the logical database.</p>
+         */
         @NameInMap("DatabaseIds")
         public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds databaseIds;
 
         /**
-         * <p>The type of the database. For more information about the valid values of the DbType parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).</p>
+         * <p>The database engine. For more information about the valid values of the DbType parameter, see [DbType parameter](~~198106~~).</p>
          */
         @NameInMap("DbType")
         public String dbType;
@@ -164,14 +167,14 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         /**
          * <p>The type of the environment to which the database belongs. Valid values:</p>
          * <br>
-         * <p>- product: production environment</p>
-         * <p>- dev: development environment</p>
-         * <p>- pre: staging environment</p>
-         * <p>- test: test environment</p>
-         * <p>- sit: SIT environment</p>
-         * <p>- uat: user acceptance testing (UAT) environment</p>
-         * <p>- pet: stress testing environment</p>
-         * <p>- stag: STAG environment</p>
+         * <p>*   product: production environment</p>
+         * <p>*   dev: development environment</p>
+         * <p>*   pre: pre-release environment</p>
+         * <p>*   test: test environment</p>
+         * <p>*   sit: system integration testing (SIT) environment</p>
+         * <p>*   uat: user acceptance testing (UAT) environment</p>
+         * <p>*   pet: stress testing environment</p>
+         * <p>*   stag: staging environment</p>
          */
         @NameInMap("EnvType")
         public String envType;

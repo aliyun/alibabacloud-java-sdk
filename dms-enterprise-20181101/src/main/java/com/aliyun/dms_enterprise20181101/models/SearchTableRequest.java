@@ -4,30 +4,77 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SearchTableRequest extends TeaModel {
+    /**
+     * <p>The type of database. Valid values:</p>
+     * <br>
+     * <p>*   **MySQL**</p>
+     * <p>*   **SQLServer**</p>
+     * <p>*   **PostgreSQL**</p>
+     * <p>*   **Oracle**</p>
+     * <p>*   **DRDS**</p>
+     * <p>*   **OceanBase**</p>
+     * <p>*   **Mongo**</p>
+     * <p>*   **Redis**</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
+    /**
+     * <p>The type of the environment to which databases belong. For more information, see [Change the environment type of an instance](~~163309~~).</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Specifies whether to return the GUID of each table.</p>
+     */
     @NameInMap("ReturnGuid")
     public Boolean returnGuid;
 
+    /**
+     * <p>The keyword that is used to query tables.</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <p>The scope of tables that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **HAS_PERMSSION**: the tables on which the current account has permissions.</p>
+     * <p>*   **OWNER**: the tables owned by the current account.</p>
+     * <p>*   **MY_FOCUS**: the tables that the current account follows.</p>
+     * <p>*   **UNKNOWN**: all tables.</p>
+     */
     @NameInMap("SearchRange")
     public String searchRange;
 
+    /**
+     * <p>The type of table that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **TABLE**: physical and logical tables</p>
+     * <p>*   **SINGLE_TABLE**: physical tables</p>
+     * <p>*   **LOGIC_TABLE**: logical tables</p>
+     */
     @NameInMap("SearchTarget")
     public String searchTarget;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

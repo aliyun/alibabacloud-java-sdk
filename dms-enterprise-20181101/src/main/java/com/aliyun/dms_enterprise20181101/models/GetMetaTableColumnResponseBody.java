@@ -84,30 +84,30 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
 
     public static class GetMetaTableColumnResponseBodyColumnList extends TeaModel {
         /**
-         * <p>Indicates whether the field is an auto-increment field. Valid values:</p>
+         * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
          * <br>
-         * <p>*   **true**: The field is an auto-increment field.</p>
-         * <p>*   **false**: The field is not an auto-increment field.</p>
+         * <p>*   **true**: The column is an auto-increment column.</p>
+         * <p>*   **false**: The column is not an auto-increment column.</p>
          */
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
         /**
-         * <p>The ID of the field.</p>
+         * <p>The ID of the column.</p>
          */
         @NameInMap("ColumnId")
         public String columnId;
 
         /**
-         * <p>The name of the field.</p>
+         * <p>The name of the column.</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
-         * <p>The data type of the field.</p>
+         * <p>The data type of the column.</p>
          * <br>
-         * <p>>  The returned data type is not unique. For example, the returned data type can be **bigint** or **int**.</p>
+         * <p>> The return value of a column is not unique, such as **bigint** or **int**.</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
@@ -125,13 +125,13 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         public Integer dataPrecision;
 
         /**
-         * <p>The number of decimal places that the field shows.</p>
+         * <p>The number of decimal places for the field.</p>
          */
         @NameInMap("DataScale")
         public Integer dataScale;
 
         /**
-         * <p>The description of the field.</p>
+         * <p>The description of the column.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -161,13 +161,13 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         public String primaryKey;
 
         /**
-         * <p>The sensitivity level of the field. Valid values:</p>
+         * <p>The sensitivity level of the column. Valid values:</p>
          * <br>
-         * <p>*   **INNER**: The field is not sensitive.</p>
-         * <p>*   **SENSITIVE**: The field is sensitive.</p>
-         * <p>*   **CONFIDENTIAL**: The field is confidential.</p>
+         * <p>*   **INNER**: The column is not sensitive.</p>
+         * <p>*   **SENSITIVE**: The column is sensitive.</p>
+         * <p>*   **CONFIDENTIAL**: The column is confidential.</p>
          * <br>
-         * <p>>  For more information, see [Sensitivity levels of fields](~~66091~~).</p>
+         * <p>> For more information, see [Sensitivity levels of columns](~~66091~~).</p>
          */
         @NameInMap("SecurityLevel")
         public String securityLevel;

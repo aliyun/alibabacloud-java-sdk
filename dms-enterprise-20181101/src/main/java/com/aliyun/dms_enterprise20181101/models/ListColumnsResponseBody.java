@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListColumnsResponseBody extends TeaModel {
     /**
-     * <p>The information about the columns returned.</p>
+     * <p>The details about columns.</p>
      */
     @NameInMap("ColumnList")
     public ListColumnsResponseBodyColumnList columnList;
@@ -31,8 +31,8 @@ public class ListColumnsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,28 +84,28 @@ public class ListColumnsResponseBody extends TeaModel {
 
     public static class ListColumnsResponseBodyColumnListColumn extends TeaModel {
         /**
-         * <p>Indicates whether the field is an auto-increment field. Valid values:</p>
+         * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
          * <br>
-         * <p>*   true: The field is an auto-increment field.</p>
-         * <p>*   false: The field is not an auto-increment field.</p>
+         * <p>*   true: The column is an auto-increment column.</p>
+         * <p>*   false: The column is not an auto-increment column.</p>
          */
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
         /**
-         * <p>The ID of the field.</p>
+         * <p>The ID of the column.</p>
          */
         @NameInMap("ColumnId")
         public String columnId;
 
         /**
-         * <p>The name of the field.</p>
+         * <p>The name of the column.</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
-         * <p>The data type of the field.</p>
+         * <p>The data type of the column.</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
@@ -129,13 +129,13 @@ public class ListColumnsResponseBody extends TeaModel {
         public Integer dataScale;
 
         /**
-         * <p>The default value of the field.</p>
+         * <p>The default value of the column.</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
-         * <p>The description of the field.</p>
+         * <p>The description of the column.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -152,31 +152,31 @@ public class ListColumnsResponseBody extends TeaModel {
         public String functionType;
 
         /**
-         * <p>Indicates whether the field can be empty. Valid values:</p>
+         * <p>Indicates whether the column can be empty. Valid values:</p>
          * <br>
-         * <p>*   **true**: The field can be empty.</p>
-         * <p>*   **false**: The field cannot be empty.</p>
+         * <p>*   **true**: The column can be empty.</p>
+         * <p>*   **false**: The column cannot be empty.</p>
          */
         @NameInMap("Nullable")
         public Boolean nullable;
 
         /**
-         * <p>The security level of the field. Valid values:</p>
+         * <p>The security level of the column. Valid values:</p>
          * <br>
-         * <p>*   INNER: The field is an internal field but not sensitive.</p>
-         * <p>*   SENSITIVE: The field is a sensitive field.</p>
-         * <p>*   CONFIDENTIAL: The field is a confidential field.</p>
+         * <p>*   INNER: The column is an internal column but not sensitive.</p>
+         * <p>*   SENSITIVE: The column is a sensitive column.</p>
+         * <p>*   CONFIDENTIAL: The column is a confidential column.</p>
          * <br>
-         * <p>>  For more information, see [Adjust the sensitivity level of one or more fields](~~66091~~).</p>
+         * <p>> For more information, see [Sensitivity levels of fields](~~66091~~).</p>
          */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
         /**
-         * <p>Indicates whether the field is a sensitive field. Valid values:</p>
+         * <p>Indicates whether the column is a sensitive column. Valid values:</p>
          * <br>
-         * <p>*   **true**: The field is a sensitive field.</p>
-         * <p>*   **false**: The field is not a sensitive field.</p>
+         * <p>*   **true**: The column is a sensitive column.</p>
+         * <p>*   **false**: The column is not a sensitive column.</p>
          */
         @NameInMap("Sensitive")
         public Boolean sensitive;

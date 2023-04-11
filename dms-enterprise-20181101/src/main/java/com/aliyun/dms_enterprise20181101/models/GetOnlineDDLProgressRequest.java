@@ -4,9 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetOnlineDDLProgressRequest extends TeaModel {
+    /**
+     * <p>The ID of the OnlineDDL SQL task details. You can call the [ListDBTaskSQLJobDetail](~~207073~~) operation to obtain the task detail ID.</p>
+     */
     @NameInMap("JobDetailId")
     public Long jobDetailId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](~~181330~~) topic.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

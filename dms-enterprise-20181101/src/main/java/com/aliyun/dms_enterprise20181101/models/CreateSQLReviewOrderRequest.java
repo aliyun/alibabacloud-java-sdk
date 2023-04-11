@@ -4,15 +4,27 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateSQLReviewOrderRequest extends TeaModel {
+    /**
+     * <p>The purpose or objective of the SQL review. This reduces unnecessary communication.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The parameters of the ticket.</p>
+     */
     @NameInMap("Param")
     public CreateSQLReviewOrderRequestParam param;
 
+    /**
+     * <p>The stakeholders involved in this operation. All the specified stakeholders can view the ticket details and take part in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
+     */
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
+    /**
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
@@ -54,12 +66,23 @@ public class CreateSQLReviewOrderRequest extends TeaModel {
     }
 
     public static class CreateSQLReviewOrderRequestParam extends TeaModel {
+        /**
+         * <p>The files to be reviewed. Multiple files can be reviewed at a time.</p>
+         */
         @NameInMap("AttachmentKeyList")
         public java.util.List<String> attachmentKeyList;
 
+        /**
+         * <p>The ID of the database. You can call the [SearchDatabases](~~141876~~) operation to query the ID of the database.</p>
+         * <br>
+         * <p>>  You can call this operation to query only physical databases. This operation is unavailable to query logical databases.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
+        /**
+         * <p>The name of the project.</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 

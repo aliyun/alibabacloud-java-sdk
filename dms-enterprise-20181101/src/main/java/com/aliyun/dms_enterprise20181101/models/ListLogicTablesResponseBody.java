@@ -4,21 +4,39 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListLogicTablesResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The details of the logical tables.</p>
+     */
     @NameInMap("LogicTableList")
     public ListLogicTablesResponseBodyLogicTableList logicTableList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of logical tables that meet the query conditions.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -114,33 +132,63 @@ public class ListLogicTablesResponseBody extends TeaModel {
     }
 
     public static class ListLogicTablesResponseBodyLogicTableListLogicTable extends TeaModel {
+        /**
+         * <p>The ID of the logical database.</p>
+         */
         @NameInMap("DatabaseId")
         public String databaseId;
 
+        /**
+         * <p>Indicates whether the table is a logical table. The value is fixed to true.</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The IDs of the owners of the logical tables.</p>
+         */
         @NameInMap("OwnerIdList")
         public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList ownerIdList;
 
+        /**
+         * <p>The nicknames of the owners of the logical tables.</p>
+         */
         @NameInMap("OwnerNameList")
         public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerNameList ownerNameList;
 
+        /**
+         * <p>The logical database to which the logical table belongs.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The number of logical tables.</p>
+         */
         @NameInMap("TableCount")
         public String tableCount;
 
+        /**
+         * <p>The expression of the logical table.</p>
+         */
         @NameInMap("TableExpr")
         public String tableExpr;
 
+        /**
+         * <p>The GUID of the logical table.</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        /**
+         * <p>The ID of the logical table.</p>
+         */
         @NameInMap("TableId")
         public String tableId;
 
+        /**
+         * <p>The name of the logical table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

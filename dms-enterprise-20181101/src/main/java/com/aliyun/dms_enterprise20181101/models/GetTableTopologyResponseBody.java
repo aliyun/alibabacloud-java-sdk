@@ -4,18 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetTableTopologyResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The topology information.</p>
+     */
     @NameInMap("TableTopology")
     public GetTableTopologyResponseBodyTableTopology tableTopology;
 
@@ -65,36 +80,87 @@ public class GetTableTopologyResponseBody extends TeaModel {
     }
 
     public static class GetTableTopologyResponseBodyTableTopologyTableTopologyInfoList extends TeaModel {
+        /**
+         * <p>The ID of the physical database.</p>
+         */
         @NameInMap("DbId")
         public Long dbId;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The name that is used to search for the database.</p>
+         */
         @NameInMap("DbSearchName")
         public String dbSearchName;
 
+        /**
+         * <p>The database engine.</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The ID of the instance to which the physical database belongs.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The ID of the resource related to the instance. The resource corresponds with the database instance type returned in the InstanceSource parameter.</p>
+         * <br>
+         * <p>*   **RDS**:The ID of the ApsaraDB RDS instance.</p>
+         * <p>*   **ECS_OWN**: The ID of the Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **PUBLIC_OWN**: This parameter is left empty for self-managed database instances that are connected over the Internet.</p>
+         * <p>*   **VPC_ID**:The ID of the virtual private cloud (VPC).</p>
+         * <p>*   **GATEWAY**: The ID of the database gateway.</p>
+         */
         @NameInMap("InstanceResourceId")
         public String instanceResourceId;
 
+        /**
+         * <p>The type of the database instance. Valid values:</p>
+         * <br>
+         * <p>*   **RDS**: an ApsaraDB RDS instance.</p>
+         * <p>*   **ECS_OWN**: a self-managed database that is deployed on an ECS instance</p>
+         * <p>*   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.</p>
+         * <p>*   **VPC_ID**: a self-managed database instance in a VPC that is connected over Express Connect circuits.</p>
+         * <p>*   **GATEWAY**: a database instance connected by using a database gateway.</p>
+         */
         @NameInMap("InstanceSource")
         public String instanceSource;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of tables.</p>
+         */
         @NameInMap("TableCount")
         public Long tableCount;
 
+        /**
+         * <p>The expression of the names of logical tables.</p>
+         * <br>
+         * <p>**</p>
+         * <br>
+         * <p>**Description**This parameter is not returned for physical tables.</p>
+         */
         @NameInMap("TableNameExpr")
         public String tableNameExpr;
 
+        /**
+         * <p>The names of tables.</p>
+         * <br>
+         * <p>> The table names are separated by commas (,).</p>
+         */
         @NameInMap("TableNameList")
         public String tableNameList;
 
@@ -194,15 +260,30 @@ public class GetTableTopologyResponseBody extends TeaModel {
     }
 
     public static class GetTableTopologyResponseBodyTableTopology extends TeaModel {
+        /**
+         * <p>Indicates whether the table is a logical table. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The GUID of the table in DMS.</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>Information of the topology of the table.</p>
+         */
         @NameInMap("TableTopologyInfoList")
         public java.util.List<GetTableTopologyResponseBodyTableTopologyTableTopologyInfoList> tableTopologyInfoList;
 

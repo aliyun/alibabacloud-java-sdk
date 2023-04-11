@@ -4,18 +4,33 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
+    /**
+     * <p>The details of the data change task.</p>
+     */
     @NameInMap("DataCorrectTaskDetail")
     public GetDataCorrectTaskDetailResponseBodyDataCorrectTaskDetail dataCorrectTaskDetail;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,36 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataCorrectTaskDetailResponseBodyDataCorrectTaskDetail extends TeaModel {
+        /**
+         * <p>The number of rows affected by the SQL statement.</p>
+         */
         @NameInMap("ActualAffectRows")
         public Long actualAffectRows;
 
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the SQL task group.</p>
+         */
         @NameInMap("DBTaskGroupId")
         public Long DBTaskGroupId;
 
+        /**
+         * <p>The state of the SQL task. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The SQL task was initialized.</p>
+         * <p>*   **PENDING**: The SQL task waited to be run.</p>
+         * <p>*   **BE_SCHEDULED**: The SQL task waited to be scheduled.</p>
+         * <p>*   **FAIL**: The SQL task failed.</p>
+         * <p>*   **SUCCESS**: The SQL task was successful.</p>
+         * <p>*   **PAUSE**: The SQL task was paused.</p>
+         * <p>*   **DELETE**: The SQL task was deleted.</p>
+         * <p>*   **RUNNING**: The SQL task was being run.</p>
+         */
         @NameInMap("jobStatus")
         public String jobStatus;
 

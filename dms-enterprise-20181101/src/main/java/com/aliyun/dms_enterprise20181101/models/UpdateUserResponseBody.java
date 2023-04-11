@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateUserResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -23,10 +23,7 @@ public class UpdateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <p>Indicates whether the request succeeded.</p>
      */
     @NameInMap("Success")
     public Boolean success;

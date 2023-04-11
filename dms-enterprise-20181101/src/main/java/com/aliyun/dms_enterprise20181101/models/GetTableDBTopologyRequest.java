@@ -4,9 +4,23 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetTableDBTopologyRequest extends TeaModel {
+    /**
+     * <p>The GUID of the table in DMS.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the database to which the table belongs is a logical database, you can call the [ListLogicTables](~~141875~~) operation to obtain the GUID. The value of the ReturnGuid parameter must be set to true.</p>
+     * <br>
+     * <p>*   If the database to which the table belongs is a physical database, you can call the [ListTables](~~141878~~) operation to obtain the GUID. The value of the ReturnGuid parameter must be set to true.</p>
+     */
     @NameInMap("TableGuid")
     public String tableGuid;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     * <br>
+     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

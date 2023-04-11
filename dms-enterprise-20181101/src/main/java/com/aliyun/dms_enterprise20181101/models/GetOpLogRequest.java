@@ -16,7 +16,7 @@ public class GetOpLogRequest extends TeaModel {
      * <p>*   **PERMISSION**: permissions</p>
      * <p>*   **OWNER**: data owner</p>
      * <p>*   **SQL_CONSOLE**: data query</p>
-     * <p>*   **SQL\_CONSOLE\_EXPORT**: query result export</p>
+     * <p>*   **SQL_CONSOLE_EXPORT**: query result export</p>
      * <p>*   **DATA_CHANGE**: data change</p>
      * <p>*   **DATA_EXPORT**: data export</p>
      * <p>*   **SQL_REVIEW**: SQL review</p>
@@ -25,10 +25,18 @@ public class GetOpLogRequest extends TeaModel {
      * <p>*   **DB_TASK**: task management</p>
      * <p>*   **INSTANCE_MANAGE**: instance management</p>
      * <p>*   **USER_MANAGE**: user management</p>
-     * <p>*   **SECURITY_RULE**: security rule</p>
+     * <p>*   **SECURITY_RULE**: security rules</p>
      * <p>*   **CONFIG_MANAGE**: configuration management</p>
      * <p>*   **RESOURCE_AUTH**: resource authorization</p>
-     * <p>*   **ACCESS\_WHITE\_IP**: access IP address allowlist</p>
+     * <p>*   **ACCESS_WHITE_IP**: access IP address whitelist</p>
+     * <p>*   **NDDL**: schema design</p>
+     * <p>*   **DSQL_CONSOLE**: cross-database data query</p>
+     * <p>*   **DSQL_CONSOLE_EXPORT**: cross-database query result export</p>
+     * <p>*   **DATA_TRACT**: data tracking</p>
+     * <p>*   **DATA_QUALITY**: data quality</p>
+     * <p>*   **DATALINK_MANAGE** :DBLink management</p>
+     * <p>*   **DATASEC_MANAGE**: sensitive data management</p>
+     * <p>*   **SELL**: sales</p>
      */
     @NameInMap("Module")
     public String module;
@@ -56,7 +64,7 @@ public class GetOpLogRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.</p>
      */
     @NameInMap("Tid")
     public Long tid;
