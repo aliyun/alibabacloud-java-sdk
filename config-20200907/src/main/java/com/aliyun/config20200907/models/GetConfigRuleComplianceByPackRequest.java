@@ -4,6 +4,11 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetConfigRuleComplianceByPackRequest extends TeaModel {
+    /**
+     * <p>The ID of the compliance package.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).</p>
+     */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 

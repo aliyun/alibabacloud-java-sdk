@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
+    /**
+     * <p>The compliance evaluation result returned.</p>
+     */
     @NameInMap("EvaluationResults")
     public ListConfigRuleEvaluationResultsResponseBodyEvaluationResults evaluationResults;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,65 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier extends TeaModel {
+        /**
+         * <p>The ID of the compliance package to which the rule belongs.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the rule.</p>
+         */
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        /**
+         * <p>The date on which the system automatically re-evaluates the ignored incompliant resources.</p>
+         * <br>
+         * <p>>  If this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+         */
         @NameInMap("IgnoreDate")
         public String ignoreDate;
 
+        /**
+         * <p>The ID of the region where the resource resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
+         */
         @NameInMap("ResourceOwnerId")
         public Long resourceOwnerId;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -150,9 +188,15 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier extends TeaModel {
+        /**
+         * <p>The information about the evaluated resource in the compliance evaluation result.</p>
+         */
         @NameInMap("EvaluationResultQualifier")
         public ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier evaluationResultQualifier;
 
+        /**
+         * <p>The timestamp when the compliance evaluation was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("OrderingTimestamp")
         public Long orderingTimestamp;
 
@@ -180,27 +224,73 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList extends TeaModel {
+        /**
+         * <p>The annotation to the resource that is evaluated as non-compliant. The following parameters may be returned:</p>
+         * <br>
+         * <p>*   `configuration`: the current resource configuration that is evaluated as non-compliant.</p>
+         * <p>*   `desiredValue`: the expected resource configuration that is evaluated as compliant.</p>
+         * <p>*   `operator`: the operator that compares the current configuration with the expected configuration of the resource.</p>
+         * <p>*   `property`: the JSON path of the current configuration in the resource property struct.</p>
+         * <p>*   `reason`: the reason why the resource is evaluated as non-compliant.</p>
+         */
         @NameInMap("Annotation")
         public String annotation;
 
+        /**
+         * <p>The compliance evaluation result of the resources. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The timestamp when the rule was triggered for the compliance evaluation. Unit: milliseconds.</p>
+         */
         @NameInMap("ConfigRuleInvokedTimestamp")
         public Long configRuleInvokedTimestamp;
 
+        /**
+         * <p>The identifier of the compliance evaluation result.</p>
+         */
         @NameInMap("EvaluationResultIdentifier")
         public ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier;
 
+        /**
+         * <p>The trigger type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+         * <p>*   ScheduledNotification: The rule is periodically triggered.</p>
+         */
         @NameInMap("InvokingEventMessageType")
         public String invokingEventMessageType;
 
+        /**
+         * <p>Indicates whether the remediation template is enabled. Valid values:</p>
+         * <br>
+         * <p>- true: The remediation template is enabled.</p>
+         * <p>- false: The remediation template is disabled.</p>
+         */
         @NameInMap("RemediationEnabled")
         public Boolean remediationEnabled;
 
+        /**
+         * <p>The timestamp when the compliance evaluation result was recorded. Unit: milliseconds.</p>
+         */
         @NameInMap("ResultRecordedTimestamp")
         public Long resultRecordedTimestamp;
 
+        /**
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <br>
+         * <p>*   1: high risk level</p>
+         * <p>*   2: medium risk level</p>
+         * <p>*   3: low risk level</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -276,12 +366,21 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class ListConfigRuleEvaluationResultsResponseBodyEvaluationResults extends TeaModel {
+        /**
+         * <p>The details of the compliance evaluation result.</p>
+         */
         @NameInMap("EvaluationResultList")
         public java.util.List<ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> evaluationResultList;
 
+        /**
+         * <p>The maximum number of entries returned per page.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that was used to initiate the next request.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

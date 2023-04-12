@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the compliance evaluation results returned.</p>
+     */
     @NameInMap("EvaluationResults")
     public ListAggregateResourceEvaluationResultsResponseBodyEvaluationResults evaluationResults;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,53 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
     }
 
     public static class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the rule.</p>
+         */
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The name of the monitoring rule.</p>
+         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        /**
+         * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
+         * <br>
+         * <p>>  If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+         */
         @NameInMap("IgnoreDate")
         public String ignoreDate;
 
+        /**
+         * <p>The ID of the region where the resource resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -128,9 +160,15 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
     }
 
     public static class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier extends TeaModel {
+        /**
+         * <p>The information about the evaluated resource in the compliance evaluation result.</p>
+         */
         @NameInMap("EvaluationResultQualifier")
         public ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier evaluationResultQualifier;
 
+        /**
+         * <p>The timestamp when the compliance evaluation was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("OrderingTimestamp")
         public Long orderingTimestamp;
 
@@ -158,27 +196,67 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
     }
 
     public static class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList extends TeaModel {
+        /**
+         * <p>The annotation to the resource that is evaluated as incompliant.</p>
+         */
         @NameInMap("Annotation")
         public String annotation;
 
+        /**
+         * <p>The compliance evaluation result of the resources. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resources are evaluated as incompliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The timestamp when the rule was triggered. Unit: milliseconds.</p>
+         */
         @NameInMap("ConfigRuleInvokedTimestamp")
         public Long configRuleInvokedTimestamp;
 
+        /**
+         * <p>The identifying information about the compliance evaluation result.</p>
+         */
         @NameInMap("EvaluationResultIdentifier")
         public ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier;
 
+        /**
+         * <p>The trigger type of the managed rule. Valid values:</p>
+         * <br>
+         * <p>*   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</p>
+         * <p>*   ScheduledNotification: The managed rule is periodically triggered.</p>
+         */
         @NameInMap("InvokingEventMessageType")
         public String invokingEventMessageType;
 
+        /**
+         * <p>Indicates whether the remediation template is enabled. Valid values:</p>
+         * <br>
+         * <p>- true: The remediation template is enabled.</p>
+         * <p>- false: The remediation template is disabled.</p>
+         */
         @NameInMap("RemediationEnabled")
         public Boolean remediationEnabled;
 
+        /**
+         * <p>The timestamp when the compliance evaluation result was recorded. Unit: milliseconds.</p>
+         */
         @NameInMap("ResultRecordedTimestamp")
         public Long resultRecordedTimestamp;
 
+        /**
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <br>
+         * <p>*   1: high risk level</p>
+         * <p>*   2: medium risk level</p>
+         * <p>*   3: low risk level</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -254,12 +332,21 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
     }
 
     public static class ListAggregateResourceEvaluationResultsResponseBodyEvaluationResults extends TeaModel {
+        /**
+         * <p>The details of the compliance evaluation result.</p>
+         */
         @NameInMap("EvaluationResultList")
         public java.util.List<ListAggregateResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> evaluationResultList;
 
+        /**
+         * <p>The maximum number of entries returned on each page.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that was used to initiate the next request.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

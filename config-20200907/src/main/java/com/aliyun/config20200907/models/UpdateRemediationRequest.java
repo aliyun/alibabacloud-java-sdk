@@ -4,24 +4,61 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateRemediationRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The execution mode of the remediation. Valid values:</p>
+     * <br>
+     * <p>*   NON_EXECUTION: The remediation is not executed.</p>
+     * <p>*   AUTO_EXECUTION: The remediation is automatically executed.</p>
+     * <p>*   MANUAL_EXECUTION: The remediation is manually executed.</p>
+     * <p>*   NOT_CONFIG: The execution mode is not specified.</p>
+     */
     @NameInMap("InvokeType")
     public String invokeType;
 
+    /**
+     * <p>The desired parameter values of the remediation setting.</p>
+     */
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <p>The ID of the remediation setting.</p>
+     * <br>
+     * <p>You can call the [ListRemediations](~~270772~~) operation to obtain the ID of the remediation setting.</p>
+     */
     @NameInMap("RemediationId")
     public String remediationId;
 
+    /**
+     * <p>The ID of the remediation template.</p>
+     * <br>
+     * <p>You can call the [ListRemediationTemplates](~~270066~~) operation to obtain the ID of the remediation template.</p>
+     */
     @NameInMap("RemediationTemplateId")
     public String remediationTemplateId;
 
+    /**
+     * <p>The type of the remediation template. Valid values:</p>
+     * <br>
+     * <p>*   OOS: Operation Orchestration Service (OOS)</p>
+     * <p>*   FC: Function Compute. You can use Function Compute to configure custom remediation settings.</p>
+     */
     @NameInMap("RemediationType")
     public String remediationType;
 
+    /**
+     * <p>The source of the remediation setting. Valid values:</p>
+     * <br>
+     * <p>*   ALIYUN: the default remediation setting of Alibaba Cloud.</p>
+     * <p>*   CUSTOM: a custom remediation setting.</p>
+     * <p>*   NONE: The source is not specified.</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 

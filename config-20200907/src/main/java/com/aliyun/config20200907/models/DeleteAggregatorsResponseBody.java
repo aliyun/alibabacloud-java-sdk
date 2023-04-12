@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteAggregatorsResponseBody extends TeaModel {
+    /**
+     * <p>The results of the delete operations.</p>
+     */
     @NameInMap("OperateAggregatorsResult")
     public DeleteAggregatorsResponseBodyOperateAggregatorsResult operateAggregatorsResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,26 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
     }
 
     public static class DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators extends TeaModel {
+        /**
+         * <p>The ID of the account group.</p>
+         */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
+        /**
+         * <p>The error code.</p>
+         * <br>
+         * <p>>  No error code is returned for the account group if the account group is deleted.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether the delete operation is successful. Valid values:</p>
+         * <br>
+         * <p>*   true: The account group is deleted.</p>
+         * <p>*   false: The account group fails to be deleted.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -73,6 +93,9 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
     }
 
     public static class DeleteAggregatorsResponseBodyOperateAggregatorsResult extends TeaModel {
+        /**
+         * <p>The result for the account group.</p>
+         */
         @NameInMap("OperateAggregators")
         public java.util.List<DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators> operateAggregators;
 

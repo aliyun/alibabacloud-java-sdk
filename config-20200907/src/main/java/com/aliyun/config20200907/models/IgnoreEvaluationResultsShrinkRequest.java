@@ -4,15 +4,31 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class IgnoreEvaluationResultsShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
+     * <br>
+     * <p>>  If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+     */
     @NameInMap("IgnoreDate")
     public String ignoreDate;
 
+    /**
+     * <p>The reason why you want to ignore the resource.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The resources to be ignored.</p>
+     */
     @NameInMap("Resources")
     public String resourcesShrink;
 

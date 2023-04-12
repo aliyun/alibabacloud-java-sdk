@@ -4,6 +4,11 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetManagedRuleRequest extends TeaModel {
+    /**
+     * <p>The identifier of the managed rule.</p>
+     * <br>
+     * <p>You can call the [ListManagedRules](~~421144~~) operation to obtain the managed rule identifier.</p>
+     */
     @NameInMap("Identifier")
     public String identifier;
 

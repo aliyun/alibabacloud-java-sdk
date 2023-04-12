@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteAggregateConfigRulesResponseBody extends TeaModel {
+    /**
+     * <p>The results of the delete operations.</p>
+     */
     @NameInMap("OperateRuleResult")
     public DeleteAggregateConfigRulesResponseBodyOperateRuleResult operateRuleResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,30 @@ public class DeleteAggregateConfigRulesResponseBody extends TeaModel {
     }
 
     public static class DeleteAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The error code.</p>
+         * <br>
+         * <p>*   If the rule is deleted, no error code is returned.</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>*   If the rule fails to be deleted, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <br>
+         * <p>*   true: The request was successful.</p>
+         * <p>*   false: The request failed.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -73,6 +97,9 @@ public class DeleteAggregateConfigRulesResponseBody extends TeaModel {
     }
 
     public static class DeleteAggregateConfigRulesResponseBodyOperateRuleResult extends TeaModel {
+        /**
+         * <p>The details of the result.</p>
+         */
         @NameInMap("OperateRuleItemList")
         public java.util.List<DeleteAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> operateRuleItemList;
 

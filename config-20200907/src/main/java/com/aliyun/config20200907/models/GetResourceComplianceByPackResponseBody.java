@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetResourceComplianceByPackResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The compliance evaluation results returned.</p>
+     */
     @NameInMap("ResourceComplianceResult")
     public GetResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult;
 
@@ -32,12 +38,21 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
     }
 
     public static class GetResourceComplianceByPackResponseBodyResourceComplianceResult extends TeaModel {
+        /**
+         * <p>The ID of the compliance package.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The number of non-compliant resources.</p>
+         */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
+        /**
+         * <p>The total number of resources.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

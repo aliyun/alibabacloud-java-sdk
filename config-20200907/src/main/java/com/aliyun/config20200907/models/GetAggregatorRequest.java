@@ -4,6 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregatorRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 

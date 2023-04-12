@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListCompliancePacksResponseBody extends TeaModel {
+    /**
+     * <p>The compliance packages returned.</p>
+     */
     @NameInMap("CompliancePacksResult")
     public ListCompliancePacksResponseBodyCompliancePacksResult compliancePacksResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,58 @@ public class ListCompliancePacksResponseBody extends TeaModel {
     }
 
     public static class ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the compliance package belongs.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The ID of the compliance package.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The name of the compliance package.</p>
+         */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
 
+        /**
+         * <p>The ID of the compliance package template based on which the compliance package was created.</p>
+         */
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
 
+        /**
+         * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The description of the compliance package.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:</p>
+         * <br>
+         * <p>*   1: high risk level.</p>
+         * <p>*   2: medium risk level.</p>
+         * <p>*   3: low risk level.</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <p>The status of the compliance package. Valid values:</p>
+         * <br>
+         * <p>*   ACTIVE: The compliance package is active.</p>
+         * <p>*   CREATING: The compliance package is being created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -128,15 +165,27 @@ public class ListCompliancePacksResponseBody extends TeaModel {
     }
 
     public static class ListCompliancePacksResponseBodyCompliancePacksResult extends TeaModel {
+        /**
+         * <p>The details of the compliance package.</p>
+         */
         @NameInMap("CompliancePacks")
         public java.util.List<ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacks> compliancePacks;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of compliance packages returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

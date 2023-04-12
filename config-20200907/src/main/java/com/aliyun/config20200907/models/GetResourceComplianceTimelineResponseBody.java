@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetResourceComplianceTimelineResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the compliance timeline.</p>
+     */
     @NameInMap("ResourceComplianceTimeline")
     public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline resourceComplianceTimeline;
 
@@ -32,39 +38,78 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
     }
 
     public static class GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The zone where the resource resides.</p>
+         */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
+        /**
+         * <p>The timestamp when the compliance evaluation was recorded. Unit: milliseconds.</p>
+         */
         @NameInMap("CaptureTime")
         public Long captureTime;
 
+        /**
+         * <p>The information about the rules that evaluated the resource and the compliance evaluation result.</p>
+         */
         @NameInMap("Configuration")
         public String configuration;
 
+        /**
+         * <p>The details of the configuration change that triggered the compliance evaluation.</p>
+         */
         @NameInMap("ConfigurationDiff")
         public String configurationDiff;
 
+        /**
+         * <p>The ID of the region where the resource resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+         */
         @NameInMap("ResourceCreateTime")
         public Long resourceCreateTime;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The status of the resource. The parameter value varies with the resource type and may be left empty. Examples:</p>
+         * <br>
+         * <p>*   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, valid values of this parameter include Running and Stopped.</p>
+         * <p>*   If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that does not have a specific state. In this case, this parameter is left empty.</p>
+         */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tags of the resource.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -172,12 +217,21 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
     }
 
     public static class GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline extends TeaModel {
+        /**
+         * <p>The compliance evaluation records on the compliance timeline.</p>
+         */
         @NameInMap("ComplianceList")
         public java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList;
 
+        /**
+         * <p>The maximum number of entries that can be returned for a single request.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that is used to initiate the next request.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

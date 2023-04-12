@@ -4,18 +4,39 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class IgnoreAggregateEvaluationResultsShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
+     * <br>
+     * <p>>  If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+     */
     @NameInMap("IgnoreDate")
     public String ignoreDate;
 
+    /**
+     * <p>The reason why you ignore the resource.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The resources to be ignored.</p>
+     */
     @NameInMap("Resources")
     public String resourcesShrink;
 

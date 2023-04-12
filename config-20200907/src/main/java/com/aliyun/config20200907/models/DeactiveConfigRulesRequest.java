@@ -4,6 +4,11 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeactiveConfigRulesRequest extends TeaModel {
+    /**
+     * <p>The ID of the rule. Separate multiple rule IDs with commas (,).</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;
 

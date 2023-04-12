@@ -4,18 +4,39 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The date from which the system automatically re-evaluates the ignored incompliant resources.</p>
+     * <br>
+     * <p>>  If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+     */
     @NameInMap("IgnoreDate")
     public String ignoreDate;
 
+    /**
+     * <p>The reason why you ignore the resource.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The resources to be ignored.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<IgnoreAggregateEvaluationResultsRequestResources> resources;
 
@@ -65,15 +86,35 @@ public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
     }
 
     public static class IgnoreAggregateEvaluationResultsRequestResources extends TeaModel {
+        /**
+         * <p>The ID of the region in which the resource resides.</p>
+         * <br>
+         * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
+         * <br>
+         * <p>>  You must specify the ID of the current management account or a member account in the account group of the management account.</p>
+         */
         @NameInMap("ResourceAccountId")
         public Long resourceAccountId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         * <br>
+         * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         * <br>
+         * <p>For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

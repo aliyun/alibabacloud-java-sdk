@@ -4,9 +4,17 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListRemediationTemplatesRequest extends TeaModel {
+    /**
+     * <p>The identifier of the managed rule.</p>
+     * <br>
+     * <p>You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the managed rule identifier.</p>
+     */
     @NameInMap("ManagedRuleIdentifier")
     public String managedRuleIdentifier;
 
+    /**
+     * <p>The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.</p>
+     */
     @NameInMap("RemediationType")
     public String remediationType;
 

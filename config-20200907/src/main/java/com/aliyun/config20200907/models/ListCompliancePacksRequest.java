@@ -4,12 +4,28 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListCompliancePacksRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Pages start from page 1. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The status of the compliance package to be queried. Valid values:</p>
+     * <br>
+     * <p>*   ACTIVE: The compliance package is active.</p>
+     * <p>*   CREATING: The compliance package is being created.</p>
+     */
     @NameInMap("Status")
     public String status;
 

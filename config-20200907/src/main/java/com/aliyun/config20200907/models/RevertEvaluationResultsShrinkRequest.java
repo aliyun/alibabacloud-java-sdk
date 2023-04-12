@@ -4,9 +4,17 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class RevertEvaluationResultsShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The resources that are to be reevaluated.</p>
+     */
     @NameInMap("Resources")
     public String resourcesShrink;
 

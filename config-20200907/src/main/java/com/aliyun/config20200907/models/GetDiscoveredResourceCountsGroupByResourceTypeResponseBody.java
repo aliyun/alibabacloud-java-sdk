@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends TeaModel {
+    /**
+     * <p>The statistics on the resources.</p>
+     */
     @NameInMap("DiscoveredResourceCountsSummary")
     public java.util.List<GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,23 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
     }
 
     public static class GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary extends TeaModel {
+        /**
+         * <p>The resource type by which the statistics are collected.</p>
+         * <br>
+         * <p>>  We recommend that you use the `ResourceType` parameter.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The total number of resources.</p>
+         */
         @NameInMap("ResourceCount")
         public Long resourceCount;
 
+        /**
+         * <p>The resource type by which the statistics are collected.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

@@ -4,9 +4,17 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteAggregateConfigDeliveryChannelRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the delivery channel.</p>
+     * <br>
+     * <p>For information about how to obtain the ID of a delivery channel, see [ListAggregateConfigDeliveryChannels](~~429842~~).</p>
+     */
     @NameInMap("DeliveryChannelId")
     public String deliveryChannelId;
 

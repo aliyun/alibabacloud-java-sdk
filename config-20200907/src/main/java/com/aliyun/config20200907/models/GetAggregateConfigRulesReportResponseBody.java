@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
+    /**
+     * <p>The information about the compliance evaluation report.</p>
+     */
     @NameInMap("ConfigRulesReport")
     public GetAggregateConfigRulesReportResponseBodyConfigRulesReport configRulesReport;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,43 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
     }
 
     public static class GetAggregateConfigRulesReportResponseBodyConfigRulesReport extends TeaModel {
+        /**
+         * <p>The ID of the management account to which the rules belong.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The ID of the account group.</p>
+         */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
+        /**
+         * <p>The timestamp when the compliance evaluation report was generated. Unit: milliseconds.</p>
+         */
         @NameInMap("ReportCreateTimestamp")
         public Long reportCreateTimestamp;
 
+        /**
+         * <p>The ID of the compliance evaluation report.</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
+        /**
+         * <p>The status of the compliance evaluation report. Valid values:</p>
+         * <br>
+         * <p>*   NONE: The compliance evaluation report is not generated.</p>
+         * <p>*   CREATING: The compliance evaluation report is being generated.</p>
+         * <p>*   COMPLETE: The compliance evaluation report is generated.</p>
+         */
         @NameInMap("ReportStatus")
         public String reportStatus;
 
+        /**
+         * <p>The URL that is used to download the compliance evaluation report.</p>
+         */
         @NameInMap("ReportUrl")
         public String reportUrl;
 

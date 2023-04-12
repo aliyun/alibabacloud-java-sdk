@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel {
+    /**
+     * <p>The compliance evaluation results that are returned by rules in the compliance package.</p>
+     */
     @NameInMap("ConfigRuleComplianceResult")
     public GetAggregateConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResult configRuleComplianceResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,26 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
     }
 
     public static class GetAggregateConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResultConfigRuleCompliances extends TeaModel {
+        /**
+         * <p>The compliance evaluation result returned by the rule. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The relevant resources are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
@@ -73,15 +93,27 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
     }
 
     public static class GetAggregateConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResult extends TeaModel {
+        /**
+         * <p>The ID of the compliance package.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The information about rules in the compliance package.</p>
+         */
         @NameInMap("ConfigRuleCompliances")
         public java.util.List<GetAggregateConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResultConfigRuleCompliances> configRuleCompliances;
 
+        /**
+         * <p>The number of rules against which specific resources are evaluated as non-compliant.</p>
+         */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
+        /**
+         * <p>The total number of rules in the compliance package.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

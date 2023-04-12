@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetConfigRulesReportResponseBody extends TeaModel {
+    /**
+     * <p>The information about the compliance evaluation report.</p>
+     */
     @NameInMap("ConfigRulesReport")
     public GetConfigRulesReportResponseBodyConfigRulesReport configRulesReport;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,37 @@ public class GetConfigRulesReportResponseBody extends TeaModel {
     }
 
     public static class GetConfigRulesReportResponseBodyConfigRulesReport extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the rules belong.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The timestamp when the compliance evaluation report was generated. Unit: milliseconds.</p>
+         */
         @NameInMap("ReportCreateTimestamp")
         public Long reportCreateTimestamp;
 
+        /**
+         * <p>The ID of the compliance evaluation report.</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
+        /**
+         * <p>The status of the compliance evaluation report. Valid values:</p>
+         * <br>
+         * <p>*   NONE: The compliance evaluation report is not generated.</p>
+         * <p>*   CREATING: The compliance evaluation report is being generated.</p>
+         * <p>*   COMPLETE: The compliance evaluation report is generated.</p>
+         */
         @NameInMap("ReportStatus")
         public String reportStatus;
 
+        /**
+         * <p>The URL that is used to download the compliance evaluation report.</p>
+         */
         @NameInMap("ReportUrl")
         public String reportUrl;
 

@@ -4,9 +4,19 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteAggregateRemediationsRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>You can call the [ListAggregators](~~255797~~) operation to obtain the account group ID.</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the remediation setting. If you want to specify multiple IDs, separate them with commas (,).</p>
+     * <br>
+     * <p>You can call the [ListAggregateRemediations](~~270036~~) operation to obtain the remediation setting ID.</p>
+     */
     @NameInMap("RemediationIds")
     public String remediationIds;
 

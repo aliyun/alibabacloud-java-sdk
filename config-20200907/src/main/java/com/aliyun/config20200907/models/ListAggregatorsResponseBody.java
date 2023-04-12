@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregatorsResponseBody extends TeaModel {
+    /**
+     * <p>The account groups returned.</p>
+     */
     @NameInMap("AggregatorsResult")
     public ListAggregatorsResponseBodyAggregatorsResult aggregatorsResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,57 @@ public class ListAggregatorsResponseBody extends TeaModel {
     }
 
     public static class ListAggregatorsResponseBodyAggregatorsResultAggregators extends TeaModel {
+        /**
+         * <p>The ID of the management account used to create the account group.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The number of member accounts in the account group.</p>
+         */
         @NameInMap("AggregatorAccountCount")
         public Long aggregatorAccountCount;
 
+        /**
+         * <p>The timestamp when the account group was created.</p>
+         */
         @NameInMap("AggregatorCreateTimestamp")
         public Long aggregatorCreateTimestamp;
 
+        /**
+         * <p>The ID of the account group.</p>
+         */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
+        /**
+         * <p>The name of the account group.</p>
+         */
         @NameInMap("AggregatorName")
         public String aggregatorName;
 
+        /**
+         * <p>The status of the account group. Valid values:</p>
+         * <br>
+         * <p>*   0: being created.</p>
+         * <p>*   1: created.</p>
+         */
         @NameInMap("AggregatorStatus")
         public Integer aggregatorStatus;
 
+        /**
+         * <p>The type of the account group. Valid values:</p>
+         * <br>
+         * <p>*   RD: global account group.</p>
+         * <p>*   CUSTOM: custom account group.</p>
+         */
         @NameInMap("AggregatorType")
         public String aggregatorType;
 
+        /**
+         * <p>The description of the account group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -128,9 +164,15 @@ public class ListAggregatorsResponseBody extends TeaModel {
     }
 
     public static class ListAggregatorsResponseBodyAggregatorsResult extends TeaModel {
+        /**
+         * <p>The information about the account groups.</p>
+         */
         @NameInMap("Aggregators")
         public java.util.List<ListAggregatorsResponseBodyAggregatorsResultAggregators> aggregators;
 
+        /**
+         * <p>The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

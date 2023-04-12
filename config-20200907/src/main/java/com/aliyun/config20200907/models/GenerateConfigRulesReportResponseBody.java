@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GenerateConfigRulesReportResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the compliance evaluation report.</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

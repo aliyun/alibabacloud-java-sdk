@@ -4,12 +4,23 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class RevertAggregateEvaluationResultsRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the rule in the account group.</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The resources that are to be reevaluated.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<RevertAggregateEvaluationResultsRequestResources> resources;
 
@@ -43,15 +54,35 @@ public class RevertAggregateEvaluationResultsRequest extends TeaModel {
     }
 
     public static class RevertAggregateEvaluationResultsRequestResources extends TeaModel {
+        /**
+         * <p>The ID of the region in which the resource resides.</p>
+         * <br>
+         * <p>For more information about how to obtain the ID of a region in which a resource resides, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <br>
+         * <p>>  The value must be the ID of the current management account or the member account in the account group of the management account.</p>
+         */
         @NameInMap("ResourceAccountId")
         public Long resourceAccountId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         * <br>
+         * <p>For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         * <br>
+         * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

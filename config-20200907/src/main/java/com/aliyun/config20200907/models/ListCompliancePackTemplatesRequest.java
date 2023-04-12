@@ -4,14 +4,32 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListCompliancePackTemplatesRequest extends TeaModel {
+    /**
+     * <p>The ID of the compliance package template.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](~~261176~~).</p>
+     */
     @NameInMap("CompliancePackTemplateId")
     public String compliancePackTemplateId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Pages start from page 1. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ResourceTypes")
+    public String resourceTypes;
 
     public static ListCompliancePackTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCompliancePackTemplatesRequest self = new ListCompliancePackTemplatesRequest();
@@ -40,6 +58,14 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListCompliancePackTemplatesRequest setResourceTypes(String resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public String getResourceTypes() {
+        return this.resourceTypes;
     }
 
 }

@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetConfigRuleResponseBody extends TeaModel {
+    /**
+     * <p>The details of the rule.</p>
+     */
     @NameInMap("ConfigRule")
     public GetConfigRuleResponseBodyConfigRule configRule;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,20 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleCompliance extends TeaModel {
+        /**
+         * <p>The statistics of compliance evaluation results based on compliance types. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The number of evaluated resources.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
@@ -62,27 +79,54 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus extends TeaModel {
+        /**
+         * <p>The timestamp when the rule was first triggered. Unit: milliseconds.</p>
+         */
         @NameInMap("FirstActivatedTimestamp")
         public Long firstActivatedTimestamp;
 
+        /**
+         * <p>Indicates whether resources were evaluated based on the rule. Valid values:</p>
+         * <br>
+         * <p>*   true: Resources were evaluated based on the rule.</p>
+         * <p>*   false: Resources were not evaluated based on the rule.</p>
+         */
         @NameInMap("FirstEvaluationStarted")
         public Boolean firstEvaluationStarted;
 
+        /**
+         * <p>The error code returned for the last failed compliance evaluation.</p>
+         */
         @NameInMap("LastErrorCode")
         public String lastErrorCode;
 
+        /**
+         * <p>The error message returned for the last failed compliance evaluation.</p>
+         */
         @NameInMap("LastErrorMessage")
         public String lastErrorMessage;
 
+        /**
+         * <p>The timestamp when the last failed compliance evaluation of the rule ended. Unit: milliseconds.</p>
+         */
         @NameInMap("LastFailedEvaluationTimestamp")
         public Long lastFailedEvaluationTimestamp;
 
+        /**
+         * <p>The timestamp when the last failed compliance evaluation of the rule started. Unit: milliseconds.</p>
+         */
         @NameInMap("LastFailedInvocationTimestamp")
         public Long lastFailedInvocationTimestamp;
 
+        /**
+         * <p>The timestamp when the last successful compliance evaluation of the rule ended. Unit: milliseconds.</p>
+         */
         @NameInMap("LastSuccessfulEvaluationTimestamp")
         public Long lastSuccessfulEvaluationTimestamp;
 
+        /**
+         * <p>The timestamp when the last successful compliance evaluation of the rule started. Unit: milliseconds.</p>
+         */
         @NameInMap("LastSuccessfulInvocationTimestamp")
         public Long lastSuccessfulInvocationTimestamp;
 
@@ -158,15 +202,27 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleCreateBy extends TeaModel {
+        /**
+         * <p>The ID of the compliance package.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The name of the compliance package.</p>
+         */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
 
+        /**
+         * <p>The ID of the account that was used to create the rule.</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The name of the account that was used to create the rule.</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
@@ -210,12 +266,34 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails extends TeaModel {
+        /**
+         * <p>The event source of the managed rule.</p>
+         * <br>
+         * <p>>  Only events related to Cloud Config are supported. The value is fixed to aliyun.config.</p>
+         */
         @NameInMap("EventSource")
         public String eventSource;
 
+        /**
+         * <p>The intervals at which the managed rule is triggered. Valid values:</p>
+         * <br>
+         * <p>*   One_Hour: 1 hour.</p>
+         * <p>*   Three_Hours: 3 hours.</p>
+         * <p>*   Six_Hours: 6 hours.</p>
+         * <p>*   Twelve_Hours: 12 hours</p>
+         * <p>*   TwentyFour_Hours: 24 hours</p>
+         * <br>
+         * <p>>  This parameter is returned if the managed rule is periodically triggered.</p>
+         */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
 
+        /**
+         * <p>The trigger type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</p>
+         * <p>*   ScheduledNotification: The managed rule is periodically triggered.</p>
+         */
         @NameInMap("MessageType")
         public String messageType;
 
@@ -251,24 +329,45 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleManagedRule extends TeaModel {
+        /**
+         * <p>The required input parameters of the managed rule.</p>
+         */
         @NameInMap("CompulsoryInputParameterDetails")
         public java.util.Map<String, ?> compulsoryInputParameterDetails;
 
+        /**
+         * <p>The description of the managed rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The identifier of the managed rule.</p>
+         */
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>The tags of the managed rule.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        /**
+         * <p>The name of the managed rule.</p>
+         */
         @NameInMap("ManagedRuleName")
         public String managedRuleName;
 
+        /**
+         * <p>The optional input parameters of the managed rule.</p>
+         */
         @NameInMap("OptionalInputParameterDetails")
         public java.util.Map<String, ?> optionalInputParameterDetails;
 
+        /**
+         * <p>The details of the source of the managed rule.</p>
+         */
         @NameInMap("SourceDetails")
         public java.util.List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> sourceDetails;
 
@@ -336,12 +435,34 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleSourceSourceDetails extends TeaModel {
+        /**
+         * <p>The event source of the managed rule.</p>
+         * <br>
+         * <p>>  Only events related to Cloud Config are supported. The value is fixed to aliyun.config.</p>
+         */
         @NameInMap("EventSource")
         public String eventSource;
 
+        /**
+         * <p>The intervals at which the managed rule is triggered. Valid values:</p>
+         * <br>
+         * <p>*   One_Hour: 1 hour.</p>
+         * <p>*   Three_Hours: 3 hours.</p>
+         * <p>*   Six_Hours: 6 hours.</p>
+         * <p>*   Twelve_Hours: 12 hours</p>
+         * <p>*   TwentyFour_Hours: 24 hours</p>
+         * <br>
+         * <p>>  This parameter is returned if the rule is periodically triggered.</p>
+         */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
 
+        /**
+         * <p>The trigger type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</p>
+         * <p>*   ScheduledNotification: The managed rule is periodically triggered.</p>
+         */
         @NameInMap("MessageType")
         public String messageType;
 
@@ -377,12 +498,27 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleSource extends TeaModel {
+        /**
+         * <p>The identifier of the rule.</p>
+         * <br>
+         * <p>*   If the rule was created based on a managed rule, the value of this parameter is the name of the managed rule.</p>
+         * <p>*   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</p>
+         */
         @NameInMap("Identifier")
         public String identifier;
 
+        /**
+         * <p>The way in which the rule was created. Valid values:</p>
+         * <br>
+         * <p>*   CUSTOM_FC: The rule is a custom rule.</p>
+         * <p>*   ALIYUN: The rule was created based on a managed rule of Alibaba Cloud.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The details of the source of the rule.</p>
+         */
         @NameInMap("SourceDetails")
         public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails;
 
@@ -418,75 +554,173 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRule extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the rule belongs.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The details of compliance evaluation results.</p>
+         */
         @NameInMap("Compliance")
         public GetConfigRuleResponseBodyConfigRuleCompliance compliance;
 
+        /**
+         * <p>The ARN of the managed rule.</p>
+         */
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
+        /**
+         * <p>The information about compliance evaluations performed by the rule.</p>
+         */
         @NameInMap("ConfigRuleEvaluationStatus")
         public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus configRuleEvaluationStatus;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The name of the monitoring rule.</p>
+         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   ACTIVE: The rule is being used to monitor resource configurations.</p>
+         * <p>*   DELETING: The rule is being deleted.</p>
+         * <p>*   EVALUATING: The rule is triggered and is being used to monitor resource configurations.</p>
+         * <p>*   INACTIVE: The rule is disabled and is no longer used to monitor resource configurations.</p>
+         */
         @NameInMap("ConfigRuleState")
         public String configRuleState;
 
+        /**
+         * <p>The trigger type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</p>
+         * <p>*   ScheduledNotification: The managed rule is periodically triggered.</p>
+         */
         @NameInMap("ConfigRuleTriggerTypes")
         public String configRuleTriggerTypes;
 
+        /**
+         * <p>The information about the creation of the rule.</p>
+         */
         @NameInMap("CreateBy")
         public GetConfigRuleResponseBodyConfigRuleCreateBy createBy;
 
+        /**
+         * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The description of the managed rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the resource excluded from the compliance evaluations performed by the rule.</p>
+         */
         @NameInMap("ExcludeResourceIdsScope")
         public String excludeResourceIdsScope;
 
+        /**
+         * <p>The input parameters of the rule.</p>
+         */
         @NameInMap("InputParameters")
         public java.util.Map<String, ?> inputParameters;
 
+        /**
+         * <p>The details of the managed rule.</p>
+         */
         @NameInMap("ManagedRule")
         public GetConfigRuleResponseBodyConfigRuleManagedRule managedRule;
 
+        /**
+         * <p>The intervals at which the managed rule is triggered. Valid values:</p>
+         * <br>
+         * <p>*   One_Hour: 1 hour.</p>
+         * <p>*   Three_Hours: 3 hours.</p>
+         * <p>*   Six_Hours: 6 hours.</p>
+         * <p>*   Twelve_Hours: 12 hours</p>
+         * <p>*   TwentyFour_Hours: 24 hours</p>
+         * <br>
+         * <p>>  This parameter is returned if the managed rule is periodically triggered.</p>
+         */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
 
+        /**
+         * <p>The timestamp when the rule was last updated. Unit: milliseconds.</p>
+         */
         @NameInMap("ModifiedTimestamp")
         public Long modifiedTimestamp;
 
+        /**
+         * <p>The ID of the region to which the rule applies.</p>
+         */
         @NameInMap("RegionIdsScope")
         public String regionIdsScope;
 
+        /**
+         * <p>The ID of the resource group to which the rule applies.</p>
+         */
         @NameInMap("ResourceGroupIdsScope")
         public String resourceGroupIdsScope;
 
+        /**
+         * <p>The type of the resource evaluated by the rule.</p>
+         */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
 
+        /**
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <br>
+         * <p>*   1: high risk level</p>
+         * <p>*   2: medium risk level</p>
+         * <p>*   3: low risk level</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <p>The information about how the rule was created.</p>
+         */
         @NameInMap("Source")
         public GetConfigRuleResponseBodyConfigRuleSource source;
 
+        /**
+         * <p>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.</p>
+         * <br>
+         * <p>>  This parameter applies only to managed rules.</p>
+         */
         @NameInMap("TagKeyLogicScope")
         public String tagKeyLogicScope;
 
+        /**
+         * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+         * <br>
+         * <p>>  The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.</p>
+         */
         @NameInMap("TagKeyScope")
         public String tagKeyScope;
 
+        /**
+         * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+         * <br>
+         * <p>>  The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.</p>
+         */
         @NameInMap("TagValueScope")
         public String tagValueScope;
 

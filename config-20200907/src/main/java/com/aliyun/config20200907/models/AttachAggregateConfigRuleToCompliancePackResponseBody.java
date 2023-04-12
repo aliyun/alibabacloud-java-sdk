@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaModel {
+    /**
+     * <p>The results of the operations to add one or more rules.</p>
+     */
     @NameInMap("OperateRuleResult")
     public AttachAggregateConfigRuleToCompliancePackResponseBodyOperateRuleResult operateRuleResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,30 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
     }
 
     public static class AttachAggregateConfigRuleToCompliancePackResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
+        /**
+         * <p>The ID of the rule that is added to the compliance package.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The error code.</p>
+         * <br>
+         * <p>*   This parameter is empty if the rule is added to the compliance package.</p>
+         * <br>
+         * <p><!----></p>
+         * <br>
+         * <p>*   An error code is returned if the rule fails to be added to the compliance package. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <br>
+         * <p>*   true: The operation is successful.</p>
+         * <p>*   false: The operation fails.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -73,6 +97,9 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
     }
 
     public static class AttachAggregateConfigRuleToCompliancePackResponseBodyOperateRuleResult extends TeaModel {
+        /**
+         * <p>The result of the operation to add the rule.</p>
+         */
         @NameInMap("OperateRuleItemList")
         public java.util.List<AttachAggregateConfigRuleToCompliancePackResponseBodyOperateRuleResultOperateRuleItemList> operateRuleItemList;
 

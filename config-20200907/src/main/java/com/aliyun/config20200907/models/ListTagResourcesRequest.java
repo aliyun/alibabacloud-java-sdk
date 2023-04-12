@@ -4,18 +4,43 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The token that determines the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID of the tag.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource.</p>
+     * <br>
+     * <p>You can specify up to 50 resources.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   `ACS::Config::Rule`</p>
+     * <p>*   `ACS::Config::AggregateConfigRule`</p>
+     * <p>*   `ACS::Config::Aggregator`</p>
+     * <p>*   `ACS::Config::CompliancePack`</p>
+     * <p>*   `ACS::Config::AggregateCompliancePack`</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <br>
+     * <p>You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -65,9 +90,19 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys of the resource.</p>
+         * <br>
+         * <p>You can specify up to 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values of the resource.</p>
+         * <br>
+         * <p>You can specify up to 20 tag values.</p>
+         */
         @NameInMap("Value")
         public String value;
 
